@@ -73,6 +73,16 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - `AREA_CAPS` G: grouse 80, moose 80. Quail only in Region 8 (`QUAIL_AREAS`). Coarse migration bands (`MIG_POLY`). No elk or turkey spots in G.
 - G sizes: layers 12 MB, spots 7.1 MB (1,052 spots, 1,221 routes, 99 camps). 0 VERIFY. 18 style lines, all official road names (Trans-Canada Hwy, Three Valley-Mabel FSR and similar).
 
+## All of BC, popularity, camping (2026-10-16)
+- Province wide areas: `python3 scripts/spots-bc-areas.py --cache ...` writes `scripts/spots-bc-areas.json` (62 cells of 2 by 1.5 degrees, keys R<region><letter>, A to G boxes cut out). The pipeline loads them into `AREAS`. Each has `demz` 11 (terrarium zoom 11) and `tileScale` 4 (bigger fetch tiles in sparse country; R1B, R2A, R8A, R4A keep 1).
+- Run one area at a time and delete its raw files after (scratch stays under 4 GB): `--areas R2B --steps fetch,dem,spots`, then `rm -rf <cache>/raw/*/R2B <cache>/work/R2B <cache>/dem/11`. Then `--areas <all with data> --steps spotsman` updates only the spots and routes manifest entries (safe while other layers change).
+- Caps for R areas: `BC_CAPS` (deer 10, moose 10, duck 6, grouse 5, camp 6, elk 8, bear 6 per category), for the size budget. Elk in Regions 4 and 7B; Region 4 rules (feeding ban, CWD (Chronic Wasting Disease) zone flag) in every Region 4 area. Quail and turkey only in the hand made areas.
+- Coast deer: CWH and CDF count as deer zones (2 points): black tailed deer are among the most common large mammals in the CWH (95%) and use logged habitat often (80%) (lesson: Wet forests). Area B went from 118 to 357 deer spots.
+- Black bear spots (`W['bear']`, max 7, min 5): cutblock 5 to 20 years within 500 m, burn within 500 m, south facing slope, creek or wetland within 200 m, 1 km from pavement and 2 km from a town. Reasons as the black bear lessons state them. Not in the data: salmon streams, avalanche chutes. No bear spots in B and R2A (owner: no bear near Mission); bear stays a tag there.
+- Popularity (`popularity()`, step `pop` reruns it on built files): MU hunter days per square km (bc-harvest.json, 2020 to 2024 mean, the spot's species where surveyed, else all big game), split in thirds over BC MUs, plus access from `pressure()`. Popular = top third with busier or average access, or middle third with busier access. Certainty 50 (estimate). Index fields `pop` and `tg` (tags) feed the map filters.
+- Tags (`party_tags()`, Tip): Beginner friendly (quieter, 1 to 2 km walk), Good for 2 (cutblock or burn edge, slope 25 degrees or less), Good solo (1 km or less, 100 m climb or less). Region 2 deer spots carry the black tailed deer note.
+- Camping layer: `python3 scripts/build-camping.py --cache ... --photos 300` writes `data/spots/camping/r<region>.geojson`, `meta.json`, `verify-mission.json` and the `camping` manifest entry (replaces the old `camps` entry). Sources and rules are in the script header. Commons answers Python urllib with 429 here, so photos go through curl, one request a second.
+
 ## Outputs and sizes (2026-10-04)
 - D: layers 17.1 MB, spots 10.8 MB. E: layers 13.2 MB, spots 10.0 MB. All data now about 157 MB (layers 115, spots 42), a little over the 150 MB budget.
 - `data/layers/**`: 86 MB. Biggest: A cutblocks 18.2 MB, A forest roads 9.4 MB, A habitat zones 9.2 MB (PMTiles).

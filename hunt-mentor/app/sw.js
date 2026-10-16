@@ -84,7 +84,8 @@ self.addEventListener('fetch', (e) => {
   }
   if ((url.hostname === 's3.amazonaws.com' && url.pathname.startsWith('/elevation-tiles-prod/'))
     || (url.hostname === 'server.arcgisonline.com' && url.pathname.includes('/tile/'))
-    || url.hostname === 'tile.opentopomap.org') { e.respondWith(tileFirst(req)); return; }
+    || url.hostname === 'tile.opentopomap.org'
+    || (url.hostname === 'upload.wikimedia.org' && url.pathname.includes('/thumb/'))) { e.respondWith(tileFirst(req)); return; } // free photo thumbnails on camp and spot cards: kept once viewed
   // everything else (place search, weather): network only
 });
 

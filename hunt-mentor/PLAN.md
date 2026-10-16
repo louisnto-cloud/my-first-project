@@ -160,3 +160,4 @@ hunt-mentor/
 - 2026-10-16: published 31 track, sign and terrain photos (ts-*).
 - 2026-10-16: published Crown land, tenures and Where you can likely hunt for all of BC (about 41 MB PMTiles, read by range).
 - 2026-10-16: published 29 bird photos (bd-*).
+- 2026-10-16: published camping (4,422 camps, all BC, official first, closures in red) and hunting spots for all of BC with popular/quieter (estimate 50- 2026-10-16: published camping (4,422 camps, all BC, official first, closures in red) and hunting spots for all of BC with popular or quieter (estimate, 50 percent), tags Good for 2, Good solo, Beginner friendly, detail cards. Colours: rec sites dark green, BC Parks blue, OSM orange, Crown camps lime; popular ring red, quieter ring yellow.

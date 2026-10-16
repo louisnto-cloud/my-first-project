@@ -12,34 +12,34 @@
   "lat": 49.1327,
   "lon": -122.3045
  },
- "generated": "2026-10-04",
- "total": 538,
+ "generated": "2026-10-16",
+ "total": 776,
  "counts": {
   "byCategory": {
-   "camp": 85,
-   "atv": 154,
-   "drive": 219,
-   "walk": 79,
+   "camp": 84,
+   "atv": 226,
+   "drive": 295,
+   "walk": 170,
    "backcountry": 1
   },
   "byPrimary": {
-   "camp": 85,
-   "deer": 118,
+   "camp": 84,
+   "deer": 357,
    "duck": 78,
    "grouse": 252,
    "moose": 5
   },
   "byPressure": {
-   "busier": 298,
-   "average": 223,
-   "quieter": 9,
+   "busier": 410,
+   "average": 343,
+   "quieter": 15,
    "remote": 8
   },
   "byPrimaryCategory": {
-   "camp:camp": 85,
-   "deer:atv": 32,
-   "deer:drive": 39,
-   "deer:walk": 47,
+   "camp:camp": 84,
+   "deer:atv": 104,
+   "deer:drive": 115,
+   "deer:walk": 138,
    "duck:backcountry": 1,
    "duck:drive": 60,
    "duck:walk": 17,
@@ -50,20 +50,20 @@
    "moose:walk": 3
   },
   "bySpeciesTag": {
-   "deer": 118,
-   "bear": 131,
+   "deer": 357,
+   "bear": 257,
    "duck": 78,
    "grouse": 252,
    "moose": 5
   }
  },
- "routes": 594,
- "camps": 86,
+ "routes": 888,
+ "camps": 85,
  "bytes": {
-  "index.geojson": 132336,
-  "detail": 1951194,
-  "routes": 1565637,
-  "camps.geojson": 40368
+  "index.geojson": 211016,
+  "detail": 3265570,
+  "routes": 1920716,
+  "camps.geojson": 46389
  },
  "tiles": {
   "deg": 0.25,
@@ -95,30 +95,30 @@
    "-486_196": [
     -121.494,
     49.002,
-    -121.306,
+    -121.304,
     49.251
    ],
    "-486_197": [
     -121.525,
     49.223,
-    -121.295,
+    -121.29,
     49.503
    ],
    "-486_198": [
     -121.533,
     49.473,
     -121.295,
-    49.773
+    49.787
    ],
    "-486_199": [
     -121.545,
     49.711,
-    -121.322,
+    -121.315,
     49.958
    ],
    "-487_196": [
-    -121.763,
-    49.017,
+    -121.778,
+    49.001,
     -121.491,
     49.301
    ],
@@ -126,17 +126,17 @@
     -121.765,
     49.288,
     -121.524,
-    49.468
+    49.475
    ],
    "-487_198": [
-    -121.751,
+    -121.803,
     49.512,
     -121.479,
-    49.742
+    49.744
    ],
    "-487_199": [
     -121.782,
-    49.808,
+    49.781,
     -121.485,
     49.97
    ],
@@ -147,16 +147,16 @@
     49.192
    ],
    "-488_197": [
-    -122.011,
+    -122.021,
     49.257,
     -121.73,
-    49.503
+    49.517
    ],
    "-488_198": [
     -122.02,
     49.48,
     -121.725,
-    49.741
+    49.75
    ],
    "-488_199": [
     -121.996,
@@ -201,15 +201,15 @@
     49.746
    ],
    "-490_199": [
-    -122.432,
-    49.802,
-    -122.237,
+    -122.46,
+    49.721,
+    -122.218,
     49.957
    ],
    "-491_198": [
     -122.783,
     49.58,
-    -122.595,
+    -122.57,
     49.734
    ],
    "-492_197": [
@@ -219,56 +219,56 @@
     49.51
    ],
    "-492_198": [
-    -122.91,
+    -122.911,
     49.5,
     -122.78,
-    49.647
+    49.694
    ]
   }
  },
  "layerDates": {
-  "roads": "2026-10-03",
-  "private": "2026-09-26",
-  "privateFetched": "2026-10-03",
-  "closures": "2026-10-03",
-  "mu": "2026-10-03",
-  "parks": "2026-10-03",
-  "reserves": "2026-10-03",
-  "cities": "2026-10-03",
-  "wma": "2026-10-03",
-  "cutblocks": "2026-10-03",
-  "burns": "2026-10-03",
-  "winterRange": "2026-10-03",
-  "dem": "2026-10-04"
+  "roads": "2026-10-16",
+  "private": "2026-10-10",
+  "privateFetched": "2026-10-16",
+  "closures": "2026-10-16",
+  "mu": "2026-10-16",
+  "parks": "2026-10-16",
+  "reserves": "2026-10-16",
+  "cities": "2026-10-16",
+  "wma": "2026-10-16",
+  "cutblocks": "2026-10-16",
+  "burns": "2026-10-16",
+  "winterRange": "2026-10-16",
+  "dem": "2026-10-16"
  },
  "stats": {
   "deer": {
    "drive": {
-    "candidates": 462,
-    "droppedWeak": 406,
+    "candidates": 576,
+    "droppedWeak": 435,
     "droppedCap": 0,
-    "kept": 56
+    "kept": 141
    },
    "atv": {
-    "candidates": 525,
-    "droppedWeak": 480,
+    "candidates": 728,
+    "droppedWeak": 596,
     "droppedCap": 0,
-    "kept": 45
+    "kept": 132
    },
    "walk": {
-    "candidates": 569,
-    "droppedWeak": 517,
+    "candidates": 844,
+    "droppedWeak": 697,
     "droppedCap": 0,
-    "kept": 52
+    "kept": 147
    },
    "backcountry": {
-    "candidates": 16,
-    "droppedWeak": 16,
+    "candidates": 59,
+    "droppedWeak": 58,
     "droppedCap": 0,
-    "kept": 0
+    "kept": 1
    },
-   "droppedExact": 32,
-   "droppedOnClosedLand": 1
+   "droppedExact": 51,
+   "droppedOnClosedLand": 2
   },
   "moose": {
    "drive": {
@@ -337,14 +337,15 @@
   "camp": {
    "official": 35,
    "crownKept": 60,
-   "droppedWeak": 1696,
-   "droppedCap": 50,
-   "droppedExact": 6,
+   "droppedWeak": 1703,
+   "droppedCap": 57,
+   "droppedExact": 7,
    "droppedOnClosedLand": 1
   },
-  "spacingRemoved": 5
+  "outsideBC": 0,
+  "spacingRemoved": 14
  },
- "styleLinesFlagged": 55,
+ "styleLinesFlagged": 66,
  "scoring": {
   "weights": {
    "deer": {
@@ -378,6 +379,20 @@
     "creek": 1,
     "draw": 1
    },
+   "elk": {
+    "uwr": 3,
+    "burn": 2,
+    "cut": 1,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "water": 1
+   },
+   "turkey": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1
+   },
    "camp": {
     "flat": 2,
     "water": 2,
@@ -392,7 +407,9 @@
    "duck": 8,
    "grouse": 3,
    "quail": 6,
-   "camp": 7
+   "camp": 7,
+   "elk": 11,
+   "turkey": 5
   },
   "min": {
    "deer": 7,
@@ -400,7 +417,9 @@
    "duck": 4,
    "grouse": 2,
    "quail": 4,
-   "camp": 5
+   "camp": 5,
+   "elk": 7,
+   "turkey": 4
   },
   "spacingM": 800,
   "selectRadiusM": {
@@ -416,7 +435,9 @@
    "duck": 180,
    "grouse": 120,
    "quail": 300,
-   "camp": 60
+   "camp": 60,
+   "elk": 120,
+   "turkey": 80
   },
   "cutAgeYears": [
    5,
@@ -443,6 +464,12 @@
  "regsWarnings": [],
  "seasonFiles": [
   {
+   "region": 1,
+   "edition": "2026-10-02",
+   "rows": 38,
+   "checked": "2026-10-04"
+  },
+  {
    "region": 2,
    "edition": "2026-10-02",
    "rows": 43,
@@ -455,9 +482,33 @@
    "checked": "2026-10-04"
   },
   {
+   "region": 4,
+   "edition": "2026-10-02",
+   "rows": 53,
+   "checked": "2026-10-04"
+  },
+  {
    "region": 5,
    "edition": "2026-10-02",
    "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 6,
+   "edition": "2026-10-02",
+   "rows": 59,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7A",
+   "edition": "2026-10-02",
+   "rows": 42,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7B",
+   "edition": "2026-10-02",
+   "rows": 43,
    "checked": "2026-10-04"
   },
   {
@@ -474,7 +525,7 @@
   }
  ],
  "seasonCoverage": {
-  "withFileRows": 453,
+  "withFileRows": 692,
   "withRegsRows": 0,
   "verify": 0
  },

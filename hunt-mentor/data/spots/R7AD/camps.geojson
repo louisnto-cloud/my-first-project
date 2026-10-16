@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"id":"R7AD-bear-backcountry-0001-camp","kind":"Backcountry camp","name":"Camp for By Dave Henry Creek","campsites":null,"water":"Dave Henry Creek right here","elev":1368,"spotIds":["R7AD-bear-backcountry-0001"],"note":"Flat ground near water from the data (estimate). Scout it first."},"geometry":{"type":"Point","coordinates":[-118.99961,52.81228]}},
+{"type":"Feature","properties":{"id":"R7AD-camp-camp-0001","kind":"Rec site","name":"Yellowjacket Creek rec site","campsites":10,"water":"Water: Yellowjacket Creek 110 m SE.","nearSpots":3,"closure":null,"spotIds":["R7AD-bear-walk-0001","R7AD-grouse-atv-0001","R7AD-grouse-drive-0002"],"note":"Official rec site"},"geometry":{"type":"Point","coordinates":[-119.0523,52.70486]}}
+]}

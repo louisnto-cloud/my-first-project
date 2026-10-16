@@ -64,6 +64,21 @@ AREAS = {
 }
 
 
+# Province wide areas (scripts/spots-bc-areas.py writes scripts/spots-bc-areas.json, 2026-10-16): keys R<region><letter>.
+# Each has 'excl' (the boxes of A to G), 'demz' (terrarium zoom, 11: about 50 m pixels, enough for the 100 m grid) and
+# 'tileScale' (fetch tiles this many times bigger in sparse country: fewer requests, pages handle the rest).
+_BCA = Path(__file__).resolve().parent / 'spots-bc-areas.json'
+if _BCA.exists():
+    for _k, _v in json.load(open(_BCA)).items():
+        _v['box'] = tuple(_v['box'])
+        _v['excl'] = [tuple(b) for b in _v.get('excl', [])]
+        AREAS.setdefault(_k, _v)
+
+
+def in_excl_box(excl, lon, lat):
+    return any(b[0] < lon < b[2] and b[1] < lat < b[3] for b in excl)
+
+
 def area_excl(area):
     return AREAS.get(area, {}).get('excl') or []
 
@@ -174,13 +189,17 @@ W = {
     'quail': {'zone': 2, 'farm': 2, 'creek': 1, 'draw': 1},
     'elk': {'uwr': 3, 'burn': 2, 'cut': 1, 'bec_low': 2, 'bec_ms': 1, 'aspect': 1, 'water': 1},
     'turkey': {'zone': 2, 'farm': 2, 'creek': 1},
+    # black bear (2026-10-16): only reasons the app's black bear lessons state (content/phase4/06-black-bear.md,
+    # content/phase8/85-black-bear-year.md, 86-black-bear-day.md). Not in the data: salmon streams, avalanche chutes.
+    'bear': {'cut': 2, 'burn': 2, 'south': 1, 'riparian': 1, 'quiet': 1},
     'camp': {'flat': 2, 'water': 2, 'named_water': 1, 'quiet': 1, 'spots_near': 1},
 }
-SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7, 'elk': 11, 'turkey': 5}
-MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5, 'elk': 7, 'turkey': 4}
+SCORE_MAX = {'deer': 11, 'moose': 7, 'duck': 8, 'grouse': 3, 'quail': 6, 'camp': 7, 'elk': 11, 'turkey': 5, 'bear': 7}
+MIN_SCORE = {'deer': 7, 'moose': 4, 'duck': 4, 'grouse': 2, 'quail': 4, 'camp': 5, 'elk': 7, 'turkey': 4, 'bear': 5}
 SPACING_M = 800            # no two spots of the same species and category closer than this
 SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 'camp': 3000}
-CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80}   # per area and category: best first
+CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80, 'bear': 60}   # per area and category: best first
+NO_BEAR_AREAS = {'B', 'R2A'}   # owner 2026-10-16: no black bear spots promoted around Mission (bear stays a tag there)
 AREA_CAPS = {'F': {'grouse': 80, 'moose': 60}, 'G': {'grouse': 80, 'moose': 80}}   # area F size budget (about 35 MB): fewer grouse routes and moose spots
 
 
@@ -194,6 +213,9 @@ BURN_YEARS = (2015, 2023)  # recent burns for scoring
 BURN_MIN_HA = 10           # smaller spot fires grow too little feed to score (my pick)
 DEER_ZONES_LOW = {'BG', 'PP', 'IDF'}
 DEER_ZONES_MID = {'MS'}
+# Coast forest zones count as deer zones: black tailed deer are among the most common large mammals in the CWH (95%) and use
+# logged habitats often in spring and summer (80%) (lesson: Wet forests, BC Ministry of Environment). Added 2026-10-16 (my pick).
+DEER_ZONES_COAST = {'CWH', 'CDF'}
 GROUSE_ZONES = {'IDF', 'MS', 'ESSF', 'ICH'}
 GROUSE_ZONES_EXTRA = {'B': {'CWH'}, 'E': {'SBPS', 'SBS'}}   # Assumption (my pick): CWH forest in B; Cariboo pine and spruce in E
 QUAIL_AREAS = {'C': None, 'D': {'8'}, 'G': {'8'}}   # quail spots: area -> regions allowed (None = all). Region 3 has no quail season.
@@ -214,6 +236,18 @@ TURKEY_MAX_ELEV = 1100   # Merriam's turkeys in the Kootenay winter low, near fa
 QUAIL_MAX_ELEV = 700
 DUCK_MAX_ELEV = 900
 R3_ATV_LIMIT_M = 1700
+
+# Province wide areas (keys R...): small caps for the phone size budget (about 40 MB for all of BC), best spots first (my pick)
+BC_CAPS = {'deer': 10, 'moose': 10, 'duck': 6, 'grouse': 5, 'quail': 0, 'camp': 6, 'elk': 8, 'turkey': 0, 'bear': 6}
+for _k, _v in AREAS.items():
+    if len(_k) > 1:
+        AREA_CAPS.setdefault(_k, BC_CAPS)
+        if _v.get('region') in ('4', '7B'):
+            ELK_AREAS.add(_k)
+        if _v.get('region') == '4':
+            R4_AREAS.add(_k)
+        GROUSE_ZONES_EXTRA.setdefault(_k, {'SBS', 'SBPS', 'BWBS', 'CWH'})   # my pick: grouse forest across the north and coast
+
 
 BEC_NAMES = {
     'BG': 'Bunchgrass', 'PP': 'Ponderosa Pine', 'IDF': 'Interior Douglas fir', 'ICH': 'Interior Cedar Hemlock',
@@ -319,7 +353,8 @@ def fetch_layer(cache, layer, scope_key, box):
         return
     t0 = time.time()
     n = 0
-    tiles = tiles_for(box, L.get('tile')) if box else [None]
+    ts = AREAS.get(scope_key, {}).get('tileScale', 1)
+    tiles = tiles_for(box, L.get('tile') and L['tile'] * ts) if box else [None]
     ex = area_excl(scope_key)
     pg = L.get('page', PAGE)   # smaller pages for heavy layers (dense parcels time out at 5000)
     for ti, tb in enumerate(tiles):
@@ -458,6 +493,10 @@ def lonlat_to_tilef(lon, lat, z):
     return x, y
 
 
+def area_demz(a):
+    return AREAS.get(a, {}).get('demz', DEM_Z)
+
+
 def dem_tile_range(box, z=DEM_Z, pad=0.02):
     x0, y0 = lonlat_to_tilef(box[0] - pad, box[3] + pad, z)
     x1, y1 = lonlat_to_tilef(box[2] + pad, box[1] - pad, z)
@@ -466,16 +505,17 @@ def dem_tile_range(box, z=DEM_Z, pad=0.02):
 
 def step_dem_fetch(cache, areas):
     for a in areas:
-        x0, y0, x1, y1 = dem_tile_range(AREAS[a]['box'])
+        z = area_demz(a)
+        x0, y0, x1, y1 = dem_tile_range(AREAS[a]['box'], z)
         t0 = time.time()
         n = 0
         for x in range(x0, x1 + 1):
             for y in range(y0, y1 + 1):
-                fn = Path(cache) / 'dem' / str(DEM_Z) / str(x) / f'{y}.png'
+                fn = Path(cache) / 'dem' / str(z) / str(x) / f'{y}.png'
                 if fn.exists():
                     continue
                 fn.parent.mkdir(parents=True, exist_ok=True)
-                b = http_get(TERRARIUM.format(z=DEM_Z, x=x, y=y), min_gap=0.05)
+                b = http_get(TERRARIUM.format(z=z, x=x, y=y), min_gap=0.05)
                 if b:
                     fn.write_bytes(b)
                     n += 1
@@ -1148,11 +1188,12 @@ def build_dem_grid(cache, area):
     out = Path(cache) / 'work' / area / 'dem.npy'
     if out.exists():
         return
-    x0, y0, x1, y1 = dem_tile_range(AREAS[area]['box'])
+    z = area_demz(area)
+    x0, y0, x1, y1 = dem_tile_range(AREAS[area]['box'], z)
     dem = np.full(((y1 - y0 + 1) * 256, (x1 - x0 + 1) * 256), np.nan, np.float32)
     for x in range(x0, x1 + 1):
         for y in range(y0, y1 + 1):
-            fn = Path(cache) / 'dem' / str(DEM_Z) / str(x) / f'{y}.png'
+            fn = Path(cache) / 'dem' / str(z) / str(x) / f'{y}.png'
             if not fn.exists():
                 continue
             a = np.asarray(Image.open(fn).convert('RGB')).astype(np.float32)
@@ -1160,7 +1201,7 @@ def build_dem_grid(cache, area):
             dem[(y - y0) * 256:(y - y0 + 1) * 256, (x - x0) * 256:(x - x0 + 1) * 256] = h
     out.parent.mkdir(parents=True, exist_ok=True)
     np.save(out, dem)
-    json.dump({'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1, 'z': DEM_Z}, open(out.with_suffix('.json'), 'w'))
+    json.dump({'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1, 'z': z}, open(out.with_suffix('.json'), 'w'))
     log(f'  dem grid {area}: {dem.shape}, nan {int(np.isnan(dem).sum())}')
 
 
@@ -1568,7 +1609,11 @@ class AreaContext:
         self.mu = sub('mu')
         self.parks = sub('parks')
         self.reserves = sub('reserves')
-        self.cities = sub('municipalities')
+        cg_, cp_ = sub('municipalities')
+        # A regional municipality (Northern Rockies, about 85,000 km2 of wild country around Fort Nelson) is not a town:
+        # it does not block targets or count as town access. Its town bylaws still apply: the spot flags say check locally.
+        keep_ = [i for i, x in enumerate(cp_) if 'Regional Municipality' not in (x.get('name') or '')]
+        self.cities = (cg_[keep_] if len(cg_) else cg_, [cp_[i] for i in keep_])
         self.mvpr = sub('mvpr_areas')
         self.mvpr_routes = sub('mvpr_routes')
         self.wma = sub('wma')
@@ -2296,7 +2341,7 @@ def grid_scores(ctx, sp):
     w = W.get(sp, {})
     if sp == 'deer':
         S = (w['uwr'] * (D['uwr_deer'] <= 500) + w['cut'] * (D['cut_young'] <= 1000) + w['burn'] * (D['burn'] <= 1000)
-             + w['bec_low'] * zone_mask(ctx, DEER_ZONES_LOW) + w['bec_ms'] * zone_mask(ctx, DEER_ZONES_MID)
+             + w['bec_low'] * zone_mask(ctx, DEER_ZONES_LOW | DEER_ZONES_COAST) + w['bec_ms'] * zone_mask(ctx, DEER_ZONES_MID)
              + w['aspect'] * ((R['slope'] >= 5) & (R['aspect'] >= 135) & (R['aspect'] <= 315))
              + w['fields'] * (D['fields'] <= 2000))
         TB = (0.3 * (1 - clip01(D['uwr_deer'] / 2000)) + 0.3 * (1 - clip01(D['cut_young'] / 1000))
@@ -2321,6 +2366,14 @@ def grid_scores(ctx, sp):
              + w['water'] * (D['water'] <= 500))
         TB = (0.35 * (1 - clip01(D['uwr_elk'] / 2000)) + 0.3 * (1 - clip01(D['burn'] / 1000))
               + 0.15 * (1 - clip01(D['cut_young'] / 1000)) + 0.19 * clip01(1 - np.abs(R['slope'] - 12) / 15))
+        extra = ~zone_mask(ctx, {'IMA', 'CMA', 'BAFA'}) & ~R['singleproj']
+    elif sp == 'bear':
+        S = (w['cut'] * (D['cut_young'] <= 500) + w['burn'] * (D['burn'] <= 500)
+             + w['south'] * ((R['slope'] >= 10) & (R['aspect'] >= 135) & (R['aspect'] <= 270))
+             + w['riparian'] * ((D['stream'] <= 200) | (D['wetland'] <= 200))
+             + w['quiet'] * ((D['paved'] >= 1000) & (D['city'] >= 2000)))
+        TB = (0.35 * (1 - clip01(np.minimum(D['cut_young'], D['burn']) / 500)) + 0.3 * (1 - clip01(np.minimum(D['stream'], D['wetland']) / 200))
+              + 0.34 * clip01(D['paved'] / 3000))
         extra = ~zone_mask(ctx, {'IMA', 'CMA', 'BAFA'}) & ~R['singleproj']
     elif sp == 'turkey':
         S = w['zone'] * zone_mask(ctx, TURKEY_ZONES) + w['farm'] * (D['fields'] <= 1000) + w['creek'] * (D['stream'] <= 300)
@@ -2999,6 +3052,9 @@ def evidence(rf, s):
         z, lab = _zone_at(rf, x, y)
         if z in DEER_ZONES_LOW:
             items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}): low winter and fall range.', 'pts': w['bec_low']})
+        elif z in DEER_ZONES_COAST:
+            items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}): coast forest, where black tailed deer are among the most '
+                               'common large mammals (95%) and use logged ground often (80%) (lesson: Wet forests).', 'pts': w['bec_low']})
         elif z in DEER_ZONES_MID:
             items.append({'t': f'Habitat zone {BEC_NAMES.get(z, z)} ({lab}).', 'pts': w['bec_ms']})
         sl = float(rf.ctx.dem.sample_xy('slope', x, y)[0])
@@ -3080,6 +3136,29 @@ def evidence(rf, s):
         wn = _water_near(rf, x, y, 500)
         if wn:
             items.append({'t': f"Water: {wn['name'] or 'unnamed ' + wn['kind']} {wn['where']}.", 'pts': w['water']})
+    elif sp == 'bear':
+        w = W['bear']
+        c = _cut_near(rf, x, y, 500)
+        if c:
+            items.append({'t': f"Cutblock harvested {c['year']} ({c['age']} years old), {c['where']}: cutblocks and logging road edges green up "
+                               "first in spring (65%) and grow berries for the fall feed (lesson: Black bear).", 'pts': w['cut']})
+        b = _burn_near(rf, x, y, 500)
+        if b:
+            items.append({'t': f"Burn from {b['year']} (fire {b['fire']}), {b['where']}: burned areas are spring bear food (90%) and huckleberry "
+                               "grows in old burns (80%) (lessons: Black bear Masterclass 5, Habitat tour).", 'pts': w['burn']})
+        sl = float(ctx.dem.sample_xy('slope', x, y)[0])
+        a = float(ctx.dem.sample_xy('aspect', x, y, order=0)[0])
+        if sl >= 10 and 135 <= a <= 270:
+            items.append({'t': f'{compass8(a)} facing slope, {sl:.0f} degrees: grassy south facing slopes are spring bear food (90%, lesson: '
+                               'Black bear Masterclass 5).', 'pts': w['south']})
+        wn = _water_near(rf, x, y, 200)
+        if wn and wn['kind'] in ('creek', 'wetland'):
+            items.append({'t': f"{wn['name'] or 'Unnamed ' + wn['kind']} {wn['where']}: stream sides and skunk cabbage swamps are spring food, "
+                               "and bears forage on berries and spawning fish in fall (90%, lesson: Black bear Masterclass 5).", 'pts': w['riparian']})
+        r, c_ = ctx.grid.rc(x, y)
+        if ctx.D['paved'][r, c_] >= 1000 and ctx.D['city'][r, c_] >= 2000:
+            items.append({'t': '1 km or more from pavement and 2 km from a town: bears near people feed more at night (75%, lesson: '
+                               'Black bear Masterclass 6).', 'pts': w['quiet']})
     elif sp == 'turkey':
         w = W['turkey']
         el = float(rf.ctx.dem.sample_xy('elev', x, y)[0])
@@ -3378,6 +3457,220 @@ def pressure(rf, s):
     return 'average', 'No town, pavement or rec site within 1 km and not behind a closure (estimate).'
 
 
+# ---------------------------------------------------------------- popularity (estimate) and party tags (Tip)
+# Popularity = (a) hunter days per km2 in the spot's MU (data/harvest/bc-harvest.json, Big Game Harvest Statistics,
+# resident and non resident days, mean of the years listed, for the spot's species where the survey covers it, else all
+# big game) plus (b) access from pressure() (busier, average, quieter, remote). My pick, certainty 50 (estimate).
+POP_CERT = 50
+POP_SP = {'deer': ('mule deer', 'white tailed deer'), 'moose': ('moose',), 'elk': ('elk',), 'bear': ('black bear',)}
+POP_LABEL = {'popular': 'Popular (more hunters)', 'quiet': 'Less popular (quieter)'}
+_POP = {}
+
+
+def load_pop(cache):
+    """{group: {mu: (days per km2, class 'high' | 'mid' | 'low', days per year)}} for groups in POP_SP plus 'all'."""
+    if _POP:
+        return _POP
+    bc = clean_bc(cache)
+    g, p, _ = bc['mu']
+    area = {}
+    for gi, pi in zip(g, p):
+        area[pi['MU']] = area.get(pi['MU'], 0.0) + float(shapely.area(gi)) / 1e6
+    H = json.load(open(ROOT / 'data' / 'harvest' / 'bc-harvest.json'))
+    groups = dict(POP_SP, all=None)
+    for k, sps in groups.items():
+        per = {}   # mu -> year -> days
+        for r in H['rows']:
+            if not r.get('mu') or r.get('days') is None or (sps and r['species'] not in sps):
+                continue
+            per.setdefault(r['mu'], {}).setdefault(r['year'], 0)
+            per[r['mu']][r['year']] += r['days']
+        dens = {mu: (sum(v.values()) / len(v)) / area[mu] for mu, v in per.items() if area.get(mu)}
+        vals = sorted(dens.values())
+        if not vals:
+            continue
+        t1, t2 = vals[len(vals) // 3], vals[2 * len(vals) // 3]
+        _POP[k] = {mu: (round(d, 3), 'high' if d >= t2 else 'mid' if d >= t1 else 'low',
+                        round(sum(per[mu].values()) / len(per[mu]))) for mu, d in dens.items()}
+        _POP[k + ':cut'] = (round(t1, 3), round(t2, 3))
+    _POP['_meta'] = {'source': H['source'], 'url': H['url'], 'years': H['years'], 'checked': H['checked']}
+    return _POP
+
+
+def popularity(cache, p):
+    """Popularity class for spot properties p (needs mu, primary, pressure). Returns dict for the spot."""
+    P = load_pop(cache)
+    sp = p.get('primary')
+    grp = sp if sp in POP_SP and p.get('mu') in P.get(sp, {}) else 'all'
+    row = P.get(grp, {}).get(p.get('mu'))
+    busy = p.get('pressure') or 'average'
+    acc = {'busier': 2, 'average': 1, 'quieter': 0, 'remote': 0}.get(busy, 1)
+    who = ' and '.join(POP_SP[grp]) if grp in POP_SP else 'all big game'
+    yrs = P['_meta']['years']
+    if row:
+        dens, cls, days = row
+        mu_pts = {'high': 2, 'mid': 1, 'low': 0}[cls]
+        mu_txt = (f"MU {p['mu']}: about {fmt_int(days)} hunter days a year for {who} ({yrs[0]} to {yrs[-1]} mean), "
+                  f"{dens:.2f} days per square km, {'top' if cls == 'high' else 'middle' if cls == 'mid' else 'bottom'} third of BC MUs")
+    else:
+        mu_pts, cls = 1, None
+        mu_txt = f"MU {p.get('mu') or 'unknown'}: no hunter day numbers in the harvest survey, counted as average"
+    acc_txt = {'busier': 'close to pavement, a town or a rec site', 'average': 'average access',
+               'quieter': 'a long walk from parking', 'remote': 'more than 5 km from a drivable road'}.get(busy, 'average access')
+    pop = 'popular' if busy != 'remote' and mu_pts + acc >= 3 else 'quiet'
+    why = f"{POP_LABEL[pop]}: {mu_txt}; access: {acc_txt}. Estimate, about {POP_CERT}% sure (my pick)."
+    return {'pop': pop, 'popLabel': POP_LABEL[pop], 'popWhy': why, 'popCert': POP_CERT, 'muDays': cls}
+
+
+def party_tags(p):
+    """Tip tags from the app's lessons (Hunting with a partner, Bush safety). Only for hunting spots, never camps."""
+    if p.get('primary') == 'camp':
+        return []
+    out = []
+    walk = float(p.get('walkKm') or 0)
+    climb = float(p.get('climbM') or 0)
+    cat = p.get('category')
+    ev = ' '.join(e.get('t', '') for e in p.get('evidence') or [])
+    if p.get('pop') == 'quiet' and 1.0 <= walk <= 2.0:
+        out.append({'k': 'beginner', 'label': 'Beginner friendly',
+                    'why': f'Quieter spot only {walk:.1f} km from the parking: fewer hunters, short walk back (Tip, estimate).'})
+    if cat in ('drive', 'walk', 'atv') and re.search(r'Cutblock|Burn', ev) and float(p.get('slope') or 0) <= 25:
+        out.append({'k': 'two', 'label': 'Good for 2',
+                    'why': 'Cover edge here (cutblock or burn): one hunter sits at a crossing or glasses, the other walks the edge slowly '
+                           'with the wind at their back toward the stander. Agree zones of fire, a meeting point and a time at the truck '
+                           '(Tip, lesson: Hunting with a partner). Pushes are on foot only (99%, synopsis page 11, item 25).'})
+    if walk <= 1.0 and climb <= 100 and cat != 'backcountry':
+        out.append({'k': 'solo', 'label': 'Good solo',
+                    'why': f'Short pack out: {walk:.1f} km and about {fmt_int(climb)} m of climb from the parking (Tip). '
+                           'Cell coverage is not in the data: leave a trip plan and carry SOS or a satellite messenger '
+                           '(lesson: Bush safety).'})
+    return out
+
+
+BTD_NOTE = ('Deer here are black tailed deer, the coast form of mule deer: the synopsis calls them "mule (black-tailed) deer" '
+            '(99%, Rule Book: Region 2 Lower Mainland).')
+CACHE = [None]
+
+
+def apply_extras(p):
+    """Popularity, party tags and the Region 2 deer note on full spot properties (in place). Safe to run twice."""
+    if p.get('primary') != 'camp':
+        p.update(popularity(CACHE[0], p))
+    p['tags'] = party_tags(p)
+    if p.get('region') == '2' and 'deer' in (p.get('species') or []) and not any(e.get('t') == BTD_NOTE for e in p.get('evidence') or []):
+        p.setdefault('evidence', []).insert(0, {'t': BTD_NOTE, 'pts': 0})
+    return p
+
+
+def step_pop(cache, areas):
+    """Add popularity and tags to already built spot files (no download, no rescoring)."""
+    CACHE[0] = cache
+    for a in areas:
+        out = OUT_SPOTS / a
+        if not (out / 'index.geojson').exists():
+            continue
+        det = {}
+        for f in sorted((out / 'detail').glob('*.json')):
+            d = json.load(open(f))
+            for p in d.values():
+                apply_extras(p)
+            det[f] = d
+            f.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        byid = {k: v for d in det.values() for k, v in d.items()}
+        fc = json.load(open(out / 'index.geojson'))
+        for ft in fc['features']:
+            q = byid.get(ft['properties'].get('id'))
+            if q:
+                ft['properties'].update(index_extra(q))
+        write_fc(out / 'index.geojson', fc['features'])
+        log(f'pop {a}: {len(byid)} spots, popular {sum(1 for v in byid.values() if v.get("pop") == "popular")}, '
+            f'quiet {sum(1 for v in byid.values() if v.get("pop") == "quiet")}')
+
+
+# Size budget for the province wide areas (owner: about 40 MB added for all of BC): keep the best ranked spots per species
+# and access type, no route lines, and leave out fields the app can rebuild (map links, monthsKey, score label).
+TRIM_KEEP = {'deer': 6, 'moose': 5, 'duck': 3, 'grouse': 3, 'camp': 4, 'bear': 4, 'elk': 4, 'quail': 3, 'turkey': 3}
+TRIM_DROP = ('gmaps', 'gdir', 'apple', 'monthsKey', 'scoreLabel')
+
+
+def step_trim(cache, areas):
+    import shutil
+    for a in areas:
+        out = OUT_SPOTS / a
+        if len(a) == 1 or not (out / 'meta.json').exists():
+            continue   # the hand made areas A to G keep everything
+        det = {}
+        for f in (out / 'detail').glob('*.json'):
+            det.update(json.load(open(f)))
+        n0 = len(det)
+        keep = {k: v for k, v in det.items() if v.get('rank', 1) <= TRIM_KEEP.get(v.get('primary'), 3)}
+        for v in keep.values():
+            for k in TRIM_DROP:
+                v.pop(k, None)
+        idx = json.load(open(out / 'index.geojson'))['features']
+        where = {f_['properties']['id']: f_['geometry'] for f_ in idx}
+        feats = [{'type': 'Feature', 'properties': v, 'geometry': where[k]} for k, v in keep.items() if k in where]
+        if (out / 'routes').exists():
+            shutil.rmtree(out / 'routes')
+        sizes, tiles = write_spot_tiles(out, feats, [])
+        cf = out / 'camps.geojson'
+        if cf.exists():
+            cs = json.load(open(cf))['features']
+            cs = [c for c in cs if c['properties']['id'] in keep or any(s in keep for s in c['properties'].get('spotIds') or [])
+                  and c['properties'].get('kind') == 'Backcountry camp']
+            for c in cs:
+                c['properties']['spotIds'] = [s for s in c['properties'].get('spotIds') or [] if s in keep]
+            sizes['camps.geojson'] = write_fc(cf, cs)
+        meta = json.load(open(out / 'meta.json'))
+        n0 = (meta.get('trim') or {}).get('before', n0)   # a second trim keeps the count from before the first
+        meta.update(total=len(feats), routes=0, bytes=sizes, tiles=tiles,
+                    trim={'keptPerSpeciesAndAccess': TRIM_KEEP, 'before': n0, 'after': len(feats),
+                          'note': 'Size budget: best ranked spots kept per species and access type; route lines and map link fields left out.'})
+        json.dump(meta, open(out / 'meta.json', 'w'), indent=1, ensure_ascii=False)
+        log(f'trim {a}: {n0} -> {len(feats)} spots, {sum(v for v in sizes.values() if isinstance(v, int)) / 1e6:.2f} MB')
+
+
+def step_spotsman(cache, areas):
+    """Update only the spots and routes manifest entries (areas, detail tiles, route tiles, bytes, date) from
+    data/spots/<area>/meta.json, plus areaBoxes and areaNames. Other layers are left as they are (safe while others edit)."""
+    mp = OUT_LAYERS / 'manifest.json'
+    man = json.load(open(mp))
+    have = [a for a in AREAS if (OUT_SPOTS / a / 'meta.json').exists() and (OUT_SPOTS / a / 'index.geojson').exists()]
+    for l in man['layers']:
+        if l.get('id') == 'spots':
+            l['areas'] = have
+            l['detailTiles'] = {a: json.load(open(OUT_SPOTS / a / 'meta.json'))['tiles']['detail'] for a in have}
+            l['bytes'] = sum(f.stat().st_size for a in have for f in (OUT_SPOTS / a).rglob('*') if f.is_file() and 'routes' not in f.parts)
+            l['dataDate'] = TODAY
+            l['about'] = ('Candidate spots scored from open data (my pick): drive, ATV (all terrain vehicle), walk, backcountry and camp. '
+                          'Popular (more hunters) and Less popular (quieter) are estimates. Candidate, scout it first.')
+        if l.get('id') == 'routes':
+            files = []
+            for a in have:
+                for k, b in json.load(open(OUT_SPOTS / a / 'meta.json'))['tiles'].get('routes', {}).items():
+                    files.append({'area': a, 'file': f'data/spots/{a}/routes/{k}.geojson', 'bbox': b})
+            l['files'] = files
+            l['areas'] = sorted({f['area'] for f in files}, key=list(AREAS).index)
+            l['bytes'] = sum((ROOT / f['file']).stat().st_size for f in files if (ROOT / f['file']).exists())
+            l['dataDate'] = TODAY
+    man['areaBoxes'] = {a: list(v['box']) for a, v in AREAS.items()}
+    man['areaNames'] = {a: v['name'] for a, v in AREAS.items()}
+    tmp = mp.with_suffix('.tmp')
+    json.dump(man, open(tmp, 'w'), indent=1, ensure_ascii=False)
+    tmp.replace(mp)
+    log(f'spotsman: spots in {len(have)} areas')
+
+
+def index_extra(p):
+    """Index fields for the map filters: pop ('popular' | 'quiet') and tg (tag keys)."""
+    o = {}
+    if p.get('pop'):
+        o['pop'] = p['pop']
+    if p.get('tags'):
+        o['tg'] = [t['k'] for t in p['tags']]
+    return o
+
+
 # ---------------------------------------------------------------- plan text (short lines, under 160 words)
 def words(t):
     return len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'.,:%/()]*", t))
@@ -3467,6 +3760,9 @@ def make_plan(rf, s):
         feat = s.get('watch') or 'the open grass slopes and burn edges'
         t = (f"Hunt: elk, {when}. Glass {feat} at first and last light; in September listen for bugling bulls. "
              "Keep the wind in your face (Tip).")
+    elif sp == 'bear':
+        t = (f"Hunt: black bear, {when}. Glass berry slopes, cutblocks and road edges at dawn and the last 2 hours of light, "
+             "wind in your face (Tip). A bear under 2 years old and any bear with it are closed (99%, synopsis page 11).")
     elif sp == 'turkey':
         t = (f"Hunt: wild turkey, {when}. Find roost trees by the creek, set up before first light, call softly. "
              "Never bait: unlawful in Region 4 (Tip).")
@@ -3798,6 +4094,7 @@ def spot_feature(s, sid):
         props['recDirections'] = s['recDirections']
     if s.get('bcCamp'):
         props['camp'] = list(ll(s['bcCamp']['x'], s['bcCamp']['y']))
+    apply_extras(props)
     return {'type': 'Feature', 'properties': props, 'geometry': {'type': 'Point', 'coordinates': [lon, lat]}}
 
 
@@ -3841,6 +4138,7 @@ def write_spot_tiles(out, feats, routes):
         p = f['properties']
         lon, lat = (round(c, 5) for c in f['geometry']['coordinates'][:2])
         ip = {k2: p[k] for k, k2 in INDEX_KEYS if p.get(k) not in (None, '', [])}
+        ip.update(index_extra(p))
         idx.append({'type': 'Feature', 'properties': ip, 'geometry': {'type': 'Point', 'coordinates': [lon, lat]}})
         k = tile_key(lon, lat)
         detail.setdefault(k, {})[p['id']] = p
@@ -3883,7 +4181,8 @@ def step_spots(cache, areas):
         rf = Refiner(ctx, dates)
         stats = {}
         cands = []
-        for sp in (('deer', 'moose') + (('quail',) if a in QUAIL_AREAS else ()) + (('elk',) if a in ELK_AREAS else ())
+        for sp in (('deer', 'moose') + (('bear',) if a not in NO_BEAR_AREAS and cap_for(a, 'bear') else ())
+                   + (('quail',) if a in QUAIL_AREAS else ()) + (('elk',) if a in ELK_AREAS else ())
                    + (('turkey',) if a in TURKEY_AREAS else ())):
             c = grid_candidates(ctx, sp, stats)
             log(f'  {sp}: {len(c)} grid candidates')
@@ -4578,16 +4877,10 @@ def step_manifest(cache, areas):
         rt.update({'files': rt_files, 'areas': sp_areas, 'licence': OGL, 'dataDate': rt_date, 'bytes': rt_bytes})
         out.append(rt)
         made.add('routes')
-    add({'id': 'camps', 'group': 'Access', 'kind': 'camps', 'label': 'Camps (rec sites and candidates)', 'type': 'circle', 'minzoom': 9,
-         'paint': {'circle-color': ['match', ['get', 'kind'], 'Rec site', '#2e7d32', 'Backcountry camp', '#5e35b1', '#8bc34a'],
-                   'circle-radius': 5, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 1.5},
-         'popup': [['Name', 'name'], ['Kind', 'kind'], ['Campsites', 'campsites'], ['Water', 'water'], ['Note', 'note']],
-         'labelField': 'name', 'source': 'FTEN_REC_SITE_POINTS_SVW plus Crown land camp candidates (Hunt Mentor spot pipeline)',
-         'about': 'Official rec sites and Crown land camp candidates (flat, near water, not private, park or reserve). Scout it first.',
-         'cert': 60, 'legal': False}, spot_rec('camps.geojson'))
+    # 'camps' (rec sites and Crown candidates, areas A to G) is replaced by the BC wide 'camping' layer (scripts/build-camping.py)
     # keep layers the pipeline does not make (hand added), drop the old per area spot ids
     for l in old.get('layers', []):
-        if l.get('id') in made or l.get('id') in ('spots_a', 'routes_a', 'spots_b', 'routes_b', 'spots_c', 'routes_c'):
+        if l.get('id') in made or l.get('id') in ('spots_a', 'routes_a', 'spots_b', 'routes_b', 'spots_c', 'routes_c', 'camps'):
             continue
         if l.get('id') in {s[0] for s in MANIFEST_SPEC}:
             continue   # pipeline layer with no data this run
@@ -4606,7 +4899,7 @@ def step_manifest(cache, areas):
 # ======================================================================================
 # CLI
 # ======================================================================================
-STEP_ORDER = ['fetch', 'dem', 'layers', 'spots', 'migration', 'pack', 'manifest']
+STEP_ORDER = ['fetch', 'dem', 'layers', 'spots', 'pop', 'trim', 'migration', 'pack', 'manifest', 'spotsman']
 
 
 def main():
@@ -4620,6 +4913,7 @@ def main():
     if str(cache).startswith(str(ROOT)):
         sys.exit('cache must be outside the repo')
     cache.mkdir(parents=True, exist_ok=True)
+    CACHE[0] = cache
     areas = [a.strip().upper() for a in args.areas.split(',') if a.strip()]
     steps = STEP_ORDER if args.steps == 'all' else [s.strip() for s in args.steps.split(',')]
     timings = {}

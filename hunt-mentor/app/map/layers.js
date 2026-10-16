@@ -5,9 +5,10 @@
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
 import { withOverrides, guideFor } from './layer-guide.js';
+import { openCamp } from './place-card.js';
 
 const MANIFEST = 'data/layers/manifest.json';
-export const GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Spots', 'My Content'];
+export const GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Camping', 'Spots', 'My Content'];
 const AREA_BOXES = { A: [-121.6, 50.2, -119.4, 51.9], B: [-122.9, 49.0, -121.3, 49.95], C: [-120.1, 49.0, -119.2, 49.7], D: [-121.3, 49.7, -118.6, 50.5], E: [-122.6, 51.2, -120.4, 52.3] };
 const AREA_NAMES = { A: 'Kamloops, North Thompson, Bonaparte, Shuswap west', B: 'Mission, Fraser Valley, Harrison, Hope, Fraser Canyon', C: 'South Okanagan and Similkameen', D: 'Merritt, Nicola and North Okanagan', E: 'Cariboo south: 100 Mile House to Williams Lake', BC: 'Province wide' };
 const LEGAL_GROUPS = ['Land status', 'Hunting', 'Access'];
@@ -401,6 +402,13 @@ export function setSpotCat(c) {
   H.emit('spotfilter', { species: prefs.species || 'all', cat: c });
 }
 
+/** Spot popularity filter (estimate): 'all', 'popular' or 'quiet'. */
+export function setSpotPop(v) {
+  prefs.spotPop = v; savePrefs();
+  for (const st of L.values()) if (st.spot && st.added) refresh(st);
+  H.emit('spotfilter', { species: prefs.species || 'all', cat: prefs.spotCat || 'all', pop: v });
+}
+
 // ---------- taps ----------
 let tapMk = null;
 function tapMarker(ll) {
@@ -416,6 +424,13 @@ export function handleClick(e) {
   if (spotIds.length) {
     const hit = map.queryRenderedFeatures(box, { layers: spotIds });
     if (hit.length) { spots.onHit(H, hit[0], (k) => raw.get(k)); return true; }
+  }
+  // layers with their own detail card (campgrounds: place-card.js)
+  const cardIds = on.filter((s) => !s.spot && s.l.card === 'camp').flatMap((s) => s.mapIds).filter((id) => map.getLayer(id));
+  if (cardIds.length) {
+    const hit = map.queryRenderedFeatures(box, { layers: cardIds }).find((h) => h.properties._hid != null);
+    const r = hit && raw.get(hit.properties._hid);
+    if (r) { openCamp(H, r.st.l, r.f); return true; }
   }
   const ids = on.filter((s) => !s.spot).flatMap((s) => s.mapIds).filter((id) => map.getLayer(id));
   if (!ids.length) return false;
@@ -607,6 +622,7 @@ function wirePanel(body) {
     if (b.dataset.month != null) { setMonth(+b.dataset.month); body.querySelectorAll('[data-month]').forEach((x) => x.classList.toggle('on', x === b)); refreshRows(); return; }
     if (b.dataset.sp) { setSpecies(b.dataset.sp); body.querySelectorAll('[data-sp]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.cat) { setSpotCat(b.dataset.cat); body.querySelectorAll('[data-cat]').forEach((x) => x.classList.toggle('on', x === b)); return; }
+    if (b.dataset.pop) { setSpotPop(b.dataset.pop); body.querySelectorAll('[data-pop]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.l === 'info') openInfo(b.closest('.hmm-lrow').dataset.id);
     if (b.dataset.guide != null) openGuide();
   });
@@ -648,7 +664,7 @@ function openInfo(id) {
   body.querySelector('[data-back]').onclick = () => openPanel();
   body.querySelector('[data-all]').onclick = () => openGuide(l.group);
 }
-const GUIDE_GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Spots'];
+const GUIDE_GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Camping', 'Spots'];
 const gslug = (g) => `hmg-${String(g).toLowerCase().replace(/[^a-z]+/g, '-')}`;
 /** The whole guide, every layer grouped. Opens at a group when given. */
 export async function openGuide(group) {
