@@ -1720,5 +1720,26 @@
   "card": true,
   "cardBack": "Band tailed pigeon: yellow bill and feet, white neck crescent. Not the town rock pigeon.",
   "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-tundra-swan",
+  "species": "Tundra swan",
+  "caption": "Tundra swan on calm water. All white, long straight neck, black bill; this bird shows a small yellow spot in front of the eye. Swans have no open season.",
+  "author": "Dominic Sherony",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tundra_Swan_(Cygnus_columbianus)_(8571142484).jpg",
+  "card": true,
+  "cardBack": "Tundra swan: all white, black bill, far bigger than a snow goose, no black wing tips. Never legal.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-canada-goose-goslings",
+  "species": "Canada goose",
+  "caption": "Canada goose parent with goslings on a lake shore in spring. By fall the young wear the same black neck and white chinstrap.",
+  "author": "The High Fin Sperm Whale",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canada_Goose_(Branta_canadensis)_with_goslings.JPG"
  }
 ]

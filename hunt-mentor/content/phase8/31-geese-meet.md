@@ -49,6 +49,9 @@ checked: 2026-10-11
 ```diagram mgs-sex-age
 ```
 
+```photo bd-canada-goose-goslings A parent with goslings in spring. By fall the young look like this adult.
+```
+
 - Same feathers. The gander is a bit bigger (75%).
 - Watch behaviour: the gander guards and leads (80%).
 
@@ -165,6 +168,7 @@ bd-snow-ross-flight | Snow and Ross's lifting off together. Hard to split in the
 g-trumpeter-swan | Trumpeter swan: huge, all white, black bill. Protected.
 g-tundra-swans-flight | Tundra swans: white wings, no black tips.
 bd-snow-geese-flight | Snow geese overhead: black wing tips. Legal.
+bd-tundra-swan | Tundra swan: long neck, black bill, this one with a yellow spot by the eye. Protected.
 brant | Brant: small dark sea goose, white necklace.
 ```
 
