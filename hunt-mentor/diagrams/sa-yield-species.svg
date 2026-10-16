@@ -1,4 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of boneless meat, a rough guide. Average mule deer buck, Wyoming study: about 25 kilograms. A 90 kilogram black bear: about 30 to 40 kilograms once the fat is trimmed. Cow elk: about 65 to 70. Spike fork bull moose: about 75 to 90. Mature bull elk: about 90 to 100. All but the deer are assumptions worked out from rules of thumb.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Boneless meat, rough guide</text><text x="8" y="74.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Mule deer buck</text><rect x="140" y="56" width="38.2" height="26" rx="4" fill="#8b5a2b"/><text x="183.1818181818182" y="74.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">about 25 kg</text><text x="8" y="116.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Black bear 90 kg</text><rect x="140" y="98" width="45.8" height="26" rx="4" fill="#1d1d1b"/><rect x="185.8" y="98" width="15.3" height="26" rx="4" fill="#1d1d1b" opacity=".45"/><text x="206.0909090909091" y="116.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">30 to 40 kg</text><text x="8" y="158.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Cow elk</text><rect x="140" y="140" width="99.3" height="26" rx="4" fill="#c8a26b"/><rect x="239.3" y="140" width="7.6" height="26" rx="4" fill="#c8a26b" opacity=".45"/><text x="251.9090909090909" y="158.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">65 to 70 kg</text><text x="8" y="200.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Spike fork moose</text><rect x="140" y="182" width="114.5" height="26" rx="4" fill="#3b2a1c"/><rect x="254.5" y="182" width="22.9" height="26" rx="4" fill="#3b2a1c" opacity=".45"/><text x="282.4545454545455" y="200.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">75 to 90 kg</text><text x="8" y="242.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Mature bull elk</text><rect x="140" y="224" width="137.5" height="26" rx="4" fill="#c8a26b"/><rect x="277.5" y="224" width="15.3" height="26" rx="4" fill="#c8a26b" opacity=".45"/><text x="297.72727272727275" y="242.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">90 to 100 kg</text><text x="200" y="288" font-size="14" fill="#6b4f35" text-anchor="middle">Deer from a study (70%). Others: rough math (Tip).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" font-family="sans-serif" role="img" aria-label="Bar chart of boneless meat, a rough guide, in kilograms. Average mule deer buck, Wyoming study: about 25 kilograms. Black bear of 90 kilograms: 30 to 40. Cow elk: 65 to 70. Spike fork bull moose: 75 to 90. Mature bull elk: 90 to 100. Deer figure from a study, 70 percent; the others are rough math, Tip. Rule of thumb: boneless meat is about a third of live weight.">
+<rect width="400" height="362" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Boneless meat, rough guide</text>
+<line x1="152.0" y1="44" x2="152.0" y2="282" stroke="#e2dccb" stroke-width="1.5"/>
+<text x="152.0" y="300" font-size="14" fill="#5d6152" text-anchor="start">0</text>
+<line x1="210.0" y1="44" x2="210.0" y2="282" stroke="#e2dccb" stroke-width="1.5"/>
+<text x="210.0" y="300" font-size="14" fill="#5d6152" text-anchor="middle">25</text>
+<line x1="268.0" y1="44" x2="268.0" y2="282" stroke="#e2dccb" stroke-width="1.5"/>
+<text x="268.0" y="300" font-size="14" fill="#5d6152" text-anchor="middle">50</text>
+<line x1="326.0" y1="44" x2="326.0" y2="282" stroke="#e2dccb" stroke-width="1.5"/>
+<text x="326.0" y="300" font-size="14" fill="#5d6152" text-anchor="middle">75</text>
+<line x1="384.0" y1="44" x2="384.0" y2="282" stroke="#e2dccb" stroke-width="1.5"/>
+<text x="384.0" y="300" font-size="14" fill="#5d6152" text-anchor="end">100 kg</text>
+<g data-tip="Mule deer buck|Average field dressed buck in a Wyoming study: about 52 kg (114 lb), giving about 25 kg (55 lb) of boneless meat (70%).">
+<rect x="6" y="48" width="388" height="42" rx="6" fill="#f4eedf"/>
+<text x="12" y="66" font-size="15" font-weight="bold" fill="#23261f">Mule deer buck</text>
+<text x="12" y="84" font-size="15" font-weight="bold" fill="#c2410c">about 25 kg</text>
+<rect x="152" y="58" width="55.7" height="22" rx="4" fill="#8b5a2b"/>
+<rect x="207.7" y="58" width="4.6" height="22" rx="4" fill="#8b5a2b" opacity=".45"/>
+</g>
+<g data-tip="Black bear|A 90 kg bear gives roughly 30 to 40 kg of boneless meat once the fat is trimmed (assumption, Tip). Cook every cut to 71 °C (160 °F) (80%).">
+<rect x="6" y="94" width="388" height="42" rx="6" fill="#fffaf0"/>
+<text x="12" y="112" font-size="15" font-weight="bold" fill="#23261f">Black bear, 90 kg</text>
+<text x="12" y="130" font-size="15" font-weight="bold" fill="#c2410c">30 to 40 kg</text>
+<rect x="152" y="104" width="69.6" height="22" rx="4" fill="#2b2b2b"/>
+<rect x="221.6" y="104" width="23.2" height="22" rx="4" fill="#2b2b2b" opacity=".45"/>
+</g>
+<g data-tip="Cow elk|Cows weigh up to about 225 kg (70%). Rough math from the bull figures gives about 65 to 70 kg boneless (assumption, Tip).">
+<rect x="6" y="140" width="388" height="42" rx="6" fill="#f4eedf"/>
+<text x="12" y="158" font-size="15" font-weight="bold" fill="#23261f">Cow elk</text>
+<text x="12" y="176" font-size="15" font-weight="bold" fill="#c2410c">65 to 70 kg</text>
+<rect x="152" y="150" width="150.8" height="22" rx="4" fill="#c7a26a"/>
+<rect x="302.8" y="150" width="11.6" height="22" rx="4" fill="#c7a26a" opacity=".45"/>
+</g>
+<g data-tip="Spike fork moose|About 162 kg dressed in a BC Interior study (75%). Boneless meat about 35 to 45% of live weight, so roughly 75 to 90 kg (assumption, Tip).">
+<rect x="6" y="186" width="388" height="42" rx="6" fill="#fffaf0"/>
+<text x="12" y="204" font-size="15" font-weight="bold" fill="#23261f">Spike fork moose</text>
+<text x="12" y="222" font-size="15" font-weight="bold" fill="#c2410c">75 to 90 kg</text>
+<rect x="152" y="196" width="174.0" height="22" rx="4" fill="#4a3426"/>
+<rect x="326.0" y="196" width="34.8" height="22" rx="4" fill="#4a3426" opacity=".45"/>
+</g>
+<g data-tip="Mature bull elk|Bulls range up to about 320 to 340 kg (70%). About 30% of live weight is boneless meat: roughly 90 to 100 kg (assumption, Tip).">
+<rect x="6" y="232" width="388" height="42" rx="6" fill="#f4eedf"/>
+<text x="12" y="250" font-size="15" font-weight="bold" fill="#23261f">Mature bull elk</text>
+<text x="12" y="268" font-size="15" font-weight="bold" fill="#c2410c">90 to 100 kg</text>
+<rect x="152" y="242" width="208.8" height="22" rx="4" fill="#c7a26a"/>
+<rect x="360.8" y="242" width="23.2" height="22" rx="4" fill="#c7a26a" opacity=".45"/>
+</g>
+<g data-tip="Rule of thumb|Boneless meat is about 48% of field dressed weight, or about a third of live weight (70%, deer studies).">
+<rect x="8" y="312" width="384" height="42" rx="10" fill="#2f3a2b"/>
+<text x="200" y="338" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">About <tspan fill="#f6b98f">1/3</tspan> of live weight. Deer: study. Rest: Tip.</text>
+</g>
 </svg>

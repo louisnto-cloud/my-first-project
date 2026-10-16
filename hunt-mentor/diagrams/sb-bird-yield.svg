@@ -6,42 +6,56 @@
 <line x1="183.1" y1="42" x2="183.1" y2="318" stroke="#ddd6c6" stroke-width="1"/>
 <line x1="267.6" y1="42" x2="267.6" y2="318" stroke="#ddd6c6" stroke-width="1"/>
 <line x1="352.2" y1="42" x2="352.2" y2="318" stroke="#ddd6c6" stroke-width="1"/>
+<g data-tip="Quail|About 60 to 80 g of meat: one per person as a starter (Tip, 60%). Pluck or skin, gut with a thumb (Tip).">
 <text x="14" y="58" font-size="16" font-weight="bold" fill="#2f3a2b">Quail</text>
 <text x="386" y="58" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">60 to 80</text>
 <rect x="14" y="64" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="64" width="20.3" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <rect x="34.3" y="64" width="6.8" height="14" rx="3" fill="#e8590c"/>
+</g>
+<g data-tip="Chukar and partridge|About 150 to 250 g of meat per bird. Skin and breast, keep the legs (Tip, 60%).">
 <text x="14" y="104" font-size="16" font-weight="bold" fill="#2f3a2b">Chukar, partridge</text>
 <text x="386" y="104" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">150 to 250</text>
 <rect x="14" y="110" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="110" width="50.7" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <rect x="64.7" y="110" width="33.8" height="14" rx="3" fill="#e8590c"/>
+</g>
+<g data-tip="Ruffed grouse|A bird of about 500 g gives roughly 200 to 280 g of boned meat (60%). White, dry meat: do not overcook (Tip).">
 <text x="14" y="150" font-size="16" font-weight="bold" fill="#2f3a2b">Ruffed grouse</text>
 <text x="386" y="150" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">200 to 280</text>
 <rect x="14" y="156" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="156" width="67.6" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <rect x="81.6" y="156" width="27.1" height="14" rx="3" fill="#e8590c"/>
+</g>
+<g data-tip="Mallard|About 1.25 kg live (80%). Two breast fillets plus legs, roughly 350 to 450 g of meat (Tip).">
 <text x="14" y="196" font-size="16" font-weight="bold" fill="#2f3a2b">Mallard</text>
 <text x="386" y="196" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">350 to 450</text>
 <rect x="14" y="202" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="202" width="118.4" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <rect x="132.4" y="202" width="33.8" height="14" rx="3" fill="#e8590c"/>
+</g>
+<g data-tip="Pheasant cock|About 450 to 600 g of meat. Hang a day in the cold, pluck and roast whole, or breast out and braise the legs (Tip, 60%).">
 <text x="14" y="242" font-size="16" font-weight="bold" fill="#2f3a2b">Pheasant cock</text>
 <text x="386" y="242" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">450 to 600</text>
 <rect x="14" y="248" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="248" width="152.2" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <rect x="166.2" y="248" width="50.7" height="14" rx="3" fill="#e8590c"/>
+</g>
+<g data-tip="Canada goose|A mature bird of about 3.6 kg gives roughly 1 kg of boned breast; each breast about 280 to 450 g (60%). Keep the legs and slow cook them (Tip).">
 <text x="14" y="288" font-size="16" font-weight="bold" fill="#2f3a2b">Canada goose, breast</text>
 <text x="386" y="288" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">about 1 kg</text>
 <rect x="14" y="294" width="372" height="14" rx="3" fill="#efe8d6"/>
 <rect x="14" y="294" width="338.2" height="14" rx="3" fill="#8b5a2b" opacity=".35"/>
 <circle cx="352.2" cy="301" r="8" fill="#e8590c"/>
+</g>
 <text x="14" y="330" font-size="14" fill="#6b5b4b">0 g</text>
 <text x="98.5" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">250 g</text>
 <text x="183.1" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">500 g</text>
 <text x="267.6" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">750 g</text>
 <text x="352.2" y="330" font-size="14" fill="#6b5b4b" text-anchor="middle">1 kg</text>
+<g data-tip="Dusky grouse and teal|A dusky grouse gives about twice a ruffed grouse. A teal (about 0.4 kg) gives a single serving (Tip).">
 <rect x="8" y="342" width="384" height="52" rx="8" fill="#f4eedf"/>
 <text x="20" y="363" font-size="16" fill="#2f3a2b">Dusky grouse: about twice a ruffed grouse</text>
 <text x="20" y="384" font-size="16" fill="#2f3a2b">Teal: one serving</text>
+</g>
 </svg>
