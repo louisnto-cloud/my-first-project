@@ -106,7 +106,35 @@ export const styleFor = (l) => STYLE[keyFor(l)] || null;
 export const guideFor = (l) => GUIDE[keyFor(l)] || null;
 
 /** Manifest layer with the colour and text overrides applied (the manifest object is not changed). */
+// Owner rule 2026-10-16: every layer a different colour. Old colour to new colour per layer (paint, outline, hatch and legend).
+// Land: private orange, park dark green, reserve yellow, WMA teal, town grey, no shooting red/magenta/pink, Crown greens (crown layers).
+// Hunting: MU black, LEH navy. Access: closures purple, closure routes blue, forest roads brown, rec trails dark cyan.
+// Habitat: each animal its own colour (winter range strong, season range light of the same), burns charcoal, cutblocks cyan, water blues, wetlands lavender.
+const RECOLOUR = {
+  city_limits: { '#e53935': '#90a4ae', '#c62828': '#455a64' },
+  no_hunting: { '#ef6c00': '#c51162', '#e65100': '#c51162', '#f9a825': '#f06292', '#c9a100': '#ec407a', '#d32f2f': '#d50000', '#b71c1c': '#b71c1c' },
+  leh: { '#4e342e': '#283593', '#3e2723': '#1a237e', '#f9a825': '#3949ab', '#f57f17': '#1a237e' },
+  rec_trails: { '#6a1b9a': '#00838f' },
+  uwr_mule_deer: { '#b8860b': '#6d4c41' }, season_mule_deer: { '#b8860b': '#bcaaa4' },
+  uwr_wt_deer: { '#a1887f': '#f4511e' }, season_wt_deer: { '#a1887f': '#ffab91' },
+  uwr_moose: { '#6d4c41': '#3949ab' }, season_moose: { '#6d4c41': '#9fa8da' },
+  uwr_elk: { '#8d6e63': '#9e9d24' }, season_elk: { '#8d6e63': '#e6ee9c' },
+  uwr_sheep: { '#bcaaa4': '#00897b' }, season_sheep: { '#bcaaa4': '#80cbc4' },
+  uwr_goat: { '#90a4ae': '#5e35b1' },
+  burns: { '#9e9e9e': '#bdbdbd', '#ff9800': '#757575', '#f4511e': '#212121' },
+  cutblocks: { '#7cb342': '#00acc1', '#dce775': '#80deea', '#c5e1a5': '#e0f7fa' },
+  duck_waters: { '#4dd0e1': '#64b5f6' },
+  wetlands: { '#4fc3f7': '#b39ddb' },
+};
+const recolour = (v, map) => (typeof v === 'string' ? (map[v.toLowerCase()] || v) : Array.isArray(v) ? v.map((x) => recolour(x, map)) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, recolour(x, map)])) : v);
 export function withOverrides(l) {
+  const o = withStyle(l), map = RECOLOUR[l.id];
+  if (!map) return o;
+  const r = Object.assign({}, o);
+  for (const k of ['paint', 'outline', 'hatch', 'legend']) if (r[k] != null) r[k] = recolour(r[k], map);
+  return r;
+}
+function withStyle(l) {
   const s = styleFor(l); if (!s) return l;
   const o = Object.assign({}, l);
   if (s.paint) o.paint = Object.assign({}, l.paint || {}, s.paint);
