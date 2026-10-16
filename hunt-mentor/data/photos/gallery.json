@@ -1651,5 +1651,41 @@
   "licence": "Public domain",
   "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
   "source": "https://commons.wikimedia.org/wiki/File:Snow_geese_and_Ross_geese_(6338624060).jpg"
+ },
+ {
+  "id": "bd-merganser-flight",
+  "species": "Common merganser",
+  "caption": "Two common merganser drakes in flight, Chambéry, France. Long, thin and straight: dark head, white body, thin red bill.",
+  "author": "Florian Pépellin",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mergus_merganser_merganser_en_vol_sur_la_Leysse_%C3%A0_Chamb%C3%A9ry_(2019).jpg"
+ },
+ {
+  "id": "bd-hooded-merganser-flight",
+  "species": "Hooded merganser",
+  "caption": "Hooded merganser drake taking off low over the water. Small and fast: white fan on a black head.",
+  "author": "Brocken Inaglory",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_male_Lophodytes_cucullatus_in_flight.jpg"
+ },
+ {
+  "id": "bd-coot-with-ducks",
+  "species": "American coot",
+  "caption": "Union Bay Natural Area pond, Seattle, Washington: dark American coots with white bills mixed with American wigeon. Coots have their own limit.",
+  "author": "Walter Siegmund",
+  "licence": "CC BY 2.5",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Fulica_americana_03500.JPG"
+ },
+ {
+  "id": "bd-wt-ptarmigan-hen-chicks",
+  "species": "White tailed ptarmigan",
+  "caption": "White tailed ptarmigan hen and chicks, North Cascades National Park, Washington, 15 July 2023. Mottled summer coat on alpine rock and snow.",
+  "author": "A. LaValle, U.S. Fish and Wildlife Service Pacific Region",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_White-Tailed_Ptarmigan_and_Two_Chicks_(53058441194).jpg"
  }
 ]

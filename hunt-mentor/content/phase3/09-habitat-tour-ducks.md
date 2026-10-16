@@ -22,6 +22,7 @@ hab-lac-du-bois-potholes | Grassland potholes north of Kamloops. Small, shallow,
 hab-kamloops-pond-farm | Pond, hay fields and cottonwoods near Kamloops. Water, food and shelter close together.
 hab-osoyoos-wetland | Haynes Point wetland on Osoyoos Lake. Reeds and calm water out of the wind.
 mallard-hen | Mallard hen. Mallards use almost any shallow pond.
+bd-coot-with-ducks | A pond in Seattle: dark coots with white bills among wigeon. Not every swimmer is a duck.
 ```
 
 - Shallow water with plants on the edge beats deep, bare water for dabblers (80%).

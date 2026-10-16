@@ -182,6 +182,8 @@ common-merganser-drake | Common merganser drake: white body, green head, thin re
 common-merganser-hen | Common merganser hen: rusty crest, clean white chin.
 hooded-merganser-drake | Hooded merganser drake: white fan crest.
 hooded-merganser-hen | Hooded merganser hen: brown crest.
+bd-merganser-flight | Common mergansers in the air: long, thin, straight.
+bd-hooded-merganser-flight | Hooded merganser drake in the air: small, fast, white fan.
 g-loon | Loon: protected. Dagger bill, sits low.
 g-western-grebe | Western grebe: protected.
 g-horned-grebe | Horned grebe: protected.

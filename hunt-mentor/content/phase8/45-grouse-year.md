@@ -98,6 +98,9 @@ commons-dusky-grouse | A male dusky grouse showing off for a hen.
 - Ruffed: 7 to 12 eggs, hatch usually early June (85%).
 - Chicks leave the nest within a day (85%).
 
+```photo bd-wt-ptarmigan-hen-chicks A white tailed ptarmigan hen with her chicks in July.
+```
+
 ```more nests, eggs and chicks
 - Ruffed grouse: 7 to 12 eggs, incubation 23 to 24 days, hatch usually early June (85%, Hinterland Who's Who). Pennsylvania gives 6 to 16 eggs, about 24 days (75%).
 - Spruce grouse: clutches average 4.8 in Alberta, the Franklin's form (75%). Median hatch there about 29 June (75%). Chicks fly short hops at about 6 days (75%).
