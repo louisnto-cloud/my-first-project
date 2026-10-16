@@ -49,6 +49,9 @@ checked: 2026-10-11
 ```diagram mc-black-bear-cub-timeline
 ```
 
+```photo bg-bb-den
+```
+
 - Cubs born in January or February, about 400 g (90%).
 - Interior bears den about 5 to 7 months (90%).
 
@@ -102,6 +105,9 @@ hab-skunk-cabbage | Skunk cabbage: early spring food on the coast.
 ```diagram sg-berry-calendar
 ```
 
+```photo bg-bb-devils-club
+```
+
 - Berries ripen low first, then higher up (70%).
 - A fall bear may eat up to 20,000 calories a day (70%).
 
@@ -119,6 +125,9 @@ hab-skunk-cabbage | Skunk cabbage: early spring food on the coast.
 ## September to November: fatten, then den
 
 ```diagram mc-black-bear-oct-nov
+```
+
+```photo bg-bb-talus
 ```
 
 - Fall season opens 1 September in most of Region 3 (99%).

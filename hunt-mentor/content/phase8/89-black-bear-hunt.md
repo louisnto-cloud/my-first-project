@@ -86,6 +86,11 @@ mc-black-bear-judge-4 | Shot: broadside, backstop, in range.
 ```diagram mc-black-bear-id-flow
 ```
 
+```gallery
+bg-bb-chest-patch | Head on: tall ears, straight muzzle.
+bg-bb-sitting | Short claws, no hump, tan muzzle.
+```
+
 ## Spot and stalk
 
 ```anim mc-black-bear-stalk Move only when the head is down.

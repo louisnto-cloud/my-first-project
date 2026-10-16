@@ -66,6 +66,11 @@ sa-bid-4 | Claws: short and curved, or long and straight.
 ```diagram mc-black-bear-id-flow
 ```
 
+```gallery
+bg-bb-yoho | Black bear, Yoho, BC: straight face, tall ears.
+bg-bb-brown-quesnel | Brown black bear, Quesnel Lake, BC: no hump.
+```
+
 ## Colour is a trap
 
 ```diagram mc-black-bear-colour-trap
@@ -131,6 +136,11 @@ commons-grizzly-bear | Grizzly: shoulder hump, dished face, short round ears.
 - The target: an adult male, a boar (98%).
 
 ```diagram sa-bear-age
+```
+
+```gallery
+bg-bb-sow-cub-bc | Sow and cub, Christina Lake, BC.
+bg-bb-cubs-tree-bc | Two cubs up a tree. Look for them first.
 ```
 
 ```more the words of the rule and the notice

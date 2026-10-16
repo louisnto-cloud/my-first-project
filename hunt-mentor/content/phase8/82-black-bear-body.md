@@ -25,6 +25,11 @@ checked: 2026-10-11
 ```diagram mc-black-bear-claws
 ```
 
+```gallery
+bg-bb-climbing-claws | Short curved claws: built to climb.
+bg-bb-paws-1909 | Short claws (left) and grizzly claws (right).
+```
+
 - Flat footed (plantigrade), five toes, short curved claws (90%).
 - Built to climb trees, not to dig (90%).
 

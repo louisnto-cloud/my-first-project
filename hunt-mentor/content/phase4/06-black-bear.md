@@ -105,6 +105,11 @@ g-bb-sow-cubs | One family, two colours.
 ```diagram sa-bear-age
 ```
 
+```gallery
+bg-bb-yearling | Yearling: in its second year. Never.
+bg-bb-sow-cub-bc | Sow with a cub, BC. Never.
+```
+
 ```anim sa-bear-watch Watch 5 minutes. Cubs show up late.
 ```
 

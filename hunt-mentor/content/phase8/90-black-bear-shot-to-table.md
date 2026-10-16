@@ -133,6 +133,9 @@ mc-black-bear-skin-4 | Flesh, salt, fold. Never plastic.
 ```diagram mc-black-bear-skull
 ```
 
+```photo bg-bb-skull
+```
+
 - Score = length + width of the cleaned skull (75%).
 - Dry 60 days before official scoring (75%).
 

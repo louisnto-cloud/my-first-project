@@ -349,5 +349,113 @@
   "licence": "Public domain",
   "licenceUrl": "",
   "source": "https://commons.wikimedia.org/wiki/File:Black_Bear_Yearling.JPG"
+ },
+ {
+  "id": "bg-bb-cubs-tree-bc",
+  "species": "Black bear",
+  "caption": "Spot the cubs: two small black shapes up the trunk. Garibaldi Park, BC.",
+  "author": "Clayoquot",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_cubs_climbing.JPG"
+ },
+ {
+  "id": "bg-bb-sow-cub-bc",
+  "species": "Black bear",
+  "caption": "Sow with a cub, Christina Lake, BC. Any bear with a cub: never.",
+  "author": "Eviatar Bach",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_and_cub_at_Christina_Lake.JPG"
+ },
+ {
+  "id": "bg-bb-sitting",
+  "species": "Black bear",
+  "caption": "Black bear facing you: tall ears, straight tan muzzle, short claws.",
+  "author": "Mike Bender, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_large.jpg"
+ },
+ {
+  "id": "bg-bb-paws-1909",
+  "species": "Black bear",
+  "caption": "Old 1909 plate of bear paws and prints. Left: short curved claws (black bear). Right: long claws (brown bear, the grizzly).",
+  "author": "Unknown (1909 book plate)",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bear_paws.jpg"
+ },
+ {
+  "id": "bg-bb-den",
+  "species": "Black bear",
+  "caption": "Sow and newborn cubs in a winter den.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bear_hibernating.jpg"
+ },
+ {
+  "id": "bg-bb-skull",
+  "species": "Black bear",
+  "caption": "Black bear skull from the front: short wide muzzle, big canine teeth.",
+  "author": "Acroterion",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_skull_1.jpg"
+ },
+ {
+  "id": "bg-bb-yoho",
+  "species": "Black bear",
+  "caption": "Black bear in Yoho National Park, BC: straight face, tall ears, no hump.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Cinnamon_black_bear_(Ursus_americanus_cinnamomum)_Yoho.jpg"
+ },
+ {
+  "id": "bg-bb-climbing-claws",
+  "species": "Black bear",
+  "caption": "Young brown phase black bear on a tree: short curved claws grip the bark.",
+  "author": "Steve Maslowski, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Young_black_bear_standing_with_front_legs_grasping_tree_trunk.jpg"
+ },
+ {
+  "id": "bg-bb-talus",
+  "species": "Black bear",
+  "caption": "Young black bear searching for food on a rocky slope.",
+  "author": "Jacob W. Frank, Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_young_black_bear_searches_for_food_on_a_talus_slope_(49015793312).jpg"
+ },
+ {
+  "id": "bg-bb-chest-patch",
+  "species": "Black bear",
+  "caption": "Black bear head on: tall ears, straight muzzle, pale chest patch.",
+  "author": "Sunshinedave",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:BLACK_BEAR_MUNCHING_ON_DANDELIONS.jpg"
+ },
+ {
+  "id": "bg-bb-devils-club",
+  "species": "Black bear",
+  "caption": "Black bear eating devil's club berries, southeast Alaska.",
+  "author": "Taal Levi, Oregon State University",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ursus_americanus_eating_Oplopanax_horridus_berries.jpg"
+ },
+ {
+  "id": "bg-bb-brown-quesnel",
+  "species": "Black bear",
+  "caption": "Brown phase black bear (a sow), Quesnel Lake, BC: straight face, tall ears, no shoulder hump.",
+  "author": "Alan D. Wilson",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_Quesnel_Lake_BC.jpg"
  }
 ]
