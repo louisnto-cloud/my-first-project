@@ -186,6 +186,9 @@ hab-moose-willows | Moose browse willow at chest height.
 
 - The height of the line tells you who ate (65%).
 
+```photo ts-browse-highlined-pine A pine sapling stripped bare by mule deer up to the browse line.
+```
+
 ```more browse details and 3 plants to learn
 - Deer have no upper front teeth. They **tear** twigs, leaving a ragged, shredded end (75%).
 - Hares and rabbits **cut** twigs clean at 45 degrees, like pruning shears, on stems under about 1.2 cm (75%).

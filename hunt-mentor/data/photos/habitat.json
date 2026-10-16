@@ -760,5 +760,113 @@
     "licence": "CC BY 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Jasper-Bear-Hunt-28.jpg"
+  },
+  {
+    "id": "ts-avalanche-chute-cascades",
+    "species": "Terrain: avalanche track",
+    "caption": "Avalanche track in the Cascades, Washington. A light green strip down dark timber where snow slides keep big trees out.",
+    "author": "Walter Siegmund",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Avalanche_Chute_0284.JPG"
+  },
+  {
+    "id": "ts-saddle-banff",
+    "species": "Terrain: saddle",
+    "caption": "Saddle Mountain, Banff, seen from Fairview Mountain. The low grassy dip between the two high points is a saddle.",
+    "author": "Adam Kahtava",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saddle_Mountain_from_Fairview_Mountain.jpg"
+  },
+  {
+    "id": "ts-burn-year1-glacier",
+    "species": "Habitat: young burn",
+    "caption": "Mount Brown, Glacier National Park, a year after the 2017 Sprague Fire. Fireweed and green herbs come up among the black logs.",
+    "author": "Glacier National Park",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Burned_Forests_are_Beautiful_(44026769544).jpg"
+  },
+  {
+    "id": "ts-burn-year10-yellowstone",
+    "species": "Habitat: 10 year burn",
+    "caption": "Yellowstone, 10 years after the 2009 Arnica Fire. Grass, fallen snags and small pines coming up.",
+    "author": "National Park Service",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Regrowth_from_2009_Arnica_Fire_as_seen_today,_10_years_later._(d189ee97-1283-484a-96db-0365f49fa41d).jpg"
+  },
+  {
+    "id": "ts-burn-fireweed-lolo",
+    "species": "Fireweed",
+    "caption": "Fireweed in bloom in an old burn, Lolo National Forest, Montana. Tall pink spikes under black and grey snags.",
+    "author": "USDA Forest Service, Alexandra Barone",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Fireweed_blooms_after_a_fire_in_Lolo_National_Forest_-_20210811-FS-AB-003.jpg"
+  },
+  {
+    "id": "ts-burn-alpine-lakes",
+    "species": "Habitat: burn mosaic",
+    "caption": "Burn in the Alpine Lakes Wilderness, Washington. Green regrowth and snags on the slope, with live firs that survived.",
+    "author": "Jsayre64",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alpine_Lakes_Wilderness_burn_area.JPG"
+  },
+  {
+    "id": "ts-wolf-track-hand",
+    "species": "Grey wolf",
+    "caption": "Wolf track in snow with a hand for scale. Four toes with claw marks, close to palm sized.",
+    "author": "Dean Miller (QuarterCircleS)",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:06_Elk_Hunt_(194).JPG"
+  },
+  {
+    "id": "ts-moose-track-katmai",
+    "species": "Moose",
+    "caption": "Moose track in gravel beside a hiking boot, Katmai, Alaska. Two long pointed toes make a big heart shape.",
+    "author": "Katmai National Park and Preserve, C. Bell",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Moose_track_(34316145155).jpg"
+  },
+  {
+    "id": "ts-elk-tracks-cmr",
+    "species": "Elk",
+    "caption": "Elk track in sand, Charles M. Russell National Wildlife Refuge, Montana. Rounder and blunter than a deer track.",
+    "author": "Katie Theule, USFWS",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Elk_Tracks_(14730606803).jpg"
+  },
+  {
+    "id": "ts-bear-claw-hartnup",
+    "species": "Bear",
+    "caption": "Bear claw marks on a smooth barked tree, Whistler, British Columbia. Old scars in sets of parallel lines.",
+    "author": "Ruth Hartnup",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bear_claw_marks_on_tree_trunk_(37993499614).jpg"
+  },
+  {
+    "id": "ts-bear-scratches-ncascades",
+    "species": "Black bear",
+    "caption": "Black bear scratches on a tree, North Cascades National Park, Washington. A strip of bark torn away above, fine claw lines below.",
+    "author": "National Park Service",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Tree_bark_with_black_bear_scratches_in_2002_(86297c1e091440f7a602c304e6613fdb).JPG"
+  },
+  {
+    "id": "ts-browse-highlined-pine",
+    "species": "Mule deer",
+    "caption": "Ponderosa pine sapling in sagebrush, Deschutes National Forest, Oregon. Mule deer stripped every needle and bud up to the browse line. Damage like this often means natural feed is short.",
+    "author": "Richard S. Driscoll, US Forest Service",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Animal_Damage_-_Oregon_-_DPLA_-_b7734b7d3d58dedab92cee584199b42a.jpg"
   }
 ]

@@ -98,6 +98,9 @@ hab-willow-shrub | Willow in wet meadows: winter browse.
 - June to August: about 1,000 to 2,300 m (55%).
 - Winter: below about 1,200 m (60%).
 
+```photo ts-avalanche-chute-cascades Avalanche tracks: green strips of shrubs and herbs down a timbered face. Summer elk feed.
+```
+
 ```more elevation in detail
 - These bands come from the app's migration data: habitat zones and elevations by month built from the BC account and BC ecosystem zone ranges, not from collar data (55 to 70%).
 - January to March: 0 to 1,200 m, bunchgrass, ponderosa pine and interior Douglas fir zones, coastal western hemlock on the coast.

@@ -36,6 +36,12 @@ rp-burn-y15 | Year 10 to 20: dense young forest. Cover, less food.
 - Black, then green, then shrubs, then thicket (75%).
 - The best feed years are roughly 2 to 10 (65%).
 
+```gallery
+ts-burn-year1-glacier | About 1 year after a fire: fireweed among black logs.
+ts-burn-year10-yellowstone | 10 years after: grass, fallen snags, small pines.
+ts-burn-fireweed-lolo | Fireweed: the pink flag of a young burn.
+```
+
 ```more the stages in detail
 - Year 0: ash, black soil, standing dead trees (snags). Ash pits can stay hot long after the flames (85%, BC Wildfire Service).
 - Years 1 to 2: grasses and herbs flush green. Seeds of snowbrush (ceanothus) and lodgepole pine germinate in response to fire (90%, BC restoration guidelines). Elk use of burned grassland went up in the first 1 to 2 years after prescribed burns in Montana (70%).
@@ -72,6 +78,9 @@ rp-burn-y15 | Year 10 to 20: dense young forest. Cover, less food.
 - Unburned islands, light burn, black burn (85%).
 - Hunt the edges between patches (Tip).
 - Moose favoured low and medium burn patches (75%).
+
+```photo ts-burn-alpine-lakes Green regrowth under snags, with live firs left standing: a patchwork burn.
+```
 
 ```more reading severity
 - Low severity: ground burned, many trees alive with green crowns, black trunks (Tip).

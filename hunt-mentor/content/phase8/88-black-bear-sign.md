@@ -111,6 +111,8 @@ commons-black-bear-marking | A black bear rubbing and marking trees.
 ```gallery
 ts-bear-rub-tree | Rub tree: bark worn off at bear height.
 ts-bear-rub-jasper | Scat on the trail, rubbed trunks behind.
+ts-bear-claw-hartnup | Old claw scars on smooth bark, Whistler.
+ts-bear-scratches-ncascades | Fresh bark torn off, claw lines below.
 ```
 
 ```more marking in detail

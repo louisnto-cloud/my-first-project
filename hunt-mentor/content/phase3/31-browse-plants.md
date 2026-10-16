@@ -203,6 +203,9 @@ hab-deer-rub | Not browse: a buck rub on a sapling.
 ```diagram sg-browse-line
 ```
 
+```photo ts-browse-highlined-pine Highlined: every needle and bud gone up to the deer browse line.
+```
+
 ## Grandpa's rule
 
 ```diagram rp-browse-key

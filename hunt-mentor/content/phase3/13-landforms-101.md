@@ -140,6 +140,7 @@ photo:hab-dogwood-stems | Ground: red osier dogwood fills a wet draw.
 hf-shape-saddle | Topo: an hourglass between two tops.
 rl-lf-saddle-3d | 3D: a dip in the ridge. Trails cross here.
 rl-lf-saddle-ground | Ground: the low notch between two tops.
+photo:ts-saddle-banff | Real: the low grassy dip joining two high points.
 ```
 
 - The low point on a ridge between two higher points (90%).

@@ -32,6 +32,7 @@ checked: 2026-10-11
 ```gallery
 hab-elk-tracks-shore | A herd churned this shore.
 hab-elk-trail-snow | Single file through spring snow.
+ts-elk-tracks-cmr | One elk print in sand: round and blunt.
 ```
 
 ```more tracks in detail

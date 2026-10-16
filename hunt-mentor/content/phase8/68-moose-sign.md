@@ -31,6 +31,7 @@ checked: 2026-10-11
 
 ```gallery
 hab-moose-tracks-mud | Moose tracks in mud: long pointed toes.
+ts-moose-track-katmai | Moose track beside a hiking boot, Alaska.
 ```
 
 ```more tracks in detail

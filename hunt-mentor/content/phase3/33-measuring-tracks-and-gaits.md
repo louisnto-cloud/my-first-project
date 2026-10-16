@@ -140,6 +140,11 @@ rs-ms-5 | Groups: measure the group and the gap.
 - Front 10 cm or longer, or hind 9 cm or longer, no claws: likely wolf (80%).
 - Big dog breeds overlap. Read the trail as well (80%).
 
+```gallery
+ts-wolf-track-hand | Wolf track beside a hand: about palm sized.
+ts-wolf-front-hind | Front (left) is bigger than hind. Ruler for scale.
+```
+
 ```more the rule in full
 - "Tracks were likely made by wolves if either of the following is true (82% of dogs have feet smaller than this): Hind foot length 3 1/2 inches or longer without claws; Front foot length 4 inches or longer without claws" (85%, Washington Department of Fish and Wildlife, citing Halfpenny and Furman 2010).
 - In centimetres: hind 8.9 cm or more, front 10.2 cm or more (85%).

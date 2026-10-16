@@ -216,6 +216,9 @@ yt-age-tracks | Sharp edges mean fresh. Rounded and filled means old.
 - Hoof: the point leads (85%). Paw: toes and claws lead (80%).
 - Loose soil or snow piles up at the back (65%).
 
+```photo hab-deer-track-dirt The pointed toes lead: this deer walked toward the top of the photo.
+```
+
 ```more more direction clues
 - Hoofed animals: the pointed end leads (85%). Toes dig deeper than the heel when climbing or pushing off (65%).
 - Paws: the toes point the way and the claws lead (80%).
