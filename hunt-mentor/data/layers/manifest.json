@@ -84,6 +84,506 @@
    "bytes": 3828424
   },
   {
+   "group": "Land status",
+   "type": "fill",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-16",
+   "areas": [
+    "Region 3",
+    "Region 8",
+    "Region 2",
+    "Region 4",
+    "Region 5",
+    "Region 1",
+    "Region 7A",
+    "Region 7B",
+    "Region 6"
+   ],
+   "id": "crown_land",
+   "label": "Crown land",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "cls"
+     ],
+     "crown",
+     "#66bb6a",
+     "federal",
+     "#00b0ff",
+     "#c5e1a5"
+    ],
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "cls"
+     ],
+     "likely",
+     0.3,
+     0.22
+    ]
+   },
+   "legend": [
+    [
+     "Crown land (provincial parcel), 90%",
+     "#66bb6a"
+    ],
+    [
+     "Likely Crown land (no titled parcel), 80%",
+     "#c5e1a5"
+    ],
+    [
+     "Federal land: CHECK, 90%",
+     "#00b0ff"
+    ]
+   ],
+   "popup": [
+    [
+     "Land",
+     "land"
+    ],
+    [
+     "How we know",
+     "how"
+    ],
+    [
+     "Certainty",
+     "certText"
+    ],
+    [
+     "Rule",
+     "rule"
+    ],
+    [
+     "Source",
+     "src"
+    ],
+    [
+     "Data date",
+     "date"
+    ]
+   ],
+   "source": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC owner type), with reserves, treaty lands, parks and municipalities cut out",
+   "about": "Public provincial land. Hunting is usually allowed here in an open season. Light green is derived: land with no titled parcel.",
+   "cert": 80,
+   "files": [
+    {
+     "area": "Region 3",
+     "file": "data/layers/crown/3/crown_land.pmtiles",
+     "bbox": [
+      -123.7321,
+      49.5746,
+      -118.3144,
+      52.8769
+     ]
+    },
+    {
+     "area": "Region 8",
+     "file": "data/layers/crown/8/crown_land.pmtiles",
+     "bbox": [
+      -121.1164,
+      48.9994,
+      -118.0371,
+      50.9373
+     ]
+    },
+    {
+     "area": "Region 2",
+     "file": "data/layers/crown/2/crown_land.pmtiles",
+     "bbox": [
+      -125.4526,
+      48.9973,
+      -120.5979,
+      51.3697
+     ]
+    },
+    {
+     "area": "Region 4",
+     "file": "data/layers/crown/4/crown_land.pmtiles",
+     "bbox": [
+      -118.9925,
+      48.9988,
+      -114.0541,
+      52.4969
+     ]
+    },
+    {
+     "area": "Region 5",
+     "file": "data/layers/crown/5/crown_land.pmtiles",
+     "bbox": [
+      -129.1511,
+      50.8759,
+      -120.1395,
+      53.5447
+     ]
+    },
+    {
+     "area": "Region 1",
+     "file": "data/layers/crown/1/crown_land.pmtiles",
+     "bbox": [
+      -129.2122,
+      48.2248,
+      -123.0089,
+      51.5252
+     ]
+    },
+    {
+     "area": "Region 7A",
+     "file": "data/layers/crown/7a/crown_land.pmtiles",
+     "bbox": [
+      -127.7385,
+      52.1491,
+      -118.195,
+      58.0375
+     ]
+    },
+    {
+     "area": "Region 7B",
+     "file": "data/layers/crown/7b/crown_land.pmtiles",
+     "bbox": [
+      -129.6356,
+      53.7964,
+      -120.0012,
+      60.0048
+     ]
+    },
+    {
+     "area": "Region 6",
+     "file": "data/layers/crown/6/crown_land.pmtiles",
+     "bbox": [
+      -139.0613,
+      51.7181,
+      -124.4574,
+      60.0019
+     ]
+    }
+   ],
+   "bytes": 13207728
+  },
+  {
+   "group": "Land status",
+   "type": "fill",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-16",
+   "areas": [
+    "Region 3",
+    "Region 8",
+    "Region 2",
+    "Region 4",
+    "Region 5",
+    "Region 1",
+    "Region 7A",
+    "Region 7B",
+    "Region 6"
+   ],
+   "id": "crown_tenures",
+   "label": "Crown tenures (leases, licences)",
+   "minzoom": 9,
+   "paint": {
+    "fill-color": "#8d6e63",
+    "fill-opacity": 0.12
+   },
+   "popup": [
+    [
+     "Tenure",
+     "tenure"
+    ],
+    [
+     "Type",
+     "type"
+    ],
+    [
+     "Purpose",
+     "purpose"
+    ],
+    [
+     "Expires",
+     "expiry"
+    ],
+    [
+     "Rule",
+     "rule"
+    ],
+    [
+     "How we know",
+     "how"
+    ],
+    [
+     "Certainty",
+     "certText"
+    ]
+   ],
+   "source": "WHSE_TANTALIS.TA_CROWN_TENURES_SVW (Crown land tenures, in good standing)",
+   "about": "Leases, licences of occupation, permits and rights of way on Crown land. Hunting is often allowed, but check for buildings, fences and signs.",
+   "cert": 90,
+   "files": [
+    {
+     "area": "Region 3",
+     "file": "data/layers/crown/3/crown_tenures.pmtiles",
+     "bbox": [
+      -123.7321,
+      49.5746,
+      -118.3144,
+      52.8769
+     ]
+    },
+    {
+     "area": "Region 8",
+     "file": "data/layers/crown/8/crown_tenures.pmtiles",
+     "bbox": [
+      -121.1164,
+      48.9994,
+      -118.0371,
+      50.9373
+     ]
+    },
+    {
+     "area": "Region 2",
+     "file": "data/layers/crown/2/crown_tenures.pmtiles",
+     "bbox": [
+      -125.4526,
+      48.9973,
+      -120.5979,
+      51.3697
+     ]
+    },
+    {
+     "area": "Region 4",
+     "file": "data/layers/crown/4/crown_tenures.pmtiles",
+     "bbox": [
+      -118.9925,
+      48.9988,
+      -114.0541,
+      52.4969
+     ]
+    },
+    {
+     "area": "Region 5",
+     "file": "data/layers/crown/5/crown_tenures.pmtiles",
+     "bbox": [
+      -129.1511,
+      50.8759,
+      -120.1395,
+      53.5447
+     ]
+    },
+    {
+     "area": "Region 1",
+     "file": "data/layers/crown/1/crown_tenures.pmtiles",
+     "bbox": [
+      -129.2122,
+      48.2248,
+      -123.0089,
+      51.5252
+     ]
+    },
+    {
+     "area": "Region 7A",
+     "file": "data/layers/crown/7a/crown_tenures.pmtiles",
+     "bbox": [
+      -127.7385,
+      52.1491,
+      -118.195,
+      58.0375
+     ]
+    },
+    {
+     "area": "Region 7B",
+     "file": "data/layers/crown/7b/crown_tenures.pmtiles",
+     "bbox": [
+      -129.6356,
+      53.7964,
+      -120.0012,
+      60.0048
+     ]
+    },
+    {
+     "area": "Region 6",
+     "file": "data/layers/crown/6/crown_tenures.pmtiles",
+     "bbox": [
+      -139.0613,
+      51.7181,
+      -124.4574,
+      60.0019
+     ]
+    }
+   ],
+   "bytes": 9594959
+  },
+  {
+   "group": "Land status",
+   "type": "fill",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-16",
+   "areas": [
+    "Region 3",
+    "Region 8",
+    "Region 2",
+    "Region 4",
+    "Region 5",
+    "Region 1",
+    "Region 7A",
+    "Region 7B",
+    "Region 6"
+   ],
+   "id": "hunt_likely",
+   "label": "Where you can likely hunt",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "cls"
+     ],
+     "open",
+     "#00c853",
+     "#9e9e9e"
+    ],
+    "fill-opacity": [
+     "match",
+     [
+      "get",
+      "cls"
+     ],
+     "open",
+     0.28,
+     0.3
+    ]
+   },
+   "legend": [
+    [
+     "Likely open to hunt (check season, MU and signs)",
+     "#00c853"
+    ],
+    [
+     "Check first: tenure, federal land or park",
+     "#9e9e9e"
+    ]
+   ],
+   "popup": [
+    [
+     "Land",
+     "land"
+    ],
+    [
+     "How we know",
+     "how"
+    ],
+    [
+     "Certainty",
+     "certText"
+    ],
+    [
+     "Rule",
+     "rule"
+    ],
+    [
+     "Data date",
+     "date"
+    ]
+   ],
+   "source": "Derived: Crown land layer minus no_hunting, municipalities, tenures and federal land; parks as check first",
+   "about": "Derived. Never a sure yes: the season, MU (Management Unit), signs, closures and the 100 m rule still decide.",
+   "cert": 75,
+   "files": [
+    {
+     "area": "Region 3",
+     "file": "data/layers/crown/3/hunt_likely.pmtiles",
+     "bbox": [
+      -123.7321,
+      49.5746,
+      -118.3144,
+      52.8769
+     ]
+    },
+    {
+     "area": "Region 8",
+     "file": "data/layers/crown/8/hunt_likely.pmtiles",
+     "bbox": [
+      -121.1164,
+      48.9994,
+      -118.0371,
+      50.9373
+     ]
+    },
+    {
+     "area": "Region 2",
+     "file": "data/layers/crown/2/hunt_likely.pmtiles",
+     "bbox": [
+      -125.4526,
+      48.9973,
+      -120.5979,
+      51.3697
+     ]
+    },
+    {
+     "area": "Region 4",
+     "file": "data/layers/crown/4/hunt_likely.pmtiles",
+     "bbox": [
+      -118.9925,
+      48.9988,
+      -114.0541,
+      52.4969
+     ]
+    },
+    {
+     "area": "Region 5",
+     "file": "data/layers/crown/5/hunt_likely.pmtiles",
+     "bbox": [
+      -129.1511,
+      50.8759,
+      -120.1395,
+      53.5447
+     ]
+    },
+    {
+     "area": "Region 1",
+     "file": "data/layers/crown/1/hunt_likely.pmtiles",
+     "bbox": [
+      -129.2122,
+      48.2248,
+      -123.0089,
+      51.5252
+     ]
+    },
+    {
+     "area": "Region 7A",
+     "file": "data/layers/crown/7a/hunt_likely.pmtiles",
+     "bbox": [
+      -127.7385,
+      52.1491,
+      -118.195,
+      58.0375
+     ]
+    },
+    {
+     "area": "Region 7B",
+     "file": "data/layers/crown/7b/hunt_likely.pmtiles",
+     "bbox": [
+      -129.6356,
+      53.7964,
+      -120.0012,
+      60.0048
+     ]
+    },
+    {
+     "area": "Region 6",
+     "file": "data/layers/crown/6/hunt_likely.pmtiles",
+     "bbox": [
+      -139.0613,
+      51.7181,
+      -124.4574,
+      60.0019
+     ]
+    }
+   ],
+   "bytes": 19947219
+  },
+  {
    "id": "parks",
    "group": "Land status",
    "label": "Parks and protected areas",

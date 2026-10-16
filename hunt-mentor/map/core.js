@@ -84,7 +84,7 @@ export async function open(param) {
   ev.emit('open');
   // #/map/mu/3-27, #/map/region/3, #/map/place/<id>: fit and outline (map/focus.js, from the "Open on Hunt Map" pop up in places.js)
   // #/map/tool/canhunt, glass, scent, sightings: open a hunt helper once the plugins are in (tools-hunt.js)
-  const tm = String(param || '').match(/^tool\/(canhunt|glass|scent|sightings)$/);
+  const tm = String(param || '').match(/^tool\/(canhunt|where|glass|scent|sightings)$/);
   if (tm) whenHunt().then((h) => h.open(tm[1])).catch((err) => console.warn('Hunt Map tool', err));
   if (/^(mu|region|place)\/[\w-]+$/.test(String(param || ''))) HuntMap.ready.then(() => import('./focus.js')).then((m) => m.default(HuntMap, String(param))).catch((err) => console.warn('Hunt Map focus', err));
   return HuntMap;

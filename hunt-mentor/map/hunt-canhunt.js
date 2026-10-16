@@ -4,6 +4,7 @@
      Open today: data/seasons/region*.json (synopsis rows) and data/seasons/migratory.json (federal ducks and geese), like Home "Open today"
      Legal light now: app sun times (window.HuntMentor.sunEvent) and the hours in data/regs.json (window.HM.regs.hours)
      Land: private land, reserves, parks, city limits, WMAs, motor vehicle closures (manifest layers, tools-insights.js nearLayer)
+     Crown land: manifest layers crown_land (cls crown, likely, federal) and crown_tenures (scripts/build-crown.py)
      No shooting / no hunting areas: manifest layer no_hunting (scripts/build-noshoot.py). Each area says what it means for a rifle,
        a shotgun with shot and a bow ("no", "check" or "ok"), so the method the hunter picks decides NO or CHECK.
      Closures that are not drawn (their line is only on a synopsis map): data/addons/noshoot/unmapped.json, listed by MU under "Still check yourself"
@@ -56,6 +57,9 @@ const RULE = {
   reserve: { t: 'Indian Reserves are private land. Permission must be obtained (from the Nation).', page: 9, cert: 99 },
   m100: { t: 'No hunting or shooting within 100 m (109 yd) of a dwelling, or a farm or ranch building occupied by people or animals.', page: 10, cert: 99 },
   road15: { t: 'Not within 15 m (16 yd) of the centre of a numbered highway or 2 lane public road, and no shooting across a road allowance.', page: 10, cert: 99 },
+  crown: { t: 'On Crown land a person must abide by the open seasons.', page: 11, cert: 99 },
+  graze: { t: '“A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land.” Leased land is subject to the Trespass Act, regardless of whether livestock are present.', page: 9, cert: 99 },
+  fed: { t: 'Hunting is prohibited in National Wildlife Areas and Migratory Bird Sanctuaries unless a special federal permit is granted or notices to the contrary are posted.', page: 9, cert: 99 },
   noShoot: { t: 'Other No Shooting Areas and closed areas are drawn only on the synopsis maps for each region. Town and city bylaws can also ban shooting.', page: 10, cert: 99 },
 };
 
@@ -107,7 +111,7 @@ export function open(p) {
   const body = H.openSheet({ title: TITLE, modal: false, bar: 'tools',
     onClose: peek(() => { active = false; setMarker(null); }),
     html: `${intro('a quick YES, NO or CHECK for one spot, one animal, right now.',
-      ['Pick the animal and how you will shoot.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'It checks the MU (Management Unit), the season today, legal light, land layers (private land, parks, reserves, city limits, closures) and the mapped no shooting and no hunting areas.', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
+      ['Pick the animal and how you will shoot.', 'Tap any point on the map (the sheet stays open), or use the buttons below.', 'It checks the MU (Management Unit), the season today, legal light, land layers (Crown land, tenures, private land, parks, reserves, city limits, closures) and the mapped no shooting and no hunting areas.', 'Read every line, not just the light. CHECK means the app cannot be sure: the reason is shown.'])}
     <label class="hmm-field">Animal<select data-ch="sp" class="hh-select">${SPECIES.map((s) => `<option value="${s.k}" ${s.k === sp.k ? 'selected' : ''}>${esc(s.l)}</option>`).join('')}</select></label>
     <label class="hmm-field">How you will shoot<select data-ch="method" class="hh-select">${METHODS.map((m) => `<option value="${m.k}" ${m.k === prefMethod(sp).k ? 'selected' : ''}>${esc(m.l)}</option>`).join('')}</select></label>
     <div data-out="ch">${lastP ? '' : '<p class="hh-tapnow">Tap any point on the map.</p>'}</div>
@@ -147,11 +151,12 @@ export async function evaluate(p, sp, now = new Date(), method) {
   const items = [], today = todayPacific(now);
   const add = (st, h, t, src) => items.push({ st, h, t, src: src || '' });
   const synSrc = (page, c) => `${SYN}, page ${page}. ${cert(c)} <a href="${SYN_URL}" target="_blank" rel="noopener">Synopsis PDF</a>`;
-  const [mu, priv, res, park, city, wma, clos, nsh, unm, osm] = await Promise.all([
+  const [mu, priv, res, park, city, wma, clos, nsh, unm, osm, crown, ten] = await Promise.all([
     safe(layers.muAt(p)), safe(nearLayer('private_land', p, 0)), safe(nearLayer('reserves', p, 0)), safe(nearLayer('parks', p, 0)),
     safe(nearLayer('city_limits', p, 0)), safe(nearLayer('wma', p, 0)), safe(nearLayer('closures', p, 0)), safe(nearLayer('no_hunting', p, 0)),
     safe(getJSON('data/addons/noshoot/unmapped.json')),
     safe(osmArea(map, bboxAround(p, 160), ['building', 'transportation'])),
+    safe(nearLayer('crown_land', p, 0)), safe(nearLayer('crown_tenures', p, 0)),
   ]);
   // 1. MU
   const muId = mu && mu.state === 'ok' && mu.id ? mu.id : null;
@@ -196,6 +201,7 @@ export async function evaluate(p, sp, now = new Date(), method) {
     else add('info', head, `${why} This rule does not ban it.`, src);
   }
   if (!nsh || nsh.state !== 'ok') add('check', 'No shooting and no hunting areas: not checked', nsh && nsh.state === 'missing' ? 'This map has no no shooting layer yet. Open the map with signal to update it.' : 'The no shooting layer is not on this phone here. Open the map with signal, or save this area in Offline Maps.');
+  crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p });
   const covers = (id) => { const st = layers.stateOf(id); return !!(st && st.files.some((f) => !f.box || (p[0] >= f.box[0] && p[0] <= f.box[2] && p[1] >= f.box[1] && p[1] <= f.box[3]))); };
   const LAND = [['private land', 'private_land', priv], ['reserves', 'reserves', res], ['parks', 'parks', park], ['city limits', 'city_limits', city]];
   const noData = LAND.filter(([, id, x]) => !read(x) && !covers(id)).map(([n]) => n);
@@ -227,6 +233,29 @@ export async function evaluate(p, sp, now = new Date(), method) {
 
   const light = items.some((i) => i.st === 'no') ? 'no' : items.some((i) => i.st === 'check') ? 'check' : 'yes';
   return { p, sp, method: meth.k, light, items, remind, muId, osm: !!(osm && osm.got), when: now };
+}
+
+/** Land line from the Crown land layers: OK on a Crown parcel, CHECK on likely Crown land, federal land or a tenure. Private land stays NO above. */
+function crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p }) {
+  const st = layers.stateOf('crown_land');
+  if (!st) return; // an older manifest without the layer
+  const inBox = st.files.some((f) => !f.box || (p[0] >= f.box[0] && p[0] <= f.box[2] && p[1] >= f.box[1] && p[1] <= f.box[3]));
+  if (!read(crown)) {
+    if (inBox) add('check', 'Land: Crown land not checked', 'The Crown land layer is not on this phone here. Open the map with signal, or save this area in Offline Maps.');
+    return;
+  }
+  const c = inside(crown), x = c && c.props, how = x ? `${esc(x.how || '')}. Land ${cert(x.cert || 80)}<br>Map: ${lay(crown)}` : '';
+  const rule = `${RULE.crown.t} Hunting is usually allowed there in an open season, unless a closure, park, No Shooting Area, posted sign or bylaw says no.`;
+  if (x && x.cls === 'crown') add('ok', 'Land: Crown land', `${rule}`, `${synSrc(RULE.crown.page, RULE.crown.cert)} (the open season rule). “Usually allowed”: Rule Book, where you can hunt, ${cert(85)} (my reading).<br>${how}`);
+  else if (x && x.cls === 'likely') add('check', 'Land: likely Crown land (no titled parcel)', `${rule} The app worked this out: there is no titled parcel, reserve, park or town here in the official data. Watch for fences and signs.`, `${synSrc(RULE.crown.page, RULE.crown.cert)}<br>${how}`);
+  else if (x && x.cls === 'federal') add('check', 'Land: federal land', `${RULE.fed.t} Other federal land (for example defence land) has its own rules: VERIFY before you hunt.`, `${synSrc(RULE.fed.page, RULE.fed.cert)}<br>${how}`);
+  else if (!pv && !rv && !pk && !ct) add('check', 'Land: owner type not known here', 'Not Crown land and not private land in the map data. It may be town, regional district, Crown agency or other land. Find out who owns it before you hunt.', `Map: ${lay(crown)}`);
+  const t = ten && ten.hits ? ten.hits.filter((h) => h.dist === 0) : [];
+  for (const h of t.slice(0, 3)) {
+    const y = h.props, what = [y.type, y.purpose].filter(Boolean).map(esc).join(', ');
+    if (y.kind === 'grazing') add('check', `Crown land with a grazing tenure${what ? `: ${what}` : ''}`, `${esc(RULE.graze.t)} Ask the lessee if cattle are on it, and respect fences, gates and signs.`, `${synSrc(RULE.graze.page, RULE.graze.cert)}<br>Map: ${lay(ten)}`);
+    else add('check', `Crown land with a tenure: ${esc(y.tenure || 'tenure')}${what ? ` (${what})` : ''}`, 'Crown land with a tenure: hunting is often allowed but buildings, fences, posted areas and the 100 m (109 yd) dwelling rule may apply: CHECK. Leased land is subject to the Trespass Act.', `${synSrc(9, 99)} (Trespass Act note), ${synSrc(RULE.m100.page, RULE.m100.cert)} (100 m rule).<br>Map: ${lay(ten)}`);
+  }
 }
 
 function seasonItems(sp, muId, regs, today, add, synSrc) {
