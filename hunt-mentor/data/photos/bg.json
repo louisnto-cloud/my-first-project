@@ -457,5 +457,86 @@
   "licence": "CC BY-SA 3.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Black_bear_Quesnel_Lake_BC.jpg"
+ },
+ {
+  "id": "bg-wt-winter-bc",
+  "species": "White tailed deer",
+  "caption": "Young white tailed deer in winter near Fort St. John, BC: grey brown winter coat.",
+  "author": "tuchodi",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_Deer_(24048341250).jpg"
+ },
+ {
+  "id": "bg-md-rumps-penticton",
+  "species": "Mule deer",
+  "caption": "Mule deer from behind, Penticton: white rump patch, thin tail with a black tip.",
+  "author": "Blake Handley",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:2018_05_30a_Penticton_Morning_Walk_14_(28020762447).jpg"
+ },
+ {
+  "id": "bg-md-doe-clearwater",
+  "species": "Mule deer",
+  "caption": "Mule deer doe in summer, Trophy Mountain meadows near Clearwater, BC.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Trophy_Mtn_meadows,_Clearwater_(8466104301).jpg"
+ },
+ {
+  "id": "bg-moose-cow-calf-bowron",
+  "species": "Moose",
+  "caption": "Cow and calf in a wetland, Bowron Lake Park, BC.",
+  "author": "Trougnouf",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_in_Bowron_Lake_Provincial_Park,_BC_(DSCF3983).jpg"
+ },
+ {
+  "id": "bg-moose-slough-bowron",
+  "species": "Moose",
+  "caption": "Moose country: a slough with sedge and willow, Bowron Lake Park, BC. Find the moose.",
+  "author": "Trougnouf",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Western_moose_in_the_Bowron_Slough_(DSCF4301).jpg"
+ },
+ {
+  "id": "bg-moose-newborn-bc",
+  "species": "Moose",
+  "caption": "Cow with a red brown newborn calf, northern BC, spring.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:On_Hwy_97_between_Summit_Lake_and_LiardMoose_mum_and_calf_(5857519152).jpg"
+ },
+ {
+  "id": "bg-moose-cow-calf-water",
+  "species": "Moose",
+  "caption": "Cow and calf standing in water.",
+  "author": "Eric Kilby",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_Mom_and_Calf_Cooling_Off.jpg"
+ },
+ {
+  "id": "bg-elk-sparring-jasper",
+  "species": "Elk",
+  "caption": "Bulls sparring in the timber, Jasper National Park.",
+  "author": "Jeffrey Pang",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Elk_Sparring_-_Jasper_National_Park.jpg"
+ },
+ {
+  "id": "bg-elk-cow-calf-jasper",
+  "species": "Elk",
+  "caption": "Cow and calf at the forest edge, Jasper National Park.",
+  "author": "Thomas Fuhrmann",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Rocky_Mountain_elk_(Cervus_canadensis_nelsoni)_-_Jasper_National_Park_03.jpg"
  }
 ]

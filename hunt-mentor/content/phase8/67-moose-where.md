@@ -12,6 +12,9 @@ checked: 2026-10-11
 ```diagram mc-moose-habitat
 ```
 
+```photo bg-moose-slough-bowron
+```
+
 - Willow and water first; cover close by (90%).
 - Young cutblocks and burns grow the browse (85%).
 

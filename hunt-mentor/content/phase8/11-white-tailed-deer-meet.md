@@ -121,6 +121,9 @@ bg-wt-buck-rack | Mature buck: thick neck, big rack.
 ```diagram mule-vs-whitetail
 ```
 
+```photo bg-md-rumps-penticton
+```
+
 - Mule deer: separate species, separate licence and seasons (99%).
 - Button buck = antlerless. Know which class is open (99%).
 

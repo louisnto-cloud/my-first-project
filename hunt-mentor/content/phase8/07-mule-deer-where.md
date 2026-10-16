@@ -106,6 +106,9 @@ hab-willow-shrub | Willow: browse by water.
 ```diagram mmd-elev-months
 ```
 
+```photo bg-md-doe-clearwater
+```
+
 - Low in winter, high in summer, moving in spring and fall (85 to 90%).
 - Snow sets the timing each year (85%).
 

@@ -122,6 +122,9 @@ commons-elk-cow-calf | A cow and calf: a calf follows close by fall.
 ```diagram mc-elk-rut-calendar
 ```
 
+```photo bg-elk-sparring-jasper
+```
+
 - Bulls gather harems, bugle, wallow, thrash (90%).
 - Most bulls do not breed until 4 or 5 (90%).
 

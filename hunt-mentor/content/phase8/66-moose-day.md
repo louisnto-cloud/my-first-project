@@ -88,6 +88,9 @@ checked: 2026-10-11
 ```anim mc-moose-heat-day A warm day: into the shade.
 ```
 
+```photo bg-moose-cow-calf-water
+```
+
 - Warmer than about 14°C: less moving in the open (70%).
 - Hunt the edges early and late on warm days (Tip).
 

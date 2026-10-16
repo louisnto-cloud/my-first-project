@@ -61,6 +61,9 @@ checked: 2026-10-11
 ```anim mc-elk-migrate Snow pushes them down in fall; green up pulls them up in spring.
 ```
 
+```photo bg-elk-cow-calf-jasper
+```
+
 - May and June: up to subalpine basins (90%).
 - Calves: late May and early June (90%).
 

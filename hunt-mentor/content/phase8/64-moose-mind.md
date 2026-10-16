@@ -57,6 +57,9 @@ checked: 2026-10-11
 ```diagram mc-moose-social
 ```
 
+```photo bg-moose-cow-calf-bowron
+```
+
 - Seasonal home range: seldom over 5 to 10 km² (90%).
 - Groups at good food in winter have no social bond (90%).
 

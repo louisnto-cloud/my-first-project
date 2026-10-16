@@ -44,6 +44,7 @@ hab-moose-willows | Winter browse: willow tips bitten off.
 ```gallery
 g-moose-calf | Spring calf beside its mother.
 g-moose-cow-calf | Cow and calf: she defends it hard.
+bg-moose-newborn-bc | Newborn calf: red brown. Northern BC.
 ```
 
 - Antlers start: late April or early May (90%).

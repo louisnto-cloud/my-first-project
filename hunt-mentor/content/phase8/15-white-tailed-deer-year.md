@@ -28,6 +28,9 @@ checked: 2026-10-11
 ```diagram mwt-winter-yard
 ```
 
+```photo bg-wt-winter-bc
+```
+
 - Valley bottoms, south slopes, dense conifer in deep snow (85%).
 - Bucks drop antlers January to March (75%).
 
