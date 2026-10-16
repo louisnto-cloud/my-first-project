@@ -972,7 +972,7 @@
   // today's task for one plan: { path, st, must, todayN, doneToday, leftToday, finish, mustFinish, daysToGo, pace }
   function studyToday(plan, lessons) {
     const P = studyPath(plan.species, lessons), st = pathStats(P.all), ms = pathStats(P.must);
-    const day = studyDay(), t = day.date, pace = plan.pace || '10';
+    const day = studyDay(), t = day.date, pace = plan.pace || 'must'; // owner default 2026-10-16: must know by the hunt
     const daysToGo = plan.from ? dayDiff(t, plan.from) : null;
     if (!day.base[plan.id]) {
       const per10 = Math.max(1, Math.round(STUDY_MIN / Math.max(0.3, st.perScreen)));

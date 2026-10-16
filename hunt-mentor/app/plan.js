@@ -797,7 +797,7 @@
     const row = (id) => { const t = C.study.stats([id]); const done = t.left === 0; return `<a class="item" href="#/s/${esc(id)}${done ? '' : '/' + (t.next ? t.next.i : 0)}"><span class="grow">${done ? '&#10003; ' : ''}${esc(C.lessonTitle(id))}</span><span class="pill">${t.seen}/${t.total}</span></a>`; };
     el.innerHTML = `<div class="card">${b.html}
       <h3>Pace</h3><div class="seg pl-pace" role="group" aria-label="Pace">
-        <button type="button" class="${!b.T.pace || b.T.pace === '10' ? 'on' : ''}" data-pace="10">10 min a day</button>
+        <button type="button" class="${b.T.pace === '10' ? 'on' : ''}" data-pace="10">10 min a day</button>
         <button type="button" class="${b.T.pace === 'must' ? 'on' : ''}" data-pace="must">Must know by the hunt${b.T.mustPerDay ? ` (about ${b.T.mustPerDay} min a day)` : ''}</button>
         <button type="button" class="${b.T.pace === 'fit' ? 'on' : ''}" data-pace="fit">All of it by the hunt${b.T.allPerDay ? ` (about ${b.T.allPerDay} min a day)` : ''}</button></div>
       <p class="muted pl-small">Minutes come from each lesson's own time, plus about 2 minutes for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
@@ -834,7 +834,7 @@
     const np = C.study && nextPlan(C);
     if (np) {
       if (!Dc) loadData().then((d) => { if (d && d.species.length) { Dc = d; C.refresh && C.refresh(); } }).catch(() => {});
-      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first.</p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a></div>`; } catch (e) { console.warn('study card', e); } }
+      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.</p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a></div>`; } catch (e) { console.warn('study card', e); } }
     }
     return `${study}<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt</a>
