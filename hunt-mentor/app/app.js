@@ -1154,7 +1154,16 @@
     return S.study;
   }
   // today's task for one plan: { path, st, must, todayN, doneToday, leftToday, finish, mustFinish, daysToGo, pace }
+  // the Rule Book region lesson follows the plan's MU (Management Unit): a Mission plan studies Region 2, not Region 3; local lessons for other areas drop out
+  function regionLessons(plan, lessons) {
+    const r = String((plan.where && plan.where.mu) || '').split('-')[0].toLowerCase();
+    const rb = r && byId['rb-region-' + r] ? 'rb-region-' + r : null;
+    const out = (lessons || []).filter((id) => !(r && r !== '3' && /^local-heffley/.test(id))).map((id) => (rb && /^rb-region-/.test(id) ? rb : id));
+    if (rb && !out.includes(rb)) out.unshift(rb);
+    return [...new Set(out)];
+  }
   function studyToday(plan, lessons) {
+    lessons = regionLessons(plan, lessons);
     const P = studyPath(plan.species, lessons), st = pathStats(P.all), ms = pathStats(P.must);
     const day = studyDay(), t = day.date, pace = plan.pace || 'must'; // owner default 2026-10-16: must know by the hunt
     const daysToGo = plan.from ? dayDiff(t, plan.from) : null;
