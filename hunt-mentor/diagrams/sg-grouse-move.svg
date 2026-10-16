@@ -1,16 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Grouse moves. Dusky grouse are upside down migrants: in fall they move up from open breeding ground into dense conifers and eat needles all winter, then come back down to breed in late March or April. Ruffed grouse stay on a small home range all year, and young birds scatter in the fall shuffle. Spruce grouse stay in conifers, some moving up to 9.5 km.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: who moves</text>
-  <path d="M0 260 Q120 250 200 170 Q260 100 300 70 Q340 60 400 80 L400 260 Z" fill="#dfe6d3"/>
-  <g fill="#2f3a2b"><polygon points="290,90 300,60 310,90"/><polygon points="320,85 330,55 340,85"/><polygon points="350,90 360,60 370,90"/><polygon points="260,115 270,85 280,115"/></g>
-  <text x="330" y="115" font-size="14" fill="#2f3a2b" text-anchor="middle">dense conifers</text>
-  <path d="M150 215 Q210 150 270 120" stroke="#e8590c" stroke-width="4" fill="none"/><path d="M262 116 l12 2 l-5 11" stroke="#e8590c" stroke-width="4" fill="none"/>
-  <text x="110" y="150" font-size="16" font-weight="bold" fill="#e8590c">Dusky: UP</text>
-  <text x="110" y="170" font-size="14" fill="#2f3a2b">in fall, needles</text>
-  <text x="110" y="188" font-size="14" fill="#2f3a2b">all winter</text>
-  <circle cx="70" cy="240" r="18" fill="none" stroke="#8b5a2b" stroke-width="3"/><circle cx="70" cy="240" r="5" fill="#8b5a2b"/>
-  <text x="100" y="250" font-size="15" font-weight="bold" fill="#8b5a2b">Ruffed: stays home</text>
-  <text x="100" y="270" font-size="14" fill="#2f3a2b">young birds scatter in fall</text>
-  <text x="290" y="200" font-size="15" font-weight="bold" fill="#2f3a2b">Spruce: stays</text>
-  <text x="290" y="220" font-size="14" fill="#2f3a2b">in conifers</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Grouse moves, a hillside seen from the side. 1, dusky grouse are upside down migrants: in fall they move up from open breeding ground into dense conifers and eat needles all winter, then come back down to breed in late March or April. 2, spruce grouse stay in conifers, some moving up to 9.5 km. 3, ruffed grouse stay on a small home range in the aspen all year, and young birds scatter in the fall shuffle.">
+<defs>
+<g id="sg-grouse-move-bird"><path d="M-10 -11 L-25 -19 L-27 -12 L-25 -4z" fill="#6b4f35" stroke="#3b2a1c" stroke-width="1"/><ellipse cx="0" cy="-10" rx="13" ry="8" fill="#8b6a48" stroke="#3b2a1c" stroke-width="1.2"/><path d="M-6 -12 q6 -4 12 0" stroke="#5c4330" stroke-width="1.6" fill="none"/><circle cx="12" cy="-18" r="5.5" fill="#8b6a48" stroke="#3b2a1c" stroke-width="1.2"/><path d="M17 -19 L22 -17 L17 -15z" fill="#3b2a1c"/><circle cx="13" cy="-19" r="1.2" fill="#120b06"/><path d="M-2 -3 L-3 0 M4 -3 L5 0" stroke="#3b2a1c" stroke-width="1.6"/></g>
+<g id="sg-grouse-move-fir"><rect x="-2" y="-6" width="4" height="8" fill="#5c3b1c"/><path d="M0 -46 L12 -18 L7 -18 L15 -4 L-15 -4 L-7 -18 L-12 -18z" fill="#2f4f2a" stroke="#1f3a1c" stroke-width="1"/></g>
+<g id="sg-grouse-move-aspen"><rect x="-1.5" y="-26" width="3" height="27" fill="#d9d4c4" stroke="#8a8270" stroke-width=".6"/><ellipse cx="0" cy="-32" rx="12" ry="14" fill="#d9b74a" stroke="#a88a2a" stroke-width="1"/></g>
+</defs>
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse in fall: who moves?</text>
+<path d="M0 270 C110 262 190 222 250 160 C290 120 340 96 400 88 L400 300 L0 300Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<g data-tip="Dense conifers|In fall dusky grouse move into dense coniferous forest. In most parts of the range this means moving uphill (70%).">
+<use href="#sg-grouse-move-fir" transform="translate(262 160)"/><use href="#sg-grouse-move-fir" transform="translate(290 132)"/><use href="#sg-grouse-move-fir" transform="translate(318 114)"/><use href="#sg-grouse-move-fir" transform="translate(346 102)"/><use href="#sg-grouse-move-fir" transform="translate(376 94)"/>
+<use href="#sg-grouse-move-fir" transform="translate(304 150) scale(.8)"/><use href="#sg-grouse-move-fir" transform="translate(360 128) scale(.8)"/>
+</g>
+<g data-tip="Ruffed grouse home|Ruffed grouse live in aspen and poplar stands near water (85%). Most in BC live at 750 to 1,250 m (85%).">
+<use href="#sg-grouse-move-aspen" transform="translate(34 268)"/><use href="#sg-grouse-move-aspen" transform="translate(70 266) scale(1.1)"/><use href="#sg-grouse-move-aspen" transform="translate(132 254)"/>
+</g>
+<g data-tip="1. Dusky grouse go UP|In fall they walk and fly from open breeding ground up into dense conifers and eat needles all winter. Up to about 48 km, usually much less (70%).">
+<path d="M196 210 C224 196 244 170 270 140" stroke="#e8590c" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M262 132 L278 130 L276 147z" fill="#e8590c"/>
+<use href="#sg-grouse-move-bird" transform="translate(182 228)"/>
+<circle cx="166" cy="196" r="11" fill="#e8590c"/><text x="166" y="201" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="24" cy="54" r="12" fill="#e8590c"/><text x="24" y="59" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="44" y="60" font-size="17" font-weight="bold" fill="#c2410c">Dusky: UP in fall</text>
+<text x="44" y="79" font-size="14" fill="#2f3a2b">into conifers, eats needles</text>
+</g>
+<g data-tip="Back down in spring|Dusky grouse come back down to breed in late March or April (70%). In BC many breed high anyway, at 1,500 to 2,250 m (85%).">
+<path d="M262 178 C246 196 232 208 218 216" stroke="#8b5a2b" stroke-width="2.6" stroke-dasharray="6 5" fill="none"/><path d="M211 221 L218 209 L224 220z" fill="#8b5a2b"/>
+<text x="232" y="232" font-size="14" font-weight="bold" fill="#8b5a2b">spring: back down</text>
+</g>
+<g data-tip="2. Spruce grouse stay|Resident in conifers: on the ground late spring to early fall, in the trees eating needles in winter (75%). Some move up to 9.5 km between summer and winter ranges (70%).">
+<use href="#sg-grouse-move-bird" transform="translate(340 82) scale(.9)"/>
+<circle cx="302" cy="70" r="11" fill="#2f3a2b"/><text x="302" y="75" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="24" cy="106" r="12" fill="#2f3a2b"/><text x="24" y="111" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="44" y="112" font-size="16" font-weight="bold" fill="#2f3a2b">Spruce: stays in conifers</text>
+</g>
+<g data-tip="3. Ruffed grouse stay home|Resident on a home range of about 2.4 to 16 hectares all year (70%). Adults stay put.">
+<ellipse cx="96" cy="258" rx="52" ry="15" fill="#8b5a2b" fill-opacity=".12" stroke="#8b5a2b" stroke-width="2" stroke-dasharray="5 4"/>
+<use href="#sg-grouse-move-bird" transform="translate(100 266) scale(.85)"/>
+<circle cx="166" cy="274" r="11" fill="#8b5a2b"/><text x="166" y="279" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="24" cy="160" r="12" fill="#8b5a2b"/><text x="24" y="165" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="44" y="166" font-size="16" font-weight="bold" fill="#6b4f35">Ruffed: stays home</text>
+</g>
+<g data-tip="Fall shuffle|In fall the young ruffed grouse scatter to new ground, the fall shuffle. Adults stay put (70%).">
+<path d="M150 252 L176 244" stroke="#6b4f35" stroke-width="2.4"/><path d="M182 242 L172 238 L174 249z" fill="#6b4f35"/>
+<path d="M58 284 L28 288" stroke="#6b4f35" stroke-width="2.4"/><path d="M20 289 L30 283 L31 294z" fill="#6b4f35"/>
+<text x="44" y="185" font-size="14" fill="#2f3a2b">young birds scatter</text>
+</g>
 </svg>

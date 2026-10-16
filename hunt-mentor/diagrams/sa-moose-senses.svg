@@ -1,4 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 258" font-family="sans-serif" role="img" aria-label="Moose senses ranked. Nose: excellent, wind at your back ends the stalk. Ears: very good, the big ears swivel and catch a snapped twig far away. Eyes: poor, they see motion but not detail. A moose often stands and stares instead of running.">
-<rect x="0" y="0" width="400" height="258" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Moose senses</text><text x="8" y="78.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Nose</text><rect x="80" y="56" width="222.9" height="34" rx="4" fill="#e8590c"/><text x="307.8571428571429" y="78.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">excellent</text><text x="8" y="134.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Ears</text><rect x="80" y="112" width="178.3" height="34" rx="4" fill="#4a7fb0"/><text x="263.2857142857143" y="134.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">very good</text><text x="8" y="190.0" font-size="14" font-weight="bold" fill="#23261f" text-anchor="start">Eyes</text><rect x="80" y="168" width="66.9" height="34" rx="4" fill="#8a9a6b"/><text x="151.85714285714286" y="190.0" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">poor: motion only</text><text x="200" y="246" font-size="14" fill="#6b4f35" text-anchor="middle">A staring moose has seen you (hunter lore).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Moose senses ranked. 1, nose: excellent, wind at your back ends the stalk. 2, ears: very good, the big ears swivel and catch a snapped twig far away. 3, eyes: poor, they see motion but not detail. A moose often stands and stares instead of running: a staring moose has seen you, hunter lore.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<g data-tip="How a moose puts it together|Ears hear, nose confirms, eyes check last (Tip).">
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Moose senses, ranked</text>
+</g>
+<g data-tip="1. Nose: excellent|Wind at your back ends the stalk (70%). Your scent travels downwind in a widening cone (80%). A wrong smell usually ends it at once (Tip).">
+<rect x="4" y="44" width="392" height="66" fill="#000" fill-opacity="0"/>
+<circle cx="20" cy="66" r="12" fill="#e8590c"/><text x="20" y="71" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<path d="M40 76 C40 60 52 54 62 56 C72 58 74 70 70 78 C66 84 46 86 40 76z" fill="#6b4a32" stroke="#3b2a1c" stroke-width="1.2"/><ellipse cx="52" cy="72" rx="3" ry="5" transform="rotate(-20 52 72)" fill="#1a110a"/><ellipse cx="63" cy="72" rx="3" ry="5" transform="rotate(20 63 72)" fill="#1a110a"/>
+<text x="84" y="76" font-size="17" font-weight="bold" fill="#23261f">Nose</text>
+<rect x="138" y="54" width="250" height="28" rx="5" fill="#e8590c"/>
+<text x="378" y="74" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="end">excellent</text>
+<text x="138" y="102" font-size="14" fill="#2f3a2b">wind at your back ends it</text>
+</g>
+<g data-tip="2. Ears: very good|The big ears swivel and pick up a snapped twig far away (70%). A cow's rut moan carries up to 3 km (90%).">
+<rect x="4" y="116" width="392" height="66" fill="#000" fill-opacity="0"/>
+<circle cx="20" cy="138" r="12" fill="#4a7fb0"/><text x="20" y="143" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<path d="M44 158 C38 140 44 124 58 120 C66 132 64 150 52 160z" fill="#6b4a32" stroke="#3b2a1c" stroke-width="1.2"/><path d="M48 154 C46 142 50 132 57 128" stroke="#c9a27a" stroke-width="2.4" fill="none"/>
+<text x="84" y="148" font-size="17" font-weight="bold" fill="#23261f">Ears</text>
+<rect x="138" y="126" width="196" height="28" rx="5" fill="#4a7fb0"/>
+<text x="324" y="146" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="end">very good</text>
+<text x="138" y="174" font-size="14" fill="#2f3a2b">a snapped twig, far away</text>
+</g>
+<g data-tip="3. Eyes: poor|Moose see motion but not detail (70%). Freeze when it looks; move when it feeds (Tip).">
+<rect x="4" y="188" width="392" height="66" fill="#000" fill-opacity="0"/>
+<circle cx="20" cy="210" r="12" fill="#8a9a6b"/><text x="20" y="215" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<path d="M38 212 Q55 196 72 212 Q55 228 38 212z" fill="#f3ead8" stroke="#3b2a1c" stroke-width="1.6"/><circle cx="55" cy="212" r="6" fill="#3b2a1c"/>
+<text x="84" y="220" font-size="17" font-weight="bold" fill="#23261f">Eyes</text>
+<rect x="138" y="198" width="74" height="28" rx="5" fill="#8a9a6b"/>
+<text x="222" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">poor</text>
+<text x="138" y="246" font-size="14" fill="#2f3a2b">see motion, not detail</text>
+</g>
+<g data-tip="The stare|A moose often stands and stares instead of running. Do not read that as it has not seen me (hunter lore, 60%). Keep a tree between you and a close moose (Tip).">
+<rect x="10" y="262" width="380" height="32" rx="8" fill="#f4e3d3"/>
+<text x="200" y="284" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">A staring moose has seen you (hunter lore)</text>
+</g>
 </svg>

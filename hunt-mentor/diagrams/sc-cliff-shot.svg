@@ -1,20 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two pictures side by side. Left: a sheep or goat standing on a cliff edge, marked no, because it falls, the horns smash and the meat is lost. Right: the animal on a flat bench, marked yes, it drops where you can reach it. This is a tip." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<line x1="200" y1="40" x2="200" y2="230" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6"/>
-<text x="100" y="26" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">Cliff edge</text>
-<text x="300" y="26" font-size="16" fill="#2f6b3a" text-anchor="middle" font-weight="bold">Bench below you</text>
-<path d="M20 110 L120 110 L124 230 L20 230 Z" fill="#9a9a90" stroke="#6b6b62" stroke-width="2"/>
-<path d="M120 110 L140 230" stroke="#6b6b62" stroke-width="2" stroke-dasharray="4 4"/>
-<g transform="translate(95 89)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#c9a27a" stroke="#23261f"/><path d="M-18 -4 L-28 -16 L-36 -12 L-30 -2 Z" fill="#c9a27a" stroke="#23261f"/><path d="M-26 -16 c-4 -8 6 -10 5 -2" fill="none" stroke="#5c3b1c" stroke-width="3"/><path d="M-14 8 v12 M-6 9 v11 M8 9 v11 M16 8 v12" stroke="#23261f" stroke-width="3"/></g>
-<line x1="150" y1="110" x2="159.1" y2="201.0" stroke="#e8590c" stroke-width="3"/><polygon points="160,210 164.0,200.6 154.2,201.5" fill="#e8590c"/>
-<circle cx="100" cy="170" r="14" fill="#e8590c"/><path d="M95 165 l10 10 m0 -10 l-10 10" stroke="#fff" stroke-width="3" fill="none"/>
-<path d="M220 160 C260 150 330 150 390 160 L390 230 L220 230 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
-<g transform="translate(300 140)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#c9a27a" stroke="#23261f"/><path d="M-18 -4 L-28 -16 L-36 -12 L-30 -2 Z" fill="#c9a27a" stroke="#23261f"/><path d="M-26 -16 c-4 -8 6 -10 5 -2" fill="none" stroke="#5c3b1c" stroke-width="3"/><path d="M-14 8 v12 M-6 9 v11 M8 9 v11 M16 8 v12" stroke="#23261f" stroke-width="3"/></g>
-<circle cx="300" cy="196" r="14" fill="#2f6b3a"/><path d="M295 196 l4 4 l7 -8" stroke="#fff" stroke-width="3" fill="none"/>
-<rect x="10" y="240" width="185" height="54" rx="8" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/>
-<text x="102.5" y="262.9" font-size="14" fill="#23261f" text-anchor="middle">Falls: horns smash,</text>
-<text x="102.5" y="280.9" font-size="14" fill="#23261f" text-anchor="middle">meat lost</text>
-<rect x="205" y="240" width="185" height="54" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
-<text x="297.5" y="262.9" font-size="14" fill="#23261f" text-anchor="middle">Drops where you</text>
-<text x="297.5" y="280.9" font-size="14" fill="#23261f" text-anchor="middle">can reach it</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Two pictures side by side. Left: a sheep or goat standing on a cliff edge, marked no, because it falls, the horns smash and the meat is lost. Right: the animal on a flat bench, marked yes, it drops where you can reach it; aim broadside, behind the shoulder, one third up. Wait until it moves to ground you can reach. This is a tip." font-family="sans-serif">
+<defs>
+<g id="sc-cliff-shot-ram">
+<rect x="-25" y="-15" width="5" height="15" fill="#5c4632"/><rect x="-17" y="-15" width="5" height="15" fill="#6b5640"/><rect x="14" y="-15" width="5" height="15" fill="#5c4632"/><rect x="21" y="-15" width="5" height="15" fill="#6b5640"/>
+<path d="M-30 -24 C-30 -37 -16 -41 0 -41 C16 -41 26 -37 30 -29 C32 -21 28 -15 24 -13 L-26 -13 C-31 -15 -31 -19 -30 -24z" fill="#9a7a58" stroke="#3b2a1c" stroke-width="1.3"/>
+<ellipse cx="-28" cy="-26" rx="4.5" ry="8" fill="#f3ead8"/>
+<path d="M22 -35 C28 -43 32 -50 36 -54 L46 -50 C42 -42 36 -32 30 -26z" fill="#9a7a58" stroke="#3b2a1c" stroke-width="1.2"/>
+<path d="M36 -56 C42 -60 52 -58 58 -52 C60 -48 58 -45 54 -45 L44 -46 C38 -46 34 -50 36 -56z" fill="#9a7a58" stroke="#3b2a1c" stroke-width="1.2"/>
+<ellipse cx="55" cy="-48" rx="3.5" ry="2.6" fill="#f3ead8"/><circle cx="47" cy="-53" r="1.7" fill="#120b06"/>
+<path d="M42 -58 C34 -68 20 -64 20 -52 C20 -42 31 -38 37 -45" fill="none" stroke="#3b2a1c" stroke-width="8" stroke-linecap="round"/>
+<path d="M42 -58 C34 -68 20 -64 20 -52 C20 -42 31 -38 37 -45" fill="none" stroke="#c9a77a" stroke-width="5.5" stroke-linecap="round"/>
+</g>
+</defs>
+<rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<line x1="200" y1="40" x2="200" y2="232" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="100" y="28" font-size="17" fill="#c0392b" text-anchor="middle" font-weight="bold">Cliff edge: NO</text>
+<text x="300" y="28" font-size="17" fill="#2f6b3a" text-anchor="middle" font-weight="bold">Bench: YES</text>
+<g data-tip="Your own escape plan|No stalks onto ground you cannot climb back up. Unload before scrambling (Tip).">
+<path d="M10 118 L118 118 L124 140 L120 170 L128 200 L124 232 L10 232Z" fill="#a8a59a" stroke="#6b6b62" stroke-width="2" stroke-linejoin="round"/>
+<path d="M30 140 l18 8 M60 170 l22 -6 M28 200 l20 6 M92 136 l12 10 M80 210 l14 -8" stroke="#7d7a70" stroke-width="2"/>
+</g>
+<g data-tip="Never on a cliff edge|An animal shot on a cliff falls: the meat can be lost and the retrieval can kill you (Tip). A fall can smash the horns (Tip).">
+<use href="#sc-cliff-shot-ram" transform="translate(92 118) scale(.95)"/>
+<path d="M146 122 L158 196" stroke="#c0392b" stroke-width="3" stroke-dasharray="7 5"/><path d="M160 210 L151 196 L165 194z" fill="#c0392b"/>
+<circle cx="166" cy="96" r="15" fill="#c0392b"/><path d="M160 90 l12 12 m0 -12 l-12 12" stroke="#fffaf0" stroke-width="3.4" stroke-linecap="round"/>
+<rect x="10" y="244" width="185" height="50" rx="8" fill="#fbe3dc" stroke="#c0392b" stroke-width="2"/>
+<text x="102" y="265" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Falls: horns smash,</text>
+<text x="102" y="285" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">meat lost</text>
+</g>
+<g data-tip="Ground you can reach|Shoot only an animal on a bench or slope you can reach, never one on a cliff edge (Tip).">
+<path d="M208 232 L208 176 C250 168 330 166 392 174 L392 232Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M226 176 l3 -8 l3 8 M300 170 l3 -8 l3 8 M360 172 l3 -8 l3 8" stroke="#6b8f4e" stroke-width="2" fill="none"/>
+<use href="#sc-cliff-shot-ram" transform="translate(286 172) scale(.95)"/>
+<circle cx="370" cy="126" r="15" fill="#2f6b3a"/><path d="M362 126 l6 6 l10 -12" stroke="#fffaf0" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+<rect x="205" y="244" width="185" height="50" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="297" y="265" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Drops where you</text>
+<text x="297" y="285" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">can reach it</text>
+</g>
+<g data-tip="Where to aim|Broadside, behind the shoulder, one third up: heart and lungs (75%). On a goat, long hair hides the body: aim lower than the hair suggests (Tip).">
+<circle cx="302" cy="151" r="7" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><path d="M302 141 v20 M292 151 h20" stroke="#fffaf0" stroke-width="1.6"/>
+<path d="M296 147 L254 120" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="254" cy="120" r="2.4" fill="#2f3a2b"/>
+<text x="250" y="116" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">aim</text>
+</g>
+<g data-tip="Wait|Wait until it moves to ground you can reach (Tip). Be ready for a second shot; goats often walk after a hit (Tip).">
+<rect x="10" y="300" width="380" height="26" rx="6" fill="#000" fill-opacity="0"/>
+<text x="200" y="320" font-size="16" font-weight="bold" fill="#6b4f35" text-anchor="middle">Wait for safer ground (Tip)</text>
+</g>
 </svg>

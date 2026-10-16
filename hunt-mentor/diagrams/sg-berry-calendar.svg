@@ -1,29 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" font-family="sans-serif" role="img" aria-label="Berry calendar, July to December. Saskatoon and soopolallie: July and August. Huckleberry: August and September. Himalayan blackberry in the Fraser Valley: August and September. Rose hips and snowberry: mid September into winter. Bears and grouse follow the fruit (70%).">
-<rect width="400" height="312" fill="#fffaf0"/>
-<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Berry calendar</text>
-<rect x="148" y="58" width="40" height="220" fill="#f1ead9"/>
-<text x="168" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jul</text>
-<text x="208" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Aug</text>
-<rect x="228" y="58" width="40" height="220" fill="#f1ead9"/>
-<text x="248" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
-<text x="288" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
-<rect x="308" y="58" width="40" height="220" fill="#f1ead9"/>
-<text x="328" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
-<text x="368" y="52" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
-<circle cx="18" cy="82" r="5" fill="#5b3a6b"/><circle cx="25" cy="78" r="5" fill="#5b3a6b"/><circle cx="25" cy="87" r="5" fill="#5b3a6b"/>
-<text x="36" y="92" font-size="16" font-weight="bold" fill="#2f3a2b">Saskatoon</text>
-<rect x="150" y="75" width="76" height="22" rx="6" fill="#5b3a6b"/>
-<circle cx="18" cy="124" r="5" fill="#c0392b"/><circle cx="25" cy="120" r="5" fill="#c0392b"/><circle cx="25" cy="129" r="5" fill="#c0392b"/>
-<text x="36" y="134" font-size="16" font-weight="bold" fill="#2f3a2b">Soopolallie</text>
-<rect x="150" y="117" width="76" height="22" rx="6" fill="#c0392b"/>
-<circle cx="18" cy="166" r="5" fill="#2c3e6b"/><circle cx="25" cy="162" r="5" fill="#2c3e6b"/><circle cx="25" cy="171" r="5" fill="#2c3e6b"/>
-<text x="36" y="176" font-size="16" font-weight="bold" fill="#2f3a2b">Huckleberry</text>
-<rect x="190" y="159" width="76" height="22" rx="6" fill="#2c3e6b"/>
-<circle cx="18" cy="208" r="5" fill="#3d2a4a"/><circle cx="25" cy="204" r="5" fill="#3d2a4a"/><circle cx="25" cy="213" r="5" fill="#3d2a4a"/>
-<text x="36" y="209" font-size="16" font-weight="bold" fill="#2f3a2b">Blackberry</text><text x="36" y="227" font-size="14" fill="#6b5b4b">Fraser Valley</text>
-<rect x="190" y="201" width="76" height="22" rx="6" fill="#3d2a4a"/>
-<circle cx="18" cy="250" r="5" fill="#e8590c"/><circle cx="25" cy="246" r="5" fill="#e8590c"/><circle cx="25" cy="255" r="5" fill="#e8590c"/>
-<text x="36" y="251" font-size="16" font-weight="bold" fill="#2f3a2b">Hips,</text><text x="36" y="269" font-size="15" font-weight="bold" fill="#2f3a2b">snowberry</text>
-<rect x="250.0" y="243" width="136.0" height="22" rx="6" fill="#e8590c"/>
-<text x="200" y="300" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Bears and grouse follow the fruit (70%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" font-family="sans-serif" role="img" aria-label="Berry calendar, July to December. Saskatoon and soopolallie: July and August. Huckleberry: August and September. Himalayan blackberry in the Fraser Valley: August and September. Rose hips and snowberry: mid September into winter. Bears and grouse follow the fruit (70%).">
+<rect width="400" height="318" fill="#fffaf0"/>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Berry calendar</text>
+<rect x="150.0" y="40" width="39.5" height="226" fill="#f1ead9"/>
+<text x="169.8" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jul</text>
+<text x="209.2" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Aug</text>
+<rect x="229.0" y="40" width="39.5" height="226" fill="#f1ead9"/>
+<text x="248.8" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="288.2" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<rect x="308.0" y="40" width="39.5" height="226" fill="#f1ead9"/>
+<text x="327.8" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="367.2" y="57" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<g data-tip="Saskatoon|Berry season for bears and grouse: saskatoon in July and August (70%).">
+<rect x="4" y="70" width="392" height="38" fill="#000" fill-opacity="0"/>
+<circle cx="16" cy="87" r="5.5" fill="#5b3a6b"/><circle cx="24" cy="82" r="5.5" fill="#5b3a6b"/><circle cx="24" cy="92" r="5.5" fill="#5b3a6b"/><path d="M24 76 l3 -5" stroke="#4a7438" stroke-width="2"/>
+<text x="36" y="95" font-size="16" font-weight="bold" fill="#2f3a2b">Saskatoon</text>
+<rect x="152.0" y="77" width="75.0" height="24" rx="6" fill="#5b3a6b"/>
+</g>
+<g data-tip="Soopolallie|Also called soapberry. It ripens late July to mid August and is a main bear food (65%).">
+<rect x="4" y="110" width="392" height="38" fill="#000" fill-opacity="0"/>
+<circle cx="16" cy="127" r="5.5" fill="#c0392b"/><circle cx="24" cy="122" r="5.5" fill="#c0392b"/><circle cx="24" cy="132" r="5.5" fill="#c0392b"/><path d="M24 116 l3 -5" stroke="#4a7438" stroke-width="2"/>
+<text x="36" y="135" font-size="16" font-weight="bold" fill="#2f3a2b">Soopolallie</text>
+<rect x="152.0" y="117" width="75.0" height="24" rx="6" fill="#c0392b"/>
+</g>
+<g data-tip="Huckleberry|Fattens bears in August and September (70%).">
+<rect x="4" y="150" width="392" height="38" fill="#000" fill-opacity="0"/>
+<circle cx="16" cy="167" r="5.5" fill="#2c3e6b"/><circle cx="24" cy="162" r="5.5" fill="#2c3e6b"/><circle cx="24" cy="172" r="5.5" fill="#2c3e6b"/><path d="M24 156 l3 -5" stroke="#4a7438" stroke-width="2"/>
+<text x="36" y="175" font-size="16" font-weight="bold" fill="#2f3a2b">Huckleberry</text>
+<rect x="191.5" y="157" width="75.0" height="24" rx="6" fill="#2c3e6b"/>
+</g>
+<g data-tip="Himalayan blackberry|Fraser Valley: fruits August to September (60%). Wild crabapple, hazelnut and old orchard apples draw black tailed deer and bears (60%).">
+<rect x="4" y="190" width="392" height="38" fill="#000" fill-opacity="0"/>
+<circle cx="16" cy="207" r="5.5" fill="#3d2a4a"/><circle cx="24" cy="202" r="5.5" fill="#3d2a4a"/><circle cx="24" cy="212" r="5.5" fill="#3d2a4a"/><path d="M24 196 l3 -5" stroke="#4a7438" stroke-width="2"/>
+<text x="36" y="207" font-size="16" font-weight="bold" fill="#2f3a2b">Blackberry</text>
+<text x="36" y="224" font-size="14" fill="#6b5b4b">Fraser Valley</text>
+<rect x="191.5" y="197" width="75.0" height="24" rx="6" fill="#3d2a4a"/>
+</g>
+<g data-tip="Rose hips and snowberry|Last into winter (70%). Grouse eat rose hips, snowberry, kinnikinnick berries and clover along roads in October (65%).">
+<rect x="4" y="230" width="392" height="38" fill="#000" fill-opacity="0"/>
+<circle cx="16" cy="247" r="5.5" fill="#e8590c"/><circle cx="24" cy="242" r="5.5" fill="#e8590c"/><circle cx="24" cy="252" r="5.5" fill="#e8590c"/><path d="M24 236 l3 -5" stroke="#4a7438" stroke-width="2"/>
+<text x="36" y="247" font-size="16" font-weight="bold" fill="#2f3a2b">Rose hips,</text>
+<text x="36" y="264" font-size="14" fill="#6b5b4b">snowberry</text>
+<rect x="250.8" y="237" width="124.2" height="24" rx="6" fill="#e8590c"/>
+<path d="M371.0 233 L387.0 249 L371.0 265z" fill="#e8590c"/>
+<text x="312.9" y="254" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">into winter</text>
+</g>
+<g data-tip="Follow the fruit|Bears work berry patches hard in September to fatten up. Fresh bear scat full of seeds marks a patch (Tip). Berries ripen low first, then higher up (70%).">
+<rect x="10" y="276" width="380" height="34" rx="8" fill="#f4e3d3"/>
+<text x="200" y="299" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Bears and grouse follow the fruit (70%)</text>
+</g>
 </svg>

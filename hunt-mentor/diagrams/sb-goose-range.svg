@@ -2,8 +2,10 @@
 <rect width="400" height="300" fill="#fffaf0"/>
 <text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Geese look close. Count the metres (Tip)</text>
 <rect x="0" y="214" width="400" height="86" fill="#e7ecdc"/>
+<g data-tip="Your max range|35 m (38 yd) for you this season (Tip). Pattern test: at least 60 pellets in a 76 cm (30 in) circle at your longest range (70%).">
 <rect x="34" y="188" width="224" height="22" rx="4" fill="#2f6e3b" opacity=".22"/>
 <text x="156" y="204" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Shoot: inside 35 m</text>
+</g>
 <line x1="34" y1="214" x2="390" y2="214" stroke="#2f3a2b" stroke-width="2"/>
 <line x1="34.0" y1="208" x2="34.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
 <text x="34" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">0 m</text>
@@ -17,13 +19,22 @@
 <text x="290" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">40 m</text>
 <line x1="354.0" y1="208" x2="354.0" y2="220" stroke="#2f3a2b" stroke-width="2"/>
 <text x="350" y="238" font-size="15" fill="#2f3a2b" text-anchor="middle">50 m</text>
+<g data-tip="Your load|Steel BB is the all round pellet for large Canada geese; BBB and T for longer shots (70%). Non toxic shot only (99%).">
 <path d="M12 214 L16 180 L22 194 L26 174 L32 192 L38 176 L44 194 L50 184 L54 214 Z" fill="#8a9a6b" stroke="#5b6b3e" stroke-width="1.2"/>
 <text x="34" y="260" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+</g>
+<g data-tip="Feet down|Wait for feet down inside 35 m (38 yd). Pick one bird, then the next. Never flock shoot (Tip).">
 <g transform="translate(245.20000000000002 150) scale(-0.62 0.62)"><path d="M-2 14 L-6 32 M8 14 L8 32" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 34 L-6 31 L0 35 M2 34 L8 31 L14 34" stroke="#2a2a2a" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M-6 -8 C-18 -34 -34 -50 -50 -56 C-40 -40 -30 -22 -18 -4 Z" fill="#5c4e40" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-46 2 C-34 -12 0 -16 22 -12 C38 -9 44 2 36 12 C26 22 -8 22 -28 14 C-38 10 -44 8 -46 2 Z" fill="#8a7a66" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M36 12 C26 22 -8 22 -28 14 C-10 14 16 12 30 0 Z" fill="#d9cdb8"/><path d="M-46 2 C-42 8 -36 12 -28 14 C-34 8 -38 4 -40 0 Z" fill="#ffffff"/><path d="M-46 2 L-54 -2 L-50 6 Z" fill="#1f2420"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#2f3a2b" stroke-width="15.516129032258064" fill="none" stroke-linecap="round"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#1f2420" stroke-width="11" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="-38" rx="10" ry="7" transform="rotate(-18 51 -38)" fill="#1f2420"/><path d="M59 -42 C64 -43 68 -42 70 -40 C66 -38 62 -37 59 -37 Z" fill="#1f2420"/><path d="M44 -36 C48 -33 52 -32 55 -33 C53 -29 48 -28 44 -30 Z" fill="#ffffff"/><path d="M-2 -6 C-4 -36 -12 -60 -26 -74 C-6 -64 10 -40 14 -10 Z" fill="#6b5b4b" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-26 -74 C-20 -70 -16 -66 -13 -60 L-20 -62 Z" fill="#1f2420"/></g>
 <path d="M275 110 l8 8 l16 -20" fill="none" stroke="#2f6e3b" stroke-width="5" stroke-linecap="round"/>
 <text x="241.2" y="94" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Feet down</text>
-<g transform="translate(340.0 96) scale(-0.62 0.62)"><path d="M-2 14 L-6 32 M8 14 L8 32" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 34 L-6 31 L0 35 M2 34 L8 31 L14 34" stroke="#2a2a2a" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M-6 -8 C-18 -34 -34 -50 -50 -56 C-40 -40 -30 -22 -18 -4 Z" fill="#5c4e40" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-46 2 C-34 -12 0 -16 22 -12 C38 -9 44 2 36 12 C26 22 -8 22 -28 14 C-38 10 -44 8 -46 2 Z" fill="#8a7a66" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M36 12 C26 22 -8 22 -28 14 C-10 14 16 12 30 0 Z" fill="#d9cdb8"/><path d="M-46 2 C-42 8 -36 12 -28 14 C-34 8 -38 4 -40 0 Z" fill="#ffffff"/><path d="M-46 2 L-54 -2 L-50 6 Z" fill="#1f2420"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#2f3a2b" stroke-width="15.516129032258064" fill="none" stroke-linecap="round"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#1f2420" stroke-width="11" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="-38" rx="10" ry="7" transform="rotate(-18 51 -38)" fill="#1f2420"/><path d="M59 -42 C64 -43 68 -42 70 -40 C66 -38 62 -37 59 -37 Z" fill="#1f2420"/><path d="M44 -36 C48 -33 52 -32 55 -33 C53 -29 48 -28 44 -30 Z" fill="#ffffff"/><path d="M-2 -6 C-4 -36 -12 -60 -26 -74 C-6 -64 10 -40 14 -10 Z" fill="#6b5b4b" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-26 -74 C-20 -70 -16 -66 -13 -60 L-20 -62 Z" fill="#1f2420"/></g>
-<path d="M332.0 132 l16 16 M348.0 132 l-16 16" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
-<text x="336" y="172" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">50 m: too far</text>
+</g>
+<g data-tip="Too far|A goose looks close at 50 m because it is big. Wait (Tip).">
+<g transform="translate(354 96) scale(-0.62 0.62)"><path d="M-2 14 L-6 32 M8 14 L8 32" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 34 L-6 31 L0 35 M2 34 L8 31 L14 34" stroke="#2a2a2a" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M-6 -8 C-18 -34 -34 -50 -50 -56 C-40 -40 -30 -22 -18 -4 Z" fill="#5c4e40" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-46 2 C-34 -12 0 -16 22 -12 C38 -9 44 2 36 12 C26 22 -8 22 -28 14 C-38 10 -44 8 -46 2 Z" fill="#8a7a66" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M36 12 C26 22 -8 22 -28 14 C-10 14 16 12 30 0 Z" fill="#d9cdb8"/><path d="M-46 2 C-42 8 -36 12 -28 14 C-34 8 -38 4 -40 0 Z" fill="#ffffff"/><path d="M-46 2 L-54 -2 L-50 6 Z" fill="#1f2420"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#2f3a2b" stroke-width="15.516129032258064" fill="none" stroke-linecap="round"/><path d="M26 -8 C34 -20 38 -30 46 -36" stroke="#1f2420" stroke-width="11" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="-38" rx="10" ry="7" transform="rotate(-18 51 -38)" fill="#1f2420"/><path d="M59 -42 C64 -43 68 -42 70 -40 C66 -38 62 -37 59 -37 Z" fill="#1f2420"/><path d="M44 -36 C48 -33 52 -32 55 -33 C53 -29 48 -28 44 -30 Z" fill="#ffffff"/><path d="M-2 -6 C-4 -36 -12 -60 -26 -74 C-6 -64 10 -40 14 -10 Z" fill="#6b5b4b" stroke="#2f3a2b" stroke-width="2.258064516129032"/><path d="M-26 -74 C-20 -70 -16 -66 -13 -60 L-20 -62 Z" fill="#1f2420"/></g>
+<path d="M346 132 l16 16 M362 132 l-16 16" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+<text x="392" y="172" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="end">50 m: too far</text>
+</g>
+<g data-tip="Aim at the head|Head and neck shots at close decoying geese kill clean (65%). Aim at the white cheek, not the whole bird (Tip).">
+<rect x="10" y="268" width="380" height="28" rx="6" fill="#000" fill-opacity="0"/>
 <text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Inside 35 m (38 yd). Aim at the head</text>
+</g>
 </svg>

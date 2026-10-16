@@ -1,53 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 393" font-family="sans-serif" role="img" aria-label="Season bars, September 2026 to March 2027, for Canada and cackling geese, 10 a day (99%). District 3, Kamloops: 8 to 20 September, 1 October to 23 December, 1 to 10 March. District 8, Okanagan: 20 September to 28 November, 20 December to 5 January, 21 February to 10 March. District 2, Mission: 5 to 15 September, 10 October to 22 November, 19 December to 10 January, 10 February to 10 March. Gaps are closed. District 3 is closed 21 to 30 September.">
-<rect width="400" height="393" fill="#fffaf0"/>
-<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Canada and cackling geese, 10 a day (99%)</text>
-<text x="40.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
-<text x="93.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
-<text x="147.4" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
-<text x="200.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
-<text x="255.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
-<text x="307" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Feb</text>
-<text x="358.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Mar</text>
-<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">District 3, Kamloops</text>
-<text x="14" y="92" font-size="15" font-weight="bold" fill="#8b5a2b">Sept 8 to 20, Oct 1 to Dec 23,</text>
-<text x="14" y="113" font-size="15" font-weight="bold" fill="#8b5a2b">Mar 1 to 10</text>
-<rect x="14.0" y="121" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="66.6" y="121" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="121.0" y="121" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="173.7" y="121" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="228.1" y="121" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="282.5" y="121" width="49.1" height="16" fill="#f8f3e6"/>
-<rect x="331.6" y="121" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="26.3" y="122" width="22.8" height="14" rx="3" fill="#8b5a2b"/>
-<rect x="66.6" y="122" width="147.4" height="14" rx="3" fill="#8b5a2b"/>
-<rect x="331.6" y="122" width="17.5" height="14" rx="3" fill="#8b5a2b"/>
-<text x="14" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">District 8, Okanagan</text>
-<text x="14" y="187" font-size="15" font-weight="bold" fill="#2c5d86">Sept 20 to Nov 28, Dec 20 to Jan 5,</text>
-<text x="14" y="208" font-size="15" font-weight="bold" fill="#2c5d86">Feb 21 to Mar 10</text>
-<rect x="14.0" y="216" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="66.6" y="216" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="121.0" y="216" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="173.7" y="216" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="228.1" y="216" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="282.5" y="216" width="49.1" height="16" fill="#f8f3e6"/>
-<rect x="331.6" y="216" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="47.3" y="217" width="122.8" height="14" rx="3" fill="#4a7fb0"/>
-<rect x="207.0" y="217" width="29.8" height="14" rx="3" fill="#4a7fb0"/>
-<rect x="317.6" y="217" width="31.6" height="14" rx="3" fill="#4a7fb0"/>
-<text x="14" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">District 2, Mission</text>
-<text x="14" y="282" font-size="15" font-weight="bold" fill="#2f6e3b">Sept 5 to 15, Oct 10 to Nov 22,</text>
-<text x="14" y="303" font-size="15" font-weight="bold" fill="#2f6e3b">Dec 19 to Jan 10, Feb 10 to Mar 10</text>
-<rect x="14.0" y="311" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="66.6" y="311" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="121.0" y="311" width="52.6" height="16" fill="#efe8d6"/>
-<rect x="173.7" y="311" width="54.4" height="16" fill="#f8f3e6"/>
-<rect x="228.1" y="311" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="282.5" y="311" width="49.1" height="16" fill="#f8f3e6"/>
-<rect x="331.6" y="311" width="54.4" height="16" fill="#efe8d6"/>
-<rect x="21.0" y="312" width="19.3" height="14" rx="3" fill="#2f6e3b"/>
-<rect x="82.4" y="312" width="77.2" height="14" rx="3" fill="#2f6e3b"/>
-<rect x="205.3" y="312" width="40.4" height="14" rx="3" fill="#2f6e3b"/>
-<rect x="298.3" y="312" width="50.9" height="14" rx="3" fill="#2f6e3b"/>
-<text x="14" y="358" font-size="15" font-weight="bold" fill="#2f3a2b">Gaps are closed.</text>
-<text x="14" y="379" font-size="15" font-weight="bold" fill="#c0392b">District 3: closed 21 to 30 Sept.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 426" font-family="sans-serif" role="img" aria-label="Season bars, September 2026 to March 2027, for Canada and cackling geese, 10 a day, 30 in possession (99%). District 3, Kamloops: 8 to 20 September, 1 October to 23 December, 1 to 10 March. District 8, Okanagan: 20 September to 28 November, 20 December to 5 January, 21 February to 10 March in a year that is not a leap year. District 2, Mission: 5 to 15 September, 10 October to 22 November, 19 December to 10 January, 10 February to 10 March. Gaps are closed. District 3 is closed 21 to 30 September.">
+<rect width="400" height="426" fill="#fffaf0"/>
+<g data-tip="Daily bag|Canada and cackling geese combined: 10 a day, 30 in possession (99%). Hunt two districts in one day: the highest daily limit of the areas applies (99%).">
+<text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Canada and cackling geese</text>
+<text x="14" y="44" font-size="15" font-weight="bold" fill="#c2410c">10 a day, 30 in possession (99%)</text>
+</g>
+<g data-tip="Where the dates come from|Federal Migratory Birds Regulations, 2022, Schedule 3, as copied in the Rule Book (99%). Study aid only. The official regulations are the law.">
+<text x="40.3" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="93.8" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="147.4" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="200.9" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="255.3" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
+<text x="307.0" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Feb</text>
+<text x="358.8" y="68" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Mar</text>
+</g>
+<g data-tip="District 3, Kamloops|MUs (Management Units) 3-12 to 3-20 and 3-26 to 3-44 (99%). Your October hunt is inside the open period (99%).">
+<rect x="8" y="78" width="384" height="56" fill="#000" fill-opacity="0"/>
+<text x="14" y="96" font-size="16" font-weight="bold" fill="#2f3a2b">District 3, Kamloops</text>
+<rect x="14.0" y="104" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="66.6" y="104" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="121.0" y="104" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="173.7" y="104" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="228.1" y="104" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="282.5" y="104" width="49.1" height="24" fill="#f8f3e6"/>
+<rect x="331.6" y="104" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="26.3" y="106" width="22.8" height="20" rx="4" fill="#8b5a2b"/>
+<rect x="66.6" y="106" width="147.4" height="20" rx="4" fill="#8b5a2b"/>
+<rect x="331.6" y="106" width="17.5" height="20" rx="4" fill="#8b5a2b"/>
+<path d="M51.1 109 l13.5 14 M64.6 109 l-13.5 14" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/>
+<text x="14" y="146" font-size="14" fill="#8b5a2b" font-weight="bold">8 to 20 Sep, 1 Oct to 23 Dec, 1 to 10 Mar</text>
+</g>
+<g data-tip="District 8, Okanagan|MUs (Management Units) 8-1 to 8-15 and 8-21 to 8-26 (99%). The late period is 21 February to 10 March in a year that is not a leap year (99%).">
+<rect x="8" y="160" width="384" height="76" fill="#000" fill-opacity="0"/>
+<text x="14" y="178" font-size="16" font-weight="bold" fill="#2f3a2b">District 8, Okanagan</text>
+<rect x="14.0" y="186" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="66.6" y="186" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="121.0" y="186" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="173.7" y="186" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="228.1" y="186" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="282.5" y="186" width="49.1" height="24" fill="#f8f3e6"/>
+<rect x="331.6" y="186" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="47.3" y="188" width="122.8" height="20" rx="4" fill="#2c5d86"/>
+<rect x="207.0" y="188" width="29.8" height="20" rx="4" fill="#2c5d86"/>
+<rect x="317.6" y="188" width="31.6" height="20" rx="4" fill="#2c5d86"/>
+<text x="14" y="228" font-size="14" fill="#2c5d86" font-weight="bold">20 Sep to 28 Nov, 20 Dec to 5 Jan,</text>
+<text x="14" y="246" font-size="14" fill="#2c5d86" font-weight="bold">21 Feb to 10 Mar (not a leap year)</text>
+</g>
+<g data-tip="District 2, Mission|MUs (Management Units) 2-2 to 2-19 (99%). Dates for 2026 to 2027 as printed in the synopsis, page 28 (99%). Mission is in MU 2-8 (90%).">
+<rect x="8" y="260" width="384" height="76" fill="#000" fill-opacity="0"/>
+<text x="14" y="278" font-size="16" font-weight="bold" fill="#2f3a2b">District 2, Mission</text>
+<rect x="14.0" y="286" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="66.6" y="286" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="121.0" y="286" width="52.6" height="24" fill="#efe8d6"/>
+<rect x="173.7" y="286" width="54.4" height="24" fill="#f8f3e6"/>
+<rect x="228.1" y="286" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="282.5" y="286" width="49.1" height="24" fill="#f8f3e6"/>
+<rect x="331.6" y="286" width="54.4" height="24" fill="#efe8d6"/>
+<rect x="21.0" y="288" width="19.3" height="20" rx="4" fill="#2f6e3b"/>
+<rect x="82.4" y="288" width="77.2" height="20" rx="4" fill="#2f6e3b"/>
+<rect x="205.3" y="288" width="40.4" height="20" rx="4" fill="#2f6e3b"/>
+<rect x="298.3" y="288" width="50.9" height="20" rx="4" fill="#2f6e3b"/>
+<text x="14" y="328" font-size="14" fill="#2f6e3b" font-weight="bold">5 to 15 Sep, 10 Oct to 22 Nov,</text>
+<text x="14" y="346" font-size="14" fill="#2f6e3b" font-weight="bold">19 Dec to 10 Jan, 10 Feb to 10 Mar</text>
+</g>
+<g data-tip="Gaps are closed|No goose hunting between the open periods. District 3 Canada geese are closed 21 to 30 September between the two fall periods (99%).">
+<rect x="8" y="366" width="384" height="52" rx="8" fill="#fbe3dc"/>
+<text x="200" y="386" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gaps are closed.</text>
+<text x="200" y="406" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">District 3: closed 21 to 30 Sep (red X)</text>
+</g>
 </svg>

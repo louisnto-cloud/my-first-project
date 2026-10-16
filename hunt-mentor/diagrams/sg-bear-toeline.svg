@@ -1,23 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The bear toe line test. Lay a straight edge across the top of the front palm pad. Black bear: toes in a curved row, the small outer toe falls below the line, short claws close to the toes. Grizzly: toes in a straighter row, all 5 sit above the line, long claw marks far ahead of the toes.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The toe line test</text>
-  <g transform="translate(100 160)">
-    <path d="M-45 0 Q-40 -18 0 -18 Q40 -18 45 0 Q45 38 0 42 Q-45 38 -45 0 Z" fill="#8b5a2b"/>
-    <g fill="#8b5a2b"><ellipse cx="-42" cy="-20" rx="9" ry="10"/><ellipse cx="-24" cy="-42" rx="10" ry="11"/><ellipse cx="0" cy="-50" rx="10" ry="12"/><ellipse cx="24" cy="-44" rx="10" ry="11"/><ellipse cx="44" cy="-28" rx="9" ry="10"/></g>
-    <g fill="#2f3a2b"><circle cx="-46" cy="-34" r="3"/><circle cx="-27" cy="-58" r="3"/><circle cx="0" cy="-67" r="3"/><circle cx="27" cy="-60" r="3"/><circle cx="48" cy="-43" r="3"/></g>
-    <line x1="-60" y1="-24" x2="60" y2="-24" stroke="#e8590c" stroke-width="3"/>
-  </g>
-  <g transform="translate(300 165)">
-    <path d="M-45 0 Q-40 -16 0 -16 Q40 -16 45 0 Q45 34 0 38 Q-45 34 -45 0 Z" fill="#8b5a2b"/>
-    <g fill="#8b5a2b"><ellipse cx="-38" cy="-34" rx="9" ry="10"/><ellipse cx="-19" cy="-38" rx="9" ry="11"/><ellipse cx="0" cy="-40" rx="9" ry="11"/><ellipse cx="19" cy="-38" rx="9" ry="11"/><ellipse cx="38" cy="-34" rx="9" ry="10"/></g>
-    <g stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"><path d="M-40 -50 v-22 M-20 -55 v-24 M0 -57 v-25 M20 -55 v-24 M40 -50 v-22"/></g>
-    <line x1="-60" y1="-22" x2="60" y2="-22" stroke="#e8590c" stroke-width="3"/>
-  </g>
-  <text x="100" y="232" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Black bear</text>
-  <text x="100" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">outer toe dips below</text>
-  <text x="100" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">short claws</text>
-  <text x="300" y="232" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Grizzly</text>
-  <text x="300" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">all toes above, in a row</text>
-  <text x="300" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">long claws, far ahead</text>
-  <text x="200" y="294" font-size="14" fill="#e8590c" text-anchor="middle">Orange line: along the top of the palm pad</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="The bear toe line test on a front track. Step 1: lay a straight edge across the top of the front palm pad. Step 2: look at the small outer toe. Black bear: toes in a curved row, the small outer toe falls below the line, short claws close to the toes, 2.5 to 6.4 cm ahead. Grizzly: toes in a straighter row, all 5 sit above the line, long claw marks far ahead of the toes, 5 to 11.4 cm. Grizzly until proven otherwise.">
+<rect width="400" height="340" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The toe line test</text>
+<g data-tip="1. The straight edge|Lay a straight edge across the top of the palm pad, under the toes (70%). Idaho Fish and Game: on a grizzly it will not cross the toes; on a black bear it crosses them (80%).">
+<circle cx="22" cy="52" r="11" fill="#e8590c"/><text x="22" y="57" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="40" y="58" font-size="16" font-weight="bold" fill="#2f3a2b">Line across top of the palm pad</text>
+</g>
+<g data-tip="2. Clean prints only|Snow melt can change a track's shape; look for clean prints (85%).">
+<circle cx="22" cy="80" r="11" fill="#e8590c"/><text x="22" y="85" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="40" y="86" font-size="16" font-weight="bold" fill="#2f3a2b">Check the small outer toe</text>
+</g>
+<rect x="10" y="100" width="185" height="150" rx="10" fill="#f4eedf"/>
+<rect x="205" y="100" width="185" height="150" rx="10" fill="#f4eedf"/>
+<g data-tip="Black bear track|5 toes in a curved row; the outer, smallest toe falls below the line (70%). Front track about 10 to 16 cm long and 10 to 14 cm wide (70%).">
+<g transform="translate(108 196)">
+<path d="M-34 6 Q0 -4 34 6 Q38 30 0 34 Q-38 30 -34 6Z" fill="#6b4f35"/>
+<g fill="#6b4f35"><circle cx="-38" cy="2" r="7"/><circle cx="-25" cy="-18" r="9"/><circle cx="-6" cy="-26" r="9.5"/><circle cx="14" cy="-25" r="9.5"/><circle cx="32" cy="-14" r="9"/></g>
+<line x1="-54" y1="1" x2="52" y2="1" stroke="#e8590c" stroke-width="3"/>
+<circle cx="-38" cy="2" r="11" fill="none" stroke="#c0392b" stroke-width="2"/>
+</g>
+</g>
+<g data-tip="Black bear claws|Short claws, about 3 to 5 cm, print as dots close to the toes (70%). Middle claw marks sit 2.5 to 6.4 cm (1 to 2.5 in) ahead of the toe pads (80%).">
+<g transform="translate(108 196)" fill="#2f3a2b"><ellipse cx="-48" cy="-6" rx="2.6" ry="3"/><ellipse cx="-33" cy="-36" rx="2.6" ry="3"/><ellipse cx="-7" cy="-50" rx="2.6" ry="3"/><ellipse cx="16" cy="-49" rx="2.6" ry="3"/><ellipse cx="41" cy="-31" rx="2.6" ry="3"/></g>
+<text x="102" y="120" font-size="14" fill="#2f3a2b" text-anchor="middle">claws close</text>
+</g>
+<g data-tip="Grizzly track|Toes in a straighter row; all 5 sit above the line (70%). Front track about 18 cm long and 13 cm wide (65%).">
+<g transform="translate(300 206)">
+<path d="M-40 6 Q0 -2 40 6 Q44 32 0 36 Q-44 32 -40 6Z" fill="#6b4f35"/>
+<g fill="#6b4f35"><circle cx="-34" cy="-14" r="8"/><circle cx="-17" cy="-17" r="8.5"/><circle cx="0" cy="-18" r="8.5"/><circle cx="17" cy="-17" r="8.5"/><circle cx="34" cy="-14" r="8"/></g>
+<line x1="-56" y1="2" x2="56" y2="2" stroke="#e8590c" stroke-width="3"/>
+</g>
+</g>
+<g data-tip="Grizzly claws|Claw marks sit well ahead of the toes (65%). Middle claw marks are 5 to 11.4 cm (2 to 4.5 in) ahead of the toe pads (80%).">
+<g transform="translate(300 206)" stroke="#2f3a2b" stroke-width="4" stroke-linecap="round" fill="none"><path d="M-36 -28 q-3 -18 -2 -34"/><path d="M-18 -31 q-2 -20 -1 -40"/><path d="M0 -32 v-42"/><path d="M18 -31 q2 -20 1 -40"/><path d="M36 -28 q3 -18 2 -34"/></g>
+<text x="300" y="120" font-size="14" fill="#2f3a2b" text-anchor="middle">long claws, far ahead</text>
+</g>
+<text x="102" y="270" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Black bear</text>
+<text x="102" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">outer toe dips below</text>
+<text x="300" y="270" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">Grizzly</text>
+<text x="300" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">all 5 toes above</text>
+<g data-tip="Grizzly until proven otherwise|A bear track with long claw marks and toes in a straight row: make noise, keep bear spray on your belt, and do not follow it. A fresh grizzly track on your trail means change your plan (Tip).">
+<rect x="10" y="302" width="380" height="32" rx="8" fill="#fbe3dc" stroke="#c0392b" stroke-width="1.5"/>
+<text x="200" y="324" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">Grizzly until proven otherwise</text>
+</g>
 </svg>
