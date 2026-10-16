@@ -3,6 +3,7 @@
 - **ACTS**: Firearm safety rules. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: PROVE it safe (85%).
 - **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
 - **ATV**: All terrain vehicle. A quad.
+- **CSV**: Comma separated values. A plain spreadsheet file. Opens in Excel, Numbers or Google Sheets. The sightings log and journal export as CSV.
 - **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop. In navigation lessons, a backstop is also a big line you must not cross (a river, road or ridge) that tells you that you went too far.
 - **Bag limit**: Most animals of a kind you may take in one day (birds) or one year (big game).
 - **Bore sight**: Lining up the scope with the barrel before shooting, to get on paper fast.
