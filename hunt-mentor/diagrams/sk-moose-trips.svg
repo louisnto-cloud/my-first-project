@@ -1,32 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" font-family="sans-serif" role="img" aria-label="One moose packed out by two people, drawn as the loads. Two hind quarters of about 45 to 55 kilograms each, split in two; two front quarters of about 35 to 40 kilograms each; game bags of loins, neck, ribs and trim; antlers and gear. About 7 loads at 30 kilograms each: 4 trips each, plus antlers. A full day for 1 kilometre. A tip, not a measured figure.">
-<rect width="400" height="362" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 432" font-family="sans-serif" role="img" aria-label="One moose packed out by two people, drawn as the loads. Two hind quarters of about 45 to 55 kilograms each, split in two; two front quarters of about 35 to 40 kilograms each; game bags of loins, neck, ribs and trim; antlers and gear. About 7 loads at 30 kilograms each: 4 trips each, plus antlers. A full day for 1 kilometre. A tip, not a measured figure.">
+<rect width="400" height="432" fill="#fffaf0"/>
+<!-- step 1 -->
+<circle cx="22" cy="18" r="12" fill="#e8590c"/><text x="22" y="23" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="42" y="24" font-size="17" font-weight="bold" fill="#2f3a2b">Cut it into loads</text>
+<text x="388" y="24" font-size="14" fill="#6b5b4b" text-anchor="end">bone in (Tip)</text>
+<g transform="translate(0 40)">
+<g data-tip="Hind quarter|Bone in, about 45 to 55 kg each. Over 30 kg, so it never goes in one load: bone it out, or saw it into two pieces. Tip." data-tip-dot="86,16">
 <circle cx="50" cy="56" r="44" fill="#f4eedf"/>
 <g transform="translate(50 52)"><path d="M-26 -34 C-6 -46 26 -40 28 -14 C30 4 16 18 6 24 L4 34 L-6 34 L-8 22 C-22 12 -32 -10 -26 -34z" fill="#c2614e" stroke="#7e3326" stroke-width="1.6"/><path d="M-20 -32 C-4 -40 18 -36 22 -18" stroke="#f1dcc4" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M-8 -6 C0 -12 10 -10 14 -2" stroke="#9e4a3a" stroke-width="1.4" fill="none"/><rect x="-6" y="30" width="10" height="16" rx="2" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/><ellipse cx="-1" cy="46" rx="7" ry="4" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/></g>
-<text x="50" y="126" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hind × 2</text>
-<text x="50" y="146" font-size="15" fill="#2f3a2b" text-anchor="middle">45 to 55 kg</text>
-<text x="50" y="164" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">split in 2</text>
+<path d="M30 30 L72 78" stroke="#fffaf0" stroke-width="2.4" stroke-dasharray="5 4"/>
+<text x="50" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hind × 2</text>
+<text x="50" y="144" font-size="15" fill="#2f3a2b" text-anchor="middle">45 to 55 kg</text>
+<text x="50" y="162" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">split in 2</text>
+</g>
+<g data-tip="Front quarter|Bone in, about 35 to 40 kg each. Tip." data-tip-dot="186,16">
 <circle cx="150" cy="56" r="44" fill="#f4eedf"/>
 <g transform="translate(150 52)"><path d="M-24 -26 C-10 -34 16 -34 26 -24 C22 -6 12 12 6 22 L4 32 L-6 32 L-8 22 C-16 10 -24 -6 -24 -26z" fill="#c2614e" stroke="#7e3326" stroke-width="1.6"/><path d="M-16 -24 C-4 -28 10 -28 18 -22" stroke="#f1dcc4" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M-6 -18 L10 -18 L4 4z" fill="none" stroke="#9e4a3a" stroke-width="1.3"/><rect x="-6" y="28" width="10" height="16" rx="2" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/><ellipse cx="-1" cy="44" rx="7" ry="4" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/></g>
-<text x="150" y="126" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front × 2</text>
-<text x="150" y="146" font-size="15" fill="#2f3a2b" text-anchor="middle">35 to 40 kg</text>
+<text x="150" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front × 2</text>
+<text x="150" y="144" font-size="15" fill="#2f3a2b" text-anchor="middle">35 to 40 kg</text>
+</g>
+<g data-tip="Game bags|Loins, neck, rib and trim: about 40 to 50 kg more, in bags. Tip." data-tip-dot="286,16">
 <circle cx="250" cy="56" r="44" fill="#f4eedf"/>
 <g transform="translate(250 52)"><g transform="translate(-16 6) scale(0.95)"><path d="M-14 -16 C-18 0 -18 16 -12 22 C-4 26 4 26 12 22 C18 16 18 0 14 -16 C6 -12 -6 -12 -14 -16z" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-14 -16 C-8 -22 8 -22 14 -16" fill="none" stroke="#8a7f6a" stroke-width="1.4"/><path d="M0 -20 l-4 -8 M0 -20 l4 -8" stroke="#8a7f6a" stroke-width="1.6"/><path d="M-8 4 C-4 8 4 8 8 4" stroke="#c2614e" stroke-width="2" fill="none" opacity=".6"/></g><g transform="translate(16 6) scale(0.95)"><path d="M-14 -16 C-18 0 -18 16 -12 22 C-4 26 4 26 12 22 C18 16 18 0 14 -16 C6 -12 -6 -12 -14 -16z" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-14 -16 C-8 -22 8 -22 14 -16" fill="none" stroke="#8a7f6a" stroke-width="1.4"/><path d="M0 -20 l-4 -8 M0 -20 l4 -8" stroke="#8a7f6a" stroke-width="1.6"/><path d="M-8 4 C-4 8 4 8 8 4" stroke="#c2614e" stroke-width="2" fill="none" opacity=".6"/></g><g transform="translate(0 -6) scale(1.05)"><path d="M-14 -16 C-18 0 -18 16 -12 22 C-4 26 4 26 12 22 C18 16 18 0 14 -16 C6 -12 -6 -12 -14 -16z" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-14 -16 C-8 -22 8 -22 14 -16" fill="none" stroke="#8a7f6a" stroke-width="1.4"/><path d="M0 -20 l-4 -8 M0 -20 l4 -8" stroke="#8a7f6a" stroke-width="1.6"/><path d="M-8 4 C-4 8 4 8 8 4" stroke="#c2614e" stroke-width="2" fill="none" opacity=".6"/></g></g>
-<text x="250" y="126" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bags</text>
-<text x="250" y="146" font-size="15" fill="#2f3a2b" text-anchor="middle">loins, neck,</text>
-<text x="250" y="164" font-size="15" fill="#2f3a2b" text-anchor="middle">ribs, trim</text>
+<text x="250" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bags</text>
+<text x="250" y="144" font-size="15" fill="#2f3a2b" text-anchor="middle">loins, neck,</text>
+<text x="250" y="162" font-size="15" fill="#2f3a2b" text-anchor="middle">ribs, trim</text>
+</g>
+<g data-tip="Antlers and gear|One more trip for antlers and gear. Keep the antlers on the skull plate, with the licence, in the same vehicle as the meat. Tip." data-tip-dot="386,16">
 <circle cx="350" cy="56" r="44" fill="#f4eedf"/>
 <g transform="translate(350 52)"><g transform="translate(-8 4)"><path d="M-30 12 C-26 2 -20 -4 -12 -8 L-18 -20 L-13 -19 L-12 -34 L-6 -21 L-1 -38 L3 -23 L9 -36 L11 -21 L19 -30 L18 -16 L27 -18 L19 -5 C10 2 -2 6 -10 8 C-18 11 -24 15 -28 17z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4" stroke-linejoin="round"/><ellipse cx="-30" cy="15" rx="4" ry="5" fill="#cbb48c" stroke="#6b4f35" stroke-width="1.2"/></g><rect x="20" y="-24" width="20" height="34" rx="5" fill="#5a6b3a" stroke="#3a4626" stroke-width="1.4"/><rect x="23" y="-12" width="14" height="10" rx="2" fill="#4a5a2e"/><path d="M24 -24 C24 -32 36 -32 36 -24" fill="none" stroke="#3a4626" stroke-width="2"/></g>
-<text x="350" y="126" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">antlers</text>
-<text x="350" y="146" font-size="15" fill="#2f3a2b" text-anchor="middle">and gear</text>
-<line x1="12" y1="196" x2="388" y2="196" stroke="#d8ccb4"/>
-<text x="70" y="216" font-size="14" fill="#6b5b4b" text-anchor="middle">about</text>
-<text x="70" y="246" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">7</text><text x="70" y="268" font-size="15" fill="#2f3a2b" text-anchor="middle">loads</text>
-<text x="134" y="244" font-size="24" font-weight="bold" fill="#6b5b4b" text-anchor="middle">×</text>
-<text x="200" y="246" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">30 kg</text><text x="200" y="268" font-size="15" fill="#2f3a2b" text-anchor="middle">each</text>
-<path d="M254 236 H276" stroke="#6b5b4b" stroke-width="3"/><path d="M282.0 236.0 L273.0 231.1 L273.0 240.9z" fill="#6b5b4b"/>
-<text x="330" y="246" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text><text x="330" y="268" font-size="15" fill="#2f3a2b" text-anchor="middle">trips each</text>
-<rect x="8" y="290" width="384" height="64" rx="10" fill="#f4eedf"/>
-<g transform="translate(40 348) scale(0.95)"><rect x="4" y="-44" width="14" height="24" rx="3" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.3"/><path d="M-3 -20 L-8 0 M5 -20 L8 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-7 -40 C-7 -44 7 -44 7 -40 L6 -19 H-6z" fill="#e8590c"/><circle cx="-1" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-7 -49 C-7 -56 5 -56 5 -49z" fill="#e8590c"/></g><g transform="translate(68 348) scale(0.95)"><rect x="4" y="-44" width="14" height="24" rx="3" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.3"/><path d="M-3 -20 L-8 0 M5 -20 L8 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-7 -40 C-7 -44 7 -44 7 -40 L6 -19 H-6z" fill="#e8590c"/><circle cx="-1" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-7 -49 C-7 -56 5 -56 5 -49z" fill="#e8590c"/></g>
-<text x="98" y="317" font-size="16" font-weight="bold" fill="#2f3a2b">Two people, plus antlers.</text>
-<text x="98" y="339" font-size="16" font-weight="bold" fill="#e8590c">A full day for 1 km (Tip)</text>
+<text x="350" y="124" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">antlers</text>
+<text x="350" y="144" font-size="15" fill="#2f3a2b" text-anchor="middle">and gear</text>
+</g>
+</g>
+<line x1="12" y1="216" x2="388" y2="216" stroke="#d8ccb4"/>
+<!-- step 2 -->
+<circle cx="22" cy="240" r="12" fill="#e8590c"/><text x="22" y="245" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="42" y="246" font-size="17" font-weight="bold" fill="#2f3a2b">Count the trips</text>
+<g data-tip="About 7 loads|About 7 loads for two people. Boned out it is still about 7 loads, lighter each but more bags. Tip." data-tip-dot="104,264">
+<rect x="20" y="258" width="100" height="70" rx="8" fill="#f4eedf"/>
+<text x="70" y="296" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">7</text><text x="70" y="318" font-size="15" fill="#2f3a2b" text-anchor="middle">loads</text>
+</g>
+<text x="135" y="300" font-size="24" font-weight="bold" fill="#6b5b4b" text-anchor="middle">×</text>
+<g data-tip="30 kg a load|Your safe load is the one you can carry on rough ground without falling. 30 kg is a starting point, not a rule. Tip." data-tip-dot="236,264">
+<rect x="150" y="258" width="100" height="70" rx="8" fill="#f4eedf"/>
+<text x="200" y="296" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">30 kg</text><text x="200" y="318" font-size="15" fill="#2f3a2b" text-anchor="middle">each</text>
+</g>
+<path d="M256 293 H272" stroke="#6b5b4b" stroke-width="3"/><path d="M280 293 L271 288 L271 298z" fill="#6b5b4b"/>
+<g data-tip="4 trips each|At 30 kg per person per trip: 4 trips each, plus one for antlers and gear. Tip." data-tip-dot="370,264">
+<rect x="284" y="258" width="100" height="70" rx="8" fill="#f4eedf"/>
+<text x="334" y="296" font-size="30" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text><text x="334" y="318" font-size="15" fill="#2f3a2b" text-anchor="middle">trips each</text>
+</g>
+<!-- step 3 -->
+<circle cx="22" cy="352" r="12" fill="#e8590c"/><text x="22" y="357" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="42" y="358" font-size="17" font-weight="bold" fill="#2f3a2b">Plan the day before the shot</text>
+<g data-tip="Plan before the shot|A full day for 1 km, two days for 3 km. Never shoot a moose farther than four return trips before dark. Tip." data-tip-dot="384,374">
+<rect x="8" y="366" width="384" height="60" rx="10" fill="#f4eedf"/>
+<g transform="translate(40 420) scale(0.95)"><rect x="4" y="-44" width="14" height="24" rx="3" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.3"/><path d="M-3 -20 L-8 0 M5 -20 L8 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-7 -40 C-7 -44 7 -44 7 -40 L6 -19 H-6z" fill="#e8590c"/><circle cx="-1" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-7 -49 C-7 -56 5 -56 5 -49z" fill="#e8590c"/></g><g transform="translate(68 420) scale(0.95)"><rect x="4" y="-44" width="14" height="24" rx="3" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.3"/><path d="M-3 -20 L-8 0 M5 -20 L8 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-7 -40 C-7 -44 7 -44 7 -40 L6 -19 H-6z" fill="#e8590c"/><circle cx="-1" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-7 -49 C-7 -56 5 -56 5 -49z" fill="#e8590c"/></g>
+<text x="98" y="391" font-size="16" font-weight="bold" fill="#2f3a2b">Two people: 1 km takes</text>
+<text x="98" y="413" font-size="16" font-weight="bold" fill="#e8590c">a full day (Tip)</text>
+</g>
 </svg>

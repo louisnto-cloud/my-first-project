@@ -1,31 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 299" role="img" aria-label="Grid: Ducks: daily bag. All ducks together, a day: 8. Pintails, at most: 4. Canvasbacks, at most: 4. Goldeneyes, Barrow&#x27;s and Common together: 2. Harlequins, at most: 2. Ducks in possession: 24." font-family="sans-serif">
-<rect x="0" y="0" width="400" height="299" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Ducks: daily bag</text>
-<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">The 4, 4, 2 and 2 count inside the 8, never on</text>
-<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">top.</text>
-<rect x="6.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
-<text x="68.0" y="121" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">8</text>
-<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">All ducks</text>
-<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">together, a day</text>
-<rect x="138.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="200.0" y="121" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">4</text>
-<text x="200.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Pintails, at</text>
-<text x="200.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">most</text>
-<rect x="270.0" y="87" width="124.0" height="88" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="332.0" y="121" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">4</text>
-<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Canvasbacks, at</text>
-<text x="332.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">most</text>
-<rect x="6.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="68.0" y="217" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">2</text>
-<text x="68.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Goldeneyes,</text>
-<text x="68.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">Barrow&#x27;s and</text>
-<text x="68.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">Common together</text>
-<rect x="138.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
-<text x="200.0" y="217" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">2</text>
-<text x="200.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Harlequins, at</text>
-<text x="200.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">most</text>
-<rect x="270.0" y="183" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
-<text x="332.0" y="217" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">24</text>
-<text x="332.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Ducks in</text>
-<text x="332.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">possession</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" role="img" aria-label="Grid: Ducks: daily bag. All ducks together, a day: 8. Pintails, at most: 4. Canvasbacks, at most: 4. Goldeneyes, Barrow&#x27;s and Common together: 2. Harlequins, at most: 2. Ducks in possession: 24." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="392" fill="#fffaf0"/>
+<g data-tip="Two districts, one day|Hunt two districts in one day? The highest daily bag limit of all the areas applies (99%)." data-tip-dot="300,14">
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Ducks: daily bag</text></g>
+<g data-tip="Inside the 8|Pintails, canvasbacks, goldeneyes and harlequins are restricted species. Their limits count inside the 8, never on top (99%)." data-tip-dot="370,40">
+<text x="200" y="48" font-size="15" fill="#8b5a2b" text-anchor="middle">The small limits count inside the 8</text></g>
+<g data-tip="8 a day|8 ducks a day in every BC district (99%). A dead or wounded bird you find and keep counts in your daily bag (99%)." data-tip-dot="382,66">
+<rect x="6" y="58" width="388" height="42" rx="8" fill="#fde3d3"/>
+<text x="14" y="77" font-size="15" font-weight="bold" fill="#23261f">All ducks</text>
+<text x="14" y="95" font-size="14" font-weight="bold" fill="#c2410c">8 a day</text>
+<rect x="148" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(161 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="178" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(191 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="208" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(221 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="238" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(251 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="268" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(281 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="298" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(311 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="328" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(341 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="358" y="64" width="26" height="30" rx="5" fill="#ffffff" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(371 79) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#e8590c"/><path d="M11 1 l5 -3 l-1 6z" fill="#e8590c"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
+<path d="M148 104 H386" stroke="#d8cfbd" stroke-width="1.4"/>
+<g data-tip="Pintails|No more than 4 Northern Pintails inside the 8 (99%)." data-tip-dot="262,118">
+<text x="14" y="129" font-size="15" font-weight="bold" fill="#23261f">Pintails</text>
+<text x="14" y="147" font-size="14" font-weight="bold" fill="#2f5f8a">max 4</text>
+<rect x="148" y="116" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(161 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#6b4f35"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="178" y="116" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(191 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#6b4f35"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="208" y="116" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(221 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#6b4f35"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="238" y="116" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(251 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#6b4f35"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="268" y="116" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(281 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="298" y="116" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(311 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="328" y="116" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(341 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="358" y="116" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(371 131) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
+<g data-tip="Canvasbacks|No more than 4 Canvasbacks inside the 8 (99%)." data-tip-dot="262,162">
+<text x="14" y="173" font-size="15" font-weight="bold" fill="#23261f">Canvasbacks</text>
+<text x="14" y="191" font-size="14" font-weight="bold" fill="#2f5f8a">max 4</text>
+<rect x="148" y="160" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(161 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#8b3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="178" y="160" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(191 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#8b3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="208" y="160" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(221 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#8b3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="238" y="160" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(251 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#8b3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="268" y="160" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(281 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="298" y="160" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(311 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="328" y="160" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(341 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="358" y="160" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(371 175) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
+<g data-tip="Goldeneyes|No more than 2 Barrow's or Common Goldeneyes, in any combination, inside the 8 (99%)." data-tip-dot="202,206">
+<text x="14" y="217" font-size="15" font-weight="bold" fill="#23261f">Goldeneyes</text>
+<text x="14" y="235" font-size="14" font-weight="bold" fill="#2f5f8a">max 2 together</text>
+<rect x="148" y="204" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(161 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="178" y="204" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(191 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#2f3a2b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="208" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(221 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="238" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(251 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="268" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(281 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="298" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(311 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="328" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(341 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="358" y="204" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(371 219) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
+<g data-tip="Harlequins|No more than 2 Harlequin Ducks inside the 8 (99%)." data-tip-dot="202,250">
+<text x="14" y="261" font-size="15" font-weight="bold" fill="#23261f">Harlequins</text>
+<text x="14" y="279" font-size="14" font-weight="bold" fill="#2f5f8a">max 2</text>
+<rect x="148" y="248" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(161 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#3b4a6b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="178" y="248" width="26" height="30" rx="5" fill="#ffffff" stroke="#4a7fb0" stroke-width="2"/>
+<g transform="translate(191 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#4a7fb0"/><path d="M11 1 l5 -3 l-1 6z" fill="#4a7fb0"/><circle cx="-7" cy="-4" r="4.6" fill="#3b4a6b"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="208" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(221 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="238" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(251 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="268" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(281 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="298" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(311 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="328" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(341 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<rect x="358" y="248" width="26" height="30" rx="5" fill="#f1ece0" stroke="#d8cfbd" stroke-width="1.2"/>
+<g transform="translate(371 263) scale(0.95)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#ddd5c4"/><path d="M11 1 l5 -3 l-1 6z" fill="#ddd5c4"/><circle cx="-7" cy="-4" r="4.6" fill="#ddd5c4"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
+<g data-tip="Possession|24 ducks: 3 days' worth. Inside it: no more than 12 pintails, 12 canvasbacks, 6 goldeneyes and 6 harlequins (99%)." data-tip-dot="384,300">
+<rect x="6" y="292" width="388" height="94" rx="10" fill="#f4eedf" stroke="#8b5a2b" stroke-width="2"/>
+<text x="18" y="318" font-size="26" font-weight="bold" fill="#8b5a2b">24</text>
+<text x="18" y="340" font-size="15" font-weight="bold" fill="#23261f">in possession</text>
+<text x="18" y="360" font-size="14" fill="#23261f">3 days' worth</text>
+<text x="148" y="317" font-size="14" font-weight="bold" fill="#8b5a2b">day 1</text>
+<g transform="translate(214 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(236 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(258 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(280 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(302 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(324 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(346 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(368 312) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<text x="148" y="341" font-size="14" font-weight="bold" fill="#8b5a2b">day 2</text>
+<g transform="translate(214 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(236 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(258 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(280 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(302 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(324 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(346 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(368 336) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<text x="148" y="365" font-size="14" font-weight="bold" fill="#8b5a2b">day 3</text>
+<g transform="translate(214 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(236 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(258 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(280 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(302 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(324 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(346 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+<g transform="translate(368 360) scale(0.8)"><ellipse cx="2" cy="3" rx="10" ry="6" fill="#8b5a2b"/><path d="M11 1 l5 -3 l-1 6z" fill="#8b5a2b"/><circle cx="-7" cy="-4" r="4.6" fill="#5a3e26"/><path d="M-11 -5 l-5 1.6 l5 1.8z" fill="#d9a441"/></g>
+</g>
 </svg>

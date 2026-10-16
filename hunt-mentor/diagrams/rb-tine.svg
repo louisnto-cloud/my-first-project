@@ -1,18 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two antler bumps in a 2.5 centimetre box. Left: a low wide bump, wider than it is long, not a tine. Right: a tall narrow spike, at least 2.5 centimetres long and longer than it is wide, a tine. Width is measured at least 2.5 centimetres down from the tip." font-family="sans-serif">
-  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Is it a tine (point)?</text>
-<rect x="20" y="44" width="170" height="190" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
-<rect x="60" y="96" width="90" height="90" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="5 4"/>
-<rect x="40" y="186" width="130" height="18" fill="#8b5a2b"/>
-<path d="M50 186 Q 105 140 160 186 Z" fill="#8b5a2b"/>
-<text x="105" y="70" font-size="16" fill="#c92a2a" text-anchor="middle" font-weight="bold">NOT a tine</text>
-<text x="105" y="226" font-size="14" fill="#2f3a2b" text-anchor="middle">2.5 cm box</text>
-<rect x="210" y="44" width="170" height="190" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
-<rect x="250" y="96" width="90" height="90" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="5 4"/>
-<rect x="230" y="186" width="130" height="18" fill="#8b5a2b"/>
-<path d="M280 186 L292 90 L306 186 Z" fill="#8b5a2b"/>
-<text x="295" y="70" font-size="16" fill="#5c7a3a" text-anchor="middle" font-weight="bold">A tine</text>
-<text x="295" y="226" font-size="14" fill="#2f3a2b" text-anchor="middle">2.5 cm box</text>
-<text x="14" y="262" font-size="15" fill="#23261f" text-anchor="start">At least 2.5 cm (1 in) long, AND longer than it</text>
-<text x="14" y="282" font-size="15" fill="#23261f" text-anchor="start">is wide. Width measured 2.5 cm down from the tip.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 446" font-family="sans-serif" role="img" aria-label="A tine or point must be at least 2.5 cm (1 inch) long and longer than it is wide. Left: a low wide bump inside a 2.5 cm box is NOT a tine. Right: a narrow spike that reaches the top of the box IS a tine. Width is measured 2.5 cm down from the tip. Synopsis definitions page.">
+<rect width="400" height="446" fill="#fffaf0"/>
+<g data-tip="One antler|Count on one antler, in good light, through binoculars, with the animal standing. If you cannot count with certainty, it does not count." data-tip-dot="370,14">
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Is it a tine (point)?</text>
+</g>
+<!-- left: not a tine -->
+<g data-tip="A bump|A low wide bump is wider than it is long, so it fails. At 150 m a knob looks like a point. Tip." data-tip-dot="184,50">
+<rect x="8" y="40" width="188" height="260" rx="12" fill="#ffffff" stroke="#c92a2a" stroke-width="3"/>
+<text x="102" y="66" font-size="18" font-weight="bold" fill="#c92a2a" text-anchor="middle">NOT a tine</text>
+<rect x="18" y="230" width="168" height="22" rx="6" fill="#8b5a2b"/>
+<path d="M40 231 C60 194 144 194 164 231z" fill="#8b5a2b"/>
+<rect x="62" y="150" width="80" height="80" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="102" y="142" font-size="14" fill="#6b5b4b" text-anchor="middle">2.5 cm box</text>
+<path d="M90 186 l24 24 M114 186 l-24 24" stroke="#c92a2a" stroke-width="4" stroke-linecap="round"/>
+<text x="102" y="274" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Under 2.5 cm,</text>
+<text x="102" y="292" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">wider than long</text>
+</g>
+<!-- right: a tine, drawn to scale: 80 px = 2.5 cm -->
+<g data-tip="A tine|A branch of an antler at least 2.5 cm (1 in) long and longer than it is wide (99%)." data-tip-dot="380,50">
+<rect x="204" y="40" width="188" height="260" rx="12" fill="#ffffff" stroke="#2f6e3b" stroke-width="3"/>
+<text x="298" y="66" font-size="18" font-weight="bold" fill="#2f6e3b" text-anchor="middle">A tine</text>
+<path d="M283 231 C290 190 296 150 300 116 C304 150 310 190 317 231z" fill="#8b5a2b"/>
+<rect x="258" y="150" width="80" height="80" fill="none" stroke="#8a9a6b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="298" y="292" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">longer than wide</text>
+<text x="298" y="274" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">2.5 cm or more,</text>
+</g>
+<g data-tip="Brow tine counts|The brow tine counts. The main beam tip counts as a tine too if it passes the test (85%)." data-tip-dot="384,240">
+<rect x="214" y="230" width="168" height="22" rx="6" fill="#8b5a2b"/>
+</g>
+<g data-tip="Length|Measure from the tip, along the curve of the point, to the middle of the width line (99%)." data-tip-dot="236,130">
+<path d="M246 116 V196" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M240 116 h12 M240 196 h12" stroke="#2f3a2b" stroke-width="2.2"/>
+<path d="M300 116 H254" stroke="#2f3a2b" stroke-width="1.2" stroke-dasharray="3 3"/>
+<circle cx="228" cy="156" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="228" y="161" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+</g>
+<g data-tip="Width|Measure the width at least 2.5 cm down from the tip (99%). On a palm, measure it in the plane of the palm." data-tip-dot="384,196">
+<path d="M291 196 H309" stroke="#e8590c" stroke-width="3"/>
+<path d="M291 189 v14 M309 189 v14" stroke="#e8590c" stroke-width="2.4"/>
+<circle cx="360" cy="196" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="360" y="201" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<path d="M312 196 H347" stroke="#e8590c" stroke-width="1.4" stroke-dasharray="3 3"/>
+</g>
+<g data-tip="2.5 cm box|The synopsis drawing puts each point in a square 2.5 cm on each side to compare them (99%)." data-tip-dot="350,140">
+<text x="340" y="104" font-size="14" fill="#6b5b4b" text-anchor="middle">2.5 cm box</text>
+<path d="M340 110 L330 148" stroke="#6b5b4b" stroke-width="1.2"/>
+</g>
+<!-- steps -->
+<g font-size="15" fill="#23261f">
+<rect x="8" y="310" width="384" height="84" rx="10" fill="#f4eedf"/>
+<circle cx="28" cy="329" r="10" fill="#e8590c"/><text x="28" y="334" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="46" y="334">Go 2.5 cm down from the tip</text>
+<circle cx="28" cy="353" r="10" fill="#e8590c"/><text x="28" y="358" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="46" y="358">Measure the width there</text>
+<circle cx="28" cy="377" r="10" fill="#e8590c"/><text x="28" y="382" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="46" y="382">Length beats width? It counts.</text>
+</g>
+<g data-tip="Not sure? No shot|Not sure it passes 2.5 cm? It is not a point. No shot." data-tip-dot="384,412">
+<rect x="8" y="402" width="384" height="38" rx="8" fill="#2f3a2b"/>
+<text x="200" y="427" font-size="16" font-weight="bold" fill="#f6d47a" text-anchor="middle">Not sure it passes? It is not a point.</text>
+</g>
 </svg>

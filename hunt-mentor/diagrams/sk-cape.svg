@@ -1,4 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Caping a deer for a shoulder mount: a ring cut around the body well behind the front shoulders, one cut up the back of the neck to between the antlers, and never a cut down the throat. Leave 20 to 30 cm of hide behind the shoulder.">
-<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
-<text x="200" y="24" font-size="17" font-weight="bold" text-anchor="middle" fill="#23261f">Caping for a shoulder mount</text><g transform="translate(230 170)"><g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"><rect x="-58" y="18" width="11" height="62" rx="4" fill="#8a9a6b"/><rect x="-48" y="18" width="11" height="62" rx="4" fill="#8a9a6b"/><rect x="46" y="16" width="11" height="64" rx="4" fill="#8a9a6b"/><rect x="58" y="16" width="11" height="64" rx="4" fill="#8a9a6b"/><path d="M-60 -14 L-92 -60 L-74 -70 L-40 -24 Z" fill="#8a9a6b"/><ellipse cx="0" cy="0" rx="80" ry="32" fill="#8a9a6b"/><ellipse cx="-98" cy="-62" rx="19" ry="10" fill="#8a9a6b"/><path d="M-84 -70 L-74 -86 L-76 -66 Z" fill="#8a9a6b"/><path d="M78 -12 L92 -18 L88 -2 Z" fill="#fff"/></g><circle cx="-106" cy="-64" r="2" fill="#23261f"/><path d="M-88 -71 L-90 -98 M-90 -86 L-100 -94 M-90 -92 L-80 -104" fill="none" stroke="#6b4f35" stroke-width="3.5" stroke-linecap="round"/><path d="M-10 -32 C 4 -10, 4 14, -10 32" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="8 5"/><path d="M-42 -27 L-74 -70 L-86 -74" fill="none" stroke="#e8590c" stroke-width="4" stroke-dasharray="8 5"/></g><path d="M143 125 L161 143 M161 125 L143 143" stroke="#b3261e" stroke-width="4" stroke-linecap="round"/><text x="20" y="48" font-size="14" font-weight="bold" fill="#e8590c">One cut up the back of</text><text x="20" y="64" font-size="14" font-weight="bold" fill="#e8590c">the neck to the antlers</text><text x="260" y="96" font-size="14" font-weight="bold" fill="#e8590c">Ring cut well</text><text x="260" y="112" font-size="14" font-weight="bold" fill="#e8590c">behind the shoulder</text><line x1="280" y1="120" x2="226.0" y2="150.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><path d="M231.2 142.6 L226.0 150.0 L235.0 149.5" fill="none" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="20" y="196" font-size="14" font-weight="bold" fill="#b3261e">Never cut</text><text x="20" y="212" font-size="14" font-weight="bold" fill="#b3261e">the throat</text><line x1="70" y1="186" x2="146.0" y2="142.0" stroke="#b3261e" stroke-width="2" stroke-linecap="round"/><path d="M140.9 149.4 L146.0 142.0 L137.0 142.7" fill="none" stroke="#b3261e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="276" font-size="14" text-anchor="middle" fill="#2f3a2b">Leave 20 to 30 cm of hide behind the shoulder</text><text x="200" y="294" font-size="14" text-anchor="middle" fill="#2f3a2b">Cool it fast. Freeze or salt within 24 to 48 h</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif" role="img" aria-label="Caping a deer for a shoulder mount: a ring cut around the body well behind the front shoulders, one cut up the back of the neck to between the antlers, and never a cut down the throat. Leave 20 to 30 cm of hide behind the shoulder.">
+<rect x="0" y="0" width="400" height="470" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" text-anchor="middle" fill="#23261f">Caping for a shoulder mount</text>
+<!-- deer, broadside, facing left -->
+<ellipse cx="248" cy="300" rx="120" ry="6" fill="#e6dcc6"/>
+<g stroke="#4a3826" stroke-width="1.4" stroke-linejoin="round">
+  <path d="M186 214 L196 214 L198 262 L196 298 L188 298 L188 262z" fill="#6f5640"/>
+  <path d="M316 214 L328 214 L330 260 L326 298 L318 298 L318 260z" fill="#6f5640"/>
+  <path d="M40 116 C42 108 56 100 72 96 L96 88 C104 90 110 96 114 104 L150 148 C190 140 260 140 312 146 C340 150 352 168 348 190 C346 206 338 216 326 224 C290 232 230 232 196 226 C182 222 172 214 166 204 C152 186 132 158 108 130 C96 128 70 130 56 128 C46 126 40 122 40 116z" fill="#8b6f52"/>
+  <path d="M168 210 L180 210 L182 262 L180 298 L172 298 L170 262z" fill="#8b6f52"/>
+  <path d="M300 212 L314 212 L316 260 L312 298 L304 298 L304 260z" fill="#8b6f52"/>
+  <path d="M100 90 C104 74 116 64 128 62 C126 76 116 88 106 94z" fill="#8b6f52"/>
+</g>
+<path d="M336 160 C350 166 352 192 342 206 C336 192 334 176 336 160z" fill="#f1e7d2"/>
+<path d="M108 132 C120 134 128 140 132 148 C122 144 112 140 104 136z" fill="#f1e7d2"/>
+<circle cx="70" cy="106" r="3" fill="#1a120b"/><ellipse cx="43" cy="116" rx="4" ry="3" fill="#1a120b"/>
+<path d="M92 88 C88 70 92 54 104 44 M98 66 C106 60 112 52 112 42 M90 72 C80 64 76 56 76 46" fill="none" stroke="#6b4f35" stroke-width="5" stroke-linecap="round"/>
+<path d="M92 88 C88 70 92 54 104 44 M98 66 C106 60 112 52 112 42 M90 72 C80 64 76 56 76 46" fill="none" stroke="#ecdfc3" stroke-width="2.6" stroke-linecap="round"/>
+<!-- 3 neck cut -->
+<g data-tip="Neck cut|One cut up the centre of the back of the neck to between the antler bases, then a short Y around each base." data-tip-dot="150,104">
+  <path d="M236 141 C210 140 180 142 152 147 L114 104 L98 90" fill="none" stroke="#e8590c" stroke-width="3.4" stroke-dasharray="7 5"/>
+  <path d="M98 90 l-8 -6 M98 90 l2 -10" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="148" cy="118" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="148" y="123" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+</g>
+<!-- 1 ring cut and the hide to leave -->
+<g data-tip="Ring cut|Right around the body, well behind the front shoulders. Shoulder mounts need 20 to 30 cm (8 to 12 in) of hide behind the shoulder." data-tip-dot="250,160">
+  <path d="M236 141 C232 170 232 200 236 230" fill="none" stroke="#e8590c" stroke-width="3.4" stroke-dasharray="7 5"/>
+  <g stroke="#2f3a2b" stroke-width="1.6"><line x1="188" y1="118" x2="236" y2="118"/><line x1="188" y1="111" x2="188" y2="125"/><line x1="236" y1="111" x2="236" y2="125"/></g>
+  <text x="212" y="104" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">20 to 30 cm</text>
+  <circle cx="236" cy="252" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="236" y="257" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+</g>
+<!-- 2 leg cut -->
+<g data-tip="Leg cuts|Cut around each front leg above the knee and up the back of the leg to the ring cut." data-tip-dot="150,262">
+  <path d="M168 258 C172 262 178 262 182 258" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <path d="M182 258 L182 226 C200 230 220 231 236 230" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/>
+  <circle cx="150" cy="262" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="150" y="267" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+</g>
+<!-- 4 peel forward -->
+<g data-tip="Peel forward|Peel the cape forward over the shoulders and neck. Cut close to the meat, pull hard." data-tip-dot="226,180">
+  <path d="M224 184 L186 172" stroke="#fffaf0" stroke-width="3.4" stroke-linecap="round"/><path d="M180 170 L192 164 L190 178z" fill="#fffaf0"/>
+  <circle cx="210" cy="198" r="12" fill="#fffaf0" stroke="#e8590c" stroke-width="2.4"/><text x="210" y="203" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">4</text>
+</g>
+<!-- 5 atlas joint -->
+<g data-tip="Atlas joint|Cut the head off at the atlas joint with the cape still on it. Leave ears, eyes, lips and nose to the taxidermist." data-tip-dot="64,160">
+  <path d="M116 104 L104 132" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="106" y1="128" x2="84" y2="150" stroke="#2f3a2b" stroke-width="1.4"/>
+  <circle cx="76" cy="158" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/><text x="76" y="163" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+</g>
+<!-- never cut -->
+<g data-tip="Never cut here|A throat cut or a brisket cut ruins the mount. Decide on a mount before any cut forward of the shoulders." data-tip-dot="112,200">
+  <path d="M122 150 l14 14 M136 150 l-14 14" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M158 200 l14 14 M172 200 l-14 14" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+  <text x="80" y="200" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">no cuts</text>
+  <text x="80" y="218" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">here</text>
+</g>
+<!-- legend -->
+<g font-size="15" fill="#2f3a2b">
+  <rect x="12" y="314" width="376" height="112" rx="8" fill="#f4eedf"/>
+  <g font-weight="bold" fill="#fffaf0" text-anchor="middle">
+    <circle cx="32" cy="333" r="10" fill="#e8590c"/><text x="32" y="338">1</text>
+    <circle cx="32" cy="355" r="10" fill="#e8590c"/><text x="32" y="360">2</text>
+    <circle cx="32" cy="377" r="10" fill="#e8590c"/><text x="32" y="382">3</text>
+    <circle cx="32" cy="399" r="10" fill="#e8590c"/><text x="32" y="404">4</text>
+    <circle cx="32" cy="421" r="0" fill="#e8590c"/>
+  </g>
+  <text x="50" y="338">Ring cut well behind the shoulder</text>
+  <text x="50" y="360">Round each front leg, up the back</text>
+  <text x="50" y="382">Up the back of the neck to the antlers</text>
+  <text x="50" y="404">Peel forward, then</text>
+  <circle cx="190" cy="399" r="10" fill="#2f3a2b"/><text x="190" y="404" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+  <text x="206" y="404">head off at the atlas</text>
+</g>
+<g data-tip="Cool it fast|Freeze or salt within 24 to 48 hours. Hair coming off in patches, called slip, means the cape is lost." data-tip-dot="384,446">
+  <rect x="12" y="434" width="376" height="30" rx="8" fill="#e3edf5"/>
+  <text x="200" y="455" font-size="15" font-weight="bold" fill="#2f5f8a" text-anchor="middle">Cool it fast: freeze or salt within 24 to 48 h</text>
+</g>
 </svg>

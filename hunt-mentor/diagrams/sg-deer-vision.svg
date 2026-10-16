@@ -1,13 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="How a deer sees colour, a rough picture. Deer have two colour cones, blue near 455 nanometres and green near 537, and no red cone. Blaze orange looks dull, close to grey or brown. Blue stands out. Some detergent brighteners may glow in ultraviolet. Motion and outline give you away, not colour.">
-  <rect width="400" height="320" fill="#fffaf0"/>
-  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You see / a deer sees</text>
-  <g font-size="15" font-weight="bold" fill="#2f3a2b"><text x="14" y="82">You</text><text x="14" y="162">Deer</text></g>
-  <rect x="80" y="55" width="70" height="44" rx="6" fill="#ff6a00"/><rect x="160" y="55" width="70" height="44" rx="6" fill="#4f7f3a"/><rect x="240" y="55" width="70" height="44" rx="6" fill="#2f63c9"/><rect x="320" y="55" width="66" height="44" rx="6" fill="#f2f2f2" stroke="#2f3a2b"/>
-  <rect x="80" y="135" width="70" height="44" rx="6" fill="#9c9478"/><rect x="160" y="135" width="70" height="44" rx="6" fill="#7f8a6a"/><rect x="240" y="135" width="70" height="44" rx="6" fill="#2f63e0"/><rect x="320" y="135" width="66" height="44" rx="6" fill="#d8e6ff" stroke="#4a7fb0" stroke-width="3"/>
-  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="115" y="120">orange</text><text x="195" y="120">green</text><text x="275" y="120">blue</text><text x="353" y="120">bright wash</text></g>
-  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="115" y="200">dull</text><text x="195" y="200">greyer</text><text x="275" y="200">stands out</text><text x="353" y="200">UV glow?</text></g>
-  <rect x="14" y="222" width="372" height="86" rx="10" fill="#2f3a2b"/>
-  <text x="200" y="250" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Colour is not the problem.</text>
-  <text x="200" y="274" font-size="16" font-weight="bold" fill="#f3d36b" text-anchor="middle">Motion and outline are.</text>
-  <text x="200" y="298" font-size="14" fill="#fff" text-anchor="middle">Rough picture, not exact colours (Tip)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif" role="img" aria-label="Colour as you see it and as a deer sees it, a rough picture. Orange looks dull to a deer, blue still stands out, and a bright wash may glow in ultraviolet. A still hunter in cover is hard to see; a moving one is seen fast. Colour is not the problem: motion and outline are (Tip).">
+<rect width="400" height="392" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What a deer sees</text>
+<text x="143" y="54" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+<g data-tip="Low light|In low light, deer are most sensitive to blue and blue green (80%). Their eyeshine is a reflective layer behind the retina." data-tip-dot="252,44">
+<text x="229" y="54" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer</text>
+</g>
+<!-- row 1: blaze orange -->
+<g data-tip="Blaze orange|Deer have no red cone, so blaze orange looks dull to them, close to grey or brown (75%)." data-tip-dot="384,70">
+<rect x="8" y="62" width="384" height="52" rx="8" fill="#f4eedf"/>
+<text x="16" y="93" font-size="15" font-weight="bold" fill="#2f3a2b">Blaze orange</text>
+<rect x="116" y="67" width="54" height="42" rx="6" fill="#ff6a00"/>
+<path d="M176 88 h16" stroke="#6b5b4b" stroke-width="2.4"/><path d="M198 88 l-8 -5 v10z" fill="#6b5b4b"/>
+<rect x="202" y="67" width="54" height="42" rx="6" fill="#a39a7e"/>
+<text x="266" y="93" font-size="15" font-weight="bold" fill="#2f6e3b">dull</text>
+</g>
+<!-- row 2: blue -->
+<g data-tip="Blue|A deer's colour cones peak near blue and green. Blue stands out more: skip blue jeans (65%, Tip)." data-tip-dot="384,128">
+<rect x="8" y="120" width="384" height="52" rx="8" fill="#fffaf0" stroke="#efe6d2"/>
+<text x="16" y="151" font-size="15" font-weight="bold" fill="#2f3a2b">Blue jeans</text>
+<rect x="116" y="125" width="54" height="42" rx="6" fill="#2f63c8"/>
+<path d="M176 146 h16" stroke="#6b5b4b" stroke-width="2.4"/><path d="M198 146 l-8 -5 v10z" fill="#6b5b4b"/>
+<rect x="202" y="125" width="54" height="42" rx="6" fill="#2f63e0"/>
+<text x="266" y="151" font-size="15" font-weight="bold" fill="#c0392b">stands out</text>
+</g>
+<!-- row 3: UV brightener -->
+<g data-tip="UV brighteners|Deer pick up more ultraviolet (UV) light than we do. Some detergents add UV brighteners that may glow to a deer (65%). Use unscented, no brightener soap." data-tip-dot="384,186">
+<rect x="8" y="178" width="384" height="52" rx="8" fill="#f4eedf"/>
+<text x="16" y="202" font-size="15" font-weight="bold" fill="#2f3a2b">Washed with</text>
+<text x="16" y="220" font-size="15" font-weight="bold" fill="#2f3a2b">brightener</text>
+<rect x="116" y="183" width="54" height="42" rx="6" fill="#f3f1ea" stroke="#c9c2b0"/>
+<path d="M176 204 h16" stroke="#6b5b4b" stroke-width="2.4"/><path d="M198 204 l-8 -5 v10z" fill="#6b5b4b"/>
+<rect x="198" y="179" width="62" height="50" rx="9" fill="#cfe0ff"/>
+<rect x="202" y="183" width="54" height="42" rx="6" fill="#e4eeff" stroke="#4a7fb0" stroke-width="2.4"/>
+<text x="266" y="209" font-size="15" font-weight="bold" fill="#c0392b">may glow</text>
+</g>
+<g data-tip="Rough picture|These colours are a rough sketch of deer vision, not exact. Tip." data-tip-dot="384,244">
+<text x="388" y="250" font-size="14" fill="#6b5b4b" text-anchor="end">rough colours (Tip)</text>
+</g>
+<!-- motion panel -->
+<g data-tip="Freeze|Motion and outline give you away, not colour (85%). Beat the eyes with stillness and a background." data-tip-dot="188,266">
+<rect x="8" y="258" width="188" height="86" rx="8" fill="#eef1e6"/>
+<path d="M30 340 L46 282 L62 340z" fill="#4f7a3a"/><path d="M50 340 L70 270 L90 340z" fill="#3f6a2e"/>
+<circle cx="74" cy="294" r="6" fill="#8b6f52"/><rect x="67" y="301" width="14" height="22" rx="4" fill="#6b5b4b"/><path d="M70 323 l-2 17 M78 323 l2 17" stroke="#6b5b4b" stroke-width="4.5" stroke-linecap="round"/>
+<text x="140" y="292" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Still,</text>
+<text x="140" y="312" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">in cover:</text>
+<text x="140" y="332" font-size="15" fill="#2f3a2b" text-anchor="middle">hard to see</text>
+</g>
+<g data-tip="Motion|Deer catch motion fast. A moving headlamp or phone screen in the dark is pure motion. Tip." data-tip-dot="384,266">
+<rect x="204" y="258" width="188" height="86" rx="8" fill="#fbe9e4"/>
+<circle cx="238" cy="290" r="6" fill="#8b6f52"/><rect x="231" y="297" width="14" height="22" rx="4" fill="#6b5b4b"/><path d="M235 319 l-7 18 M241 319 l6 18" stroke="#6b5b4b" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M224 296 c-6 6 -6 14 0 20 M216 292 c-9 9 -9 21 0 30 M252 296 c6 6 6 14 0 20 M260 292 c9 9 9 21 0 30" fill="none" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round"/>
+<text x="326" y="292" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Moving:</text>
+<text x="326" y="312" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">seen fast</text>
+</g>
+<rect x="8" y="352" width="384" height="34" rx="8" fill="#2f3a2b"/>
+<text x="200" y="375" font-size="16" font-weight="bold" fill="#f6d47a" text-anchor="middle">Motion and outline give you away</text>
 </svg>

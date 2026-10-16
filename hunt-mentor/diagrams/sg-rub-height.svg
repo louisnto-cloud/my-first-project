@@ -1,21 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" font-family="sans-serif" role="img" aria-label="Reading a rub, drawn to scale. Most rubs sit 30 to 105 cm above the ground. A rub centred 75 cm or higher suggests a mature buck. Tree thickness helps too: 2.5 to 5 cm trees are often yearlings, over 10 cm is usually an older buck. Height beats tree size, 60 percent. The rubbed side faces where the buck came from.">
-<rect width="400" height="352" fill="#fffaf0"/>
-<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Reading a rub</text>
-<rect x="58" y="121.0" width="342" height="105.0" fill="#f6e7d2"/>
-<text x="140" y="139" font-size="15" font-weight="bold" fill="#8a5a2b">most rubs:</text>
-<text x="140" y="157" font-size="15" font-weight="bold" fill="#8a5a2b">30 to 105 cm</text>
-<rect x="0" y="268" width="400" height="80" fill="#dfe6d3"/><line x1="0" y1="268" x2="400" y2="268" stroke="#a9b37f" stroke-width="2"/>
-<line x1="44" y1="268" x2="44" y2="50" stroke="#2f3a2b" stroke-width="2"/><line x1="38" y1="268.0" x2="50" y2="268.0" stroke="#2f3a2b" stroke-width="2"/><text x="35" y="266" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">0</text><line x1="38" y1="226.0" x2="50" y2="226.0" stroke="#2f3a2b" stroke-width="2"/><text x="35" y="231" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">30</text><line x1="38" y1="163.0" x2="50" y2="163.0" stroke="#2f3a2b" stroke-width="2"/><text x="35" y="168" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">75</text><line x1="38" y1="121.0" x2="50" y2="121.0" stroke="#2f3a2b" stroke-width="2"/><text x="35" y="126" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">105</text><text x="44" y="42" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">cm</text>
-<line x1="50" y1="163.0" x2="396" y2="163.0" stroke="#e8590c" stroke-width="2" stroke-dasharray="7 5"/>
-<path d="M120 111.2 l-22 -9.9" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="98.0" cy="100.2" rx="7" ry="4.5" fill="#4a7438"/><path d="M120 104.1 l19 -8.6" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="139.0" cy="94.6" rx="7" ry="4.5" fill="#5f8a46"/><path d="M120 97.1 l-16 -7.2" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="104.0" cy="89.1" rx="7" ry="4.5" fill="#4a7438"/><path d="M120 90.0 l13 -5.9" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="133.0" cy="83.5" rx="7" ry="4.5" fill="#5f8a46"/><path d="M120 83.0 l-10 -4.5" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="110.0" cy="78.0" rx="7" ry="4.5" fill="#4a7438"/><ellipse cx="120" cy="68.0" rx="8" ry="10" fill="#5f8a46"/><path d="M116.5 268 L117.9 72 L122.1 72 L123.5 268z" fill="#6b4f35"/><rect x="117.0" y="181.2" width="6.0" height="42.0" rx="1.5" fill="#f1e2c0"/><path d="M117.5 218.2 l5.0 -1.6" stroke="#c9a36b" stroke-width="1.3"/><path d="M117.5 209.2 l5.0 0.3" stroke="#c9a36b" stroke-width="1.3"/><path d="M117.5 200.2 l5.0 -0.8" stroke="#c9a36b" stroke-width="1.3"/><path d="M117.5 191.2 l5.0 0.6" stroke="#c9a36b" stroke-width="1.3"/><path d="M116.5 223.2 q-4 6 -1 11 M123.5 223.2 q5 5 2 10" stroke="#6b4f35" stroke-width="1.6" fill="none"/>
-<path d="M262 101.1 l-22 -9.9" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="240.0" cy="90.1" rx="7" ry="4.5" fill="#4a7438"/><path d="M262 92.5 l19 -8.6" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="281.0" cy="83.0" rx="7" ry="4.5" fill="#5f8a46"/><path d="M262 84.0 l-16 -7.2" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="246.0" cy="76.0" rx="7" ry="4.5" fill="#4a7438"/><path d="M262 75.4 l13 -5.9" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="275.0" cy="68.9" rx="7" ry="4.5" fill="#5f8a46"/><path d="M262 66.8 l-10 -4.5" stroke="#6b4f35" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="252.0" cy="61.8" rx="7" ry="4.5" fill="#4a7438"/><ellipse cx="262" cy="50.0" rx="8" ry="10" fill="#5f8a46"/><path d="M253.5 268 L256.9 54 L267.1 54 L270.5 268z" fill="#6b4f35"/><rect x="254.0" y="114.0" width="16.0" height="53.2" rx="1.5" fill="#f1e2c0"/><path d="M254.5 162.2 l15.0 0.7" stroke="#c9a36b" stroke-width="1.3"/><path d="M254.5 153.2 l15.0 1.5" stroke="#c9a36b" stroke-width="1.3"/><path d="M254.5 144.2 l15.0 1.8" stroke="#c9a36b" stroke-width="1.3"/><path d="M254.5 135.2 l15.0 2.7" stroke="#c9a36b" stroke-width="1.3"/><path d="M254.5 126.2 l15.0 1.4" stroke="#c9a36b" stroke-width="1.3"/><path d="M253.5 167.2 q-4 6 -1 11 M270.5 167.2 q5 5 2 10" stroke="#6b4f35" stroke-width="1.6" fill="none"/>
-<text x="120" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2.5 to 5 cm tree:</text>
-<text x="120" y="307" font-size="15" fill="#2f3a2b" text-anchor="middle">often a yearling</text>
-<line x1="340" y1="163" x2="340" y2="173" stroke="#e8590c" stroke-width="1.4"/><circle cx="340" cy="163" r="2.6" fill="#e8590c"/>
-<rect x="272.8" y="173.0" width="121.2" height="49.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
-<text x="333.414" y="193.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">75 cm +</text>
-<text x="333.414" y="213" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">mature buck?</text>
-<text x="286" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">over 10 cm tree:</text>
-<text x="286" y="307" font-size="15" fill="#2f3a2b" text-anchor="middle">older</text>
-<text x="200" y="336" font-size="16" font-weight="bold" fill="#6b4f35" text-anchor="middle">Height beats tree size (60%)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif" role="img" aria-label="Reading a rub: most rubs sit 30 to 105 cm above the ground. A rub centred 75 cm or higher suggests a mature buck. A thin tree of 2.5 to 5 cm is often a yearling; a tree over 10 cm suggests an older buck. Height says more than tree size (60%).">
+<rect width="400" height="392" fill="#fffaf0"/>
+<rect x="0" y="300" width="400" height="92" fill="#dfe5d3"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Reading a rub</text>
+<!-- scale: 2 px per cm, ground at y 300 -->
+<g data-tip="Rub height|Most rubs sit about 30 to 105 cm above the ground (65%)." data-tip-dot="270,98">
+<rect x="56" y="90" width="336" height="150" fill="#f3e3cc"/>
+<text x="174" y="112" font-size="15" font-weight="bold" fill="#8a5a2b">most rubs</text>
+<text x="174" y="131" font-size="15" font-weight="bold" fill="#8a5a2b">30 to 105 cm</text>
+</g>
+<g font-size="14" fill="#2f3a2b" text-anchor="end">
+  <line x1="46" y1="52" x2="46" y2="300" stroke="#2f3a2b" stroke-width="2.4"/>
+  <line x1="40" y1="300" x2="52" y2="300" stroke="#2f3a2b" stroke-width="2"/><text x="36" y="305">0</text>
+  <line x1="40" y1="240" x2="52" y2="240" stroke="#2f3a2b" stroke-width="2"/><text x="36" y="245">30</text>
+  <line x1="40" y1="150" x2="52" y2="150" stroke="#2f3a2b" stroke-width="2"/><text x="36" y="155">75</text>
+  <line x1="40" y1="90" x2="52" y2="90" stroke="#2f3a2b" stroke-width="2"/><text x="36" y="95">105</text>
+  <text x="36" y="56" font-weight="bold">cm</text>
+</g>
+<!-- tree 1: thin, about 4 cm -->
+<g data-tip="Small tree|A tree 2.5 to 5 cm across is often a yearling's rub (60%)." data-tip-dot="182,318">
+  <path d="M150 40 L136 66 H144 L130 92 H170 L156 66 H164z" fill="#4f7a3a"/>
+  <rect x="146" y="90" width="8" height="210" fill="#6b4f35"/>
+  <rect x="145" y="210" width="10" height="38" rx="2" fill="#f1e2bf" stroke="#c9b48c"/>
+  <path d="M146 218 l8 3 M146 228 l8 3 M146 238 l8 3" stroke="#c9b48c" stroke-width="1.2"/>
+  <path d="M142 252 c-4 4 -2 8 2 10 M158 252 c4 4 2 8 -2 10" fill="none" stroke="#6b4f35" stroke-width="1.6"/>
+  <text x="150" y="322" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2.5 to 5 cm tree</text>
+  <text x="150" y="341" font-size="15" fill="#2f3a2b" text-anchor="middle">often a yearling</text>
+</g>
+<!-- tree 2: thick, about 12 cm -->
+<g data-tip="Big tree|Over 10 cm suggests an older buck, but young bucks rub big trees too. Height is the better clue (60%)." data-tip-dot="352,318">
+  <path d="M300 34 L280 62 H290 L272 92 H328 L310 62 H320z" fill="#3f6a2e"/>
+  <rect x="288" y="90" width="24" height="210" fill="#6b4f35"/>
+  <text x="300" y="322" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">over 10 cm tree</text>
+  <text x="300" y="341" font-size="15" fill="#2f3a2b" text-anchor="middle">older buck</text>
+</g>
+<g data-tip="Fresh or old|Fresh: wet white wood, curled bark shavings, sap. Old: grey, dry wood. Tip." data-tip-dot="318,168">
+  <rect x="287" y="120" width="26" height="54" rx="3" fill="#f1e2bf" stroke="#c9b48c"/>
+  <path d="M289 130 l22 5 M289 142 l22 5 M289 154 l22 5 M289 166 l22 4" stroke="#c9b48c" stroke-width="1.4"/>
+  <path d="M282 296 c-6 -4 -4 -10 2 -10 M318 296 c6 -4 4 -10 -2 -10 M296 298 c-2 -6 4 -8 6 -4" fill="none" stroke="#e8dcc0" stroke-width="2.4"/>
+</g>
+<g data-tip="Tine scratches|Scratches above the main rub and broken branches hint at a wide or heavy rack. Tip." data-tip-dot="320,104">
+  <path d="M292 104 l6 10 M300 100 l5 12 M306 104 l4 9" stroke="#f1e2bf" stroke-width="2" stroke-linecap="round"/>
+</g>
+<!-- 75 cm line -->
+<g data-tip="75 cm or higher|A rub centred 75 cm or higher suggests a mature buck (60%)." data-tip-dot="384,190">
+  <line x1="46" y1="150" x2="392" y2="150" stroke="#e8590c" stroke-width="2.4" stroke-dasharray="7 5"/>
+  <rect x="318" y="176" width="74" height="48" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+  <text x="355" y="196" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">75 cm +</text>
+  <text x="355" y="215" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">mature?</text>
+</g>
+<!-- rubbed side faces where he came from -->
+<g data-tip="Rubbed side|It usually faces where the buck came from. A line of rubs is his road between bed and feed (60%)." data-tip-dot="230,190">
+  <path d="M190 204 C214 194 246 176 276 156" fill="none" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="5 4"/>
+  <path d="M282 152 L270 152 L276 162z" fill="#2f3a2b"/>
+  <text x="230" y="230" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">he came</text>
+  <text x="230" y="247" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">from here</text>
+</g>
+<rect x="12" y="352" width="376" height="32" rx="8" fill="#2f3a2b"/>
+<text x="200" y="374" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Height beats tree size (60%)</text>
 </svg>

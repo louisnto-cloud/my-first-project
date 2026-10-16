@@ -1,16 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" font-family="sans-serif" role="img" aria-label="Grid of which firearm is legal for which upland bird, BC synopsis page 13, 97 to 99 percent. Grouse and ptarmigan: shotgun, .22 rimfire, centrefire rifle, air gun and bow all legal. Turkey: shotgun, .22 rimfire, air gun and bow legal, centrefire rifle not legal. Quail, chukar, partridge and pheasant: shotgun, air gun and bow only, no .22 and no centrefire rifle. Bows are classes B, C and D. Handguns are never legal for hunting. Ducks and geese: no rifle.">
-<rect width="400" height="380" fill="#fffaf0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 384" font-family="sans-serif" role="img" aria-label="Grid of which firearm is legal for which upland bird, BC synopsis page 13, 97 to 99 percent. Grouse and ptarmigan: shotgun, .22 rimfire, centrefire rifle, air gun and bow all legal. Turkey: shotgun, .22 rimfire, air gun and bow legal, centrefire rifle not legal. Quail, chukar, partridge and pheasant: shotgun, air gun and bow only, no .22 and no centrefire rifle. Bows are classes B, C and D. Handguns are never legal for hunting. Ducks and geese: no rifle.">
+<rect width="400" height="384" fill="#fffaf0"/>
 <text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which gun for which bird (97 to 99%)</text>
-<g transform="translate(180 50) scale(1.25)"><rect x="-5" y="-10" width="10" height="16" rx="1.5" fill="#c0392b" stroke="#7e2318"/><rect x="-5.5" y="6" width="11" height="6" rx="1" fill="#c9a24a" stroke="#7a5a1a"/></g>
-<text x="180" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shotgun</text>
-<g transform="translate(229 50) scale(1.25)"><rect x="-2.6" y="2" width="5.2" height="9" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-2.6 2 C-2.6 -3 2.6 -3 2.6 2z" fill="#8a8a8a" stroke="#555"/></g>
-<text x="229" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22</text>
-<g transform="translate(277 50) scale(1.25)"><rect x="-4" y="-2" width="8" height="14" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-4 -2 L-2 -8 L0 -12 L2 -8 L4 -2z" fill="#b87333" stroke="#7a4a1a"/></g>
-<text x="277" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rifle</text>
-<g transform="translate(325 50) scale(1.25)"><path d="M-4 -2 L-5 6 L5 6 L4 -2 C4 -6 -4 -6 -4 -2z" fill="#9aa0a6" stroke="#555"/></g>
+<g data-tip="Shotgun|Lead shot is legal for upland birds (99%). A pump or auto must hold no more than 3 shells in total (95%)." data-tip-dot="194,36"><g transform="translate(180 52) scale(1.6)"><rect x="-5" y="-10" width="10" height="16" rx="1.5" fill="#c0392b" stroke="#7e2318"/><rect x="-5.5" y="6" width="11" height="6" rx="1" fill="#c9a24a" stroke="#7a5a1a"/></g>
+<text x="180" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shotgun</text></g>
+<g data-tip=".22 rimfire|Legal for grouse, ptarmigan and turkey only (page 13, note 2). A .22 bullet carries over 1 km: know your backstop." data-tip-dot="243,36"><g transform="translate(229 54) scale(1.6)"><rect x="-2.6" y="2" width="5.2" height="9" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-2.6 2 C-2.6 -3 2.6 -3 2.6 2z" fill="#8a8a8a" stroke="#555"/></g>
+<text x="229" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22</text></g>
+<g data-tip="Centrefire rifle|Grouse or ptarmigan only (page 13, note 3)." data-tip-dot="291,36"><g transform="translate(277 54) scale(1.6)"><rect x="-4" y="-2" width="8" height="14" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-4 -2 L-2 -8 L0 -12 L2 -8 L4 -2z" fill="#b87333" stroke="#7a4a1a"/></g>
+<text x="277" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rifle</text></g>
+<g transform="translate(325 54) scale(1.6)"><path d="M-4 -2 L-5 6 L5 6 L4 -2 C4 -6 -4 -6 -4 -2z" fill="#9aa0a6" stroke="#555"/></g>
 <text x="325" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Air gun</text>
-<g transform="translate(371 50) scale(1.25)"><path d="M-4 -12 C8 -6 8 6 -4 12" fill="none" stroke="#8b5a2b" stroke-width="2.6"/><path d="M-4 -12 V12" stroke="#2f3a2b" stroke-width="1"/><path d="M-8 0 H10 M6 -3 L10 0 L6 3" stroke="#2f3a2b" stroke-width="1.6" fill="none"/></g>
-<text x="371" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bow</text>
+<g data-tip="Bow|Bow classes B, C and D are legal for upland birds (97%)." data-tip-dot="385,36"><g transform="translate(371 52) scale(1.6)"><path d="M-4 -12 C8 -6 8 6 -4 12" fill="none" stroke="#8b5a2b" stroke-width="2.6"/><path d="M-4 -12 V12" stroke="#2f3a2b" stroke-width="1"/><path d="M-8 0 H10 M6 -3 L10 0 L6 3" stroke="#2f3a2b" stroke-width="1.6" fill="none"/></g>
+<text x="371" y="86" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bow</text></g>
+<g data-tip="Grouse and ptarmigan|Every column is legal here. Tip: a .22 head shot on a sitting grouse inside 25 m saves all the meat." data-tip-dot="384,104">
 <rect x="8" y="96" width="384" height="70" rx="6" fill="#f4eedf"/>
 <g transform="translate(30 131.0)"><g fill="#2f3a2b" transform="scale(0.95)"><path d="M-12 -2 C-12 -10 -2 -12 6 -10 C14 -8 16 0 12 6 C8 10 -4 11 -9 7 C-12 5 -12 2 -12 -2z"/><path d="M8 -4 L20 -10 C22 -4 22 2 19 7 L8 4z"/><path d="M-9 -4 C-12 -9 -11 -15 -6 -16 C-2 -16 0 -12 -1 -8z"/><path d="M-11 -12 l-4 1 l4 1z"/><path d="M-2 10 v5 M3 10 v5" stroke="#2f3a2b" stroke-width="1.6"/></g></g>
 <text x="56" y="128" font-size="15" font-weight="bold" fill="#2f3a2b">Grouse,</text>
@@ -20,6 +21,8 @@
 <circle cx="277" cy="131.0" r="15" fill="#e3eedb"/><path d="M269.3 132.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="325" cy="131.0" r="15" fill="#e3eedb"/><path d="M317.3 132.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="371" cy="131.0" r="15" fill="#e3eedb"/><path d="M363.3 132.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g data-tip="Turkey|Shotgun, air gun, .22 rimfire or bow. No centrefire rifle (98%)." data-tip-dot="384,178">
 <rect x="8" y="170" width="384" height="70" rx="6" fill="#ffffff"/>
 <g transform="translate(30 205.0)"><g fill="#2f3a2b" transform="scale(0.95)"><path d="M-8 -2 C-8 -10 4 -12 10 -8 C14 -5 14 4 10 8 C4 12 -6 10 -8 4z"/><path d="M6 -10 C10 -20 22 -20 24 -10 C24 0 18 8 12 8z"/><path d="M-6 -2 C-10 -10 -10 -18 -14 -20 C-17 -21 -19 -18 -18 -15 L-21 -14 L-18 -13 C-16 -9 -14 -4 -12 0z"/><path d="M-18 -13 C-20 -10 -19 -7 -17 -6" stroke="#c0392b" stroke-width="2" fill="none"/><path d="M-1 10 v6 M4 10 v6" stroke="#2f3a2b" stroke-width="1.8"/></g></g>
 <text x="56" y="211" font-size="15" font-weight="bold" fill="#2f3a2b">Turkey</text>
@@ -28,6 +31,8 @@
 <circle cx="277" cy="205.0" r="15" fill="#f6e1dc"/><path d="M271.3 199.3 l11.4 11.4 M282.7 199.3 l-11.4 11.4" stroke="#c0392b" stroke-width="3.0" stroke-linecap="round"/>
 <circle cx="325" cy="205.0" r="15" fill="#e3eedb"/><path d="M317.3 206.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="371" cy="205.0" r="15" fill="#e3eedb"/><path d="M363.3 206.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g data-tip="Quail, chukar, partridge, pheasant|Shotgun, air rifle or bows B, C and D. No .22 and no centrefire rifle (99%)." data-tip-dot="384,252">
 <rect x="8" y="244" width="384" height="76" rx="6" fill="#f4eedf"/>
 <g transform="translate(30 282.0)"><g fill="#2f3a2b" transform="scale(0.95)"><ellipse cx="0" cy="0" rx="12" ry="8"/><circle cx="-10" cy="-8" r="5"/><path d="M-15 -8 l-3 1 l3 1z"/><path d="M-10 -12 C-12 -19 -6 -21 -5 -17" stroke="#2f3a2b" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M10 -2 L17 -4 L15 3z"/><path d="M-2 7 v6 M3 7 v6" stroke="#2f3a2b" stroke-width="1.6"/></g></g>
 <text x="56" y="270" font-size="15" font-weight="bold" fill="#2f3a2b">Quail, chukar,</text>
@@ -38,6 +43,10 @@
 <circle cx="277" cy="282.0" r="15" fill="#f6e1dc"/><path d="M271.3 276.3 l11.4 11.4 M282.7 276.3 l-11.4 11.4" stroke="#c0392b" stroke-width="3.0" stroke-linecap="round"/>
 <circle cx="325" cy="282.0" r="15" fill="#e3eedb"/><path d="M317.3 283.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="371" cy="282.0" r="15" fill="#e3eedb"/><path d="M363.3 283.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="200" y="342" font-size="15" fill="#2f3a2b" text-anchor="middle">Rifle: centrefire. Bow: classes B, C and D</text>
-<text x="200" y="366" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Handguns: never. Ducks, geese: no rifle</text>
+</g>
+<text x="200" y="340" font-size="15" fill="#2f3a2b" text-anchor="middle">Rifle: centrefire. Bow: classes B, C and D</text>
+<g data-tip="Never|Handguns are unlawful for hunting (99%). Any rifle for ducks: No in the same table (99%)." data-tip-dot="384,356">
+<rect x="8" y="348" width="384" height="28" rx="6" fill="#fbe9e4"/>
+<text x="200" y="368" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Handguns: never. Ducks, geese: no rifle</text>
+</g>
 </svg>

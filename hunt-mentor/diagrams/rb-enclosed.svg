@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 424" font-family="sans-serif" role="img" aria-label="Three ways private or leased land counts as enclosed under the Trespass Act, any one is enough. Signs: no trespassing signs clearly visible at each ordinary access point, drawn as a posted NO sign at a farm gate. Fence: a lawful fence all the way round, drawn as a field ringed by fence posts. Natural edge: a natural boundary all the way round, such as a riverbank or a hedge about 1.4 metres high. Enclosed land needs the owner&#x27;s permission.">
 <rect width="400" height="424" fill="#fffaf0"/>
+<g data-tip="Presumed no consent|On enclosed land you are presumed to have no permission (85%). Get the owner's consent, in writing if you can. Tip." data-tip-dot="384,16">
 <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Enclosed land: any ONE of these</text>
+</g>
+<g data-tip="Told to leave|Leave as soon as practicable. Staying or coming back is a further offence (85%)." data-tip-dot="384,42">
 <text x="200" y="48" font-size="16" fill="#2f3a2b" text-anchor="middle">Then you need the owner&#x27;s permission.</text>
+</g>
 <defs><clipPath id="rb-enclosed-c0"><rect x="10" y="62" width="186" height="112" rx="6"/></clipPath><clipPath id="rb-enclosed-c1"><rect x="10" y="184" width="186" height="112" rx="6"/></clipPath><clipPath id="rb-enclosed-c2"><rect x="10" y="306" width="186" height="112" rx="6"/></clipPath></defs>
 <g clip-path="url(#rb-enclosed-c0)"><rect x="10" y="62" width="186" height="112" fill="#e6efe0"/>
 <path d="M10 112 H196 V174 H10z" fill="#cdd9a8"/>
@@ -78,16 +82,21 @@
 <path d="M163 340 H177 M163 390 H177" stroke="#2f3a2b" stroke-width="2"/>
 </g>
 <rect x="10" y="62" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Signs|Clearly visible in daylight from the approach to each ordinary point of access (85%). A picture with a line through it is enough notice (85%)." data-tip-dot="380,72">
 <rect x="204" y="62" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
 <text x="216" y="104" font-size="18" font-weight="bold" fill="#c0392b">Signs</text>
 <text x="216" y="128" font-size="16" fill="#2f3a2b">No trespassing signs</text>
 <text x="216" y="148" font-size="16" fill="#2f3a2b">at each normal way in</text>
+</g>
 <rect x="10" y="184" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Fence|A lawful fence all the way round makes it enclosed (99%). A fence with a gap is not an invitation. Tip." data-tip-dot="380,194">
 <rect x="204" y="184" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
 <text x="216" y="226" font-size="18" font-weight="bold" fill="#c0392b">Fence</text>
 <text x="216" y="250" font-size="16" fill="#2f3a2b">A lawful fence</text>
 <text x="216" y="270" font-size="16" fill="#2f3a2b">all the way round</text>
+</g>
 <rect x="10" y="306" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Natural edge|A natural boundary all the way round, such as a riverbank or a hedge about 1.4 m (4 1/2 ft) high (99%)." data-tip-dot="380,316">
 <rect x="204" y="306" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
 <text x="216" y="338" font-size="18" font-weight="bold" fill="#c0392b">Natural edge</text>
 <text x="216" y="362" font-size="16" fill="#2f3a2b">Riverbank, or a</text>
@@ -95,4 +104,5 @@
 <text x="216" y="402" font-size="16" fill="#2f3a2b">1.4 m high</text>
 <rect x="93.9" y="312.0" width="56.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
 <text x="121.974" y="331" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1.4 m</text>
+</g>
 </svg>
