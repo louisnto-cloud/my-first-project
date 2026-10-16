@@ -151,3 +151,5 @@ hunt-mentor/
   - Open owner decisions: AI images (allow for scenes only, or keep all hand drawn); 13 "ask a conservation officer" rules; 42 VERIFY items in moose, elk, bear, skills Masterclasses.
 - 2026-10-15: AI photos on hold. Redrawing all remaining 765 flagged diagrams in waves of about 155 (5 writers x 31), lists in scratchpad waves/list-01..25; publish each wave after checks.
 - 2026-10-15: all 25 diagram lists redrawn and published (wave 5 = lists 21 to 25). Next: consistency pass for step series + redo list.
+
+- 2026-10-16: published study path (default pace must know by the hunt), 100 diagrams redrawn with tap to learn, safety tools, trainers, map hunt helpers, no shooting layer (official outlines only; unmapped closures listed by MU). Fixed: bear toe line (inner toe), moose yield 100 to 120 kg, goose finish 14 m (15 yd) Tip.
