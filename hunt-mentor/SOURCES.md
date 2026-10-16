@@ -139,3 +139,7 @@ Certainty scale: see CLAUDE.md.
 - Search previews only (pages blocked to fetch): AdventureSmart trip plan (75%), Canadian Red Cross ice thickness 15, 20, 25 cm (75%).
 - Live data (fetched on the phone only on a tap): Open-Meteo forecast API (CC BY 4.0); BC government ArcGIS Online layers BCWS_ActiveFires_PublicView (linked from the BC Data Catalogue), British Columbia Bans and Prohibition Areas (layer 14) and Area Restrictions (layer 13); Avalanche Canada api.avalanche.ca point forecast.
 - VERIFY: satellite phone emergency number (search preview only, not shown).
+## 2026-10-16 Practice trainers (#/train)
+- No new sources. Every fact in `data/addons/train/facts.json` is copied, with its certainty, from these lessons: Shot placement (Hunter Ed, ADFG, IBEP, Virginia DWR, Outdoor Canada, onX, Victory Ridge), Rule Book definitions and Region 3 (synopsis pages 3, 4, 33, 34), Mule deer, Mule deer Masterclass (BC deer account 2000: shoulder height 90 to 95 cm), White tailed deer Masterclass, Judging distance (Canadian Army fieldcraft, Vortex).
+- Range scene scale: deer drawn 92 cm at the shoulder (BC deer account, 90%). The 46 cm chest depth figure stays Tip (55%, forum lore); a web search on 2026-10-16 found no agency or study figure for mule deer chest depth (VERIFY).
+- Animal and antler drawings in the trainers are simplified practice shapes, placed to match the lesson plates; they are not anatomy references.
