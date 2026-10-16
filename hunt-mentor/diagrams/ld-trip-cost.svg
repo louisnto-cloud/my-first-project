@@ -1,30 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" font-family="sans-serif" role="img" aria-label="Bar chart of estimated first trip cost per person, split two ways, in Canadian dollars, opinion. Alberta bird trip: 550 to 800. Yukon bird trip: 750 to 1,000. Saskatchewan bird trip: 900 to 1,200. Manitoba deer trip: 1,200 to 1,500. Alaska bird trip: about 2,300 to 2,900. Fuel assumed at 22 cents per kilometre. Guided big game is a separate budget: get quotes.">
-<rect x="0" y="0" width="400" height="344" fill="#fffaf0"/>
-<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">First trip cost, each, split two ways</text>
-<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">CAD, my estimates and opinion</text>
-<line x1="120.0" y1="84" x2="120.0" y2="284" stroke="#dfe6d3" stroke-width="2"/>
-<text x="120" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
-<line x1="205.3" y1="84" x2="205.3" y2="284" stroke="#dfe6d3" stroke-width="2"/>
-<text x="205.333" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1000</text>
-<line x1="290.7" y1="84" x2="290.7" y2="284" stroke="#dfe6d3" stroke-width="2"/>
-<text x="290.667" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2000</text>
-<line x1="376.0" y1="84" x2="376.0" y2="284" stroke="#dfe6d3" stroke-width="2"/>
-<text x="376" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3000</text>
-<text x="8" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">Alberta</text>
-<rect x="166.9" y="92" width="21.3" height="22" rx="4" fill="#4a7fb0"/>
-<text x="194.267" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">$550 to $800</text>
-<text x="8" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">Yukon</text>
-<rect x="184.0" y="132" width="21.3" height="22" rx="4" fill="#4a7fb0"/>
-<text x="211.333" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">$750 to $1,000</text>
-<text x="8" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">Saskatchewan</text>
-<rect x="196.8" y="172" width="25.6" height="22" rx="4" fill="#4a7fb0"/>
-<text x="228.4" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">$900 to $1,200</text>
-<text x="8" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">Manitoba</text>
-<rect x="222.4" y="212" width="25.6" height="22" rx="4" fill="#4a7fb0"/>
-<text x="254" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">$1,200 to $1,500</text>
-<text x="8" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">Alaska</text>
-<rect x="316.3" y="252" width="51.2" height="22" rx="4" fill="#e8590c"/>
-<text x="310.267" y="268" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">$2,300 to $2,900</text>
-<text x="200" y="302" font-size="14" fill="#2f3a2b" text-anchor="middle">Birds, except Manitoba (deer). Fuel at $0.22 per km.</text>
-<text x="200" y="322" font-size="14" fill="#2f3a2b" text-anchor="middle">Assumption. Guided big game: get quotes.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif" role="img" aria-label="Bar chart of estimated first trip cost per person, split two ways, in Canadian dollars, opinion. Alberta bird trip: 550 to 800. Yukon bird trip: 750 to 1,000. Saskatchewan bird trip: 900 to 1,200. Manitoba deer trip: 1,200 to 1,500. Alaska bird trip: about 2,300 to 2,900. Fuel assumed at 22 cents per kilometre. Guided big game is a separate budget: get quotes.">
+<rect x="0" y="0" width="400" height="392" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">First trip cost, each, split two ways</text>
+<text x="200" y="48" font-size="15" fill="#6b4f35" text-anchor="middle">Canadian dollars. My estimates, opinion</text>
+<line x1="124.0" y1="84" x2="124.0" y2="312" stroke="#dfe6d3" stroke-width="2"/>
+<text x="124.0" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
+<line x1="209.3" y1="84" x2="209.3" y2="312" stroke="#dfe6d3" stroke-width="2"/>
+<text x="209.3" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1,000</text>
+<line x1="294.7" y1="84" x2="294.7" y2="312" stroke="#dfe6d3" stroke-width="2"/>
+<text x="294.7" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2,000</text>
+<line x1="380.0" y1="84" x2="380.0" y2="312" stroke="#dfe6d3" stroke-width="2"/>
+<text x="380.0" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">3,000</text>
+<g data-tip="Alberta bird trip|Licences about $122 each plus GST (Goods and Services Tax), fuel $350 to $400, 4 days of motel or camping and food $500 to $900. Each: $550 to $800.">
+<text x="8" y="110" font-size="15" font-weight="bold" fill="#2f3a2b">Alberta</text>
+<text x="8" y="128" font-size="14" fill="#6b5b4b">birds</text>
+<rect x="124" y="103" width="46.9" height="4" fill="#dfe6d3"/>
+<rect x="170.9" y="92" width="21.3" height="26" rx="4" fill="#4a7fb0"/>
+<text x="198.3" y="111" font-size="15" font-weight="bold" fill="#2f3a2b">$550 to $800</text>
+</g>
+<g data-tip="Yukon bird trip|Small game licence $20 each, fuel $900 to $1,100, 7 days of camping and food $500 to $800. Each: $750 to $1,000.">
+<text x="8" y="154" font-size="15" font-weight="bold" fill="#2f3a2b">Yukon</text>
+<text x="8" y="172" font-size="14" fill="#6b5b4b">birds</text>
+<rect x="124" y="147" width="64.0" height="4" fill="#dfe6d3"/>
+<rect x="188.0" y="136" width="21.3" height="26" rx="4" fill="#4a7fb0"/>
+<text x="215.3" y="155" font-size="15" font-weight="bold" fill="#2f3a2b">$750 to $1,000</text>
+</g>
+<g data-tip="Saskatchewan bird trip|Habitat Certificate and game bird licence $120 each, fuel $600 to $700, 6 days of motel and food $900 to $1,400. Each: $900 to $1,200.">
+<text x="8" y="198" font-size="15" font-weight="bold" fill="#2f3a2b">Saskatchewan</text>
+<text x="8" y="216" font-size="14" fill="#6b5b4b">birds</text>
+<rect x="124" y="191" width="76.8" height="4" fill="#dfe6d3"/>
+<rect x="200.8" y="180" width="25.6" height="26" rx="4" fill="#4a7fb0"/>
+<text x="232.4" y="199" font-size="15" font-weight="bold" fill="#2f3a2b">$900 to $1,200</text>
+</g>
+<g data-tip="Manitoba deer trip|Deer licence $184.25 each, fuel $900 to $1,000, 7 days of motel and food $1,100 to $1,600. Each: $1,200 to $1,500.">
+<text x="8" y="242" font-size="15" font-weight="bold" fill="#2f3a2b">Manitoba</text>
+<text x="8" y="260" font-size="14" fill="#6b5b4b">deer</text>
+<rect x="124" y="235" width="102.4" height="4" fill="#dfe6d3"/>
+<rect x="226.4" y="224" width="25.6" height="26" rx="4" fill="#4a7fb0"/>
+<text x="258.0" y="243" font-size="15" font-weight="bold" fill="#2f3a2b">$1,200 to $1,500</text>
+</g>
+<g data-tip="Alaska bird trip|Nonresident alien licence 630 US dollars each, fuel about $1,400 to $1,600, 12 days of camping and food $1,200 to $1,800. Each: about $2,300 to $2,900.">
+<text x="8" y="286" font-size="15" font-weight="bold" fill="#2f3a2b">Alaska</text>
+<text x="8" y="304" font-size="14" fill="#6b5b4b">birds</text>
+<rect x="124" y="279" width="196.3" height="4" fill="#dfe6d3"/>
+<rect x="320.3" y="268" width="51.2" height="26" rx="4" fill="#e8590c"/>
+<text x="314.3" y="287" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">$2,300 to $2,900</text>
+</g>
+<g data-tip="Fuel (Assumption)|Fuel is figured at $0.22 per km. That rate is an assumption, so check prices before you go."><text x="200" y="348" font-size="15" fill="#2f3a2b" text-anchor="middle">Fuel at $0.22 per km (Assumption)</text></g>
+<g data-tip="Guided big game|A guided big game hunt is a separate budget. Get quotes."><text x="200" y="374" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Guided big game: get quotes</text></g>
 </svg>

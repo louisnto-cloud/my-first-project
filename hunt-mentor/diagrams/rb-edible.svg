@@ -30,28 +30,28 @@
   <path d="M104 100 C102 80 108 62 122 50 M108 76 C98 70 94 60 96 50 M118 54 C122 44 132 40 140 40 M122 50 C118 40 118 32 122 26" fill="none" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
   
 </g>
-<rect x="170.3" y="82.0" width="51.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="196" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">loins</text>
-<line x1="236" y1="156" x2="200" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="236" cy="156" r="2.6" fill="#2f3a2b"/>
-<rect x="244.5" y="82.0" width="145.5" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="317.259" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hind quarters (2)</text>
-<line x1="326" y1="192" x2="330" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="326" cy="192" r="2.6" fill="#2f3a2b"/>
-<rect x="14.0" y="174.0" width="51.0" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="39.4896" y="194.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">neck</text>
-<line x1="134" y1="162" x2="64.9792" y2="188" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="134" cy="162" r="2.6" fill="#2f3a2b"/>
-<rect x="35.0" y="318.0" width="149.9" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="110" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front quarters (2)</text>
-<line x1="176" y1="204" x2="150" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="176" cy="204" r="2.6" fill="#2f3a2b"/>
-<rect x="240.3" y="318.0" width="43.4" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
-<text x="262" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ribs</text>
-<line x1="252" y1="208" x2="258" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="252" cy="208" r="2.6" fill="#2f3a2b"/>
+<g data-tip="Loins|The loins along the back come out with the rest."><rect x="150" y="82.0" width="80" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="204" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">loins</text>
+<line x1="236" y1="156" x2="200" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="236" cy="156" r="2.6" fill="#2f3a2b"/><circle cx="164" cy="96" r="12" fill="#e8590c"/><text x="164" y="101" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text></g>
+<g data-tip="Hind quarters (2)|Both hind quarters come out. Leave the tail and evidence of sex on the hind quarter you keep with you."><rect x="238" y="82.0" width="156" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330" y="102.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hind quarters (2)</text>
+<line x1="326" y1="192" x2="330" y2="111" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="326" cy="192" r="2.6" fill="#2f3a2b"/><circle cx="252" cy="96" r="12" fill="#e8590c"/><text x="252" y="101" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text></g>
+<g data-tip="Neck|The edible portions of the neck come out too. Common slip: quartering a deer and leaving the neck and ribs."><rect x="8" y="174.0" width="84" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="64" y="194.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">neck</text>
+<line x1="134" y1="162" x2="92" y2="188" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="134" cy="162" r="2.6" fill="#2f3a2b"/><circle cx="22" cy="188" r="12" fill="#e8590c"/><text x="22" y="193" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text></g>
+<g data-tip="Front quarters (2)|All four quarters come out, front and hind. Plan the pack out before the shot."><rect x="20" y="318.0" width="180" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="124" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front quarters (2)</text>
+<line x1="176" y1="204" x2="150" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="176" cy="204" r="2.6" fill="#2f3a2b"/><circle cx="34" cy="332" r="12" fill="#e8590c"/><text x="34" y="337" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text></g>
+<g data-tip="Ribs|The rib meat is an edible portion. It goes home with the quarters, not left on the carcass."><rect x="236" y="318.0" width="74" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="287" y="338.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ribs</text>
+<line x1="252" y1="208" x2="258" y2="318" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="252" cy="208" r="2.6" fill="#2f3a2b"/><circle cx="250" cy="332" r="12" fill="#e8590c"/><text x="250" y="337" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text></g>
 <line x1="12" y1="370" x2="388" y2="370" stroke="#d8ccb4"/>
-<g transform="translate(40 406)"><path d="M-28 -2 C-24 -10 -8 -10 6 -8 C14 -7 18 -4 20 0 C22 8 12 13 -2 13 C-16 13 -26 8 -28 -2z" fill="#9a9488" stroke="#4a4436" stroke-width="1.2"/><path d="M-26 -3 L-34 -6 L-30 2z" fill="#3a3a3a"/><path d="M-14 -6 C-6 -9 4 -8 8 -4 C2 -2 -8 -2 -14 -6z" fill="#6b6456"/><path d="M8 -8 C14 -9 20 -4 21 2 C20 8 14 12 6 13 C10 6 10 -2 8 -8z" fill="#c96f5a" stroke="#8e3f2f" stroke-width="1"/><path d="M10 -8 C10 -16 14 -22 20 -22 C26 -22 28 -18 26 -14 C24 -10 20 -8 16 -6z" fill="#2f6e3b" stroke="#1d3a22" stroke-width="1"/><path d="M26 -17 L35 -15 C35 -13 33 -12 26 -13z" fill="#e2b33c"/><circle cx="21" cy="-17" r="1.6" fill="#111"/></g>
-<text x="84" y="412" font-size="16" font-weight="bold" fill="#2f3a2b">Game birds: both breasts</text>
-<circle cx="40" cy="452" r="13" fill="#fffaf0" stroke="#6b5b4b" stroke-width="3.5"/><line x1="30.9" y1="461.1" x2="49.1" y2="442.9" stroke="#6b5b4b" stroke-width="3.5"/>
-<text x="84" y="458" font-size="16" fill="#2f3a2b">Exempt: wolf, lynx, bobcat, wolverine</text>
+<g data-tip="Game birds|Ducks, quail and grouse: the edible portions of both breasts."><g transform="translate(40 406)"><path d="M-28 -2 C-24 -10 -8 -10 6 -8 C14 -7 18 -4 20 0 C22 8 12 13 -2 13 C-16 13 -26 8 -28 -2z" fill="#9a9488" stroke="#4a4436" stroke-width="1.2"/><path d="M-26 -3 L-34 -6 L-30 2z" fill="#3a3a3a"/><path d="M-14 -6 C-6 -9 4 -8 8 -4 C2 -2 -8 -2 -14 -6z" fill="#6b6456"/><path d="M8 -8 C14 -9 20 -4 21 2 C20 8 14 12 6 13 C10 6 10 -2 8 -8z" fill="#c96f5a" stroke="#8e3f2f" stroke-width="1"/><path d="M10 -8 C10 -16 14 -22 20 -22 C26 -22 28 -18 26 -14 C24 -10 20 -8 16 -6z" fill="#2f6e3b" stroke="#1d3a22" stroke-width="1"/><path d="M26 -17 L35 -15 C35 -13 33 -12 26 -13z" fill="#e2b33c"/><circle cx="21" cy="-17" r="1.6" fill="#111"/></g>
+<text x="84" y="412" font-size="16" font-weight="bold" fill="#2f3a2b">Game birds: both breasts</text></g>
+<g data-tip="Exempt|Wolf, lynx, bobcat and wolverine are left out of the edible portions rule. A black bear follows the meat rule like a deer."><circle cx="40" cy="452" r="13" fill="#fffaf0" stroke="#6b5b4b" stroke-width="3.5"/><line x1="30.9" y1="461.1" x2="49.1" y2="442.9" stroke="#6b5b4b" stroke-width="3.5"/>
+<text x="84" y="458" font-size="16" fill="#2f3a2b">Exempt: wolf, lynx, bobcat, wolverine</text></g>
 <line x1="12" y1="482" x2="388" y2="482" stroke="#d8ccb4"/>
-<text x="200" y="508" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Take them to</text>
+<g data-tip="Where it goes|Your home, a meat cutter or a cold storage plant. Gave the animal to someone who takes the meat out? Then you are covered."><text x="200" y="508" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Take them to</text>
 <circle cx="70" cy="544" r="20" fill="#f4eedf" stroke="#c9bb9c"/>
 <g transform="translate(70 545)" fill="#2f3a2b"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
 <text x="70" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">home</text>
@@ -60,5 +60,5 @@
 <text x="200" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">meat cutter</text>
 <circle cx="330" cy="544" r="20" fill="#f4eedf" stroke="#c9bb9c"/>
 <g transform="translate(330 545)" fill="#2f3a2b"><g stroke="#2f3a2b" stroke-width="2.6" stroke-linecap="round"><path d="M0 -14 V14 M-12 -7 L12 7 M-12 7 L12 -7"/><path d="M-4 -11 L0 -7 L4 -11 M-4 11 L0 7 L4 11"/></g></g>
-<text x="330" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cold storage</text>
+<text x="330" y="586" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cold storage</text></g>
 </svg>

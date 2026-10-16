@@ -1,14 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Region 3 rule: above 1,700 metres, all motor vehicles except snowmobiles must stay on existing roads and trails. Below the line, other closures may still apply. No new tracks across the alpine.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 3: the 1,700 m line</text>
-  <path d="M0 270 L80 200 L150 120 L210 60 L270 110 L330 150 L400 210 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
-  <line x1="0" y1="140" x2="400" y2="140" stroke="#e8590c" stroke-width="3" stroke-dasharray="10 6"/>
-  <text x="10" y="132" font-size="15" font-weight="bold" fill="#e8590c">1,700 m</text>
-  <path d="M60 260 Q 120 210 160 150 Q 190 110 210 64" stroke="#8b5a2b" stroke-width="5" fill="none"/>
-  <path d="M232 92 Q 260 120 300 128" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="4 4" fill="none"/>
-  <path d="M256 96 l20 20 M276 96 l-20 20" stroke="#c0392b" stroke-width="5"/>
-  <text x="300" y="80" font-size="14" font-weight="bold" fill="#c0392b">No new tracks</text>
-  <text x="120" y="100" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Existing road</text><text x="120" y="116" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">or trail only</text>
-  <text x="290" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">Below: check your MU map</text>
-  <text x="290" y="286" font-size="14" fill="#2f3a2b" text-anchor="middle">Snowmobiles excepted</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" font-family="sans-serif" role="img" aria-label="Region 3 rule: above 1,700 metres, all motor vehicles except snowmobiles must stay on existing roads and trails. Below the line, other closures may still apply. No new tracks across the alpine.">
+  <rect width="400" height="344" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 3: the 1,700 m line</text>
+  <g data-tip="Below the line|Other closures may still apply. Open the MU (Management Unit) closure map before you ride: gov.bc.ca/thompsonaccess.">
+    <path d="M0 296 L60 250 L130 170 L200 72 L260 120 L330 160 L400 216 L400 296 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="300" y="250" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Below: check</text>
+    <text x="300" y="270" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">your MU map</text>
+  </g>
+  <path d="M144.3 150 L200 72 L260 120 L312.5 150 Z" fill="#f4f7ee"/>
+  <g data-tip="The 1,700 m line|Above 1,700 m (5,577 ft), motor vehicles stay on existing roads and trails, all year, in all of Region 3. The Hunt Map readout tells you when you are near it.">
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#e8590c" stroke-width="3.5" stroke-dasharray="10 6"/>
+    <text x="10" y="142" font-size="16" font-weight="bold" fill="#e8590c">1,700 m</text>
+    <text x="10" y="170" font-size="14" fill="#e8590c">(5,577 ft)</text>
+  </g>
+  <g data-tip="Existing road or trail|Paved, logging, mining or service roads, a marked ski route, or a bare two track a 4 wheel vehicle can straddle.">
+    <path d="M44 292 Q 100 262 112 226 Q 120 200 150 192 Q 176 184 150 160 Q 132 140 170 118 Q 196 100 194 80" stroke="#8b5a2b" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <circle cx="28" cy="80" r="13" fill="#2f6e3b"/><path d="M22 80 l4 4 l8 -9" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="48" y="78" font-size="15" font-weight="bold" fill="#2f6e3b">Existing road</text>
+    <text x="48" y="97" font-size="15" font-weight="bold" fill="#2f6e3b">or trail: OK</text>
+  </g>
+  <g data-tip="No new tracks|Cutting a new quad track across an alpine meadow is the common slip. No new tracks across the alpine.">
+    <path d="M200 98 Q 240 112 296 140" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="5 4" fill="none"/>
+    <path d="M238 104 l18 18 M256 104 l-18 18" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+    <text x="392" y="66" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="end">No new tracks</text>
+    <text x="392" y="85" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="end">across the alpine</text>
+  </g>
+  <g data-tip="Snowmobiles excepted|This 1,700 m rule does not cover snowmobiles.">
+    <rect x="8" y="304" width="188" height="32" rx="8" fill="#e6eef5"/>
+    <text x="102" y="326" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snowmobiles excepted</text>
+  </g>
+  <g data-tip="Region 8 too|Region 8 has its own 1,700 m rule. Read it in the Rule Book.">
+    <rect x="204" y="304" width="188" height="32" rx="8" fill="#f3ece0"/>
+    <text x="298" y="326" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 8: own rule</text>
+  </g>
 </svg>

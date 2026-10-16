@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif" role="img" aria-label="A sapling rub and a scrape drawn to true scale against a height scale in centimetres, 0 to 150. Rub: bark stripped from the sapling between about 30 and 105 centimetres up; higher means a bigger buck. Licking branch: an overhanging branch with a chewed tip, about 1.2 to 1.5 metres up. Scrape: pawed bare dirt about 1 metre long under the branch, debris kicked back. White tails scrape; mule deer rarely do.">
 <rect width="400" height="450" fill="#fffaf0"/>
-<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rub on a sapling and a scrape</text>
+<g data-tip="When to look|About 80% of scraping in the north happens from mid October to mid November."><text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rub on a sapling and a scrape</text></g>
 <rect x="0" y="40" width="400" height="276" fill="#eef3ea"/>
 <rect x="0" y="316" width="400" height="34" fill="#a9b77e"/><line x1="0" y1="316" x2="400" y2="316" stroke="#5c6b3e" stroke-width="2"/>
 <line x1="44" y1="316" x2="44" y2="136.0" stroke="#2f3a2b" stroke-width="1.6"/>
@@ -16,8 +16,9 @@
 <text x="34" y="177" font-size="14" fill="#2f3a2b" text-anchor="end">120</text>
 <line x1="38" y1="136" x2="50" y2="136" stroke="#2f3a2b" stroke-width="1.6"/>
 <text x="34" y="141" font-size="14" fill="#2f3a2b" text-anchor="end">150</text>
+<line x1="38" y1="226" x2="56" y2="226" stroke="#e8590c" stroke-width="2.4"/><text x="60" y="231" font-size="14" font-weight="bold" fill="#e8590c">75</text>
 <text x="44" y="126" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cm</text>
-<path d="M97 316 L100 88.0 L108 88.0 L111 316z" fill="#6b4f35"/>
+<g data-tip="Read the rub line|The rubbed side faces where the buck came from. A line of rubs facing one way is his route between bed and feed. Fresh rubs show pale wood and sap (Tip)."><path d="M97 316 L100 88.0 L108 88.0 L111 316z" fill="#6b4f35"/>
 <line x1="104" y1="136" x2="78" y2="105" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
 <line x1="104" y1="114" x2="132" y2="88" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
 <line x1="104" y1="160" x2="126" y2="136" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
@@ -39,14 +40,14 @@
 <path d="M95 316 l-3 -6" stroke="#6b4f35" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M102 316 l-3 -6" stroke="#6b4f35" stroke-width="2.2" stroke-linecap="round"/>
 <path d="M109 316 l3 -6" stroke="#6b4f35" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M116 316 l-3 -6" stroke="#6b4f35" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M118 280 h6 V190 h-6" fill="none" stroke="#e8590c" stroke-width="2"/>
+<path d="M116 316 l-3 -6" stroke="#6b4f35" stroke-width="2.2" stroke-linecap="round"/></g>
+<g data-tip="1. Rub|Bark stripped by a buck's antlers and forehead, mostly 30 to 105 cm up. A rub centred 75 cm or higher suggests a mature buck."><path d="M118 280 h6 V190 h-6" fill="none" stroke="#e8590c" stroke-width="2"/>
 <rect x="130.0" y="191.2" width="164.5" height="81.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
 <text x="212.274" y="210.7" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Rub</text>
 <text x="212.274" y="228.2" font-size="15" fill="#2f3a2b" text-anchor="middle">bark stripped,</text>
 <text x="212.274" y="246.2" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">30 to 105 cm up</text>
-<text x="212.274" y="264.2" font-size="15" fill="#2f3a2b" text-anchor="middle">higher = bigger buck</text>
-<rect x="382" y="40" width="18" height="276" fill="#6b4f35"/>
+<text x="212.274" y="264.2" font-size="15" fill="#2f3a2b" text-anchor="middle">higher = bigger buck</text><circle cx="130" cy="192" r="13" fill="#e8590c"/><text x="130" y="198" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text></g>
+<g data-tip="3. Licking branch|An overhanging branch about 1.2 to 1.5 m up. The buck chews the tip and urinates in the scrape below."><rect x="382" y="40" width="18" height="276" fill="#6b4f35"/>
 <path d="M382 105 C332 117 282 136 232 158" fill="none" stroke="#6b4f35" stroke-width="5" stroke-linecap="round"/>
 <path d="M232 158 l-10 6 M232 158 l-9 -4 M232 158 l-4 9" stroke="#c9a46a" stroke-width="2.2" stroke-linecap="round"/>
 <ellipse cx="322" cy="112" rx="11" ry="7" fill="#7f9a55"/>
@@ -57,8 +58,8 @@
 <line x1="226" y1="155.2" x2="250" y2="112" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="226" cy="155.2" r="2.6" fill="#2f3a2b"/><rect x="212.7" y="48.0" width="146.6" height="63.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
 <text x="286" y="67.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Licking branch</text>
 <text x="286" y="85" font-size="15" fill="#2f3a2b" text-anchor="middle">chewed tip, about</text>
-<text x="286" y="103" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1.2 to 1.5 m up</text>
-<ellipse cx="242" cy="322" rx="60.0" ry="9" fill="#4a3526"/>
+<text x="286" y="103" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1.2 to 1.5 m up</text><circle cx="214" cy="50" r="13" fill="#e8590c"/><text x="214" y="56" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text></g>
+<g data-tip="2. Scrape|A pawed bare oval of dirt about 1 m long, under the licking branch. Fresh: dark moist soil, leaves thrown back, a urine smell (Tip)."><ellipse cx="242" cy="322" rx="60.0" ry="9" fill="#4a3526"/>
 <ellipse cx="310" cy="320" rx="4" ry="2.4" fill="#9b8466"/>
 <ellipse cx="316" cy="323" rx="4" ry="2.4" fill="#9b8466"/>
 <ellipse cx="322" cy="326" rx="4" ry="2.4" fill="#9b8466"/>
@@ -69,6 +70,6 @@
 <line x1="242" y1="338" x2="242" y2="356" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="242" cy="338" r="2.6" fill="#2f3a2b"/><rect x="116.1" y="356.0" width="251.9" height="63.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
 <text x="242" y="375.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Scrape</text>
 <text x="242" y="393" font-size="15" fill="#2f3a2b" text-anchor="middle">pawed bare dirt about 1 m long,</text>
-<text x="242" y="411" font-size="15" fill="#2f3a2b" text-anchor="middle">debris kicked back</text>
-<text x="200" y="438" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White tails scrape. Mule deer rarely do.</text>
+<text x="242" y="411" font-size="15" fill="#2f3a2b" text-anchor="middle">debris kicked back</text><circle cx="118" cy="358" r="13" fill="#e8590c"/><text x="118" y="364" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text></g>
+<g data-tip="White tails or mule deer|White tails scrape and make many rubs. Mule deer rarely scrape and make fewer rubs, on small conifers and shrubs."><text x="200" y="438" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White tails scrape. Mule deer rarely do.</text></g>
 </svg>

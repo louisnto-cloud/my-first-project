@@ -1,18 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shot size by bird, pellets drawn at relative size. Steel number 4 for teal and very close shots. Steel 3 for medium ducks and decoying birds. Steel 2 for all round ducks. Steel BB for geese. Upland: number 7.5 for quail, number 6 for grouse. Bigger number means smaller pellet.">
-  <rect width="400" height="300" fill="#fffaf0"/>
-  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shot size by bird</text>
-  <text x="200" y="40" font-size="14" fill="#2f3a2b" text-anchor="middle">Bigger number = smaller pellet</text>
-  <rect x="10" y="50" width="380" height="24" fill="#4a7fb0"/><text x="20" y="67" font-size="14" font-weight="bold" fill="#fff">Waterfowl: steel (non toxic)</text>
-  <g font-size="15" fill="#2f3a2b">
-    <circle cx="40" cy="96" r="6.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="101" font-weight="bold">#4</text><text x="130" y="101">Teal, very close</text>
-    <circle cx="40" cy="126" r="7" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="131" font-weight="bold">#3</text><text x="130" y="131">Medium ducks, decoying</text>
-    <circle cx="40" cy="157" r="7.5" fill="#e8590c" stroke="#2f3a2b"/><text x="70" y="162" font-weight="bold" fill="#e8590c">#2</text><text x="130" y="162" font-weight="bold">All round ducks</text>
-    <circle cx="40" cy="190" r="9" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="195" font-weight="bold">BB</text><text x="130" y="195">Geese</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" font-family="sans-serif" role="img" aria-label="Shot size by bird, pellets drawn at relative size. Steel number 4 for teal and very close shots. Steel 3 for medium ducks and decoying birds. Steel 2 for all round ducks. Steel BB for geese. Upland: number 7.5 for quail, number 6 for grouse. Bigger number means smaller pellet.">
+  <rect width="400" height="372" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shot size by bird</text>
+  <text x="200" y="45" font-size="15" fill="#2f3a2b" text-anchor="middle">Bigger number = smaller pellet. Drawn to scale.</text>
+  <g data-tip="Non toxic only|Ducks, geese, coots and snipe: steel, bismuth, tungsten or tin. No lead in your pockets or boat.">
+    <rect x="10" y="56" width="380" height="28" rx="6" fill="#4a7fb0"/><text x="20" y="76" font-size="16" font-weight="bold" fill="#ffffff">Waterfowl: steel (non toxic)</text>
   </g>
-  <rect x="10" y="214" width="380" height="24" fill="#8a9a6b"/><text x="20" y="231" font-size="14" font-weight="bold" fill="#fff">Upland: lead or steel</text>
-  <g font-size="15" fill="#2f3a2b">
-    <circle cx="40" cy="256" r="4.8" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="261" font-weight="bold">#7.5</text><text x="130" y="261">Quail</text>
-    <circle cx="40" cy="282" r="5.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="70" y="287" font-weight="bold">#6</text><text x="130" y="287">Grouse</text>
+  <g data-tip="Steel 4|Teal and very close shots. Teal over decoys: steel 4 to 6.">
+    <rect x="10" y="88" width="380" height="36" fill="#fffaf0"/>
+    <circle cx="44" cy="106" r="7.9" fill="#8a8f88" stroke="#2f3a2b"/><text x="76" y="112" font-size="17" font-weight="bold" fill="#2f3a2b">#4</text><text x="132" y="112" font-size="16" fill="#2f3a2b">Teal, very close</text>
   </g>
-  <text x="390" y="287" font-size="14" fill="#2f3a2b" text-anchor="end">Relative size</text>
+  <g data-tip="Steel 3|Medium ducks and close decoying birds.">
+    <rect x="10" y="124" width="380" height="36" fill="#fffaf0"/>
+    <circle cx="44" cy="142" r="8.5" fill="#8a8f88" stroke="#2f3a2b"/><text x="76" y="148" font-size="17" font-weight="bold" fill="#2f3a2b">#3</text><text x="132" y="148" font-size="16" fill="#2f3a2b">Medium ducks, decoying</text>
+  </g>
+  <g data-tip="Steel 2: the all round load|The all round duck load. Steel is lighter than lead, so go two sizes bigger than the old lead advice. Max range for you: 35 m (38 yd) (Tip).">
+    <rect x="10" y="160" width="380" height="38" rx="6" fill="#fde6d8"/>
+    <circle cx="44" cy="179" r="9.1" fill="#e8590c" stroke="#2f3a2b"/><text x="76" y="185" font-size="17" font-weight="bold" fill="#e8590c">#2</text><text x="132" y="185" font-size="16" font-weight="bold" fill="#2f3a2b">All round ducks</text>
+  </g>
+  <g data-tip="Steel BB|The all round pellet for large Canada geese. BBB and T for longer shots. Aim at the head, not the whole bird (Tip).">
+    <rect x="10" y="198" width="380" height="38" fill="#fffaf0"/>
+    <circle cx="44" cy="217" r="11" fill="#8a8f88" stroke="#2f3a2b"/><text x="76" y="223" font-size="17" font-weight="bold" fill="#2f3a2b">BB</text><text x="132" y="223" font-size="16" fill="#2f3a2b">Geese</text>
+  </g>
+  <g data-tip="Lead is legal for upland|Lead is legal for BC upland birds: grouse, ptarmigan, quail, partridge, pheasants and turkey. Hunting ducks the same day? Carry only steel (Tip).">
+    <rect x="10" y="246" width="380" height="28" rx="6" fill="#6b7a55"/><text x="20" y="266" font-size="16" font-weight="bold" fill="#ffffff">Upland: lead or steel</text>
+  </g>
+  <g data-tip="Quail: #7.5|1 to 1 1/8 ounce loads. A .22 is not legal for quail: use the shotgun.">
+    <rect x="10" y="278" width="380" height="34" fill="#fffaf0"/>
+    <circle cx="44" cy="295" r="5.8" fill="#8a8f88" stroke="#2f3a2b"/><text x="76" y="301" font-size="17" font-weight="bold" fill="#2f3a2b">#7.5</text><text x="132" y="301" font-size="16" fill="#2f3a2b">Quail</text>
+  </g>
+  <g data-tip="Grouse: #6|1 to 1 1/8 ounce loads. A .22 is legal for grouse too: head shots only (Tip).">
+    <rect x="10" y="312" width="380" height="34" fill="#fffaf0"/>
+    <circle cx="44" cy="329" r="6.7" fill="#8a8f88" stroke="#2f3a2b"/><text x="76" y="335" font-size="17" font-weight="bold" fill="#2f3a2b">#6</text><text x="132" y="335" font-size="16" fill="#2f3a2b">Grouse</text>
+  </g>
+  <text x="390" y="362" font-size="14" fill="#6b5b4b" text-anchor="end">Pellets at relative size</text>
 </svg>
