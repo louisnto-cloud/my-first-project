@@ -23,6 +23,16 @@
   const todayIso = () => new Date().toLocaleDateString('en-CA', { timeZone: TZ });
   const ago = (ms) => { const m = Math.round((Date.now() - ms) / 6e4); return m < 1 ? 'just now' : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} days ago`; };
   const f5 = (x) => (+x).toFixed(5);
+  // BC (Vancouver) wall clock <-> time stamp, so the alarm is right even if the phone is set to another time zone
+  const hm24 = (ms) => new Date(ms).toLocaleTimeString('en-GB', { timeZone: TZ, hour: '2-digit', minute: '2-digit', hour12: false });
+  const vanMs = (y, m, d, hh, mm) => {
+    let t = Date.UTC(y, m - 1, d, hh, mm);
+    for (let i = 0; i < 2; i++) {
+      const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: TZ, hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' }).formatToParts(new Date(t)).map((x) => [x.type, x.value]));
+      t += Date.UTC(y, m - 1, d, hh, mm) - Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute);
+    }
+    return t;
+  };
 
   function copy(text) {
     const legacy = () => { const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; } ta.remove(); return ok; };
@@ -62,7 +72,8 @@
     return dataP;
   }
   const srcOf = (sid) => (DATA && DATA.sources && DATA.sources[sid]) || null;
-  const shortName = (s) => String(s.name).split(':')[0].replace(/\s*\(.*$/, '');
+  const shortName = (s) => { const p = String(s.name).split(':'); return /^Hunt Mentor lesson/.test(p[0]) ? 'Lesson: ' + String(p[1] || '').replace(/\s*\(.*$/, '').trim() : p[0].replace(/\s*\(.*$/, ''); };
+  const dot = (s) => (/\.$/.test(s) ? s : s + '.');
   const srcLink = (sid) => {
     const s = srcOf(sid); if (!s) return '';
     const ext = /^https?:/.test(s.url);
@@ -72,7 +83,7 @@
   const cert = (f) => (f.verify ? VERIFY : f.c ? badge(f.c) : TIP);
   const fact = (f) => `<li>${esc(f.t)} ${cert(f)}${f.s ? srcLink(f.s) : ''}${f.n ? `<div class="sf-n">${esc(f.n)}</div>` : ''}</li>`;
   const facts = (arr, cls) => (arr && arr.length ? `<ul class="sf-facts ${cls || ''}">${arr.map(fact).join('')}</ul>` : '');
-  const tips = (arr) => (arr && arr.length ? `<ul class="sf-facts">${arr.map((t) => `<li>${esc(t.replace(/\s*\(Tip\)\s*$/, ''))} ${TIP}</li>`).join('')}</ul>` : '');
+  const tips = (arr) => (arr && arr.length ? `<ul class="sf-facts">${arr.map((t) => `<li>${esc(t.replace(/\s*\(Tip\)(\.?)\s*$/, '$1'))} ${TIP}</li>`).join('')}</ul>` : '');
   function sourcesBox(ids) {
     const rows = [...new Set(ids)].map((id) => [id, srcOf(id)]).filter(([, s]) => s);
     if (!rows.length) return '';
@@ -185,16 +196,16 @@
       o = document.createElement('div'); o.id = 'sf-alarm'; o.setAttribute('role', 'alertdialog'); o.setAttribute('aria-label', 'Turnaround alarm');
       document.body.appendChild(o);
     }
-    o.innerHTML = `<div class="sf-al-in"><div class="sf-al-big">TURN AROUND NOW</div><p>Your turnaround time was ${esc(fmtT(st.at))}${Date.now() - st.at > 9e4 ? `, ${esc(ago(st.at))}` : ''}.</p><p>Head back to the truck. Tell your partner.</p><button class="btn primary block" id="sf-al-ok">I am heading back. Stop the alarm</button></div>`;
+    o.innerHTML = `<div class="sf-al-in"><div class="sf-al-big">TURN AROUND NOW</div><p>${esc(dot(`Your turnaround time was ${fmtT(st.at)}${Date.now() - st.at > 9e4 ? `, ${ago(st.at)}` : ''}`))}</p><p>Head back to the truck. Tell your partner.</p><button class="btn primary block" id="sf-al-ok">I am heading back. Stop the alarm</button></div>`;
     $('#sf-al-ok', o).onclick = () => { const s = ld(K.turn, {}); s.acked = true; sv(K.turn, s); o.remove(); if (/^#\/safety\/turn/.test(location.hash)) turnView(); };
   }
   function watch() {
     const st = ld(K.turn, null);
     if (!st || !st.on || st.acked) { overlay(null); return; }
     const left = st.at - Date.now();
-    if (left <= 15 * 6e4 && left > 0 && !st.warned) { st.warned = true; sv(K.turn, st); notify('15 minutes to turnaround', `Turn around at ${fmtT(st.at)}.`); toast(`15 minutes to turnaround (${fmtT(st.at)}).`); }
+    if (left <= 15 * 6e4 && left > 0 && !st.warned) { st.warned = true; sv(K.turn, st); notify('15 minutes to turnaround', dot(`Turn around at ${fmtT(st.at)}`)); toast(`15 minutes to turnaround (${fmtT(st.at)}).`); }
     if (left <= 0) {
-      if (!st.fired) { st.fired = true; sv(K.turn, st); notify('Turn around now', `Your turnaround time was ${fmtT(st.at)}. Head back.`); }
+      if (!st.fired) { st.fired = true; sv(K.turn, st); notify('Turn around now', dot(`Your turnaround time was ${fmtT(st.at)}`) + ' Head back.'); }
       overlay(st);
       if (document.visibilityState === 'visible' && (!watch.last || Date.now() - watch.last > 8000)) { watch.last = Date.now(); beep(); try { navigator.vibrate && navigator.vibrate([400, 200, 400, 200, 400]); } catch (e) { /* no vibrate */ } }
     }
@@ -426,7 +437,7 @@
     const at = () => {
       const v = $('#sf-time').value; if (!v) return null;
       const [y, m, d] = ($('#sf-date').value || todayIso()).split('-').map(Number), [hh, mm] = v.split(':').map(Number);
-      return +new Date(y, m - 1, d, hh, mm, 0, 0);
+      return vanMs(y, m, d, hh, mm);
     };
     const draw = () => {
       const iso = $('#sf-date').value || todayIso(), s = sunFor(pt, iso);
@@ -436,7 +447,7 @@
            <p class="muted">Worked out on the phone for ${esc(pt.label)}. Within a minute or two.</p>`;
       const w = +$('#sf-walk').value;
       $('#sf-sugg').innerHTML = s && w > 0 ? `<p>Suggested: sunset ${esc(fmtT(s.set))} minus ${w} min walk out =</p><div class="sf-sugg-t">${esc(fmtT(s.set - w * 6e4))}</div><button class="btn block" id="sf-use">Use ${esc(fmtT(s.set - w * 6e4))}</button>` : '<p class="muted">Enter your walk out time to get a suggested turnaround.</p>';
-      const u = $('#sf-use'); if (u) u.onclick = () => { const d = new Date(s.set - w * 6e4); $('#sf-time').value = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`; toast('Time set. Now tap Start the alarm.'); };
+      const u = $('#sf-use'); if (u) u.onclick = () => { $('#sf-time').value = hm24(s.set - w * 6e4); toast('Time set. Now tap Start the alarm.'); };
     };
     wirePicker(root, (p) => { pt = p; draw(); });
     $('#sf-date').onchange = draw; $('#sf-walk').oninput = draw;
@@ -447,7 +458,7 @@
       if (t <= Date.now()) { toast('That time has already passed. Pick a later time or another date.'); return; }
       unlockAudio();
       sv(K.turn, { on: true, at: t, date: $('#sf-date').value, time: $('#sf-time').value, walk: $('#sf-walk').value, set: Date.now() });
-      toast(`Alarm set for ${fmtT(t)}. Keep this app open, and set a phone alarm too.`);
+      toast(`Alarm set for ${fmtT(t)} Keep this app open, and set a phone alarm too.`);
       turnView(D); window.scrollTo(0, 0);
     };
     const stop = $('#sf-stop'); if (stop) stop.onclick = () => { const s = ld(K.turn, {}); s.on = false; sv(K.turn, s); overlay(null); turnView(D); };
@@ -458,7 +469,7 @@
     $('#sf-alarm-how').onclick = () => {
       const t = at(), lbl = t ? fmtT(t) : 'your turnaround time';
       sheetShow(`<h2>Set a phone alarm for ${esc(lbl)}</h2>
-        <p><b>iPhone</b></p><ol class="sf-steps"><li>Open the Clock app.</li><li>Tap Alarms, then the + button.</li><li>Set ${esc(lbl)}. Label it "Turn around".</li><li>Tap Save. Check the ring volume is up.</li></ol>
+        <p><b>iPhone</b></p><ol class="sf-steps"><li>Open the Clock app.</li><li>Tap Alarms, then the + button.</li><li>${esc(dot('Set ' + lbl))} Label it "Turn around".</li><li>Tap Save. Check the ring volume is up.</li></ol>
         <p>Or hold the side button and say to Siri: "Set an alarm for ${esc(lbl)}." Siri needs a signal for some requests ${TIP}.</p>
         <p><b>Android</b></p><ol class="sf-steps"><li>Open the Clock app, tap Alarm, then +.</li><li>Set ${esc(lbl)} and save.</li></ol>
         <p class="muted">A Clock app alarm rings even when the screen is locked. A web app cannot promise that.</p>
@@ -656,12 +667,12 @@
   .sf-chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.sf-chips .btn{min-height:44px;padding:0 14px;text-decoration:none;font-size:16px}
   .sf-facts{margin:8px 0;padding-left:20px}.sf-facts li{margin:6px 0;font-size:17px;overflow-wrap:anywhere}
   .sf-num{list-style:decimal}
-  .sf-src{font-size:13px;margin-left:4px;white-space:nowrap}
+  .sf-src{font-size:14px;margin-left:4px;overflow-wrap:anywhere}
   .sf-n{font-size:14px;color:var(--muted);margin:4px 0}
   .sf-steps{padding-left:22px;margin:8px 0}.sf-steps li{margin:6px 0;font-size:17px}
-  .sf-loc .sf-ll{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .sf-loc .sf-ll{display:grid;grid-template-columns:1fr;gap:8px}
   .sf-ll div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px}
-  .sf-ll small{display:block;font-size:14px;color:var(--muted)}.sf-ll b{font-size:24px;font-family:ui-monospace,Menlo,monospace;overflow-wrap:anywhere}
+  .sf-ll small{display:block;font-size:14px;color:var(--muted)}.sf-ll b{font-size:28px;font-family:ui-monospace,Menlo,monospace;overflow-wrap:anywhere}
   .sf-mono{font-family:ui-monospace,Menlo,monospace;font-size:17px}
   .sf-err{color:var(--bad);font-weight:700;font-size:15px}
   .sf-stop{display:grid;gap:8px;margin:8px 0}.sf-stop div{display:flex;gap:12px;align-items:center}

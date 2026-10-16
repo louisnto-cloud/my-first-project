@@ -133,3 +133,9 @@ Certainty scale: see CLAUDE.md.
 - All quotes and the comparison: research/2026-10-11-wait-times.md. Diagram: diagrams/sk-wait-compare.svg.
 
 - US National Park Service, "Bear Identification" (toe line test on tracks): https://home.nps.gov/articles/bear-identification.htm . Checked 2026-10-16. Used in 3.1 Tracks and the bear toe line diagram.
+## 2026-10-16 Safety tools (#/safety, app/addons/safety.js)
+- Full list with how each was read, certainty and dates: data/addons/safety/safety.json ("sources").
+- Read directly 2026-10-16: BC Report a wildfire (1 800 663 5555, *5555; page updated 9 February 2026, 99%); BC Conservation Officer Service RAPP page (1 877 952 7277; updated 31 May 2024, 99%); WildSafeBC black bear, grizzly bear and cougar pages (75%); Parks Canada bear spray pages, mountain parks (2024-06-28) and Pacific Rim (2025-02-11) (80 to 85%); E-Comm 911 Calling 9-1-1 (80%); Chilliwack SAR trip plan article (70%); WebKit blog, Web Push for Web Apps on iOS 16.4 (80%); BC Data Catalogue, BC Wildfire Fire Locations Current (95%).
+- Search previews only (pages blocked to fetch): AdventureSmart trip plan (75%), Canadian Red Cross ice thickness 15, 20, 25 cm (75%).
+- Live data (fetched on the phone only on a tap): Open-Meteo forecast API (CC BY 4.0); BC government ArcGIS Online layers BCWS_ActiveFires_PublicView (linked from the BC Data Catalogue), British Columbia Bans and Prohibition Areas (layer 14) and Area Restrictions (layer 13); Avalanche Canada api.avalanche.ca point forecast.
+- VERIFY: satellite phone emergency number (search preview only, not shown).
