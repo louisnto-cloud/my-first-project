@@ -119,6 +119,7 @@ ross-goose | Ross's goose: stubby bill, no grin.
 snow-and-ross-geese | Snow (left) and Ross's (right).
 g-snow-geese-flock | Dark birds in a snow goose flock are the blue form.
 bd-blue-goose | Blue form (left) and white form: one species, one bag.
+bd-snow-ross-flight | Snow and Ross's lifting off together. Hard to split in the air.
 ```
 
 ```more marks, weights and limits
@@ -135,6 +136,9 @@ bd-blue-goose | Blue form (left) and white form: one species, one bag.
 ## White fronted goose
 
 ```photo white-fronted-goose White fronted goose: white band at the bill, black bars on the belly.
+```
+
+```photo bd-whitefront-snow-flight Mixed flock: brown white fronts, white snow geese. Two bags: name each bird.
 ```
 
 - Grey brown, white face band, barred belly: "specklebelly" (70%).
@@ -160,6 +164,7 @@ bd-blue-goose | Blue form (left) and white form: one species, one bag.
 ```gallery
 g-trumpeter-swan | Trumpeter swan: huge, all white, black bill. Protected.
 g-tundra-swans-flight | Tundra swans: white wings, no black tips.
+bd-snow-geese-flight | Snow geese overhead: black wing tips. Legal.
 brant | Brant: small dark sea goose, white necklace.
 ```
 

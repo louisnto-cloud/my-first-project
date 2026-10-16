@@ -1618,5 +1618,38 @@
   "card": true,
   "cardBack": "Gray (Hungarian) partridge: orange face, grey breast, chestnut flank bars. Smaller than a chukar.",
   "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-snow-geese-flight",
+  "species": "Snow goose",
+  "caption": "Snow geese overhead, Sussex County, Delaware, January. White with black wing tips. A swan's wings are all white.",
+  "author": "Nolabob",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Snow_Geese_inflight2.jpg",
+  "card": true,
+  "cardBack": "White goose overhead with black wing tips: snow goose (or Ross's). All white wings and much bigger: a swan, never legal.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-whitefront-snow-flight",
+  "species": "Greater white fronted goose",
+  "caption": "Mixed flock in flight: brown greater white fronted geese with white snow geese. Each kind has its own limit, so name the bird before you shoot.",
+  "author": "Mike Budd, U.S. Fish and Wildlife Service Midwest Region",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:White-fronted_geese_and_snow_geese_in_flight_(51158269114).jpg",
+  "card": true,
+  "cardBack": "Mixed flock: the brown geese with barred bellies are white fronts, the white ones with black wing tips are snow geese. Separate limits.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-snow-ross-flight",
+  "species": "Snow goose",
+  "caption": "Snow and Ross's geese lifting off together, Sacramento National Wildlife Refuge, California. Ross's are smaller with shorter necks and bills; in the air they are hard to split.",
+  "author": "Steve Emmons, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Snow_geese_and_Ross_geese_(6338624060).jpg"
  }
 ]
