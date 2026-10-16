@@ -462,9 +462,17 @@ function build() {
   const notShipped = (f) => /\.(txt|md)$/i.test(f) || /(^|\/)unresolved\.json$/.test(f); // data/places/unresolved.json: the build report of names left out
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !notShipped(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
   if (fs.existsSync(path.join(ROOT, 'data/migration.json'))) mapFiles.push([path.join(ROOT, 'data/migration.json'), 'data/migration.json']); // map area report (species month bands)
+  // Add ons (app/addons/*.js): each registers its own routes in window.HMRoutes; loaded before app.js, precached; their data in data/addons/ (precached too)
+  const addonDir = path.join(ROOT, 'app/addons');
+  const addons = fs.existsSync(addonDir) ? fs.readdirSync(addonDir).filter((f) => f.endsWith('.js')).sort().map((f) => [f, read('app/addons/' + f)]) : [];
+  const addonData = [];
+  const walk = (d) => { if (!fs.existsSync(path.join(ROOT, d))) return; for (const f of fs.readdirSync(path.join(ROOT, d))) { const r = d + '/' + f; if (fs.statSync(path.join(ROOT, r)).isDirectory()) walk(r); else if (!notShipped(f)) addonData.push(r); } };
+  walk('data/addons');
   const hash = crypto.createHash('sha1').update(json + css + js + askJs);
   for (const [f] of mapFiles) hash.update(fs.readFileSync(f));
   hash.update(homeJs + planJs + placesJs);
+  for (const [, b] of addons) hash.update(b);
+  for (const r of addonData) hash.update(fs.readFileSync(path.join(ROOT, r)));
   hash.update(read('app/sw.js') + read('app/index.html') + photoIds.join(',')); // a service worker or page change alone also bumps the cache version
   const version = 'hm-' + hash.digest('hex').slice(0, 10) + '-' + data.built;
   let html = read('app/index.html');
@@ -474,7 +482,7 @@ function build() {
     .replace('<!--CSS-->', '<link rel="stylesheet" href="style.css">')
     .replace('<!--DATA-->', '<script src="content.js"></script>')
     .replace('<!--HOME-->', (homeJs ? '<script src="home.js"></script>' : '') + (planJs ? '<script src="plan.js"></script>' : ''))
-    .replace('<!--JS-->', (askJs ? '<script src="ask.js"></script>' : '') + (placesJs ? '<script src="places.js"></script>' : '') + '<script src="app.js"></script>')
+    .replace('<!--JS-->', (askJs ? '<script src="ask.js"></script>' : '') + (placesJs ? '<script src="places.js"></script>' : '') + addons.map(([f]) => `<script src="addons/${f}"></script>`).join('') + '<script src="app.js"></script>')
     .replace('<!--SW-->', '<script>if("serviceWorker" in navigator)addEventListener("load",function(){var sw=navigator.serviceWorker,had=!!sw.controller,shown=0;sw.register("sw.js").then(function(r){document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")r.update().catch(function(){});});});sw.addEventListener("controllerchange",function(){if(!had||shown)return;shown=1;var b=document.createElement("button");b.type="button";b.className="hm-update";b.textContent="New version ready. Tap to update.";b.onclick=function(){location.reload();};document.body.appendChild(b);});});</script>'));
   fs.writeFileSync(path.join(OUT, 'style.css'), css);
   fs.writeFileSync(path.join(OUT, 'app.js'), js);
@@ -482,11 +490,13 @@ function build() {
   if (planJs) fs.writeFileSync(path.join(OUT, 'plan.js'), planJs);
   if (askJs) fs.writeFileSync(path.join(OUT, 'ask.js'), askJs);
   if (placesJs) fs.writeFileSync(path.join(OUT, 'places.js'), placesJs);
+  if (addons.length) { fs.mkdirSync(path.join(OUT, 'addons'), { recursive: true }); for (const [f, body] of addons) fs.writeFileSync(path.join(OUT, 'addons', f), body); }
+  for (const r of addonData) { fs.mkdirSync(path.dirname(path.join(OUT, r)), { recursive: true }); fs.copyFileSync(path.join(ROOT, r), path.join(OUT, r)); }
   fs.writeFileSync(path.join(OUT, 'content.js'), `window.HM=${jsonIndex};`);
   fs.mkdirSync(path.join(OUT, 'lessons'), { recursive: true });
   for (const [file, body] of lessonOut) fs.writeFileSync(path.join(OUT, file), body);
   fs.writeFileSync(path.join(OUT, searchFile), searchBody);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...(planJs ? ['plan.js'] : []), ...(placesJs ? ['places.js'] : []), ...mapFiles.map(([, rel]) => rel)])));
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...(planJs ? ['plan.js'] : []), ...(placesJs ? ['places.js'] : []), ...addons.map(([f]) => 'addons/' + f), ...addonData, ...mapFiles.map(([, rel]) => rel)])));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
@@ -500,7 +510,7 @@ function build() {
   fs.writeFileSync(path.join(OUT, 'hunt-mentor-offline.html'), html
     .replace('<!--CSS-->', `<style>${css}</style>`)
     .replace('<!--DATA-->', `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
-    .replace('<!--JS-->', (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + (placesJs ? `<script>${placesJs.replace(/<\//g, '<\\/')}</script>` : '') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
+    .replace('<!--JS-->', (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + (placesJs ? `<script>${placesJs.replace(/<\//g, '<\\/')}</script>` : '') + addons.map(([, b]) => `<script>${b.replace(/<\//g, '<\\/')}</script>`).join('') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
     .replace('<!--HOME-->', (homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '') + (planJs ? `<script>${planJs.replace(/<\//g, '<\\/')}</script>` : ''))
     .replace('<!--SW-->', '')
     .replace(/<link rel="manifest"[^>]*>/, '')
