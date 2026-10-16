@@ -1687,5 +1687,26 @@
   "licence": "Public domain",
   "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
   "source": "https://commons.wikimedia.org/wiki/File:Mount_Rainier_White-Tailed_Ptarmigan_and_Two_Chicks_(53058441194).jpg"
+ },
+ {
+  "id": "bd-mallard-speculum",
+  "species": "Mallard",
+  "caption": "Mallard drake taking off. The speculum: a blue patch with a white bar on each side, the same on drake and hen all season.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_Speculum_(34431869295).jpg",
+  "card": true,
+  "cardBack": "Mallard speculum: blue patch with white bars on both sides. Same on drakes and hens.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-gadwall-hen-flight",
+  "species": "Gadwall",
+  "caption": "Gadwall hen in flight, Seedskadee National Wildlife Refuge, Wyoming. Orange bill with a dark centre, clean white belly.",
+  "author": "USFWS Mountain-Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Gadwall_Hen_Seedskadee_NWR_(15970987502).jpg"
  }
 ]

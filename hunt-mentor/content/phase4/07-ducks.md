@@ -56,6 +56,9 @@ checked: 2026-10-01
 ```diagram duck-id-wings
 ```
 
+```photo bd-mallard-speculum Mallard drake taking off: blue patch with white bars on both wings.
+```
+
 - The wing patch stays the same all season (80%).
 - Size, shape, wing patch, flight. Head colour last (Tip).
 

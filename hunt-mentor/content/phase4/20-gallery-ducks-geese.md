@@ -44,6 +44,7 @@ blue-winged-teal-drake | Look alike: blue winged teal drake in flight. White fac
 gadwall-drake | Drake. Plain grey, black rear end, dark bill.
 gadwall-hen | Hen, North Dakota. Orange sided bill, white wing patch.
 gadwall-drake-flight | Drake in flight, Oregon. Small square white patch on the back of the wing.
+bd-gadwall-hen-flight | Hen in flight, Wyoming. Orange edged bill, white belly. Not a mallard hen.
 ```
 
 - The only puddle duck with a white speculum (80%).

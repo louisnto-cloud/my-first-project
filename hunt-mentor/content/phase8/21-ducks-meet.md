@@ -104,6 +104,9 @@ checked: 2026-10-11
 ```diagram mdk-speculum
 ```
 
+```photo bd-mallard-speculum Mallard speculum: blue, with a white bar on each side.
+```
+
 - The [[Speculum]] is the coloured patch on the back of the wing (80%).
 - It stays the same all season. The head does not (80%).
 
