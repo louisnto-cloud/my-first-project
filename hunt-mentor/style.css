@@ -475,3 +475,11 @@ details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-botto
   :root:not([data-theme="light"]):not([data-theme="sun"]) .hs-chips select.chip.on { background: var(--accent); border-color: var(--accent); }
 }
 .hs-rest > summary { font-size: 15px; }
+
+/* study path (plan part 5 and the Home study card) */
+.pl-pace { flex-direction: column; }
+.pl-pace button { text-align: left; padding: 8px 14px; border-top: 1px solid var(--line); }
+.pl-pace button:first-child { border-top: 0; }
+.pl-late { display: block; font-size: 14px; font-weight: 600; color: var(--accent); }
+.pl-study .btn-row { margin-bottom: 8px; }
+.pl-today .bar { margin: 6px 0 10px; }

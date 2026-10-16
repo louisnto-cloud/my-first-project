@@ -497,15 +497,17 @@
         <div class="pl-kv"><span>First hunt</span><b>${p.firstHunt !== false ? 'Yes' : 'No'}</b></div>
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
       </div>
-      <nav class="pl-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s1">1 Legal</button><button type="button" data-go="pl-s2">2 Odds</button><button type="button" data-go="pl-s3">3 Days</button><button type="button" data-go="pl-s4">4 Checklist</button></nav>
+      <nav class="pl-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s1">1 Legal</button><button type="button" data-go="pl-s2">2 Odds</button><button type="button" data-go="pl-s3">3 Days</button><button type="button" data-go="pl-s4">4 Checklist</button><button type="button" data-go="pl-s5">5 Study</button></nav>
       <section class="pl-sec" id="pl-s1"><h2 class="pl-sh">1. Legal and open</h2><div id="pl-legal"><p class="muted">Checking the season tables...</p></div></section>
       <section class="pl-sec" id="pl-s2"><h2 class="pl-sh">2. Odds</h2><div id="pl-odds"><p class="muted">Loading harvest numbers...</p></div></section>
       <section class="pl-sec" id="pl-s3"><h2 class="pl-sh">3. Day by day</h2><div id="pl-days"><p class="muted">Building your days...</p></div></section>
       <section class="pl-sec" id="pl-s4"><h2 class="pl-sh">4. Checklist</h2><div id="pl-check"></div></section>
+      <section class="pl-sec" id="pl-s5"><h2 class="pl-sh">5. Study before you go</h2><div id="pl-study"></div></section>
     </div>`;
     const $ = (s) => view.querySelector(s);
     const m = (memo[p.id] = { p, sp });
     const link = (el) => { if (C.link && el) C.link(el); }; // MUs, regions and place names: tap for a mini map (places.js)
+    if (C.study) drawStudy(view.querySelector('#pl-study'), p, sp, C);
     link($('.pl-sum'));
 
     // actions
@@ -789,10 +791,53 @@
     draw();
   }
 
+  function drawStudy(el, p, sp, C) {
+    if (!el) return;
+    const b = studyBits(p, sp, C), P = b.T.path;
+    const row = (id) => { const t = C.study.stats([id]); const done = t.left === 0; return `<a class="item" href="#/s/${esc(id)}${done ? '' : '/' + (t.next ? t.next.i : 0)}"><span class="grow">${done ? '&#10003; ' : ''}${esc(C.lessonTitle(id))}</span><span class="pill">${t.seen}/${t.total}</span></a>`; };
+    el.innerHTML = `<div class="card">${b.html}
+      <h3>Pace</h3><div class="seg pl-pace" role="group" aria-label="Pace">
+        <button type="button" class="${b.T.pace === '10' ? 'on' : ''}" data-pace="10">10 min a day</button>
+        <button type="button" class="${b.T.pace === 'must' ? 'on' : ''}" data-pace="must">Must know by the hunt${b.T.mustPerDay ? ` (about ${b.T.mustPerDay} min a day)` : ''}</button>
+        <button type="button" class="${b.T.pace === 'fit' ? 'on' : ''}" data-pace="fit">All of it by the hunt${b.T.allPerDay ? ` (about ${b.T.allPerDay} min a day)` : ''}</button></div>
+      <p class="muted pl-small">Minutes come from each lesson's own time, plus about 2 minutes for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
+      <p class="muted pl-small">Cards use spaced repetition: a card you know comes back in 1 day, then 6 days, then further apart each time. A card you miss comes back tomorrow. Testing yourself this way beats rereading (Roediger and Karpicke, 2006). Assumption: about 12 seconds per card (not measured).</p>
+      </div>
+      <details class="pl-cat" open><summary>Must know first (${b.T.must.seen}/${b.T.must.total} screens)</summary><div class="list">${P.must.map(row).join('')}</div></details>
+      <details class="pl-cat"><summary>Then the rest (${C.study.stats(P.rest).seen}/${C.study.stats(P.rest).total} screens)</summary><div class="list">${P.rest.map(row).join('')}</div></details>`;
+    el.querySelectorAll('[data-pace]').forEach((x) => { x.onclick = () => { p.pace = x.dataset.pace; C.save(); drawStudy(el, p, sp, C); C.toast && C.toast(({ fit: 'Pace: all of it by the hunt.', must: 'Pace: must know by the hunt.' }[p.pace] || 'Pace: 10 minutes a day.') + ' Starts tomorrow.'); }; });
+  }
+
   // ---------- Home card ----------
+  // ---------- study path (engine in app.js, C.study) ----------
+  let Dc = null;
+  const nextPlan = (C) => { const t = C.study.dayISO(); return plansOf(C).filter((p) => p.from && (p.to || p.from) >= t).sort((a, b) => (a.from < b.from ? -1 : 1))[0] || null; };
+  const fmtDay = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+  function studyBits(p, sp, C) {
+    const T = C.study.today(p, sp.lessons), st = T.st, cl = C.study.cardsLeft(), cd = C.study.cardsDone();
+    const late = p.from && T.finish > p.from, mustLate = p.from && T.mustFinish > p.from;
+    const go = st.next ? `#/s/${esc(st.next.id)}/${st.next.i}` : '#/learn';
+    return { T, html: `<div class="pl-study">
+      <div class="pl-kv"><span>Today</span><b>${T.leftToday ? `${T.leftToday} screen${T.leftToday === 1 ? '' : 's'}` : 'Screens done &#10003;'}, ${cl ? `${cl} card${cl === 1 ? '' : 's'}` : 'cards done &#10003;'}</b></div>
+      ${T.daysToGo != null && (p.to || p.from) >= C.study.dayISO() ? `<div class="pl-kv"><span>Hunt starts</span><b>${T.daysToGo > 0 ? `${T.daysToGo} day${T.daysToGo === 1 ? '' : 's'} to go` : 'Now'}</b></div>` : ''}
+      <div class="muted pl-small">Path: ${st.seen} of ${st.total} screens read. Must know: ${T.must.seen} of ${T.must.total}.</div>
+      <div class="bar"><i style="width:${Math.round((st.seen / Math.max(1, st.total)) * 100)}%"></i></div>
+      <div class="pl-kv"><span>Must know done</span><b>${T.must.left ? fmtDay(T.mustFinish) : 'Done &#10003;'}${mustLate ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
+      ${mustLate && T.mustPerDay ? `<p class="pl-small"><b>Heads up:</b> at this pace the must know screens finish after your hunt starts. About ${T.mustPerDay} minutes a day gets them done first. Change the pace in the plan, part 5.</p>` : ''}
+      <div class="pl-kv"><span>Whole path done</span><b>${st.left ? fmtDay(T.finish) : 'Done &#10003;'}${late ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
+      ${st.next ? `<div class="muted pl-small">Next: ${esc(st.next.title)}</div>` : ''}
+      <div class="btn-row">${T.leftToday && st.next ? `<a class="btn primary" href="${go}">Read today's screens</a>` : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
+    </div>` };
+  }
   function homeCard(C) {
     const all = plansOf(C).slice(0, 3);
-    return `<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
+    let study = '';
+    const np = C.study && nextPlan(C);
+    if (np) {
+      if (!Dc) loadData().then((d) => { if (d && d.species.length) { Dc = d; C.refresh && C.refresh(); } }).catch(() => {});
+      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.</p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a></div>`; } catch (e) { console.warn('study card', e); } }
+    }
+    return `${study}<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt</a>
       ${all.length ? `<div class="list pl-home-list">${all.map((p) => `<a class="item" href="#/plan/${esc(p.id)}"><span class="grow"><b>${esc(planTitle(p, null))}</b><br><span class="muted">${esc(rangeLabel(p.from, p.to))}</span></span></a>`).join('')}</div>${plansOf(C).length > 3 ? '<a href="#/plan">All my plans</a>' : ''}` : ''}</div>`;
   }
