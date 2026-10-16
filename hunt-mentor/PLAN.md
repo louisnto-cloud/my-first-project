@@ -154,3 +154,4 @@ hunt-mentor/
 
 - 2026-10-16: published study path (default pace must know by the hunt), 100 diagrams redrawn with tap to learn, safety tools, trainers, map hunt helpers, no shooting layer (official outlines only; unmapped closures listed by MU). Fixed: bear toe line (inner toe), moose yield 100 to 120 kg, goose finish 14 m (15 yd) Tip.
 - 2026-10-16: owner home base is Mission (Home default and map first view); priority animals black bear and deer.
+- 2026-10-16: owner focus is deer near Mission (Harrison area fine, about 60 km); no bear hunting near Mission.
