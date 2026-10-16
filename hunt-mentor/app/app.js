@@ -98,6 +98,185 @@
     if (c) { S.checks[c.dataset.key] = c.checked; save(); }
   });
   const hydrateChecks = (root) => root.querySelectorAll('input[data-key]').forEach((c) => { c.checked = !!S.checks[c.dataset.key]; });
+  // ---------- tap to learn diagrams ----------
+  // Any SVG element (or <g>) with data-tip="Short title|One or two plain sentences" is a hotspot.
+  // Optional data-tip-dot="x,y" (viewBox units) places its pulsing dot; else the dot sits at the top right of the part.
+  // Tap a hotspot (or its dot) for a small bottom sheet; tap the diagram background for full screen with pinch zoom.
+  // Lesson diagrams and step slides only (not flashcards, where a tap flips the card). Delegated, so the
+  // single file offline build behaves the same.
+  const Tip = (() => {
+    const SVGNS = 'http://www.w3.org/2000/svg';
+    const parse = (el) => { const t = el.getAttribute('data-tip') || ''; const k = t.indexOf('|'); return k < 0 ? [t.trim(), ''] : [t.slice(0, k).trim(), t.slice(k + 1).trim()]; };
+    const tipsOf = (svg) => [...svg.querySelectorAll('[data-tip]')];
+    // bounding box of el in the root svg's own coordinates (viewBox units)
+    const boxOf = (svg, el) => {
+      let b; try { b = el.getBBox(); } catch (e) { return null; }
+      if (!b || (!b.width && !b.height)) return null;
+      const a = svg.getScreenCTM && svg.getScreenCTM(), c = el.getScreenCTM && el.getScreenCTM();
+      if (!a || !c) return { x: b.x, y: b.y, w: b.width, h: b.height };
+      const m = a.inverse().multiply(c);
+      const pts = [[b.x, b.y], [b.x + b.width, b.y], [b.x, b.y + b.height], [b.x + b.width, b.y + b.height]].map(([x, y]) => [m.a * x + m.c * y + m.e, m.b * x + m.d * y + m.f]);
+      const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+      return { x: Math.min(...xs), y: Math.min(...ys), w: Math.max(...xs) - Math.min(...xs), h: Math.max(...ys) - Math.min(...ys) };
+    };
+    const vb = (svg) => { const v = svg.viewBox && svg.viewBox.baseVal; return v && v.width ? v : { x: 0, y: 0, width: 400, height: 400 }; };
+    const mk = (tag, attrs) => { const n = document.createElementNS(SVGNS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); return n; };
+    // pulsing dots: drawn once the diagram is on screen (getBBox needs it rendered)
+    function dots(svg) {
+      if (svg.dataset.hmDots) return; const tips = tipsOf(svg); if (!tips.length) return;
+      const v = vb(svg); let drawn = 0;
+      const layer = mk('g', { class: 'hm-dots', 'aria-hidden': 'true' });
+      tips.forEach((el, i) => {
+        let x, y; const o = (el.getAttribute('data-tip-dot') || '').split(/[ ,]+/).map(Number);
+        if (o.length === 2 && o.every(isFinite)) [x, y] = o;
+        else { const b = boxOf(svg, el); if (!b) return; x = b.x + b.w - Math.min(6, b.w / 2); y = b.y + Math.min(6, b.h / 2); }
+        x = Math.max(v.x + 10, Math.min(v.x + v.width - 10, x)); y = Math.max(v.y + 10, Math.min(v.y + v.height - 10, y));
+        const g = mk('g', { class: 'hm-dot', 'data-tip-i': i, transform: `translate(${x.toFixed(1)} ${y.toFixed(1)})` });
+        g.appendChild(mk('circle', { class: 'hm-dot-ring', r: 9 })); g.appendChild(mk('circle', { class: 'hm-dot-core', r: 5.5 }));
+        layer.appendChild(g); drawn++;
+      });
+      if (drawn) { svg.appendChild(layer); svg.dataset.hmDots = '1'; }
+    }
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { dots(e.target); if (e.target.dataset.hmDots) io.unobserve(e.target); } }), { threshold: 0.15 }) : null;
+    // mark up new figures (runs after every render; idempotent)
+    function scan() {
+      document.querySelectorAll('figure.diagram:not([data-hmz]), figure.step-frame:not([data-hmz])').forEach((fig) => {
+        const svg = fig.querySelector('svg');
+        if (!svg || fig.closest('.fc, .hm-zoom')) { fig.dataset.hmz = 'off'; return; }
+        fig.dataset.hmz = '1'; fig.classList.add('hm-zoomable');
+        const tips = tipsOf(svg); if (!tips.length) return;
+        fig.classList.add('has-tips');
+        tips.forEach((el, i) => { el.setAttribute('data-tip-i', i); el.setAttribute('tabindex', '0'); el.setAttribute('role', 'button'); el.setAttribute('aria-label', parse(el)[0]); });
+        const hint = document.createElement('div'); hint.className = 'hm-tiphint';
+        hint.innerHTML = `<span class="hm-tiphint-t"><i aria-hidden="true"></i>Tap the parts to learn (${tips.length})</span><button type="button" class="hm-zoom-btn">Full screen</button>` +
+          `<span class="hm-tiplist"><span class="sr">Parts:</span>${tips.map((el, i) => `<button type="button" class="hm-tipbtn" data-tip-i="${i}">${esc(parse(el)[0])}</button>`).join('')}</span>`;
+        const cap = [...fig.children].find((c) => c.tagName === 'FIGCAPTION');
+        fig.insertBefore(hint, cap || null);
+        if (io) io.observe(svg); else dots(svg);
+      });
+    }
+    let queued = 0;
+    const queue = () => { if (!queued) { queued = 1; requestAnimationFrame(() => { queued = 0; scan(); }); } };
+    new MutationObserver(queue).observe(document.body, { childList: true, subtree: true });
+    queue();
+
+    // the bottom sheet (not modal: the diagram stays visible with the part ringed)
+    const sh = document.createElement('div');
+    sh.className = 'hm-tipsheet'; sh.hidden = true; sh.setAttribute('role', 'dialog'); sh.setAttribute('aria-labelledby', 'hm-tip-t');
+    sh.innerHTML = '<div class="hm-tip-head"><h3 id="hm-tip-t" tabindex="-1"></h3><button type="button" class="hm-tip-x" aria-label="Close">&#215;</button></div>' +
+      '<p id="hm-tip-p" aria-live="polite"></p><div class="hm-tip-nav"><button type="button" class="btn hm-tip-prev">&#8249; Back</button><span class="hm-tip-n"></span><button type="button" class="btn hm-tip-next">Next part &#8250;</button></div>';
+    document.body.appendChild(sh);
+    let cur = null; // { svg, i, back }
+    const clearRing = () => document.querySelectorAll('.hm-ring').forEach((r) => r.remove());
+    function show(svg, i, back) {
+      const tips = tipsOf(svg); if (!tips.length) return;
+      i = (i + tips.length) % tips.length;
+      cur = { svg, i, back: back || (cur && cur.back) };
+      const [t, p] = parse(tips[i]);
+      $('#hm-tip-t', sh).textContent = t; $('#hm-tip-p', sh).textContent = p;
+      $('.hm-tip-n', sh).textContent = `${i + 1} of ${tips.length}`;
+      const one = tips.length < 2; $('.hm-tip-prev', sh).hidden = one; $('.hm-tip-next', sh).hidden = one;
+      sh.hidden = false;
+      clearRing(); dots(svg);
+      const b = boxOf(svg, tips[i]);
+      if (b) svg.appendChild(mk('rect', { class: 'hm-ring', 'aria-hidden': 'true', x: b.x - 4, y: b.y - 4, width: b.w + 8, height: b.h + 8, rx: 8 }));
+      svg.querySelectorAll('.hm-dot').forEach((d) => d.classList.toggle('on', +d.dataset.tipI === i));
+    }
+    function hide() {
+      if (sh.hidden) return; sh.hidden = true; clearRing();
+      document.querySelectorAll('.hm-dot.on').forEach((d) => d.classList.remove('on'));
+      const back = cur && cur.back; cur = null; if (back && back.isConnected) try { back.focus({ preventScroll: true }); } catch (e) { /* */ }
+    }
+    $('.hm-tip-x', sh).onclick = hide;
+    $('.hm-tip-prev', sh).onclick = () => cur && show(cur.svg, cur.i - 1);
+    $('.hm-tip-next', sh).onclick = () => cur && show(cur.svg, cur.i + 1);
+
+    // full screen with pinch zoom
+    const zm = document.createElement('div');
+    zm.className = 'hm-zoom'; zm.hidden = true; zm.setAttribute('role', 'dialog'); zm.setAttribute('aria-modal', 'true'); zm.setAttribute('aria-label', 'Diagram, full screen');
+    zm.innerHTML = '<div class="hm-zoom-bar"><span class="hm-zoom-help">Pinch to zoom</span><button type="button" class="hm-zoom-out" aria-label="Zoom out">&#8722;</button><button type="button" class="hm-zoom-in" aria-label="Zoom in">+</button><button type="button" class="hm-zoom-x">Close</button></div><div class="hm-zoom-stage"><div class="hm-zoom-inner"></div></div>';
+    document.body.appendChild(zm);
+    const stage = $('.hm-zoom-stage', zm), inner = $('.hm-zoom-inner', zm);
+    let z = { s: 1, x: 0, y: 0 }, zBack = null, moved = false;
+    const apply = () => { inner.style.transform = `translate(${z.x}px, ${z.y}px) scale(${z.s})`; };
+    const zoomAt = (s, cx, cy) => {
+      const r = stage.getBoundingClientRect(); cx = cx == null ? r.width / 2 : cx - r.left; cy = cy == null ? r.height / 2 : cy - r.top;
+      s = Math.max(1, Math.min(6, s)); const k = s / z.s;
+      z.x = cx - (cx - z.x) * k; z.y = cy - (cy - z.y) * k; z.s = s;
+      if (s === 1) { z.x = 0; z.y = 0; }
+      apply();
+    };
+    function openZoom(fig) {
+      const svg = fig && fig.querySelector('svg'); if (!svg) return;
+      hide(); zBack = document.activeElement;
+      const c = svg.cloneNode(true); c.querySelectorAll('.hm-ring').forEach((r) => r.remove());
+      inner.innerHTML = ''; inner.appendChild(c);
+      const cap = fig.querySelector('figcaption'); if (cap && !cap.querySelector('.anim-replay')) { const p = document.createElement('p'); p.className = 'hm-zoom-cap'; p.textContent = cap.textContent; inner.appendChild(p); }
+      z = { s: 1, x: 0, y: 0 }; apply();
+      zm.hidden = false; document.body.classList.add('hm-zoom-open');
+      $('.hm-zoom-x', zm).focus();
+    }
+    function closeZoom() {
+      if (zm.hidden) return; hide(); zm.hidden = true; inner.innerHTML = ''; document.body.classList.remove('hm-zoom-open');
+      if (zBack && zBack.isConnected) try { zBack.focus({ preventScroll: true }); } catch (e) { /* */ }
+    }
+    $('.hm-zoom-x', zm).onclick = closeZoom;
+    $('.hm-zoom-in', zm).onclick = () => zoomAt(z.s * 1.5);
+    $('.hm-zoom-out', zm).onclick = () => zoomAt(z.s / 1.5);
+    const pts = new Map(); let g0 = null, lastTap = 0;
+    const snap = () => { const p = [...pts.values()]; return { s: z.s, x: z.x, y: z.y, p: p.map((q) => ({ ...q })), d: p.length > 1 ? Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y) : 0 }; };
+    stage.addEventListener('pointerdown', (e) => { pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); if (pts.size === 1) moved = false; g0 = snap(); });
+    stage.addEventListener('pointermove', (e) => {
+      if (!pts.has(e.pointerId) || !g0) return;
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); const p = [...pts.values()];
+      if (p.length > 1 && g0.d) {
+        moved = true; const d = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+        const mx = (p[0].x + p[1].x) / 2, my = (p[0].y + p[1].y) / 2, m0x = (g0.p[0].x + g0.p[1].x) / 2, m0y = (g0.p[0].y + g0.p[1].y) / 2;
+        z = { s: g0.s, x: g0.x + mx - m0x, y: g0.y + my - m0y }; zoomAt(g0.s * d / g0.d, mx, my);
+      } else if (p.length === 1) {
+        const dx = p[0].x - g0.p[0].x, dy = p[0].y - g0.p[0].y;
+        if (Math.abs(dx) + Math.abs(dy) > 8) moved = true;
+        if (moved && z.s > 1) { z.x = g0.x + dx; z.y = g0.y + dy; apply(); }
+      }
+    });
+    const up = (e) => {
+      pts.delete(e.pointerId); g0 = pts.size ? snap() : null;
+      if (!pts.size && !moved && e.type === 'pointerup' && !(e.target.closest && e.target.closest('[data-tip], .hm-dot'))) {
+        const now = Date.now(); if (now - lastTap < 300) { zoomAt(z.s > 1.2 ? 1 : 2.5, e.clientX, e.clientY); lastTap = 0; } else lastTap = now;
+      }
+    };
+    stage.addEventListener('pointerup', up); stage.addEventListener('pointercancel', up);
+    stage.addEventListener('wheel', (e) => { e.preventDefault(); zoomAt(z.s * (e.deltaY < 0 ? 1.15 : 1 / 1.15), e.clientX, e.clientY); }, { passive: false });
+    // a pan or pinch is not a tap
+    stage.addEventListener('click', (e) => { if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; } }, true);
+
+    // taps and keys (delegated)
+    document.addEventListener('click', (e) => {
+      const t = e.target; if (!t.closest) return;
+      const b = t.closest('.hm-tipbtn');
+      if (b) { show(b.closest('figure').querySelector('svg'), +b.dataset.tipI, b); $('#hm-tip-t', sh).focus(); return; }
+      if (t.closest('.hm-zoom-btn')) { openZoom(t.closest('figure')); return; }
+      const fig = t.closest('figure.hm-zoomable, .hm-zoom-inner');
+      if (!fig || t.closest('.fc, figcaption, .hm-tiphint, button, a')) return;
+      const svg = t.closest('svg'); if (!svg) return;
+      const h = t.closest('[data-tip], .hm-dot');
+      if (h && h.closest('svg') === svg) { const i = +h.getAttribute('data-tip-i'); if (isFinite(i)) { show(svg, i, h.classList.contains('hm-dot') ? null : h); return; } }
+      if (fig.classList.contains('hm-zoomable')) openZoom(fig);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { if (!sh.hidden) { hide(); return; } if (!zm.hidden) closeZoom(); return; }
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('svg [data-tip][tabindex]')) {
+        e.preventDefault(); show(e.target.closest('svg'), +e.target.getAttribute('data-tip-i'), e.target); $('#hm-tip-t', sh).focus();
+      }
+      if (!zm.hidden && e.key === 'Tab') { // keep focus inside the full screen view (and its sheet)
+        const a = document.activeElement;
+        if (!zm.contains(a) && !sh.contains(a)) { e.preventDefault(); $('.hm-zoom-x', zm).focus(); }
+      }
+    });
+    window.addEventListener('hashchange', () => { hide(); closeZoom(); });
+    return { scan, show, hide, openZoom, closeZoom };
+  })();
+  window.HMTips = Tip;
 
   // ---------- sun times (NOAA almanac method) ----------
   function sunEvent(date, lat, lon, rising) {

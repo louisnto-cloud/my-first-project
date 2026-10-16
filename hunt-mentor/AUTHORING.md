@@ -47,6 +47,7 @@ Item two
 ```
 ````
   - SVG rules: `viewBox` set, no width/height attributes, no external refs, no copied art. Big labels (font-size >= 14 in a ~400 wide viewBox), `font-family="sans-serif"`. Colours: ink #23261f, moss #2f3a2b, sage #8a9a6b, bark #6b4f35, accent #e8590c, paper #fffaf0 (diagrams sit on a light card in both themes). Every shape has an explicit fill.
+  - Tap to learn (2026-10-16): mark 3 to 8 parts with `data-tip="Short title|One or two plain sentences"` on any element or `<g>`. The app adds a pulsing dot, a "Tap the parts" hint, a bottom sheet with Back / Next part, keyboard and screen reader buttons, and full screen pinch zoom (tap the diagram background). Optional `data-tip-dot="x,y"` places the dot. Tip text comes only from the lesson that uses the diagram: no new facts. Escape `&`, `<` and `"` in the attribute. Works in lessons and step slides, not on flashcards.
 - Quiz (last block in file), JSON array, `answer` is the 0 based index, `why` explains:
 ````
 ```quiz

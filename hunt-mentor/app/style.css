@@ -483,3 +483,48 @@ details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-botto
 .pl-late { display: block; font-size: 14px; font-weight: 600; color: var(--accent); }
 .pl-study .btn-row { margin-bottom: 8px; }
 .pl-today .bar { margin: 6px 0 10px; }
+
+/* ---------- Tap to learn diagrams (data-tip hotspots, app.js Tip) ---------- */
+.hm-zoomable svg { cursor: zoom-in; }
+.has-tips [data-tip] { cursor: pointer; }
+.has-tips [data-tip]:focus { outline: none; }
+.has-tips [data-tip]:focus-visible { outline: 3px solid #e8590c; outline-offset: 2px; }
+.hm-dot { cursor: pointer; }
+.hm-dot-core { fill: #e8590c; stroke: #fffaf0; stroke-width: 2; }
+.hm-dot-ring { fill: none; stroke: #e8590c; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: hm-pulse 2.2s ease-out infinite; }
+.hm-dot.on .hm-dot-core { fill: #2f3a2b; }
+@keyframes hm-pulse { 0% { transform: scale(.6); opacity: .9; } 70% { transform: scale(1.6); opacity: 0; } 100% { transform: scale(1.6); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .hm-dot-ring { animation: none; opacity: .5; } }
+.hm-ring { fill: rgba(232, 89, 12, .08); stroke: #e8590c; stroke-width: 2.5; stroke-dasharray: 6 4; pointer-events: none; }
+.hm-tiphint { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; margin-top: 6px; font-size: 14px; color: #5d6152; }
+.hm-tiphint-t { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+.hm-tiphint-t i { width: 10px; height: 10px; border-radius: 50%; background: #e8590c; box-shadow: 0 0 0 3px rgba(232, 89, 12, .25); }
+.hm-zoom-btn { min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid #c9bb9c; background: #fffaf0; color: #2f3a2b; font-size: 14px; font-weight: 600; }
+/* parts list for keyboard and screen readers: hidden until a part button has focus */
+.hm-tiplist { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hm-tiplist:focus-within { position: static; width: 100%; height: auto; clip: auto; white-space: normal; display: flex; flex-wrap: wrap; gap: 6px; }
+.hm-tiplist .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.hm-tipbtn { min-height: 44px; padding: 0 12px; border-radius: 99px; border: 1px solid #c9bb9c; background: #fffaf0; color: #2f3a2b; font-size: 14px; }
+.hm-tipsheet { position: fixed; left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); z-index: 60; max-width: 560px; margin: 0 auto; max-height: 50vh; overflow: auto;
+  background: var(--card); color: var(--ink); border: 2px solid #e8590c; border-radius: 16px; padding: 12px 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, .3); }
+.hm-tipsheet[hidden] { display: none; }
+.hm-tip-head { display: flex; align-items: flex-start; gap: 8px; }
+.hm-tip-head h3 { flex: 1; margin: 6px 0 0; font-size: 18px; outline: none; }
+.hm-tip-x { flex: none; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--line); color: var(--ink); font-size: 24px; line-height: 1; }
+#hm-tip-p { margin: 6px 0 10px; font-size: 16px; }
+.hm-tip-nav { display: flex; align-items: center; gap: 8px; }
+.hm-tip-nav .btn { flex: 1; min-height: 44px; padding: 0 8px; font-size: 15px; }
+.hm-tip-nav .btn[hidden] { display: none; }
+.hm-tip-n { flex: none; font-size: 14px; color: var(--muted); }
+.hm-zoom { position: fixed; inset: 0; z-index: 50; background: #1b1d18; display: flex; flex-direction: column; }
+.hm-zoom[hidden] { display: none; }
+body.hm-zoom-open { overflow: hidden; }
+.hm-zoom-bar { display: flex; align-items: center; gap: 8px; padding: calc(8px + env(safe-area-inset-top)) 12px 8px; color: #ece6d6; font-size: 14px; }
+.hm-zoom-help { flex: 1; min-width: 0; }
+.hm-zoom-bar button { min-width: 44px; min-height: 44px; border: 1px solid #5d6152; border-radius: 10px; background: #2f3a2b; color: #fff; font-size: 18px; font-weight: 700; padding: 0 10px; }
+.hm-zoom-bar .hm-zoom-x { font-size: 16px; background: #e8590c; border-color: #e8590c; }
+.hm-zoom-stage { flex: 1; overflow: hidden; touch-action: none; position: relative; }
+.hm-zoom-inner { transform-origin: 0 0; padding: 8px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; will-change: transform; }
+.hm-zoom-inner svg { display: block; width: 100%; max-width: 900px; max-height: calc(100% - 40px); margin: 0 auto; background: #fffaf0; border-radius: 10px; cursor: default; }
+.hm-zoom-cap { color: #ece6d6; font-size: 15px; text-align: center; margin: 8px 0 0; }
+@media print { .hm-tiphint, .hm-dots, .hm-tipsheet, .hm-zoom { display: none !important; } }
