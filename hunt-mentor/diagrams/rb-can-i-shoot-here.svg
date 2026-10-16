@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 572" font-family="sans-serif" role="img" aria-label="Checklist: can I shoot here? Every one of nine checks must be yes, and a check that does not apply counts as yes. 1 outside every National Park. 2 outside every ecological reserve. 3 not in a BC Park, or its page allows hunting in an open season. 4 over 100 metres (109 yards) from occupied buildings and schools. 5 off the road allowance and not shooting across it. 6 outside No Shooting and No Hunting Areas. 7 on a listed highway, a rifle only past 400 metres from its road allowance. 8 fenced, posted, leased or crop land: the owner said yes. 9 in a town: the local bylaw allows it. Any no: do not shoot. All yes: the place is OK; now check season, licence, target and backstop.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 572" font-family="sans-serif" role="img" aria-label="Checklist: can I shoot here? Every one of nine checks must be yes, and a check that does not apply counts as yes. 1 outside every National Park. 2 outside every ecological reserve. 3 not in a BC Park, or its page allows hunting in an open season. 4 over 100 metres (109 yards) from occupied buildings and schools. 5 off the road allowance and not shooting across it. 6 outside No Shooting and No Hunting Areas. 7 near a listed highway: check its 400 metre band in the Rule Book; some ban rifles and slugs, some ban all hunting. 8 fenced, posted, leased or crop land: the owner said yes. 9 in a town: the local bylaw allows it. Any no: do not shoot. All yes: the place is OK; now check season, licence, target and backstop.">
 <rect width="400" height="572" fill="#fffaf0"/>
 <text x="16" y="34" font-size="21" font-weight="bold" fill="#e8590c">Need YES to all 9</text>
 <text x="384" y="34" font-size="15" fill="#6b5b4b" text-anchor="end">Does not apply = yes</text>
@@ -39,7 +39,7 @@
 <rect x="8" y="314" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
 <circle cx="28" cy="334" r="12" fill="#2f3a2b"/><text x="28" y="339.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">7</text>
 <g transform="translate(58 334) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-12 -13 H12 V2 C12 9 6 13 0 15 C-6 13 -12 9 -12 2z"/><path d="M-6 -6 H6 M-6 0 H6" stroke="#fffaf0" stroke-width="2.4"/></g>
-<text x="80" y="340" font-size="16" fill="#2f3a2b">Listed highway: rifle past 400 m</text>
+<text x="80" y="340" font-size="16" fill="#2f3a2b">Listed highway: check its 400 m band</text>
 <g data-tip="Private and leased land|A fence all the way round or no trespassing signs at each way in means it is closed without the owner's permission. Cultivated land needs consent too.">
 <rect x="8" y="358" width="384" height="40" rx="7" fill="#ffffff" stroke="#e3d8c0"/>
 <circle cx="28" cy="378" r="12" fill="#2f3a2b"/><text x="28" y="383.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
