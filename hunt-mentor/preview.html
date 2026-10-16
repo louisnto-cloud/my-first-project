@@ -569,9 +569,9 @@ body.hm-zoom-open { overflow: hidden; }
   // Species shown on the card, in this order. Ducks and geese come from the federal table (migratory.json).
   const GROUPS = [
     ['Deer', (s) => s === 'mule deer' || s === 'white tailed deer'],
-    ['Black bear', (s) => s === 'black bear'],
     ['Grouse', (s) => s.includes('grouse')],
     ['Quail', (s) => s.includes('quail')],
+    ['Black bear', (s) => s === 'black bear'],
     ['Moose', (s) => s === 'moose'],
     ['Elk', (s) => s === 'elk'],
   ];
@@ -627,7 +627,7 @@ body.hm-zoom-open { overflow: hidden; }
         for (const r of M.rows || []) {
           if (r.district !== dk || (r.mus && !r.mus.includes(mu))) continue;
           const sp = String(r.species || '').toLowerCase();
-          const g = sp === 'ducks' ? 1.5 : sp.includes('geese') ? 1.6 : -1; // after deer and black bear (owner priority), before grouse
+          const g = sp === 'ducks' ? 0.5 : sp.includes('geese') ? 0.6 : -1; // after deer (owner priority), before grouse
           if (g < 0 || !openOn(r, t)) continue;
           out.push({ g, sp: cap(sp), cls: r.daily ? `${r.daily} a day, ${r.possession} in possession` : '', note: '', tag: '',
             open: r.open, close: r.close, left: daysLeft(r.close, iso), src: `Federal Migratory Birds Regulations, ${r.item || 'Schedule 3'}`, cert: r.cert });

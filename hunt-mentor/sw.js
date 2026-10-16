@@ -6,7 +6,7 @@
 // or from the saved range chunks of an offline area (keys "<file>?v=..&hmr=<start>-<end>&hmt=<size>", map/offline.js).
 // No signal: navigator.onLine false, or a network request failed or hung in the last few seconds, means "down".
 // While down nothing waits on the network: saved copies answer at once and anything not saved fails at once.
-const CACHE = 'hm-1287704eda-2026-10-16';
+const CACHE = 'hm-efc0e6f787-2026-10-16';
 const TILES = 'hm-tiles';
 const DATA = 'hm-data';
 const TILE_CAP = 4000;
