@@ -349,7 +349,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 ```more yield math and meat care
 - BC central Interior carcass study: calves averaged about 82 kg dressed; spike fork bulls about 162 kg dressed (search preview) (75%).
 - Rule of thumb: field dressed is about 72% of live weight; boneless meat about 35 to 45% of live weight (hunter sources) (60%).
-- So a spike fork bull should give roughly 75 to 90 kg of boneless meat (assumption, Tip).
+- So a spike fork bull should give roughly 100 to 120 kg of boneless meat: the 162 kg carcass is already skinned quarters, and boning out usually keeps about 65 to 75% of it (Tip, 60%, my math, checked 2026-10-16).
 - Use the [[Gutless method]]: quarter on the hide, bag each quarter, hang in shade (Tip).
 - Heat is the enemy. A moose holds body heat for hours. Skin fast in warm weather (Tip).
 - Plan 4 to 6 trips with 2 people, or a cart or sled. Mark the kill on your map (Tip).

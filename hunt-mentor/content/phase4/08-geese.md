@@ -181,7 +181,7 @@ yt-goose-calling-fields | Read the flock and call to match it.
 - Pattern test: at least 60 pellets in a 76 cm (30 in) circle at your longest range (70%). Modified choke is the usual starting point with BB steel (Tip).
 - Head and neck shots at close decoying geese kill clean (65%). Aim at the white cheek, not the whole bird (Tip).
 - Max range for you this season: 35 m (38 yd). A goose looks close at 50 m because it is big (Tip).
-- Finishing a crippled goose on the ground: steel 2 or 4 at about 15 m to the head (65%). Carry a few in a different pocket (Tip).
+- Finishing a crippled goose on the ground: steel 2 or 4 at about 14 m (15 yd) to the head (Tip: no official distance exists; close enough for a tight pattern on the head). Carry a few in a different pocket (Tip).
 ```
 
 ## Season and bag limits by district

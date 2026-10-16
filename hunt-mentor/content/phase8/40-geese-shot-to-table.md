@@ -40,7 +40,7 @@ checked: 2026-10-11
 - Steel 1 or 2 for cackling geese and snow geese over decoys (Tip, quick lesson).
 - Your 12 gauge with 3 inch steel is enough (Tip). Modified choke is a usual start with BB steel (Tip). Pattern it: [Shotgun skills](#/s/shotgun-skills), [Shotgun guide](#/s/shotgun-guide).
 - Max range for you this season: 35 m (38 yd). A goose looks close at 50 m because it is big (Tip).
-- Cripple shells: steel 2 or 4, finish at about 14 m (15 yd) (65%).
+- Cripple shells: steel 2 or 4, finish at about 14 m (15 yd) (Tip: no official distance exists).
 ```
 
 ```anim sk-leads Swing through, sustained lead, pull away.

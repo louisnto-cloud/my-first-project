@@ -155,7 +155,7 @@ yt-gutless-vs-gutting | Gutless method: take the meat, leave the guts inside.
   - Adult bulls were heavier before the rut than after (75%).
 - Rule of thumb from hunter sources: boneless meat about 35 to 45% of live weight (60%, Tip, [Moose](#/s/moose)).
 - BC account: moose provide "more meat than all other ungulates combined" in BC (90%).
-- Your freezer: plan space for well over 100 kg of boned meat from a spike fork bull (Tip, my reading of the carcass weight).
+- Your freezer: plan space for about 100 to 120 kg of boned meat from a spike fork bull: 162 kg carcass times about 65 to 75% kept after boning (Tip, 60%, my math).
 ```
 
 ```diagram sa-yield-species

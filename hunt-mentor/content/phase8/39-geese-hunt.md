@@ -243,7 +243,7 @@ yt-goose-calling-fields | Read the flock and call to match it.
 ```more ethics in full
 - A goose looks close at 50 m because it is big. Wait (Tip).
 - Pick one bird, then the next. Never flock shoot (Tip).
-- Carry steel 2 or 4 shells for finishing cripples at about 14 m (15 yd) (65%).
+- Carry steel 2 or 4 shells for finishing cripples at about 14 m (15 yd) (Tip: no official distance exists).
 - You must kill and retrieve a wounded bird as soon as you can (99%, s. 42). Make all reasonable effort to find it, and it counts in your bag (99%, page 12).
 - Daily limit reached: stop hunting that species for the day (99%, s. 44).
 - Dogs: Ducks Unlimited advises a young retriever gets a year of duck hunting before geese (65%). Without a dog, plan every retrieve before you shoot (Tip).
