@@ -55,7 +55,7 @@
     <line x1="68" y1="472" x2="68" y2="433" stroke="#2f3a2b" stroke-width="1.8"/><line x1="68" y1="433" x2="68" y2="411" stroke="#2f3a2b" stroke-width="1.4" stroke-dasharray="3 3"/>
     <circle cx="68" cy="433" r="4" fill="#e8590c"/>
    </g>
-   <g data-tip="Quartering away|Aim at the off shoulder. The bullet enters behind the ribs and crosses both lungs." data-tip-dot="250,368">
+   <g data-tip="Quartering away|Aim at the off shoulder. The bullet enters behind the ribs and crosses both lungs (the deer rule from the shot placement lesson, 80%)." data-tip-dot="250,368">
     <rect x="140" y="358" width="120" height="122" rx="8" fill="#f2ecdd" stroke="#c9bb9c"/>
     <text x="200" y="377" font-weight="bold">Quartering away</text><text x="200" y="394" fill="#2f6e3b" font-weight="bold">good</text>
     <use href="#vitals-bear-top" transform="translate(212 428) rotate(35)"/>
