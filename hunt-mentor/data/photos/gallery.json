@@ -1708,5 +1708,17 @@
   "licence": "Public domain",
   "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
   "source": "https://commons.wikimedia.org/wiki/File:Gadwall_Hen_Seedskadee_NWR_(15970987502).jpg"
+ },
+ {
+  "id": "bd-band-tailed-pigeon",
+  "species": "Band tailed pigeon",
+  "caption": "Band tailed pigeon, San Luis Obispo, California. Yellow bill and feet, white crescent above a green sheen on the back of the neck. A migratory game bird.",
+  "author": "aroid",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Patagioenas_fasciata_-San_Luis_Obispo,_California,_USA-8_(1).jpg",
+  "card": true,
+  "cardBack": "Band tailed pigeon: yellow bill and feet, white neck crescent. Not the town rock pigeon.",
+  "cardDeck": "Photo ID"
  }
 ]

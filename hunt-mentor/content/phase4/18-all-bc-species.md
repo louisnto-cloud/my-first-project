@@ -126,6 +126,9 @@ checked: 2026-10-02
 ```diagram sc-sp-birds
 ```
 
+```photo bd-band-tailed-pigeon Band tailed pigeon: yellow bill and feet, white crescent on the neck.
+```
+
 - Ducks, geese and snipe need the federal permit too (99%).
 - Bird limits: daily, with possession in brackets (95%).
 
