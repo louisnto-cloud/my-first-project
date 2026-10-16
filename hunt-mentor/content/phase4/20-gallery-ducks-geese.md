@@ -157,6 +157,7 @@ ross-goose | Ross's goose. Smaller, stubby bill, no grin patch.
 snow-and-ross-geese | Snow (left) and Ross's (right) side by side.
 g-snow-geese-skagit | Snow geese over the Skagit Valley, Washington. Black wing tips.
 g-snow-geese-flock | Snow geese lifting off, California. Dark birds are the blue form.
+bd-blue-goose | Blue form (left) beside a white snow goose. Same pink bill, same species.
 ```
 
 - White geese show black wing tips in flight. A swan is all white and much bigger (80%).

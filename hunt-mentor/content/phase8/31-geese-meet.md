@@ -118,6 +118,7 @@ snow-goose | Snow goose: pink bill with a dark grin patch.
 ross-goose | Ross's goose: stubby bill, no grin.
 snow-and-ross-geese | Snow (left) and Ross's (right).
 g-snow-geese-flock | Dark birds in a snow goose flock are the blue form.
+bd-blue-goose | Blue form (left) and white form: one species, one bag.
 ```
 
 ```more marks, weights and limits

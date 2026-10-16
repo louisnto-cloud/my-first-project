@@ -68,6 +68,9 @@ checked: 2026-10-11
 ```diagram mdk-eclipse
 ```
 
+```photo bd-mallard-eclipse Eclipse mallard drake: only patches of green on the head, plain yellow bill.
+```
+
 - Ducks drop all flight feathers at once (85%).
 - Flightless for about 3 to 4 weeks (80%).
 

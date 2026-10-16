@@ -114,6 +114,9 @@ g-quail-pair | A pair. The female is plainer and smaller in the plume.
 ```diagram sb-partridge-id
 ```
 
+```photo bd-gray-partridge A pair of Huns in a grain field: orange faces, chestnut bars on grey sides.
+```
+
 - Orange face, chestnut horseshoe, rusty tail in flight (75%).
 - 300 to 500 g. Flushes with a cackle (75%).
 

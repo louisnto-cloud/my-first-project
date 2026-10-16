@@ -69,6 +69,9 @@ bd-mountain-quail | Look alike: mountain quail. Straight plume, white bars on re
 ```diagram sb-partridge-id
 ```
 
+```photo bd-gray-partridge A pair in a grain field: orange faces, chestnut bars on grey sides.
+```
+
 - Orange face, chestnut horseshoe, rusty tail (80%).
 - Stubble, hedgerows, pasture. Which fields: VERIFY locally.
 

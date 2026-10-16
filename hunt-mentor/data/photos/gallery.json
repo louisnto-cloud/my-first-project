@@ -1559,7 +1559,7 @@
   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Ring-necked_pheasant_flying_Lacreek_National_Wildlife_Refuge_(15008410261).jpg",
   "card": true,
-  "cardBack": "Pheasant cock in the air: dark head, white ring, copper body. Legal. A plain brown bird with a long tail is a hen.",
+  "cardBack": "Pheasant cock in the air: dark head, white ring, copper body. Only cocks are legal in BC pheasant seasons. A plain brown bird with a long tail is a hen.",
   "cardDeck": "Photo ID"
  },
  {
@@ -1584,6 +1584,39 @@
   "source": "https://commons.wikimedia.org/wiki/File:Non-breeding_pied-billed_grebe-6514.jpg",
   "card": true,
   "cardBack": "Pied billed grebe: small brown diver, thick pale bill. Grebes have no open season.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-mallard-eclipse",
+  "species": "Mallard",
+  "caption": "Mallard drake in eclipse plumage (front) with a hen behind. Hen like brown coat, but a plain yellow bill, patchy green head and a rusty chest.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mallard_Drake_in_Eclipse_Plumage_(54308903041).jpg",
+  "card": true,
+  "cardBack": "Eclipse mallard drake: looks like a hen, but the bill is plain yellow, not orange and black.",
+  "cardDeck": "Photo ID"
+ },
+ {
+  "id": "bd-blue-goose",
+  "species": "Snow goose",
+  "caption": "Snow goose, blue form (left) and white form (right), banded park birds, Germany. Same pink bill with a dark grin patch, same species.",
+  "author": "Hobbyfotowiki",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Snow_goose_(Anser_caerulescens),_white_and_blue_morph.jpg"
+ },
+ {
+  "id": "bd-gray-partridge",
+  "species": "Gray partridge",
+  "caption": "Gray (Hungarian) partridge pair in a young grain field, Öland, Sweden. Orange face, grey breast, chestnut bars on the flanks.",
+  "author": "Åsa Berndtsson",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Rapph%C3%B6na_Grey_Partridge_(14334064297).jpg",
+  "card": true,
+  "cardBack": "Gray (Hungarian) partridge: orange face, grey breast, chestnut flank bars. Smaller than a chukar.",
   "cardDeck": "Photo ID"
  }
 ]

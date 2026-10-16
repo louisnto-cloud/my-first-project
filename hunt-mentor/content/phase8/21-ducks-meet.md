@@ -122,6 +122,9 @@ checked: 2026-10-11
 ```diagram mdk-eclipse
 ```
 
+```photo bd-mallard-eclipse Eclipse mallard drake (front): hen like coat, but a plain yellow bill. Hen behind.
+```
+
 - Summer drakes moult into [[Eclipse plumage]] and look like hens (80%).
 - By mid November most mallard drakes are back in colour (75%).
 
