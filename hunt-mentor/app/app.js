@@ -964,6 +964,7 @@
       <div class="card"><h2>First hunt date</h2><input type="date" id="fh" value="${esc(firstHunt())}"></div>
       <div class="card list">
         <a class="item" href="#/safety"><span class="grow">Safety: emergency card, trip plan, turnaround alarm, bears, conditions</span></a>
+        <a class="item" href="#/train"><span class="grow">Practice: shot placement, legal buck, guess the range</span></a>
         <a class="item" href="#/daily"><span class="grow">Today's cards (spaced review, all decks)</span></a>
         <a class="item" href="#/ask"><span class="grow">Ask the app (works with no signal)</span></a>
         <a class="item" href="#/cards"><span class="grow">Flashcards</span></a>
