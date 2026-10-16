@@ -185,6 +185,7 @@ photo:hab-grass-fir-edge | Ground: flat ground below timber.
 rl-lf-knob-topo | Topo: a small set of closed rings.
 rl-lf-knob-3d | 3D: a little top on gentler ground.
 photo:rl-knoll-newnham | Ground: a rounded little hill.
+photo:ts-skoatl-point | Real: a rock knob standing above the timber.
 ```
 
 - A small rounded hill or high point (85%).

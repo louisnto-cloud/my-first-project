@@ -895,5 +895,86 @@
     "licence": "Public domain",
     "licenceUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Abies_lasiocarpa_with_deer_browsing_damage.jpg"
+  },
+  {
+    "id": "ts-kamloops-dewdrop-2",
+    "species": "Terrain: aspect",
+    "caption": "Kamloops and the Thompson River from the hike between the Dewdrop and Red Plateau. Timbered slope in front, open grassy ridge across the river, flat farm benches by the water.",
+    "author": "Murray Foubister",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_late_afternoon_hike_from_the_Dewdrop_to_Red_Plateau_-_Kamloops,and_the_Thompson_River_from_above_(13657808795).jpg"
+  },
+  {
+    "id": "ts-beaver-chewed-nps",
+    "species": "Beaver sign",
+    "caption": "Michigan. Large tree at the edge of a marsh, gnawed all the way around by a beaver. Fresh pale wood and a pile of chips at the base.",
+    "author": "National Park Service",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Beaver_Chewed_Tree_(f2bbf4d8-7fce-4db3-8b4a-b0875c0bd909).JPG"
+  },
+  {
+    "id": "ts-embelton-sw-kamloops",
+    "species": "Terrain: local view",
+    "caption": "Embelton Mountain trail near Heffley Lake, looking southwest toward Kamloops. Open grass and shrub faces, timbered ridges and lakes in the valley.",
+    "author": "Murray Foubister",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_nice_(steep)_hike_on_the_Embelton_Mtn_trail_near_Heffley_Lake.looking_SW_toward_Kamloops_(15117352560).jpg"
+  },
+  {
+    "id": "ts-skoatl-point",
+    "species": "Terrain: knob",
+    "caption": "Skoatl Point, Kamloops area: a rounded rock knob rising above the forest, seen across a lake. Many of the pines are grey and red.",
+    "author": "Murray Foubister",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Skoatl_Point_hike_(15493702864).jpg"
+  },
+  {
+    "id": "ts-wolf-scat-katmai",
+    "species": "Grey wolf",
+    "caption": "Wolf scat on a gravel trail, Katmai, Alaska, with a boot for scale. Thick twisted pieces packed with hair.",
+    "author": "Katmai National Park and Preserve, C. Bell",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Wolf_scat_(34185340421).jpg"
+  },
+  {
+    "id": "ts-wolf-scat-hollinger",
+    "species": "Grey wolf",
+    "caption": "Old wolf scat in Wells Gray Provincial Park, British Columbia. Bleached white and almost all hair. Scale bar 1 cm.",
+    "author": "Jason Hollinger",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wolf_Scat_(3536824940).jpg"
+  },
+  {
+    "id": "ts-grizzly-claw-marks",
+    "species": "Grizzly bear",
+    "caption": "Bear claw marks on a tree near a grizzly hair snag station, Glacier National Park, Montana. Bright wood shows in the gashes; hair is caught in the bark above.",
+    "author": "Glacier National Park",
+    "licence": "Public domain",
+    "licenceUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Grizzly_claw_marks_on_a_tree_near_a_hair_snag_station_(Northern_Divide_Grizzly_Bear_Project)_(4428160760).jpg"
+  },
+  {
+    "id": "ts-lac-du-bois-east",
+    "species": "Terrain: rolling grassland",
+    "caption": "Looking east across Lac du Bois Grasslands Protected Area near Kamloops. Rolling folds and swales, a lone fir, timbered hills behind.",
+    "author": "tuchodi",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lac_du_Bois_Grasslands_Protected_Area_(4043431063).jpg"
+  },
+  {
+    "id": "ts-lac-du-bois-foubister-2",
+    "species": "Habitat: grassland pond",
+    "caption": "Lac du Bois grasslands near Kamloops in fall. A pond among rolling grass knolls, yellow aspen in the low spots, timber on the ridge behind.",
+    "author": "Murray Foubister",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lac_du_Bois_grasslands._(8467219402).jpg"
   }
 ]

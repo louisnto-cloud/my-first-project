@@ -132,6 +132,9 @@ hab-douglas-fir-stand | Thick Douglas fir: cooler, shadier faces.
 
 - Drive any valley and you see it: grass on one side, timber on the other (Tip).
 
+```photo ts-kamloops-dewdrop-2 Above Kamloops: thick timber on the near slope, open grass on the far ridge.
+```
+
 ```more why the plants split
 - Warm aspects lose more water to sun, so trees are fewer and grass and shrubs take over (75%).
 - North aspects "support denser stands of higher crown closures" (85%, BC wildlife habitat rating account, mule deer, 2004).

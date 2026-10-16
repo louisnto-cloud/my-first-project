@@ -133,6 +133,7 @@ commons-mule-deer-okanagan | Mule deer feeding on an open Okanagan slope.
 hab-grass-fir-edge | The edge: grass meets Douglas fir.
 hab-chokecherry | Chokecherry in a brushy draw.
 hab-kamloops-pond-farm | Pond, hay and cottonwoods near Kamloops.
+ts-lac-du-bois-foubister-2 | Grassland pond, aspen in the low spots, fir on the ridge.
 ```
 
 ## Stalk the open: use the draw
@@ -142,6 +143,9 @@ hab-kamloops-pond-farm | Pond, hay and cottonwoods near Kamloops.
 
 - In the open, your route is the hunt (Tip).
 - Stay below the skyline in a draw or fold (Tip).
+
+```photo ts-lac-du-bois-east Lac du Bois: rolling folds and swales. Each one can hide a stalking hunter.
+```
 - Wind from the deer to you, always (75%).
 
 ```more stalking open country

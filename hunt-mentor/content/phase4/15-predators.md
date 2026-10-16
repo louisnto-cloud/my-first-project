@@ -230,6 +230,11 @@ ts-wolf-front-hind | Wolf: claws show, small heel pad. Front is bigger.
 
 - Cats: no claws. Dogs: claws (80%).
 
+```gallery
+ts-wolf-scat-katmai | Wolf scat full of hair, boot for scale.
+ts-wolf-scat-hollinger | Old wolf scat, bleached: almost all hair. Wells Gray.
+```
+
 ## Tactics: options
 
 ```anim sc-coyote-call Tip: a crosswind setup. He circles downwind and crosses the open in front of you.

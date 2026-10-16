@@ -184,6 +184,9 @@ hf-fsr-4 | Gate or closed sign: park, or turn around.
 - Mule deer: low, sunny winter range once snow comes (85%).
 - White tails: river bottoms and hayfields (75%).
 
+```photo ts-embelton-sw-kamloops From the Embelton Mountain trail near Heffley Lake: open sunny faces, timbered ridges, lakes below.
+```
+
 ```more where the deer are, seats, wind and the west bank
 - Mule deer drift down to [[Winter range]] in October and November. Snow and cold push them, not the rut (85%).
 - Winter range here is low, sunny ground: south and west faces, old Douglas fir, grassland benches (85%). The Dewdrop range below 760 m north of Kamloops is a studied winter range (80%).

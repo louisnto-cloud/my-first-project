@@ -77,6 +77,7 @@ hab-deer-pellets-old | Old deer pellets: dry, pale, crumbly.
 
 ```gallery
 hab-bear-scat-okanagan | Black bear scat on a trail, full of seeds and skins.
+ts-wolf-scat-katmai | Wolf scat: thick, twisted, packed with hair.
 ```
 
 ## Aging scat

@@ -50,6 +50,7 @@ g-coyote-snow | Coyote: tracks and scat everywhere in Region 3.
 ```gallery
 ts-bear-rub-jasper | Bear scat on a trail, rub trees behind.
 ts-wolf-track-birch | Wolf track in creek mud, knife for scale.
+ts-grizzly-claw-marks | Bear claw gashes, bright wood, hair in the bark.
 ```
 
 ```more sign in full

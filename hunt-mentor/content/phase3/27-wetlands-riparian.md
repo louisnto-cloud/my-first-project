@@ -92,6 +92,9 @@ hab-skunk-cabbage | Skunk cabbage: coast swamp.
 - Dam, lodge, drowned trees, regrowing willow (85%).
 - Ducks on the water, moose on the willow (Tip).
 
+```photo ts-beaver-chewed-nps Fresh beaver work: a gnawed waist and a pile of pale chips by flooded timber.
+```
+
 ```more why beaver ponds are gold
 - Beaver dams flood the land, kill trees and create open water and marsh. Willow sprouts thick around the edges (80%, general ecology).
 - Beaver are listed for lakes and streams in every Interior zone (95%).
