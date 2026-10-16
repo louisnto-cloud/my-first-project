@@ -131,3 +131,5 @@ Certainty scale: see CLAUDE.md.
 - National Deer Association, NDA Staff, "You just shot a deer. Here's how to find it", 25 October 2023: https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/ (read directly, 70%). Liver 8 to 10 h, guts 10 to 12 h.
 - American Hunter, Jeff Johnston, 8 August 2019, and MeatEater, Mark Kenyon, 23 November 2019 (read directly, 65 to 70%). Hunter education study guides, hunter-ed.com Iowa and bowhunter-ed.com Pennsylvania (read directly, 75%).
 - All quotes and the comparison: research/2026-10-11-wait-times.md. Diagram: diagrams/sk-wait-compare.svg.
+
+- US National Park Service, "Bear Identification" (toe line test on tracks): https://home.nps.gov/articles/bear-identification.htm . Checked 2026-10-16. Used in 3.1 Tracks and the bear toe line diagram.

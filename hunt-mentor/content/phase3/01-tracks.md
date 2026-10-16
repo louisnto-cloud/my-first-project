@@ -103,7 +103,7 @@ yt-deer-tracks | Read a deer track: size, gait, age, direction.
 - Black bear: 5 toes in a curved row, short claws (about 3 to 5 cm) that print as dots close to the toes (70%).
 - Black bear front track about 10 to 16 cm long and 10 to 14 cm wide. Hind track about 15 to 18 cm long, like a flat human foot (70%).
 - Grizzly: front track about 18 cm long and 13 cm wide. Hind about 28 cm long. Claw marks sit well ahead of the toes (65%).
-- The toe line test: lay a straight edge across the top of the palm pad, under the toes. Black bear: the outer, smallest toe falls below the line. Grizzly: all 5 toes sit above it (70%).
+- The toe line test: lay a straight edge across the top of the palm pad, under the toes. Black bear: the inner, smallest toe falls mostly below the line. Grizzly: it sits mostly above (80%, US National Park Service bear identification). If the line cuts the toe in half, use other signs: toe spacing, claw length (Tip).
 - Grizzlies live in the Thompson. A fresh grizzly track on your trail means change your plan (Tip). See [Bush safety](#/s/bush-safety).
 ```
 

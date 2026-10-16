@@ -65,7 +65,7 @@
   </g>
   <text x="200" y="337" font-size="13" font-weight="bold" fill="#23261f" text-anchor="middle">Black bear</text>
   <text x="200" y="352" font-size="13" fill="#23261f" text-anchor="middle">10 to 16 cm</text>
-  <text x="200" y="367" font-size="13" fill="#2f3a2b" text-anchor="middle">outer toe</text>
+  <text x="200" y="367" font-size="13" fill="#2f3a2b" text-anchor="middle">inner toe</text>
   <text x="200" y="382" font-size="13" fill="#2f3a2b" text-anchor="middle">below line</text>
 
   <g transform="translate(330 282) scale(1.2)" stroke="#23261f" stroke-width="1.5">
