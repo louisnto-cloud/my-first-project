@@ -64,7 +64,7 @@ region: 1
 - **5.** Gulf Islands: Special Area Licence ($2.00), $100,000 liability insurance unless guided, and the owner's permission (99%, pages 8, 20). [Gulf Islands](#/s/rb-region-1/30).
 - **6.** Map A26, part of MU 1-6: bucks with 2 points or better only; keep the antlers with the licence (99%, page 21). [Rule 54](#/s/fw-rules-06/4).
 - **7.** Denman and Hornby open 5 October, not 10 September. No bow season there, on the MU 1-1 Gulf Islands (Gabriola aside) or in Zone B of MU 1-5 (99%, page 21).
-- **8.** No motor vehicles all year at the Parksville Qualicum Beach WMA (Wildlife Management Area), Willow Creek and Green Mountain Block 1392; no ATV (all terrain vehicle) or snowmobile at Nanaimo River Camp, 1 September to 31 December (99%, page 20). [Vehicle closures](#/s/rb-region-1/26).
+- **8.** No motor vehicles all year at the Parksville Qualicum Beach WMA (Wildlife Management Area), Willow Creek in MU 1-6 and Green Mountain Block 1392 in MU 1-5; no ATV (all terrain vehicle) or snowmobile at Nanaimo River Camp, 1 September to 31 December (99%, page 20). [Vehicle closures](#/s/rb-region-1/26).
 - **9.** No shooting areas: Cowichan River 100 m (109 yd), Nanoose Bay, Westcan Terminals, CRD (Capital Regional District) water and park lands, and 100 m from regional district parks (99%, pages 9, 20, 23). [Rule 39](#/s/fw-rules-04/9).
 - **10.** A brown bear on the Island is likely a grizzly: never shoot, report it. Every goat and cougar goes to inspection; every wolf is reported (99%, pages 19, 21).
 
