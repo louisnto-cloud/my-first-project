@@ -101,7 +101,7 @@ bd-pheasant-cock-flight | Rooster flushing, South Dakota. In the air: dark green
 ```
 
 - Chukar: steep rocky slopes and cheatgrass; runs uphill, flies downhill (80%).
-- Pheasant: farm edges, ditches and cattails. The law rows: cocks only in Regions 2, 3, 4 and 8; Region 1 reads "PHEASANTS" with no sex named, in MUs 1-1 to 1-9 (99%, Hunting Regulation, Schedules 1 to 4 and 8, BC Laws, checked 2026-10-17). Shoot cocks only (Tip).
+- Pheasant: farm edges, ditches and cattails. Law rows: cocks only in Regions 2, 3, 4 and 8; Region 1 names no sex (99%, Hunting Regulation, checked 2026-10-17). Shoot cocks only (Tip).
 
 ## Wild turkey
 

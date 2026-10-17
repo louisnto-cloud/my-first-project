@@ -296,7 +296,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 ```
 
 - Bag limit 1. Licence $25.00 (98%).
-- Your MU (Management Unit) at Heffley Creek: The Heffley Creek community point is in MU 3-27, only about 0.4 km from the MU 3-28 line (95%, BC Geographical Names point on the app MU map, checked 2026-10-17). Both MUs share the same Region 3 deer, moose, bear and wolf rows (99%, Hunting Regulation, Schedule 3). Check each spot on the Hunt Map anyway (Tip).
+- Your MU (Management Unit) at Heffley Creek: 3-27, with 3-28 about 0.4 km away (95%, BC Geographical Names on the app MU map, checked 2026-10-17).
 
 ```more fees, the full table and other regions
 - **Species licence:** Moose, BC resident $25.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).

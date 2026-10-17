@@ -89,7 +89,7 @@ fn-cam-s6 | Movement: head down, move. Head up, freeze.
 - Wear it walking in and out, and when others hunt nearby (Tip).
 
 ```more blaze orange in full
-- BC rule: no blaze orange clothing rule for BC hunters. The word "orange" appears nowhere in the 2026 to 2028 synopsis text, the Wildlife Act or the Hunting Regulation (95%, full text searched 2026-10-17). Wear it anyway (Tip).
+- BC rule: no blaze orange clothing rule for BC hunters (95%, synopsis, Wildlife Act and Hunting Regulation searched 2026-10-17). Wear it anyway (Tip).
 - Other places do require it (New Brunswick, Washington State, Missouri), so check the rules when you hunt outside BC (85%, those regulations, search preview). See the trip lessons.
 - Deer see orange as dull, close to brown or grey; motion and outline give you away, not the colour (75%, see Deer senses and mind).
 - Tip: an orange toque and vest for walking, packed away when you sit in a safe spot with no other hunters around. Wrap a carried deer or turkey in orange.
@@ -212,7 +212,7 @@ Froze every time a deer looked up
 - Jacobs and others, deer cone pigments, and a 2014 Wildlife Society Bulletin behaviour study of UV sensitivity, via search previews 2026-10-11 (70 to 75%).
 - [Australian Army CoVE: camouflage and concealment](https://cove.army.gov.au/article/battle-lab-camouflage-and-concealment), search preview 2026-10-11 (page did not load): the Seven S's (70%).
 - Hunter orange rules in other places: New Brunswick, Washington and Missouri regulations, search preview 2026-10-11 (85%).
-- Hunt Mentor Rule Book, read 2026-10-11, and the [synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), Wildlife Act and Hunting Regulation text searched 2026-10-17: no BC orange rule (95%).
+- Rule Book read 2026-10-11; synopsis, Wildlife Act and Hunting Regulation searched 2026-10-17: no BC orange rule (95%).
 - Hunting application of the six: hunter experience, labelled Tip.
 
 ```quiz
