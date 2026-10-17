@@ -1185,15 +1185,15 @@
    ],
    "labelField": "name",
    "legal": true,
-   "source": "Synopsis 2026 to 2028 and Closed Areas Regulation rules, drawn on official outlines: TA_PARK_ECORES_PA_SVW, CLAB_NATIONAL_PARKS, ABMS_MUNICIPALITIES_SP, TA_WILDLIFE_MGMT_AREAS_SVW, FWA_LAKES_POLY and the MU 3-45 outline",
-   "about": "Areas where hunting or shooting is banned, drawn only where the legal area is an official outline (BC wide: ecological reserves and national parks; Region 3: the closures listed in the Rule Book that follow an official outline). Most No Shooting Areas are not drawn: see the synopsis maps.",
+   "source": "Synopsis 2026 to 2028 and Closed Areas Regulation rules, drawn on official outlines: TA_PARK_ECORES_PA_SVW, CLAB_NATIONAL_PARKS, ABMS_MUNICIPALITIES_SP, TA_WILDLIFE_MGMT_AREAS_SVW, FWA_LAKES_POLY, FWA_ISLANDS_POLY, GBA_LOCAL_REG_GREENSPACES_SP, PMBC_PARCEL_FABRIC_POLY_SVW and the MU 3-45 outline",
+   "about": "Areas where hunting or shooting is banned, drawn only where the legal area is an official outline (BC wide: ecological reserves and national parks; Regions 1 and 2: regional district parks plus 100 m; Region 2: Burns Bog, Bowen, Keats, Savary and North Thormanby islands, seasonal Garibaldi Park and Cultus Lake; Region 3: the closures listed in the Rule Book that follow an official outline). Most No Shooting Areas are not drawn: see the synopsis maps.",
    "cert": 90,
    "file": "data/layers/bc/no_hunting.geojson",
    "areas": "BC",
    "licence": "Open Government Licence BC",
-   "dataDate": "2026-10-16",
-   "bytes": 551787,
-   "features": 258
+   "dataDate": "2026-10-17",
+   "bytes": 815438,
+   "features": 349
   },
   {
    "id": "mu",

@@ -23,6 +23,7 @@
     ['Moose', (s) => s === 'moose'],
     ['Elk', (s) => s === 'elk'],
   ];
+  const BT_LABEL = 'Black tailed deer (listed as mule deer in the synopsis)';
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const cap = (s) => String(s || '').charAt(0).toUpperCase() + String(s || '').slice(1);
   const compass8 = (deg) => ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'][Math.round(((deg % 360) + 360) % 360 / 45) % 8];
@@ -62,7 +63,9 @@
         const g = GROUPS.findIndex(([, test]) => test(sp));
         if (g < 0 || !openOn(r, t)) continue;
         const note = cap(String(r.notes || '').split(';')[0].trim());
-        out.push({ g: g < 1 ? 0 : g + 2, sp: cap(sp), cls: cap(r.class || ''), note: tagOf(r.notes) ? '' : note, tag: tagOf(r.notes),
+        // Region 2 deer are black tailed deer; the synopsis rows call them mule deer (page 28). Label only: the data stays as printed.
+        const label = f === 'region2' && sp === 'mule deer' ? BT_LABEL : cap(sp);
+        out.push({ g: g < 1 ? 0 : g + 2, sp: label, cls: cap(r.class || ''), note: tagOf(r.notes) ? '' : note, tag: tagOf(r.notes),
           open: r.open, close: r.close, allYear: r.allYear, left: r.close ? daysLeft(r.close, iso) : null, src: r.page != null ? `Synopsis page ${r.page}` : '', cert: r.cert });
       }
     }
