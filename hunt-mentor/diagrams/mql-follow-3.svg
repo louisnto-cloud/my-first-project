@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3: walk the edge of that cover slowly, stopping every few steps, so hiding birds lose their nerve and flush. Stop for 15 to 20 seconds, Washington Fish and Wildlife, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Follow a covey: 3 Stop and go</text>
+<rect x="10" y="40" width="380" height="196" rx="8" fill="#dfe6d3"/>
+<ellipse cx="200" cy="120" rx="150" ry="40" fill="#8a9a6b"/>
+<g transform="translate(80 200)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<g transform="translate(160 200)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<text x="260" y="200" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">stop 15 to 20 s</text>
+<rect x="10" y="246" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="269" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Walk, stop 15 to 20 s, walk (75%)</text>
+</svg>

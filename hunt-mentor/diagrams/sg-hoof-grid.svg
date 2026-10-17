@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" font-family="sans-serif" role="img" aria-label="Hoof tracks drawn to one scale, front track length. Deer: 4 to 10 centimetres, heart shaped with pointed toes. Elk: 10 to 13 centimetres, rounder with blunt tips. Moose: 11 to 18 centimetres, a giant deer track, often with dewclaws behind. Cow: round and wide, no point. The pointed end shows the way the animal went. Mule deer and white tail tracks overlap; read the trail.">
+<rect width="400" height="430" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hoof tracks, to scale</text>
+<rect x="8" y="44" width="384" height="232" rx="12" fill="#e9dfc8"/>
+<path d="M20 264 H380" stroke="#cdbf9f" stroke-width="1.5" stroke-dasharray="2 4"/>
+<g data-tip="Deer|Heart shaped, two pointed toes. White tail about 4 to 10 cm, mule deer about 6 to 10 cm (70%). One print will not tell them apart (60%).">
+<rect x="2" y="52" width="92" height="216" rx="8" fill="#e9dfc8" fill-opacity=".01"/>
+<g transform="translate(48 250)"><path d="M-2.2 -56 C-8.6 -51.5 -18.2 -34.7 -18.2 -17.9 C-18.2 -4.5 -12.7 0 -7.6 0 C-3.2 0 -2.2 -3.4 -2.2 -9.0z" fill="#7a5232"/><path d="M2.2 -56 C8.6 -51.5 18.2 -34.7 18.2 -17.9 C18.2 -4.5 12.7 0 7.6 0 C3.2 0 2.2 -3.4 2.2 -9.0z" fill="#7a5232"/></g>
+<text x="48" y="300" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer</text>
+<text x="48" y="320" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">4 to 10 cm</text>
+<text x="48" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">pointed</text>
+</g>
+<g data-tip="Elk|About 10 to 13 cm long, 9 to 11 cm wide. Rounder, with blunt tips: a big deer track with the point rubbed off (70%).">
+<rect x="94" y="52" width="92" height="216" rx="8" fill="#e9dfc8" fill-opacity=".01"/>
+<g transform="translate(140 250)"><path d="M-2.2 -78.1 C-21.4 -80.5 -35.0 -62.8 -35.0 -33.8 C-35.0 -6.4 -24.5 0 -14.7 0 C-3.2 0 -2.2 -4.8 -2.2 -12.9z" fill="#7a5232"/><path d="M2.2 -78.1 C21.4 -80.5 35.0 -62.8 35.0 -33.8 C35.0 -6.4 24.5 0 14.7 0 C3.2 0 2.2 -4.8 2.2 -12.9z" fill="#7a5232"/></g>
+<text x="140" y="300" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Elk</text>
+<text x="140" y="320" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">10 to 13 cm</text>
+<text x="140" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">blunt tips</text>
+</g>
+<g data-tip="Moose|About 11 to 18 cm long, 10 to 15 cm wide. A giant deer track, often with dewclaws (70%).">
+<rect x="206" y="52" width="92" height="216" rx="8" fill="#e9dfc8" fill-opacity=".01"/>
+<g transform="translate(252 250)"><path d="M-2.2 -101.5 C-15.7 -93.4 -38.5 -62.9 -38.5 -32.5 C-38.5 -8.1 -26.9 0 -16.2 0 C-3.2 0 -2.2 -6.1 -2.2 -16.2z" fill="#7a5232"/><path d="M2.2 -101.5 C15.7 -93.4 38.5 -62.9 38.5 -32.5 C38.5 -8.1 26.9 0 16.2 0 C3.2 0 2.2 -6.1 2.2 -16.2z" fill="#7a5232"/></g>
+<text x="252" y="300" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Moose</text>
+<text x="252" y="320" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">11 to 18 cm</text>
+<text x="252" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">dewclaws</text>
+</g>
+<g data-tip="Cow|Round, blunt and wide, with no pointed tip. In Region 3 grassland cattle tracks are everywhere (75%).">
+<rect x="306" y="52" width="92" height="216" rx="8" fill="#e9dfc8" fill-opacity=".01"/>
+<g transform="translate(352 250)"><path d="M-2.2 -67.2 C-31.6 -70.0 -36.8 -56.0 -36.8 -35.0 C-36.8 -5.6 -25.7 0 -15.4 0 C-3.2 0 -2.2 -4.2 -2.2 -11.2z" fill="#6b6b5e"/><path d="M2.2 -67.2 C31.6 -70.0 36.8 -56.0 36.8 -35.0 C36.8 -5.6 25.7 0 15.4 0 C3.2 0 2.2 -4.2 2.2 -11.2z" fill="#6b6b5e"/></g>
+<text x="352" y="300" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cow</text>
+<text x="352" y="320" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">no point</text>
+<text x="352" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">round, wide</text>
+</g>
+<g data-tip="Dewclaws|The two small bumps behind the hoof. They show in deep mud, snow, or when the animal runs (75%)."><circle cx="240" cy="266" r="6" fill="#7a5232"/><circle cx="264" cy="266" r="6" fill="#7a5232"/><circle cx="252" cy="266" r="17" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 3"/></g>
+<g data-tip="Which way it went|The pointed end of the heart points the way the animal went (85%)."><path d="M48 180 V110" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><path d="M38 122 L48 104 L58 122z" fill="#e8590c"/><text x="64" y="100" font-size="15" font-weight="bold" fill="#c2410c">way it went</text></g>
+<g><path d="M300 74 H335 M300 68 V80 M335 68 V80" stroke="#2f3a2b" stroke-width="2"/><text x="341" y="80" font-size="14" font-weight="bold" fill="#2f3a2b">5 cm</text></g>
+<g data-tip="Mule deer or white tail?|Their tracks overlap too much to tell apart from one print (60%). Use the trail: a stotting trail is a mule deer (85%).">
+<rect x="8" y="354" width="384" height="66" rx="10" fill="#f2ecdd" stroke="#c9bb9c"/>
+<text x="200" y="380" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mule deer or white tail? Read the trail.</text>
+<text x="200" y="404" font-size="14" fill="#5d6152" text-anchor="middle">Front track. Middle of each size range.</text>
+</g>
+</svg>

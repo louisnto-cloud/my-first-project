@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5 of cleaning the Tikka: brush the bolt face with a small solvent wet brush, clean the chamber with a nylon chamber brush, and wipe out the receiver.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">5. Bolt, chamber, receiver</text>
+<rect x="36" y="67" width="26" height="30" rx="5" fill="#3a3f3a"/>
+<rect x="60" y="69" width="214" height="26" rx="4" fill="#a9ada6" stroke="#3a3f3a" stroke-width="1.6"/>
+<path d="M64 75 H270" stroke="#e4e6e1" stroke-width="3"/>
+<path d="M84 92 L104 126" stroke="#3a3f3a" stroke-width="7" stroke-linecap="round"/><circle cx="106" cy="130" r="9" fill="#3a3f3a"/>
+<rect x="270" y="67" width="10" height="30" rx="2" fill="#8d918a" stroke="#3a3f3a" stroke-width="1.6"/>
+<g transform="rotate(-18 300 82)"><rect x="286" y="74" width="14" height="16" rx="2" fill="#c9a227"/><line x1="286.0" y1="74" x2="286.0" y2="68" stroke="#6b5b4b" stroke-width="1.4"/><line x1="286.0" y1="90" x2="286.0" y2="96" stroke="#6b5b4b" stroke-width="1.4"/><line x1="289.2" y1="74" x2="289.2" y2="68" stroke="#6b5b4b" stroke-width="1.4"/><line x1="289.2" y1="90" x2="289.2" y2="96" stroke="#6b5b4b" stroke-width="1.4"/><line x1="292.4" y1="74" x2="292.4" y2="68" stroke="#6b5b4b" stroke-width="1.4"/><line x1="292.4" y1="90" x2="292.4" y2="96" stroke="#6b5b4b" stroke-width="1.4"/><line x1="295.6" y1="74" x2="295.6" y2="68" stroke="#6b5b4b" stroke-width="1.4"/><line x1="295.6" y1="90" x2="295.6" y2="96" stroke="#6b5b4b" stroke-width="1.4"/><line x1="298.8" y1="74" x2="298.8" y2="68" stroke="#6b5b4b" stroke-width="1.4"/><line x1="298.8" y1="90" x2="298.8" y2="96" stroke="#6b5b4b" stroke-width="1.4"/><rect x="300" y="79" width="74" height="6" rx="3" fill="#2f6e3b"/></g>
+<line x1="278" y1="90" x2="326" y2="120" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="278" cy="90" r="2.6" fill="#2f3a2b"/><rect x="298.2" y="120.0" width="83.5" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="340" y="140.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bolt face</text>
+<rect x="24" y="169" width="220" height="38" rx="5" fill="#3a3f3a"/>
+<rect x="96" y="169" width="92" height="16" rx="3" fill="#d8d2c2"/>
+<rect x="244" y="176" width="146" height="24" fill="#3a3f3a"/>
+<path d="M244 181 H274 L280 184 H390 V192 H280 L274 195 H244z" fill="#6c716b"/>
+<rect x="196" y="186" width="54" height="4" fill="#c7c2b6"/>
+<rect x="248" y="182" width="24" height="12" rx="2" fill="#e8e4d8" stroke="#6b5b4b" stroke-width="1"/>
+<line x1="140" y1="178" x2="96" y2="222" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="140" cy="178" r="2.6" fill="#2f3a2b"/><rect x="39.3" y="222.0" width="77.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="78" y="242.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">receiver</text>
+<line x1="262" y1="190" x2="290" y2="222" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="262" cy="190" r="2.6" fill="#2f3a2b"/><rect x="259.4" y="222.0" width="81.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="300" y="242.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">chamber</text>
+<text x="200" y="282" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Solvent brush, then wipe out</text>
+</svg>

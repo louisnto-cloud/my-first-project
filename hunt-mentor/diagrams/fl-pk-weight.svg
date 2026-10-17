@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-label="Pack weight guide for an 80 kg person. Day pack about 10 percent of body weight, 8 kg. Loaded backpacking pack about 20 percent, 16 kg. A meat load of 20 to 30 kg is a fit adult working load on rough ground, a Tip.">
+  <rect x="0" y="0" width="400" height="256" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How heavy? (80 kg person)</text>
+<text x="152" y="73" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Day pack, 10%</text>
+<rect x="160" y="56" width="42.35294117647059" height="26" rx="4" fill="#8a9a6b"/>
+<text x="208.35294117647058" y="75" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">8 kg</text>
+<text x="152" y="115" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Overnight, 20%</text>
+<rect x="160" y="98" width="84.70588235294117" height="26" rx="4" fill="#2f3a2b"/>
+<text x="250.70588235294116" y="117" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">16 kg</text>
+<text x="152" y="157" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Meat load, low</text>
+<rect x="160" y="140" width="105.88235294117646" height="26" rx="4" fill="#e8590c"/>
+<text x="271.88235294117646" y="159" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">20 kg</text>
+<text x="152" y="199" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Meat load, high</text>
+<rect x="160" y="182" width="158.8235294117647" height="26" rx="4" fill="#b3261e"/>
+<text x="324.8235294117647" y="201" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">30 kg</text>
+<text x="200" y="246" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Percentages: REI guide (70%). Meat loads: Tip</text>
+</svg>

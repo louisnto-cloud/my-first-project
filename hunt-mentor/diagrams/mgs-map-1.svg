@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hunt Map step 1: a phone map with four layers switched on. Private land in red, Wetlands in light blue, Duck staging and winter waters in dark blue, and Wildlife Management Areas, WMA, in teal.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hunt Map step 1: turn on 4 layers</text>
+<rect x="18" y="44" width="168" height="246" rx="20" fill="#2f3a2b"/><rect x="84.0" y="53" width="36" height="5" rx="2.5" fill="#55604f"/><clipPath id="mgs-map-1-scr"><rect x="26" y="66" width="152" height="206" rx="6"/></clipPath><g clip-path="url(#mgs-map-1-scr)"><rect x="26" y="66" width="152" height="206" fill="#e6ecd9"/><rect x="30" y="72" width="60" height="52" fill="#d9d4a8" stroke="#c9c290" stroke-width="1"/><rect x="96" y="72" width="74" height="40" fill="#d9d4a8" stroke="#c9c290" stroke-width="1"/><rect x="30" y="130" width="46" height="50" fill="#d9d4a8" stroke="#c9c290" stroke-width="1"/><rect x="122" y="216" width="52" height="52" fill="#d9d4a8" stroke="#c9c290" stroke-width="1"/><rect x="30" y="72" width="60" height="52" fill="#e4472b" opacity=".38" stroke="#e4472b" stroke-width="1.6"/><path d="M28 186 C66 176 96 206 126 194 C146 186 166 196 186 190" stroke="#4a7fb0" stroke-width="7" fill="none"/><path d="M44 216 C56 202 96 206 106 222 C114 242 76 252 56 244 C40 238 36 226 44 216z" fill="#4fc3f7" opacity=".6" stroke="#4fc3f7" stroke-width="1.5"/><path d="M110 128 C126 118 166 122 172 138 C176 158 138 166 120 160 C106 154 102 138 110 128z" fill="#1e88e5" opacity=".7"/><rect x="118" y="216" width="60" height="56" fill="#00897b" opacity=".35" stroke="#00897b" stroke-width="1.6"/><path d="M26 276 L178 262" stroke="#a7a39a" stroke-width="5"/></g><rect x="88.0" y="277" width="28" height="4" rx="2" fill="#55604f"/>
+<rect x="200" y="44" width="190" height="32" rx="8" fill="#2f3a2b"/><text x="212" y="66" font-size="16" font-weight="bold" fill="#fffaf0">Layers</text>
+<rect x="200" y="84" width="190" height="38" rx="6" fill="#f4eedf"/>
+<rect x="210" y="93" width="20" height="20" rx="4" fill="#e4472b" opacity="0.45" stroke="#e4472b" stroke-width="1.6"/>
+<text x="240" y="109" font-size="16" font-weight="bold" fill="#2f3a2b">Private land</text>
+<rect x="350" y="95" width="30" height="16" rx="8" fill="#e8590c"/><circle cx="372" cy="103" r="6" fill="#fffaf0"/>
+<rect x="210" y="133" width="20" height="20" rx="4" fill="#4fc3f7" opacity="0.7" stroke="#4fc3f7" stroke-width="1.6"/>
+<text x="240" y="149" font-size="16" font-weight="bold" fill="#2f3a2b">Wetlands</text>
+<rect x="350" y="135" width="30" height="16" rx="8" fill="#e8590c"/><circle cx="372" cy="143" r="6" fill="#fffaf0"/>
+<rect x="200" y="164" width="190" height="38" rx="6" fill="#f4eedf"/>
+<rect x="210" y="173" width="20" height="20" rx="4" fill="#1e88e5" opacity="0.75" stroke="#1e88e5" stroke-width="1.6"/>
+<text x="240" y="189" font-size="16" font-weight="bold" fill="#2f3a2b">Duck waters</text>
+<rect x="350" y="175" width="30" height="16" rx="8" fill="#e8590c"/><circle cx="372" cy="183" r="6" fill="#fffaf0"/>
+<rect x="210" y="213" width="20" height="20" rx="4" fill="#00897b" opacity="0.45" stroke="#00897b" stroke-width="1.6"/>
+<text x="240" y="229" font-size="16" font-weight="bold" fill="#2f3a2b">WMA</text>
+<rect x="350" y="215" width="30" height="16" rx="8" fill="#e8590c"/><circle cx="372" cy="223" r="6" fill="#fffaf0"/>
+<text x="202" y="264" font-size="15" fill="#6b5b4b">WMA: Wildlife</text>
+<text x="202" y="283" font-size="15" fill="#6b5b4b">Management Area</text>
+</svg>

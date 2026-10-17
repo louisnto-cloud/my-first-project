@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 374" font-family="sans-serif" role="img" aria-label="Deer hunt day timeline. Night before: check legal light, wind, MU (Management Unit) rules, closures, pack. Sunrise minus 90 minutes: leave, rifles unloaded and cased. Sunrise minus 60 minutes, legal light starts: sit at the first glassing spot, load only when ready. First 3 hours: glass, barely walk. Mid morning: walk slowly into the wind, eat. Midday: move spots, scout benches. Sunset minus 3 hours: back on a glassing spot where deer feed. Sunset plus 60 minutes: legal light ends, unload, walk out with headlamps. A bracket marks legal light from sunrise minus 60 to sunset plus 60.">
+<rect width="400" height="374" fill="#fffaf0"/>
+<line x1="26" y1="32" x2="26" y2="340" stroke="#8a9a6b" stroke-width="4"/>
+<path d="M368 120 H380 V188 M380 272 V340 H368" fill="none" stroke="#e8590c" stroke-width="2.6"/>
+<text transform="translate(381 230) rotate(90)" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle" >Legal light</text>
+<circle cx="26" cy="32" r="8" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="29" font-size="16" font-weight="bold" fill="#2f3a2b">Night before</text>
+<text x="46" y="48" font-size="15" fill="#2f3a2b">legal light, wind, MU, closures</text>
+<circle cx="26" cy="76" r="8" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="73" font-size="16" font-weight="bold" fill="#2f3a2b">Sunrise minus 90 min</text>
+<text x="46" y="92" font-size="15" fill="#2f3a2b">leave, rifles unloaded, cased</text>
+<circle cx="26" cy="120" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="117" font-size="16" font-weight="bold" fill="#c2410c">Sunrise minus 60: legal light</text>
+<text x="46" y="136" font-size="15" fill="#2f3a2b">sit and glass, load when ready</text>
+<circle cx="26" cy="164" r="8" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="161" font-size="16" font-weight="bold" fill="#2f3a2b">First 3 hours</text>
+<text x="46" y="180" font-size="15" fill="#2f3a2b">glass, barely walk</text>
+<circle cx="26" cy="208" r="8" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Mid morning</text>
+<text x="46" y="224" font-size="15" fill="#2f3a2b">slow walk into the wind, eat</text>
+<circle cx="26" cy="252" r="8" fill="#8b5a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="249" font-size="16" font-weight="bold" fill="#2f3a2b">Midday</text>
+<text x="46" y="268" font-size="15" fill="#2f3a2b">move spots, scout benches</text>
+<circle cx="26" cy="296" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="293" font-size="16" font-weight="bold" fill="#c2410c">Sunset minus 3 hours</text>
+<text x="46" y="312" font-size="15" fill="#2f3a2b">glass where deer feed</text>
+<circle cx="26" cy="340" r="8" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="46" y="337" font-size="16" font-weight="bold" fill="#2f3a2b">Sunset plus 60: legal light ends</text>
+<text x="46" y="356" font-size="15" fill="#2f3a2b">unload, walk out with headlamps</text>
+</svg>

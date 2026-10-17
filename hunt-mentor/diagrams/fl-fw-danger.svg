@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A thermometer. Food is safe cold at 4 degrees or below. Germs grow fast between 4 and 60 degrees, the danger zone. Cook to 74 degrees. Do not leave perishable food in the danger zone more than 2 hours.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Food danger zone: 4 °C to 60 °C</text>
+<rect x="60" y="50" width="60" height="220" rx="30" fill="#dfe6d3" stroke="#23261f" stroke-width="2"/>
+<rect x="60" y="50" width="60" height="70" rx="30" fill="#b3261e"/><rect x="60" y="120" width="60" height="110" rx="0" fill="#e8590c"/><rect x="60" y="230" width="60" height="40" rx="20" fill="#4a7fb0"/>
+<line x1="40" y1="120" x2="140" y2="120" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><text x="150" y="126" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="start">60 °C</text>
+<line x1="40" y1="230" x2="140" y2="230" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><text x="150" y="236" font-family="sans-serif" font-size="16" font-weight="bold" fill="#23261f" text-anchor="start">4 °C</text>
+<text x="230" y="170" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="start">Germs grow fast</text><text x="230" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="start">here</text>
+<text x="230" y="258" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="start">Cold: 4 °C or less</text>
+<text x="230" y="80" font-family="sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start">Cook to 74 °C</text>
+<text x="200" y="292" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">No more than 2 hours in the zone (95%)</text>
+</svg>

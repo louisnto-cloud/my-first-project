@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two contour sketches with heights 800, 820 and 840 m. Left, a draw: the V shapes point uphill toward the higher numbers and a blue creek runs down the middle. Right, a ridge or spur: the V shapes point downhill toward the lower numbers. Caption: draw, the V points up; ridge, the V points down.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Which way does the V point?</text>
+<rect x="6" y="40" width="190" height="222" rx="8" fill="#dfe6d3"/><rect x="204" y="40" width="190" height="222" rx="8" fill="#dfe6d3"/>
+<text x="101" y="62" font-size="17" font-weight="bold" fill="#2c5d86" text-anchor="middle">DRAW</text>
+<text x="299" y="62" font-size="17" font-weight="bold" fill="#c2410c" text-anchor="middle">RIDGE or SPUR</text>
+<path d="M101 76 C 98 130, 104 190, 101 258" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+<g fill="none" stroke="#8b5a2b" stroke-width="2.6"><path d="M14 158 L101 80 L142.3 117.0"/><path d="M167.6 139.7 L188 158"/><path d="M14 200 L101 122 L142.3 159.0"/><path d="M167.6 181.7 L188 200"/><path d="M14 242 L101 164 L142.3 201.0"/><path d="M167.6 223.7 L188 242"/><path d="M212 72 L299 150 L340.3 113.0"/><path d="M365.6 90.3 L386 72"/><path d="M212 114 L299 192 L340.3 155.0"/><path d="M365.6 132.3 L386 114"/><path d="M212 156 L299 234 L340.3 197.0"/><path d="M365.6 174.3 L386 156"/></g>
+<text x="154.9" y="133.8" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">840</text>
+<text x="154.9" y="175.8" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">820</text>
+<text x="154.9" y="217.8" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">800</text>
+<text x="352.9" y="107" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">840</text>
+<text x="352.9" y="149" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">820</text>
+<text x="352.9" y="191" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">800</text>
+<path d="M40 252 L40 214" stroke="#e8590c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M40 206 L45.5 218 L34.5 218 Z" fill="#e8590c"/>
+<text x="50" y="250" font-size="15" font-weight="bold" fill="#c2410c" stroke="#dfe6d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">uphill</text>
+<path d="M238 252 L238 214" stroke="#e8590c" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M238 206 L243.5 218 L232.5 218 Z" fill="#e8590c"/>
+<text x="248" y="250" font-size="15" font-weight="bold" fill="#c2410c" stroke="#dfe6d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">uphill</text>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Draw: V points up. Ridge: V points down.</text>
+</svg>

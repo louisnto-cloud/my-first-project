@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 691" font-family="sans-serif" role="img" aria-label="Maps A30 to A37, mainland and north, grouped by rule. Black bear closed areas: A30 Kingcome Inlet and A31 Wakeman Sound in Management Unit 1-14, A35 Glendale Cove and A36 Knight Inlet in 1-15. A33 Beaver Lodge Trust Lands: No Hunting Area, MU 1-6. A34 Buckley Bay: No Shooting Area, MU 1-6. A32 Quadra Island: bow or shot only, special antlerless season, MU 1-15. A37 Stamp Lagoon: firearms using shot only, MU 1-7.">
+<rect width="400" height="691" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps A30 to A37. MU: Management Unit</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#6b4f35"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-15 10 L-14 -1 C-14 -7 -8 -10 -1 -10 C4 -10 6 -8 8 -7 L11 -9 L13 -7 L16 -4 L15 -1 L11 0 L10 3 L10 10 H6 L5 4 L-6 4 L-7 10 H-11 L-11 6z"/><circle cx="11" cy="-10" r="2.2"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">BLACK BEAR CLOSED</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#6b4f35"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A30</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Kingcome Inlet</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">MU 1-14</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#6b4f35"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A31</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Wakeman Sound</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">MU 1-14</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="194.5" width="54" height="30" rx="6" fill="#6b4f35"/>
+<text x="41" y="215.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A35</text>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Glendale Cove</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">MU 1-15</text>
+<rect x="14" y="251.5" width="54" height="30" rx="6" fill="#6b4f35"/>
+<text x="41" y="272.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A36</text>
+<text x="78" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">Knight Inlet</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">MU 1-15</text>
+<rect x="8" y="304" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 319) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="325" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO HUNTING</text>
+<rect x="8" y="340" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="352.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="373.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A33</text>
+<text x="78" y="363" font-size="16" font-weight="bold" fill="#2f3a2b">Beaver Lodge Trust Lands</text>
+<text x="78" y="382" font-size="15" fill="#2f3a2b">MU 1-6</text>
+<rect x="8" y="405" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 420) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="426" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="441" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="453.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="474.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A34</text>
+<text x="78" y="464" font-size="16" font-weight="bold" fill="#2f3a2b">Buckley Bay</text>
+<text x="78" y="483" font-size="15" fill="#2f3a2b">MU 1-6</text>
+<rect x="8" y="506" width="384" height="30" rx="6" fill="#5b6b3e"/>
+<text x="18" y="527" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SHOT ONLY</text>
+<rect x="8" y="542" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="564.0" width="54" height="30" rx="6" fill="#5b6b3e"/>
+<text x="41" y="584.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A32</text>
+<text x="78" y="565" font-size="16" font-weight="bold" fill="#2f3a2b">Quadra Island</text>
+<text x="78" y="584" font-size="15" fill="#2f3a2b">Or bow. Special antlerless season. MU</text>
+<text x="78" y="603" font-size="15" fill="#2f3a2b">1-15</text>
+<rect x="14" y="630.5" width="54" height="30" rx="6" fill="#5b6b3e"/>
+<text x="41" y="651.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A37</text>
+<text x="78" y="641" font-size="16" font-weight="bold" fill="#2f3a2b">Stamp Lagoon</text>
+<text x="78" y="660" font-size="15" fill="#2f3a2b">Firearms using shot only. MU 1-7</text>
+</svg>

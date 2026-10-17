@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Talk test bars. Easy: you can sing. Moderate: you can talk but not sing. Vigorous: only a few words before a breath. Most base training is moderate; steep climbs push you to vigorous.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The talk test: how hard?</text>
+<rect x="10" y="56" width="120" height="48" rx="8" fill="#8a9a6b"/>
+<text x="22" y="87" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="start">Easy</text>
+<text x="138" y="87" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="start">You can sing</text>
+<rect x="10" y="120" width="230" height="48" rx="8" fill="#e8590c"/>
+<text x="22" y="151" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="start">Moderate</text>
+<text x="248" y="151" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="start">Talk, but not sing</text>
+<rect x="10" y="184" width="340" height="48" rx="8" fill="#b3261e"/>
+<text x="22" y="215" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="start">Vigorous</text>
+<text x="358" y="215" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="start"></text>
+<text x="140" y="215" font-family="sans-serif" font-size="14" fill="#ffffff" text-anchor="start">A few words, then breathe</text>
+<text x="200" y="268" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Most base training: moderate</text>
+<text x="200" y="290" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Steep climbs will push you to vigorous</text>
+</svg>

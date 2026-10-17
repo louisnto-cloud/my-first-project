@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="A clock with a red cross over falling back. On 1 November 2026 BC does not turn clocks back; it stays on UTC minus 7 all year. So November sunrises read about an hour later on the clock than in past years.">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 November 2026: the clocks stay put</text>
+<circle cx="120" cy="160" r="80" fill="#fffaf0" stroke="#2f3a2b" stroke-width="6"/>
+<line x1="120.0" y1="90.0" x2="120.0" y2="98.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="155.0" y1="99.37822173508928" x2="151.0" y2="106.3064249653648" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="180.6217782649107" y1="125.0" x2="173.6935750346352" y2="129.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="190.0" y1="160.0" x2="182.0" y2="160.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="180.62177826491072" y1="195.0" x2="173.69357503463522" y2="191.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="155.0" y1="220.62177826491072" x2="151.0" y2="213.69357503463522" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="120.00000000000001" y1="230.0" x2="120.00000000000001" y2="222.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="85.0" y1="220.6217782649107" x2="89.0" y2="213.6935750346352" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="59.37822173508931" y1="195.00000000000003" x2="66.30642496536481" y2="191.00000000000003" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="50.0" y1="160.0" x2="58.0" y2="160.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="59.3782217350893" y1="125.0" x2="66.30642496536481" y2="129.0" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="84.99999999999997" y1="99.37822173508931" x2="88.99999999999997" y2="106.30642496536481" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<line x1="120" y1="160" x2="120" y2="104" stroke="#23261f" stroke-width="5" stroke-linecap="round"/><line x1="120" y1="160" x2="156" y2="170" stroke="#23261f" stroke-width="4" stroke-linecap="round"/><circle cx="120" cy="160" r="6" fill="#23261f"/>
+<path d="M237.4 97.4 l25.2 25.2 M262.6 97.4 l-25.2 25.2" fill="none" stroke="#b3261e" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round"/><text x="320" y="116" font-family="sans-serif" font-size="16" font-weight="bold" fill="#b3261e" text-anchor="middle">No fall back</text>
+<text x="300" y="170" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">BC stays on</text><text x="300" y="194" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">UTC minus 7</text><text x="300" y="218" font-family="sans-serif" font-size="15" fill="#2f3a2b" text-anchor="middle">all year (95%)</text>
+<text x="200" y="272" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">November sunrise is an hour later on the clock</text>
+</svg>

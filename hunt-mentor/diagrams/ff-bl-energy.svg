@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" font-family="sans-serif" role="img" aria-label="Bar chart of energy for a 150 grain .308: 3,590 joules at the muzzle, 2,840 at 100 m, 2,210 at 200 m, 1,700 at 300 m and 1,260 at 400 m. A dashed line marks the 1,356 joule, 1,000 foot pound, rule of thumb, which the load passes to about 350 m. Placement matters more than joules.">
+<rect width="400" height="348" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Energy left, joules</text>
+<text x="74" y="69" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">Muzzle</text>
+<rect x="84" y="51" width="220.0" height="24" rx="3" fill="#e8590c"/>
+<text x="312" y="69" font-size="16" font-weight="bold" fill="#2f3a2b">3,590 J</text>
+<text x="74" y="105" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">100 m</text>
+<rect x="84" y="87" width="174.0" height="24" rx="3" fill="#e8590c"/>
+<text x="266" y="105" font-size="16" font-weight="bold" fill="#2f3a2b">2,840</text>
+<text x="74" y="141" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">200 m</text>
+<rect x="84" y="123" width="135.4" height="24" rx="3" fill="#e8590c"/>
+<text x="227.4" y="141" font-size="16" font-weight="bold" fill="#2f3a2b">2,210</text>
+<text x="74" y="177" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">300 m</text>
+<rect x="84" y="159" width="104.2" height="24" rx="3" fill="#e8590c"/>
+<text x="196.2" y="177" font-size="16" font-weight="bold" fill="#2f3a2b">1,700</text>
+<text x="74" y="213" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">400 m</text>
+<rect x="84" y="195" width="77.2" height="24" rx="3" fill="#f4a26f"/>
+<text x="169.2" y="213" font-size="16" font-weight="bold" fill="#2f3a2b">1,260</text>
+<line x1="167.1" y1="44" x2="167.1" y2="232" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M167.1 232 L167.1 242" stroke="#2f3a2b" stroke-width="1.4"/>
+<rect x="167.1" y="242.0" width="165.2" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="249.693" y="261" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1,356 J (1,000 ft lb)</text>
+<text x="249.693" y="278.5" font-size="14" fill="#2f3a2b" text-anchor="middle">rule of thumb</text>
+<text x="200" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">150 gr .308.</text>
+<text x="200" y="335" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Placement matters more than joules.</text>
+</svg>

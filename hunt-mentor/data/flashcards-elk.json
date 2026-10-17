@@ -1,0 +1,726 @@
+[
+ {
+  "id": "mc-elk-001",
+  "deck": "Elk Masterclass",
+  "front": "Elk from behind: what do you see?",
+  "back": "A big cream (yellowish white) rump patch with a dark border, short tail (90%).",
+  "diagram": "mc-elk-id"
+ },
+ {
+  "id": "mc-elk-002",
+  "deck": "Elk Masterclass",
+  "front": "Three marks that say elk, not moose?",
+  "back": "Tan body, dark neck mane, cream rump. Moose are dark all over with a bell (85 to 90%).",
+  "diagram": "sa-elk-lookalike"
+ },
+ {
+  "id": "mc-elk-003",
+  "deck": "Elk Masterclass",
+  "front": "What are ivories?",
+  "back": "Rounded upper canine teeth. Both bulls and cows have them (90%)."
+ },
+ {
+  "id": "mc-elk-004",
+  "deck": "Elk Masterclass",
+  "front": "Bull elk weight in BC?",
+  "back": "265 to 410 kg; about 140 cm at the shoulder (90%).",
+  "diagram": "mc-elk-size-bars"
+ },
+ {
+  "id": "mc-elk-005",
+  "deck": "Elk Masterclass",
+  "front": "Cow elk weight in BC?",
+  "back": "190 to 270 kg; about 130 cm at the shoulder (90%).",
+  "diagram": "mc-elk-size-bars"
+ },
+ {
+  "id": "mc-elk-006",
+  "deck": "Elk Masterclass",
+  "front": "Elk calf weight at birth?",
+  "back": "About 13 kg (BC account) to 16 kg (RMEF) (85 to 90%)."
+ },
+ {
+  "id": "mc-elk-007",
+  "deck": "Elk Masterclass",
+  "front": "Yearling bull antlers?",
+  "back": "Usually unbranched spikes (90%).",
+  "diagram": "mc-elk-bull-ages"
+ },
+ {
+  "id": "mc-elk-008",
+  "deck": "Elk Masterclass",
+  "front": "What is a raghorn?",
+  "back": "A young bull, usually 2 years old, with a slender rack of 3 or 4 points a side (90%).",
+  "diagram": "mc-elk-bull-ages"
+ },
+ {
+  "id": "mc-elk-009",
+  "deck": "Elk Masterclass",
+  "front": "Mature bull antlers?",
+  "back": "Usually 5 tines plus the beam tip, about 6 a side, from about 4 years (80 to 90%).",
+  "diagram": "mc-elk-bull-ages"
+ },
+ {
+  "id": "mc-elk-010",
+  "deck": "Elk Masterclass",
+  "front": "BC 6 point bull: how do you count?",
+  "back": "At least 6 tines on ONE antler. The brow tine counts (99%, page 3).",
+  "diagram": "elk-antlers"
+ },
+ {
+  "id": "mc-elk-011",
+  "deck": "Elk Masterclass",
+  "front": "Minimum tine size in BC rules?",
+  "back": "At least 2.5 cm long and longer than it is wide (99%, page 4).",
+  "diagram": "rb-tine"
+ },
+ {
+  "id": "mc-elk-012",
+  "deck": "Elk Masterclass",
+  "front": "Two races of elk in BC?",
+  "back": "Roosevelt elk on the coast; Rocky Mountain elk in the interior (90%).",
+  "diagram": "mc-elk-races"
+ },
+ {
+  "id": "mc-elk-013",
+  "deck": "Elk Masterclass",
+  "front": "How do Roosevelt elk differ?",
+  "back": "Slightly bigger and darker; antler tips may end in a crown of 3 or 4 points (90%).",
+  "diagram": "mc-elk-races"
+ },
+ {
+  "id": "mc-elk-014",
+  "deck": "Elk Masterclass",
+  "front": "Which race lives near Mission?",
+  "back": "Roosevelt elk, brought back to Lower Mainland valleys by translocation (85 to 90%)."
+ },
+ {
+  "id": "mc-elk-015",
+  "deck": "Elk Masterclass",
+  "front": "BC elk population, 2022?",
+  "back": "35,000 to 71,500 (90%).",
+  "diagram": "mc-elk-numbers"
+ },
+ {
+  "id": "mc-elk-016",
+  "deck": "Elk Masterclass",
+  "front": "Region 3 Thompson elk, 2022?",
+  "back": "300 to 500, increasing (90%).",
+  "diagram": "mc-elk-numbers"
+ },
+ {
+  "id": "mc-elk-017",
+  "deck": "Elk Masterclass",
+  "front": "Region 2 Lower Mainland elk, 2022?",
+  "back": "2,200 to 2,800, increasing (90%).",
+  "diagram": "mc-elk-numbers"
+ },
+ {
+  "id": "mc-elk-018",
+  "deck": "Elk Masterclass",
+  "front": "Region 8 Okanagan elk, 2022?",
+  "back": "2,500 to 3,500, stable to increasing (90%).",
+  "diagram": "mc-elk-numbers"
+ },
+ {
+  "id": "mc-elk-019",
+  "deck": "Elk Masterclass",
+  "front": "Region 8 resident elk success, 2020 to 2024?",
+  "back": "About 4%: 560 elk from 13,427 hunter seasons, about 195 days per elk (90%).",
+  "diagram": "mc-elk-harvest"
+ },
+ {
+  "id": "mc-elk-020",
+  "deck": "Elk Masterclass",
+  "front": "Lower Mainland Roosevelt elk growth?",
+  "back": "About 315 in 2000 to about 1,600 in 2015 after translocations (85%)."
+ },
+ {
+  "id": "mc-elk-021",
+  "deck": "Elk Masterclass",
+  "front": "Where are the elk's lungs?",
+  "back": "In the chest behind the shoulder, above the front legs (85%).",
+  "diagram": "mc-elk-body-cutaway"
+ },
+ {
+  "id": "mc-elk-022",
+  "deck": "Elk Masterclass",
+  "front": "Where is the elk's heart?",
+  "back": "Low in the chest between the front legs, at the elbow line (85%).",
+  "diagram": "mc-elk-heart"
+ },
+ {
+  "id": "mc-elk-023",
+  "deck": "Elk Masterclass",
+  "front": "How thick can a bull's shoulder blade be?",
+  "back": "Up to about 6 cm (2.5 in). Aim behind it, at the lungs (65%).",
+  "diagram": "mc-elk-skeleton"
+ },
+ {
+  "id": "mc-elk-024",
+  "deck": "Elk Masterclass",
+  "front": "Hunter education aim point for elk?",
+  "back": "Up the back of the front leg, one third to one half up the chest (85%).",
+  "diagram": "vitals-elk"
+ },
+ {
+  "id": "mc-elk-025",
+  "deck": "Elk Masterclass",
+  "front": "Two lungs hit: how far does a bull usually go?",
+  "back": "Usually down within about 100 yards (91 m); one lung, hundreds of metres (65%)."
+ },
+ {
+  "id": "mc-elk-026",
+  "deck": "Elk Masterclass",
+  "front": "Four stomach chambers?",
+  "back": "Rumen, reticulum, omasum, abomasum (85%)."
+ },
+ {
+  "id": "mc-elk-027",
+  "deck": "Elk Masterclass",
+  "front": "Why can elk do well on poor range?",
+  "back": "A bigger rumen for their body size than mule deer (80%)."
+ },
+ {
+  "id": "mc-elk-028",
+  "deck": "Elk Masterclass",
+  "front": "Elk summer coat?",
+  "back": "Sleek, rich reddish brown, little undercoat (90%).",
+  "diagram": "mc-elk-coat"
+ },
+ {
+  "id": "mc-elk-029",
+  "deck": "Elk Masterclass",
+  "front": "Elk winter coat?",
+  "back": "Dark brown head, neck and legs; lighter grey brown body (90%).",
+  "diagram": "mc-elk-coat"
+ },
+ {
+  "id": "mc-elk-030",
+  "deck": "Elk Masterclass",
+  "front": "When do elk moult?",
+  "back": "May and June; they look ragged (90%)."
+ },
+ {
+  "id": "mc-elk-031",
+  "deck": "Elk Masterclass",
+  "front": "Why do bulls enter winter thin?",
+  "back": "They barely feed in the rut but burn a lot of energy (90%).",
+  "diagram": "mc-elk-fat-year"
+ },
+ {
+  "id": "mc-elk-032",
+  "deck": "Elk Masterclass",
+  "front": "Main killer of adult elk?",
+  "back": "Malnutrition in severe winters (90%, BC account)."
+ },
+ {
+  "id": "mc-elk-033",
+  "deck": "Elk Masterclass",
+  "front": "Cheek teeth by age?",
+  "back": "Calf 4, yearling 5, 2.5 years and older 6 (85%).",
+  "diagram": "mc-elk-teeth"
+ },
+ {
+  "id": "mc-elk-034",
+  "deck": "Elk Masterclass",
+  "front": "Elk lifespan?",
+  "back": "Can reach 20, but most die by 10 or 12 (90%)."
+ },
+ {
+  "id": "mc-elk-035",
+  "deck": "Elk Masterclass",
+  "front": "Elk senses in order?",
+  "back": "Nose, then ears, then eyes (75%).",
+  "diagram": "mc-elk-senses-rank"
+ },
+ {
+  "id": "mc-elk-036",
+  "deck": "Elk Masterclass",
+  "front": "Elk smells you. Then?",
+  "back": "It leaves. The hunt is over (75%).",
+  "diagram": "mc-elk-senses-rank"
+ },
+ {
+  "id": "mc-elk-037",
+  "deck": "Elk Masterclass",
+  "front": "Cool air at dawn: which way does scent go?",
+  "back": "Downhill. Approach elk above you from below (75%).",
+  "diagram": "mc-elk-thermal-slope"
+ },
+ {
+  "id": "mc-elk-038",
+  "deck": "Elk Masterclass",
+  "front": "Sun warms the slope: which way does scent go?",
+  "back": "Uphill. Approach from above or the side (75%).",
+  "diagram": "mc-elk-thermal-slope"
+ },
+ {
+  "id": "mc-elk-039",
+  "deck": "Elk Masterclass",
+  "front": "Swirling wind?",
+  "back": "The elk will probably win. Back out (75%)."
+ },
+ {
+  "id": "mc-elk-040",
+  "deck": "Elk Masterclass",
+  "front": "How far can a bugle carry?",
+  "back": "1.6 km (a mile) or more (80%).",
+  "diagram": "mc-elk-ears"
+ },
+ {
+  "id": "mc-elk-041",
+  "deck": "Elk Masterclass",
+  "front": "Elk colour vision?",
+  "back": "Two cone types: blue is clear, reds and oranges dull (80%).",
+  "diagram": "mc-elk-colour"
+ },
+ {
+  "id": "mc-elk-042",
+  "deck": "Elk Masterclass",
+  "front": "Elk field of view?",
+  "back": "Very wide, mostly one eye; small zone ahead with both eyes; narrow blind strip behind (80%).",
+  "diagram": "mc-elk-eye-field"
+ },
+ {
+  "id": "mc-elk-043",
+  "deck": "Elk Masterclass",
+  "front": "An elk stares at you. What do you do?",
+  "back": "Freeze. It is checking with nose and ears before it runs (75%).",
+  "diagram": "mc-elk-sense-check"
+ },
+ {
+  "id": "mc-elk-044",
+  "deck": "Elk Masterclass",
+  "front": "Can you use elk urine from Alberta as a lure?",
+  "back": "No. Elk parts or derivatives from outside BC may not be used for hunting (99%, page 11)."
+ },
+ {
+  "id": "mc-elk-045",
+  "deck": "Elk Masterclass",
+  "front": "Four stages of elk alarm?",
+  "back": "Head up and ears forward; stare and flared nostrils; bark; herd bunches and runs (65 to 85%).",
+  "diagram": "mc-elk-alarm"
+ },
+ {
+  "id": "mc-elk-046",
+  "deck": "Elk Masterclass",
+  "front": "What does a cow's bark mean?",
+  "back": "Alarm. You have been detected (65%).",
+  "diagram": "mc-elk-sounds"
+ },
+ {
+  "id": "mc-elk-047",
+  "deck": "Elk Masterclass",
+  "front": "Starkey: flight risk from hikers?",
+  "back": "Little effect beyond about 500 m (85%).",
+  "diagram": "mc-elk-flight-rings"
+ },
+ {
+  "id": "mc-elk-048",
+  "deck": "Elk Masterclass",
+  "front": "Starkey: flight risk from ATVs and bikes?",
+  "back": "Still likely beyond 1,500 m (85%).",
+  "diagram": "mc-elk-flight-rings"
+ },
+ {
+  "id": "mc-elk-049",
+  "deck": "Elk Masterclass",
+  "front": "Average distance elk kept from people on trails?",
+  "back": "558 to 879 m (85%).",
+  "diagram": "mc-elk-flight-rings"
+ },
+ {
+  "id": "mc-elk-050",
+  "deck": "Elk Masterclass",
+  "front": "What do hunted elk learn?",
+  "back": "To be wary, secretive and nocturnal, and where the no hunting refuges are (90%).",
+  "diagram": "mc-elk-refuge"
+ },
+ {
+  "id": "mc-elk-051",
+  "deck": "Elk Masterclass",
+  "front": "Refuge use during a Montana hunt?",
+  "back": "Odds of elk in refuges more than doubled (80%).",
+  "diagram": "mc-elk-refuge"
+ },
+ {
+  "id": "mc-elk-052",
+  "deck": "Elk Masterclass",
+  "front": "Elk cow group size?",
+  "back": "Up to 20 or more cows, calves and yearlings (90%).",
+  "diagram": "mc-elk-social"
+ },
+ {
+  "id": "mc-elk-053",
+  "deck": "Elk Masterclass",
+  "front": "How long is a newborn calf hidden?",
+  "back": "About 2 to 3 weeks, then cow and calf rejoin the group (90%).",
+  "diagram": "mc-elk-calf-hide"
+ },
+ {
+  "id": "mc-elk-054",
+  "deck": "Elk Masterclass",
+  "front": "Biggest risk to young calves?",
+  "back": "Bears: up to half the calves in some areas, mostly in the first 2 or 3 weeks (80%).",
+  "diagram": "mc-elk-calf-hide"
+ },
+ {
+  "id": "mc-elk-055",
+  "deck": "Elk Masterclass",
+  "front": "When do most bulls first breed?",
+  "back": "About 4 or 5 years old (90%)."
+ },
+ {
+  "id": "mc-elk-056",
+  "deck": "Elk Masterclass",
+  "front": "Sparring vs fighting?",
+  "back": "Sparring: equal bulls push and twist, no winner. Rut fights: serious, sometimes goring (90%)."
+ },
+ {
+  "id": "mc-elk-057",
+  "deck": "Elk Masterclass",
+  "front": "When do bulls drop antlers?",
+  "back": "Late February to early April, oldest first (90%).",
+  "diagram": "mc-elk-antler-growth"
+ },
+ {
+  "id": "mc-elk-058",
+  "deck": "Elk Masterclass",
+  "front": "How fast do antlers grow?",
+  "back": "Up to about 1.7 cm a day; about 140 days for a mature bull (80%).",
+  "diagram": "mc-elk-antler-growth"
+ },
+ {
+  "id": "mc-elk-059",
+  "deck": "Elk Masterclass",
+  "front": "When is velvet shed?",
+  "back": "Late August or early September (90%).",
+  "diagram": "mc-elk-antler-growth"
+ },
+ {
+  "id": "mc-elk-060",
+  "deck": "Elk Masterclass",
+  "front": "Who migrates up first in spring?",
+  "back": "Bulls. Cows wait until calves can follow (90%).",
+  "diagram": "mc-elk-year-wheel"
+ },
+ {
+  "id": "mc-elk-061",
+  "deck": "Elk Masterclass",
+  "front": "Elk gestation?",
+  "back": "About 8 months (90%)."
+ },
+ {
+  "id": "mc-elk-062",
+  "deck": "Elk Masterclass",
+  "front": "When are elk calves born?",
+  "back": "Late May and early June (90%).",
+  "diagram": "mc-elk-year-wheel"
+ },
+ {
+  "id": "mc-elk-063",
+  "deck": "Elk Masterclass",
+  "front": "When are most cows bred?",
+  "back": "Mid to late September (90%).",
+  "diagram": "mc-elk-rut-calendar"
+ },
+ {
+  "id": "mc-elk-064",
+  "deck": "Elk Masterclass",
+  "front": "Second heat?",
+  "back": "About a month after the first; maybe a third in November (90%).",
+  "diagram": "mc-elk-rut-calendar"
+ },
+ {
+  "id": "mc-elk-065",
+  "deck": "Elk Masterclass",
+  "front": "When do wallows start?",
+  "back": "About two weeks before cows come into heat (70%).",
+  "diagram": "mc-elk-rut-calendar"
+ },
+ {
+  "id": "mc-elk-066",
+  "deck": "Elk Masterclass",
+  "front": "What pushes elk to winter range?",
+  "back": "Autumn snowfall (90%).",
+  "diagram": "mc-elk-habitat-xsection"
+ },
+ {
+  "id": "mc-elk-067",
+  "deck": "Elk Masterclass",
+  "front": "Snow depth that restricts elk?",
+  "back": "Over about 46 cm; browse replaces grazing past 61 cm (80%).",
+  "diagram": "mc-elk-snow-depth"
+ },
+ {
+  "id": "mc-elk-068",
+  "deck": "Elk Masterclass",
+  "front": "Elk daily peaks?",
+  "back": "After dawn and at dusk; morning peak can be almost 2 hours after first light (80%).",
+  "diagram": "mc-elk-day-clock"
+ },
+ {
+  "id": "mc-elk-069",
+  "deck": "Elk Masterclass",
+  "front": "How far from cover do most elk stay?",
+  "back": "Within about 183 m (80%).",
+  "diagram": "mc-elk-day-route"
+ },
+ {
+  "id": "mc-elk-070",
+  "deck": "Elk Masterclass",
+  "front": "Summer midday bed?",
+  "back": "North slopes under dense canopy, over half closed (75%).",
+  "diagram": "mc-elk-bed-site"
+ },
+ {
+  "id": "mc-elk-071",
+  "deck": "Elk Masterclass",
+  "front": "Slopes elk use most?",
+  "back": "15 to 30%; use drops past 40 to 50% (80%).",
+  "diagram": "mc-elk-bed-site"
+ },
+ {
+  "id": "mc-elk-072",
+  "deck": "Elk Masterclass",
+  "front": "Moon and elk: what does the evidence say?",
+  "back": "No elk study found; deer studies found no moon effect. Tip only (70%).",
+  "diagram": "mc-elk-evidence"
+ },
+ {
+  "id": "mc-elk-073",
+  "deck": "Elk Masterclass",
+  "front": "Cold fronts and elk?",
+  "back": "Hunters report more movement; no elk study tested it. Tip.",
+  "diagram": "mc-elk-evidence"
+ },
+ {
+  "id": "mc-elk-074",
+  "deck": "Elk Masterclass",
+  "front": "Elk summer range?",
+  "back": "Subalpine and alpine basins and avalanche tracks (90%).",
+  "diagram": "mc-elk-habitat-xsection"
+ },
+ {
+  "id": "mc-elk-075",
+  "deck": "Elk Masterclass",
+  "front": "Elk winter range?",
+  "back": "Open forest, grassy benches, floodplain marshes; south to southwest slopes (80 to 90%).",
+  "diagram": "mc-elk-habitat-xsection"
+ },
+ {
+  "id": "mc-elk-076",
+  "deck": "Elk Masterclass",
+  "front": "What is security cover for elk?",
+  "back": "Vegetation that hides 90% of a standing elk at 61 m (80%).",
+  "diagram": "mc-elk-three-needs"
+ },
+ {
+  "id": "mc-elk-077",
+  "deck": "Elk Masterclass",
+  "front": "Interior elk winter foods?",
+  "back": "Bunchgrasses, sedges, horsetail, willow, saskatoon, rose (90%).",
+  "photo": "hab-saskatoon-berries"
+ },
+ {
+  "id": "mc-elk-078",
+  "deck": "Elk Masterclass",
+  "front": "Roosevelt elk foods?",
+  "back": "Sedges, grasses, ferns, plus willow, elderberry, blueberry, cedar and hemlock browse (90%)."
+ },
+ {
+  "id": "mc-elk-079",
+  "deck": "Elk Masterclass",
+  "front": "Elk season near Heffley Creek?",
+  "back": "None. Region 3 has no general open season for elk (99%, page 34).",
+  "diagram": "mc-elk-three-areas"
+ },
+ {
+  "id": "mc-elk-080",
+  "deck": "Elk Masterclass",
+  "front": "Elk season near Mission?",
+  "back": "None in general season. Region 2 elk are taken by LEH draw (99% and 85%).",
+  "diagram": "mc-elk-three-areas"
+ },
+ {
+  "id": "mc-elk-081",
+  "deck": "Elk Masterclass",
+  "front": "Region 8 elk seasons?",
+  "back": "6 point bulls 10 Sept to 20 Oct; bow only 6 point bulls 1 to 9 Sept; bag 1 (99%, page 68).",
+  "diagram": "re-r8-moose-elk-bars"
+ },
+ {
+  "id": "mc-elk-082",
+  "deck": "Elk Masterclass",
+  "front": "Region 8 elk LEH in the app?",
+  "back": "Hunt 2218, antlerless elk, Sept, MU 8-04 Princeton, 10 authorizations, odds 111 to 1 (99%)."
+ },
+ {
+  "id": "mc-elk-083",
+  "deck": "Elk Masterclass",
+  "front": "Elk winter range layer on the Hunt Map covers?",
+  "back": "Map area F, East Kootenay, only. Near home use Elk by month (99%, app data).",
+  "diagram": "mc-elk-map-1"
+ },
+ {
+  "id": "mc-elk-084",
+  "deck": "Elk Masterclass",
+  "front": "Elk front track size?",
+  "back": "About 7.6 to 12.4 cm, rounder and blunter than deer (70%).",
+  "diagram": "mc-elk-track-scale"
+ },
+ {
+  "id": "mc-elk-085",
+  "deck": "Elk Masterclass",
+  "front": "Elk pellets?",
+  "back": "About 1.3 to 2.5 cm long, bigger and rounder than deer; clumps on green feed (65 to 70%).",
+  "diagram": "sg-scat-hoofed"
+ },
+ {
+  "id": "mc-elk-086",
+  "deck": "Elk Masterclass",
+  "front": "What is a wallow?",
+  "back": "A mud pit where rutting bulls urinate and roll to coat themselves in scent (85 to 90%).",
+  "diagram": "mc-elk-wallow-read",
+  "photo": "hab-elk-wallow"
+ },
+ {
+  "id": "mc-elk-087",
+  "deck": "Elk Masterclass",
+  "front": "Fresh wallow signs?",
+  "back": "Cloudy water, wet splash, fresh tracks, strong urine smell (Tip).",
+  "diagram": "mc-elk-wallow-read"
+ },
+ {
+  "id": "mc-elk-088",
+  "deck": "Elk Masterclass",
+  "front": "Bugle structure?",
+  "back": "Low chesty roar, glides into a high whistle, ends in grunts (90%).",
+  "diagram": "mc-elk-sounds"
+ },
+ {
+  "id": "mc-elk-089",
+  "deck": "Elk Masterclass",
+  "front": "Mew and chirp?",
+  "back": "Cow and calf contact calls (65%).",
+  "diagram": "mc-elk-sounds"
+ },
+ {
+  "id": "mc-elk-090",
+  "deck": "Elk Masterclass",
+  "front": "Can you tell a bull from his track?",
+  "back": "No. Unconfirmed (VERIFY). Count antlers, not tracks."
+ },
+ {
+  "id": "mc-elk-091",
+  "deck": "Elk Masterclass",
+  "front": "Legal calls for elk?",
+  "back": "Mouth and hand calls. No recorded or electronic calls (99%, page 12).",
+  "diagram": "sg-calls-legal"
+ },
+ {
+  "id": "mc-elk-092",
+  "deck": "Elk Masterclass",
+  "front": "Calling setup?",
+  "back": "Shooter in front, toward the elk and downwind; caller 50 to 100 m behind (65%, spacing Tip).",
+  "diagram": "mc-elk-partner"
+ },
+ {
+  "id": "mc-elk-093",
+  "deck": "Elk Masterclass",
+  "front": "Why does the shooter sit downwind?",
+  "back": "Bulls often circle downwind to scent check the call (65%).",
+  "diagram": "mc-elk-partner"
+ },
+ {
+  "id": "mc-elk-094",
+  "deck": "Elk Masterclass",
+  "front": "How to sit a wallow?",
+  "back": "Downwind, screened, away from the main trail in (70%)."
+ },
+ {
+  "id": "mc-elk-095",
+  "deck": "Elk Masterclass",
+  "front": "Legal weapons for elk?",
+  "back": "Centrefire rifle or bow class A, C or D. No shotgun, rimfire or air rifle (99%, page 13)."
+ },
+ {
+  "id": "mc-elk-096",
+  "deck": "Elk Masterclass",
+  "front": "Dogs for elk?",
+  "back": "Only on a leash, even for tracking (99%, page 12)."
+ },
+ {
+  "id": "mc-elk-097",
+  "deck": "Elk Masterclass",
+  "front": "Wireless trail camera for hunting?",
+  "back": "Not from 1 August to 10 December (99%, page 11)."
+ },
+ {
+  "id": "mc-elk-098",
+  "deck": "Elk Masterclass",
+  "front": "First legal step after the kill?",
+  "back": "Cancel the species licence immediately, before handling the elk (95%, page 11).",
+  "diagram": "mc-elk-shot-to-table"
+ },
+ {
+  "id": "mc-elk-099",
+  "deck": "Elk Masterclass",
+  "front": "Edible portions that must come out?",
+  "back": "Four quarters, loins, neck and ribs (99%, page 11).",
+  "diagram": "mc-elk-quarter-map"
+ },
+ {
+  "id": "mc-elk-100",
+  "deck": "Elk Masterclass",
+  "front": "Antlers in a 6 point season?",
+  "back": "Keep them attached to part of the upper skull, with the licence, all the way home (99%, page 15)."
+ },
+ {
+  "id": "mc-elk-101",
+  "deck": "Elk Masterclass",
+  "front": "Elk evidence of sex?",
+  "back": "Tail or 6 cm2 of hide, plus a testicle or part of the penis for a bull (99%, page 15)."
+ },
+ {
+  "id": "mc-elk-102",
+  "deck": "Elk Masterclass",
+  "front": "Wait time, lungs hit, out of sight?",
+  "back": "30 minutes minimum (70%).",
+  "diagram": "sk-wait-compare"
+ },
+ {
+  "id": "mc-elk-103",
+  "deck": "Elk Masterclass",
+  "front": "Elk field dressed weight as share of whole?",
+  "back": "About 70% (85%, University of Wyoming).",
+  "diagram": "mc-elk-meat-math"
+ },
+ {
+  "id": "mc-elk-104",
+  "deck": "Elk Masterclass",
+  "front": "Boneless meat from a bull?",
+  "back": "About 50% of field dressed: 75 kg for one bull, 99 kg average of six (85%).",
+  "diagram": "mc-elk-meat-math"
+ },
+ {
+  "id": "mc-elk-105",
+  "deck": "Elk Masterclass",
+  "front": "Meat cooling target?",
+  "back": "Below 4°C as fast as you can (80%).",
+  "diagram": "sk-cooler"
+ },
+ {
+  "id": "mc-elk-106",
+  "deck": "Elk Masterclass",
+  "front": "Mandatory Hunter Report for elk?",
+  "back": "Every elk licence buyer, by 31 March, kill or no kill (99%, page 16)."
+ },
+ {
+  "id": "mc-elk-107",
+  "deck": "Elk Masterclass",
+  "front": "Resident elk species licence fee?",
+  "back": "$25.00 (99%, page 8)."
+ }
+]

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 611" font-family="sans-serif" role="img" aria-label="List of Region 7B Maps H1 to H9. H1 Kakwa Park and Recreation Area, MU 7-19: No Hunting Area. H2 Bear Mountain, MU 7-20: no hunting 1 June to 15 October. H3 One Island Pasture, MU 7-20: firearms using shot only 1 June to 15 October. H4 Bear Mountain Nordic Ski Area, MU 7-20: No Shooting Area. H5 Mt. Bergeron and Tumbler Ridge, MU 7-21: No Shooting or Hunting Area. H6 Dickebush and Trapper Creek, MU 7-21: motor vehicles prohibited all year on the road shown. H7 Southeast Peace, MU 7-21: Motor Vehicle Closed Area above 1,400 metres. H8 Groundbirch, MU 7-21: shot only 1 June to 31 October. H9 Dokie Subdivision, MUs 7-22 and 7-31: No Shooting Area. Colours: red no hunting, orange no shooting, green shot only or bow, blue vehicle rule.">
+<rect width="400" height="611" fill="#fffaf0"/>
+<rect x="8" y="8" width="20" height="20" rx="4" fill="#c92a2a"/>
+<text x="34" y="23" font-size="14" fill="#2f3a2b">No hunting</text>
+<rect x="116.88" y="8" width="20" height="20" rx="4" fill="#e8590c"/>
+<text x="142.88" y="23" font-size="14" fill="#2f3a2b">No shooting</text>
+<rect x="233.32" y="8" width="20" height="20" rx="4" fill="#8a9a6b"/>
+<text x="259.32" y="23" font-size="14" fill="#2f3a2b">Shot only or bow</text>
+<rect x="8" y="32" width="20" height="20" rx="4" fill="#4a7fb0"/>
+<text x="34" y="47" font-size="14" fill="#2f3a2b">Vehicle rule</text>
+<rect x="4" y="62" width="392" height="74" rx="6" fill="#f4eedf"/>
+<rect x="8" y="66" width="56" height="66" rx="6" fill="#c92a2a"/>
+<text x="36" y="105" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H1</text>
+<text x="74" y="85" font-size="16" font-weight="bold" fill="#2f3a2b">Kakwa Park and Recreation Area</text>
+<text x="74" y="105" font-size="15" fill="#b02525">No Hunting Area</text>
+<text x="74" y="124" font-size="14" fill="#6b5b4b">MU 7-19</text>
+<rect x="8" y="143" width="56" height="47" rx="6" fill="#c92a2a"/>
+<text x="36" y="172.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H2</text>
+<text x="74" y="162" font-size="16" font-weight="bold" fill="#2f3a2b">Bear Mountain</text>
+<text x="388" y="162" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-20</text>
+<text x="74" y="182" font-size="15" fill="#b02525">No hunting June 1 to Oct 15</text>
+<rect x="4" y="197" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="201" width="56" height="47" rx="6" fill="#8a9a6b"/>
+<text x="36" y="230.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H3</text>
+<text x="74" y="220" font-size="16" font-weight="bold" fill="#2f3a2b">One Island Pasture</text>
+<text x="388" y="220" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-20</text>
+<text x="74" y="240" font-size="15" fill="#5b6b3e">Shot only June 1 to Oct 15</text>
+<rect x="8" y="259" width="56" height="47" rx="6" fill="#e8590c"/>
+<text x="36" y="288.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H4</text>
+<text x="74" y="278" font-size="16" font-weight="bold" fill="#2f3a2b">Bear Mountain Nordic Ski Area</text>
+<text x="388" y="278" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-20</text>
+<text x="74" y="298" font-size="15" fill="#c2410c">No Shooting Area</text>
+<rect x="4" y="313" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="317" width="56" height="47" rx="6" fill="#c92a2a"/>
+<text x="36" y="346.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H5</text>
+<text x="74" y="336" font-size="16" font-weight="bold" fill="#2f3a2b">Mt. Bergeron, Tumbler Ridge</text>
+<text x="388" y="336" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-21</text>
+<text x="74" y="356" font-size="15" fill="#b02525">No Shooting or Hunting Area</text>
+<rect x="8" y="375" width="56" height="47" rx="6" fill="#4a7fb0"/>
+<text x="36" y="404.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H6</text>
+<text x="74" y="394" font-size="16" font-weight="bold" fill="#2f3a2b">Dickebush, Trapper Creek</text>
+<text x="388" y="394" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-21</text>
+<text x="74" y="414" font-size="15" fill="#2c5d86">No motor vehicles all year on the road shown</text>
+<rect x="4" y="429" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="433" width="56" height="47" rx="6" fill="#4a7fb0"/>
+<text x="36" y="462.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H7</text>
+<text x="74" y="452" font-size="16" font-weight="bold" fill="#2f3a2b">Southeast Peace</text>
+<text x="388" y="452" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-21</text>
+<text x="74" y="472" font-size="15" fill="#2c5d86">Motor Vehicle Closed Area above 1,400 m</text>
+<rect x="8" y="491" width="56" height="47" rx="6" fill="#8a9a6b"/>
+<text x="36" y="520.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H8</text>
+<text x="74" y="510" font-size="16" font-weight="bold" fill="#2f3a2b">Groundbirch</text>
+<text x="388" y="510" font-size="14" fill="#6b5b4b" text-anchor="end">MU 7-21</text>
+<text x="74" y="530" font-size="15" fill="#5b6b3e">Shot only June 1 to Oct 31</text>
+<rect x="4" y="545" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="549" width="56" height="47" rx="6" fill="#e8590c"/>
+<text x="36" y="578.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H9</text>
+<text x="74" y="568" font-size="16" font-weight="bold" fill="#2f3a2b">Dokie Subdivision</text>
+<text x="388" y="568" font-size="14" fill="#6b5b4b" text-anchor="end">MUs 7-22, 7-31</text>
+<text x="74" y="588" font-size="15" fill="#c2410c">No Shooting Area</text>
+</svg>

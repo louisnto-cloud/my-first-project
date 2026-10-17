@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="ATV picture checklist. Helmet on every rider and passenger. Lights on from half an hour after sunset to half an hour before sunrise, and in poor visibility. Photo ID for everyone 12 and older. Under 16: an adult 19 or older supervises, no passengers. Spark arrestor in wildfire conditions.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Before you ride</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5">
+    <rect x="6" y="34" width="190" height="82" rx="8"/><rect x="204" y="34" width="190" height="82" rx="8"/>
+    <rect x="6" y="122" width="190" height="82" rx="8"/><rect x="204" y="122" width="190" height="82" rx="8"/>
+    <rect x="6" y="210" width="388" height="84" rx="8"/>
+  </g>
+  <path d="M20 96 Q 20 52 54 52 Q 86 52 86 84 L86 96 Z" fill="#e8590c"/><rect x="56" y="70" width="30" height="14" fill="#2f3a2b"/>
+  <circle cx="236" cy="74" r="18" fill="#e8b10c"/><g stroke="#e8b10c" stroke-width="4"><line x1="258" y1="66" x2="272" y2="60"/><line x1="258" y1="74" x2="274" y2="74"/><line x1="258" y1="82" x2="272" y2="88"/></g>
+  <rect x="18" y="140" width="64" height="44" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><circle cx="36" cy="158" r="8" fill="#8a9a6b"/><rect x="50" y="152" width="26" height="5" fill="#2f3a2b"/><rect x="50" y="162" width="20" height="5" fill="#2f3a2b"/>
+  <circle cx="226" cy="148" r="12" fill="#2f3a2b"/><rect x="216" y="160" width="20" height="30" rx="5" fill="#2f3a2b"/><circle cx="262" cy="160" r="8" fill="#8a9a6b"/><rect x="255" y="168" width="14" height="22" rx="4" fill="#8a9a6b"/>
+  <rect x="20" y="236" width="50" height="22" rx="4" fill="#6b6f68"/><g fill="#e8590c"><circle cx="82" cy="244" r="3"/><circle cx="92" cy="238" r="3"/><circle cx="90" cy="252" r="3"/></g><path d="M74 230 l26 30 M100 230 l-26 30" stroke="#c0392b" stroke-width="3"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b">
+    <text x="96" y="70">Helmet</text><text x="96" y="90" font-size="14" font-weight="normal">every rider</text>
+    <text x="280" y="56">Lights on</text><text x="280" y="74" font-size="14" font-weight="normal">½ hr after sunset</text><text x="280" y="90" font-size="14" font-weight="normal">to ½ hr before</text><text x="280" y="106" font-size="14" font-weight="normal">sunrise</text>
+    <text x="92" y="156">Photo ID</text><text x="92" y="176" font-size="14" font-weight="normal">age 12 and up</text>
+    <text x="280" y="152">Under 16</text><text x="280" y="170" font-size="14" font-weight="normal">adult 19+ near,</text><text x="280" y="188" font-size="14" font-weight="normal">no passengers</text>
+    <text x="116" y="244">Spark arrestor</text><text x="116" y="264" font-size="14" font-weight="normal">in wildfire conditions. $460 ticket</text>
+  </g>
+</svg>

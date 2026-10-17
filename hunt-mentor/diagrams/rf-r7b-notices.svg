@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Four cards. Pack stock: feed locally grown invasive plant free or pelletized feed, starting 2 days before departure, advice. Treaty 8 First Nations exercise treaty rights to hunt, fish and trap throughout the region and ask hunters to be respectful. Kaska land guardians: Daylu Lands and Resources 250 779 3161 extension 0, Dease River First Nation 250 239 3646. Camelids such as llamas may not be used to hunt in Region 7B." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Notices to hunters</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Livestock</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">Advice: weed free feed</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">from 2 days before the</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">trip</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Treaty 8 First</text>
+<text x="299" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Nations</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">Treaty rights to hunt,</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">fish, trap. Be</text>
+<text x="212" y="142" font-size="14" fill="#23261f" text-anchor="start">respectful</text>
+<rect x="6" y="162" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Kaska land guardians</text>
+<rect x="22.0" y="221" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="25.0" y="225" width="10" height="18" fill="#ffffff"/>
+<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">Daylu 250 779 3161</text>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">ext. 0. Dease</text>
+<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">River 250 239 3646</text>
+<rect x="204" y="162" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Camelids, such as</text>
+<text x="299" y="198" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">llamas</text>
+<text x="212" y="228" font-size="14" fill="#23261f" text-anchor="start">Not for hunting in</text>
+<text x="212" y="246" font-size="14" fill="#23261f" text-anchor="start">Region 7B</text>
+</svg>

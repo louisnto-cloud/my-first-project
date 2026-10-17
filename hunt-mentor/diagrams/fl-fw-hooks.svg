@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Memory hook FUEL: Frequent snacks, every 2 to 3 hours. Upside down bottles: the lid freezes last. Every stream treated: boil 1, bleach 2 drops, filter. Look at your pee: pale is good. Plus: fat is 9, the rest are 4.">
+<rect width="400" height="340" fill="#fffaf0"/>
+<text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hook: FUEL</text>
+<rect x="8" y="46" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="51" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="83" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">F</text>
+<text x="74" y="69" font-size="18" font-weight="bold" fill="#2f3a2b">Frequent snacks</text>
+<text x="74" y="90" font-size="15.5" fill="#23261f">every 2 to 3 hours</text>
+<rect x="8" y="107" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="112" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="144" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">U</text>
+<text x="74" y="130" font-size="18" font-weight="bold" fill="#2f3a2b">Upside down bottles</text>
+<text x="74" y="151" font-size="15.5" fill="#23261f">the lid freezes last</text>
+<rect x="8" y="168" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="173" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="205" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+<text x="74" y="191" font-size="18" font-weight="bold" fill="#2f3a2b">Every stream treated</text>
+<text x="74" y="212" font-size="15.5" fill="#23261f">boil 1, bleach 2 drops, filter</text>
+<rect x="8" y="229" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="234" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="266" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+<text x="74" y="252" font-size="18" font-weight="bold" fill="#2f3a2b">Look at your pee</text>
+<text x="74" y="273" font-size="15.5" fill="#23261f">pale is good</text>
+<rect x="8" y="294" width="384" height="38" rx="8" fill="#2f3a2b"/>
+<text x="200" y="319" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Fat is 9, the rest are 4</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, a tip: a rifle moves from minus 15 C outside into a plus 20 C cabin and water beads form on the cold metal. Either leave it cased somewhere cold and secure, or bring it in and dry it well.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold rifle, warm cabin: fog and water (Tip)</text>
+<rect x="0" y="40" width="170" height="214" fill="#dfeaf3"/><rect x="230" y="40" width="170" height="214" fill="#f8e3cf"/>
+<rect x="170" y="40" width="60" height="214" fill="#a07850"/><rect x="176" y="70" width="48" height="184" fill="#6b4a2a"/><circle cx="216" cy="166" r="3" fill="#e0c060"/>
+<circle cx="58" cy="131" r="2.3" fill="#ffffff"/>
+<circle cx="19" cy="178" r="2.0" fill="#ffffff"/>
+<circle cx="17" cy="175" r="1.5" fill="#ffffff"/>
+<circle cx="75" cy="121" r="1.6" fill="#ffffff"/>
+<circle cx="73" cy="215" r="1.7" fill="#ffffff"/>
+<circle cx="42" cy="190" r="2.7" fill="#ffffff"/>
+<circle cx="97" cy="161" r="2.8" fill="#ffffff"/>
+<circle cx="15" cy="218" r="1.9" fill="#ffffff"/>
+<circle cx="30" cy="127" r="1.9" fill="#ffffff"/>
+<circle cx="134" cy="134" r="2.3" fill="#ffffff"/>
+<circle cx="106" cy="158" r="2.2" fill="#ffffff"/>
+<circle cx="18" cy="119" r="1.8" fill="#ffffff"/>
+<circle cx="113" cy="165" r="1.9" fill="#ffffff"/>
+<circle cx="98" cy="168" r="1.9" fill="#ffffff"/>
+<circle cx="130" cy="199" r="1.8" fill="#ffffff"/>
+<circle cx="96" cy="177" r="2.6" fill="#ffffff"/>
+<circle cx="120" cy="148" r="2.8" fill="#ffffff"/>
+<circle cx="26" cy="164" r="2.5" fill="#ffffff"/>
+<circle cx="31" cy="173" r="1.6" fill="#ffffff"/>
+<circle cx="111" cy="207" r="2.2" fill="#ffffff"/>
+<circle cx="143" cy="151" r="2.4" fill="#ffffff"/>
+<circle cx="100" cy="184" r="2.1" fill="#ffffff"/>
+<circle cx="137" cy="229" r="2.1" fill="#ffffff"/>
+<circle cx="110" cy="120" r="2.4" fill="#ffffff"/>
+<circle cx="108" cy="235" r="2.6" fill="#ffffff"/>
+<circle cx="52" cy="160" r="2.4" fill="#ffffff"/>
+<path d="M0 238 C40 230 120 232 170 238 V254 H0z" fill="#ffffff"/>
+<rect x="352" y="196" width="36" height="46" rx="3" fill="#3a3a38"/><rect x="362" y="166" width="10" height="30" fill="#3a3a38"/><rect x="358" y="214" width="24" height="14" rx="2" fill="#e8590c"/><path d="M230 242 H400" stroke="#8a6a45" stroke-width="3"/>
+<text x="85" y="66" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">outside</text><text x="85" y="88" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">minus 15 C</text>
+<text x="315" y="66" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">cabin</text><text x="315" y="88" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">plus 20 C</text>
+<g><animateTransform attributeName="transform" type="translate" values="22 156;262 156" dur="2.5s" fill="freeze"/><g transform="translate(0 0) rotate(0) scale(0.9)"><path d="M0 -5 L22 -4 L30 -2 L40 -2 L44 4 L36 5 L28 2 L20 9 L0 8z" fill="#7a4f2a" stroke="#4a2f17" stroke-width="1"/><path d="M40 -2 L84 -1 L84 4 L44 4z" fill="#7a4f2a" stroke="#4a2f17" stroke-width="1"/><rect x="38" y="-5" width="30" height="5" fill="#3c403d"/><path d="M68 -4 H122 V-1.5 H68z" fill="#3c403d"/><path d="M50 -4 v-3 h3" stroke="#3c403d" stroke-width="2" fill="none"/><path d="M36 -14 h8 l4 2 h22 l4 -2 h8 v8 h-8 l-4 -2 h-22 l-4 2 h-8z" fill="#22262a"/><path d="M44 -8 v4 M70 -8 v4" stroke="#22262a" stroke-width="2"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur=".5s" fill="freeze"/><circle cx="300" cy="164" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="312" cy="168" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="324" cy="163" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="336" cy="167" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="348" cy="162" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="360" cy="166" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="292" cy="150" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><circle cx="330" cy="146" r="3" fill="#4a7fb0" stroke="#ffffff" stroke-width="1"/><text x="315" y="126" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">water beads form</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.6s" dur=".5s" fill="freeze"/><rect x="20" y="262" width="360" height="32" rx="16" fill="#2f3a2b"/><text x="200" y="283" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Leave it cased in the cold, or dry it well</text></g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 394" font-family="sans-serif" role="img" aria-label="A hunt day timeline, example times: breakfast at 5:30, a snack at 8:00, a snack at 10:30, lunch at 12:30, a snack at 15:00, supper at 19:00. Eat little and often: something every 2 to 3 hours (Tip).">
+<rect width="400" height="394" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A hunt day: eat little and often</text>
+<text x="200" y="50" font-size="15" fill="#6b5b4b" text-anchor="middle">Example times</text>
+<line x1="150" y1="76.0" x2="150" y2="312.25" stroke="#c9d1b5" stroke-width="6" stroke-linecap="round"/>
+<text x="132" y="82" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">5:30</text>
+<circle cx="150" cy="76.0" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="82" font-size="18" font-weight="bold" fill="#e8590c">Breakfast</text>
+<g transform="translate(320 76.0)"><rect x="-10" y="-10" width="18" height="20" rx="3" fill="#8b5a2b"/><path d="M8 -5 h4 a4 4 0 0 1 0 9 h-4" fill="none" stroke="#8b5a2b" stroke-width="3"/><path d="M-5 -14 q-3 -4 0 -8 M1 -14 q-3 -4 0 -8" stroke="#6b5b4b" stroke-width="1.6" fill="none"/></g>
+<text x="132" y="125.75" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">8:00</text>
+<circle cx="150" cy="119.8" r="7" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="125.75" font-size="16" fill="#2f3a2b">Snack</text>
+<g transform="translate(320 119.75) rotate(-15)"><rect x="-14" y="-6" width="28" height="12" rx="3" fill="#c99a5b"/><rect x="-14" y="-6" width="9" height="12" rx="2" fill="#8a9a6b"/></g>
+<text x="132" y="169.5" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">10:30</text>
+<circle cx="150" cy="163.5" r="7" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="169.5" font-size="16" fill="#2f3a2b">Snack</text>
+<g transform="translate(320 163.5) rotate(-15)"><rect x="-14" y="-6" width="28" height="12" rx="3" fill="#c99a5b"/><rect x="-14" y="-6" width="9" height="12" rx="2" fill="#8a9a6b"/></g>
+<text x="132" y="204.5" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">12:30</text>
+<circle cx="150" cy="198.5" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="204.5" font-size="18" font-weight="bold" fill="#e8590c">Lunch</text>
+<g transform="translate(320 198.5)"><path d="M-14 6 L0 -12 L14 6z" fill="#e8c88a"/><path d="M-14 6 L14 6 L12 10 H-12z" fill="#6c9a44"/><path d="M-12 10 H12 L14 14 H-14z" fill="#e8c88a"/></g>
+<text x="132" y="248.25" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">15:00</text>
+<circle cx="150" cy="242.2" r="7" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="248.25" font-size="16" fill="#2f3a2b">Snack</text>
+<g transform="translate(320 242.25) rotate(-15)"><rect x="-14" y="-6" width="28" height="12" rx="3" fill="#c99a5b"/><rect x="-14" y="-6" width="9" height="12" rx="2" fill="#8a9a6b"/></g>
+<text x="132" y="318.25" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="end">19:00</text>
+<circle cx="150" cy="312.2" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="172" y="318.25" font-size="18" font-weight="bold" fill="#e8590c">Supper</text>
+<g transform="translate(320 312.25)"><path d="M-16 -2 H16 A16 13 0 0 1 -16 -2z" fill="#4a7fb0"/><path d="M-10 -6 q4 -8 10 -4 q6 -6 10 2" fill="none" stroke="#8b5a2b" stroke-width="3"/></g>
+<rect x="20" y="338" width="360" height="46" rx="10" fill="#2f3a2b"/>
+<text x="200" y="367.25" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Something every 2 to 3 hours (Tip)</text>
+</svg>

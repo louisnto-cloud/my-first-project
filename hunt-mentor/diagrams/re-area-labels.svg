@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 389" role="img" aria-label="Cards: Closed area labels. No Shooting Area: No firearms. A bow is allowed unless the area says otherwise. No Hunting Area: No hunting. No Shooting or Hunting Area: No firearms and no hunting by any method (95%, my reading). Firearms Using Shot Only Area: Shotgun with shot only: no slugs, no rifle bullets (90%, my reading)." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="389" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Closed area labels</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Pages 4 and 10</text>
+<rect x="6.0" y="69" width="388.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 97 V78 Q6.0 69 15.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#e8590c"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">No Shooting Area</text>
+<text x="14.0" y="117" font-size="14" fill="#23261f">No firearms. A bow is allowed unless the area says</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">otherwise</text>
+<rect x="6.0" y="153" width="388.0" height="58" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 181 V162 Q6.0 153 15.0 153 H385.0 Q394.0 153 394.0 162 V181 Z" fill="#c92a2a"/>
+<text x="14.0" y="173" font-size="14" font-weight="bold" fill="#ffffff">No Hunting Area</text>
+<text x="14.0" y="201" font-size="14" fill="#23261f">No hunting</text>
+<rect x="6.0" y="219" width="388.0" height="76" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 247 V228 Q6.0 219 15.0 219 H385.0 Q394.0 219 394.0 228 V247 Z" fill="#c92a2a"/>
+<text x="14.0" y="239" font-size="14" font-weight="bold" fill="#ffffff">No Shooting or Hunting Area</text>
+<text x="14.0" y="267" font-size="14" fill="#23261f">No firearms and no hunting by any method (95%, my</text>
+<text x="14.0" y="285" font-size="14" fill="#23261f">reading)</text>
+<rect x="6.0" y="303" width="388.0" height="76" rx="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<path d="M6.0 331 V312 Q6.0 303 15.0 303 H385.0 Q394.0 303 394.0 312 V331 Z" fill="#4a7fb0"/>
+<text x="14.0" y="323" font-size="14" font-weight="bold" fill="#ffffff">Firearms Using Shot Only Area</text>
+<text x="14.0" y="351" font-size="14" fill="#23261f">Shotgun with shot only: no slugs, no rifle bullets</text>
+<text x="14.0" y="369" font-size="14" fill="#23261f">(90%, my reading)</text>
+</svg>

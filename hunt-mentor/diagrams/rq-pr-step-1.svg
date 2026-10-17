@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1: Mark every open road. Map sketch with a truck road, an ATV route branching off and a gate across a road. Truck roads, ATV routes, gates. Check closures.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/><text x="30" y="37" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text><text x="60" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Mark every open road</text>
+<rect x="60" y="72" width="280" height="164" fill="#dfe6d3" stroke="#8a9a6b"/>
+<clipPath id="rq-pr-step-1-c"><rect x="60" y="72" width="280" height="164"/></clipPath>
+<g clip-path="url(#rq-pr-step-1-c)"><path d="M60 206 C120 196 150 140 220 134 C270 130 300 108 340 98" stroke="#23261f" stroke-width="5" fill="none"/><path d="M150 150 C170 180 200 200 250 228" stroke="#6b4f35" stroke-width="3" stroke-dasharray="7 4" fill="none"/></g>
+<g transform="translate(110 192) rotate(-18)"><rect x="-16" y="-8" width="32" height="16" rx="3" fill="#3d5a80"/><rect x="4" y="-7" width="9" height="14" rx="2" fill="#c9d6e0"/></g>
+<g transform="translate(218 210) rotate(28)"><rect x="-10" y="-9" width="20" height="18" rx="4" fill="#5c7a3a"/><rect x="-13" y="-11" width="6" height="5" rx="1.5" fill="#2b2b2b"/><rect x="7" y="-11" width="6" height="5" rx="1.5" fill="#2b2b2b"/><rect x="-13" y="6" width="6" height="5" rx="1.5" fill="#2b2b2b"/><rect x="7" y="6" width="6" height="5" rx="1.5" fill="#2b2b2b"/></g>
+<path d="M286 102 L296 130" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/><circle cx="286" cy="102" r="4" fill="#23261f"/><circle cx="296" cy="130" r="4" fill="#23261f"/>
+<rect x="95.4" y="92.0" width="89.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="140" y="111" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">truck road</text>
+<line x1="118" y1="186" x2="125.443" y2="119" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="118" cy="186" r="2.6" fill="#2f3a2b"/>
+<rect x="239.0" y="200.0" width="90.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="284" y="219" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ATV route</text>
+<line x1="232" y1="212" x2="238.962" y2="213" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="232" cy="212" r="2.6" fill="#2f3a2b"/>
+<rect x="277.1" y="150.0" width="45.8" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="169" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">gate</text>
+<line x1="292" y1="120" x2="297.111" y2="150" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="292" cy="120" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="270" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Truck roads, ATV routes, gates.</text>
+<text x="200" y="290" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Check closures.</text>
+</svg>

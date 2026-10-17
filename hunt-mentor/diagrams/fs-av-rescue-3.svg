@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Rescue step 3: probe straight down in a spiral where the signal is strongest until you hit them. Leave the probe in.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Probe</text><rect x="0" y="100" width="400" height="200" rx="0" fill="#f4f7fb"/><line x1="200" y1="60" x2="200" y2="220" stroke="#9a9a8f" stroke-width="5" stroke-linecap="round"/><rect x="160" y="220" width="80" height="24" rx="6" fill="#e8590c"/><text x="300" y="80" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hit? Leave it in</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Probe down, leave it in place</text>
+</svg>

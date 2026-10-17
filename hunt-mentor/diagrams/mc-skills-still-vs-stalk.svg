@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 358" font-family="sans-serif" role="img" aria-label="Two panels compared. Still hunting, drawn as a hunter in blaze orange slipping through thick timber: thick timber, you find the animal as you go, two or three steps then look, best on wet quiet days, a few hundred metres an hour. Spot and stalk, drawn as a hunter crouched glassing open hills with a deer far off: open country, glass first then go, fast in dead ground, slow where it can see, use landmarks and wind. Both are mostly standing still (Tip).">
+<rect width="400" height="358" fill="#fffaf0"/>
+<defs><clipPath id="mc-skills-still-vs-stalk-c1"><rect x="10" y="44" width="184" height="104" rx="6"/></clipPath><clipPath id="mc-skills-still-vs-stalk-c2"><rect x="206" y="44" width="184" height="104" rx="6"/></clipPath></defs>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Still hunting or spot and stalk?</text>
+<g clip-path="url(#mc-skills-still-vs-stalk-c1)"><rect x="10" y="44" width="184" height="104" fill="#dfe6d3"/>
+<path d="M55 84 L65 114 L45 114z" fill="#456b3a"/>
+<path d="M121 111 L131 143 L111 143z" fill="#456b3a"/>
+<path d="M54 118 L64 150 L44 150z" fill="#456b3a"/>
+<path d="M39 83 L49 121 L29 121z" fill="#456b3a"/>
+<path d="M82 35 L92 71 L72 71z" fill="#2f4a2a"/>
+<path d="M148 88 L158 117 L138 117z" fill="#2f4a2a"/>
+<path d="M160 58 L170 92 L150 92z" fill="#3a5a31"/>
+<path d="M141 113 L151 144 L131 144z" fill="#456b3a"/>
+<path d="M170 52 L180 78 L160 78z" fill="#2f4a2a"/>
+<path d="M58 87 L68 124 L48 124z" fill="#3a5a31"/>
+<path d="M85 59 L95 89 L75 89z" fill="#2f4a2a"/>
+<path d="M166 115 L176 149 L156 149z" fill="#2f4a2a"/>
+<path d="M138 63 L148 96 L128 96z" fill="#456b3a"/>
+<path d="M50 103 L60 137 L40 137z" fill="#3a5a31"/>
+<path d="M34 74 L44 109 L24 109z" fill="#3a5a31"/>
+<path d="M28 103 L38 134 L18 134z" fill="#2f4a2a"/>
+<path d="M16 74 L26 104 L6 104z" fill="#2f4a2a"/>
+<path d="M20 94 L30 119 L10 119z" fill="#456b3a"/>
+<path d="M178 65 L188 92 L168 92z" fill="#2f4a2a"/>
+<path d="M40 146 Q70 136 100 132" fill="none" stroke="#6b5b4b" stroke-width="2" stroke-dasharray="3 6"/>
+<g transform="translate(104 140) scale(1.1)"><circle cx="0" cy="-30" r="5" fill="#e8590c"/><path d="M-5 -24 H5 L4 -8 H-4z" fill="#e8590c"/><path d="M-2 -8 L-6 4 M2 -8 L7 4" stroke="#2f3a2b" stroke-width="3.2" stroke-linecap="round"/><path d="M4 -20 L16 -26" stroke="#3a3f3a" stroke-width="2.4"/></g>
+</g>
+<g clip-path="url(#mc-skills-still-vs-stalk-c2)"><rect x="206" y="44" width="184" height="104" fill="#e6efe0"/>
+<path d="M206 96 Q260 70 310 86 T390 78 V148 H206z" fill="#c9d3a8"/>
+<path d="M206 124 Q280 104 390 122 V148 H206z" fill="#a9b77e"/>
+<g transform="translate(356 80) scale(0.32)"><ellipse rx="20" ry="9" fill="#7a6248"/><path d="M14 -4 L22 -14 L27 -12 L20 0z" fill="#7a6248"/><ellipse cx="25" cy="-14" rx="6.5" ry="4.5" fill="#7a6248"/><rect x="-15" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="-7" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="8" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="14" y="5" width="3.5" height="14" fill="#7a6248"/></g>
+<path d="M244 130 Q290 112 330 104" fill="none" stroke="#6b5b4b" stroke-width="2" stroke-dasharray="3 6"/>
+<g transform="translate(236 136) scale(1.1)"><circle cx="2" cy="-22" r="5" fill="#e8590c"/><path d="M-2 -17 L8 -16 L6 -4 L-6 -4z" fill="#e8590c"/><path d="M-4 -4 L-10 4 L-2 4 M4 -4 L8 4" stroke="#2f3a2b" stroke-width="3.2" fill="none" stroke-linecap="round"/><rect x="6" y="-25" width="8" height="5" rx="1" fill="#2f3a2b"/><path d="M7 -15 L10 -21" stroke="#e8590c" stroke-width="3"/></g>
+</g>
+<rect x="10" y="44" width="184" height="104" rx="6" fill="none" stroke="#2f3a2b" stroke-width="1.6"/>
+<rect x="10" y="152" width="184" height="30" rx="6" fill="#2f3a2b"/>
+<text x="102" y="173" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Still hunting</text>
+<rect x="206" y="44" width="184" height="104" rx="6" fill="none" stroke="#6b4f35" stroke-width="1.6"/>
+<rect x="206" y="152" width="184" height="30" rx="6" fill="#6b4f35"/>
+<text x="298" y="173" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Spot and stalk</text>
+<circle cx="19" cy="201" r="3" fill="#e8590c"/>
+<text x="28" y="206" font-size="16" fill="#2f3a2b">Thick timber</text>
+<circle cx="215" cy="201" r="3" fill="#e8590c"/>
+<text x="224" y="206" font-size="16" fill="#2f3a2b">Open country</text>
+<circle cx="19" cy="223" r="3" fill="#e8590c"/>
+<text x="28" y="228" font-size="16" fill="#2f3a2b">You find it as you go</text>
+<circle cx="215" cy="223" r="3" fill="#e8590c"/>
+<text x="224" y="228" font-size="16" fill="#2f3a2b">Glass first, then go</text>
+<circle cx="19" cy="245" r="3" fill="#e8590c"/>
+<text x="28" y="250" font-size="16" fill="#2f3a2b">2 or 3 steps, look</text>
+<circle cx="215" cy="245" r="3" fill="#e8590c"/>
+<text x="224" y="250" font-size="16" fill="#2f3a2b">Fast in dead ground</text>
+<circle cx="19" cy="267" r="3" fill="#e8590c"/>
+<text x="28" y="272" font-size="16" fill="#2f3a2b">Wet, quiet days</text>
+<circle cx="215" cy="267" r="3" fill="#e8590c"/>
+<text x="224" y="272" font-size="16" fill="#2f3a2b">Slow in its sight</text>
+<circle cx="19" cy="289" r="3" fill="#e8590c"/>
+<text x="28" y="294" font-size="16" fill="#2f3a2b">Few hundred m an hour</text>
+<circle cx="215" cy="289" r="3" fill="#e8590c"/>
+<text x="224" y="294" font-size="16" fill="#2f3a2b">Landmarks, wind</text>
+<rect x="10" y="318" width="380" height="32" rx="8" fill="#fde3d3"/>
+<text x="200" y="340" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Both: mostly standing still (Tip)</text>
+</svg>

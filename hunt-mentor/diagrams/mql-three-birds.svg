@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three small upland birds drawn to scale by weight. California quail, 140 to 230 grams, curled black plume. Gray partridge or Hun, 300 to 500 grams, orange face and chestnut horseshoe. Chukar, 538 to 765 grams, red bill and legs and a black necklace. Weights from Audubon, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three small upland birds, to scale</text>
+<rect x="10" y="40" width="380" height="150" rx="8" fill="#dfe6d3"/>
+<g transform="translate(75 130) scale(1.0 1.0)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#7d7f86"/><path d="M-18 -2 L-28 -6 L-26 4 Z" fill="#5f6168"/><ellipse cx="-2" cy="6" rx="14" ry="6" fill="#c9b48a"/><path d="M-10 4 l3 3 M-4 4 l3 3 M2 4 l3 3 M8 4 l3 3" stroke="#5f6168" stroke-width="1.5"/><path d="M-12 -4 l14 -2 M-12 0 l14 -2" stroke="#fffaf0" stroke-width="1.5"/><circle cx="16" cy="-12" r="8" fill="#7d7f86"/><path d="M14 -10 a7 7 0 0 0 9 6 L22 -2 a9 9 0 0 1 -9 -8 Z" fill="#111"/><path d="M12 -9 q4 9 12 6" stroke="#fffaf0" stroke-width="1.5" fill="none"/><path d="M14 -19 q-2 -10 8 -9 q-4 1 -5 9 Z" fill="#111"/><circle cx="19" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#333"/><path d="M2 12 l-2 8 M8 12 l2 8" stroke="#6b4f35" stroke-width="2"/></g>
+<g transform="translate(195 128) scale(1.35 1.35)"><ellipse cx="0" cy="0" rx="20" ry="13" fill="#8f9396"/><path d="M-18 -2 L-27 -4 L-25 5 Z" fill="#b5652b"/><path d="M-6 4 q6 -6 12 0 q-6 4 -12 0 Z" fill="#6b3a1e"/><circle cx="16" cy="-12" r="8" fill="#d9822b"/><circle cx="18" cy="-13" r="1.6" fill="#111"/><path d="M23 -12 l4 1 l-4 2 Z" fill="#555"/><path d="M2 12 l-2 7 M8 12 l2 7" stroke="#6b4f35" stroke-width="2"/></g>
+<g transform="translate(320 124) scale(1.6 1.6)"><ellipse cx="0" cy="0" rx="22" ry="14" fill="#b9a88a"/><path d="M-20 -2 L-30 -4 L-28 5 Z" fill="#8b6f4a"/><path d="M-8 -6 v12 M-3 -7 v13 M2 -7 v13 M7 -6 v12" stroke="#2f2f2f" stroke-width="2"/><circle cx="18" cy="-13" r="9" fill="#9fa4a8"/><path d="M12 -15 q6 -2 13 2 q-4 10 -11 10" stroke="#111" stroke-width="2.5" fill="#f3ead8"/><circle cx="20" cy="-15" r="1.6" fill="#111"/><path d="M26 -14 l5 1 l-5 3 Z" fill="#d23b2a"/><path d="M2 13 l-2 8 M9 13 l2 8" stroke="#d23b2a" stroke-width="2.5"/></g>
+<text x="75" y="210" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">California quail</text>
+<text x="75" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">140 to 230 g</text>
+<text x="75" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">curled plume</text>
+<text x="195" y="210" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gray partridge</text>
+<text x="195" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">300 to 500 g</text>
+<text x="195" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">orange face</text>
+<text x="320" y="210" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chukar</text>
+<text x="320" y="230" font-size="14" fill="#2f3a2b" text-anchor="middle">538 to 765 g</text>
+<text x="320" y="250" font-size="14" fill="#2f3a2b" text-anchor="middle">black necklace</text>
+<text x="200" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Weights: Audubon field guide (75%)</text>
+</svg>

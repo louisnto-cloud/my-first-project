@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Warm day step 1: open the carcass or take the meat off at once, within the hour.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#2f3a2b" text-anchor="middle" font-weight="bold">1. Guts out or meat off at once</text><rect x="0" y="40" width="400" height="260" fill="#fffaf0"/><rect x="110" y="140" width="180" height="70" rx="30" fill="#8b5a2b"/><path d="M280 150 L320 116 L334 124 L300 170 Z" fill="#8b5a2b"/><line x1="140" y1="176" x2="260" y2="176" stroke="#fffaf0" stroke-width="3" stroke-dasharray="8 6"/><text x="200" y="250" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">within the hour (80%)</text>
+</svg>

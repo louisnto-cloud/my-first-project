@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 368" font-family="sans-serif" role="img" aria-label="Two panels. Group hunt: 2 to 4 hunters share one ticket; if drawn, every member gets an authorization. Not allowed for moose, bison, black bear, or elk in Regions 1 and 2. Shared hunt: moose or bison only; each member is entered with their own ticket and one hit draws the whole group. A group of 2 may take 1 animal, a group of 3 or 4 may take 2.">
+<rect width="400" height="368" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Group hunt vs shared hunt</text>
+<rect x="8" y="42" width="188" height="318" rx="10" fill="#fff" stroke="#8a9a6b" stroke-width="2.5"/>
+<rect x="204" y="42" width="188" height="318" rx="10" fill="#fff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="102" y="68" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Group hunt</text>
+<text x="298" y="68" font-size="18" font-weight="bold" fill="#c2410c" text-anchor="middle">Shared hunt</text>
+<g transform="translate(76 100)"><circle cx="-9" cy="-10" r="6" fill="#2f3a2b"/><path d="M-18 16 V2 Q-9 -5 0 2 V16 Z" fill="#2f3a2b"/><circle cx="10" cy="-8" r="6" fill="#8a9a6b"/><path d="M1 18 V4 Q10 -3 19 4 V18 Z" fill="#8a9a6b"/></g>
+<g transform="translate(134 100)"><circle cx="-9" cy="-10" r="6" fill="#2f3a2b"/><path d="M-18 16 V2 Q-9 -5 0 2 V16 Z" fill="#2f3a2b"/><circle cx="10" cy="-8" r="6" fill="#8a9a6b"/><path d="M1 18 V4 Q10 -3 19 4 V18 Z" fill="#8a9a6b"/></g>
+<g transform="translate(272 100)"><circle cx="-9" cy="-10" r="6" fill="#2f3a2b"/><path d="M-18 16 V2 Q-9 -5 0 2 V16 Z" fill="#2f3a2b"/><circle cx="10" cy="-8" r="6" fill="#8a9a6b"/><path d="M1 18 V4 Q10 -3 19 4 V18 Z" fill="#8a9a6b"/></g>
+<g transform="translate(330 100)"><circle cx="-9" cy="-10" r="6" fill="#2f3a2b"/><path d="M-18 16 V2 Q-9 -5 0 2 V16 Z" fill="#2f3a2b"/><circle cx="10" cy="-8" r="6" fill="#8a9a6b"/><path d="M1 18 V4 Q10 -3 19 4 V18 Z" fill="#8a9a6b"/></g>
+<path d="M85 128 h34 v19 a6 6 0 0 0 0 12 v19 h-34 v-19 a6 6 0 0 0 0 -12 z" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><text x="102" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1</text>
+<path d="M222 128 h34 v19 a6 6 0 0 0 0 12 v19 h-34 v-19 a6 6 0 0 0 0 -12 z" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/><text x="239" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1</text>
+<path d="M262 128 h34 v19 a6 6 0 0 0 0 12 v19 h-34 v-19 a6 6 0 0 0 0 -12 z" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/><text x="279" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2</text>
+<path d="M302 128 h34 v19 a6 6 0 0 0 0 12 v19 h-34 v-19 a6 6 0 0 0 0 -12 z" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/><text x="319" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3</text>
+<path d="M342 128 h34 v19 a6 6 0 0 0 0 12 v19 h-34 v-19 a6 6 0 0 0 0 -12 z" fill="#fde8d8" stroke="#e8590c" stroke-width="2"/><text x="359" y="159" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4</text>
+<text x="102" y="210" font-size="16" fill="#2f3a2b" text-anchor="middle">2 to 4 hunters</text>
+<text x="102" y="232" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One ticket</text>
+<text x="102" y="254" font-size="16" fill="#2f3a2b" text-anchor="middle">Drawn: everyone</text>
+<text x="102" y="276" font-size="16" fill="#2f3a2b" text-anchor="middle">gets a tag</text>
+<text x="298" y="210" font-size="16" fill="#2f3a2b" text-anchor="middle">Moose or bison only</text>
+<text x="298" y="232" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One ticket each</text>
+<text x="298" y="254" font-size="16" fill="#2f3a2b" text-anchor="middle">One hit draws all</text>
+<text x="102" y="304" font-size="15" fill="#8b5a2b" text-anchor="middle">Not for moose, bison,</text>
+<text x="102" y="323" font-size="15" fill="#8b5a2b" text-anchor="middle">black bear, or elk in</text>
+<text x="102" y="342" font-size="15" fill="#8b5a2b" text-anchor="middle">Regions 1 and 2</text>
+<text x="298" y="284" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Group of 2: 1 animal</text>
+<text x="298" y="305" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Group of 3 or 4:</text>
+<text x="298" y="326" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">2 animals</text>
+</svg>

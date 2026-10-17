@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Sketch of a knob in the Hunt Map 3D view. A small rounded hill rises out of gentler, flatter ground with wide contour lines. Small closed contour rings wrap around its top. A hunter stands on top using it as a lookout. Caption: small closed rings, a little top.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Knob in 3D</text>
+<text x="388" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="38" width="400" height="232" fill="#e3ecf3"/>
+<path d="M0 150 C80 140 150 152 200 150 C260 148 330 138 400 146 L400 270 L0 270z" fill="#c9cfa6"/>
+<path d="M0 190 C80 180 140 200 200 198 C270 196 330 184 400 192" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<path d="M0 230 C80 220 140 240 200 238 C270 236 330 224 400 232" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<path d="M118 180 C130 132 160 104 200 102 C240 104 270 132 282 180 C250 196 150 196 118 180z" fill="#ecebcf"/>
+<path d="M200 102 C240 104 270 132 282 180 C262 188 240 192 216 193 C236 160 228 124 200 102z" fill="#a3b086"/>
+<path d="M118 180 C130 132 160 104 200 102 C240 104 270 132 282 180" fill="none" stroke="#2f3a2b" stroke-width="3.2"/>
+<ellipse cx="200" cy="168" rx="70" ry="14" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="200" cy="142" rx="46" ry="10" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="200" cy="118" rx="22" ry="6" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(40 176) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(70 186) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(342 170) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(372 182) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(24 236) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(60 250) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(200 104)"><path d="M-4 0 L-7 -10 M3 0 L6 -10" stroke="#4a4136" stroke-width="3.4" stroke-linecap="round"/><path d="M-6 -22 C-6 -26 6 -26 6 -22 L5 -9 H-5z" fill="#e8590c"/><circle cx="0" cy="-27" r="4" fill="#e0b48c"/><path d="M2 -24 h8" stroke="#2f3a2b" stroke-width="3"/></g>
+<line x1="212" y1="86" x2="235.38" y2="73" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="212" cy="86" r="2.6" fill="#2f3a2b"/>
+<rect x="235.4" y="52.0" width="129.2" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="71" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Knob: a lookout</text>
+<rect x="218.7" y="241.0" width="154.6" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="296" y="260" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">gentle slope or flat</text>
+<text x="200" y="292" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Small closed rings: a little top</text>
+</svg>

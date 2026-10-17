@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="One LEH hunt row from the 2026 to 2027 synopsis: code 7014, MU 3-27 Kamloops, 1 to 30 November, antlerless, 25 authorizations, odds 22.4 to 1. Labels: 1, the hunt code changes every year; 2, MU is the Management Unit, here Kamloops; 3, dates are your hunt window; 4, class is what you may take; 5, authorizations are tentative; 6, odds are last year&#x27;s applicants per tag.">
+<rect width="400" height="314" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Read one hunt row</text>
+<rect x="8" y="42" width="50" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="33" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Code</text>
+<rect x="8" y="70" width="50" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="33" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">7014</text>
+<rect x="58" y="42" width="50" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="83" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">MU</text>
+<rect x="58" y="70" width="50" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="83" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3-27</text>
+<rect x="108" y="42" width="94" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="155" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Dates</text>
+<rect x="108" y="70" width="94" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="155" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 to 30 Nov</text>
+<rect x="202" y="42" width="90" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="247" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Class</text>
+<rect x="202" y="70" width="90" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="247" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Antlerless</text>
+<rect x="292" y="42" width="44" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="314" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Auth</text>
+<rect x="292" y="70" width="44" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="314" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25</text>
+<rect x="336" y="42" width="56" height="28" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<text x="364" y="61" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Odds</text>
+<rect x="336" y="70" width="56" height="32" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="364" y="92" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">22.4:1</text>
+<line x1="33.0" y1="102" x2="33.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="33.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="33" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<line x1="83.0" y1="102" x2="83.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="83.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="83" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<line x1="155.0" y1="102" x2="155.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="155.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="155" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">3</text>
+<line x1="247.0" y1="102" x2="247.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="247.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="247" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">4</text>
+<line x1="314.0" y1="102" x2="314.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="314.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="314" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">5</text>
+<line x1="364.0" y1="102" x2="364.0" y2="112" stroke="#e8590c" stroke-width="1.6"/>
+<circle cx="364.0" cy="124" r="11" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/><text x="364" y="129" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">6</text>
+<circle cx="22.0" cy="149.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="154" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="42" y="154" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">Hunt code:</tspan> changes every year</text>
+<circle cx="22.0" cy="177.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="182" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="42" y="182" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">MU (Management Unit):</tspan> Kamloops</text>
+<circle cx="22.0" cy="205.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="210" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="42" y="210" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">Dates:</tspan> your hunt window</text>
+<circle cx="22.0" cy="233.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="238" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="42" y="238" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">Class:</tspan> what you may take</text>
+<circle cx="22.0" cy="261.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="266" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="42" y="266" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">Auth:</tspan> tentative authorizations</text>
+<circle cx="22.0" cy="289.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="22" y="294" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<text x="42" y="294" font-size="16" fill="#2f3a2b"><tspan font-weight="bold" fill="#2f3a2b">Odds:</tspan> last year, applicants per tag</text>
+</svg>

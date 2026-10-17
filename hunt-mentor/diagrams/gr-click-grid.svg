@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Target at 100 metres on a 1 centimetre grid. The centre of a 3 shot group sits 6 centimetres low and 3 centimetres left of the bullseye. With a quarter MOA scope, 1 click is about 0.73 centimetres. 6 divided by 0.73: turn 8 clicks UP. 3 divided by 0.73: turn 4 clicks RIGHT. Move the bullet the way the arrow says.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="8" y="8" width="248" height="284" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M20 8 V292 M40 8 V292 M60 8 V292 M80 8 V292 M100 8 V292 M120 8 V292 M140 8 V292 M160 8 V292 M180 8 V292 M200 8 V292 M220 8 V292 M240 8 V292 M8 20 H256 M8 40 H256 M8 60 H256 M8 80 H256 M8 100 H256 M8 120 H256 M8 140 H256 M8 160 H256 M8 180 H256 M8 200 H256 M8 220 H256 M8 240 H256 M8 260 H256 M8 280 H256 " stroke="#dfe6d3" stroke-width="1"/>
+<circle cx="180" cy="60" r="34" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="180" cy="60" r="20" fill="none" stroke="#2f3a2b" stroke-width="1.5"/><circle cx="180" cy="60" r="8" fill="#e8590c"/>
+<circle cx="111" cy="173" r="5" fill="#2f3a2b"/>
+<circle cx="129" cy="177" r="5" fill="#2f3a2b"/>
+<circle cx="118" cy="189" r="5" fill="#2f3a2b"/>
+<path d="M113 180 h14 M120 173 v14" stroke="#e8590c" stroke-width="2"/>
+<line x1="130" y1="180" x2="172" y2="180" stroke="#e8590c" stroke-width="3.5"/><path d="M180.0 180.0 L169.0 173.9 L169.0 186.1z" fill="#e8590c"/>
+<line x1="180" y1="176" x2="180" y2="104" stroke="#e8590c" stroke-width="3.5"/><path d="M180.0 96.0 L173.9 107.0 L186.1 107.0z" fill="#e8590c"/>
+<rect x="116.0" y="196.0" width="67.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="150" y="215" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">3 cm R</text>
+<rect x="91.2" y="106.0" width="78.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="130.579" y="125" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">6 cm UP</text>
+<rect x="40.4" y="260.0" width="183.1" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="132" y="278" font-size="14" fill="#2f3a2b" text-anchor="middle">1 square = 1 cm at 100 m</text>
+<text x="266" y="32" font-size="17" font-weight="bold" fill="#2f3a2b">1 click</text><text x="266" y="54" font-size="17" font-weight="bold" fill="#e8590c">= 0.73 cm</text>
+<text x="266" y="96" font-size="16" font-weight="bold" fill="#2f3a2b">6 ÷ 0.73</text><rect x="264" y="104" width="128" height="32" rx="7" fill="#e8590c"/><text x="328" y="126" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">8 clicks UP</text>
+<text x="266" y="172" font-size="16" font-weight="bold" fill="#2f3a2b">3 ÷ 0.73</text><rect x="264" y="180" width="128" height="32" rx="7" fill="#e8590c"/><text x="328" y="202" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4 clicks R</text>
+<text x="266" y="246" font-size="15" fill="#2f3a2b">Move the bullet</text>
+<text x="266" y="265" font-size="15" fill="#2f3a2b">the way the</text>
+<text x="266" y="284" font-size="15" fill="#2f3a2b">arrow says</text>
+</svg>

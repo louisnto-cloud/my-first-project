@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" font-family="sans-serif" role="img" aria-label="Accidental illegal harvest, in order. 1, cancel your species licence at once and write in ink that you intend to self report. Then one of these: 2, with phone signal, call RAPP at 1 877 952 7277 and follow the conservation officer. 3, if a phone is a short trip away, field dress the animal, leave the carcass there and go call. 4, if remote with no phone, field dress it, care for the carcass, and call as soon as you can. The test is how you deal with the mistake.">
+<rect width="400" height="440" fill="#fffaf0"/>
+<g data-tip="Cancel first|Cancel your species licence at once and write in ink on it that you intend to self report (99%, page 18)." data-tip-dot="382,18">
+<rect x="8" y="8" width="384" height="72" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.2"/>
+<circle cx="30.0" cy="44.0" r="14" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="49" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(74 44)"><rect x="-16" y="-18" width="26" height="34" rx="2" fill="#fffdf6" stroke="#8a7f6a" stroke-width="1.4"/><path d="M-11 -10 H5 M-11 -3 H5 M-11 4 H0" stroke="#b9ae96" stroke-width="2"/><path d="M4 14 L18 -10 L22 -7 L8 17 L3 18z" fill="#2f3a2b"/><path d="M18 -10 L22 -7 L24 -10 L20 -13z" fill="#e8590c"/></g>
+<text x="108" y="38" font-size="16" font-weight="bold" fill="#2f3a2b">Cancel your licence now</text>
+<text x="108" y="60" font-size="15" fill="#2f3a2b">Write in ink: I intend to self report.</text>
+</g>
+<line x1="200" y1="82" x2="200" y2="96" stroke="#2f3a2b" stroke-width="2.2"/><path d="M200.0 104.0 L204.9 95.0 L195.1 95.0z" fill="#2f3a2b"/>
+<text x="214" y="98" font-size="14" font-weight="bold" fill="#6b5b4b">then one of these:</text>
+<g data-tip="Phone signal|Call RAPP (Report All Poachers and Polluters) and follow a Conservation Officer's direction (99%)." data-tip-dot="382,120">
+<rect x="8" y="110" width="384" height="122" rx="10" fill="#f4eedf"/>
+<rect x="8" y="110" width="6" height="122" rx="3" fill="#2f6e3b"/>
+<circle cx="32.0" cy="132.0" r="12" fill="#2f6e3b" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="137" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g transform="translate(74 172)"><rect x="-10" y="-18" width="20" height="34" rx="4" fill="#2f3a2b"/><rect x="-7" y="-13" width="14" height="22" fill="#e8f0f6"/><rect x="12" y="-4" width="3.5" height="8" fill="#2f6e3b"/><rect x="17" y="-9" width="3.5" height="13" fill="#2f6e3b"/><rect x="22" y="-14" width="3.5" height="18" fill="#2f6e3b"/></g>
+<text x="116" y="134" font-size="16" font-weight="bold" fill="#2f6e3b">Phone signal?</text>
+<text x="116" y="156" font-size="15" font-weight="bold" fill="#2f3a2b">Call RAPP (Report All</text>
+<text x="116" y="175" font-size="15" font-weight="bold" fill="#2f3a2b">Poachers and Polluters)</text>
+<text x="116" y="201" font-size="20" font-weight="bold" fill="#e8590c">1 877 952 7277</text>
+<text x="116" y="222" font-size="15" fill="#2f3a2b">Follow the officer.</text>
+</g>
+<g data-tip="Phone a short trip away|Field dress the animal so the meat keeps, leave the carcass there, and go to where you can call (99%)." data-tip-dot="382,250">
+<rect x="8" y="240" width="384" height="76" rx="10" fill="#f4eedf"/>
+<rect x="8" y="240" width="6" height="76" rx="3" fill="#4a7fb0"/>
+<circle cx="32.0" cy="262" r="12" fill="#4a7fb0" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="267" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<g transform="translate(74 280)"><rect x="-10" y="-18" width="20" height="34" rx="4" fill="#2f3a2b"/><rect x="-7" y="-13" width="14" height="22" fill="#e8f0f6"/><rect x="12" y="-4" width="3.5" height="8" fill="#2f6e3b"/><rect x="17" y="-9" width="3.5" height="13" fill="#2f6e3b"/><rect x="22" y="-14" width="3.5" height="18" fill="#2f6e3b"/><path d="M-30 14 h18" stroke="#6b5b4b" stroke-width="2" stroke-dasharray="3 3"/><path d="M-10.0 14.0 L-17.0 10.1 L-17.0 17.9z" fill="#6b5b4b"/></g>
+<text x="116" y="264" font-size="16" font-weight="bold" fill="#2c5a80">Phone a short trip away?</text>
+<text x="116" y="285" font-size="15" fill="#2f3a2b">Field dress it, leave it</text>
+<text x="116" y="306" font-size="15" fill="#2f3a2b">there, go call.</text>
+</g>
+<g data-tip="Remote, no phone|Field dress it, care for the carcass, and call as soon as you reach a phone (99%)." data-tip-dot="382,334">
+<rect x="8" y="324" width="384" height="76" rx="10" fill="#f4eedf"/>
+<rect x="8" y="324" width="6" height="76" rx="3" fill="#4a7fb0"/>
+<circle cx="32.0" cy="346" r="12" fill="#4a7fb0" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="351" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<g transform="translate(74 364)"><rect x="-10" y="-18" width="20" height="34" rx="4" fill="#2f3a2b"/><rect x="-7" y="-13" width="14" height="22" fill="#e8f0f6"/><path d="M14.2 -12.8 l9.6 9.6 M23.8 -12.8 l-9.6 9.6" stroke="#c0392b" stroke-width="2.6" stroke-linecap="round"/></g>
+<text x="116" y="348" font-size="16" font-weight="bold" fill="#2c5a80">Remote, no phone?</text>
+<text x="116" y="369" font-size="15" fill="#2f3a2b">Field dress it, care for the</text>
+<text x="116" y="390" font-size="15" fill="#2f3a2b">meat, call when you can.</text>
+</g>
+<g data-tip="The true test|Every self report is investigated and the officer decides what fits. Meat the service recovers goes to people in need (99%)." data-tip-dot="384,416">
+<text x="200" y="426" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The test is how you deal with the mistake.</text>
+</g>
+</svg>

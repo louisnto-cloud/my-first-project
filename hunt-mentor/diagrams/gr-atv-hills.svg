@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="ATV on hills, rider course practice. Going up: low gear, weight forward. Going down: weight back. Never ride sideways across a steep slope. Stalled on a climb: brake, get off on the uphill side.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hills on a quad (Tip)</text>
+  <g>
+    <path d="M6 230 L126 120 L126 230 Z" fill="#dfe6d3" stroke="#8a9a6b"/>
+    <g transform="translate(70 170) rotate(-42)"><rect x="-26" y="-12" width="52" height="12" rx="4" fill="#4a5a3a"/><circle cx="-18" cy="4" r="9" fill="#2f3a2b"/><circle cx="18" cy="4" r="9" fill="#2f3a2b"/><circle cx="8" cy="-30" r="7" fill="#e8590c"/><line x1="0" y1="-12" x2="8" y2="-24" stroke="#2f3a2b" stroke-width="5"/></g>
+    <path d="M140 230 L260 230 L140 120 Z" fill="#dfe6d3" stroke="#8a9a6b"/>
+    <g transform="translate(196 172) rotate(42)"><rect x="-26" y="-12" width="52" height="12" rx="4" fill="#4a5a3a"/><circle cx="-18" cy="4" r="9" fill="#2f3a2b"/><circle cx="18" cy="4" r="9" fill="#2f3a2b"/><circle cx="-12" cy="-30" r="7" fill="#e8590c"/><line x1="-4" y1="-12" x2="-12" y2="-24" stroke="#2f3a2b" stroke-width="5"/></g>
+    <path d="M274 230 L394 230 L394 150 Z" fill="#dfe6d3" stroke="#8a9a6b"/>
+    <g transform="translate(340 196)"><rect x="-22" y="-14" width="44" height="22" rx="4" fill="#4a5a3a" transform="rotate(-30)"/></g>
+    <path d="M318 170 l40 40 M358 170 l-40 40" stroke="#c0392b" stroke-width="6"/>
+  </g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="66" y="256">Up: lean</text><text x="66" y="274">forward</text><text x="200" y="256">Down: lean</text><text x="200" y="274">back</text><text x="334" y="256" fill="#c0392b">Never</text><text x="334" y="274" fill="#c0392b">sideways</text></g>
+  <text x="200" y="296" font-size="14" fill="#2f3a2b" text-anchor="middle">Stalled? Brake, get off uphill side</text>
+</svg>

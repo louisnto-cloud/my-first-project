@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Phone sketch of the slope direction tool. A hill seen from above, coloured by which way each side faces: north faces in blue for summer beds, south faces in gold for winter and spring feeding.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<defs><clipPath id="mc-elk-map-2-clip"><rect x="92" y="68" width="216" height="222" rx="14"/></clipPath></defs>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="#f4ecdc" stroke="#23261f" stroke-width="2"/>
+<g clip-path="url(#mc-elk-map-2-clip)"><rect x="92" y="68" width="216" height="112" fill="#bcd3e6"/>
+<rect x="92" y="180" width="216" height="110" fill="#ecd38c"/>
+<ellipse cx="200" cy="180" rx="74" ry="58" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<ellipse cx="200" cy="180" rx="54" ry="42" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<ellipse cx="200" cy="180" rx="34" ry="26" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<ellipse cx="200" cy="180" rx="14" ry="10" fill="none" stroke="#8b5a2b" stroke-width="1.6"/>
+<path d="M110 180 H290" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="7 5"/>
+<g transform="translate(288 106)"><circle r="12" fill="#bcd3e6" stroke="#6b5b4b" stroke-width="1.2"/><path d="M0 -9 L5.0 6.0 L0 2.4 L-5.0 6.0z" fill="#2f3a2b"/><text y="-16" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#bcd3e6" stroke-width="3" paint-order="stroke">N</text></g>
+<rect x="129.8" y="78.0" width="120.5" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="190" y="98.5" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">North</text>
+<text x="190" y="118" font-size="15" fill="#2f3a2b" text-anchor="middle">summer beds</text>
+<rect x="147.8" y="234.0" width="104.4" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="254.5" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle">South</text>
+<text x="200" y="274" font-size="15" fill="#2f3a2b" text-anchor="middle">winter feed</text></g>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="none" stroke="#23261f" stroke-width="2"/>
+<path d="M90 68 V52 A16 16 0 0 1 106 36 H294 A16 16 0 0 1 310 52 V68z" fill="#2f3a2b"/>
+<text x="200" y="58" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Slope direction</text>
+</svg>

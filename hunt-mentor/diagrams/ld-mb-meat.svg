@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" font-family="sans-serif" role="img" aria-label="Flowchart for meat home from Manitoba. High risk parts, the brain, eyes and spine, stay in the area where the animal was harvested. The 20 dollar wild animal export permit: whether it applies to your own harvest, VERIFY with the regional office. Across Saskatchewan and Alberta, boned meat and a cleaned skull plate satisfy all three provinces, 80 percent. At the BC line only boned meat and a cleaned hide, antlers and skull plate.">
+<rect x="0" y="0" width="400" height="370" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Manitoba: getting meat home</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">Brain, eyes and spine stay in the harvest</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">area (85%)</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="54" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" font-weight="bold" fill="#2f3a2b">$20 export permit: does it apply to you?</text>
+<text x="28" y="169" font-size="15" font-weight="bold" fill="#2f3a2b">VERIFY with the regional office</text>
+<line x1="200.0" y1="180" x2="200.0" y2="202" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,200 207.0,200 200.0,210" fill="#2f3a2b"/>
+<rect x="16" y="210" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="234" font-size="15" fill="#2f3a2b">Across Saskatchewan and Alberta: boned meat</text>
+<text x="28" y="253" font-size="15" fill="#2f3a2b">and a cleaned skull plate (80%)</text>
+<line x1="200.0" y1="264" x2="200.0" y2="286" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,284 207.0,284 200.0,294" fill="#2f3a2b"/>
+<rect x="16" y="294" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="318" font-size="15" font-weight="bold" fill="#2f3a2b">BC line: boned meat, cleaned hide, antlers,</text>
+<text x="28" y="337" font-size="15" font-weight="bold" fill="#2f3a2b">skull plate only (99%)</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 263" role="img" aria-label="Grid: Region 2 on 6 pages. Contacts, changes box, map: p. 26. Bag limits, notices, vehicle closures: p. 27. Every season row: p. 28. Maps B1 to B33: p. 29 to 31." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="263" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 2 on 6 pages</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Synopsis 2026 to 2028, edition dated 2 October</text>
+<text x="200" y="65" font-size="14" fill="#8b5a2b" text-anchor="middle">2026</text>
+<rect x="6.0" y="87" width="190.0" height="88" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="101.0" y="121" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">p. 26</text>
+<text x="101.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Contacts, changes box,</text>
+<text x="101.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">map</text>
+<rect x="204.0" y="87" width="190.0" height="88" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="299.0" y="121" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">p. 27</text>
+<text x="299.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">Bag limits, notices,</text>
+<text x="299.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">vehicle closures</text>
+<rect x="6.0" y="183" width="190.0" height="70" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="101.0" y="217" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">p. 28</text>
+<text x="101.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Every season row</text>
+<rect x="204.0" y="183" width="190.0" height="70" rx="9" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="299.0" y="217" font-size="15" font-weight="bold" fill="#8a9a6b" text-anchor="middle">p. 29 to 31</text>
+<text x="299.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Maps B1 to B33</text>
+</svg>

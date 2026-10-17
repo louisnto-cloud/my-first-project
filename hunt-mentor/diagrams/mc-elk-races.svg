@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" font-family="sans-serif" role="img" aria-label="Two races of elk in BC, split by the Coast Mountains. Coast: Roosevelt elk, slightly bigger and darker; antler tips may end in a crown of 3 or 4 points; Vancouver Island, the Sunshine Coast and Lower Mainland valleys. Interior: Rocky Mountain elk, more migratory; Kootenay, Peace and northern Rockies, with small herds in the Thompson and Okanagan. Source: BC elk account 2000, 90 percent.">
+<rect width="400" height="380" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Two races of elk in BC</text>
+<rect x="8" y="40" width="384" height="112" rx="8" fill="#e3ecf3"/>
+<path d="M8 128 C40 122 60 136 92 128 L92 152 L8 152z" fill="#4a7fb0" opacity=".7"/>
+<path d="M60 152 C90 120 130 128 160 124 L250 124 C300 122 340 126 392 120 V152z" fill="#c9cfa6"/>
+<path d="M250 152 L250 124 C300 122 340 126 392 120 V152z" fill="#e6d7b0"/>
+<path d="M150 132 L176 82 L190 100 L204 70 L222 104 L236 88 L256 132z" fill="#9aa3ad"/><path d="M176 82 L183 96 L170 96z M204 70 L212 86 L197 86z M236 88 L242 100 L231 100z" fill="#f7f9fb"/>
+<g transform="translate(98 140) scale(0.62 0.62)"><path d="M-10 -22 L-11 0 M-5 -22 L-4 0 M16 -22 L17 0 M21 -22 L23 0" stroke="#3e2a18" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="6" cy="-31" rx="22" ry="11" fill="#8a6440"/><ellipse cx="25" cy="-31" rx="6" ry="8" fill="#d9c49b"/><path d="M-15 -40 L-25 -56 L-15 -60 L-4 -38 C-6 -26 -14 -26 -15 -40z" fill="#3e2a18"/><path d="M-24 -60 C-30 -60 -36 -56 -38 -52 C-36 -49 -30 -49 -24 -51z" fill="#3e2a18"/><path d="M-18 -60 L-14 -66 L-15 -58z" fill="#3e2a18"/><path d="M-22 -61 C-20 -74 -12 -84 6 -90 M-21 -67 L-32 -73 M-17 -74 L-27 -84 M-10 -80 L-15 -94 M-1 -85 L-1 -98 M5 -89 L12 -97" stroke="#d8c79e" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<g transform="translate(330 140) scale(0.58 0.58)"><path d="M-10 -22 L-11 0 M-5 -22 L-4 0 M16 -22 L17 0 M21 -22 L23 0" stroke="#5a3e26" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="6" cy="-31" rx="22" ry="11" fill="#b98b5e"/><ellipse cx="25" cy="-31" rx="6" ry="8" fill="#ead9b4"/><path d="M-15 -40 L-25 -56 L-15 -60 L-4 -38 C-6 -26 -14 -26 -15 -40z" fill="#5a3e26"/><path d="M-24 -60 C-30 -60 -36 -56 -38 -52 C-36 -49 -30 -49 -24 -51z" fill="#5a3e26"/><path d="M-18 -60 L-14 -66 L-15 -58z" fill="#5a3e26"/><path d="M-22 -61 C-20 -74 -12 -84 6 -90 M-21 -67 L-32 -73 M-17 -74 L-27 -84 M-10 -80 L-15 -94 M-1 -85 L-1 -98 M5 -89 L12 -97" stroke="#d8c79e" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<text x="40" y="62" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle" stroke="#e3ecf3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Coast</text>
+<text x="356" y="62" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle" stroke="#e3ecf3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Interior</text>
+<line x1="204" y1="76" x2="204" y2="82" stroke="#2f3a2b" stroke-width="1.2"/>
+<rect x="142.7" y="56.0" width="122.6" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="204" y="74" font-size="14" fill="#2f3a2b" text-anchor="middle">Coast Mountains</text>
+<rect x="8" y="162" width="188" height="184" rx="8" fill="#fffaf0" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="8" y="162" width="188" height="34" rx="8" fill="#4a7fb0"/>
+<text x="102" y="185" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Roosevelt</text>
+<circle cx="20" cy="209" r="3.5" fill="#4a7fb0"/>
+<text x="30" y="214" font-size="15" fill="#2f3a2b">Slightly bigger, darker</text>
+<circle cx="20" cy="234" r="3.5" fill="#4a7fb0"/>
+<text x="30" y="239" font-size="15" fill="#2f3a2b">Tips may end in a</text>
+<text x="30" y="258" font-size="15" fill="#2f3a2b">crown of 3 or 4</text>
+<circle cx="20" cy="278" r="3.5" fill="#4a7fb0"/>
+<text x="30" y="283" font-size="15" fill="#2f3a2b">Vancouver Island,</text>
+<text x="30" y="302" font-size="15" fill="#2f3a2b">Sunshine Coast, Lower</text>
+<text x="30" y="321" font-size="15" fill="#2f3a2b">Mainland valleys</text>
+<rect x="204" y="162" width="188" height="184" rx="8" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="204" y="162" width="188" height="34" rx="8" fill="#8b5a2b"/>
+<text x="298" y="185" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Rocky Mountain</text>
+<circle cx="216" cy="209" r="3.5" fill="#8b5a2b"/>
+<text x="226" y="214" font-size="15" fill="#2f3a2b">More migratory</text>
+<circle cx="216" cy="234" r="3.5" fill="#8b5a2b"/>
+<text x="226" y="239" font-size="15" fill="#2f3a2b">Kootenay, Peace,</text>
+<text x="226" y="258" font-size="15" fill="#2f3a2b">northern Rockies</text>
+<circle cx="216" cy="278" r="3.5" fill="#8b5a2b"/>
+<text x="226" y="283" font-size="15" fill="#2f3a2b">Small herds in the</text>
+<text x="226" y="302" font-size="15" fill="#2f3a2b">Thompson, Okanagan</text>
+<text x="200" y="368" font-size="14" fill="#6b5b4b" text-anchor="middle">BC elk account 2000 (90%)</text>
+</svg>

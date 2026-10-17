@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Timeline after a covey flush. 0 minutes: the birds scatter. Next: singles land a few dozen yards away, Washington Fish and Wildlife, 75 percent. Then they sit tight and are hard to see. Soon assembly calls start, chi CA go, 70 percent. At dusk a chorus of calls as they gather to roost, 75 percent. One Okanagan naturalist says a covey is back together in about 10 minutes, a Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">After the flush: scatter, then regroup</text>
+<line x1="70" y1="50" x2="70" y2="250" stroke="#8a9a6b" stroke-width="4"/>
+<circle cx="70" cy="55" r="9" fill="#e8590c"/>
+<text x="56" y="60" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">0 min</text>
+<text x="88" y="60" font-size="14" fill="#2f3a2b" text-anchor="start">Flush: birds scatter</text>
+<circle cx="70" cy="100" r="9" fill="#8b5a2b"/>
+<text x="56" y="105" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">next</text>
+<text x="88" y="105" font-size="14" fill="#2f3a2b" text-anchor="start">Singles land a few dozen yards off (75%)</text>
+<circle cx="70" cy="145" r="9" fill="#8a9a6b"/>
+<text x="56" y="150" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">then</text>
+<text x="88" y="150" font-size="14" fill="#2f3a2b" text-anchor="start">They sit tight, hard to see (75%)</text>
+<circle cx="70" cy="190" r="9" fill="#4a7fb0"/>
+<text x="56" y="195" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">soon</text>
+<text x="88" y="195" font-size="14" fill="#2f3a2b" text-anchor="start">Assembly calls start: &quot;chi CA go&quot; (70%)</text>
+<circle cx="70" cy="235" r="9" fill="#2f3a2b"/>
+<text x="56" y="240" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">dusk</text>
+<text x="88" y="240" font-size="14" fill="#2f3a2b" text-anchor="start">Calling chorus as they roost (75%)</text>
+<rect x="10" y="262" width="380" height="32" rx="8" fill="#dfe6d3"/>
+<text x="200" y="284" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">One naturalist: back together in about 10 min (Tip)</text>
+</svg>

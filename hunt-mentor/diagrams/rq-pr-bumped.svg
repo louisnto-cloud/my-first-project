@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" font-family="sans-serif" role="img" aria-label="Flowchart, all tips. If the deer stotted or ran out of sight, mark it and leave quietly. If it walked off, tail down and unsure, freeze, wait 15 minutes and glass. If you bumped the same spot twice this week, rest it for 3 days or more. Always note the wind, time and route in the Journal.">
+<rect width="400" height="370" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">You bumped a deer. Now what? (Tip)</text>
+<rect x="10" y="44" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="68" font-size="16" font-weight="bold" fill="#2f3a2b">It stotted or ran out of</text>
+<text x="22" y="88" font-size="16" font-weight="bold" fill="#2f3a2b">sight?</text>
+<line x1="224" y1="73.0" x2="254" y2="73.0" stroke="#e8590c" stroke-width="2.4"/><path d="M262 73.0 l-9 -5 v10z" fill="#e8590c"/>
+<text x="241" y="65" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Yes</text>
+<rect x="262" y="47" width="128" height="52" rx="8" fill="#e8590c"/>
+<text x="326" y="68.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Mark it, leave</text>
+<text x="326" y="87.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">quietly</text>
+<line x1="60" y1="102" x2="60" y2="120" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 128 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="120" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="128" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="152" font-size="16" font-weight="bold" fill="#2f3a2b">It walked off, tail</text>
+<text x="22" y="172" font-size="16" font-weight="bold" fill="#2f3a2b">down, unsure?</text>
+<line x1="224" y1="157.0" x2="254" y2="157.0" stroke="#e8590c" stroke-width="2.4"/><path d="M262 157.0 l-9 -5 v10z" fill="#e8590c"/>
+<text x="241" y="149" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Yes</text>
+<rect x="262" y="131" width="128" height="52" rx="8" fill="#e8590c"/>
+<text x="326" y="152.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Freeze, wait</text>
+<text x="326" y="171.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">15 min, glass</text>
+<line x1="60" y1="186" x2="60" y2="204" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 212 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="204" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="212" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="236" font-size="16" font-weight="bold" fill="#2f3a2b">Same spot bumped</text>
+<text x="22" y="256" font-size="16" font-weight="bold" fill="#2f3a2b">twice this week?</text>
+<line x1="224" y1="241.0" x2="254" y2="241.0" stroke="#e8590c" stroke-width="2.4"/><path d="M262 241.0 l-9 -5 v10z" fill="#e8590c"/>
+<text x="241" y="233" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Yes</text>
+<rect x="262" y="215" width="128" height="52" rx="8" fill="#e8590c"/>
+<text x="326" y="236.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Rest it 3 or</text>
+<text x="326" y="255.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">more days</text>
+<line x1="60" y1="270" x2="60" y2="288" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 296 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="288" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="296" width="380" height="66" rx="12" fill="#2f3a2b"/>
+<text x="200" y="325" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Note the wind, time and route in the</text>
+<text x="200" y="347" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Journal</text>
+</svg>

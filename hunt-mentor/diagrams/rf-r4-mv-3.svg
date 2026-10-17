@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" font-family="sans-serif" role="img" aria-label="Cards of vehicle closures in Management Units 4-22 to 4-24. A star means closed to all motor vehicles; the other symbols close vehicles for hunting use. 4-22: Baynes Lake, Powerplant, Pickering Hills and Sheep Mountain, and Galbraith Creek closed to all vehicles; six watershed groups closed for hunting use in spring and 1 September to 28 February; the main Harrison Creek Forest Service Road open. 4-23: Chauncey Todhunter, Grave Prairie, Corbin, Weigert, Upper Elk and Fording, and Alexander Creek closed to all vehicles, snowmobiles allowed where noted; Barnes Lake closed for hunting use. 4-24: upper Mutton Creek closed to all vehicles; seven watersheds closed for hunting use in spring and 1 September to 28 February. White River and Bull River, across 4-22 to 4-24: closed for hunting use 1 September to 30 June.">
+<rect width="400" height="376" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Vehicle closures, MUs 4-22 to 4-24</text>
+<rect x="10" y="34" width="380" height="88" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 34 H60 V122 H17 A7 7 0 0 1 10 115 V41 A7 7 0 0 1 17 34z" fill="#4a7fb0"/>
+<text x="35" y="84" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-22</text>
+<text x="74" y="56" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="56" font-size="15" fill="#4a7fb0">Baynes Lake, Powerplant, Pickering Hills,</text>
+<text x="92" y="75" font-size="15" fill="#4a7fb0">Sheep Mtn., Galbraith Creek</text>
+<text x="74" y="94" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="94" font-size="15" fill="#c92a2a">Six watershed groups</text>
+<text x="74" y="113" font-size="15" fill="#2f3a2b">Harrison Creek Forest Service Road open</text>
+<rect x="10" y="130" width="380" height="88" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 130 H60 V218 H17 A7 7 0 0 1 10 211 V137 A7 7 0 0 1 17 130z" fill="#4a7fb0"/>
+<text x="35" y="180" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-23</text>
+<text x="74" y="152" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="152" font-size="15" fill="#4a7fb0">Chauncey Todhunter, Grave Prairie,</text>
+<text x="92" y="171" font-size="15" fill="#4a7fb0">Corbin, Weigert, Upper Elk and Fording,</text>
+<text x="92" y="190" font-size="15" fill="#4a7fb0">Alexander Creek</text>
+<text x="74" y="209" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="209" font-size="15" fill="#c92a2a">Barnes Lake</text>
+<rect x="10" y="226" width="380" height="50" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 226 H60 V276 H17 A7 7 0 0 1 10 269 V233 A7 7 0 0 1 17 226z" fill="#4a7fb0"/>
+<text x="35" y="257" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-24</text>
+<text x="74" y="248" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="248" font-size="15" fill="#4a7fb0">Upper Mutton Creek</text>
+<text x="74" y="267" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="267" font-size="15" fill="#c92a2a">Seven watersheds</text>
+<rect x="10" y="284" width="380" height="50" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 284 H60 V334 H17 A7 7 0 0 1 10 327 V291 A7 7 0 0 1 17 284z" fill="#4a7fb0"/>
+<text x="35" y="296" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-22</text><text x="35" y="310" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">to</text><text x="35" y="324" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-24</text>
+<text x="74" y="306" font-size="15" font-weight="bold" fill="#c92a2a">✖</text>
+<text x="92" y="306" font-size="15" fill="#c92a2a">White River and Bull River</text>
+<text x="74" y="325" font-size="15" fill="#2f3a2b">Across MUs 4-22 to 4-24</text>
+<rect x="12" y="347" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="359" font-size="14" fill="#2f3a2b">★ No motor vehicles</text>
+<rect x="180.20000000000002" y="347" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="200.2" y="359" font-size="14" fill="#2f3a2b">✖ ◆ Hunting use closed</text>
+</svg>

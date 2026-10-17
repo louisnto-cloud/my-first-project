@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A wheel of seven kinds of sign around a centre, each with a small picture: tracks, droppings, beds, rubs, scrapes, trails and feathers. The centre asks four questions every sign answers: who made it, when, or how fresh, which way it went, and what it was doing. Tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Seven kinds of sign</text>
+<line x1="200.0" y1="102.0" x2="200.0" y2="80.0" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="253.5" y1="134.8" x2="282.6" y2="120.0" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="259.6" y1="169.0" x2="290.3" y2="172.6" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="240.9" y1="205.9" x2="263.3" y2="230.0" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="159.1" y1="205.9" x2="136.7" y2="230.0" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="140.4" y1="169.0" x2="112.9" y2="172.2" stroke="#8a9a6b" stroke-width="2.4"/>
+<line x1="146.5" y1="134.8" x2="117.4" y2="120.0" stroke="#8a9a6b" stroke-width="2.4"/>
+<circle cx="200" cy="162" r="60" fill="#2f3a2b"/>
+<text x="200" y="140" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Who?</text>
+<text x="200" y="159" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">When?</text>
+<text x="200" y="178" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Which way?</text>
+<text x="200" y="197" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Doing what?</text>
+<rect x="146.6" y="44.0" width="106.8" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><g transform="translate(164.6 64.0) rotate(-10) scale(1.2)" fill="#8b5a2b" opacity="1.0"><path d="M-1 -7 C-5 -7 -6 -2 -5 3 C-4 6 -1 6 -1 3z"/><path d="M1 -7 C5 -7 6 -2 5 3 C4 6 1 6 1 3z"/></g><g transform="translate(173.6 57.0) rotate(-10) scale(1.0)" fill="#8b5a2b" opacity="0.7"><path d="M-1 -7 C-5 -7 -6 -2 -5 3 C-4 6 -1 6 -1 3z"/><path d="M1 -7 C5 -7 6 -2 5 3 C4 6 1 6 1 3z"/></g><text x="186.608" y="68" font-size="16" font-weight="bold" fill="#23261f">Tracks</text>
+<rect x="253.0" y="84.0" width="130.1" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><ellipse cx="268.9664" cy="105" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="274.9664" cy="107" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="280.9664" cy="104" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="271.9664" cy="100" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="277.9664" cy="99" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="282.9664" cy="98" rx="3.4" ry="2.6" fill="#5a3e26"/><ellipse cx="266.9664" cy="99" rx="3.4" ry="2.6" fill="#5a3e26"/><text x="292.966" y="108" font-size="16" font-weight="bold" fill="#23261f">Droppings</text>
+<rect x="290.3" y="160.0" width="91.4" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><ellipse cx="312.312" cy="179" rx="13" ry="7" fill="#c9b27a" stroke="#8b5a2b" stroke-width="1.4"/><path d="M304.312 179 h16 M306.312 182 h11" stroke="#8b5a2b" stroke-width="1.2"/><text x="330.312" y="184" font-size="16" font-weight="bold" fill="#23261f">Beds</text>
+<rect x="234.3" y="230.0" width="91.4" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><rect x="252.312" y="236" width="8" height="24" fill="#6b4f35"/><rect x="252.312" y="244" width="8" height="10" fill="#f1e3c2"/><path d="M247.312 260 h18" stroke="#2f3a2b" stroke-width="1.5"/><text x="274.312" y="254" font-size="16" font-weight="bold" fill="#23261f">Rubs</text>
+<rect x="62.0" y="230.0" width="116.0" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><ellipse cx="85.9856" cy="254" rx="12" ry="5" fill="#5a3e26"/><path d="M71.9856 238 C79.9856 236 89.9856 238 95.9856 242" stroke="#6b4f35" stroke-width="2" fill="none"/><text x="101.986" y="254" font-size="16" font-weight="bold" fill="#23261f">Scrapes</text>
+<rect x="15.1" y="160.0" width="97.9" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><path d="M24.059199999999997 187 C33.0592 180 35.0592 172 50.0592 169" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="4 3" fill="none"/><text x="55.0592" y="184" font-size="16" font-weight="bold" fill="#23261f">Trails</text>
+<rect x="20.9" y="84.0" width="122.2" height="36" rx="16" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/><path d="M31.904000000000003 113 C33.904 101 42.904 92 54.904 90 C52.904 102 44.904 110 31.904000000000003 113z" fill="#a98a62"/><path d="M30.904000000000003 114 L50.904 94" stroke="#4a3626" stroke-width="1.4"/><text x="60.904" y="108" font-size="16" font-weight="bold" fill="#23261f">Feathers</text>
+<text x="200" y="293" font-size="15" fill="#6b5b4b" text-anchor="middle">Every sign answers four questions (Tip)</text>
+</svg>

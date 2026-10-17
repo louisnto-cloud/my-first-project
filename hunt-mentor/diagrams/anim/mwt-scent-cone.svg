@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. Wind blows left to right. A hunter stands on the left and an orange scent cone spreads out downwind, getting wider with distance. A deer walks up from the bottom right into the cone and stops: it smells the hunter. Another deer upwind of the hunter, on the lower left, is safe.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<defs><clipPath id="mwt-scent-cone-c"><rect x="0" y="40" width="400" height="260"/></clipPath></defs>
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your scent cone grows downwind</text>
+<g clip-path="url(#mwt-scent-cone-c)"><rect x="0" y="40" width="400" height="260" fill="#d7e0c4"/>
+<path d="M106 217 l-2 -5 M106 217 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M272 258 l-2 -5 M272 258 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M77 104 l-2 -5 M77 104 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M62 102 l-2 -5 M62 102 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M292 79 l-2 -5 M292 79 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M212 99 l-2 -5 M212 99 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M120 154 l-2 -5 M120 154 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M332 198 l-2 -5 M332 198 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M10 115 l-2 -5 M10 115 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M62 264 l-2 -5 M62 264 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M321 248 l-2 -5 M321 248 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M328 232 l-2 -5 M328 232 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M376 244 l-2 -5 M376 244 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M105 258 l-2 -5 M105 258 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M195 235 l-2 -5 M195 235 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M225 153 l-2 -5 M225 153 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M147 153 l-2 -5 M147 153 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M127 75 l-2 -5 M127 75 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M325 246 l-2 -5 M325 246 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M390 219 l-2 -5 M390 219 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M221 233 l-2 -5 M221 233 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M57 215 l-2 -5 M57 215 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M178 90 l-2 -5 M178 90 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M83 177 l-2 -5 M83 177 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M103 161 l-2 -5 M103 161 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M241 145 l-2 -5 M241 145 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M55 169 l-2 -5 M55 169 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M96 105 l-2 -5 M96 105 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M80 138 l-2 -5 M80 138 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M33 209 l-2 -5 M33 209 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M378 143 l-2 -5 M378 143 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M286 279 l-2 -5 M286 279 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M21 81 l-2 -5 M21 81 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M320 256 l-2 -5 M320 256 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M255 86 l-2 -5 M255 86 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M166 263 l-2 -5 M166 263 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M351 247 l-2 -5 M351 247 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M84 259 l-2 -5 M84 259 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M151 225 l-2 -5 M151 225 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M58 289 l-2 -5 M58 289 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M241 227 l-2 -5 M241 227 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M87 200 l-2 -5 M87 200 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M232 194 l-2 -5 M232 194 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M145 228 l-2 -5 M145 228 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M138 120 l-2 -5 M138 120 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M68 217 l-2 -5 M68 217 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M48 102 l-2 -5 M48 102 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M31 207 l-2 -5 M31 207 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M222 182 l-2 -5 M222 182 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M19 156 l-2 -5 M19 156 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M138 69 l-2 -5 M138 69 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M5 295 l-2 -5 M5 295 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M52 121 l-2 -5 M52 121 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M109 195 l-2 -5 M109 195 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M34 163 l-2 -5 M34 163 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M148 255 l-2 -5 M148 255 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M6 130 l-2 -5 M6 130 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M199 288 l-2 -5 M199 288 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M207 165 l-2 -5 M207 165 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M266 120 l-2 -5 M266 120 l2 -6" stroke="#a9b78c" stroke-width="1.2"/>
+<path d="M110 160 L400 72 L400 248 Z" fill="#e8590c" opacity="0"><animate attributeName="opacity" values="0;.22" dur="2s" fill="freeze"/></path>
+<path d="M110 160 L250 118 L250 202 Z" fill="#e8590c" opacity="0"><animate attributeName="opacity" values="0;.25" begin="1s" dur="1s" fill="freeze"/></path>
+</g>
+<g><line x1="20" y1="62" x2="70" y2="62" stroke="#4a7fb0" stroke-width="3.4" stroke-linecap="round"/><path d="M76 62 l-11 -6 v12z" fill="#4a7fb0"/><animateTransform attributeName="transform" type="translate" values="0 0;16 0;0 0" dur="2s" repeatCount="indefinite"/></g>
+<g><line x1="20" y1="92" x2="70" y2="92" stroke="#4a7fb0" stroke-width="3.4" stroke-linecap="round"/><path d="M76 92 l-11 -6 v12z" fill="#4a7fb0"/><animateTransform attributeName="transform" type="translate" values="0 0;16 0;0 0" dur="2s" repeatCount="indefinite"/></g>
+<text x="22" y="120" font-size="17" font-weight="bold" fill="#2c5d86">Wind</text>
+<ellipse cx="108" cy="160" rx="9" ry="14" fill="#e8590c" stroke="#a63c06" stroke-width="1.2"/><circle cx="111" cy="160" r="6.5" fill="#d9480f" stroke="#a63c06" stroke-width="1.2"/>
+<text x="108" y="196" font-size="17" font-weight="bold" fill="#c2410c" text-anchor="middle">You</text>
+<text x="262" y="166" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Scent cone</text>
+<path id="mwt-scent-cone-p1" d="M330 276 L330 214" fill="none"/>
+<g><g transform="rotate(-90)"><ellipse rx="17" ry="7.5" fill="#8b5a2b"/><path d="M12 -4 Q20 -4 24 -2 L24 2 Q20 4 12 4z" fill="#8b5a2b"/><ellipse cx="28" cy="0" rx="6.5" ry="4.2" fill="#8b5a2b"/><ellipse cx="25" cy="-6" rx="4" ry="2" transform="rotate(-35 25 -6)" fill="#8b5a2b"/><ellipse cx="25" cy="6" rx="4" ry="2" transform="rotate(35 25 6)" fill="#8b5a2b"/><circle cx="34" cy="0" r="1.6" fill="#2b1d12"/><path d="M-17 0 l-6 0" stroke="#fffaf0" stroke-width="4" stroke-linecap="round"/></g><animateMotion dur="5s" fill="freeze"><mpath href="#mwt-scent-cone-p1"/></animateMotion></g>
+<g opacity="0"><rect x="284" y="250" width="96" height="28" rx="6" fill="#e8590c"/><text x="332" y="270" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Smells you!</text><animate attributeName="opacity" values="0;1" begin="5s" dur=".4s" fill="freeze"/></g>
+<g transform="translate(52 248) rotate(-60)"><ellipse rx="17" ry="7.5" fill="#8b5a2b"/><path d="M12 -4 Q20 -4 24 -2 L24 2 Q20 4 12 4z" fill="#8b5a2b"/><ellipse cx="28" cy="0" rx="6.5" ry="4.2" fill="#8b5a2b"/><ellipse cx="25" cy="-6" rx="4" ry="2" transform="rotate(-35 25 -6)" fill="#8b5a2b"/><ellipse cx="25" cy="6" rx="4" ry="2" transform="rotate(35 25 6)" fill="#8b5a2b"/><circle cx="34" cy="0" r="1.6" fill="#2b1d12"/><path d="M-17 0 l-6 0" stroke="#fffaf0" stroke-width="4" stroke-linecap="round"/></g>
+<text x="70" y="290" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Upwind: safe</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 327" font-family="sans-serif" role="img" aria-label="Good burger in 4 steps: 1, trim fat, silver skin, hair and bloodshot meat; 2, chill the meat and grinder parts near freezing; 3, grind, adding none, or 10 to 20 percent pork or beef fat (Tip); 4, cook ground game to 71 degrees Celsius with no pink. Deer fat is waxy and causes the gamey taste.">
+<rect width="400" height="327" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Good burger in 4 steps</text>
+<rect x="8" y="40" width="188" height="104" rx="8" fill="#f4eedf" stroke="#c9bfa4" stroke-width="1.4"/>
+<circle cx="26.0" cy="58.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="63" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(148 78) rotate(-20)"><path d="M-6 -4 C10 -10 30 -8 36 -2 C24 2 8 3 -6 2z" fill="#c9d1d6" stroke="#5a6266" stroke-width="1.4"/><rect x="-30" y="-5" width="26" height="9" rx="3" fill="#6b4f35"/></g>
+<text x="46" y="64" font-size="18" font-weight="bold" fill="#2f3a2b">Trim</text>
+<text x="22" y="112" font-size="15" fill="#2f3a2b">fat, silver skin,</text>
+<text x="22" y="131" font-size="15" fill="#2f3a2b">hair</text>
+<rect x="204" y="40" width="188" height="104" rx="8" fill="#f4eedf" stroke="#c9bfa4" stroke-width="1.4"/>
+<circle cx="222.0" cy="58.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="222" y="63" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g transform="translate(344 78)" stroke="#4a7fb0" stroke-width="3" stroke-linecap="round"><path d="M0 0 L18.0 0.0"/><path d="M0 0 L9.0 15.6"/><path d="M0 0 L-9.0 15.6"/><path d="M0 0 L-18.0 0.0"/><path d="M0 0 L-9.0 -15.6"/><path d="M0 0 L9.0 -15.6"/></g>
+<text x="242" y="64" font-size="18" font-weight="bold" fill="#2f3a2b">Chill</text>
+<text x="218" y="112" font-size="15" fill="#2f3a2b">meat and grinder</text>
+<rect x="8" y="152" width="188" height="104" rx="8" fill="#f4eedf" stroke="#c9bfa4" stroke-width="1.4"/>
+<circle cx="26.0" cy="170.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="175" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<g transform="translate(148 190)"><path d="M-14 -20 H6 L2 -10 H-10z" fill="#9aa3a6" stroke="#4f585b" stroke-width="1.6"/><rect x="-16" y="-10" width="28" height="16" rx="4" fill="#b8c0c3" stroke="#4f585b" stroke-width="1.6"/><path d="M12 -4 H22 V-14" stroke="#4f585b" stroke-width="3" fill="none"/><path d="M-12 6 v10 M-6 6 v12 M0 6 v10" stroke="#b5523b" stroke-width="3" stroke-linecap="round"/></g>
+<text x="46" y="176" font-size="18" font-weight="bold" fill="#2f3a2b">Grind</text>
+<text x="22" y="224" font-size="15" fill="#2f3a2b">None, or 10 to 20% fat</text>
+<rect x="204" y="152" width="188" height="104" rx="8" fill="#fde3d3" stroke="#e8590c" stroke-width="2"/>
+<circle cx="222.0" cy="170.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="222" y="175" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<g transform="translate(344 190)"><rect x="-5" y="-22" width="10" height="34" rx="5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><circle cx="0" cy="14" r="8" fill="#c0392b" stroke="#2f3a2b" stroke-width="2"/><rect x="-2" y="-8" width="4" height="20" fill="#c0392b"/></g>
+<text x="242" y="176" font-size="18" font-weight="bold" fill="#c2410c">Cook</text>
+<text x="218" y="224" font-size="15" fill="#2f3a2b">71°C, no pink</text>
+<rect x="8" y="264" width="384" height="57" rx="8" fill="#2f3a2b"/><text x="200" y="287.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Deer fat is waxy. Trim it.</text><text x="200" y="308.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">That is the gamey taste.</text>
+</svg>

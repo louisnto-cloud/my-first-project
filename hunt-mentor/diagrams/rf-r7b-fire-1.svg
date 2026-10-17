@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 433" font-family="sans-serif" role="img" aria-label="Firearm closures in Region 7B, part 1. No firearms on the west half of Lot 1323, where Halfway Elementary School is; the map is H19 by its caption though H18 is printed (95%). No firearms 9:30 am to 3:30 pm daily in the Dawson Creek Environmental Demonstration Area, map H14 by its caption though H13 is printed (95%). No firearms in the Bear Mountain Nordic Ski Area, Map H4. No firearms on the Fort St. John sewage lagoons. Shot only or bow: no single projectile firearms within 400 metres of Road 520, Canyon Drive, between Hudson&#x27;s Hope and the W.A.C. Bennett Dam, and Road 190, Twelve Mile Road, between Road 520 and Dunlevy Creek.">
+<rect width="400" height="433" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 23) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="29" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO FIREARMS</text>
+<rect x="8" y="44" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="81.0" r="20" fill="#fffaf0" stroke="#d9480f" stroke-width="2"/>
+<g transform="translate(41.0 81.0) scale(0.8)" fill="#d9480f" stroke="none"><path d="M-15 -3 L0 -13 L15 -3z"/><rect x="-13" y="-3" width="26" height="16"/><rect x="-3" y="4" width="6" height="9" fill="#fffaf0"/><rect x="-10" y="0" width="5" height="4" fill="#fffaf0"/><rect x="5" y="0" width="5" height="4" fill="#fffaf0"/></g>
+<text x="78" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Halfway Elementary School</text>
+<text x="78" y="86" font-size="15" fill="#2f3a2b">West half of Lot 1323. Map H19 by caption</text>
+<text x="78" y="105" font-size="15" fill="#2f3a2b">(95%)</text>
+<circle cx="41.0" cy="167.0" r="20" fill="#fffaf0" stroke="#d9480f" stroke-width="2"/>
+<g transform="translate(41.0 167.0) scale(0.8)" fill="#d9480f" stroke="none"><circle r="14"/><circle r="11" fill="#fffaf0"/><path d="M0 -8 V0 L6 4" stroke="#d9480f" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<text x="78" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Dawson Creek Environmental</text>
+<text x="78" y="163" font-size="16" font-weight="bold" fill="#2f3a2b">Demonstration Area</text>
+<text x="78" y="182" font-size="15" fill="#2f3a2b">9:30 am to 3:30 pm daily. Map H14 by</text>
+<text x="78" y="201" font-size="15" fill="#2f3a2b">caption (95%)</text>
+<rect x="8" y="216" width="384" height="48" rx="6" fill="#f4eedf"/>
+<rect x="14" y="225.0" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="245.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H4</text>
+<text x="78" y="245" font-size="16" font-weight="bold" fill="#2f3a2b">Bear Mountain Nordic Ski Area</text>
+<circle cx="41.0" cy="290.0" r="20" fill="#fffaf0" stroke="#d9480f" stroke-width="2"/>
+<g transform="translate(41.0 290.0) scale(0.8)" fill="#d9480f" stroke="none"><path d="M-15 -4 C-10 -9 -5 1 0 -4 C5 -9 10 1 15 -4 M-15 4 C-10 -1 -5 9 0 4 C5 -1 10 9 15 4" stroke="#d9480f" stroke-width="3" fill="none"/></g>
+<text x="78" y="295" font-size="16" font-weight="bold" fill="#2f3a2b">Fort St. John sewage lagoons</text>
+<rect x="8" y="324" width="384" height="30" rx="6" fill="#5b6b3e"/>
+<text x="18" y="345" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SHOT ONLY OR BOW</text>
+<rect x="8" y="360" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="387.5" r="20" fill="#fffaf0" stroke="#5b6b3e" stroke-width="2"/>
+<g transform="translate(41.0 387.5) scale(0.8)" fill="#5b6b3e" stroke="none"><path d="M-5 14 V-4 C-5 -10 -2 -14 0 -15 C2 -14 5 -10 5 -4 V14z"/><rect x="-5" y="2" width="10" height="12" fill="#b08d3c"/></g>
+<circle cx="41.0" cy="387.5" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 373.5 L55.0 401.5" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="383" font-size="16" font-weight="bold" fill="#2f3a2b">Road 520 and Road 190</text>
+<text x="78" y="402" font-size="15" fill="#2f3a2b">No single projectile within 400 m</text>
+</svg>

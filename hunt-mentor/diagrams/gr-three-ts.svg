@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="AdventureSmart's Three Ts: Trip planning, leave a plan with someone. Training, know how to use your gear. Taking the essentials, the 10 essentials every time.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The Three Ts</text>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="10" y="44" width="120" height="236" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <rect x="140" y="44" width="120" height="236" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <rect x="270" y="44" width="120" height="236" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <circle cx="70" cy="80" r="22" fill="#e8590c"/><text x="70" y="87" font-size="22" fill="#fff">T</text>
+    <circle cx="200" cy="80" r="22" fill="#e8590c"/><text x="200" y="87" font-size="22" fill="#fff">T</text>
+    <circle cx="330" cy="80" r="22" fill="#e8590c"/><text x="330" y="87" font-size="22" fill="#fff">T</text>
+    <text x="70" y="130" fill="#2f3a2b">Trip</text><text x="70" y="148" fill="#2f3a2b">planning</text>
+    <text x="200" y="130" fill="#2f3a2b">Training</text>
+    <text x="330" y="130" fill="#2f3a2b">Taking the</text><text x="330" y="148" fill="#2f3a2b">essentials</text>
+  </g>
+  <!-- icons -->
+  <rect x="46" y="170" width="48" height="60" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><g stroke="#2f3a2b" stroke-width="2"><line x1="54" y1="186" x2="86" y2="186"/><line x1="54" y1="198" x2="86" y2="198"/><line x1="54" y1="210" x2="78" y2="210"/></g>
+  <path d="M176 210 l24 -30 l24 30 Z" fill="none" stroke="#2f3a2b" stroke-width="3"/><path d="M190 214 h20" stroke="#e8590c" stroke-width="4"/>
+  <path d="M306 180 h48 v54 h-48 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/><path d="M314 180 q16 -18 32 0" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="70" y="256">Leave a plan</text><text x="200" y="256">Know your gear</text><text x="330" y="256">10 essentials</text></g>
+</svg>

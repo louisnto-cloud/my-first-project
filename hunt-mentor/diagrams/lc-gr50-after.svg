@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 462" font-family="sans-serif" role="img" aria-label="After the shot: rules 36 to 42. Rule 36: Mark where it stood. Rule 37: Wait 20 minutes, longer if gut shot. Rule 38: Cut the tag before you touch it. Also law. Rule 39: Every reasonable effort. Also law. Rule 40: Guts out within the hour. Rule 41: Evidence of sex stays on. Also law. Rule 42: Record of Receipt travels with it. Also law. Rules without the law badge are wisdom, not law.">
+<rect width="400" height="462" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">After the shot: rules 36 to 42</text>
+<rect x="8" y="42" width="384" height="50" rx="7" fill="#f4eedf"/>
+<circle cx="30" cy="67.0" r="15" fill="#6b4f35"/><text x="30" y="72" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">36</text>
+<g transform="translate(72 67.0) scale(0.8)"><path d="M-12 18 V-18" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-12 -18 H14 L8 -10 L14 -2 H-12 Z" fill="#e8590c"/></g>
+<text x="104" y="73" font-size="16" font-weight="bold" fill="#2f3a2b">Mark where it stood</text>
+<circle cx="30" cy="121.0" r="15" fill="#6b4f35"/><text x="30" y="126" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">37</text>
+<g transform="translate(72 121.0) scale(0.8)"><circle r="18" fill="#fff" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 0 V-11 M0 0 L8 5" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="104" y="127" font-size="16" font-weight="bold" fill="#2f3a2b">Wait 20 minutes, longer if gut shot</text>
+<rect x="8" y="150" width="384" height="50" rx="7" fill="#eef3f8" stroke="#4a7fb0" stroke-width="1.6"/>
+<circle cx="30" cy="175.0" r="15" fill="#6b4f35"/><text x="30" y="180" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">38</text>
+<g transform="translate(72 175.0) scale(0.8)"><path d="M-14 -18 H8 L16 -10 V18 H-14 Z" fill="#fff" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-8 -6 H10 M-8 2 H10 M-8 10 H4" stroke="#8a9a6b" stroke-width="2.5"/></g>
+<text x="104" y="171" font-size="16" font-weight="bold" fill="#2f3a2b">Cut the tag before you</text>
+<text x="104" y="191" font-size="16" font-weight="bold" fill="#2f3a2b">touch it</text>
+<rect x="334" y="163.0" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="359" y="180" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<rect x="8" y="204" width="384" height="50" rx="7" fill="#eef3f8" stroke="#4a7fb0" stroke-width="1.6"/>
+<circle cx="30" cy="229.0" r="15" fill="#6b4f35"/><text x="30" y="234" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">39</text>
+<g transform="translate(72 229.0) scale(0.8)"><rect x="-14" y="-16" width="28" height="34" rx="6" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="-9" y="2" width="18" height="10" rx="3" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="104" y="235" font-size="16" font-weight="bold" fill="#2f3a2b">Every reasonable effort</text>
+<rect x="334" y="217.0" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="359" y="234" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<rect x="8" y="258" width="384" height="50" rx="7" fill="#f4eedf"/>
+<circle cx="30" cy="283.0" r="15" fill="#6b4f35"/><text x="30" y="288" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">40</text>
+<g transform="translate(72 283.0) scale(0.8)"><path d="M-20 6 L6 -4 Q16 -8 20 -12 Q18 2 6 6 Z" fill="#cfd6bf" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="-24" y="2" width="14" height="9" rx="3" fill="#8b5a2b" transform="rotate(-20 -17 6)"/></g>
+<text x="104" y="289" font-size="16" font-weight="bold" fill="#2f3a2b">Guts out within the hour</text>
+<rect x="8" y="312" width="384" height="50" rx="7" fill="#eef3f8" stroke="#4a7fb0" stroke-width="1.6"/>
+<circle cx="30" cy="337.0" r="15" fill="#6b4f35"/><text x="30" y="342" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">41</text>
+<g transform="translate(72 337.0) scale(0.8)"><path d="M-4 18 Q-10 0 -6 -18 M-7 -2 L-18 -8 M-6 -12 L-14 -20 M4 18 Q10 0 6 -18 M7 -2 L18 -8 M6 -12 L14 -20" stroke="#6b4f35" stroke-width="3.5" fill="none" stroke-linecap="round"/></g>
+<text x="104" y="343" font-size="16" font-weight="bold" fill="#2f3a2b">Evidence of sex stays on</text>
+<rect x="334" y="325.0" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="359" y="342" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<rect x="8" y="366" width="384" height="50" rx="7" fill="#eef3f8" stroke="#4a7fb0" stroke-width="1.6"/>
+<circle cx="30" cy="391.0" r="15" fill="#6b4f35"/><text x="30" y="396" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">42</text>
+<g transform="translate(72 391.0) scale(0.8)"><path d="M-14 -18 H8 L16 -10 V18 H-14 Z" fill="#fff" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-8 -6 H10 M-8 2 H10 M-8 10 H4" stroke="#8a9a6b" stroke-width="2.5"/></g>
+<text x="104" y="387" font-size="16" font-weight="bold" fill="#2f3a2b">Record of Receipt travels</text>
+<text x="104" y="407" font-size="16" font-weight="bold" fill="#2f3a2b">with it</text>
+<rect x="334" y="379.0" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="359" y="396" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<rect x="12" y="426" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="37" y="443" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<text x="70" y="443" font-size="15" fill="#2f3a2b">also law. The rest is wisdom (Tip).</text>
+</svg>

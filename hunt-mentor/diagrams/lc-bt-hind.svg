@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 386" font-family="sans-serif" role="img" aria-label="Simplified cross section of a deer hind quarter around the leg bone, split along natural seams: sirloin tip at the front, inside round on the inner side, outside round on the outer side, and the small eye of round within it. Pull the muscles apart along the white seams. A sketch: real seams wander.">
+<rect width="400" height="386" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hind quarter: follow the seams</text>
+<defs><clipPath id="lc-bt-hind-clip"><path d="M160 86 Q272 102 264 190 Q256 284 160 290 Q56 282 58 186 Q60 92 160 86 Z"/></clipPath></defs>
+<path d="M160 86 Q272 102 264 190 Q256 284 160 290 Q56 282 58 186 Q60 92 160 86 Z" fill="#f1e4c8" stroke="#2f3a2b" stroke-width="2" transform="translate(160 186) scale(1.035) translate(-160 -186)"/>
+<g clip-path="url(#lc-bt-hind-clip)">
+<rect x="56" y="86" width="212" height="204" fill="#a0503c"/>
+<path d="M106 86 Q190 160 268 148 L268 86 Z" fill="#c4704f" stroke="#fffaf0" stroke-width="4"/>
+<path d="M268 148 Q190 160 174 196 Q164 246 148 290 L268 290 Z" fill="#8a3f2e" stroke="#fffaf0" stroke-width="4"/>
+</g>
+<ellipse cx="204" cy="244" rx="24" ry="15" fill="#c75b3f" stroke="#fffaf0" stroke-width="3"/>
+<circle cx="162" cy="166" r="15" fill="#f5f0e0" stroke="#2f3a2b" stroke-width="2"/><circle cx="162" cy="166" r="6" fill="#d9b48a"/>
+<text x="160" y="74" font-size="15" fill="#6b4f35" text-anchor="middle">Front of leg</text>
+<line x1="220" y1="118" x2="300.96" y2="84.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="220" cy="118" r="2.6" fill="#2f3a2b"/>
+<rect x="301.0" y="70.0" width="91.0" height="29.0" rx="5" fill="#fffaf0" stroke="#c4704f" stroke-width="1.2"/>
+<text x="346.48" y="90.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sirloin tip</text>
+<line x1="240" y1="200" x2="305.922" y2="195" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="240" cy="200" r="2.6" fill="#2f3a2b"/>
+<rect x="275.9" y="168.0" width="116.1" height="27.0" rx="5" fill="#fffaf0" stroke="#8a3f2e" stroke-width="1.2"/>
+<text x="333.961" y="187" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Outside round</text>
+<line x1="220" y1="250" x2="347.869" y2="284.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="220" cy="250" r="2.6" fill="#2f3a2b"/>
+<rect x="347.9" y="270.0" width="44.1" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="369.934" y="290.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Eye</text>
+<line x1="110" y1="220" x2="60" y2="300" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="110" cy="220" r="2.6" fill="#2f3a2b"/>
+<rect x="10.0" y="300.0" width="111.2" height="29.0" rx="5" fill="#fffaf0" stroke="#a0503c" stroke-width="1.2"/>
+<text x="65.6208" y="320.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Inside round</text>
+<line x1="148" y1="162" x2="54.668" y2="113.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="148" cy="162" r="2.6" fill="#2f3a2b"/>
+<rect x="6.0" y="100.0" width="48.7" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="30.334" y="119" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bone</text>
+<text x="200" y="356" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pull the muscles apart along the white seams.</text>
+<text x="200" y="376" font-size="14" fill="#6b4f35" text-anchor="middle">Simplified sketch: real seams wander (Tip).</text>
+</svg>

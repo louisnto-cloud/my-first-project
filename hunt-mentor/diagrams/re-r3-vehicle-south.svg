@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 369" font-family="sans-serif" role="img" aria-label="Region 3 vehicle closures, south and west, synopsis page 33. FSR means Forest Service Road. Map C1 Stoyoma, MUs 3-13 and 3-14: no motor vehicles above 1,800 metres, 1 May to 30 November; Cabin Lake Road open. Texas Creek, MU 3-16: closed past 3 kilometres on the Texas Creek FSR, 15 April to 30 November. Map C20 Spruce Lake, MU 3-32: closed; the map says 1 June to 30 November. Map C19 Clinton Creek, MU 3-31: closed; an authorized trapper is exempt on the Clinton Creek Access Road.">
+<rect width="400" height="369" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 33. FSR: Forest Service Road</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#2c5d86"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-15 6 V0 L-10 -2 L-6 -9 H6 L10 -2 L15 0 V6z"/><path d="M-5 -7 H-1 V-2 H-8z M1 -7 H5 L8 -2 H1z" fill="#fffaf0"/><circle cx="-8" cy="7" r="4"/><circle cx="8" cy="7" r="4"/><circle cx="-8" cy="7" r="1.6" fill="#fffaf0"/><circle cx="8" cy="7" r="1.6" fill="#fffaf0"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO MOTOR VEHICLES</text>
+<rect x="8" y="68" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="90.0" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="110.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C1</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Stoyoma, MUs 3-13, 3-14</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Above 1,800 m, May 1 to Nov 30. Cabin</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">Lake Rd open</text>
+<circle cx="41.0" cy="181.0" r="20" fill="#fffaf0" stroke="#2c5d86" stroke-width="2"/>
+<g transform="translate(41.0 181.0) scale(0.8)" fill="#2c5d86" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Texas Creek, MU 3-16</text>
+<text x="78" y="186" font-size="15" fill="#2f3a2b">Past 3 km on the Texas Creek FSR, Apr 15</text>
+<text x="78" y="205" font-size="15" fill="#2f3a2b">to Nov 30</text>
+<rect x="8" y="220" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="232.5" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="253.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C20</text>
+<text x="78" y="243" font-size="16" font-weight="bold" fill="#2f3a2b">Spruce Lake, MU 3-32</text>
+<text x="78" y="262" font-size="15" fill="#2f3a2b">Closed. Map: June 1 to Nov 30</text>
+<rect x="14" y="299.0" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="319.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C19</text>
+<text x="78" y="300" font-size="16" font-weight="bold" fill="#2f3a2b">Clinton Creek, MU 3-31</text>
+<text x="78" y="319" font-size="15" fill="#2f3a2b">Closed. Trapper exempt on Clinton Creek</text>
+<text x="78" y="338" font-size="15" fill="#2f3a2b">Access Road</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two grouse. Relaxed: head low, feeding, feathers loose. About to go: neck stretched tall, crest raised, tail fanning. Tip, hunter lore and not a study: when you see the tall neck, stop, shoulder the gun and take one more step." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Read the bird (Tip)</text>
+<rect x="10" y="44" width="185" height="200" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="205" y="44" width="185" height="200" rx="8" fill="#fbe3d3" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(110 150) scale(1.4 1.4)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<g transform="translate(300 160)"><polygon points="-30,-8 -60,-34 -66,-10 -64,10 -30,8" fill="#6b4f35"/><ellipse cx="0" cy="0" rx="34" ry="17" fill="#9a6b45"/><rect x="16" y="-52" width="12" height="40" fill="#9a6b45"/><circle cx="24" cy="-58" r="10" fill="#9a6b45"/><polygon points="18,-66 22,-80 28,-66" fill="#9a6b45"/><polygon points="32,-60 42,-57 32,-53" fill="#6b4f35"/><circle cx="27" cy="-60" r="2" fill="#23261f"/><path d="M4 16 l-2 14 M14 16 l2 14" stroke="#6b4f35" stroke-width="3"/></g>
+<text x="102" y="70" font-size="16" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Relaxed</text>
+<text x="298" y="70" font-size="16" fill="#c23b22" text-anchor="middle" font-weight="bold">About to go</text>
+<text x="102" y="196" font-size="14" fill="#23261f" text-anchor="middle">Head low, feeding</text>
+<text x="102" y="214" font-size="14" fill="#23261f" text-anchor="middle">Feathers loose</text>
+<text x="298" y="204" font-size="14" fill="#23261f" text-anchor="middle">Neck stretched tall</text>
+<text x="298" y="222" font-size="14" fill="#23261f" text-anchor="middle">Crest up, tail fans</text>
+<text x="10" y="270" font-size="14" fill="#23261f" text-anchor="start">See the tall neck? Stop, shoulder the gun,</text>
+<text x="10" y="288" font-size="14" fill="#23261f" text-anchor="start">step once more. Hunter lore, not a study.</text>
+</svg>

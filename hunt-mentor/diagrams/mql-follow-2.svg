@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: walk the road edge toward the calls and read the sign: tracks, droppings and dusting bowls show where the covey feeds and loafs.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Follow a covey: 2 Read the sign</text>
+<rect x="10" y="40" width="380" height="196" rx="8" fill="#dfe6d3"/>
+<rect x="10" y="170" width="380" height="40" fill="#e6d3b0"/>
+<g stroke="#2f3a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M120 200 L120 178"/><path d="M120 200 L110.1 182.4"/><path d="M120 200 L129.9 182.4"/><path d="M120 200 L120 203.96"/></g>
+<g stroke="#2f3a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M160 196 L160 174"/><path d="M160 196 L150.1 178.4"/><path d="M160 196 L169.9 178.4"/><path d="M160 196 L160 199.96"/></g>
+<g stroke="#2f3a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M200 200 L200 178"/><path d="M200 200 L190.1 182.4"/><path d="M200 200 L209.9 182.4"/><path d="M200 200 L200 203.96"/></g>
+<ellipse cx="270" cy="190" rx="22" ry="11" fill="#cdb48a" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="300" cy="110" rx="70" ry="34" fill="#8a9a6b"/>
+<text x="160" y="160" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">tracks</text>
+<text x="270" y="166" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">dust bowl</text>
+<rect x="10" y="246" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="269" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Tracks and dust bowls point to cover</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" font-family="sans-serif" role="img" aria-label="Top view of a field: a pile of dumped grain is bait. A red ring 400 metres around it means no hunting migratory birds inside it, 99 percent. You stand outside the ring: ticked. A card says the place must be bait free for 7 days before hunting is OK. Normal harvest spill and standing crops are not bait.">
+<rect width="400" height="310" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bait: the 400 m rule (99%)</text>
+<rect x="0" y="40" width="400" height="212" fill="#e6dcb6"/>
+<path d="M0 48 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 60 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 72 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 84 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 96 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 108 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 120 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 132 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 144 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 156 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 168 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 180 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 192 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 204 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 216 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 228 H400" stroke="#d3c28e" stroke-width="3"/><path d="M0 240 H400" stroke="#d3c28e" stroke-width="3"/>
+<circle cx="140" cy="146" r="94" fill="#f2c9c3" fill-opacity=".75" stroke="#b3261e" stroke-width="3" stroke-dasharray="9 6"/>
+<ellipse cx="140" cy="146" rx="26" ry="16" fill="#d9a93c" stroke="#9a7420" stroke-width="1.6"/>
+<ellipse cx="136" cy="142" rx="13" ry="7" fill="#efc860"/>
+<circle cx="110" cy="156" r="1.6" fill="#9a7420"/><circle cx="168" cy="138" r="1.6" fill="#9a7420"/><circle cx="164" cy="160" r="1.6" fill="#9a7420"/><circle cx="118" cy="132" r="1.6" fill="#9a7420"/><circle cx="172" cy="150" r="1.6" fill="#9a7420"/>
+<text x="140" y="98" font-size="17" font-weight="bold" fill="#b3261e" text-anchor="middle" stroke="#f4d9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">No hunting</text>
+<text x="140" y="192" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f4d9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Dumped grain</text>
+<path d="M170 146 H226" stroke="#2f3a2b" stroke-width="2"/><path d="M232.0 146.0 L223.0 141.1 L223.0 150.9z" fill="#2f3a2b"/>
+<text x="202" y="138" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#f4d9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">400 m</text>
+<circle cx="300" cy="120" r="12" fill="#e8590c" stroke="#fff" stroke-width="2"/><circle cx="300" cy="120" r="5" fill="#e0b48c"/>
+<text x="300" y="100" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle" stroke="#e6dcb6" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">You</text>
+<circle cx="332" cy="120" r="13" fill="#2f6e3b"/><path d="M327.1 121.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="265.5" y="168.0" width="101.0" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="316" y="188.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bait free</text>
+<text x="316" y="208" font-size="15" fill="#2f3a2b" text-anchor="middle">7 days: OK</text>
+<path d="M14.3 276.0 l5.5 5.5 l11.0 -12.1" fill="none" stroke="#2f6e3b" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40" y="280" font-size="15" font-weight="bold" fill="#2f3a2b">Normal harvest spill and standing</text>
+<text x="40" y="299" font-size="15" font-weight="bold" fill="#2f3a2b">crops are not bait</text>
+</svg>

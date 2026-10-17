@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Travel step 4: do not stop or camp in gullies, below cliffs or at the bottom of a slope. Regroup in safe spots, on high ground among the trees.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Avoid traps below</text>
+<path d="M0 60 L170 236 C190 250 210 250 230 236 L400 60 V300 H0z" fill="#f4f7fb" stroke="#c9d6e3" stroke-width="2"/>
+<path d="M150 214 C180 244 220 244 250 214 L262 232 C220 262 180 262 138 232z" fill="#d7e3ef"/>
+<path d="M170 236 C190 250 210 250 230 236" stroke="#9fb4c8" stroke-width="3" fill="none"/>
+<path d="M188.0 220.0 l24.0 24.0 M212.0 220.0 l-24.0 24.0" stroke="#c92a2a" stroke-width="6.4" stroke-linecap="round"/>
+<rect x="101.8" y="160.0" width="196.5" height="29.0" rx="5" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="200" y="180.5" font-size="16" font-weight="bold" fill="#c92a2a" text-anchor="middle">Not in the gully bottom</text>
+<path d="M330 86 L319 114 H341z M330 98 L317 122 H343z" fill="#3a5a31"/><rect x="328" y="122" width="4" height="6" fill="#5a3e26"/>
+<path d="M352 74 L341 102 H363z M352 86 L339 110 H365z" fill="#3a5a31"/><rect x="350" y="110" width="4" height="6" fill="#5a3e26"/>
+<path d="M374 64 L363 92 H385z M374 76 L361 100 H387z" fill="#3a5a31"/><rect x="372" y="100" width="4" height="6" fill="#5a3e26"/>
+<g transform="translate(312 140) scale(0.8)"><line x1="-6" y1="0" x2="-3" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><line x1="6" y1="0" x2="3" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><rect x="-9" y="-46" width="18" height="25" rx="4.8" fill="#e8590c"/><line x1="-8" y1="-42" x2="-14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><line x1="8" y1="-42" x2="14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><circle cx="0" cy="-53" r="8" fill="#d9b48f"/></g>
+<g transform="translate(290 150) scale(0.8)"><line x1="-6" y1="0" x2="-3" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><line x1="6" y1="0" x2="3" y2="-24" stroke="#2f3a2b" stroke-width="5.6" stroke-linecap="round"/><rect x="-9" y="-46" width="18" height="25" rx="4.8" fill="#f6c344"/><line x1="-8" y1="-42" x2="-14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><line x1="8" y1="-42" x2="14" y2="-25" stroke="#2f3a2b" stroke-width="4.8" stroke-linecap="round"/><circle cx="0" cy="-53" r="8" fill="#d9b48f"/></g>
+<rect x="274.3" y="52.0" width="83.3" height="27.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="316" y="71" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">safe spot</text>
+<path d="M360.8 150.0 l8.0 8.0 l16.0 -17.6" fill="none" stroke="#2f6e3b" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Regroup on high, safe ground</text>
+</svg>

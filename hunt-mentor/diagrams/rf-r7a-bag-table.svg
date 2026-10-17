@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 670" font-family="sans-serif" role="img" aria-label="Bag limits from the Region 7A season table, page 57. NBL means No Bag Limit; 10 (30) means 10 a day, 30 in possession. Moose 1, elk 1, bighorn sheep 1, thinhorn sheep 1, mountain goat 1, wolverine 1, lynx 1. Black bear 2. Cougar 2 in 7-2 to 7-8, 7-16 to 7-18 and 7-23, and 1 in 7-9 to 7-15, 7-24 and 7-25. Wolf, coyote, raccoon and Columbian ground squirrel: no bag limit. Snowshoe hare 10 a day. Each grouse row and ptarmigan 10 (30). Canada and cackling geese, snipe and coots 10 (30). Ducks 8 (24). Snow, Ross&#x27;s and white fronted geese 5 (15).">
+<rect width="400" height="670" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">NBL: No Bag Limit. 10 (30): 10 a day, 30 in</text>
+<text x="14" y="42" font-size="14" font-weight="bold" fill="#6b5b4b">possession.</text>
+<text x="14" y="68" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">BIG GAME AND FURBEARERS</text>
+<line x1="267" y1="63" x2="392" y2="63" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="78" width="384" height="79" rx="6" fill="#f4eedf"/>
+<text x="64" y="126.1" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<text x="130" y="102" font-size="16" fill="#2f3a2b">Moose, elk, bighorn sheep,</text>
+<text x="130" y="123" font-size="16" fill="#2f3a2b">thinhorn sheep, mountain goat,</text>
+<text x="130" y="144" font-size="16" fill="#2f3a2b">wolverine, lynx</text>
+<text x="64" y="189.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="186.5" font-size="16" fill="#2f3a2b">Black bear</text>
+<rect x="8" y="205" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="242.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="229" font-size="16" fill="#2f3a2b">Cougar in 7-2 to 7-8, 7-16 to</text>
+<text x="130" y="250" font-size="16" fill="#2f3a2b">7-18, 7-23</text>
+<text x="64" y="302.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<text x="130" y="289" font-size="16" fill="#2f3a2b">Cougar in 7-9 to 7-15, 7-24,</text>
+<text x="130" y="310" font-size="16" fill="#2f3a2b">7-25</text>
+<rect x="8" y="325" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="362.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">NBL</text>
+<text x="130" y="349" font-size="16" fill="#2f3a2b">Wolf, coyote, raccoon, ground</text>
+<text x="130" y="370" font-size="16" fill="#2f3a2b">squirrel</text>
+<text x="64" y="415.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">10 a day</text>
+<text x="130" y="412.5" font-size="16" fill="#2f3a2b">Snowshoe hare</text>
+<text x="14" y="457" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">BIRDS</text>
+<line x1="83" y1="452" x2="392" y2="452" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="467" width="384" height="79" rx="6" fill="#f4eedf"/>
+<text x="64" y="515.1" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)</text>
+<text x="130" y="491" font-size="16" fill="#2f3a2b">Each grouse row, ptarmigan.</text>
+<text x="130" y="512" font-size="16" fill="#2f3a2b">Canada and cackling geese,</text>
+<text x="130" y="533" font-size="16" fill="#2f3a2b">snipe, coots</text>
+<text x="64" y="578.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">8 (24)</text>
+<text x="130" y="575.5" font-size="16" fill="#2f3a2b">Ducks</text>
+<rect x="8" y="594" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="631.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 (15)</text>
+<text x="130" y="618" font-size="16" fill="#2f3a2b">Snow, Ross&#x27;s, white fronted</text>
+<text x="130" y="639" font-size="16" fill="#2f3a2b">geese</text>
+</svg>

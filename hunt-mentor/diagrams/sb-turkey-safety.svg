@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" font-family="sans-serif" role="img" aria-label="Turkey safety in four cards, Tip. Never wear red, white or blue: those are a tom&#x27;s head colours. Sit with your back against a tree wider than your shoulders. Never stalk a gobble: it may be another hunter calling. Wrap a dead bird in blaze orange to carry it out.">
+<rect width="400" height="372" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Turkey safety (Tip)</text>
+<rect x="8" y="42" width="188" height="158" rx="8" fill="#f4eedf" stroke="#c0392b" stroke-width="2"/>
+<text x="102" y="148" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">No red, white, blue</text>
+<text x="102" y="168" font-size="15" fill="#2f3a2b" text-anchor="middle">A tom&#x27;s head colours</text>
+<rect x="204" y="42" width="188" height="158" rx="8" fill="#f4eedf" stroke="#2f6e3b" stroke-width="2"/>
+<text x="298" y="148" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Back to a wide tree</text>
+<text x="298" y="168" font-size="15" fill="#2f3a2b" text-anchor="middle">Wider than your</text>
+<text x="298" y="186" font-size="15" fill="#2f3a2b" text-anchor="middle">shoulders</text>
+<rect x="8" y="206" width="188" height="158" rx="8" fill="#f4eedf" stroke="#c0392b" stroke-width="2"/>
+<text x="102" y="312" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Never stalk a gobble</text>
+<text x="102" y="332" font-size="15" fill="#2f3a2b" text-anchor="middle">It may be another</text>
+<text x="102" y="350" font-size="15" fill="#2f3a2b" text-anchor="middle">hunter calling</text>
+<rect x="204" y="206" width="188" height="158" rx="8" fill="#f4eedf" stroke="#2f6e3b" stroke-width="2"/>
+<text x="298" y="312" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Blaze orange bag</text>
+<text x="298" y="332" font-size="15" fill="#2f3a2b" text-anchor="middle">Wrap the bird to</text>
+<text x="298" y="350" font-size="15" fill="#2f3a2b" text-anchor="middle">carry it out</text>
+<g transform="translate(66 92)"><path d="M-6 30 C-10 10 -8 -6 0 -16 C6 -10 8 6 6 30z" fill="#3a2e24"/><ellipse cx="0" cy="-22" rx="13" ry="12" fill="#bcd4ec" stroke="#5c7fa6" stroke-width="1.2"/><path d="M-6 -30 C-4 -36 6 -36 8 -30 C6 -26 -4 -26 -6 -30z" fill="#f4f6f8"/><path d="M-12 -20 L-22 -18 L-12 -15z" fill="#c9b48a"/><path d="M-12 -24 C-18 -26 -20 -16 -18 -4 C-15 -6 -14 -14 -12 -18z" fill="#d1242a"/><path d="M-6 -12 C-8 0 -2 8 4 6 C6 -2 4 -8 2 -12z" fill="#d1242a"/><circle cx="-2" cy="-25" r="2" fill="#111"/></g>
+<rect x="108" y="72" width="20" height="34" rx="3" fill="#d1242a" stroke="#2f3a2b" stroke-width="1.2"/>
+<rect x="130" y="72" width="20" height="34" rx="3" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.2"/>
+<rect x="152" y="72" width="20" height="34" rx="3" fill="#2f5fa6" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M104 66 L176 112 M176 66 L104 112" stroke="#c0392b" stroke-width="4.5" stroke-linecap="round"/>
+<rect x="266" y="56" width="64" height="76" fill="#7a5537"/><path d="M274 58 v70" stroke="#5e4029" stroke-width="2"/><path d="M286 58 v70" stroke="#5e4029" stroke-width="2"/><path d="M298 58 v70" stroke="#5e4029" stroke-width="2"/><path d="M310 58 v70" stroke="#5e4029" stroke-width="2"/><path d="M322 58 v70" stroke="#5e4029" stroke-width="2"/><path d="M260 134 q38 -10 76 0" fill="#7a5537"/>
+<path d="M284 126 L286 100 C286 92 310 92 310 100 L312 126z" fill="#5f6b45"/><circle cx="298" cy="86" r="8" fill="#e0b48c"/><path d="M289 84 C289 74 307 74 307 84z" fill="#5f6b45"/><path d="M286 130 l-10 -12 M310 130 l10 -12" stroke="#4a4136" stroke-width="7" stroke-linecap="round"/>
+<path d="M272 52 H324" stroke="#2f3a2b" stroke-width="1.5"/><path d="M266.0 52.0 L272.0 55.3 L272.0 48.7z" fill="#2f3a2b"/><path d="M330.0 52.0 L324.0 48.7 L324.0 55.3z" fill="#2f3a2b"/>
+<path d="M112 288 C104 264 124 250 142 258 C158 246 184 260 178 288z" fill="#5b7a3a"/>
+<circle cx="148" cy="268" r="6" fill="#e8590c"/>
+<rect x="112" y="214" width="74" height="26" rx="13" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.4"/><path d="M138 239 l6 10 l4 -10z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.4"/><rect x="136" y="236" width="14" height="5" fill="#fffaf0"/>
+<text x="149" y="232" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">gobble?</text>
+<g transform="translate(54 290)"><path d="M-4 -24 L-12 0 M2 -24 L10 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-8 -48 C-2 -52 10 -50 12 -44 L4 -22 H-8z" fill="#5f6b45"/><circle cx="8" cy="-54" r="6" fill="#e0b48c"/></g>
+<path d="M30 228 L80 286 M80 228 L30 286" stroke="#c0392b" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M244 270 C244 236 274 224 314 226 C344 228 360 246 356 268 C344 290 264 292 244 270z" fill="#e8590c" stroke="#a33d06" stroke-width="2"/>
+<path d="M264 236 L284 286 M308 228 L320 288" stroke="#ff8a3d" stroke-width="3"/>
+<path d="M352 254 C364 252 376 258 380 266" stroke="#3a2e24" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M248 258 C228 236 222 256 216 246 C218 266 224 280 248 276z" fill="#6b4a2a" stroke="#3a2a1c" stroke-width="1.2"/><path d="M226 250 L246 266 M222 262 L246 270" stroke="#c9a46a" stroke-width="1.6"/><path d="M356 236 l14 -14 m-6 0 l6 0 l0 6 M350 232 l10 -16" stroke="#c9906a" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

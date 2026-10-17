@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" role="img" aria-label="Tiles: Region 1 bag limits. 3 black tailed deer a licence year, at most 2 bucks, at most 2 antlerless and those only from the Special Areas. Youth antlerless in Management Units 1-1, 1-2 and 1-4 to 1-6: 1. Grouse: 5 sooty and 5 ruffed a day." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="282" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 1 bag limits</text>
+<rect x="6" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">3</text>
+<text x="68" y="96" font-size="14" fill="#23261f" text-anchor="middle">black tailed</text>
+<text x="68" y="114" font-size="14" fill="#23261f" text-anchor="middle">deer a licence</text>
+<text x="68" y="132" font-size="14" fill="#23261f" text-anchor="middle">year</text>
+<rect x="138" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="200" y="96" font-size="14" fill="#23261f" text-anchor="middle">bucks at most</text>
+<rect x="270" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="332" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="332" y="96" font-size="14" fill="#23261f" text-anchor="middle">antlerless at</text>
+<text x="332" y="114" font-size="14" fill="#23261f" text-anchor="middle">most, Special</text>
+<text x="332" y="132" font-size="14" fill="#23261f" text-anchor="middle">Areas only</text>
+<rect x="6" y="150" width="124" height="120" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="68" y="184" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">1</text>
+<text x="68" y="206" font-size="14" fill="#23261f" text-anchor="middle">youth</text>
+<text x="68" y="224" font-size="14" fill="#23261f" text-anchor="middle">antlerless,</text>
+<text x="68" y="242" font-size="14" fill="#23261f" text-anchor="middle">MUs 1-1, 1-2,</text>
+<text x="68" y="260" font-size="14" fill="#23261f" text-anchor="middle">1-4 to 1-6</text>
+<rect x="138" y="150" width="124" height="120" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="200" y="184" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5</text>
+<text x="200" y="206" font-size="14" fill="#23261f" text-anchor="middle">sooty (blue)</text>
+<text x="200" y="224" font-size="14" fill="#23261f" text-anchor="middle">grouse a day</text>
+<rect x="270" y="150" width="124" height="120" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="332" y="184" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">5</text>
+<text x="332" y="206" font-size="14" fill="#23261f" text-anchor="middle">ruffed grouse a</text>
+<text x="332" y="224" font-size="14" fill="#23261f" text-anchor="middle">day</text>
+</svg>

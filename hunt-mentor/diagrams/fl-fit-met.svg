@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Compendium of Physical Activities MET values: hunting from a stand 2.5, hunting general 5.0, deer, elk and large game hunting 6.0, hiking with hunting gear 9.5, dragging a carcass 9.8.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How hard is hunting? (METs)</text>
+<text x="172" y="73" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Stand, little walking</text>
+<rect x="180" y="56" width="38.095238095238095" height="26" rx="4" fill="#8a9a6b"/>
+<text x="224.0952380952381" y="75" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">2.5</text>
+<text x="172" y="115" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Hunting, general</text>
+<rect x="180" y="98" width="76.19047619047619" height="26" rx="4" fill="#8a9a6b"/>
+<text x="262.1904761904762" y="117" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">5</text>
+<text x="172" y="157" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Deer, elk, large game</text>
+<rect x="180" y="140" width="91.42857142857143" height="26" rx="4" fill="#2f3a2b"/>
+<text x="277.42857142857144" y="159" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">6</text>
+<text x="172" y="199" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Hiking with gear</text>
+<rect x="180" y="182" width="144.76190476190476" height="26" rx="4" fill="#e8590c"/>
+<text x="330.76190476190476" y="201" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">9.5</text>
+<text x="172" y="241" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Dragging a carcass</text>
+<rect x="180" y="224" width="149.33333333333334" height="26" rx="4" fill="#b3261e"/>
+<text x="335.33333333333337" y="243" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">9.8</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">1 MET = sitting still. Source: Compendium (2024)</text>
+</svg>

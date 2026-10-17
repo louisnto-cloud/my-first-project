@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a dirt lane beside a brush edge. Shallow round dusting bowls in the dirt, small three toed tracks, and a grey body feather. Washington Fish and Wildlife says dusting holes, tracks and droppings show quail are near, 75 percent. Tip: dusting happens at midday, so check the spot then.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dusting bowls on a dirt lane</text>
+<rect x="0" y="40" width="400" height="190" fill="#e6d3b0"/>
+<rect x="0" y="40" width="400" height="40" fill="#8a9a6b"/>
+<text x="200" y="66" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">brush edge</text>
+<ellipse cx="90" cy="140" rx="24" ry="13" fill="#cdb48a" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="150" cy="160" rx="24" ry="13" fill="#cdb48a" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="210" cy="130" rx="24" ry="13" fill="#cdb48a" stroke="#8b5a2b" stroke-width="2"/>
+<ellipse cx="280" cy="165" rx="24" ry="13" fill="#cdb48a" stroke="#8b5a2b" stroke-width="2"/>
+<path d="M240 200 l-4 -8 M244 200 l0 -9 M248 200 l4 -8 M262 214 l-4 -8 M266 214 l0 -9 M270 214 l4 -8" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M330 120 q10 -8 16 2 q-8 4 -16 -2 Z" fill="#7d7f86"/>
+<text x="338" y="108" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">feather</text>
+<text x="150" y="196" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bowls</text>
+<text x="254" y="222" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">tracks</text>
+<rect x="10" y="236" width="380" height="56" rx="8" fill="#2f3a2b"/>
+<text x="200" y="258" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Dusting holes, tracks, droppings: birds near (75%)</text>
+<text x="200" y="280" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Midday dusting spot: come back at noon (Tip)</text>
+</svg>

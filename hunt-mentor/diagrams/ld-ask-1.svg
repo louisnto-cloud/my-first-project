@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1 of asking permission: go to the farm in person on day 1, in daylight, in clean clothes, with no guns showing. A Tip.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Go in person on day 1</text>
+<circle cx="133" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 124) scale(1.6)"><circle cx="0" cy="-12" r="8" fill="#2f3a2b"/><path d="M-12 20 v-16 q0 -8 12 -8 q12 0 12 8 v16 z" fill="#e8590c"/></g>
+<circle cx="267" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 124) scale(1.6)"><path d="M-20 18 v-18 l20 -16 l20 16 v18 z" fill="#c9b79c" stroke="#2f3a2b" stroke-width="2"/><rect x="-5" y="4" width="10" height="14" fill="#2f3a2b"/></g>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">Daylight, clean clothes, no guns showing</text>
+<text x="200" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">(Tip).</text>
+</svg>

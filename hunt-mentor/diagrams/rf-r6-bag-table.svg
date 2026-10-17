@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 723" font-family="sans-serif" role="img" aria-label="Bag limits from the Region 6 season table. NBL means No Bag Limit; 10 (30) means 10 a day, 30 in possession. Mule deer in 6-12 and 6-13 prints 15 (15), but the footnote and page 49 set possession at 5. Moose 1, elk 1, thinhorn sheep 1, mountain goat 1, cougar 1, wolverine 1, lynx 1, black bear 2, wolf 3, coyote 10, snowshoe hare 10 a day, raccoon no bag limit. Grouse 10 (30) on the mainland and 5 (15) in 6-12 and 6-13, Haida Gwaii. Ptarmigan 5 (15) or 10 (30) by Management Unit. Ducks 8 (24). Canada and cackling geese, snipe and coots 10 (30). Snow, Ross&#x27;s and white fronted geese 5 (15).">
+<rect width="400" height="723" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">NBL: No Bag Limit. 10 (30): 10 a day, 30 in</text>
+<text x="14" y="42" font-size="14" font-weight="bold" fill="#6b5b4b">possession.</text>
+<rect x="8" y="52" width="384" height="64" rx="8" fill="#fbe9e3" stroke="#c0392b" stroke-width="1.6"/>
+<text x="64" y="93" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="middle">15 (15)</text>
+<text x="128" y="78" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer, 6-12, 6-13</text>
+<text x="128" y="99" font-size="15" font-weight="bold" fill="#c0392b">Possession 5 by footnote</text>
+<text x="14" y="142" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">BIG GAME AND FURBEARERS</text>
+<line x1="267" y1="137" x2="392" y2="137" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="152" width="384" height="79" rx="6" fill="#f4eedf"/>
+<text x="64" y="200.1" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<text x="130" y="176" font-size="16" fill="#2f3a2b">Moose, elk, thinhorn sheep,</text>
+<text x="130" y="197" font-size="16" fill="#2f3a2b">mountain goat, cougar, wolverine,</text>
+<text x="130" y="218" font-size="16" fill="#2f3a2b">lynx</text>
+<text x="64" y="263.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="260.5" font-size="16" fill="#2f3a2b">Black bear</text>
+<rect x="8" y="279" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="309.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">3</text>
+<text x="130" y="306.5" font-size="16" fill="#2f3a2b">Wolf</text>
+<text x="64" y="355.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">10</text>
+<text x="130" y="352.5" font-size="16" fill="#2f3a2b">Coyote</text>
+<rect x="8" y="371" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="401.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">10 a day</text>
+<text x="130" y="398.5" font-size="16" fill="#2f3a2b">Snowshoe hare</text>
+<text x="64" y="447.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">NBL</text>
+<text x="130" y="444.5" font-size="16" fill="#2f3a2b">Raccoon</text>
+<text x="14" y="489" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">BIRDS</text>
+<line x1="83" y1="484" x2="392" y2="484" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="499" width="384" height="79" rx="6" fill="#f4eedf"/>
+<text x="64" y="547.1" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)</text>
+<text x="130" y="523" font-size="16" fill="#2f3a2b">Grouse, mainland. Ptarmigan,</text>
+<text x="130" y="544" font-size="16" fill="#2f3a2b">other MUs. Canada and cackling</text>
+<text x="130" y="565" font-size="16" fill="#2f3a2b">geese, snipe, coots</text>
+<text x="64" y="628.1" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 (15)</text>
+<text x="130" y="604" font-size="16" fill="#2f3a2b">Grouse, 6-12, 6-13. Ptarmigan,</text>
+<text x="130" y="625" font-size="16" fill="#2f3a2b">some MUs. Snow, Ross&#x27;s, white</text>
+<text x="130" y="646" font-size="16" fill="#2f3a2b">fronted geese</text>
+<rect x="8" y="661" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="691.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">8 (24)</text>
+<text x="130" y="688.5" font-size="16" fill="#2f3a2b">Ducks</text>
+</svg>

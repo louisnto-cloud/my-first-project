@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation of a bullet path against the straight line of sight. The bullet starts 3.8 cm below the line because the scope sits above the bore, rises to cross the line near 25 m, peaks about 1 cm high, crosses again at the 100 m zero, then falls: 13 cm low at 200 m, 48 cm at 300 m and 112 cm at 400 m for a 150 grain .308. An inset zooms in on the first 100 m.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Line of sight is straight. The bullet arcs.</text>
+<g><path d="M8 173 L30 172 L34 182 L22 186 L8 184z" fill="#8b5a2b"/><rect x="30" y="171.5" width="16" height="6" rx="1" fill="#4b4f48"/><rect x="44" y="172.8" width="30" height="2.4" fill="#4b4f48"/><path d="M36 177 q1 6 6 5" fill="none" stroke="#2f3a2b" stroke-width="1.6"/><rect x="28" y="167.4" width="26" height="5.2" rx="2.6" fill="#2f3a2b"/><path d="M28 166 l-5 -1.5 v11 l5 -1.5z M54 166 l6 -2 v12 l-6 -2z" fill="#2f3a2b"/></g>
+<line x1="74" y1="170" x2="392" y2="170" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="392" y="190" font-size="14" fill="#2f3a2b" text-anchor="end">line of sight</text>
+<line x1="150.5" y1="164" x2="150.5" y2="176" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="227.0" y1="164" x2="227.0" y2="176" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="303.5" y1="164" x2="303.5" y2="176" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="380.0" y1="164" x2="380.0" y2="176" stroke="#2f3a2b" stroke-width="2"/>
+<text x="227" y="160" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">200 m</text>
+<text x="303.5" y="160" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">300 m</text>
+<path d="M74.0 173.0 L93.1 170.0 L112.2 169.4 L123.7 169.2 L131.4 169.2 L150.5 170.0 L188.8 173.6 L227.0 180.1 L265.2 191.8 L303.5 207.4 L341.8 229.3 L380.0 257.4" fill="none" stroke="#e8590c" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="1000"><animate attributeName="stroke-dashoffset" values="1000;0" dur="4s" fill="freeze"/></path>
+<rect x="150" y="38" width="242" height="100" rx="8" fill="#f4eedf" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="382" y="129" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">First 100 m, zoomed</text>
+<line x1="164.0" y1="80" x2="378.0" y2="80" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<path d="M164.0 114.2 C202.5 94.4 249.6 69.2 313.8 71.0 S 360.9 75.5 378.0 80.0" fill="none" stroke="#e8590c" stroke-width="3" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="400"><animate attributeName="stroke-dashoffset" values="400;0" dur="1.2s" fill="freeze"/></path>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.5s" fill="freeze"/><circle cx="217.5" cy="80" r="4" fill="#2f3a2b"/><text x="225.5" y="100" font-size="14" font-weight="bold" fill="#2f3a2b">crosses near 25 m</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.5s" fill="freeze"/><text x="309.5" y="61" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">1 cm high</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze"/><circle cx="150.5" cy="170" r="6" fill="#2f6e3b"/><text x="150.5" y="158" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">zero 100 m</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.0s" dur="0.5s" fill="freeze"/><text x="217" y="202.1" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">13 cm low</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.0s" dur="0.5s" fill="freeze"/><text x="293.5" y="227.4" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">48 cm low</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.8s" dur="0.5s" fill="freeze"/><text x="366" y="261.4" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">112 cm low at 400 m</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.2s" dur="0.5s" fill="freeze"/><text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">150 gr, 100 m zero, scope 3.8 cm above the bore</text></g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2, head bob: the deer drops its head as if to feed, then snaps it up to catch you moving. Hunter lore.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="250" width="400" height="50" fill="#dfe6d3"/>
+<text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Head bob</text>
+<g transform="translate(0 0) scale(1.0)"><rect x="150" y="190" width="9" height="62" fill="#8b5a2b"/><rect x="168" y="190" width="9" height="60" fill="#8b5a2b"/><rect x="240" y="190" width="9" height="62" fill="#8b5a2b"/><rect x="226" y="190" width="9" height="62" fill="#8b5a2b"/><ellipse cx="200" cy="175" rx="62" ry="28" fill="#8b5a2b"/><path d="M140 165 q-12 -2 -14 10 q8 2 14 -2 Z" fill="#fff"/><polygon points="236,160 268,215 284,206 262,170" fill="#8b5a2b"/><ellipse cx="282" cy="224" rx="20" ry="10" transform="rotate(70 282 224)" fill="#8b5a2b"/><ellipse cx="270" cy="205" rx="5" ry="13" transform="rotate(-60 270 205)" fill="#8b5a2b"/></g>
+<path d="M330 200 V110" stroke="#e8590c" stroke-width="4"/><path d="M320 122 l10 -14 l10 14" stroke="#e8590c" stroke-width="4" fill="none"/><text x="60" y="80" font-size="16" font-weight="bold" fill="#e8590c">Fakes feeding,</text><text x="60" y="100" font-size="16" font-weight="bold" fill="#e8590c">then snaps up</text>
+</svg>

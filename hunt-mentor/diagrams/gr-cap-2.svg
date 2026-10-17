@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Capsize step 2: stay with the boat and hold on. It is bigger to see and helps you float. Do not swim for shore unless it is very close.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Stay with the boat</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 150 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+  <path d="M170 150 Q 260 132 350 150 L344 170 L176 170 Z" fill="#8a8f88" stroke="#2f3a2b" stroke-width="2" transform="rotate(180 260 156)"/><circle cx="140" cy="140" r="12" fill="#d9b48f"/><rect x="125.0" y="154" width="30" height="34" rx="7" fill="#e8590c"/><path d="M152 150 L176 150" stroke="#d9b48f" stroke-width="7" stroke-linecap="round"/><path d="M90 90 l-50 0" stroke="#c0392b" stroke-width="3"/><text x="20" y="80" font-size="14" font-weight="bold" fill="#c0392b">Not shore</text>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">It is bigger to see and helps you float</text>
+</svg>

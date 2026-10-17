@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A mountain goat broadside. The long hair, a dashed outline, makes the goat look much deeper than its real body, drawn inside it. The heart and lung target sits behind the shoulder, one third up the real body, lower than the hair suggests. A tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="17" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Aim lower than the hair says (Tip)</text>
+<g transform="translate(225 160) scale(2.0)"><path d="M-34,-20 C-30,-40 -6,-42 4,-36 C20,-32 36,-30 42,-16 L44,16 C34,22 -24,24 -36,14 Z" fill="#ffffff" stroke="#23261f" stroke-width="0.8" stroke-dasharray="2 1.5"/><path d="M-28,-12 C-26,-26 -10,-30 0,-26 C14,-22 28,-20 34,-10 L36,8 C28,12 -22,14 -28,6 Z" fill="#f3ead8" stroke="#23261f" stroke-width="0.8"/><path d="M-34,-10 L-38,-30 L-48,-34 L-62,-26 L-62,-20 L-50,-16 L-44,-8 Z" fill="#ffffff" stroke="#23261f" stroke-width="0.8"/><path d="M-46,-28 C-46,-42 -38,-48 -30,-50" fill="none" stroke="#23261f" stroke-width="3" stroke-linecap="round"/><path d="M-22,14 L-22,36 M-10,16 L-10,36 M22,16 L22,36 M32,14 L32,36" stroke="#23261f" stroke-width="3"/><ellipse cx="-14" cy="-2" rx="9" ry="8" fill="#e8590c" opacity="0.45"/></g>
+<text x="390" y="66" font-size="14" fill="#2f3a2b" text-anchor="end">Long hair: dashed line</text>
+<line x1="320" y1="72" x2="297.5" y2="87.0" stroke="#2f3a2b" stroke-width="2"/><polygon points="290,92 300.2,91.1 294.7,82.9" fill="#2f3a2b"/>
+<text x="330" y="262" font-size="14" fill="#8b5a2b" text-anchor="middle" font-weight="bold">Real body: inside</text>
+<text x="80" y="260" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Heart and lungs</text>
+<line x1="110" y1="246" x2="183.9" y2="166.6" stroke="#e8590c" stroke-width="2.5"/><polygon points="190,160 180.2,163.2 187.5,170.0" fill="#e8590c"/>
+<text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">Broadside, behind the shoulder, one third up</text>
+</svg>

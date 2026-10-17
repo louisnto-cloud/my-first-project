@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Cards. Moose stay on high range longer than deer and drift down slowly; they move easily in snow to 40 centimetres and often winter in 50 or more. Autumn snow pushes elk herds to winter range. About 1,350 elk lived in the Thompson Okanagan in 2000.">
+<rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Moose and elk near your bases</text>
+<rect x="10" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g transform="translate(40 74) scale(0.8)"><ellipse rx="20" ry="9" fill="#4a3524"/><circle cx="19" cy="-10" r="6.5" fill="#4a3524"/><rect x="-15" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="-6" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="7" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="13" y="5" width="3.5" height="14" fill="#4a3524"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/></g>
+<text x="70" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Moose</text>
+<text x="20" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Stay high longer than</text>
+<text x="20" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">deer; drift down slowly</text>
+<text x="20" y="148" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">(85%).</text>
+<rect x="204" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g transform="translate(234 74) scale(0.8)"><ellipse rx="20" ry="9" fill="#4a3524"/><circle cx="19" cy="-10" r="6.5" fill="#4a3524"/><rect x="-15" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="-6" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="7" y="5" width="3.5" height="14" fill="#4a3524"/><rect x="13" y="5" width="3.5" height="14" fill="#4a3524"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/></g>
+<text x="264" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Moose snow</text>
+<text x="214" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Easy to 40 cm; often</text>
+<text x="214" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">winter in 50 cm or more</text>
+<text x="214" y="148" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">(85%).</text>
+<rect x="10" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g transform="translate(40 210) scale(0.8)"><ellipse rx="20" ry="9" fill="#a0703a"/><circle cx="19" cy="-10" r="6.5" fill="#a0703a"/><rect x="-15" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="-6" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="7" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="13" y="5" width="3.5" height="14" fill="#a0703a"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/><path d="M19 -15 l-5 -10 m3 5 l-6 -2 M23 -15 l5 -10 m-3 5 l6 -2" stroke="#5c3b1c" stroke-width="2" fill="none"/></g>
+<text x="70" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Elk</text>
+<text x="20" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Autumn snow pushes herds</text>
+<text x="20" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">to winter range (85%).</text>
+<rect x="204" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<g transform="translate(234 210) scale(0.8)"><ellipse rx="20" ry="9" fill="#a0703a"/><circle cx="19" cy="-10" r="6.5" fill="#a0703a"/><rect x="-15" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="-6" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="7" y="5" width="3.5" height="14" fill="#a0703a"/><rect x="13" y="5" width="3.5" height="14" fill="#a0703a"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/><path d="M19 -15 l-5 -10 m3 5 l-6 -2 M23 -15 l5 -10 m-3 5 l6 -2" stroke="#5c3b1c" stroke-width="2" fill="none"/></g>
+<text x="264" y="206" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Elk numbers</text>
+<text x="214" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">About 1,350 in Thompson</text>
+<text x="214" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Okanagan, 2000 (85%).</text>
+</svg>

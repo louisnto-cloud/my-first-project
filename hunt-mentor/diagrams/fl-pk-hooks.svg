@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" font-family="sans-serif" role="img" aria-label="Memory hook for pack fit in four, Hungry Sheep Like Salt: Hips first, belt on the hip bones, tight. Shoulders snug, no gap. Lifters pull the load close. Sternum strap, clip it last. Packing: light low, heavy close, quick on top.">
+<rect width="400" height="310" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hook: fit in four</text>
+<rect x="8" y="44" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="44" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="79" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">H</text>
+<text x="74" y="66" font-size="18" font-weight="bold" fill="#2f3a2b">Hips first</text>
+<text x="74" y="87" font-size="15" fill="#2f3a2b">Belt on the hip bones, tight</text>
+<rect x="8" y="102" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="102" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="137" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">S</text>
+<text x="74" y="124" font-size="18" font-weight="bold" fill="#2f3a2b">Shoulders</text>
+<text x="74" y="145" font-size="15" fill="#2f3a2b">Snug, no gap</text>
+<rect x="8" y="160" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="160" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="195" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">L</text>
+<text x="74" y="182" font-size="18" font-weight="bold" fill="#2f3a2b">Lifters</text>
+<text x="74" y="203" font-size="15" fill="#2f3a2b">Pull the load close</text>
+<rect x="8" y="218" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="218" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="253" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">S</text>
+<text x="74" y="240" font-size="18" font-weight="bold" fill="#2f3a2b">Sternum</text>
+<text x="74" y="261" font-size="15" fill="#2f3a2b">Clip it last</text>
+<text x="200" y="294" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Packing: light low, heavy close, quick on top</text>
+</svg>

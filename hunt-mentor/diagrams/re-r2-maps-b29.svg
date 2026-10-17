@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 257" role="img" aria-label="Cards: Maps B29 to B32. B29 Elbow Lake: No Shooting Area. MU 2-19. B30 Yale: No Shooting Area. MU 2-18. B31 North Thormanby Island: No Shooting or Hunting Area. MU 2-16. B32 Hemlock Valley: No Shooting Area. MU 2-19." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="257" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Maps B29 to B32</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 31</text>
+<rect x="6.0" y="69" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M6.0 97 V78 Q6.0 69 15.0 69 H187.0 Q196.0 69 196.0 78 V97 Z" fill="#e8590c"/>
+<text x="14.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">B29 Elbow Lake</text>
+<text x="14.0" y="117" font-size="14" fill="#23261f">No Shooting Area. MU</text>
+<text x="14.0" y="135" font-size="14" fill="#23261f">2-19</text>
+<rect x="204.0" y="69" width="190.0" height="76" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 97 V78 Q204.0 69 213.0 69 H385.0 Q394.0 69 394.0 78 V97 Z" fill="#e8590c"/>
+<text x="212.0" y="89" font-size="14" font-weight="bold" fill="#ffffff">B30 Yale</text>
+<text x="212.0" y="117" font-size="14" fill="#23261f">No Shooting Area. MU</text>
+<text x="212.0" y="135" font-size="14" fill="#23261f">2-18</text>
+<rect x="6.0" y="153" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6.0 199 V162 Q6.0 153 15.0 153 H187.0 Q196.0 153 196.0 162 V199 Z" fill="#c92a2a"/>
+<text x="14.0" y="173" font-size="14" font-weight="bold" fill="#ffffff">B31 North Thormanby</text>
+<text x="14.0" y="191" font-size="14" font-weight="bold" fill="#ffffff">Island</text>
+<text x="14.0" y="219" font-size="14" fill="#23261f">No Shooting or Hunting</text>
+<text x="14.0" y="237" font-size="14" fill="#23261f">Area. MU 2-16</text>
+<rect x="204.0" y="153" width="190.0" height="94" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<path d="M204.0 199 V162 Q204.0 153 213.0 153 H385.0 Q394.0 153 394.0 162 V199 Z" fill="#e8590c"/>
+<text x="212.0" y="173" font-size="14" font-weight="bold" fill="#ffffff">B32 Hemlock Valley</text>
+<text x="212.0" y="219" font-size="14" fill="#23261f">No Shooting Area. MU</text>
+<text x="212.0" y="237" font-size="14" fill="#23261f">2-19</text>
+</svg>

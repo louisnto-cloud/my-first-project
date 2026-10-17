@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="A fuel gauge from E, empty, to F, full, with marks at a quarter, a half and three quarters. The red zone from empty to a quarter means shaky, cold and bad choices. The needle sits well above a quarter: keep it there. Eat before you are hungry and drink before you are thirsty.">
+<rect width="400" height="314" fill="#fffaf0"/>
+<text x="200" y="30" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Keep the tank above a quarter</text>
+<path d="M50 216 A150 150 0 0 1 350 216" fill="#2f3a2b"/>
+<path d="M58 216 A142 142 0 0 1 342 216z" fill="#fbf7ee"/>
+<path d="M78.0 210.0 A122 122 0 0 1 113.7 123.7" fill="none" stroke="#c0392b" stroke-width="22"/>
+<path d="M113.7 123.7 A122 122 0 0 1 322.0 210.0" fill="none" stroke="#8a9a6b" stroke-width="22"/>
+<line x1="92.0" y1="210.0" x2="66.0" y2="210.0" stroke="#2f3a2b" stroke-width="3"/>
+<text x="134" y="212" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Empty</text>
+<line x1="123.6" y1="133.6" x2="105.2" y2="115.2" stroke="#2f3a2b" stroke-width="3"/>
+<text x="136.4" y="152.4" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1/4</text>
+<line x1="200.0" y1="102.0" x2="200.0" y2="76.0" stroke="#2f3a2b" stroke-width="3"/>
+<text x="200" y="126" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1/2</text>
+<line x1="276.4" y1="133.6" x2="294.8" y2="115.2" stroke="#2f3a2b" stroke-width="3"/>
+<text x="263.6" y="152.4" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3/4</text>
+<line x1="308.0" y1="210.0" x2="334.0" y2="210.0" stroke="#2f3a2b" stroke-width="3"/>
+<text x="266" y="212" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Full</text>
+<line x1="200" y1="210" x2="239.7" y2="147.5" stroke="#e8590c" stroke-width="6" stroke-linecap="round"/><circle cx="200" cy="210" r="12" fill="#2f3a2b"/>
+<g transform="translate(166 180)"><rect x="-8" y="-12" width="16" height="24" rx="2" fill="#2f3a2b"/><rect x="-5" y="-8" width="10" height="7" fill="#fbf7ee"/><path d="M8 -6 h4 v12 c0 3 4 3 4 0 v-14 l-4 -4" fill="none" stroke="#2f3a2b" stroke-width="2"/></g>
+
+<rect x="8" y="228" width="384" height="34" rx="8" fill="#fbe3df" stroke="#c0392b" stroke-width="1.4"/>
+<rect x="18" y="238" width="16" height="14" rx="3" fill="#c0392b"/><text x="42" y="251" font-size="16" font-weight="bold" fill="#c0392b">Red: shaky, cold, bad choices</text>
+<rect x="8" y="270" width="384" height="36" rx="8" fill="#2f3a2b"/>
+<text x="200" y="294" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Eat before hungry. Drink before thirsty.</text>
+</svg>

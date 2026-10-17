@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" font-family="sans-serif" role="img" aria-label="Field care step 2. A grouse: pull the crop at the base of the neck, then make a small cut at the vent and hook out the guts, soon after the shot.">
+<rect width="400" height="270" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Care 2: crop and guts out soon</text>
+<path d="M70 150 L34 128 C26 150 26 170 34 188 L72 170z" fill="#5a3e26"/><path d="M36 132 C30 150 30 168 36 184" stroke="#1d1a16" stroke-width="5" fill="none"/>
+<path d="M66 160 C66 116 120 100 196 104 C262 108 300 130 300 160 C300 196 262 216 196 216 C122 216 66 200 66 160z" fill="#a07a52" stroke="#5a3e26" stroke-width="1.6"/>
+<path d="M110 150 C140 132 220 132 262 150 C226 160 150 162 110 150z" fill="#8c6844"/>
+<path d="M286 144 C300 122 318 106 336 100 C352 98 362 110 356 124 C350 136 334 142 318 150z" fill="#a07a52" stroke="#5a3e26" stroke-width="1.4"/>
+<path d="M354 112 L372 116 L354 122z" fill="#3b2a1a"/><circle cx="344" cy="112" r="2.6" fill="#1b1714"/><path d="M330 98 l-4 -12 l10 8z" fill="#5a3e26"/>
+<path d="M150 182 q6 -6 12 0" stroke="#5a3e26" stroke-width="1.6" fill="none"/>
+<path d="M172 182 q6 -6 12 0" stroke="#5a3e26" stroke-width="1.6" fill="none"/>
+<path d="M194 182 q6 -6 12 0" stroke="#5a3e26" stroke-width="1.6" fill="none"/>
+<path d="M216 182 q6 -6 12 0" stroke="#5a3e26" stroke-width="1.6" fill="none"/>
+<path d="M238 182 q6 -6 12 0" stroke="#5a3e26" stroke-width="1.6" fill="none"/>
+<circle cx="300" cy="150" r="16" fill="#e9c08a" stroke="#e8590c" stroke-width="3"/>
+<path d="M84 186 C96 196 110 200 124 198" stroke="#e8590c" stroke-width="3.4" stroke-dasharray="5 4" fill="none"/>
+<rect x="264.8" y="58.0" width="106.4" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="318" y="78.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Crop: pull it</text>
+<line x1="304" y1="136" x2="304.776" y2="87" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="304" cy="136" r="2.6" fill="#2f3a2b"/>
+<rect x="49.4" y="228.0" width="301.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="248.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small cut at the vent, hook out guts</text>
+<line x1="104" y1="196" x2="79.3632" y2="228" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="104" cy="196" r="2.6" fill="#2f3a2b"/>
+</svg>

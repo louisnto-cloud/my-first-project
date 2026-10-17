@@ -1,0 +1,56 @@
+[
+ {
+  "id": "rl-knoll-newnham",
+  "species": "Landform: knob",
+  "caption": "A knob (knoll): a small rounded hill rising out of gentler ground. On a map it is a small set of closed rings.",
+  "author": "Fabian Musto",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Knoll_at_Newnham_Bridge_-_geograph.org.uk_-_7701668.jpg"
+ },
+ {
+  "id": "rl-edge-grass-aspen",
+  "species": "Habitat: edge",
+  "caption": "Edge: open grassland meets a stand of aspen. Feed in the open, cover a few steps away.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Nice_grassland_slopes_at_Edith_Hill_(16207692071).jpg"
+ },
+ {
+  "id": "rl-bluff-saddle-mtn",
+  "species": "Habitat: rock bluff",
+  "caption": "Rock bluff on Saddle Mountain, Paul Lake Provincial Park near Kamloops. Steep broken rock like this is escape terrain.",
+  "author": "MStormy",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:IMG_3385_-_Saddle_Mt._B.C._01.jpg"
+ },
+ {
+  "id": "rl-beaver-pond-manning",
+  "species": "Habitat: beaver pond",
+  "caption": "Beaver pond in E. C. Manning Provincial Park: flooded meadow, dead snags and still water.",
+  "author": "Hardo Müller from Bonn, Germany",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Beaver_Pond_(4296802236).jpg"
+ },
+ {
+  "id": "rl-snowy-forest-road",
+  "species": "Habitat: forest road",
+  "caption": "A forest road after fresh snow: every track that crosses it is new.",
+  "author": "Wes van Vugt",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:SA200_logging_road_-_panoramio.jpg"
+ },
+ {
+  "id": "rl-hedgerow-field-edge",
+  "species": "Habitat: hedge edge",
+  "caption": "A hedgerow along a field edge (England): a strip of cover that animals and birds travel.",
+  "author": "J.Hannan-Briggs",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Field_edge_and_hedgerow_-_geograph.org.uk_-_3481565.jpg"
+ }
+]

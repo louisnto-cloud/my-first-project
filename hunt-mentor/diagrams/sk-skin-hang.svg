@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" font-family="sans-serif" role="img" aria-label="A deer hung head down by its hind legs on a gambrel through the hock tendons, belly toward you. Cut around the hocks, down the inside of the legs and up the belly, then pull the hide down with your fist, using the knife as little as possible. The hide is shown peeled off the hind quarters. The head comes off at the atlas joint, the first joint behind the skull.">
+<rect width="400" height="380" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Skinning: hang it by the hind legs</text>
+<g transform="translate(0 18)">
+<path d="M128 40 V60" stroke="#8a7a5a" stroke-width="3"/>
+<path d="M58 74 C54 66 58 60 66 62 L128 60 L190 62 C198 60 202 66 198 74" stroke="#5c625d" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M60 76 L60 44 L68 44 L72 76z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/><path d="M60 44 l1 -10 h6 l1 10z" fill="#2b2622"/>
+<path d="M184 76 L188 44 L196 44 L196 76z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/><path d="M188 44 l1 -10 h6 l1 10z" fill="#2b2622"/>
+<path d="M60 78 C68 104 88 124 98 150 L158 150 C168 124 188 104 196 78 L182 76 C168 100 142 116 128 120 C114 116 88 100 74 76z" fill="#b5523b" stroke="#4a3320" stroke-width="1.6"/>
+<path d="M78 92 C88 112 98 130 104 146 M178 92 C168 112 158 130 152 146" stroke="#d98a73" stroke-width="2" fill="none"/>
+<path d="M96 146 C84 180 80 220 86 250 C92 270 106 278 114 282 L142 282 C150 278 164 270 170 250 C176 220 172 180 160 146z" fill="#9a7350" stroke="#4a3320" stroke-width="1.6"/>
+<path d="M112 150 C108 190 108 230 118 270 L138 270 C148 230 148 190 144 150z" fill="#efe4cf"/>
+<path d="M94 148 C116 156 140 156 162 148" stroke="#6b4f35" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M81 240 L76 318 L84 318 L95 240z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/><path d="M76 318 l0 10 h8 l0 -10z" fill="#2b2622"/>
+<path d="M161 240 L168 318 L176 318 L175 240z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/><path d="M168 318 l0 10 h8 l0 -10z" fill="#2b2622"/>
+<path d="M115 280 L117 312 L139 312 L141 280z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/>
+<path d="M114 312 C112 330 120 348 128 352 C136 348 144 330 142 312z" fill="#9a7350" stroke="#4a3320" stroke-width="1.4"/><path d="M115 318 l-14 -10 l4 14z M141 318 l14 -10 l-4 14z" fill="#9a7350" stroke="#4a3320" stroke-width="1.2"/><ellipse cx="128" cy="349" rx="5" ry="3.5" fill="#1b1b1b"/>
+<ellipse cx="66" cy="80" rx="10" ry="4" fill="none" stroke="#e8590c" stroke-width="2.6" stroke-dasharray="4 3"/>
+<ellipse cx="190" cy="80" rx="10" ry="4" fill="none" stroke="#e8590c" stroke-width="2.6" stroke-dasharray="4 3"/>
+<path d="M70 86 C88 108 116 120 128 124 C140 120 168 108 186 86 M128 124 V268" stroke="#e8590c" stroke-width="2.6" fill="none" stroke-dasharray="6 4"/>
+<path d="M108 312 H148" stroke="#c0392b" stroke-width="3.4"/>
+<path d="M70 170 V214" stroke="#2f3a2b" stroke-width="2.6"/><path d="M70.0 220.0 L75.0 211.0 L65.0 211.0z" fill="#2f3a2b"/>
+</g>
+<line x1="198" y1="84" x2="256.3" y2="72.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="198" cy="84" r="3" fill="#2f3a2b"/><rect x="256.3" y="50.0" width="135.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="324.171" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gambrel through</text>
+<text x="324.171" y="87" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">the hock tendon</text>
+<line x1="158" y1="134" x2="210.8" y2="151.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="158" cy="134" r="3" fill="#2f3a2b"/><rect x="210.8" y="120.0" width="181.2" height="63.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="301.38" y="139" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Cut around the hocks,</text>
+<text x="301.38" y="157" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">down the inside of the</text>
+<text x="301.38" y="175" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">legs, up the belly</text>
+<line x1="148" y1="330" x2="250.2" y2="337.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="148" cy="330" r="3" fill="#2f3a2b"/><rect x="250.2" y="306.0" width="141.8" height="63.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="321.121" y="325" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">Head off at the</text>
+<text x="321.121" y="343" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">atlas joint, first</text>
+<text x="321.121" y="361" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">joint behind skull</text>
+
+<text x="14" y="256" font-size="15" font-weight="bold" fill="#2f3a2b">Then fist</text><text x="14" y="275" font-size="15" font-weight="bold" fill="#2f3a2b">and pull.</text>
+<text x="392" y="256" font-size="15" fill="#2f3a2b" text-anchor="end">Knife as little</text><text x="392" y="275" font-size="15" fill="#2f3a2b" text-anchor="end">as possible.</text>
+</svg>

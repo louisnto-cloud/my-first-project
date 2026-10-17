@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two farm gates. Left: you found it closed, you leave it closed. Right: you found it open, you leave it open, because cattle may need to reach water. Leave every gate the way you found it unless the owner says otherwise.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="170" width="400" height="60" fill="#dfe6d3"/>
+  <g stroke="#6b4f35" stroke-width="6">
+    <line x1="30" y1="90" x2="30" y2="180"/><line x1="170" y1="90" x2="170" y2="180"/>
+    <line x1="230" y1="90" x2="230" y2="180"/><line x1="370" y1="90" x2="370" y2="180"/>
+  </g>
+  <g stroke="#8b5a2b" stroke-width="5" fill="none">
+    <path d="M30 110 L170 110 M30 135 L170 135 M30 160 L170 160 M30 160 L170 110"/>
+    <path d="M230 110 L262 70 M230 135 L262 95 M230 160 L262 120 M262 70 L262 120"/>
+  </g>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle">
+    <text x="100" y="56" font-weight="bold" fill="#2f3a2b">Found closed</text>
+    <text x="100" y="256" fill="#23261f">Leave it closed</text>
+    <text x="300" y="56" font-weight="bold" fill="#2f3a2b">Found open</text>
+    <text x="300" y="256" fill="#23261f">Leave it open</text>
+  </g>
+  <text x="200" y="290" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">Unless the owner tells you otherwise</text>
+</svg>

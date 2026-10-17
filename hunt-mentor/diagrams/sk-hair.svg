@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 466" font-family="sans-serif" role="img" aria-label="Deer side view showing hair zones. Long, coarse grey brown hair from the top of the back means a high hit. Short brown hair with dark tips from the side of the chest is good. Long, fine white hair from the belly or brisket means a low hit. White hair with a dark band comes from the tail or rump. Hunter lore, a tip only. Hair but no blood: back out and give it more time.">
+<rect width="400" height="466" fill="#fffaf0"/>
+<text x="200" y="20" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hair at the hit site: how high? (Tip)</text>
+<defs><clipPath id="sk-hair-body"><path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z"/></clipPath></defs>
+<g transform="translate(0 66)">  <ellipse cx="250" cy="302" rx="120" ry="7" fill="#d8ccb2"/>
+  <!-- far legs -->
+  <path d="M200 216 L212 218 L214 260 L216 298 L206 300 L204 262 L198 236z" fill="#7a5638"/>
+  <path d="M290 212 L314 216 L318 248 L322 296 L312 298 L306 252 L294 230z" fill="#7a5638"/>
+  <!-- near body outline -->
+  <path d="M62 128 C62 122 70 116 80 112 L98 102 C104 98 112 98 116 104 C128 118 148 138 172 147 C210 143 270 145 316 149 C330 151 338 157 342 166 C344 188 340 208 330 222 L326 246 L330 296 L320 298 L316 250 C312 236 306 226 300 220 C270 228 222 230 196 222 L194 246 L196 296 L186 298 L184 250 C182 238 178 230 170 226 C158 222 150 212 148 198 C140 174 118 150 100 138 C92 136 80 134 70 134 L62 130z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- belly shade, throat and rump patches -->
+  <path d="M200 220 C230 226 270 224 298 216 C290 208 250 214 200 212z" fill="#c9a37a"/>
+  <path d="M104 140 C116 150 128 160 136 172 C126 168 114 158 104 148z" fill="#f3ead8"/>
+  <path d="M336 160 C344 172 344 196 336 208 C332 196 332 176 336 160z" fill="#f3ead8"/>
+  <path d="M340 158 C350 162 352 176 346 186 C342 178 340 168 340 158z" fill="#f3ead8" stroke="#5a3e26" stroke-width="1"/>
+  <!-- ear, eye, nose, antlers -->
+  <path d="M110 102 C116 86 126 76 134 72 C134 86 126 100 116 106z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.4"/>
+  <circle cx="90" cy="114" r="2.6" fill="#2f241a"/>
+  <ellipse cx="64" cy="126" rx="3.4" ry="2.6" fill="#2f241a"/>
+  <path d="M104 100 C102 80 108 62 122 50 M108 76 C98 70 94 60 96 50 M118 54 C122 44 132 40 140 40 M122 50 C118 40 118 32 122 26" fill="none" stroke="#6b4f35" stroke-width="3" stroke-linecap="round"/>
+<g clip-path="url(#sk-hair-body)"><path d="M150 146 C210 140 270 142 330 150" stroke="#76695a" stroke-width="16" fill="none"/><path d="M190 226 C222 234 270 232 304 222" stroke="#f3ead8" stroke-width="14" fill="none"/><path d="M146 200 C148 214 156 224 170 230" stroke="#f3ead8" stroke-width="10" fill="none"/></g>
+<path d="M343 186 C346 192 346 198 342 202" stroke="#2f241a" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+<line x1="282" y1="212" x2="320" y2="75" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="282" cy="212" r="2.6" fill="#2f3a2b"/>
+<rect x="223.6" y="30.0" width="168.4" height="45.0" rx="5" fill="#fffaf0" stroke="#76695a" stroke-width="1.2"/>
+<text x="307.8" y="49" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Coarse, grey brown</text>
+<text x="307.8" y="67" font-size="15" fill="#c0392b" text-anchor="middle">Top of back: high hit</text>
+<line x1="212" y1="251" x2="160.129" y2="290" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="212" cy="251" r="2.6" fill="#2f3a2b"/>
+<rect x="8.0" y="290.0" width="158.1" height="63.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="87.0645" y="309" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Short, brown,</text>
+<text x="87.0645" y="327" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">dark tips</text>
+<text x="87.0645" y="345" font-size="15" fill="#2f6e3b" text-anchor="middle">Side of chest: good</text>
+<line x1="160" y1="282" x2="172" y2="384" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="160" cy="282" r="2.6" fill="#2f3a2b"/>
+<rect x="8.0" y="384.0" width="189.9" height="45.0" rx="5" fill="#fffaf0" stroke="#b8ad92" stroke-width="1.2"/>
+<text x="102.954" y="403" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Long, white, fine</text>
+<text x="102.954" y="421" font-size="15" fill="#c0392b" text-anchor="middle">Belly or brisket: low hit</text>
+<line x1="346" y1="248" x2="360" y2="384" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="346" cy="248" r="2.6" fill="#2f3a2b"/>
+<rect x="254.1" y="384.0" width="137.9" height="45.0" rx="5" fill="#fffaf0" stroke="#b8ad92" stroke-width="1.2"/>
+<text x="323.047" y="403" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">White, dark band</text>
+<text x="323.047" y="421" font-size="15" fill="#2f3a2b" text-anchor="middle">Tail or rump</text>
+<text x="200" y="456" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hair, no blood: back out, give it more time</text>
+</svg>

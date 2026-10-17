@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Four kinds of pinch point, seen from above, where deer must squeeze through. Creek crossing with low banks. A gap in a cliff band. An open gate or downed fence. The inside corner of a field. An orange dot marks where the deer lines meet.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 pinch points</text>
+  <g><rect x="10" y="40" width="185" height="130" rx="10" fill="#dfe6d3"/>
+    <path d="M10 100 Q100 90 195 110" stroke="#4a7fb0" stroke-width="14" fill="none"/>
+    <path d="M60 50 Q95 80 100 98 M140 50 Q110 80 100 98 M100 98 Q100 130 95 165" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+    <circle cx="100" cy="98" r="8" fill="#e8590c"/>
+    <text x="102" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Creek crossing</text></g>
+  <g><rect x="205" y="40" width="185" height="130" rx="10" fill="#dfe6d3"/>
+    <path d="M205 95 H280 L290 110 H205 Z M310 110 L320 95 H390 V110 Z" fill="#6f6252"/>
+    <path d="M300 50 V160" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 4"/>
+    <circle cx="300" cy="102" r="8" fill="#e8590c"/>
+    <text x="297" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gap in a cliff band</text></g>
+  <g><rect x="10" y="200" width="185" height="110" rx="10" fill="#dfe6d3"/>
+    <path d="M10 255 H80 M120 255 H195" stroke="#2f3a2b" stroke-width="3"/>
+    <g fill="#6b4f35"><rect x="76" y="247" width="6" height="16"/><rect x="118" y="247" width="6" height="16"/></g>
+    <path d="M60 210 Q100 240 100 255 M140 210 Q100 240 100 255 M100 255 V305" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+    <circle cx="100" cy="255" r="8" fill="#e8590c"/>
+    <text x="102" y="330" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gate or downed fence</text></g>
+  <g><rect x="205" y="200" width="185" height="110" rx="10" fill="#e9dfa8"/>
+    <path d="M205 200 H390 V230 H245 V310 H205 Z" fill="#2f3a2b"/>
+    <path d="M300 230 Q270 250 255 240 M330 290 Q270 270 255 240" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
+    <circle cx="252" cy="238" r="8" fill="#e8590c"/>
+    <text x="320" y="270" font-size="14" fill="#6b4f35">field</text>
+    <text x="297" y="330" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Inside field corner</text></g>
+</svg>

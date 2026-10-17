@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1 of cleaning a shotgun: unload the magazine and chamber, action open, then look and feel to prove it empty.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Unload, open, prove</text>
+<g transform="translate(196 122) rotate(0) scale(1.18)"><path d="M-150 -6 C-120 -6 -90 -4 -62 -2 L-40 -6 V7 C-46 9 -52 16 -56 20 L-64 19 C-62 13 -64 9 -68 8 C-96 12 -124 18 -150 22z" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1"/><path d="M-150 -6 V22" stroke="#2b2b2b" stroke-width="4"/><rect x="-42" y="-8" width="46" height="16" rx="2" fill="#3a3f3a"/><rect x="-30" y="-5" width="22" height="7" rx="1" fill="#f3efe4" stroke="#2b2b2b" stroke-width="1"/><rect x="4" y="-6.5" width="150" height="6" rx="2" fill="#2b2b2b"/><rect x="4" y="1" width="112" height="5" rx="2" fill="#4a4f4a"/><rect x="18" y="-1" width="40" height="10" rx="4" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1"/><circle cx="152" cy="-6" r="1.8" fill="#d9b13c"/><path d="M-36 8 C-36 15 -26 15 -24 9" stroke="#2b2b2b" stroke-width="1.8" fill="none"/></g>
+<rect x="97.5" y="52.0" width="105.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="150" y="72.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">action open</text>
+<line x1="176" y1="118" x2="160" y2="81" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="176" cy="118" r="2.6" fill="#2f3a2b"/>
+<rect x="52.1" y="176.0" width="135.9" height="29.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="120" y="196.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">chamber empty</text>
+<line x1="174" y1="124" x2="140" y2="176" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="174" cy="124" r="2.6" fill="#2f3a2b"/>
+<rect x="228.1" y="176.0" width="143.8" height="29.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="300" y="196.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">magazine empty</text>
+<line x1="280" y1="128" x2="300" y2="176" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="280" cy="128" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="238" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">Look and feel</text>
+<text x="200" y="282" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Magazine and chamber empty</text>
+</svg>

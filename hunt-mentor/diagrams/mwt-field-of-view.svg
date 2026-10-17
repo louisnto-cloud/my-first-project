@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif" role="img" aria-label="Top view of a deer with its field of view. Green covers about 310 degrees around it: it sees to the sides and almost behind without turning its head. A narrow orange wedge in front is where both eyes overlap and judge depth. A small brown wedge straight behind is the blind spot.">
+<rect width="400" height="350" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">What a deer sees from one spot</text>
+<circle cx="200" cy="170" r="104" fill="#b9c79a"/>
+<path d="M200 170 L152.8 77.3 A104 104 0 0 1 247.2 77.3z" fill="#f2a46b"/>
+<path d="M200 170 L244.0 264.3 A104 104 0 0 1 156.0 264.3z" fill="#8b6a48"/>
+<circle cx="200" cy="170" r="104" fill="none" stroke="#6f7f52" stroke-width="1.6"/>
+<g transform="translate(200 170)"><ellipse cx="0" cy="14" rx="15" ry="30" fill="#9a7350" stroke="#6b4f35" stroke-width="1.2"/><path d="M-7 -12 C-7 -22 -6 -28 -5 -34 L5 -34 C6 -28 7 -22 7 -12z" fill="#9a7350"/><path d="M-7 -34 C-8 -44 -5 -52 0 -56 C5 -52 8 -44 7 -34z" fill="#9a7350" stroke="#6b4f35" stroke-width="1.2"/><path d="M-6 -42 C-14 -46 -20 -44 -22 -40 C-16 -38 -10 -38 -6 -38z M6 -42 C14 -46 20 -44 22 -40 C16 -38 10 -38 6 -38z" fill="#9a7350" stroke="#6b4f35" stroke-width="1"/><circle cx="-6.5" cy="-46" r="2.2" fill="#111"/><circle cx="6.5" cy="-46" r="2.2" fill="#111"/><path d="M0 44 L-3 52 L3 52z" fill="#f3ead8" stroke="#6b4f35" stroke-width=".8"/></g>
+<line x1="193.5" y1="124" x2="156.0" y2="264.3" stroke="#4d5a36" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="206.5" y1="124" x2="244.0" y2="264.3" stroke="#4d5a36" stroke-width="1.2" stroke-dasharray="3 4"/>
+<rect x="130.4" y="40.0" width="139.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="59" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Both eyes: depth</text>
+<line x1="200" y1="84" x2="200" y2="67" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="200" cy="84" r="2.6" fill="#2f3a2b"/>
+<rect x="6.0" y="156.0" width="57.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="34.828" y="175" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Side</text>
+<text x="34.828" y="193" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">vision</text>
+<line x1="118" y1="170" x2="63.656" y2="170" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="118" cy="170" r="2.6" fill="#2f3a2b"/>
+<rect x="336.3" y="156.0" width="57.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="365.172" y="175" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Side</text>
+<text x="365.172" y="193" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">vision</text>
+<line x1="282" y1="170" x2="336.344" y2="170" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="282" cy="170" r="2.6" fill="#2f3a2b"/>
+<rect x="147.6" y="284.0" width="104.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="303" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Blind behind</text>
+<line x1="200" y1="258" x2="200" y2="284" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="200" cy="258" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="338" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">About 310 degrees without moving the head.</text>
+</svg>

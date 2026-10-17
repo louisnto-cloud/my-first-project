@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 496" font-family="sans-serif" role="img" aria-label="Region 7B, synopsis page 61. Muskwa Kechika Access Management Area and Klingzut Mountain, Map H26: restrictions on vehicles other than aircraft in portions of MUs 7-36, 7-42, 7-43, 7-50, 7-51, 7-52, 7-54 and 7-57. Several trails: travel within 10 metres of the route, vehicles under 750 kilograms only. MU 7-52: a motor vehicle may be used on roads highlighted green on Map 1-58/26 and within 400 metres of them, 1 May to 15 November; that map is not printed in the book, VERIFY. For routes ask the Fort St. John Ministry office, or Ministry of Forests offices in Fort Nelson and Dawson Creek.">
+<rect width="400" height="496" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 61. MU: Management Unit</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#4a7fb0"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-15 6 V0 L-10 -2 L-6 -9 H6 L10 -2 L15 0 V6z"/><path d="M-5 -7 H-1 V-2 H-8z M1 -7 H5 L8 -2 H1z" fill="#fffaf0"/><circle cx="-8" cy="7" r="4"/><circle cx="8" cy="7" r="4"/><circle cx="-8" cy="7" r="1.6" fill="#fffaf0"/><circle cx="8" cy="7" r="1.6" fill="#fffaf0"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">VEHICLES RESTRICTED</text>
+<rect x="8" y="68" width="384" height="113" rx="6" fill="#f4eedf"/>
+<rect x="14" y="109.5" width="54" height="30" rx="6" fill="#4a7fb0"/>
+<text x="41" y="130.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">H26</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Muskwa Kechika and Klingzut</text>
+<text x="78" y="111" font-size="16" font-weight="bold" fill="#2f3a2b">Mountain</text>
+<text x="78" y="130" font-size="15" fill="#2f3a2b">Vehicles other than aircraft restricted in</text>
+<text x="78" y="149" font-size="15" fill="#2f3a2b">portions of MUs 7-36, 7-42, 7-43, 7-50,</text>
+<text x="78" y="168" font-size="15" fill="#2f3a2b">7-51, 7-52, 7-54, 7-57</text>
+<rect x="14" y="205.0" width="54" height="30" rx="6" fill="#4a7fb0"/>
+<text x="41" y="225.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">10 m</text>
+<text x="78" y="206" font-size="16" font-weight="bold" fill="#2f3a2b">Some trails</text>
+<text x="78" y="225" font-size="15" fill="#2f3a2b">Stay within 10 m of the route. Vehicles</text>
+<text x="78" y="244" font-size="15" fill="#2f3a2b">under 750 kg only</text>
+<rect x="8" y="267" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<g transform="translate(31 282) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="50" y="288" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">MU 7-52: OPEN ROADS</text>
+<rect x="8" y="303" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="325.0" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="345" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">400 m</text>
+<text x="78" y="326" font-size="16" font-weight="bold" fill="#2f3a2b">Green roads on Map 1-58/26</text>
+<text x="78" y="345" font-size="15" fill="#2f3a2b">May 1 to Nov 15, within 400 m. Map not</text>
+<text x="78" y="364" font-size="15" fill="#2f3a2b">printed: VERIFY</text>
+<rect x="8" y="387" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<g transform="translate(31 402) scale(0.62)" fill="#fffaf0" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="50" y="408" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">ASK FOR ROUTES</text>
+<rect x="8" y="423" width="384" height="55" rx="6" fill="#f4eedf"/>
+<text x="14" y="446" font-size="16" font-weight="bold" fill="#2f3a2b">Fort St. John Ministry office</text>
+<text x="14" y="465" font-size="15" fill="#2f3a2b">Forests offices in Fort Nelson and Dawson Creek</text>
+</svg>

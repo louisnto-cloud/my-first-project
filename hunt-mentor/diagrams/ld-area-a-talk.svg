@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 548" font-family="sans-serif" role="img" aria-label="Cards for Area A hunter talk, leads not facts. Check land status before you go. MU means Management Unit. Jamieson Creek, MU 3-28: deer winter range in a 1976 study, 80 percent, forum mule deer 50 percent. Barriere Lakes and the Chu Chua road ridges, MU 3-38: blog 2011, moose, mule deer and black bear, 55 percent. Deadman River, Red Lake, Criss Creek, MU 3-29: blog 2011, mule deer and some moose, 55 percent. Little Fort to Clearwater: heavily hunted, blog 2011, 55 percent. Paul Lake, Pinantan, Heffley, MU 3-27: forum mule deer, 50 percent. Bonaparte Plateau: a provincial moose research area, 85 percent, research not a tip.">
+<rect width="400" height="548" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Area A: hunter talk, leads only</text>
+<text x="200" y="49" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Check land status before you go</text>
+<text x="200" y="68" font-size="14" fill="#6b5b4b" text-anchor="middle">MU = Management Unit</text>
+<rect x="8" y="80" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="101" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">LEADS, NOT FACTS</text>
+<rect x="8" y="116" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="138.0" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="158.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3-28</text>
+<text x="78" y="139" font-size="16" font-weight="bold" fill="#2f3a2b">Jamieson Creek</text>
+<text x="78" y="158" font-size="15" fill="#2f3a2b">Deer winter range study (80%). Forum: mule</text>
+<text x="78" y="177" font-size="15" fill="#2f3a2b">deer (50%)</text>
+<rect x="14" y="214.0" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="234.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3-38</text>
+<text x="78" y="215" font-size="16" font-weight="bold" fill="#2f3a2b">Barriere Lakes, Chu Chua ridges</text>
+<text x="78" y="234" font-size="15" fill="#2f3a2b">Blog 2011: moose, mule deer, black bear</text>
+<text x="78" y="253" font-size="15" fill="#2f3a2b">(55%)</text>
+<rect x="8" y="268" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="280.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="301.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3-29</text>
+<text x="78" y="291" font-size="16" font-weight="bold" fill="#2f3a2b">Deadman, Red Lake, Criss Creek</text>
+<text x="78" y="310" font-size="15" fill="#2f3a2b">Blog 2011: mule deer, some moose (55%)</text>
+<circle cx="41.0" cy="352.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 352.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M0 15 C-4 8 -11 1 -11 -5 A11 11 0 0 1 11 -5 C11 1 4 8 0 15z"/><circle cy="-5" r="4.2" fill="#fffaf0"/></g>
+<text x="78" y="348" font-size="16" font-weight="bold" fill="#2f3a2b">Little Fort to Clearwater</text>
+<text x="78" y="367" font-size="15" fill="#2f3a2b">Heavily hunted. Blog 2011 (55%)</text>
+<rect x="8" y="382" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="394.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="415.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3-27</text>
+<text x="78" y="405" font-size="16" font-weight="bold" fill="#2f3a2b">Paul Lake, Pinantan, Heffley</text>
+<text x="78" y="424" font-size="15" fill="#2f3a2b">Forum: mule deer (50%)</text>
+<rect x="8" y="447" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="468" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">RESEARCH, NOT A TIP</text>
+<rect x="8" y="483" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="510.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 510.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-8 -14 L-1 0 L-4 0 L1 9 L-17 9 L-12 0 L-15 0z"/><path d="M8 -10 L14 1 L12 1 L16 10 L0 10 L4 1 L2 1z"/><rect x="-9.5" y="9" width="3" height="4"/><rect x="6.5" y="10" width="3" height="3"/></g>
+<text x="78" y="506" font-size="16" font-weight="bold" fill="#2f3a2b">Bonaparte Plateau</text>
+<text x="78" y="525" font-size="15" fill="#2f3a2b">Moose research area (85%)</text>
+</svg>

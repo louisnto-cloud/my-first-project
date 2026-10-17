@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Eight numbered boxes: the 10 minute map read. 1 Law: MU, season, land status. 2 Access: roads, gates, closures. 3 Shape: ridges, saddles, benches. 4 Face: aspect for the weather. 5 Water: blue lines and green spots. 6 Cover: edges, cutblocks, burns. 7 Pressure: roads, trails, parking. 8 Wind: seat and approach. Same 8 every time, in the same order.">
+<rect width="400" height="404" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The 10 minute map read</text>
+<rect x="8" y="44" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="28.0" cy="66.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="28" y="71" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="48" y="72" font-size="18" font-weight="bold" fill="#c2410c">Law</text>
+<text x="20" y="96" font-size="15" fill="#2f3a2b">MU, season, land status</text>
+<rect x="204" y="44" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="224.0" cy="66.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="224" y="71" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="244" y="72" font-size="18" font-weight="bold" fill="#c2410c">Access</text>
+<text x="216" y="96" font-size="15" fill="#2f3a2b">roads, gates, closures</text>
+<rect x="8" y="126" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="28.0" cy="148.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="28" y="153" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="48" y="154" font-size="18" font-weight="bold" fill="#c2410c">Shape</text>
+<text x="20" y="174" font-size="15" fill="#2f3a2b">ridges, saddles,</text>
+<text x="20" y="192" font-size="15" fill="#2f3a2b">benches</text>
+<rect x="204" y="126" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="224.0" cy="148.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="224" y="153" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="244" y="154" font-size="18" font-weight="bold" fill="#c2410c">Face</text>
+<text x="216" y="178" font-size="15" fill="#2f3a2b">aspect for the weather</text>
+<rect x="8" y="208" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="28.0" cy="230.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="28" y="235" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="48" y="236" font-size="18" font-weight="bold" fill="#c2410c">Water</text>
+<text x="20" y="260" font-size="15" fill="#2f3a2b">blue lines, green spots</text>
+<rect x="204" y="208" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="224.0" cy="230.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="224" y="235" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<text x="244" y="236" font-size="18" font-weight="bold" fill="#c2410c">Cover</text>
+<text x="216" y="260" font-size="15" fill="#2f3a2b">edges, cutblocks, burns</text>
+<rect x="8" y="290" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="28.0" cy="312.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="28" y="317" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">7</text>
+<text x="48" y="318" font-size="18" font-weight="bold" fill="#c2410c">Pressure</text>
+<text x="20" y="342" font-size="15" fill="#2f3a2b">roads, trails, parking</text>
+<rect x="204" y="290" width="188" height="74" rx="8" fill="#e9eedd"/>
+<circle cx="224.0" cy="312.0" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="224" y="317" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<text x="244" y="318" font-size="18" font-weight="bold" fill="#c2410c">Wind</text>
+<text x="216" y="342" font-size="15" fill="#2f3a2b">seat and approach</text>
+<text x="200" y="390" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Same 8 every time, in the same order</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 387" role="img" aria-label="Season bar chart: District No. 4, Kootenay. All ducks, coots, snipe: Sept 8 to Dec 23. Canada, cackling, white fronted, snow and Ross&#x27;s geese: Sept 8 to Dec 23. Mourning and collared doves: Sept 1 to Sept 30. Brant: No open season. Band tailed pigeons: No open season." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="387" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">District No. 4, Kootenay</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Table 1, item 4</text>
+<text x="58.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="152.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="246.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="340.2" y="83" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="12.0" y1="91" x2="12.0" y2="377" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="104.5" y1="91" x2="104.5" y2="377" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="200.0" y1="91" x2="200.0" y2="377" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="292.5" y1="91" x2="292.5" y2="377" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="388.0" y1="91" x2="388.0" y2="377" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<text x="12" y="107" font-size="14" font-weight="bold" fill="#23261f">All ducks, coots, snipe</text>
+<rect x="33.6" y="113" width="329.8" height="22" rx="3" fill="#4a7fb0"/>
+<text x="198.5" y="129" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 8 to Dec 23</text>
+<text x="12" y="163" font-size="14" font-weight="bold" fill="#23261f">Canada, cackling, white fronted, snow and</text>
+<text x="12" y="181" font-size="14" font-weight="bold" fill="#23261f">Ross&#x27;s geese</text>
+<rect x="33.6" y="187" width="329.8" height="22" rx="3" fill="#8b5a2b"/>
+<text x="198.5" y="203" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sept 8 to Dec 23</text>
+<text x="12" y="237" font-size="14" font-weight="bold" fill="#23261f">Mourning and collared doves</text>
+<rect x="12.0" y="243" width="92.5" height="22" rx="3" fill="#8a9a6b"/>
+<text x="110.5" y="259" font-size="14" font-weight="bold" fill="#23261f">Sept 1 to Sept 30</text>
+<text x="12" y="293" font-size="14" font-weight="bold" fill="#23261f">Brant</text>
+<text x="12" y="314" font-size="14" font-weight="bold" fill="#c92a2a">No open season</text>
+<text x="12" y="345" font-size="14" font-weight="bold" fill="#23261f">Band tailed pigeons</text>
+<text x="12" y="366" font-size="14" font-weight="bold" fill="#c92a2a">No open season</text>
+</svg>

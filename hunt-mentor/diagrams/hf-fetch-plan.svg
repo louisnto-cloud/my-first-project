@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a pond: shoot only where you can fetch. A shallow green zone near shore can be waded, so shooting is OK there. Deep water and a fast creek outlet are red: no shot. Mark each fall with a tree or rock behind it and go straight there.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="240" width="400" height="60" fill="#c9b79c"/>
+  <path d="M20 240 C 20 120, 120 40, 220 40 C 330 40, 380 130, 380 240 Z" fill="#4a7fb0" opacity=".6"/>
+  <path d="M40 240 C 50 180, 120 140, 200 140 C 280 140, 350 180, 360 240 Z" fill="#2f6e3b" opacity=".35"/>
+  <path d="M340 90 L400 60 L400 100 L360 120 Z" fill="#4a7fb0"/>
+  <g stroke="#fff" stroke-width="2"><path d="M360 96 l16 -6 m-4 -3 l4 3 l-4 4"/></g>
+  <text x="200" y="200" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shallow: wade it, OK</text>
+  <text x="200" y="90" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Deep: no shot</text>
+  <text x="392" y="140" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="end">fast water: no</text>
+  <rect x="170" y="246" width="60" height="20" rx="4" fill="#2f3a2b"/>
+  <g fill="#2f3a2b"><polygon points="90,40 100,10 110,40"/></g>
+  <circle cx="110" cy="170" r="6" fill="#8b5a2b"/>
+  <path d="M110 170 L100 44" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="12" y="290" font-size="14" fill="#2f3a2b">Mark the fall: tree behind it, walk straight</text>
+</svg>

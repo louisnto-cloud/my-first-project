@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Treat all stream water: boil at least 1 minute, 2 minutes above 2,000 m; or 2 drops of household bleach per litre and wait 30 minutes, double for cloudy or cold water; or a filter certified to remove pathogens.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Treat every stream (HealthLink BC)</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M42.0 86 q-10.799999999999999 -10.799999999999999 0 -24.0 q10.799999999999999 13.2 0 24.0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.0 86 q-4.8 -6.0 0 -12.0 q4.8 6.0 0 12.0 z" fill="#f6c343" stroke="#f6c343" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="68" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Boil 1 minute</text>
+<text x="80" y="90" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">2 minutes above 2,000 m (95%)</text>
+<rect x="10" y="108" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M42.0 129.6 q9.6 12.0 8.4 18.0 a8.4 8.4 0 0 1 -16.8 0 q-1.2 -6.0 8.4 -18.0 z" fill="#cfe0ef" stroke="#cfe0ef" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="130" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Bleach: 2 drops per litre</text>
+<text x="80" y="152" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">wait 30 min; cold or cloudy: double (95%)</text>
+<rect x="10" y="170" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="32.0" y="176" width="20" height="34" rx="4" fill="#888888"/>
+<text x="80" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Filter</text>
+<text x="80" y="214" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">certified to remove pathogens (95%)</text>
+<rect x="10" y="232" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="42.0" y="264" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2f3a2b" text-anchor="middle">→</text>
+<text x="80" y="254" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Full lesson</text>
+<text x="80" y="276" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Water: finding it and making it safe</text>
+</svg>

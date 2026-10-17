@@ -1,0 +1,639 @@
+[
+ {
+  "id": "fw-grandpa-001",
+  "deck": "Grandpa's rules",
+  "front": "Finish Grandpa's saying: \"Treat every firearm as if it is ...\"",
+  "back": "Loaded. Every gun, every time. Tradition: rule 1 of ACTS, Assume every firearm is loaded (85%).",
+  "diagram": "rb-loaded-firearm"
+ },
+ {
+  "id": "fw-grandpa-002",
+  "deck": "Grandpa's rules",
+  "front": "Grandpa's muzzle rule?",
+  "back": "Never point a gun at anything you do not want to shoot. Tradition: Control the muzzle (85%)."
+ },
+ {
+  "id": "fw-grandpa-003",
+  "deck": "Grandpa's rules",
+  "front": "What must you know besides your target?",
+  "back": "What is beyond it. Look past the animal; the sky is never a backstop. Tradition (85%)."
+ },
+ {
+  "id": "fw-grandpa-004",
+  "deck": "Grandpa's rules",
+  "front": "Where does your trigger finger live until you decide to shoot?",
+  "back": "Straight along the stock, outside the trigger guard. Tradition: the T in ACTS (85%).",
+  "diagram": "fw-grandpa-trigger"
+ },
+ {
+  "id": "fw-grandpa-005",
+  "deck": "Grandpa's rules",
+  "front": "\"If you are not sure ...\"",
+  "back": "\"... you are not shooting.\" Never shoot at a sound or a movement (85%, Texas hunter education). Opinion, widely taught.",
+  "diagram": "fw-grandpa-sure"
+ },
+ {
+  "id": "fw-grandpa-006",
+  "deck": "Grandpa's rules",
+  "front": "New York 1989 to 1995: share of 'mistaken for game' victims not wearing orange?",
+  "back": "94% (117 of 125) (90%, US Centers for Disease Control and Prevention). Tradition: wear orange so the next hunter sees a person.",
+  "diagram": "fw-grandpa-orange"
+ },
+ {
+  "id": "fw-grandpa-007",
+  "deck": "Grandpa's rules",
+  "front": "Fence, log, creek, truck, boat: what first?",
+  "back": "Unload. Lay it across with the muzzle away, cross, check the barrel. Tradition (85%).",
+  "diagram": "fw-grandpa-fence"
+ },
+ {
+  "id": "fw-grandpa-008",
+  "deck": "Grandpa's rules",
+  "front": "Gunpowder and ...?",
+  "back": "... alcohol do not mix. No alcohol or drugs before or while handling a gun. Tradition (85%)."
+ },
+ {
+  "id": "fw-grandpa-009",
+  "deck": "Grandpa's rules",
+  "front": "AdventureSmart's 3 Ts?",
+  "back": "Trip planning, training, taking the essentials (85%). Tell someone where you go and when you are back.",
+  "diagram": "fw-grandpa-search-area"
+ },
+ {
+  "id": "fw-grandpa-010",
+  "deck": "Grandpa's rules",
+  "front": "Cold water 1, 10, 1?",
+  "back": "About 1 minute of cold shock, about 10 minutes of useful movement, up to about 1 hour before you pass out (85%). Wear the PFD zipped.",
+  "diagram": "hf-cold-water"
+ },
+ {
+  "id": "fw-grandpa-011",
+  "deck": "Grandpa's rules",
+  "front": "\"Hunt the wind, or ...\"",
+  "back": "\"... hunt somewhere else.\" Keep the wind from the animal to you. Tradition; scent and movement beat colour (85%).",
+  "diagram": "hf-upwind-rule"
+ },
+ {
+  "id": "fw-grandpa-012",
+  "deck": "Grandpa's rules",
+  "front": "\"Every new ridge is a ...\"",
+  "back": "\"... new wind.\" Terrain bends wind; check it again (80%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-013",
+  "deck": "Grandpa's rules",
+  "front": "Cool air ..., warm air ...",
+  "back": "Sinks; climbs. Calm mornings slide downhill until the sun warms the slope (75 to 80%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-014",
+  "deck": "Grandpa's rules",
+  "front": "Wind check shows a swirl. Grandpa says?",
+  "back": "\"A swirl is a no. Back out, come back.\" Opinion (Tip)."
+ },
+ {
+  "id": "fw-grandpa-015",
+  "deck": "Grandpa's rules",
+  "front": "Red sky at night, red sky at morning?",
+  "back": "Night: dry air coming from the west. Morning: weather may follow. Partly true where weather moves west to east (75%, Met Office).",
+  "diagram": "fw-grandpa-red-sky"
+ },
+ {
+  "id": "fw-grandpa-016",
+  "deck": "Grandpa's rules",
+  "front": "Ring around the moon?",
+  "back": "Rain or snow soon, sometimes. Ice crystal cloud often runs ahead of a warm front, but not always (65%).",
+  "diagram": "fw-grandpa-halo"
+ },
+ {
+  "id": "fw-grandpa-017",
+  "deck": "Grandpa's rules",
+  "front": "Do deer feed hard before a storm front?",
+  "back": "Studies disagree. Penn State found no meaningful effect of oncoming winter storms (75%). Opinion; go when you can."
+ },
+ {
+  "id": "fw-grandpa-018",
+  "deck": "Grandpa's rules",
+  "front": "Penn State GPS: deer on windy days and nights?",
+  "back": "More movement on windy days, less on windy nights (80%). The 'deer lie up in a gale' saying is mixed.",
+  "diagram": "rq-rw-wind-evidence"
+ },
+ {
+  "id": "fw-grandpa-019",
+  "deck": "Grandpa's rules",
+  "front": "Which weather factor most influenced deer movement in a Mississippi State study?",
+  "back": "Temperature (65%, secondary). 'Cold snaps move deer' has some support; a Texas study disagreed."
+ },
+ {
+  "id": "fw-grandpa-020",
+  "deck": "Grandpa's rules",
+  "front": "\"The best day to hunt is ...\"",
+  "back": "\"... the day you can go.\" Dawn and dusk beat moon and weather in collar studies (85%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-021",
+  "deck": "Grandpa's rules",
+  "front": "\"Find the food, ...\"",
+  "back": "\"... find the animal.\" Forage best described mule deer feeding sites (85%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-022",
+  "deck": "Grandpa's rules",
+  "front": "Penn State: share of hunters within 0.5 km of a road?",
+  "back": "73% (85%). Average farthest point 0.84 km; hunters said 2.23 km. Walk past where the others stop.",
+  "diagram": "rq-pr-road-bands"
+ },
+ {
+  "id": "fw-grandpa-023",
+  "deck": "Grandpa's rules",
+  "front": "\"Glass more, ...\"",
+  "back": "\"... walk less.\" Let the spotting scope do the walking (80%, Mule Deer Foundation). Tradition.",
+  "diagram": "glassing-grid"
+ },
+ {
+  "id": "fw-grandpa-024",
+  "deck": "Grandpa's rules",
+  "front": "What gives a deer away in timber?",
+  "back": "A flat back line among upright trunks, an ear or tail flick, a patch of white (70%). Look for a piece, not the whole animal.",
+  "diagram": "fw-grandpa-flat-line"
+ },
+ {
+  "id": "fw-grandpa-025",
+  "deck": "Grandpa's rules",
+  "front": "\"Hunt the edges, not ...\"",
+  "back": "\"... the middle.\" Where cover meets food (75%). Tradition. On grassland, hunt the folds."
+ },
+ {
+  "id": "fw-grandpa-026",
+  "deck": "Grandpa's rules",
+  "front": "Montana elk under pressure chose?",
+  "back": "Large forest patches with hiding cover, away from open roads (80%). Go where the pressure is not.",
+  "diagram": "fw-grandpa-elk-flee"
+ },
+ {
+  "id": "fw-grandpa-027",
+  "deck": "Grandpa's rules",
+  "front": "\"The farmer is the best ...\"",
+  "back": "\"... scouting report in the valley.\" 88% of surveyed Idaho landowners say yes when asked first (80%)."
+ },
+ {
+  "id": "fw-grandpa-028",
+  "deck": "Grandpa's rules",
+  "front": "\"Be on the glass before ...\"",
+  "back": "\"... the light.\" Bucks often bed early; set up before first light (80%, Mule Deer Foundation)."
+ },
+ {
+  "id": "fw-grandpa-029",
+  "deck": "Grandpa's rules",
+  "front": "Cold morning, hot noon: where do deer bed?",
+  "back": "Cold: first sun. Hot: shade. Temperature and canopy drove mule deer bed choice (85%). Opinion.",
+  "diagram": "sa-bed-warm-cold"
+ },
+ {
+  "id": "fw-grandpa-030",
+  "deck": "Grandpa's rules",
+  "front": "\"Big country, ...\"",
+  "back": "\"... small spots.\" Remote brushy draws protected Montana elk (70%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-031",
+  "deck": "Grandpa's rules",
+  "front": "Still hunting time budget?",
+  "back": "Stand at least 10 times longer than you walk (85%, hunter education). Tradition.",
+  "diagram": "fw-grandpa-ten-to-one"
+ },
+ {
+  "id": "fw-grandpa-032",
+  "deck": "Grandpa's rules",
+  "front": "\"If you think you are going slow enough, ...\"",
+  "back": "\"... halve it.\" 3 to 5 m then stop; or one step every 30 seconds (65 to 75%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-033",
+  "deck": "Grandpa's rules",
+  "front": "Head down? Head up?",
+  "back": "Head down, you move. Head up, you are a stump. Movement gives you away (85%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-034",
+  "deck": "Grandpa's rules",
+  "front": "Crossing a ridge: Grandpa's rule?",
+  "back": "Never walk the top. Come up below the crest and peek. A human outline spooks game (85%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-035",
+  "deck": "Grandpa's rules",
+  "front": "\"When it stares, ...\"",
+  "back": "\"... you are a stump.\" Freeze until it looks away. Opinion (Tip)."
+ },
+ {
+  "id": "fw-grandpa-036",
+  "deck": "Grandpa's rules",
+  "front": "\"Let the animal ...\"",
+  "back": "\"... do the walking.\" Sit on a trail, pinch or edge. 72% of Penn State hunters sat still in the morning (85%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-037",
+  "deck": "Grandpa's rules",
+  "front": "How long did collared bucks avoid a stand after one sit, in one study?",
+  "back": "About 3 days (60%, secondary). The best stand is the one the deer do not know you use.",
+  "diagram": "fw-grandpa-stand-days"
+ },
+ {
+  "id": "fw-grandpa-038",
+  "deck": "Grandpa's rules",
+  "front": "\"When you want to move, ...\"",
+  "back": "\"... glass it one more time.\" Look longer, look smarter (80%, Mule Deer Foundation). Tradition."
+ },
+ {
+  "id": "fw-grandpa-039",
+  "deck": "Grandpa's rules",
+  "front": "\"Know where your partner is before ...\"",
+  "back": "\"... you know where the deer is.\" Agree zones of fire (85%). Tradition.",
+  "diagram": "mgs-partner-zones"
+ },
+ {
+  "id": "fw-grandpa-040",
+  "deck": "Grandpa's rules",
+  "front": "Still hunting: where do your eyes go at each stop?",
+  "back": "Into the woods ahead and to the sides, not at your feet (85%, hunter education). Tradition."
+ },
+ {
+  "id": "fw-grandpa-041",
+  "deck": "Grandpa's rules",
+  "front": "\"You can fool the eyes, you can fool the ears, ...\"",
+  "back": "\"... you will never fool the nose.\" Play the wind. Tradition."
+ },
+ {
+  "id": "fw-grandpa-042",
+  "deck": "Grandpa's rules",
+  "front": "\"Count one side twice, ...\"",
+  "back": "\"... then decide.\" A 4 point buck has 4 tines on one antler, not counting the brow tine (99%, synopsis page 4).",
+  "diagram": "mmd-buck-ages"
+ },
+ {
+  "id": "fw-grandpa-043",
+  "deck": "Grandpa's rules",
+  "front": "Can you age a buck by points?",
+  "back": "No: points are not a reliable age guide (90%, BC account). Read the body before the bone. Opinion."
+ },
+ {
+  "id": "fw-grandpa-044",
+  "deck": "Grandpa's rules",
+  "front": "\"In the rut, hunt ...\"",
+  "back": "\"... the does. The buck will find them before you find him.\" Tradition."
+ },
+ {
+  "id": "fw-grandpa-045",
+  "deck": "Grandpa's rules",
+  "front": "A white tail flags and bounds away. Grandpa?",
+  "back": "\"A flag in the air means goodbye. Let it go.\" Running shots are poor shots. Tradition."
+ },
+ {
+  "id": "fw-grandpa-046",
+  "deck": "Grandpa's rules",
+  "front": "Spooked mule deer behaviour Grandpa counts on?",
+  "back": "It often stops to look back (60%). Old bucks often do not. Tradition."
+ },
+ {
+  "id": "fw-grandpa-047",
+  "deck": "Grandpa's rules",
+  "front": "Daylight buck visits to stand areas, weeks 1 to 3 versus week 13 (one study)?",
+  "back": "About 1 in 3, then about 1 in 20 (60%, secondary). Hunt the trail, not the field.",
+  "diagram": "fw-grandpa-daylight-visits"
+ },
+ {
+  "id": "fw-grandpa-048",
+  "deck": "Grandpa's rules",
+  "front": "\"Shoot the lungs, ...\"",
+  "back": "\"... eat the shoulders.\" Heart and lung area is the vital zone (85%). Tradition.",
+  "diagram": "vitals-deer"
+ },
+ {
+  "id": "fw-grandpa-049",
+  "deck": "Grandpa's rules",
+  "front": "Bedded mule deer: eyes and nose?",
+  "back": "Watches below, smells behind (opinion). Science measured temperature and canopy, not wind (85%)."
+ },
+ {
+  "id": "fw-grandpa-050",
+  "deck": "Grandpa's rules",
+  "front": "Which colour stands out to deer: orange or blue?",
+  "back": "Blue. Deer cannot tell orange from green (85%, National Deer Association). Wear orange, skip blue.",
+  "diagram": "mc-skills-colour-see"
+ },
+ {
+  "id": "fw-grandpa-051",
+  "deck": "Grandpa's rules",
+  "front": "Cow moose and calf: Grandpa's rule?",
+  "back": "Never get between them. In Alaska moose injure more people than bears each year (65%). Tradition.",
+  "diagram": "sa-moose-family"
+ },
+ {
+  "id": "fw-grandpa-052",
+  "deck": "Grandpa's rules",
+  "front": "Bull moose knee deep in the lake. Shoot?",
+  "back": "Wait for dry ground. A moose is too heavy to drag out of water (60%). Opinion.",
+  "diagram": "fw-grandpa-moose-water"
+ },
+ {
+  "id": "fw-grandpa-053",
+  "deck": "Grandpa's rules",
+  "front": "\"Plan the pack ...\"",
+  "back": "\"... before the shot.\" Moose carcasses run hundreds of kilograms (90%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-054",
+  "deck": "Grandpa's rules",
+  "front": "Moose calling: after the call?",
+  "back": "Wait longer than you think. Bulls can come slow and silent (50%, Tip). Opinion."
+ },
+ {
+  "id": "fw-grandpa-055",
+  "deck": "Grandpa's rules",
+  "front": "\"Never spook the herd ...\"",
+  "back": "\"... you want to hunt tomorrow.\" Some Montana elk moved over 10 km in the first days (65%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-056",
+  "deck": "Grandpa's rules",
+  "front": "\"Call less ...\"",
+  "back": "\"... than you want to.\" Set up right first; volume does not matter (65%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-057",
+  "deck": "Grandpa's rules",
+  "front": "Where are elk at midday?",
+  "back": "Bedded in dark timber near the food (Tip). Elk chose big forest patches with hiding cover (80%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-058",
+  "deck": "Grandpa's rules",
+  "front": "Why watch a lone bear five minutes?",
+  "back": "Spring cubs lag behind their mother (85%). In BC a cub, yearling, or bear with them is off limits (99%).",
+  "diagram": "mc-black-bear-judge-2"
+ },
+ {
+  "id": "fw-grandpa-059",
+  "deck": "Grandpa's rules",
+  "front": "Big ears, long legs on a black bear means?",
+  "back": "Young bear or sow. Big boars look small eared with thick legs (60 to 70%). Opinion.",
+  "diagram": "mc-black-bear-judge-3"
+ },
+ {
+  "id": "fw-grandpa-060",
+  "deck": "Grandpa's rules",
+  "front": "Bear meat: cook to what?",
+  "back": "71 °C (160 °F) inside. Freezing does not kill the northern Trichinella (90%).",
+  "diagram": "mc-black-bear-trich"
+ },
+ {
+  "id": "fw-grandpa-061",
+  "deck": "Grandpa's rules",
+  "front": "Ducks land into the wind. So the wind goes where?",
+  "back": "At your back, so they land facing you (85%, Ducks Unlimited). Tradition."
+ },
+ {
+  "id": "fw-grandpa-062",
+  "deck": "Grandpa's rules",
+  "front": "Landing hole distance, Ducks Unlimited sweet spot?",
+  "back": "About 18 m (20 yd) in front of the blind (80%). Put decoys where you do not want them to land.",
+  "diagram": "decoy-spread"
+ },
+ {
+  "id": "fw-grandpa-063",
+  "deck": "Grandpa's rules",
+  "front": "Call to the tail or the face?",
+  "back": "The tail. Quiet when birds come at you (70%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-064",
+  "deck": "Grandpa's rules",
+  "front": "\"If you can see the duck's eye, ...\"",
+  "back": "\"... it can see yours.\" A bare face or hands flare ducks (70%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-065",
+  "deck": "Grandpa's rules",
+  "front": "When do you stand up on decoying ducks?",
+  "back": "When they commit: wings cupped, feet down. Early shots are long shots (65 to 75%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-066",
+  "deck": "Grandpa's rules",
+  "front": "Ducks Unlimited: many self taught hunters struggle past what range on crossers?",
+  "back": "About 27 m (30 yd) (85%). If you have to wonder if it is in range, it is not."
+ },
+ {
+  "id": "fw-grandpa-067",
+  "deck": "Grandpa's rules",
+  "front": "Covey rise: how many birds do you shoot at?",
+  "back": "One, then the next. Pick a single bird (85%, Kentucky wildlife agency). Tradition."
+ },
+ {
+  "id": "fw-grandpa-068",
+  "deck": "Grandpa's rules",
+  "front": "\"Fetch the bird ...\"",
+  "back": "\"... before you shoot the next.\" Mark the fall and go straight to it. Opinion."
+ },
+ {
+  "id": "fw-grandpa-069",
+  "deck": "Grandpa's rules",
+  "front": "Where do you never hunt waterfowl, by tradition?",
+  "back": "The roost. Hunting near it can push birds off (65%). Hunt where they feed or fly."
+ },
+ {
+  "id": "fw-grandpa-070",
+  "deck": "Grandpa's rules",
+  "front": "\"Find the field, ...\"",
+  "back": "\"... not the goose.\" Set up where they fed the evening before (65%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-071",
+  "deck": "Grandpa's rules",
+  "front": "\"Aim small, ...\"",
+  "back": "\"... miss small.\" One hair, not the whole deer. Origin unsettled (Tip). Tradition.",
+  "diagram": "fw-grandpa-aim-small"
+ },
+ {
+  "id": "fw-grandpa-072",
+  "deck": "Grandpa's rules",
+  "front": "\"If you can get lower, get lower. If you can get closer, ...\"",
+  "back": "\"... get closer.\" Close shots forgive errors (75%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-073",
+  "deck": "Grandpa's rules",
+  "front": "Whose range limits the shot?",
+  "back": "Yours, not the rifle's. Beyond your competent range you risk crippling (85%, Ducks Unlimited). Opinion."
+ },
+ {
+  "id": "fw-grandpa-074",
+  "deck": "Grandpa's rules",
+  "front": "Best rifle shot angles?",
+  "back": "Broadside or quartering away, still, near leg forward (85%, hunter education). Tradition."
+ },
+ {
+  "id": "fw-grandpa-075",
+  "deck": "Grandpa's rules",
+  "front": "\"Mark it, ...\"",
+  "back": "\"... then wait it.\" Use landmarks for where it stood and vanished (85%, National Deer Association)."
+ },
+ {
+  "id": "fw-grandpa-076",
+  "deck": "Grandpa's rules",
+  "front": "Liver or gut hit: how long to wait?",
+  "back": "Hours, longer than for a lung hit; gut longest. Sources differ: Hunter Ed blog 4 to 6 h and 6 to 8 h; National Deer Association 2012 2 to 4 h and 4 to 6 h; 2023 8 to 10 h and 10 to 12 h (70%). Your call. Pushed early, lost forever.",
+  "diagram": "sk-wait-compare"
+ },
+ {
+  "id": "fw-grandpa-077",
+  "deck": "Grandpa's rules",
+  "front": "Deer drops like a stone. Grandpa?",
+  "back": "Down is not dead. Spine shock can wear off in about a minute (85%). Reload, watch, approach from the back.",
+  "diagram": "fw-grandpa-dropped"
+ },
+ {
+  "id": "fw-grandpa-078",
+  "deck": "Grandpa's rules",
+  "front": "No blood at the hit site means a miss?",
+  "back": "No. Check for hair and bone and search (75%). Read the hit site slowly."
+ },
+ {
+  "id": "fw-grandpa-079",
+  "deck": "Grandpa's rules",
+  "front": "Where do you walk on a blood trail?",
+  "back": "Beside it, flagging each spot. You may need it twice (85%). Opinion."
+ },
+ {
+  "id": "fw-grandpa-080",
+  "deck": "Grandpa's rules",
+  "front": "Leg or bone hit: wait or go?",
+  "back": "Go now, ready for a follow up shot (85%, National Deer Association). Finish the one you started."
+ },
+ {
+  "id": "fw-grandpa-081",
+  "deck": "Grandpa's rules",
+  "front": "Penn State Extension target carcass temperature?",
+  "back": "3 to 4 °C (35 to 40 °F), quickly (90%). Cold meat, clean meat, good meat.",
+  "diagram": "fw-grandpa-cool"
+ },
+ {
+  "id": "fw-grandpa-082",
+  "deck": "Grandpa's rules",
+  "front": "Why skin soon?",
+  "back": "The hide holds heat; removing it lets meat cool faster (90%, Ohio). A hide is a winter coat."
+ },
+ {
+  "id": "fw-grandpa-083",
+  "deck": "Grandpa's rules",
+  "front": "Warm meat in plastic?",
+  "back": "No. Plastic traps heat and moisture; use cloth game bags (65%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-084",
+  "deck": "Grandpa's rules",
+  "front": "How long to hang venison at home?",
+  "back": "2 to 3 days at 4 °C or below, at most (90%, Penn State Extension). Aging is not necessary for sausage."
+ },
+ {
+  "id": "fw-grandpa-085",
+  "deck": "Grandpa's rules",
+  "front": "Why 'cotton kills'?",
+  "back": "Wet cotton loses insulation and dries slowly (70%). True in cold and wet; overstated on warm days."
+ },
+ {
+  "id": "fw-grandpa-086",
+  "deck": "Grandpa's rules",
+  "front": "\"Be bold, ...\"",
+  "back": "\"... start cold.\" Start with fewer layers so you do not sweat; add layers when you stop (70%). Tradition."
+ },
+ {
+  "id": "fw-grandpa-087",
+  "deck": "Grandpa's rules",
+  "front": "\"Two is one, ...\"",
+  "back": "\"... and one is none.\" Back up what your life depends on: fire, light, navigation. Military saying (70%).",
+  "diagram": "fs-fire-ignition"
+ },
+ {
+  "id": "fw-grandpa-088",
+  "deck": "Grandpa's rules",
+  "front": "Sharp knife or dull knife: which is safer?",
+  "back": "Sharp. Dull knives slip and need more force (80%, university extension). Tradition."
+ },
+ {
+  "id": "fw-grandpa-089",
+  "deck": "Grandpa's rules",
+  "front": "Bear country camp: food and meat how far from your bed?",
+  "back": "At least 100 m (80%, Alberta BearSmart). A clean camp is a quiet camp."
+ },
+ {
+  "id": "fw-grandpa-090",
+  "deck": "Grandpa's rules",
+  "front": "When do you check your rifle's zero?",
+  "back": "Before the season, after a bump, after air travel (65%). Shoot it before you hunt it."
+ },
+ {
+  "id": "fw-grandpa-091",
+  "deck": "Grandpa's rules",
+  "front": "Fair chase, three words?",
+  "back": "Ethical, sportsmanlike, lawful (85%, Boone and Crockett Club). Give the animal a fair chance to escape.",
+  "diagram": "fw-grandpa-fair-chase"
+ },
+ {
+  "id": "fw-grandpa-092",
+  "deck": "Grandpa's rules",
+  "front": "\"The shot you pass on is ...\"",
+  "back": "\"... the one you never have to explain.\" Tradition."
+ },
+ {
+  "id": "fw-grandpa-093",
+  "deck": "Grandpa's rules",
+  "front": "Farm gate found open?",
+  "back": "Leave it open. Leave every gate as you found it unless the owner says otherwise (80%).",
+  "diagram": "fw-grandpa-gates"
+ },
+ {
+  "id": "fw-grandpa-094",
+  "deck": "Grandpa's rules",
+  "front": "Last year's landowner permission?",
+  "back": "Never assume it still stands. Ask again, in writing (80%, Idaho Fish and Game)."
+ },
+ {
+  "id": "fw-grandpa-095",
+  "deck": "Grandpa's rules",
+  "front": "\"Leave it a little better ...\"",
+  "back": "\"... than you found it.\" Baden Powell, 1941 (80%). Pack it in, pack it out."
+ },
+ {
+  "id": "fw-grandpa-096",
+  "deck": "Grandpa's rules",
+  "front": "\"If you shoot it, ...\"",
+  "back": "\"... you eat it.\" Hunters are legally and ethically bound to take the edible meat (85%)."
+ },
+ {
+  "id": "fw-grandpa-097",
+  "deck": "Grandpa's rules",
+  "front": "\"Notch first, ...\"",
+  "back": "\"... knife second.\" Cancel the licence before you touch the knife. Rules: Rule Book."
+ },
+ {
+  "id": "fw-grandpa-098",
+  "deck": "Grandpa's rules",
+  "front": "See a poacher. Do what?",
+  "back": "Do not confront. Note details, call RAPP 1 877 952 7277 (95%)."
+ },
+ {
+  "id": "fw-grandpa-099",
+  "deck": "Grandpa's rules",
+  "front": "\"Somebody took you. ...\"",
+  "back": "\"... Take somebody.\" Mentor a new hunter when you are ready. BC Wildlife Federation runs Learn to Hunt (80%)."
+ },
+ {
+  "id": "fw-grandpa-100",
+  "deck": "Grandpa's rules",
+  "front": "Where does BC's licence conservation surcharge go?",
+  "back": "The Habitat Conservation Trust Foundation, since 1981 (80%). Hunters paid for the wild.",
+  "diagram": "fw-grandpa-licence"
+ }
+]

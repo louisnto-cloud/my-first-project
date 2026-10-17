@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 414" font-family="sans-serif" role="img" aria-label="Flowchart for Yukon. Grouse, ptarmigan, hare, ducks or geese? Yes: no guide, small game licence. Deer or elk? Yes: not open to you, Yukon residents only. Sheep, goat, grizzly or wolverine? Yes: registered outfitter only. Otherwise moose, caribou or bison: a registered outfitter, or a Yukon resident friend with a special guide licence won in a lottery, who may not be paid.">
+<rect x="0" y="0" width="400" height="414" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Yukon: do you need a guide?</text>
+<rect x="16" y="42" width="236" height="54" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" font-weight="bold" fill="#2f3a2b">Grouse, ptarmigan, hare,</text>
+<text x="28" y="85" font-size="15" font-weight="bold" fill="#2f3a2b">ducks or geese?</text>
+<line x1="252" y1="69.0" x2="282" y2="69.0" stroke="#2f3a2b" stroke-width="3"/><polygon points="280,62.0 280,76.0 290,69.0" fill="#2f3a2b"/>
+<text x="256" y="61" font-size="14" font-weight="bold" fill="#6b4f35">Yes</text>
+<rect x="290" y="42" width="96" height="68" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="298" y="64" font-size="14" font-weight="bold" fill="#2f3a2b">No guide.</text>
+<text x="298" y="82" font-size="14" font-weight="bold" fill="#2f3a2b">Small game</text>
+<text x="298" y="100" font-size="14" font-weight="bold" fill="#2f3a2b">licence</text>
+<line x1="134" y1="110" x2="134" y2="132" stroke="#2f3a2b" stroke-width="3"/><polygon points="127,130 141,130 134,140" fill="#2f3a2b"/>
+<text x="144" y="131" font-size="14" font-weight="bold" fill="#6b4f35">No</text>
+<rect x="16" y="140" width="236" height="35" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="164" font-size="15" font-weight="bold" fill="#2f3a2b">Deer or elk?</text>
+<line x1="252" y1="157.5" x2="282" y2="157.5" stroke="#2f3a2b" stroke-width="3"/><polygon points="280,150.5 280,164.5 290,157.5" fill="#2f3a2b"/>
+<text x="256" y="149.5" font-size="14" font-weight="bold" fill="#6b4f35">Yes</text>
+<rect x="290" y="140" width="96" height="50" rx="8" fill="#f6ddd0" stroke="#e8590c" stroke-width="2.5"/>
+<text x="298" y="162" font-size="14" font-weight="bold" fill="#2f3a2b">Not open to</text>
+<text x="298" y="180" font-size="14" font-weight="bold" fill="#2f3a2b">you</text>
+<line x1="134" y1="190" x2="134" y2="212" stroke="#2f3a2b" stroke-width="3"/><polygon points="127,210 141,210 134,220" fill="#2f3a2b"/>
+<text x="144" y="211" font-size="14" font-weight="bold" fill="#6b4f35">No</text>
+<rect x="16" y="220" width="236" height="54" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="244" font-size="15" font-weight="bold" fill="#2f3a2b">Sheep, goat, grizzly or</text>
+<text x="28" y="263" font-size="15" font-weight="bold" fill="#2f3a2b">wolverine?</text>
+<line x1="252" y1="247.0" x2="282" y2="247.0" stroke="#2f3a2b" stroke-width="3"/><polygon points="280,240.0 280,254.0 290,247.0" fill="#2f3a2b"/>
+<text x="256" y="239" font-size="14" font-weight="bold" fill="#6b4f35">Yes</text>
+<rect x="290" y="220" width="96" height="68" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="298" y="242" font-size="14" font-weight="bold" fill="#2f3a2b">Registered</text>
+<text x="298" y="260" font-size="14" font-weight="bold" fill="#2f3a2b">outfitter</text>
+<text x="298" y="278" font-size="14" font-weight="bold" fill="#2f3a2b">only</text>
+<line x1="134" y1="288" x2="134" y2="310" stroke="#2f3a2b" stroke-width="3"/><polygon points="127,308 141,308 134,318" fill="#2f3a2b"/>
+<text x="144" y="309" font-size="14" font-weight="bold" fill="#6b4f35">No</text>
+<rect x="16" y="318" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="342" font-size="15" font-weight="bold" fill="#2f3a2b">Moose, caribou, bison: outfitter, or a Yukon</text>
+<text x="28" y="361" font-size="15" font-weight="bold" fill="#2f3a2b">friend with a special guide licence</text>
+<text x="200" y="392" font-size="14" fill="#2f3a2b" text-anchor="middle">Special guide: won by lottery, unpaid (85%).</text>
+</svg>

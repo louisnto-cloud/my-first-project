@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view of a mountain. Summer: mule deer feed high in the subalpine. Fall: the snow line creeps down the mountain and the deer walk down ahead of it. Winter: the deer gather on low south facing winter range below the snow. Final label: snow and cold push them down, spring green up pulls them back up.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="270" fill="#dbe7f3"/>
+  <path d="M0 270 L0 250 Q80 245 140 200 Q200 150 240 90 Q270 50 300 45 Q340 60 400 120 L400 270 Z" fill="#8a9a6b"/>
+  <path d="M0 270 L0 250 Q80 245 140 200 L150 192 L400 192 L400 270 Z" fill="#dfe6d3" opacity=".7"/>
+  <clipPath id="sg-mig-snowline-clip"><path d="M0 270 L0 250 Q80 245 140 200 Q200 150 240 90 Q270 50 300 45 Q340 60 400 120 L400 270 Z"/></clipPath>
+  <g clip-path="url(#sg-mig-snowline-clip)">
+    <rect x="0" y="0" width="400" height="60" fill="#ffffff">
+      <animate attributeName="height" values="60;60;175;175" keyTimes="0;0.2;0.7;1" dur="8s" fill="freeze"/>
+    </rect>
+  </g>
+  <rect x="0" y="270" width="400" height="30" fill="#c9b79c"/>
+  <text x="290" y="290" font-size="14" font-weight="bold" fill="#2f3a2b">Valley</text>
+  <g fill="#8b5a2b">
+    <circle cx="255" cy="85" r="6"><animate attributeName="cy" values="85;85;215;215" keyTimes="0;0.2;0.75;1" dur="8s" fill="freeze"/><animate attributeName="cx" values="255;255;110;110" keyTimes="0;0.2;0.75;1" dur="8s" fill="freeze"/></circle>
+    <circle cx="275" cy="70" r="6"><animate attributeName="cy" values="70;70;225;225" keyTimes="0;0.25;0.8;1" dur="8s" fill="freeze"/><animate attributeName="cx" values="275;275;80;80" keyTimes="0;0.25;0.8;1" dur="8s" fill="freeze"/></circle>
+    <circle cx="232" cy="105" r="6"><animate attributeName="cy" values="105;105;222;222" keyTimes="0;0.2;0.7;1" dur="8s" fill="freeze"/><animate attributeName="cx" values="232;232;130;130" keyTimes="0;0.2;0.7;1" dur="8s" fill="freeze"/></circle>
+  </g>
+  <rect x="0" y="0" width="400" height="36" fill="#2f3a2b"/>
+  <text x="200" y="24" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">June to September: high country
+    <set attributeName="opacity" to="0" begin="1.6s" fill="freeze"/></text>
+  <text x="200" y="24" font-size="17" font-weight="bold" fill="#cfd8e6" text-anchor="middle" opacity="0">October to December: snow line drops
+    <set attributeName="opacity" to="1" begin="1.6s"/><set attributeName="opacity" to="0" begin="6s" fill="freeze"/></text>
+  <text x="200" y="24" font-size="17" font-weight="bold" fill="#f3d36b" text-anchor="middle" opacity="0">Winter: low south slopes
+    <set attributeName="opacity" to="1" begin="6s" fill="freeze"/></text>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="7s" dur=".5s" fill="freeze"/>
+    <rect x="170" y="210" width="220" height="52" rx="8" fill="#2f3a2b"/>
+    <text x="280" y="232" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Snow pushes them down.</text>
+    <text x="280" y="252" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Spring green pulls them up.</text>
+  </g>
+</svg>

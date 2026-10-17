@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" font-family="sans-serif" role="img" aria-label="Freshness ladder, freshest at the top. Hours: wet scat, warm bed, green twig ends, dew knocked off. Today: sharp track edges, soft scat, damp scrape. This week: dry scat, grey twig ends, refrozen bed. Old: faded, crumbling, moss, leaves in the track. Hunt within 300 metres of the freshest sign (Tip).">
+<rect width="400" height="388" fill="#fffaf0"/>
+<g data-tip="Read 3 clues, not 1|Track edges, pellets and bed together tell you more than one clue alone. Tip." data-tip-dot="300,16">
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Freshness ladder</text>
+</g>
+<!-- ladder -->
+<rect x="22" y="40" width="6" height="252" rx="3" fill="#8b5a2b"/>
+<rect x="52" y="40" width="6" height="252" rx="3" fill="#8b5a2b"/>
+<g fill="#8b5a2b"><rect x="22" y="70" width="36" height="5"/><rect x="22" y="134" width="36" height="5"/><rect x="22" y="198" width="36" height="5"/><rect x="22" y="262" width="36" height="5"/></g>
+<text x="40" y="36" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">fresh</text>
+<g data-tip="Hours|Wet scat, warm bed, green browse ends, crisp track walls, dew knocked off the grass. Tip." data-tip-dot="384,50">
+<rect x="66" y="44" width="326" height="56" rx="10" fill="#e8590c"/>
+<circle cx="40" cy="72" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="40" y="77" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="80" y="67" font-size="17" font-weight="bold" fill="#fffaf0">Hours</text>
+<text x="80" y="89" font-size="15" fill="#fffaf0">wet scat, warm bed, dew knocked off</text>
+</g>
+<g data-tip="Today|Track edges still sharp, scat dull but soft, scrape dark and damp. Tip." data-tip-dot="384,114">
+<rect x="66" y="108" width="326" height="56" rx="10" fill="#f2a36d"/>
+<circle cx="40" cy="136" r="13" fill="#f2a36d" stroke="#fffaf0" stroke-width="2"/><text x="40" y="141" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2</text>
+<text x="80" y="131" font-size="17" font-weight="bold" fill="#2f3a2b">Today</text>
+<text x="80" y="153" font-size="15" fill="#2f3a2b">sharp track edges, soft scat</text>
+</g>
+<g data-tip="This week|Dry scat, grey browse ends, track softened, bed with refrozen snow. Tip." data-tip-dot="384,178">
+<rect x="66" y="172" width="326" height="56" rx="10" fill="#dfe5d3"/>
+<circle cx="40" cy="200" r="13" fill="#8a9a6b" stroke="#fffaf0" stroke-width="2"/><text x="40" y="205" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="80" y="195" font-size="17" font-weight="bold" fill="#2f3a2b">This week</text>
+<text x="80" y="217" font-size="15" fill="#2f3a2b">dry scat, grey twig ends, refrozen bed</text>
+</g>
+<g data-tip="Old|Faded, crumbling, moss, leaves in the track. Tip." data-tip-dot="384,242">
+<rect x="66" y="236" width="326" height="56" rx="10" fill="#e6dfd2"/>
+<circle cx="40" cy="264" r="13" fill="#9a8c78" stroke="#fffaf0" stroke-width="2"/><text x="40" y="269" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="80" y="259" font-size="17" font-weight="bold" fill="#2f3a2b">Old</text>
+<text x="80" y="281" font-size="15" fill="#2f3a2b">crumbling, moss, leaves in the track</text>
+</g>
+<g data-tip="Mixed ages|Lots of mixed age sign: the animals live here, they did not just pass through (60%)." data-tip-dot="186,306">
+<rect x="8" y="300" width="188" height="36" rx="8" fill="#f4eedf" stroke="#d8ccb4"/>
+<text x="102" y="323" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mixed ages: they live here</text>
+</g>
+<g data-tip="Weather resets the clock|Rain and frost reset the clock. A print on top of the last rain or frost is newer than the weather. Tip." data-tip-dot="384,306">
+<rect x="204" y="300" width="188" height="36" rx="8" fill="#e3edf5" stroke="#bcd0e2"/>
+<text x="298" y="323" font-size="14" font-weight="bold" fill="#2f5f8a" text-anchor="middle">Rain or frost: clock resets</text>
+</g>
+<g data-tip="Hunt the freshest|Pick the freshest sign on your walk and hunt within 300 m of it at dawn or dusk. Tip." data-tip-dot="384,350">
+<rect x="8" y="344" width="384" height="38" rx="8" fill="#2f3a2b"/>
+<circle cx="34" cy="363" r="11" fill="none" stroke="#e8590c" stroke-width="2.4"/><circle cx="34" cy="363" r="4" fill="#e8590c"/>
+<text x="210" y="369" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Hunt within 300 m of the freshest (Tip)</text>
+</g>
+</svg>

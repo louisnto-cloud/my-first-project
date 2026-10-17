@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506" font-family="sans-serif" role="img" aria-label="Cards of vehicle closures in Management Units 4-9 to 4-21, page 38. A star means closed to all motor vehicles; the other symbols close vehicles for hunting use. 4-9: Malde, Goodeve, Morris and Shepard creeks and Cambridge Creek above 750 metres closed for hunting use in spring and fall; Tiger Creek spring and 1 September to 28 February. 4-14: Peter and Faith creeks 1 September to 30 November. 4-15: Rialto to Tulip Creek above 760 metres spring and fall; Deer Creek Road areas 1 September to 30 November. 4-18: Grohman Creek closed for hunting use year round; Marsden Face no vehicles 1 December to 15 April; Sproule Creek spring and 1 September to 28 February. 4-20: Wycliffe Conservation Properties, Baribeau Creek and Cherry Creek closed to all vehicles; six creek watersheds closed for hunting use in spring and 1 September to 28 February. 4-21: Premier Ridge and parts of Lewis Creek closed to all vehicles; Coyote Creek headwaters spring and winter; Island Pond 1 September to 30 June.">
+<rect width="400" height="506" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Vehicle closures, MUs 4-9 to 4-21</text>
+<rect x="10" y="34" width="380" height="69" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 34 H60 V103 H17 A7 7 0 0 1 10 96 V41 A7 7 0 0 1 17 34z" fill="#4a7fb0"/>
+<text x="35" y="74.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-9</text>
+<text x="74" y="56" font-size="15" font-weight="bold" fill="#c92a2a">▲</text>
+<text x="92" y="56" font-size="15" fill="#c92a2a">Malde, Goodeve, Morris, Shepard and</text>
+<text x="92" y="75" font-size="15" fill="#c92a2a">Cambridge creeks</text>
+<text x="74" y="94" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="94" font-size="15" fill="#c92a2a">Tiger Creek</text>
+<rect x="10" y="111" width="380" height="40" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 111 H60 V151 H17 A7 7 0 0 1 10 144 V118 A7 7 0 0 1 17 111z" fill="#4a7fb0"/>
+<text x="35" y="137" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-14</text>
+<text x="74" y="133" font-size="15" font-weight="bold" fill="#c92a2a">✢</text>
+<text x="92" y="133" font-size="15" fill="#c92a2a">Peter and Faith creeks</text>
+<rect x="10" y="159" width="380" height="50" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 159 H60 V209 H17 A7 7 0 0 1 10 202 V166 A7 7 0 0 1 17 159z" fill="#4a7fb0"/>
+<text x="35" y="190" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-15</text>
+<text x="74" y="181" font-size="15" font-weight="bold" fill="#c92a2a">▲</text>
+<text x="92" y="181" font-size="15" fill="#c92a2a">Rialto to Tulip Creek above 760 m</text>
+<text x="74" y="200" font-size="15" font-weight="bold" fill="#c92a2a">✢</text>
+<text x="92" y="200" font-size="15" fill="#c92a2a">Deer Creek Road areas</text>
+<rect x="10" y="217" width="380" height="69" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 217 H60 V286 H17 A7 7 0 0 1 10 279 V224 A7 7 0 0 1 17 217z" fill="#4a7fb0"/>
+<text x="35" y="257.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-18</text>
+<text x="74" y="239" font-size="15" font-weight="bold" fill="#c92a2a">❄</text>
+<text x="92" y="239" font-size="15" fill="#c92a2a">Grohman Creek</text>
+<text x="74" y="258" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="258" font-size="15" fill="#4a7fb0">Marsden Face, Dec 1 to Apr 15</text>
+<text x="74" y="277" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="277" font-size="15" fill="#c92a2a">Sproule Creek</text>
+<rect x="10" y="294" width="380" height="69" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 294 H60 V363 H17 A7 7 0 0 1 10 356 V301 A7 7 0 0 1 17 294z" fill="#4a7fb0"/>
+<text x="35" y="334.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-20</text>
+<text x="74" y="316" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="316" font-size="15" fill="#4a7fb0">Wycliffe properties, Baribeau Creek,</text>
+<text x="92" y="335" font-size="15" fill="#4a7fb0">Cherry Creek</text>
+<text x="74" y="354" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="354" font-size="15" fill="#c92a2a">Six creek watersheds</text>
+<rect x="10" y="371" width="380" height="69" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 371 H60 V440 H17 A7 7 0 0 1 10 433 V378 A7 7 0 0 1 17 371z" fill="#4a7fb0"/>
+<text x="35" y="411.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4-21</text>
+<text x="74" y="393" font-size="15" font-weight="bold" fill="#4a7fb0">★</text>
+<text x="92" y="393" font-size="15" fill="#4a7fb0">Premier Ridge, parts of Lewis Creek</text>
+<text x="74" y="412" font-size="15" font-weight="bold" fill="#c92a2a">◆</text>
+<text x="92" y="412" font-size="15" fill="#c92a2a">Coyote Creek headwaters</text>
+<text x="74" y="431" font-size="15" font-weight="bold" fill="#c92a2a">✖</text>
+<text x="92" y="431" font-size="15" fill="#c92a2a">Island Pond</text>
+<rect x="12" y="453" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="32" y="465" font-size="14" fill="#2f3a2b">★ No motor vehicles</text>
+<rect x="12" y="477" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="32" y="489" font-size="14" fill="#2f3a2b">▲ ◆ ✢ ❄ ✖ Hunting use closed</text>
+</svg>

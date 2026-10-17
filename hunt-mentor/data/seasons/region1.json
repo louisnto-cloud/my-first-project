@@ -1,0 +1,1235 @@
+{
+ "edition": "2026-10-02",
+ "region": 1,
+ "source": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026",
+ "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+ "checked": "2026-10-04",
+ "note": "General open seasons only. open and close are MM-DD (month and day); months lists every month the row touches. LEH hunts are in the separate LEH synopsis.",
+ "rows": [
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "Bucks",
+   "open": "09-10",
+   "close": "12-10",
+   "notes": "On Denman and Hornby Islands the season is Oct 5 to Dec 10. Part of MU 1-6 (Map A26) is 2 point or better; keep antlers with the species licence",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-15"
+   ],
+   "class": "Antlerless",
+   "open": "08-25",
+   "close": "09-09",
+   "notes": "Special Areas only (Maps A1, A10, A13, A14, A19, A20, A32), bow only. no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island), in zone B of MU 1-5 (Map A12) or on Denman and Hornby Islands (MU 1-6)",
+   "page": 21,
+   "cert": 90,
+   "months": [
+    8,
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-15"
+   ],
+   "class": "Antlerless",
+   "open": "09-10",
+   "close": "12-10",
+   "notes": "Special Areas only (Maps A1, A10, A13, A14, A19, A20, A32). On Denman and Hornby Islands the season is Oct 5 to Dec 10",
+   "page": 21,
+   "cert": 90,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6"
+   ],
+   "class": "Antlerless",
+   "open": "09-10",
+   "close": "12-10",
+   "notes": "Youth Only: hunters under 18. Bag 1 antlerless in this season (page 20)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "Bucks",
+   "open": "08-25",
+   "close": "09-09",
+   "notes": "Bow Only. no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island), in zone B of MU 1-5 (Map A12) or on Denman and Hornby Islands (MU 1-6). Part of MU 1-6 (Map A26) is 2 point or better",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    8,
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6"
+   ],
+   "class": "Antlerless",
+   "open": "08-25",
+   "close": "09-09",
+   "notes": "Youth Bow Only: hunters under 18. Bag 1 antlerless in this season (page 20). no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island), in zone B of MU 1-5 (Map A12) or on Denman and Hornby Islands (MU 1-6)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    8,
+    9
+   ]
+  },
+  {
+   "species": "fallow deer",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "Either sex",
+   "open": null,
+   "close": null,
+   "notes": "NBL; No Closed Season; species licence not required for fallow deer",
+   "page": 21,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "mountain goat",
+   "mus": [
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "bag 1; Compulsory Inspection required",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "12-10",
+   "notes": "bag 2",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 2",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "08-25",
+   "close": "09-09",
+   "notes": "bag 2; Bow Only; no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island), in zone B of MU 1-5 (Map A12) or on Denman and Hornby Islands (MU 1-6)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    8,
+    9
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "03-31",
+   "notes": "bag 3; all wolves taken in Region 1 must be Compulsory Reported",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 3; all wolves taken in Region 1 must be Compulsory Reported",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "03-31",
+   "notes": "bag 2; no cougar kitten or cougar in its company; Compulsory Inspection",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "bag 2; no cougar kitten or cougar in its company; Compulsory Inspection",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "raccoon",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": null,
+   "close": null,
+   "notes": "bag 10; No Closed Season",
+   "page": 21,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "snowshoe hare",
+   "mus": [
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "08-01",
+   "close": "04-30",
+   "notes": "10 (daily)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "species": "opossum and skunk",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": null,
+   "close": null,
+   "notes": "NBL; No Closed Season; opossum carcass requested by the Wildlife Program",
+   "page": 21,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "12-31",
+   "notes": "sooty (blue) and ruffed only; 5 each (15 each); no open season on Denman Island (page 20)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "08-20",
+   "close": "08-31",
+   "notes": "sooty (blue) and ruffed; Bow Only; 5 each (15 each); no bow only season on the Gulf Islands in MU 1-1 (except Gabriola Island), in zone B of MU 1-5 (Map A12) or on Denman and Hornby Islands (MU 1-6)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    8
+   ]
+  },
+  {
+   "species": "ptarmigan",
+   "mus": [
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "5 (15)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "california quail",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-01",
+   "close": "11-30",
+   "notes": "5 (15); no open season on mountain quail; none on Denman Island (page 20)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11
+   ]
+  },
+  {
+   "species": "pheasant",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9"
+   ],
+   "class": "",
+   "open": "10-01",
+   "close": "11-30",
+   "notes": "2 (6); none on Denman Island (page 20)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11
+   ]
+  },
+  {
+   "species": "turkey",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "Any Turkey",
+   "open": null,
+   "close": null,
+   "notes": "NBL; No Closed Season",
+   "page": 21,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "band tailed pigeon",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "09-15",
+   "close": "09-30",
+   "notes": "5 (15)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "snipe",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "10 (30); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "coot",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "10 (30); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "ducks",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "8 (24): max 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins; printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "snow and ross geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "5 (15); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "white fronted geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-3",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "5 (15); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-3",
+    "1-8",
+    "1-9",
+    "1-10",
+    "1-11",
+    "1-12",
+    "1-13",
+    "1-14",
+    "1-15"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "01-24",
+   "notes": "10 (30); printed 10 Oct 2026 to 24 Jan 2027, then 9 Oct 2027 to 23 Jan 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "",
+   "open": "09-05",
+   "close": "09-15",
+   "notes": "10 (30); printed 5 to 15 Sept 2026, then 4 to 14 Sept 2027; not the Ex Dinsdale property (MU 1-4); no September season in the Cowichan Bay Seasonal No Shooting Area (Map A8)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "11-22",
+   "notes": "10 (30); printed 10 Oct to 22 Nov 2026, then 9 Oct to 21 Nov 2027; not the Ex Dinsdale property (MU 1-4)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10,
+    11
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "",
+   "open": "12-19",
+   "close": "01-10",
+   "notes": "10 (30); printed 19 Dec 2026 to 10 Jan 2027, then 18 Dec 2027 to 9 Jan 2028; not the Ex Dinsdale property (MU 1-4)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    12,
+    1
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-1",
+    "1-2",
+    "1-4",
+    "1-5",
+    "1-6",
+    "1-7"
+   ],
+   "class": "",
+   "open": "02-10",
+   "close": "03-10",
+   "notes": "10 (30); printed 10 Feb to 10 Mar 2027, then 11 Feb to 10 Mar 2028; not the Ex Dinsdale property (MU 1-4)",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    2,
+    3
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-4"
+   ],
+   "class": "",
+   "open": "10-10",
+   "close": "10-19",
+   "notes": "10 (30); Ex Dinsdale property only (Map A8); printed 10 to 19 Oct 2026, then 9 to 18 Oct 2027",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    10
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-4"
+   ],
+   "class": "",
+   "open": "12-19",
+   "close": "12-31",
+   "notes": "10 (30); Ex Dinsdale property only (Map A8); printed 19 to 31 Dec 2026, then 18 to 31 Dec 2027",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    12
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "1-4"
+   ],
+   "class": "",
+   "open": "02-20",
+   "close": "03-10",
+   "notes": "10 (30); Ex Dinsdale property only (Map A8); printed 20 Feb to 10 Mar 2027, then 19 Feb to 10 Mar 2028",
+   "page": 21,
+   "cert": 99,
+   "months": [
+    2,
+    3
+   ]
+  }
+ ],
+ "bag": [
+  {
+   "species": "deer",
+   "limit": "Deer: The bag limit for mule (black-tailed) deer is 3, of which only two may be antlerless from Special Areas and only two may be bucks.",
+   "page": 20,
+   "cert": 99
+  },
+  {
+   "species": "deer, youth antlerless",
+   "limit": "The bag limit for antlerless mule (black-tailed) deer taken during the youth only season or the youth bow only season in MUs 1-1, 1-2, 1-4, 1-5, and 1-6 is one.",
+   "page": 20,
+   "cert": 99
+  },
+  {
+   "species": "grouse",
+   "limit": "Grouse: The daily bag limit for blue (sooty) and ruffed grouse is 5 each. See page 12 for additional information on bag limits.",
+   "page": 20,
+   "cert": 99
+  },
+  {
+   "species": "deer, page 14 table",
+   "limit": "Region 1 row: mule deer bucks 2, antlerless 2, total 3; white tailed deer 0; regional 3; provincial 3",
+   "page": 14,
+   "cert": 99
+  },
+  {
+   "species": "Mule deer",
+   "limit": "Refer to Regional Bag Limits on p. 20 and the Deer Bag Limits article on p. 14",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Fallow deer",
+   "limit": "NBL",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Mountain goat",
+   "limit": "1",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Black bear",
+   "limit": "2",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Wolf",
+   "limit": "3",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Cougar",
+   "limit": "2",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Raccoon",
+   "limit": "10",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Snowshoe hare",
+   "limit": "10 (daily)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Opossum, skunk",
+   "limit": "NBL",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Grouse: sooty (blue) and ruffed",
+   "limit": "5 each (15 each)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Ptarmigan",
+   "limit": "5 (15)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "California quail",
+   "limit": "5 (15)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Pheasant",
+   "limit": "2 (6)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Turkey",
+   "limit": "NBL",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Band tailed pigeons",
+   "limit": "5 (15)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Common snipe",
+   "limit": "10(30)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Coots",
+   "limit": "10(30)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Ducks",
+   "limit": "8(24)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Geese: snow and Ross's",
+   "limit": "5 (15)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Geese: white fronted",
+   "limit": "5 (15)",
+   "page": 21,
+   "cert": 99
+  },
+  {
+   "species": "Geese: Canada and cackling",
+   "limit": "10 (30)",
+   "page": 21,
+   "cert": 99
+  }
+ ],
+ "leh": [
+  {
+   "species": "mule deer",
+   "class": "antlerless",
+   "notes": "No open season for antlerless mule deer where rifles are permitted, except by LEH in a portion of MU 1-15 and the youth seasons in MUs 1-1, 1-2, 1-4, 1-5 and 1-6",
+   "page": 20,
+   "cert": 99
+  }
+ ],
+ "noRow": {
+  "species": [
+   "white tailed deer",
+   "moose",
+   "elk",
+   "bighorn sheep",
+   "caribou",
+   "coyote",
+   "lynx",
+   "bobcat",
+   "columbian ground squirrel",
+   "spruce grouse",
+   "sharp tailed grouse",
+   "mountain quail",
+   "chukar",
+   "gray partridge",
+   "dove"
+  ],
+  "page": 21,
+  "cert": 95,
+  "notes": "No row in the Region 1 table, so no general open season (page 5: open seasons are only those in the synopsis). Mountain quail: printed 'No open season on mountain quail'."
+ },
+ "closedMus": [],
+ "gulfIslandsNote": "Gulf Islands Special Hunting Area: all islands in MU 1-1 (except Vancouver Island) and Denman and Hornby Islands (MU 1-6). Gulf Islands Special Area Licence for hunters 18 and over; no hunting in Gulf Islands National Park; no upland game bird season on Denman Island (page 20)."
+}

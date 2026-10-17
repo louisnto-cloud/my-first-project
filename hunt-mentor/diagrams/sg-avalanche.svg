@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Avalanche terrain. Slopes around 30 degrees and steeper can slide once there is enough snow. Open slopes, gullies and the run out zone below them are all danger. Gentle, treed ground is safer. Take an Avalanche Skills Training level 1 course before you hunt steep snow.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Avalanche terrain</text>
+  <path d="M20 250 L230 250 L380 60 L380 250 Z" fill="#eef2f6"/>
+  <path d="M230 250 L380 60" stroke="#4a7fb0" stroke-width="4"/>
+  <path d="M120 250 L230 250" stroke="#c0392b" stroke-width="10" opacity=".5"/>
+  <path d="M265 250 A 35 35 0 0 0 258 228" stroke="#2f3a2b" stroke-width="2" fill="none"/>
+  <text x="275" y="240" font-size="15" font-weight="bold" fill="#2f3a2b">30 degrees +</text>
+  <path d="M320 120 L300 160 M340 110 L310 190" stroke="#4a7fb0" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="270" y="100" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="end">can slide</text>
+  <text x="170" y="240" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">run out</text>
+  <g fill="#2f3a2b"><polygon points="30,250 40,220 50,250"/><polygon points="60,250 70,215 80,250"/></g>
+  <text x="55" y="205" font-size="14" fill="#2f3a2b" text-anchor="middle">gentle, treed</text>
+  <text x="200" y="278" font-size="15" fill="#2f3a2b" text-anchor="middle">Avalanche Skills Training 1: 2 days, before steep snow</text>
+</svg>

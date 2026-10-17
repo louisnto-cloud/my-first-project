@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 739" font-family="sans-serif" role="img" aria-label="Cards for Region 4 Maps D19 to D27, page 41. D19 Fairmont and D20 Windermere: No Shooting Areas, MU 4-25. D21 Columbia Wetlands Wildlife Management Area: closed to any conveyance with a motor over 10 horsepower; see the wetlands screen. D22 Radium: No Shooting or Hunting Area, MUs 4-25 and 4-35. D23 Columbia Lake and River Wildlife Sanctuary: no shooting, hunting or trapping. D24 Lardeau: the mountain goat season area in MU 4-30. D25 Edgewater: No Shooting or Hunting Area, MU 4-35. D26 Bergenham and Moberly Marsh Wildlife Sanctuaries, MU 4-36: no shooting, hunting or trapping. D27 Cranbrook Deer Hunt, new: 5 to 31 January general open season on any deer of either species and sex, bag one, in addition to regional limits, never more than 3 deer province wide.">
+<rect width="400" height="739" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Region 4 maps D19 to D27, page 41</text>
+<rect x="10" y="34" width="380" height="56" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M17 34 H72 V90 H17 A7 7 0 0 1 10 83 V41 A7 7 0 0 1 17 34z" fill="#e8590c"/>
+<text x="41" y="56" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D19</text>
+<g transform="translate(41.0 76.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="9"/><path d="M0 -13 V-5 M0 5 V13 M-13 0 H-5 M5 0 H13"/><path d="M-9 9 L9 -9" stroke-width="3"/></g>
+<text x="86" y="57" font-size="16" font-weight="bold" fill="#2f3a2b">Fairmont</text>
+<text x="86" y="76" font-size="15" fill="#2f3a2b">No Shooting Area, MU 4-25</text>
+<rect x="10" y="98" width="380" height="56" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M17 98 H72 V154 H17 A7 7 0 0 1 10 147 V105 A7 7 0 0 1 17 98z" fill="#e8590c"/>
+<text x="41" y="120" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D20</text>
+<g transform="translate(41.0 140.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="9"/><path d="M0 -13 V-5 M0 5 V13 M-13 0 H-5 M5 0 H13"/><path d="M-9 9 L9 -9" stroke-width="3"/></g>
+<text x="86" y="121" font-size="16" font-weight="bold" fill="#2f3a2b">Windermere</text>
+<text x="86" y="140" font-size="15" fill="#2f3a2b">No Shooting Area, MU 4-25</text>
+<rect x="10" y="162" width="380" height="70" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 162 H72 V232 H17 A7 7 0 0 1 10 225 V169 A7 7 0 0 1 17 162z" fill="#4a7fb0"/>
+<text x="41" y="191" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D21</text>
+<g transform="translate(41.0 211.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><path d="M-12 3 V-3 L-7 -9 H5 L9 -3 H12 V3z" fill="#fffaf0" stroke="none"/><circle cx="-6" cy="5" r="3.6" fill="#fffaf0" stroke="none"/><circle cx="7" cy="5" r="3.6" fill="#fffaf0" stroke="none"/></g>
+<text x="86" y="185" font-size="16" font-weight="bold" fill="#2f3a2b">Columbia Wetlands</text>
+<text x="86" y="204" font-size="15" fill="#2f3a2b">Over 10 horsepower prohibited. See the</text>
+<text x="86" y="223" font-size="15" fill="#2f3a2b">wetlands screen</text>
+<rect x="10" y="240" width="380" height="70" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 240 H72 V310 H17 A7 7 0 0 1 10 303 V247 A7 7 0 0 1 17 240z" fill="#c92a2a"/>
+<text x="41" y="269" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D22</text>
+<g transform="translate(41.0 289.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="263" font-size="16" font-weight="bold" fill="#2f3a2b">Radium</text>
+<text x="86" y="282" font-size="15" fill="#2f3a2b">No Shooting or Hunting Area, MUs 4-25,</text>
+<text x="86" y="301" font-size="15" fill="#2f3a2b">4-35</text>
+<rect x="10" y="318" width="380" height="71" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 318 H72 V389 H17 A7 7 0 0 1 10 382 V325 A7 7 0 0 1 17 318z" fill="#c92a2a"/>
+<text x="41" y="347.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D23</text>
+<g transform="translate(41.0 367.5)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="341" font-size="16" font-weight="bold" fill="#2f3a2b">Columbia Lake and River Wildlife</text>
+<text x="86" y="361" font-size="16" font-weight="bold" fill="#2f3a2b">Sanctuary</text>
+<text x="86" y="380" font-size="15" fill="#2f3a2b">No shooting, hunting or trapping</text>
+<rect x="10" y="397" width="380" height="56" rx="7" fill="#fffaf0" stroke="#5c7a3a" stroke-width="1.6"/>
+<path d="M17 397 H72 V453 H17 A7 7 0 0 1 10 446 V404 A7 7 0 0 1 17 397z" fill="#5c7a3a"/>
+<text x="41" y="419" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D24</text>
+<g transform="translate(41.0 439.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><rect x="-11" y="-9" width="22" height="20" rx="2"/><path d="M-11 -3 H11 M-5 -13 V-6 M5 -13 V-6"/><circle cx="-4" cy="4" r="1.8" fill="#fffaf0"/><circle cx="3" cy="4" r="1.8" fill="#fffaf0"/></g>
+<text x="86" y="420" font-size="16" font-weight="bold" fill="#2f3a2b">Lardeau</text>
+<text x="86" y="439" font-size="15" fill="#2f3a2b">Mountain goat season area, MU 4-30</text>
+<rect x="10" y="461" width="380" height="56" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 461 H72 V517 H17 A7 7 0 0 1 10 510 V468 A7 7 0 0 1 17 461z" fill="#c92a2a"/>
+<text x="41" y="483" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D25</text>
+<g transform="translate(41.0 503.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="484" font-size="16" font-weight="bold" fill="#2f3a2b">Edgewater</text>
+<text x="86" y="503" font-size="15" fill="#2f3a2b">No Shooting or Hunting Area, MU 4-35</text>
+<rect x="10" y="525" width="380" height="70" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 525 H72 V595 H17 A7 7 0 0 1 10 588 V532 A7 7 0 0 1 17 525z" fill="#c92a2a"/>
+<text x="41" y="554" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D26</text>
+<g transform="translate(41.0 574.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="548" font-size="16" font-weight="bold" fill="#2f3a2b">Bergenham and Moberly Marsh</text>
+<text x="86" y="567" font-size="15" fill="#2f3a2b">Wildlife sanctuaries: no shooting, hunting</text>
+<text x="86" y="586" font-size="15" fill="#2f3a2b">or trapping, MU 4-36</text>
+<rect x="10" y="603" width="380" height="70" rx="7" fill="#fffaf0" stroke="#6a4c93" stroke-width="1.6"/>
+<path d="M17 603 H72 V673 H17 A7 7 0 0 1 10 666 V610 A7 7 0 0 1 17 603z" fill="#6a4c93"/>
+<text x="41" y="632" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D27</text>
+<g transform="translate(41.0 652.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><rect x="-11" y="-9" width="22" height="20" rx="2"/><path d="M-11 -3 H11 M-5 -13 V-6 M5 -13 V-6"/><circle cx="-4" cy="4" r="1.8" fill="#fffaf0"/><circle cx="3" cy="4" r="1.8" fill="#fffaf0"/></g>
+<text x="86" y="626" font-size="16" font-weight="bold" fill="#2f3a2b">Cranbrook Deer Hunt (new)</text>
+<text x="86" y="645" font-size="15" fill="#2f3a2b">Jan 5 to 31: one extra deer of either</text>
+<text x="86" y="664" font-size="15" fill="#2f3a2b">species and sex</text>
+<rect x="12" y="686" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="698" font-size="14" fill="#2f3a2b">No shooting</text>
+<rect x="126.44000000000001" y="686" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="146.44" y="698" font-size="14" fill="#2f3a2b">No hunting</text>
+<rect x="233.32" y="686" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="253.32" y="698" font-size="14" fill="#2f3a2b">Vehicle rule</text>
+<rect x="12" y="710" width="14" height="14" rx="3" fill="#5c7a3a"/>
+<text x="32" y="722" font-size="14" fill="#2f3a2b">Open or allowed</text>
+<rect x="155.0" y="710" width="14" height="14" rx="3" fill="#6a4c93"/>
+<text x="175" y="722" font-size="14" fill="#2f3a2b">Special season</text>
+</svg>

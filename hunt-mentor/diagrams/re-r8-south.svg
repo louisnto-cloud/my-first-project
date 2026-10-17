@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 590" font-family="sans-serif" role="img" aria-label="Closed areas from Oliver to Penticton, synopsis pages 67, 69 and 70, grouped by rule. No shooting or hunting: Map J1 Osoyoos Oxbows, 1 March to 30 September; Vaseux Lake, Migratory Bird Sanctuary and National Wildlife Areas: no hunting, blue loon signs. No Shooting Areas: Map J10 Kaleden and Okanagan Falls; Map J8 Upper Carmi Road, almost all private land; Map J11 Naramata, with a Shot Only Area around it; Map J9 Brenda Mines, MU 8-8. Shot only: Map J10 Skaha Lake, Firearms Using Shot Only Area.">
+<rect width="400" height="590" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Pages 67, 69 and 70. Badge: map number</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING OR HUNTING</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J1</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Osoyoos Oxbows</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">No shooting or hunting Mar 1 to Sept 30</text>
+<circle cx="41.0" cy="162.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 162.0) scale(0.8)" fill="#c0392b" stroke="none"><rect x="-15" y="-12" width="30" height="24" rx="2" fill="#2f63a6"/><path d="M-10 5 C-6 -1 4 -1 8 3 L12 1 L10 5 C6 8 -6 8 -10 5z M8 3 C8 -2 4 -4 2 -2" fill="#fffaf0"/></g>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Vaseux Lake</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">Migratory Bird Sanctuary and National</text>
+<text x="78" y="186" font-size="15" fill="#2f3a2b">Wildlife Areas: no hunting. Blue loon signs</text>
+<rect x="8" y="209" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 224) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="230" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="245" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="257.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="278.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J10</text>
+<text x="78" y="268" font-size="16" font-weight="bold" fill="#2f3a2b">Kaleden, Okanagan Falls</text>
+<text x="78" y="287" font-size="15" fill="#2f3a2b">No Shooting Areas</text>
+<rect x="14" y="314.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="335.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J8</text>
+<text x="78" y="325" font-size="16" font-weight="bold" fill="#2f3a2b">Upper Carmi Road</text>
+<text x="78" y="344" font-size="15" fill="#2f3a2b">No Shooting Area. Almost all private land</text>
+<rect x="8" y="359" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="371.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="392.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J11</text>
+<text x="78" y="382" font-size="16" font-weight="bold" fill="#2f3a2b">Naramata</text>
+<text x="78" y="401" font-size="15" fill="#2f3a2b">No Shooting Area, Shot Only Area around it</text>
+<rect x="14" y="428.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="449.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J9</text>
+<text x="78" y="439" font-size="16" font-weight="bold" fill="#2f3a2b">Brenda Mines</text>
+<text x="78" y="458" font-size="15" fill="#2f3a2b">No Shooting Area. MU 8-8</text>
+<rect x="8" y="481" width="384" height="30" rx="6" fill="#5b6b3e"/>
+<text x="18" y="502" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SHOT ONLY</text>
+<rect x="8" y="517" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="529.5" width="54" height="30" rx="6" fill="#5b6b3e"/>
+<text x="41" y="550.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J10</text>
+<text x="78" y="540" font-size="16" font-weight="bold" fill="#2f3a2b">Skaha Lake</text>
+<text x="78" y="559" font-size="15" fill="#2f3a2b">Firearms Using Shot Only Area</text>
+</svg>

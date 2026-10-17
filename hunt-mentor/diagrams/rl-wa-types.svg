@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of water types on one piece of ground: a river along the bottom, a dashed dry creek that runs only in wet times, a spring with a short creek below it, a green seep patch, a dugout pond, a beaver pond with its dam, and a muddy wallow.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Water on one map</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">map view</text><rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end"></text>
+  <path d="M0 230 C 80 220, 160 236, 240 226 S 360 214, 400 220" stroke="#4a7fb0" stroke-width="6" fill="none"/>
+  <path d="M120 60 C 126 110, 118 160, 130 228" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+  <circle cx="250" cy="96" r="7" fill="#4a7fb0"/><path d="M250 103 C 252 140, 246 170, 252 224" stroke="#4a7fb0" stroke-width="3" fill="none"/>
+  <ellipse cx="320" cy="150" rx="26" ry="14" fill="#7fb069"/>
+  <ellipse cx="60" cy="120" rx="28" ry="16" fill="#4a7fb0" opacity=".7"/>
+  <path d="M175 168 C 190 150, 220 152, 228 170 C 220 190, 190 192, 175 168 Z" fill="#4a7fb0" opacity=".6"/><path d="M226 162 L232 182" stroke="#8b5a2b" stroke-width="5"/>
+  <ellipse cx="370" cy="96" rx="16" ry="9" fill="#8b6a3c"/>
+  <text x="14" y="250" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">River</text><text x="132" y="70" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">Dry creek (dashed)</text><text x="260" y="92" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="start">Spring</text><text x="320" y="132" font-size="14" font-weight="bold" fill="#3d7a2a" text-anchor="middle">Seep</text>
+  <text x="60" y="148" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Dugout</text><text x="200" y="206" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Beaver pond</text><text x="370" y="120" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Wallow</text>
+</svg>

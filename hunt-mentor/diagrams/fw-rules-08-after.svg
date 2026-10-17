@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" font-family="sans-serif" role="img" aria-label="Four steps after big game is down. 1: cancel the species licence before you touch the animal. 2: leave the unskinned tail and evidence of sex attached. 3: take the edible portions, neck, ribs, four quarters and loins, home or to a meat cutter. 4: moose, elk or caribou licence: file the Mandatory Hunter Report by 31 March, hunt or no hunt.">
+<rect width="400" height="306" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="36" rx="6" fill="#e8590c"/>
+<text x="200" y="33" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">After the shot, in order</text>
+<rect x="8" y="52" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="82.0" r="26" fill="#e8590c"/>
+<text x="44" y="91" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="86" y="78" font-size="17" font-weight="bold" fill="#2f3a2b">Cancel</text>
+<text x="86" y="98" font-size="15" fill="#2f3a2b">The licence, before you touch it</text>
+<circle cx="44" cy="144.0" r="26" fill="#e8590c"/>
+<text x="44" y="153" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="86" y="140" font-size="17" font-weight="bold" fill="#2f3a2b">Leave on</text>
+<text x="86" y="160" font-size="15" fill="#2f3a2b">Tail and evidence of sex</text>
+<rect x="8" y="176" width="384" height="60" rx="6" fill="#f4eedf"/>
+<circle cx="44" cy="206.0" r="26" fill="#e8590c"/>
+<text x="44" y="215" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="86" y="202" font-size="17" font-weight="bold" fill="#2f3a2b">Take home</text>
+<text x="86" y="222" font-size="15" fill="#2f3a2b">Neck, ribs, quarters, loins</text>
+<circle cx="44" cy="268.0" r="26" fill="#e8590c"/>
+<text x="44" y="277" font-size="25" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="86" y="264" font-size="17" font-weight="bold" fill="#2f3a2b">Report</text>
+<text x="86" y="284" font-size="15" fill="#2f3a2b">Moose or elk licence: by 31 March</text>
+</svg>

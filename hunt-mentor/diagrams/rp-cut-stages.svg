@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" font-family="sans-serif" role="img" aria-label="BC structural stages after a cut or fire, each with a small picture. Stages 1 and 2, sparse and herb: usually under 20 years. 3a, low shrub under 2 m: under 20 years. 3b, tall shrub 2 to 10 m: under 40 years. 4, pole and sapling: usually under 40 years. 5, young forest: 40 to 80 years. 6, mature forest: 80 to 140 or up to 250 years. 7, old forest: over 140 to 250 years depending on the zone. Typical times since disturbance (90%). Food peaks in the shrub stages, 3a and 3b (85%).">
+<rect width="400" height="396" fill="#fffaf0"/>
+<text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">BC forest stages after a cut or fire</text>
+<g data-tip="Stages 1 and 2: sparse, herb|Mosses and lichens, then grasses, forbs and ferns; trees under 10% cover; under 20 years (90%). Fresh blocks, years 0 to 2, are mostly stumps and slash (90%).">
+<rect x="8" y="38" width="384" height="42" rx="6" fill="#f4eedf"/>
+<rect x="14" y="45" width="40" height="28" rx="6" fill="#d9c78f"/>
+<text x="34" y="65" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1-2</text>
+<g transform="translate(62 42) scale(0.88 1) translate(-62 -42)"><rect x="62" y="42" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="70" width="60" height="6" rx="2" fill="#b59a6a"/><rect x="72" y="65" width="6" height="6" fill="#8b5a2b"/><rect x="102" y="66" width="6" height="5" fill="#8b5a2b"/><path d="M82 71 l-2 -6 M84 71 l0 -7 M86 71 l2 -6" stroke="#7c9a4a" stroke-width="1.5"/><path d="M92 71 l-2 -6 M94 71 l0 -7 M96 71 l2 -6" stroke="#7c9a4a" stroke-width="1.5"/><path d="M112 71 l-2 -6 M114 71 l0 -7 M116 71 l2 -6" stroke="#7c9a4a" stroke-width="1.5"/><circle cx="90" cy="64" r="1.8" fill="#c2255c"/></g>
+<text x="122" y="65" font-size="16" font-weight="bold" fill="#2f3a2b">Sparse, herb</text>
+<text x="386" y="65" font-size="15" fill="#6b4f35" text-anchor="end">under 20 yrs</text>
+</g>
+<g data-tip="Stage 3a: low shrub|Shrubs over 20% cover, under 2 m, under 20 years after disturbance (90%). Grandpa&apos;s rule (wisdom): knee high feeds deer.">
+<rect x="14" y="89" width="40" height="28" rx="6" fill="#b9cf8f"/>
+<text x="34" y="109" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3a</text>
+<g transform="translate(62 86) scale(0.88 1) translate(-62 -86)"><rect x="62" y="86" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="114" width="60" height="6" rx="2" fill="#b59a6a"/><ellipse cx="72" cy="112" rx="7" ry="5" fill="#7c9a4a"/><ellipse cx="86" cy="112" rx="7" ry="5" fill="#7c9a4a"/><ellipse cx="100" cy="112" rx="7" ry="5" fill="#7c9a4a"/><ellipse cx="114" cy="112" rx="7" ry="5" fill="#7c9a4a"/></g>
+<text x="122" y="109" font-size="15" font-weight="bold" fill="#2f3a2b">Low shrub, under 2 m</text>
+<text x="386" y="109" font-size="15" fill="#6b4f35" text-anchor="end">under 20 yrs</text>
+</g>
+<g data-tip="Stage 3b: tall shrub|2 to 10 m, under 40 years after disturbance (90%). That is moose browse height (90%). Grandpa&apos;s rule (wisdom): head high hides moose.">
+<rect x="8" y="126" width="384" height="42" rx="6" fill="#f4eedf"/>
+<rect x="14" y="133" width="40" height="28" rx="6" fill="#9fbf76"/>
+<text x="34" y="153" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3b</text>
+<g transform="translate(62 130) scale(0.88 1) translate(-62 -130)"><rect x="62" y="130" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="158" width="60" height="6" rx="2" fill="#b59a6a"/><ellipse cx="73" cy="150" rx="8" ry="10" fill="#5f8a3a"/><ellipse cx="92" cy="150" rx="8" ry="10" fill="#5f8a3a"/><ellipse cx="111" cy="150" rx="8" ry="10" fill="#5f8a3a"/></g>
+<text x="122" y="153" font-size="15" font-weight="bold" fill="#2f3a2b">Tall shrub, 2 to 10 m</text>
+<text x="386" y="153" font-size="15" fill="#6b4f35" text-anchor="end">under 40 yrs</text>
+</g>
+<g data-tip="Stage 4: pole and sapling|Dense trees over 10 m tall overtop the shrub and herb layers, so little food grows. Usually under 40 years since disturbance (90%).">
+<rect x="14" y="177" width="40" height="28" rx="6" fill="#6b8f4e"/>
+<text x="34" y="197" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<g transform="translate(62 174) scale(0.88 1) translate(-62 -174)"><rect x="62" y="174" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="202" width="60" height="6" rx="2" fill="#b59a6a"/><rect x="67.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M68 181 L71.0 203 L65.0 203z" fill="#3f6b3a"/><rect x="73.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M74 181 L77.0 203 L71.0 203z" fill="#3f6b3a"/><rect x="79.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M80 181 L83.0 203 L77.0 203z" fill="#3f6b3a"/><rect x="85.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M86 181 L89.0 203 L83.0 203z" fill="#3f6b3a"/><rect x="91.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M92 181 L95.0 203 L89.0 203z" fill="#3f6b3a"/><rect x="97.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M98 181 L101.0 203 L95.0 203z" fill="#3f6b3a"/><rect x="103.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M104 181 L107.0 203 L101.0 203z" fill="#3f6b3a"/><rect x="109.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M110 181 L113.0 203 L107.0 203z" fill="#3f6b3a"/><rect x="115.2" y="184" width="1.6" height="19" fill="#6b4f35"/><path d="M116 181 L119.0 203 L113.0 203z" fill="#3f6b3a"/></g>
+<text x="122" y="197" font-size="16" font-weight="bold" fill="#2f3a2b">Pole, sapling</text>
+<text x="386" y="197" font-size="15" fill="#6b4f35" text-anchor="end">usually under 40</text>
+</g>
+<g data-tip="Stage 5: young forest|Self thinning and layering; generally 40 to 80 years (90%).">
+<rect x="8" y="214" width="384" height="42" rx="6" fill="#f4eedf"/>
+<rect x="14" y="221" width="40" height="28" rx="6" fill="#4a6e3f"/>
+<text x="34" y="241" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<g transform="translate(62 218) scale(0.88 1) translate(-62 -218)"><rect x="62" y="218" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="246" width="60" height="6" rx="2" fill="#b59a6a"/><path d="M72 223 L78.5 247 L65.5 247z" fill="#2f6040"/><path d="M87 223 L93.5 247 L80.5 247z" fill="#2f6040"/><path d="M102 223 L108.5 247 L95.5 247z" fill="#2f6040"/><path d="M116 223 L122.5 247 L109.5 247z" fill="#2f6040"/></g>
+<text x="122" y="241" font-size="16" font-weight="bold" fill="#2f3a2b">Young forest</text>
+<text x="386" y="241" font-size="15" fill="#6b4f35" text-anchor="end">40 to 80 yrs</text>
+</g>
+<g data-tip="Stage 6: mature forest|Understories well developed as the canopy opens; 80 to 140 years in some zones, 80 to 250 years in the others (90%).">
+<rect x="14" y="265" width="40" height="28" rx="6" fill="#355a3a"/>
+<text x="34" y="285" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<g transform="translate(62 262) scale(0.88 1) translate(-62 -262)"><rect x="62" y="262" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="290" width="60" height="6" rx="2" fill="#b59a6a"/><path d="M74 264 L81.0 291 L67.0 291z" fill="#2f5a32"/><path d="M96 264 L103.0 291 L89.0 291z" fill="#2f5a32"/><path d="M114 266 L120.0 291 L108.0 291z" fill="#2f5a32"/><ellipse cx="85" cy="289" rx="5" ry="2.5" fill="#7c9a4a"/><ellipse cx="106" cy="289" rx="4" ry="2" fill="#7c9a4a"/></g>
+<text x="122" y="285" font-size="16" font-weight="bold" fill="#2f3a2b">Mature forest</text>
+<text x="386" y="285" font-size="15" fill="#6b4f35" text-anchor="end">80 to 250 yrs</text>
+</g>
+<g data-tip="Stage 7: old forest|Snags and logs of all ages, patchy understories; over 140 or over 250 years (90%).">
+<rect x="8" y="302" width="384" height="42" rx="6" fill="#f4eedf"/>
+<rect x="14" y="309" width="40" height="28" rx="6" fill="#22402c"/>
+<text x="34" y="329" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">7</text>
+<g transform="translate(62 306) scale(0.88 1) translate(-62 -306)"><rect x="62" y="306" width="60" height="34" rx="4" fill="#e9f0f5"/><rect x="62" y="334" width="60" height="6" rx="2" fill="#b59a6a"/><path d="M74 307 L83.0 335 L65.0 335z" fill="#1f4a2c"/><path d="M106 307 L115.0 335 L97.0 335z" fill="#1f4a2c"/><rect x="89" y="314" width="2.4" height="21" fill="#7a6a58"/><rect x="84" y="332" width="18" height="3" rx="1.5" fill="#7a5a32"/></g>
+<text x="122" y="329" font-size="16" font-weight="bold" fill="#2f3a2b">Old forest</text>
+<text x="386" y="329" font-size="15" fill="#6b4f35" text-anchor="end">over 140 to 250</text>
+</g>
+<g data-tip="Where the stages come from|BC structural stages, reprinted in Accounts and Measures for Managing Identified Wildlife, Appendix 5, 2004 (90%). Food peaks in the shrub stages (85%).">
+<text x="14" y="366" font-size="15" fill="#6b4f35">Typical times since disturbance (90%)</text>
+<rect x="14" y="376" width="22" height="14" rx="3" fill="none" stroke="#e8590c" stroke-width="2.4"/><text x="44" y="388" font-size="15" font-weight="bold" fill="#c2410c">Food peaks in the shrub stages (85%)</text>
+</g>
+<rect x="9" y="83" width="382" height="84" rx="6" fill="none" stroke="#e8590c" stroke-width="2.4" pointer-events="none"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Bar chart of the cost of one shot in Canadian dollars: .308 hunting ammunition $2.05 to $2.75, a steel duck shell $1.20 to $1.40, an upland lead shell $0.68 to $0.88, a .22 long rifle Mini Mag round $0.14 to $0.17, and dry fire $0. Prices from the ammo session, checked 2026-10-01.">
+<rect width="400" height="330" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What one shot costs (CAD)</text>
+<text x="14" y="61" font-size="16" font-weight="bold" fill="#2f3a2b">.308 hunting</text>
+<rect x="14" y="68" width="232" height="20" rx="3" fill="#f1ead9"/>
+<rect x="14" y="68" width="232.0" height="20" rx="3" fill="#e8590c" opacity=".45"/>
+<rect x="14" y="68" width="172.9" height="20" rx="3" fill="#e8590c"/>
+<text x="256" y="84" font-size="16" font-weight="bold" fill="#2f3a2b">$2.05 to $2.75</text>
+<text x="14" y="113" font-size="16" font-weight="bold" fill="#2f3a2b">Steel duck shell</text>
+<rect x="14" y="120" width="232" height="20" rx="3" fill="#f1ead9"/>
+<rect x="14" y="120" width="118.1" height="20" rx="3" fill="#e8590c" opacity=".45"/>
+<rect x="14" y="120" width="101.2" height="20" rx="3" fill="#e8590c"/>
+<text x="256" y="136" font-size="16" font-weight="bold" fill="#2f3a2b">$1.20 to $1.40</text>
+<text x="14" y="165" font-size="16" font-weight="bold" fill="#2f3a2b">Upland lead shell</text>
+<rect x="14" y="172" width="232" height="20" rx="3" fill="#f1ead9"/>
+<rect x="14" y="172" width="74.2" height="20" rx="3" fill="#e8590c" opacity=".45"/>
+<rect x="14" y="172" width="57.4" height="20" rx="3" fill="#e8590c"/>
+<text x="256" y="188" font-size="16" font-weight="bold" fill="#2f3a2b">$0.68 to $0.88</text>
+<text x="14" y="217" font-size="16" font-weight="bold" fill="#2f3a2b">.22 LR Mini Mag</text>
+<rect x="14" y="224" width="232" height="20" rx="3" fill="#f1ead9"/>
+<rect x="14" y="224" width="14.3" height="20" rx="3" fill="#4a7fb0" opacity=".45"/>
+<rect x="14" y="224" width="11.8" height="20" rx="3" fill="#4a7fb0"/>
+<text x="256" y="240" font-size="16" font-weight="bold" fill="#2f3a2b">$0.14 to $0.17</text>
+<text x="14" y="269" font-size="16" font-weight="bold" fill="#2f3a2b">Dry fire</text>
+<rect x="14" y="276" width="232" height="20" rx="3" fill="#f1ead9"/>
+<rect x="14" y="276" width="3.0" height="20" rx="3" fill="#2f6e3b" opacity=".45"/>
+<rect x="14" y="276" width="3.0" height="20" rx="3" fill="#2f6e3b"/>
+<text x="256" y="292" font-size="16" font-weight="bold" fill="#2f3a2b">$0</text>
+<text x="200" y="318" font-size="14" fill="#6b5b4b" text-anchor="middle">Prices: ammo session, checked 2026-10-01</text>
+</svg>

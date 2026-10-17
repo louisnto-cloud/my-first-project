@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A tom turkey with an orange circle on its head and neck: aim here, never at the body. Pattern your shotgun at 30 and 40 metres. Your maximum range is where 8 or more pellets hit the head and neck of a paper turkey, usually about 40 metres. Shot size 4, 5 or 6 with a full or turkey choke. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Head and neck only (Tip)</text>
+  <g transform="translate(110 150) scale(1.5)"><path d="M-10 -10 L-60.4 -22.8 L-56.8 -32.6Z" fill="#4a3b2c"/><circle cx="-56.0" cy="-26.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L-54.2 -37.4 L-47.9 -45.6Z" fill="#4a3b2c"/><circle cx="-48.9" cy="-39.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L-43.9 -49.4 L-35.4 -55.4Z" fill="#4a3b2c"/><circle cx="-38.1" cy="-50.1" r="4" fill="#efe6d6"/><path d="M-10 -10 L-30.5 -57.8 L-20.6 -60.9Z" fill="#4a3b2c"/><circle cx="-24.7" cy="-56.7" r="4" fill="#efe6d6"/><path d="M-10 -10 L-15.2 -61.7 L-4.8 -61.7Z" fill="#4a3b2c"/><circle cx="-10.0" cy="-59.0" r="4" fill="#efe6d6"/><path d="M-10 -10 L0.6 -60.9 L10.5 -57.8Z" fill="#4a3b2c"/><circle cx="4.7" cy="-56.7" r="4" fill="#efe6d6"/><path d="M-10 -10 L15.4 -55.4 L23.9 -49.4Z" fill="#4a3b2c"/><circle cx="18.1" cy="-50.1" r="4" fill="#efe6d6"/><path d="M-10 -10 L27.9 -45.6 L34.2 -37.4Z" fill="#4a3b2c"/><circle cx="28.9" cy="-39.8" r="4" fill="#efe6d6"/><path d="M-10 -10 L36.8 -32.6 L40.4 -22.8Z" fill="#4a3b2c"/><circle cx="36.0" cy="-26.8" r="4" fill="#efe6d6"/><ellipse cx="0" cy="0" rx="28" ry="20" fill="#4a3b2c"/><path d="M18 -8 Q26 -30 30 -40" stroke="#c0392b" stroke-width="7" fill="none"/><circle cx="31" cy="-42" r="7" fill="#7fb0d8"/><path d="M37 -43 L44 -41 L37 -39Z" fill="#2f3a2b"/><path d="M30 -36 q4 8 0 14" stroke="#c0392b" stroke-width="4" fill="none"/><path d="M22 -6 L24 20" stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"/><path d="M-4 18 L-6 34 M8 18 L10 34" stroke="#b07a5a" stroke-width="3"/></g>
+  <circle cx="156" cy="99" r="26" fill="none" stroke="#e8590c" stroke-width="4"/>
+  <text x="180" y="70" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="start">Aim here</text>
+  <path d="M70 140 l20 20 M90 140 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <text x="80" y="186" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Not the body</text>
+  <rect x="230" y="110" width="160" height="130" rx="8" fill="#dfe6d3"/>
+  <text x="310" y="136" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pattern at</text>
+  <text x="310" y="156" font-size="14" fill="#2f3a2b" text-anchor="middle">30 and 40 m</text>
+  <text x="310" y="186" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Max range: 8+</text>
+  <text x="310" y="204" font-size="14" fill="#2f3a2b" text-anchor="middle">pellets in head</text>
+  <text x="310" y="222" font-size="14" fill="#2f3a2b" text-anchor="middle">and neck: about 40 m</text>
+  <text x="200" y="276" font-size="14" fill="#2f3a2b" text-anchor="middle">Shot 4, 5 or 6, full or turkey choke (Tip)</text>
+</svg>

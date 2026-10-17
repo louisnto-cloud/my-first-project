@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Up in spring, down in fall</text>
+  <text x="200" y="46" font-size="14" fill="#23261f" text-anchor="middle">Deer and moose: general pattern</text>
+  <!-- elevation bands on the mountain (bottom to top) -->
+  <polygon points="0,330 32,290 368,290 400,330" fill="#e9dfb8"/>
+  <polygon points="32,290 68,245 332,245 368,290" fill="#d9cfb3"/>
+  <polygon points="68,245 104,200 296,200 332,245" fill="#b9c29a"/>
+  <polygon points="104,200 140,155 260,155 296,200" fill="#9fae86"/>
+  <polygon points="140,155 180,105 220,105 260,155" fill="#8a9a6b"/>
+  <polygon points="180,105 200,80 220,105" fill="#fffaf0"/>
+  <!-- band edges, slightly wobbly like a pencil line -->
+  <g stroke="#23261f" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="6 4" fill="none">
+    <path d="M32 290 Q120 287 200 291 T368 290"/>
+    <path d="M68 245 Q140 242 200 246 T332 245"/>
+    <path d="M104 200 Q160 197 200 201 T296 200"/>
+    <path d="M140 155 Q180 152 200 156 T260 155"/>
+    <path d="M180 105 Q200 102 220 105"/>
+  </g>
+  <!-- mountain outline -->
+  <path d="M0 330 L60 256 L95 214 L140 155 L172 116 L200 80 L228 116 L262 158 L300 205 L345 262 L400 330" fill="none" stroke="#23261f" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- band labels -->
+  <g font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="200" y="316">BG bunchgrass</text>
+    <text x="200" y="273">PP ponderosa pine</text>
+    <text x="200" y="228">IDF interior Douglas fir</text>
+    <text x="200" y="183">MS montane spruce</text>
+    <text x="200" y="137">ESSF</text>
+  </g>
+  <text x="200" y="72" font-size="14" fill="#23261f" text-anchor="middle">Alpine</text>
+  <!-- spring arrow: up the left flank -->
+  <g stroke="#2f3a2b" stroke-width="5" stroke-linecap="round" fill="#2f3a2b">
+    <line x1="13" y1="279" x2="139" y2="121"/>
+    <polygon points="143,116 139.5,131.6 128.6,122.9" stroke-width="1"/>
+  </g>
+  <g font-size="14" fill="#2f3a2b">
+    <text x="10" y="92" font-weight="bold">Spring:</text>
+    <text x="10" y="110">UP to</text>
+    <text x="10" y="128">summer range</text>
+    <text x="10" y="146">Apr to Jun</text>
+  </g>
+  <!-- fall arrow: down the right flank -->
+  <g stroke="#e8590c" stroke-width="5" stroke-linecap="round" fill="#e8590c">
+    <line x1="257" y1="116" x2="383" y2="274"/>
+    <polygon points="387,279 383.9,263.5 373,272.3" stroke-width="1"/>
+  </g>
+  <g font-size="14" fill="#e8590c" text-anchor="end">
+    <text x="390" y="92" font-weight="bold">Fall:</text>
+    <text x="390" y="110">DOWN to</text>
+    <text x="390" y="128">winter range</text>
+    <text x="390" y="146">Oct to Dec</text>
+  </g>
+  <text x="200" y="352" font-size="14" fill="#23261f" text-anchor="middle">Some deer and moose stay low all year.</text>
+</svg>

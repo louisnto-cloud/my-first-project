@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two wingtips side by side showing the three outermost flight feathers, P8, P9 and P10. Young of the year: P9 and P10 are pointed and frayed at the tip. Adult: the tips are rounded, and if P9 or P10 is still growing in, the bird is an adult. Alaska Department of Fish and Game guide, 85 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Young or adult? Check P9 and P10</text>
+<rect x="10" y="44" width="180" height="196" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M51 210 L51 102 Q60 84 69 102 L69 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M91 210 L91 100 Q94 86 100 78 Q104 88 109 98 L109 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/><path d="M102 84 l4 6 M95 94 l-3 4" stroke="#fffaf0" stroke-width="2"/>
+<path d="M131 210 L131 92 Q134 78 140 70 Q144 80 149 90 L149 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/><path d="M142 76 l4 6 M135 86 l-3 4" stroke="#fffaf0" stroke-width="2"/>
+<text x="60" y="230" font-size="14" fill="#23261f" text-anchor="middle">P8</text>
+<text x="100" y="230" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">P9</text>
+<text x="140" y="230" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">P10</text>
+<text x="100" y="64" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Young of the year</text>
+<rect x="210" y="44" width="180" height="196" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M251 210 L251 102 Q260 84 269 102 L269 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M291 210 L291 90 Q300 72 309 90 L309 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/>
+<path d="M331 210 L331 82 Q340 64 349 82 L349 210 Z" fill="#6b5a4a" stroke="#23261f" stroke-width="1.5"/>
+<text x="260" y="230" font-size="14" fill="#23261f" text-anchor="middle">P8</text>
+<text x="300" y="230" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">P9</text>
+<text x="340" y="230" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">P10</text>
+<text x="300" y="64" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Adult</text>
+<text x="10" y="262" font-size="14" fill="#23261f" text-anchor="start">Young: P9 and P10 pointed, frayed (85%).</text>
+<text x="10" y="280" font-size="14" fill="#23261f" text-anchor="start">Adult: rounded. P9 or P10 still growing = adult (85%).</text>
+</svg>

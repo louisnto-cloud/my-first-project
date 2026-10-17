@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif" role="img" aria-label="A mule deer buck head in side view with one antler drawn. The antler forks, then each fork forks again, giving 4 points numbered 1 to 4 on one antler. A small brow tine low on the beam is crossed out: it is not counted for a mule deer 4 point buck. Count one side. For elk and moose the brow tine does count.">
+<rect width="400" height="450" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mule deer: is he a 4 point?</text>
+<g transform="translate(50.6 -238.2) scale(1.9)"><path d="M104 330 C100 306 90 290 80 280 C70 270 58 270 50 276 C40 284 28 300 18 312 C14 318 18 324 26 324 C40 322 54 316 64 316 C70 322 72 328 74 330z" fill="#8b6a48" stroke="#3f2c1c" stroke-width="1"/><path d="M74 330 C74 318 80 306 90 300 C98 308 102 320 104 330z" fill="#6b5240"/><path d="M14 316 C18 310 26 312 30 318 C26 324 18 324 14 316z" fill="#f1e9dc"/><ellipse cx="17" cy="315" rx="3.6" ry="2.6" fill="#1f160e"/><circle cx="50" cy="288" r="2.4" fill="#1f160e"/><path d="M76 280 C92 262 118 256 128 260 C120 272 100 286 82 290z" fill="#9a7a58" stroke="#3f2c1c" stroke-width="1"/><path d="M84 284 C98 272 112 266 122 263" fill="none" stroke="#e9dcc8" stroke-width="2.2"/></g>
+<path d="M167.5 135.6 Q137.6 119.5 113.0 96.8 L111.0 99.2 Q133.4 124.7 160.5 144.4z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M169.6 140.5 Q166.4 105.9 171.6 72.1 L168.4 71.9 Q159.7 105.4 158.4 139.5z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M245.6 145.3 Q235.4 113.1 233.6 79.8 L230.4 80.2 Q228.7 113.9 234.4 146.7z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M243.4 150.5 Q264.6 126.5 291.0 109.3 L289.0 106.7 Q260.5 121.1 236.6 141.5z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<path d="M181.6 264.7 Q166.9 251.6 148.9 242.9 L147.1 245.1 Q163.8 255.6 176.4 271.3z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="2" stroke-linejoin="round"/>
+<g data-tip="Forks that fork again|The near antler forks, then each fork forks again, giving four points on that side (99%).">
+<path d="M176 288 Q178 238 196 196" fill="none" stroke="#6b4f35" stroke-width="15" stroke-linecap="round"/>
+<path d="M196 196 Q176 174 164 140" fill="none" stroke="#6b4f35" stroke-width="13" stroke-linecap="round"/>
+<path d="M196 196 Q222 180 240 146" fill="none" stroke="#6b4f35" stroke-width="13" stroke-linecap="round"/>
+<path d="M176 288 Q178 238 196 196" fill="none" stroke="#ecdfc3" stroke-width="11" stroke-linecap="round"/>
+<path d="M196 196 Q176 174 164 140" fill="none" stroke="#ecdfc3" stroke-width="9" stroke-linecap="round"/>
+<path d="M196 196 Q222 180 240 146" fill="none" stroke="#ecdfc3" stroke-width="9" stroke-linecap="round"/>
+<ellipse cx="176" cy="290" rx="11" ry="6" fill="#b89b6e" stroke="#6b4f35" stroke-width="1.4"/>
+</g>
+<g data-tip="Count the tines|At least four tines, excluding the brow tine, on one antler (99%, synopsis page 4). Count one side, skip the brow tine, then count again.">
+<circle cx="99.6" cy="87.9" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="99.6" y="92.9" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="171.4" cy="56.1" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="171.4" y="61.1" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="230.1" cy="64.1" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="230.1" y="69.1" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="302.7" cy="98.3" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="302.7" y="103.3" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+</g>
+<g data-tip="Brow tine|Not counted on a mule deer (99%). The common slip: 3 points plus a brow tine, called a 4 point.">
+<path d="M130 230 L146 246 M146 230 L130 246" stroke="#c0392b" stroke-width="3.6" stroke-linecap="round"/>
+<line x1="132" y1="230" x2="70" y2="214" stroke="#c0392b" stroke-width="1.4"/><circle cx="132" cy="230" r="2.6" fill="#c0392b"/><rect x="10.8" y="168.0" width="106.4" height="49.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="64" y="188.5" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Brow tine:</text>
+<text x="64" y="208.5" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">not counted</text>
+</g>
+<g data-tip="One antler, not both|A 4 point buck is counted on one antler, not both sides added (99%). Eastern counts add both sides (Tip).">
+<rect x="292.8" y="186.0" width="102.3" height="89.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="344" y="206.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Forks that</text>
+<text x="344" y="226.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">fork again:</text>
+<text x="344" y="246.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 points on</text>
+<text x="344" y="266.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ONE antler</text>
+</g>
+<text data-tip="Before any buck shot|Say out loud: species, date row, points on one side, no brow tine. Black tailed deer are mule deer under this definition (99%)." x="200" y="414" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Count one side. Brow tine excluded.</text>
+<text data-tip="Elk and moose|For elk and moose the brow tine does count (99%, page 3)." x="200" y="438" font-size="16" fill="#2f3a2b" text-anchor="middle">Elk and moose: the brow tine counts.</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart: time to cover 200 metres of timber. Hiking pace, about 3 minutes, a short bar. Still hunting, 30 minutes or more, a long bar. Most beginners walk at hiking pace.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Time to cover 200 m of timber</text>
+  <text x="20" y="84" font-size="16" font-weight="bold" fill="#c0392b">Hiking pace</text>
+  <rect x="20" y="94" width="24" height="40" rx="4" fill="#c0392b"/>
+  <text x="54" y="121" font-size="15" fill="#2f3a2b">about 3 min (Tip)</text>
+  <text x="20" y="174" font-size="16" font-weight="bold" fill="#2f6e3b">Still hunting</text>
+  <rect x="20" y="184" width="300" height="40" rx="4" fill="#2f6e3b"/>
+  <text x="170" y="210" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">30 min or more (Tip)</text>
+  <polygon points="320,184 344,204 320,224" fill="#2f6e3b"/>
+  <text x="200" y="270" font-size="15" fill="#2f3a2b" text-anchor="middle">Slow down and the woods change</text>
+</svg>

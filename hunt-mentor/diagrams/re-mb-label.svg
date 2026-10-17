@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A shipping tag for ducks you give away. It shows: full name of the hunter who took the bird, postal address, email if any and phone, the date taken, the migratory game bird hunting permit number, and the signature. One label in a package covers the birds in it." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Label before you give birds away</text>
+<path d="M60 44 H340 V276 H60 Z" fill="#ffffff" stroke="#8b5a2b" stroke-width="3"/>
+<circle cx="200" cy="64" r="8" fill="#fffaf0" stroke="#8b5a2b" stroke-width="3"/>
+<text x="76" y="104" font-size="15" font-weight="bold" fill="#23261f">Full name</text><line x1="76" y1="114" x2="324" y2="114" stroke="#8a9a6b" stroke-width="2"/>
+<text x="76" y="140" font-size="15" font-weight="bold" fill="#23261f">Address, email, phone</text><line x1="76" y1="150" x2="324" y2="150" stroke="#8a9a6b" stroke-width="2"/>
+<text x="76" y="176" font-size="15" font-weight="bold" fill="#23261f">Date taken</text><line x1="76" y1="186" x2="324" y2="186" stroke="#8a9a6b" stroke-width="2"/>
+<text x="76" y="212" font-size="15" font-weight="bold" fill="#23261f">Permit number</text><line x1="76" y1="222" x2="324" y2="222" stroke="#8a9a6b" stroke-width="2"/>
+<text x="76" y="248" font-size="15" font-weight="bold" fill="#23261f">Signature</text><line x1="76" y1="258" x2="324" y2="258" stroke="#8a9a6b" stroke-width="2"/>
+<text x="200" y="294" font-size="14" fill="#8b5a2b" text-anchor="middle">s. 50(5). One label covers a package</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 648" font-family="sans-serif" role="img" aria-label="Maps G10 to G17, grouped by rule. Open only during a lawful season: G10 Purden Lake Park addition, MU 7-7, and G13 Dahl Lake Park addition, MU 7-12, where the shaded area is open to hunting and shooting only during a lawful season. Shaded area open to hunting: G15 Mount Robson addition, MU 7-3, and G16 Eskers Park addition, MU 7-15. No Shooting or Hunting Area: G11 Tabor Mountain, MU 7-9. No Shooting Areas: G12 Red Rock Seed Orchard, MU 7-10; G14 Paaren&#x27;s Beach, MUs 7-13 and 7-25; G17, MU 7-15, by Prince George.">
+<rect width="400" height="648" fill="#fffaf0"/>
+<rect x="8" y="8" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="29" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">OPEN ONLY IN A LAWFUL SEASON</text>
+<rect x="8" y="44" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="56.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="77.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G10</text>
+<text x="78" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Purden Lake Park addition</text>
+<text x="78" y="86" font-size="15" fill="#2f3a2b">MU 7-7</text>
+<rect x="14" y="113.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="134.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G13</text>
+<text x="78" y="124" font-size="16" font-weight="bold" fill="#2f3a2b">Dahl Lake Park addition</text>
+<text x="78" y="143" font-size="15" fill="#2f3a2b">MU 7-12</text>
+<rect x="8" y="166" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="187" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SHADED AREA OPEN TO HUNTING</text>
+<rect x="8" y="202" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="214.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="235.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G15</text>
+<text x="78" y="225" font-size="16" font-weight="bold" fill="#2f3a2b">Mount Robson addition</text>
+<text x="78" y="244" font-size="15" fill="#2f3a2b">MU 7-3</text>
+<rect x="14" y="271.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="292.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G16</text>
+<text x="78" y="282" font-size="16" font-weight="bold" fill="#2f3a2b">Eskers Park addition</text>
+<text x="78" y="301" font-size="15" fill="#2f3a2b">MU 7-15</text>
+<rect x="8" y="324" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 339) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="345" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING OR HUNTING</text>
+<rect x="8" y="360" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="372.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="393.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G11</text>
+<text x="78" y="383" font-size="16" font-weight="bold" fill="#2f3a2b">Tabor Mtn</text>
+<text x="78" y="402" font-size="15" fill="#2f3a2b">MU 7-9</text>
+<rect x="8" y="425" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 440) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="446" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="461" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="473.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="494.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G12</text>
+<text x="78" y="484" font-size="16" font-weight="bold" fill="#2f3a2b">Red Rock Seed Orchard</text>
+<text x="78" y="503" font-size="15" fill="#2f3a2b">MU 7-10</text>
+<rect x="14" y="530.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="551.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G14</text>
+<text x="78" y="541" font-size="16" font-weight="bold" fill="#2f3a2b">Paaren&#x27;s Beach</text>
+<text x="78" y="560" font-size="15" fill="#2f3a2b">MUs 7-13, 7-25</text>
+<rect x="8" y="575" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="587.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="608.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G17</text>
+<text x="78" y="598" font-size="16" font-weight="bold" fill="#2f3a2b">By Prince George</text>
+<text x="78" y="617" font-size="15" fill="#2f3a2b">MU 7-15</text>
+</svg>

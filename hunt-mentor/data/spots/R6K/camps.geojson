@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"id":"R6K-camp-camp-0001","kind":"Crown land candidate","name":"By Sphaler Creek","campsites":null,"water":"Water: Sphaler Creek 40 m SW.","nearSpots":2,"closure":null,"spotIds":["R6K-bear-walk-0001","R6K-grouse-drive-0001"],"note":"Candidate, scout it first (estimate)"},"geometry":{"type":"Point","coordinates":[-131.15856,57.06581]}},
+{"type":"Feature","properties":{"id":"R6K-camp-camp-0002","kind":"Crown land candidate","name":"3.4 km NE of Sphaler Creek","campsites":null,"water":"Water: unnamed lake 90 m N.","nearSpots":1,"closure":null,"spotIds":["R6K-grouse-drive-0001"],"note":"Candidate, scout it first (estimate)"},"geometry":{"type":"Point","coordinates":[-131.10153,57.08514]}}
+]}

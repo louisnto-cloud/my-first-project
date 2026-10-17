@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 424" font-family="sans-serif" role="img" aria-label="Three ways private or leased land counts as enclosed under the Trespass Act, any one is enough. Signs: no trespassing signs clearly visible at each ordinary access point, drawn as a posted NO sign at a farm gate. Fence: a lawful fence all the way round, drawn as a field ringed by fence posts. Natural edge: a natural boundary all the way round, such as a riverbank or a hedge about 1.4 metres high. Enclosed land needs the owner&#x27;s permission.">
+<rect width="400" height="424" fill="#fffaf0"/>
+<g data-tip="Presumed no consent|On enclosed land you are presumed to have no permission (85%). Get the owner's consent, in writing if you can. Tip." data-tip-dot="384,16">
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Enclosed land: any ONE of these</text>
+</g>
+<g data-tip="Told to leave|Leave as soon as practicable. Staying or coming back is a further offence (85%)." data-tip-dot="384,42">
+<text x="200" y="48" font-size="16" fill="#2f3a2b" text-anchor="middle">Then you need the owner&#x27;s permission.</text>
+</g>
+<defs><clipPath id="rb-enclosed-c0"><rect x="10" y="62" width="186" height="112" rx="6"/></clipPath><clipPath id="rb-enclosed-c1"><rect x="10" y="184" width="186" height="112" rx="6"/></clipPath><clipPath id="rb-enclosed-c2"><rect x="10" y="306" width="186" height="112" rx="6"/></clipPath></defs>
+<g clip-path="url(#rb-enclosed-c0)"><rect x="10" y="62" width="186" height="112" fill="#e6efe0"/>
+<path d="M10 112 H196 V174 H10z" fill="#cdd9a8"/>
+<path d="M88 174 L104 112 L118 112 L146 174z" fill="#d8c9a3"/>
+<rect x="16" y="118" width="4" height="30" fill="#6b4f35"/>
+<rect x="40" y="118" width="4" height="30" fill="#6b4f35"/>
+<rect x="64" y="118" width="4" height="30" fill="#6b4f35"/>
+<rect x="132" y="118" width="4" height="30" fill="#6b4f35"/>
+<rect x="158" y="118" width="4" height="30" fill="#6b4f35"/>
+<rect x="184" y="118" width="4" height="30" fill="#6b4f35"/>
+<path d="M16 126 H86 M16 138 H86 M128 126 H196 M128 138 H196" stroke="#5c4a32" stroke-width="1.6"/>
+<rect x="84" y="112" width="6" height="40" fill="#6b4f35"/><rect x="124" y="112" width="6" height="40" fill="#6b4f35"/>
+<path d="M90 122 H124 M90 132 H124 M90 142 H124 M90 122 L124 142" stroke="#9b8466" stroke-width="2.4"/>
+<rect x="50" y="96" width="5" height="40" fill="#6b4f35"/>
+<rect x="22" y="68" width="62" height="30" rx="2" fill="#fffaf0" stroke="#c0392b" stroke-width="2.4"/>
+<text x="53" y="90" font-size="18" font-weight="bold" fill="#c0392b" text-anchor="middle">NO</text>
+</g>
+<g clip-path="url(#rb-enclosed-c1)"><rect x="10" y="184" width="186" height="112" fill="#e6efe0"/>
+<path d="M44 206 L166 204 L186 282 L22 284z" fill="#cdd9a8"/>
+<line x1="40.9" y1="217.1" x2="168.9" y2="215.1" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="37.7" y1="228.3" x2="171.7" y2="226.3" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="34.6" y1="239.4" x2="174.6" y2="237.4" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="31.4" y1="250.6" x2="177.4" y2="248.6" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="28.3" y1="261.7" x2="180.3" y2="259.7" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="25.1" y1="272.9" x2="183.1" y2="270.9" stroke="#b5c48a" stroke-width="1.6"/>
+<line x1="44" y1="206" x2="166" y2="204" stroke="#5c4a32" stroke-width="1.8"/>
+<rect x="42.0" y="195.0" width="4" height="12" fill="#6b4f35"/>
+<rect x="59.4" y="194.7" width="4" height="12" fill="#6b4f35"/>
+<rect x="76.9" y="194.4" width="4" height="12" fill="#6b4f35"/>
+<rect x="94.3" y="194.1" width="4" height="12" fill="#6b4f35"/>
+<rect x="111.7" y="193.9" width="4" height="12" fill="#6b4f35"/>
+<rect x="129.1" y="193.6" width="4" height="12" fill="#6b4f35"/>
+<rect x="146.6" y="193.3" width="4" height="12" fill="#6b4f35"/>
+<line x1="166" y1="204" x2="186" y2="282" stroke="#5c4a32" stroke-width="1.8"/>
+<rect x="164.0" y="193.0" width="4" height="12" fill="#6b4f35"/>
+<rect x="166.9" y="204.1" width="4" height="12" fill="#6b4f35"/>
+<rect x="169.7" y="215.3" width="4" height="12" fill="#6b4f35"/>
+<rect x="172.6" y="226.4" width="4" height="12" fill="#6b4f35"/>
+<rect x="175.4" y="237.6" width="4" height="12" fill="#6b4f35"/>
+<rect x="178.3" y="248.7" width="4" height="12" fill="#6b4f35"/>
+<rect x="181.1" y="259.9" width="4" height="12" fill="#6b4f35"/>
+<line x1="186" y1="282" x2="22" y2="284" stroke="#5c4a32" stroke-width="1.8"/>
+<rect x="184.0" y="271.0" width="4" height="12" fill="#6b4f35"/>
+<rect x="160.6" y="271.3" width="4" height="12" fill="#6b4f35"/>
+<rect x="137.1" y="271.6" width="4" height="12" fill="#6b4f35"/>
+<rect x="113.7" y="271.9" width="4" height="12" fill="#6b4f35"/>
+<rect x="90.3" y="272.1" width="4" height="12" fill="#6b4f35"/>
+<rect x="66.9" y="272.4" width="4" height="12" fill="#6b4f35"/>
+<rect x="43.4" y="272.7" width="4" height="12" fill="#6b4f35"/>
+<line x1="22" y1="284" x2="44" y2="206" stroke="#5c4a32" stroke-width="1.8"/>
+<rect x="20.0" y="273.0" width="4" height="12" fill="#6b4f35"/>
+<rect x="23.1" y="261.9" width="4" height="12" fill="#6b4f35"/>
+<rect x="26.3" y="250.7" width="4" height="12" fill="#6b4f35"/>
+<rect x="29.4" y="239.6" width="4" height="12" fill="#6b4f35"/>
+<rect x="32.6" y="228.4" width="4" height="12" fill="#6b4f35"/>
+<rect x="35.7" y="217.3" width="4" height="12" fill="#6b4f35"/>
+<rect x="38.9" y="206.1" width="4" height="12" fill="#6b4f35"/>
+</g>
+<g clip-path="url(#rb-enclosed-c2)"><rect x="10" y="306" width="186" height="112" fill="#e6efe0"/>
+<path d="M10 418 V386 H196 V418z" fill="#cdd9a8"/>
+<path d="M10 398 C50 392 80 410 120 404 C150 400 176 410 196 406 V418 H10z" fill="#4a7fb0"/>
+<ellipse cx="22" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="35" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="48" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="61" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="74" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="87" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="100" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="113" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="126" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<ellipse cx="139" cy="356" rx="10" ry="18" fill="#4f6b3f"/>
+<rect x="12" y="354" width="134" height="36" fill="#4f6b3f"/>
+<line x1="170" y1="340" x2="170" y2="390" stroke="#2f3a2b" stroke-width="2"/>
+<path d="M163 340 H177 M163 390 H177" stroke="#2f3a2b" stroke-width="2"/>
+</g>
+<rect x="10" y="62" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Signs|Clearly visible in daylight from the approach to each ordinary point of access (85%). A picture with a line through it is enough notice (85%)." data-tip-dot="380,72">
+<rect x="204" y="62" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
+<text x="216" y="104" font-size="18" font-weight="bold" fill="#c0392b">Signs</text>
+<text x="216" y="128" font-size="16" fill="#2f3a2b">No trespassing signs</text>
+<text x="216" y="148" font-size="16" fill="#2f3a2b">at each normal way in</text>
+</g>
+<rect x="10" y="184" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Fence|A lawful fence all the way round makes it enclosed (99%). A fence with a gap is not an invitation. Tip." data-tip-dot="380,194">
+<rect x="204" y="184" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
+<text x="216" y="226" font-size="18" font-weight="bold" fill="#c0392b">Fence</text>
+<text x="216" y="250" font-size="16" fill="#2f3a2b">A lawful fence</text>
+<text x="216" y="270" font-size="16" fill="#2f3a2b">all the way round</text>
+</g>
+<rect x="10" y="306" width="186" height="112" rx="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+<g data-tip="Natural edge|A natural boundary all the way round, such as a riverbank or a hedge about 1.4 m (4 1/2 ft) high (99%)." data-tip-dot="380,316">
+<rect x="204" y="306" width="186" height="112" rx="6" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.6"/>
+<text x="216" y="338" font-size="18" font-weight="bold" fill="#c0392b">Natural edge</text>
+<text x="216" y="362" font-size="16" fill="#2f3a2b">Riverbank, or a</text>
+<text x="216" y="382" font-size="16" fill="#2f3a2b">hedge about</text>
+<text x="216" y="402" font-size="16" fill="#2f3a2b">1.4 m high</text>
+<rect x="93.9" y="312.0" width="56.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="121.974" y="331" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1.4 m</text>
+</g>
+</svg>

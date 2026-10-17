@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 804" font-family="sans-serif" role="img" aria-label="Black bear or grizzly: use body shape, not colour. Black bear, legal in season: the rump is the high point, no shoulder hump, tall ears, a straight face, and short curved claws about 2.5 to 5 cm. Grizzly, no open season in BC: the rump is lower than the shoulder hump, small round ears, a dished face, and long straighter claws about 5 to 10 cm. Colour is not reliable: black, brown, cinnamon and blond can all be black bears.">
+<rect width="400" height="804" fill="#fffaf0"/>
+<text x="12" y="24" font-size="16" font-weight="bold" fill="#2f3a2b">Use body shape, not colour</text>
+<rect x="8" y="36" width="384" height="306" rx="10" fill="#fffaf0" stroke="#5c7a3a" stroke-width="2"/>
+<path d="M18 36 H382 A10 10 0 0 1 392 46 V70 H8 V46 A10 10 0 0 1 18 36z" fill="#5c7a3a"/>
+<text x="20" y="60" font-size="17" font-weight="bold" fill="#fffaf0">Black bear: legal in season</text>
+<path d="M20 263 H380" stroke="#cfc6b0" stroke-width="3"/>
+<g transform="translate(170 262) scale(1.05)"><path d="M-80 0 L-82 -40 L-62 -40 L-60 0z M16 0 L18 -40 L40 -40 L36 0z" fill="#55524c"/><path d="M-90 0 L-68 0 C-67 -10 -63 -22 -54 -32 C-30 -30 10 -30 34 -33 C36 -20 38 -8 39 0 L64 0 C61 -12 60 -24 62 -36 C66 -42 72 -44 80 -45 C90 -46 100 -48 108 -52 C112 -55 111 -58 107 -60 C96 -63 86 -68 76 -76 C70 -82 60 -83 52 -79 C36 -77 10 -79 -20 -83 C-50 -89 -80 -94 -96 -84 C-108 -72 -108 -48 -98 -32 C-94 -22 -92 -12 -90 0 Z" fill="#1d1d1b"/><path d="M53 -79 L55 -100 L67 -82 Z" fill="#1d1d1b"/><path d="M92 -50 C98 -51 104 -53 108 -55 C110 -57 108 -59 104 -59 C98 -60 92 -58 88 -56z" fill="#a07850"/><circle cx="80" cy="-64" r="2.2" fill="#eee"/><ellipse cx="109" cy="-57" rx="3" ry="2.4" fill="#000"/><path d="M64 -4 q6 -2 7 4 M60 -4 q6 -2 7 4 M56 -4 q6 -2 7 4" stroke="#bdb4a0" stroke-width="2.2" fill="none" stroke-linecap="round"/></g>
+<line x1="77.6" y1="165.4" x2="77.6" y2="107" stroke="#e8590c" stroke-width="1.8"/><circle cx="77.6" cy="165.4" r="2.6" fill="#e8590c"/>
+<line x1="233" y1="160.15" x2="313.874" y2="107" stroke="#e8590c" stroke-width="1.8"/><circle cx="233" cy="160.15" r="2.6" fill="#e8590c"/>
+<line x1="182.6" y1="179.05" x2="182.6" y2="141" stroke="#e8590c" stroke-width="1.8"/><circle cx="182.6" cy="179.05" r="2.6" fill="#e8590c"/>
+<line x1="270.8" y1="195.85" x2="283.7" y2="272" stroke="#e8590c" stroke-width="1.8"/><circle cx="270.8" cy="195.85" r="2.6" fill="#e8590c"/>
+<line x1="241.4" y1="260.95" x2="241.4" y2="306" stroke="#e8590c" stroke-width="1.8"/><circle cx="241.4" cy="260.95" r="2.6" fill="#e8590c"/>
+<rect x="14.0" y="80.0" width="182.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="105.102" y="99" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rump is the high point</text>
+<rect x="305.9" y="80.0" width="80.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="345.937" y="99" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tall ears</text>
+<rect x="122.4" y="114.0" width="147.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="133" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No shoulder hump</text>
+<rect x="275.7" y="272.0" width="110.3" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330.85" y="291" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Straight face</text>
+<rect x="14.0" y="306.0" width="301.0" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="164.487" y="325" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Short curved claws, about 2.5 to 5 cm</text>
+<rect x="8" y="352" width="384" height="306" rx="10" fill="#fffaf0" stroke="#c92a2a" stroke-width="2"/>
+<path d="M18 352 H382 A10 10 0 0 1 392 362 V386 H8 V362 A10 10 0 0 1 18 352z" fill="#c92a2a"/>
+<text x="20" y="376" font-size="17" font-weight="bold" fill="#fffaf0">Grizzly: NO open season in BC</text>
+<path d="M20 579 H380" stroke="#cfc6b0" stroke-width="3"/>
+<g transform="translate(170 578) scale(1.05)"><path d="M-80 0 L-82 -40 L-60 -40 L-58 0z M14 0 L16 -40 L38 -40 L34 0z" fill="#5e4630"/><path d="M-92 0 L-66 0 C-65 -10 -61 -22 -52 -32 C-30 -30 10 -30 32 -33 C34 -20 36 -8 37 0 L66 0 C63 -12 62 -24 64 -36 C68 -42 74 -44 82 -44 C92 -45 102 -46 110 -49 C114 -52 113 -56 109 -57 C100 -57 95 -60 92 -63 C88 -67 85 -72 80 -78 C74 -85 64 -86 56 -82 C48 -86 40 -96 26 -101 C8 -105 -12 -96 -32 -86 C-55 -80 -80 -82 -96 -74 C-108 -62 -108 -44 -99 -30 C-96 -20 -94 -10 -92 0 Z" fill="#8a6a45"/><path d="M-10 -96 C10 -104 26 -100 40 -92 C30 -90 14 -92 -6 -88z" fill="#c4a982" opacity=".8"/><circle cx="57" cy="-85" r="6" fill="#8a6a45"/><circle cx="57" cy="-85" r="3" fill="#5e4630"/><circle cx="84" cy="-64" r="2.2" fill="#111"/><ellipse cx="111" cy="-53" rx="3" ry="2.4" fill="#111"/><path d="M64 -2 l18 2 M64 -5 l19 0 M64 -8 l18 -1" stroke="#e4dcc8" stroke-width="2.4" stroke-linecap="round"/></g>
+<line x1="86" y1="491.9" x2="86" y2="423" stroke="#e8590c" stroke-width="1.8"/><circle cx="86" cy="491.9" r="2.6" fill="#e8590c"/>
+<line x1="229.85" y1="482.45" x2="253.847" y2="423" stroke="#e8590c" stroke-width="1.8"/><circle cx="229.85" cy="482.45" r="2.6" fill="#e8590c"/>
+<line x1="191" y1="469.85" x2="191" y2="457" stroke="#e8590c" stroke-width="1.8"/><circle cx="191" cy="469.85" r="2.6" fill="#e8590c"/>
+<line x1="264.5" y1="508.7" x2="292.367" y2="588" stroke="#e8590c" stroke-width="1.8"/><circle cx="264.5" cy="508.7" r="2.6" fill="#e8590c"/>
+<line x1="254" y1="575.9" x2="254" y2="622" stroke="#e8590c" stroke-width="1.8"/><circle cx="254" cy="575.9" r="2.6" fill="#e8590c"/>
+<rect x="14.0" y="396.0" width="186.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="107.188" y="415" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rump lower than hump</text>
+<rect x="245.8" y="396.0" width="140.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="315.923" y="415" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Small round ears</text>
+<rect x="133.9" y="430.0" width="124.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="449" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shoulder hump</text>
+<rect x="284.4" y="588.0" width="101.6" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="335.183" y="607" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dished face</text>
+<rect x="14.0" y="622.0" width="315.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="171.709" y="641" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Long straighter claws, about 5 to 10 cm</text>
+<rect x="8" y="668" width="384" height="128" rx="10" fill="#f4eedf"/>
+<text x="200" y="692" font-size="17" font-weight="bold" fill="#c92a2a" text-anchor="middle">Colour is NOT reliable.</text>
+<text x="200" y="712" font-size="15" fill="#2f3a2b" text-anchor="middle">All of these can be black bears.</text>
+<g transform="translate(56 766) scale(0.36)"><path d="M-80 0 L-82 -40 L-62 -40 L-60 0z M16 0 L18 -40 L40 -40 L36 0z" fill="#55524c"/><path d="M-90 0 L-68 0 C-67 -10 -63 -22 -54 -32 C-30 -30 10 -30 34 -33 C36 -20 38 -8 39 0 L64 0 C61 -12 60 -24 62 -36 C66 -42 72 -44 80 -45 C90 -46 100 -48 108 -52 C112 -55 111 -58 107 -60 C96 -63 86 -68 76 -76 C70 -82 60 -83 52 -79 C36 -77 10 -79 -20 -83 C-50 -89 -80 -94 -96 -84 C-108 -72 -108 -48 -98 -32 C-94 -22 -92 -12 -90 0 Z" fill="#1d1d1b"/><path d="M53 -79 L55 -100 L67 -82 Z" fill="#1d1d1b"/></g>
+<text x="58" y="786" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">black</text>
+<g transform="translate(152 766) scale(0.36)"><path d="M-80 0 L-82 -40 L-62 -40 L-60 0z M16 0 L18 -40 L40 -40 L36 0z" fill="#55524c"/><path d="M-90 0 L-68 0 C-67 -10 -63 -22 -54 -32 C-30 -30 10 -30 34 -33 C36 -20 38 -8 39 0 L64 0 C61 -12 60 -24 62 -36 C66 -42 72 -44 80 -45 C90 -46 100 -48 108 -52 C112 -55 111 -58 107 -60 C96 -63 86 -68 76 -76 C70 -82 60 -83 52 -79 C36 -77 10 -79 -20 -83 C-50 -89 -80 -94 -96 -84 C-108 -72 -108 -48 -98 -32 C-94 -22 -92 -12 -90 0 Z" fill="#6b4a2e"/><path d="M53 -79 L55 -100 L67 -82 Z" fill="#6b4a2e"/></g>
+<text x="154" y="786" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">brown</text>
+<g transform="translate(248 766) scale(0.36)"><path d="M-80 0 L-82 -40 L-62 -40 L-60 0z M16 0 L18 -40 L40 -40 L36 0z" fill="#55524c"/><path d="M-90 0 L-68 0 C-67 -10 -63 -22 -54 -32 C-30 -30 10 -30 34 -33 C36 -20 38 -8 39 0 L64 0 C61 -12 60 -24 62 -36 C66 -42 72 -44 80 -45 C90 -46 100 -48 108 -52 C112 -55 111 -58 107 -60 C96 -63 86 -68 76 -76 C70 -82 60 -83 52 -79 C36 -77 10 -79 -20 -83 C-50 -89 -80 -94 -96 -84 C-108 -72 -108 -48 -98 -32 C-94 -22 -92 -12 -90 0 Z" fill="#a8703f"/><path d="M53 -79 L55 -100 L67 -82 Z" fill="#a8703f"/></g>
+<text x="250" y="786" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">cinnamon</text>
+<g transform="translate(344 766) scale(0.36)"><path d="M-80 0 L-82 -40 L-62 -40 L-60 0z M16 0 L18 -40 L40 -40 L36 0z" fill="#55524c"/><path d="M-90 0 L-68 0 C-67 -10 -63 -22 -54 -32 C-30 -30 10 -30 34 -33 C36 -20 38 -8 39 0 L64 0 C61 -12 60 -24 62 -36 C66 -42 72 -44 80 -45 C90 -46 100 -48 108 -52 C112 -55 111 -58 107 -60 C96 -63 86 -68 76 -76 C70 -82 60 -83 52 -79 C36 -77 10 -79 -20 -83 C-50 -89 -80 -94 -96 -84 C-108 -72 -108 -48 -98 -32 C-94 -22 -92 -12 -90 0 Z" fill="#d9b77a"/><path d="M53 -79 L55 -100 L67 -82 Z" fill="#d9b77a"/></g>
+<text x="346" y="786" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">blond</text>
+</svg>

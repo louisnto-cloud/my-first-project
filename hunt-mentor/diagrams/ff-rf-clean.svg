@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" font-family="sans-serif" role="img" aria-label="Cleaning a .22 bolt action rifle: with the bolt out, the rod and brush go in from the chamber end and push through to the muzzle. Push the brush all the way through before reversing; never change direction inside the bore. The CZ manual says this protects the muzzle crown.">
+<rect width="400" height="352" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Clean a .22 from the chamber end</text>
+<g transform="translate(34 0) scale(0.8 1)"><path d="M22 152 Q70 152 112 154 L122 156 L250 156 Q260 158 258 164 L250 171 L152 173 Q142 175 140 184 L136 200 Q132 206 122 202 L118 184 Q114 176 100 178 L26 202z" fill="#8b5a2b"/><rect x="14" y="150" width="10" height="54" rx="2" fill="#2b2420"/><path d="M144 173 q5 10 -1 17" stroke="#2b2f31" stroke-width="3" fill="none"/><path d="M134 174 Q134 194 152 192 L166 173" stroke="#2b2f31" stroke-width="2.6" fill="none"/><rect x="116" y="140" width="98" height="17" rx="3" fill="#4a4f52"/><rect x="210" y="144" width="176" height="8" rx="2" fill="#4a4f52"/><rect x="382" y="143" width="7" height="10" rx="1.5" fill="#2b2f31"/><rect x="124" y="143" width="40" height="7" rx="2" fill="#1d2022"/></g>
+
+<rect x="6" y="142" width="34" height="12" rx="5" fill="#b33a1f"/>
+<line x1="40" y1="148" x2="134.8" y2="148" stroke="#c7c1b4" stroke-width="3"/>
+<line x1="134.8" y1="148" x2="344.40000000000003" y2="148" stroke="#c7c1b4" stroke-width="2" stroke-dasharray="4 4" opacity=".9"/>
+<line x1="345.20000000000005" y1="148" x2="359.20000000000005" y2="148" stroke="#c7c1b4" stroke-width="3"/>
+<rect x="359.20000000000005" y="142" width="26" height="12" rx="3" fill="#c9a24a"/><path d="M361.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/><path d="M365.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/><path d="M369.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/><path d="M373.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/><path d="M377.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/><path d="M381.20000000000005 142 v12" stroke="#8a6a20" stroke-width="1.2"/>
+<g transform="translate(150 236)"><rect x="0" y="-5" width="86" height="10" rx="4" fill="#4a4f52"/><path d="M14 0 L4 16" stroke="#2b2f31" stroke-width="4" stroke-linecap="round"/><circle cx="3" cy="19" r="5" fill="#2b2f31"/></g>
+<text x="246" y="241" font-size="15" font-weight="bold" fill="#6b5b4b">bolt out</text>
+<line x1="138.0" y1="104" x2="338.0" y2="104" stroke="#e8590c" stroke-width="3"/><path d="M346.0 104.0 L333.0 96.8 L333.0 111.2z" fill="#e8590c"/>
+<text x="242" y="94" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">chamber to muzzle</text>
+<rect x="72.9" y="52.0" width="110.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="128.4" y="71" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chamber end</text>
+<line x1="131.6" y1="140" x2="128.4" y2="79" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="131.6" cy="140" r="2.6" fill="#2f3a2b"/>
+<rect x="325.0" y="176.0" width="67.0" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="358.517" y="195" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Muzzle</text>
+<text x="358.517" y="213" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">crown</text>
+<line x1="343.2" y1="152" x2="343.2" y2="176" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="343.2" cy="152" r="2.6" fill="#2f3a2b"/>
+<rect x="8" y="262" width="384" height="58" rx="10" fill="#2f3a2b"/>
+<text x="200" y="286" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Brush all the way through, then back.</text>
+<text x="200" y="308" font-size="16" font-weight="bold" fill="#ffb37a" text-anchor="middle">Never reverse mid bore.</text>
+<text x="14" y="342" font-size="14" fill="#6b5b4b">CZ manual: protects the muzzle crown</text>
+</svg>

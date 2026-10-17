@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 514" font-family="sans-serif" role="img" aria-label="Cards for Region 4 Maps D7 to D12, page 40. D7 Argenta Marsh Wildlife Management Area, 4-19: No Shooting or Hunting Area. D8 Fry Creek, 4-19: No Shooting Area. D9 Skookumchuck Pulp Mill, 4-20: No Shooting Area. D10 Wasa Slough Wildlife Sanctuary, 4-21: no shooting, hunting or trapping. D11 Baynes Lake, 4-22: motorized use prohibited all year, public access prohibited 15 April to 15 July except public beaches 1 and 2. D12 Sulphur Creek, 4-22: no access beyond 3 metres of either side of Sulphur Creek Road, up to 1,310 metres elevation.">
+<rect width="400" height="514" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Region 4 maps D7 to D12, page 40</text>
+<rect x="10" y="34" width="380" height="71" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 34 H72 V105 H17 A7 7 0 0 1 10 98 V41 A7 7 0 0 1 17 34z" fill="#c92a2a"/>
+<text x="41" y="63.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D7</text>
+<g transform="translate(41.0 83.5)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="57" font-size="16" font-weight="bold" fill="#2f3a2b">Argenta Marsh Wildlife Management</text>
+<text x="86" y="77" font-size="16" font-weight="bold" fill="#2f3a2b">Area</text>
+<text x="86" y="96" font-size="15" fill="#2f3a2b">No Shooting or Hunting Area, MU 4-19</text>
+<rect x="10" y="113" width="380" height="56" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M17 113 H72 V169 H17 A7 7 0 0 1 10 162 V120 A7 7 0 0 1 17 113z" fill="#e8590c"/>
+<text x="41" y="135" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D8</text>
+<g transform="translate(41.0 155.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="9"/><path d="M0 -13 V-5 M0 5 V13 M-13 0 H-5 M5 0 H13"/><path d="M-9 9 L9 -9" stroke-width="3"/></g>
+<text x="86" y="136" font-size="16" font-weight="bold" fill="#2f3a2b">Fry Creek</text>
+<text x="86" y="155" font-size="15" fill="#2f3a2b">No Shooting Area, MU 4-19</text>
+<rect x="10" y="177" width="380" height="56" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M17 177 H72 V233 H17 A7 7 0 0 1 10 226 V184 A7 7 0 0 1 17 177z" fill="#e8590c"/>
+<text x="41" y="199" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D9</text>
+<g transform="translate(41.0 219.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="9"/><path d="M0 -13 V-5 M0 5 V13 M-13 0 H-5 M5 0 H13"/><path d="M-9 9 L9 -9" stroke-width="3"/></g>
+<text x="86" y="200" font-size="16" font-weight="bold" fill="#2f3a2b">Skookumchuck Pulp Mill</text>
+<text x="86" y="219" font-size="15" fill="#2f3a2b">No Shooting Area, MU 4-20</text>
+<rect x="10" y="241" width="380" height="56" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 241 H72 V297 H17 A7 7 0 0 1 10 290 V248 A7 7 0 0 1 17 241z" fill="#c92a2a"/>
+<text x="41" y="263" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D10</text>
+<g transform="translate(41.0 283.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="264" font-size="16" font-weight="bold" fill="#2f3a2b">Wasa Slough Wildlife Sanctuary</text>
+<text x="86" y="283" font-size="15" fill="#2f3a2b">No shooting, hunting or trapping, MU 4-21</text>
+<rect x="10" y="305" width="380" height="89" rx="7" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M17 305 H72 V394 H17 A7 7 0 0 1 10 387 V312 A7 7 0 0 1 17 305z" fill="#4a7fb0"/>
+<text x="41" y="343.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D11</text>
+<g transform="translate(41.0 363.5)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><path d="M-12 3 V-3 L-7 -9 H5 L9 -3 H12 V3z" fill="#fffaf0" stroke="none"/><circle cx="-6" cy="5" r="3.6" fill="#fffaf0" stroke="none"/><circle cx="7" cy="5" r="3.6" fill="#fffaf0" stroke="none"/></g>
+<text x="86" y="328" font-size="16" font-weight="bold" fill="#2f3a2b">Baynes Lake</text>
+<text x="86" y="347" font-size="15" fill="#2f3a2b">No motor use all year. Access closed Apr</text>
+<text x="86" y="366" font-size="15" fill="#2f3a2b">15 to July 15, beaches 1 and 2 excepted.</text>
+<text x="86" y="385" font-size="15" fill="#2f3a2b">MU 4-22</text>
+<rect x="10" y="402" width="380" height="70" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 402 H72 V472 H17 A7 7 0 0 1 10 465 V409 A7 7 0 0 1 17 402z" fill="#c92a2a"/>
+<text x="41" y="431" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D12</text>
+<g transform="translate(41.0 451.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="425" font-size="16" font-weight="bold" fill="#2f3a2b">Sulphur Creek</text>
+<text x="86" y="444" font-size="15" fill="#2f3a2b">Stay within 3 m of the road, up to 1,310</text>
+<text x="86" y="463" font-size="15" fill="#2f3a2b">m. MU 4-22</text>
+<rect x="12" y="485" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="32" y="497" font-size="14" fill="#2f3a2b">No hunting</text>
+<rect x="118.88" y="485" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="138.88" y="497" font-size="14" fill="#2f3a2b">No shooting</text>
+<rect x="233.32" y="485" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="253.32" y="497" font-size="14" fill="#2f3a2b">Vehicle rule</text>
+</svg>

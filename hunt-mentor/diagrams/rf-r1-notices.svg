@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 457" font-family="sans-serif" role="img" aria-label="Four notices to hunters for Region 1. Fallow deer and black tailed deer rules differ: know which deer is in your scope. Town bylaws on firearms and bows are not in the synopsis: ask the municipality. Management Unit 1-11, Beaver Cove: no black bear hunting within 800 metres of the junction of Beaver Cove Road and Telegraph Cove Road. Nanaimo River estuary: a city bylaw allows hunting in only part of it, and only in migratory bird seasons.">
+<rect width="400" height="457" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 20. Notices to hunters</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-10 -14 H5 L11 -8 V14 H-10z"/><path d="M5 -14 V-8 H11" fill="#fffaf0" opacity=".5"/><path d="M-6 -5 H6 M-6 0 H6 M-6 5 H6 M-6 10 H2" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">KNOW THE RULE</text>
+<rect x="8" y="68" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="90.0" width="54" height="30" rx="6" fill="#2f3a2b"/>
+<text x="41" y="110.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Fallow or black tail?</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Rules differ. Know which deer is in your</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">scope</text>
+<circle cx="41.0" cy="171.5" r="20" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(41.0 171.5) scale(0.8)" fill="#2f3a2b" stroke="none"><rect x="-15" y="-4" width="10" height="17"/><rect x="-4" y="-14" width="11" height="27"/><rect x="8" y="0" width="8" height="13"/><path d="M-1 -10 h2 v2 h-2z M3 -10 h2 v2 h-2z M-1 -4 h2 v2 h-2z M3 -4 h2 v2 h-2z M-1 2 h2 v2 h-2z M3 2 h2 v2 h-2z" fill="#fffaf0"/></g>
+<text x="78" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Town bylaws</text>
+<text x="78" y="186" font-size="15" fill="#2f3a2b">Not in the synopsis. Ask the municipality</text>
+<rect x="8" y="209" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="230" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SPECIES CLOSED</text>
+<rect x="8" y="245" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="267.0" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="287" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">800 m</text>
+<text x="78" y="268" font-size="16" font-weight="bold" fill="#2f3a2b">Beaver Cove, MU 1-11</text>
+<text x="78" y="287" font-size="15" fill="#2f3a2b">No black bears within 800 m of the Beaver</text>
+<text x="78" y="306" font-size="15" fill="#2f3a2b">Cove and Telegraph Cove roads junction</text>
+<rect x="8" y="329" width="384" height="30" rx="6" fill="#e8590c"/>
+<text x="18" y="350" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="365" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="402.0" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(41.0 402.0) scale(0.8)" fill="#e8590c" stroke="none"><path d="M-15 -4 C-10 -9 -5 1 0 -4 C5 -9 10 1 15 -4 M-15 4 C-10 -1 -5 9 0 4 C5 -1 10 9 15 4" stroke="#e8590c" stroke-width="3" fill="none"/></g>
+<text x="78" y="388" font-size="16" font-weight="bold" fill="#2f3a2b">Nanaimo River estuary</text>
+<text x="78" y="407" font-size="15" fill="#2f3a2b">City bylaw: part of it only, in migratory bird</text>
+<text x="78" y="426" font-size="15" fill="#2f3a2b">seasons only</text>
+</svg>

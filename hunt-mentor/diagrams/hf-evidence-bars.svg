@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bar chart of how strong the evidence is that each factor moves deer. Snow and cold: strong. The rut: strong. Hunting pressure: strong. Fronts and barometric pressure: weak and mixed. Moon phase: almost none.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What really moves deer: the evidence</text>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b">
+    <text x="12" y="68">Snow, cold</text><text x="12" y="112">The rut</text><text x="12" y="156">Hunters</text><text x="12" y="200">Fronts,</text><text x="12" y="216">pressure</text><text x="12" y="252">Moon</text>
+  </g>
+  <rect x="130" y="50" width="240" height="26" rx="4" fill="#2f6e3b"/>
+  <rect x="130" y="94" width="230" height="26" rx="4" fill="#2f6e3b"/>
+  <rect x="130" y="138" width="200" height="26" rx="4" fill="#2f6e3b"/>
+  <rect x="130" y="186" width="80" height="26" rx="4" fill="#e8590c"/>
+  <rect x="130" y="236" width="14" height="26" rx="4" fill="#c0392b"/>
+  <g font-size="14" font-weight="bold" fill="#fff"><text x="140" y="68">strong</text><text x="140" y="112">strong</text><text x="140" y="156">strong</text></g>
+  <text x="218" y="204" font-size="14" font-weight="bold" fill="#e8590c">weak, mixed</text>
+  <text x="152" y="254" font-size="14" font-weight="bold" fill="#c0392b">almost none</text>
+  <text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Mostly white tailed deer collar studies (Tip)</text>
+</svg>

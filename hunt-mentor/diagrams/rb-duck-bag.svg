@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Duck daily bag limits drawn as 8 boxes. All ducks together: 8. Inside that 8, never on top: at most 4 canvasback, 4 northern pintail, 2 goldeneye, Barrow's and common together, and 2 harlequin. Possession limit 24, three times the daily limit. Each hunter has their own limit. Regions can set lower limits.">
+<rect width="400" height="404" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Ducks: daily bag limit</text>
+<g data-tip="All ducks: 8|The daily bag limit for ducks in aggregate is 8: mallards, wigeon and teal together (99%, synopsis page 12). Scoters and long tailed ducks have no own cap; they count in the 8 (95%).">
+<rect x="6" y="46" width="388" height="44" rx="8" fill="#f4eedf"/>
+<text x="16" y="74" font-size="16" fill="#23261f" font-weight="bold">All ducks</text>
+<rect x="146" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="173" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="200" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="227" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="254" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="281" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="308" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="335" y="54" width="23" height="28" rx="5" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="380" y="76" font-size="22" fill="#23261f" text-anchor="middle" font-weight="bold">8</text>
+</g>
+<g data-tip="Canvasback: 4|Counts inside the 8, never on top (95%, my reading). Possession: not more than 12 may be pintails or canvasbacks (99%).">
+<rect x="6" y="120" width="388" height="44" rx="8" fill="#fdf1e8"/>
+<text x="16" y="148" font-size="16" fill="#23261f" font-weight="bold">Canvasback</text>
+<rect x="146" y="128" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="173" y="128" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="200" y="128" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="227" y="128" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="254" y="128" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="281" y="128" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="308" y="128" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="335" y="128" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="380" y="150" font-size="22" fill="#c2410c" text-anchor="middle" font-weight="bold">4</text>
+</g>
+<g data-tip="Northern pintail: 4|Counts inside the 8, never on top (95%, my reading). Possession: not more than 12 may be pintails or canvasbacks (99%).">
+<rect x="6" y="170" width="388" height="44" rx="8" fill="#fdf1e8"/>
+<text x="16" y="198" font-size="16" fill="#23261f" font-weight="bold">Pintail</text>
+<rect x="146" y="178" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="173" y="178" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="200" y="178" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="227" y="178" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="254" y="178" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="281" y="178" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="308" y="178" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="335" y="178" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="380" y="200" font-size="22" fill="#c2410c" text-anchor="middle" font-weight="bold">4</text>
+</g>
+<g data-tip="Goldeneye: 2|Barrow's and common goldeneye together (99%). Once you have 2 goldeneyes, you stop hunting them for the day (99%).">
+<rect x="6" y="220" width="388" height="44" rx="8" fill="#fdf1e8"/>
+<text x="16" y="240" font-size="16" fill="#23261f" font-weight="bold">Goldeneye</text>
+<text x="16" y="257" font-size="14" fill="#5d6152">Barrow's + common</text>
+<rect x="146" y="228" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="173" y="228" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="200" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="227" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="254" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="281" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="308" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="335" y="228" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="380" y="250" font-size="22" fill="#c2410c" text-anchor="middle" font-weight="bold">2</text>
+</g>
+<g data-tip="Harlequin: 2|Counts inside the 8. Possession: not more than 6 may be goldeneyes or harlequins (99%).">
+<rect x="6" y="270" width="388" height="44" rx="8" fill="#fdf1e8"/>
+<text x="16" y="298" font-size="16" fill="#23261f" font-weight="bold">Harlequin</text>
+<rect x="146" y="278" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="173" y="278" width="23" height="28" rx="5" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="200" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="227" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="254" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="281" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="308" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<rect x="335" y="278" width="23" height="28" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="380" y="300" font-size="22" fill="#c2410c" text-anchor="middle" font-weight="bold">2</text>
+</g>
+<text x="16" y="113" font-size="15" font-weight="bold" fill="#c2410c">&#8595; These count INSIDE the 8, never on top</text>
+<g data-tip="Possession: 24|Three times the daily limit, at home too, until the birds are preserved (99%).">
+<rect x="8" y="336" width="186" height="60" rx="10" fill="#2f3a2b"/>
+<text x="101" y="360" font-size="15" fill="#fffaf0" text-anchor="middle" font-weight="bold">Possession</text>
+<text x="101" y="384" font-size="16" fill="#f6b98f" text-anchor="middle" font-weight="bold">24 (3 times daily)</text>
+</g>
+<g data-tip="Your own limit|Each hunter has their own limit. Birds you find dead or wounded and keep count in your bag (99%). Regions can set lower limits (99%).">
+<rect x="206" y="336" width="186" height="60" rx="10" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="299" y="360" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Per hunter</text>
+<text x="299" y="382" font-size="14" fill="#23261f" text-anchor="middle">regions may set lower</text>
+</g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif" role="img" aria-label="Schematic, not to scale, of the BC part of the Pacific Flyway. Interior plateau ponds freeze first, ducks move to valley rivers such as the Thompson and Okanagan, then toward the coast. The Fraser delta feeds waterfowl from September to April. Snow geese come about 5,000 kilometres from Wrangel Island to the Fraser delta, then shift to the Skagit in Washington in late December.">
+<rect width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pacific Flyway: the BC part</text>
+<clipPath id="rq-mg-flyway-clip"><rect x="8" y="40" width="384" height="284" rx="8"/></clipPath>
+<g clip-path="url(#rq-mg-flyway-clip)">
+<rect x="0" y="40" width="400" height="324" fill="#cfe0ee"/>
+<path d="M156 40 C146 70 164 96 146 122 C132 144 146 166 132 188 C120 208 134 228 122 246 L116 262 L124 270 L124 324 L400 324 L400 40z" fill="#dfe6d3"/>
+<path d="M124 270 L400 270 L400 324 L124 324z" fill="#ece6d6"/>
+<path d="M156 40 C146 70 164 96 146 122 C132 144 146 166 132 188 C120 208 134 228 122 246 L116 262 L124 270" fill="none" stroke="#8a9a6b" stroke-width="1.6"/>
+<path d="M100 270 H400" stroke="#6b5b4b" stroke-width="1.6" stroke-dasharray="8 5"/>
+<path d="M206 40 C196 80 204 120 188 152 C172 186 156 222 126 248" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+<path d="M190 150 C240 150 290 140 386 148" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+<path d="M352 168 C360 180 358 220 354 248 C352 258 346 258 346 246 C346 224 344 186 352 168z" fill="#9fc3e0" stroke="#4a7fb0" stroke-width="1.4"/>
+<ellipse cx="262" cy="104" rx="9" ry="5.4" fill="#eaf3fb" stroke="#4a7fb0" stroke-width="1.4"/>
+<ellipse cx="296" cy="98" rx="7" ry="4.2" fill="#eaf3fb" stroke="#4a7fb0" stroke-width="1.4"/>
+<ellipse cx="326" cy="110" rx="10" ry="6.0" fill="#eaf3fb" stroke="#4a7fb0" stroke-width="1.4"/>
+<ellipse cx="360" cy="100" rx="8" ry="4.8" fill="#eaf3fb" stroke="#4a7fb0" stroke-width="1.4"/>
+<ellipse cx="290" cy="118" rx="6" ry="3.6" fill="#eaf3fb" stroke="#4a7fb0" stroke-width="1.4"/>
+</g>
+<rect x="8" y="40" width="384" height="284" rx="8" fill="none" stroke="#8a9a6b" stroke-width="1.5"/>
+<path d="M300 126 C300 132 298 136 296 138" fill="none" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><path d="M0 0 l-13 -7 v14z" fill="#e8590c" transform="translate(295 144) rotate(100)"/>
+<path d="M180 170 C168 196 154 214 140 228" fill="none" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><path d="M0 0 l-13 -7 v14z" fill="#e8590c" transform="translate(136 233) rotate(128)"/>
+<path d="M108 116 C112 160 112 196 110 230" fill="none" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 5"/><path d="M0 0 l-13 -7 v14z" fill="#2f3a2b" transform="translate(110 238) rotate(92)"/>
+<rect x="246.5" y="46.0" width="119.0" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="306" y="65" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Plateau ponds</text>
+<text x="306" y="83" font-size="15" fill="#2f3a2b" text-anchor="middle">freeze first</text>
+<rect x="225.8" y="158.0" width="112.2" height="63.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="281.887" y="177" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Valley rivers:</text>
+<text x="281.887" y="195" font-size="15" fill="#2f3a2b" text-anchor="middle">Thompson,</text>
+<text x="281.887" y="213" font-size="15" fill="#2f3a2b" text-anchor="middle">Okanagan</text>
+<rect x="150.0" y="224.0" width="145.9" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="222.966" y="243" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fraser delta</text>
+<text x="222.966" y="261" font-size="15" fill="#2f3a2b" text-anchor="middle">Sept to April food</text>
+<rect x="14.0" y="48.0" width="128.9" height="63.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="78.459" y="67" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow geese:</text>
+<text x="78.459" y="85" font-size="15" fill="#2f3a2b" text-anchor="middle">Wrangel Island,</text>
+<text x="78.459" y="103" font-size="15" fill="#2f3a2b" text-anchor="middle">about 5,000 km</text>
+<rect x="150.0" y="277.0" width="163.3" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="231.632" y="296" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Skagit (Washington)</text>
+<text x="231.632" y="314" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">late Dec</text>
+<path d="M116 254 C120 272 128 286 140 294" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round"/><path d="M0 0 l-13 -7 v14z" fill="#2f3a2b" transform="translate(146 297) rotate(25)"/>
+<text x="386" y="263" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">BC</text>
+<text x="386" y="288" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">USA</text>
+<text x="18" y="170" font-size="15" font-weight="bold" fill="#2c5d86">Pacific</text>
+<text x="18" y="188" font-size="15" font-weight="bold" fill="#2c5d86">Ocean</text>
+<text x="200" y="342" font-size="14" fill="#6b5b4b" text-anchor="middle">Schematic, not to scale</text>
+</svg>

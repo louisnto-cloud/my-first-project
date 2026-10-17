@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" font-family="sans-serif" role="img" aria-label="Map: a deer hit on an open ridge runs downhill along a game trail, through thick cover, and toward the creek. Wounded deer often head downhill, to thick cover and to water, 70 percent.">
+<rect width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where wounded deer go</text>
+<rect x="8" y="40" width="384" height="220" rx="8" fill="#e6ead8"/>
+<path d="M8 48 a8 8 0 0 1 8 -8 H150 C120 100 116 190 140 260 H16 a8 8 0 0 1 -8 -8z" fill="#d6dcae"/>
+<path d="M150 40 C124 100 120 190 142 260" stroke="#8b5a2b" stroke-width="1.4" fill="none" opacity=".7"/>
+<path d="M200 40 C174 100 170 190 192 260" stroke="#8b5a2b" stroke-width="2.2" fill="none" opacity=".7"/>
+<path d="M250 40 C224 100 220 190 242 260" stroke="#8b5a2b" stroke-width="1.4" fill="none" opacity=".7"/>
+<path d="M296 40 C270 100 266 190 288 260" stroke="#8b5a2b" stroke-width="1.4" fill="none" opacity=".7"/>
+<path d="M206 104 C236 92 272 104 282 130 C292 160 276 196 246 200 C218 204 196 182 194 156 C192 132 194 112 206 104z" fill="#7f9465"/>
+<path d="M214 113 L208 125 H220z" fill="#3e5b37"/><path d="M234 103 L228 115 H240z" fill="#3e5b37"/><path d="M258 109 L252 121 H264z" fill="#3e5b37"/><path d="M272 131 L266 143 H278z" fill="#3e5b37"/><path d="M264 163 L258 175 H270z" fill="#3e5b37"/><path d="M234 173 L228 185 H240z" fill="#3e5b37"/><path d="M210 163 L204 175 H216z" fill="#3e5b37"/><path d="M250 183 L244 195 H256z" fill="#3e5b37"/>
+<path d="M320 40 C306 100 304 180 330 260" stroke="#4a7fb0" stroke-width="7" fill="none"/>
+<path d="M70 120 C130 130 180 144 214 160 C250 176 286 198 312 214" stroke="#8b5a2b" stroke-width="2" stroke-dasharray="2 4" fill="none"/>
+<path d="M76 120 C130 130 180 144 214 160 C250 176 284 196 304 208" stroke="#c92a2a" stroke-width="3" stroke-dasharray="7 5" fill="none"/><path d="M312.0 213.0 L305.9 202.0 L299.5 212.3z" fill="#c92a2a"/>
+<circle cx="96" cy="124" r="2.6" fill="#c92a2a"/><circle cx="122" cy="128" r="2.6" fill="#c92a2a"/><circle cx="150" cy="136" r="2.6" fill="#c92a2a"/><circle cx="178" cy="146" r="2.6" fill="#c92a2a"/>
+<circle cx="72" cy="119" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+
+<line x1="72" y1="110" x2="72" y2="107" stroke="#e8590c" stroke-width="1.3"/><circle cx="72" cy="110" r="2.6" fill="#e8590c"/>
+<rect x="54.9" y="78.0" width="34.2" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="72" y="98.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">hit</text>
+<rect x="18.0" y="48.0" width="95.2" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="65.6065" y="67" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ridge, open</text>
+<text x="251" y="158" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">thick</text>
+<line x1="312" y1="130" x2="331.554" y2="131" stroke="#4a7fb0" stroke-width="1.3"/><circle cx="312" cy="130" r="2.6" fill="#4a7fb0"/>
+<rect x="331.6" y="118.0" width="54.4" height="27.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="358.777" y="137" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">creek</text>
+<line x1="70.0" y1="226.0" x2="142.0" y2="226.0" stroke="#8b5a2b" stroke-width="2.4"/><path d="M150.0 226.0 L140.0 220.5 L140.0 231.5z" fill="#8b5a2b"/><text x="70" y="248" font-size="15" font-weight="bold" fill="#8b5a2b">downhill</text>
+<text x="200" y="284" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Downhill, to thick cover and water (70%)</text>
+</svg>

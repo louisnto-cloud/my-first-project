@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Mark the spot. Birds return to good spots (Tip).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Mark the spot</text>
+<ellipse cx="200" cy="160" rx="120" ry="45" fill="#4a7fb0"/><g transform="translate(250 165) scale(2)"><g><path d="M0 0 l-7 -12 a8 8 0 1 1 14 0 Z" fill="#e8590c"/><circle cx="0" cy="-15" r="3" fill="#fff"/></g></g><text x="200" y="235" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Mark exactly where they landed</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Birds return to good spots (Tip).</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation: a hunter seen from the side with a frame pack. The heaviest piece, a quarter, goes on first, high and close to the back. Lighter game bags go below it. Straps cinch everything tight. Carry 20 to 30 kilograms per trip (tip).">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pack it: heavy, high, tight to your back</text>
+<rect x="0" y="286" width="400" height="14" fill="#dfe6d3"/>
+<path d="M112 196 L100 284 M124 196 L132 284" stroke="#4a4136" stroke-width="13" stroke-linecap="round"/>
+<path d="M94 284 h12 M128 284 h12" stroke="#2a241d" stroke-width="7" stroke-linecap="round"/>
+<path d="M100 98 C98 90 140 88 142 98 L140 200 L104 200z" fill="#e8590c"/>
+<circle cx="114" cy="72" r="15" fill="#e0b48c"/><path d="M98 70 C98 52 132 52 132 68 L134 70 L96 70z" fill="#e8590c"/><path d="M96 70 h-8" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/>
+<circle cx="106" cy="74" r="1.8" fill="#222"/>
+<rect x="144" y="70" width="10" height="196" rx="3" fill="#6b4f35"/>
+<rect x="144" y="258" width="88" height="9" rx="3" fill="#6b4f35"/>
+<path d="M140 100 C150 110 152 130 140 150" stroke="#3a3a3a" stroke-width="5" fill="none"/>
+<path d="M140 196 h14" stroke="#3a3a3a" stroke-width="7"/>
+<path d="M124 104 C112 130 104 150 112 170" stroke="#c2410c" stroke-width="12" stroke-linecap="round" fill="none"/><circle cx="113" cy="174" r="6" fill="#e0b48c"/>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.4s" dur=".3s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="60 -50;0 0" begin="0.4s" dur=".8s" fill="freeze"/><g transform="translate(192 124) rotate(180) scale(1.05)"><path d="M-26 -34 C-6 -46 26 -40 28 -14 C30 4 16 18 6 24 L4 34 L-6 34 L-8 22 C-22 12 -32 -10 -26 -34z" fill="#c2614e" stroke="#7e3326" stroke-width="1.6"/><path d="M-20 -32 C-4 -40 18 -36 22 -18" stroke="#f1dcc4" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="-6" y="30" width="10" height="12" rx="2" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/><ellipse cx="-1" cy="42" rx="7" ry="4" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.2"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.6s" dur=".3s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="60 -50;0 0" begin="1.6s" dur=".8s" fill="freeze"/><path d="M156 176 C156 170 222 170 222 176 L220 206 C218 212 160 212 158 206z" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.6"/><path d="M189.0 172 l-5 -8 M189.0 172 l5 -8" stroke="#8a7f6a" stroke-width="1.6"/><path d="M168 195.0 C176 201.0 202 201.0 210 195.0" stroke="#c2614e" stroke-width="2.4" fill="none" opacity=".55"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur=".3s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="60 -50;0 0" begin="2.6s" dur=".8s" fill="freeze"/><path d="M158 224 C158 218 218 218 218 224 L216 250 C214 256 162 256 160 250z" fill="#f4efe2" stroke="#8a7f6a" stroke-width="1.6"/><path d="M188.0 220 l-5 -8 M188.0 220 l5 -8" stroke="#8a7f6a" stroke-width="1.6"/><path d="M170 241.0 C178 247.0 198 247.0 206 241.0" stroke="#c2614e" stroke-width="2.4" fill="none" opacity=".55"/></g>
+<line x1="150" y1="104" x2="232" y2="104" stroke="#e8590c" stroke-width="5" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;1" begin="3.8s" dur="0.3s" fill="freeze"/></line>
+<line x1="150" y1="184" x2="232" y2="184" stroke="#e8590c" stroke-width="5" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.1s" dur="0.3s" fill="freeze"/></line>
+<line x1="150" y1="234" x2="232" y2="234" stroke="#e8590c" stroke-width="5" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.4s" dur="0.3s" fill="freeze"/></line>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.8s" dur="0.5s" fill="freeze"/><rect x="254.3" y="82.0" width="123.5" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="316" y="101" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Heaviest piece</text>
+<text x="316" y="119" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">high and close</text><line x1="222" y1="112" x2="254.269" y2="104" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="222" cy="112" r="2.6" fill="#2f3a2b"/><rect x="265.2" y="168.0" width="101.6" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="316" y="187" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Straps tight</text><line x1="234" y1="184" x2="265.183" y2="182" stroke="#e8590c" stroke-width="1.4"/><circle cx="234" cy="184" r="2.6" fill="#e8590c"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.6s" dur="0.5s" fill="freeze"/><rect x="261.5" y="226.0" width="109.0" height="45.0" rx="5" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="316" y="245" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">20 to 30 kg</text>
+<text x="316" y="263" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">per trip (Tip)</text></g>
+</svg>

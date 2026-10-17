@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 333" font-family="sans-serif" role="img" aria-label="Region 3: what changed for 2026 to 2028, synopsis page 32. 1. No feeding or baiting of ungulates within 200 m of a dwelling, school yard or playground. 2. New bow only white tailed deer season, either sex, 11 to 20 December. 3. New youth only grouse season, 1 to 9 September. 4. Two roads now open, Poison Mountain Saddle Road and Yalakom Big Bar Road, through the Red Mountain and French Mountain vehicle closure.">
+<rect width="400" height="333" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 32. New for 2026 to 2028</text>
+<rect x="8" y="32" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="69.0" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(41.0 69.0) scale(0.8)" fill="#e8590c" stroke="none"><path d="M-14 10 H14 L10 2 H-10z"/><circle cx="-5" cy="-1" r="4"/><circle cx="3" cy="-2" r="4"/><circle cx="-1" cy="-7" r="4"/><circle cx="7" cy="-7" r="3"/></g>
+<circle cx="41.0" cy="69.0" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 55.0 L55.0 83.0" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="55" font-size="16" font-weight="bold" fill="#2f3a2b">1. No feeding or baiting</text>
+<text x="78" y="74" font-size="15" fill="#2f3a2b">Ungulates, within 200 m of a dwelling,</text>
+<text x="78" y="93" font-size="15" fill="#2f3a2b">school yard or playground</text>
+<circle cx="41.0" cy="135.5" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(41.0 135.5) scale(0.8)" fill="#e8590c" stroke="none"><path d="M-6 -15 C10 -10 10 10 -6 15" stroke="#e8590c" stroke-width="3" fill="none"/><path d="M-6 -15 V15" stroke="#e8590c" stroke-width="1.2"/><path d="M-14 0 H14 M10 -3 L14 0 L10 3" stroke="#e8590c" stroke-width="2" fill="none"/></g>
+<text x="78" y="131" font-size="16" font-weight="bold" fill="#2f3a2b">2. New bow only white tail</text>
+<text x="78" y="150" font-size="15" fill="#2f3a2b">Either sex, Dec 11 to 20</text>
+<rect x="8" y="165" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="192.5" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(41.0 192.5) scale(0.8)" fill="#e8590c" stroke="none"><path d="M-14 6 C-12 -4 -2 -8 6 -6 L8 -12 C10 -14 14 -12 13 -9 L11 -5 C14 2 8 10 -2 10 L-6 13 L-6 9 C-10 9 -13 8 -14 6z"/><path d="M-15 4 L-20 0 L-19 8z"/></g>
+<text x="78" y="188" font-size="16" font-weight="bold" fill="#2f3a2b">3. New youth only grouse</text>
+<text x="78" y="207" font-size="15" fill="#2f3a2b">Sept 1 to 9</text>
+<circle cx="41.0" cy="268.5" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2"/>
+<g transform="translate(41.0 268.5) scale(0.8)" fill="#e8590c" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="245" font-size="16" font-weight="bold" fill="#2f3a2b">4. Two roads now open</text>
+<text x="78" y="264" font-size="15" fill="#2f3a2b">Poison Mountain Saddle Road and Yalakom</text>
+<text x="78" y="283" font-size="15" fill="#2f3a2b">Big Bar Road, through the Red Mountain</text>
+<text x="78" y="302" font-size="15" fill="#2f3a2b">and French Mountain closure</text>
+</svg>

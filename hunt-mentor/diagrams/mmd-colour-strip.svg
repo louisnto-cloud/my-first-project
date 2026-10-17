@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 332" font-family="sans-serif" role="img" aria-label="Rough sketch, not exact: colour swatches as a person sees them beside a guess at how a deer sees them, a tip. Blaze orange, green and red turn dull yellow or grey brown. Blue jeans and white stay bright and bluish. Deer have no red cone; blue and UV, ultraviolet, stand out, 75 to 85 percent.">
+<rect width="400" height="332" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Colour: you vs a deer</text>
+<text x="200" y="47" font-size="15" fill="#6b5b4b" text-anchor="middle">(rough sketch)</text>
+<path d="M136 72 C144 62 160 62 168 72 C160 82 144 82 136 72z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.8"/><circle cx="152" cy="72" r="5" fill="#5b4a3a"/><text x="174" y="78" font-size="16" font-weight="bold" fill="#2f3a2b">you see</text>
+<path d="M268 72 C276 62 292 62 300 72 C292 82 276 82 268 72z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.8"/><circle cx="284" cy="72" r="5" fill="#1d1a16"/><text x="306" y="78" font-size="16" font-weight="bold" fill="#2f3a2b">deer (Tip)</text>
+<text x="140" y="115" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">blaze orange</text>
+<rect x="150" y="92" width="104" height="32" rx="5" fill="#ff6a00" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M260 108 H270" stroke="#6b5b4b" stroke-width="2"/><path d="M278.0 108.0 L270.0 103.6 L270.0 112.4z" fill="#6b5b4b"/>
+<rect x="282" y="92" width="104" height="32" rx="5" fill="#b8a35c" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="140" y="157" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">green</text>
+<rect x="150" y="134" width="104" height="32" rx="5" fill="#3c8d2f" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M260 150 H270" stroke="#6b5b4b" stroke-width="2"/><path d="M278.0 150.0 L270.0 145.6 L270.0 154.4z" fill="#6b5b4b"/>
+<rect x="282" y="134" width="104" height="32" rx="5" fill="#a8a060" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="140" y="199" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">blue jeans</text>
+<rect x="150" y="176" width="104" height="32" rx="5" fill="#2f5fa8" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M260 192 H270" stroke="#6b5b4b" stroke-width="2"/><path d="M278.0 192.0 L270.0 187.6 L270.0 196.4z" fill="#6b5b4b"/>
+<rect x="282" y="176" width="104" height="32" rx="5" fill="#3f63b8" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="140" y="241" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">red</text>
+<rect x="150" y="218" width="104" height="32" rx="5" fill="#c62828" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M260 234 H270" stroke="#6b5b4b" stroke-width="2"/><path d="M278.0 234.0 L270.0 229.6 L270.0 238.4z" fill="#6b5b4b"/>
+<rect x="282" y="218" width="104" height="32" rx="5" fill="#7c7458" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="140" y="283" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">white</text>
+<rect x="150" y="260" width="104" height="32" rx="5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.2"/>
+<path d="M260 276 H270" stroke="#6b5b4b" stroke-width="2"/><path d="M278.0 276.0 L270.0 271.6 L270.0 280.4z" fill="#6b5b4b"/>
+<rect x="282" y="260" width="104" height="32" rx="5" fill="#e9f0ff" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="200" y="320" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">No red cone. Blue and UV stand out (75 to 85%)</text>
+</svg>

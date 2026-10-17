@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" font-family="sans-serif" role="img" aria-label="A mountain cross section. On average air cools about 6.5 degrees for every 1,000 m you climb, so a bench 700 m above the valley is often 4 to 5 degrees colder, and the slopes 1,300 m up, about 8 degrees colder, may hold snow. Cold air can also pool in valleys on calm nights, so it is not always true. Tip.">
+<rect width="400" height="352" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Higher is usually colder</text>
+<defs><clipPath id="fl-wx-elev-mt"><path d="M8 262 L118 262 C150 240 176 196 200 172 L246 167 C270 140 300 92 330 66 C350 82 372 110 392 132 V300 H8z"/></clipPath></defs>
+<rect x="8" y="34" width="384" height="266" rx="6" fill="#e6eef4"/>
+<path d="M8 262 L118 262 C150 240 176 196 200 172 L246 167 C270 140 300 92 330 66 C350 82 372 110 392 132 V300 H8z" fill="#c9cfa4"/>
+<rect x="8" y="34" width="384" height="63" fill="#f7f9fb" clip-path="url(#fl-wx-elev-mt)"/>
+<path d="M230 97 L250 91 L262 99 L280 93 L300 101 L318 94 L340 100 L392 96 V107 H230z" fill="#c9cfa4" clip-path="url(#fl-wx-elev-mt)"/>
+<rect x="8" y="262" width="384" height="40" fill="#b9bd8e" clip-path="url(#fl-wx-elev-mt)"/>
+<rect x="202.5" y="167.0" width="3" height="5" fill="#5a3d22"/><path d="M204.0 149.0 L209.1 158.9 L206.8 158.9 L213.2 168.0 L194.8 168.0 L201.2 158.9 L198.9 158.9z" fill="#3a5a31"/>
+<rect x="212.5" y="167.0" width="3" height="5" fill="#5a3d22"/><path d="M214.0 145.0 L220.0 156.7 L217.3 156.7 L224.9 168.0 L203.1 168.0 L210.7 156.7 L208.0 156.7z" fill="#3a5a31"/>
+<rect x="224.5" y="167.0" width="3" height="5" fill="#5a3d22"/><path d="M226.0 151.0 L230.6 160.0 L228.5 160.0 L234.4 168.0 L217.6 168.0 L223.5 160.0 L221.4 160.0z" fill="#3a5a31"/>
+<rect x="236.5" y="167.0" width="3" height="5" fill="#5a3d22"/><path d="M238.0 147.0 L243.5 157.8 L241.0 157.8 L248.1 168.0 L227.9 168.0 L235.0 157.8 L232.5 157.8z" fill="#3a5a31"/>
+<rect x="250.5" y="164.0" width="3" height="5" fill="#5a3d22"/><path d="M252.0 150.0 L256.2 158.1 L254.3 158.1 L259.6 165.0 L244.4 165.0 L249.7 158.1 L247.8 158.1z" fill="#3a5a31"/>
+<rect x="260.5" y="155.0" width="3" height="5" fill="#5a3d22"/><path d="M262.0 137.0 L267.1 146.9 L264.8 146.9 L271.2 156.0 L252.8 156.0 L259.2 146.9 L256.9 146.9z" fill="#3a5a31"/>
+<rect x="274.5" y="142.4" width="3" height="5" fill="#5a3d22"/><path d="M276.0 128.4 L280.2 136.5 L278.3 136.5 L283.6 143.4 L268.4 143.4 L273.7 136.5 L271.8 136.5z" fill="#3a5a31"/>
+<rect x="286.5" y="131.6" width="3" height="5" fill="#5a3d22"/><path d="M288.0 119.6 L291.7 126.8 L290.0 126.8 L294.7 132.6 L281.3 132.6 L286.0 126.8 L284.3 126.8z" fill="#3a5a31"/>
+<rect x="346.5" y="117.5" width="3" height="5" fill="#5a3d22"/><path d="M348.0 103.5 L352.2 111.6 L350.3 111.6 L355.6 118.5 L340.4 118.5 L345.7 111.6 L343.8 111.6z" fill="#3a5a31"/>
+<rect x="358.5" y="132.5" width="3" height="5" fill="#5a3d22"/><path d="M360.0 116.5 L364.6 125.5 L362.5 125.5 L368.4 133.5 L351.6 133.5 L357.5 125.5 L355.4 125.5z" fill="#3a5a31"/>
+<rect x="370.5" y="147.5" width="3" height="5" fill="#5a3d22"/><path d="M372.0 135.5 L375.7 142.7 L374.0 142.7 L378.7 148.5 L365.3 148.5 L370.0 142.7 L368.3 142.7z" fill="#3a5a31"/>
+<rect x="22" y="272" width="120" height="9" rx="2" fill="#8f8d86"/><path d="M30 276.5 H134" stroke="#f7f4ea" stroke-width="1.2" stroke-dasharray="6 5"/>
+<rect x="24" y="250" width="14" height="12" fill="#e8e1cf" stroke="#6b5b4b" stroke-width="1"/>
+<rect x="42" y="246" width="12" height="16" fill="#e8e1cf" stroke="#6b5b4b" stroke-width="1"/>
+<rect x="58" y="252" width="16" height="10" fill="#e8e1cf" stroke="#6b5b4b" stroke-width="1"/>
+<rect x="78" y="248" width="12" height="14" fill="#e8e1cf" stroke="#6b5b4b" stroke-width="1"/>
+<path d="M104 247 l14 -3 l-4 -5 h3 l6 4 l8 -2 c3 0 3 3 0 3 l-8 2 l-2 7 h-3 l1 -6 l-12 3z" fill="#4d5a66"/>
+<line x1="8" y1="262" x2="392" y2="262" stroke="#2f3a2b" stroke-width="1.3" stroke-dasharray="5 4" opacity=".7"/>
+<line x1="8" y1="171" x2="392" y2="171" stroke="#2f3a2b" stroke-width="1.3" stroke-dasharray="5 4" opacity=".7"/>
+<line x1="8" y1="93" x2="392" y2="93" stroke="#2f3a2b" stroke-width="1.3" stroke-dasharray="5 4" opacity=".7"/>
+<rect x="14.0" y="47.0" width="145.3" height="45.0" rx="5" fill="#fffaf0" stroke="#2c5d86" stroke-width="1.2"/>
+<text x="86.6445" y="66.5" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">+ 1,300 m</text>
+<text x="86.6445" y="84" font-size="15" fill="#2f3a2b" text-anchor="middle">about 8 °C colder</text>
+<rect x="14.0" y="125.0" width="180.3" height="45.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="104.139" y="144.5" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">+ 700 m</text>
+<text x="104.139" y="162" font-size="15" fill="#2f3a2b" text-anchor="middle">about 4 to 5 °C colder</text>
+<rect x="14.0" y="198.0" width="118.0" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="73.002" y="217" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Valley, airport</text>
+<text x="200" y="322" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">About 6.5 °C per 1,000 m on average.</text>
+<text x="200" y="342" font-size="15" fill="#6b5b4b" text-anchor="middle">Not always (Tip)</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1: from where you shot, pick a landmark beside where the animal stood: a stump, rock or odd tree.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Mark it from where you shot</text>
+<rect x="0" y="200" width="400" height="100" rx="0" fill="#cfdcb5"/><g transform="translate(60 230)"><circle cx="0" cy="-30" r="9" fill="#e8590c"/><rect x="-9" y="-21" width="18" height="30" rx="5" fill="#e8590c"/></g><line x1="70" y1="200" x2="300" y2="200" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/><g transform="translate(310 202) scale(1)"><rect x="-3" y="-10" width="6" height="12" fill="#6b4f35"/><path d="M0 -50 L16 -10 L-16 -10 Z" fill="#8a9a6b"/></g><text x="200" y="100" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">From your shooting spot,</text><text x="200" y="124" font-size="15" fill="#23261f" text-anchor="middle">pick a landmark by the animal</text>
+</svg>

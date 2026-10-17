@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 492" font-family="sans-serif" role="img" aria-label="Your rifle to Alaska and back, in six steps. 1: buy your Alaska hunting licence online; the ATF, the US Bureau of Alcohol, Tobacco, Firearms and Explosives, needs a copy of it with your application. 2: file ATF Form 6NIA, one per hunter; about 4 to 6 weeks; approval is valid 1 year. 3: leave Canada; optional: CBSA, Canada Border Services Agency, card BSF407 listing serial numbers. 4: at the US border, CBP, Customs and Border Protection, declare the firearm and show the approved 6NIA plus the Alaska licence. 5: hunt; keep the 6NIA and licence on you; unloaded and cased in the truck is the safe habit. 6: back into Canada, CBSA: declare it and show your PAL, Possession and Acquisition Licence; non restricted re entry only. Ammunition rides on the same 6NIA. Keep every paper in one folder.">
+<rect width="400" height="492" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Your rifle to Alaska and back</text>
+<line x1="30" y1="70.5" x2="30" y2="413.5" stroke="#8a9a6b" stroke-width="4"/>
+<text x="56" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Buy your Alaska hunting licence online</text>
+<text x="56" y="86" font-size="15" fill="#2f3a2b">ATF needs a copy of it with your application</text>
+<text x="56" y="128" font-size="16" font-weight="bold" fill="#2f3a2b">File ATF Form 6NIA, one per hunter</text>
+<text x="56" y="147" font-size="15" fill="#2f3a2b">About 4 to 6 weeks. Approval valid 1 year</text>
+<text x="56" y="189" font-size="16" font-weight="bold" fill="#2f3a2b">Leave Canada</text>
+<text x="56" y="208" font-size="15" fill="#2f3a2b">Optional: CBSA card BSF407 listing serial</text>
+<text x="56" y="227" font-size="15" fill="#2f3a2b">numbers</text>
+<rect x="8" y="246" width="384" height="53" rx="8" fill="#fbe4d6" stroke="#e8590c" stroke-width="1.6"/>
+<text x="56" y="269" font-size="16" font-weight="bold" fill="#c2410c">US border (CBP): declare the firearm</text>
+<text x="56" y="288" font-size="15" fill="#2f3a2b">Show approved 6NIA plus the Alaska licence</text>
+<text x="56" y="330" font-size="16" font-weight="bold" fill="#2f3a2b">Hunt. Keep 6NIA and licence on you</text>
+<text x="56" y="349" font-size="15" fill="#2f3a2b">Unloaded and cased in the truck is the safe</text>
+<text x="56" y="368" font-size="15" fill="#2f3a2b">habit</text>
+<rect x="8" y="387" width="384" height="53" rx="8" fill="#fbe4d6" stroke="#e8590c" stroke-width="1.6"/>
+<text x="56" y="410" font-size="16" font-weight="bold" fill="#c2410c">Back into Canada (CBSA): declare it</text>
+<text x="56" y="429" font-size="15" fill="#2f3a2b">Show your PAL. Non restricted re entry only</text>
+<circle cx="30.0" cy="70.5" r="13" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="75.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="30.0" cy="131.5" r="13" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="136.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="30.0" cy="202.0" r="13" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="207" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="30.0" cy="272.5" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="277.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<circle cx="30.0" cy="343.0" r="13" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="348" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<circle cx="30.0" cy="413.5" r="13" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="30" y="418.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<text x="14" y="460" font-size="15" font-weight="bold" fill="#2f3a2b">Ammunition rides on the same 6NIA.</text>
+<text x="14" y="480" font-size="15" font-weight="bold" fill="#2f3a2b">Keep every paper in one folder.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" font-family="sans-serif" role="img" aria-label="Average daily high and low temperatures, normals 1991 to 2020, 95 percent. Each bar runs from the low to the high. Kamloops: October 13.6 and 3.5, November 5.8 and minus 1.1. Abbotsford: October 15.0 and 6.4, November 9.5 and 2.7. Osoyoos: October 16.2 and 4.1, November 7.3 and minus 0.3.">
+<rect width="400" height="376" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Average high and low, Oct and Nov</text>
+<text x="14" y="50" font-size="14" font-weight="bold" fill="#6b5b4b">Daily, 1991 to 2020 normals, °C</text>
+<line x1="141.7" y1="64" x2="141.7" y2="318" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="141.7" y="336" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0 °C</text>
+<line x1="245.8" y1="64" x2="245.8" y2="318" stroke="#d8cfb8" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="245.8" y="336" font-size="14" fill="#6b5b4b" text-anchor="middle">10 °C</text>
+<line x1="350.0" y1="64" x2="350.0" y2="318" stroke="#d8cfb8" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="350" y="336" font-size="14" fill="#6b5b4b" text-anchor="middle">20 °C</text>
+<text x="14" y="82" font-size="16" font-weight="bold" fill="#2f3a2b">Kamloops</text>
+<text x="14" y="105" font-size="14" fill="#6b5b4b">Oct</text>
+<rect x="178.1" y="90" width="105.2" height="20" rx="3" fill="#e8590c"/>
+<text x="172.1" y="105" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">3.5</text>
+<text x="289.3" y="105" font-size="15" font-weight="bold" fill="#c2410c" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">13.6</text>
+<text x="14" y="131" font-size="14" fill="#6b5b4b">Nov</text>
+<rect x="130.2" y="116" width="71.9" height="20" rx="3" fill="#8b5a2b"/>
+<text x="124.2" y="131" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-1.1</text>
+<text x="208.1" y="131" font-size="15" font-weight="bold" fill="#8b5a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">5.8</text>
+<text x="14" y="168" font-size="16" font-weight="bold" fill="#2f3a2b">Abbotsford</text>
+<text x="14" y="191" font-size="14" fill="#6b5b4b">Oct</text>
+<rect x="208.3" y="176" width="89.6" height="20" rx="3" fill="#e8590c"/>
+<text x="202.3" y="191" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">6.4</text>
+<text x="303.9" y="191" font-size="15" font-weight="bold" fill="#c2410c" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">15.0</text>
+<text x="14" y="217" font-size="14" fill="#6b5b4b">Nov</text>
+<rect x="169.8" y="202" width="70.8" height="20" rx="3" fill="#8b5a2b"/>
+<text x="163.8" y="217" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">2.7</text>
+<text x="246.6" y="217" font-size="15" font-weight="bold" fill="#8b5a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">9.5</text>
+<text x="14" y="254" font-size="16" font-weight="bold" fill="#2f3a2b">Osoyoos</text>
+<text x="14" y="277" font-size="14" fill="#6b5b4b">Oct</text>
+<rect x="184.4" y="262" width="126.0" height="20" rx="3" fill="#e8590c"/>
+<text x="178.4" y="277" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">4.1</text>
+<text x="316.4" y="277" font-size="15" font-weight="bold" fill="#c2410c" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">16.2</text>
+<text x="14" y="303" font-size="14" fill="#6b5b4b">Nov</text>
+<rect x="138.5" y="288" width="79.2" height="20" rx="3" fill="#8b5a2b"/>
+<text x="132.5" y="303" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">-0.3</text>
+<text x="223.7" y="303" font-size="15" font-weight="bold" fill="#8b5a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">7.3</text>
+<rect x="14" y="350" width="14" height="14" rx="3" fill="#e8590c"/><text x="34" y="362" font-size="14" fill="#2f3a2b">October</text>
+<rect x="130" y="350" width="14" height="14" rx="3" fill="#8b5a2b"/><text x="150" y="362" font-size="14" fill="#2f3a2b">November</text>
+<text x="250" y="362" font-size="14" font-weight="bold" fill="#2f3a2b">Low to high (95%)</text>
+</svg>

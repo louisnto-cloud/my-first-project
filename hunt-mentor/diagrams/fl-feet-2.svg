@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Wear the socks you will hunt in: wool or synthetic, never cotton.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">2</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Hunting socks</text>
+<path d="M150 90 L150 180 Q150 220 200 220 L260 220 Q280 220 280 200 Q280 180 250 180 L200 180 L200 90 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="120" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Wool or</text><text x="300" y="140" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">synthetic</text><text x="300" y="170" font-family="sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start">Not cotton</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Same socks for training and hunting.</text>
+</svg>

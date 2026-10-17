@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A March calendar with days 1 to 10 highlighted green: the only brant season in BC, in MU 2-4 only, 98 percent. 3 a day, 9 in possession.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brant: a 10 day window (98%)</text>
+  <text x="200" y="50" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">March, MU 2-4 only</text>
+  <rect x="20" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="44" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+  <rect x="72" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="96" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+  <rect x="124" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="148" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+  <rect x="176" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="200" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+  <rect x="228" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="252" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+  <rect x="280" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="304" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+  <rect x="332" y="66" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="356" y="90" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">7</text>
+  <rect x="20" y="108" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="44" y="132" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">8</text>
+  <rect x="72" y="108" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="96" y="132" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">9</text>
+  <rect x="124" y="108" width="48" height="36" rx="5" fill="#2f6e3b"/>
+  <text x="148" y="132" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">10</text>
+  <rect x="176" y="108" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="200" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">11</text>
+  <rect x="228" y="108" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="252" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">12</text>
+  <rect x="280" y="108" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="304" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">13</text>
+  <rect x="332" y="108" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="356" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">14</text>
+  <rect x="20" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="44" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">15</text>
+  <rect x="72" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="96" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">16</text>
+  <rect x="124" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="148" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">17</text>
+  <rect x="176" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="200" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">18</text>
+  <rect x="228" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="252" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">19</text>
+  <rect x="280" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="304" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">20</text>
+  <rect x="332" y="150" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="356" y="174" font-size="15" fill="#2f3a2b" text-anchor="middle">21</text>
+  <rect x="20" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="44" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">22</text>
+  <rect x="72" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="96" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">23</text>
+  <rect x="124" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="148" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">24</text>
+  <rect x="176" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="200" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">25</text>
+  <rect x="228" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="252" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">26</text>
+  <rect x="280" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="304" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">27</text>
+  <rect x="332" y="192" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="356" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">28</text>
+  <rect x="20" y="234" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="44" y="258" font-size="15" fill="#2f3a2b" text-anchor="middle">29</text>
+  <rect x="72" y="234" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="96" y="258" font-size="15" fill="#2f3a2b" text-anchor="middle">30</text>
+  <rect x="124" y="234" width="48" height="36" rx="5" fill="#dfe6d3"/>
+  <text x="148" y="258" font-size="15" fill="#2f3a2b" text-anchor="middle">31</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3 a day, 9 in possession</text>
+</svg>

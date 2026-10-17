@@ -1,0 +1,1031 @@
+{
+ "updated": "2026-10-17",
+ "note": "Names found in the content but left out of places.json, with the reason. Not shipped in the app.",
+ "names": [
+  {
+   "name": "Fraser Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 181
+  },
+  {
+   "name": "Pitt Addington Marsh",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 16
+  },
+  {
+   "name": "Swan Lake",
+   "why": "ambiguous: 9 places in BC have this name",
+   "n": 16
+  },
+  {
+   "name": "Skull Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 13
+  },
+  {
+   "name": "Atlin",
+   "why": "found in MU 6-25, but the lesson names MU 5-15, 7-37, 7-39, 7-41, 7-50, 7-54 next to it",
+   "n": 11
+  },
+  {
+   "name": "Creston Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 10
+  },
+  {
+   "name": "Oliver Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 9
+  },
+  {
+   "name": "Dewdrop Rosseau Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 8
+  },
+  {
+   "name": "Hornby Islands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 8
+  },
+  {
+   "name": "Wrangel Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 7
+  },
+  {
+   "name": "Clinton Creek",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 6
+  },
+  {
+   "name": "Shaman Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 6
+  },
+  {
+   "name": "Sterling Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 6
+  },
+  {
+   "name": "Bryce Canyon",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 5
+  },
+  {
+   "name": "Galloping Hills",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 5
+  },
+  {
+   "name": "Holt Creek",
+   "why": "ambiguous: 3 places in BC have this name",
+   "n": 5
+  },
+  {
+   "name": "Whistler Olympic Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 5
+  },
+  {
+   "name": "An FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 4
+  },
+  {
+   "name": "Black Hills",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 4
+  },
+  {
+   "name": "Grizzly Plateau",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 4
+  },
+  {
+   "name": "Harrison Creek",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 4
+  },
+  {
+   "name": "Jamieson Creek",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 4
+  },
+  {
+   "name": "Lac du Bois Grasslands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 4
+  },
+  {
+   "name": "Sandy Creek",
+   "why": "ambiguous: 4 places in BC have this name",
+   "n": 4
+  },
+  {
+   "name": "Squamish Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 4
+  },
+  {
+   "name": "Whiteswan FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 4
+  },
+  {
+   "name": "Apex Mountain",
+   "why": "ambiguous: 3 places in BC have this name",
+   "n": 3
+  },
+  {
+   "name": "Dewdrop Range",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 3
+  },
+  {
+   "name": "Erickson",
+   "why": "found in MU 4-6, but the lesson names MU 1-6 next to it",
+   "n": 3
+  },
+  {
+   "name": "Harrison Creek FSR",
+   "why": "more than one road with this name in the forest road layer",
+   "n": 3
+  },
+  {
+   "name": "Isobel Lakes",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 3
+  },
+  {
+   "name": "Kam Lake",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 3
+  },
+  {
+   "name": "Lower Burnt FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 3
+  },
+  {
+   "name": "North Sloquet Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 3
+  },
+  {
+   "name": "Poison Creek",
+   "why": "ambiguous: 4 places in BC have this name",
+   "n": 3
+  },
+  {
+   "name": "Salmon River",
+   "why": "ambiguous: 6 places in BC have this name",
+   "n": 3
+  },
+  {
+   "name": "Saltery Bay",
+   "why": "found in MU 1-12, but the lesson names MU 2-12 next to it",
+   "n": 3
+  },
+  {
+   "name": "Telkwa Mountains",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 3
+  },
+  {
+   "name": "White Lake Grasslands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 3
+  },
+  {
+   "name": "Argenta Marsh",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Bear Creek",
+   "why": "ambiguous: 14 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Bear Pass",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Birkenhead Lake FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Black Creek",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Blue Mountains",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Boundary Creek",
+   "why": "ambiguous: 4 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Burton Creek",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Chehalis Fleetwood FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Chilliwack Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Cottonwood River",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Elephant Hills",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Gladys Lake",
+   "why": "ambiguous: 3 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Grano FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Grave Prairie",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Green Lake",
+   "why": "ambiguous: 7 places in BC have this name",
+   "n": 2
+  },
+  {
+   "name": "Gulf Islands National Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Hot Lakes",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "James Islands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Lazo Marsh",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Level Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Lillooet South FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Mabel Mountains",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Madison Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "New Lower Burnt River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Okanagan Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Phelix Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Pickering Hills",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Pikett Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Premier Ridge",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Ryan River FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Salal Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Shoemaker Bay",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "South Okanagan Grasslands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Sportsman Ridge",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Squamish River Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Squamish Valley FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Sunshine Meadows",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Texas Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Thompson Rivers FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 2
+  },
+  {
+   "name": "Wasa Slough",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Woodhus Slough",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "All of Savary Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "An Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Arrow Neck FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Ashlu Creek North FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Atlin Park Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Barriere Lakes",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Bear Pass Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Between Sulphur Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Birkenhead FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Bitter Creek",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Blackwater Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Blanchet Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Bleeker FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Burrell Young Lake FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Castle Creek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Cayoosh Mountain Range",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "City of Dawson Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Clearwater Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Copper Mountain",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Cougar Ridge",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "DeCourcy Islands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Deeh Ridge Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Deep Bay",
+   "why": "ambiguous: 4 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Deep Lake",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Delkatla Slough",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Dickebush Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Dore River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Dore River Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Downie Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Driftwood Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Dunster Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "East River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "East Twin Creek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Edziza Park Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Elk Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Extend Morkill FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Fife Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Fishtrap FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Fry Creek Canyon",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Ft Nelson River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Glacier Bay",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Gleason Creek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Goat Island Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Goatskin Rendall FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Gribbel Islands",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Halfway River",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Hart Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Hoole Creek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Hotsprings Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Hunting Area Kalamalka Lake Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Jacks Lake",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Kalamalka Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Kenetrek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Kiwa Creek Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Lighthouse Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Lillooet FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Link Island",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Lois River Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Long Range",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Lower Fraser Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Main FSR",
+   "why": "more than one road with this name in the forest road layer",
+   "n": 1
+  },
+  {
+   "name": "Mary River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Mcleod Lake",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Meadow Creek",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Meager Creek North FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Meager Creek South FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Mid Oct Heffley Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Monkman Lake Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Moose Lake",
+   "why": "ambiguous: 11 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Morkill FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Mount Kettley FSRs",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Mount Thompson Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Muncho Lake Park Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Municipality of Lake",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Murdock Point",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Nass Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Nass Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Nk'Mip Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "North Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "North Kitsumkalum Lake",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Northern Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Olympic Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Ospika River Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Parts of Hatzic Slough",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Powell Lake",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Prince Edward Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Quinn Creek",
+   "why": "ambiguous: 2 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Radar Lake",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Rainy Day Lake Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Regional Park",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Rendall FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Rescind Underdown Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Rialto Cr FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Shulaps Mountain Range",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Shuswap Lakes",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Sitka Dew Point",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Skagit Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Smallwood FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "South Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "South of Kamloops Lake",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Spillimacheen FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Sproule Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Squamish Rivers Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Swanson Creek",
+   "why": "ambiguous: 3 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Tagish Highlands Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Teck Coal Limited Coal Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Telegraph Creek",
+   "why": "ambiguous: 3 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Toad River Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Tranquille Criss Creek FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Trout Creek",
+   "why": "ambiguous: 5 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Turnbill Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Turnigan River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Tuya Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Upper Elk Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Upper Lillooet North FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Upper Wigwam River",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Victory Ridge",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Warne Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Wet Fraser Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Wigwam Flats",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Winchester Power Point",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 1
+  },
+  {
+   "name": "Windfall Creek",
+   "why": "ambiguous: 4 places in BC have this name",
+   "n": 1
+  },
+  {
+   "name": "Yalakom River FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Young Lake FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  }
+ ]
+}

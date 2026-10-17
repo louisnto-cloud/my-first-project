@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" font-family="sans-serif" role="img" aria-label="Top view of a hedgerow in a field, a tip. The walker moves along the hedgerow toward the blocker, who stands in the open just past the far end. Birds flush out of the end of the hedgerow. A red wedge shows the no shot arc: never back toward the hedgerow and the walker. A green wedge shows the safe zone out over open ground. Agree the arc before you start.">
+<rect width="400" height="318" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pinch a hedgerow (Tip)</text>
+<defs><clipPath id="sb-upland-pinch-c"><rect x="8" y="40" width="384" height="222" rx="10"/></clipPath><pattern id="sb-upland-pinch-rows" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#e2d59a"/><rect y="5" width="12" height="2" fill="#d3c483"/></pattern></defs>
+<g clip-path="url(#sb-upland-pinch-c)"><rect x="8" y="40" width="384" height="222" fill="url(#sb-upland-pinch-rows)"/>
+<path data-tip="Safe zone|Shoot only out over open ground. Each hunter owns a zone of fire and never swings past it (Tip)." d="M296 150 L343.0 68.6 A94 94 0 0 1 343.0 231.4z" fill="#5f8f4a" opacity="0.45"/>
+<path data-tip="No shot arc|The blocker is in the line of fire. Never shoot back toward the hedgerow and the walker. Agree a no shot arc before you start (Tip)." d="M296 150 L183.4 215.0 A130 130 0 0 1 183.4 85.0z" fill="#c92a2a" opacity="0.45"/>
+</g>
+<circle cx="24.9" cy="159.4" r="9.5" fill="#000" opacity=".12"/><circle cx="24.9" cy="157.4" r="9.5" fill="#6a8a45"/><circle cx="22.0" cy="154.6" r="4.3" fill="#fff" opacity=".12"/>
+<circle cx="31.6" cy="146.2" r="12.2" fill="#000" opacity=".12"/><circle cx="31.6" cy="144.2" r="12.2" fill="#6a8a45"/><circle cx="27.9" cy="140.5" r="5.5" fill="#fff" opacity=".12"/>
+<circle cx="39.6" cy="154.3" r="10.8" fill="#000" opacity=".12"/><circle cx="39.6" cy="152.3" r="10.8" fill="#557538"/><circle cx="36.4" cy="149.1" r="4.9" fill="#fff" opacity=".12"/>
+<circle cx="47.8" cy="153.2" r="12.6" fill="#000" opacity=".12"/><circle cx="47.8" cy="151.2" r="12.6" fill="#557538"/><circle cx="44.0" cy="147.4" r="5.7" fill="#fff" opacity=".12"/>
+<circle cx="54.0" cy="147.7" r="9.1" fill="#000" opacity=".12"/><circle cx="54.0" cy="145.7" r="9.1" fill="#557538"/><circle cx="51.3" cy="143.0" r="4.1" fill="#fff" opacity=".12"/>
+<circle cx="63.1" cy="151.6" r="12.6" fill="#000" opacity=".12"/><circle cx="63.1" cy="149.6" r="12.6" fill="#6a8a45"/><circle cx="59.3" cy="145.8" r="5.7" fill="#fff" opacity=".12"/>
+<circle cx="68.9" cy="148.1" r="13.0" fill="#000" opacity=".12"/><circle cx="68.9" cy="146.1" r="13.0" fill="#5f7f3e"/><circle cx="65.0" cy="142.2" r="5.9" fill="#fff" opacity=".12"/>
+<circle cx="77.3" cy="157.3" r="9.4" fill="#000" opacity=".12"/><circle cx="77.3" cy="155.3" r="9.4" fill="#5f7f3e"/><circle cx="74.5" cy="152.5" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="84.6" cy="155.1" r="11.0" fill="#000" opacity=".12"/><circle cx="84.6" cy="153.1" r="11.0" fill="#6a8a45"/><circle cx="81.3" cy="149.8" r="5.0" fill="#fff" opacity=".12"/>
+<circle cx="92.7" cy="147.3" r="12.2" fill="#000" opacity=".12"/><circle cx="92.7" cy="145.3" r="12.2" fill="#6a8a45"/><circle cx="89.0" cy="141.6" r="5.5" fill="#fff" opacity=".12"/>
+<circle cx="98.3" cy="159.1" r="11.0" fill="#000" opacity=".12"/><circle cx="98.3" cy="157.1" r="11.0" fill="#5f7f3e"/><circle cx="95.0" cy="153.8" r="5.0" fill="#fff" opacity=".12"/>
+<circle cx="106.0" cy="157.8" r="10.8" fill="#000" opacity=".12"/><circle cx="106.0" cy="155.8" r="10.8" fill="#6a8a45"/><circle cx="102.8" cy="152.6" r="4.9" fill="#fff" opacity=".12"/>
+<circle cx="116.3" cy="148.6" r="10.4" fill="#000" opacity=".12"/><circle cx="116.3" cy="146.6" r="10.4" fill="#557538"/><circle cx="113.2" cy="143.5" r="4.7" fill="#fff" opacity=".12"/>
+<circle cx="120.7" cy="156.2" r="9.4" fill="#000" opacity=".12"/><circle cx="120.7" cy="154.2" r="9.4" fill="#6a8a45"/><circle cx="117.9" cy="151.4" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="128.9" cy="149.7" r="11.6" fill="#000" opacity=".12"/><circle cx="128.9" cy="147.7" r="11.6" fill="#557538"/><circle cx="125.4" cy="144.2" r="5.2" fill="#fff" opacity=".12"/>
+<circle cx="137.0" cy="147.2" r="9.6" fill="#000" opacity=".12"/><circle cx="137.0" cy="145.2" r="9.6" fill="#6a8a45"/><circle cx="134.1" cy="142.3" r="4.3" fill="#fff" opacity=".12"/>
+<circle cx="143.5" cy="154.5" r="12.2" fill="#000" opacity=".12"/><circle cx="143.5" cy="152.5" r="12.2" fill="#6a8a45"/><circle cx="139.8" cy="148.8" r="5.5" fill="#fff" opacity=".12"/>
+<circle cx="153.5" cy="152.7" r="10.4" fill="#000" opacity=".12"/><circle cx="153.5" cy="150.7" r="10.4" fill="#5f7f3e"/><circle cx="150.4" cy="147.6" r="4.7" fill="#fff" opacity=".12"/>
+<circle cx="158.4" cy="147.5" r="9.1" fill="#000" opacity=".12"/><circle cx="158.4" cy="145.5" r="9.1" fill="#557538"/><circle cx="155.7" cy="142.8" r="4.1" fill="#fff" opacity=".12"/>
+<circle cx="166.1" cy="157.3" r="12.6" fill="#000" opacity=".12"/><circle cx="166.1" cy="155.3" r="12.6" fill="#5f7f3e"/><circle cx="162.3" cy="151.5" r="5.7" fill="#fff" opacity=".12"/>
+<circle cx="174.6" cy="145.9" r="12.7" fill="#000" opacity=".12"/><circle cx="174.6" cy="143.9" r="12.7" fill="#5f7f3e"/><circle cx="170.8" cy="140.1" r="5.7" fill="#fff" opacity=".12"/>
+<circle cx="180.2" cy="156.3" r="10.2" fill="#000" opacity=".12"/><circle cx="180.2" cy="154.3" r="10.2" fill="#5f7f3e"/><circle cx="177.1" cy="151.2" r="4.6" fill="#fff" opacity=".12"/>
+<circle cx="190.0" cy="150.1" r="12.3" fill="#000" opacity=".12"/><circle cx="190.0" cy="148.1" r="12.3" fill="#6a8a45"/><circle cx="186.3" cy="144.4" r="5.5" fill="#fff" opacity=".12"/>
+<circle cx="195.9" cy="147.7" r="10.6" fill="#000" opacity=".12"/><circle cx="195.9" cy="145.7" r="10.6" fill="#557538"/><circle cx="192.7" cy="142.5" r="4.8" fill="#fff" opacity=".12"/>
+<circle cx="203.2" cy="145.3" r="9.3" fill="#000" opacity=".12"/><circle cx="203.2" cy="143.3" r="9.3" fill="#6a8a45"/><circle cx="200.4" cy="140.5" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="209.4" cy="145.4" r="9.4" fill="#000" opacity=".12"/><circle cx="209.4" cy="143.4" r="9.4" fill="#6a8a45"/><circle cx="206.6" cy="140.6" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="218.5" cy="146.5" r="12.7" fill="#000" opacity=".12"/><circle cx="218.5" cy="144.5" r="12.7" fill="#557538"/><circle cx="214.7" cy="140.7" r="5.7" fill="#fff" opacity=".12"/>
+<circle cx="226.6" cy="159.7" r="9.3" fill="#000" opacity=".12"/><circle cx="226.6" cy="157.7" r="9.3" fill="#5f7f3e"/><circle cx="223.8" cy="154.9" r="4.2" fill="#fff" opacity=".12"/>
+<circle cx="234.9" cy="149.5" r="11.6" fill="#000" opacity=".12"/><circle cx="234.9" cy="147.5" r="11.6" fill="#5f7f3e"/><circle cx="231.4" cy="144.0" r="5.2" fill="#fff" opacity=".12"/>
+<circle cx="241.6" cy="149.6" r="12.9" fill="#000" opacity=".12"/><circle cx="241.6" cy="147.6" r="12.9" fill="#5f7f3e"/><circle cx="237.7" cy="143.7" r="5.8" fill="#fff" opacity=".12"/>
+<rect x="8" y="40" width="384" height="222" rx="10" fill="none" stroke="#6b5b4b" stroke-width="1.4"/>
+<g data-tip="1. Walker|One hunter walks the hedgerow slowly toward the other (Tip). Quail and grouse run along hedges and brushy strips to the end (75%).">
+<circle cx="40" cy="112" r="10" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M56 112 H120" stroke="#e8590c" stroke-width="3.4"/><path d="M130.0 112.0 L118.0 105.4 L118.0 118.6z" fill="#e8590c"/>
+<line x1="40" y1="102" x2="40" y2="91" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="40" cy="102" r="2.6" fill="#2f3a2b"/>
+<rect x="8.0" y="64.0" width="84" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="50" y="83" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1 Walker</text>
+</g>
+<g data-tip="3. Blocker|Stands in the open just past the end of the cover, never facing back into it (Tip). Birds flush toward the blocker.">
+<circle cx="296" cy="150" r="10" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<line x1="294" y1="160" x2="278" y2="202" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="294" cy="160" r="2.6" fill="#2f3a2b"/>
+<rect x="226" y="202.0" width="88" height="27.0" rx="5" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="270" y="221" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3 Blocker</text>
+</g>
+<g data-tip="2. Birds flush at the end|The end of a hedge or brushy strip is where birds flush (Tip). The pinch cuts off birds that run.">
+<path d="M262 148 C290 120 318 100 344 88" stroke="#8b5a2b" stroke-width="2.4" stroke-dasharray="6 4" fill="none"/>
+<g transform="translate(352 84) rotate(-28)"><ellipse rx="9" ry="5" fill="#8a7a66"/><path d="M-2 -3 C-6 -12 -12 -16 -16 -16 C-12 -10 -10 -6 -8 -2z M-2 3 C-6 12 -12 16 -16 16 C-12 10 -10 6 -8 2z" fill="#6b5b4b"/><circle cx="9" cy="0" r="3.4" fill="#c98a4a"/></g>
+<rect x="236" y="50" width="78" height="27" rx="5" fill="#8b5a2b"/>
+<text x="275" y="69" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2 Flush</text>
+</g>
+<line x1="110" y1="162" x2="110" y2="186" stroke="#2f3a2b" stroke-width="1.3"/><circle cx="110" cy="162" r="2.6" fill="#2f3a2b"/>
+<rect x="66.1" y="186.0" width="87.8" height="27.0" rx="5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="110" y="205" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hedgerow</text>
+<rect x="314.4" y="144.0" width="63.1" height="63.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="346" y="163" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Safe:</text>
+<text x="346" y="181" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">open</text>
+<text x="346" y="199" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">ground</text>
+<text x="200" y="286" font-size="16" font-weight="bold" fill="#b3261e" text-anchor="middle">Red: no shot toward the walker</text>
+<g data-tip="Agree and talk|Agree the arc before you start. Talk often so you always know where the other is. Orange on both hunters in thick cover (Tip).">
+<text x="200" y="308" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Agree the arc before you start</text>
+</g>
+</svg>

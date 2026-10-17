@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three ways to hunt ducks, top views. Decoys: ducks come to you over a spread on the water, close slow shots. Jump shooting: sneak along a creek edge and ducks flush close. Pass shooting: stand under a flight line between roost and food, long crossing shots.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g fill="#dfe6d3"><rect x="6" y="40" width="126" height="190" rx="8"/><rect x="137" y="40" width="126" height="190" rx="8"/><rect x="268" y="40" width="126" height="190" rx="8"/></g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="69" y="30">Decoys</text><text x="200" y="30">Jump</text><text x="331" y="30">Pass</text></g>
+  <ellipse cx="69" cy="120" rx="54" ry="44" fill="#cfe0ea"/>
+  <g fill="#8b5a2b"><ellipse cx="50" cy="110" rx="7" ry="4"/><ellipse cx="66" cy="102" rx="7" ry="4"/><ellipse cx="84" cy="112" rx="7" ry="4"/><ellipse cx="58" cy="132" rx="7" ry="4"/></g>
+  <rect x="50" y="170" width="38" height="16" rx="4" fill="#2f3a2b"/>
+  <path d="M120 70 C 100 80, 90 95, 78 108" stroke="#2f3a2b" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+  <path d="M160 230 C 180 190, 230 170, 220 120 S 180 60, 230 40" stroke="#4a7fb0" stroke-width="18" fill="none"/>
+  <circle cx="176" cy="160" r="8" fill="#e8590c"/>
+  <path d="M206 140 l14 -20 M222 150 l18 -12" stroke="#8b5a2b" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#cfe0ea"><ellipse cx="300" cy="200" rx="22" ry="14"/><ellipse cx="370" cy="70" rx="20" ry="12"/></g>
+  <path d="M300 190 L370 80" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="356" cy="160" r="8" fill="#e8590c"/>
+  
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="69" y="250">close, slow</text><text x="69" y="268" font-weight="bold" fill="#2f6e3b">best to learn</text>
+    <text x="200" y="250">close, fast</text><text x="200" y="268" font-weight="bold" fill="#2f6e3b">start here</text>
+    <text x="331" y="250">long, crossing</text><text x="331" y="268" font-weight="bold" fill="#c0392b">skip for now</text>
+  </g>
+  <text x="200" y="292" font-size="14" fill="#2f3a2b" text-anchor="middle">My lean (Tip)</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 6: coming home, show your Possession and Acquisition Licence to CBSA, declare the firearms with the BSF407 card ready, and declare leftover ammunition.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Coming home</text>
+<circle cx="133" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 124) scale(1.6)"><rect x="-28" y="-18" width="56" height="36" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-22" y="-11" width="15" height="19" fill="#8a9a6b"/><path d="M-2 -8 h22 M-2 -1 h22 M-2 6 h15" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<circle cx="267" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 124) scale(1.6)"><rect x="-32" y="-12" width="64" height="24" rx="10" fill="#2f3a2b"/><rect x="-26" y="-6" width="52" height="12" rx="6" fill="#6b4f35"/><rect x="-4" y="9" width="8" height="8" rx="2" fill="#e8590c"/></g>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">Show your PAL. Declare firearms</text>
+<text x="200" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">and leftover ammunition (85%).</text>
+</svg>

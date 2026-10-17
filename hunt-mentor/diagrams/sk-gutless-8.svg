@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 294" font-family="sans-serif" role="img" aria-label="Step 8: flip the deer onto the clean hide and repeat on the other side. Seven cloth game bags hang apart from a pole between two trees: two front quarters, two hind quarters, loins, neck and ribs. Every piece in its own game bag, hung apart, never stacked. Head: skull plate, or the whole head for a disease test.">
+<rect width="400" height="294" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">8  Flip onto the hide, do the other side</text>
+<rect x="11" y="40" width="10" height="150" rx="3" fill="#6b4f35"/>
+<rect x="379" y="40" width="10" height="150" rx="3" fill="#6b4f35"/>
+<line x1="10" y1="56" x2="390" y2="56" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/>
+<line x1="52.0" y1="56" x2="52.0" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M48.0 72 L56.0 72 L69.0 86 C71.0 116.4 69.0 140.0 63.0 146.0 L41.0 146.0 C35.0 140.0 33.0 116.4 35.0 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="52.0" cy="117.88" rx="10.2" ry="14.8" fill="#c96b5a" opacity=".28"/>
+<path d="M47.0 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="52" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Front</text>
+<line x1="101.3" y1="56" x2="101.3" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M97.3 72 L105.3 72 L118.3 86 C120.3 116.4 118.3 140.0 112.3 146.0 L90.3 146.0 C84.3 140.0 82.3 116.4 84.3 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="101.3" cy="117.88" rx="10.2" ry="14.8" fill="#c96b5a" opacity=".28"/>
+<path d="M96.3 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="101.3" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Front</text>
+<line x1="150.6" y1="56" x2="150.6" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M146.6 72 L154.6 72 L170.14999999999998 86 C172.14999999999998 123.06 170.14999999999998 151.1 164.14999999999998 157.1 L137.05 157.1 C131.05 151.1 129.05 123.06 131.05 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="150.6" cy="124.762" rx="11.7" ry="17.0" fill="#c96b5a" opacity=".28"/>
+<path d="M145.6 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="150.6" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hind</text>
+<line x1="199.89999999999998" y1="56" x2="199.89999999999998" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M195.89999999999998 72 L203.89999999999998 72 L219.45 86 C221.45 123.06 219.45 151.1 213.45 157.1 L186.34999999999997 157.1 C180.34999999999997 151.1 178.34999999999997 123.06 180.34999999999997 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="199.89999999999998" cy="124.762" rx="11.7" ry="17.0" fill="#c96b5a" opacity=".28"/>
+<path d="M194.89999999999998 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="199.9" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hind</text>
+<line x1="249.2" y1="56" x2="249.2" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M245.2 72 L253.2 72 L264.5 86 C266.5 111.96000000000001 264.5 132.60000000000002 258.5 138.60000000000002 L239.89999999999998 138.60000000000002 C233.89999999999998 132.60000000000002 231.89999999999998 111.96000000000001 233.89999999999998 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="249.2" cy="113.292" rx="9.2" ry="13.3" fill="#c96b5a" opacity=".28"/>
+<path d="M244.2 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="249.2" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Loins</text>
+<line x1="298.5" y1="56" x2="298.5" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M294.5 72 L302.5 72 L312.95 86 C314.95 109.74 312.95 128.9 306.95 134.9 L290.05 134.9 C284.05 128.9 282.05 109.74 284.05 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="298.5" cy="110.99799999999999" rx="8.7" ry="12.6" fill="#c96b5a" opacity=".28"/>
+<path d="M293.5 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="298.5" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Neck</text>
+<line x1="347.79999999999995" y1="56" x2="347.79999999999995" y2="72" stroke="#23261f" stroke-width="1.6"/>
+<path d="M343.79999999999995 72 L351.79999999999995 72 L363.09999999999997 86 C365.09999999999997 111.96000000000001 363.09999999999997 132.60000000000002 357.09999999999997 138.60000000000002 L338.49999999999994 138.60000000000002 C332.49999999999994 132.60000000000002 330.49999999999994 111.96000000000001 332.49999999999994 86z" fill="#f4efe2" stroke="#23261f" stroke-width="1.8"/>
+<ellipse cx="347.79999999999995" cy="113.292" rx="9.2" ry="13.3" fill="#c96b5a" opacity=".28"/>
+<path d="M342.79999999999995 75 l10 0" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round"/>
+<text x="347.8" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ribs</text>
+<text x="200" y="230" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Every piece in its own game bag.</text>
+<text x="200" y="252" font-size="16" fill="#2f3a2b" text-anchor="middle">Hang them apart, never stacked.</text>
+<text x="200" y="280" font-size="14" fill="#6b5b4b" text-anchor="middle">Head: skull plate, or whole for a disease test</text>
+</svg>

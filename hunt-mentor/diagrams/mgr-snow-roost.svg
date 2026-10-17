@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Cross section of a snow roost. A grouse dives from the air into soft snow, tunnels a short way and sits in a small chamber under 20 centimetres or more of snow. Outside air can be as cold as minus 35 degrees Celsius, while the roost stays between minus 3 and minus 12, 75 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A snow roost: a grouse igloo</text>
+<rect x="0" y="230" width="400" height="60" fill="#c9b79c"/>
+<path d="M0 120 Q200 110 400 122 L400 230 L0 230 Z" fill="#ffffff" stroke="#b9c6d3" stroke-width="2"/>
+<path d="M70 118 Q90 150 150 175 Q200 190 240 185" fill="none" stroke="#b9c6d3" stroke-width="18" stroke-linecap="round"/>
+<ellipse cx="262" cy="182" rx="40" ry="24" fill="#e8eef4" stroke="#b9c6d3" stroke-width="2"/>
+<g transform="translate(262 184) scale(0.75 0.75)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="70" y="64" font-size="16" fill="#4a7fb0" text-anchor="start" font-weight="bold">Air: as cold as -35 C</text>
+<text x="220" y="252" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Inside: -3 to -12 C (75%)</text>
+<text x="20" y="108" font-size="14" fill="#23261f" text-anchor="start">Dives in from the air</text>
+<line x1="370" y1="124" x2="370" y2="230" stroke="#23261f" stroke-width="2"/>
+<text x="362" y="160" font-size="15" fill="#23261f" text-anchor="end" font-weight="bold">20 cm+</text>
+<text x="362" y="178" font-size="14" fill="#23261f" text-anchor="end">soft snow</text>
+</svg>

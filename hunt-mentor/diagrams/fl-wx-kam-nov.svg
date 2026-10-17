@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" role="img" aria-label="Kamloops A, November normals 1991 to 2020: average high 5.8, average low minus 1.1, mean 2.3 degrees; 16 nights at or below 0; 10 cm of snow on about 4 days; 26 mm of precipitation.">
+  <rect x="0" y="0" width="400" height="312" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Kamloops in November (normals)</text>
+<rect x="10.0" y="50" width="185.0" height="106" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="102.5" cy="84.1" r="10" fill="#8a9a6b"/><line x1="116.5" y1="84.1" x2="124.5" y2="84.1" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="112.39972423989164" y1="93.99926562802017" x2="118.05670951982972" y2="99.65598884403171" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="102.50064857512832" y1="98.09999998497679" x2="102.50101918948737" y2="106.0999999763921" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="92.60119300509682" y1="94.0001828305166" x2="86.94473186515214" y2="99.65743016224037" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="88.50000006009282" y1="84.10129715025523" x2="80.50000009443156" y2="84.10203837897252" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="92.59935860010594" y1="74.20165165945834" x2="86.94184922873791" y2="68.54545260772025" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="102.4980542746206" y1="70.10000013520883" x2="102.49694243154667" y2="62.100000212471016" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/><line x1="112.39788966493656" y1="74.19890005197695" x2="118.05382661632888" y2="68.54112865310663" stroke="#8a9a6b" stroke-width="3" stroke-linecap="round"/>
+<text x="102.5" y="126" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">High 5.8 °C</text>
+<text x="102.5" y="145" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">average daily max</text>
+<rect x="205.0" y="50" width="185.0" height="106" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="297.5" cy="84.1" r="16" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="3"/>
+<text x="297.5" y="126" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Low minus 1.1 °C</text>
+<text x="297.5" y="145" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">average daily min</text>
+<rect x="10.0" y="166" width="185.0" height="106" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="102.5" y="208.1" font-family="sans-serif" font-size="26" font-weight="bold" fill="#4a7fb0" text-anchor="middle">16</text>
+<text x="102.5" y="242" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">16 frosty nights</text>
+<text x="102.5" y="261" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">min at or below 0</text>
+<rect x="205.0" y="166" width="185.0" height="106" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="297.5" y="210.1" font-family="sans-serif" font-size="30" fill="#4a7fb0" text-anchor="middle">❄</text>
+<text x="297.5" y="242" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">10 cm of snow</text>
+<text x="297.5" y="261" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">about 4 snow days</text>
+<text x="200" y="300" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Environment Canada, Kamloops A (95%)</text>
+</svg>

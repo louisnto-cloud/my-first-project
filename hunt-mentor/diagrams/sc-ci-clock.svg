@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 334" font-family="sans-serif" role="img" aria-label="Timeline from September to December showing the compulsory inspection deadline for sheep and goats: within 30 days and before December 5, whichever comes first. Example 1: killed September 15, due October 15, 30 days later. Example 2: killed November 20, due December 5, not December 20. By appointment only, no drop ins, 98 percent.">
+<rect width="400" height="334" fill="#fffaf0"/>
+<text x="12" y="24" font-size="17" font-weight="bold" fill="#2f3a2b">Inspection deadline: sheep and goat</text>
+<text x="12" y="46" font-size="15" fill="#2f3a2b">Within <tspan font-weight="bold" fill="#c2410c">30 days</tspan> AND before <tspan font-weight="bold" fill="#c2410c">December 5</tspan></text>
+<text x="58.2295" y="76" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.23" y="76" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<line x1="104.5" y1="62" x2="104.5" y2="82" stroke="#cfc6b0" stroke-width="1.4"/>
+<text x="246.23" y="76" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<line x1="200.0" y1="62" x2="200.0" y2="82" stroke="#cfc6b0" stroke-width="1.4"/>
+<text x="340.23" y="76" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<line x1="292.5" y1="62" x2="292.5" y2="82" stroke="#cfc6b0" stroke-width="1.4"/>
+<text x="12" y="104" font-size="15" fill="#2f3a2b">Kill Sep 15: due <tspan font-weight="bold" fill="#2f6e3b">Oct 15</tspan></text>
+<rect x="12" y="112" width="376" height="28" rx="6" fill="#efe8d6"/>
+<rect x="55.1" y="112" width="92.5" height="28" rx="6" fill="#4a7fb0"/>
+<text x="105.377" y="132" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">30 days</text>
+<circle cx="55.1" cy="126" r="7" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M147.6 110 V142 M147.6 110 l14 5 l-14 5" stroke="#2f6e3b" stroke-width="2.4" fill="#2f6e3b"/>
+<text x="12" y="168" font-size="15" fill="#2f3a2b">Kill Nov 20: due <tspan font-weight="bold" fill="#c2410c">Dec 5</tspan>, not Dec 20</text>
+<rect x="12" y="176" width="376" height="28" rx="6" fill="#efe8d6"/>
+<rect x="258.6" y="176" width="92.5" height="28" rx="6" fill="#c3d3e3"/>
+<rect x="258.6" y="176" width="46.2" height="28" rx="6" fill="#4a7fb0"/>
+<circle cx="258.6" cy="190" r="7" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/>
+<path d="M336.5 185.5 l9.0 9.0 M345.5 185.5 l-9.0 9.0" stroke="#c92a2a" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="304.8" y1="108" x2="304.8" y2="144" stroke="#e8590c" stroke-width="3"/>
+<line x1="304.8" y1="172" x2="304.8" y2="208" stroke="#e8590c" stroke-width="3"/>
+<path d="M294.8 172 H314.8" stroke="none"/>
+<path d="M304.8 208 V216" stroke="#e8590c" stroke-width="3"/>
+<rect x="275.3" y="216" width="59.0" height="26" rx="13.0" fill="#e8590c"/><text x="304.8" y="234.4" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Dec 5</text>
+<circle cx="20" cy="264" r="7" fill="#2f3a2b"/>
+<text x="34" y="269" font-size="15" fill="#2f3a2b">kill</text>
+<path d="M80 256 V272 M80 256 l12 4 l-12 4" stroke="#2f6e3b" stroke-width="2.2" fill="#2f6e3b"/>
+<text x="98" y="269" font-size="15" fill="#2f3a2b">inspection due</text>
+<rect x="8" y="284" width="384" height="42" rx="9" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="200" y="311" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">By appointment only. No drop ins (98%).</text>
+</svg>

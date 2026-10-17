@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation of a stalk, top view. A deer feeds with its head down. The hunter moves from one bush to the next only while the head is down. Each time the deer lifts its head, the hunter freezes. After three moves the hunter is behind the last bush, in range, wind in the face.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#efe6cf"/>
+  <g stroke="#4a7fb0" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M370 40 l-40 30 m4 -12 l-4 12 l12 -2"><animateTransform attributeName="transform" type="translate" values="0 0;-10 8;0 0" dur="2s" repeatCount="indefinite"/></path>
+  </g>
+  <text x="388" y="24" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="end">wind in your face</text>
+  <g fill="#8a9a6b"><circle cx="90" cy="236" r="20"/><circle cx="160" cy="180" r="20"/><circle cx="230" cy="140" r="18"/><circle cx="268" cy="110" r="16"/></g>
+  <g>
+    <ellipse cx="330" cy="90" rx="22" ry="11" fill="#8b5a2b"/>
+    <circle cx="308" cy="104" r="7" fill="#8b5a2b">
+      <animate attributeName="cy" values="104;72;104;72;104" keyTimes="0;0.22;0.39;0.66;0.78" calcMode="discrete" dur="9s" fill="freeze"/>
+    </circle>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="66 252;66 252;140 196;140 196;140 196;212 156;212 156;212 156;252 126;252 126" keyTimes="0;0.03;0.2;0.22;0.4;0.62;0.66;0.79;0.95;1" dur="9s" fill="freeze"/>
+    <circle r="9" fill="#e8590c"/>
+  </g>
+  <g>
+    <text x="12" y="290" font-size="16" font-weight="bold" fill="#2f6e3b">Head down: move
+      <animate attributeName="opacity" values="1;0;1;0;1" keyTimes="0;0.22;0.39;0.66;0.78" calcMode="discrete" dur="9s" fill="freeze"/></text>
+    <text x="12" y="290" font-size="16" font-weight="bold" fill="#c0392b" opacity="0">Head up: FREEZE
+      <animate attributeName="opacity" values="0;1;0;1;0" keyTimes="0;0.22;0.39;0.66;0.78" calcMode="discrete" dur="9s" fill="freeze"/></text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="8.6s" dur=".4s" fill="freeze"/>
+    <rect x="220" y="244" width="170" height="44" rx="8" fill="#2f3a2b"/>
+    <text x="305" y="272" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">In range, hidden</text>
+  </g>
+</svg>

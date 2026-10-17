@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 292" font-family="sans-serif" role="img" aria-label="Calendar bars, October to December. Rut timing, 80 percent: the white tailed deer rut peaks in November; the mule deer rut runs mid November to mid December. Opening day hunting pressure pushes deer to thick cover and to night within about 48 hours, 65 percent. In the rut, bucks move more and in daylight, 75 percent.">
+<rect width="400" height="292" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Rut timing (80%)</text>
+<text x="76.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="200" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="323.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">White tailed deer rut peak</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">November</text>
+<rect x="14.0" y="80" width="125.3" height="16" fill="#efe8d6"/>
+<rect x="139.3" y="80" width="121.3" height="16" fill="#f8f3e6"/>
+<rect x="260.7" y="80" width="125.3" height="16" fill="#efe8d6"/>
+<rect x="139.3" y="81" width="121.3" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer rut</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">mid Nov to mid Dec</text>
+<rect x="14.0" y="134" width="125.3" height="16" fill="#efe8d6"/>
+<rect x="139.3" y="134" width="121.3" height="16" fill="#f8f3e6"/>
+<rect x="260.7" y="134" width="125.3" height="16" fill="#efe8d6"/>
+<rect x="196.0" y="135" width="125.3" height="14" rx="3" fill="#e8590c"/>
+<rect x="8" y="172" width="384" height="52" rx="8" fill="#f4eedf"/>
+<g transform="translate(34 198) scale(0.8)" fill="#c2410c" stroke="none"><path d="M-16 -2 H8 V-5 H12 V-2 H16 V1 H-2 L-4 3 H-8 L-11 8 H-16 L-13 1 H-16z"/></g>
+<text x="62" y="194" font-size="16" font-weight="bold" fill="#2f3a2b">Opener: deer go to thick cover</text>
+<text x="62" y="214" font-size="15" fill="#2f3a2b">and night within about 48 h (65%)</text>
+<rect x="8" y="230" width="384" height="52" rx="8" fill="#f4eedf"/>
+<g transform="translate(34 256) scale(0.8)" fill="#8b5a2b" stroke="none"><circle r="14"/><circle r="11" fill="#fffaf0"/><path d="M0 -8 V0 L6 4" stroke="#8b5a2b" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<text x="62" y="252" font-size="16" font-weight="bold" fill="#2f3a2b">In the rut, bucks move more</text>
+<text x="62" y="272" font-size="15" fill="#2f3a2b">and in daylight (75%)</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a cliff. Several contour lines squeeze together until they touch in the middle. A red X marks the cliff. An orange dashed route goes around the end of it instead.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="2.5">
+    <path d="M10 70 C 120 74, 160 142, 200 148 C 240 142, 280 74, 390 70"/>
+    <path d="M10 100 C 120 104, 160 146, 200 150 C 240 146, 280 104, 390 100"/>
+    <path d="M10 200 C 120 196, 160 154, 200 152 C 240 154, 280 196, 390 200"/>
+    <path d="M10 230 C 120 226, 160 156, 200 154 C 240 156, 280 226, 390 230"/>
+  </g>
+  <path d="M186 136 L214 164 M214 136 L186 164" stroke="#c0392b" stroke-width="5"/>
+  <path d="M60 260 C 40 180, 40 120, 60 50" fill="none" stroke="#e8590c" stroke-width="3.5" stroke-dasharray="8 6"/>
+  <polygon points="52,56 68,56 60,40" fill="#e8590c"/>
+  <text x="70" y="168" font-size="14" font-weight="bold" fill="#e8590c">go around</text>
+  <text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Cliff</text>
+  <text x="200" y="292" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Lines touch = cliff. No route here</text>
+</svg>

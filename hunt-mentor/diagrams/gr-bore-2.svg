@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bore sight step 2: look through the bore from the back. Move the rifle until the target sits in the centre of the round bore view.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Look through the bore</text>
+  <circle cx="200" cy="155" r="110" fill="#2f3a2b"/>
+  <circle cx="200" cy="155" r="70" fill="#4a4f48"/>
+  <circle cx="200" cy="155" r="44" fill="#dfe6d3"/>
+  <circle cx="200" cy="155" r="16" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><circle cx="200" cy="155" r="6" fill="#e8590c"/>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Target centred in the bore</text>
+  <text x="330" y="70" font-size="14" fill="#fffaf0" text-anchor="middle">Barrel</text>
+</svg>

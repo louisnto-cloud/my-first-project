@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation, top view. Wind blows from the grouse toward you. The grouse scent drifts downwind in a widening cone. Your dog zig zags into the wind, crosses the scent cone, turns up it and closes on the grouse. Point or flush: be ready." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Your dog works into the wind</text>
+<rect x="0" y="40" width="400" height="260" fill="#dfe6d3" opacity=".6"/>
+<g><line x1="330" y1="70" x2="270.0" y2="70.0" stroke="#4a7fb0" stroke-width="3"/><polygon points="270.0,70.0 279.0,65.7 279.0,74.3" fill="#4a7fb0"/><animateTransform attributeName="transform" type="translate" values="0 0;-20 0;0 0" dur="2s" repeatCount="indefinite"/></g>
+<g><line x1="330" y1="120" x2="270.0" y2="120.0" stroke="#4a7fb0" stroke-width="3"/><polygon points="270.0,120.0 279.0,115.7 279.0,124.3" fill="#4a7fb0"/><animateTransform attributeName="transform" type="translate" values="0 0;-20 0;0 0" dur="2s" repeatCount="indefinite"/></g>
+<text x="390" y="56" font-size="15" fill="#4a7fb0" text-anchor="end" font-weight="bold">Wind</text>
+<path d="M300 170 L80 110 L80 230 Z" fill="#e8590c" opacity=".18"/>
+<g transform="translate(300 170)"><ellipse cx="0" cy="8" rx="30" ry="14" fill="#8a9a6b"/></g>
+<g transform="translate(302 168) scale(0.55 0.55)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#6b4f35"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#9a6b45"/><circle cx="21" cy="-14" r="8" fill="#9a6b45"/><polygon points="16,-20 20,-28 25,-20" fill="#9a6b45"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<text x="300" y="205" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse</text>
+<text x="390" y="288" font-size="14" fill="#e8590c" text-anchor="end" font-weight="bold">Scent drifts downwind</text>
+<path id="mgr-dog-wind-p" d="M40 280 L120 250 L40 210 L130 175 L170 168 L240 170" fill="none" stroke="#6b4f35" stroke-width="2" stroke-dasharray="6 6"/>
+<g><ellipse rx="12" ry="6" fill="#6b4f35"/><circle cx="12" cy="-4" r="5" fill="#6b4f35"/><animateMotion dur="7s" fill="freeze" rotate="auto"><mpath href="#mgr-dog-wind-p"/></animateMotion></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="4s" fill="freeze"/><text x="150" y="150" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Hits the scent!</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="7s" fill="freeze"/><rect x="10" y="48" width="230" height="30" rx="8" fill="#2f3a2b" stroke="none" stroke-width="0"/><text x="125" y="69" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Point or flush: be ready</text></g>
+</svg>

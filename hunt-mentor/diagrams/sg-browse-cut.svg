@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Who bit the twig? Deer have no upper front teeth, so they tear twigs and leave a ragged, shredded end; elk and moose tear too. Hares cut twigs clean at 45 degrees, like pruning shears. Fresh ends are pale and moist, old ends grey and dry, a tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who bit the twig?</text>
+<g data-tip="Deer: torn end|Deer have no upper front teeth. They tear twigs, leaving a ragged, shredded end (75%). A ragged, torn tip means deer, elk or moose (80%).">
+<rect x="10" y="40" width="185" height="166" rx="10" fill="#f4eedf" stroke="#c9bb9c" stroke-width="1.5"/>
+<text x="102" y="64" font-size="18" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Deer: torn</text>
+<g transform="translate(102 184)">
+<path d="M-10 0 L-10 -88 L-8 -100 L-5 -92 L-2 -106 L1 -94 L4 -104 L7 -93 L10 -99 L10 0z" fill="#6b4f35" stroke="#3b2a1c" stroke-width="1.4"/>
+<path d="M-7 -88 L-6 -96 M-3 -88 L-2 -101 M1 -88 L1 -92 M4 -88 L4 -100 M7 -88 L7 -92" stroke="#f1e2c0" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M-9 -90 C-18 -96 -22 -90 -26 -96 M9 -92 C18 -88 22 -96 28 -92" stroke="#f1e2c0" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<path d="M-6 -30 l-3 -10 M5 -60 l3 -8" stroke="#3b2a1c" stroke-width="1.2"/>
+</g>
+<text x="102" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">ragged, shredded</text>
+</g>
+<g data-tip="Hare: clean cut|Hares and rabbits cut twigs clean at 45 degrees, like pruning shears, on stems under about 1.2 cm (75%).">
+<rect x="205" y="40" width="185" height="166" rx="10" fill="#f4eedf" stroke="#c9bb9c" stroke-width="1.5"/>
+<text x="297" y="64" font-size="18" font-weight="bold" fill="#c2410c" text-anchor="middle">Hare: cut</text>
+<g transform="translate(297 184)">
+<path d="M-10 0 L-10 -86 L10 -106 L10 0z" fill="#6b4f35" stroke="#3b2a1c" stroke-width="1.4"/>
+<path d="M-10 -86 L10 -106" stroke="#f1e2c0" stroke-width="5" stroke-linecap="round"/>
+<path d="M-10 -86 L40 -86" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M30 -86 A40 40 0 0 0 18 -114" stroke="#e8590c" stroke-width="2" fill="none"/>
+<text x="44" y="-100" font-size="16" font-weight="bold" fill="#c2410c">45°</text>
+<path d="M-6 -40 l-3 -9 M5 -66 l3 -8" stroke="#3b2a1c" stroke-width="1.2"/>
+</g>
+<text x="297" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">clean, 45 degrees</text>
+</g>
+<text x="200" y="232" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How fresh? (Tip)</text>
+<g data-tip="Fresh browse|The torn end is pale green or white and moist (Tip). Browsed saskatoon in October means deer are feeding here now (Tip).">
+<rect x="10" y="244" width="185" height="48" rx="10" fill="#e3eedc" stroke="#2f6e3b" stroke-width="1.5"/>
+<circle cx="38" cy="268" r="14" fill="#6b4f35"/><circle cx="38" cy="268" r="10" fill="#e8f0c8"/><circle cx="38" cy="268" r="3" fill="#b9cf8f"/><path d="M50 276 q3 6 0 9 q-3 -3 0 -9z" fill="#4a7fb0"/>
+<text x="62" y="264" font-size="16" font-weight="bold" fill="#2f6e3b">Fresh</text>
+<text x="62" y="283" font-size="14" fill="#2f3a2b">pale, moist</text>
+</g>
+<g data-tip="Old browse|Old browse is grey and dry (Tip). Check for the clean hare cut before you call it deer.">
+<rect x="205" y="244" width="185" height="48" rx="10" fill="#ecebe6" stroke="#8a8270" stroke-width="1.5"/>
+<circle cx="233" cy="268" r="14" fill="#6b4f35"/><circle cx="233" cy="268" r="10" fill="#a9a59a"/><path d="M227 262 l5 6 l-3 6 M238 263 l-4 5" stroke="#6b6658" stroke-width="1.3" fill="none"/>
+<text x="257" y="264" font-size="16" font-weight="bold" fill="#5a5648">Old</text>
+<text x="257" y="283" font-size="14" fill="#2f3a2b">grey, dry</text>
+</g>
+</svg>

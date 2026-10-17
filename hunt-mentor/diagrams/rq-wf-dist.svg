@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 358" font-family="sans-serif" role="img" aria-label="Bar chart on a real kilometre scale, 0 to 15 km, of how far ducks commute each day. Louisiana mallards move 3.1 to 15 kilometres between day and night sites, Link and others 2011, 85 percent. Missouri mallards: average local move about 3 kilometres (2 miles); most moves are under 13 kilometres (8 miles), Ducks Unlimited satellite tracking, 65 percent.">
+<rect width="400" height="358" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How far ducks commute each day</text>
+<path d="M16.0 70 v8" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M40.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M64.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M88.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M112.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M136.0 70 v8" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M160.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M184.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M208.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M232.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M256.0 70 v8" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M280.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M304.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M328.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M352.0 70 v4" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M376.0 70 v8" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="16" y="64" font-size="14" font-weight="bold" fill="#6b5b4b">0 km</text>
+<text x="136" y="64" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">5 km</text>
+<text x="256" y="64" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">10 km</text>
+<text x="376" y="64" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">15 km</text>
+<path d="M16.0 70 H376.0" stroke="#6b5b4b" stroke-width="1.4"/>
+<text x="16" y="108" font-size="16" font-weight="bold" fill="#2f3a2b">Louisiana mallards</text>
+<text x="16" y="128" font-size="14" fill="#6b5b4b">Day sites to night sites</text>
+<path d="M136.0 131 V161" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M256.0 131 V161" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="90.4" y="133" width="285.6" height="26" rx="4" fill="#e8590c"/>
+<text x="368" y="152" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">3.1 to 15 km</text>
+<text x="16" y="189" font-size="16" font-weight="bold" fill="#2f3a2b">Missouri mallards, average</text>
+<text x="16" y="209" font-size="14" fill="#6b5b4b">Local move</text>
+<path d="M136.0 212 V242" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M256.0 212 V242" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="16.0" y="214" width="72.0" height="26" rx="4" fill="#8a9a6b"/>
+<text x="96" y="233" font-size="15" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">about 3 km (2 mi)</text>
+<text x="16" y="270" font-size="16" font-weight="bold" fill="#2f3a2b">Missouri mallards, most moves</text>
+<path d="M136.0 274 V304" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M256.0 274 V304" stroke="#d8d0bc" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="16.0" y="276" width="312.0" height="26" rx="4" fill="#2f3a2b"/>
+<text x="320" y="295" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">under 13 km (8 mi)</text>
+<text x="16" y="322" font-size="14" fill="#8b5a2b">Link and others 2011 (85%).</text>
+<text x="16" y="341" font-size="14" fill="#8b5a2b">Ducks Unlimited satellite tracking (65%).</text>
+</svg>

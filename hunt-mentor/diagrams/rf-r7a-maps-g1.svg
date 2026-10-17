@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 590" font-family="sans-serif" role="img" aria-label="Maps G1 to G9, Robson Valley goats, grouped by rule. Mountain goat closed areas: G1 Mount Thompson, MU 7-2; G5 East Twin Creek, MU 7-3; G9 Dunster, MU 7-4. Goat hunting only for Limited Entry Hunting (LEH) permit holders: G6 Dore River, MU 7-4; G7 Holmes River and Castle Creek, MUs 7-3 and 7-4; G8 Kiwa Creek, MU 7-4. G2 Robert W. Starratt Wildlife Sanctuary: no shooting, hunting or trapping, MU 7-2. No Map G3 or G4 is printed.">
+<rect width="400" height="590" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps G1 to G9. No Map G3 or G4 printed</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-14 4 C-14 -3 -9 -5 0 -5 L6 -6 L8 -11 L12 -11 L15 -7 L13 -4 L10 -3 L9 3 L9 12 H6 L5 5 L-8 5 L-9 12 H-12 L-12 7z"/><path d="M9 -11 C8 -15 6 -16 4 -16" stroke="#fffaf0" stroke-width="2" fill="none"/><path d="M13 -4 L14 1" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">MOUNTAIN GOAT CLOSED</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G1</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Mount Thompson</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">MU 7-2</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G5</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">East Twin Creek</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">MU 7-3</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="194.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="215.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G9</text>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Dunster</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">MU 7-4</text>
+<rect x="8" y="247" width="384" height="30" rx="6" fill="#6a4c93"/>
+<g transform="translate(31 262) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-14 4 C-14 -3 -9 -5 0 -5 L6 -6 L8 -11 L12 -11 L15 -7 L13 -4 L10 -3 L9 3 L9 12 H6 L5 5 L-8 5 L-9 12 H-12 L-12 7z"/><path d="M9 -11 C8 -15 6 -16 4 -16" stroke="#fffaf0" stroke-width="2" fill="none"/><path d="M13 -4 L14 1" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="50" y="268" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">GOATS: DRAW (LEH) ONLY</text>
+<rect x="8" y="283" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="295.5" width="54" height="30" rx="6" fill="#6a4c93"/>
+<text x="41" y="316.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G6</text>
+<text x="78" y="306" font-size="16" font-weight="bold" fill="#2f3a2b">Dore River</text>
+<text x="78" y="325" font-size="15" fill="#2f3a2b">MU 7-4</text>
+<rect x="14" y="352.5" width="54" height="30" rx="6" fill="#6a4c93"/>
+<text x="41" y="373.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G7</text>
+<text x="78" y="363" font-size="16" font-weight="bold" fill="#2f3a2b">Holmes River, Castle Creek</text>
+<text x="78" y="382" font-size="15" fill="#2f3a2b">MUs 7-3, 7-4</text>
+<rect x="8" y="397" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="409.5" width="54" height="30" rx="6" fill="#6a4c93"/>
+<text x="41" y="430.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G8</text>
+<text x="78" y="420" font-size="16" font-weight="bold" fill="#2f3a2b">Kiwa Creek</text>
+<text x="78" y="439" font-size="15" fill="#2f3a2b">MU 7-4</text>
+<rect x="8" y="462" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 477) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="483" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING, HUNTING OR TRAPPING</text>
+<rect x="8" y="498" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="510.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="531.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G2</text>
+<text x="78" y="521" font-size="16" font-weight="bold" fill="#2f3a2b">Robert W. Starratt Wildlife Sanctuary</text>
+<text x="78" y="540" font-size="15" fill="#2f3a2b">MU 7-2</text>
+<text x="14" y="577" font-size="14" fill="#6b5b4b">LEH: Limited Entry Hunting (the draw)</text>
+</svg>

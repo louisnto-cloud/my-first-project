@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bird tracks drawn on a grid of 1 centimetre squares. A quail track, about 3.5 centimetres long, a Tip from a related quail, VERIFY. A grouse track, about 5 centimetres, 75 percent. Both show three toes forward and a short hind toe. Quail walk with prints in one line, one in front of the next, 60 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tracks on a 1 cm grid</text>
+<line x1="20" y1="44" x2="20" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="40" y1="44" x2="40" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="60" y1="44" x2="60" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="80" y1="44" x2="80" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="100" y1="44" x2="100" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="120" y1="44" x2="120" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="140" y1="44" x2="140" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="160" y1="44" x2="160" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="180" y1="44" x2="180" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="200" y1="44" x2="200" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="220" y1="44" x2="220" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="240" y1="44" x2="240" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="260" y1="44" x2="260" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="280" y1="44" x2="280" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="300" y1="44" x2="300" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="320" y1="44" x2="320" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="340" y1="44" x2="340" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="360" y1="44" x2="360" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="380" y1="44" x2="380" y2="214" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="44" x2="380" y2="44" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="64" x2="380" y2="64" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="84" x2="380" y2="84" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="104" x2="380" y2="104" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="124" x2="380" y2="124" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="144" x2="380" y2="144" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="164" x2="380" y2="164" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="184" x2="380" y2="184" stroke="#e2dccd" stroke-width="1"/>
+<line x1="20" y1="204" x2="380" y2="204" stroke="#e2dccd" stroke-width="1"/>
+<g stroke="#2f3a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M110 180 L110 110"/><path d="M110 180 L78.5 124.0"/><path d="M110 180 L141.5 124.0"/><path d="M110 180 L110 192.6"/></g>
+<g stroke="#8b5a2b" stroke-width="5" stroke-linecap="round" fill="none"><path d="M280 194 L280 94"/><path d="M280 194 L235.0 114.0"/><path d="M280 194 L325.0 114.0"/><path d="M280 194 L280 212.0"/></g>
+<text x="110" y="236" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quail: about 3.5 cm</text>
+<text x="110" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">(Tip, VERIFY)</text>
+<text x="280" y="236" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse: about 5 cm</text>
+<text x="280" y="254" font-size="14" fill="#2f3a2b" text-anchor="middle">(75%)</text>
+<rect x="10" y="262" width="380" height="32" rx="8" fill="#dfe6d3"/>
+<text x="200" y="284" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Prints in one line, one ahead of the next (60%)</text>
+</svg>

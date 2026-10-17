@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 308" font-family="sans-serif" role="img" aria-label="Ten steps after the shot, in order: 1 wait, 2 mark, 3 track, 4 approach, 5 notch the licence, 6 keep evidence of sex, 7 field dress, 8 cool the meat, 9 transport legally, 10 report. Notch, evidence, transport and report are the law, shown in orange. The rest is skill.">
+<rect width="400" height="308" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">After the shot: 10 steps in order</text>
+<rect x="12" y="44" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="32.0" cy="62.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="67" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="54" y="68" font-size="17" font-weight="bold" fill="#2f3a2b">Wait</text>
+<path d="M32 81 V89" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="12" y="90" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="32.0" cy="108.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="113" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="54" y="114" font-size="17" font-weight="bold" fill="#2f3a2b">Mark</text>
+<path d="M32 127 V135" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="12" y="136" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="32.0" cy="154.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="159" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="54" y="160" font-size="17" font-weight="bold" fill="#2f3a2b">Track</text>
+<path d="M32 173 V181" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="12" y="182" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="32.0" cy="200.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="205" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="54" y="206" font-size="17" font-weight="bold" fill="#2f3a2b">Approach</text>
+<path d="M32 219 V227" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="12" y="228" width="176" height="36" rx="8" fill="#fde3d3" stroke="#e8590c" stroke-width="2.2"/>
+<circle cx="32.0" cy="246.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="32" y="251" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="54" y="252" font-size="17" font-weight="bold" fill="#c2410c">Notch</text>
+<rect x="212" y="44" width="176" height="36" rx="8" fill="#fde3d3" stroke="#e8590c" stroke-width="2.2"/>
+<circle cx="232.0" cy="62.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="67" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<text x="254" y="68" font-size="17" font-weight="bold" fill="#c2410c">Evidence</text>
+<path d="M232 81 V89" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="212" y="90" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="232.0" cy="108.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="113" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">7</text>
+<text x="254" y="114" font-size="17" font-weight="bold" fill="#2f3a2b">Dress</text>
+<path d="M232 127 V135" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="212" y="136" width="176" height="36" rx="8" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.2"/>
+<circle cx="232.0" cy="154.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="159" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<text x="254" y="160" font-size="17" font-weight="bold" fill="#2f3a2b">Cool</text>
+<path d="M232 173 V181" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="212" y="182" width="176" height="36" rx="8" fill="#fde3d3" stroke="#e8590c" stroke-width="2.2"/>
+<circle cx="232.0" cy="200.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="205" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">9</text>
+<text x="254" y="206" font-size="17" font-weight="bold" fill="#c2410c">Transport</text>
+<path d="M232 219 V227" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="212" y="228" width="176" height="36" rx="8" fill="#fde3d3" stroke="#e8590c" stroke-width="2.2"/>
+<circle cx="232.0" cy="246.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="232" y="251" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">10</text>
+<text x="254" y="252" font-size="17" font-weight="bold" fill="#c2410c">Report</text>
+<path d="M190 246.0 C210 246.0 192 62.0 210 62.0" stroke="#6b5b4b" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+<path d="M212.0 62.0 L204.0 57.6 L204.0 66.4z" fill="#6b5b4b"/>
+<rect x="12" y="278" width="22" height="18" rx="4" fill="#fde3d3" stroke="#e8590c" stroke-width="2"/>
+<text x="42" y="293" font-size="16" font-weight="bold" fill="#2f3a2b">Orange = the law. The rest is skill.</text>
+</svg>

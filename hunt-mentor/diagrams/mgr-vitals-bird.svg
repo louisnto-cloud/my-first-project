@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Side view of a grouse. The heart sits low and forward in the chest, under the front of the breast meat and behind the wing root. The lungs sit above it, against the back. The head and neck sit just in front, circled as the target zone for a .22 so the breast meat is saved." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Where the vitals sit</text>
+<g transform="translate(200 170) scale(3.2 3.2)"><polygon points="-20,-6 -38,-20 -48,-12 -52,0 -48,8 -20,8" fill="#8b5a2b"/><path d="M-40 -18 Q-50 -10 -48 6" fill="none" stroke="#23261f" stroke-width="3"/><ellipse cx="0" cy="0" rx="26" ry="15" fill="#c9a77f"/><circle cx="21" cy="-14" r="8" fill="#c9a77f"/><polygon points="16,-20 20,-28 25,-20" fill="#c9a77f"/><polygon points="28,-16 35,-13 28,-10" fill="#6b4f35"/><circle cx="23" cy="-16" r="1.8" fill="#23261f"/><path d="M2 13 l-2 11 M10 13 l2 11" stroke="#6b4f35" stroke-width="2.5" fill="none"/></g>
+<ellipse cx="214" cy="146" rx="32" ry="11" fill="#b5524a" opacity=".9"/>
+<ellipse cx="250" cy="182" rx="20" ry="18" fill="#c23b22" opacity=".9"/>
+<circle cx="267" cy="124" r="34" fill="none" stroke="#2f3a2b" stroke-width="4" stroke-dasharray="6 4"/>
+<text x="320" y="70" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Head and</text>
+<text x="320" y="88" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">neck</text>
+<line x1="310" y1="94" x2="285" y2="108" stroke="#2f3a2b" stroke-width="2"/>
+<text x="80" y="80" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Lungs</text>
+<line x1="96" y1="84" x2="205" y2="142" stroke="#23261f" stroke-width="1.5"/>
+<text x="110" y="268" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Heart: low, forward</text>
+<line x1="160" y1="255" x2="244" y2="192" stroke="#23261f" stroke-width="1.5"/>
+<text x="395" y="250" font-size="14" fill="#23261f" text-anchor="end">Behind the wing root,</text>
+<text x="395" y="268" font-size="14" fill="#23261f" text-anchor="end">under the front breast</text>
+</svg>

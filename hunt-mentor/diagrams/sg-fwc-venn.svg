@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Three overlapping circles: food, water and cover. Food: shrubs, hay, Douglas fir needles. Water: seeps, ponds, creeks. Cover: timber and thick brush. Where all three overlap is where the deer lives this week.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Find all three close together</text>
+  <circle cx="140" cy="140" r="95" fill="#e9dfa8" opacity=".85"/>
+  <circle cx="260" cy="140" r="95" fill="#4a7fb0" opacity=".35"/>
+  <circle cx="200" cy="235" r="95" fill="#8a9a6b" opacity=".6"/>
+  <g font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="100" y="110">Food</text><text x="300" y="110">Water</text><text x="200" y="300">Cover</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="95" y="132">shrubs, hay,</text><text x="95" y="150">fir needles</text>
+    <text x="305" y="132">seeps, ponds,</text><text x="305" y="150">creeks</text>
+    <text x="200" y="318">timber, thick brush</text>
+  </g>
+  <circle cx="200" cy="175" r="44" fill="#e8590c"/>
+  <text x="200" y="170" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Home</text>
+  <text x="200" y="189" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">this week</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="STOP, step O: Observe. Check your map app and compass, the sun, creeks, and listen for a road.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="220" width="400" height="80" fill="#dfe6d3"/>
+  <g fill="#2f3a2b" opacity=".35"><polygon points="20,220 40,140 60,220"/><polygon points="340,220 360,130 380,220"/><polygon points="300,220 316,160 332,220"/></g>
+  <circle cx="54" cy="54" r="34" fill="#e8590c"/><text x="54" y="68" font-size="40" font-weight="bold" fill="#fff" text-anchor="middle">O</text>
+  <text x="102" y="50" font-size="24" font-weight="bold" fill="#2f3a2b">Observe</text>
+  <text x="102" y="74" font-size="15" fill="#2f3a2b">Map, compass, sun, creeks, roads</text>
+  <rect x="160" y="196" width="80" height="20" rx="8" fill="#8b5a2b"/><circle cx="200" cy="140" r="13" fill="#2f3a2b"/><line x1="200" y1="154" x2="200" y2="192" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/><path d="M200 192 L226 196 L230 220" stroke="#2f3a2b" stroke-width="8" fill="none"/><rect x="90" y="120" width="40" height="64" rx="6" fill="#2f3a2b"/><rect x="95" y="128" width="30" height="46" fill="#dfe6d3"/><circle cx="110" cy="150" r="4" fill="#e8590c"/><circle cx="300" cy="150" r="22" fill="#fff" stroke="#2f3a2b" stroke-width="3"/><path d="M300 132 l6 18 h-12 Z" fill="#c0392b"/><circle cx="340" cy="100" r="14" fill="#e8b10c"/><path d="M250 240 q30 -10 60 0 t60 0" stroke="#4a7fb0" stroke-width="5" fill="none"/>
+</svg>

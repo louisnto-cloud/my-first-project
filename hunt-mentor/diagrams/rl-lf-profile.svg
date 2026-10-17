@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="An elevation profile chart from about 1,000 to 1,400 m along a line you draw. The line climbs, runs flat for a while (a bench, in orange), climbs to a top, dips (a saddle), climbs to a second top, then drops into a draw (in blue). Caption: a flat bit is a bench, a dip between tops is a saddle.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Read the shapes on a profile</text>
+<rect x="76" y="42" width="312" height="194" fill="#fbf7ec" stroke="#c9bfa6" stroke-width="1.2"/>
+<line x1="76" y1="205.0" x2="388" y2="205.0" stroke="#d8cfb8" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="70" y="210" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">1,000 m</text>
+<line x1="76" y1="142.9" x2="388" y2="142.9" stroke="#d8cfb8" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="70" y="147.9" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">1,200 m</text>
+<line x1="76" y1="80.8" x2="388" y2="80.8" stroke="#d8cfb8" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="70" y="85.8" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">1,400 m</text>
+<path d="M76 223.6 L110 208.1 L140 195.7 L196 193.8 L224 158.4 L262 75.2 L294 99.4 L322 66.6 L352 149.1 L372 198.8 L388 211.2 L388 236 L76 236z" fill="#e3d3b0"/>
+<path d="M76 223.6 L110 208.1 L140 195.7 L196 193.8 L224 158.4 L262 75.2 L294 99.4 L322 66.6 L352 149.1 L372 198.8 L388 211.2" fill="none" stroke="#8b5a2b" stroke-width="3.4" stroke-linejoin="round"/>
+<path d="M140 195.7 L196 193.8" stroke="#e8590c" stroke-width="7" stroke-linecap="round"/>
+<text x="168" y="179.8" font-size="16" font-weight="bold" fill="#b8450a" text-anchor="middle" stroke="#fbf7ec" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">bench</text>
+<path d="M262 69.2 l-6 -9 h12z" fill="#2f3a2b"/>
+<text x="262" y="55.2" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fbf7ec" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">top</text>
+<path d="M322 60.6 l-6 -9 h12z" fill="#2f3a2b"/>
+<text x="322" y="46.6" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#fbf7ec" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">top</text>
+<circle cx="294" cy="99.4" r="6" fill="#e8590c" stroke="#fffaf0" stroke-width="1.6"/>
+<text x="294" y="129.4" font-size="16" font-weight="bold" fill="#b8450a" text-anchor="middle">saddle</text>
+<path d="M352 149.1 L372 198.8 L388 211.2" fill="none" stroke="#4a7fb0" stroke-width="4" stroke-linejoin="round"/>
+<text x="352" y="209" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="end" stroke="#e3d3b0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">draw</text>
+<text x="232" y="256" font-size="14" fill="#6b5b4b" text-anchor="middle">distance along your line</text>
+<text x="200" y="286" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Flat bit: bench. Dip between tops: saddle.</text>
+</svg>

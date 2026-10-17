@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two kinds of closed area. Motor Vehicle Closed Area: no motor vehicle at all, or only some types such as ATVs. Motor Vehicle for Hunting Closed Area: no vehicle to hunt, or to carry game, gear or hunters. No sign is not a defence, the regulation wins.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Two kinds of closed area</text>
+  <g>
+    <circle cx="100" cy="110" r="64" fill="#fff" stroke="#c0392b" stroke-width="10"/>
+    <g transform="translate(100 116) scale(1.1)"><rect x="-30" y="-14" width="60" height="16" rx="5" fill="#2f3a2b"/><circle cx="-20" cy="8" r="10" fill="#2f3a2b"/><circle cx="20" cy="8" r="10" fill="#2f3a2b"/></g>
+    <line x1="56" y1="66" x2="144" y2="154" stroke="#c0392b" stroke-width="10"/>
+    <circle cx="300" cy="110" r="64" fill="#fff" stroke="#c0392b" stroke-width="10"/>
+    <g transform="translate(286 122)"><rect x="-26" y="-12" width="52" height="14" rx="5" fill="#2f3a2b"/><circle cx="-17" cy="7" r="9" fill="#2f3a2b"/><circle cx="17" cy="7" r="9" fill="#2f3a2b"/></g>
+    <path d="M300 70 l20 0 l-6 16 h-10 Z M306 86 l10 26" stroke="#8b5a2b" stroke-width="5" fill="none"/>
+    <line x1="256" y1="66" x2="344" y2="154" stroke="#c0392b" stroke-width="10"/>
+  </g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="100" y="200">Motor Vehicle</text><text x="100" y="218">Closed Area</text><text x="300" y="200">Motor Vehicle for</text><text x="300" y="218">Hunting Closed Area</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="100" y="240">no vehicle, or no ATVs</text><text x="300" y="240">no hunters, game, gear</text></g>
+  <text x="200" y="282" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">No sign is not a defence</text>
+</svg>

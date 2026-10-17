@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bore sight step 1: the rifle sits solid in sandbags, bolt out, aimed at a target 25 metres away.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Solid rest, bolt out</text>
+  <rect x="0" y="210" width="400" height="90" fill="#dfe6d3"/>
+  <ellipse cx="70" cy="200" rx="34" ry="16" fill="#8a9a6b"/><ellipse cx="190" cy="196" rx="30" ry="14" fill="#8a9a6b"/>
+  <path d="M30 168 L100 160 L108 160 L116 184 L200 182 L200 190 L110 194 L94 204 L84 198 L30 210 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="100" y="152" width="60" height="16" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="115" y="154" width="28" height="8" fill="#fffaf0"/>
+  <rect x="160" y="156" width="120" height="7" fill="#6b6f68"/>
+  <rect x="104" y="134" width="70" height="12" fill="#2f3a2b"/>
+  <!-- target far -->
+  <rect x="330" y="110" width="50" height="60" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="355" cy="140" r="14" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="355" cy="140" r="5" fill="#e8590c"/>
+  <rect x="352" y="170" width="6" height="40" fill="#8b5a2b"/>
+  <line x1="290" y1="250" x2="380" y2="250" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="335" y="276" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">25 m</text>
+  <text x="130" y="250" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sandbags</text>
+  <text x="130" y="120" font-size="14" fill="#e8590c" text-anchor="middle" font-weight="bold">Bolt out</text>
+</svg>

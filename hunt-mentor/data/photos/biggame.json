@@ -1,0 +1,73 @@
+[
+ {
+  "id": "bighorn-ewe",
+  "species": "Bighorn sheep",
+  "caption": "Bighorn ewe. Short, thin horns with only a slight curve. Pale rump patch.",
+  "author": "USFWS Mountain Prairie",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Bighorn_Sheep_Ewe_at_NER_(22730007468).jpg"
+ },
+ {
+  "id": "bighorn-ram-full-curl",
+  "species": "Bighorn sheep",
+  "caption": "Mature bighorn ram in winter. Heavy brown horns curling back, down and forward toward a full circle.",
+  "author": "YellowstoneNPS",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Bighorn_sheep_ram_in_winter_(53481643872).jpg",
+  "card": true,
+  "cardBack": "Bighorn ram. Heavy curled horns, brown body, white rump. Ram classes and curl rules: see the Rule Book."
+ },
+ {
+  "id": "dalls-sheep-ram",
+  "species": "Dall sheep",
+  "caption": "Dall sheep ram, head close up. All white, with pale amber horns that flare out to the side.",
+  "author": "Jacob W. Frank",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Closeup_of_a_Dall_sheep_ram_(08f0a8ea-88cd-44d1-973c-49248da0d61f).jpg",
+  "card": true,
+  "cardBack": "Dall sheep ram. All white body, pale flaring horns. In BC only in the far northwest."
+ },
+ {
+  "id": "stones-sheep-ram",
+  "species": "Stone's sheep",
+  "caption": "Stone's sheep ram on rock. Dark grey brown body, white rump and belly, curled amber horns.",
+  "author": "Jack Bindernagel",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ovis_dalli_stonei_321175932.jpg",
+  "card": true,
+  "cardBack": "Stone's sheep ram. Dark body, white rump, belly and leg backs. Northern BC."
+ },
+ {
+  "id": "stones-sheep-young-ram",
+  "species": "Stone's sheep",
+  "caption": "Young Stone's sheep ram. Horns curve back but are still short of a big curl.",
+  "author": "Thompson Hyggen",
+  "licence": "CC0",
+  "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ovis_dalli_stonei_325066259.jpg"
+ },
+ {
+  "id": "mountain-goat-billy",
+  "species": "Mountain goat",
+  "caption": "Mountain goat. White shaggy coat, short black horns, beard on the chin.",
+  "author": "Forest Service Alaska Region, USDA",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountain_Goat-Tongass-BLL-018_(52502328982).jpg",
+  "card": true,
+  "cardBack": "Mountain goat. White coat, short black dagger horns, beard. Not a sheep: sheep have curled brown or amber horns."
+ },
+ {
+  "id": "mountain-goat-nanny-kid",
+  "species": "Mountain goat",
+  "caption": "Mountain goat nanny with her kid on a cliff top. A nanny with a kid at her side is easy to spot.",
+  "author": "Yellowstone National Park, USA by Diane Renkin",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Mountain_goats_on_Sepulcher_Mountain_(8468633942).jpg"
+ }
+]

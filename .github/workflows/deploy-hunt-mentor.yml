@@ -1,0 +1,37 @@
+name: Deploy Hunt Mentor
+
+on:
+  push:
+    branches:
+      - claude/hunt-mentor-step0
+    paths:
+      - 'hunt-mentor/**'
+      - '.github/workflows/deploy-hunt-mentor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Hunt Mentor has no dependencies; the build is one Node script.
+      - name: Build Hunt Mentor
+        run: node hunt-mentor/build.mjs --out hunt-mentor/dist
+      # Overlay only /hunt-mentor, leaving the rest of the site untouched.
+      - name: Publish /hunt-mentor
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./hunt-mentor/dist
+          destination_dir: hunt-mentor
+          keep_files: true

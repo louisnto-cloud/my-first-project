@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 249" font-family="sans-serif" role="img" aria-label="Timeline chart of the duck seasons by district, September 2026 to January 2027, 99 percent. District 3, Kamloops: 8 September to 23 December. District 8, Okanagan: 23 September to 7 January. District 2, Mission: 10 October 2026 to 24 January 2027. Every district: 8 a day, 24 in possession.">
+<rect width="400" height="249" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Duck seasons 2026 to 2027 (99%)</text>
+<text x="50.5" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="124.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="198.8" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="272.9" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="348.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Jan</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">District 3, Kamloops</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 8 to Dec 23</text>
+<rect x="14.0" y="80" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="80" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="80" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="80" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="80" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="31.0" y="81" width="260.2" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">District 8, Okanagan</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 23 to Jan 7</text>
+<rect x="14.0" y="134" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="134" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="134" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="134" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="134" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="67.5" y="135" width="260.2" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">District 2, Mission</text>
+<text x="386" y="180" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="end">Oct 10 to Jan 24</text>
+<rect x="14.0" y="188" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="86.9" y="188" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="162.3" y="188" width="72.9" height="16" fill="#efe8d6"/>
+<rect x="235.3" y="188" width="75.4" height="16" fill="#f8f3e6"/>
+<rect x="310.6" y="188" width="75.4" height="16" fill="#efe8d6"/>
+<rect x="108.8" y="189" width="260.2" height="14" rx="3" fill="#2f6e3b"/>
+<text x="14" y="235" font-size="15" font-weight="bold" fill="#2f3a2b">8 a day, 24 in possession, every district</text>
+</svg>

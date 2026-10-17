@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Myth meter, drawn as a dial in three parts. Left, orange: myth, science says no. Middle, light: mixed, studies disagree or it depends. Right, green: holds up, evidence supports it. Each saying in the myth check gets a verdict and a certainty percent, for example Myth (85%). Tradition is not proof. Check the source.">
+  <rect width="400" height="330" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Myth meter</text>
+  <g transform="translate(0 30)">
+    <g data-tip="Myth|Science says no. Example: &quot;It dropped, so it is dead&quot;: Myth (85%).">
+      <path d="M50 200 A150 150 0 0 1 125 70.1" fill="none" stroke="#e8590c" stroke-width="48"/>
+      <text x="132" y="160" font-size="18" font-weight="bold" fill="#c2410c" text-anchor="middle">MYTH</text>
+      <text x="132" y="180" font-size="14" fill="#2f3a2b" text-anchor="middle">science</text>
+      <text x="132" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">says no</text>
+    </g>
+    <g data-tip="Mixed|Studies disagree, or it depends. Example: &quot;Watch the barometer&quot;: a few studies find an effect, many do not (60%).">
+      <path d="M125 70.1 A150 150 0 0 1 275 70.1" fill="none" stroke="#dfe6d3" stroke-width="48"/>
+      <text x="200" y="104" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">MIXED</text>
+      <text x="200" y="124" font-size="14" fill="#2f3a2b" text-anchor="middle">studies disagree</text>
+    </g>
+    <g data-tip="Holds up|Evidence backs it.">
+      <path d="M275 70.1 A150 150 0 0 1 350 200" fill="none" stroke="#8a9a6b" stroke-width="48"/>
+      <text x="268" y="160" font-size="18" font-weight="bold" fill="#3f5a2b" text-anchor="middle">HOLDS UP</text>
+      <text x="268" y="180" font-size="14" fill="#2f3a2b" text-anchor="middle">evidence</text>
+      <text x="268" y="196" font-size="14" fill="#2f3a2b" text-anchor="middle">backs it</text>
+    </g>
+    <path d="M26 200 A174 174 0 0 1 374 200" fill="none" stroke="#2f3a2b" stroke-width="1.5"/>
+    <path d="M74 200 A126 126 0 0 1 326 200" fill="none" stroke="#2f3a2b" stroke-width="1.5"/>
+    <line x1="20" y1="200" x2="380" y2="200" stroke="#2f3a2b" stroke-width="2"/>
+    <circle cx="200" cy="200" r="22" fill="#2f3a2b"/>
+    <text x="200" y="208" font-size="22" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+  </g>
+  <g data-tip="Verdict and certainty|Every saying in the myth check gets a verdict and a certainty, for example &quot;Hunt by the moon phase&quot;: Myth (85%). Open the evidence for each under the table.">
+    <rect x="70" y="248" width="260" height="36" rx="18" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+    <text x="200" y="272" font-size="16" fill="#2f3a2b" text-anchor="middle"><tspan font-weight="bold">Verdict</tspan> + certainty: Myth (85%)</text>
+  </g>
+  <text x="200" y="314" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Tradition is not proof. Check the source.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 519" font-family="sans-serif" role="img" aria-label="Region 2 bird limits, day and possession, synopsis page 28. 10 (30) means 10 a day, 30 in possession. Grouse, sooty (blue), ruffed and spruce together: 10 (30). Ptarmigan: 5 (15). Pheasant (cocks): 2 (6). Band tailed pigeons: 5 (15). Ducks: 8 (24). Common snipe: 10 (30). Coots: 10 (30). Geese, Canada and cackling: 10 (30). Geese, snow and Ross&#x27;s: 10 (30), star: the snow goose footnote raises it to 15 (45) in MUs 2-4 and 2-5. Geese, white fronted: 5 (15). Brant: 3 (9).">
+<rect width="400" height="519" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 28. 10 (30): 10 a day, 30 in possession.</text>
+<text x="14" y="49" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">UPLAND BIRDS</text>
+<line x1="155" y1="44" x2="392" y2="44" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="59" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="64" y="96.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">10 (30)</text>
+<text x="130" y="83" font-size="16" fill="#2f3a2b">Grouse: sooty (blue), ruffed,</text>
+<text x="130" y="104" font-size="16" fill="#2f3a2b">spruce, together</text>
+<text x="64" y="149.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">5 (15)</text>
+<text x="130" y="146.5" font-size="16" fill="#2f3a2b">Ptarmigan, band tailed pigeons</text>
+<rect x="8" y="165" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="195.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">2 (6)</text>
+<text x="130" y="192.5" font-size="16" fill="#2f3a2b">Pheasant (cocks)</text>
+<text x="14" y="237" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">WATERFOWL AND OTHER BIRDS</text>
+<line x1="292" y1="232" x2="392" y2="232" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="247" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="277.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">8 (24)</text>
+<text x="130" y="274.5" font-size="16" fill="#2f3a2b">Ducks</text>
+<text x="64" y="330.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)</text>
+<text x="130" y="317" font-size="16" fill="#2f3a2b">Common snipe, coots, geese:</text>
+<text x="130" y="338" font-size="16" fill="#2f3a2b">Canada and cackling</text>
+<rect x="8" y="353" width="384" height="56" rx="6" fill="#f4eedf"/>
+<text x="64" y="389.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">10 (30)★</text>
+<text x="130" y="377" font-size="16" fill="#2f3a2b">Geese: snow and Ross&#x27;s</text>
+<text x="130" y="397" font-size="15" font-weight="bold" fill="#c0392b">★ 15 (45) in MUs 2-4, 2-5</text>
+<text x="64" y="441.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 (15)</text>
+<text x="130" y="438.5" font-size="16" fill="#2f3a2b">Geese: white fronted</text>
+<rect x="8" y="457" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="487.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">3 (9)</text>
+<text x="130" y="484.5" font-size="16" fill="#2f3a2b">Brant</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three layers of navigation backup, left to right: a phone with offline maps, a baseplate compass, and a paper map of the block. If the phone dies, the compass and map still get you to the truck.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Carry all three</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"><rect x="12" y="50" width="120" height="170" rx="10"/><rect x="140" y="50" width="120" height="170" rx="10"/><rect x="268" y="50" width="120" height="170" rx="10"/></g>
+  <rect x="50" y="70" width="44" height="80" rx="8" fill="#2f3a2b"/><rect x="56" y="80" width="32" height="58" fill="#8a9a6b"/><circle cx="72" cy="108" r="5" fill="#e8590c"/>
+  <rect x="174" y="66" width="52" height="88" rx="6" fill="#cfe0ea" stroke="#4a7fb0" stroke-width="2"/><circle cx="200" cy="120" r="21" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><polygon points="200,103 194,120 206,120" fill="#c0392b"/><polygon points="200,137 194,120 206,120" fill="#fffaf0" stroke="#2f3a2b"/>
+  <path d="M290 76 L320 70 L336 76 L366 70 L366 146 L336 152 L320 146 L290 152 Z" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/><path d="M296 110 C 316 96, 336 126, 360 104" fill="none" stroke="#8b5a2b" stroke-width="2"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="72" y="178">Phone</text><text x="200" y="178">Compass</text><text x="328" y="178">Paper map</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="72" y="200">offline maps</text><text x="200" y="200">set for 15 east</text><text x="328" y="200">of the block</text></g>
+  <rect x="12" y="236" width="376" height="54" rx="8" fill="#2f3a2b"/>
+  <text x="200" y="260" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Phone dies? Compass and map</text>
+  <text x="200" y="280" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">still get you to the truck</text>
+</svg>

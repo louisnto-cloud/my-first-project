@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Phone sketch of the viewshed tool, what can I see from here, side view. A pin on a knob; the far slope is shaded where you can see it. Pick a glassing seat that sees meadows and timber edges.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<defs><clipPath id="mc-elk-map-4-clip"><rect x="92" y="68" width="216" height="222" rx="14"/></clipPath></defs>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="#f4ecdc" stroke="#23261f" stroke-width="2"/>
+<g clip-path="url(#mc-elk-map-4-clip)"><rect x="92" y="68" width="216" height="222" fill="#e3ecf3"/>
+<path d="M92 260 L132 150 L176 236 L200 250 L230 214 L308 112 L308 290 L92 290z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M210 238 L230 214 L308 112 L308 290 L210 290z" fill="#e8590c" opacity=".35"/>
+<path d="M132 146 L222 224 M132 146 L306 114" stroke="#e8590c" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="132" cy="146" r="8" fill="#e8590c" stroke="#2f3a2b" stroke-width="1.6"/>
+<line x1="132" y1="138" x2="120" y2="127" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="132" cy="138" r="2.6" fill="#2f3a2b"/>
+<rect x="97.9" y="98.0" width="44.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="120" y="118.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+<line x1="262" y1="200" x2="262" y2="119" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="262" cy="200" r="2.6" fill="#2f3a2b"/>
+<rect x="158.7" y="70.0" width="126.6" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="222" y="90.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Shaded:</text>
+<text x="222" y="110" font-size="15" fill="#2f3a2b" text-anchor="middle">you can see it</text></g>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="none" stroke="#23261f" stroke-width="2"/>
+<path d="M90 68 V52 A16 16 0 0 1 106 36 H294 A16 16 0 0 1 310 52 V68z" fill="#2f3a2b"/>
+<text x="200" y="58" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">What can I see from here</text>
+</svg>

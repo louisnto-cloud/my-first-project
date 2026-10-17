@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 231" role="img" aria-label="Animation: a cursor moves from January to December at the Osoyoos Oxbows, Map J1. Vehicles stay on established roads all year. From 1 March to 30 September there is no shooting or hunting, roads included. On 1 October that closure ends and the quail season opens, to 30 November. The ecological reserve beside it stays closed all year." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="231" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Osoyoos Oxbows through the year</text>
+<text x="35.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Jan</text>
+<text x="64.4" y="117" font-size="14" fill="#23261f" text-anchor="middle">Feb</text>
+<text x="93.5" y="117" font-size="14" fill="#23261f" text-anchor="middle">Mar</text>
+<text x="123.6" y="117" font-size="14" fill="#23261f" text-anchor="middle">Apr</text>
+<text x="153.6" y="117" font-size="14" fill="#23261f" text-anchor="middle">May</text>
+<text x="183.7" y="117" font-size="14" fill="#23261f" text-anchor="middle">Jun</text>
+<text x="213.8" y="117" font-size="14" fill="#23261f" text-anchor="middle">Jul</text>
+<text x="244.4" y="117" font-size="14" fill="#23261f" text-anchor="middle">Aug</text>
+<text x="274.5" y="117" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="304.5" y="117" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="334.6" y="117" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="364.7" y="117" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="20.0" y1="125" x2="20.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="50.6" y1="125" x2="50.6" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="78.2" y1="125" x2="78.2" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="108.8" y1="125" x2="108.8" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="138.4" y1="125" x2="138.4" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="168.9" y1="125" x2="168.9" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="198.5" y1="125" x2="198.5" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="229.1" y1="125" x2="229.1" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="259.7" y1="125" x2="259.7" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="289.3" y1="125" x2="289.3" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="319.8" y1="125" x2="319.8" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="349.4" y1="125" x2="349.4" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="380.0" y1="125" x2="380.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<rect x="10" y="49" width="380" height="46" rx="8" fill="#dfe6d3"/>
+<text x="20" y="141" font-size="14" font-weight="bold" fill="#23261f">Oxbows no shooting or hunting</text>
+<rect x="78.2" y="147" width="211.1" height="20" rx="3" fill="#c92a2a"/>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="1.45s" fill="freeze"/>OFF</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="1.45s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.73s" fill="freeze"/>IN FORCE</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="6.73s" fill="freeze"/>OFF</text>
+<text x="20" y="191" font-size="14" font-weight="bold" fill="#23261f">Quail season</text>
+<rect x="289.3" y="197" width="60.2" height="20" rx="3" fill="#e8590c"/>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.73s" fill="freeze"/>CLOSED</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="6.73s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="8.24s" fill="freeze"/>OPEN</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="8.24s" fill="freeze"/>CLOSED</text>
+<g><line x1="20" y1="123" x2="20" y2="223" stroke="#e8590c" stroke-width="3"/><animateTransform attributeName="transform" type="translate" from="0 0" to="360.0 0" begin="0s" dur="9.0s" fill="freeze"/></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="1.45s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Vehicles: established roads only, all year</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="1.45s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="6.73s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mar 1: no shooting or hunting at the</text><text x="200" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oxbows</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="6.73s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="8.24s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct 1: Oxbows closure off, quail open</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="8.24s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec 1: quail closed</text></g>
+</svg>

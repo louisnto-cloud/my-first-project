@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Legal hours timeline around sunrise. Ducks and other migratory birds: start half an hour before sunrise. Deer and quail: start 1 hour before sunrise. The same gaps apply after sunset: half an hour for ducks, 1 hour for deer and quail.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">When can you start?</text>
+  <line x1="20" y1="200" x2="380" y2="200" stroke="#2f3a2b" stroke-width="3"/>
+  <g stroke="#2f3a2b" stroke-width="2"><line x1="80" y1="192" x2="80" y2="208"/><line x1="200" y1="192" x2="200" y2="208"/><line x1="320" y1="192" x2="320" y2="208"/></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="80" y="226">1 h before</text><text x="200" y="226">30 min before</text><text x="320" y="226">sunrise</text></g>
+  <circle cx="320" cy="250" r="14" fill="#e8590c"/><rect x="290" y="250" width="60" height="16" fill="#fffaf0"/>
+  <rect x="200" y="70" width="180" height="34" rx="6" fill="#4a7fb0"/>
+  <text x="290" y="92" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Ducks: half hour</text>
+  <rect x="80" y="130" width="300" height="34" rx="6" fill="#8b5a2b"/>
+  <text x="230" y="152" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Deer and quail: 1 hour</text>
+  <text x="200" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Same gaps after sunset (99%)</text>
+</svg>

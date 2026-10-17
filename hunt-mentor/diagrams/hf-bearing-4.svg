@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4, top view. A hunter holds the compass flat at the belly and turns the whole body until the red needle sits in the shed again. Then walks where the direction of travel arrow points. Turn your feet, not just the compass.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="40" font-size="16" font-weight="bold" fill="#e8590c">Step 4</text>
+<text x="12" y="70" font-size="16" fill="#2f3a2b">Hold it flat. Turn</text>
+<text x="12" y="90" font-size="16" fill="#2f3a2b">your whole body</text>
+<text x="12" y="110" font-size="16" fill="#2f3a2b">until red is in</text>
+<text x="12" y="130" font-size="16" fill="#2f3a2b">the shed.</text>
+<line x1="250" y1="118" x2="250" y2="44" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/><path d="M250.0 30.0 L242.3 44.0 L257.7 44.0z" fill="#e8590c"/>
+<text x="268" y="54" font-size="16" font-weight="bold" fill="#c2410c">Walk this way</text>
+<g transform="translate(250 214) rotate(0) scale(1.25)"><ellipse cx="0" cy="4" rx="34" ry="15" fill="#e8590c" stroke="#7a2f06" stroke-width="1.4"/><path d="M-26 -2 C-24 -14 -14 -20 -8 -22 M26 -2 C24 -14 14 -20 8 -22" stroke="#7a2f06" stroke-width="9" stroke-linecap="round" fill="none"/><circle cx="0" cy="2" r="13" fill="#6b4f35"/><path d="M-9 -4 Q0 -14 9 -4z" fill="#c2410c"/></g>
+<g transform="translate(250 168) rotate(0) scale(0.36)"><rect x="-54" y="-138" width="108" height="232" rx="10" fill="#cfe0ea" stroke="#4a7fb0" stroke-width="2" opacity=".95"/><polygon points="0,-132 -14,-98 14,-98" fill="#2f3a2b"/><line x1="0" y1="-88" x2="0" y2="-64" stroke="#2f3a2b" stroke-width="2"/><circle r="62" fill="#fffaf0" stroke="#2f3a2b" stroke-width="3"/><path d="M-9 22 L-9 -16 L-16 -16 L0 -33 L16 -16 L9 -16 L9 22 Z" fill="none" stroke="#e8590c" stroke-width="2.5"/><polygon points="0,-31 -6,0 6,0" fill="#c0392b"/><polygon points="0,31 -6,0 6,0" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/><circle r="3" fill="#2f3a2b"/></g>
+<path d="M168 236 A 92 60 0 0 0 332 236" fill="none" stroke="#e8590c" stroke-width="3"/><path d="M336.0 230.0 L323.2 235.0 L333.3 243.4z" fill="#e8590c"/>
+<text x="200" y="290" font-size="16" fill="#2f3a2b" text-anchor="middle">Turn your feet, not just the compass</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 487" font-family="sans-serif" role="img" aria-label="Vehicle closures in MUs 2-4 to 2-9, synopsis page 27. Star closures run 1 April to 15 June unless dated. No vehicles all year: Bert Brink WMA (Wildlife Management Area), 2-4, and Pitt Addington Marsh, 2-8. No vehicles 1 April to 15 June: in 2-6, Elaho G Main past the 50.5 mile bridge, Ashlu Creek North past the Pikett Creek bridge at 30 miles, and the North Sloquet Creek FSR (Forest Service Road); in 2-9, the North Sloquet Creek FSR past the unnamed creek bridge 5 km north.">
+<rect width="400" height="487" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 27. ★ closures: Apr 1 to June 15 unless dated</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-15 6 V0 L-10 -2 L-6 -9 H6 L10 -2 L15 0 V6z"/><path d="M-5 -7 H-1 V-2 H-8z M1 -7 H5 L8 -2 H1z" fill="#fffaf0"/><circle cx="-8" cy="7" r="4"/><circle cx="8" cy="7" r="4"/><circle cx="-8" cy="7" r="1.6" fill="#fffaf0"/><circle cx="8" cy="7" r="1.6" fill="#fffaf0"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO VEHICLES, ALL YEAR</text>
+<rect x="8" y="68" width="384" height="48" rx="6" fill="#f4eedf"/>
+<rect x="14" y="77.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="97.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-4</text>
+<text x="78" y="97" font-size="16" font-weight="bold" fill="#2f3a2b">Bert Brink WMA</text>
+<rect x="14" y="127.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="147.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-8</text>
+<text x="78" y="147" font-size="16" font-weight="bold" fill="#2f3a2b">Pitt Addington Marsh</text>
+<rect x="8" y="176" width="384" height="30" rx="6" fill="#2c5d86"/>
+<g transform="translate(31 191) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-15 6 V0 L-10 -2 L-6 -9 H6 L10 -2 L15 0 V6z"/><path d="M-5 -7 H-1 V-2 H-8z M1 -7 H5 L8 -2 H1z" fill="#fffaf0"/><circle cx="-8" cy="7" r="4"/><circle cx="8" cy="7" r="4"/><circle cx="-8" cy="7" r="1.6" fill="#fffaf0"/><circle cx="8" cy="7" r="1.6" fill="#fffaf0"/></g>
+<text x="50" y="197" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO VEHICLES, APR 1 TO JUNE 15</text>
+<rect x="8" y="212" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="224.5" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="245.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-6</text>
+<text x="78" y="235" font-size="16" font-weight="bold" fill="#2f3a2b">Elaho G Main</text>
+<text x="78" y="254" font-size="15" fill="#2f3a2b">Past the 50.5 mile bridge</text>
+<rect x="14" y="281.5" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="302.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-6</text>
+<text x="78" y="292" font-size="16" font-weight="bold" fill="#2f3a2b">Ashlu Creek North</text>
+<text x="78" y="311" font-size="15" fill="#2f3a2b">Past the Pikett Creek bridge, at 30 miles</text>
+<rect x="8" y="326" width="384" height="48" rx="6" fill="#f4eedf"/>
+<rect x="14" y="335.0" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="355.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-6</text>
+<text x="78" y="355" font-size="16" font-weight="bold" fill="#2f3a2b">North Sloquet Creek FSR</text>
+<rect x="14" y="388.5" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="409.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-9</text>
+<text x="78" y="399" font-size="16" font-weight="bold" fill="#2f3a2b">North Sloquet Creek FSR</text>
+<text x="78" y="418" font-size="15" fill="#2f3a2b">Past the unnamed creek bridge 5 km north</text>
+<text x="14" y="455" font-size="14" fill="#6b5b4b">WMA: Wildlife Management Area. FSR: Forest Service</text>
+<text x="14" y="474" font-size="14" fill="#6b5b4b">Road.</text>
+</svg>

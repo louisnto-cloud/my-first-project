@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" font-family="sans-serif" role="img" aria-label="Pattern bars for a fall day, 5:00 to 20:00, pattern only, 65 to 70 percent. Mallards and other dabblers often feed at night, fly at dawn to a day roost, roost and loaf through the day and fly out at dusk to feed. Canada geese roost on water, fly to fields in the morning and late afternoon and rest on water at midday, then roost. On stormy days geese fly all day, 70 percent. Dashed lines: legal duck hours at Heffley Creek on 15 October, about 6:52 to 18:41. Times shift by day and place.">
+<rect width="400" height="348" fill="#fffaf0"/>
+<text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">A fall day for ducks and geese</text>
+<text x="14" y="44" font-size="15" fill="#6b5b4b">Pattern only (65 to 70%)</text>
+<line x1="38.8" y1="78" x2="38.8" y2="294" stroke="#d6d0bf" stroke-width="1"/>
+<text x="38.8" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">6:00</text>
+<line x1="113.2" y1="78" x2="113.2" y2="294" stroke="#d6d0bf" stroke-width="1"/>
+<text x="113.2" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">9:00</text>
+<line x1="187.6" y1="78" x2="187.6" y2="294" stroke="#d6d0bf" stroke-width="1"/>
+<text x="187.6" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">12:00</text>
+<line x1="262.0" y1="78" x2="262.0" y2="294" stroke="#d6d0bf" stroke-width="1"/>
+<text x="262" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">15:00</text>
+<line x1="336.4" y1="78" x2="336.4" y2="294" stroke="#d6d0bf" stroke-width="1"/>
+<text x="336.4" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">18:00</text>
+<line x1="60.3" y1="78" x2="60.3" y2="290" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="353.3" y1="78" x2="353.3" y2="290" stroke="#e8590c" stroke-width="2.2" stroke-dasharray="5 3"/>
+<g data-tip="Mallards and other dabblers|Dabblers often feed at night and rest by day (65%). Louisiana mallards moved 3.1 to 15 km between day and night sites (85%).">
+<text paint-order="stroke" stroke="#fffaf0" stroke-width="5" stroke-linejoin="round" x="14" y="106" font-size="16" font-weight="bold" fill="#2f3a2b">Mallards, other dabblers</text>
+<rect x="15.0" y="114" width="37.7" height="30" rx="5" fill="#2f3a2b"/>
+<text x="33.8" y="134" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">feed</text>
+<rect x="54.7" y="114" width="32.7" height="30" rx="5" fill="#e8590c"/>
+<text x="71" y="134" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">fly</text>
+<rect x="89.4" y="114" width="208.8" height="30" rx="5" fill="#4a7fb0"/>
+<text x="193.8" y="134" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">roost, loaf</text>
+<rect x="300.2" y="114" width="40.2" height="30" rx="5" fill="#e8590c"/>
+<text x="320.3" y="134" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">fly</text>
+<rect x="342.4" y="114" width="42.6" height="30" rx="5" fill="#2f3a2b"/>
+<text x="363.7" y="134" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">feed</text>
+</g>
+<g data-tip="Canada geese|Roost on water, fly to fields in the morning, back to water at midday, out again late afternoon (70%).">
+<text paint-order="stroke" stroke="#fffaf0" stroke-width="5" stroke-linejoin="round" x="14" y="174" font-size="16" font-weight="bold" fill="#2f3a2b">Canada geese</text>
+<rect x="15.0" y="182" width="47.6" height="30" rx="5" fill="#4a7fb0"/>
+<text x="38.8" y="202" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">roost</text>
+<rect x="64.6" y="182" width="72.4" height="30" rx="5" fill="#e8590c"/>
+<text x="100.8" y="202" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">field</text>
+<rect x="139.0" y="182" width="109.6" height="30" rx="5" fill="#4a7fb0"/>
+<text x="193.8" y="202" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">water</text>
+<rect x="250.6" y="182" width="72.4" height="30" rx="5" fill="#e8590c"/>
+<text x="286.8" y="202" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">field</text>
+<rect x="325.0" y="182" width="60.0" height="30" rx="5" fill="#4a7fb0"/>
+<text x="355" y="202" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">roost</text>
+</g>
+<g data-tip="Stormy days|Illinois study: geese increase flight activity throughout the day when it is stormy (70%).">
+<text paint-order="stroke" stroke="#fffaf0" stroke-width="5" stroke-linejoin="round" x="14" y="242" font-size="16" font-weight="bold" fill="#2f3a2b">Stormy day, geese</text>
+<rect x="64.6" y="250" width="270.8" height="30" rx="5" fill="#e8590c"/>
+<text x="200" y="270" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">flights all day (70%)</text>
+</g>
+<g data-tip="Legal hours|Ducks and geese: 30 minutes before sunrise to 30 minutes after sunset (99%). Heffley Creek, 15 October 2026: sunrise 7:22, sunset 18:11; times about 2 minutes either way (85%).">
+<text x="64.3" y="308" font-size="15" font-weight="bold" fill="#c2410c">legal 6:52</text>
+<text x="349.3" y="308" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">18:41</text>
+</g>
+<g data-tip="Pattern only|Times shift by day and place. Many ducks feed at night anyway; species differ (65%). Watch your own birds (Tip).">
+<text x="14" y="334" font-size="14" fill="#6b5b4b">Times shift by day and place.</text>
+</g>
+</svg>

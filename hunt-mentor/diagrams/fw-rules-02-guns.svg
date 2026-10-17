@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" role="img" aria-label="Grid. A .22 rimfire: no for deer, yes for grouse, no for quail. A .308 centrefire: yes for deer, yes for grouse, no for quail. A 12 gauge with bird shot: no for deer, yes for grouse, yes for quail. A 12 gauge with No. 1 Buck or larger shot, or slugs: yes for deer. Source: synopsis page 13 table and notes 1 to 3." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="266" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Which gun, which game?</text>
+  <text x="195.66666666666666" y="62" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Deer</text>
+  <text x="275.0" y="62" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse</text>
+  <text x="354.3333333333333" y="62" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Quail</text>
+  <rect x="6" y="72" width="388" height="40" rx="6" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.5"/>
+  <text x="14" y="97" font-size="14" fill="#23261f">.22 rimfire</text>
+  <rect x="169.66666666666666" y="80" width="52" height="24" rx="12" fill="#b03a2e"/>
+  <text x="195.66666666666666" y="97" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No</text>
+  <rect x="249.0" y="80" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="275.0" y="97" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="328.3333333333333" y="80" width="52" height="24" rx="12" fill="#b03a2e"/>
+  <text x="354.3333333333333" y="97" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No</text>
+  <rect x="6" y="116" width="388" height="40" rx="6" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.5"/>
+  <text x="14" y="141" font-size="14" fill="#23261f">.308 centrefire</text>
+  <rect x="169.66666666666666" y="124" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="195.66666666666666" y="141" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="249.0" y="124" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="275.0" y="141" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="328.3333333333333" y="124" width="52" height="24" rx="12" fill="#b03a2e"/>
+  <text x="354.3333333333333" y="141" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No</text>
+  <rect x="6" y="160" width="388" height="40" rx="6" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.5"/>
+  <text x="14" y="185" font-size="14" fill="#23261f">12 ga bird shot</text>
+  <rect x="169.66666666666666" y="168" width="52" height="24" rx="12" fill="#b03a2e"/>
+  <text x="195.66666666666666" y="185" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">No</text>
+  <rect x="249.0" y="168" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="275.0" y="185" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="328.3333333333333" y="168" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="354.3333333333333" y="185" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+  <rect x="6" y="204" width="388" height="40" rx="6" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.5"/>
+  <text x="14" y="229" font-size="14" fill="#23261f">12 ga Buck or slug</text>
+  <rect x="169.66666666666666" y="212" width="52" height="24" rx="12" fill="#5c7a3a"/>
+  <text x="195.66666666666666" y="229" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Yes</text>
+</svg>

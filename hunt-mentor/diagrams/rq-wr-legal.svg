@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Four cards. An Ungulate Winter Range order sets forestry rules: keep cover and limit roads. The hunting synopsis sets seasons, limits and closures. Wildlife Management Areas have their own rules; call the regional office first. Motor vehicle closures are shown on maps by MU.">
+<rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Four different rule books</text>
+<rect x="10" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<text x="20" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">UWR order</text>
+<text x="20" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Forestry rules: keep</text>
+<text x="20" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">cover, limit roads</text>
+<text x="20" y="148" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">(99%).</text>
+<rect x="204" y="40" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<text x="214" y="64" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Hunting synopsis</text>
+<text x="214" y="114" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Seasons, limits,</text>
+<text x="214" y="131" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">closures (99%).</text>
+<rect x="10" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<text x="20" y="200" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">WMA rules</text>
+<text x="20" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Call the regional office</text>
+<text x="20" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">first (99%).</text>
+<rect x="204" y="176" width="186" height="128" rx="10" fill="#f5f1e4" stroke="#8a9a6b" stroke-width="1.5"/>
+<text x="214" y="200" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="start">Vehicle closures</text>
+<text x="214" y="250" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">Maps by MU: open roads</text>
+<text x="214" y="267" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">only (99%).</text>
+</svg>

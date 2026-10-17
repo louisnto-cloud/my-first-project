@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 410" font-family="sans-serif" role="img" aria-label="Bar chart of duck body weights in kilograms, 80 percent. Canvasback 1.35, mallard 1.25, Barrow&#x27;s goldeneye 1.25, redhead 1.1, gadwall 0.9, pintail 0.8, wigeon 0.8, wood duck 0.7, bufflehead 0.45, teal 0.4. Puddle ducks in brown, divers in blue. A teal is a third of a mallard.">
+  <rect width="400" height="410" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How heavy? Body weight in kg (80%)</text>
+  <text x="152" y="64" font-size="14" fill="#2f3a2b" text-anchor="end">Canvasback</text>
+  <rect x="160" y="50" width="202" height="20" rx="4" fill="#4a7fb0"/>
+  <text x="368.5" y="65" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1.35</text>
+  <text x="152" y="95" font-size="14" fill="#2f3a2b" text-anchor="end">Mallard</text>
+  <rect x="160" y="81" width="188" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="353.5" y="96" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1.25</text>
+  <text x="152" y="126" font-size="14" fill="#2f3a2b" text-anchor="end">Barrow&#x27;s goldeneye</text>
+  <rect x="160" y="112" width="188" height="20" rx="4" fill="#4a7fb0"/>
+  <text x="353.5" y="127" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1.25</text>
+  <text x="152" y="157" font-size="14" fill="#2f3a2b" text-anchor="end">Redhead</text>
+  <rect x="160" y="143" width="165" height="20" rx="4" fill="#4a7fb0"/>
+  <text x="331.0" y="158" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">1.1</text>
+  <text x="152" y="188" font-size="14" fill="#2f3a2b" text-anchor="end">Gadwall</text>
+  <rect x="160" y="174" width="135" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="301.0" y="189" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.9</text>
+  <text x="152" y="219" font-size="14" fill="#2f3a2b" text-anchor="end">Pintail</text>
+  <rect x="160" y="205" width="120" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="286.0" y="220" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.8</text>
+  <text x="152" y="250" font-size="14" fill="#2f3a2b" text-anchor="end">Wigeon</text>
+  <rect x="160" y="236" width="120" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="286.0" y="251" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.8</text>
+  <text x="152" y="281" font-size="14" fill="#2f3a2b" text-anchor="end">Wood duck</text>
+  <rect x="160" y="267" width="105" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="271.0" y="282" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.7</text>
+  <text x="152" y="312" font-size="14" fill="#2f3a2b" text-anchor="end">Bufflehead</text>
+  <rect x="160" y="298" width="68" height="20" rx="4" fill="#4a7fb0"/>
+  <text x="233.5" y="313" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.45</text>
+  <text x="152" y="343" font-size="14" fill="#2f3a2b" text-anchor="end">Teal</text>
+  <rect x="160" y="329" width="60" height="20" rx="4" fill="#8b5a2b"/>
+  <text x="226.0" y="344" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">0.4</text>
+  <rect x="60" y="364" width="18" height="14" fill="#8b5a2b"/>
+  <text x="84" y="376" font-size="14" fill="#2f3a2b" text-anchor="start">Puddle duck</text>
+  <rect x="210" y="364" width="18" height="14" fill="#4a7fb0"/>
+  <text x="234" y="376" font-size="14" fill="#2f3a2b" text-anchor="start">Diver</text>
+  <text x="200" y="398" font-size="14" fill="#2f3a2b" text-anchor="middle">A teal is a third of a mallard</text>
+</svg>

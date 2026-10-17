@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Capsize step 3: climb onto the upturned hull to get as much of your body out of the water as you can.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Climb onto the hull</text>
+  <rect x="0" y="150" width="400" height="150" fill="#4a7fb0" opacity=".35"/>
+  <path d="M0 150 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+  <path d="M150 150 Q 250 132 350 150 L344 170 L156 170 Z" fill="#8a8f88" stroke="#2f3a2b" stroke-width="2" transform="rotate(180 250 156)"/><g transform="rotate(-8 250 120)"><circle cx="200" cy="118" r="12" fill="#d9b48f"/><rect x="212" y="112" width="70" height="26" rx="8" fill="#e8590c"/><rect x="280" y="116" width="50" height="16" rx="6" fill="#5c5a4a"/></g>
+  <text x="200" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Get as much of you out of the water as you can</text>
+</svg>

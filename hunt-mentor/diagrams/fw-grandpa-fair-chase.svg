@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Fair chase drawn as a roof on three pillars, from the Boone and Crockett Club definition: ethical, sportsmanlike, lawful. The pursuit of a wild, free ranging animal that keeps a fair chance to escape.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <polygon points="40,90 200,26 360,90" fill="#2f3a2b"/>
+  <text x="200" y="78" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fffaf0" text-anchor="middle">FAIR CHASE</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2">
+    <rect x="60" y="100" width="70" height="130"/><rect x="165" y="100" width="70" height="130"/><rect x="270" y="100" width="70" height="130"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="95" y="170">Ethical</text><text x="200" y="162">Sporting</text><text x="200" y="180">manner</text><text x="305" y="170">Lawful</text>
+  </g>
+  <rect x="40" y="230" width="320" height="14" fill="#8b5a2b"/>
+  <text x="200" y="272" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Wild, free ranging, a fair chance to escape</text>
+</svg>

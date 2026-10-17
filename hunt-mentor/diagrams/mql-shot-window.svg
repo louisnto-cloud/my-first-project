@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="The shot window, side view. You stand in brush with your shotgun. A wedge of open sky above and ahead of you is the safe window, with a shaded band at about 15 to 30 metres, a Tip. A high quail with sky behind it is in the window: OK. A low quail skimming over the brush: NO shot. Loads from Washington Fish and Wildlife, 75 percent: lead 7.5 or 8, steel 6 or 7, an open choke such as skeet or improved cylinder. Straightaway birds: most hunters shoot high, so hold a hair under.">
+<rect width="400" height="330" fill="#fffaf0"/>
+<defs><linearGradient id="mql-shot-window-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0ee"/><stop offset="1" stop-color="#eef3f0"/></linearGradient></defs>
+<rect x="0" y="0" width="400" height="252" fill="url(#mql-shot-window-sky)"/>
+<path d="M130 152 L66.6 16.1 A150 150 0 0 1 252.9 66.0z" fill="#e8590c" fill-opacity="0.12" stroke="#e8590c" stroke-width="1.6" stroke-dasharray="6 4"/>
+<path d="M103.8 95.8 L75.1 34.2 A130 130 0 0 1 236.5 77.4 L180.8 116.4 A62 62 0 0 0 103.8 95.8z" fill="#e8590c" fill-opacity="0.2"/>
+<path d="M103.8 95.8 A62 62 0 0 1 180.8 116.4" fill="none" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M75.1 34.2 A130 130 0 0 1 236.5 77.4" fill="none" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="0" y="232" width="400" height="20" fill="#cbb98f"/>
+<ellipse cx="292" cy="225" rx="21" ry="16" fill="#9aa77a"/>
+<ellipse cx="350" cy="225" rx="21" ry="16" fill="#9aa77a"/>
+<ellipse cx="185" cy="226" rx="19" ry="15" fill="#8a9a6b"/>
+<ellipse cx="297" cy="225" rx="23" ry="17" fill="#8a9a6b"/>
+<ellipse cx="247" cy="225" rx="22" ry="17" fill="#7b8c5e"/>
+<ellipse cx="278" cy="226" rx="20" ry="15" fill="#8a9a6b"/>
+<ellipse cx="312" cy="226" rx="19" ry="14" fill="#8a9a6b"/>
+<ellipse cx="345" cy="225" rx="22" ry="17" fill="#8a9a6b"/>
+<ellipse cx="317" cy="227" rx="16" ry="12" fill="#9aa77a"/>
+<ellipse cx="291" cy="227" rx="17" ry="13" fill="#8a9a6b"/>
+<ellipse cx="355" cy="227" rx="16" ry="12" fill="#8a9a6b"/>
+<ellipse cx="353" cy="227" rx="17" ry="13" fill="#8a9a6b"/>
+<ellipse cx="232" cy="225" rx="23" ry="18" fill="#9aa77a"/>
+<ellipse cx="338" cy="226" rx="20" ry="16" fill="#8a9a6b"/>
+<ellipse cx="349" cy="226" rx="21" ry="16" fill="#7b8c5e"/>
+<ellipse cx="234" cy="226" rx="18" ry="14" fill="#8a9a6b"/>
+<ellipse cx="30" cy="226" rx="22" ry="14" fill="#8a9a6b"/>
+<ellipse cx="66" cy="226" rx="22" ry="14" fill="#8a9a6b"/>
+<g transform="translate(112 252) scale(1.3)"><path d="M-6 -26 L-10 0 M4 -26 L8 0" stroke="#5c4a32" stroke-width="5" stroke-linecap="round"/><path d="M-9 -58 H7 L8 -24 H-10z" fill="#e8590c"/><circle cx="0" cy="-66" r="7" fill="#d9b48f"/><path d="M-8 -70 Q0 -79 8 -70z" fill="#e8590c"/></g>
+<line x1="110" y1="196" x2="130" y2="152" stroke="#3a3f3a" stroke-width="4" stroke-linecap="round"/>
+<path d="M116 178 L108 190 L102 196" stroke="#d9b48f" stroke-width="4" fill="none" stroke-linecap="round"/>
+<g transform="translate(160.9 56.9) scale(1.25 1.25)"><path d="M-16 -2 L-24 -6 L-23 3z" fill="#5d6670"/><ellipse cx="0" cy="0" rx="17" ry="9" fill="#7d8894"/><path d="M-8 4 Q2 10 12 4 Q2 7 -8 4z" fill="#c9a36a"/><path d="M-4 -4 L-14 -24 L6 -6z" fill="#6b7480"/><path d="M-2 -5 L-6 -26 L10 -6z" fill="#8a95a1"/><circle cx="16" cy="-5" r="6.5" fill="#3d4148"/><path d="M12 -3 Q17 2 22 -2" stroke="#fffaf0" stroke-width="1.6" fill="none"/><path d="M15 -11 Q20 -20 26 -14" stroke="#1f2328" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M22 -5 L27 -3 L22 -1z" fill="#1f2328"/><circle cx="18" cy="-6" r="1.2" fill="#fffaf0"/></g>
+<g transform="translate(318 204) scale(1.15 1.15)"><path d="M-16 -2 L-24 -6 L-23 3z" fill="#5d6670"/><ellipse cx="0" cy="0" rx="17" ry="9" fill="#7d8894"/><path d="M-8 4 Q2 10 12 4 Q2 7 -8 4z" fill="#c9a36a"/><path d="M-4 -4 L-14 -24 L6 -6z" fill="#6b7480"/><path d="M-2 -5 L-6 -26 L10 -6z" fill="#8a95a1"/><circle cx="16" cy="-5" r="6.5" fill="#3d4148"/><path d="M12 -3 Q17 2 22 -2" stroke="#fffaf0" stroke-width="1.6" fill="none"/><path d="M15 -11 Q20 -20 26 -14" stroke="#1f2328" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M22 -5 L27 -3 L22 -1z" fill="#1f2328"/><circle cx="18" cy="-6" r="1.2" fill="#fffaf0"/></g>
+<path d="M296 180 L340 224 M340 180 L296 224" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+<line x1="186.902" y1="48.8943" x2="270" y2="50" stroke="#2f6e3b" stroke-width="1.4"/><circle cx="186.902" cy="48.8943" r="2.6" fill="#2f6e3b"/><rect x="258.8" y="26.0" width="133.2" height="49.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="325.422" y="46.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">High bird,</text>
+<text x="325.422" y="66.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">sky behind: OK</text>
+<rect x="272.5" y="130.0" width="119.5" height="29.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="332.27" y="150.5" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Low bird: NO</text>
+<line x1="97.1661" y1="61.7895" x2="88" y2="108" stroke="#e8590c" stroke-width="1.4"/><circle cx="97.1661" cy="61.7895" r="2.6" fill="#e8590c"/><rect x="8.0" y="92.0" width="101.0" height="49.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="58.4848" y="112.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">15 to 30 m</text>
+<text x="58.4848" y="132.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">(Tip)</text>
+<line x1="102" y1="186" x2="50" y2="182" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="102" cy="186" r="2.6" fill="#2f3a2b"/><rect x="8.0" y="170.0" width="44.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="30.0656" y="190.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+<rect x="10" y="262" width="380" height="58" rx="8" fill="#2f3a2b"/>
+<text x="200" y="285" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Lead 7.5 or 8 (steel 6 or 7), open choke</text>
+<text x="200" y="308" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Straightaway: hold a hair under (75%)</text>
+</svg>

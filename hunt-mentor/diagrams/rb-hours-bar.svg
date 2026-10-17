@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Timeline of legal hunting hours. Deer, grouse, quail and all other game except migratory birds: from 1 hour before sunrise to 1 hour after sunset. Ducks and geese: from 30 minutes before sunrise to 30 minutes after sunset, so they start later and end sooner. At night, shaded, no hunting at all.">
+<rect width="400" height="330" fill="#fffaf0"/>
+<defs><linearGradient id="rb-hours-bar-sky" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#2b3a55"/><stop offset="0.188" stop-color="#2b3a55"/><stop offset="0.318" stop-color="#dbe8f1"/><stop offset="0.682" stop-color="#dbe8f1"/><stop offset="0.812" stop-color="#2b3a55"/><stop offset="1" stop-color="#2b3a55"/></linearGradient></defs>
+<rect x="8" y="8" width="384" height="62" rx="8" fill="url(#rb-hours-bar-sky)"/>
+<circle cx="30" cy="22" r="1.6" fill="#fff"/>
+<circle cx="52" cy="28" r="1.6" fill="#fff"/>
+<circle cx="360" cy="22" r="1.6" fill="#fff"/>
+<circle cx="340" cy="28" r="1.6" fill="#fff"/>
+<circle cx="375" cy="22" r="1.6" fill="#fff"/>
+<circle cx="42" cy="46" r="9" fill="#f3e7b3"/><circle cx="46.0" cy="43.8" r="7.6" fill="#2b3a55"/>
+<circle cx="130" cy="70" r="15" fill="#f2b632"/>
+<path d="M130 46 V40 M114 54 L109 49 M146 54 L151 49" stroke="#f2b632" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="270" cy="70" r="15" fill="#f2b632"/>
+<path d="M270 46 V40 M254 54 L249 49 M286 54 L291 49" stroke="#f2b632" stroke-width="2.6" stroke-linecap="round"/>
+<rect x="8" y="70" width="384" height="5" fill="#8a9a6b"/>
+<text x="130" y="102" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sunrise</text>
+<text x="270" y="102" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sunset</text>
+<text x="200" y="48" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">day</text>
+<rect x="80" y="114" width="240" height="32" rx="6" fill="#5c7a3a"/>
+<text x="200" y="136" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Deer, grouse, quail</text>
+<text x="105" y="112" font-size="14" fill="#2f3a2b"></text>
+<text x="295" y="112" font-size="14" fill="#2f3a2b"></text>
+<rect x="105.0" y="158" width="190.0" height="32" rx="6" fill="#4a7fb0"/>
+<text x="200" y="180" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Ducks and geese</text>
+<line x1="130" y1="86" x2="130" y2="198" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="4 3"/>
+<line x1="270" y1="86" x2="270" y2="198" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="4 3"/>
+<line x1="86" y1="216" x2="124" y2="216" stroke="#5c7a3a" stroke-width="1.6"/><path d="M80.0 216.0 L88.0 220.4 L88.0 211.6z" fill="#5c7a3a"/><path d="M130.0 216.0 L122.0 211.6 L122.0 220.4z" fill="#5c7a3a"/>
+<line x1="276" y1="216" x2="314" y2="216" stroke="#5c7a3a" stroke-width="1.6"/><path d="M270.0 216.0 L278.0 220.4 L278.0 211.6z" fill="#5c7a3a"/><path d="M320.0 216.0 L312.0 211.6 L312.0 220.4z" fill="#5c7a3a"/>
+<text x="105" y="236" font-size="15" font-weight="bold" fill="#3f5a26" text-anchor="middle">1 hour</text>
+<text x="295" y="236" font-size="15" font-weight="bold" fill="#3f5a26" text-anchor="middle">1 hour</text>
+<line x1="105.0" y1="250" x2="130" y2="250" stroke="#4a7fb0" stroke-width="3"/><line x1="270" y1="250" x2="295.0" y2="250" stroke="#4a7fb0" stroke-width="3"/>
+<text x="117.5" y="270" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">30 min</text>
+<text x="282.5" y="270" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">30 min</text>
+<text x="12" y="298" font-size="15" font-weight="bold" fill="#2f3a2b">Ducks start later and end sooner.</text>
+<text x="12" y="320" font-size="15" fill="#2f3a2b">Night (shaded): no hunting at all.</text>
+</svg>

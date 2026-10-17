@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif" role="img" aria-label="Two circles around a house. The inner dashed circle is the BC rule, 100 metres. The outer orange circle is the Mission bylaw, 150 metres from any school, public park, playground, church, workshop, place of business, dwelling house, farm building, highway or place where people are assembled. No discharge on or across any highway.">
+<rect x="0" y="0" width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mission adds a bigger circle</text>
+<circle cx="200" cy="170" r="110" fill="#e8590c" opacity=".15" stroke="#e8590c" stroke-width="3"/>
+<circle cx="200" cy="170" r="74" fill="#e8590c" opacity=".2" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 4"/>
+<g transform="translate(200 170) scale(1.4)"><path d="M-20 18 v-18 l20 -16 l20 16 v18 z" fill="#c9b79c" stroke="#2f3a2b" stroke-width="2"/><rect x="-5" y="4" width="10" height="14" fill="#2f3a2b"/></g>
+<text x="200" y="76" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Mission bylaw: 150 m</text>
+<text x="200" y="120" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">BC rule: 100 m</text>
+<text x="200" y="300" font-size="14" fill="#2f3a2b" text-anchor="middle">150 m from a house, farm building, school,</text>
+<text x="200" y="318" font-size="14" fill="#2f3a2b" text-anchor="middle">park, church, workplace or highway (99%).</text>
+<text x="200" y="338" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Never on or across a highway (99%).</text>
+</svg>

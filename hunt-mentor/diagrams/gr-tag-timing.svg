@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Deer tags. Ordered online, they come by mail in about 14 business days. Bought in person at Service BC, FrontCounter BC or a vendor, you get them the same day. They cannot be printed at home.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer tags: how fast?</text>
+  <!-- online lane -->
+  <text x="20" y="62" font-size="16" font-weight="bold" fill="#2f3a2b">Online order</text>
+  <rect x="20" y="72" width="360" height="22" rx="4" fill="#dfe6d3"/>
+  <rect x="20" y="72" width="360" height="22" rx="4" fill="#4a7fb0" opacity=".7"/>
+  <text x="200" y="88" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Mailed: about 14 business days</text>
+  <!-- envelope -->
+  <rect x="300" y="104" width="60" height="38" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><path d="M300 104 l30 20 l30 -20" fill="none" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="20" y="126" font-size="14" fill="#2f3a2b">Too slow for a hunt in 2 weeks</text>
+  <!-- in person lane -->
+  <text x="20" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">In person</text>
+  <rect x="20" y="190" width="70" height="22" rx="4" fill="#e8590c"/>
+  <text x="100" y="206" font-size="14" font-weight="bold" fill="#e8590c">Same day</text>
+  <text x="20" y="236" font-size="14" fill="#2f3a2b">Service BC, FrontCounter BC, vendor</text>
+  <!-- no printer -->
+  <g transform="translate(320 222)">
+    <rect x="-26" y="-14" width="52" height="30" rx="4" fill="#8a9a6b"/><rect x="-16" y="-28" width="32" height="16" fill="#fff" stroke="#2f3a2b"/>
+    <line x1="-34" y1="-34" x2="34" y2="28" stroke="#c0392b" stroke-width="5"/>
+  </g>
+  <text x="320" y="272" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No home printing</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 556" font-family="sans-serif" role="img" aria-label="Where you can camp. Crown land: up to 14 consecutive days, then leave with your gear for 72 hours to reset, 99 percent. Recreation sites: the same 14 day limit, most first come first served, fees at some, 99 percent. At a rec site: no shooting within 100 metres of structures, no gut piles, no taking firewood, 99 percent. Campfires: at most half a metre by half a metre, water or a hand tool ready, follow BC Wildfire Service bans, 99 percent. Five Wildlife Management Areas, WMAs, no camping and no fires: Pitt Addington Marsh, Boundary Bay, Bert Brink, Harrison Chehalis and Serpentine, 99 percent.">
+<rect width="400" height="556" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where you can camp</text>
+<text x="200" y="53" font-size="14" fill="#6b5b4b" text-anchor="middle">WMA = Wildlife Management Area</text>
+<rect x="8" y="62" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="83" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CAMPING OK</text>
+<rect x="8" y="98" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="135.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 135.0) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-16 12 L0 -13 L16 12z"/><path d="M0 -1 L-5 12 L5 12z" fill="#fffaf0"/></g>
+<text x="78" y="121" font-size="16" font-weight="bold" fill="#2f3a2b">Crown land: 14 days</text>
+<text x="78" y="140" font-size="15" fill="#2f3a2b">Then leave with your gear for 72 hours to</text>
+<text x="78" y="159" font-size="15" fill="#2f3a2b">reset (99%)</text>
+<circle cx="41.0" cy="211.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 211.0) scale(0.8)" fill="#2f6e3b" stroke="none"><rect x="-15" y="-6" width="30" height="4" rx="1"/><rect x="-13" y="2" width="26" height="3" rx="1"/><path d="M-10 -2 L-13 12 M10 -2 L13 12 M-5 -2 L-8 12 M5 -2 L8 12" stroke="#2f6e3b" stroke-width="2.4"/></g>
+<text x="78" y="197" font-size="16" font-weight="bold" fill="#2f3a2b">Rec sites: 14 days</text>
+<text x="78" y="216" font-size="15" fill="#2f3a2b">Most first come, first served. Some charge</text>
+<text x="78" y="235" font-size="15" fill="#2f3a2b">a fee (99%)</text>
+<rect x="8" y="258" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="279" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">RULES IN CAMP</text>
+<rect x="8" y="294" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="331.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 331.0) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-16 -2 H8 V-5 H12 V-2 H16 V1 H-2 L-4 3 H-8 L-11 8 H-16 L-13 1 H-16z"/></g>
+<circle cx="41.0" cy="331.0" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 317.0 L55.0 345.0" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="317" font-size="16" font-weight="bold" fill="#2f3a2b">At a rec site</text>
+<text x="78" y="336" font-size="15" fill="#2f3a2b">No shooting within 100 m of structures. No</text>
+<text x="78" y="355" font-size="15" fill="#2f3a2b">gut piles. No taking firewood (99%)</text>
+<circle cx="41.0" cy="407.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 407.0) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M0 -15 C6 -7 13 -2 11 6 C9 12 4 14 0 14 C-4 14 -10 12 -11 5 C-12 -1 -7 -4 -5 -9 C-3 -4 -2 -2 0 -2 C2 -6 1 -10 0 -15z"/><path d="M0 3 C3 6 4 9 2 12 H-2 C-4 9 -3 6 0 3z" fill="#fffaf0"/></g>
+<text x="78" y="393" font-size="16" font-weight="bold" fill="#2f3a2b">Campfire</text>
+<text x="78" y="412" font-size="15" fill="#2f3a2b">At most 0.5 m by 0.5 m. Water or a tool</text>
+<text x="78" y="431" font-size="15" fill="#2f3a2b">ready. Check bans (99%)</text>
+<rect x="8" y="454" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 469) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="475" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">5 WMAs: NO CAMPING, NO FIRES</text>
+<rect x="8" y="490" width="384" height="54" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="517.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 517.0) scale(0.8)" fill="#c0392b" stroke="none"><path d="M-16 12 L0 -13 L16 12z"/><path d="M0 -1 L-5 12 L5 12z" fill="#fffaf0"/></g>
+<circle cx="41.0" cy="517.0" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 503.0 L55.0 531.0" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="512" font-size="15" fill="#2f3a2b">Pitt Addington, Boundary Bay, Bert Brink,</text>
+<text x="78" y="531" font-size="15" fill="#2f3a2b">Harrison Chehalis, Serpentine (99%)</text>
+</svg>

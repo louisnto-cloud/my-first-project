@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Animation of a grouse breathing. Step 1: on the in breath, fresh air flows down the windpipe past the lung into the rear air sacs. Step 2: the bird squeezes, and the rear sacs push the air one way through the rigid lung, where oxygen goes into the blood. Step 3: on the next breath the used air moves to the front sacs and out. Fresh air crosses the lung in one direction." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">How a grouse breathes</text>
+<path d="M50 170 Q60 110 160 105 Q250 100 300 120 L340 100 L370 110 L340 130 Q320 220 200 235 Q90 235 50 170 Z" fill="#efe3cf" stroke="#6b4f35" stroke-width="3"/>
+<ellipse cx="120" cy="175" rx="48" ry="30" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="2"/>
+<ellipse cx="290" cy="170" rx="26" ry="22" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="185" y="118" width="70" height="24" rx="10" fill="#b5524a"/>
+<text x="220" y="135" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Lung</text>
+<text x="120" y="180" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Rear sacs</text>
+<text x="290" y="176" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Front</text>
+<path d="M370 108 L330 112 L290 150" fill="none" stroke="#6b4f35" stroke-width="5"/>
+<path id="mgr-air-sacs-p1" d="M370 108 L330 112 L280 130 L200 150 L130 172" fill="none"/>
+<path id="mgr-air-sacs-p2" d="M130 172 L190 132 L250 130 L290 168" fill="none"/>
+<path id="mgr-air-sacs-p3" d="M290 168 L300 140 L330 112 L380 104" fill="none"/>
+<circle r="6" fill="#4a7fb0" opacity="0"><set attributeName="opacity" to="1" begin="0s"/><animateMotion dur="2.5s" begin="0s" fill="freeze"><mpath href="#mgr-air-sacs-p1"/></animateMotion><set attributeName="opacity" to="0" begin="3.2s"/></circle>
+<circle r="6" fill="#e8590c" opacity="0"><set attributeName="opacity" to="1" begin="3.2s"/><animateMotion dur="2.5s" begin="3.2s" fill="freeze"><mpath href="#mgr-air-sacs-p2"/></animateMotion><set attributeName="opacity" to="0" begin="6.4s"/></circle>
+<circle r="6" fill="#9aa0a6" opacity="0"><set attributeName="opacity" to="1" begin="6.4s"/><animateMotion dur="2s" begin="6.4s" fill="freeze"><mpath href="#mgr-air-sacs-p3"/></animateMotion><set attributeName="opacity" to="0" begin="8.8s"/></circle>
+<circle r="6" fill="#4a7fb0" opacity="0"><set attributeName="opacity" to="1" begin="0.25s"/><animateMotion dur="2.5s" begin="0.25s" fill="freeze"><mpath href="#mgr-air-sacs-p1"/></animateMotion><set attributeName="opacity" to="0" begin="3.2s"/></circle>
+<circle r="6" fill="#e8590c" opacity="0"><set attributeName="opacity" to="1" begin="3.45s"/><animateMotion dur="2.5s" begin="3.45s" fill="freeze"><mpath href="#mgr-air-sacs-p2"/></animateMotion><set attributeName="opacity" to="0" begin="6.4s"/></circle>
+<circle r="6" fill="#9aa0a6" opacity="0"><set attributeName="opacity" to="1" begin="6.65s"/><animateMotion dur="2s" begin="6.65s" fill="freeze"><mpath href="#mgr-air-sacs-p3"/></animateMotion><set attributeName="opacity" to="0" begin="8.8s"/></circle>
+<circle r="6" fill="#4a7fb0" opacity="0"><set attributeName="opacity" to="1" begin="0.5s"/><animateMotion dur="2.5s" begin="0.5s" fill="freeze"><mpath href="#mgr-air-sacs-p1"/></animateMotion><set attributeName="opacity" to="0" begin="3.2s"/></circle>
+<circle r="6" fill="#e8590c" opacity="0"><set attributeName="opacity" to="1" begin="3.7s"/><animateMotion dur="2.5s" begin="3.7s" fill="freeze"><mpath href="#mgr-air-sacs-p2"/></animateMotion><set attributeName="opacity" to="0" begin="6.4s"/></circle>
+<circle r="6" fill="#9aa0a6" opacity="0"><set attributeName="opacity" to="1" begin="6.9s"/><animateMotion dur="2s" begin="6.9s" fill="freeze"><mpath href="#mgr-air-sacs-p3"/></animateMotion><set attributeName="opacity" to="0" begin="8.8s"/></circle>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0s"/><set attributeName="opacity" to="0" begin="3.2s"/><text x="200" y="270" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">1. Breathe in: fresh air goes past the lung to the rear sacs</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="3.2s"/><set attributeName="opacity" to="0" begin="6.4s"/><text x="200" y="270" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">2. Squeeze: the sacs push it one way through the lung</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6.4s"/><text x="200" y="270" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">3. Next breath: used air leaves by the front sacs</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="8.8s" fill="freeze"/><rect x="40" y="52" width="320" height="30" rx="8" fill="#2f3a2b" stroke="none" stroke-width="0"/><text x="200" y="73" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Fresh air crosses the lung one way</text></g>
+</svg>

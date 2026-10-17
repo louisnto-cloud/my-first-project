@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 356" font-family="sans-serif" role="img" aria-label="A deer's senses ranked: 1 nose, never lies, beat it only with the wind; 2 ears, catch metal and zips, beat them with quiet gear and slow feet; 3 eyes, catch motion, beat them by freezing and having a background.">
+<rect width="400" height="356" fill="#fffaf0"/>
+<g data-tip="How a deer checks|It hears it, looks for it, tries to smell it, then goes. Freeze while it is only ears and eyes. Tip." data-tip-dot="372,14">
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nose, then ears, then eyes</text>
+</g>
+<!-- 1 nose -->
+<g data-tip="Nose|Smell is a deer's strongest sense. Wind at your back toward the deer ends the hunt." data-tip-dot="382,52">
+<rect x="8" y="42" width="384" height="86" rx="10" fill="#fde3d3" stroke="#e8590c" stroke-width="2"/>
+<circle cx="32" cy="66" r="15" fill="#e8590c"/><text x="32" y="72" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(68 92) scale(0.85)">
+  <path d="M-22 -16 C-12 -22 12 -22 22 -16 C26 -4 18 12 0 18 C-18 12 -26 -4 -22 -16z" fill="#2a1d12"/>
+  <path d="M-14 -4 C-12 -12 -4 -10 -6 -2 C-8 4 -12 6 -16 4z M14 -4 C12 -12 4 -10 6 -2 C8 4 12 6 16 4z" fill="#000"/>
+  <path d="M-10 -14 C-4 -17 4 -17 10 -14" fill="none" stroke="#5a4636" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26 -14 q4 -5 8 0 t8 0 M26 0 q4 -5 8 0 t8 0 M26 14 q4 -5 8 0 t8 0" fill="none" stroke="#e8590c" stroke-width="2.2" stroke-linecap="round"/>
+</g>
+<text x="118" y="70" font-size="18" font-weight="bold" fill="#2f3a2b">Nose</text>
+<text x="170" y="70" font-size="15" fill="#6b5b4b">never lies</text>
+<text x="118" y="94" font-size="15" fill="#2f3a2b">catches your scent far</text>
+<text x="118" y="114" font-size="15" font-weight="bold" fill="#c0392b">Beat it: only with the wind</text>
+</g>
+<!-- 2 ears -->
+<g data-tip="Ears|They hear about 115 Hz (hertz) to 54 kHz (kilohertz), best at 4 to 8 kHz. That is the range of zippers, Velcro, nylon swish and metal clicks." data-tip-dot="382,146">
+<rect x="8" y="136" width="384" height="86" rx="10" fill="#fbeee2" stroke="#f0a36f" stroke-width="2"/>
+<circle cx="32" cy="160" r="15" fill="#f0a36f"/><text x="32" y="166" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g transform="translate(70 184)">
+  <path d="M-4 22 C-16 6 -16 -20 -2 -32 C10 -20 12 6 4 22z" fill="#8b6f52" stroke="#4a3826" stroke-width="1.4"/>
+  <path d="M-2 14 C-8 2 -8 -14 -2 -24 C4 -14 4 2 -2 14z" fill="#e9c9b0"/>
+  <path d="M18 -10 c5 4 5 10 0 14 M24 -16 c8 7 8 19 0 26" fill="none" stroke="#e8590c" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+<text x="118" y="164" font-size="18" font-weight="bold" fill="#2f3a2b">Ears</text>
+<text x="170" y="164" font-size="15" fill="#6b5b4b">metal, zips, voices</text>
+<text x="118" y="188" font-size="15" fill="#2f3a2b">catch high clicks and nylon</text>
+<text x="118" y="208" font-size="15" font-weight="bold" fill="#2f6e3b">Beat it: quiet gear, slow feet</text>
+</g>
+<!-- 3 eyes -->
+<g data-tip="Eyes|They catch motion and outline fast, not colour detail. Blaze orange looks dull to them." data-tip-dot="382,240">
+<rect x="8" y="230" width="384" height="86" rx="10" fill="#eef1e6" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="32" cy="254" r="15" fill="#8a9a6b"/><text x="32" y="260" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<g transform="translate(72 280)">
+  <path d="M-24 0 C-14 -14 14 -14 24 0 C14 14 -14 14 -24 0z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="0" cy="0" r="9" fill="#5a3e26"/><rect x="-7" y="-2.5" width="14" height="5" rx="2.5" fill="#0b0805"/>
+</g>
+<text x="118" y="258" font-size="18" font-weight="bold" fill="#2f3a2b">Eyes</text>
+<text x="170" y="258" font-size="15" fill="#6b5b4b">motion, outline</text>
+<text x="118" y="282" font-size="15" fill="#2f3a2b">not colour detail</text>
+<text x="118" y="302" font-size="15" font-weight="bold" fill="#2f6e3b">Beat it: freeze, keep a background</text>
+</g>
+<g data-tip="Play the wind|You can fool the eyes. You can quiet your feet. You can never fool the nose." data-tip-dot="382,326">
+<rect x="8" y="322" width="384" height="30" rx="8" fill="#2f3a2b"/>
+<text x="200" y="343" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">You can never fool the nose. Play the wind.</text>
+</g>
+</svg>

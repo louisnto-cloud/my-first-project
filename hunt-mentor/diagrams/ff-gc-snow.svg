@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" font-family="sans-serif" role="img" aria-label="A barrel cut away to show a plug of snow at the muzzle. If you fall, slip or dip the muzzle in snow or mud: 1 unload, 2 take the bolt out, 3 look through the bore. Any obstruction: do not fire. Tikka says a gunsmith must remove obstructions (95%).">
+<rect width="400" height="312" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow or mud in the barrel: stop</text>
+<text x="200" y="52" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fall, slip, muzzle in snow?</text>
+<rect x="0" y="66" width="400" height="66" fill="#e3ecf3"/>
+<line x1="35.0" y1="76.0" x2="45.0" y2="76.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="37.5" y1="71.7" x2="42.5" y2="80.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="42.5" y1="71.7" x2="37.5" y2="80.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="115.0" y1="122.0" x2="125.0" y2="122.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="117.5" y1="117.7" x2="122.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="122.5" y1="117.7" x2="117.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="175.0" y1="76.0" x2="185.0" y2="76.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="177.5" y1="71.7" x2="182.5" y2="80.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="182.5" y1="71.7" x2="177.5" y2="80.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="295.0" y1="122.0" x2="305.0" y2="122.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="297.5" y1="117.7" x2="302.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="302.5" y1="117.7" x2="297.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="375.0" y1="122.0" x2="385.0" y2="122.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="377.5" y1="117.7" x2="382.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="382.5" y1="117.7" x2="377.5" y2="126.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="265.0" y1="72.0" x2="275.0" y2="72.0" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="267.5" y1="67.7" x2="272.5" y2="76.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/><line x1="272.5" y1="67.7" x2="267.5" y2="76.3" stroke="#9bb7cf" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M14 80 H64 L70 84 H232 V108 H70 L64 112 H14z" fill="#3f443d"/>
+<rect x="70" y="92" width="162" height="8" fill="#8d918a"/>
+<path d="M232 84 H246 V108 H232z" fill="#555b52"/>
+<rect x="202" y="92" width="44" height="8" fill="#f7f9fb" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M240 90 C252 82 264 92 258 102 C266 108 252 114 244 106z" fill="#f7f9fb" stroke="#4a7fb0" stroke-width="1.4"/>
+<line x1="262" y1="100" x2="288" y2="99" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="262" cy="100" r="2.6" fill="#2f3a2b"/><rect x="288.0" y="86.0" width="95.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="335.574" y="106.5" font-size="16" font-weight="bold" fill="#2f5f8a" text-anchor="middle">snow plug</text>
+<rect x="8" y="146" width="124" height="92" rx="8" fill="#f1ead9"/>
+<circle cx="26.0" cy="164.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="26" y="169" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(52 188)"><rect x="-4" y="-12" width="8" height="20" rx="1.5" fill="#c9a227"/><path d="M-4 -12 L0 -20 L4 -12z" fill="#b87333"/></g>
+<g transform="translate(66 188)"><rect x="-4" y="-12" width="8" height="20" rx="1.5" fill="#c9a227"/><path d="M-4 -12 L0 -20 L4 -12z" fill="#b87333"/></g>
+<g transform="translate(80 188)"><rect x="-4" y="-12" width="8" height="20" rx="1.5" fill="#c9a227"/><path d="M-4 -12 L0 -20 L4 -12z" fill="#b87333"/></g>
+<text x="70" y="228" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Unload</text>
+<rect x="138" y="146" width="124" height="92" rx="8" fill="#f1ead9"/>
+<circle cx="156.0" cy="164.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="156" y="169" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g transform="translate(156 184) scale(0.55)"><rect x="0" y="-13" width="22" height="26" rx="5" fill="#3f443d"/><rect x="20" y="-11" width="130" height="22" rx="4" fill="#a9ada6" stroke="#3f443d" stroke-width="1.6"/><path d="M24 -5 H146" stroke="#e4e6e1" stroke-width="3"/><path d="M40 8 L56 36" stroke="#3f443d" stroke-width="6" stroke-linecap="round"/><circle cx="58" cy="40" r="8" fill="#3f443d"/><rect x="148" y="-13" width="8" height="26" rx="2" fill="#8d918a" stroke="#3f443d" stroke-width="1.6"/></g>
+<text x="200" y="228" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bolt out</text>
+<rect x="268" y="146" width="124" height="92" rx="8" fill="#f1ead9"/>
+<circle cx="286.0" cy="164.0" r="11" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="286" y="169" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="344" cy="188" r="13" fill="#8d918a" stroke="#3f443d" stroke-width="3"/><circle cx="344" cy="188" r="5" fill="#fff"/>
+<g transform="translate(312 188) scale(0.85)"><path d="M-16 0 C-8 -10 8 -10 16 0 C8 10 -8 10 -16 0z" fill="#fff" stroke="#2f3a2b" stroke-width="2.2"/><circle r="5.5" fill="#2f3a2b"/><circle cx="-1.8" cy="-1.8" r="1.6" fill="#fff"/></g>
+<text x="330" y="228" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Look through</text>
+<rect x="8" y="248" width="384" height="56" rx="8" fill="#b3261e"/><text x="200" y="272.4" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Any obstruction: do not fire</text><text x="200" y="292.4" font-size="14" fill="#fffaf0" text-anchor="middle">Tikka: a gunsmith removes it (95%)</text>
+</svg>

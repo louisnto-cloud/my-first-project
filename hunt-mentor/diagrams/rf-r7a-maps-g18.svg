@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 691" font-family="sans-serif" role="img" aria-label="Maps G18 to G25, north and caribou, grouped by rule. Mountain goat closed areas: G18 Gleason Creek, MU 7-18; G21 Ospika River, MU 7-37; G23 Mitchell and Blanchet, MUs 7-27 and 7-28; G24 Driftwood, MU 7-27. Caribou: G22, caribou in Zone D of MU 7-39 only for Limited Entry Hunting (LEH) permit holders; G25, caribou hunting prohibited in parts of MUs 7-39 and 7-40. G20 Kennedy Siding: no hunting or shooting 1 September to 31 March, MU 7-23. G19 Monkman Lake Park area: open to hunting, MU 7-18.">
+<rect width="400" height="691" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps G18 to G25. MU: Management Unit</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><path d="M-14 4 C-14 -3 -9 -5 0 -5 L6 -6 L8 -11 L12 -11 L15 -7 L13 -4 L10 -3 L9 3 L9 12 H6 L5 5 L-8 5 L-9 12 H-12 L-12 7z"/><path d="M9 -11 C8 -15 6 -16 4 -16" stroke="#fffaf0" stroke-width="2" fill="none"/><path d="M13 -4 L14 1" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">MOUNTAIN GOAT CLOSED</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G18</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Gleason Creek</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">MU 7-18</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G21</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Ospika River</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">MU 7-37</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="194.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="215.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G23</text>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Mitchell and Blanchet</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">MUs 7-27, 7-28</text>
+<rect x="14" y="251.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="272.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G24</text>
+<text x="78" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">Driftwood</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">MU 7-27</text>
+<rect x="8" y="304" width="384" height="30" rx="6" fill="#6a4c93"/>
+<text x="18" y="325" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CARIBOU</text>
+<rect x="8" y="340" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="352.5" width="54" height="30" rx="6" fill="#6a4c93"/>
+<text x="41" y="373.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G22</text>
+<text x="78" y="363" font-size="16" font-weight="bold" fill="#2f3a2b">Zone D, MU 7-39</text>
+<text x="78" y="382" font-size="15" fill="#2f3a2b">Draw (LEH) permit holders only</text>
+<rect x="14" y="409.5" width="54" height="30" rx="6" fill="#6a4c93"/>
+<text x="41" y="430.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G25</text>
+<text x="78" y="420" font-size="16" font-weight="bold" fill="#2f3a2b">Parts of MUs 7-39, 7-40</text>
+<text x="78" y="439" font-size="15" fill="#c0392b">Caribou hunting prohibited</text>
+<rect x="8" y="462" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 477) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="483" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO HUNTING OR SHOOTING</text>
+<rect x="8" y="498" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="510.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="531.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G20</text>
+<text x="78" y="521" font-size="16" font-weight="bold" fill="#2f3a2b">Kennedy Siding</text>
+<text x="78" y="540" font-size="15" fill="#2f3a2b">Sept 1 to Mar 31. MU 7-23</text>
+<rect x="8" y="563" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="584" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">OPEN TO HUNTING</text>
+<rect x="8" y="599" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="611.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="632.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">G19</text>
+<text x="78" y="622" font-size="16" font-weight="bold" fill="#2f3a2b">Monkman Lake Park area</text>
+<text x="78" y="641" font-size="15" fill="#2f3a2b">MU 7-18</text>
+<text x="14" y="678" font-size="14" fill="#6b5b4b">LEH: Limited Entry Hunting (the draw)</text>
+</svg>

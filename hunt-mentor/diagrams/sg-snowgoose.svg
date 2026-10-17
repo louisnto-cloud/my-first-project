@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="Snow geese calendar. They reach the Fraser delta by early October, peak mid October to mid December, mostly shift to the Skagit in Washington late December to February, return mid March to mid April, then fly home to Wrangel Island, Russia, in April.">
+<rect width="400" height="290" fill="#fffaf0"/>
+<g data-tip="Fall migration|In the Interior, fall migration runs late September to late November, as the lakes freeze.">
+<rect x="8" y="6" width="384" height="30" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Snow geese and the Fraser delta</text></g>
+<rect x="118.0" y="44" width="34.0" height="150" fill="#f3ecdb"/>
+<text x="135.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<rect x="152.0" y="44" width="34.0" height="150" fill="#faf5ea"/>
+<text x="169.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<rect x="186.0" y="44" width="34.0" height="150" fill="#f3ecdb"/>
+<text x="203.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<rect x="220.0" y="44" width="34.0" height="150" fill="#faf5ea"/>
+<text x="237.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<rect x="254.0" y="44" width="34.0" height="150" fill="#f3ecdb"/>
+<text x="271.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jan</text>
+<rect x="288.0" y="44" width="34.0" height="150" fill="#faf5ea"/>
+<text x="305.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feb</text>
+<rect x="322.0" y="44" width="34.0" height="150" fill="#f3ecdb"/>
+<text x="339.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mar</text>
+<rect x="356.0" y="44" width="34.0" height="150" fill="#faf5ea"/>
+<text x="373.0" y="214" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Apr</text>
+<line x1="254.0" y1="44" x2="254.0" y2="198" stroke="#6b5b4b" stroke-width="1.5" stroke-dasharray="4 3"/>
+<g data-tip="Fraser delta|Snow geese reach the Fraser delta by early October and come back mid March to mid April. The big BC flocks are here.">
+<rect x="8" y="52" width="384" height="44" fill="none" pointer-events="all"/>
+<text x="110" y="80" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Fraser delta</text>
+<rect x="155.4" y="60" width="91.8" height="28" rx="7" fill="#4a7fb0"/>
+<rect x="339.0" y="60" width="34.0" height="28" rx="7" fill="#4a7fb0"/>
+</g>
+<g data-tip="Peak|Mid October to mid December, on the Fraser delta.">
+<rect x="8" y="100" width="384" height="44" fill="none" pointer-events="all"/>
+<text x="110" y="128" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Peak</text>
+<rect x="169.0" y="108" width="68.0" height="28" rx="7" fill="#e8590c"/>
+</g>
+<g data-tip="Skagit, Washington|Most of the flock shifts south to the Skagit in Washington from late December to February.">
+<rect x="8" y="148" width="384" height="44" fill="none" pointer-events="all"/>
+<text x="110" y="167" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Skagit,</text>
+<text x="110" y="185" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">Washington</text>
+<rect x="247.2" y="156" width="74.8" height="28" rx="7" fill="#6f7d55"/>
+</g>
+<g data-tip="Home in April|In April the snow geese fly home to Wrangel Island, Russia."><rect x="8" y="228" width="384" height="52" rx="9" fill="#eef2f6"/><path d="M30 254 H58" stroke="#2c5d86" stroke-width="3"/><path d="M64 254 l-10 -6 v12z" fill="#2c5d86"/><text x="76" y="250" font-size="15" font-weight="bold" fill="#2c5d86">April: home to Wrangel Island,</text><text x="76" y="270" font-size="15" fill="#2c5d86">Russia (80%)</text></g>
+</svg>

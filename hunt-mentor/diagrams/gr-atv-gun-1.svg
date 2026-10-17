@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="ATV gun step 1: at the truck, take the magazine out and empty the chamber, then put the rifle in the boot on the rack.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="230" width="400" height="70" fill="#dfe6d3"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">At the truck: unload</text>
+  <g transform="translate(200 196) scale(1.8)"><rect x="-40" y="-18" width="80" height="20" rx="6" fill="#4a5a3a" stroke="#2f3a2b" stroke-width="2"/><rect x="-46" y="-26" width="26" height="8" fill="#2f3a2b"/><rect x="20" y="-26" width="26" height="8" fill="#2f3a2b"/><circle cx="-28" cy="10" r="14" fill="#2f3a2b"/><circle cx="28" cy="10" r="14" fill="#2f3a2b"/><path d="M-6 -18 l6 -14 h10" stroke="#2f3a2b" stroke-width="4" fill="none"/></g><rect x="150" y="140" width="110" height="16" rx="6" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2" transform="rotate(-8 205 148)"/><rect x="40" y="70" width="30" height="40" rx="3" fill="#2f3a2b"/><text x="80" y="96" font-size="15" font-weight="bold" fill="#e8590c">Magazine out</text><text x="250" y="96" font-size="15" font-weight="bold" fill="#e8590c">Chamber empty</text>
+  <text x="200" y="284" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Magazine out, chamber empty, rifle in the boot</text>
+</svg>

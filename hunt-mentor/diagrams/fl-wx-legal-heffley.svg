@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 384" font-family="sans-serif" role="img" aria-label="Bar chart of legal big game hunting hours near Heffley Creek in 2026, on BC time, UTC minus 7. Sunrise and sunset: 1 September 6:13 and 19:50, 1 October 6:59 and 18:42, 15 October 7:22 and 18:12, 31 October 7:49 and 17:40, 15 November 8:15 and 17:16, 30 November 8:39 and 17:01, 10 December 8:52 and 16:56. A lighter band adds 1 hour before sunrise and 1 hour after sunset: legal hours for big game.">
+<rect width="400" height="384" fill="#fffaf0"/>
+<text x="14" y="22" font-size="14" font-weight="bold" fill="#6b5b4b">BC time, UTC minus 7, 2026</text>
+<text x="14" y="57" font-size="16" font-weight="bold" fill="#2f3a2b">Sep 1</text>
+<rect x="72" y="40" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="93.2" y="40" width="272.4" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="110.7" y="40" width="237.5" height="26" rx="4" fill="#e8590c"/>
+<text x="116.7" y="58" font-size="15" font-weight="bold" fill="#fffaf0">6:13</text>
+<text x="342.2" y="58" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">19:50</text>
+<text x="14" y="93" font-size="16" font-weight="bold" fill="#2f3a2b">Oct 1</text>
+<rect x="72" y="76" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="106.6" y="76" width="239.3" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="124.0" y="76" width="204.4" height="26" rx="4" fill="#e8590c"/>
+<text x="130" y="94" font-size="15" font-weight="bold" fill="#fffaf0">6:59</text>
+<text x="322.4" y="94" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">18:42</text>
+<text x="14" y="129" font-size="16" font-weight="bold" fill="#2f3a2b">Oct 15</text>
+<rect x="72" y="112" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="113.3" y="112" width="223.9" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="130.7" y="112" width="189.0" height="26" rx="4" fill="#e8590c"/>
+<text x="136.7" y="130" font-size="15" font-weight="bold" fill="#fffaf0">7:22</text>
+<text x="313.7" y="130" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">18:12</text>
+<text x="14" y="165" font-size="16" font-weight="bold" fill="#2f3a2b">Oct 31</text>
+<rect x="72" y="148" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="121.1" y="148" width="206.7" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="138.6" y="148" width="171.8" height="26" rx="4" fill="#e8590c"/>
+<text x="144.6" y="166" font-size="15" font-weight="bold" fill="#fffaf0">7:49</text>
+<text x="304.4" y="166" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">17:40</text>
+<text x="14" y="201" font-size="16" font-weight="bold" fill="#2f3a2b">Nov 15</text>
+<rect x="72" y="184" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="128.7" y="184" width="192.2" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="146.1" y="184" width="157.3" height="26" rx="4" fill="#e8590c"/>
+<text x="152.1" y="202" font-size="15" font-weight="bold" fill="#fffaf0">8:15</text>
+<text x="297.4" y="202" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">17:16</text>
+<text x="14" y="237" font-size="16" font-weight="bold" fill="#2f3a2b">Nov 30</text>
+<rect x="72" y="220" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="135.7" y="220" width="180.8" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="153.1" y="220" width="146.0" height="26" rx="4" fill="#e8590c"/>
+<text x="159.1" y="238" font-size="15" font-weight="bold" fill="#fffaf0">8:39</text>
+<text x="293.1" y="238" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">17:01</text>
+<text x="14" y="273" font-size="16" font-weight="bold" fill="#2f3a2b">Dec 10</text>
+<rect x="72" y="256" width="314" height="26" rx="4" fill="#ece7da"/>
+<rect x="139.5" y="256" width="175.6" height="26" rx="4" fill="#f6c8a8"/>
+<rect x="156.9" y="256" width="140.7" height="26" rx="4" fill="#e8590c"/>
+<text x="162.9" y="274" font-size="15" font-weight="bold" fill="#fffaf0">8:52</text>
+<text x="291.6" y="274" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">16:56</text>
+<line x1="106.9" y1="290" x2="106.9" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="106.9" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">6:00</text>
+<line x1="159.2" y1="290" x2="159.2" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="159.2" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">9:00</text>
+<line x1="211.6" y1="290" x2="211.6" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="211.6" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">12:00</text>
+<line x1="263.9" y1="290" x2="263.9" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="263.9" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">15:00</text>
+<line x1="316.2" y1="290" x2="316.2" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="316.2" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">18:00</text>
+<line x1="368.6" y1="290" x2="368.6" y2="295" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="368.6" y="311" font-size="14" fill="#6b5b4b" text-anchor="middle">21:00</text>
+<line x1="72" y1="290" x2="386" y2="290" stroke="#6b5b4b" stroke-width="1.2"/>
+<rect x="14" y="326" width="26" height="16" rx="3" fill="#e8590c"/>
+<text x="48" y="340" font-size="16" font-weight="bold" fill="#2f3a2b">Sunrise to sunset</text>
+<rect x="14" y="352" width="26" height="16" rx="3" fill="#f6c8a8"/>
+<text x="48" y="366" font-size="16" font-weight="bold" fill="#2f3a2b">Legal: 1 h before and after</text>
+</svg>

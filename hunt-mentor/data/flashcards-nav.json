@@ -1,0 +1,723 @@
+[
+ {
+  "id": "mc-nav-001",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "BC ground search and rescue tasks in 2022?",
+  "back": "1,510 tasks; 1,019 lives saved (95%, BCSARA 2022 review).",
+  "diagram": "mc-nav-sar-bars"
+ },
+ {
+  "id": "mc-nav-002",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Biggest activity slice of BC ground SAR tasks, 2022?",
+  "back": "Hiking, about 41%. Hunting has no slice of its own (80%, my reading of the chart)."
+ },
+ {
+  "id": "mc-nav-003",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Does BC charge you for a search and rescue?",
+  "back": "No. \"You don't pay to be rescued\" (95%, BCSARA report); NSR: no cost for rescue (75%)."
+ },
+ {
+  "id": "mc-nav-004",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "BCSARA top 10 worst things: name 4 about planning and navigation.",
+  "back": "No trip plan; only a cell phone and maybe water; no \"what if\"; not knowing your location (95%).",
+  "diagram": "mc-nav-worst10"
+ },
+ {
+  "id": "mc-nav-005",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "BCSARA's number 1 worst thing?",
+  "back": "Wrong footwear: slips, trips, falls, broken bones (95%)."
+ },
+ {
+  "id": "mc-nav-006",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "How do hunters usually get lost?",
+  "back": "Following an animal or a blood trail intently through dense brush (65%, Koester via Popular Science).",
+  "diagram": "mc-nav-hunter-lost"
+ },
+ {
+  "id": "mc-nav-007",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What does FACETS stand for?",
+  "back": "Familiarity, Acceptance, Consistency, Expert halo, Tracks or scarcity, Social facilitation: six thinking traps from avalanche accidents (80%).",
+  "diagram": "mc-nav-facets"
+ },
+ {
+  "id": "mc-nav-008",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "\"One more ridge, we came this far.\" Which trap?",
+  "back": "Consistency: committed to a goal as things get worse (80% for the trap; Tip for the example)."
+ },
+ {
+  "id": "mc-nav-009",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "\"Last day, last hour of light.\" Which trap?",
+  "back": "Scarcity (tracks): racing a closing window (80%; example Tip)."
+ },
+ {
+  "id": "mc-nav-010",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "7 lines of a trip plan?",
+  "back": "Who; vehicle and plate; where parked with coordinates; route A and B; back by; call 911 if; gear and colours (75% core, Tip extras).",
+  "diagram": "mc-nav-tripplan"
+ },
+ {
+  "id": "mc-nav-011",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "When should you call 911 if lost or hurt?",
+  "back": "As soon as you know. Dial 911, ask for police (75%, North Shore Rescue).",
+  "diagram": "mc-nav-call-time"
+ },
+ {
+  "id": "mc-nav-012",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Who activates ground SAR in BC?",
+  "back": "Agencies such as police, BC Ambulance, fire services. You call 911 (95%, BCSARA)."
+ },
+ {
+  "id": "mc-nav-013",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Box yourself in: the 3 kinds of lines?",
+  "back": "Baseline you can always walk back to; handrails on the sides; a backstop you never cross (Tip, built on orienteering, 85%).",
+  "diagram": "mc-nav-box"
+ },
+ {
+  "id": "mc-nav-014",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What is a handrail?",
+  "back": "A line feature you can follow without the compass: creek, road, fence, power line, timber edge, ridge (85%, Little Book of Orienteering)."
+ },
+ {
+  "id": "mc-nav-015",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What is a catching feature?",
+  "back": "A big line just past your target that tells you that you overshot (85%).",
+  "diagram": "fn-nav-catch"
+ },
+ {
+  "id": "mc-nav-016",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What is an attack point?",
+  "back": "A big, easy feature near the target. Go big, then go small (85%).",
+  "diagram": "fn-nav-attack"
+ },
+ {
+  "id": "mc-nav-017",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What is a collecting feature?",
+  "back": "Something you pass on the way that tells you that you are on track, like a creek you cross (85%)."
+ },
+ {
+  "id": "mc-nav-018",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Escape bearing?",
+  "back": "The rough bearing that always reaches your baseline, e.g. road to the south: about 180. Write it on your hand (Tip).",
+  "diagram": "mc-nav-study-4"
+ },
+ {
+  "id": "mc-nav-019",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "First two things at the truck?",
+  "back": "Drop a Parking waypoint and note the escape bearing (99% app; Tip)."
+ },
+ {
+  "id": "mc-nav-020",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Why look back at every fork?",
+  "back": "The way out looks different from the way in (Tip)."
+ },
+ {
+  "id": "mc-nav-021",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "How often should you find yourself on the map?",
+  "back": "Every 15 to 30 minutes; more often in timber, fog, snow and dark (Tip).",
+  "diagram": "mc-nav-check-clock"
+ },
+ {
+  "id": "mc-nav-022",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Walking speed off trail and on a road?",
+  "back": "About 4 km/h off trail, 5 on roads (75%, Aitken). Add 1 h per 600 m of climb (75%, Naismith).",
+  "diagram": "mc-nav-speeds"
+ },
+ {
+  "id": "mc-nav-023",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "The first sign you are unsure. What do you do?",
+  "back": "Stop. Go back to your last sure point if you can see it or follow your track. Otherwise full STOP (Tip; 75%).",
+  "diagram": "mc-nav-unsure-flow"
+ },
+ {
+  "id": "mc-nav-024",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "1:50,000: what is 1 cm on the ground?",
+  "back": "500 m. So 2 cm is 1 km (99%, maths).",
+  "diagram": "mc-nav-scale"
+ },
+ {
+  "id": "mc-nav-025",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "1:20,000: what is 1 cm?",
+  "back": "200 m. 1 km is 5 cm (99%)."
+ },
+ {
+  "id": "mc-nav-026",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "NTS standard map scales?",
+  "back": "1:50,000 and 1:250,000 (85%)."
+ },
+ {
+  "id": "mc-nav-027",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Contour gap 1 mm, 20 m lines, 1:50,000: how steep?",
+  "back": "About 22 degrees. 2 mm about 11; 0.5 mm about 39 (95%, my calculation).",
+  "diagram": "mc-nav-spacing-slope"
+ },
+ {
+  "id": "mc-nav-028",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Hunt Map contour interval?",
+  "back": "20 m, with a thicker index line every 100 m (99%, app). Feet mode: 40 and 200 ft."
+ },
+ {
+  "id": "mc-nav-029",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Contours cross a creek in a V. Which way does it point?",
+  "back": "Upstream, toward higher ground (95%, USGS).",
+  "diagram": "mc-nav-v-upstream"
+ },
+ {
+  "id": "mc-nav-030",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Ridge versus draw on contours?",
+  "back": "Ridge: bends point downhill. Draw: bends point uphill (85%).",
+  "diagram": "hf-shape-draw"
+ },
+ {
+  "id": "mc-nav-031",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Contour lines touching or merging mean?",
+  "back": "A cliff (95%).",
+  "diagram": "hf-shape-cliff"
+ },
+ {
+  "id": "mc-nav-032",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Topo map colours: brown, blue, green?",
+  "back": "Brown contours; blue water and grid; green vegetation (95%, USGS). Read each sheet's legend.",
+  "diagram": "mc-nav-symbols"
+ },
+ {
+  "id": "mc-nav-033",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "How do you read a UTM grid reference?",
+  "back": "Right first (easting), then up (northing) (95%).",
+  "diagram": "mc-nav-utm-read"
+ },
+ {
+  "id": "mc-nav-034",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "UTM zones: Heffley Creek, Mission, Osoyoos?",
+  "back": "Heffley Creek and Mission zone 10; Osoyoos zone 11 (90%)."
+ },
+ {
+  "id": "mc-nav-035",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Declination at Heffley Creek, Oct 2026?",
+  "back": "15.17 degrees east, changing minus 0.13 a year (95%, NOAA World Magnetic Model).",
+  "diagram": "mc-nav-three-norths"
+ },
+ {
+  "id": "mc-nav-036",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Declination at Mission and Osoyoos?",
+  "back": "Mission 15.20 E; Osoyoos area 14.58 E (95%, NOAA)."
+ },
+ {
+  "id": "mc-nav-037",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Grid north near Heffley Creek?",
+  "back": "About 2.5 degrees east of true north, so the needle is about 12.7 degrees east of grid lines (85%, my calculation)."
+ },
+ {
+  "id": "mc-nav-038",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Declination east, magnetic ...?",
+  "back": "Least: map to compass subtract 15; compass to map add 15 (90%)."
+ },
+ {
+  "id": "mc-nav-039",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Four compass jobs?",
+  "back": "Take a bearing, follow it, reverse it (back bearing), find yourself (cross bearings).",
+  "diagram": "mc-nav-compass-jobs"
+ },
+ {
+  "id": "mc-nav-040",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Taking a map bearing: what about the needle?",
+  "back": "Ignore it on the map. Ring lines to map north lines (95%).",
+  "diagram": "fn-mapbrg-2"
+ },
+ {
+  "id": "mc-nav-041",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Following a bearing: where are your eyes?",
+  "back": "On a target tree on the line, not on the needle (95%).",
+  "diagram": "mc-nav-partner-leapfrog"
+ },
+ {
+  "id": "mc-nav-042",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Two person leapfrog?",
+  "back": "Brother walks ahead; you wave him onto the line; walk to him; repeat. Stay in sight (Tip).",
+  "diagram": "mc-nav-partner-leapfrog"
+ },
+ {
+  "id": "mc-nav-043",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Back bearing of 40? Of 300?",
+  "back": "220 and 120. Under 180 add 180, over 180 take 180 (95%).",
+  "diagram": "mc-nav-back-bearing"
+ },
+ {
+  "id": "mc-nav-044",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Best angle between two landmarks for a cross bearing?",
+  "back": "About 90 degrees (85%).",
+  "diagram": "fn-tri-4"
+ },
+ {
+  "id": "mc-nav-045",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "On a road, one landmark. How do you find where you are?",
+  "back": "Take a bearing to it; where its back bearing crosses the road is you (Tip, from resection, 85%).",
+  "diagram": "mc-nav-line-handrail"
+ },
+ {
+  "id": "mc-nav-046",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Why aim off?",
+  "back": "So you know which way to turn when you hit the road or shore (85%)."
+ },
+ {
+  "id": "mc-nav-047",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "How much to aim off at 2 km?",
+  "back": "More than your error: 5 degrees is about 175 m, so 200 to 300 m (98% maths; Tip)."
+ },
+ {
+  "id": "mc-nav-048",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Miss per km for 1 degree of error?",
+  "back": "About 17 m (98%).",
+  "diagram": "mc-nav-error-km"
+ },
+ {
+  "id": "mc-nav-049",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Forgot declination near Kamloops: miss per km?",
+  "back": "About 268 m (98%). Set it west instead: 577 m."
+ },
+ {
+  "id": "mc-nav-050",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Three things that bend the needle?",
+  "back": "Steel (rifle, truck), magnets, phones and electronics (80%). Step away.",
+  "diagram": "fn-cmp-metal"
+ },
+ {
+  "id": "mc-nav-051",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "How do you orient a map with the compass?",
+  "back": "Turn the map, not yourself, until its north lines run with the needle (95%).",
+  "diagram": "fn-cmp-orient"
+ },
+ {
+  "id": "mc-nav-052",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Orient a map with no compass?",
+  "back": "Line up a road, ridge or lake on the map with the real one; check a second feature (95%; Tip)."
+ },
+ {
+  "id": "mc-nav-053",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Thumb the map?",
+  "back": "Thumb beside your position; move it as you walk (Tip, orienteering habit).",
+  "diagram": "mc-nav-thumb"
+ },
+ {
+  "id": "mc-nav-054",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Terrain association in 4 steps?",
+  "back": "Name 3 big features; find them on the map; check their order; mark where you must be (Tip).",
+  "diagram": "mc-nav-ta-3"
+ },
+ {
+  "id": "mc-nav-055",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "One feature doesn't fit. What does it mean?",
+  "back": "You are probably not where you think. Don't bend the map (Tip)."
+ },
+ {
+  "id": "mc-nav-056",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Where am I? The order to try?",
+  "back": "Handrail plus one bearing; landforms; cross bearings; phone checked on paper; else STOP and stay (Tip).",
+  "diagram": "mc-nav-where-flow"
+ },
+ {
+  "id": "mc-nav-057",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Mid October sunrise and sunset bearings at Heffley Creek?",
+  "back": "Rise about 103 degrees, set about 257 (85%, my calculation).",
+  "diagram": "mc-nav-sun-arc"
+ },
+ {
+  "id": "mc-nav-058",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "When is the sun due south at Heffley Creek in mid October?",
+  "back": "About 12:46 daylight time, 30 degrees up (85%)."
+ },
+ {
+  "id": "mc-nav-059",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Shadow stick: which mark is west?",
+  "back": "The first mark. Rough check only (60%).",
+  "diagram": "mc-nav-shadow-3"
+ },
+ {
+  "id": "mc-nav-060",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "BC clocks in November 2026?",
+  "back": "No fall back: BC stays on daylight time (95%, BC government release, via Weather and daylight)."
+ },
+ {
+  "id": "mc-nav-061",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Does phone GPS need cell signal?",
+  "back": "No (95%). Map tiles do: save Offline Maps at home.",
+  "diagram": "fn-nav-backup"
+ },
+ {
+  "id": "mc-nav-062",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Three Offline Maps choices in the Hunt Map?",
+  "back": "My base area (Heffley Creek, about 25 km), This view, Draw a box (99%, app).",
+  "diagram": "mc-nav-phone-areas"
+ },
+ {
+  "id": "mc-nav-063",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Offline Maps: what is NOT saved?",
+  "back": "Satellite photos (99%, app)."
+ },
+ {
+  "id": "mc-nav-064",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What does Back to start show?",
+  "back": "Distance and heading to where you started recording, e.g. 1.9 km, 214 degrees (SW); green dot = start (99%, app).",
+  "diagram": "fn-nt-back"
+ },
+ {
+  "id": "mc-nav-065",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Hunt Map track: when are points skipped?",
+  "back": "When GPS accuracy is worse than 30 m: \"GPS is weak\" (99%, app code).",
+  "diagram": "mc-nav-accuracy"
+ },
+ {
+  "id": "mc-nav-066",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Typical phone GPS accuracy in the open?",
+  "back": "About 4.9 m (16 ft); worse near trees and cliffs (90%, gps.gov)."
+ },
+ {
+  "id": "mc-nav-067",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Why can't the Hunt Map track with the screen off on iPhone?",
+  "back": "iPhone web apps cannot record with the screen off; the app keeps the screen awake (99%)."
+ },
+ {
+  "id": "mc-nav-068",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "No track, only a truck pin. Heading to the truck?",
+  "back": "Tools, Draw and measure, Measure from your dot to the pin (99% tool; Tip use).",
+  "diagram": "mc-nav-ns-3"
+ },
+ {
+  "id": "mc-nav-069",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "iPhone operating temperature range?",
+  "back": "0 to 35°C. Colder, it may shut off; it recovers when warm (95%).",
+  "diagram": "fn-bat-cold"
+ },
+ {
+  "id": "mc-nav-070",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "iPhone satellite SOS needs?",
+  "back": "iPhone 14 or later, iOS 16.1 in Canada, no cell or wifi, clear view of sky and horizon (95%).",
+  "diagram": "fn-sos-sky"
+ },
+ {
+  "id": "mc-nav-071",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Satellite messenger versus PLB?",
+  "back": "Messenger: two way text, paid plan (65%). PLB: one way SOS on 406 MHz, no plan for SOS (60%).",
+  "diagram": "mc-nav-sat-compare"
+ },
+ {
+  "id": "mc-nav-072",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Phone died in the cold. First?",
+  "back": "STOP, then warm it inside your jacket about 15 minutes (95% Apple: recovers when warm).",
+  "diagram": "fn-ph-fail-flow"
+ },
+ {
+  "id": "mc-nav-073",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "STOP stands for?",
+  "back": "Stop, Think, Observe, Plan (75%, AdventureSmart).",
+  "diagram": "gr-stop-s"
+ },
+ {
+  "id": "mc-nav-074",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "AdventureSmart on moving when lost?",
+  "back": "\"It's always harder for search teams to find you if you move\" (75%)."
+ },
+ {
+  "id": "mc-nav-075",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "First 10 minutes when lost?",
+  "back": "0 to 3 sit, drink, eat; 3 to 6 think: last sure point; 6 to 10 observe; then plan (Tip).",
+  "diagram": "mc-nav-first10"
+ },
+ {
+  "id": "mc-nav-076",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "When does moving make sense?",
+  "back": "Sure of the way back in daylight; fresh tracks in snow; or your spot is dangerous (Tip). Any doubt: stay (75%).",
+  "diagram": "mc-nav-stay-move"
+ },
+ {
+  "id": "mc-nav-077",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Double the distance you wander. Search area?",
+  "back": "4 times bigger (95%, geometry).",
+  "diagram": "fs-lost-search-area"
+ },
+ {
+  "id": "mc-nav-078",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Which way do lost hunters drift?",
+  "back": "Downhill and off trail (65%, Koester).",
+  "diagram": "mc-nav-downhill"
+ },
+ {
+  "id": "mc-nav-079",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Why not follow a creek downhill?",
+  "back": "Ravines are steep, unstable and hard to escape (75%, North Shore Rescue)."
+ },
+ {
+  "id": "mc-nav-080",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "What do you say first on a 911 call when lost?",
+  "back": "Where: coordinates and their format. Then who, what, what you have, your plan (Tip).",
+  "diagram": "mc-nav-call-script"
+ },
+ {
+  "id": "mc-nav-081",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Distress signals?",
+  "back": "Three of anything: whistle, mirror, light, fires. Ground V or SOS at least 3 m (75%).",
+  "diagram": "mc-nav-signals"
+ },
+ {
+  "id": "mc-nav-082",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Aiming a mirror with no sight?",
+  "back": "Two fingers in a V on the target; tilt the light onto the V; flash in threes (Tip).",
+  "diagram": "mc-nav-mirror-2"
+ },
+ {
+  "id": "mc-nav-083",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "You hear a searcher's whistle?",
+  "back": "Three blasts back and stay put. Answer every call (70%)."
+ },
+ {
+  "id": "mc-nav-084",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Night out order?",
+  "back": "Safe spot; insulate from the ground; roof; fire if safe and legal; signal, water, food (Tip).",
+  "diagram": "mc-nav-survival-order"
+ },
+ {
+  "id": "mc-nav-085",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "When to decide to stay out?",
+  "back": "About 1 hour before dark (Tip).",
+  "diagram": "mc-nav-night-clock"
+ },
+ {
+  "id": "mc-nav-086",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Pick the spot: bench or bottom?",
+  "back": "Bench. Cold air drains into low ground at night (75%).",
+  "diagram": "fs-sh-site"
+ },
+ {
+  "id": "mc-nav-087",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Roof or bed first?",
+  "back": "Bed: the ground pulls heat by conduction (75%).",
+  "diagram": "fs-sh-ground"
+ },
+ {
+  "id": "mc-nav-088",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Category 1 campfire size?",
+  "back": "No bigger than 0.5 m high by 0.5 m wide; 8 L of water or a hand tool on hand; check bans (80%)."
+ },
+ {
+  "id": "mc-nav-089",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Wet tinder that still burns?",
+  "back": "Birch bark and pitch wood (65%)."
+ },
+ {
+  "id": "mc-nav-090",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Boil water how long?",
+  "back": "At least 1 minute; above 2,000 m at least 2 (80%, HealthLink BC).",
+  "diagram": "fs-wat-rank"
+ },
+ {
+  "id": "mc-nav-091",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Early hypothermia signs?",
+  "back": "Stumbles, mumbles, fumbles, grumbles (75%).",
+  "diagram": "gr-hypo-scale"
+ },
+ {
+  "id": "mc-nav-092",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Shivering stops and drowsy?",
+  "back": "Moderate hypothermia: gentle, horizontal, wrap, warm the trunk, get help (75%)."
+ },
+ {
+  "id": "mc-nav-093",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "AdventureSmart's 10 essentials?",
+  "back": "Light, fire kit, signal, extra food and water, extra clothes, navigation and communication, first aid, shelter, knife, sun protection (75%).",
+  "diagram": "gr-ten-essentials"
+ },
+ {
+  "id": "mc-nav-094",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Legal light end for big game?",
+  "back": "1 hour after sunset (99%, Rule Book). Mid Oct Heffley Creek: about 19:08 (85%).",
+  "diagram": "mc-nav-light"
+ },
+ {
+  "id": "mc-nav-095",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Hunt Map red slopes?",
+  "back": "30 to 45 degrees: avalanche terrain in snow (99% app; 95% Avalanche Canada).",
+  "diagram": "mc-nav-slope-classes"
+ },
+ {
+  "id": "mc-nav-096",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Clear blue ice to walk alone?",
+  "back": "At least 15 cm; 20 for a group (75%, Canadian Red Cross).",
+  "diagram": "fs-ice-thickness"
+ },
+ {
+  "id": "mc-nav-097",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "1 10 1?",
+  "back": "About 1 minute cold shock, 10 minutes useful movement, 1 hour to unconscious (80%).",
+  "diagram": "gr-1-10-1"
+ },
+ {
+  "id": "mc-nav-098",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "PFD law in a boat?",
+  "back": "An approved PFD of the right size on board for each person; inflatables worn in open boats (99%).",
+  "diagram": "mc-nav-boat"
+ },
+ {
+  "id": "mc-nav-099",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "ATV deaths in BC?",
+  "back": "Almost 13 a year on average; about half rollovers (60%, CBC).",
+  "diagram": "gr-atv-hills"
+ },
+ {
+  "id": "mc-nav-100",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Rifle on the ATV?",
+  "back": "Unloaded: nothing in the chamber or an attached magazine (98 to 99%)."
+ },
+ {
+  "id": "mc-nav-101",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Bear or cougar: run?",
+  "back": "Never (75%). Moose: run and put a tree between you (85%).",
+  "diagram": "mc-nav-wildlife-grid"
+ },
+ {
+  "id": "mc-nav-102",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Zone of fire for two hunters?",
+  "back": "About 45 degrees straight ahead each; middle and behind are no shot (75%).",
+  "diagram": "zones-of-fire"
+ },
+ {
+  "id": "mc-nav-103",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Turnaround time formula?",
+  "back": "At truck time, minus the walk out, minus about 30 minutes buffer (Tip).",
+  "diagram": "mc-nav-turnaround"
+ },
+ {
+  "id": "mc-nav-104",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Compass triangle drill pass mark?",
+  "back": "Finish within about 10 m of the start on 3 legs of 100 m (Tip).",
+  "diagram": "mc-nav-dc-3"
+ },
+ {
+  "id": "mc-nav-105",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Map vs land drill pass mark?",
+  "back": "3 of 5 pencil dots within about 200 m (Tip).",
+  "diagram": "mc-nav-dm-4"
+ },
+ {
+  "id": "mc-nav-106",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Phone drill: 3 rounds?",
+  "back": "Back to start; pin only with Measure; phone dead pretend with escape bearing (Tip).",
+  "diagram": "mc-nav-dp-4"
+ },
+ {
+  "id": "mc-nav-107",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Lost scenario drill pass mark?",
+  "back": "STOP, fix or stay decision, signal and shelter within 30 minutes (Tip).",
+  "diagram": "mc-nav-dl-2"
+ },
+ {
+  "id": "mc-nav-108",
+  "deck": "Safety and Navigation Masterclass",
+  "front": "Practise the 911 call in a drill?",
+  "back": "Say the script, coordinates first. Do not dial (Tip)."
+ }
+]

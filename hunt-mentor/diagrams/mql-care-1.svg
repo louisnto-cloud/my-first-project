@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bird care step 1: cool it fast. Put the bird in a game vest with a mesh back, not a plastic bag, and keep it out of the October sun. Tip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bird care: 1 Cool it fast</text>
+<rect x="10" y="40" width="380" height="196" rx="8" fill="#dfe6d3"/>
+<path d="M140 70 h120 l20 140 h-160 Z" fill="#e8590c"/>
+<g stroke="#fffaf0" stroke-width="2"><line x1="150" y1="80" x2="150" y2="200"/><line x1="162" y1="80" x2="162" y2="200"/><line x1="174" y1="80" x2="174" y2="200"/><line x1="186" y1="80" x2="186" y2="200"/><line x1="198" y1="80" x2="198" y2="200"/><line x1="210" y1="80" x2="210" y2="200"/><line x1="222" y1="80" x2="222" y2="200"/><line x1="234" y1="80" x2="234" y2="200"/><line x1="246" y1="80" x2="246" y2="200"/><line x1="258" y1="80" x2="258" y2="200"/></g>
+<text x="200" y="230" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">mesh back vest</text>
+<text x="330" y="120" font-size="14" font-weight="bold" fill="#a33b2a" text-anchor="middle">no plastic</text>
+<text x="330" y="140" font-size="14" font-weight="bold" fill="#a33b2a" text-anchor="middle">bag</text>
+<rect x="10" y="246" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="269" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Mesh vest, shade, air around it (Tip)</text>
+</svg>

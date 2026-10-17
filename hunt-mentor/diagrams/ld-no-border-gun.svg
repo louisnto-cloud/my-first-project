@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="sans-serif" role="img" aria-label="Cards about firearms on trips inside Canada. No border: your Possession and Acquisition Licence is federal and covers you, 85 percent. The same federal RCMP transport rules apply: unloaded and cased. Each province has its own road and vehicle hunting rules, read them before you load near a road, VERIFY.">
+<rect x="0" y="0" width="400" height="416" fill="#fffaf0"/>
+<g data-tip="No border|Yukon, Alberta, Saskatchewan and Manitoba are Canada. Your firearm crosses no border on these trips.">
+<rect x="8" y="6" width="384" height="32" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">Firearms: no border inside Canada</text>
+</g>
+<g data-tip="Your licence|Your Possession and Acquisition Licence (PAL) is federal, so it covers you in Alberta, Saskatchewan, Manitoba and Yukon too.">
+<rect x="12" y="46" width="376" height="100" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<rect x="22" y="58" width="76" height="76" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.6"/>
+<g transform="translate(60 96)"><rect x="-28" y="-18" width="56" height="36" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-22" y="-11" width="15" height="19" fill="#8a9a6b"/><path d="M-2 -8 h22 M-2 -1 h22 M-2 6 h15" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<circle cx="24" cy="58" r="12" fill="#2f3a2b"/><text x="24" y="63.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="110" y="76" font-size="17" font-weight="bold" fill="#23261f">Your licence covers you</text>
+<text x="110" y="102" font-size="15" fill="#2f3a2b">Possession and Acquisition</text>
+<text x="110" y="122" font-size="15" fill="#2f3a2b">Licence is federal (85%)</text>
+<circle cx="366" cy="122" r="12" fill="#2f6e3b"/><path d="M360.5 122 l4 4 l7.5 -8.5" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g data-tip="Transport rules|The federal Royal Canadian Mounted Police (RCMP) transport rules apply, the same as at home: unloaded, and cased.">
+<rect x="12" y="156" width="376" height="100" rx="10" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<rect x="22" y="168" width="76" height="76" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="1.6"/>
+<g transform="translate(60 196) scale(0.9)"><rect x="-32" y="-12" width="64" height="24" rx="10" fill="#2f3a2b"/><rect x="-26" y="-6" width="52" height="12" rx="6" fill="#6b4f35"/><rect x="-4" y="9" width="8" height="8" rx="2" fill="#e8590c"/></g>
+<g transform="translate(62 228) scale(0.75)"><path d="M-30 8 v-12 h28 v-10 h18 l10 10 h4 v12 z" fill="#4a7fb0"/><circle cx="-18" cy="10" r="6" fill="#2f3a2b"/><circle cx="18" cy="10" r="6" fill="#2f3a2b"/><rect x="0" y="-11" width="11" height="7" fill="#fff"/></g>
+<circle cx="24" cy="168" r="12" fill="#2f3a2b"/><text x="24" y="173.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="110" y="186" font-size="17" font-weight="bold" fill="#23261f">Same transport rules</text>
+<text x="110" y="212" font-size="15" fill="#2f3a2b">Unloaded and cased,</text>
+<text x="110" y="232" font-size="15" fill="#2f3a2b">federal rules (85%)</text>
+<circle cx="366" cy="232" r="12" fill="#2f6e3b"/><path d="M360.5 232 l4 4 l7.5 -8.5" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g data-tip="Road and vehicle rules|Each province has its own rules on loaded firearms in vehicles and near roads. Read its regulations before the trip.">
+<rect x="12" y="266" width="376" height="100" rx="10" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<rect x="22" y="278" width="76" height="76" rx="8" fill="#ffffff" stroke="#6b4f35" stroke-width="1.6"/>
+<g transform="translate(60 316)"><path d="M0 -14 q-14 -6 -28 -2 v32 q14 -4 28 2 q14 -6 28 -2 v-32 q-14 -4 -28 2 z" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M0 -14 v32" stroke="#2f3a2b" stroke-width="2"/><path d="M-22 -6 h16 M-22 2 h16 M6 -6 h16 M6 2 h16" stroke="#8a9a6b" stroke-width="2.5"/></g>
+<circle cx="24" cy="278" r="12" fill="#2f3a2b"/><text x="24" y="283.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="110" y="296" font-size="17" font-weight="bold" fill="#23261f">Road rules differ</text>
+<text x="110" y="322" font-size="15" fill="#2f3a2b">Read that province's rules</text>
+<text x="110" y="342" font-size="15" fill="#2f3a2b">before you load. VERIFY.</text>
+<circle cx="366" cy="342" r="12" fill="#4a7fb0"/><text x="366" y="347.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">?</text>
+</g>
+<g data-tip="Long drive|You may cross Alberta and Saskatchewan on the way, and their vehicle rules differ. Keep the rifle unloaded and cased the whole drive. Opinion.">
+<rect x="12" y="376" width="376" height="34" rx="8" fill="#2f3a2b"/>
+<text x="200" y="398" font-size="15" fill="#fffaf0" text-anchor="middle">Long drive: unloaded, cased all the way</text>
+</g>
+</svg>

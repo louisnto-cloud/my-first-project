@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Eggs per nest. Spruce grouse in Alberta, the Franklin form: 4.8 on average. Dusky grouse: 7 to 9 on average. Ruffed grouse: 7 to 12. Ptarmigan: 5 to 14. Sharp tailed grouse in BC: 12.8 on average. Eggs hatch after about 3 weeks, 21 to 24 days." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Eggs per nest (average or range)</text>
+<text x="20" y="58" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Spruce (Alberta)</text>
+<rect x="125.6" y="64" width="10" height="16" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="143.6" y="78" font-size="14" fill="#23261f" text-anchor="start">4.8 avg</text>
+<text x="20" y="102" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Dusky</text>
+<rect x="174" y="108" width="44" height="16" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="226" y="122" font-size="14" fill="#23261f" text-anchor="start">7 to 9 avg</text>
+<text x="20" y="146" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ruffed</text>
+<rect x="174" y="152" width="110" height="16" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="292" y="166" font-size="14" fill="#23261f" text-anchor="start">7 to 12</text>
+<text x="20" y="190" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Ptarmigan</text>
+<rect x="130" y="196" width="198" height="16" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="336" y="210" font-size="14" fill="#23261f" text-anchor="start">5 to 14</text>
+<text x="20" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Sharp tailed (BC)</text>
+<rect x="301.6" y="240" width="10" height="16" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="319.6" y="254" font-size="14" fill="#23261f" text-anchor="start">12.8 avg</text>
+<text x="20" y="290" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Eggs hatch after about 3 weeks (21 to 24 days).</text>
+</svg>

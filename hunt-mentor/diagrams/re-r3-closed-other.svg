@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 527" font-family="sans-serif" role="img" aria-label="Other Region 3 closed areas, synopsis pages 33 and 35, grouped by rule. No Shooting or Hunting Areas: Map C9 Sicamous, MU 3-26; Map C10 Salmon Arm, MU 3-26; Map C14 Marble Canyon Provincial Park, MU 3-17; and Wells Gray Park, MU 3-45: no hunting, no firearm discharge. No Shooting Areas: Map C4 Highland Valley, MU 3-18; Map C6 Logan Lake, MU 3-19; Map C8 Blind Bay, MU 3-26.">
+<rect width="400" height="527" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Pages 33 and 35. Badge: map number</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING OR HUNTING</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C9</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Sicamous</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">MU 3-26</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C10</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Salmon Arm</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">MU 3-26</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="194.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="215.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C14</text>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Marble Canyon Provincial Park</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">MU 3-17</text>
+<circle cx="41.0" cy="266.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 266.5) scale(0.8)" fill="#c0392b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">Wells Gray Park</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">No hunting, no firearm discharge. MU 3-45</text>
+<rect x="8" y="304" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 319) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="325" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="340" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="352.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="373.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C4</text>
+<text x="78" y="363" font-size="16" font-weight="bold" fill="#2f3a2b">Highland Valley</text>
+<text x="78" y="382" font-size="15" fill="#2f3a2b">MU 3-18</text>
+<rect x="14" y="409.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="430.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C6</text>
+<text x="78" y="420" font-size="16" font-weight="bold" fill="#2f3a2b">Logan Lake</text>
+<text x="78" y="439" font-size="15" fill="#2f3a2b">MU 3-19</text>
+<rect x="8" y="454" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="466.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="487.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C8</text>
+<text x="78" y="477" font-size="16" font-weight="bold" fill="#2f3a2b">Blind Bay</text>
+<text x="78" y="496" font-size="15" fill="#2f3a2b">MU 3-26</text>
+</svg>

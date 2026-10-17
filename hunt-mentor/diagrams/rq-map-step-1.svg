@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 1: Legal base: MU and land status. MU lines, private land, parks, reserves, WMAs.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Legal base: MU and land status</text>
+<rect x="80" y="70" width="240" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><path d="M180 70 L200 220" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="8 5"/><text x="140" y="150" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3-27</text><text x="260" y="150" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3-28</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">MU lines, private land, parks, reserves, WMAs.</text>
+</svg>

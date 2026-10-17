@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view of pass shooting, drawn to scale for height. Geese fly a line from the roost water to the feeding field. You hide in cover under the flight line between the roost and the field. Geese at about 50 metres are too high: let them pass, a Tip. A goose at about 25 metres is in range: under 30 metres, a Tip.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pass shooting: only the low birds</text>
+<rect x="0" y="240" width="400" height="60" fill="#dfe6d3"/>
+<path d="M6 242 C20 234 86 234 104 242 C96 254 16 254 6 242z" fill="#9fc3e0" stroke="#4a7fb0" stroke-width="1.5"/>
+<path d="M24 241 L34 241 M60 244 L72 244" stroke="#4a7fb0" stroke-width="1.4"/>
+<rect x="300" y="236" width="96" height="10" fill="#d9c48f"/>
+<path d="M304 236 L305 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M311 236 L312 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M318 236 L319 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M325 236 L326 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M332 236 L333 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M339 236 L340 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M346 236 L347 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M353 236 L354 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M360 236 L361 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M367 236 L368 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M374 236 L375 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M381 236 L382 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M388 236 L389 230" stroke="#b39a5a" stroke-width="1.4"/>
+<path d="M395 236 L396 230" stroke="#b39a5a" stroke-width="1.4"/>
+<text x="55" y="274" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Roost</text>
+<text x="348" y="274" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Field</text>
+<path d="M30 190 C60 120 120 80 170 64" stroke="#4a7fb0" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
+<text x="22" y="182" font-size="14" font-weight="bold" fill="#4a7fb0">Flight line</text>
+<path d="M140 240 C138 222 152 214 162 220 C168 208 186 210 188 222 C198 218 206 230 202 240z" fill="#6d8b4a"/>
+<circle cx="172" cy="218" r="6" fill="#d8b48a"/><path d="M165 216 h14 v-5 h-14z" fill="#e8590c"/>
+<path d="M160 224 C162 214 182 214 184 224z" fill="#5b6b3e"/>
+<text x="170" y="274" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You, in cover</text>
+<line x1="206" y1="240" x2="206" y2="100" stroke="#6b5b4b" stroke-width="1.6"/>
+<line x1="200" y1="240" x2="212" y2="240" stroke="#6b5b4b" stroke-width="1.6"/>
+<line x1="200" y1="170" x2="212" y2="170" stroke="#6b5b4b" stroke-width="1.6"/>
+<line x1="200" y1="100" x2="212" y2="100" stroke="#6b5b4b" stroke-width="1.6"/>
+<text x="216" y="105" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">50 m</text>
+<text x="216" y="175" font-size="16" font-weight="bold" fill="#2f3a2b" stroke="#fffaf0" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">25 m</text>
+<g transform="translate(120 104) scale(0.66 0.66)"><path d="M-24 -1 L-30 -4 L-30 3z" fill="#1f1f1f"/><ellipse cx="-2" cy="0" rx="22" ry="8" fill="#7a6a58"/><path d="M-20 3 C-8 9 8 9 18 3 C10 6 -8 7 -20 3z" fill="#d9cfc0"/><path d="M-24 1 C-22 4 -18 5 -16 4 L-18 0z" fill="#ffffff"/><path d="M16 -3 C24 -6 32 -8 40 -9" stroke="#1f1f1f" stroke-width="5.5" fill="none" stroke-linecap="round"/><ellipse cx="43" cy="-9.5" rx="6.5" ry="4.2" fill="#1f1f1f"/><path d="M42 -12 C45 -12 46 -9 44 -7.5 C42 -7.5 40.5 -9 42 -12z" fill="#ffffff"/><path d="M49 -10.5 L54 -9 L49 -7.5z" fill="#1f1f1f"/><path d="M-6 -3 C-2 -22 6 -34 14 -38 C12 -26 10 -12 8 -3z" fill="#5d5145"/></g>
+<g transform="translate(166 88) scale(0.6 0.6)"><path d="M-24 -1 L-30 -4 L-30 3z" fill="#1f1f1f"/><ellipse cx="-2" cy="0" rx="22" ry="8" fill="#7a6a58"/><path d="M-20 3 C-8 9 8 9 18 3 C10 6 -8 7 -20 3z" fill="#d9cfc0"/><path d="M-24 1 C-22 4 -18 5 -16 4 L-18 0z" fill="#ffffff"/><path d="M16 -3 C24 -6 32 -8 40 -9" stroke="#1f1f1f" stroke-width="5.5" fill="none" stroke-linecap="round"/><ellipse cx="43" cy="-9.5" rx="6.5" ry="4.2" fill="#1f1f1f"/><path d="M42 -12 C45 -12 46 -9 44 -7.5 C42 -7.5 40.5 -9 42 -12z" fill="#ffffff"/><path d="M49 -10.5 L54 -9 L49 -7.5z" fill="#1f1f1f"/><path d="M-6 2 C-2 14 4 22 12 26 C11 16 10 8 8 2z" fill="#5d5145"/></g>
+<g transform="translate(150 174) scale(0.8 0.8)"><path d="M-24 -1 L-30 -4 L-30 3z" fill="#1f1f1f"/><ellipse cx="-2" cy="0" rx="22" ry="8" fill="#7a6a58"/><path d="M-20 3 C-8 9 8 9 18 3 C10 6 -8 7 -20 3z" fill="#d9cfc0"/><path d="M-24 1 C-22 4 -18 5 -16 4 L-18 0z" fill="#ffffff"/><path d="M16 -3 C24 -6 32 -8 40 -9" stroke="#1f1f1f" stroke-width="5.5" fill="none" stroke-linecap="round"/><ellipse cx="43" cy="-9.5" rx="6.5" ry="4.2" fill="#1f1f1f"/><path d="M42 -12 C45 -12 46 -9 44 -7.5 C42 -7.5 40.5 -9 42 -12z" fill="#ffffff"/><path d="M49 -10.5 L54 -9 L49 -7.5z" fill="#1f1f1f"/><path d="M-6 -3 C-2 -22 6 -34 14 -38 C12 -26 10 -12 8 -3z" fill="#5d5145"/></g>
+
+<rect x="269.0" y="74.0" width="116.1" height="63.0" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>
+<text x="327" y="93.5" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Too high:</text>
+<text x="327" y="111" font-size="15" fill="#c0392b" text-anchor="middle">let them pass</text>
+<text x="327" y="129" font-size="15" fill="#c0392b" text-anchor="middle">(Tip)</text>
+<rect x="257.4" y="144.0" width="139.2" height="45.0" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="1.2"/>
+<text x="327" y="163.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Low: in range</text>
+<text x="327" y="181" font-size="15" fill="#2f6e3b" text-anchor="middle">under 30 m (Tip)</text>
+</svg>

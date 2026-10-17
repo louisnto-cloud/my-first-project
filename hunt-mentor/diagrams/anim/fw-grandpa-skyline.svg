@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Animation, side view of a ridge with a deer feeding on the far slope. First a hunter walks along the very top of the ridge, outlined against the sky; the deer lifts its head and runs. Then the same walk again just below the crest, with the hill behind the hunter; the hunter creeps up and peeks over, and the deer keeps feeding. Stay below the skyline.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#cfe0ee"/>
+  <path d="M0 300 L0 150 Q 120 70 220 90 Q 300 104 400 160 L400 300 Z" fill="#8a9a6b"/>
+  <path d="M220 90 Q 300 104 400 160 L400 300 L220 300 Z" fill="#dfe6d3"/>
+  <g id="fw-grandpa-skyline-deer" transform="translate(330 190)">
+    <ellipse rx="18" ry="9" fill="#8b5a2b"/><circle cx="18" cy="4" r="6" fill="#8b5a2b"><animate attributeName="cy" values="4;-10" begin="2.4s" dur="0.3s" fill="freeze"/></circle>
+    <animateTransform attributeName="transform" type="translate" values="330 190;330 190;440 230" keyTimes="0;0.5;1" begin="2.4s" dur="1.6s" fill="freeze"/>
+  </g>
+  <g>
+    <circle r="7" fill="#2f3a2b" cy="-26"/><rect x="-6" y="-20" width="12" height="22" fill="#e8590c"/>
+    <animateMotion dur="3s" fill="freeze" path="M40 128 Q 120 70 210 86"/>
+    <animate attributeName="opacity" values="1;0" begin="4.4s" dur="0.2s" fill="freeze"/>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.3s" fill="freeze"/><animate attributeName="opacity" values="1;0" begin="4.4s" dur="0.2s" fill="freeze"/>
+    <rect x="20" y="20" width="200" height="34" rx="6" fill="#e8590c"/>
+    <text x="120" y="43" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">On the skyline: seen</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.6s" dur="0.2s" fill="freeze"/>
+    <g transform="translate(345 195)"><ellipse rx="18" ry="9" fill="#8b5a2b"/><circle cx="18" cy="6" r="6" fill="#8b5a2b"/></g>
+    <g>
+      <circle r="7" fill="#2f3a2b" cy="-26"/><rect x="-6" y="-20" width="12" height="22" fill="#e8590c"/>
+      <animateMotion begin="4.6s" dur="3s" fill="freeze" path="M40 168 Q 120 116 196 112 L 208 100"/>
+    </g>
+    <rect x="20" y="20" width="230" height="34" rx="6" fill="#2f3a2b"/>
+    <text x="135" y="43" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Below the crest, then peek</text>
+  </g>
+</svg>

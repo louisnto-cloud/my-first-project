@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" font-family="sans-serif" role="img" aria-label="Before you start: three questions. Any heart or chest symptoms such as chest pain or dizzy spells, any health condition or injury, or pregnant? If yes, ask first: check with a health professional or the Get Active Questionnaire. If no to all, start easy.">
+<rect width="400" height="342" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Safety check before training</text>
+<rect x="10" y="44" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="68" font-size="16" font-weight="bold" fill="#2f3a2b">Chest pain or dizzy</text>
+<text x="22" y="88" font-size="16" font-weight="bold" fill="#2f3a2b">spells?</text>
+<line x1="224" y1="73.0" x2="254" y2="73.0" stroke="#c0392b" stroke-width="2.4"/><path d="M262 73.0 l-9 -5 v10z" fill="#c0392b"/>
+<text x="241" y="65" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="47" width="128" height="52" rx="8" fill="#c0392b"/>
+<text x="326" y="78" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Ask first</text>
+<line x1="60" y1="102" x2="60" y2="120" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 128 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="120" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="128" width="214" height="58" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="152" font-size="16" font-weight="bold" fill="#2f3a2b">Health condition or</text>
+<text x="22" y="172" font-size="16" font-weight="bold" fill="#2f3a2b">injury?</text>
+<line x1="224" y1="157.0" x2="254" y2="157.0" stroke="#c0392b" stroke-width="2.4"/><path d="M262 157.0 l-9 -5 v10z" fill="#c0392b"/>
+<text x="241" y="149" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="131" width="128" height="52" rx="8" fill="#c0392b"/>
+<text x="326" y="162" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Ask first</text>
+<line x1="60" y1="186" x2="60" y2="204" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 212 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="204" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="212" width="214" height="52" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="22" y="243" font-size="16" font-weight="bold" fill="#2f3a2b">Pregnant?</text>
+<line x1="224" y1="238.0" x2="254" y2="238.0" stroke="#c0392b" stroke-width="2.4"/><path d="M262 238.0 l-9 -5 v10z" fill="#c0392b"/>
+<text x="241" y="230" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Yes</text>
+<rect x="262" y="215" width="128" height="46" rx="8" fill="#c0392b"/>
+<text x="326" y="243" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Ask first</text>
+<line x1="60" y1="264" x2="60" y2="282" stroke="#2f3a2b" stroke-width="2.4"/><path d="M60 290 l-5 -9 h10z" fill="#2f3a2b"/>
+<text x="70" y="282" font-size="14" font-weight="bold" fill="#2f3a2b">No</text>
+<rect x="10" y="290" width="380" height="44" rx="12" fill="#2f3a2b"/>
+<text x="200" y="319" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Start easy</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Mistake: on a morning hunt, the hunter sits below the bench on the same slope. Rising morning air carries the hunter's scent straight up to the bedded deer. Red cross: do not glass from below in the morning.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 280 L120 250 L250 120 L300 116 L400 30 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <g transform="translate(280 106)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-8" r="6" fill="#8b5a2b"/></g>
+  <text x="290" y="146" font-size="14" font-weight="bold" fill="#2f3a2b">bench</text>
+  <circle cx="130" cy="236" r="9" fill="#e8590c"/><text x="80" y="226" font-size="14" font-weight="bold" fill="#e8590c">You</text>
+  <path d="M140 226 C 180 190, 220 150, 262 118" fill="none" stroke="#4a7fb0" stroke-width="4" stroke-dasharray="8 6"/>
+  <polygon points="256,112 270,112 264,126" fill="#4a7fb0"/>
+  <text x="120" y="160" font-size="14" font-weight="bold" fill="#4a7fb0">rising air,</text>
+  <text x="120" y="176" font-size="14" font-weight="bold" fill="#4a7fb0">your scent</text>
+  <path d="M180 60 L230 110 M230 60 L180 110" stroke="#c0392b" stroke-width="6"/>
+  <text x="200" y="30" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Morning: never glass from below</text>
+</svg>

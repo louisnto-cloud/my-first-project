@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Side view cutaway of a grouse facing right. The crop sits at the base of the neck. The heart sits low and forward in the chest. The lungs sit high against the back. Air sacs fill much of the body behind the lungs. The gizzard sits in the middle of the belly, and the two long ceca run toward the tail. The big breast muscle sits along the keel bone underneath." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Inside a grouse</text>
+<path d="M60 150 Q70 90 150 85 Q230 80 270 100 Q300 70 330 72 Q356 74 360 96 L382 104 L360 110 Q352 130 320 140 Q300 200 230 215 Q140 230 90 205 L20 210 L30 185 L10 170 L60 160 Z" fill="#efe3cf" stroke="#6b4f35" stroke-width="3"/>
+<circle cx="340" cy="92" r="3" fill="#23261f" stroke="none" stroke-width="0"/>
+<ellipse cx="200" cy="200" rx="95" ry="18" fill="#f2d7c9" stroke="#c9a491" stroke-width="2"/>
+<path d="M125 214 Q200 236 285 210" fill="none" stroke="#6b4f35" stroke-width="4"/>
+<ellipse cx="240" cy="112" rx="32" ry="12" fill="#b5524a"/>
+<ellipse cx="262" cy="160" rx="13" ry="16" fill="#c23b22"/>
+<ellipse cx="300" cy="132" rx="16" ry="13" fill="#e9c46a" stroke="#6b4f35" stroke-width="1.5"/>
+<ellipse cx="175" cy="125" rx="40" ry="20" fill="#cfe0ef" stroke="#4a7fb0" stroke-width="2"/>
+<ellipse cx="200" cy="172" rx="18" ry="14" fill="#6b4f35"/>
+<path d="M150 170 Q110 160 90 175 Q110 186 150 178" fill="none" stroke="#7d6b3a" stroke-width="6"/>
+<line x1="300" y1="132" x2="330" y2="161" stroke="#23261f" stroke-width="1.5"/>
+<text x="330" y="175" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Crop</text>
+<line x1="262" y1="160" x2="290" y2="241" stroke="#23261f" stroke-width="1.5"/>
+<text x="290" y="255" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Heart</text>
+<line x1="240" y1="112" x2="260" y2="62" stroke="#23261f" stroke-width="1.5"/>
+<text x="260" y="58" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Lungs</text>
+<line x1="175" y1="125" x2="140" y2="62" stroke="#23261f" stroke-width="1.5"/>
+<text x="140" y="58" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Air sacs</text>
+<line x1="200" y1="172" x2="200" y2="241" stroke="#23261f" stroke-width="1.5"/>
+<text x="200" y="255" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Gizzard</text>
+<line x1="100" y1="172" x2="50" y2="241" stroke="#23261f" stroke-width="1.5"/>
+<text x="50" y="255" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Ceca</text>
+<line x1="130" y1="205" x2="100" y2="266" stroke="#23261f" stroke-width="1.5"/>
+<text x="100" y="280" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Breast on the keel</text>
+</svg>

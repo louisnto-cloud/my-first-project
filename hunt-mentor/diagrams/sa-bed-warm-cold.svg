@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 338" font-family="sans-serif" role="img" aria-label="Where a deer beds today. Warm day: north facing timber, benches, draws and shade. Cold day: sunny south or west slope, out of the wind.">
+<rect width="400" height="338" fill="#fffaf0"/>
+<defs>
+  <g id="sa-bed-warm-cold-deer">
+    <ellipse cx="0" cy="0" rx="18" ry="8" fill="#8b6f52" stroke="#4a3826" stroke-width="1"/>
+    <path d="M-10 -3 L-16 -16 L-10 -18 L-4 -4z" fill="#8b6f52"/>
+    <ellipse cx="-19" cy="-17" rx="9" ry="4.5" fill="#8b6f52" stroke="#4a3826" stroke-width="1" transform="rotate(12 -19 -17)"/>
+    <ellipse cx="-11" cy="-24" rx="3" ry="6" fill="#8b6f52" stroke="#4a3826" stroke-width=".8" transform="rotate(40 -11 -24)"/>
+    <ellipse cx="-16" cy="-26" rx="3" ry="6" fill="#8b6f52" stroke="#4a3826" stroke-width=".8" transform="rotate(15 -16 -26)"/>
+    <circle cx="-21" cy="-19" r="1.6" fill="#1a120b"/><circle cx="-27.5" cy="-15.5" r="1.6" fill="#1a120b"/>
+    <ellipse cx="12" cy="-3" rx="5" ry="3" fill="#f1e7d2"/>
+  </g>
+</defs>
+<g data-tip="Why it beds there|Day beds give hiding cover and shelter (80%)." data-tip-dot="370,16">
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Where a deer beds today</text>
+</g>
+<!-- warm day -->
+<g data-tip="Warm day|North facing timber, benches, draws, shade (80%)." data-tip-dot="186,52">
+<rect x="8" y="40" width="188" height="222" rx="12" fill="#eef3f8" stroke="#4a7fb0" stroke-width="3"/>
+<text x="22" y="66" font-size="18" font-weight="bold" fill="#2f5f8a">Warm day</text>
+<circle cx="160" cy="88" r="14" fill="#f6c94a"/>
+<path d="M160 66 v-5 M160 110 v5 M138 88 h-5 M182 88 h5" stroke="#f6c94a" stroke-width="3" stroke-linecap="round"/>
+<path d="M11 206 L60 168 L193 150 V212 H11z" fill="#c8d3b4"/>
+<path d="M11 212 H193 V258 H11z" fill="#c8d3b4"/>
+<g fill="#2f3a2b" fill-opacity=".3"><ellipse cx="62" cy="200" rx="20" ry="4"/><ellipse cx="92" cy="192" rx="22" ry="4"/><ellipse cx="126" cy="186" rx="22" ry="4"/><ellipse cx="160" cy="182" rx="22" ry="4"/></g>
+<g fill="#2f3a2b">
+  <path d="M36 196 L50 150 L64 196z"/><path d="M62 186 L78 134 L94 186z"/><path d="M96 180 L112 126 L128 180z"/><path d="M130 176 L146 124 L162 176z"/>
+</g>
+<g fill="#6b4f35"><rect x="48" y="196" width="4" height="10"/><rect x="76" y="186" width="4" height="12"/><rect x="110" y="180" width="4" height="12"/><rect x="144" y="176" width="4" height="12"/></g>
+<rect x="20" y="104" width="22" height="20" rx="4" fill="#fffaf0" stroke="#2f5f8a" stroke-width="1.6"/><text x="31" y="119" font-size="14" font-weight="bold" fill="#2f5f8a" text-anchor="middle">N</text>
+<text x="22" y="232" font-size="15" font-weight="bold" fill="#23261f">North facing timber,</text>
+<text x="22" y="251" font-size="15" font-weight="bold" fill="#23261f">benches, draws, shade</text>
+</g>
+<g data-tip="The bed|An oval of flattened grass or scraped earth, about 1 m long, often with pellets and hair nearby (70%)." data-tip-dot="112,196">
+<ellipse cx="96" cy="210" rx="26" ry="6" fill="#7a5a3a"/>
+<use href="#sa-bed-warm-cold-deer" transform="translate(98 204)"/>
+</g>
+<!-- cold day -->
+<g data-tip="Cold day|Sunny south and west slopes, out of the wind (80%). On cold sunny days deer often bed where the first sun hits. Tip." data-tip-dot="382,52">
+<rect x="204" y="40" width="188" height="222" rx="12" fill="#fdf0e6" stroke="#e8590c" stroke-width="3"/>
+<text x="218" y="66" font-size="18" font-weight="bold" fill="#c2410c">Cold day</text>
+<circle cx="232" cy="98" r="18" fill="#f6c94a"/>
+<path d="M254 104 L290 122 M250 116 L280 140 M244 124 L264 156" stroke="#f6c94a" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M207 212 L389 120 V258 H207z" fill="#d9e4c6"/>
+<path d="M207 212 H389 V258 H207z" fill="#d9e4c6"/>
+<rect x="214" y="176" width="32" height="20" rx="4" fill="#fffaf0" stroke="#c2410c" stroke-width="1.6"/><text x="230" y="191" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">S W</text>
+<text x="218" y="232" font-size="15" font-weight="bold" fill="#23261f">Sunny south or west</text>
+<text x="218" y="251" font-size="15" font-weight="bold" fill="#23261f">slope, out of the wind</text>
+</g>
+<g data-tip="Out of the wind|On a slope it often beds facing downhill with the wind at its back, on the leeward side of a roll (65%)." data-tip-dot="372,118">
+<path d="M330 148 C334 132 350 126 366 130 C376 134 378 140 376 144z" fill="#9a8c78" stroke="#6b5b4b" stroke-width="1.4"/>
+<path d="M388 112 h-28 M382 124 h-22" stroke="#4a7fb0" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M356 112 l7 -5 v10z M356 124 l7 -5 v10z" fill="#4a7fb0"/>
+<text x="374" y="104" font-size="14" font-weight="bold" fill="#2f5f8a" text-anchor="middle">wind</text>
+<ellipse cx="306" cy="166" rx="26" ry="6" fill="#7a5a3a" transform="rotate(-27 306 166)"/>
+<use href="#sa-bed-warm-cold-deer" transform="translate(308 160) rotate(-20)"/>
+</g>
+<!-- grandpa's rule -->
+<g data-tip="Grandpa's rule|Opinion. Temperature and canopy drove mule deer bed choice (85%). Wind and pressure can override it (Tip)." data-tip-dot="384,276">
+<rect x="8" y="270" width="384" height="62" rx="10" fill="#2f3a2b"/>
+<text x="200" y="294" font-size="16" font-weight="bold" fill="#f6d47a" text-anchor="middle">Cold morning: look to the sun.</text>
+<text x="200" y="318" font-size="16" font-weight="bold" fill="#cfe0ff" text-anchor="middle">Hot noon: look to the shade.</text>
+</g>
+</svg>

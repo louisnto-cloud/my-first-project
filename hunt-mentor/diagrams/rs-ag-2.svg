@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: compare edges, colour and moisture. Your print is minutes old. If theirs looks the same, theirs is fresh.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Compare the edges</text>
+<g transform="translate(140 160) rotate(0) scale(2.2)" fill="#8b5a2b"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g><g transform="translate(270 160)"><path d="M-22 -40 Q0 -52 22 -40 L24 30 Q0 44 -24 30 Z" fill="#6b4f35"/></g><rect x="110" y="222" width="180" height="36" rx="8" fill="#fff" stroke="#23261f" stroke-width="1.5"/><text x="200" y="246" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Edge: same? sharper?</text><text x="200" y="284" font-size="15" fill="#23261f" text-anchor="middle">Yours is minutes old. Compare.</text>
+</svg>

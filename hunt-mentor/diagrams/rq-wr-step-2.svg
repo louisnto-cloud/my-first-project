@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Check the season and class. From 1 Nov a mule deer buck needs 4 points.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Check the season and class</text>
+<rect x="90" y="80" width="220" height="140" rx="10" fill="#fff" stroke="#2f3a2b"/><text x="200" y="120" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct: any buck</text><text x="200" y="150" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Nov 1 to Dec 10:</text><text x="200" y="175" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">4 point bucks</text><text x="200" y="245" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">Region 3 mule deer, your MUs (99%)</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">From 1 Nov a mule deer buck needs 4 points.</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 332" font-family="sans-serif" role="img" aria-label="Suggested scope power, all tips: 3 to 4 power in timber under 100 m, 6 to 8 power on open slopes at 100 to 200 m, 9 to 10 power for long shots past 200 m. Walk with it on low power: a deer close in timber fills a 9x scope.">
+<rect width="400" height="332" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Scope power for the shot</text>
+<text x="200" y="50" font-size="15" fill="#6b5b4b" text-anchor="middle">Suggested settings (Tip)</text>
+<rect x="8" y="62" width="384" height="60" rx="8" fill="#f1ead9"/>
+<g transform="translate(40 92) scale(1.15)" fill="#2f3a2b" stroke="none"><path d="M-8 -14 L-1 0 L-4 0 L1 9 L-17 9 L-12 0 L-15 0z"/><path d="M8 -10 L14 1 L12 1 L16 10 L0 10 L4 1 L2 1z"/><rect x="-9.5" y="9" width="3" height="4"/><rect x="6.5" y="10" width="3" height="3"/></g>
+<text x="70" y="88" font-size="17" font-weight="bold" fill="#2f3a2b">Timber</text>
+<text x="70" y="109" font-size="15" fill="#2f3a2b">under 100 m</text>
+<rect x="282.2" y="77" width="87.7" height="30" rx="15.0" fill="#2f6e3b"/><text x="326" y="98.1" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">3 to 4x</text>
+<rect x="8" y="130" width="384" height="60" rx="8" fill="#f1ead9"/>
+<g transform="translate(40 160) scale(1.15)" fill="#2f3a2b" stroke="none"><path d="M-15 11 L-4 -9 L2 1 L6 -4 L15 11z"/><path d="M-4 -9 L-1 -4 L-6 -3z" fill="#fffaf0"/></g>
+<text x="70" y="156" font-size="17" font-weight="bold" fill="#2f3a2b">Open slope</text>
+<text x="70" y="177" font-size="15" fill="#2f3a2b">100 to 200 m</text>
+<rect x="282.2" y="145" width="87.7" height="30" rx="15.0" fill="#4a7fb0"/><text x="326" y="166.1" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">6 to 8x</text>
+<rect x="8" y="198" width="384" height="60" rx="8" fill="#f1ead9"/>
+<g transform="translate(40 228)"><circle r="15" fill="none" stroke="#2f3a2b" stroke-width="2.4"/><path d="M-15 0 H15 M0 -15 V15" stroke="#2f3a2b" stroke-width="1.6"/><circle r="3" fill="#e8590c"/></g>
+<text x="70" y="224" font-size="17" font-weight="bold" fill="#2f3a2b">Long</text>
+<text x="70" y="245" font-size="15" fill="#2f3a2b">200 m plus</text>
+<rect x="277.1" y="213" width="97.8" height="30" rx="15.0" fill="#e8590c"/><text x="326" y="234.1" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">9 to 10x</text>
+<rect x="8" y="268" width="384" height="56" rx="8" fill="#2f3a2b"/><text x="200" y="292.4" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Walk with it on low power</text><text x="200" y="312.4" font-size="14" fill="#fffaf0" text-anchor="middle">A deer close in timber fills a 9x scope (Tip)</text>
+</svg>

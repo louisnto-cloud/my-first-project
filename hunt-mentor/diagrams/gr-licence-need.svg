@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="What each hunt needs. Deer: a BC hunting licence plus a deer tag. Ducks and geese: a BC hunting licence plus the federal bird permit. Quail and grouse: a BC hunting licence only.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What each hunt needs</text>
+  <g stroke="#8a9a6b" stroke-width="1.5"><line x1="10" y1="118" x2="390" y2="118"/><line x1="10" y1="204" x2="390" y2="204"/></g>
+  <!-- deer -->
+  <g transform="translate(40 70)" fill="#8b5a2b">
+    <ellipse rx="20" ry="10"/><rect x="-16" y="5" width="4" height="18"/><rect x="12" y="5" width="4" height="18"/>
+    <path d="M14 -4 L24 -20 L32 -18 L22 0 Z"/><path d="M26 -20 l-4 -10 M30 -20 l6 -9" stroke="#5c3b1c" stroke-width="2"/>
+  </g>
+  <text x="18" y="112" font-size="15" font-weight="bold" fill="#2f3a2b">Deer</text>
+  <!-- duck -->
+  <g transform="translate(42 162)">
+    <ellipse rx="20" ry="11" fill="#4a7fb0"/><circle cx="18" cy="-10" r="8" fill="#2f6b3a"/><path d="M25 -10 l10 3 l-10 2 Z" fill="#e8b10c"/>
+  </g>
+  <text x="14" y="198" font-size="15" font-weight="bold" fill="#2f3a2b">Ducks</text>
+  <!-- grouse -->
+  <g transform="translate(42 245)">
+    <ellipse rx="18" ry="13" fill="#8b5a2b"/><circle cx="15" cy="-10" r="7" fill="#8b5a2b"/><path d="M-16 -2 l-12 -8 l2 14 Z" fill="#5c3b1c"/>
+  </g>
+  <text x="10" y="286" font-size="15" font-weight="bold" fill="#2f3a2b">Grouse, quail</text>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="120" y="58" width="120" height="44" rx="8" fill="#8a9a6b"/><text x="180" y="86" fill="#fff">BC licence</text>
+    <text x="255" y="87" font-size="22" fill="#2f3a2b">+</text>
+    <rect x="270" y="58" width="120" height="44" rx="8" fill="#e8590c"/><text x="330" y="86" fill="#fff">Deer tag</text>
+    <rect x="120" y="140" width="120" height="44" rx="8" fill="#8a9a6b"/><text x="180" y="168" fill="#fff">BC licence</text>
+    <text x="255" y="169" font-size="22" fill="#2f3a2b">+</text>
+    <rect x="270" y="140" width="120" height="44" rx="8" fill="#4a7fb0"/><text x="330" y="160" fill="#fff">Federal</text><text x="330" y="178" fill="#fff">bird permit</text>
+    <rect x="120" y="226" width="120" height="44" rx="8" fill="#8a9a6b"/><text x="180" y="254" fill="#fff">BC licence</text>
+    <text x="300" y="254" fill="#2f3a2b">That is all</text>
+  </g>
+</svg>

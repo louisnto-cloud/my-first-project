@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bar chart from New York, 1989 to 1995: 125 hunters shot after being mistaken for game. 117, or 94 percent, were not wearing hunter orange. 6, or 5 percent, were wearing orange. 2 were not recorded. Source: US Centers for Disease Control report.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mistaken for game: 125 hunters shot</text>
+  <text x="200" y="48" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">New York, 1989 to 1995</text>
+  <line x1="40" y1="250" x2="380" y2="250" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="60" y="76" width="80" height="174" fill="#8b5a2b"/>
+  <rect x="170" y="241" width="80" height="9" fill="#e8590c"/>
+  <rect x="280" y="247" width="80" height="3" fill="#8a9a6b"/>
+  <g font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+    <text x="100" y="68" fill="#8b5a2b">117</text>
+    <text x="210" y="232" fill="#e8590c">6</text>
+    <text x="320" y="238" fill="#2f3a2b">2</text>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">
+    <text x="100" y="270">No orange</text><text x="100" y="288">94%</text>
+    <text x="210" y="270">In orange</text><text x="210" y="288">5%</text>
+    <text x="320" y="270">Not known</text><text x="320" y="288">1%</text>
+  </g>
+</svg>

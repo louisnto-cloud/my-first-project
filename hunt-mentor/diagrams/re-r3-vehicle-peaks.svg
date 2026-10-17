@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 514" font-family="sans-serif" role="img" aria-label="Region 3 vehicle closures on the high peaks, synopsis page 33. No motor vehicles above 1,920 m in MUs 3-16 and 3-32 on Cayoosh, Shulaps, China Head, Nine Mile Ridge, Red Mountain French Mountain and Hogback. Roads that stay open: China Head, Yalakom Big Bar Road; Red Mountain French Mountain, Poison Mountain Saddle Road and Yalakom Big Bar Road. Map C22, MU 3-44: no motor vehicles in the Miledge, Chappell and Lempriere creeks above 1,700 m. Snowmobiles are allowed in the marked area 1 December to 31 May.">
+<rect width="400" height="514" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 33. Region 3 high peaks</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO VEHICLES ABOVE 1,920 M</text>
+<rect x="8" y="68" width="384" height="93" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="114.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 114.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-16 12 L-4 -12 L2 -2 L7 -8 L16 12z"/><path d="M-4 -12 L0 -4 L-7 -4z" fill="#fffaf0"/><path d="M-16 0 H16" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 2"/></g>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">MUs 3-16, 3-32</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Cayoosh, Shulaps, China Head, Nine Mile</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">Ridge, Red Mountain French Mountain,</text>
+<text x="78" y="148" font-size="15" fill="#2f3a2b">Hogback</text>
+<rect x="8" y="171" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="192" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">ROADS THAT STAY OPEN</text>
+<rect x="8" y="207" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="234.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 234.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="230" font-size="16" font-weight="bold" fill="#2f3a2b">China Head</text>
+<text x="78" y="249" font-size="15" fill="#2f3a2b">Yalakom Big Bar Rd</text>
+<circle cx="41.0" cy="301.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 301.0) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="287" font-size="16" font-weight="bold" fill="#2f3a2b">Red Mtn French Mtn</text>
+<text x="78" y="306" font-size="15" fill="#2f3a2b">Poison Mountain Saddle Rd, Yalakom Big</text>
+<text x="78" y="325" font-size="15" fill="#2f3a2b">Bar Rd</text>
+<rect x="8" y="348" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<g transform="translate(31 363) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="369" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO VEHICLES ABOVE 1,700 M</text>
+<rect x="8" y="384" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="396.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="417.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C22</text>
+<text x="78" y="407" font-size="16" font-weight="bold" fill="#2f3a2b">MU 3-44</text>
+<text x="78" y="426" font-size="15" fill="#2f3a2b">Miledge, Chappell, Lempriere creeks</text>
+<circle cx="41.0" cy="468.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 468.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-14 9 H12 C15 9 16 6 14 5" stroke="#8b5a2b" stroke-width="2.4" fill="none"/><path d="M-13 4 L-11 -2 H-2 L1 -8 H6 L8 -2 H13 L13 4z"/><rect x="-4" y="-12" width="3" height="6" rx="1"/></g>
+<text x="78" y="464" font-size="16" font-weight="bold" fill="#2f3a2b">Snowmobiles allowed</text>
+<text x="78" y="483" font-size="15" fill="#2f3a2b">In the marked area, Dec 1 to May 31</text>
+</svg>

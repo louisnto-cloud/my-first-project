@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Track age chart. Cut through a print from the side. Minutes to hours: crisp sharp walls, shiny wet mud, a thin raised rim in dust. A day: edges start to round, the rim collapses. Days: walls rounded and soft. A week or more: leaves, needles and spider web inside. Frost or rain pits inside a print mean it was made before the frost or rain.">
+<rect width="400" height="404" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">How old is the track?</text>
+<text x="200" y="48" font-size="15" fill="#6b4f35" text-anchor="middle">One print cut in half, seen from the side</text>
+<path d="M30 66 H366" stroke="#c9b79c" stroke-width="3"/><path d="M376 66 l-12 -6 v12z" fill="#c9b79c"/>
+<g data-tip="1. Hours|Fresh prints have crisp, sharp walls. In mud the walls are still shiny and wet. In fine dust a thin raised rim slumps within hours.">
+<rect x="8" y="80" width="90" height="150" fill="#fffaf0"/>
+<circle cx="51" cy="66" r="11" fill="#e8590c"/><text x="51" y="71.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<path d="M12 88 H34 V120 H66 V88 H90 V138 H12 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+<path d="M30 86 l4 -6 l4 6 M62 86 l4 -6 l4 6" stroke="#6b4f35" stroke-width="2" fill="none"/>
+<text x="51" y="164" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Hours</text>
+<text x="51" y="186" font-size="15" fill="#2f3a2b" text-anchor="middle">crisp walls</text>
+<text x="51" y="205" font-size="15" fill="#2f3a2b" text-anchor="middle">shiny mud</text>
+<text x="51" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">dust rim</text>
+</g>
+<g data-tip="2. A day|The edges soften and loose crumbs slide in (Tip).">
+<rect x="104" y="80" width="90" height="150" fill="#fffaf0"/>
+<circle cx="148" cy="66" r="11" fill="#e8590c"/><text x="148" y="71.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<path d="M108 88 H128 Q132 88 132 98 V120 H164 V98 Q164 88 168 88 H188 V138 H108 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+<text x="148" y="164" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">A day</text>
+<text x="148" y="186" font-size="15" fill="#2f3a2b" text-anchor="middle">edges</text>
+<text x="148" y="205" font-size="15" fill="#2f3a2b" text-anchor="middle">softening</text>
+<text x="148" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">rim gone</text>
+</g>
+<g data-tip="3. Days|Sun, wind and rain round the walls off. The ridge between the toes is gone (Tip).">
+<rect x="202" y="80" width="94" height="150" fill="#fffaf0"/>
+<circle cx="249" cy="66" r="11" fill="#e8590c"/><text x="249" y="71.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<path d="M206 88 H222 Q232 92 234 112 Q236 120 248 120 Q262 120 264 112 Q266 92 276 88 H292 V138 H206 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+<text x="249" y="164" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Days</text>
+<text x="249" y="186" font-size="15" fill="#2f3a2b" text-anchor="middle">walls</text>
+<text x="249" y="205" font-size="15" fill="#2f3a2b" text-anchor="middle">rounded</text>
+</g>
+<g data-tip="4. A week or more|Leaves, needles, insect trails or spider web inside the print mean time has passed.">
+<rect x="300" y="80" width="94" height="150" fill="#fffaf0"/>
+<circle cx="347" cy="66" r="11" fill="#e8590c"/><text x="347" y="71.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<path d="M302 88 H316 Q330 98 334 114 Q340 118 352 116 Q362 100 376 88 H392 V138 H302 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+<g fill="#8a9a6b"><path d="M330 108 l10 -6 l8 8 Z"/><path d="M345 112 l12 -8 l2 10 Z"/></g>
+<path d="M322 100 L366 100 M330 94 L350 108" stroke="#2f3a2b" stroke-width="1"/>
+<text x="347" y="164" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">A week</text>
+<text x="347" y="186" font-size="15" fill="#2f3a2b" text-anchor="middle">leaves,</text>
+<text x="347" y="205" font-size="15" fill="#2f3a2b" text-anchor="middle">web inside</text>
+</g>
+<rect x="8" y="240" width="384" height="156" rx="10" fill="#eef2f6"/>
+<text x="22" y="266" font-size="16" font-weight="bold" fill="#2c5d86">Weather clocks</text>
+<g data-tip="Frost or rain inside|Frost crystals or rain pits inside the print mean it was made before the frost or the rain.">
+<rect x="14" y="276" width="372" height="34" fill="#eef2f6"/>
+<g transform="translate(32 292)" stroke="#4a7fb0" stroke-width="2" stroke-linecap="round"><path d="M0 -9 V9 M-8 -4.5 L8 4.5 M-8 4.5 L8 -4.5"/></g>
+<text x="52" y="298" font-size="15" fill="#2f3a2b">Frost or rain pits inside: made before</text>
+</g>
+<g data-tip="Through the frost|A print pressed through the frost crust was made after the frost, this morning. Cold, shaded ground keeps tracks crisp for days.">
+<rect x="14" y="312" width="372" height="34" fill="#eef2f6"/>
+<g transform="translate(32 328)"><rect x="-10" y="-2" width="20" height="9" fill="#ffffff" stroke="#4a7fb0" stroke-width="1.6"/><path d="M-4 -8 l4 13 l4 -13" fill="#c9b79c" stroke="#6b4f35" stroke-width="1.6"/></g>
+<text x="52" y="334" font-size="15" fill="#2f3a2b">Print cuts through frost: this morning</text>
+</g>
+<g data-tip="Boot test|Make your own boot print right beside it and watch it age over the day (Tip).">
+<rect x="14" y="348" width="372" height="40" fill="#eef2f6"/>
+<g transform="translate(32 366)" fill="#6b4f35"><path d="M-6 -11 h9 v12 h6 q4 0 4 4 v4 h-19z"/></g>
+<text x="52" y="372" font-size="15" fill="#2f3a2b">Best test: your boot print beside it</text>
+</g>
+</svg>

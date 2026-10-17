@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 254" font-family="sans-serif" role="img" aria-label="When to buy gear, a tip, across the year from January to December. Winter: big buys and sales. Spring: fit the pack and break in boots. Summer: test every item on training hikes. Fall: nothing new, only replacements.">
+<rect width="400" height="254" fill="#fffaf0"/>
+<text x="200" y="30" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">When to buy gear (Tip)</text>
+<rect x="8.0" y="48" width="90" height="150" rx="9" fill="#f4eedf" stroke="#4a6f8f" stroke-width="2"/>
+<path d="M8.0 57 a9 9 0 0 1 9 -9 h72 a9 9 0 0 1 9 9 v19 h-90z" fill="#4a6f8f"/>
+<text x="53" y="70" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Winter</text>
+<path d="M53.0 94.0 L53.0 118.0" stroke="#5a8fc0" stroke-width="2.4" stroke-linecap="round"/><path d="M42.6 100.0 L63.4 112.0" stroke="#5a8fc0" stroke-width="2.4" stroke-linecap="round"/><path d="M63.4 100.0 L42.6 112.0" stroke="#5a8fc0" stroke-width="2.4" stroke-linecap="round"/>
+<text x="53" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">big buys,</text>
+<text x="53" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sales</text>
+<rect x="106.0" y="48" width="90" height="150" rx="9" fill="#f4eedf" stroke="#8b5a2b" stroke-width="2"/>
+<path d="M106.0 57 a9 9 0 0 1 9 -9 h72 a9 9 0 0 1 9 9 v19 h-90z" fill="#8b5a2b"/>
+<text x="151" y="70" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Spring</text>
+<g transform="translate(151.0 106)"><path d="M0 14 V-4" stroke="#5b6b3e" stroke-width="2.6"/><path d="M0 -2 C-4 -12 -14 -12 -15 -6 C-10 -2 -4 -2 0 -2z M0 2 C4 -8 14 -9 15 -3 C10 1 4 1 0 2z" fill="#6f8f4a"/><path d="M-10 14 H10" stroke="#8b5a2b" stroke-width="2.6"/></g>
+<text x="151" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">fit, break</text>
+<text x="151" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">in</text>
+<rect x="204.0" y="48" width="90" height="150" rx="9" fill="#f4eedf" stroke="#e8590c" stroke-width="2"/>
+<path d="M204.0 57 a9 9 0 0 1 9 -9 h72 a9 9 0 0 1 9 9 v19 h-90z" fill="#e8590c"/>
+<text x="249" y="70" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Summer</text>
+<path d="M260.0 106.0 L264.0 106.0" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M256.8 113.8 L259.6 116.6" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M249.0 117.0 L249.0 121.0" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M241.2 113.8 L238.4 116.6" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M238.0 106.0 L234.0 106.0" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M241.2 98.2 L238.4 95.4" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M249.0 95.0 L249.0 91.0" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><path d="M256.8 98.2 L259.6 95.4" stroke="#e0a21b" stroke-width="2.4" stroke-linecap="round"/><circle cx="249.0" cy="106" r="7.5" fill="#f2b632"/>
+<text x="249" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">test on</text>
+<text x="249" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">hikes</text>
+<rect x="302.0" y="48" width="90" height="150" rx="9" fill="#f4eedf" stroke="#c0392b" stroke-width="2"/>
+<path d="M302.0 57 a9 9 0 0 1 9 -9 h72 a9 9 0 0 1 9 9 v19 h-90z" fill="#c0392b"/>
+<text x="347" y="70" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Fall</text>
+<g transform="translate(347.0 106) scale(0.9)"><path d="M-12 12 C-14 -4 -2 -14 14 -13 C14 4 4 13 -12 12z" fill="#c0392b"/><path d="M-12 12 L6 -6" stroke="#fffaf0" stroke-width="1.8"/></g>
+<text x="347" y="152" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">nothing</text>
+<text x="347" y="172" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">new</text>
+<path d="M20 222 H372" stroke="#2f3a2b" stroke-width="2.4"/><path d="M384.0 222.0 L373.0 215.9 L373.0 228.1z" fill="#2f3a2b"/>
+<text x="20" y="244" font-size="15" font-weight="bold" fill="#6b5b4b">Jan</text>
+<text x="380" y="244" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">Dec</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Glassing plan for a day. Deer activity, a curve, peaks at dawn and dusk and dips at midday; deer are most active at dawn and dusk, 70 percent. Legal hunting hours for deer run from 1 hour before sunrise to 1 hour after sunset, 99 percent. Tip: glass open slopes and edges at first light and the last hour, and glass shade, timber edges and benches at midday.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer legal hours</text>
+<text x="200" y="44" font-size="15" fill="#2f3a2b" text-anchor="middle">1 h before sunrise to 1 h after sunset (99%)</text>
+<rect x="30" y="56" width="340" height="142" fill="#dfe6d3" opacity=".6"/>
+<rect x="30" y="56" width="44" height="142" fill="#2f3a2b" opacity=".15"/><rect x="326" y="56" width="44" height="142" fill="#2f3a2b" opacity=".15"/>
+<path d="M30 140 C46 86 76 70 100 78 C144 98 172 186 200 186 C228 186 256 98 300 78 C324 70 354 86 370 140" fill="none" stroke="#e8590c" stroke-width="4"/>
+<line x1="30" y1="198" x2="370" y2="198" stroke="#2f3a2b" stroke-width="2"/>
+<g stroke="#2f3a2b" stroke-width="2" stroke-dasharray="4 4"><line x1="74" y1="56" x2="74" y2="198"/><line x1="326" y1="56" x2="326" y2="198"/></g>
+<text x="74" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">sunrise</text><text x="200" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">midday</text><text x="326" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">sunset</text>
+<text x="52" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 h</text><text x="348" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 h</text>
+<text x="200" y="112" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">deer activity</text>
+<text x="104" y="70" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">peak</text><text x="296" y="70" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">peak</text>
+<rect x="10" y="230" width="186" height="62" rx="8" fill="#e8590c"/>
+<text x="103" y="255" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Dawn, last hour:</text><text x="103" y="278" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">open slopes, edges</text>
+<rect x="204" y="230" width="186" height="62" rx="8" fill="#2f3a2b"/>
+<text x="297" y="255" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Midday: shade,</text><text x="297" y="278" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">timber, benches</text>
+</svg>

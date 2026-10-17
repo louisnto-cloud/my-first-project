@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 278" font-family="sans-serif" role="img" aria-label="Season chart for a Canadian resident white tailed deer licence in Manitoba, archery, Manitoba Regulation 165/91, 85 percent. 26 August to 15 September, and 14 October to 10 November, in Game Hunting Areas 5 to 7, 8, 10, 11, 15, 15A, 17 and 17B. General rifle season dates: VERIFY in Schedule B of the Hunting Seasons and Bag Limits Regulation.">
+<rect width="400" height="278" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Manitoba deer, Canadian resident</text>
+<text x="200" y="47" font-size="15" fill="#8b5a2b" text-anchor="middle">Archery dates, M.R. 165/91 (85%)</text>
+<text x="61.3" y="72" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Aug</text>
+<text x="154.3" y="72" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="247.3" y="72" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="340.3" y="72" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="14" y="102" font-size="16" font-weight="bold" fill="#2f3a2b">Archery part 1</text><text x="386" y="102" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">Aug 26 to Sep 15</text>
+<rect x="14.0" y="112" width="94.5" height="18" fill="#efe8d6"/>
+<rect x="108.5" y="112" width="91.5" height="18" fill="#f8f3e6"/>
+<rect x="200.0" y="112" width="94.5" height="18" fill="#efe8d6"/>
+<rect x="294.5" y="112" width="91.5" height="18" fill="#f8f3e6"/>
+<rect x="90.2" y="112" width="64.0" height="18" rx="4" fill="#2f6e3b"/>
+<text x="14" y="166" font-size="16" font-weight="bold" fill="#2f3a2b">Archery part 2</text><text x="386" y="166" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 14 to Nov 10</text>
+<rect x="14.0" y="176" width="94.5" height="18" fill="#efe8d6"/>
+<rect x="108.5" y="176" width="91.5" height="18" fill="#f8f3e6"/>
+<rect x="200.0" y="176" width="94.5" height="18" fill="#efe8d6"/>
+<rect x="294.5" y="176" width="91.5" height="18" fill="#f8f3e6"/>
+<rect x="239.6" y="176" width="85.4" height="18" rx="4" fill="#2f6e3b"/>
+<rect x="8" y="214" width="384" height="56" rx="8" fill="#f4eedf"/>
+<text x="200" y="237" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">GHAs 5 to 7, 8, 10, 11, 15, 15A, 17, 17B.</text>
+<text x="200" y="259" font-size="15" fill="#c2410c" text-anchor="middle">Rifle dates: VERIFY in Schedule B.</text>
+</svg>
