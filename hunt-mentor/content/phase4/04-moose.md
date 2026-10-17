@@ -94,7 +94,7 @@ hab-wells-gray-cutblock | Young cutblock: browse and edges.
 ```
 
 - Wetlands, willow flats, young cutblocks (Tip).
-- Your MU (Management Unit): VERIFY on the map.
+- Your MU (Management Unit): Heffley Creek is in 3-27 (95%).
 
 ```more numbers, closures and local reading
 - Moose live across most of the BC Interior. Region 3 estimate: 7,000 to 9,000, stable (2022 provincial estimates, search preview) (80%).
@@ -102,7 +102,7 @@ hab-wells-gray-cutblock | Young cutblock: browse and edges.
 - Wells Gray Park is MU 3-45. Hunting and the discharge of firearms are prohibited there (page 33) (98%).
 - Region 3 bans all motor vehicles except snowmobiles above 1,700 m, except on existing roads and trails (page 33) (98%).
 - Moose use young cutblocks and burns for browse, and old conifer stands for shelter in deep snow (70%).
-- Season blocks by MU are in the Legal screen. Your MU: VERIFY on the official map.
+- Season blocks by MU are in the Legal screen. Heffley Creek: MU 3-27 (95%); check each spot on the Hunt Map.
 ```
 
 ## A day in the life: October

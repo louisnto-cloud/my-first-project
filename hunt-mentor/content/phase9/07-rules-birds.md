@@ -222,7 +222,7 @@ checked: 2026-10-11
 - District 3, Heffley Creek: ducks 8 September to 23 December; Canada geese closed 21 to 30 September (99%, Table 1 item 3).
 - District 2, Mission: ducks 10 October 2026 to 24 January 2027; Canada geese closed 23 November to 18 December (99%, Table 1 item 2, page 28).
 - District 8, Okanagan: ducks 23 September to 7 January (99%, Table 1 item 8).
-- MUs 2-1, 3-45, 3-46, 5-16 and 7-1 sit in no district: no federal season there (90%, my reading). VERIFY.
+- MUs 2-1, 3-45, 3-46, 5-16 and 7-1 sit in no district: no federal season there, and BC's Hunting Regulation duck and goose rows skip them too (95%, BC Laws and the ECCC, Environment and Climate Change Canada, BC summary, checked 2026-10-17).
 - **Why it trips people (Tip):** one province, but bird dates follow the [[District]].
 - **How common:** Tip (opinion). No count found.
 - **Source:** [Rule Book: ducks and geese](#/s/rb-migratory-birds), Schedule 3 Part 10 (99%).

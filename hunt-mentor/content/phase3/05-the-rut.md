@@ -125,7 +125,7 @@ hab-elk-wallow | Elk wallow: rut sign at a wet meadow.
 - Other moose and elk: [[LEH]] (Limited Entry Hunting) or closed (85%).
 
 ```more moose and elk seasons and tactics
-- Region 3 has general open seasons for **spike fork** bull moose in some MU areas, with dates between 20 September and 15 November depending on the MU (95%). Region 3 synopsis page 34. Exact MU and dates: read the table there; they are not yet in this app's regs data (VERIFY).
+- Region 3 has general open seasons for **spike fork** bull moose in some MU areas, with dates between 20 September and 15 November depending on the MU (95%). Region 3 synopsis page 34. By MU (99%, Hunting Regulation, Schedule 3, items 11 to 11.2, BC Laws, checked 2026-10-17): 20 September to 31 October in 3-34 to 3-38, 3-40 to 3-44 and 3-46; 15 October to 15 November in 3-15 to 3-17 and 3-31 to 3-33; 1 to 15 November in 3-12 to 3-14, 3-18 to 3-20, 3-26 to 3-30 and 3-39.
 - A spike fork bull is a young bull whose antlers meet the synopsis definition. Read the definition on the synopsis definitions pages before you shoot (85%).
 - Other moose hunts in Region 3 are by [[LEH]] (Limited Entry Hunting) draw (85%).
 - No elk general open season appears in the Region 3 pages (95%). The [LEH synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf) lists no Region 3 elk hunt either, so there is no elk hunting in Region 3 this licence year (95%, read 2026-10-17).
