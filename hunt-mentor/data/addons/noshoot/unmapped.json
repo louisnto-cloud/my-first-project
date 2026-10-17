@@ -1,5 +1,5 @@
 {
- "built": "2026-10-16",
+ "built": "2026-10-17",
  "source": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028",
  "note": "Closures whose boundary is a description or a map picture, not an official polygon. Not drawn on the map. Quoted from the app lessons (content/phase7).",
  "items": [
@@ -124,6 +124,247 @@
    "page": null,
    "cert": 99,
    "src": "Closed Areas Regulation (BC Wildlife Act)"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Nicomen, Harrison Bay and Harrison Mills lowland: no rifles",
+   "mus": [
+    "2-8",
+    "2-18",
+    "2-19"
+   ],
+   "text": "No rifles. The area runs from the southeast corner of Squawkum Creek Indian Reserve 3 east along the Canadian Pacific Railway to the District of Kent, along the Kent line to the District of Chilliwack line, then by the dykes at Zaitscullachan Slough and Skumalasph Indian Reserve 16, Malcolm Road, a creek near Hodgkin Road and the 200 m contour back to the start. A shotgun and a bow are not banned by this rule. MUs are my reading (85%).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 11 s. 1 (not printed in the synopsis)"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Nicomen, Deroche, Lake Errock and Harrison Bay: shot only",
+   "mus": [
+    "2-8",
+    "2-19"
+   ],
+   "text": "Firearms Using Shot Only Area: (1) the lowland from Eagle Road and Hatzic Lake east past Stave Lake, Davis Lake Park, Norrish Creek and Deroche Creek to Malcolm Road and the Harrison Hill dyke, south to the Fraser River, excepting Indian Reserve lands; (2) Harrison Bay, from Squawkum Indian Reserve 3 to the Highway 7 bridge and the District of Kent. Rifles and slugs are out; shotguns with shot are allowed (99% rule, 85% my reading of the long boundary).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 9 s. 9 (not printed in the synopsis)"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Highways 1 and 7: shot only within 150 m",
+   "mus": [
+    "2-3",
+    "2-8",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "text": "Firearms Using Shot Only Area within 150 m (164 yd) of the travelled road: Highway 7 from the east line of Mission to Highway 1, and Highway 1 from the east line of Chilliwack to the north boundary of MU 2-18. MUs are my reading (85%).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 9 s. 1 (not printed in the synopsis)"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Nicomen and Hatzic: No Shooting",
+   "mus": [
+    "2-8"
+   ],
+   "text": "No Shooting Area, four pieces east of Mission: Farms, Durieu, Sylvester and Seux roads; Hatzic Slough by Dale Road and Farms Road; north of Highway 7 from Eagle Road to Hatzic Lake and Sward Road; Ross Road to Taylor Road and Deroche Creek. Also 50 m either side of Sylvester Road from Farms Road to Dale Road (my reading, 85%).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 5 ss. 63 and 85 (not printed in the synopsis)"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Fraser Valley Regional District roads: no target shooting",
+   "mus": [
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-8",
+    "2-17",
+    "2-18",
+    "2-19"
+   ],
+   "text": "Unless lawfully hunting or trapping, no firearm discharge within 400 m (437 yd) of select FVRD (Fraser Valley Regional District) roads. Hunting is allowed; target shooting is not. The road map is the FVRD PDF (www.fvrd.ca/assets/Government/Documents/NoShootingAreas.pdf, dated 2017): there is no official outline to draw. MUs are my reading (80%).",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Forest Service roads north of Mission: no target shooting",
+   "mus": [
+    "2-8"
+   ],
+   "text": "Crown land within 400 m of the Florence Lake, Lost Creek, Terepocki, Lease, Murdo, Mount Kettley and Salsbury Forest Service roads (with spurs), the Hatzic roads on Map 5.1-1/17 and every road in the Norrish Creek watershed. These are FVRD roads: hunting is allowed, target shooting is not (95%, my reading of page 27).",
+   "page": 27,
+   "cert": 95,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27; Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 5.1 ss. 7 to 10"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Harrison west side roads: no target shooting",
+   "mus": [
+    "2-19"
+   ],
+   "text": "Crown land within 400 m of the Francis Lake and Weaver Lake Forest Service roads (with spurs), the Sts'ailes (West) Forest Service Road from the Weaver Lake road to the Davidson Creek bridge, and the Chehalis Forest Service Road from the Statlu road to the Elbow Lake area (Map B29). Hunting is allowed, target shooting is not (90%, my reading of page 27 with the regulation).",
+   "page": 27,
+   "cert": 90,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27; Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 5.1 ss. 11 and 12"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Mount Judge Howay Park",
+   "mus": [
+    "2-8"
+   ],
+   "text": "No Shooting Area: the whole park, north of Stave Lake. Not printed in the synopsis. The park is not in the current BC parks layer, so its line is not drawn: VERIFY the boundary with the regional office (604 586 4400).",
+   "page": null,
+   "cert": 99,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 5 s. 115"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Pitt Wildlife Management Area and Addington Marsh",
+   "mus": [
+    "2-8"
+   ],
+   "text": "No Shooting or Hunting Areas near Pitt Meadows and Port Coquitlam: the Pitt Wildlife Management Area lands from Grant Narrows, and Addington Marsh inside the dyke. Part of the Pitt area by Koerner and Rannie roads is a seasonal No Shooting or Hunting Area (Schedule 4 s. 3). Described in words, not drawn. Addington Marsh is also closed to motor vehicles all year (page 27).",
+   "page": null,
+   "cert": 95,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 3 ss. 12 and 22, Schedule 4 s. 3"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "FVRD Electoral Area H (Huntingdon and Sumas Mountain)",
+   "mus": [
+    "2-3",
+    "2-4"
+   ],
+   "text": "No Shooting Area: \"Electoral Area H of the Fraser Valley Regional District\" (1996 wording, headed Huntingdon and Sumas Mountain). Today's Area H, redrawn in 2022, is around Cultus Lake, not Sumas Mountain, so the app cannot tell which outline the rule means. VERIFY with the regional office before you shoot in either place.",
+   "page": null,
+   "cert": 80,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 5 s. 49"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Cultus Lake land: shot only",
+   "mus": [
+    "2-3"
+   ],
+   "text": "Firearms Using Shot Only Area on the land around Cultus Lake, from the 250 m contour west of the Sweltzer River along Cultus Lake Park. The lake water is drawn as a seasonal No Shooting Area.",
+   "page": null,
+   "cert": 95,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 9 s. 7"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "McGillivray Creek, Chilliwack",
+   "mus": [
+    "2-4"
+   ],
+   "text": "No Shooting, Hunting or Trapping Area between McGillivray Creek, the Little Sumas River, the Fraser River and Miller Slough, north of the dyke (my reading, 85%).",
+   "page": null,
+   "cert": 95,
+   "src": "Closed Areas Regulation, B.C. Reg. 76/84 (BC Wildlife Act), Schedule 1 s. 7"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Regional district parks not drawn",
+   "mus": [],
+   "text": "No hunting or shooting within 100 m (109 yd) of any regional district park (page 9). The map draws only the parks named \"Regional Park\" in the provincial data. Community parks run by a regional district, and new parks, are not drawn: watch for park signs.",
+   "page": 9,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 9"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Whistler Olympic Park",
+   "mus": [
+    "2-6"
+   ],
+   "text": "No hunting inside the park boundaries (Schedule 7 s. 52 draws it on its own map).",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Highway 99 and Callaghan Road",
+   "mus": [
+    "2-6",
+    "2-7",
+    "2-8",
+    "2-9"
+   ],
+   "text": "No hunting and no shooting within 400 m of the road allowance of Highway 99 from Squamish to Whistler and Callaghan Road to the Whistler Olympic Park gate (page 27). No shooting 400 m west and 1 km east of Highway 99 from West Vancouver to Squamish (page 10). MUs are my reading (80%).",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 10 and 27"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Bowen Island: near buildings and roads",
+   "mus": [
+    "2-16"
+   ],
+   "text": "No hunting within 150 m of any public highway, school building, school yard, public park, playground, church, workshop, place of business, dwelling house or farm building.",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Burrard Inlet",
+   "mus": [
+    "2-8"
+   ],
+   "text": "No firearms on Burrard Inlet east of a straight line from Point Grey to Point Atkinson (Lighthouse Park).",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27"
+  },
+  {
+   "region": "2",
+   "map": "",
+   "name": "Boundary Bay and the Delta and Surrey dykes",
+   "mus": [
+    "2-4"
+   ],
+   "text": "Boundary Bay Wildlife Management Area is closed to snipe hunting. No lead shot on any dyke in Delta or on the water side of it, or on the Mud Bay dykes in Surrey.",
+   "page": 27,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 27"
+  },
+  {
+   "region": "1",
+   "map": "",
+   "name": "Regional district parks not drawn",
+   "mus": [],
+   "page": 9,
+   "cert": 99,
+   "src": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 9",
+   "text": "No hunting or shooting within 100 m (109 yd) of any regional district park (page 9). The map draws only the parks named \"Regional Park\" in the provincial data. Community parks run by a regional district, and new parks, are not drawn: watch for park signs."
   },
   {
    "region": "1",
