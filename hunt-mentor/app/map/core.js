@@ -429,12 +429,14 @@ function openBasePicker() {
     <div class="hmm-set">
       <label class="hmm-sw-row"><span>3D terrain<small>Tilt with two fingers, or use the tilt and rotate buttons on the left.</small></span><input type="checkbox" data-set="3d" ${prefs.is3d ? 'checked' : ''}><i class="hmm-switch"></i></label>
       <label class="hmm-range"><span>3D height boost <b data-out="exag">${exag().toFixed(1)} times</b></span><input type="range" min="1" max="2.5" step="0.1" value="${exag()}" data-set="exag"></label>
-      <label class="hmm-sw-row"><span>Contours on satellite<small>Brown lines on Topo are always on.</small></span><input type="checkbox" data-set="satc" ${prefs.satContours !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
+      <label class="hmm-sw-row"><span>Contour lines on Topo<small>The brown lines along the hills. Each line is one height; lines close together mean steep ground. Turn off for a cleaner map.</small></span><input type="checkbox" data-set="topoc" ${prefs.topoContours !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
+      <label class="hmm-sw-row"><span>Contour lines on satellite</span><input type="checkbox" data-set="satc" ${prefs.satContours !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
       <label class="hmm-sw-row"><span>Shade hills on satellite<small>Adds soft shadows so ridges and draws stand out.</small></span><input type="checkbox" data-set="sats" ${prefs.satShade !== false ? 'checked' : ''}><i class="hmm-switch"></i></label>
     </div>
     <p class="hmm-muted">Satellite imagery from Esri is for viewing. Offline Maps saves Topo and terrain; satellite tiles you have looked at stay saved for a while.</p>` });
   body.querySelectorAll('[data-base]').forEach((b) => b.onclick = () => { setBase(b.dataset.base); body.querySelectorAll('[data-base]').forEach((x) => x.classList.toggle('on', x === b)); });
   body.querySelector('[data-set="3d"]').onchange = (e) => set3d(e.target.checked);
+  body.querySelector('[data-set="topoc"]').onchange = (e) => { prefs.topoContours = e.target.checked; savePrefs(); applyView(); };
   body.querySelector('[data-set="satc"]').onchange = (e) => { prefs.satContours = e.target.checked; savePrefs(); applyView(); };
   body.querySelector('[data-set="sats"]').onchange = (e) => { prefs.satShade = e.target.checked; savePrefs(); applyView(); };
   wireExag(body);
