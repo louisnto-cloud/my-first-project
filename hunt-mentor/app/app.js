@@ -1125,7 +1125,7 @@
   const dayISO = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: TZ });
   const addDays = (iso, n) => { const d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
   const dayDiff = (a, b) => Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 864e5);
-  const MUST_RE = /^(rb-|tagging-legal|shot-placement|blood-trailing|field-dressing|meat-care|cwd|first-)/;
+  const MUST_RE = /^(rb-|local-harrison|tagging-legal|shot-placement|blood-trailing|field-dressing|meat-care|cwd|first-)/;
   const MUST_ALL = ['mc-skills-10', 'mc-nav-07']; // safety and first aid; what to do when lost
   const STUDY_MIN = 8, DAY_CARDS = 10;
   const seenOf = (s) => { const n = stepsOf(s).length; return S.done[s.id] ? n : S.max[s.id] != null ? Math.min(n, S.max[s.id] + 1) : 0; };
@@ -1160,6 +1160,8 @@
     const rb = r && byId['rb-region-' + r] ? 'rb-region-' + r : null;
     const out = (lessons || []).filter((id) => !(r && r !== '3' && /^local-heffley/.test(id))).map((id) => (rb && /^rb-region-/.test(id) ? rb : id));
     if (rb && !out.includes(rb)) out.unshift(rb);
+    // Harrison area deer plans (MU 2-8, 2-18, 2-19) also get the local lesson, as must know
+    if (/^2-(8|18|19)$/.test(String(plan.where && plan.where.mu)) && /deer/.test(plan.species) && byId['local-harrison-deer']) out.splice(1, 0, 'local-harrison-deer');
     return [...new Set(out)];
   }
   function studyToday(plan, lessons) {
