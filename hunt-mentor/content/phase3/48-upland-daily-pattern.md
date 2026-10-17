@@ -197,9 +197,9 @@ rq-up-step-5 | Write every flush down.
 | Chukar | Region 3 | 1 Oct to 30 Nov | 5 |
 | Pheasant cocks | Region 3 | 1 Oct to 30 Nov | 2 |
 | California quail | Region 8, MUs 8-1 to 8-15, 8-21 to 8-26 | 1 Oct to 30 Nov | 10 (30 possession) |
-| Grouse (aggregate) | Region 8 | VERIFY dates in the Rule Book | 5 total |
+| Grouse (aggregate) | Region 8 | 10 Sept to 30 Nov | 5 total |
 
-- All rows 99%, synopsis pages 34, 67 and 68 (2 October 2026 edition), except the Region 8 grouse dates: VERIFY.
+- All rows 99%, synopsis pages 34, 67 and 68 (2 October 2026 edition), and the Region 8 grouse dates from the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 8, item 21: 10 September to 30 November, daily aggregate 5 (99%, BC Laws, checked 2026-10-17). A youth only season runs 1 to 9 September (99%).
 
 ```more where each row comes from
 - Region 3 rows: synopsis page 34, as carried in [Local plan: Heffley Creek](#/s/local-heffley/0) (99%).

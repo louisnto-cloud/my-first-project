@@ -465,7 +465,7 @@ checked: 2026-10-03
 
 ```more the exact route words
 - Hwy 5: "Hwy 5 (Coquihalla Highway) between Hope and the junction of Hwys 1 and 5 at Kamloops" (99%, page 10, 2 October 2026 edition). Hwy 5 north of Kamloops, past your Heffley Creek base, is not on this list (95%, my reading).
-- Hwy 6: "Hwy 6 between Bench Cr. and Banting Cr." (99%).
+- Hwy 6: "Hwy 6 between Bench Cr. and Banting Cr." (99%). Both creeks are in Region 4 Kootenay, MUs 4-32 and 4-14 (85%, BC Geographical Names points on the app MU map, checked 2026-10-17).
 - Hwy 16: "Hwy 16 between the boundary of Prince Rupert and the B.C. - Alberta interprovincial boundary" (99%).
 - Hwy 27: "Hwy 27 from the junction with Route 16 (Yellowhead) west of Vanderhoof to Fort St. James" (99%).
 - Hwy 29: "Hwy 29 between the intersection of Hwy 29 with Hwy 97 in the vicinity of the Village of Chetwynd and the intersection of Hwy 29 with Hwy 97 in the vicinity of Charlie Lake, Peace River Land District" (99%).

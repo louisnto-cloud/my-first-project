@@ -94,7 +94,7 @@ hab-wells-gray-cutblock | Young cutblock: browse and edges.
 ```
 
 - Wetlands, willow flats, young cutblocks (Tip).
-- Your MU (Management Unit): VERIFY on the map.
+- Your MU (Management Unit): Heffley Creek is in 3-27 (95%).
 
 ```more numbers, closures and local reading
 - Moose live across most of the BC Interior. Region 3 estimate: 7,000 to 9,000, stable (2022 provincial estimates, search preview) (80%).
@@ -102,7 +102,7 @@ hab-wells-gray-cutblock | Young cutblock: browse and edges.
 - Wells Gray Park is MU 3-45. Hunting and the discharge of firearms are prohibited there (page 33) (98%).
 - Region 3 bans all motor vehicles except snowmobiles above 1,700 m, except on existing roads and trails (page 33) (98%).
 - Moose use young cutblocks and burns for browse, and old conifer stands for shelter in deep snow (70%).
-- Season blocks by MU are in the Legal screen. Your MU: VERIFY on the official map.
+- Season blocks by MU are in the Legal screen. Heffley Creek: MU 3-27 (95%); check each spot on the Hunt Map.
 ```
 
 ## A day in the life: October
@@ -296,7 +296,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 ```
 
 - Bag limit 1. Licence $25.00 (98%).
-- Your MU (Management Unit) at Heffley Creek: VERIFY on the map.
+- Your MU (Management Unit) at Heffley Creek: 3-27, with 3-28 about 0.4 km away (95%, BC Geographical Names on the app MU map, checked 2026-10-17).
 
 ```more fees, the full table and other regions
 - **Species licence:** Moose, BC resident $25.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).
@@ -312,8 +312,8 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - Footnotes on page 34: "All individuals with a moose species licence must submit a Mandatory Hunter Report by March 31st." and "See Definitions Section: Moose. Antlers must accompany the species licence." (98%)
 - **Region 8**, page 68: `8-1 to 8-15, 8-21 to 8-26 | Spike-fork Bulls | Nov 1 - Nov 15 | 1`, same two footnotes (98%).
 - **Region 2** (Mission base): no moose row in the Lower Mainland table, page 28. No general open season (98%).
-- **Any other class** (cow, calf, bigger bull): LEH seasons "are open only to hunters who have drawn an LEH authorization" (page 5) (98%). Region 3 moose draws: VERIFY in the [LEH synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf).
-- **Your MU at Heffley Creek:** VERIFY on the official map.
+- **Any other class** (cow, calf, bigger bull): LEH seasons "are open only to hunters who have drawn an LEH authorization" (page 5) (98%). Region 3 moose draws in 2026 to 2027: antlerless hunts 4001 to 4018 (1 to 10 November) and bull hunts 4019 to 4082 (from 20 September in 3-46 to 10 December), MU by MU (99%, page 8, read 2026-10-17). See the [LEH synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf).
+- **Your MU at Heffley Creek:** 3-27, with 3-28 next door (95%). Both are in the 1 to 15 November spike fork row (99%, Hunting Regulation, Schedule 3, item 11.2, checked 2026-10-17).
 ```
 
 ```regs safety
@@ -408,7 +408,7 @@ Put the Mandatory Hunter Report deadline, 31 March, in my phone
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), full edition read from a local copy: definitions pages 3 and 4, LEH page 5, fees page 8, unlawful acts pages 10 and 11, methods page 13, evidence of sex page 15, Mandatory Hunter Report page 16, inspection page 17, Region 2 page 28, Region 3 pages 31, 33 and 34, Region 6 page 50, Region 7B page 62, Region 8 pages 67 and 68, checked 2026-10-01 (98%)
 - BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), [Region 8 Okanagan synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf) and [Region 2 Lower Mainland synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), same page numbers, checked 2026-10-01 (98%)
 - BC [2026 Hunting and Trapping Regulation Changes Summary](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026_hunting-trapping_regulation_changes_summary.pdf), province wide changes table, checked 2026-10-01 (95%)
-- BC [Limited Entry Hunting Regulations Synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf), not read, VERIFY
+- BC [Limited Entry Hunting Regulations Synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf), 2026 to 2027 edition, read 2026-10-17: page 8, Region 3 moose (99%)
 - BC [2022 provincial ungulate population estimates](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/ungulates/2022_provincial_ungulate_population_estimates.pdf), search preview, checked 2026-10-01 (80%)
 - Hinterland Who's Who, [Moose](https://www.hww.ca/wildlife/mammals/moose/), search preview, checked 2026-10-01 (75%)
 - Aitken and others 2012, [carcass weights of moose in central BC](https://alcesjournal.org/index.php/alces/article/view/87), Alces journal, search preview, checked 2026-10-01 (75%)

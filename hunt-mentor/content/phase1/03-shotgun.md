@@ -160,7 +160,7 @@ Show your PAL (Possession and Acquisition Licence). Seller checks it with the RC
 ```
 
 ```more private sale
-- For a private sale, the seller must confirm your PAL with the RCMP and get a reference number (75%). Exact steps: VERIFY.
+- For a private sale, the seller must get a reference number from the Registrar of Firearms (the RCMP Canadian Firearms Program) before the transfer, and you give the seller your licence details so they can ask (99%, [Firearms Act s. 23](https://laws-lois.justice.gc.ca/eng/acts/F-11.6/section-23.html), current to 30 September 2026, checked 2026-10-17). The number is valid only for a set period (99%).
 ```
 
 ## Entry tier

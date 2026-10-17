@@ -176,7 +176,7 @@ mgs-care-4 | Label or preserve before you give a goose away.
 - District 8: Canada and cackling 20 September to 28 November, 20 December to 5 January, 21 February to 10 March in a year that is not a leap year. White fronted and snow and Ross's 23 September to 7 January (99%).
 - District 2, 2026 to 2027: Canada and cackling 5 to 15 September, 10 October to 22 November, 19 December to 10 January, 10 February to 10 March. White fronted 10 October to 24 January. Snow and Ross's 10 October to 5 January, then 20 February to 10 March (99%).
 - District 2 snow and Ross's limit, federal table: "10 (not more than 5 may be Ross's Geese). An additional 5 Snow Geese may be killed or taken in Provincial Management Units 2-4 and 2-5" (99%). Possession 30, not more than 15 Ross's, plus 15 more snow geese in 2-4 and 2-5 (99%).
-- The synopsis page 12 prints 5 a day outside 2-4 and 2-5. The [Region 2 Rule Book](#/s/rb-region-2) marks Mission's 2-8 VERIFY and suggests taking 5 a day to stay safe (Tip).
+- The synopsis page 12 prints 5 a day outside 2-4 and 2-5. The Region 2 table note on page 28 agrees with the federal table: 10 (30) in 2-2, 2-3 and 2-6 to 2-19, no more than 5 (15) Ross's (99%, read 2026-10-17). The Environment and Climate Change Canada BC summary for August 2026 to July 2027 says the same (90%, read 2026-10-17). So Mission's 2-8 is 10 a day (90%). Taking 5 a day stays the safe habit (Tip); see the [Region 2 Rule Book](#/s/rb-region-2).
 - District 2: the MU 2-4 late Canada goose season does not apply 100 m either side of any dyke in Delta, other than Westham Island (99%, page 28).
 - Hunt two districts in one day: the highest daily limit of the areas applies (99%, s. 43(2)).
 ```

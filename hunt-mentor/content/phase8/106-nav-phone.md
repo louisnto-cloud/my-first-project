@@ -142,9 +142,9 @@ mc-nav-ns-4 | Set the heading on the compass and walk.
 - A messenger texts both ways on a plan; a beacon only sends SOS (60 to 65%).
 
 ```more the three kinds compared
-- **iPhone 14 or later:** Emergency SOS via satellite in Canada with iOS 16.1 or later, only where there is no cell or wifi, outside with a clear view of the sky and horizon (95%, Apple). It shares location, elevation, battery and Medical ID if set (95%). Free for two years after activation; after that VERIFY (95%).
+- **iPhone 14 or later:** Emergency SOS via satellite in Canada with iOS 16.1 or later, only where there is no cell or wifi, outside with a clear view of the sky and horizon (95%, Apple). It shares location, elevation, battery and Medical ID if set (95%). Free for two years after activation (95%, Apple support page published 5 October 2026, checked 2026-10-17). The page does not say what it costs after that: VERIFY.
 - **Satellite messenger** such as a Garmin inReach: SOS over the Iridium network to a staffed 24/7 response centre, two way texting, needs an active subscription (65%, Garmin).
-- **PLB (personal locator beacon):** one way SOS on 406 MHz, no monthly plan for the SOS function, often with a 121.5 MHz homing signal and GPS (60%, gear guides). Registration in Canada: VERIFY (Canadian Beacon Registry page is on canada.ca and could not be read).
+- **PLB (personal locator beacon):** one way SOS on 406 MHz, no monthly plan for the SOS function, often with a 121.5 MHz homing signal and GPS (60%, gear guides). Registration in Canada: free on the Canadian Beacon Registry. Its page says registering a 406 MHz beacon "is required in most situations" and names PLBs only "in some situations" (90%, canada.ca beacon registry page, modified 18 February 2026, read 2026-10-17). Register yours anyway so rescuers get your contact details (Tip).
 - [[Satellite messenger]] gear tiers and prices: [GPS, phone and battery](#/s/gps-phone-battery) (60 to 65%).
 - My lean (Tip): if both of you carry iPhone 14 or later, that covers SOS. A messenger adds texting home "running late, all fine", which stops a needless search.
 - Practise Apple's satellite Demo mode at home (Tip).

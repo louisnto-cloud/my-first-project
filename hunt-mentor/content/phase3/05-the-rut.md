@@ -125,10 +125,10 @@ hab-elk-wallow | Elk wallow: rut sign at a wet meadow.
 - Other moose and elk: [[LEH]] (Limited Entry Hunting) or closed (85%).
 
 ```more moose and elk seasons and tactics
-- Region 3 has general open seasons for **spike fork** bull moose in some MU areas, with dates between 20 September and 15 November depending on the MU (95%). Region 3 synopsis page 34. Exact MU and dates: read the table there; they are not yet in this app's regs data (VERIFY).
+- Region 3 has general open seasons for **spike fork** bull moose in some MU areas, with dates between 20 September and 15 November depending on the MU (95%). Region 3 synopsis page 34. By MU (99%, Hunting Regulation, Schedule 3, items 11 to 11.2, BC Laws, checked 2026-10-17): 20 September to 31 October in 3-34 to 3-38, 3-40 to 3-44 and 3-46; 15 October to 15 November in 3-15 to 3-17 and 3-31 to 3-33; 1 to 15 November in 3-12 to 3-14, 3-18 to 3-20, 3-26 to 3-30 and 3-39.
 - A spike fork bull is a young bull whose antlers meet the synopsis definition. Read the definition on the synopsis definitions pages before you shoot (85%).
 - Other moose hunts in Region 3 are by [[LEH]] (Limited Entry Hunting) draw (85%).
-- No elk general open season appears in the Region 3 pages (95%). Elk in Region 3 are LEH or closed: VERIFY in the LEH regulations.
+- No elk general open season appears in the Region 3 pages (95%). The [LEH synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf) lists no Region 3 elk hunt either, so there is no elk hunting in Region 3 this licence year (95%, read 2026-10-17).
 - Moose rut tactic: sit a willow swamp or lake edge at dawn and dusk from the last week of September, call softly, and listen for grunts and antler raking (hunter lore) (60%).
 - Elk rut tactic: find bugling at first light, get the wind, and cow call from 100 m back in cover (hunter lore) (60%).
 ```
@@ -165,9 +165,9 @@ yt-moose-calling-eastmans | Hear real moose calls and when to use each one.
 | Early November | Seeking phase: bucks cruise, daylight sightings rise (75%) | Sit funnels and saddles all morning. Rattle and grunt for white tails (Tip) |
 | Mid November | Peak deer rut, mule deer peak about now (80%) | Find the does, the bucks are with them. Be patient, do not shoot the first buck (Tip) |
 | Late November to 10 December | Tending and post rut. Bucks worn, snow deep up high (70%) | Hunt winter range slopes, track in snow, respect the deer (Tip) |
-| Mid December | Most Region 3 deer seasons closed (65%, VERIFY). Second rut for unbred does (65%) | Scout and learn. Shed hunting comes later (Tip) |
+| Mid December | Region 3 mule deer closed after 10 December; white tailed deer bow only 11 to 20 December (99%, Hunting Regulation, Schedule 3). Second rut for unbred does (65%) | Scout and learn. Shed hunting comes later (Tip) |
 
-- Check the [[Synopsis]] for the exact season end in your MU. Many Region 3 mule deer seasons run to 10 December with a [[4 point buck]] rule from 1 November (65%, VERIFY).
+- Check the [[Synopsis]] for the exact season end in your MU. Region 3 mule deer buck seasons run to 10 December with a [[4 point buck]] rule from 1 November (99%, Hunting Regulation, Schedule 3, items 5 and 6, BC Laws, checked 2026-10-17): any buck 1 to 31 October, 4 points or better 10 to 30 September and 1 November to 10 December.
 ```
 
 ## Rules that touch this session

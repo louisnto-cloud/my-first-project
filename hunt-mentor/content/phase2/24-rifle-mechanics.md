@@ -112,7 +112,7 @@ checked: 2026-10-11
 - **Bore:** the inside of the barrel, with rifling (85%).
 - **Muzzle and crown:** the last edge the bullet touches. Damage here can spoil accuracy (70%).
 - Arctic barrel: 508 mm (20 inch), stainless (95%, Sako spec page).
-- Threaded muzzle: some Tikkas have one. Keep the thread protector on when no brake or suppressor is fitted (95%, Tikka manual). Suppressor and brake law is not covered here: VERIFY before fitting anything.
+- Threaded muzzle: some Tikkas have one. Keep the thread protector on when no brake or suppressor is fitted (95%, Tikka manual). A suppressor is a prohibited device in Canada: any device "designed or intended to muffle or stop the sound or report of a firearm" (99%, [Criminal Code s. 84(1)](https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html), current to 30 September 2026, checked 2026-10-17). Muzzle brakes are not named there (95%); ask the store before fitting one (Tip).
 - Obstruction check before loading: bolt out, look through from the back. Any obstruction is a gunsmith job (95%, Tikka manual).
 ```
 
@@ -234,7 +234,7 @@ ff-rm-check-4 | Bolt in, close, decock pointing safe.
 - "Do not try to force more cartridges than the maximum capacity of your magazine" (95%, Tikka manual).
 - Unload a magazine: thumb presses the rim forward, index finger tips the round up and out (95%, Tikka manual).
 - Clean it: follower and spring out, wash in warm soapy water or solvent, lightly oil, reassemble (95%, Tikka manual).
-- Arctic magazine capacity: 10 rounds per one retailer listing (65%). VERIFY with your magazine. Legal limits on magazine capacity: not covered here, VERIFY.
+- Arctic magazine capacity: 10 rounds per one retailer listing (65%). VERIFY with your magazine. Legal limits on magazine capacity: the 5 round limit for long guns applies to magazines made for semi automatic firearms; a bolt action magazine is not on that list (90%, my reading of [SOR/98-462](https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-462/FullText.html), Schedule, Part 4, s. 3, current to 30 September 2026, checked 2026-10-17).
 - Loaded means a round in the chamber or in an attached magazine. See [Rule Book: definitions](#/s/rb-definitions/0) (99%).
 ```
 

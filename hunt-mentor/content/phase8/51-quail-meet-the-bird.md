@@ -87,7 +87,7 @@ g-quail-pair | A pair. The female is plainer and smaller in the plume.
 
 ```more look alikes in full
 - Mountain quail: long straight plume, chestnut throat, broad white bars on red brown sides (80%, Audubon). The Rule Book: "No open season on mountain quail." Region 1, page 21 (99%).
-- The Region 8 row says only "QUAIL". Whether it covers mountain quail: VERIFY. Shoot California quail only (Tip, from the [Region 8 Rule Book](#/s/rb-region-8)).
+- The Region 8 row says only "QUAIL". The law behind it, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 8, item 23, also says only "QUAIL" and names no kind (99%, BC Laws, current to 13 October 2026, checked 2026-10-17). My reading: the season is not limited to California quail (80%). Still shoot California quail only (Tip, from the [Region 8 Rule Book](#/s/rb-region-8)).
 - Chukar and gray partridge: legal in Regions 3 and 8 (99%). Pheasant: cocks only, Regions 2, 3 and 8 (99%).
 - Grouse flush from the same draws in September and October. Different rows, different limits (99%, Rule Book).
 ```

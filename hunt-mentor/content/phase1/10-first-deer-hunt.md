@@ -232,7 +232,7 @@ yt-glassing-mule-deer | Watch how a guide glasses for mule deer at first light.
 - Loaded means a round in the chamber **or** in an attached magazine (99%).
 - **No shooting from a motor vehicle**, ATV included (99%).
 - No hunting or shooting within the road allowance of numbered highways and 2 lane or wider public roads kept by the Ministry of Transportation and Infrastructure, and no shooting across them (99%). On a 2 lane road the strip runs 15 m each side of the centre (99%).
-- FSRs are not named in that rule (99%). Whether a given FSR counts: VERIFY. Never shoot along or across any road (Tip).
+- FSRs are not named in that rule (99%). The law, the [Closed Areas Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01) s. 12(1), covers public roads of two lanes or more maintained by the ministry responsible for the Transportation Act, or by another province, a territory or Canada (99%, BC Laws, checked 2026-10-17). An FSR kept by the Ministry of Forests likely does not count (85%, my reading). Never shoot along or across any road (Tip).
 - ATV: registered with the plate or sticker showing, and a helmet on a ride astride machine (99%). On an FSR the driver also needs a valid driver's licence and at least $200,000 third party liability insurance (99%).
 - Region 3: no motor vehicles except snowmobiles above 1,700 m, except on existing roads and trails (99%).
 - MUs 3-28, 3-29, 3-30 and part of 3-17 (Map C3): no ATV use for hunting, or for hauling hunters, gear or game, 1 Sept to 10 Dec (99%). The west bank at Heffley Creek is 3-28 (90%). MU 3-27 has no such closure listed (95%).

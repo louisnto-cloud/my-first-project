@@ -244,7 +244,7 @@ ff-gc-sg-4 | Choke back in, snug.
 - Boats: a BC exemption allows a loaded firearm only in a boat with no motor, or one the motor is not moving, when hunting or retrieving wildlife (95%, firearm safety refresher).
 - Unloaded means no cartridge in the chamber and none in a magazine attached to or inserted in the firearm (99%, federal transport regulations section 1).
 - Leaving the vehicle: non restricted firearms locked in the trunk or a lockable compartment; no trunk, out of sight and the vehicle locked (99%, federal transport regulations section 10(2)).
-- Home storage law is not covered in this app yet: VERIFY with the RCMP Canadian Firearms Program. Tikka's advice: lock the firearm away and store ammunition in a separate locked place (95%, manufacturer advice).
+- Home storage law for a non restricted rifle or shotgun: store it unloaded, and either lock it with a secure locking device, take out the bolt, or keep it in a locked container or room that cannot readily be broken into. Ammunition must not be readily at hand unless it is locked up too (99%, [Storage, Display, Transportation and Handling of Firearms by Individuals Regulations](https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html), s. 5(1), current to 30 September 2026, checked 2026-10-17). Tikka's advice: lock the firearm away and store ammunition in a separate locked place (95%, manufacturer advice).
 - After a bumpy ATV or truck ride: check scope screws and confirm zero if anything moved (Tip).
 ```
 

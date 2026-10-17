@@ -114,8 +114,8 @@ fs-fire-build-5 | Feed the next size only when this one roars.
 - Fire needs heat, fuel and air (75%).
 - Birch bark and pitch wood burn even when wet (65%). Split a wet piece: the core is often dry (65%).
 - Category 1 campfire: no larger than 0.5 m high by 0.5 m wide (80%, BC Wildfire Service brochure, search preview, via [Fire](#/s/fire-wet-weather)).
-- Keep at least 8 litres of water or a hand tool on hand while it burns (80%; exact wording varies, VERIFY on the current order).
-- Fire bans change. Check the BC Wildfire Service before each fire (80%). Kamloops Fire Centre status after 9 October 2026: VERIFY.
+- While it burns, keep a fuel break round it and have the person watching it hold at least one fire fighting hand tool (a shovel, axe or extinguisher) or 8 litres of water (99%, Wildfire Regulation, B.C. Reg. 38/2005, s. 1 and s. 20, BC Laws, current to 13 October 2026, checked 2026-10-17).
+- Fire bans change. Check the BC Wildfire Service before each fire (80%). Kamloops Fire Centre on 17 October 2026: Category 1 campfires and Category 2 and 3 open fires all permitted, no area restrictions (95%, Kamloops Fire Centre page, last updated 2 October 2026). Check again before every fire.
 - Do not light a fire in strong wind (75%, BC Wildfire Service).
 - Smoke by day, flame by night; three fires mean help (75%).
 - Out means cool to the touch: drown, stir, feel, repeat (80%).

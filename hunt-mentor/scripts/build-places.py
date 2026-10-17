@@ -108,6 +108,28 @@ def gn_name(name):
     if not d: return None
     return [f for f in d['features'] if f['properties']['name'] == name]
 
+def norm_name(s):
+    """Spelling key: the lessons drop hyphens (writing rule) and may differ in case or apostrophes from the official name."""
+    s = s.replace('’', "'").replace("'", '').replace('.', '').replace('-', ' ').lower()
+    return re.sub(r'\s+', ' ', s).strip()
+
+def gn_fuzzy(name):
+    """Official names that differ from the lesson's spelling only by hyphens, case or apostrophes
+    (Pitt-Addington Marsh, McLeod Lake, Lions Bay). A lesson's "X Provincial Park" is the official "X Park"
+    when that record is a provincial park. Returns (features, note) or ([], '')."""
+    key = re.sub(r'[^A-Za-z0-9]+', '_', name)[:80]
+    tries = [(name, None)]
+    if name.endswith(' Provincial Park'): tries.append((name[:-len(' Provincial Park')] + ' Park', 4))
+    for q, cat in tries:
+        d = gn_get({'name': q, 'itemsPerPage': 100}, 'f_' + re.sub(r'[^A-Za-z0-9]+', '_', q)[:80])
+        if not d: continue
+        fs = [f for f in d['features'] if norm_name(f['properties']['name']) == norm_name(q)
+              and (cat is None or int(f['properties']['featureCategory']) == cat)]
+        if fs:
+            official = sorted({f['properties']['name'] for f in fs})
+            return fs, 'BC Geographical Names spells it ' + ' or '.join(official) + '.'
+    return [], ''
+
 def rec(f):
     p = f['properties']; x, y = f['geometry']['coordinates'][:2]
     return {'name': p['name'], 'type': p['featureType'], 'cat': int(p['featureCategory']), 'catd': p['featureCategoryDescription'],
@@ -339,6 +361,7 @@ places, unresolved = [], []
 for name in sorted(names):
     if not occ[name]:
         continue
+    spell_note = ''
     if name in listed:
         recs = list(listed[name])
         extra = gn_name(name) if ' ' in name else None
@@ -346,6 +369,7 @@ for name in sorted(names):
     else:
         fs = gn_name(name)
         if fs is None: unresolved.append({'name': name, 'why': 'web service did not answer'}); continue
+        if not fs: fs, spell_note = gn_fuzzy(name)
         recs = [rec(f) for f in fs]
     recs = [r for r in recs if r['type'] not in ('Railway Point', 'Former Railway Point', 'Station', 'Post Office', 'Former Post Office', 'Indian Reserve',
                                                  'Indian Reserve-Réserve indienne', 'Réserve indienne', 'Former Locality', 'Abandoned Locality')]
@@ -407,6 +431,7 @@ for name in sorted(names):
     bad = [cm for cm in withmu if not near_ok(cm)]
     if risky and r['cat'] != 1 and bad and len(bad) == len(withmu):
         unresolved.append({'name': name, 'why': f'found in MU {m["id"]}, but the lesson names MU {", ".join(bad[0])} next to it', 'n': len(occ[name])}); continue
+    if spell_note: note = (note + ' ' + spell_note).strip()
     places.append({'name': name, 'r': r, 'mu': m, 'note': note, 'cert': cert if r['official'] else min(cert, 80), 'n': len(occ[name])})
 
 # ---------- forest service roads (FSRs) from the app's own road layer ----------

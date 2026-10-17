@@ -223,7 +223,7 @@ checked: 2026-10-11
 > "Municipal bylaws are NOT included in this synopsis. Consult municipal clerks for details."
 
 - Inside the City of Kamloops line, no firearms or bows on Lac du Bois or Crown land (99%, page 33).
-- Mission's own firearm bylaw: not in the synopsis. VERIFY with the District of Mission.
+- Mission's own firearm bylaw is not in the synopsis (99%). It is the [District of Mission Discharge of Firearms Regulation Bylaw 5433-2014](https://www.mission.ca/media/file/discharge-firearms-regulation-bylaw-5433-2014pdf): no firing anywhere in the District except as it allows (s. 4). Hunters with a BC hunting licence may fire, in season, only a shotgun with shot in Area B, a shotgun with shot or slug in Area C, and a rifle or shotgun in Area D of its Schedule A map (s. 11). Never on or across a road, which here includes forestry roads, or within 150 m of a school, park, church, home, farm building, workplace or road (s. 3 and s. 7) (85%, District copy read 2026-10-17; later amendments not checked).
 - **Why it trips people (Tip):** the synopsis cannot print every town's bylaw.
 - **How common:** Tip (opinion). No count found.
 - **Source:** [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt), page 9; [Region 3](#/s/rb-region-3), page 33 (99%).

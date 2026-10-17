@@ -167,7 +167,7 @@ gr-atv-gun-3 | Load away from the quad. Hunt on foot.
 - It happened in 2026: an ORV ban covered the Kamloops Fire Centre from noon on 10 August 2026 (98%). News reports say it was lifted on 28 August (70%).
 - On 25 September 2026 the Kamloops Fire Centre page listed no ORV ban and no area restrictions (95%).
 - Area restriction orders close ground near active fires under Wildfire Act section 11 (95%).
-- Check the [Kamloops Fire Centre page](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions/kamloops-fire-centre-bans) the night before every trip. Mission falls under a different fire centre: VERIFY which.
+- Check the [Kamloops Fire Centre page](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions/kamloops-fire-centre-bans) the night before every trip. Mission falls under the Coastal Fire Centre, which covers the Lower Mainland (95%, [BC Wildfire Service fire centres](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/about-bcws/fire-centres), checked 2026-10-17).
 ```
 
 ## Riding safety basics

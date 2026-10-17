@@ -53,7 +53,7 @@ region: 4
 | White fronted, snow and Ross's geese | 5 (15) each | 99%, page 40 |
 | Coots, snipe | 10 (30) each | 99%, page 40 |
 
-- Province wide caps for the licence year: elk 1, moose 1, mountain goat 1, black bear 2, cougar 2, wolf 3, lynx 1, bobcat 5 (99%, page 13). The Kootenay bobcat limit of 1 is the one that stops you (99%, page 37). Some Kootenay wolf rows print no bag limit; page 13 marks wolf with a star for regional exceptions (99%). My reading: those rows are such an exception (80%). VERIFY.
+- Province wide caps for the licence year: elk 1, moose 1, mountain goat 1, black bear 2, cougar 2, wolf 3, lynx 1, bobcat 5 (99%, page 13). The Kootenay bobcat limit of 1 is the one that stops you (99%, page 37). Some Kootenay wolf rows print no bag limit; page 13 marks wolf with a star for regional exceptions (99%). The law row itself, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 4, item 19.1, prints NBL (no bag limit) for wolf in 4-5 to 4-8, 4-17, 4-18, 4-20, 4-27 to 4-31, 4-33 and 4-37 to 4-40 (99%, BC Laws, checked 2026-10-17). So those rows are such an exception (90%, my reading).
 
 ## 10 rules that catch hunters here
 
@@ -728,7 +728,7 @@ region: 4
 | Animal | Footnote |
 |---|---|
 | August bear | Private land, permission first (99%) |
-| Wolf | No closed season in parts, below 1,100 m (90%, VERIFY line) |
+| Wolf | No closed season in parts, below 1,100 m (99%, Hunting Regulation; Trench line VERIFY) |
 | Cougar | Inspection within 30 days. No kittens (99%) |
 | Ground squirrel | Private land, permission (99%) |
 
@@ -743,7 +743,7 @@ region: 4
 > "The open season for Columbian Ground Squirrel is restricted to private land only. Hunters must obtain permission from landowners before hunting on private land."
 
 - August bears: private land, with permission first (99%).
-- Wolves: no closed season in the East Kootenay Trench parts of the listed MUs and in 4-4 to 4-7, below 1,100 m (3,609 ft) (90%, my reading that "below 1100 m" covers both groups). The synopsis prints no map of the Trench line. VERIFY the boundary.
+- Wolves: no closed season in the East Kootenay Trench parts of the listed MUs and in 4-4 to 4-7, below 1,100 m (3,609 ft) (99%, Hunting Regulation, Schedule 4, Part 2, s. 11(3) and (4), BC Laws, checked 2026-10-17: each group is written "below 1 100 m elevation"). Neither the synopsis nor the law maps the Trench line. VERIFY the boundary with the regional office.
 - Every cougar goes to inspection, now within 30 days (99%, pages 36 and 39).
 - Ground squirrels: private land, with permission (99%).
 ```

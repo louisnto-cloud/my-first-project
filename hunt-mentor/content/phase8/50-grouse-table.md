@@ -191,7 +191,7 @@ mgr-care-4 | Into a cooler on ice, under 4 C.
 | 31 | Sharp tail: Region 3 MUs 3-30, 3-31 only | 99% |
 | 32 | No hunting from a vehicle, no loaded gun in it | 99% |
 | 33 | Road allowance: 15 m from the middle (under 3 lanes) | 99% |
-| 34 | FSRs and the road allowance rule: VERIFY | 70% |
+| 34 | FSRs and the road allowance rule: likely not covered (Closed Areas Regulation s. 12) | 85% |
 | 35 | One feathered wing on; both breasts home | 99% |
 | 36 | Cool under 4 C; cook to 74 C | 80% |
 

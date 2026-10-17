@@ -1,11 +1,16 @@
 {
- "updated": "2026-10-11",
+ "updated": "2026-10-17",
  "note": "Names found in the content but left out of places.json, with the reason. Not shipped in the app.",
  "names": [
   {
    "name": "Fraser Valley",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 169
+   "n": 181
+  },
+  {
+   "name": "Pitt Addington Marsh",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 16
   },
   {
    "name": "Swan Lake",
@@ -13,22 +18,22 @@
    "n": 16
   },
   {
-   "name": "Pitt Addington Marsh",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 15
-  },
-  {
    "name": "Skull Mountain",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 12
+   "n": 13
   },
   {
    "name": "Atlin",
    "why": "found in MU 6-25, but the lesson names MU 5-15, 7-37, 7-39, 7-41, 7-50, 7-54 next to it",
-   "n": 10
+   "n": 11
   },
   {
    "name": "Creston Valley",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 10
+  },
+  {
+   "name": "Oliver Mountain",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 9
   },
@@ -39,11 +44,6 @@
   },
   {
    "name": "Hornby Islands",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 8
-  },
-  {
-   "name": "Oliver Mountain",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 8
   },
@@ -88,6 +88,11 @@
    "n": 5
   },
   {
+   "name": "An FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 4
+  },
+  {
    "name": "Black Hills",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 4
@@ -120,6 +125,11 @@
   {
    "name": "Squamish Valley",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 4
+  },
+  {
+   "name": "Whiteswan FSR",
+   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
    "n": 4
   },
   {
@@ -188,11 +198,6 @@
    "n": 3
   },
   {
-   "name": "Whiteswan FSR",
-   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
-   "n": 3
-  },
-  {
    "name": "Argenta Marsh",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 2
@@ -219,11 +224,6 @@
   },
   {
    "name": "Blue Mountains",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 2
-  },
-  {
-   "name": "Bonaparte Provincial Park",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 2
   },
@@ -298,6 +298,11 @@
    "n": 2
   },
   {
+   "name": "Level Mountain",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
    "name": "Lillooet South FSR",
    "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
    "n": 2
@@ -313,7 +318,7 @@
    "n": 2
   },
   {
-   "name": "Myra Bellevue Park",
+   "name": "New Lower Burnt River",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 2
   },
@@ -358,11 +363,6 @@
    "n": 2
   },
   {
-   "name": "Skagit Valley Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 2
-  },
-  {
    "name": "South Okanagan Grasslands",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 2
@@ -398,11 +398,6 @@
    "n": 2
   },
   {
-   "name": "Tunkwa Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 2
-  },
-  {
    "name": "Wasa Slough",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 2
@@ -418,8 +413,8 @@
    "n": 1
   },
   {
-   "name": "An FSR",
-   "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "name": "An Island",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
   },
   {
@@ -563,11 +558,6 @@
    "n": 1
   },
   {
-   "name": "Dunn Peak Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Dunster Mountain",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
@@ -638,11 +628,6 @@
    "n": 1
   },
   {
-   "name": "Granby Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Gribbel Islands",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
@@ -693,16 +678,6 @@
    "n": 1
   },
   {
-   "name": "Lac du Bois Grasslands Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
-   "name": "Level Mountain",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Lighthouse Park",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
@@ -715,11 +690,6 @@
   {
    "name": "Link Island",
    "why": "ambiguous: 2 places in BC have this name",
-   "n": 1
-  },
-  {
-   "name": "Lion’s Bay",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
   },
   {
@@ -743,18 +713,13 @@
    "n": 1
   },
   {
-   "name": "Marble Canyon Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Mary River",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
   },
   {
    "name": "Mcleod Lake",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "why": "ambiguous: 2 places in BC have this name",
    "n": 1
   },
   {
@@ -770,6 +735,11 @@
   {
    "name": "Meager Creek South FSR",
    "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
+   "n": 1
+  },
+  {
+   "name": "Mid Oct Heffley Creek",
+   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
   },
   {
@@ -823,11 +793,6 @@
    "n": 1
   },
   {
-   "name": "New Lower Burnt River",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Nk'Mip Creek",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
@@ -859,11 +824,6 @@
   },
   {
    "name": "Parts of Hatzic Slough",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
-   "name": "Pinecone Burke Provincial Park",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
   },
@@ -968,11 +928,6 @@
    "n": 1
   },
   {
-   "name": "Syringa Provincial Park",
-   "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 1
-  },
-  {
    "name": "Tagish Highlands Mountain",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
    "n": 1
@@ -1071,10 +1026,6 @@
    "name": "Young Lake FSR",
    "why": "road not found in the app forest road layer (data/layers/*/forest_roads)",
    "n": 1
-  },
-  {
-   "name": "Mid Oct Heffley Creek",
-   "why": "web service did not answer"
   }
  ]
 }

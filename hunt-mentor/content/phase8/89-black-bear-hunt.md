@@ -126,7 +126,7 @@ yt-spot-stalk-tips | Spot and stalk basics.
 - Sit the edge of a berry patch, an orchard with permission, or a creek crossing with fresh scat; arrive early, wind right (Tip).
 - Item 21, page 11: unlawful "to hunt bears by placing bait or by using a dead animal or using part of it as bait" (99%, [legal methods](#/s/rb-legal-methods)). So no sitting over your own gut pile for a bear (95%, my reading in the Rule Book).
 - Item 20: unlawful to feed bears; baiting is only for cougar, coyote and wolf where authorized (99%).
-- Natural food (a berry patch, a fruit tree, a salmon stream) is not bait you placed (Tip, my reading of the bait definition; VERIFY with a conservation officer for any farm crop or orchard you did not grow).
+- Natural food (a berry patch, a fruit tree, a salmon stream) is not bait you placed (Tip, my reading of the bait definition; VERIFY with a conservation officer for any farm crop or orchard you did not grow). The law defines bait as any thing, including "cultivated crops", that may attract wildlife, and the bear offence is hunting "by placing bait" (99%, Hunting Regulation s. 1 and s. 17(1)(m), BC Laws, checked 2026-10-17).
 - Still hunting: slow steps through timber edges between food and beds, in wet or windy weather (Tip, [still hunting](#/s/still-hunting)).
 ```
 

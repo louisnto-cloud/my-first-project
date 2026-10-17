@@ -171,7 +171,7 @@ fn-ph-setup-5 | Low Power Mode on.
 - Apple Emergency SOS via satellite works in Canada on iPhone 14 or later; Canada needs iOS 16.1 or later (95%, Apple support, read 2026-10-11).
 - It works only where there is no cellular or wifi coverage, outside with a clear view of the sky and horizon (95%).
 - It texts emergency services and shares your location with elevation, battery level, Medical ID and emergency contacts if set up (95%).
-- Free for two years after activating an eligible iPhone (95%). After that: VERIFY.
+- Free for two years after activating an eligible iPhone (95%). The Apple support page (published 5 October 2026, checked 2026-10-17) does not say what it costs after that: VERIFY.
 - Try it in Demo mode at home so you know the screens (Tip).
 - Two way texting with family needs a satellite messenger or a paid plan. See [Bush safety](#/s/bush-safety/0).
 ```

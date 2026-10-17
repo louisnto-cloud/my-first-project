@@ -36,7 +36,7 @@ checked: 2026-10-01
 - Go mid morning. Deer are bedded, you are not hunting, and you will not bump them if you stay out of thick timber (Tip).
 - Crown land is open to walk. Cultivated land and grazing leases with livestock need consent to hunt, and enclosed land is trespass without permission (85%). See [BC rules](#/s/bc-rules).
 - Lac du Bois grassland inside the City of Kamloops boundary: no firearm discharge (95%), but it is a superb sign walk (Tip).
-- Heffley Creek [[MU]] (Management Unit): VERIFY on the official map before you carry a rifle.
+- Heffley Creek [[MU]] (Management Unit): The Heffley Creek community point is in MU 3-27, only about 0.4 km from the MU 3-28 line (95%, BC Geographical Names point on the app MU map, checked 2026-10-17). Both MUs share the same Region 3 deer, moose, bear and wolf rows (99%, Hunting Regulation, Schedule 3). Check each spot on the Hunt Map anyway (Tip).
 ```
 
 ## What to bring

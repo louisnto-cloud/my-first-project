@@ -126,8 +126,8 @@ checked: 2026-10-01
 ```more the bylaw details
 - Synopsis page 9: "Most municipalities have bylaws restricting and controlling the use of weapons, firearms and bows within their boundaries. Municipal bylaws are NOT included in this synopsis." (99%)
 - Vernon, Firearms and Weapons Bylaw 5399: "No person shall discharge a firearm within the corporate boundaries of the City." Firearm includes air guns. Only farmers protecting crops and bylaw officers are exempt (99%, read in the bylaw).
-- Kelowna, Discharge of Firearms Bylaw No. 9779: no discharge of a firearm within the city limits (70%, search preview of the city page, VERIFY).
-- Penticton: a firearms bylaw with permit exceptions exists. Name, number and wording: VERIFY.
+- Kelowna, [Discharge of Firearms Bylaw No. 9779](https://apps.kelowna.ca/CityPage/Docs/PDFs/Bylaws/Discharge%20of%20Firearms%20Bylaw%20No.%209779.pdf), s. 3.1: "No person shall discharge a Firearm within the limits of the City of Kelowna." Firearm includes air guns. Permits only for ranges, slaughter, events, the airport, park wildlife control, and landowners or farmers protecting land, crops or animals; none for hunting (90%, city consolidated copy, read 2026-10-17).
+- Penticton, [Bow and Arrow and Firearms Regulations Bylaw No. 2015-37](https://www.penticton.ca/sites/default/files/uploads/bylaws/Bylaw%201988-76-Firearms%20Regulations.pdf), s. 5.1: "No person shall discharge a firearm within the City of Penticton." Crossbows are banned in the city too (s. 4.1). Exceptions: approved ranges, officers on duty, emergency flares, and permits for agricultural and park zones (85%, city copy of the 2015 bylaw, read 2026-10-17; later amendments not checked).
 - Oliver, Osoyoos, Summerland, Peachland, Lake Country, West Kelowna: VERIFY each bylaw before you shoot inside town limits.
 - Regional districts (Okanagan Similkameen, Central Okanagan, North Okanagan): VERIFY. Page 9 warns most regional district parks ban firearms (99%).
 - Plain rule for this trip: hunt outside every town boundary. iMapBC shows municipal boundaries (95%).

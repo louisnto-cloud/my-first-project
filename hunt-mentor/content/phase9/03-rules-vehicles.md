@@ -64,7 +64,7 @@ checked: 2026-10-11
 > "It is unlawful to discharge a firearm across or to discharge a firearm or hunt within the road allowances of all numbered highways and any two lane or greater public road in B.C. that is maintained by the Ministry of Transportation and Infrastructure (or their contractors), the federal government or another province or territory."
 
 - Width, whichever comes first: 15 m each side of the middle (under 3 lanes); 15 m from the pavement edge (3 lanes or more); or the line of private or cultivated land (99%).
-- Which forest roads count is not spelled out. Ask a conservation officer (VERIFY).
+- Forest roads: the law, the Closed Areas Regulation s. 12(1), covers only public roads of two lanes or more maintained by the ministry responsible for the Transportation Act, or another province, a territory or Canada (99%, BC Laws, checked 2026-10-17). An FSR (Forest Service Road) kept by the Ministry of Forests likely does not count (85%, my reading).
 - **Why it trips people (Tip):** the deer is in the ditch, and the shoulder is open ground.
 - **How common:** a Fort St. John hunter was fined $5,000 and banned a year for an elk shot in the road allowance of Upper Cache Road. The Conservation Officer Service said: "Highways and publicly maintained roads are defined as no-shooting areas under the Wildlife Act" (70%, CJDC, March 2026, read directly).
 - **Source:** [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt), page 10 (99%).

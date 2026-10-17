@@ -71,7 +71,7 @@ mus: 8-1, 8-9
 |---|---|---|
 | 1 | Pheasant: cocks only. A hen is never legal. [Birds](#/s/fw-rules-07) | 99%, page 68 |
 | 2 | Grouse: 5 a day of the three kinds together. | 99%, page 67 |
-| 3 | The row says only "QUAIL". Does it cover mountain quail? VERIFY. Shoot California quail only. | 99% row, page 68; Tip |
+| 3 | The row says only "QUAIL", and so does the Hunting Regulation, Schedule 8, item 23 (checked 2026-10-17). My reading: not limited to California quail. Shoot California quail only. | 99% row, page 68; 80% reading; Tip |
 | 4 | Osoyoos Oxbows, Map J1: no shooting or hunting 1 March to 30 September. Vehicles on established roads only, all year. | 99%, page 69 |
 | 5 | Vaseux Lake: no hunting in the bird sanctuary or the National Wildlife Areas. Blue loon signs mark them. | 99%, pages 9 and 67 |
 | 6 | Oliver Mountain, Map J2: no motor vehicles. Above 1,700 m anywhere in Region 8: no vehicles off existing roads. [Vehicles](#/s/fw-rules-03) | 99%, page 67 |
@@ -84,9 +84,9 @@ mus: 8-1, 8-9
 - Hours: one hour before sunrise to one hour after sunset (99%, page 11). [Hours and methods](#/s/fw-rules-05)
 - White tailed jackrabbit, Nuttall's cottontail and badger are protected. No season (99%, page 67).
 - No feeding or baiting deer and other hoofed game within 200 m of a home, school yard or playground (99%, page 67, new).
-- The Oliver Mountain line points to Map J3, but the map is J2 (99%, pages 67 and 69). VERIFY with the Penticton office.
+- The Oliver Mountain line points to Map J3, but the map is J2 (99%, pages 67 and 69). VERIFY with the Penticton office (corrections page checked 2026-10-17 (last updated 19 August 2026): no correction listed for this).
 - Kaleden and Okanagan Falls are No Shooting Areas; Skaha Lake is shot only (99%, Map J10).
-- Oliver, Osoyoos and Penticton bylaws are not in the synopsis (99%). VERIFY each town's firearm bylaw.
+- Oliver, Osoyoos and Penticton bylaws are not in the synopsis (99%). Penticton bans firing a firearm or a crossbow in the city (85%, Bylaw No. 2015-37, read 2026-10-17). Oliver and Osoyoos: VERIFY each town's firearm bylaw (not found online 2026-10-17).
 ```
 
 ## Strategy here: quail, chukar and partridge
@@ -175,7 +175,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 
 - 100 m (109 yd) from homes, occupied farm buildings, schools and playgrounds (99%).
 - Orchards and vineyards are [[Cultivated land|cultivated land]]: get the owner's consent (90%, my reading).
-- Oliver, Osoyoos, Penticton, Summerland, Kelowna and Vernon bylaws are not in the synopsis (99%). VERIFY each town's firearm bylaw.
+- Oliver, Osoyoos, Penticton, Summerland, Kelowna and Vernon bylaws are not in the synopsis (99%). Kelowna, Penticton and Vernon ban firing a firearm inside city limits (85 to 99%, each bylaw read; see [Okanagan quail trip](#/s/local-okanagan)). Oliver, Osoyoos and Summerland: VERIFY each town's firearm bylaw.
 ```
 
 ## Regional office and Conservation Officers
@@ -243,7 +243,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 
 - New: no feeding or baiting hoofed big game within 200 m (219 yd) of a home, school yard or playground (99%). The full rule is on the special rules screen (99%).
 - Changed: turkey seasons now share the same dates across the listed MUs (99%).
-- The change box ends the turkey list at 8-25. The season table on page 68 lists 8-22 to 8-26. VERIFY whether MU 8-26 has a turkey season; the table is what I show below (85%, my reading).
+- The change box ends the turkey list at 8-25. The season table on page 68 lists 8-22 to 8-26. The law settles it: the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 8, items 31 and 32, lists 8-22 to 8-26 for both turkey seasons, so MU 8-26 has a turkey season (99%, BC Laws, current to 13 October 2026, checked 2026-10-17).
 - Gone: the Underdown Creek, Derenzy [[FSR]] (Forest Service Road) and South Ellis Creek vehicle closures (99%).
 ```
 
@@ -468,7 +468,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 - Every row checked against the page 68 image (99%, page 68, 2 October 2026 edition).
 - Grey partridge are [[Huns]]. The synopsis spells it "GRAY" (99%).
 - Pheasant: cocks only. A hen is never legal here (99%).
-- The quail row says only "QUAIL", not "California quail". Region 1 prints "No open season on mountain quail" (99%, page 21). Whether the Region 8 row covers mountain quail: VERIFY. Shoot California quail only (Tip).
+- The quail row says only "QUAIL", not "California quail". Region 1 prints "No open season on mountain quail" (99%, page 21). The law behind the row, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 8, item 23, also reads only "QUAIL" (99%, BC Laws, current to 13 October 2026, checked 2026-10-17). My reading: the law names no kind, so the season is not limited to California quail (80%). Shoot California quail only (Tip).
 - No row in Region 8 for ptarmigan or sharp tailed grouse (99%, page 68).
 ```
 
@@ -722,7 +722,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 
 - Every line quoted from page 67; dates in the table come from those lines and the map captions (99%).
 - "All year" where no dates are printed: a ★ closure with no dates applies year round (90%, my reading of the symbol key).
-- The Oliver Mountain line points to Map J3, but the Oliver Mountain map is J2. The Crater Mountain line points to Map J22, which does not exist; Crater Mountain is on Map J20 (99%, pages 69 and 70). VERIFY with the Penticton office.
+- The Oliver Mountain line points to Map J3, but the Oliver Mountain map is J2. The Crater Mountain line points to Map J22, which does not exist; Crater Mountain is on Map J20 (99%, pages 69 and 70). VERIFY with the Penticton office (corrections page checked 2026-10-17 (last updated 19 August 2026): no correction listed for this).
 - SDYD means Similkameen Division of Yale District, a land district (90%).
 
 > [!law] Granby, Galloping Hills and Joss Mountain lines, page 67
@@ -804,7 +804,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 - Hwy 97C, Peachland to Aspen Grove: no hunting and no shooting within 400 m (437 yd) of the [[Road allowance|road allowance]] (99%).
 - Hwy 3 from Manning Park to Princeton: the same 400 m closure (99%).
 - Every numbered highway: no shooting across it and no shooting or hunting inside the road allowance (99%, page 10).
-- Page 10 also bans single projectiles within 400 m of "Hwy 6 between Bench Cr. and Banting Cr." The synopsis does not say which region that stretch is in (99%). VERIFY where that stretch is before using a rifle near Hwy 6.
+- Page 10 also bans single projectiles within 400 m of "Hwy 6 between Bench Cr. and Banting Cr." The synopsis does not say which region that stretch is in (99%). It is not in Region 8: BC Geographical Names puts Bench Creek in MU 4-32 and Banting Creek in MU 4-14, Region 4 Kootenay, about 8 km east of the Region 8 line (85%, place points read 2026-10-17 and set on the app MU map). The same list sits in the Closed Areas Regulation, Schedule 9, s. 22(h) (99%).
 ```
 
 ## Maps J1 and J2: Osoyoos and Oliver

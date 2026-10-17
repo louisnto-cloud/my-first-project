@@ -122,7 +122,7 @@ rl-hm-spot | 8: Weather and Scent cone for your seat.
 > [!law] Definition of hunt
 > "HUNT AND HUNTING - includes shooting at, attracting, searching for, chasing, pursuing, following after or on the trail of, stalking, or lying in wait for wildlife or attempting to do any of those things, whether or not the wildlife is then or subsequently wounded, killed or captured: (a) with intention to capture the wildlife, or (b) while in possession of a firearm or other weapon."
 
-- My reading (85%, VERIFY with a conservation officer): glassing for game from the truck with a firearm in it can count as hunting from a motor vehicle. Scout from the truck without a firearm, or step away from the truck to glass with the rifle unloaded and cased inside.
+- My reading (85%, from the Wildlife Act s. 1 definition of hunt, which includes searching for wildlife while in possession of a firearm, and synopsis item 22; checked 2026-10-17): glassing for game from the truck with a firearm in it can count as hunting from a motor vehicle. Ask a conservation officer if unsure (Tip). Scout from the truck without a firearm, or step away from the truck to glass with the rifle unloaded and cased inside.
 - When you decide to hunt: walk away from the truck and out of the road allowance before you load (99% for the allowance rule).
 - Rules carried in full: [Rule Book: it is unlawful](#/s/rb-unlawful-acts/0), [Rule Book: definitions](#/s/rb-definitions/0), [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt/0).
 - No hunting with a light: no spotlight, headlamp or truck lights to hunt by (99%, item 38).

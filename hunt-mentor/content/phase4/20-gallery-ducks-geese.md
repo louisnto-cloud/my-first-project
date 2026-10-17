@@ -144,7 +144,7 @@ g-canada-goose-flight | Canada goose in flight, Burnaby Lake, BC.
 ```
 
 - A [[Cackling goose|cackling goose]] is a separate species from the Canada goose, not a young one (85%).
-- Both sit in the dark goose bag in BC; check your district's goose limits (VERIFY for your area).
+- Both sit in the same bag in BC: "Canada Geese and Cackling Geese, combined", 10 a day and 30 in possession in every BC district (90%, [Environment and Climate Change Canada (ECCC) BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html) August 2026 to July 2027, read 2026-10-17).
 
 ```video
 commons-canada-geese-flight | Canada geese in flight: long black neck, white chin strap.
@@ -177,7 +177,7 @@ bd-pied-billed-grebe | Pied billed grebe in fall, California. Small, brown, thic
 > [!warn] Study aid only. The official regulations are the law.
 
 - Loons and grebes have no open season. They are protected (90%).
-- Swans: no open season in BC (VERIFY in the ECCC, Environment and Climate Change Canada, BC migratory bird summary). An all white bird bigger than a goose, with no black wing tips, is a swan (80%).
+- Swans: no open season in BC. The ECCC (Environment and Climate Change Canada) BC summary for 2026 to 2027 lists no swan, and neither do the BC Hunting Regulation season rows (95%, read 2026-10-17). An all white bird bigger than a goose, with no black wing tips, is a swan (80%).
 - Harlequin duck is legal in BC, but only 2 a day inside the duck bag (99%, page 12).
 
 ## Grandpa's rule

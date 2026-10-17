@@ -127,7 +127,7 @@ hab-willow-shrub | Willow in wet meadows: winter browse.
 - 2022 estimate: Region 3 Thompson 300 to 500 elk, increasing since 2017 (90%).
 - Elk were once widespread in the Thompson and Cariboo but declined for unknown reasons; today small, scattered herds remain (80%, BC habitat model).
 - Transplanted herds started near Lytton and Princeton (90%, BC account). Rocky Mountain elk occur near Lytton and in the Okanagan (80%, BC habitat model).
-- Rules: the Region 3 table on page 34 has no elk row: no general open season (99%, [Region 3](#/s/rb-region-3)). Any Region 3 elk LEH (Limited Entry Hunting) hunt: not listed in the app's [LEH session](#/s/leh-strategy) (VERIFY in the LEH synopsis).
+- Rules: the Region 3 table on page 34 has no elk row: no general open season (99%, [Region 3](#/s/rb-region-3)). The [Limited Entry Hunting (LEH) synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf) lists no Region 3 elk hunt either: elk hunt codes appear only for Regions 1, 2, 4, 5, 6, 7 and 8 (95%, read 2026-10-17).
 - Harvest data 2020 to 2024: only 2 resident elk hunters reported in Region 3, no elk (90%).
 - Region 3 asks hunters to submit elk heads for [[CWD]] (Chronic Wasting Disease) testing (99%, page 32).
 - What to do: log every elk you see near the base in your Journal with date, place and group size (Tip).
@@ -150,7 +150,7 @@ hab-willow-shrub | Willow in wet meadows: winter browse.
 - News reports: 23 elk to the Pitt River watershed in 2004 to 2005; 20 to the Stave watershed in 2006 to 2007 (65%).
 - Rules: the page 28 table has no elk row: no general open season (99%, [Region 2](#/s/rb-region-2)).
 - Harvest data 2020 to 2024: 1,053 resident hunters took 407 elk in Region 2, most in MUs (Management Units) 2-5 (229), 2-8 (67) and 2-12 (54) (90%). Mission sits in MU 2-8 (90%, [Mission](#/s/local-mission)). With no general season these come from LEH draws (85%, my reading).
-- LEH facts in the app: elk wins in Regions 1 and 2 cut your odds for that species by 66% for 3 years, and group applications are not allowed for Region 1 and 2 elk (99%, [LEH strategy](#/s/leh-strategy)). Hunt codes and dates: VERIFY in the LEH synopsis.
+- LEH facts in the app: elk wins in Regions 1 and 2 cut your odds for that species by 66% for 3 years, and group applications are not allowed for Region 1 and 2 elk (99%, [LEH strategy](#/s/leh-strategy)). Hunt codes and dates are in the LEH synopsis 2026 to 2027. Nearest your bases: Region 8 hunts 2218 to 2221, antlerless elk in 8-04 Princeton and 8-12 Christian Valley (99%, page 8, read 2026-10-17).
 ```
 
 ## South Okanagan, Region 8
@@ -241,7 +241,7 @@ mc-elk-map-5 | Wind and scent cone: plan the approach.
 [
   {"q": "Where do interior elk usually spend July and August?", "options": ["Low grassy benches", "Subalpine and alpine basins and avalanche tracks", "Valley bottom farms only"], "answer": 1, "why": "BC account: in May and June most Rocky Mountain elk migrate to subalpine and alpine basins and avalanche tracks (90%)."},
   {"q": "What does 'security cover' mean for elk in the BC habitat models?", "options": ["Any tree", "Vegetation that hides 90% of a standing elk at 61 m", "A fenced area"], "answer": 1, "why": "Thomas 1979, cited in BC habitat models: cover that conceals 90% of a standing elk at 61 m or less (80%)."},
-  {"q": "Is there a general open season for elk near Heffley Creek or Mission?", "options": ["Yes, in October", "No. Regions 3 and 2 have no general open season for elk", "Only for bow hunters"], "answer": 1, "why": "Pages 34 and 28 have no elk rows (99%). Region 2 elk are taken by LEH draw; any Region 3 elk LEH is VERIFY."},
+  {"q": "Is there a general open season for elk near Heffley Creek or Mission?", "options": ["Yes, in October", "No. Regions 3 and 2 have no general open season for elk", "Only for bow hunters"], "answer": 1, "why": "Pages 34 and 28 have no elk rows (99%). Region 2 elk are taken by LEH draw; the 2026 to 2027 LEH synopsis lists no Region 3 elk hunt (95%)."},
   {"q": "Which slopes do elk prefer in winter and spring?", "options": ["North facing", "South to southwest facing", "Any slope over 60%"], "answer": 1, "why": "BC habitat model: many studies report elk prefer southern to southwestern exposures in winter and spring; snow free slopes give access to feed (80%)."},
   {"q": "What is the 'Elk by month' layer on the Hunt Map?", "options": ["Collar locations", "A general pattern of habitat zones and elevations by month, about 60%", "Official winter range"], "answer": 1, "why": "The app layer note: where elk tend to be by month from studies, a general pattern, not mapped corridors (60%). The official Elk winter range layer covers only map area F."}
 ]
