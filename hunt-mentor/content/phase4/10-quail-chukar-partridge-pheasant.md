@@ -250,7 +250,7 @@ yt-upland-basics | Walk the cover slowly; the stop makes birds flush.
 - "It is unlawful to hunt or discharge a firearm within 100 m of a church, school building, school yard, playground, regional district park, dwelling house, or farm or ranch building that is occupied by persons or domestic animals." (99%)
 - A packing shed with workers, a barn with horses, a worker cabin: all count (95%). Rangefind every building before the first flush (Tip).
 - "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land." (99%) An orchard is [[Cultivated land]] (95%).
-- Municipal bylaws are not in the synopsis (99%). Kelowna, Penticton, Osoyoos and the regional districts have their own firearm rules: VERIFY each one.
+- Municipal bylaws are not in the synopsis (99%). Kelowna and Penticton ban firing a firearm inside city limits (85 to 90%, Bylaw No. 9779 and Bylaw No. 2015-37, read 2026-10-17). Osoyoos and the regional districts: VERIFY each one.
 - Shot falls 150 to 250 m away. Never shoot toward a road, a house, a crew, a vehicle or a ladder, no matter how far (Tip).
 - Low birds in brush are off limits. A quail at knee height has a hidden person behind it more often than you think (Tip).
 - Orchards have irrigation pipe, ladders, bins and people all season. Ask where the crew is today, and leave gates as you found them (Tip).

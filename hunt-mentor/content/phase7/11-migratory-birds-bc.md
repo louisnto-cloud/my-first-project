@@ -140,7 +140,7 @@ District No. 2, Table 1, item 2 (99%).
 - It "expires on June 30 following the date of issue" (99%, s. 33).
 - Carry it while hunting, and while away from home with birds that are not preserved (99%, s. 34(1)). Show it to a game officer "immediately on request" (99%, s. 34(2)).
 - Minors (under 18) get the permit and stamp free (99%, s. 32(1)).
-- Where to buy, and whether a phone copy counts: canada.ca could not be read from here. VERIFY.
+- Where to buy: online on the federal Regulatory Services Platform. A permit bought online may be shown "as an electronic PDF or as a printed copy" (90%, [ECCC BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html), August 2026 to July 2027, dated 7 July 2026, read 2026-10-17). Keep the PDF saved on the phone for no signal (Tip).
 ```
 
 ## Permit: BC side and youth
@@ -163,7 +163,7 @@ District No. 2, Table 1, item 2 (99%).
 - A youth with a free permit hunts only beside an adult who holds a permit now and held one in an earlier year (99%, s. 32(2)).
 - One adult, two youth at most (99%, s. 32(3)).
 - BC adds: youth and their supervising hunters carry the right BC licences too (99%, page 7).
-- BC says the youth permit is sold only through the federal online system (99%, page 7). How that system works today: VERIFY.
+- BC says the youth permit is sold only through the federal online system (99%, page 7). Today that is the Regulatory Services Platform: the youth permit and electronic stamp are free and only sold there; the mentor holds a permit now, held one in an earlier year, and supervises at most two youth (90%, ECCC BC summary 2026 to 2027, read 2026-10-17).
 ```
 
 ## The 8 BC districts, in the regulation's words
@@ -228,7 +228,7 @@ District No. 2, Table 1, item 2 (99%).
 - MUs 3-45 and 3-46: Region 3 runs to 3-46, District 3 stops at 3-44 (99%).
 - MU 5-16: Region 5 runs 5-1 to 5-16, District 5 stops at 5-15 (99%).
 - MU 7-1: Region 7A starts at 7-1, District 7 starts at 7-2 (99%).
-- My reading: no federal open season, so no duck or goose hunting, in those 5 MUs (90%, s. 28(1)). VERIFY with the Canadian Wildlife Service before you plan one.
+- No duck or goose hunting in those 5 MUs (95%). The federal districts leave them out (s. 28(1)), the ECCC BC summary district lists stop at the same MUs, and BC's own [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00) rows leave them out too: ducks run 2-2 to 2-19, 3-12 to 3-20 and 3-26 to 3-44, 5-1 to 5-15 and 7-2 to 7-58 (99%, BC Laws, checked 2026-10-17).
 - The BC Region 3 page agrees: its duck rows stop at 3-44 (99%, page 34).
 ```
 
@@ -278,7 +278,7 @@ District No. 2, Table 1, item 2 (99%).
 
 - Rule text: 99%, Table 1, item 1. My 2026 to 2027 dates: worked from the formula, then matched to the BC Region 1 page (99%, page 21).
 - Leap year wording (vii), February 11 to March 10, applies in 2028 (99%).
-- BC adds Ex Dinsdale property dates in MU 1-4, and no September goose season in the Cowichan Bay Seasonal No Shooting Area (99%, page 21, Map A8). Not in the federal text: VERIFY which law sets them.
+- BC adds Ex Dinsdale property dates in MU 1-4, and no September goose season in the Cowichan Bay Seasonal No Shooting Area (99%, page 21, Map A8). Not in the federal text (99%). BC sets them: the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 1, Part 2, s. 11, sets the Ex Dinsdale goose days, and the Cowichan Bay seasonal no shooting area is in the Closed Areas Regulation, Schedule 6, s. 7 (99%, BC Laws, checked 2026-10-17).
 ```
 
 ## District No. 2: Lower Mainland
@@ -313,7 +313,7 @@ District No. 2, Table 1, item 2 (99%).
 - Rule text: 99%, Table 1, item 2. My 2026 to 2027 dates match the BC Region 2 page (99%, page 28).
 - Snow geese: 10 a day, at most 5 of them Ross's. MUs 2-4 and 2-5 add 5 snow geese a day, 15 more in possession (99%).
 - Leap year wording, February 11 and February 21 starts, applies in 2028 (99%).
-- BC prints a Delta dyke exclusion for the MU 2-4 March goose days and closes Boundary Bay Wildlife Management Area to snipe (99%, page 28). Not in the federal text: VERIFY which law sets them.
+- BC prints a Delta dyke exclusion for the MU 2-4 March goose days and closes Boundary Bay Wildlife Management Area to snipe (99%, page 28). Not in the federal text (99%). BC sets them: Hunting Regulation, Schedule 2, Part 2, s. 7 (Delta dykes, 100 m either side, Westham Island excepted) and s. 8 (Boundary Bay snipe) (99%, BC Laws, checked 2026-10-17).
 ```
 
 ## District No. 3: Thompson, Kamloops
@@ -427,7 +427,7 @@ District No. 2, Table 1, item 2 (99%).
 | Band tailed pigeons | "No open season" | None |
 
 - Every cell: 99%, Table 1, item 7. Prince George and the Peace share these dates (99%).
-- BC adds: a Peace River migratory game bird closed area in MU 7-33 (99%, page 63). The page cites Map H17 on some rows and Map H16 on the duck row: VERIFY which map.
+- BC adds: a Peace River migratory game bird closed area in MU 7-33 (99%, page 63). The page cites Map H17 on some rows and Map H16 on the duck row. The law needs no map: Hunting Regulation, Schedule 7, Part 2, s. 12, closes ducks, coots, snipe and geese within 100 m of either side of the Peace River from the Highway 97 bridge near Taylor to the Alberta border (99%, BC Laws, checked 2026-10-17).
 ```
 
 ## District No. 8: Okanagan
@@ -463,7 +463,7 @@ District No. 2, Table 1, item 2 (99%).
 - Other provinces have a Table 2, "Special Measures for Overabundant Species", with extra seasons, bigger limits and electronic calls (99%, Schedule 3, e.g. Part 11).
 - Part 10, British Columbia, has only Table 1. No Table 2 (99%, read 2026-10-04).
 - So in BC: no spring snow goose conservation season, no electronic calls, no special equipment (95%, my reading of s. 39(1)(b) and s. 59(2)).
-- The Minister can still vary seasons or limits for conservation by posted notice, valid until 31 July at the latest (99%, s. 19). Any notice for 2026 to 2027: canada.ca blocked. VERIFY.
+- The Minister can still vary seasons or limits for conservation by posted notice, valid until 31 July at the latest (99%, s. 19). The ECCC BC summary for August 2026 to July 2027 (dated 7 July 2026) mentions no such notice (85%, read 2026-10-17). Check it again before each trip (Tip).
 ```
 
 ## Hours and hunting out of season
@@ -631,7 +631,7 @@ Signature
 - [Migratory Birds Regulations, 2022, SOR/2022-105, full text (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), current to 21 September 2026, last amended 12 June 2026, read directly 2026-10-04: s. 1, 6, 19, 28, 31 to 34, 36 to 47, 50, 52, 55, 56, 59, 69, Schedule 2 and Schedule 3 Part 10 Table 1 items 1 to 8 (99%).
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text: pages 2, 7, 8, 11, 12, 13, 15, 21, 28, 29, 34, 40, 63. Checked 2026-10-04 (99%).
 - [Hunting Regulation, B.C. Reg. 190/84, amended by B.C. Reg. 66/2026 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026), s. 17(1)(n) and (1.2), effective 1 October 2026, read directly 2026-10-04 (99%).
-- Environment and Climate Change Canada BC hunting summary and permit pages: canada.ca is blocked from here, not read. Lines that need it say VERIFY.
+- [Environment and Climate Change Canada BC hunting summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html), August 2026 to July 2027, page dated 7 July 2026, read 2026-10-17 through a page reader (90%): limits by district, permit purchase, electronic copies, youth permit. It also says paper permits may end as early as the 2027 to 2028 season.
 - 2026 to 2027 dates for Districts 1 and 2 are worked out from the federal formulas, then matched to synopsis pages 21 and 28 (99%).
 - Lines marked "my reading" are this app's interpretation, 80 to 95%.
 ```

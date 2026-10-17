@@ -353,7 +353,7 @@ region: 6
 ```diagram rf-r6-mtn
 ```
 
-- Haida Gwaii black bear season: VERIFY (no page 50 row).
+- Haida Gwaii black bear: no general open season. The law row, Hunting Regulation, Schedule 6, item 21, covers 6-1 to 6-11 and 6-14 to 6-30 only (99%, BC Laws, checked 2026-10-17).
 
 ```more the full tables and notes
 ### Thinhorn mountain sheep
@@ -386,7 +386,7 @@ region: 6
 
 - Every row checked against the page 50 image (99%, page 50).
 - The bow goat row is a footnote line, not a table row: "Aug 15 - Oct 19 Bow Only Season in part of MU 6-8" (99%).
-- Black bear in 6-12 and 6-13 has no row on page 50, though page 49 sets a bag of 1 there. VERIFY whether a Haida Gwaii bear season exists.
+- Black bear in 6-12 and 6-13 has no row on page 50, though page 49 sets a bag of 1 there. The law has no row either: the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 6, item 21, is the only black bear row and it skips 6-12 and 6-13 (99%, BC Laws, current to 13 October 2026, checked 2026-10-17). So no general Haida Gwaii bear season (95%).
 ```
 
 ## Predator, furbearer and small game seasons

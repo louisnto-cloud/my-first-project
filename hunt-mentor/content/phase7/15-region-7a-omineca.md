@@ -49,7 +49,7 @@ region: 7a
 | White fronted, snow and Ross's geese | 5 (15) each | 99%, page 57 |
 | Coots, snipe | 10 (30) each | 99%, page 57 |
 
-- Province wide caps for the licence year: moose 1, elk 1, sheep 1, goat 1, caribou 1, black bear 2, cougar 2, wolf 3, wolverine 1, lynx 1 (99%, page 13). The 7A wolf row prints no bag limit; page 13 caps wolf at 3 with a star for regional exceptions (99%). My reading: the 7A no bag limit is such an exception (80%). VERIFY.
+- Province wide caps for the licence year: moose 1, elk 1, sheep 1, goat 1, caribou 1, black bear 2, cougar 2, wolf 3, wolverine 1, lynx 1 (99%, page 13). The 7A wolf row prints no bag limit; page 13 caps wolf at 3 with a star for regional exceptions (99%). The law row itself, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 7, item 41, prints NBL (no bag limit) for wolf in 7-2 to 7-18, 7-23 to 7-30 and 7-37 to 7-41 (99%, BC Laws, checked 2026-10-17). So the 7A no bag limit is such an exception (90%, my reading).
 
 ## 10 rules that catch hunters here
 

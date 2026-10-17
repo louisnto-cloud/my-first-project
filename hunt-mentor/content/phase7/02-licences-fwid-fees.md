@@ -495,7 +495,7 @@ checked: 2026-10-02
 
 ```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images. Page 3 (migratory game birds, licence year), page 4 (restricted and unrestricted licences), page 5 (hunter education, WILD and FWID, residency, electronic licences, LEH, open seasons, notice to hunters), page 6 (Aboriginal hunting, licence requirements, youth and initiation licences, supervision), page 7 (deer licences, Haida Gwaii, migratory birds, records, non residents, ear tags), page 8 (all three fee tables checked cell by cell on a 220 dpi image, replacement, buying licences). Checked 2026-10-02 (99%).
-- CORE exam fee amounts: not printed in the synopsis. VERIFY with BCWF (B.C. Wildlife Federation) before quoting a number.
+- CORE exam fee amounts: not printed in the synopsis. The written exam fee is paid to the examiner who runs it, and no amount is published on the BCWF (B.C. Wildlife Federation) or HunterCourse pages (checked 2026-10-17). VERIFY with your examiner before quoting a number.
 ```
 
 ```quiz

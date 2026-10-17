@@ -70,7 +70,7 @@ checked: 2026-10-03
 ```more where the amounts come from, and fur pelts
 - Source of the table: Schedule 1.06 of the Wildlife Act Commercial Activities Regulation, current to 29 September 2026 (95%). The synopsis does not print it (99%).
 - The Permit Regulation, section 16(8), makes a permit to accompany holder pay these Schedule 1.06 amounts within 30 days after the hunt (95%).
-- Fur pelts: the royalty is 3% of the average Canadian auction price for that species over the last three years (95%, Commercial Activities Regulation section 3.09). The synopsis says it usually runs $0.25 to $10 a pelt and changes yearly (99%, page 73). This year's amounts: VERIFY.
+- Fur pelts: the royalty is 3% of the average Canadian auction price for that species over the last three years (95%, Commercial Activities Regulation section 3.09). The synopsis says it usually runs $0.25 to $10 a pelt and changes yearly (99%, page 73). Amounts from 14 January 2026, per pelt: beaver $1.03, black bear $8.69, bobcat $11.29, coyote $0.68, fisher $1.94, fox $0.73, lynx $5.33, marten $2.08, mink $0.32, muskrat $0.07, otter $1.40, raccoon $0.21, skunk $1.38, squirrel $0.04, weasel $0.25, wolf $9.62, wolverine $16.18 (99%, [Trapping in B.C.](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/trapping-in-bc), read 2026-10-17). Paid under a trapping licence unless you sell the pelt to a licensed fur trader (99%).
 ```
 
 ## Possession and transport: game birds
@@ -569,7 +569,7 @@ rb-tooth-3 | Dry it in a labelled paper envelope.
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: page 2 (province wide changes), page 7 (royalty payment in WILD), page 15 (royalty fees, possession and transportation, evidence of sex, transporting wildlife, CWD routes, disposal, game checks, export), page 16 (export, CITES, taxidermy records, grizzly reporting, Hunter Sample Questionnaire, Mandatory Hunter Report), page 17 (compulsory inspection and reporting), page 18 (incisor tooth, accidental illegal harvest, meat safety, Moose Tracker, permits), page 73 (fur royalty range). Checked 2026-10-03 (99%).
 - [Wildlife Act Commercial Activities Regulation, B.C. Reg. 338/82 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/338_82), consolidation current to 29 September 2026, read directly: section 1.06 and Schedule 1.06 (royalty amounts), section 3.09 (fur royalty at 3%). Checked 2026-10-03 (95%).
 - [Permit Regulation, B.C. Reg. 253/2000 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/253_2000), consolidation current to 29 September 2026, read directly: section 16(8) (permit to accompany royalties within 30 days, Schedule 1.06 amounts). Checked 2026-10-03 (95%).
-- The government royalty list web page the synopsis points to was not opened. VERIFY that it matches Schedule 1.06, and VERIFY this year's fur royalty amounts.
+- The government royalty list web page the synopsis points to was not opened. VERIFY that it matches Schedule 1.06. Fur royalty amounts: read on the Trapping in B.C. page, 2026-10-17 (99%).
 - Lines marked "my reading" are this app's interpretation, 85 to 95%.
 ```
 

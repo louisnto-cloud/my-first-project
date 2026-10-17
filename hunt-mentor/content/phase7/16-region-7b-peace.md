@@ -519,7 +519,7 @@ region: 7b
 | Wolf, coyote | No closed season below 1,100 m |
 | Wolverine, lynx | Compulsory reporting |
 | Raven | Private land, owner's permission |
-| Snipe, coots, geese | Map H17 closed area. Map name: VERIFY |
+| Ducks, snipe, coots, geese | Closed within 100 m of the Peace River below the Taylor bridge (law text) |
 
 ```more Official wording, footnotes (synopsis pages 62 and 63)
 > [!law] Sheep and goat footnotes, page 62
@@ -550,7 +550,7 @@ region: 7b
 - Wolf and coyote below 1,100 m: open all year (99%).
 - Wolverine and lynx: [[Compulsory reporting]] (99%).
 - Ravens: private land only, with the owner's permission (99%).
-- The snipe, coot and goose rows cite Map H17; the duck row cites Map H16. Map H16 is Charlie Lake. VERIFY: Map H17 is the closed area map (95%, my reading of the captions).
+- The snipe, coot and goose rows cite Map H17; the duck row cites Map H16. Map H16 is Charlie Lake. The law does not need the map: the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 7, Part 2, s. 12, closes ducks, coots, snipe and all geese "within 100 m (109 yards) of either side of the Peace River downstream from the Highway 97 bridge near Taylor to the Province of Alberta border" in MU 7-33 (99%, BC Laws, checked 2026-10-17). Map H17 is the picture of it (95%, my reading of the captions).
 ```
 
 ## Firearm and hunting closures, part 1
@@ -595,7 +595,7 @@ region: 7b
 > "Hunting is prohibited in the vicinity of the community of Fontas. See Map H21"
 
 - Lower Burnt: printed green, new (99%).
-- Map H3 is captioned "One Island Pasture", not One Mile Pasture (99%, page 63). VERIFY the name.
+- Map H3 is captioned "One Island Pasture", not One Mile Pasture (99%, page 63). VERIFY the name (corrections page checked 2026-10-17 (last updated 19 August 2026): no correction listed for this).
 - Fontas: the map is H24 (Fontas No Hunting Area), not H21 as printed (95%, my reading of the captions).
 - Highway single projectile bans on Hwys 29 and 97 are on page 10 (99%).
 ```
