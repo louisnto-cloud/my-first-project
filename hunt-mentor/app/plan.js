@@ -281,7 +281,9 @@
   const PARTY = [['solo', 'Solo'], ['two', 'With my brother'], ['group', 'Group (3 or more)']];
   const accessLabel = (a) => (a || []).map((x) => (ACCESS.find(([k]) => k === x) || [x, x])[1].replace(/ \(.*\)/, '')).join(', ');
   const partyLabel = (p) => (PARTY.find(([k]) => k === p) || [p, p])[1];
-  function planTitle(p, D) { const sp = D && D.byId[p.species]; return `${sp ? sp.name : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
+  // Region 2 deer are black tailed deer; the synopsis season rows list them as mule deer (page 28). Display only: plan data stays "mule-deer".
+  const spName = (sp, mu) => (sp && /^2-/.test(mu || '') && (sp.seasonKeys || []).includes('mule deer') ? 'Black tailed deer (listed as mule deer in the synopsis)' : sp ? sp.name : '');
+  function planTitle(p, D) { const sp = D && D.byId[p.species]; return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
   function planProgress(p, D) {
     const sp = D.byId[p.species]; if (!sp) return null;
     const items = checkItems(sp, D.lists, condOf(p));
@@ -293,6 +295,7 @@
 
   // ---------- wizard ----------
   // Harrison Lake area: Harrison Hot Springs, approximate town centre (Assumption), in MU 2-18 (point in polygon on the MU layer, checked 2026-10-16). Deer near Mission are black tailed deer; the Rule Book season rows list them as mule deer.
+  const HARRISON_LESSON = 'local-harrison-deer'; // content/phase6/20-local-harrison-deer.md: linked from the Harrison presets and plans (species lessons are not per region)
   const PRESETS = {
     'harrison-deer-two': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'two', firstHunt: true },
     'harrison-deer-solo': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'solo', firstHunt: true },
@@ -315,7 +318,7 @@
     const k = STEPS[n];
     C.setTitle(d.editId ? 'Change the plan' : 'Plan a hunt');
     const sp = D.byId[d.species];
-    const head = `<div class="pl-wiz-h"><div class="muted">Question ${n + 1} of ${STEPS.length}${sp && n > 0 ? `: ${esc(sp.name)}` : ''}</div><div class="bar"><i style="width:${Math.round(((n + 1) / STEPS.length) * 100)}%"></i></div>
+    const head = `<div class="pl-wiz-h"><div class="muted">Question ${n + 1} of ${STEPS.length}${sp && n > 0 ? `: ${esc(spName(sp, d.where && d.where.mu))}` : ''}</div><div class="bar"><i style="width:${Math.round(((n + 1) / STEPS.length) * 100)}%"></i></div>
       <h2 class="pl-q">${Q[k]}</h2></div>`;
     const done = (patch) => { Object.assign(d, patch); saveDraft(); if (n < STEPS.length - 1) goStep(n + 1); else finish(C, D); };
     let body = '';
@@ -492,7 +495,7 @@
     const H = hoursFor(sp);
     view.innerHTML = `<div class="pl" id="pl">
       <p class="pl-law">Study aid only. The official regulations are the law.</p>
-      <div class="card pl-sum"><h2>${esc(sp.name)}</h2>
+      <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
         <div class="pl-kv"><span>How</span><b>${esc(((sp.methods || []).find((m) => m.id === p.method) || {}).label || METHOD_LABEL[p.method] || p.method || '')}</b></div>
@@ -502,6 +505,7 @@
         <div class="pl-kv"><span>First hunt</span><b>${p.firstHunt !== false ? 'Yes' : 'No'}</b></div>
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
       </div>
+      ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}</a></div>` : ''}
       <nav class="pl-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s1">1 Legal</button><button type="button" data-go="pl-s2">2 Odds</button><button type="button" data-go="pl-s3">3 Days</button><button type="button" data-go="pl-s4">4 Checklist</button><button type="button" data-go="pl-s5">5 Study</button></nav>
       <section class="pl-sec" id="pl-s1"><h2 class="pl-sh">1. Legal and open</h2><div id="pl-legal"><p class="muted">Checking the season tables...</p></div></section>
       <section class="pl-sec" id="pl-s2"><h2 class="pl-sh">2. Odds</h2><div id="pl-odds"><p class="muted">Loading harvest numbers...</p></div></section>
@@ -739,7 +743,7 @@
   // ---------- share ----------
   function shareText(m, D, C) {
     const { p, sp } = m, L = [];
-    L.push(`Hunt plan: ${sp.name}`);
+    L.push(`Hunt plan: ${spName(sp, p.where.mu)}`);
     L.push(`Where: ${p.where.label}${p.where.mu ? `, MU (Management Unit) ${p.where.mu}` : ''}`);
     L.push(`When: ${rangeLabel(p.from, p.to)}`);
     L.push(`How: ${METHOD_LABEL[p.method] || p.method}. Access: ${accessLabel(p.access)}. Overnight: ${p.overnight ? 'yes' : 'no'}. Party: ${partyLabel(p.party)}.`);
@@ -845,6 +849,7 @@
     return `${study}<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt</a>
       <div class="btn-row"><a class="btn" href="#/plan/preset/harrison-deer-two">Deer near Harrison, with my brother</a><a class="btn" href="#/plan/preset/harrison-deer-solo">Deer near Harrison, solo</a></div>
+      ${C.hasSession && C.hasSession(HARRISON_LESSON) ? `<p class="pl-small"><a href="#/s/${HARRISON_LESSON}">Read first: ${esc(C.lessonTitle(HARRISON_LESSON))}</a></p>` : ''}
       ${all.length ? `<div class="list pl-home-list">${all.map((p) => `<a class="item" href="#/plan/${esc(p.id)}"><span class="grow"><b>${esc(planTitle(p, null))}</b><br><span class="muted">${esc(rangeLabel(p.from, p.to))}</span></span></a>`).join('')}</div>${plansOf(C).length > 3 ? '<a href="#/plan">All my plans</a>' : ''}` : ''}</div>`;
   }
 

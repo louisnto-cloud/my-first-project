@@ -144,7 +144,7 @@ checked: 2026-10-01
 
 ```more every other rule, quoted
 - Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview, VERIFY the hunting wording).
-- Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98%).
+- Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98% for the wording). The wording dates from 1996; today's Area H, redrawn in 2022, is around Cultus Lake, not Sumas Mountain (95%, BC electoral area boundaries, read 2026-10-17). Which area the rule covers now: VERIFY with the regional office.
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).
 - Schedule 11, Nicomen: rifles prohibited in the Nicomen Island lowland south of the CPR line, east to the District of Kent boundary and along the Chilliwack boundary (90%, long legal text read in part).
 - FVRD (Fraser Valley Regional District) map: "With the exception of persons engaged in lawful hunting or trapping, the discharge of firearms is prohibited within 400m of the indicated roads." (99%)
