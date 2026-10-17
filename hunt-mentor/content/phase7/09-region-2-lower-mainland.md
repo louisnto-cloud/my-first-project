@@ -59,12 +59,12 @@ mus: 2-8, 2-4, 2-3, 2-19
 | Canada and cackling geese | 10 (30) | 99%, page 28 |
 | White fronted geese | 5 (15) | 99%, page 28 |
 | Snow and Ross's geese, MUs 2-4 and 2-5 | 15 (45), Ross's 5 (15) at most | 99%, page 28 |
-| Snow and Ross's geese, MU 2-8 | VERIFY: page 28 says 10 (30), page 12 says 5 a day | 99% both pages |
+| Snow and Ross's geese, MUs 2-2, 2-3 and 2-6 to 2-19 (includes Mission, 2-8) | 10 (30), at most 5 Ross's a day | 99%, page 28 note H; federal District 2 table and ECCC summary agree (90%). Page 12 prints 5: the regional page and federal table govern |
 | Brant. MU 2-4 only, March | 3 (9) | 99%, page 28 |
 
 ```more the fine print
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 28).
-- Until the snow goose limit in MU 2-8 is settled, take 5 a day (Tip).
+- Snow geese near Mission: the limit is 10 a day. Taking 5 is still a fine plan for a first hunt (Tip).
 ```
 
 ## 10 rules that catch hunters here
