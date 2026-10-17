@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif" role="img" aria-label="Phone sketch of the Hunt Map. Step 1: the elevation profile button at the top left is ringed. Step 2: draw a line across the land. The elevation profile sheet shows a side view of every climb, bench and saddle on that line.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" font-family="sans-serif" role="img" aria-label="Phone sketch of the Hunt Map. Step 1: the elevation profile button at the top left is ringed. Step 2: draw a line across the land. The elevation profile sheet shows a side view of every climb, bench and saddle on that line. You can also pick a saved line or recorded track.">
 <rect width="400" height="400" fill="#fffaf0"/>
 <rect x="14" y="8" width="372" height="330" rx="22" fill="#2f3a2b"/>
 <rect x="24" y="18" width="352" height="150" fill="#e6ead6"/>
@@ -25,6 +25,6 @@
 <text x="184.4" y="280" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">bench</text>
 <text x="293.6" y="260" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">saddle</text>
 <path d="M293.6 240.0 L289.2 248.0 L298.0 248.0z" fill="#2f3a2b"/>
-<text x="200" y="364" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tap the top left button</text>
+<text x="200" y="364" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tap the top left button, or Tools</text>
 <text x="200" y="388" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Draw a line: see every climb, bench and saddle</text>
 </svg>

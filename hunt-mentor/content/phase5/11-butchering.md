@@ -117,7 +117,7 @@ yt-skin-debone-deer | Skin and debone a deer for the freezer.
 ```more grinding and shop sausage in full
 - Trim silver skin, fat, hair and bloodshot before the grinder. Venison fat tastes waxy and goes rancid (Tip, common practice).
 - Chill meat and the grinder parts near freezing. Warm meat smears (Tip).
-- Burger: add 10 to 20% pork or beef fat for juiciness, or none for lean (Tip).
+- Burger: add 10 to 20% pork or beef fat for juiciness, or none for lean (Tip; same rule of thumb as [MeatEater, how much fat to add to ground venison](https://www.themeateater.com/cook/butchering-and-processing/how-much-fat-should-you-add-to-ground-venison), 60%, checked 2026-10-17). The diagram above uses the same numbers.
 - Shops: the Maple Ridge shop runs a 25 lb (11 kg) minimum sausage batch: 19 lb game plus 6 lb of 50/50 pork (85%, read on their site 2026-10-01).
 - Sausage prices there: $4 to $7.50 per lb of finished product, plus $1 per lb for vacuum packing (85%, price checked 2026-10-01).
 - Cook ground game to 71°C (160°F) (95%, Canadian Food Inspection Agency; North Dakota State University).
