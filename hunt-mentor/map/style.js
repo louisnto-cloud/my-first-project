@@ -49,6 +49,7 @@ function layerOn(l, mode, prefs, opts = {}) {
   if (id.startsWith('contour')) {
     if (opts.deferContours) return false;
     if (mode !== 'topo' && prefs.satContours === false) return false;
+    if (mode === 'topo' && prefs.topoContours === false) return false; // owner 2026-10-17: lines can be turned off on Topo too
   }
   if (opts.declutter && DECLUTTER.has(id)) return false;
   return true;
