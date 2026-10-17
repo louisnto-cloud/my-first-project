@@ -319,9 +319,9 @@
   }
 
   const css = `.hma-row{display:flex;gap:8px;align-items:stretch}.hma-row input{flex:1;min-width:0}.hma-row .btn{min-height:48px;padding:0 16px}
-  .hma-ex{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.hma-ex .pill{text-decoration:none;color:var(--ink);padding:6px 10px;font-size:15px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+  .hma-ex{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.hma-ex .pill{text-decoration:none;color:var(--ink);padding:6px 12px;min-height:44px;display:inline-flex;align-items:center;font-size:15px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
   #hma-res{margin-top:14px}.hma-h{font-size:17px;margin:18px 0 8px;color:var(--muted)}.hma-card h3{margin:2px 0 6px;font-size:18px}
-  .hma-k{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+  .hma-k{font-size:14px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
   .hma-quick{border:2px solid var(--accent)}.hma-quick .hma-k{color:var(--accent)}.hma-card p{margin:6px 0;overflow-wrap:anywhere}
   .hma-ss{margin:6px 0 8px;padding-left:20px}.hma-ss li{margin:4px 0;overflow-wrap:anywhere}
   .hma-open{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
