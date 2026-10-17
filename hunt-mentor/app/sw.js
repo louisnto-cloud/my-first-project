@@ -13,14 +13,17 @@ const TILE_CAP = 4000;
 // CORE must all load or the install fails (the old version keeps running). EXTRA files are added one by one:
 // a missing photo or map file is skipped (fetched on demand later) instead of breaking the whole install.
 const CORE = ['./', 'index.html', 'style.css', 'app.js', 'content.js'];
-const EXTRA = ['home.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', ...__CONTENT__, ...__MAP__, ...__PHOTOS__, 'hunt-mentor-offline.html']; // content: lesson screens and search text (lessons/*.json)
+const EXTRA = ['home.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', ...__CONTENT__, ...__MAP__, ...__PHOTOS__]; // content: lesson screens and search text (lessons/*.json). Not the single file backup (hunt-mentor-offline.html, about 100 MB): precaching it doubled every install and update
 const fresh = (u) => new Request(u, { cache: 'reload' }); // skip the browser HTTP cache so one version never mixes with another
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then(async (c) => {
     await c.addAll(CORE.map(fresh));
     let i = 0;
-    const worker = async () => { while (i < EXTRA.length) { const u = EXTRA[i++]; try { await c.add(fresh(u)); } catch (err) { /* skipped, loads on demand */ } } };
+    // lesson files carry a content hash in their name, and photos keep their name for life: copy them from the
+    // last version's cache instead of downloading them again, so an update only fetches what changed
+    const reuse = (u) => /^lessons\/.+\.[0-9a-f]{10}\.json$/.test(u) || /^photos\//.test(u);
+    const worker = async () => { while (i < EXTRA.length) { const u = EXTRA[i++]; try { const hit = reuse(u) && await caches.match(u, MATCH); if (hit) await c.put(u, hit); else await c.add(fresh(u)); } catch (err) { /* skipped, loads on demand */ } } };
     await Promise.all([worker(), worker(), worker(), worker()]);
   }).then(() => self.skipWaiting()));
 });

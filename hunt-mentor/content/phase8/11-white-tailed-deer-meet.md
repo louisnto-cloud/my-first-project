@@ -139,6 +139,7 @@ bg-wt-buck-rack | Mature buck: thick neck, big rack.
 - **Button buck**: a male fawn. Its skin or hair covered bumps are not antlers, so it is antlerless (99%, synopsis page 3, [Rule Book: definitions](#/s/rb-definitions)).
 - **Hybrids**: mule deer and white tails do cross. A genetic study on the western Canadian prairies found about 1% hybrids (85%, Russell and others 2021). Mixed tail and antler traits. If you cannot tell, do not shoot (Tip).
 - **Elk calf**: much bigger, pale rump, dark neck (80%). Never confuse at legal range if you look (Tip).
+```
 
 ```diagram sa-button-buck
 ```

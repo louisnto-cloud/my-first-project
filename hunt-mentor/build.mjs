@@ -507,11 +507,16 @@ function build() {
   for (const dir of ['data/layers', 'data/spots']) if (fs.existsSync(path.join(ROOT, dir))) fs.cpSync(path.join(ROOT, dir), path.join(OUT, dir), { recursive: true });
 
   // Single file offline backup
+  // a file:// page cannot fetch: small JSON data files (add on data, season tables) are answered from an inline map by a tiny fetch shim
+  const inlineFiles = [...addonData.filter((r) => /\.(json|geojson)$/.test(r)), ...(fs.existsSync(seasonsDir) ? fs.readdirSync(seasonsDir).filter((f) => /^[\w-]+\.json$/.test(f)).map((f) => `data/seasons/${f}`) : [])];
+  const fetchInline = Object.fromEntries(inlineFiles.map((r) => [r, readJSON(r)]));
+  const fetchShim = `<script>(function(){var D=${JSON.stringify(fetchInline).replace(/<\//g, '<\\/')},f=window.fetch;window.fetch=function(u){var k=typeof u==='string'?u.split('?')[0].replace(/^\\.\\//,''):'';if(Object.prototype.hasOwnProperty.call(D,k))return Promise.resolve(new Response(JSON.stringify(D[k]),{headers:{'Content-Type':'application/json'}}));return f.apply(this,arguments);};})();</script>`;
   fs.writeFileSync(path.join(OUT, 'hunt-mentor-offline.html'), html
-    .replace('<!--CSS-->', `<style>${css}</style>`)
-    .replace('<!--DATA-->', `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
-    .replace('<!--JS-->', (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + (placesJs ? `<script>${placesJs.replace(/<\//g, '<\\/')}</script>` : '') + addons.map(([, b]) => `<script>${b.replace(/<\//g, '<\\/')}</script>`).join('') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
-    .replace('<!--HOME-->', (homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '') + (planJs ? `<script>${planJs.replace(/<\//g, '<\\/')}</script>` : ''))
+    // function replacers: a plain string replacement would expand $& and $' found inside the inlined code (places.js has '\\$&')
+    .replace('<!--CSS-->', () => `<style>${css}</style>`)
+    .replace('<!--DATA-->', () => fetchShim + `<script>window.HM=${jsonSingle.replace(/<\//g, '<\\/')};</script>`)
+    .replace('<!--JS-->', () => (askJs ? `<script>${askJs.replace(/<\//g, '<\\/')}</script>` : '') + (placesJs ? `<script>${placesJs.replace(/<\//g, '<\\/')}</script>` : '') + addons.map(([, b]) => `<script>${b.replace(/<\//g, '<\\/')}</script>`).join('') + `<script>${js.replace(/<\//g, '<\\/')}</script>`)
+    .replace('<!--HOME-->', () => (homeJs ? `<script>${homeJs.replace(/<\//g, '<\\/')}</script>` : '') + (planJs ? `<script>${planJs.replace(/<\//g, '<\\/')}</script>` : ''))
     .replace('<!--SW-->', '')
     .replace(/<link rel="manifest"[^>]*>/, '')
     .replace(/<link rel="apple-touch-icon"[^>]*>/, ''));

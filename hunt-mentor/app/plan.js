@@ -320,7 +320,7 @@
     const sp = D.byId[d.species];
     const head = `<div class="pl-wiz-h"><div class="muted">Question ${n + 1} of ${STEPS.length}${sp && n > 0 ? `: ${esc(spName(sp, d.where && d.where.mu))}` : ''}</div><div class="bar"><i style="width:${Math.round(((n + 1) / STEPS.length) * 100)}%"></i></div>
       <h2 class="pl-q">${Q[k]}</h2></div>`;
-    const done = (patch) => { Object.assign(d, patch); saveDraft(); if (n < STEPS.length - 1) goStep(n + 1); else finish(C, D); };
+    const done = (patch) => { Object.assign(d, patch); saveDraft(); let k = n + 1; if (d._preset) while (k < STEPS.length && answered(d, STEPS[k])) k++; if (k < STEPS.length) goStep(k); else finish(C, D); }; // a ready made plan skips what it already answered
     let body = '';
     if (k === 'animal') {
       body = `<input type="search" id="pl-find" class="pl-find" placeholder="Find an animal: deer, duck, quail" aria-label="Find an animal" autocomplete="off">
@@ -860,7 +860,8 @@
     view.onchange = null;
     if (!a) return listView(view, C);
     // ready made starts (owner, 2026-10-16): deer near Harrison with a rifle, with the brother or solo; the wizard opens at "When?" with the rest filled in
-    if (a === 'preset' && PRESETS[b]) { draft = Object.assign({}, PRESETS[b]); saveDraft(); return goStep(STEPS.indexOf('when')); }
+    // replace the preset entry (not push): Back from "When?" then leaves the wizard instead of reloading the preset
+    if (a === 'preset' && PRESETS[b]) { draft = Object.assign({ _preset: true }, PRESETS[b]); saveDraft(); const n = STEPS.indexOf('when'); history.replaceState(history.state, '', `#/plan/new/${n}`); return wizard(view, n, C); }
     if (a === 'new') { if (b == null || b === '') { draft = {}; saveDraft(); } return wizard(view, Math.max(0, Math.min(STEPS.length - 1, +b || 0)), C); }
     return planView(view, a, C);
   }
