@@ -192,7 +192,7 @@ yt-gutless-vs-gutting | Gutless or gutting: take the meat, leave the guts.
 - Region 3, page 34: no elk row (99%, [Region 3](#/s/rb-region-3)). Region 2, page 28: no elk row (99%, [Region 2](#/s/rb-region-2)).
 - [[6 point bull]]: at least 6 tines on one antler, brow included; tines at least 2.5 cm and longer than wide (99%, pages 3 and 4, [definitions](#/s/rb-definitions)).
 - Licences: resident hunting licence plus an elk [[Species licence]], $25.00 for residents (99%, page 8, [licences and fees](#/s/rb-licences-fees)). No waiting period for elk (99%).
-- [[LEH]] (Limited Entry Hunting): an authorization is not a licence; elk wins in Regions 1 or 2 cut your odds 66% for 3 years (99%, [LEH strategy](#/s/leh-strategy)). Region 8 hunt 2218 antlerless elk, 8-04 Princeton (99%). Region 3 elk LEH: VERIFY.
+- [[LEH]] (Limited Entry Hunting): an authorization is not a licence; elk wins in Regions 1 or 2 cut your odds 66% for 3 years (99%, [LEH strategy](#/s/leh-strategy)). Region 8 hunt 2218 antlerless elk, 8-04 Princeton (99%). Region 3 elk LEH: none in the 2026 to 2027 LEH synopsis (95%, read 2026-10-17).
 - Legal methods: centrefire or bow A, C, D; no shotgun, rimfire, air rifle; no recorded or electronic calls; dogs leashed; hours 1 hour before sunrise to 1 hour after sunset (99%, pages 11 to 13, [legal methods](#/s/rb-legal-methods)).
 - No elk parts or urine from outside BC for hunting (99%, page 11).
 - After the kill: cancel the licence before handling, evidence of sex, antlers with the licence, edible portions out (95 to 99%, pages 11 and 15, [tagging](#/s/tagging-legal), [after the kill](#/s/rb-after-the-kill)).

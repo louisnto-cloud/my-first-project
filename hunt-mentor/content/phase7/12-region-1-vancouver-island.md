@@ -368,6 +368,8 @@ region: 1
 |---|---|---|---|
 | 1-1 to 1-15 | None printed | Oct 1 to Nov 30 | 5 (15). No mountain quail |
 
+- The law behind this row, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 1, item 16, lists California quail in MUs 1-1 to 1-5 only (99%, BC Laws, current to 13 October 2026, checked 2026-10-17). The synopsis prints 1-1 to 1-15. VERIFY with the regional office before you hunt quail in 1-6 to 1-15. Until then, hunt quail only in 1-1 to 1-5 (Tip).
+
 ### Pheasant
 
 | MUs | Class | Season | Notes |

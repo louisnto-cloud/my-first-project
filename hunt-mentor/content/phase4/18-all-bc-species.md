@@ -29,7 +29,7 @@ checked: 2026-10-02
 ```more how to read this page
 - Source: the [[Synopsis]] 2026 to 2028, general open season tables for each region, and the fee tables on page 8 (99%).
 - "Open in" means the species has a row in that region's general open season table (95%). Often only some MUs (Management Units) are open. Always read your MU row.
-- Hunts that are [[LEH]] (Limited Entry Hunting) only are not general seasons. Check the LEH synopsis for those (VERIFY).
+- Hunts that are [[LEH]] (Limited Entry Hunting) only are not general seasons. Check the [LEH synopsis 2026 to 2027](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf) for those; it is online only (99%, read 2026-10-17).
 - Regions: 1 Vancouver Island, 2 Lower Mainland, 3 Thompson, 4 Kootenay, 5 Cariboo, 6 Skeena, 7A Omineca, 7B Peace, 8 Okanagan (99%, synopsis table of contents).
 - Table pages: Region 1 page 21, Region 2 page 28, Region 3 page 34, Region 4 pages 39 and 40, Region 5 page 44, Region 6 pages 50 and 51, Region 7A page 57, Region 7B pages 62 and 63, Region 8 page 68 (99%).
 - Every resident hunter also needs the basic hunting licence: $32.00 (99%, page 8).
@@ -72,7 +72,7 @@ checked: 2026-10-02
 | Caribou | Limited entry hunting only in 6 and 7A (99%, pages 50 and 57) | $20.00 (99%, page 8) |
 
 - Moose, elk and caribou licence holders must file the [[Mandatory Hunter Report]] by 31 March (99%, page 34 note for moose; page 16).
-- No general moose season rows in Regions 1, 2 or 5 (95%). No general elk rows in Regions 1, 2, 3 or 5 (95%). LEH may exist: VERIFY.
+- No general moose season rows in Regions 1, 2 or 5 (95%). No general elk rows in Regions 1, 2, 3 or 5 (95%). LEH 2026 to 2027: moose hunts in Region 5, none in Regions 1 or 2; elk hunts in Regions 1, 2 and 5, none in Region 3 (95%, LEH synopsis hunt codes, read 2026-10-17).
 ```
 
 ## Big game: sheep, goat, bear, cats, wolf
@@ -96,7 +96,7 @@ checked: 2026-10-02
 | Wolverine | 6, 7A, 7B (95%) | $8.00 (99%, page 8) |
 
 - Lynx, bobcat, wolf and wolverine are also furbearers. They are big game when hunted (99%, page 3 definition of big game).
-- No general mountain goat rows in Regions 3 or 8, and no general sheep rows in Regions 1, 2, 4 or 8 (95%). LEH may exist: VERIFY.
+- No general mountain goat rows in Regions 3 or 8, and no general sheep rows in Regions 1, 2, 4 or 8 (95%). LEH 2026 to 2027: mountain goat hunts in Regions 3 and 8; sheep hunts in Regions 4 and 8, none in Regions 1 or 2 (95%, LEH synopsis hunt codes, read 2026-10-17).
 ```
 
 ## Small game
@@ -216,7 +216,7 @@ checked: 2026-10-02
   - Pages 19 and 80: grizzly bear, bear colour phases, young bears, caribou status (99%).
   - General open season tables, pages 21, 28, 34, 39, 40, 44, 50, 51, 57, 62, 63 and 68 (99%). Region lists in this app are my reading of those tables (95%).
   - Page 76: provincial trapping seasons (99%).
-- LEH only hunts: the separate LEH synopsis, not read for this session (VERIFY).
+- LEH only hunts: the separate LEH synopsis 2026 to 2027, read 2026-10-17 for the region summary above (95%). Hunt by hunt details: read it yourself before you apply.
 
 ```quiz
 [

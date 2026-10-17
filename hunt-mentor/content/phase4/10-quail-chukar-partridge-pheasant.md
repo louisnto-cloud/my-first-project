@@ -169,7 +169,7 @@ bd-pheasant-cock-flight | Cock on the flush: dark head, white ring, copper body.
 | Region 2, page 28 | "PHEASANT (Cocks)" (99%) | 2-4, 2-8 (99%) | "Oct 10, 2026 - Nov 30, 2026" and "Oct 9, 2027 - Nov 30, 2027" (99%) | "2(6)" (99%) |
 | Region 2, page 28 | Quail, chukar, partridge: no rows (97%) | none | no open season (95%) | none |
 
-- The Region 8 row says only "QUAIL". Whether it means California quail alone: VERIFY. Treat it as California quail only; mountain quail is closed in Region 1 and should never be shot (Tip).
+- The Region 8 row says only "QUAIL", and so does the law behind it, the Hunting Regulation, Schedule 8, item 23 (99%, BC Laws, checked 2026-10-17). My reading: it is not limited to California quail (80%). Treat it as California quail only anyway; mountain quail is closed in Region 1 and should never be shot (Tip).
 - Region 1 for comparison: "CALIFORNIA QUAIL" 5 (15), 1 October to 30 November, page 21 (99%).
 - Mission is inside MU 2-8 (90%, Map B10). Pheasant there also needs the Fraser Valley Special Area licence and $1,000,000 liability insurance (99%).
 ```

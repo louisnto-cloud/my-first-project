@@ -71,7 +71,7 @@ mus: 8-1, 8-9
 |---|---|---|
 | 1 | Pheasant: cocks only. A hen is never legal. [Birds](#/s/fw-rules-07) | 99%, page 68 |
 | 2 | Grouse: 5 a day of the three kinds together. | 99%, page 67 |
-| 3 | The row says only "QUAIL". Does it cover mountain quail? VERIFY. Shoot California quail only. | 99% row, page 68; Tip |
+| 3 | The row says only "QUAIL", and so does the Hunting Regulation, Schedule 8, item 23 (checked 2026-10-17). My reading: not limited to California quail. Shoot California quail only. | 99% row, page 68; 80% reading; Tip |
 | 4 | Osoyoos Oxbows, Map J1: no shooting or hunting 1 March to 30 September. Vehicles on established roads only, all year. | 99%, page 69 |
 | 5 | Vaseux Lake: no hunting in the bird sanctuary or the National Wildlife Areas. Blue loon signs mark them. | 99%, pages 9 and 67 |
 | 6 | Oliver Mountain, Map J2: no motor vehicles. Above 1,700 m anywhere in Region 8: no vehicles off existing roads. [Vehicles](#/s/fw-rules-03) | 99%, page 67 |
@@ -468,7 +468,7 @@ Strategy is opinion. Each line says Tip or gives its source.
 - Every row checked against the page 68 image (99%, page 68, 2 October 2026 edition).
 - Grey partridge are [[Huns]]. The synopsis spells it "GRAY" (99%).
 - Pheasant: cocks only. A hen is never legal here (99%).
-- The quail row says only "QUAIL", not "California quail". Region 1 prints "No open season on mountain quail" (99%, page 21). Whether the Region 8 row covers mountain quail: VERIFY. Shoot California quail only (Tip).
+- The quail row says only "QUAIL", not "California quail". Region 1 prints "No open season on mountain quail" (99%, page 21). The law behind the row, the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 8, item 23, also reads only "QUAIL" (99%, BC Laws, current to 13 October 2026, checked 2026-10-17). My reading: the law names no kind, so the season is not limited to California quail (80%). Shoot California quail only (Tip).
 - No row in Region 8 for ptarmigan or sharp tailed grouse (99%, page 68).
 ```
 

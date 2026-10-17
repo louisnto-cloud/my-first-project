@@ -113,7 +113,7 @@ g-wt-buck-flag | White tail: wide flag.
 |---|---|---|
 | White tailed deer | Wide brown tail, white flag; antler tines rise off one main beam; gallops, no stot (85%) | Separate species licence and seasons (99%, [Rule Book](#/s/rb-bag-limits)) |
 | Black tailed deer (coast) | Tail dark brown or black for most of its length, smaller rump patch, smaller body (90%) | Same species as mule deer; the synopsis says "mule (black-tailed) deer" (99%). Region 2 has its own limits ([Region 2](#/s/rb-region-2)) |
-| Mule deer and black tail hybrids | Mixed traits in some valleys where the two meet (90%) | Treated as mule deer in the synopsis wording (Tip, VERIFY with the Rule Book) |
+| Mule deer and black tail hybrids | Mixed traits in some valleys where the two meet (90%) | The law names the two as one: "MULE (Black-tailed) DEER" (99%, Hunting Regulation schedules, BC Laws, checked 2026-10-17). So a hybrid counts as a mule deer (85%, my reading) |
 | Elk cow or calf | Much bigger, dark neck mane, yellow rump, no black tail tip (85%) | Not open in MUs (Management Units) 3-27 and 3-28 (99%, page 34) |
 | White tail and mule deer hybrid | Rare; mixed tail and antler traits (70%) | When in doubt, do not shoot (Tip) |
 

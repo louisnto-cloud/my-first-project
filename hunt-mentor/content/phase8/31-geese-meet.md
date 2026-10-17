@@ -133,7 +133,7 @@ bd-snow-ross-flight | Snow and Ross's lifting off together. Hard to split in the
 - BC snow geese are the Fraser and Skagit part of the Wrangel Island, Russia, population (85%, Demarchi 2006).
 - Limits: District 3 and District 8, 5 a day (15 in possession) (99%).
 - District 2 (Mission): the federal table says 10 a day, not more than 5 Ross's, possession 30; MUs (Management Units) 2-4 and 2-5 add 5 more snow geese a day (99%, [Rule Book: migratory birds](#/s/rb-migratory-birds)).
-- The synopsis page 12 prints 5 a day outside 2-4 and 2-5. The [Region 2 Rule Book](#/s/rb-region-2) marks this VERIFY and says take 5 a day in 2-8 to stay safe (Tip).
+- The synopsis page 12 prints 5 a day outside 2-4 and 2-5. But the Region 2 table note on page 28 prints 10 (30) in MUs 2-2, 2-3 and 2-6 to 2-19, no more than 5 (15) Ross's, and 15 (45) in 2-4 and 2-5 (99%, read 2026-10-17). The Environment and Climate Change Canada (ECCC) BC summary for August 2026 to July 2027 says the same as the federal table (90%, read 2026-10-17). So Mission's MU 2-8 is 10 a day, not more than 5 Ross's (90%). Taking 5 a day is still the safe habit (Tip); see the [Region 2 Rule Book](#/s/rb-region-2).
 ```
 
 ## White fronted goose

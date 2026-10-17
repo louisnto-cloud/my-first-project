@@ -301,7 +301,7 @@ yt-glassing-spotting-scope | Glassing with a spotting scope, step by step.
 
 ```more every draw rule
 - You need an FWID (Fish and Wildlife ID) with resident and hunting credentials, then apply in [[WILD]] (Wildlife Information and Licensing Data) or at Service BC or FrontCounter BC (98%).
-- Main draw deadline: 11:59 pm, Tuesday June 23, 2026 (98%). Application fee: VERIFY in WILD.
+- Main draw deadline: 11:59 pm, Tuesday June 23, 2026 (98%). Application fee: $6.30 including taxes, not refundable (99%, LEH synopsis 2026 to 2027, page 1, read 2026-10-17).
 - An LEH authorization is not a licence. You still need the resident hunting licence and the sheep species licence (98%).
 - In 2025, 167,971 applications were entered and 16,904 authorizations issued for 8 species, about 1 in 10 (98%). Sheep odds are far worse (95%).
 - If you win a sheep draw, your odds for sheep drop by 50% for one year (98%).
