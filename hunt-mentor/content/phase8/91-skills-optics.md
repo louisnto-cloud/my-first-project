@@ -208,7 +208,7 @@ g-md-distance | Find the deer: grey bodies, white rumps.
 
 - Hunting includes "searching for" wildlife "while in possession of a firearm or other weapon" (99%, page 3, [Rule Book: definitions](#/s/rb-definitions)).
 - It is unlawful "To hunt wildlife from a motor vehicle" (99%, page 11, item 22, [Rule Book: it is unlawful](#/s/rb-unlawful-acts)).
-- How those two lines apply to glassing from a parked truck with a cased rifle inside is not spelled out in the app's Rule Book. Ask a [[Conservation officer]] before you rely on any reading (VERIFY).
+- The same definition is in the [Wildlife Act](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01), s. 1 (99%, BC Laws, checked 2026-10-17). My reading: glassing from a parked truck with a rifle inside, even cased, is searching for wildlife while in possession of a firearm, from a motor vehicle. Treat it as unlawful (85%). Ask a [[Conservation officer]] if unsure (Tip).
 - Clear and simple: scout from the truck with no firearm, or step away from the truck before you glass with your rifle (Tip). Loaded firearm rules for vehicles: item 28 in the same Rule Book screen (99%).
 ```
 
