@@ -165,9 +165,9 @@ yt-moose-calling-eastmans | Hear real moose calls and when to use each one.
 | Early November | Seeking phase: bucks cruise, daylight sightings rise (75%) | Sit funnels and saddles all morning. Rattle and grunt for white tails (Tip) |
 | Mid November | Peak deer rut, mule deer peak about now (80%) | Find the does, the bucks are with them. Be patient, do not shoot the first buck (Tip) |
 | Late November to 10 December | Tending and post rut. Bucks worn, snow deep up high (70%) | Hunt winter range slopes, track in snow, respect the deer (Tip) |
-| Mid December | Most Region 3 deer seasons closed (65%, VERIFY). Second rut for unbred does (65%) | Scout and learn. Shed hunting comes later (Tip) |
+| Mid December | Region 3 mule deer closed after 10 December; white tailed deer bow only 11 to 20 December (99%, Hunting Regulation, Schedule 3). Second rut for unbred does (65%) | Scout and learn. Shed hunting comes later (Tip) |
 
-- Check the [[Synopsis]] for the exact season end in your MU. Many Region 3 mule deer seasons run to 10 December with a [[4 point buck]] rule from 1 November (65%, VERIFY).
+- Check the [[Synopsis]] for the exact season end in your MU. Region 3 mule deer buck seasons run to 10 December with a [[4 point buck]] rule from 1 November (99%, Hunting Regulation, Schedule 3, items 5 and 6, BC Laws, checked 2026-10-17): any buck 1 to 31 October, 4 points or better 10 to 30 September and 1 November to 10 December.
 ```
 
 ## Rules that touch this session

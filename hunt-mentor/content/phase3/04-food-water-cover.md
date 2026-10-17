@@ -83,7 +83,7 @@ hab-douglas-fir-stand | Mature Douglas fir: thermal cover.
 - Deer have trouble in snow deeper than about 30 cm and leave slopes where it passes about 50 cm (75%). Moose move freely to about 40 cm and are restricted by 40 to 70 cm (70%). Elk sit between (65%).
 - Winter diet: Douglas fir, shrubs, and whatever bunchgrass is blown clear on windy ridges (80%).
 - Winter range shows browse lines and hedged shrubs, trails between beds and feed, and pellets everywhere (65%).
-- Many Region 3 mule deer general seasons end 10 December (65%, VERIFY your [[MU]] (Management Unit) in the [[Synopsis]]). Late season means hunting winter range in snow (Tip).
+- Region 3 mule deer buck seasons end 10 December, with a [[4 point buck]] rule from 1 November, in MUs 3-12 to 3-20, 3-26 to 3-44 and 3-46 (99%, [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), Schedule 3, item 6, BC Laws, checked 2026-10-17; check your [[MU]] (Management Unit) in the [[Synopsis]]). Late season means hunting winter range in snow (Tip).
 - Do not push deer on winter range for fun. Every run costs them fat they cannot replace (Tip).
 ```
 

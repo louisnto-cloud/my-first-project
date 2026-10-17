@@ -112,7 +112,7 @@ bobcat | Bobcat: spots, short tufts.
 - "Hunters may not hunt a cougar kitten or any cougar in its company. See Definitions Section: Cougar kitten. Compulsory Inspection required." (98%)
 - "BOBCAT | 3-12 to 3-20, 3-26 to 3-44 | Nov 15 - Feb 15 | 1" (98%)
 - "LYNX | 3-12 to 3-20, 3-26 to 3-44 | Nov 15 - Feb 15 | 1" (98%)
-- NBL means no bag limit (98%). Heffley Creek's MU: VERIFY on the Region 3 map, then read your row.
+- NBL means no bag limit (98%). Heffley Creek's MU: 3-27, with 3-28 about 0.4 km away (95%, BC Geographical Names on the app MU map, checked 2026-10-17). Read your row.
 ```
 
 ## Wolverine: not here

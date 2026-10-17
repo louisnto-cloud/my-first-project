@@ -48,15 +48,15 @@ checked: 2026-10-11
 ```
 
 - Check the ban status for your fire centre before every fire (80%).
-- Kamloops Fire Centre status today: VERIFY.
+- Kamloops Fire Centre on 17 October 2026: Category 1, 2 and 3 open fires all permitted, no area restrictions (95%, [Kamloops Fire Centre page](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions/kamloops-fire-centre-bans), last updated 2 October 2026). It changes: check before every fire.
 
 ```more the rules in full
-- **Category 1 campfire:** an open fire burning material in one pile no larger than 0.5 m high and 0.5 m wide, lit for recreation (80%, BC Wildfire Service Category 1 campfire brochure, search preview). Bigger is a Category 2 open fire (80%).
-- **Water or tool:** at least 8 litres of water or a hand tool on hand at all times while it is lit (80%). One fire centre notice says "a shovel or at least eight litres of water" (75%). The exact wording varies: VERIFY on the current order.
+- **Category 1 campfire:** an open fire burning material in one pile no larger than 0.5 m high and 0.5 m wide (99%, [Wildfire Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/38_2005), s. 1, BC Laws, checked 2026-10-17), lit for recreation (80%, BC Wildfire Service brochure). Bigger is a Category 2 open fire (80%).
+- **Water or tool:** keep a fuel break around it, and the person watching it must have at least one fire fighting hand tool (shovel, axe, pulaski, hand pump or extinguisher) or 8 litres of water in one or more containers (99%, Wildfire Regulation, s. 1 and s. 20(1), BC Laws, current to 13 October 2026, checked 2026-10-17).
 - **Fuel break:** clear the area around the fire of debris and anything that burns (80%). One fire centre advises a pit or ring at least 3 m from trees, shrubs and debris (70%).
 - **During a campfire ban:** only a CSA (Canadian Standards Association) or ULC (Underwriters Laboratories of Canada) approved portable campfire apparatus with a flame no higher than 15 cm may be used (75%).
 - **Fines:** up to $1,150 for breaking an open fire ban (80%). An escaped fire that causes a wildfire can bring a fine up to $1 million, up to 1 year in jail and the firefighting costs (75%).
-- **Kamloops Fire Centre 2026:** Category 1 campfires were allowed again from noon 3 September 2026; Category 2 and 3 open fires stayed banned until noon 9 October 2026 unless rescinded earlier (70%, District of Logan Lake release, 3 September 2026). After 9 October: VERIFY.
+- **Kamloops Fire Centre 2026:** Category 1 campfires were allowed again from noon 3 September 2026; Category 2 and 3 open fires stayed banned until noon 9 October 2026 unless rescinded earlier (70%, District of Logan Lake release, 3 September 2026). On 17 October 2026 the Kamloops Fire Centre page shows all three categories permitted (95%, page last updated 2 October 2026).
 - **Survival fire during a ban:** whether a life threatening emergency changes the rule is not confirmed here. VERIFY with BC Wildfire Service. My lean: carry a small stove and an emergency bivy so you rarely need a fire in a ban.
 - Not in the Rule Book: the hunting synopsis does not carry fire bans. The [Rule Book](#/s/rb-unlawful-acts/0) covers hunting rules only.
 ```

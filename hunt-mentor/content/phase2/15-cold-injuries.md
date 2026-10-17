@@ -238,7 +238,7 @@ fs-cold-fb-4 | Rewarm in 37 to 39 °C water, about 30 minutes.
   - Same temperature with 30 mph (48 km/h) wind: about 10 minutes.
 - The chart has 3 bands: 30, 10 and 5 minutes to frostbite (70%).
 - Riding the [[ATV]] (all terrain vehicle) or a boat makes your own wind. A 40 km/h ride in November adds wind chill to your face and hands (Tip).
-- Canadian wind chill guidance exists from Environment and Climate Change Canada, but canada.ca was not available here. VERIFY against it.
+- Canada's own scale (95%, [Environment and Climate Change Canada: wind chill](https://www.canada.ca/en/services/environment/weather/severeweather/wind-chill-index.html), modified 16 December 2025, read 2026-10-17): wind chill minus 28 to minus 39, exposed skin can freeze in 10 to 30 minutes; minus 40 to minus 47, 5 to 10 minutes; minus 48 to minus 54, 2 to 5 minutes; minus 55 or colder, under 2 minutes. In winds over 50 km/h frostbite can come faster.
 ```
 
 ## Cold kit for a long sit
@@ -340,5 +340,5 @@ Emergency blanket or small tarp
 - [Wikipedia: Kamloops, climate table (Kamloops Airport normals 1991 to 2020)](https://en.wikipedia.org/wiki/Kamloops), read directly. Checked 2026-10-11 (75%)
 - [Snowseekers: Sun Peaks stats](https://www.snowseekers.ca/britishcolumbia/sunpeaks/stats), checked 2026-10-11 (search preview, elevation) (70%)
 - Sunrise and sunset: my calculation with the standard NOAA (National Oceanic and Atmospheric Administration) approximation for 50.67 N, 120.33 W. Checked 2026-10-11 (80%)
-- Note: canada.ca (Environment and Climate Change Canada wind chill) not used. VERIFY there.
+- [Environment and Climate Change Canada: wind chill and the Wind Chill Index](https://www.canada.ca/en/services/environment/weather/severeweather/wind-chill-index.html), modified 16 December 2025, read 2026-10-17 through a page reader (95%).
 ```

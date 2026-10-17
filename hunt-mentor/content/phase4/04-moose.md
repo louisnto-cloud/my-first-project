@@ -296,7 +296,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 ```
 
 - Bag limit 1. Licence $25.00 (98%).
-- Your MU (Management Unit) at Heffley Creek: VERIFY on the map.
+- Your MU (Management Unit) at Heffley Creek: The Heffley Creek community point is in MU 3-27, only about 0.4 km from the MU 3-28 line (95%, BC Geographical Names point on the app MU map, checked 2026-10-17). Both MUs share the same Region 3 deer, moose, bear and wolf rows (99%, Hunting Regulation, Schedule 3). Check each spot on the Hunt Map anyway (Tip).
 
 ```more fees, the full table and other regions
 - **Species licence:** Moose, BC resident $25.00. Includes the HCTF (Habitat Conservation Trust Foundation) surcharge, not GST (Goods and Services Tax) (page 8) (98%).
@@ -313,7 +313,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - **Region 8**, page 68: `8-1 to 8-15, 8-21 to 8-26 | Spike-fork Bulls | Nov 1 - Nov 15 | 1`, same two footnotes (98%).
 - **Region 2** (Mission base): no moose row in the Lower Mainland table, page 28. No general open season (98%).
 - **Any other class** (cow, calf, bigger bull): LEH seasons "are open only to hunters who have drawn an LEH authorization" (page 5) (98%). Region 3 moose draws in 2026 to 2027: antlerless hunts 4001 to 4018 (1 to 10 November) and bull hunts 4019 to 4082 (from 20 September in 3-46 to 10 December), MU by MU (99%, page 8, read 2026-10-17). See the [LEH synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf).
-- **Your MU at Heffley Creek:** VERIFY on the official map.
+- **Your MU at Heffley Creek:** 3-27, with 3-28 next door (95%). Both are in the 1 to 15 November spike fork row (99%, Hunting Regulation, Schedule 3, item 11.2, checked 2026-10-17).
 ```
 
 ```regs safety

@@ -365,7 +365,7 @@ rb-notch-5 | Keep the licence with the meat.
 
 ```more more on reporting
 - RAPP (Report All Poachers and Polluters): 1 877 952 7277 (99%).
-- Cell shortcut: VERIFY. Save the full number above.
+- Cell shortcut: none is listed on the [RAPP page](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp); it gives the full number and an online report form (95%, read 2026-10-17). Save the full number above.
 - Open 24 hours, 7 days (99%). You can report anonymously (95%).
 - Note: plate, vehicle, place, time, what you saw. Never confront. Tip.
 ```

@@ -331,7 +331,7 @@ sa-stalk-5 | Rest, watch for cubs, wait for broadside.
 - Region 2 change for 2026: the proposed private property black bear hunt "was not approved" (changes summary) (95%).
 - **Fraser Valley Special Area:** hunting in MU 2-4, and the parts of MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam, needs a Fraser Valley Special Area Hunting Licence ($10.00) plus $1,000,000 public liability and property damage insurance (pages 8 and 29) (95%).
 - **Hours:** 1 hour before sunrise to 1 hour after sunset (page 11) (98%).
-- **Your MU at Heffley Creek:** VERIFY on the official map.
+- **Your MU at Heffley Creek:** The Heffley Creek community point is in MU 3-27, only about 0.4 km from the MU 3-28 line (95%, BC Geographical Names point on the app MU map, checked 2026-10-17). Both MUs share the same Region 3 deer, moose, bear and wolf rows (99%, Hunting Regulation, Schedule 3). Check each spot on the Hunt Map anyway (Tip).
 ```
 
 ```regs safety

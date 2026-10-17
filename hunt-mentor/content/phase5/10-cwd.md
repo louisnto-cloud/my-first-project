@@ -51,13 +51,13 @@ checked: 2026-10-01
 ```diagram sc-cwd-timeline
 ```
 
-- Cases cluster around Cranbrook (95%). Current count: VERIFY on the map.
+- Cases cluster around Cranbrook (95%). Nine confirmed cases as of January 2026 (99%, synopsis 2026 to 2028, Minister's message). Newer count: check the map.
 
 ```more status details and sources
 - "CWD was first detected in B.C. in January 2024 in deer samples from the Kootenay region" (95%, BC CWD page).
 - Both mule deer and white tailed deer were positive (95%, synopsis p. 36).
 - The cases cluster around Cranbrook. A January deer hunt there adds one deer to the bag limit to thin the herd (95%, BC CWD page).
-- Case count: news reports said 9 confirmed cases by late 2025 (65%, search summary of CBC). The province publishes a positive detections map, last mapped 14 January 2026 (95%). Current count: VERIFY on the map.
+- Case count: news reports said 9 confirmed cases by late 2025 (65%, search summary of CBC). The synopsis Minister's message confirms it: "as of January 2026 there have been nine confirmed cases" (99%, read 2026-10-17). The province publishes a positive detections map, last mapped 14 January 2026 (95%).
 - The disease is also in Alberta, Saskatchewan, Manitoba, Quebec, and 36 American states (95%, BC CWD page, BC Centre for Disease Control).
 ```
 
@@ -240,7 +240,7 @@ Tools bleached after the cut
 - [BC positive detections map (PDF)](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/wildlife-health/wildlife-health-documents/map_cwd_positive_detection.pdf), mapping date 14 January 2026, read directly. Count not legible in text. VERIFY.
 - [BC Centre for Disease Control, Chronic wasting disease](https://www.bccdc.ca/health-info/diseases-conditions/chronic-wasting-disease), read directly, 95%. Checked 2026-10-01.
 - [cwdbc.ca drop off page](https://cwdbc.ca/cwd-sample-drop-off-locations/), a Hunters for BC project, used only to cross check the official list, 70%. Checked 2026-10-01.
-- Case count: CBC search summary, 65%. VERIFY.
+- Case count: synopsis 2026 to 2028, Minister's message, read directly 2026-10-17 (99%); CBC search summary agrees (65%).
 
 ```quiz
 [

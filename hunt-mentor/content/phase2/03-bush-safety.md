@@ -72,7 +72,7 @@ Phone and satellite device charged
 - Much of the backcountry near Sun Peaks has no cell signal (Assumption: check with your carrier map).
 - iPhone 14 or later can send Emergency SOS via satellite in Canada with iOS 16.1 or later (85%).
 - Messages via satellite and Find My via satellite also work in Canada on iPhone 14 or later (80%).
-- Apple says it is free for two years from activation of the phone (80%). After that: VERIFY.
+- Apple says it is free for two years from activation of an iPhone 14 or later (95%). The Apple support page (published 5 October 2026, checked 2026-10-17) does not say what it costs after that: VERIFY.
 - It needs open sky. Trees, hills and canyons slow or block it (75%).
 - A dedicated satellite messenger (two way texting and SOS) works on any phone. Needs a paid plan.
 ```
@@ -110,7 +110,7 @@ yt-hypothermia-red-cross | Spot hypothermia early: shivering, fumbling, confusio
 ```more fire rules and the numbers
 - Interior October can go from sun to sleet in an afternoon. Pack a dry layer and a toque every trip.
 - Daylight is short. Turn back time = 1 hour before sunset.
-- Kamloops Fire Centre campfire and open fire rules changed in late September 2026 (75%). Today's status: VERIFY on the BC Wildfire Service app before any fire.
+- Kamloops Fire Centre campfire and open fire rules changed in late September 2026 (75%). On 17 October 2026 the Kamloops Fire Centre page shows Category 1, 2 and 3 fires all permitted (95%, page last updated 2 October 2026). Check the BC Wildfire Service app before any fire (Tip).
 - Report a wildfire: 1 800 663 5555 toll free, or *5555 on a cell (80%).
 - Never park a hot vehicle or ATV on dry grass. The exhaust can start a fire (Tip).
 ```

@@ -308,7 +308,7 @@ Firearm unloaded and cased for the drive
 > [!law] Item 36, page 11
 > "To operate or posses a drone while on a hunting or trapping expedition, or to use information that a drone obtains during, or less than 6 hours before the start of, a hunting or trapping expedition."
 
-- My reading: radios and phones between partners are not named as banned (80%). VERIFY with a conservation officer if you plan to rely on them for a deer drive.
+- My reading: radios and phones between partners are not named as banned (85%). The hunting methods sections of the [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00), s. 17, 17.1 and 18, ban drones, wireless cameras (Regions 2 to 8 from 1 August to 10 December), aircraft spotting and electronic calls for most game, but not radios (99%, BC Laws, checked 2026-10-17). Ask a conservation officer if unsure (Tip).
 - Tip: volume low, earpiece in, agree check in times. Noise spooks game.
 - Partner plans and signals: [Hunting with a partner](#/s/hunting-partner/0).
 ```
@@ -323,7 +323,7 @@ Firearm unloaded and cased for the drive
 
 ```more numbers in full
 - "911 doesn't work in all areas of the province" (85%, BC Forest Safety Council guide, 2017).
-- Wildfire reporting: 1 800 663 5555, *5555 on a cell (85%, same guide, 2017 version: VERIFY it is current before you save it).
+- Wildfire reporting: 1 800 663 5555, *5555 on a cell (99%, [BC Wildfire Service: report a wildfire](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/contact-channels/report-a-wildfire), last updated 9 February 2026, checked 2026-10-17).
 - RAPP (Report All Poachers and Polluters): 1 877 952 7277 (99%, synopsis).
 - Problems on the road (damage, garbage, vandalism): report to the maintenance company named at the start of the road, or the ministry (85%, same guide).
 ```
