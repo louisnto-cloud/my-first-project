@@ -140,7 +140,7 @@ District No. 2, Table 1, item 2 (99%).
 - It "expires on June 30 following the date of issue" (99%, s. 33).
 - Carry it while hunting, and while away from home with birds that are not preserved (99%, s. 34(1)). Show it to a game officer "immediately on request" (99%, s. 34(2)).
 - Minors (under 18) get the permit and stamp free (99%, s. 32(1)).
-- Where to buy: online on the federal Regulatory Services Platform. A permit bought online may be shown "as an electronic PDF or as a printed copy" (90%, [ECCC BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html), August 2026 to July 2027, dated 7 July 2026, read 2026-10-17). Keep the PDF saved on the phone for no signal (Tip).
+- Where to buy: online on the federal Regulatory Services Platform. A permit bought online may be shown "as an electronic PDF or as a printed copy" (90%, [Environment and Climate Change Canada (ECCC) BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html), August 2026 to July 2027, dated 7 July 2026, read 2026-10-17). Keep the PDF saved on the phone for no signal (Tip).
 ```
 
 ## Permit: BC side and youth
@@ -163,7 +163,7 @@ District No. 2, Table 1, item 2 (99%).
 - A youth with a free permit hunts only beside an adult who holds a permit now and held one in an earlier year (99%, s. 32(2)).
 - One adult, two youth at most (99%, s. 32(3)).
 - BC adds: youth and their supervising hunters carry the right BC licences too (99%, page 7).
-- BC says the youth permit is sold only through the federal online system (99%, page 7). Today that is the Regulatory Services Platform: the youth permit and electronic stamp are free and only sold there; the mentor holds a permit now, held one in an earlier year, and supervises at most two youth (90%, ECCC BC summary 2026 to 2027, read 2026-10-17).
+- BC says the youth permit is sold only through the federal online system (99%, page 7). Today that is the Regulatory Services Platform: the youth permit and electronic stamp are free and only sold there; the mentor holds a permit now, held one in an earlier year, and supervises at most two youth (90%, Environment and Climate Change Canada BC summary 2026 to 2027, read 2026-10-17).
 ```
 
 ## The 8 BC districts, in the regulation's words
@@ -228,7 +228,7 @@ District No. 2, Table 1, item 2 (99%).
 - MUs 3-45 and 3-46: Region 3 runs to 3-46, District 3 stops at 3-44 (99%).
 - MU 5-16: Region 5 runs 5-1 to 5-16, District 5 stops at 5-15 (99%).
 - MU 7-1: Region 7A starts at 7-1, District 7 starts at 7-2 (99%).
-- No duck or goose hunting in those 5 MUs (95%). The federal districts leave them out (s. 28(1)), the ECCC BC summary district lists stop at the same MUs, and BC's own [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00) rows leave them out too: ducks run 2-2 to 2-19, 3-12 to 3-20 and 3-26 to 3-44, 5-1 to 5-15 and 7-2 to 7-58 (99%, BC Laws, checked 2026-10-17).
+- No duck or goose hunting in those 5 MUs (95%). The federal districts leave them out (s. 28(1)), the Environment and Climate Change Canada (ECCC) BC summary district lists stop at the same MUs, and BC's own [Hunting Regulation](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00) rows leave them out too: ducks run 2-2 to 2-19, 3-12 to 3-20 and 3-26 to 3-44, 5-1 to 5-15 and 7-2 to 7-58 (99%, BC Laws, checked 2026-10-17).
 - The BC Region 3 page agrees: its duck rows stop at 3-44 (99%, page 34).
 ```
 
@@ -463,7 +463,7 @@ District No. 2, Table 1, item 2 (99%).
 - Other provinces have a Table 2, "Special Measures for Overabundant Species", with extra seasons, bigger limits and electronic calls (99%, Schedule 3, e.g. Part 11).
 - Part 10, British Columbia, has only Table 1. No Table 2 (99%, read 2026-10-04).
 - So in BC: no spring snow goose conservation season, no electronic calls, no special equipment (95%, my reading of s. 39(1)(b) and s. 59(2)).
-- The Minister can still vary seasons or limits for conservation by posted notice, valid until 31 July at the latest (99%, s. 19). The ECCC BC summary for August 2026 to July 2027 (dated 7 July 2026) mentions no such notice (85%, read 2026-10-17). Check it again before each trip (Tip).
+- The Minister can still vary seasons or limits for conservation by posted notice, valid until 31 July at the latest (99%, s. 19). The Environment and Climate Change Canada (ECCC) BC summary for August 2026 to July 2027 (dated 7 July 2026) mentions no such notice (85%, read 2026-10-17). Check it again before each trip (Tip).
 ```
 
 ## Hours and hunting out of season

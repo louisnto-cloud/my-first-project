@@ -144,7 +144,7 @@ g-canada-goose-flight | Canada goose in flight, Burnaby Lake, BC.
 ```
 
 - A [[Cackling goose|cackling goose]] is a separate species from the Canada goose, not a young one (85%).
-- Both sit in the same bag in BC: "Canada Geese and Cackling Geese, combined", 10 a day and 30 in possession in every BC district (90%, [ECCC BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html) August 2026 to July 2027, read 2026-10-17).
+- Both sit in the same bag in BC: "Canada Geese and Cackling Geese, combined", 10 a day and 30 in possession in every BC district (90%, [Environment and Climate Change Canada (ECCC) BC summary](https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html) August 2026 to July 2027, read 2026-10-17).
 
 ```video
 commons-canada-geese-flight | Canada geese in flight: long black neck, white chin strap.
