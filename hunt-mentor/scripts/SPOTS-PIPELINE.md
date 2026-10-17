@@ -105,3 +105,12 @@ Script: `scripts/spots-pipeline.py` (Python 3.11). Rerunnable. Every download is
 - Road allowance and local bylaws: flagged only for numbered highways, 2 lane paved roads and city limits.
 - Elk and sheep get evidence tags only (LEH or no season data), not their own spots.
 - B and C layers were built from the same cached download as A (2026-10-03). Rerun `fetch` monthly for fresh closures and cutblocks.
+
+## Crown land water cut and Range tenures (2026-10-17, scripts/build-crown.py)
+- `--cut-water --regions 3,8,2,4,5,1,7A,7B,6`: downloads FWA lakes, rivers and manmade waterbodies of 2 ha or more once (each page reduced to simplified WKB as it arrives, about 12 min), then rewrites each region's crown_land (class likely) and hunt_likely (class open) PMTiles tile by tile. No parcel download. About 10 min for all of BC.
+- `--range`: Range Act tenures (FTEN_RANGE_POLY_SVW, active), merged by type and district: `data/layers/bc/range_tenures.pmtiles` (max zoom 10) and its manifest entry after crown_tenures. Holder names are never shipped.
+- A full region rebuild (`--regions ...` without flags) now also cuts water.
+
+## Black bear in the hand made areas (2026-10-17)
+- `AREA_CAPS` bear 30 per access type for A, C, D, E, F, G (B stays out: `NO_BEAR_AREAS`). Rebuilt one area at a time with `--steps fetch,dem,spots`, raw, work and dem deleted after each (scratch peak about 1.5 GB), then `spotsman` for all 68 areas.
+- Bear spots: A 90, C 73, D 82, E 88, F 99, G 88. Other species counts within a few spots of 2026-10-04 (fresh downloads). Sizes: A 12 MB (same), C 8.1 to 8.5, D 12 to 13, E 11 to 12, F 14 to 15, G 7.7 to 8.3. All spots 62.5 to 64.8 MB. Fetch takes 20 to 40 min per area.

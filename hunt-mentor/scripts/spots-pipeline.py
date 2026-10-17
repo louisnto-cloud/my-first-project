@@ -201,6 +201,10 @@ SELECT_RADIUS = {'drive': 1500, 'atv': 1500, 'walk': 2000, 'backcountry': 3000, 
 CAPS = {'deer': 220, 'moose': 100, 'duck': 180, 'grouse': 120, 'quail': 300, 'camp': 60, 'elk': 120, 'turkey': 80, 'bear': 60}   # per area and category: best first
 NO_BEAR_AREAS = {'B', 'R2A'}   # owner 2026-10-16: no black bear spots promoted around Mission (bear stays a tag there)
 AREA_CAPS = {'F': {'grouse': 80, 'moose': 60}, 'G': {'grouse': 80, 'moose': 80}}   # area F size budget (about 35 MB): fewer grouse routes and moose spots
+# Hand made areas A, C to G got black bear spots on 2026-10-17 (B never: NO_BEAR_AREAS). 30 per access type keeps each area
+# near its old size (my pick).
+for _a in 'ACDEFG':
+    AREA_CAPS.setdefault(_a, {})['bear'] = 30
 
 
 def cap_for(area, sp):

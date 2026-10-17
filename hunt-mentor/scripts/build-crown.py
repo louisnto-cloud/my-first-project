@@ -20,6 +20,8 @@ Classes (layer crown_land, property cls):
   likely   land inside the province outline that is NOT inside any parcel (any owner), reserve, treaty land, park,
            national park or municipality. Gaps narrower than 50 m (road allowances, slivers) and pieces under 5 ha are dropped.
            "Likely Crown land (no titled parcel)": most BC Crown land is unsurveyed and has no parcel. 80%.
+           Lakes, wide rivers and reservoirs of 2 ha or more (FWA_LAKES_POLY, FWA_RIVERS_POLY, FWA_MANMADE_WATERBODIES_POLY) are cut out
+           of this class and of hunt_likely open (the 1:125,000 land mask includes lakes).
   Parks, reserves, treaty lands and national parks are never drawn as Crown land (they have their own layers and rules).
 Layer crown_tenures: TA_CROWN_TENURES_SVW, stage TENURE, in good standing, not RESERVE/NOTATION (government reserves and
   notations are not leases or licences), where it touches the land above (kind, type, purpose).
@@ -31,6 +33,8 @@ Outputs: data/layers/crown/<region>/{crown_land,crown_tenures,hunt_likely}.pmtil
 Cache: raw downloads go to --cache (outside the repo); parcel pages are reduced per tile and deleted as it goes.
 
 Usage: python3 scripts/build-crown.py --cache /path/outside/repo --regions 3 [--regions 3,8,...] [--manifest-only]
+       --cut-water --regions 1,2,...: cut water out of the existing PMTiles only (no parcel download; 2026-10-17)
+       --range: Range Act tenures (WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW, active) -> data/layers/bc/range_tenures.pmtiles (2026-10-17)
 Python packages: shapely pyproj numpy pmtiles mapbox-vector-tile (write_pmtiles is reused from spots-pipeline.py)
 """
 import argparse
@@ -253,6 +257,137 @@ def do_tile(tb, region, X, cache_dir):
     return res
 
 
+# ---------- water (lakes, wide rivers, reservoirs) ----------
+# The land mask (1:125,000 coastline) includes lakes, so the derived "likely" class and hunt_likely "open" used to cover them.
+# Water is cut out of those two classes (parcel classes and "check" classes are left as they are).
+WATER_LAYERS = (('lakes', 'WHSE_BASEMAPPING.FWA_LAKES_POLY'), ('rivers', 'WHSE_BASEMAPPING.FWA_RIVERS_POLY'),
+                ('manmade', 'WHSE_BASEMAPPING.FWA_MANMADE_WATERBODIES_POLY'))
+WATER_MIN_HA = 2     # smaller ponds are a few pixels at zoom 11 (my pick; 1 ha made Region 2 files 7% bigger again)
+WATER_SIMPLIFY = 5   # metres, well inside the 1:20,000 Freshwater Atlas accuracy
+WATER_PAGE = 2000
+WATER_PX = 3        # my pick: a lake under about 3 by 3 pixels stays green below the top zoom (file size)
+WATER_TOL = (3, 8)  # simplify water by this many tile units at the top zoom (about 15 m) and below it (1 pixel); my pick, for file size
+WATER_NOTE = '; lakes, wide rivers and reservoirs (WHSE_BASEMAPPING.FWA_LAKES_POLY, FWA_RIVERS_POLY, FWA_MANMADE_WATERBODIES_POLY) cut out'
+
+
+def water(cache):
+    """All BC water polygons of WATER_MIN_HA or more, in BC Albers, simplified. Raw pages are never written to disk:
+    each page is reduced to simplified WKB as it arrives (cache/water_<key>.wkb.json)."""
+    out = []
+    for key, layer in WATER_LAYERS:
+        f = cache / f'water_{key}.wkb.json'
+        if not f.exists():
+            cql = f'AREA_HA>={WATER_MIN_HA}'
+            hits = int(get(f"{WFS}?{urllib.parse.urlencode({'service': 'WFS', 'version': '2.0.0', 'request': 'GetFeature', 'resultType': 'hits', 'typeNames': f'pub:{layer}', 'CQL_FILTER': cql})}")
+                       .decode().split('numberMatched="')[1].split('"')[0])
+            print(f'fetch water {key}: {hits} polygons')
+
+            def page(start):
+                fs = wfs(layer, cql, ['AREA_HA', 'GEOMETRY'], start, WATER_PAGE).get('features') or []
+                hx = []
+                for g, _ in geoms(fs):
+                    g = polys(g.simplify(WATER_SIMPLIFY, preserve_topology=True))
+                    if not g.is_empty:
+                        hx.append(wkb.dumps(g, hex=True))
+                return hx
+            allhx = []
+            for i, start in enumerate(range(0, hits, WATER_PAGE)):   # one request at a time (the server pool is small)
+                allhx += page(start)
+                print(f'  {key} page {i + 1}/{-(-hits // WATER_PAGE)}', flush=True)
+            json.dump(allhx, open(f, 'w'))
+        out += [g for g in (wkb.loads(h, hex=True) for h in json.load(open(f))) if g.area >= WATER_MIN_HA * 1e4]
+    print(f'water: {len(out)} polygons')
+    return out
+
+
+def cut_water_pmtiles(path, cls_value, wtree, wgeoms_merc, patch=None):
+    """Rewrite one PMTiles file in place: in every tile, features whose cls is cls_value lose the water polygons.
+    Works on the stored tiles (each zoom keeps its own simplification), so the parcel download is not needed again."""
+    import gzip
+    import mapbox_vector_tile
+    import numpy as np
+    from pmtiles.reader import MmapSource, Reader, all_tiles
+    from pmtiles.tile import zxy_to_tileid
+    from pmtiles.writer import Writer
+    path = Path(path)
+    with open(path, 'rb') as fh:
+        src = MmapSource(fh)
+        rd = Reader(src)
+        header, meta = rd.header(), rd.metadata()
+        maxz = header['max_zoom']
+        tiles, cut = {}, 0
+        for (z, x, y), data in all_tiles(src):
+            raw = gzip.decompress(data)
+            size = 2 * SP.WORLD / 2 ** z
+            minx, maxy = -SP.WORLD + x * size, SP.WORLD - y * size
+            tb = (minx, maxy - size, minx + size, maxy)
+            buf = size * 64 / 4096
+            clip = box(tb[0] - buf, tb[1] - buf, tb[2] + buf, tb[3] + buf)
+            idx = wtree.query(clip, predicate='intersects')
+            dec = mapbox_vector_tile.decode(raw, default_options={'y_coord_down': False})
+            has = any(f['properties'].get('cls') == cls_value for L in dec.values() for f in L['features'])
+            if not has or (not len(idx) and not patch):
+                tiles[zxy_to_tileid(z, x, y)] = data
+                continue
+            unit = size / 4096
+            w = shapely.clip_by_rect(UNION([wgeoms_merc[i] for i in idx]), *clip.bounds) if len(idx) else shapely.Polygon()
+            if not w.is_empty:   # tile units: 1 is about 5 m at zoom 11 (keeps files small; the likely class is 15 m simplified)
+                w = w.simplify(unit * (WATER_TOL[0] if z == maxz else WATER_TOL[1]), preserve_topology=True)
+            # to tile units (0..4096, y up), the same frame decode returns
+            w = shapely.transform(w, lambda c: np.column_stack([(c[:, 0] - tb[0]) / unit, (c[:, 1] - tb[1]) / unit]))
+            w = polys(shapely.make_valid(w))
+            if z < maxz and not w.is_empty:   # below the top zoom, water smaller than WATER_PX screen pixels is not drawn (8 units a pixel)
+                w = unary_union([q for q in getattr(w, 'geoms', [w]) if q.area >= (8 * WATER_PX) ** 2]) if WATER_PX else w
+            layers = []
+            for name, L in dec.items():
+                feats = []
+                for f in L['features']:
+                    g = shape(f['geometry'])
+                    pr = f['properties']
+                    if pr.get('cls') == cls_value:
+                        pr = dict(pr, **(patch or {}))
+                        if g.geom_type in ('Polygon', 'MultiPolygon') and not w.is_empty:
+                            g = polys(DIFF(shapely.make_valid(g), w))
+                            if z < maxz:   # same small piece rule as write_pmtiles (drop_units 6)
+                                g = unary_union([p for p in getattr(g, 'geoms', [g]) if p.area >= 36]) if not g.is_empty else g
+                            cut += 1
+                    if g.is_empty:
+                        continue
+                    feats.append({'geometry': g, 'properties': pr})
+                if feats:
+                    layers.append({'name': name, 'features': feats})
+            if layers:
+                tiles[zxy_to_tileid(z, x, y)] = gzip.compress(mapbox_vector_tile.encode(
+                    layers, default_options={'quantize_bounds': (0, 0, 4096, 4096), 'extents': 4096, 'y_coord_down': False}))
+    tmp = path.with_suffix('.tmp')
+    with open(tmp, 'wb') as fo:
+        wr = Writer(fo)
+        for tid in sorted(tiles):
+            wr.write_tile(tid, tiles[tid])
+        wr.finalize({k: header[k] for k in ('tile_type', 'tile_compression', 'min_zoom', 'max_zoom', 'min_lon_e7', 'min_lat_e7',
+                                              'max_lon_e7', 'max_lat_e7', 'center_zoom', 'center_lon_e7', 'center_lat_e7')}, meta)
+    before = path.stat().st_size
+    tmp.replace(path)
+    return before, path.stat().st_size, len(tiles), cut
+
+
+def cut_water_region(r, wtree, wgeoms_merc, cache):
+    out = ROOT / 'data/layers/crown' / r.lower()
+    res = {}
+    for lid, cls, patch in (('crown_land', 'likely', {'how': PROPS['likely']['how']}), ('hunt_likely', 'open', {'how': HL_HOW_OPEN})):
+        t0 = time.time()
+        res[lid] = cut_water_pmtiles(out / f'{lid}.pmtiles', cls, wtree, wgeoms_merc, patch)
+        print(f'Region {r} {lid}: {res[lid][0]} -> {res[lid][1]} bytes, {res[lid][2]} tiles, {res[lid][3]} features cut, {time.time() - t0:.0f} s')
+    sf = cache / f'stats_{r}.json'
+    st = json.load(open(sf)) if sf.exists() else None
+    if st:
+        for lid in res:
+            st[lid] = [res[lid][1], res[lid][2]]
+        st['water'] = TODAY
+        json.dump(st, open(sf, 'w'))
+    return res
+
+
 # ---------- outputs ----------
 RULE_CROWN = ('On Crown land the open seasons apply (synopsis page 11, 99%). Hunting is usually allowed in an open season '
               'unless a closure, park, No Shooting Area, posted sign or town bylaw says no (Rule Book: where you can hunt, 85%, my reading).')
@@ -269,8 +404,14 @@ PROPS = {
     'federal': {'land': 'Federal land: CHECK', 'how': 'ParcelMap BC parcel, owner type Federal', 'cert': 90, 'rule': RULE_FED},
     'likely': {'land': 'Likely Crown land (no titled parcel)', 'cert': 80, 'rule': RULE_CROWN,
                'how': 'Derived: inside BC and not inside any ParcelMap BC parcel, reserve, treaty land, park or municipality. '
-                      'Most BC Crown land is unsurveyed, so it has no parcel. Gaps under 50 m wide (road allowances) and pieces under 5 ha are left out.'},
+                      'Most BC Crown land is unsurveyed, so it has no parcel. Gaps under 50 m wide (road allowances) and pieces under 5 ha are left out. '
+                      'Lakes, wide rivers and reservoirs of 2 ha or more (Freshwater Atlas) are left out.'},
 }
+
+
+HL_HOW_OPEN = ('Derived from Crown land (parcel and likely), minus mapped no hunting / no shooting areas, towns, tenures and federal land. '
+               'Lakes, wide rivers and reservoirs of 2 ha or more (Freshwater Atlas) are left out. '
+               'Motor vehicle closures are not cut out: they limit vehicles, not hunting. Most No Shooting Areas are not drawn.')
 
 
 def tenure_kind(p):
@@ -290,7 +431,7 @@ def cap(s):
     return s[:1].upper() + s[1:]
 
 
-def write(path, items, lid, minzoom=8, tol=8):
+def write(path, items, lid, minzoom=8, tol=8, maxzoom=MAXZ):
     gs, ps = [], []
     for g, p in items:
         if g is None or g.is_empty:
@@ -303,7 +444,7 @@ def write(path, items, lid, minzoom=8, tol=8):
             ps.append(p)
     if not gs:
         return 0, 0
-    size, n = SP.write_pmtiles(path, gs, ps, lid, minzoom=minzoom, maxzoom=MAXZ, tol_units=2, drop_units=6)
+    size, n = SP.write_pmtiles(path, gs, ps, lid, minzoom=minzoom, maxzoom=maxzoom, tol_units=2, drop_units=6)
     return size, n
 
 
@@ -331,6 +472,8 @@ def build_region(r, X, cache):
         U[k] = polys(shapely.make_valid(U[k]))
     # the derived class follows the 1:125,000 coastline and 50 m gaps: 15 m simplification is well inside its accuracy (keeps files small)
     U['likely'] = polys(shapely.make_valid(U['likely'].simplify(15, preserve_topology=True)))
+    wat = polys(X['water_i'].union_in(region))
+    U['likely'] = polys(DIFF(U['likely'], wat))
     crownish = UNION([U['crown'], U['likely']])
     # tenures, clipped to Crown land (provincial, likely and federal)
     rw = transform(TO_WGS, region).bounds
@@ -360,7 +503,7 @@ def build_region(r, X, cache):
     nohunt, muni = cut(X['nohunt']), cut(X['muni'])
     tchk = UNION([g for g, p in ten if p['kind'] in CHECK_KINDS]) if ten else shapely.Polygon()
     parks = polys(INT(INT(cut(X['parks_open']), region), X['prov_i'].union_in(big)))
-    open_ = polys(DIFF(crownish, UNION([nohunt, muni, tchk, U['federal']])))
+    open_ = polys(DIFF(crownish, UNION([nohunt, muni, tchk, U['federal'], wat])))
     chk_t = polys(DIFF(INT(crownish, tchk), UNION([nohunt, muni])))
     chk_p = polys(DIFF(parks, nohunt))
     chk_f = polys(DIFF(U['federal'], UNION([nohunt, muni])))
@@ -372,10 +515,9 @@ def build_region(r, X, cache):
     items = [(U[k], dict(base, cls=k, certText=f"{PROPS[k]['cert']}%", **PROPS[k])) for k in ('crown', 'federal', 'likely')]
     stats['crown_land'] = write(out / 'crown_land.pmtiles', items, 'crown_land')
     stats['crown_tenures'] = write(out / 'crown_tenures.pmtiles', ten, 'crown_tenures', minzoom=9, tol=10)
-    hl = 'Derived from Crown land (parcel and likely), minus mapped no hunting / no shooting areas, towns, tenures and federal land. '
     items = [
         (open_, {'cls': 'open', 'land': 'Likely open to hunt (check season, MU and signs)', 'cert': 75, 'certText': '75%',
-                 'how': hl + 'Motor vehicle closures are not cut out: they limit vehicles, not hunting. Most No Shooting Areas are not drawn.',
+                 'how': HL_HOW_OPEN,
                  'rule': RULE_CROWN, 'date': TODAY}),
         (chk_t, {'cls': 'check', 'land': 'Check first: Crown land with a tenure', 'cert': 90, 'certText': '90%', 'how': 'TA_CROWN_TENURES_SVW on Crown land',
                  'rule': RULE_TEN, 'date': TODAY}),
@@ -393,6 +535,64 @@ def build_region(r, X, cache):
     print(f'Region {r} done in {time.time() - t0:.0f} s:', json.dumps(stats))
     json.dump(stats, open(cache / f'stats_{r}.json', 'w'))
     return stats
+
+
+# ---------- Range Act tenures (grazing and hay cutting licences and permits), all of BC ----------
+RANGE_LAYER = 'WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW'
+RANGE_FILE = 'data/layers/bc/range_tenures.pmtiles'
+RANGE_TOL = 20             # metres: range lines are drawn coarsely (often along creeks and ridges); with max zoom 10 keeps the file small (my pick)
+RANGE_COLOUR = '#827717'   # olive: not used by any other layer (owner rule 2026-10-16, every layer its own colour)
+# FILE_TYPE_CODE words from the dataset column notes (BC Data Catalogue, Range Tenure Polygons, read 2026-10-17)
+RANGE_TYPES = {'E01': ('grazing', 'Grazing licence (Range Act)'), 'E02': ('grazing', 'Grazing permit (Range Act)'),
+               'E03': ('grazing', 'Non replaceable grazing permit (Range Act)'), 'H01': ('hay', 'Hay cutting licence (Range Act)'),
+               'H02': ('hay', 'Hay cutting permit (Range Act)'), 'H03': ('hay', 'Non replaceable hay cutting permit (Range Act)')}
+RANGE_RULE = ('“A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land '
+              'is occupied by livestock, without the consent of the owner, lessee, or occupant of the land.” (synopsis page 9, 99%)')
+RANGE_VERIFY = ('VERIFY: a Range Act grazing licence or permit may not be a “grazing lease” in this rule (a lease is a different kind of tenure). '
+                'Ask FrontCounter BC or a conservation officer. Tip: if cattle are on it, ask the tenure holder or the district office first.')
+RANGE_HOW = ('FTEN_RANGE_POLY_SVW, active tenures only, merged by type and district. Range tenures apply only to Crown land: where a line '
+             'crosses private land, that private land is not part of the grazing area, and grazing can reach into lakes at low water '
+             '(dataset notes). Tenure holder names are left out.')
+
+
+def build_range(cache):
+    f = cache / 'range.json'
+    if not f.exists():
+        print('fetch range tenures')
+        fs = wfs_all(RANGE_LAYER, "LIFE_CYCLE_STATUS_CODE='ACTIVE'", ['FOREST_FILE_ID', 'FILE_TYPE_CODE', 'ADMIN_DISTRICT_NAME', 'GEOMETRY'])
+        json.dump(fs, open(f, 'w'))
+    groups = {}
+    for g, p in geoms(json.load(open(f))):
+        t = RANGE_TYPES.get(p.get('FILE_TYPE_CODE'))
+        if not t:
+            continue
+        g = polys(g.simplify(RANGE_TOL, preserve_topology=True))
+        groups.setdefault((p['FILE_TYPE_CODE'], p.get('ADMIN_DISTRICT_NAME') or ''), []).append(g)
+    items = []
+    for (code, dist), gs in sorted(groups.items()):
+        kind, word = RANGE_TYPES[code]
+        items.append((polys(UNION(gs)), {'kind': kind, 'tenure': word, 'district': dist, 'n': len(gs), 'rule': RANGE_RULE, 'verify': RANGE_VERIFY,
+                                         'how': RANGE_HOW, 'cert': 90, 'certText': '90%', 'src': RANGE_LAYER, 'date': TODAY}))
+    print(f'range tenures: {sum(len(v) for v in groups.values())} polygons in {len(items)} groups')
+    size, n = write(ROOT / RANGE_FILE, items, 'range_tenures', minzoom=8, tol=RANGE_TOL, maxzoom=10)  # overzoomed past 10: about 10 m detail
+    bb = shapely.total_bounds([transform(TO_WGS, g) for g, _ in items])
+    mp = ROOT / 'data/layers/manifest.json'
+    man = json.load(open(mp))
+    E = {'id': 'range_tenures', 'group': 'Land status', 'label': 'Range tenures (grazing, Range Act)', 'type': 'fill', 'minzoom': 8,
+         'paint': {'fill-color': RANGE_COLOUR, 'fill-opacity': 0.06}, 'hatch': RANGE_COLOUR,
+         'legend': [['Grazing or hay cutting licence or permit (Range Act)', RANGE_COLOUR]],
+         'popup': [['Range tenure', 'tenure'], ['District', 'district'], ['Rule', 'rule'], ['Check', 'verify'], ['How we know', 'how'],
+                   ['Certainty', 'certText'], ['Data date', 'date']],
+         'source': f'{RANGE_LAYER} (Range tenures, active)', 'licence': OGL, 'dataDate': TODAY, 'cert': 90,
+         'about': 'Crown land where someone holds a Range Act grazing or hay cutting licence or permit. Cattle may be out. Respect gates and fences.',
+         'areas': 'BC', 'bytes': size, 'files': [{'area': 'BC', 'file': RANGE_FILE, 'bbox': [round(x, 4) for x in bb]}]}
+    layers = [l for l in man['layers'] if l.get('id') != 'range_tenures']
+    at = next((i + 1 for i, l in enumerate(layers) if l.get('id') == 'crown_tenures'), len(layers))
+    man['layers'] = layers[:at] + [E] + layers[at:]
+    tmp = mp.with_suffix('.tmp')
+    json.dump(man, open(tmp, 'w'), indent=1, ensure_ascii=False)
+    tmp.replace(mp)
+    print('range_tenures:', size, 'bytes,', n, 'tiles')
 
 
 LEG = {'crown_land': None}
@@ -414,7 +614,7 @@ def update_manifest(cache):
              legend=[['Crown land (provincial parcel), 90%', '#66bb6a'], ['Likely Crown land (no titled parcel), 80%', '#c5e1a5'],
                      ['Federal land: CHECK, 90%', '#00b0ff']],
              popup=[['Land', 'land'], ['How we know', 'how'], ['Certainty', 'certText'], ['Rule', 'rule'], ['Source', 'src'], ['Data date', 'date']],
-             source='WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC owner type), with reserves, treaty lands, parks and municipalities cut out',
+             source='WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC owner type), with reserves, treaty lands, parks and municipalities cut out' + WATER_NOTE,
              about='Public provincial land. Hunting is usually allowed here in an open season. Light green is derived: land with no titled parcel.',
              cert=80, files=files('crown_land'), bytes=size('crown_land')),
         dict(common, id='crown_tenures', label='Crown tenures (leases, licences)', minzoom=9,
@@ -428,7 +628,7 @@ def update_manifest(cache):
              paint={'fill-color': ['match', ['get', 'cls'], 'open', '#00c853', '#9e9e9e'], 'fill-opacity': ['match', ['get', 'cls'], 'open', 0.28, 0.3]},
              legend=[['Likely open to hunt (check season, MU and signs)', '#00c853'], ['Check first: tenure, federal land or park', '#9e9e9e']],
              popup=[['Land', 'land'], ['How we know', 'how'], ['Certainty', 'certText'], ['Rule', 'rule'], ['Data date', 'date']],
-             source='Derived: Crown land layer minus no_hunting, municipalities, tenures and federal land; parks as check first',
+             source='Derived: Crown land layer minus no_hunting, municipalities, tenures and federal land; parks as check first' + WATER_NOTE,
              about='Derived. Never a sure yes: the season, MU (Management Unit), signs, closures and the 100 m rule still decide.',
              cert=75, files=files('hunt_likely'), bytes=size('hunt_likely')),
     ]
@@ -447,16 +647,40 @@ def main():
     ap.add_argument('--cache', required=True)
     ap.add_argument('--regions', default='3')
     ap.add_argument('--manifest-only', action='store_true')
+    ap.add_argument('--cut-water', action='store_true',
+                    help='only cut lakes, wide rivers and reservoirs out of the existing crown_land (likely) and hunt_likely (open) files')
+    ap.add_argument('--range', action='store_true', help='only build the Range Act tenures layer (range_tenures) for all of BC')
     a = ap.parse_args()
     cache = Path(a.cache).resolve()
     if str(cache).startswith(str(ROOT)):
         raise SystemExit('cache must be outside the repo')
     cache.mkdir(parents=True, exist_ok=True)
+    if a.range:
+        build_range(cache)
+        return
+    if a.cut_water:
+        TO_MERC = Transformer.from_crs(3005, 3857, always_xy=True)
+        wm = [shapely.transform(g, SP._tf(TO_MERC)) for g in water(cache)]
+        wt = shapely.STRtree(wm)
+        for r in a.regions.upper().split(','):
+            cut_water_region(r, wt, wm, cache)
+        mp = ROOT / 'data/layers/manifest.json'
+        man = json.load(open(mp))
+        for l in man['layers']:
+            if l.get('id') in ('crown_land', 'hunt_likely'):
+                l['bytes'] = sum((ROOT / f['file']).stat().st_size for f in l['files'])
+                if WATER_NOTE not in l['source']:
+                    l['source'] += WATER_NOTE
+        tmp = mp.with_suffix('.tmp')
+        json.dump(man, open(tmp, 'w'), indent=1, ensure_ascii=False)
+        tmp.replace(mp)
+        return
     if not a.manifest_only:
         X = bc_inputs(cache)
         X['prov_i'] = Index(X['prov'])
         X['excl_i'] = Index(X['excl'])
         X['muni_i'] = Index(X['muni'])
+        X['water_i'] = Index(water(cache))
         for r in a.regions.upper().split(','):
             build_region(r, X, cache)
     update_manifest(cache)

@@ -20,7 +20,7 @@ const TITLE = 'Glassing and walk in';
 export function init(api) {
   H = api; map = H.map;
   H.onClick((e) => {
-    if (!last || !map.getLayer('hh-glass-dot')) return false;
+    if (!last || !map.getLayer('hh-glass-dot') || otherTool()) return false; // a tap for another open tool is that tool's tap
     const pt = e.point, hit = map.queryRenderedFeatures([[pt.x - 14, pt.y - 14], [pt.x + 14, pt.y + 14]], { layers: ['hh-glass-dot', 'hh-glass-n'] });
     if (!hit.length) return false;
     spotSheet(+hit[0].properties.i);
@@ -95,9 +95,17 @@ function uncovered(G, covered) {
 }
 
 // ---------- the run ----------
+/** Another tool's sheet is on screen (this tool's own sheets are the list and "Glassing spot N"). */
+function otherTool() {
+  const t = H.els.sheetT.textContent;
+  return !H.els.sheet.hidden && t !== TITLE && !/^Glassing spot \d+$/.test(t);
+}
 export async function run() {
   if (map.getZoom() < 11) { H.toast('Zoom in closer first: the tool reads up to about 6 by 6 km.', 4000); return null; }
   const my = ++busy, t0 = performance.now();
+  // stale: a newer run or Clear started, or the user opened another tool while this one was working (slow network).
+  // A stale run stops and draws nothing, so it never covers the tool the user moved on to. Closing the sheet to watch the map is fine.
+  const stale = () => my !== busy || otherTool();
   const say = (t) => { const o = H.els.sheetB.querySelector('[data-out="g"]'); if (o && H.els.sheetT.textContent === TITLE) o.innerHTML = `<p class="hmm-muted">${t}</p>`; };
   if (H.els.sheet.hidden || H.els.sheetT.textContent !== TITLE) open();
   say('Reading the terrain and the roads');
@@ -108,7 +116,7 @@ export async function run() {
     osmArea(map, G.bbox, ['transportation', 'landcover', 'water'], (k, n) => say(`Reading the terrain and the roads: map tile ${k} of ${n}`)),
     forestRoads(G.bbox), pmArea('cutblocks', G.bbox, 3), pmArea('burns', G.bbox, 3),
   ]);
-  if (my !== busy) return null;
+  if (stale()) return null;
   // elevation
   const N = G.nx * G.ny, e = new Float32Array(N); let bad = 0;
   for (let j = 0; j < G.ny; j++) for (let i = 0; i < G.nx; i++) {
@@ -130,8 +138,9 @@ export async function run() {
   const unc = uncovered(G, osm.covered), dUnc = distanceField(unc, G.nx, G.ny, G.cellM);
   say('Looking for high points with a view');
   await new Promise((r) => setTimeout(r, 0));
+  if (stale()) return null;
   const spots = terrainOk ? findSpots(G, e, woodM, waterM, dist) : [];
-  if (my !== busy) return null;
+  if (stale()) return null;
   // walk in zone overlay (view part only)
   let walkCells = 0, viewCells = 0, unknownCells = 0;
   const cv = document.createElement('canvas'); cv.width = G.vnx; cv.height = G.vny;

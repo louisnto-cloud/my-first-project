@@ -51,7 +51,11 @@ function loadCss() {
 
 export async function open(name, p) {
   if (mods[name]) {
+    // on a slow network the tool's code can still be loading: if another sheet opened meanwhile, do not cover it
+    const sig = () => (H.els.sheet.hidden ? '' : H.els.sheetT.textContent), was = sig();
     let m; try { m = await mods[name]; } catch (err) { H.toast('This tool did not load. Reload the app with signal.', 4000); return null; }
+    const now = sig();
+    if (now && now !== was) return null;
     return name === 'canhunt' ? m.open(p) : m.open();
   }
   if (name === 'scent') { if (typeof H.scentPanel === 'function') return H.scentPanel(p); H.toast('The wind tool is still loading. Try again in a moment.', 3500); return null; }

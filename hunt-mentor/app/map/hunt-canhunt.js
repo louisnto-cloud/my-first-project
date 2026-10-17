@@ -151,12 +151,12 @@ export async function evaluate(p, sp, now = new Date(), method) {
   const items = [], today = todayPacific(now);
   const add = (st, h, t, src) => items.push({ st, h, t, src: src || '' });
   const synSrc = (page, c) => `${SYN}, page ${page}. ${cert(c)} <a href="${SYN_URL}" target="_blank" rel="noopener">Synopsis PDF</a>`;
-  const [mu, priv, res, park, city, wma, clos, nsh, unm, osm, crown, ten] = await Promise.all([
+  const [mu, priv, res, park, city, wma, clos, nsh, unm, osm, crown, ten, rng] = await Promise.all([
     safe(layers.muAt(p)), safe(nearLayer('private_land', p, 0)), safe(nearLayer('reserves', p, 0)), safe(nearLayer('parks', p, 0)),
     safe(nearLayer('city_limits', p, 0)), safe(nearLayer('wma', p, 0)), safe(nearLayer('closures', p, 0)), safe(nearLayer('no_hunting', p, 0)),
     safe(getJSON('data/addons/noshoot/unmapped.json')),
-    safe(osmArea(map, bboxAround(p, 160), ['building', 'transportation'])),
-    safe(nearLayer('crown_land', p, 0)), safe(nearLayer('crown_tenures', p, 0)),
+    safe(osmArea(map, bboxAround(p, 160), ['building', 'transportation', 'water'])),
+    safe(nearLayer('crown_land', p, 0)), safe(nearLayer('crown_tenures', p, 0)), safe(nearLayer('range_tenures', p, 0)),
   ]);
   // 1. MU
   const muId = mu && mu.state === 'ok' && mu.id ? mu.id : null;
@@ -201,7 +201,12 @@ export async function evaluate(p, sp, now = new Date(), method) {
     else add('info', head, `${why} This rule does not ban it.`, src);
   }
   if (!nsh || nsh.state !== 'ok') add('check', 'No shooting and no hunting areas: not checked', nsh && nsh.state === 'missing' ? 'This map has no no shooting layer yet. Open the map with signal to update it.' : 'The no shooting layer is not on this phone here. Open the map with signal, or save this area in Offline Maps.');
-  crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p });
+  // lakes and wide rivers are left out of the Crown land layers (scripts/build-crown.py), so say why there is no land class
+  const onWater = !!(osm && osm.got && osm.feats.some((f) => f.layer === 'water' && f.type === 3 && featDist(f, p) === 0));
+  crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p, onWater });
+  // Range Act grazing or hay cutting licence or permit (range_tenures layer): cattle may be out, and the page 9 rule may apply
+  const rg = !pv && !rv && inside(rng);
+  if (rg) add('check', `Range tenure: ${esc(rg.props.tenure || 'grazing or hay cutting (Range Act)')}`, `${esc(RULE.graze.t)} VERIFY: a Range Act grazing licence or permit may not be a “grazing lease” in this rule. Tip: if cattle are on it, ask the tenure holder${rg.props.district ? ` or the ${esc(rg.props.district)}` : ''} first, and leave gates as you found them.`, `${synSrc(RULE.graze.page, RULE.graze.cert)}<br>Map: ${lay(rng)}`);
   const covers = (id) => { const st = layers.stateOf(id); return !!(st && st.files.some((f) => !f.box || (p[0] >= f.box[0] && p[0] <= f.box[2] && p[1] >= f.box[1] && p[1] <= f.box[3]))); };
   const LAND = [['private land', 'private_land', priv], ['reserves', 'reserves', res], ['parks', 'parks', park], ['city limits', 'city_limits', city]];
   const noData = LAND.filter(([, id, x]) => !read(x) && !covers(id)).map(([n]) => n);
@@ -236,7 +241,7 @@ export async function evaluate(p, sp, now = new Date(), method) {
 }
 
 /** Land line from the Crown land layers: OK on a Crown parcel, CHECK on likely Crown land, federal land or a tenure. Private land stays NO above. */
-function crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p }) {
+function crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read, p, onWater }) {
   const st = layers.stateOf('crown_land');
   if (!st) return; // an older manifest without the layer
   const inBox = st.files.some((f) => !f.box || (p[0] >= f.box[0] && p[0] <= f.box[2] && p[1] >= f.box[1] && p[1] <= f.box[3]));
@@ -249,6 +254,7 @@ function crownItems(crown, ten, { pv, rv, pk, ct, add, lay, synSrc, inside, read
   if (x && x.cls === 'crown') add('ok', 'Land: Crown land', `${rule}`, `${synSrc(RULE.crown.page, RULE.crown.cert)} (the open season rule). “Usually allowed”: Rule Book, where you can hunt, ${cert(85)} (my reading).<br>${how}`);
   else if (x && x.cls === 'likely') add('check', 'Land: likely Crown land (no titled parcel)', `${rule} The app worked this out: there is no titled parcel, reserve, park or town here in the official data. Watch for fences and signs.`, `${synSrc(RULE.crown.page, RULE.crown.cert)}<br>${how}`);
   else if (x && x.cls === 'federal') add('check', 'Land: federal land', `${RULE.fed.t} Other federal land (for example defence land) has its own rules: VERIFY before you hunt.`, `${synSrc(RULE.fed.page, RULE.fed.cert)}<br>${how}`);
+  else if (!pv && !rv && !pk && !ct && onWater) add('check', 'Water: a lake or river', 'This point is on water in the map data (OpenStreetMap). The Crown land layers leave lakes and wide rivers out, so the app does not say who owns it or whether you can hunt here. Check the synopsis and posted signs.', `Map: ${lay(crown)}, water from OpenStreetMap`);
   else if (!pv && !rv && !pk && !ct) add('check', 'Land: owner type not known here', 'Not Crown land and not private land in the map data. It may be town, regional district, Crown agency or other land. Find out who owns it before you hunt.', `Map: ${lay(crown)}`);
   const t = ten && ten.hits ? ten.hits.filter((h) => h.dist === 0) : [];
   for (const h of t.slice(0, 3)) {

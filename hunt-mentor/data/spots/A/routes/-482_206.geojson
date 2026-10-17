@@ -1,5 +1,4 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"spotId":"A-camp-camp-0119","kind":"walk","km":0.05,"climbM":0,"name":"1.9 km N of Surprise Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.27502,51.74677],[-120.27569,51.74695]]}},
 {"type":"Feature","properties":{"spotId":"A-duck-drive-0009","kind":"walk","km":0.07,"climbM":0,"name":"Hardcastle Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.32623,51.56324],[-120.32721,51.56311]]}},
 {"type":"Feature","properties":{"spotId":"A-duck-drive-0013","kind":"walk","km":0.13,"climbM":0,"name":"Rioux Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.45135,51.73573],[-120.45111,51.7369]]}},
 {"type":"Feature","properties":{"spotId":"A-duck-drive-0014","kind":"walk","km":0.13,"climbM":0,"name":"Tintlhohtan Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-120.3204,51.58756],[-120.31978,51.58645]]}},

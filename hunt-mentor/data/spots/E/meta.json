@@ -13,30 +13,42 @@
   "lon": -121.2957,
   "note": "Nominatim 2026-10-04. The town sits inside area A; area E spots lie west of -121.6 and north of 51.9."
  },
- "generated": "2026-10-04",
- "total": 1545,
+ "generated": "2026-10-17",
+ "total": 1633,
  "counts": {
   "byCategory": {
-   "camp": 91,
-   "atv": 380,
-   "backcountry": 26,
-   "drive": 508,
-   "walk": 540
+   "atv": 405,
+   "backcountry": 34,
+   "drive": 531,
+   "walk": 572,
+   "camp": 91
   },
   "byPrimary": {
+   "bear": 88,
    "camp": 91,
    "deer": 572,
    "duck": 326,
    "grouse": 262,
    "moose": 294
   },
+  "bySpeciesTag": {
+   "bear": 456,
+   "deer": 592,
+   "duck": 326,
+   "grouse": 262,
+   "moose": 294
+  },
   "byPressure": {
-   "busier": 548,
-   "average": 864,
-   "remote": 50,
-   "quieter": 83
+   "busier": 566,
+   "average": 918,
+   "remote": 59,
+   "quieter": 90
   },
   "byPrimaryCategory": {
+   "bear:atv": 25,
+   "bear:backcountry": 8,
+   "bear:drive": 23,
+   "bear:walk": 32,
    "camp:camp": 91,
    "deer:atv": 170,
    "deer:backcountry": 14,
@@ -52,22 +64,15 @@
    "moose:backcountry": 11,
    "moose:drive": 69,
    "moose:walk": 121
-  },
-  "bySpeciesTag": {
-   "deer": 592,
-   "bear": 391,
-   "duck": 326,
-   "grouse": 262,
-   "moose": 294
   }
  },
- "routes": 1824,
- "camps": 116,
+ "routes": 1937,
+ "camps": 124,
  "bytes": {
-  "index.geojson": 383236,
-  "detail": 6285642,
-  "routes": 3237366,
-  "camps.geojson": 61737
+  "index.geojson": 451466,
+  "detail": 7636296,
+  "routes": 3411191,
+  "camps.geojson": 65682
  },
  "tiles": {
   "deg": 0.25,
@@ -118,8 +123,8 @@
   ],
   "routes": {
    "-482_207": [
-    -120.492,
-    51.982,
+    -120.559,
+    51.963,
     -120.432,
     52.003
    ],
@@ -127,10 +132,10 @@
     -120.549,
     51.999,
     -120.381,
-    52.083
+    52.109
    ],
    "-483_207": [
-    -120.709,
+    -120.705,
     51.896,
     -120.425,
     52.002
@@ -144,7 +149,7 @@
    "-483_209": [
     -120.744,
     52.23,
-    -120.561,
+    -120.535,
     52.318
    ],
    "-484_207": [
@@ -161,15 +166,15 @@
    ],
    "-484_209": [
     -120.997,
-    52.248,
+    52.229,
     -120.758,
-    52.299
+    52.314
    ],
    "-485_207": [
     -121.234,
     51.9,
-    -121.021,
-    52.02
+    -121.003,
+    52.021
    ],
    "-485_208": [
     -121.275,
@@ -240,7 +245,7 @@
    "-488_204": [
     -122.0,
     51.202,
-    -121.737,
+    -121.731,
     51.23
    ],
    "-488_205": [
@@ -264,7 +269,7 @@
    "-488_208": [
     -122.018,
     52.0,
-    -121.736,
+    -121.713,
     52.25
    ],
    "-488_209": [
@@ -358,13 +363,13 @@
     51.751
    ],
    "-491_207": [
-    -122.605,
+    -122.607,
     51.748,
     -122.502,
     51.989
    ],
    "-491_208": [
-    -122.599,
+    -122.6,
     52.034,
     -122.44,
     52.267
@@ -378,19 +383,19 @@
   }
  },
  "layerDates": {
-  "roads": "2026-10-04",
-  "private": "2026-09-22",
-  "privateFetched": "2026-10-04",
-  "closures": "2026-10-03",
-  "mu": "2026-10-03",
-  "parks": "2026-10-03",
-  "reserves": "2026-10-03",
-  "cities": "2026-10-03",
-  "wma": "2026-10-03",
-  "cutblocks": "2026-10-04",
-  "burns": "2026-10-04",
-  "winterRange": "2026-10-04",
-  "dem": "2026-10-04"
+  "roads": "2026-10-17",
+  "private": "2026-10-07",
+  "privateFetched": "2026-10-17",
+  "closures": "2026-10-17",
+  "mu": "2026-10-17",
+  "parks": "2026-10-17",
+  "reserves": "2026-10-17",
+  "cities": "2026-10-17",
+  "wma": "2026-10-17",
+  "cutblocks": "2026-10-17",
+  "burns": "2026-10-17",
+  "winterRange": "2026-10-17",
+  "dem": "2026-10-17"
  },
  "stats": {
   "deer": {
@@ -449,6 +454,34 @@
    "droppedExact": 10,
    "droppedOnClosedLand": 1
   },
+  "bear": {
+   "drive": {
+    "candidates": 1039,
+    "droppedWeak": 821,
+    "droppedCap": 188,
+    "kept": 30
+   },
+   "atv": {
+    "candidates": 1294,
+    "droppedWeak": 1007,
+    "droppedCap": 257,
+    "kept": 30
+   },
+   "walk": {
+    "candidates": 1435,
+    "droppedWeak": 1103,
+    "droppedCap": 302,
+    "kept": 30
+   },
+   "backcountry": {
+    "candidates": 76,
+    "droppedWeak": 63,
+    "droppedCap": 0,
+    "kept": 13
+   },
+   "droppedExact": 7,
+   "droppedOnClosedLand": 1
+  },
   "duck": {
    "drive": {
     "candidates": 1576,
@@ -471,14 +504,14 @@
   },
   "grouse": {
    "drive": {
-    "candidates": 291,
+    "candidates": 290,
     "kept": 120,
     "droppedCap": 118
    },
    "atv": {
-    "candidates": 280,
+    "candidates": 281,
     "kept": 120,
-    "droppedCap": 106
+    "droppedCap": 107
    },
    "walk": {
     "candidates": 33,
@@ -490,13 +523,14 @@
   "camp": {
    "official": 33,
    "crownKept": 60,
-   "droppedWeak": 40111,
-   "droppedCap": 308,
-   "droppedExact": 1,
-   "droppedOnClosedLand": 1
+   "droppedWeak": 40083,
+   "droppedCap": 312,
+   "droppedOnClosedLand": 1,
+   "droppedExact": 1
   },
+  "outsideBC": 0,
   "inOtherArea": 6,
-  "spacingRemoved": 39
+  "spacingRemoved": 46
  },
  "styleLinesFlagged": 43,
  "scoring": {
@@ -532,6 +566,27 @@
     "creek": 1,
     "draw": 1
    },
+   "elk": {
+    "uwr": 3,
+    "burn": 2,
+    "cut": 1,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "water": 1
+   },
+   "turkey": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1
+   },
+   "bear": {
+    "cut": 2,
+    "burn": 2,
+    "south": 1,
+    "riparian": 1,
+    "quiet": 1
+   },
    "camp": {
     "flat": 2,
     "water": 2,
@@ -546,7 +601,10 @@
    "duck": 8,
    "grouse": 3,
    "quail": 6,
-   "camp": 7
+   "camp": 7,
+   "elk": 11,
+   "turkey": 5,
+   "bear": 7
   },
   "min": {
    "deer": 7,
@@ -554,7 +612,10 @@
    "duck": 4,
    "grouse": 2,
    "quail": 4,
-   "camp": 5
+   "camp": 5,
+   "elk": 7,
+   "turkey": 4,
+   "bear": 5
   },
   "spacingM": 800,
   "selectRadiusM": {
@@ -570,7 +631,10 @@
    "duck": 180,
    "grouse": 120,
    "quail": 300,
-   "camp": 60
+   "camp": 60,
+   "elk": 120,
+   "turkey": 80,
+   "bear": 60
   },
   "cutAgeYears": [
    5,
@@ -659,7 +723,7 @@
   }
  ],
  "seasonCoverage": {
-  "withFileRows": 1454,
+  "withFileRows": 1542,
   "withRegsRows": 0,
   "verify": 0
  },

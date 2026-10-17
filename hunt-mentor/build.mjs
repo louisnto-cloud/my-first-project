@@ -221,12 +221,18 @@ function fenced(kind, arg, body, ctx) {
 // ---------- photos (public domain / Creative Commons, credited) ----------
 function loadPhotos() {
   const dir = path.join(ROOT, 'data', 'photos');
-  const out = {};
+  const out = {}, bySource = new Map();
   if (!fs.existsSync(dir)) return out;
+  // the same Commons file under two ids shows the same picture twice (a gallery can even show it side by side)
+  const srcKey = (s) => { let k = String(s).trim(); try { k = decodeURIComponent(k); } catch { /* keep as is */ } return k.replace(/^https?:\/\//i, '').replace(/[?#].*$/, '').replace(/\/+$/, '').replace(/ /g, '_').toLowerCase(); };
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     for (const ph of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))) {
       if (out[ph.id]) console.warn(`Duplicate photo id ${ph.id} in ${f}`);
       out[ph.id] = ph;
+      if (!ph.source) continue;
+      const k = srcKey(ph.source), seen = bySource.get(k);
+      if (seen && seen.id !== ph.id) console.warn(`Duplicate photo source: ${seen.id} (${seen.f}) and ${ph.id} (${f}) both use ${ph.source}`);
+      else if (!seen) bySource.set(k, { id: ph.id, f });
     }
   }
   return out;
