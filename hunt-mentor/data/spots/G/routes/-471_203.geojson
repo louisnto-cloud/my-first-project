@@ -1,7 +1,7 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"spotId":"G-camp-camp-0038","kind":"walk","km":0.17,"climbM":0,"name":"150 m N of Upper Arrow Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.71426,50.75907],[-117.71568,50.75779]]}},
+{"type":"Feature","properties":{"spotId":"G-camp-camp-0039","kind":"walk","km":0.17,"climbM":0,"name":"150 m N of Upper Arrow Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.71426,50.75907],[-117.71568,50.75779]]}},
 {"type":"Feature","properties":{"spotId":"G-camp-camp-0051","kind":"walk","km":0.02,"climbM":0,"name":"180 m N of Bullard Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.60264,50.93468],[-117.6024,50.93471]]}},
-{"type":"Feature","properties":{"spotId":"G-camp-camp-0069","kind":"walk","km":0.23,"climbM":0,"name":"180 m SE of Incomappleux River","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.63142,50.80693],[-117.63331,50.80861]]}},
+{"type":"Feature","properties":{"spotId":"G-camp-camp-0068","kind":"walk","km":0.23,"climbM":0,"name":"180 m SE of Incomappleux River","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.63142,50.80693],[-117.63331,50.80861]]}},
 {"type":"Feature","properties":{"spotId":"G-deer-drive-0041","kind":"walk","km":0.08,"climbM":6,"name":"280 m NW of Upper Arrow Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.72895,50.75908],[-117.7282,50.75956]]}},
 {"type":"Feature","properties":{"spotId":"G-deer-walk-0058","kind":"walk","km":0.86,"climbM":253,"name":"410 m SW of Town Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.7468,50.76394],[-117.7459,50.77161]]}},
 {"type":"Feature","properties":{"spotId":"G-deer-walk-0086","kind":"walk","km":0.86,"climbM":722,"name":"780 m NW of Incomappleux River","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.66233,50.78271],[-117.66991,50.78874]]}},

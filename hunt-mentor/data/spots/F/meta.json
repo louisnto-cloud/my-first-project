@@ -13,40 +13,55 @@
   "lon": -115.7673,
   "note": "Nominatim 2026-10-04 (municipality centroid)"
  },
- "generated": "2026-10-04",
- "total": 1695,
+ "generated": "2026-10-17",
+ "total": 1788,
  "counts": {
   "byCategory": {
-   "camp": 122,
-   "atv": 358,
-   "backcountry": 52,
-   "drive": 575,
-   "walk": 588
+   "atv": 378,
+   "backcountry": 72,
+   "drive": 598,
+   "walk": 618,
+   "camp": 122
   },
   "byPrimary": {
+   "bear": 99,
    "camp": 122,
    "deer": 533,
-   "duck": 270,
+   "duck": 266,
    "elk": 137,
    "grouse": 240,
    "moose": 195,
-   "turkey": 198
+   "turkey": 196
+  },
+  "bySpeciesTag": {
+   "bear": 634,
+   "deer": 759,
+   "elk": 793,
+   "sheep": 93,
+   "moose": 627,
+   "duck": 266,
+   "grouse": 240,
+   "turkey": 196
   },
   "byPressure": {
-   "busier": 850,
-   "average": 649,
-   "remote": 112,
-   "quieter": 84
+   "average": 697,
+   "busier": 861,
+   "remote": 139,
+   "quieter": 91
   },
   "byPrimaryCategory": {
+   "bear:atv": 22,
+   "bear:backcountry": 20,
+   "bear:drive": 22,
+   "bear:walk": 35,
    "camp:camp": 122,
    "deer:atv": 157,
    "deer:backcountry": 11,
    "deer:drive": 178,
    "deer:walk": 187,
    "duck:backcountry": 6,
-   "duck:drive": 155,
-   "duck:walk": 109,
+   "duck:drive": 156,
+   "duck:walk": 104,
    "elk:atv": 32,
    "elk:backcountry": 1,
    "elk:drive": 44,
@@ -58,29 +73,19 @@
    "moose:backcountry": 33,
    "moose:drive": 57,
    "moose:walk": 59,
-   "turkey:atv": 43,
+   "turkey:atv": 41,
    "turkey:backcountry": 1,
    "turkey:drive": 61,
    "turkey:walk": 93
-  },
-  "bySpeciesTag": {
-   "deer": 759,
-   "bear": 563,
-   "elk": 793,
-   "sheep": 94,
-   "moose": 627,
-   "duck": 270,
-   "grouse": 240,
-   "turkey": 198
   }
  },
- "routes": 1941,
- "camps": 171,
+ "routes": 2052,
+ "camps": 191,
  "bytes": {
-  "index.geojson": 431551,
-  "detail": 8842978,
-  "routes": 3582655,
-  "camps.geojson": 85521
+  "index.geojson": 504443,
+  "detail": 10357414,
+  "routes": 3907402,
+  "camps.geojson": 93949
  },
  "tiles": {
   "deg": 0.25,
@@ -147,7 +152,7 @@
   "routes": {
    "-459_196": [
     -114.737,
-    49.022,
+    49.018,
     -114.601,
     49.131
    ],
@@ -171,13 +176,13 @@
    ],
    "-459_200": [
     -114.805,
-    50.033,
+    50.032,
     -114.722,
     50.105
    ],
    "-460_196": [
-    -114.98,
-    49.019,
+    -115.051,
+    49.006,
     -114.704,
     49.246
    ],
@@ -233,7 +238,7 @@
     -115.197,
     49.751,
     -115.007,
-    50.027
+    50.028
    ],
    "-461_200": [
     -115.231,
@@ -272,7 +277,7 @@
     49.751
    ],
    "-462_199": [
-    -115.334,
+    -115.402,
     49.739,
     -115.198,
     49.948
@@ -328,8 +333,8 @@
    "-463_201": [
     -115.759,
     50.25,
-    -115.495,
-    50.493
+    -115.449,
+    50.494
    ],
    "-463_202": [
     -115.756,
@@ -377,7 +382,7 @@
     -115.984,
     50.506,
     -115.755,
-    50.613
+    50.617
    ],
    "-465_196": [
     -116.263,
@@ -388,7 +393,7 @@
    "-465_197": [
     -116.236,
     49.276,
-    -116.052,
+    -116.043,
     49.462
    ],
    "-465_198": [
@@ -416,7 +421,7 @@
     50.501
    ],
    "-465_202": [
-    -116.236,
+    -116.259,
     50.499,
     -116.009,
     50.606
@@ -431,11 +436,11 @@
     -116.519,
     49.25,
     -116.253,
-    49.378
+    49.507
    ],
    "-466_198": [
     -116.496,
-    49.521,
+    49.515,
     -116.265,
     49.758
    ],
@@ -471,8 +476,8 @@
    ],
    "-467_197": [
     -116.62,
-    49.383,
-    -116.555,
+    49.377,
+    -116.507,
     49.398
    ],
    "-467_198": [
@@ -496,43 +501,43 @@
   }
  },
  "layerDates": {
-  "roads": "2026-10-04",
-  "private": "2026-09-26",
-  "privateFetched": "2026-10-04",
-  "closures": "2026-10-03",
-  "mu": "2026-10-03",
-  "parks": "2026-10-03",
-  "reserves": "2026-10-03",
-  "cities": "2026-10-03",
-  "wma": "2026-10-03",
-  "cutblocks": "2026-10-04",
-  "burns": "2026-10-04",
-  "winterRange": "2026-10-04",
-  "dem": "2026-10-04"
+  "roads": "2026-10-17",
+  "private": "2026-10-09",
+  "privateFetched": "2026-10-17",
+  "closures": "2026-10-17",
+  "mu": "2026-10-17",
+  "parks": "2026-10-17",
+  "reserves": "2026-10-17",
+  "cities": "2026-10-17",
+  "wma": "2026-10-17",
+  "cutblocks": "2026-10-17",
+  "burns": "2026-10-17",
+  "winterRange": "2026-10-17",
+  "dem": "2026-10-17"
  },
  "stats": {
   "deer": {
    "drive": {
-    "candidates": 1739,
-    "droppedWeak": 885,
-    "droppedCap": 634,
+    "candidates": 1743,
+    "droppedWeak": 887,
+    "droppedCap": 636,
     "kept": 220
    },
    "atv": {
-    "candidates": 1218,
-    "droppedWeak": 690,
-    "droppedCap": 308,
+    "candidates": 1217,
+    "droppedWeak": 687,
+    "droppedCap": 310,
     "kept": 220
    },
    "walk": {
-    "candidates": 1958,
-    "droppedWeak": 1250,
+    "candidates": 1961,
+    "droppedWeak": 1253,
     "droppedCap": 488,
     "kept": 220
    },
    "backcountry": {
-    "candidates": 117,
-    "droppedWeak": 97,
+    "candidates": 116,
+    "droppedWeak": 96,
     "droppedCap": 0,
     "kept": 20
    },
@@ -542,26 +547,26 @@
   },
   "moose": {
    "drive": {
-    "candidates": 1941,
-    "droppedWeak": 684,
-    "droppedCap": 1197,
+    "candidates": 1944,
+    "droppedWeak": 686,
+    "droppedCap": 1198,
     "kept": 60
    },
    "atv": {
-    "candidates": 1363,
-    "droppedWeak": 575,
-    "droppedCap": 728,
+    "candidates": 1364,
+    "droppedWeak": 574,
+    "droppedCap": 730,
     "kept": 60
    },
    "walk": {
-    "candidates": 2415,
+    "candidates": 2417,
     "droppedWeak": 1255,
-    "droppedCap": 1100,
+    "droppedCap": 1102,
     "kept": 60
    },
    "backcountry": {
-    "candidates": 177,
-    "droppedWeak": 103,
+    "candidates": 176,
+    "droppedWeak": 102,
     "droppedCap": 14,
     "kept": 60
    },
@@ -569,40 +574,67 @@
    "droppedSingleProjectile": 2,
    "droppedOnClosedLand": 6
   },
+  "bear": {
+   "drive": {
+    "candidates": 1849,
+    "droppedWeak": 1336,
+    "droppedCap": 483,
+    "kept": 30
+   },
+   "atv": {
+    "candidates": 1493,
+    "droppedWeak": 1231,
+    "droppedCap": 232,
+    "kept": 30
+   },
+   "walk": {
+    "candidates": 2828,
+    "droppedWeak": 2396,
+    "droppedCap": 402,
+    "kept": 30
+   },
+   "backcountry": {
+    "candidates": 265,
+    "droppedWeak": 223,
+    "droppedCap": 12,
+    "kept": 30
+   },
+   "droppedExact": 5
+  },
   "elk": {
    "drive": {
-    "candidates": 1796,
-    "droppedWeak": 1030,
-    "droppedCap": 646,
+    "candidates": 1793,
+    "droppedWeak": 1031,
+    "droppedCap": 642,
     "kept": 120
    },
    "atv": {
-    "candidates": 1309,
-    "droppedWeak": 857,
-    "droppedCap": 332,
+    "candidates": 1308,
+    "droppedWeak": 853,
+    "droppedCap": 335,
     "kept": 120
    },
    "walk": {
-    "candidates": 2259,
-    "droppedWeak": 1651,
-    "droppedCap": 488,
+    "candidates": 2234,
+    "droppedWeak": 1631,
+    "droppedCap": 483,
     "kept": 120
    },
    "backcountry": {
-    "candidates": 180,
-    "droppedWeak": 160,
+    "candidates": 174,
+    "droppedWeak": 154,
     "droppedCap": 0,
     "kept": 20
    },
-   "droppedExact": 66,
+   "droppedExact": 67,
    "droppedOnClosedLand": 8,
    "droppedSingleProjectile": 1
   },
   "turkey": {
    "drive": {
-    "candidates": 816,
-    "droppedWeak": 402,
-    "droppedCap": 334,
+    "candidates": 814,
+    "droppedWeak": 401,
+    "droppedCap": 333,
     "kept": 80
    },
    "atv": {
@@ -612,9 +644,9 @@
     "kept": 80
    },
    "walk": {
-    "candidates": 548,
+    "candidates": 546,
     "droppedWeak": 278,
-    "droppedCap": 190,
+    "droppedCap": 188,
     "kept": 80
    },
    "backcountry": {
@@ -623,18 +655,18 @@
     "droppedCap": 0,
     "kept": 1
    },
-   "droppedOnClosedLand": 35,
+   "droppedOnClosedLand": 37,
    "droppedExact": 1
   },
   "duck": {
    "drive": {
-    "candidates": 575,
+    "candidates": 531,
     "kept": 180,
-    "droppedCap": 158
+    "droppedCap": 145
    },
    "walk": {
-    "candidates": 169,
-    "kept": 134,
+    "candidates": 161,
+    "kept": 128,
     "droppedCap": 0
    },
    "backcountry": {
@@ -642,9 +674,9 @@
     "kept": 6,
     "droppedCap": 0
    },
-   "droppedWeak": 968,
-   "droppedOnClosedLand": 45,
-   "droppedExact": 3
+   "droppedWeak": 873,
+   "droppedOnClosedLand": 44,
+   "droppedExact": 2
   },
   "grouse": {
    "drive": {
@@ -658,21 +690,21 @@
     "droppedCap": 281
    },
    "walk": {
-    "candidates": 242,
+    "candidates": 241,
     "kept": 80,
-    "droppedCap": 107
+    "droppedCap": 106
    },
-   "droppedWeak": 270
+   "droppedWeak": 271
   },
   "camp": {
    "official": 65,
    "crownKept": 60,
-   "droppedWeak": 26562,
-   "droppedCap": 352,
+   "droppedWeak": 26784,
+   "droppedCap": 353,
    "droppedExact": 1
   },
   "outsideBC": 1,
-  "spacingRemoved": 240
+  "spacingRemoved": 255
  },
  "styleLinesFlagged": 54,
  "scoring": {
@@ -722,6 +754,13 @@
     "farm": 2,
     "creek": 1
    },
+   "bear": {
+    "cut": 2,
+    "burn": 2,
+    "south": 1,
+    "riparian": 1,
+    "quiet": 1
+   },
    "camp": {
     "flat": 2,
     "water": 2,
@@ -738,7 +777,8 @@
    "quail": 6,
    "camp": 7,
    "elk": 11,
-   "turkey": 5
+   "turkey": 5,
+   "bear": 7
   },
   "min": {
    "deer": 7,
@@ -748,7 +788,8 @@
    "quail": 4,
    "camp": 5,
    "elk": 7,
-   "turkey": 4
+   "turkey": 4,
+   "bear": 5
   },
   "spacingM": 800,
   "selectRadiusM": {
@@ -766,7 +807,8 @@
    "quail": 300,
    "camp": 60,
    "elk": 120,
-   "turkey": 80
+   "turkey": 80,
+   "bear": 60
   },
   "cutAgeYears": [
    5,
@@ -853,7 +895,7 @@
   }
  ],
  "seasonCoverage": {
-  "withFileRows": 1573,
+  "withFileRows": 1666,
   "withRegsRows": 0,
   "verify": 0
  },

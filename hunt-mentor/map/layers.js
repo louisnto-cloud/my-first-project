@@ -438,7 +438,7 @@ export function handleClick(e) {
   for (const h of map.queryRenderedFeatures(box, { layers: ids })) {
     let r = null, k = h.properties._hid;
     if (k != null) r = raw.get(k);
-    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
+    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
     if (!r || seen.has(k)) continue;
     seen.add(k); items.push(r);
     if (items.length >= 6) break;

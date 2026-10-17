@@ -1,5 +1,6 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"spotId":"G-camp-camp-0045","kind":"walk","km":0.09,"climbM":0,"name":"180 m NW of Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.79443,51.54672],[-117.79338,51.54629]]}},
+{"type":"Feature","properties":{"spotId":"G-bear-drive-0018","kind":"walk","km":0.02,"climbM":0,"name":"By Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.81288,51.52875],[-117.81266,51.52871]]}},
+{"type":"Feature","properties":{"spotId":"G-camp-camp-0014","kind":"walk","km":0.09,"climbM":0,"name":"180 m NW of Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.79443,51.54672],[-117.79338,51.54629]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0127","kind":"walk","km":0.05,"climbM":0,"name":"Unnamed wetland 190 m NW of Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.86718,51.51041],[-117.86667,51.51013]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0130","kind":"walk","km":0.18,"climbM":0,"name":"Unnamed wetland by Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.85306,51.51414],[-117.85142,51.51288]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0135","kind":"walk","km":0.03,"climbM":0,"name":"Unnamed wetland 120 m NW of Bachelor Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-117.8294,51.52022],[-117.82952,51.51999]]}},

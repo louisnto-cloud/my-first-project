@@ -1,6 +1,6 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"spotId":"G-camp-camp-0030","kind":"walk","km":0.05,"climbM":0,"name":"230 m N of Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.28183,51.51668],[-118.28246,51.51651]]}},
-{"type":"Feature","properties":{"spotId":"G-camp-camp-0036","kind":"walk","km":0.11,"climbM":0,"name":"By Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.34344,51.51335],[-118.34267,51.51247]]}},
+{"type":"Feature","properties":{"spotId":"G-camp-camp-0031","kind":"walk","km":0.05,"climbM":0,"name":"230 m N of Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.28183,51.51668],[-118.28246,51.51651]]}},
+{"type":"Feature","properties":{"spotId":"G-camp-camp-0037","kind":"walk","km":0.11,"climbM":0,"name":"By Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.34344,51.51335],[-118.34267,51.51247]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0003","kind":"walk","km":0.11,"climbM":0,"name":"Unnamed wetland by Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.27955,51.51514],[-118.2802,51.51425]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0016","kind":"walk","km":0.17,"climbM":0,"name":"Unnamed wetland by Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.333,51.51624],[-118.3313,51.51512]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0025","kind":"walk","km":0.26,"climbM":3,"name":"Unnamed wetland 170 m SW of Downie Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.30196,51.52021],[-118.30275,51.51795]]}},

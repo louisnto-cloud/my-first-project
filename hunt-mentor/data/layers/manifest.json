@@ -600,7 +600,7 @@
      "date"
     ]
    ],
-   "source": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC owner type), with reserves, treaty lands, parks and municipalities cut out",
+   "source": "WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (ParcelMap BC owner type), with reserves, treaty lands, parks and municipalities cut out; lakes, wide rivers and reservoirs (WHSE_BASEMAPPING.FWA_LAKES_POLY, FWA_RIVERS_POLY, FWA_MANMADE_WATERBODIES_POLY) cut out",
    "about": "Public provincial land. Hunting is usually allowed here in an open season. Light green is derived: land with no titled parcel.",
    "cert": 80,
    "files": [
@@ -695,7 +695,7 @@
      ]
     }
    ],
-   "bytes": 13207728
+   "bytes": 20314229
   },
   {
    "group": "Land status",
@@ -848,6 +848,73 @@
    "bytes": 9594959
   },
   {
+   "id": "range_tenures",
+   "group": "Land status",
+   "label": "Range tenures (grazing, Range Act)",
+   "type": "fill",
+   "minzoom": 8,
+   "paint": {
+    "fill-color": "#827717",
+    "fill-opacity": 0.06
+   },
+   "hatch": "#827717",
+   "legend": [
+    [
+     "Grazing or hay cutting licence or permit (Range Act)",
+     "#827717"
+    ]
+   ],
+   "popup": [
+    [
+     "Range tenure",
+     "tenure"
+    ],
+    [
+     "District",
+     "district"
+    ],
+    [
+     "Rule",
+     "rule"
+    ],
+    [
+     "Check",
+     "verify"
+    ],
+    [
+     "How we know",
+     "how"
+    ],
+    [
+     "Certainty",
+     "certText"
+    ],
+    [
+     "Data date",
+     "date"
+    ]
+   ],
+   "source": "WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW (Range tenures, active)",
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-17",
+   "cert": 90,
+   "about": "Crown land where someone holds a Range Act grazing or hay cutting licence or permit. Cattle may be out. Respect gates and fences.",
+   "areas": "BC",
+   "bytes": 2318242,
+   "files": [
+    {
+     "area": "BC",
+     "file": "data/layers/bc/range_tenures.pmtiles",
+     "bbox": [
+      -139.0636,
+      48.9996,
+      -114.0544,
+      60.001
+     ]
+    }
+   ]
+  },
+  {
    "group": "Land status",
    "type": "fill",
    "licence": "Open Government Licence BC",
@@ -920,7 +987,7 @@
      "date"
     ]
    ],
-   "source": "Derived: Crown land layer minus no_hunting, municipalities, tenures and federal land; parks as check first",
+   "source": "Derived: Crown land layer minus no_hunting, municipalities, tenures and federal land; parks as check first; lakes, wide rivers and reservoirs (WHSE_BASEMAPPING.FWA_LAKES_POLY, FWA_RIVERS_POLY, FWA_MANMADE_WATERBODIES_POLY) cut out",
    "about": "Derived. Never a sure yes: the season, MU (Management Unit), signs, closures and the 100 m rule still decide.",
    "cert": 75,
    "files": [
@@ -1015,7 +1082,7 @@
      ]
     }
    ],
-   "bytes": 19947219
+   "bytes": 24920169
   },
   {
    "id": "parks",
@@ -4571,8 +4638,8 @@
     "R7BL"
    ],
    "licence": "Open Government Licence BC",
-   "dataDate": "2026-10-16",
-   "bytes": 62491423
+   "dataDate": "2026-10-17",
+   "bytes": 64821515
   },
   {
    "id": "routes",
@@ -4670,8 +4737,8 @@
      "area": "A",
      "file": "data/spots/A/routes/-478_204.geojson",
      "bbox": [
-      -119.463,
-      50.981,
+      -119.485,
+      50.978,
       -119.402,
       51.246
      ]
@@ -4683,7 +4750,7 @@
       -119.484,
       51.317,
       -119.388,
-      51.516
+      51.517
      ]
     },
     {
@@ -4840,7 +4907,7 @@
      "area": "A",
      "file": "data/spots/A/routes/-480_205.geojson",
      "bbox": [
-      -120.038,
+      -120.061,
       51.262,
       -119.716,
       51.468
@@ -4902,7 +4969,7 @@
      "bbox": [
       -120.226,
       50.767,
-      -119.981,
+      -119.977,
       50.998
      ]
     },
@@ -5040,7 +5107,7 @@
      "area": "A",
      "file": "data/spots/A/routes/-483_202.geojson",
      "bbox": [
-      -120.739,
+      -120.74,
       50.517,
       -120.488,
       50.676
@@ -5061,7 +5128,7 @@
      "file": "data/spots/A/routes/-483_204.geojson",
      "bbox": [
       -120.753,
-      51.044,
+      51.011,
       -120.483,
       51.237
      ]
@@ -5091,7 +5158,7 @@
      "file": "data/spots/A/routes/-483_207.geojson",
      "bbox": [
       -120.713,
-      51.75,
+      51.751,
       -120.52,
       51.901
      ]
@@ -5163,7 +5230,7 @@
       -121.003,
       51.501,
       -120.778,
-      51.729
+      51.749
      ]
     },
     {
@@ -5182,7 +5249,7 @@
      "bbox": [
       -121.198,
       50.206,
-      -121.012,
+      -121.034,
       50.263
      ]
     },
@@ -5202,8 +5269,8 @@
      "bbox": [
       -121.251,
       50.514,
-      -120.999,
-      50.743
+      -120.997,
+      50.749
      ]
     },
     {
@@ -5211,8 +5278,8 @@
      "file": "data/spots/A/routes/-485_203.geojson",
      "bbox": [
       -121.217,
-      50.835,
-      -121.057,
+      50.833,
+      -121.047,
       51.0
      ]
     },
@@ -5222,7 +5289,7 @@
      "bbox": [
       -121.292,
       51.03,
-      -121.017,
+      -121.016,
       51.253
      ]
     },
@@ -5272,7 +5339,7 @@
      "bbox": [
       -121.5,
       50.245,
-      -121.226,
+      -121.216,
       50.46
      ]
     },
@@ -5661,7 +5728,7 @@
      "file": "data/spots/C/routes/-478_196.geojson",
      "bbox": [
       -119.48,
-      49.0,
+      49.002,
       -119.242,
       49.273
      ]
@@ -5702,7 +5769,7 @@
      "bbox": [
       -119.763,
       49.245,
-      -119.486,
+      -119.476,
       49.496
      ]
     },
@@ -5731,7 +5798,7 @@
      "file": "data/spots/C/routes/-480_197.geojson",
      "bbox": [
       -120.024,
-      49.232,
+      49.22,
       -119.724,
       49.526
      ]
@@ -5773,7 +5840,7 @@
       -120.119,
       49.494,
       -119.968,
-      49.713
+      49.714
      ]
     },
     {
@@ -5792,7 +5859,7 @@
      "bbox": [
       -118.753,
       49.735,
-      -118.576,
+      -118.573,
       50.02
      ]
     },
@@ -5832,7 +5899,7 @@
      "bbox": [
       -119.02,
       49.754,
-      -118.726,
+      -118.71,
       50.045
      ]
     },
@@ -5853,7 +5920,7 @@
       -119.008,
       50.25,
       -118.724,
-      50.506
+      50.51
      ]
     },
     {
@@ -6021,7 +6088,7 @@
      "file": "data/spots/D/routes/-481_199.geojson",
      "bbox": [
       -120.24,
-      49.744,
+      49.739,
       -119.971,
       49.999
      ]
@@ -6043,7 +6110,7 @@
       -120.48,
       49.689,
       -120.26,
-      49.738
+      49.743
      ]
     },
     {
@@ -6130,7 +6197,7 @@
      "area": "D",
      "file": "data/spots/D/routes/-485_198.geojson",
      "bbox": [
-      -121.116,
+      -121.251,
       49.689,
       -121.001,
       49.749
@@ -6141,7 +6208,7 @@
      "file": "data/spots/D/routes/-485_199.geojson",
      "bbox": [
       -121.222,
-      49.753,
+      49.736,
       -120.998,
       50.013
      ]
@@ -6160,10 +6227,10 @@
      "area": "D",
      "file": "data/spots/D/routes/-486_198.geojson",
      "bbox": [
-      -121.28,
+      -121.308,
       49.717,
       -121.228,
-      49.725
+      49.74
      ]
     },
     {
@@ -6180,18 +6247,18 @@
      "area": "D",
      "file": "data/spots/D/routes/-486_200.geojson",
      "bbox": [
-      -121.287,
+      -121.3,
       50.059,
       -121.22,
-      50.131
+      50.186
      ]
     },
     {
      "area": "E",
      "file": "data/spots/E/routes/-482_207.geojson",
      "bbox": [
-      -120.492,
-      51.982,
+      -120.559,
+      51.963,
       -120.432,
       52.003
      ]
@@ -6203,14 +6270,14 @@
       -120.549,
       51.999,
       -120.381,
-      52.083
+      52.109
      ]
     },
     {
      "area": "E",
      "file": "data/spots/E/routes/-483_207.geojson",
      "bbox": [
-      -120.709,
+      -120.705,
       51.896,
       -120.425,
       52.002
@@ -6232,7 +6299,7 @@
      "bbox": [
       -120.744,
       52.23,
-      -120.561,
+      -120.535,
       52.318
      ]
     },
@@ -6261,9 +6328,9 @@
      "file": "data/spots/E/routes/-484_209.geojson",
      "bbox": [
       -120.997,
-      52.248,
+      52.229,
       -120.758,
-      52.299
+      52.314
      ]
     },
     {
@@ -6272,8 +6339,8 @@
      "bbox": [
       -121.234,
       51.9,
-      -121.021,
-      52.02
+      -121.003,
+      52.021
      ]
     },
     {
@@ -6392,7 +6459,7 @@
      "bbox": [
       -122.0,
       51.202,
-      -121.737,
+      -121.731,
       51.23
      ]
     },
@@ -6432,7 +6499,7 @@
      "bbox": [
       -122.018,
       52.0,
-      -121.736,
+      -121.713,
       52.25
      ]
     },
@@ -6590,7 +6657,7 @@
      "area": "E",
      "file": "data/spots/E/routes/-491_207.geojson",
      "bbox": [
-      -122.605,
+      -122.607,
       51.748,
       -122.502,
       51.989
@@ -6600,7 +6667,7 @@
      "area": "E",
      "file": "data/spots/E/routes/-491_208.geojson",
      "bbox": [
-      -122.599,
+      -122.6,
       52.034,
       -122.44,
       52.267
@@ -6621,7 +6688,7 @@
      "file": "data/spots/F/routes/-459_196.geojson",
      "bbox": [
       -114.737,
-      49.022,
+      49.018,
       -114.601,
       49.131
      ]
@@ -6661,7 +6728,7 @@
      "file": "data/spots/F/routes/-459_200.geojson",
      "bbox": [
       -114.805,
-      50.033,
+      50.032,
       -114.722,
       50.105
      ]
@@ -6670,8 +6737,8 @@
      "area": "F",
      "file": "data/spots/F/routes/-460_196.geojson",
      "bbox": [
-      -114.98,
-      49.019,
+      -115.051,
+      49.006,
       -114.704,
       49.246
      ]
@@ -6763,7 +6830,7 @@
       -115.197,
       49.751,
       -115.007,
-      50.027
+      50.028
      ]
     },
     {
@@ -6830,7 +6897,7 @@
      "area": "F",
      "file": "data/spots/F/routes/-462_199.geojson",
      "bbox": [
-      -115.334,
+      -115.402,
       49.739,
       -115.198,
       49.948
@@ -6922,8 +6989,8 @@
      "bbox": [
       -115.759,
       50.25,
-      -115.495,
-      50.493
+      -115.449,
+      50.494
      ]
     },
     {
@@ -7003,7 +7070,7 @@
       -115.984,
       50.506,
       -115.755,
-      50.613
+      50.617
      ]
     },
     {
@@ -7022,7 +7089,7 @@
      "bbox": [
       -116.236,
       49.276,
-      -116.052,
+      -116.043,
       49.462
      ]
     },
@@ -7070,7 +7137,7 @@
      "area": "F",
      "file": "data/spots/F/routes/-465_202.geojson",
      "bbox": [
-      -116.236,
+      -116.259,
       50.499,
       -116.009,
       50.606
@@ -7093,7 +7160,7 @@
       -116.519,
       49.25,
       -116.253,
-      49.378
+      49.507
      ]
     },
     {
@@ -7101,7 +7168,7 @@
      "file": "data/spots/F/routes/-466_198.geojson",
      "bbox": [
       -116.496,
-      49.521,
+      49.515,
       -116.265,
       49.758
      ]
@@ -7161,8 +7228,8 @@
      "file": "data/spots/F/routes/-467_197.geojson",
      "bbox": [
       -116.62,
-      49.383,
-      -116.555,
+      49.377,
+      -116.507,
       49.398
      ]
     },
@@ -7300,7 +7367,7 @@
      "area": "G",
      "file": "data/spots/G/routes/-473_202.geojson",
      "bbox": [
-      -118.084,
+      -118.073,
       50.554,
       -117.992,
       50.747
@@ -7323,7 +7390,7 @@
       -118.272,
       51.001,
       -117.95,
-      51.222
+      51.223
      ]
     },
     {
@@ -7332,7 +7399,7 @@
      "bbox": [
       -118.287,
       51.259,
-      -118.004,
+      -117.87,
       51.519
      ]
     },
@@ -7341,7 +7408,7 @@
      "file": "data/spots/G/routes/-473_206.geojson",
      "bbox": [
       -118.243,
-      51.485,
+      51.48,
       -118.013,
       51.602
      ]
@@ -7362,7 +7429,7 @@
      "bbox": [
       -118.502,
       50.506,
-      -118.341,
+      -118.32,
       50.763
      ]
     },
@@ -7383,7 +7450,7 @@
       -118.426,
       50.991,
       -118.251,
-      51.089
+      51.092
      ]
     },
     {
@@ -7413,7 +7480,7 @@
       -118.763,
       50.497,
       -118.483,
-      50.74
+      50.744
      ]
     },
     {
@@ -7443,7 +7510,7 @@
       -118.746,
       51.271,
       -118.537,
-      51.458
+      51.465
      ]
     },
     {
@@ -7541,7 +7608,7 @@
      "file": "data/spots/G/routes/-477_205.geojson",
      "bbox": [
       -119.256,
-      51.257,
+      51.251,
       -118.995,
       51.495
      ]
@@ -7581,7 +7648,7 @@
      "file": "data/spots/G/routes/-478_204.geojson",
      "bbox": [
       -119.399,
-      51.03,
+      51.028,
       -119.21,
       51.182
      ]
@@ -7591,7 +7658,7 @@
      "file": "data/spots/G/routes/-478_205.geojson",
      "bbox": [
       -119.402,
-      51.262,
+      51.251,
       -119.248,
       51.496
      ]
@@ -7617,8 +7684,8 @@
     "G"
    ],
    "licence": "Open Government Licence BC",
-   "dataDate": "2026-10-16",
-   "bytes": 20764122
+   "dataDate": "2026-10-17",
+   "bytes": 21863848
   }
  ]
 }

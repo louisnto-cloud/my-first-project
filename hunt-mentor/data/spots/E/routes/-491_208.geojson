@@ -1,5 +1,6 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"spotId":"E-camp-camp-0060","kind":"walk","km":0.13,"climbM":0,"name":"2.1 km E of Fish Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.53092,52.10136],[-122.5309,52.10254]]}},
+{"type":"Feature","properties":{"spotId":"E-bear-walk-0009","kind":"walk","km":0.52,"climbM":0,"name":"2.1 km W of Drummond Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.59914,52.0497],[-122.59688,52.04524]]}},
+{"type":"Feature","properties":{"spotId":"E-camp-camp-0064","kind":"walk","km":0.13,"climbM":0,"name":"2.1 km E of Fish Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.53092,52.10136],[-122.5309,52.10254]]}},
 {"type":"Feature","properties":{"spotId":"E-deer-walk-0132","kind":"walk","km":0.48,"climbM":38,"name":"910 m N of Drummond Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.57178,52.05743],[-122.56556,52.05945]]}},
 {"type":"Feature","properties":{"spotId":"E-deer-walk-0141","kind":"walk","km":0.53,"climbM":4,"name":"1.8 km W of Drummond Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.59662,52.05017],[-122.59266,52.04606]]}},
 {"type":"Feature","properties":{"spotId":"E-deer-walk-0189","kind":"walk","km":0.35,"climbM":19,"name":"1.0 km W of Twin Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-122.50219,52.07587],[-122.50502,52.07331]]}},

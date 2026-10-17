@@ -1,4 +1,5 @@
 {"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"G-bear-backcountry-0010","kind":"backcountry","km":5.9,"climbM":365,"name":"By Ratchford Creek","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.69946,51.41369],[-118.72346,51.46446]]}},
 {"type":"Feature","properties":{"spotId":"G-camp-camp-0041","kind":"walk","km":0.07,"climbM":2,"name":"570 m S of Pettipiece Pass","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.61674,51.41094],[-118.61645,51.41151]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0109","kind":"walk","km":0.02,"climbM":0,"name":"Parmater Lake","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.56652,51.41963],[-118.56672,51.4195]]}},
 {"type":"Feature","properties":{"spotId":"G-duck-drive-0128","kind":"walk","km":0.02,"climbM":0,"name":"Unnamed lake 710 m S of Pettipiece Pass","flags":[]},"geometry":{"type":"LineString","coordinates":[[-118.61528,51.41051],[-118.61532,51.41036]]}},
