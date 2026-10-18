@@ -143,9 +143,10 @@ function loadCss() {
 }
 
 // ---------- chrome ----------
+// [key, icon, full name (read aloud), short name shown under the icon: fits 14 px text in a 360 px wide bar]
 const BAR = [
-  ['offline', 'offline', 'Offline Maps'], ['content', 'content', 'My Content'], ['tools', 'tools', 'Tools'],
-  ['insights', 'insights', 'Insights'], ['track', 'track', 'Go & Track'],
+  ['offline', 'offline', 'Offline Maps', 'Offline'], ['content', 'content', 'My Content', 'Content'], ['tools', 'tools', 'Tools', 'Tools'],
+  ['insights', 'insights', 'Insights', 'Insights'], ['track', 'track', 'Go & Track', 'Track'],
 ];
 const BASES = { topo: 'Topo', satellite: 'Satellite', hybrid: 'Hybrid' };
 const sv = (d) => `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
@@ -198,7 +199,7 @@ function buildChrome() {
       <span class="hmm-layers-ic">${ICONS.layers}</span><span class="hmm-layers-t"><small>Hunt Map</small><b>Layers</b></span><i class="hmm-badge" hidden></i>
     </button>
     <nav class="hmm-bar" aria-label="Map tools">
-      ${BAR.map(([k, ic, label]) => `<button data-bar="${k}">${ICONS[ic]}<span>${esc(label)}</span></button>`).join('')}
+      ${BAR.map(([k, ic, label, short]) => `<button data-bar="${k}" aria-label="${esc(label)}">${ICONS[ic]}<span>${esc(short)}</span></button>`).join('')}
     </nav>
     <div class="hmm-scrim" hidden></div>
     <section class="hmm-sheet" role="dialog" aria-modal="false" hidden>

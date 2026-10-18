@@ -126,7 +126,7 @@ function addLayers() {
   map.addLayer({ id: 'hm-wind-arrow', type: 'symbol', source: SRC_W, layout: {
     'icon-image': 'hm-wind-arrow', 'icon-rotate': ['get', 'to'], 'icon-rotation-alignment': 'map', 'icon-allow-overlap': true, 'icon-ignore-placement': true,
     'icon-size': ['interpolate', ['linear'], ['get', 'kmh'], 0, 0.75, 30, 1.3],
-    'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'], 'text-size': 12, 'text-offset': [0, 1.9], 'text-allow-overlap': true, 'text-ignore-placement': true,
+    'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'], 'text-size': 14, 'text-offset': [0, 1.9], 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#0b4f8a', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.8 } });
   map.addLayer({ id: 'hm-scent-fill', type: 'fill', source: SRC_C, filter: ['==', ['get', 'k'], 'cone'], paint: { 'fill-color': '#7b2cbf', 'fill-opacity': 0.22 } });
   map.addLayer({ id: 'hm-scent-line', type: 'line', source: SRC_C, filter: ['==', ['get', 'k'], 'cone'], paint: { 'line-color': '#7b2cbf', 'line-width': 2, 'line-dasharray': [2, 1.2] } });
@@ -134,7 +134,7 @@ function addLayers() {
   map.addLayer({ id: 'hm-therm-head', type: 'fill', source: SRC_C, filter: ['==', ['get', 'k'], 'therm-head'], paint: { 'fill-color': ['match', ['get', 'mode'], 'up', '#d6336c', '#1c7ed6'] } });
   map.addLayer({ id: 'hm-scent-dot', type: 'circle', source: SRC_C, filter: ['==', ['get', 'k'], 'origin'], paint: { 'circle-radius': 6, 'circle-color': '#7b2cbf', 'circle-stroke-color': '#fff', 'circle-stroke-width': 2 } });
   map.addLayer({ id: 'hm-scent-label', type: 'symbol', source: SRC_C, filter: ['==', ['get', 'k'], 'label'], layout: {
-    'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-max-width': 9, 'text-allow-overlap': true, 'text-ignore-placement': true,
+    'text-field': ['get', 'text'], 'text-font': ['Noto Sans Bold'], 'text-size': 14, 'text-max-width': 9, 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#4a1677', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2 } });
 }
 

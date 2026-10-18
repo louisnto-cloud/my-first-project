@@ -82,7 +82,7 @@ function addLayers() {
     'heatmap-color': ['interpolate', ['linear'], ['heatmap-density'], 0, 'rgba(255,255,178,0)', 0.2, 'rgba(254,217,118,0.6)', 0.45, 'rgb(253,141,60)', 0.7, 'rgb(240,59,32)', 1, 'rgb(189,0,38)'],
   } }, before);
   map.addLayer({ id: 'hh-sight-dot', type: 'circle', source: SRC, minzoom: 10, paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, 7, 15, 13], 'circle-color': ['get', 'color'], 'circle-stroke-color': '#fff', 'circle-stroke-width': 2.5 } });
-  map.addLayer({ id: 'hh-sight-n', type: 'symbol', source: SRC, minzoom: 12, layout: { 'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'], 'text-size': 12, 'text-allow-overlap': true, 'text-ignore-placement': true }, paint: { 'text-color': '#fff' } });
+  map.addLayer({ id: 'hh-sight-n', type: 'symbol', source: SRC, minzoom: 12, layout: { 'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'], 'text-size': 14, 'text-allow-overlap': true, 'text-ignore-placement': true }, paint: { 'text-color': '#fff' } });
 }
 function draw() {
   if (!map) return;

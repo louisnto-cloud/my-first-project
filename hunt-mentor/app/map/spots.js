@@ -75,7 +75,7 @@ export function addLayers(H, l, src) {
     'circle-stroke-color': '#ffffff', 'circle-stroke-width': 2.5,
   } }, before);
   map.addLayer({ id: `${id}-count`, type: 'symbol', source: src, filter: ['has', 'point_count'], layout: {
-    'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 13, 'text-allow-overlap': true, 'text-ignore-placement': true,
+    'text-field': ['get', 'point_count_abbreviated'], 'text-font': ['Noto Sans Bold'], 'text-size': 14, 'text-allow-overlap': true, 'text-ignore-placement': true,
   }, paint: { 'text-color': '#ffffff' } }, before);
   map.addLayer({ id: `${id}-pop`, type: 'circle', source: src, filter: ['all', ['!', ['has', 'point_count']], ['has', '_pop']], paint: {
     'circle-color': ['match', ['get', '_pop'], 'popular', POP.popular[1], POP.quiet[1]], 'circle-opacity': 0.95,
@@ -84,7 +84,7 @@ export function addLayers(H, l, src) {
   map.addLayer({ id, type: 'symbol', source: src, filter: ['!', ['has', 'point_count']], layout: {
     'icon-image': ['concat', 'spot-', ['coalesce', ['get', '_cat'], 'other']], 'icon-overlap': ['step', ['zoom'], 'never', 14, 'always'], 'icon-padding': 1,
     'symbol-sort-key': ['-', 100, ['coalesce', ['get', '_score'], 0]],
-    'text-field': ['step', ['zoom'], '', 13, ['get', '_name']], 'text-font': ['Noto Sans Bold'], 'text-size': 11.5, 'text-padding': 4,
+    'text-field': ['step', ['zoom'], '', 13, ['get', '_name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14, 'text-padding': 4,
     'text-anchor': 'top', 'text-offset': [0, 1.4], 'text-optional': true, 'text-max-width': 9,
   }, paint: { 'text-color': '#24261f', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 1.6 } }, before);
   return [`${id}-cluster`, `${id}-count`, `${id}-pop`, id];
