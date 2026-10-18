@@ -204,3 +204,4 @@ Certainty scale: see CLAUDE.md.
   - Canadian Beacon Registry, beacons that must be registered, modified 18 February 2026: https://www.canada.ca/en/air-force/services/search-rescue/beacon-registry/beacons.html
   - Apple support, Emergency SOS via satellite, published 5 October 2026: https://support.apple.com/en-ca/101573 (95%)
 - Secondary (60%): MeatEater, how much fat to add to ground venison (burger fat rule of thumb, Tip).
+- Hunt Map Steep ground layer (checked 2026-10-18): Avalanche Canada, Avy Savvy, Slope Angle: "The vast majority of avalanches take place on slopes between 30° and 45°"; less common on 25 to 30° slopes: https://avysavvy.avalanche.ca/en-ca/slope-angle (95%). Slope bands worked out on the phone from AWS Terrain Tiles (terrarium), no new download source.

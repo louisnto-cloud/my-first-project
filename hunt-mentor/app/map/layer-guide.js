@@ -95,6 +95,9 @@ export const GUIDE = {
     why: 'Starting points to scout, not promises. Check land status and closures for each one. How popular is worked out (estimate, about 50% sure, my pick): (a) hunter days per square kilometre in the spot\'s MU (Management Unit), from the BC Big Game Harvest Statistics 2020 to 2024 (a sample survey, so the days are estimates), for the spot\'s animal where the survey covers it (deer, moose, elk, black bear), else all big game; each MU falls in the top, middle or bottom third of BC MUs. (b) Access: close to pavement, a town or a rec site counts busier; a long walk or more than 5 km from a drivable road counts quieter. Top third MU with average or busier access, or middle third with busier access, is Popular; the rest is Less popular. An MU average hides local hot spots, and roads change: treat it as a hint. Tags (Tip): Beginner friendly (quieter and 1 to 2 km from parking), Good for 2 (a cover edge for one sitter and one slow walker), Good solo (short pack out).', links: [L_SCOUT, ['#/s/hunting-partner', 'Lesson: hunting with a partner']] },
   camping: { what: 'Campgrounds and camp spots across BC, one colour per type: pink Rec site (Recreation Sites and Trails BC, official), blue BC Parks campground (official listing), orange Other campground (OpenStreetMap, unofficial: verify), light green Crown land camp candidate (a computer pick: flat, near water, not private, park or reserve).',
     why: 'Where to sleep near your hunt. Tap a camp for the details, each with its source and date; anything not in the data says not listed. Official closure notes show in red. No shooting on or into the developed part of a recreation site: 100 m (109 yd) from any structure or campsite (99%, synopsis page 9). Many campgrounds close after Thanksgiving: call or check (Tip).', links: [RB_WHERE] },
+  steep_ground: { what: 'Steep ground, worked out on your phone from the terrain tiles the map already uses (works offline where you saved the area). Yellow 25 to 30 degrees: steep, slow going. Orange 30 to 35 degrees and red over 35 degrees: over 30 degrees is slow and risky with a load, and avalanche terrain in snow. Under 25 degrees: no colour. Shows from zoom 10. Terrain points are about 24 m apart, so small cliffs, cut banks and rock bands do not show (estimate, about 70% sure).',
+    why: 'Plan the shot around the pack out: a deer shot on red ground is a hard, risky carry (Tip). Avalanche Canada: the vast majority of avalanches start on slopes between 30 and 45 degrees, and they can happen on 25 to 30 degree slopes, less often (95%, Avalanche Canada, Avy Savvy: Slope Angle, checked 2026-10-18). A slide can start on steep ground above you and run onto flat ground. Not an avalanche forecast: check the Avalanche Canada forecast before snowy mountain trips. More bands: Tools, Terrain, Slope steepness.',
+    links: [['https://avysavvy.avalanche.ca/en-ca/slope-angle', 'Avalanche Canada: slope angle'], ['#/s/packing-out/0', 'Lesson: packing out'], ['#/s/slope-aspect/0', 'Lesson: slope and aspect']] },
   routes: { what: 'Suggested approach lines from parking to a spot (estimate). Shows from zoom 12.', why: 'A first idea of how to walk or ride in. Check the ground, the land status and closures.', links: [RB_WHERE] },
 };
 
@@ -163,3 +166,11 @@ function withStyle(l) {
   if (s.legend && !(Array.isArray(l.legend) && l.legend.length)) o.legend = s.legend;
   return o;
 }
+
+/* Layers made on the phone, not from a data file: added to the manifest list by layers.js. type 'raster' with tiles (custom protocol). */
+export const BUILTIN_LAYERS = [
+  { id: 'steep_ground', group: 'Terrain', label: 'Steep ground', type: 'raster', tiles: ['hmter://steep/{z}/{x}/{y}'], minzoom: 10, maxzoom: 14,
+    source: 'Worked out on the phone from Terrain Tiles (Mapzen terrarium elevation, AWS Open Data), about 24 m apart', licence: 'Terrain Tiles open data terms (AWS Open Data registry)',
+    about: 'Steep ground warning: 25 to 30, 30 to 35 and over 35 degrees.', cert: 70, legal: false,
+    legend: [['25 to 30°: steep, slow going', '#ffd43b'], ['30 to 35°: slow, risky with a load; avalanche terrain in snow', '#ff922b'], ['Over 35°: very steep; avalanche terrain in snow', '#d6002f']] },
+];
