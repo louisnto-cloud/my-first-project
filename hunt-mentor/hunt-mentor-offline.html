@@ -1355,6 +1355,7 @@ body.hm-zoom-open { overflow: hidden; }
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share<\/button><button type="button" class="btn" id="pl-print">Print<\/button><button type="button" class="btn" id="pl-edit">Change<\/button><button type="button" class="btn" id="pl-del">Delete<\/button><\/div>
       <\/div>
       ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first<\/h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.<\/p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}<\/a><\/div>` : ''}
+      <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal<\/h3><p class="muted">Loading...<\/p><\/div>
       <nav class="pl-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s1">1 Legal<\/button><button type="button" data-go="pl-s2">2 Odds<\/button><button type="button" data-go="pl-s3">3 Days<\/button><button type="button" data-go="pl-s4">4 Checklist<\/button><button type="button" data-go="pl-s5">5 Study<\/button><\/nav>
       <section class="pl-sec" id="pl-s1"><h2 class="pl-sh">1. Legal and open<\/h2><div id="pl-legal"><p class="muted">Checking the season tables...<\/p><\/div><\/section>
       <section class="pl-sec" id="pl-s2"><h2 class="pl-sh">2. Odds<\/h2><div id="pl-odds"><p class="muted">Loading harvest numbers...<\/p><\/div><\/section>
@@ -1443,7 +1444,37 @@ body.hm-zoom-open { overflow: hidden; }
     $('#pl-spots').innerHTML = spotsHtml(st, sp, p, C);
     link($('#pl-days'));
     wireRundowns($('#pl-spots'), st, p, C);
+    mountOffline($('#pl-offline'), p, sp, C);
   }
+
+  // "Save this hunt area for no signal" (map/plan-offline.js, through map/offline.js): the plan point, its spots and nearest camp
+  function offlineFiles(p, sp, C) {
+    const HM = window.HM || {}, lf = HM.lessonFiles || {};
+    const ids = [...new Set([...(C.study ? C.study.today(p, sp.lessons).path.all : sp.lessons || []), ...(p.where && p.where.id === 'harrison' ? [HARRISON_LESSON] : [])])].filter((id) => lf[id]);
+    const data = [...regionFiles(p.where.mu).map((f) => `data/seasons/${f}.json`), 'data/harvest/bc-harvest.json', ...(HM.plansInline ? [] : HM.planFiles && HM.planFiles.length ? HM.planFiles : DEFAULT_FILES)];
+    return [{ label: 'Lessons for this hunt', urls: ids.map((id) => lf[id]) }, { label: 'Plan data (seasons, odds, checklists)', urls: data }];
+  }
+  function mountOffline(el, p, sp, C) {
+    if (!el) return;
+    import('./map/plan-offline.js').then((m) => { if (el.isConnected) m.mount(el, { plan: p, files: offlineFiles(p, sp, C), toast: C.toast }); })
+      .catch(() => { if (el.isConnected) el.innerHTML = '<h3>Offline for no signal<\/h3><p class="muted">This part did not load. Open the app once with signal.<\/p>'; });
+  }
+  // Home study card: a short status, and the full card (size estimate first) on tap
+  let homeC = null;
+  function offlineHomeHtml(p) {
+    let rec = null;
+    try { rec = ((JSON.parse(localStorage.getItem('hm.map.v1') || '{}') || {}).offline || []).find((x) => x.planId === p.id) || null; } catch (e) { rec = null; }
+    if (p.where.lat == null) return '';
+    return `<div class="pl-offline-home no-print" data-plo-plan="${esc(p.id)}">${rec && !rec.partial ? `<p class="pl-small">Saved for no signal on ${esc(rec.updated || rec.created)}.<\/p><button type="button" class="btn" data-plo-home="1">Check again<\/button>`
+      : `<button type="button" class="btn block" data-plo-home="1">${rec ? 'Finish saving this hunt area for no signal' : 'Save this hunt area for no signal'}<\/button>`}<\/div>`;
+  }
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest && e.target.closest('[data-plo-home]'); if (!b || !homeC || !Dc) return;
+    const el = b.closest('[data-plo-plan]'), p = plansOf(homeC).find((x) => x.id === el.dataset.ploPlan), sp = p && Dc.byId[p.species];
+    if (!p || !sp) return;
+    el.classList.add('pl-offline'); el.innerHTML = '<h3>Offline for no signal<\/h3><p class="muted">Loading...<\/p>';
+    mountOffline(el, p, sp, homeC);
+  });
 
   // Full rundown per spot: the shared renderer (map/spot-rundown.js), loaded and worked out only when opened
   function wireRundowns(root, st, p, C) {
@@ -1693,7 +1724,7 @@ body.hm-zoom-open { overflow: hidden; }
     const np = C.study && nextPlan(C);
     if (np) {
       if (!Dc) loadData().then((d) => { if (d && d.species.length) { Dc = d; C.refresh && C.refresh(); } }).catch(() => {});
-      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}<\/h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.<\/p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)<\/a><\/div>`; } catch (e) { console.warn('study card', e); } }
+      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); homeC = C; study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}<\/h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.<\/p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)<\/a>${offlineHomeHtml(np)}<\/div>`; } catch (e) { console.warn('study card', e); } }
     }
     return `${study}<div class="card pl-home"><h2>Plan a hunt<\/h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.<\/p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt<\/a>

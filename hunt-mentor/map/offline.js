@@ -11,7 +11,9 @@
      into chunks, key "<file>?v=..&hmr=<start>-<end>"). sw.js cuts any range MapLibre asks for out of those chunks.
    - Spots: the area index and the spot card detail tiles for the box.
    - Satellite (Esri World Imagery) is not bulk saved: its terms for bulk offline use are unclear. Viewed tiles are cached normally.
-   Window API (added): HuntMap.offline = { openSheet, save({ preset: 'base'|'view', bbox?, name?, maxZ? }), list() }. */
+   Window API (added): HuntMap.offline = { openSheet, save({ preset: 'base'|'view', bbox?, name?, maxZ? }), list() }.
+   Hunt plans (map/plan-offline.js, no map needed): planArea, estimateArea, saveArea, checkArea, findPlanArea, stop, running.
+   A plan area has an `outer` ring ({ bbox, maxZ: 12 }) saved at lower detail, and a planId. */
 import { esc, prefs, savePrefs, tileRange, fmtNum, throttle } from './util.js';
 import { OFM_TILEJSON, OFM_GLYPHS, FONTS, TERRARIUM, DEM_MAXZOOM } from './style.js';
 import * as layers from './layers.js';
@@ -42,7 +44,7 @@ export function init(api) {
   H = api; map = api.map;
   api.offline = { openSheet, save: apiSave, estimate: (bbox, maxZ) => estimateFor(bbox || baseArea(), maxZ), base: () => baseArea(), list: () => (prefs.offline || []).slice() };
   injectCss();
-  document.addEventListener('visibilitychange', () => { if (!document.hidden && job) holdWake(); });
+  wakeWired = true; document.addEventListener('visibilitychange', () => { if (!document.hidden && job) holdWake(); });
   if (api.ready && api.ready.then) api.ready.then(() => setTimeout(resumeOnOpen, 5000));
   // No signal: saved tiles answer at once and missing ones fail at once, so the map can finish loading without a new frame:
   // MapLibre then never fires 'load' or 'idle', and core.js (ready, first idle) and layers.js wait for them. A few cheap repaints in the first
@@ -243,23 +245,24 @@ function startDraw() {
 }
 
 // ---------- estimate ----------
-/** Tile lists for an area. Zoom 0 to 5 always (small), then minZ up. Terrain keeps a one tile margin. */
-function tileSets(bbox, minZ, maxZ) {
-  const vec = [], dem = [];
+/** Tile lists for an area. Zoom 0 to 5 always (small), then minZ up. Terrain keeps a one tile margin.
+    outer ({ bbox, maxZ }, optional): a wider ring saved only up to its own lower zoom (a hunt plan: full detail near the spots). */
+function tileSets(bbox, minZ, maxZ, outer) {
+  const vec = [], dem = [], boxAt = (z) => (outer && outer.bbox && z <= outer.maxZ ? outer.bbox : bbox);
   for (let z = 0; z <= Math.min(maxZ, 14); z++) {
     if (z > 5 && z < minZ) continue;
-    const r = tileRange(bbox, z), n = 2 ** z - 1, m = z < Math.min(maxZ, 14) ? 1 : 0; // a one tile margin below the top zoom: a tilted view sees past the edge
+    const r = tileRange(boxAt(z), z), n = 2 ** z - 1, m = z < Math.min(maxZ, 14) ? 1 : 0; // a one tile margin below the top zoom: a tilted view sees past the edge
     vec.push([z, Math.max(0, r.x0 - m), Math.min(n, r.x1 + m), Math.max(0, r.y0 - m), Math.min(n, r.y1 + m)]);
   }
   for (let z = 0; z <= Math.min(maxZ, DEM_MAXZOOM); z++) {
     if (z > 5 && z < minZ - 1) continue;
-    const r = tileRange(bbox, z), n = 2 ** z - 1;
+    const r = tileRange(boxAt(z), z), n = 2 ** z - 1;
     dem.push([z, Math.max(0, r.x0 - 1), Math.min(n, r.x1 + 1), Math.max(0, r.y0 - 1), Math.min(n, r.y1 + 1)]);
   }
   return { vec, dem };
 }
-function countParts(bbox, minZ, maxZ) {
-  const t = tileSets(bbox, minZ, maxZ);
+function countParts(bbox, minZ, maxZ, outer) {
+  const t = tileSets(bbox, minZ, maxZ, outer);
   const sum = (sets, f) => sets.reduce((s, [z, x0, x1, y0, y1]) => { const k = (x1 - x0 + 1) * (y1 - y0 + 1); s.n += k; s.bytes += k * f(z); return s; }, { n: 0, bytes: 0 });
   return { topo: sum(t.vec, VEC_B), dem: sum(t.dem, DEM_B), fonts: { n: FONTS.length * GLYPH_RANGES.length, bytes: FONTS.length * GLYPH_RANGES.length * FONT_B } };
 }
@@ -335,8 +338,10 @@ async function holdWake() { try { if (navigator.wakeLock && (!wake || wake.relea
 function releaseWake() { try { if (wake) wake.release(); } catch (err) { /* already released */ } wake = null; }
 function tellSw() { try { const c = navigator.serviceWorker && navigator.serviceWorker.controller; if (c) c.postMessage({ hm: 'offline-changed' }); } catch (err) { /* no worker */ } }
 
+// Hunting layers cover the whole saved box, the wider ring too (they are small next to the map tiles)
+const layerBox = (area) => (area.outer && area.outer.bbox ? area.outer.bbox : area.bbox);
 async function vectorTemplate() {
-  const s = map.getSource('omt');
+  const s = map && map.getSource('omt');
   if (s && s.tiles && s.tiles[0]) return s.tiles[0];
   const tj = await (await fetch(dl(OFM_TILEJSON))).json();
   return tj.tiles[0];
@@ -423,14 +428,14 @@ const rangeKey = (url, s, e, t) => `${url}${url.includes('?') ? '&' : '?'}hmr=${
 async function buildItems(area, onStep) {
   const items = [];
   const tpl = await vectorTemplate();
-  const t = tileSets(area.bbox, area.minZ, area.maxZ);
+  const t = tileSets(area.bbox, area.minZ, area.maxZ, area.outer);
   items.push({ url: OFM_TILEJSON, key: OFM_TILEJSON, part: 'topo', always: true });
   for (const [z, x0, x1, y0, y1] of t.vec) for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) { const u = tpl.replace('{z}', z).replace('{x}', x).replace('{y}', y); items.push({ url: u, key: normKey(u), part: 'topo' }); }
   for (const [z, x0, x1, y0, y1] of t.dem) for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) { const u = TERRARIUM.replace('{z}', z).replace('{x}', x).replace('{y}', y); items.push({ url: u, key: u, part: 'dem' }); }
   for (const f of FONTS) for (const r of GLYPH_RANGES) { const u = OFM_GLYPHS.replace('{fontstack}', f).replace('{range}', r); items.push({ url: u, key: u, part: 'fonts' }); }
   const man = abs('data/layers/manifest.json');
   items.push({ url: man, key: man, part: 'layers', always: true });
-  const files = await areaFiles(area.bbox);
+  const lbox = layerBox(area), files = await areaFiles(lbox);
   let i = 0;
   for (const f of files) {
     const u = abs(f.url);
@@ -439,7 +444,7 @@ async function buildItems(area, onStep) {
       const size = await fileSize(f.url);
       if (size && size <= PM_WHOLE_MAX) { items.push({ url: u, key: u, part: f.part }); continue; }
       try {
-        const r = await pmRanges(u, area.bbox, f.minzoom);
+        const r = await pmRanges(u, lbox, f.minzoom);
         for (const [s, e] of r.chunks) items.push({ url: u, key: rangeKey(u, s, e, r.total), part: f.part, range: [s, e], total: r.total, etag: r.etag });
       } catch (err) { items.push({ url: u, key: u, part: f.part }); } // could not read the index: save the whole file
     } else items.push({ url: u, key: u, part: f.part });
@@ -469,31 +474,38 @@ function progressUi(area) {
   return { bar, txt };
 }
 
-/** mode: 'new' | 'resume' (skip what is saved) | 'update' (fresh manifest and layer files, missing tiles, drop old versions). */
-async function runDownload(area, mode) {
-  if (job) { H.toast('A download is already running.'); return; }
-  const { bar, txt } = progressUi(area);
-  txt.textContent = 'Getting ready';
+// The saved area list lives in prefs (localStorage). core.js reloads prefs when the map opens, so a download that started
+// from a hunt plan writes its record back by id instead of keeping a stale object.
+function keepRec(rec) {
+  const list = prefs.offline || (prefs.offline = []), i = list.findIndex((x) => x.id === rec.id);
+  if (i < 0) list.push(rec); else if (list[i] !== rec) list[i] = rec;
+  savePrefs();
+}
+let wakeWired = false;
+/** The download itself, with no map needed (the map's progress panel and a hunt plan card both call it).
+    mode: 'new' | 'resume' (skip what is saved) | 'update' (fresh manifest and layer files, missing tiles, drop old versions).
+    cb: { step(text), progress(done, total, bytes) }. Returns { rec, cancelled, failed, error }. */
+async function downloadCore(area, mode, cb = {}) {
+  if (job) return { busy: true };
   job = { id: area.id, cancelled: false, ctrl: new AbortController() };
+  if (!wakeWired) { wakeWired = true; document.addEventListener('visibilitychange', () => { if (!document.hidden && job) holdWake(); }); }
   holdWake(); askPersist();
-  const list = prefs.offline || (prefs.offline = []);
-  let rec = list.find((x) => x.id === area.id);
-  if (!rec) { rec = { id: area.id, name: area.name, kind: area.kind, bbox: area.bbox, minZ: area.minZ, maxZ: area.maxZ, created: new Date().toISOString().slice(0, 10), bytes: 0 }; list.push(rec); }
-  rec.partial = true; rec.done = rec.done || 0; savePrefs();
-  const cacheName = `hm-offline-${area.id}`, cache = await caches.open(cacheName);
+  let rec = (prefs.offline || []).find((x) => x.id === area.id);
+  if (!rec) rec = { id: area.id, name: area.name, kind: area.kind, bbox: area.bbox, minZ: area.minZ, maxZ: area.maxZ, created: new Date().toISOString().slice(0, 10), bytes: 0, ...(area.outer ? { outer: area.outer } : {}), ...(area.planId ? { planId: area.planId } : {}) };
+  rec.partial = true; rec.done = rec.done || 0; keepRec(rec);
+  const cache = await caches.open(`hm-offline-${area.id}`);
   let items;
-  try { items = await buildItems(rec, (s) => { txt.textContent = s; }); } catch (err) {
+  try { items = await buildItems(rec, (s) => cb.step && cb.step(s)); } catch (err) {
     job = null; releaseWake();
-    txt.textContent = 'Could not start. Check your connection and try again. Tap Resume in Offline Maps later.';
-    setTimeout(() => { if (!job) cancelFrame(); }, 4000); return;
+    return { rec, error: err };
   }
   const total = items.length, queue = items.slice(), parts = {};
-  let done = 0, bytes = 0, failed = 0, lastSave = 0;
+  rec.chunks = {}; for (const it of items) if (it.range) rec.chunks[it.url] = (rec.chunks[it.url] || 0) + 1; // byte range chunks per big layer file, for the check
+  let done = 0, bytes = 0, failed = 0, none = 0, lastSave = 0;
   const t0 = Date.now();
   const show = throttle(() => {
-    bar.firstElementChild.style.width = `${(done / total) * 100}%`;
-    txt.textContent = `${Math.round((done / total) * 100)}%: ${fmtNum(done)} of ${fmtNum(total)} files${bytes ? `, ${mb(bytes)} new` : ''}. ${document.hidden ? '' : 'Keep the app open. The screen stays on.'}`;
-    if (Date.now() - lastSave > 2000) { lastSave = Date.now(); rec.done = done; rec.total = total; savePrefs(); }
+    if (cb.progress) cb.progress(done, total, bytes);
+    if (Date.now() - lastSave > 2000) { lastSave = Date.now(); rec.done = done; rec.total = total; keepRec(rec); }
   }, 200);
   const sizeOf = (res) => +res.headers.get('content-length') || 0;
   const work = async () => {
@@ -516,7 +528,7 @@ async function runDownload(area, mode) {
           res = new Response(buf, { status: 200, headers: hd }); size = buf.byteLength;
         } else {
           if (!res) res = await fetchRetry(dl(it.url), it.always ? { cache: 'reload' } : {});
-          if (res.status === 404) { done++; show(); continue; } // nothing there (a font range the font lacks): not a failure
+          if (res.status === 404) { none++; done++; show(); continue; } // nothing there (a font range the font lacks): not a failure
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           // store with its real size (Content-Length), so Resume and the saved area list can add sizes without reading bodies
           const blob = await res.blob(), hd = new Headers(res.headers); size = blob.size;
@@ -536,12 +548,34 @@ async function runDownload(area, mode) {
     for (const k of await cache.keys()) if (k.url.startsWith(here) && !keep.has(k.url)) await cache.delete(k);
   }
   job = null; releaseWake(); tellSw();
-  rec.done = done; rec.total = total; rec.failed = failed; rec.parts = parts;
+  rec.done = done; rec.total = total; rec.failed = failed; rec.none = none; rec.parts = parts;
   rec.bytes = Object.values(parts).reduce((s, x) => s + x.bytes, 0);
-  if (cancelled) { rec.done = Math.max(0, done - 6); savePrefs(); cancelFrame(); H.toast('Download stopped. Open Offline Maps and tap Resume to finish it.', 5000); return; }
+  if (cancelled) { rec.done = Math.max(0, done - 6); keepRec(rec); return { rec, cancelled: true }; }
   rec.partial = false; rec.updated = new Date().toISOString().slice(0, 10); rec.secs = Math.round((Date.now() - t0) / 1000);
-  savePrefs(); cancelFrame();
-  H.toast(failed ? `Saved "${area.name}" with ${fmtNum(failed)} files missing. Tap Fix and update later with a connection.` : `Saved "${area.name}" for offline use.`, 5000);
+  keepRec(rec);
+  return { rec, failed };
+}
+
+/** The map's download: progress panel over the map, then the saved list. */
+async function runDownload(area, mode) {
+  if (job) { H.toast('A download is already running.'); return; }
+  const { bar, txt } = progressUi(area);
+  txt.textContent = 'Getting ready';
+  const r = await downloadCore(area, mode, {
+    step: (s) => { txt.textContent = s; },
+    progress: (done, total, bytes) => {
+      bar.firstElementChild.style.width = `${(done / total) * 100}%`;
+      txt.textContent = `${Math.round((done / total) * 100)}%: ${fmtNum(done)} of ${fmtNum(total)} files${bytes ? `, ${mb(bytes)} new` : ''}. ${document.hidden ? '' : 'Keep the app open. The screen stays on.'}`;
+    },
+  });
+  if (r.busy) { H.toast('A download is already running.'); return; }
+  if (r.error) {
+    txt.textContent = 'Could not start. Check your connection and try again. Tap Resume in Offline Maps later.';
+    setTimeout(() => { if (!job) cancelFrame(); }, 4000); return;
+  }
+  cancelFrame();
+  if (r.cancelled) { H.toast('Download stopped. Open Offline Maps and tap Resume to finish it.', 5000); return; }
+  H.toast(r.failed ? `Saved "${area.name}" with ${fmtNum(r.failed)} files missing. Tap Fix and update later with a connection.` : `Saved "${area.name}" for offline use.`, 5000);
   openSheet();
 }
 
@@ -564,6 +598,100 @@ async function apiSave({ preset = 'view', bbox = null, name = '', maxZ = 14, min
 }
 /** Size estimate per part (for tests): { topo, dem, fonts, layers, spots }. */
 export async function estimateFor(bbox, maxZ = 14) { const p = countParts(bbox, 6, maxZ); const f = await fileParts(bbox); return { ...p, layers: f.layers, spots: f.spots }; }
+
+// ---------- hunt plan areas (used by map/plan-offline.js, with no map open) ----------
+const PLAN_PAD_KM = 2, PLAN_MAX_KM = 45, PLAN_RING_KM = 5, PLAN_RING_Z = 12;
+const kmLon = (lat) => 111.32 * Math.cos((lat * Math.PI) / 180);
+const inBox = (b, p) => p.lon >= b[0] && p.lon <= b[2] && p.lat >= b[1] && p.lat <= b[3];
+/** A box around a plan's points ({ lat, lon, name }), padded about 2 km, full detail (zoom 14) inside, plus a 5 km ring
+    at zoom 12 for the drive in. Wider or taller than 45 km: cut to 45 km around the middle; `left` lists the points outside. */
+export function planArea(points, { id, name, planId } = {}) {
+  const pts = (points || []).filter((p) => p && Number.isFinite(+p.lat) && Number.isFinite(+p.lon)).map((p) => ({ ...p, lat: +p.lat, lon: +p.lon }));
+  if (!pts.length) return null;
+  const lats = pts.map((p) => p.lat), lons = pts.map((p) => p.lon);
+  let s = Math.min(...lats), n = Math.max(...lats), w = Math.min(...lons), e = Math.max(...lons);
+  const my = (s + n) / 2, dy = PLAN_PAD_KM / 111.32, dx = PLAN_PAD_KM / kmLon(my);
+  s -= dy; n += dy; w -= dx; e += dx;
+  const hy = PLAN_MAX_KM / 2 / 111.32, hx = PLAN_MAX_KM / 2 / kmLon(my), cx = (w + e) / 2, cy = (s + n) / 2;
+  if (n - s > 2 * hy) { s = cy - hy; n = cy + hy; }
+  if (e - w > 2 * hx) { w = cx - hx; e = cx + hx; }
+  const r5 = (v) => +v.toFixed(5), bbox = [w, s, e, n].map(r5);
+  const ry = PLAN_RING_KM / 111.32, rx = PLAN_RING_KM / kmLon(my);
+  return {
+    id: id || Date.now().toString(36), name: name || 'Hunt plan area', kind: 'plan', planId, bbox, minZ: 6, maxZ: 14,
+    outer: { bbox: [w - rx, s - ry, e + rx, n + ry].map(r5), maxZ: PLAN_RING_Z },
+    left: pts.filter((p) => !inBox(bbox, p)),
+    km: { w: (e - w) * kmLon(my), h: (n - s) * 111.32 },
+  };
+}
+/** Size estimate for an area before download: { n tiles, bytes, parts, tooBig, exact (layer sizes known) }. */
+export async function estimateArea(area) {
+  const p = countParts(area.bbox, area.minZ || 6, area.maxZ || 14, area.outer);
+  let f = null;
+  if (navigator.onLine) f = await fileParts(layerBox(area)).catch(() => null);
+  const n = p.topo.n + p.dem.n;
+  const bytes = p.topo.bytes + p.dem.bytes + p.fonts.bytes + (f ? f.layers.bytes + f.spots.bytes : 0);
+  return { n, bytes, parts: { ...p, ...(f ? { layers: f.layers, spots: f.spots } : {}) }, tooBig: n > MAX_TILES, exact: !!f };
+}
+/** Save (or finish, or update) an area without the map. Same files and cache as the map's Offline Maps. */
+export async function saveArea(area, cb) {
+  const rec = (prefs.offline || []).find((x) => x.id === area.id);
+  return downloadCore(rec || area, !rec ? 'new' : rec.partial ? 'resume' : 'update', cb);
+}
+export const stop = () => { if (job) job.cancelled = true; };
+export const running = () => (job ? job.id : null);
+export const findPlanArea = (planId) => (prefs.offline || []).find((x) => x.planId === planId) || null;
+export const sizeText = mb;
+const CHECK_LAYERS = [['no_hunting', 'No shooting and no hunting areas'], ['crown_land', 'Crown land'], ['mu', 'MU (Management Unit) lines'], ['spots', 'Spots'], ['camping', 'Camps']];
+/** Is everything for this saved area on the phone? Reads only the phone's caches, so it works with no signal.
+    opts: { points (must be inside the saved box), files: [{ label, urls }] (lessons and plan data) }.
+    Returns { ok, rows: [{ label, ok, text }] }. */
+export async function checkArea(rec, { points = [], files = [] } = {}) {
+  const rows = [], add = (label, ok, text) => rows.push({ label, ok, text });
+  const name = `hm-offline-${rec && rec.id}`;
+  if (!rec || !(await caches.has(name))) { add('Saved map', false, 'Not saved on this phone'); return { ok: false, rows }; }
+  if (rec.partial) add('Download', false, `Stopped part way (${Math.round(((rec.done || 0) / (rec.total || 1)) * 100)}%)`);
+  const keys = new Set((await (await caches.open(name)).keys()).map((r) => r.url));
+  // map tiles: topo (keys without the weekly version, normKey) and terrain
+  const t = tileSets(rec.bbox, rec.minZ || 6, rec.maxZ || 14, rec.outer);
+  let need = 0, miss = 0;
+  const each = (sets, key) => { for (const [z, x0, x1, y0, y1] of sets) for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) { need++; if (!keys.has(key(z, x, y))) miss++; } };
+  each(t.vec, (z, x, y) => `https://tiles.openfreemap.org/planet/_/${z}/${x}/${y}.pbf`);
+  each(t.dem, (z, x, y) => TERRARIUM.replace('{z}', z).replace('{x}', x).replace('{y}', y));
+  const gone = rec.none || 0; // tiles the server does not have (404) are not missing
+  if (!keys.has(OFM_TILEJSON)) miss++;
+  add('Base map and terrain tiles', miss <= gone, miss <= gone ? `${fmtNum(need)} tiles` : `${fmtNum(miss)} of ${fmtNum(need)} missing`);
+  const fontMiss = FONTS.filter((f) => !keys.has(OFM_GLYPHS.replace('{fontstack}', f).replace('{range}', '0-255').replace(/ /g, '%20')) && !keys.has(OFM_GLYPHS.replace('{fontstack}', f).replace('{range}', '0-255'))).length;
+  add('Map text (fonts)', !fontMiss, fontMiss ? `${fontMiss} of ${FONTS.length} missing` : 'Saved');
+  // hunting layers: each file in the box, saved whole or as byte range chunks
+  const man = await layers.loadManifest();
+  const lbox = layerBox(rec), hit = (b) => !b || (b[0] <= lbox[2] && b[2] >= lbox[0] && b[1] <= lbox[3] && b[3] >= lbox[1]);
+  const keyList = [...keys];
+  const saved = (u) => {
+    const a = abs(u); if (keys.has(a)) return true;
+    const pre = `${a}${a.includes('?') ? '&' : '?'}hmr=`, n = keyList.filter((k) => k.startsWith(pre)).length;
+    return n > 0 && n >= ((rec.chunks && rec.chunks[a]) || 1);
+  };
+  for (const [id, label] of CHECK_LAYERS) {
+    const st = man && layers.stateOf(id);
+    if (!st) { add(label, false, 'Layer list not on this phone'); continue; }
+    const urls = st.files.filter((f) => hit(f.box)).map((f) => f.url);
+    if (st.spot) urls.push(...spots.detailFiles(st.l, lbox));
+    const m = urls.filter((u) => !saved(u)).length;
+    add(label, !m, !urls.length ? 'None in this area' : m ? `${m} of ${urls.length} files missing` : `${urls.length} file${urls.length === 1 ? '' : 's'}`);
+  }
+  const pts = points.filter((p) => p && Number.isFinite(+p.lat));
+  if (pts.length) {
+    const outside = pts.filter((p) => !inBox(rec.bbox, { lat: +p.lat, lon: +p.lon }));
+    add('Your point, spots and camp inside the saved area', !outside.length, outside.length ? `${outside.length} of ${pts.length} outside: ${outside.map((p) => p.name).filter(Boolean).slice(0, 3).join(', ')}` : `${pts.length} of ${pts.length}`);
+  }
+  for (const g of files) {
+    let m = 0;
+    for (const u of g.urls) if (!(await caches.match(abs(u), { ignoreVary: true, ignoreSearch: true }))) m++;
+    add(g.label, !m, m ? `${m} of ${g.urls.length} missing` : `${g.urls.length} file${g.urls.length === 1 ? '' : 's'}`);
+  }
+  return { ok: rows.every((r) => r.ok), rows };
+}
 
 function injectCss() {
   if (document.getElementById('hmo-css')) return;
