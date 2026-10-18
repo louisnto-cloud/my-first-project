@@ -12,7 +12,7 @@
 .ter-compass text { font: 700 11px system-ui, sans-serif; fill: currentColor; }
 /* key on the map, centred under the top buttons; never takes taps */
 .ter-legend { position: absolute; z-index: 3; top: calc(var(--st) + 72px); left: 50%; transform: translateX(-50%); max-width: calc(100% - var(--sl) - var(--sr) - 140px);
-  display: flex; flex-direction: column; gap: 4px; padding: 6px 10px; border-radius: 12px; background: var(--hmm-btn); color: var(--hmm-ink); box-shadow: var(--hmm-shadow); pointer-events: none; font-size: 12px; }
+  display: flex; flex-direction: column; gap: 4px; padding: 6px 10px; border-radius: 12px; background: var(--hmm-btn); color: var(--hmm-ink); box-shadow: var(--hmm-shadow); pointer-events: none; font-size: 14px; }
 .ter-legend[hidden] { display: none; }
 .ter-lg-row { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 4px; }
 .ter-lg-row b { margin-right: 4px; }
