@@ -42,9 +42,9 @@ export const STYLE = {
     legend: [['No hunting and no shooting (every method)', '#b71c1c'], ['No Shooting Area: no firearms, bows allowed unless restricted', '#e65100'], ['Part bans shooting: check (City of Kamloops)', '#c9a100']] },
   // Hunting: thin dark lines, numbers on top
   mu: { label: 'Management Unit (MU) lines', paint: { 'fill-color': 'rgba(0,0,0,0)' }, outline: { color: '#1b1b1b', width: zw(1.1, 1.6, 2.2), casing: 8 },
-    labelExpr: MU_TEXT, labelField: 'MU', labelMinzoom: 9, labelSize: ['interpolate', ['linear'], ['zoom'], 9, 13, 14, 17], labelColor: '#111111' },
+    labelExpr: MU_TEXT, labelField: 'MU', labelMinzoom: 9, labelSize: ['interpolate', ['linear'], ['zoom'], 9, 14, 14, 17], labelColor: '#111111' },
   mu_labels: { paint: { 'text-color': '#111111', 'text-halo-color': 'rgba(255,255,255,0.95)', 'text-halo-width': 2.2 },
-    layout: { 'text-field': MU_TEXT, 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 6, 11, 9, 13, 14, 17], 'text-padding': 4 } },
+    layout: { 'text-field': MU_TEXT, 'text-font': ['Noto Sans Bold'], 'text-size': ['interpolate', ['linear'], ['zoom'], 6, 14, 14, 17], 'text-padding': 4 } },
   leh: { paint: { 'fill-color': '#4e342e', 'fill-opacity': 0.03 }, outline: { color: '#3e2723', width: zw(0.7, 1.2, 1.8), dash: [4, 2] }, labelMinzoom: 11 },
   // Access: closures purple dashed
   closures: { short: 'Vehicle closure', paint: { 'fill-color': '#7b1fa2', 'fill-opacity': 0.1 },
@@ -100,6 +100,15 @@ export const GUIDE = {
     links: [['https://avysavvy.avalanche.ca/en-ca/slope-angle', 'Avalanche Canada: slope angle'], ['#/s/packing-out/0', 'Lesson: packing out'], ['#/s/slope-aspect/0', 'Lesson: slope and aspect']] },
   routes: { what: 'Suggested approach lines from parking to a spot (estimate). Shows from zoom 12.', why: 'A first idea of how to walk or ride in. Check the ground, the land status and closures.', links: [RB_WHERE] },
 };
+
+/* One tap layer presets (layers.js applies them). layers: manifest ids; "uwr_*" means every id that starts with "uwr_".
+   Ids not in the manifest are skipped, so a preset never turns on a layer that does not exist.
+   Your waypoints, lines and tracks (My Content) are yours: no preset hides or shows them. */
+export const PRESETS = [
+  { id: 'clean', name: 'Clean', what: 'Base map only. Every hunting layer is off. Your own waypoints stay.', layers: [] },
+  { id: 'scout', name: 'Scouting', what: 'Where you can likely hunt, candidate spots, camps, winter range, cutblocks and burns.', layers: ['hunt_likely', 'spots', 'camping', 'uwr_*', 'cutblocks', 'burns'] },
+  { id: 'hunt', name: 'Hunt day', what: 'No shooting areas, Crown land and MU (Management Unit) lines with their numbers. Your waypoints stay.', layers: ['no_hunting', 'crown_land', 'mu', 'mu_labels'] },
+];
 
 // New or renamed layers from the data pipeline: match by words in id, label or source
 const KEYS = [

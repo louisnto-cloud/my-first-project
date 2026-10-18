@@ -258,7 +258,7 @@ function hideChip() {
   if (!chip) return;
   chip.classList.remove('hmk-rec', 'paused'); chip.removeAttribute('aria-label');
   const d = chip.querySelector('.hmk-dot'); if (d) d.remove();
-  const t = chip.querySelector('span'); if (t) t.textContent = 'Go & Track';
+  const t = chip.querySelector('span'); if (t) t.textContent = 'Track'; chip.setAttribute('aria-label', 'Go & Track');
 }
 
 const WARN_HTML = `<div class="hmm-banner hmk-warn" role="note"><b>${WARN}</b> The app keeps the screen awake while you record. Dim it and carry a battery pack on long days.</div>`;

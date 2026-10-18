@@ -4,11 +4,11 @@
 .hmt-tile > svg { flex: none; }
 .hmt-tile > b { flex: none; min-width: 44px; font-size: 14px; color: var(--hmm-accent); }
 .hmt-tile span { display: flex; flex-direction: column; min-width: 0; }
-.hmt-tile small { font-weight: 400; font-size: 12.5px; color: var(--hmm-muted); }
+.hmt-tile small { font-weight: 400; font-size: 14px; color: var(--hmm-muted); }
 .hmt-tile:active, .hmt-row:active { background: var(--hmm-soft); }
 
 .hmt-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
-.hmt-icons button { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 64px; padding: 6px 2px; border-radius: 12px; border: 2px solid transparent; background: var(--hmm-soft); font-size: 11.5px; font-weight: 600; line-height: 1.15; color: var(--hmm-ink); }
+.hmt-icons button { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 64px; padding: 6px 2px; border-radius: 12px; border: 2px solid transparent; background: var(--hmm-soft); font-size: 14px; font-weight: 600; line-height: 1.15; color: var(--hmm-ink); }
 .hmt-icons button[aria-checked="true"] { border-color: var(--hmm-accent); background: var(--hmm-card); }
 .hmt-colors { display: flex; flex-wrap: wrap; gap: 6px; }
 .hmt-colors button { width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--hmm-card); background: var(--c); box-shadow: 0 0 0 1.5px var(--hmm-line); }
@@ -26,10 +26,10 @@
 .hmt-area { fill: var(--hmm-accent); fill-opacity: 0.22; }
 .hmt-ln { fill: none; stroke: var(--hmm-accent); stroke-width: 2.4; vector-effect: non-scaling-stroke; }
 .hmt-cur { stroke: var(--hmm-ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.hmt-hi, .hmt-lo, .hmt-read { position: absolute; left: 8px; font-size: 12px; font-weight: 700; color: var(--hmm-muted); pointer-events: none; }
+.hmt-hi, .hmt-lo, .hmt-read { position: absolute; left: 8px; font-size: 14px; font-weight: 700; color: var(--hmm-muted); pointer-events: none; }
 .hmt-hi { top: 4px; } .hmt-lo { bottom: 4px; }
 .hmt-read { right: 8px; left: auto; top: 4px; color: var(--hmm-ink); background: var(--hmm-card); padding: 1px 6px; border-radius: 6px; }
-.hmt-axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--hmm-muted); margin: 2px 2px 0; }
+.hmt-axis { display: flex; justify-content: space-between; font-size: 14px; color: var(--hmm-muted); margin: 2px 2px 0; }
 
 .hmt-top { margin-top: 4px; }
 .hmt-item { display: flex; align-items: center; border-bottom: 1px solid var(--hmm-line); }
@@ -38,7 +38,7 @@
 .hmt-row > svg { flex: none; }
 .hmt-rn { display: flex; flex-direction: column; min-width: 0; font-weight: 700; }
 .hmt-rn, .hmt-rn small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hmt-rn small { font-weight: 400; font-size: 13px; color: var(--hmm-muted); }
+.hmt-rn small { font-weight: 400; font-size: 14px; color: var(--hmm-muted); }
 .hmt-sw { flex: none; width: 30px; height: 30px; border-radius: 8px; background: var(--c, #e8590c); display: inline-block; }
 .hmt-sw.line, .hmt-sw.track { height: 8px; border-radius: 4px; margin: 11px 0; }
 .hmt-sw.area { opacity: 0.75; border: 2px solid var(--hmm-ink); }
@@ -59,6 +59,8 @@
 /* chips on the map for overlays you switched on (range rings, scent cone, wind arrows): tap to clear */
 .hmt-chips { position: absolute; z-index: 4; left: calc(var(--sl) + 12px); bottom: calc(var(--low, 108px) + 74px); max-width: calc(100% - var(--sl) - var(--sr) - 96px); flex-direction: column-reverse; align-items: flex-start; display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none; }
 .hmt-chips:empty { display: none; }
+/* the "What am I looking at?" key button (layers.js) sits just above the Layers button: chips go above it */
+.hmm:has(.hmm-keybtn:not([hidden])) .hmt-chips { bottom: calc(var(--low, 108px) + 130px); }
 .hmt-chip { pointer-events: auto; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px 0 14px; border-radius: 22px; border: 0;
   background: var(--hmm-btn); color: var(--hmm-ink); box-shadow: var(--hmm-shadow); font-weight: 700; font-size: 14px; }
 .hmt-chip svg { width: 18px; height: 18px; color: var(--hmm-muted); }
