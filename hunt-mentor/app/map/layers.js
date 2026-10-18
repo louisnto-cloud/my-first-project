@@ -4,7 +4,7 @@
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
-import { withOverrides, guideFor, BUILTIN_LAYERS } from './layer-guide.js';
+import { withOverrides, guideFor, BUILTIN_LAYERS, PRESETS } from './layer-guide.js';
 import { openCamp } from './place-card.js';
 
 const MANIFEST = 'data/layers/manifest.json';
@@ -18,7 +18,7 @@ const EMPTY = { type: 'FeatureCollection', features: [] };
 const CSS = `.hmm-chiprow .hmm-chiplabel{flex:none}.hmm-chip svg{flex:none;margin-right:5px}
 .hmm-sw.fill2{position:relative;overflow:hidden;border:2.5px solid var(--c);background:transparent}.hmm-sw.fill2.dashed{border-style:dashed}
 .hmm-sw.fill2 i,.hmm-sw.fill2 b{position:absolute;inset:0}
-.hmm-sw.sym{display:grid;place-items:center;font:800 11px/1 -apple-system,sans-serif;border:1.5px solid currentColor;background:none}
+.hmm-sw.sym{display:grid;place-items:center;font:800 14px/1 -apple-system,sans-serif;border:1.5px solid currentColor;background:none}
 .hmm-guide-btn{width:100%;min-height:48px;margin:2px 0 12px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1.5px solid var(--hmm-accent);background:var(--hmm-card);color:var(--hmm-ink);font-weight:800;font-size:15px}
 .hmm-guide-btn svg{width:20px;height:20px;color:var(--hmm-accent)}
 .hmm-gcard{padding:12px 0;border-bottom:1px solid var(--hmm-line)}
@@ -26,16 +26,23 @@ const CSS = `.hmm-chiprow .hmm-chiplabel{flex:none}.hmm-chip svg{flex:none;margi
 .hmm-gcard p{margin:5px 0;font-size:14.5px;line-height:1.4}.hmm-gcard p b{font-weight:800}
 .hmm-gcard .hmm-legend{margin:6px 0}
 .hmm-glinks{display:flex;flex-wrap:wrap;gap:0 14px}.hmm-glinks a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:14px}
-.hmm-gnav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}.hmm-gnav a{min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:18px;border:1.5px solid var(--hmm-line);font-size:13px;font-weight:700;color:var(--hmm-ink);text-decoration:none}
-.hmm-gh{margin:16px 0 0;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--hmm-muted)}
-.hmm-landchip{position:absolute;z-index:2;left:calc(var(--sl,0px) + 12px);bottom:calc(var(--low,120px) + 74px);max-width:min(240px,calc(100% - 110px));background:var(--hmm-btn);color:var(--hmm-ink);border-radius:16px;box-shadow:var(--hmm-shadow);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:700 13px/1.2 -apple-system,system-ui,sans-serif}
-.hmm-landchip[hidden],.framing .hmm-landchip{display:none}
-.hmm-landchip>button{display:flex;align-items:center;gap:6px;min-height:44px;width:100%;padding:0 12px;border:0;background:none;color:inherit;font:inherit;border-radius:16px}
-.hmm-landchip>button .hmm-sw{width:16px;height:16px;border-radius:4px;border-width:2px}
-.hmm-landchip ul{list-style:none;margin:0;padding:0 12px 4px}.hmm-landchip li{display:flex;align-items:center;gap:8px;min-height:26px}
-.hmm-landchip li .hmm-sw{width:18px;height:18px;border-radius:4px;border-width:2px}
-.hmm-landchip .hmm-lc-more{display:block;width:100%;min-height:44px;border:0;border-top:1px solid var(--hmm-line);background:none;color:var(--hmm-accent);font:inherit;font-weight:800}
-.hmm-lc-k{margin-left:auto;color:var(--hmm-muted);font-weight:600}`;
+.hmm-gnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}.hmm-gnav a{min-height:44px;display:inline-flex;align-items:center;padding:0 12px;border-radius:18px;border:1.5px solid var(--hmm-line);font-size:14px;font-weight:700;color:var(--hmm-ink);text-decoration:none}
+.hmm-gh{margin:16px 0 0;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--hmm-muted)}
+.hmm .hmm-keybtn{position:absolute;z-index:2;left:calc(var(--sl,0px) + 12px);bottom:calc(var(--low,108px) + 74px);display:flex;align-items:center;gap:8px;min-height:44px;max-width:calc(100% - 110px);padding:0 16px 0 10px;border:0;border-radius:22px;background:var(--hmm-btn);color:var(--hmm-ink);box-shadow:var(--hmm-shadow);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:700 15px/1.2 -apple-system,system-ui,sans-serif;text-align:left}
+.hmm-keybtn svg{flex:none;width:22px;height:22px;color:var(--hmm-accent)}
+.hmm-keybtn[hidden],.framing .hmm-keybtn{display:none}
+.hmm-presets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:6px 0 4px}
+.hmm .hmm-preset{min-height:52px;padding:4px 6px;border-radius:12px;border:1.5px solid var(--hmm-line);background:var(--hmm-card);color:var(--hmm-ink);font-weight:800;font-size:15px;line-height:1.15}
+.hmm .hmm-preset.on{background:var(--hmm-accent);border-color:var(--hmm-accent);color:#fff}
+.hmm-preset-what{margin:4px 0 12px !important;font-size:14px;color:var(--hmm-muted)}
+.hmm-klist{list-style:none;margin:4px 0;padding:0}
+.hmm-krow{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;padding:10px 0;border-bottom:1px solid var(--hmm-line)}
+.hmm-krow>.hmm-sw{margin-top:1px}
+.hmm-krow b{display:block;font-size:16px;line-height:1.25}
+.hmm-krow p{margin:3px 0 !important;font-size:14px;line-height:1.4}
+.hmm-krow .hmm-legend{font-size:14px}.hmm-krow .hmm-legend i{width:16px;height:16px}
+.hmm-krow small{display:block;font-size:14px;color:var(--hmm-muted)}
+.hmm-kwhy{font-size:14px;color:var(--hmm-muted)}`;
 const DEF_PAINT = {
   fill: { 'fill-color': '#e4472b', 'fill-opacity': 0.4 },
   line: { 'line-color': '#e4472b', 'line-width': 2 },
@@ -58,8 +65,9 @@ export function init(api) {
   H.on('base', () => { for (const st of L.values()) if (st.added && lp(st.l.id).on && st.mapIds.some((x) => x.endsWith('-case'))) setVis(st, monthOk(st)); });
   H.ready.then(() => loadManifest()).then(() => {
     for (const st of L.values()) if (lp(st.l.id).on) turnOn(st);
-    updateBadge(); updateLandChip();
+    updateBadge(); keyButton();
   });
+  (window.HuntMap || H).presets = { list: PRESETS, apply: applyPreset, current: currentPreset, openKey }; // H here is a child of HuntMap, so set it on HuntMap itself. Other modules: H.on('preset', (id) => ...) after a preset is applied
 }
 export const manifest = () => M;
 export const manifestState = () => mState;
@@ -110,11 +118,13 @@ function filesFor(l) {
 }
 
 // ---------- on and off ----------
-export function setOn(id, on) {
+export function setOn(id, on, fromPreset) {
   const st = L.get(id); if (!st) return;
-  lp(id).on = !!on; savePrefs();
+  lp(id).on = !!on;
+  if (!fromPreset) prefs.preset = currentPreset(); // a hand made mix is remembered as no preset (or the preset it matches)
+  savePrefs();
   if (on) turnOn(st); else setVis(st, false);
-  updateBadge(); updateLandChip(); H.emit('layers', id, !!on);
+  updateBadge(); if (!fromPreset) refreshKey(); H.emit('layers', id, !!on);
 }
 function turnOn(st) {
   if (st.unsupported) return;
@@ -220,7 +230,7 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   const id = `hm-l-${l.id}${sfx}`, minzoom = l.minzoom || 0, sl = sourceLayer ? { 'source-layer': sourceLayer } : {};
   const paint = Object.assign({}, DEF_PAINT[type], l.paint || {});
   const layout = Object.assign({}, type === 'line' ? { 'line-join': 'round', 'line-cap': 'round' } : {}, l.layout || {});
-  if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 12 });
+  if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14 });
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
   map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id);
@@ -245,7 +255,7 @@ function addLayerSet(st, src, sfx, sourceLayer) {
     // labels only once there is room for them: area names from zoom 9, line names from 11, point names from 12
     const lz = l.labelMinzoom ?? (type === 'fill' ? 9 : type === 'line' ? 11 : 12);
     map.addLayer({ id: `${id}-label`, type: 'symbol', source: src, ...sl, minzoom: Math.max(minzoom, lz), layout: {
-      'text-field': l.labelExpr || ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': l.labelSize || ['interpolate', ['linear'], ['zoom'], 7, 11, 14, 14],
+      'text-field': l.labelExpr || ['to-string', ['get', l.labelField]], 'text-font': ['Noto Sans Bold'], 'text-size': l.labelSize || ['interpolate', ['linear'], ['zoom'], 7, 14, 14, 15],
       'symbol-placement': type === 'line' ? 'line' : 'point', 'text-max-width': 8, 'text-padding': 10, 'symbol-spacing': 500,
     }, paint: { 'text-color': l.labelColor || darken(firstColor(l.outline && l.outline.color) || firstColor(paint[`${type}-color`]) || '#333333'), 'text-halo-color': 'rgba(255,255,255,0.92)', 'text-halo-width': 1.8 } }, H.anchors.symbols);
     ids.push(`${id}-label`);
@@ -321,7 +331,7 @@ function moveNow() {
     loadNear(st);
     if (st.win ? !contains(st.win, viewBox(0)) : st.last && st.last.length > WIN_FEATS && map.getZoom() >= 7) refresh(st); // panned out of the drawn window: draw the features around the new view
   }
-  refreshRows();
+  refreshRows(); refreshKey();
 }
 const contains = (o, i) => i[0] >= o[0] && i[1] >= o[1] && i[2] <= o[2] && i[3] <= o[3];
 
@@ -404,7 +414,7 @@ export const stateOf = (id) => L.get(id);
 export function setMonth(m) {
   prefs.month = m; prefs.monthChosen = true; savePrefs();
   for (const st of L.values()) { if (!st.added) continue; refresh(st); if (lp(st.l.id).on) setVis(st, monthOk(st)); }
-  H.emit('month', m);
+  refreshKey(); H.emit('month', m);
 }
 export function setSpecies(s) {
   prefs.species = s; savePrefs();
@@ -601,7 +611,7 @@ export async function openPanel() {
 }
 function renderPanel(body) {
   let html = basesHtml();
-  if (M) html += `<button class="hmm-guide-btn" data-guide>${H.icons.info}<span>What do these colours mean?</span></button>`;
+  if (M) html += `${presetsHtml()}<button class="hmm-guide-btn" data-key>${H.icons.info}<span>What am I looking at?</span></button>`;
   if (!M) {
     html += `<div class="hmm-empty"><b>Layers are being built</b><p>Land status, MU (Management Unit) boundaries, closures, habitat and candidate spots will appear here after the next data update.</p>
       ${mState === 'offline' ? '<p class="hmm-muted">You are offline. Open the map once with a connection to get the layers.</p>' : ''}</div>`;
@@ -621,11 +631,14 @@ function renderPanel(body) {
   body.querySelector('.hmm-layers-panel').innerHTML = html;
 }
 function wirePanel(body) {
+  if (body.dataset.lw) return; // the sheet body is shared by every sheet: wire it once
+  body.dataset.lw = '1';
   body.addEventListener('change', (e) => {
     const t = e.target; const row = t.closest('.hmm-lrow');
     if (t.dataset.l === 'toggle' && row) {
       setOn(row.dataset.id, t.checked);
       row.classList.toggle('on', t.checked); row.querySelector('.hmm-lmore').hidden = !t.checked;
+      markPresets(body);
       const s = row.querySelector('[data-st]'); if (s) s.textContent = statusText(L.get(row.dataset.id));
     }
   });
@@ -640,8 +653,10 @@ function wirePanel(body) {
     if (b.dataset.sp) { setSpecies(b.dataset.sp); body.querySelectorAll('[data-sp]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.cat) { setSpotCat(b.dataset.cat); body.querySelectorAll('[data-cat]').forEach((x) => x.classList.toggle('on', x === b)); return; }
     if (b.dataset.pop) { setSpotPop(b.dataset.pop); body.querySelectorAll('[data-pop]').forEach((x) => x.classList.toggle('on', x === b)); return; }
+    if (b.dataset.preset) { if (b.closest('.hmm-layers-panel')) { applyPreset(b.dataset.preset); renderPanel(body); } return; }
     if (b.dataset.l === 'info') openInfo(b.closest('.hmm-lrow').dataset.id);
     if (b.dataset.guide != null) openGuide();
+    if (b.dataset.key != null) openKey();
   });
 }
 const certWord = (c) => (c == null ? '' : c >= 95 ? 'Read directly in the official source.' : c >= 80 ? 'Official source, some interpretation.' : c >= 60 ? 'Reliable secondary source.' : 'Not a fact: treat it as a tip.');
@@ -705,25 +720,111 @@ export async function openGuide(group) {
   return body;
 }
 
-// ---------- Land chip: a small always visible key while any land status layer is on ----------
-let chip = null;
-function updateLandChip() {
-  if (!H || !H.els || !H.els.bar) return;
-  const on = [...L.values()].filter((st) => st.l.group === 'Land status' && lp(st.l.id).on && !st.unsupported);
-  if (!chip) {
-    if (!on.length) return;
-    chip = document.createElement('div'); chip.className = 'hmm-landchip';
-    H.els.bar.parentElement.insertBefore(chip, H.els.bar);
-    chip.addEventListener('click', (e) => {
-      if (e.target.closest('.hmm-lc-more')) { openGuide('Land status'); return; }
-      if (e.target.closest('.hmm-lc-t')) { prefs.landKeyOpen = !prefs.landKeyOpen; savePrefs(); updateLandChip(); }
+// ---------- presets and the "What am I looking at?" key ----------
+/** Manifest ids a preset turns on: ids that exist in the manifest, and "prefix*" for every id that starts with prefix. */
+function presetIds(p) {
+  const ids = [...L.keys()];
+  return [...new Set(p.layers.flatMap((x) => (x.endsWith('*') ? ids.filter((id) => id.startsWith(x.slice(0, -1))) : ids.includes(x) ? [x] : [])))].filter((id) => !L.get(id).unsupported);
+}
+const onIds = () => [...L.values()].filter((st) => lp(st.l.id).on && !st.unsupported).map((st) => st.l.id).sort().join();
+/** The preset the layers on now match exactly, or '' for your own mix. */
+export function currentPreset() {
+  if (!M) return prefs.preset || '';
+  const now = onIds(), p = PRESETS.find((x) => presetIds(x).sort().join() === now);
+  return p ? p.id : '';
+}
+/** One tap: exactly the preset's layers on, every other layer off. Remembered with the layer choices (prefs.layers and prefs.preset). */
+export function applyPreset(id) {
+  const p = PRESETS.find((x) => x.id === id); if (!p || !M) return false;
+  const want = new Set(presetIds(p));
+  for (const st of L.values()) { const on = want.has(st.l.id); if (!!lp(st.l.id).on !== on) setOn(st.l.id, on, true); }
+  prefs.preset = id; savePrefs();
+  refreshKey(); H.emit('preset', id);
+  H.toast(`${p.name}: ${want.size ? `${want.size} layer${want.size > 1 ? 's' : ''} on` : 'base map only'}`);
+  return true;
+}
+const MIX = 'Your own mix of layers. Tap a preset to switch in one tap.';
+function presetsHtml() {
+  const cur = currentPreset(), p = PRESETS.find((x) => x.id === cur);
+  return `<div class="hmm-presets" role="group" aria-label="Layer presets">${PRESETS.map((x) => `<button class="hmm-preset ${x.id === cur ? 'on' : ''}" data-preset="${x.id}" aria-pressed="${x.id === cur}">${esc(x.name)}</button>`).join('')}</div>
+    <p class="hmm-preset-what" data-preset-what>${esc(p ? p.what : MIX)}</p>`;
+}
+function markPresets(body) {
+  const cur = currentPreset(), p = PRESETS.find((x) => x.id === cur);
+  body.querySelectorAll('[data-preset]').forEach((b) => { b.classList.toggle('on', b.dataset.preset === cur); b.setAttribute('aria-pressed', String(b.dataset.preset === cur)); });
+  const w = body.querySelector('[data-preset-what]'); if (w) w.textContent = p ? p.what : MIX;
+}
+/** On screen now: turned on, shown this month, zoomed in far enough, and with data in this view. */
+function onScreen(st) {
+  if (st.error || !monthOk(st) || map.getZoom() < (st.l.minzoom || 0)) return false;
+  const v = viewBox(0);
+  return !st.files.length || st.files.some((f) => !f.box || bboxIntersects(v, f.box));
+}
+const firstSentence = (t) => String(t || '').split(/(?<=[.!?])\s+/)[0];
+const BASE_WORDS = {
+  topo: 'Topo: roads, rivers, place names and brown contour lines. Lines close together mean steep ground.',
+  satellite: 'Satellite photo (Esri). Contour lines show if you turned them on.',
+  hybrid: 'Satellite photo (Esri) with roads and place names on top.',
+};
+function keyHtml() {
+  if (!M) return `<div class="hmm-key">${BANNER}<p class="hmm-muted">Layers are not loaded yet. Open the map once with a connection.</p></div>`;
+  const on = [...L.values()].filter((st) => lp(st.l.id).on && !st.unsupported);
+  const shown = on.filter(onScreen), notHere = on.filter((st) => !onScreen(st));
+  const mine = ((H.tools && H.tools.items) || []).filter((i) => !i.hidden).length;
+  const chips = [...document.querySelectorAll('.hmt-chip span')].map((x) => x.textContent.trim()).filter(Boolean);
+  const row = (st) => {
+    const l = st.l, g = guideFor(l) || {};
+    return `<li class="hmm-krow" data-kid="${esc(l.id)}">${swatch(st)}<div><b>${esc(l.label || l.id)}</b><p>${esc(firstSentence(g.what || l.about || ''))}</p>${legendHtml(l)}<small>Certainty ${H.ui.cert(l.cert)}</small></div></li>`;
+  };
+  return `<div class="hmm-key">${BANNER}${presetsHtml()}
+    <h3 class="hmm-h">On the map now</h3>
+    <ul class="hmm-klist" data-k="shown">
+      <li class="hmm-krow hmm-kbase"><span class="hmm-sw th-${esc(prefs.base || 'topo')}"></span><div><b>Base map</b><p>${esc(BASE_WORDS[prefs.base] || BASE_WORDS.topo)}</p></div></li>
+      ${shown.map(row).join('')}
+      ${mine ? `<li class="hmm-krow hmm-kmine"><span class="hmm-sw circle" style="--c:#e8590c"></span><div><b>Your waypoints, lines and tracks</b><p>${mine} saved on this phone. Show or hide them in My Content.</p></div></li>` : ''}
+      ${chips.map((c) => `<li class="hmm-krow hmm-ktool"><span class="hmm-sw line" style="--c:#e8590c"></span><div><b>${esc(c)}</b><p>A tool you switched on. Tap its chip on the map to clear it.</p></div></li>`).join('')}
+    </ul>
+    ${!shown.length ? '<p class="hmm-muted">No hunting layers on screen. Tap Scouting or Hunt day above, or open All layers.</p>' : ''}
+    ${notHere.length ? `<h3 class="hmm-h">Turned on, not on screen here</h3><ul class="hmm-klist" data-k="hidden">${notHere.map((st) => `<li class="hmm-krow" data-kid="${esc(st.l.id)}">${swatch(st)}<div><b>${esc(st.l.label || st.l.id)}</b><small>${esc(statusText(st) || 'Not on screen here')}</small></div></li>`).join('')}</ul>` : ''}
+    <div class="hmm-btnrow"><button class="hmm-btn2" data-k-all>All layers</button><button class="hmm-btn2" data-k-guide>What every colour means</button></div>
+    <p class="hmm-muted">Short forms on this screen: MU (Management Unit), ATV (all terrain vehicle), LEH (Limited Entry Hunting).</p></div>`;
+}
+let keyBody = null, keyWired = false;
+/** The map key: only what is on screen now, with its colours, in plain words. Non modal, so the map stays live under it. */
+export function openKey() {
+  const body = H.openSheet({ title: 'What am I looking at?', modal: false, html: keyHtml(), onClose: () => { keyBody = null; } });
+  keyBody = body;
+  if (!keyWired) { // the sheet body is shared by every sheet: wire once, act only inside the key
+    keyWired = true;
+    body.addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b || !keyBody || !b.closest('.hmm-key')) return;
+      if (b.dataset.preset) applyPreset(b.dataset.preset);
+      else if (b.dataset.kAll != null) openPanel();
+      else if (b.dataset.kGuide != null) openGuide();
     });
   }
-  chip.hidden = !on.length;
-  if (!on.length) return;
-  const open = !!prefs.landKeyOpen, short = (st) => st.l.short || st.l.label || st.l.id;
-  chip.innerHTML = `<button class="hmm-lc-t" aria-expanded="${open}" aria-label="Land colours key, ${open ? 'hide' : 'show'} names">Land ${on.map(swatch).join('')}<span class="hmm-lc-k">${open ? 'Hide' : 'Key'}</span></button>
-    ${open ? `<ul>${on.map((st) => `<li>${swatch(st)}<span>${esc(short(st))}</span></li>`).join('')}</ul><button class="hmm-lc-more">What do these mean?</button>` : ''}`;
+  if (!M) loadManifest().then(() => refreshKey());
+  return body;
+}
+function refreshKey() {
+  updateKeyBtn();
+  if (!keyBody || H.els.sheet.hidden || !keyBody.querySelector('.hmm-key')) return;
+  const y = keyBody.scrollTop; keyBody.innerHTML = keyHtml(); keyBody.scrollTop = y;
+}
+let keyBtn = null;
+function keyButton() {
+  if (keyBtn || !H.els || !H.els.bar) return;
+  keyBtn = document.createElement('button');
+  keyBtn.className = 'hmm-keybtn'; keyBtn.type = 'button';
+  keyBtn.innerHTML = `${H.icons.info}<span>What am I looking at?</span>`;
+  keyBtn.onclick = () => openKey();
+  H.els.bar.parentElement.insertBefore(keyBtn, H.els.bar);
+  updateKeyBtn();
+}
+function updateKeyBtn() {
+  if (!keyBtn) return;
+  const n = [...L.values()].filter((st) => lp(st.l.id).on && !st.unsupported && onScreen(st)).length;
+  keyBtn.setAttribute('aria-label', `What am I looking at? ${n ? `${n} layer${n > 1 ? 's' : ''} on screen` : 'Base map only'}. Opens the map key.`);
 }
 
 // ---------- Management Units, local search ----------
