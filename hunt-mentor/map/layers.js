@@ -4,7 +4,7 @@
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
-import { withOverrides, guideFor } from './layer-guide.js';
+import { withOverrides, guideFor, BUILTIN_LAYERS } from './layer-guide.js';
 import { openCamp } from './place-card.js';
 
 const MANIFEST = 'data/layers/manifest.json';
@@ -42,7 +42,7 @@ const DEF_PAINT = {
   circle: { 'circle-color': '#e4472b', 'circle-radius': 5, 'circle-stroke-color': '#ffffff', 'circle-stroke-width': 1.5 },
   symbol: { 'text-color': '#222222', 'text-halo-color': '#ffffff', 'text-halo-width': 1.5 },
 };
-const OPACITY = { fill: ['fill-opacity'], line: ['line-opacity'], circle: ['circle-opacity', 'circle-stroke-opacity'], symbol: ['icon-opacity', 'text-opacity'] };
+const OPACITY = { raster: ['raster-opacity'], fill: ['fill-opacity'], line: ['line-opacity'], circle: ['circle-opacity', 'circle-stroke-opacity'], symbol: ['icon-opacity', 'text-opacity'] };
 
 let H, map, M = null, mState = 'idle', mPromise = null, hid = 0;
 const L = new Map(); // id -> layer state
@@ -72,6 +72,7 @@ export function loadManifest() {
     if (!r.ok) { mState = r.status === 404 ? 'missing' : 'error'; return null; }
     const m = await r.json();
     if (!m || !Array.isArray(m.layers)) { mState = 'error'; return null; }
+    for (const b of BUILTIN_LAYERS) if (!m.layers.some((x) => x && x.id === b.id)) m.layers.push(b); // made on the phone (Steep ground)
     M = m; mState = 'ok';
     for (const l of m.layers) if (l && l.id && !L.has(l.id)) L.set(l.id, newState(l));
     return M;
@@ -84,6 +85,8 @@ function newState(l) {
   const st = { l, files: [], loaded: new Map(), loading: new Map(), failed: new Set(), added: false, mapIds: [], base: {}, legal: l.legal != null ? !!l.legal : LEGAL_GROUPS.includes(l.group), spot: spots.isSpotLayer(l) };
   st.files = filesFor(l);
   st.pm = st.files.some((f) => /\.pmtiles(\?|$)/i.test(f.url)); // vector tiles, drawn by MapLibre tile by tile
+  st.raster = l.type === 'raster' && Array.isArray(l.tiles); // made on the phone from terrain tiles (tools-terrain.js), no data file
+  if (st.raster) st.spot = false;
   if (st.pm) st.spot = false;
   st.layerMonths = parseMonths(l.months);
   return st;
@@ -147,6 +150,18 @@ function ensureAdded(st) {
       return;
     }
     const src = `hm-src-${l.id}`;
+    if (st.raster) {
+      st.adding = true;
+      import('./tools-terrain.js').then((t) => {
+        t.ensureProtocol(H);
+        if (!map.getSource(src)) map.addSource(src, { type: 'raster', tiles: l.tiles, tileSize: 256, minzoom: l.minzoom || 0, maxzoom: l.maxzoom || 14 });
+        const id = `hm-l-${l.id}`;
+        if (!map.getLayer(id)) map.addLayer({ id, type: 'raster', source: src, minzoom: l.minzoom || 0, paint: { 'raster-opacity': 0.75, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, H.anchors.fills);
+        st.added = true; adopt(st, [id]); refreshRows();
+      }).catch((err) => { st.error = String(err && err.message || err); console.warn('Hunt Map layer', l.id, err); refreshRows(); })
+        .finally(() => { st.adding = false; });
+      return;
+    }
     if (st.spot) adopt(st, spots.addLayers(H, l, src));
     else {
       map.addSource(src, { type: 'geojson', data: EMPTY, tolerance: 0.45, attribution: l.attribution || 'BC Data Catalogue (Open Government Licence BC)' });
@@ -358,6 +373,7 @@ function winBox() {
   return [cx - hw, cy - hh, cx + hw, cy + hh];
 }
 function refresh(st) {
+  if (st.raster) return;
   if (st.pm) { pmMonthFilter(st); return; }
   const src = map.getSource(`hm-src-${st.l.id}`); if (!src) return;
   if (!lp(st.l.id).on) { st.dirty = true; return; } // drawn when it is turned on
@@ -374,7 +390,7 @@ function refresh(st) {
 /** GeoJSON for a manifest layer. opts.all loads every area, opts.near ([lng, lat]) the areas holding that point, else areas near the view. */
 export async function getLayerData(id, opts = {}) {
   await loadManifest();
-  const st = L.get(id); if (!st || st.unsupported || st.pm) return null;
+  const st = L.get(id); if (!st || st.unsupported || st.pm || st.raster) return null;
   let files = st.files;
   if (opts.near) files = files.filter((f) => !f.box || (opts.near[0] >= f.box[0] && opts.near[0] <= f.box[2] && opts.near[1] >= f.box[1] && opts.near[1] <= f.box[3]));
   else if (!opts.all) { const v = viewBox(0.2); files = files.filter((f) => !f.box || bboxIntersects(v, f.box)); }
@@ -432,7 +448,7 @@ export function handleClick(e) {
     const r = hit && raw.get(hit.properties._hid);
     if (r) { openCamp(H, r.st.l, r.f); return true; }
   }
-  const ids = on.filter((s) => !s.spot).flatMap((s) => s.mapIds).filter((id) => map.getLayer(id));
+  const ids = on.filter((s) => !s.spot && !s.raster).flatMap((s) => s.mapIds).filter((id) => map.getLayer(id));
   if (!ids.length) return false;
   const seen = new Set(), items = [];
   for (const h of map.queryRenderedFeatures(box, { layers: ids })) {
@@ -486,6 +502,7 @@ const colorsIn = (v) => (typeof v === 'string' ? [v] : Array.isArray(v) ? v.flat
 function swatch(st) {
   const l = st.l, p = l.paint || {};
   if (st.spot) return `<span class="hmm-sw spot">${spots.iconHtml('walk', 20)}</span>`;
+  if (st.raster) { const cs = (l.legend || []).map((x) => x[1]); return `<span class="hmm-sw fill2" style="--c:${esc(cs[cs.length - 1] || '#888888')}"><i style="background:linear-gradient(135deg, ${cs.map((c, i) => `${esc(c)} ${(i * 100) / cs.length}% ${((i + 1) * 100) / cs.length}%`).join(', ')});opacity:.85"></i></span>`; }
   const t = l.type, key = t === 'fill' ? 'fill-color' : t === 'circle' ? 'circle-color' : t === 'symbol' ? 'text-color' : 'line-color';
   const cs = [...new Set(colorsIn(p[key]))].filter((c) => !/^rgba\(.*,\s*0\)$/.test(c)).slice(0, 4);
   if (t === 'symbol') return `<span class="hmm-sw sym" style="color:${esc(cs[0] || '#222222')}">12</span>`;
@@ -633,7 +650,7 @@ const CERT_SCALE = '<p class="hmm-muted">Certainty scale: 95 to 100% read direct
 function guideCard(st, head = true, src = true) {
   const l = st.l, g = guideFor(l) || {};
   const what = g.what || l.about || 'No description yet.';
-  const links = (g.links || []).map(([h, t]) => `<a href="${esc(h)}">${esc(t)}</a>`).join('');
+  const links = (g.links || []).map(([h, t]) => `<a href="${esc(h)}"${/^https?:/.test(h) ? ' target="_blank" rel="noopener"' : ''}>${esc(t)}</a>`).join('');
   return `<article class="hmm-gcard" data-gid="${esc(l.id)}">
     ${head ? `<h4>${swatch(st)}<span>${esc(l.label || l.id)}</span></h4>` : ''}
     <p><b>What it shows:</b> ${esc(what)}</p>

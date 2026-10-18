@@ -24,6 +24,13 @@ export const SLOPE_CLASSES = [
   { min: 30, max: 45, color: '#e03131', label: '30 to 45°', say: 'Very steep, avalanche terrain in snow' },
   { min: 45, max: 90, color: '#8e44d6', label: 'Over 45°', say: 'Cliffy, scrambling' },
 ];
+/* "Steep ground" layer in the layer list (layer-guide.js BUILTIN_LAYERS, drawn by layers.js from hmter://steep): three bands only,
+   colours no other layer uses. Avalanche Canada: "The vast majority of avalanches take place on slopes between 30° and 45°" (95%). */
+export const STEEP_CLASSES = [
+  { min: 25, max: 30, color: '#ffd43b', label: '25 to 30°', say: 'Steep: slow going, hard with a load' },
+  { min: 30, max: 35, color: '#ff922b', label: '30 to 35°', say: 'Very steep: slow, risky with a load; avalanche terrain in snow' },
+  { min: 35, max: 90, color: '#d6002f', label: 'Over 35°', say: 'Too steep to pack meat safely; avalanche terrain in snow' },
+];
 export const ASPECT_COLORS = [ // N, NE, E, SE, S, SW, W, NW
   '#2f6fd6', '#21a6c7', '#3db36b', '#a8c83a', '#f2c70c', '#f08c00', '#e03131', '#9b4fd1',
 ];
@@ -33,7 +40,7 @@ const DIRS = ['North', 'Northeast', 'East', 'Southeast', 'South', 'Southwest', '
    dem: Float32Array W x Hh of the DEM tile s/sx/sy. Output tile z/x/y (z >= s). Returns RGBA Uint8ClampedArray 256 x 256, or null if nothing is coloured. */
 function terKernel(mode, dem, W, Hh, s, sx, sy, z, x, y, colors) {
   const N = 256, k = 2 ** (z - s), fx = x - sx * k, fy = y - sy * k, out = new Uint8ClampedArray(N * N * 4);
-  const r2d = 180 / Math.PI, A = mode === 'slope' ? 150 : 125; // overlay alpha (0 to 255)
+  const r2d = 180 / Math.PI, A = mode === 'aspect' ? 125 : 150; // overlay alpha (0 to 255)
   const e = (u, v) => { // bilinear, clamped
     if (u < 0) u = 0; else if (u > W - 1) u = W - 1;
     if (v < 0) v = 0; else if (v > Hh - 1) v = Hh - 1;
@@ -57,6 +64,7 @@ function terKernel(mode, dem, W, Hh, s, sx, sy, z, x, y, colors) {
       const deg = Math.atan(Math.sqrt(gx * gx + gs * gs)) * r2d;
       let c = -1;
       if (mode === 'slope') c = deg < 15 ? -1 : deg < 25 ? 0 : deg < 30 ? 1 : deg < 45 ? 2 : 3;
+      else if (mode === 'steep') c = deg < 25 ? -1 : deg < 30 ? 0 : deg < 35 ? 1 : 2;
       else if (deg >= 8) { // aspect: the way the slope faces (downhill), from north, clockwise
         const az = (Math.atan2(-gx, gs) * r2d + 360) % 360;
         c = Math.round(az / 45) % 8;
@@ -137,7 +145,7 @@ async function makeTile(mode, z, x, y) {
     const tile = await H.dem.getDemTile(s, sx, sy);
     const t1 = performance.now();
     let main = 0, m0 = performance.now();
-    const msg = { mode, dem: tile.data, w: tile.width, h: tile.height, s, sx, sy, z, x, y, colors: mode === 'slope' ? SLOPE_CLASSES.map((c) => c.color) : ASPECT_COLORS };
+    const msg = { mode, dem: tile.data, w: tile.width, h: tile.height, s, sx, sy, z, x, y, colors: mode === 'slope' ? SLOPE_CLASSES.map((c) => c.color) : mode === 'steep' ? STEEP_CLASSES.map((c) => c.color) : ASPECT_COLORS };
     const rp = inWorker(msg); main += performance.now() - m0;
     let r = await rp, where = 'worker', buf;
     if (r.err) { // no worker: same maths on the main thread (about 5 to 15 ms a tile), PNG made by the browser off the main thread
@@ -159,12 +167,18 @@ function addProtocol() {
   const ml = H.maplibregl;
   if (addProtocol.done) return; addProtocol.done = true;
   ml.addProtocol(SCHEME, async (params) => {
-    const m = /^hmter:\/\/(slope|aspect)\/(\d+)\/(\d+)\/(\d+)/.exec(params.url);
+    const m = /^hmter:\/\/(slope|aspect|steep)\/(\d+)\/(\d+)\/(\d+)/.exec(params.url);
     if (!m) throw new Error('Bad terrain tile URL');
     const z = +m[2];
     if (z < ZMIN || z > ZMAX) return { data: TRANSPARENT.slice(0) };
     try { return { data: (await makeTile(m[1], z, +m[3], +m[4])).slice(0) }; } catch (err) { return { data: TRANSPARENT.slice(0) }; } // no terrain tile here (offline, not downloaded)
   });
+}
+
+/** For layers.js (the Steep ground layer can be on before this plugin loads): register hmter:// tiles once. */
+export function ensureProtocol(api) {
+  if (!H) { H = api; map = api.map; }
+  addProtocol();
 }
 
 // ---------- slope and aspect overlays ----------

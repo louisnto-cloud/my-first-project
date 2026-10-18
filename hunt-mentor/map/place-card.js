@@ -21,7 +21,7 @@ const CSS = `.hpc-photo{margin:8px 0 4px}.hpc-photo img{display:block;width:100%
 .hpc-tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.hpc-tag{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:15px;font-weight:800;font-size:13.5px;border:2px solid currentColor}
 .hpc-pop{border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14.5px;line-height:1.4;border:2px solid}.hpc-pop.popular{border-color:#ff1744;background:rgba(255,23,68,.07)}.hpc-pop.quiet{border-color:#00c853;background:rgba(0,230,118,.08)}
 .hpc-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.hpc-btns .hmm-btn2{width:100%;font-size:14px;line-height:1.2;text-align:center}
-.hpc-light{font-weight:800}.hpc-light.yes{color:#1b5e20}.hpc-light.no{color:#b71c1c}.hpc-light.check{color:#a15c00}`;
+.hpc-pack dd small{font-size:14px;line-height:1.35}.hpc-light{font-weight:800}.hpc-light.yes{color:#1b5e20}.hpc-light.no{color:#b71c1c}.hpc-light.check{color:#a15c00}`;
 function css() { if (!document.getElementById('hpc-css')) { const s = document.createElement('style'); s.id = 'hpc-css'; s.textContent = CSS; document.head.appendChild(s); } }
 const cap = (s) => String(s || '').charAt(0).toUpperCase() + String(s || '').slice(1);
 const NL = '<span class="hmm-muted">not listed</span>';
@@ -188,13 +188,89 @@ export function spotExtrasHtml(p, lng, lat) {
     ${miniMapHtml(lng, lat, 'hpc-mini-spot')}
     <h3 class="hmm-h">Here now</h3><div data-quick><p class="hmm-muted">Checking the MU, the season today and the land layers</p></div>
     <h3 class="hmm-h">Nearest camping</h3><div data-camp><p class="hmm-muted">Looking</p></div>
+    ${p._cat === 'camp' || p.category === 'camp' ? '' : '<h3 class="hmm-h">Pack out from here <span class="hmm-cert tip">Tip</span></h3><div data-packout><p class="hmm-muted">Working out the way back to the parking</p></div>'}
     ${actionsHtml('spot')}`;
 }
+// ---------- pack out estimate (Tip): distance to parking, climb on the way back, rough time, trips for a deer ----------
+// Walk time: 3 km/h plus 1 minute per 10 m of climb, the same rule the spot pipeline uses for "walkMin" (scripts/spots-pipeline.py).
+// Deer numbers from the Packing out lesson (content/phase5/09-packing-out.md, all Tip): boneless meat about 25 kg,
+// whole and gutted about 50 kg, 20 to 30 kg per trip is sustainable for a fit adult.
+const PACK = { kmh: 3, minPer10m: 1, deerBoned: 25, deerWhole: 50, load: 25 };
+const walkMin = (km, climb) => Math.max(1, Math.round((km / PACK.kmh) * 60 + (climb / 10) * PACK.minPer10m));
+const hm = (min) => (min < 60 ? `${min} min` : `${Math.floor(min / 60)} h ${String(min % 60).padStart(2, '0')} min`);
+function parkLL(p) {
+  let pk = p.park;
+  if (typeof pk === 'string' && /^\s*\[/.test(pk)) { try { pk = JSON.parse(pk); } catch (e) { pk = null; } }
+  if (Array.isArray(pk) && pk.length >= 2 && isFinite(+pk[0]) && isFinite(+pk[1])) return [+pk[0], +pk[1]];
+  const la = +(p.park_lat ?? p.parkLat), lo = +(p.park_lon ?? p.park_lng ?? p.parkLon);
+  return isFinite(la) && isFinite(lo) && (la || lo) ? [lo, la] : null;
+}
+/** Climb going along a line (sampled about every 30 m from the terrain tiles). Returns metres up, or null without terrain. */
+async function climbAlong(H, coords) {
+  const pts = [];
+  for (let i = 0; i < coords.length - 1; i++) {
+    const a = coords[i], b = coords[i + 1], n = Math.max(1, Math.min(60, Math.ceil(haversine(a, b) / 30)));
+    for (let k = 0; k < n; k++) pts.push([a[0] + ((b[0] - a[0]) * k) / n, a[1] + ((b[1] - a[1]) * k) / n]);
+  }
+  pts.push(coords[coords.length - 1]);
+  const els = await Promise.all(pts.slice(0, 400).map((x) => H.elevationAt(x).catch(() => null)));
+  if (els.some((e) => e == null)) return null;
+  let up = 0;
+  for (let i = 1; i < els.length; i++) if (els[i] > els[i - 1]) up += els[i] - els[i - 1];
+  return up;
+}
+export async function packOut(H, p, lng, lat) {
+  const park = parkLL(p), spot = [lng, lat];
+  let segs = [];
+  try {
+    const fc = p.id ? await H.getLayerData('routes', { near: spot }) : null;
+    segs = ((fc && fc.features) || []).filter((f) => f.properties && f.properties.spotId === p.id && f.geometry && f.geometry.type === 'LineString' && f.geometry.coordinates.length > 1);
+  } catch (e) { segs = []; }
+  let walkKm = 0, rideKm = 0, lines = [], from = 'route';
+  if (segs.length) {
+    for (const f of segs) {
+      let c = f.geometry.coordinates.slice();
+      const len = c.reduce((s2, x, i) => (i ? s2 + haversine(c[i - 1], x) : 0), 0) / 1000;
+      // the way back runs from the end nearer the spot to the end nearer the parking
+      if (park ? haversine(c[0], park) < haversine(c[c.length - 1], park) : haversine(c[0], spot) > haversine(c[c.length - 1], spot)) c = c.reverse();
+      if (f.properties.kind === 'ride') rideKm += len; else { walkKm += len; lines.push(c); }
+    }
+    if (!rideKm && +p.rideKm > 0) rideKm = +p.rideKm; // ride listed but not drawn as a route
+  } else if (park) {
+    from = 'straight';
+    walkKm = (+p.walkKm || 0) || haversine(spot, park) / 1000; rideKm = +p.rideKm || 0;
+    lines = [[spot, park]];
+  } else return null;
+  let climbBack = 0, known = true;
+  for (const c of lines) { const u = await climbAlong(H, c); if (u == null) { known = false; break; } climbBack += u; }
+  const climbIn = +p.climbM;
+  return { walkKm, rideKm, climbBack: known ? Math.round(climbBack) : null, climbIn: isFinite(climbIn) ? climbIn : null, from, park };
+}
+function packOutHtml(r, p) {
+  if (!r) return '<p class="hmm-muted">No parking point listed for this spot, so the pack out is not worked out.</p>';
+  const out = r.climbBack != null ? walkMin(r.walkKm, r.climbBack) : null;
+  const deer = (p._sp || []).includes('deer') || p.primary === 'deer';
+  const rows = [
+    ['Distance to parking', `${esc(units.dist(r.walkKm * 1000))} on foot${r.rideKm ? `, then ${esc(units.dist(r.rideKm * 1000))} by ATV (all terrain vehicle) where it is allowed` : ''}`, r.from === 'route' ? 'Along the suggested route (estimate)' : 'Straight line or listed walk, no route drawn (estimate)'],
+    ['Climb on the way back', r.climbBack != null ? (r.climbBack < 5 ? 'almost none: flat or downhill' : `about ${esc(units.elev(r.climbBack))} up`) : 'Not known here: terrain not loaded (go online or save this area)', 'Terrain tiles, about 24 m apart: small ups and downs are missed'],
+    ['Rough time, loaded', out != null ? `at least ${esc(hm(out))} on foot${r.rideKm ? ', plus the ATV ride' : ''}` : 'Not known here', `${PACK.kmh} km/h plus 1 minute per 10 m of climb, the pace the app uses for spot walk times. With 25 kg on your back you will be slower: time your own pace on a scouting trip`],
+  ];
+  if (deer && out != null) {
+    const back = walkMin(r.walkKm, r.climbIn != null ? r.climbIn : r.climbBack);
+    rows.push(['Trips for a deer', `about 1 trip boned out (about ${PACK.deerBoned} kg of meat), about 2 trips bone in or whole (about ${PACK.deerWhole} kg): about ${esc(hm(out * 2 + back))} with the walk back in. With a partner: one trip each`, 'Packing out lesson: 20 to 30 kg per trip is a sustainable load for a fit adult. Black tailed deer can be smaller than the lesson\'s average deer']);
+  }
+  return `<dl class="hpc-dl hpc-pack">${rows.map(([k, v, s2]) => `<dt>${esc(k)}</dt><dd>${v}<small>${esc(s2)}</small></dd>`).join('')}</dl>
+    <p class="hmm-muted">Estimate (Tip). Plan the pack out before the shot, and leave light for it. <a href="#/s/packing-out/0">Lesson: packing out</a></p>`;
+}
+
 const SPMAP = { deer: 'muledeer', bear: 'blackbear', moose: 'moose', elk: 'elk', grouse: 'grouse', duck: 'ducks', quail: 'quail', turkey: 'turkey', camp: 'muledeer' };
 export async function fillSpotExtras(H, body, p, lng, lat) {
   wireMini(body);
   wireActions(H, body, [lng, lat], p._name || p.name || 'Spot', 'stand');
   fillLivePhoto(body, lng, lat, 1000);
+  const po = body.querySelector('[data-packout]');
+  if (po) packOut(H, p, lng, lat).then((r) => { if (po.isConnected) po.innerHTML = packOutHtml(r, p); })
+    .catch(() => { if (po.isConnected) po.innerHTML = '<p class="hmm-muted">The pack out estimate did not work out here.</p>'; });
   // quick legal check: the same checks as Can I hunt here now?
   const q = body.querySelector('[data-quick]');
   if (q && H.canHunt && H.canHunt.evaluate) {
