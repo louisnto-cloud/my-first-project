@@ -65,6 +65,8 @@ export function init(api) {
   H.on('base', () => { for (const st of L.values()) if (st.added && lp(st.l.id).on && st.mapIds.some((x) => x.endsWith('-case'))) setVis(st, monthOk(st)); });
   H.ready.then(() => loadManifest()).then(() => {
     for (const st of L.values()) if (lp(st.l.id).on) turnOn(st);
+    // owner choice 2026-10-18: start on Scouting, once; any later pick or hand mix is kept
+    if (!prefs.startPresetDone) { prefs.startPresetDone = true; savePrefs(); applyPreset('scout'); }
     updateBadge(); keyButton();
   });
   (window.HuntMap || H).presets = { list: PRESETS, apply: applyPreset, current: currentPreset, openKey }; // H here is a child of HuntMap, so set it on HuntMap itself. Other modules: H.on('preset', (id) => ...) after a preset is applied

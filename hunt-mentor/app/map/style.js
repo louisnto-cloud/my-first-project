@@ -182,28 +182,28 @@ function labels(add, p, modes, c) {
   const isLine = ['match', ['geometry-type'], ['LineString', 'MultiLineString'], true, false];
   const isPoint = ['match', ['geometry-type'], ['Point', 'MultiPoint'], true, false];
   add(modes, { id: `${p}-waterway-name`, type: 'symbol', source: 'omt', 'source-layer': 'waterway', minzoom: 12, filter: ['all', isLine, ['has', 'name']], layout: {
-    'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[12, 11], [16, 13]]), 'symbol-spacing': 400, 'text-max-angle': 30, 'text-letter-spacing': 0.04,
+    'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[12, 14], [16, 15]]), 'symbol-spacing': 400, 'text-max-angle': 30, 'text-letter-spacing': 0.04,
   }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
   add(modes, { id: `${p}-water-name`, type: 'symbol', source: 'omt', 'source-layer': 'water_name', minzoom: 9, filter: ['all', isPoint, ['has', 'name']], layout: {
-    'text-field': name, 'text-font': I, 'text-size': z([[9, 11], [14, 14]]), 'text-max-width': 7, 'text-letter-spacing': 0.04,
+    'text-field': name, 'text-font': I, 'text-size': z([[9, 14], [14, 16]]), 'text-max-width': 7, 'text-letter-spacing': 0.04,
   }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
   add(modes, { id: `${p}-water-name-line`, type: 'symbol', source: 'omt', 'source-layer': 'water_name', minzoom: 9, filter: ['all', isLine, ['has', 'name']], layout: {
-    'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[9, 11], [14, 14]]), 'text-letter-spacing': 0.04,
+    'symbol-placement': 'line', 'text-field': name, 'text-font': I, 'text-size': z([[9, 14], [14, 16]]), 'text-letter-spacing': 0.04,
   }, paint: { 'text-color': c.water, 'text-halo-color': c.waterHalo, 'text-halo-width': 1.3 } });
   add(modes, { id: `${p}-road-name`, type: 'symbol', source: 'omt', 'source-layer': 'transportation_name', minzoom: 11, filter: ['all', isLine, ['has', 'name'], ['match', ['get', 'class'], ['primary', 'secondary', 'tertiary', 'trunk', 'minor', 'track', 'service', 'unclassified', 'residential'], true, false]], layout: {
-    'symbol-placement': 'line', 'text-field': name, 'text-font': R, 'text-size': z([[11, 10.5], [16, 13]]), 'symbol-spacing': 350, 'text-max-angle': 30,
+    'symbol-placement': 'line', 'text-field': name, 'text-font': R, 'text-size': z([[11, 14], [16, 15]]), 'symbol-spacing': 350, 'text-max-angle': 30,
   }, paint: { 'text-color': c.road, 'text-halo-color': c.halo, 'text-halo-width': 1.6 } });
   add(modes, { id: `${p}-shield`, type: 'symbol', source: 'omt', 'source-layer': 'transportation_name', minzoom: 7, filter: ['all', isLine, ['has', 'ref'], ['<=', ['get', 'ref_length'], 5], ['match', ['get', 'class'], ['motorway', 'trunk', 'primary', 'secondary'], true, false]], layout: {
-    'symbol-placement': 'line', 'symbol-spacing': 500, 'text-field': ['get', 'ref'], 'text-font': B, 'text-size': 10.5, 'text-rotation-alignment': 'viewport', 'icon-rotation-alignment': 'viewport',
+    'symbol-placement': 'line', 'symbol-spacing': 500, 'text-field': ['get', 'ref'], 'text-font': B, 'text-size': 14, 'text-rotation-alignment': 'viewport', 'icon-rotation-alignment': 'viewport',
     'icon-image': 'hm-shield', 'icon-text-fit': 'both', 'icon-text-fit-padding': [2, 4, 1, 4],
   }, paint: { 'text-color': '#2a2a2a' } });
   add(modes, { id: `${p}-park-name`, type: 'symbol', source: 'omt', 'source-layer': 'park', minzoom: 9, filter: ['all', isPoint, ['has', 'name']], layout: {
-    'text-field': name, 'text-font': I, 'text-size': 11, 'text-max-width': 8, 'text-padding': 6,
+    'text-field': name, 'text-font': I, 'text-size': 14, 'text-max-width': 8, 'text-padding': 6,
   }, paint: { 'text-color': p === 'tp' ? '#4f6b3c' : '#e6f5d6', 'text-halo-color': c.halo, 'text-halo-width': 1.3 } });
   const ele = ['case', ['has', 'ele'], ['concat', ['number-format', ['get', 'ele'], { locale: 'en-CA' }], ' m'], ''];
   add(modes, { id: `${p}-peak`, type: 'symbol', source: 'omt', 'source-layer': 'mountain_peak', minzoom: 10, filter: ['all', ['has', 'name'], ['match', ['get', 'class'], ['peak', 'volcano'], true, false]], layout: {
     'icon-image': p === 'tp' ? 'hm-peak' : 'hm-peak-w', 'text-field': ['format', name, {}, '\n', {}, ['to-string', ele], { 'font-scale': 0.85 }],
-    'text-font': R, 'text-size': 11, 'text-anchor': 'top', 'text-offset': [0, 0.5], 'text-max-width': 8, 'symbol-sort-key': ['-', 0, ['coalesce', ['get', 'ele'], 0]],
+    'text-font': R, 'text-size': 14, 'text-anchor': 'top', 'text-offset': [0, 0.5], 'text-max-width': 8, 'symbol-sort-key': ['-', 0, ['coalesce', ['get', 'ele'], 0]],
   }, paint: { 'text-color': c.peak, 'text-halo-color': c.halo, 'text-halo-width': 1.4 } });
   const place = (id, classes, minzoom, size, font) => add(modes, { id: `${p}-${id}`, type: 'symbol', source: 'omt', 'source-layer': 'place', minzoom, filter: ['match', ['get', 'class'], classes, true, false], layout: {
     'text-field': name, 'text-font': font, 'text-size': size, 'text-max-width': 8,
@@ -211,12 +211,12 @@ function labels(add, p, modes, c) {
     'text-anchor': ['step', ['zoom'], 'left', 13, 'center'], 'text-offset': ['step', ['zoom'], ['literal', [0.55, 0]], 13, ['literal', [0, 0]]],
     'text-padding': 3, 'symbol-sort-key': ['coalesce', ['get', 'rank'], 99],
   }, paint: { 'text-color': c.text, 'text-halo-color': c.halo, 'text-halo-width': 1.6 } });
-  place('hamlet', ['hamlet', 'locality', 'isolated_dwelling'], 11, z([[11, 10.5], [15, 13]]), R);
-  place('village', ['village', 'suburb'], 9, z([[9, 11], [14, 14]]), R);
-  place('town', ['town'], 7, z([[7, 12], [13, 16]]), R);
-  place('city', ['city'], 4, z([[4, 12], [12, 18]]), B);
+  place('hamlet', ['hamlet', 'locality', 'isolated_dwelling'], 11, z([[11, 14], [15, 15]]), R);
+  place('village', ['village', 'suburb'], 9, z([[9, 14], [14, 16]]), R);
+  place('town', ['town'], 7, z([[7, 14], [13, 17]]), R);
+  place('city', ['city'], 4, z([[4, 14], [12, 19]]), B);
   add(modes, { id: `${p}-state`, type: 'symbol', source: 'omt', 'source-layer': 'place', maxzoom: 7, filter: ['==', ['get', 'class'], 'state'], layout: {
-    'text-field': name, 'text-font': B, 'text-size': 12, 'text-transform': 'uppercase', 'text-letter-spacing': 0.15,
+    'text-field': name, 'text-font': B, 'text-size': 14, 'text-transform': 'uppercase', 'text-letter-spacing': 0.15,
   }, paint: { 'text-color': p === 'tp' ? '#6b6d60' : '#ffffff', 'text-halo-color': c.halo, 'text-halo-width': 1.2 } });
 }
 

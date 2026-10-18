@@ -170,3 +170,4 @@ hunt-mentor/
 - 2026-10-18: map round 2 part 2 published: Mark my truck with arrow and walk back time, legal light chip, turnaround chip synced with Safety.
 - 2026-10-18: map round 2 part 3 published: Save this hunt area for no signal on plans (Harrison plan about 56 MB, Ready offline check).
 - 2026-10-18: map round 2 complete: layer sets (Clean, Scouting, Hunt day), What am I looking at? key, 14 px and 44 px in all map UI. Open owner choice: default layer set. Known: first PMTiles header request fails once then retries (no user impact seen).
+- 2026-10-18: owner choices: map starts on Scouting (applied once, later picks kept); base map place, road, water, park and peak names 14 px minimum (contour numbers unchanged).
