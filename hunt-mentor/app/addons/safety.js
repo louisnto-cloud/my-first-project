@@ -211,6 +211,7 @@
     }
   }
   setInterval(watch, 2000);
+  window.HMSafety = { unlockAudio, check: watch }; // Hunt Map (map/hunt-field.js) sets the same alarm from the map
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') watch(); });
 
   // ---------- screens ----------
