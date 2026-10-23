@@ -42,7 +42,7 @@ mus: 2-8, 2-4, 2-3, 2-19
 - Page 27 is the Region 2 ceiling: 2 black tailed deer, 1 of them antlerless at most (99%).
 - Page 14, Region 2 row: bucks 2, antlerless 1, total 2, white tailed deer 0 (99%).
 - A limit is not a season. In MU 2-8 the only general deer row is bucks, so the antlerless 1 is out of reach there (99%, page 28).
-- Bowen and Texada print "3(2)". The "(2)" is my reading: up to 2 of the 3 antlerless (80%). VERIFY.
+- Bowen and Texada print "3(2)": 3 deer, "two of which may be antlerless" (99%, Hunting Regulation, Schedule 2, Part 3, section 1(2)).
 - A Region 2 black tailed buck does not count against the one mule deer buck for Regions 3 to 8 combined (95%, my reading of page 14).
 ```
 
@@ -261,7 +261,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 - Region 2, the Lower Mainland, is 19 MUs: 2-1 to 2-19 (99%, all 19 numbers are printed on the page 26 map).
 - One by one: 2-1, 2-2, 2-3, 2-4, 2-5, 2-6, 2-7, 2-8, 2-9, 2-10, 2-11, 2-12, 2-13, 2-14, 2-15, 2-16, 2-17, 2-18, 2-19 (99%).
-- MU 2-1 is in no season row on page 28 (99%). Why it is closed is not printed on these pages. VERIFY.
+- MU 2-1 is in no season row on page 28 (99%). The Hunting Regulation, Schedule 2, has no 2-1 row, and the federal District No. 2 is MUs 2-2 to 2-19, so no open season there for any game or migratory bird (99%). The reason is not written in any of these texts: VERIFY with the regional office if you need it.
 - Towns printed on the page 26 map: Pemberton, Whistler, Squamish, Sechelt, Gibsons, Powell River, North Vancouver, Vancouver, Maple Ridge, Surrey, Mission, Abbotsford, Chilliwack, Harrison Hot Springs, Hope and Spuzzum (99%).
 - Mission sits on the north bank of the Fraser in MU 2-8. Abbotsford, south of the river, is 2-4. Chilliwack is 2-3. The Chehalis and west Harrison Lake country is 2-19 (90%, my reading of the page 26 map).
 - The page 26 map is approximate. The legal MU lines are in the Management Unit Regulation maps (99%).
@@ -608,7 +608,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 >
 > "★ Season applies to Bowen Island only. See Notice to Hunters. ✻Season applies to Texada Island only. * Restricted to hunters under the age of 18."
 
-- ▲ On Bowen and Texada islands the deer limit is 3 (99%). The "(2)" is my reading: up to 2 of the 3 may be antlerless (80%). VERIFY.
+- ▲ On Bowen and Texada islands the deer limit is 3, and 2 of the 3 may be antlerless (99%, Hunting Regulation, Schedule 2, Part 3, section 1(2)).
 - ★ rows: Bowen Island only. ✻ row: Texada Island only (99%).
 - "Youth Only": hunters under 18 only (99%).
 
@@ -671,7 +671,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 ```diagram re-duck-bag
 ```
 
-- Snow geese in 2-8: page 28 and page 12 disagree. VERIFY.
+- Snow geese in 2-8: 10 a day, 5 Ross's at most (99%, federal and BC law).
 
 ```more Official wording (synopsis pages 12 and 28)
 > [!law] Grouse footnote, page 28
@@ -695,7 +695,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 > "The daily bag limit for Snow and Ross’s geese in aggregate is 5 except for MUs 2-4 and 2-5 where 15 Snow Geese may be taken."
 
 - Page 28: 10 a day in Mission's 2-8, 15 a day in 2-4 and 2-5. No more than 5 Ross's either way (99%).
-- Page 12 says 5 a day outside 2-4 and 2-5. The two pages do not agree for 2-8. VERIFY with the federal summary; until then take 5 a day in 2-8 to stay safe (Tip).
+- Page 12 says 5 a day outside 2-4 and 2-5. The law agrees with page 28: the federal Migratory Birds Regulations, 2022, Schedule 3, Part 10, Table 1, item 2(d), set 10 a day (5 Ross's at most) and 30 in possession in District No. 2, MUs 2-2 to 2-19, plus 5 more snow geese a day in 2-4 and 2-5 (99%, current to 30 September 2026). BC's Hunting Regulation, Schedule 2, item 32.01, says the same 10(30) (99%). Page 12 is the odd one out.
 
 > [!law] Canada goose note and federal line, page 28
 > "Note: The open season for Canada Geese and Cackling Geese in M.U. 2-4 (March 10 and preceding 28 days) does not apply to the area 100 metres on either side of any dyke in the Municipality of Delta, other than Westham Island."
@@ -1172,6 +1172,8 @@ Every row: page 28, 2 October 2026 edition (99%).
 ```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text and checked against rendered page images: page 26 (contacts, changes box, map, 150 dpi), page 27 (bag limits, notices, access, 150 dpi), page 28 (every row, 150 dpi plus 220 dpi crops), pages 29 to 31 (Maps B1 to B33, 150 dpi). Also pages 3, 4, 5, 8, 9, 10, 12 and 14. Checked 2026-10-04 (99%).
 - [Closed Areas Regulation, B.C. Reg. 76/84 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01): Schedule 3 s. 17; Schedule 5 ss. 33, 61, 62, 63, 67; Schedule 5.1 ss. 7 to 10, 14; Schedule 7 s. 52; Schedule 9 ss. 1, 9, 23. Consolidation current to 22 September 2026, read directly 2026-10-04 (99%).
+- [Hunting Regulation, B.C. Reg. 190/84, Schedule 2 (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_03), current to 20 October 2026, read directly 2026-10-23: Part 1 items 5 and 32.01, Part 3 section 1(2). 99%.
+- [Migratory Birds Regulations, 2022 (Justice Laws)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html), current to 30 September 2026, read directly 2026-10-23: Schedule 3, Part 10, District No. 2. 99%.
 - Older Region 2 digest from 2026-10-01 (7 July 2026 edition) used as a cross check only.
 - Lines marked "my reading" are this app's interpretation, 80 to 95%. Map readings are 80 to 90%.
 ```
