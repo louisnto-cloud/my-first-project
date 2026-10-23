@@ -686,7 +686,8 @@
       "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "canada-geese",
@@ -1303,7 +1304,8 @@
       "Forgetting the District 2 closure from 23 November to 18 December."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "snow-geese",
@@ -1803,7 +1805,8 @@
       "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "white-fronted-geese",
@@ -2231,7 +2234,8 @@
       "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "brant",
@@ -2623,7 +2627,8 @@
       "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "coot",
@@ -3025,7 +3030,8 @@
       "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "snipe",
@@ -3423,7 +3429,8 @@
       "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "doves",
@@ -3812,7 +3819,8 @@
       "Forgetting the federal permit for mourning dove (99%)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "band-tailed-pigeon",
@@ -4161,7 +4169,8 @@
       "Forgetting the federal permit."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "forest-grouse",
@@ -4936,7 +4945,8 @@
       "Taking a .22 to the Hatzic or Nicomen lowland. It is shot only."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "sharp-tailed-grouse",
@@ -5481,7 +5491,8 @@
       "Taking a sharp tailed grouse near Mission because it looked like a grouse. Region 2 has no season (99%)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "ptarmigan",
@@ -5972,7 +5983,8 @@
       "Late start, caught by dark above the trees."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "chukar",
@@ -6356,7 +6368,8 @@
       "Chasing a running covey uphill all day."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "gray-partridge",
@@ -7454,7 +7467,8 @@
       "Breasting birds and tossing the wings."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "wild-turkey",
@@ -7924,7 +7938,8 @@
       "No official success data exists for birds. Any odds are rough math (Tip)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "snowshoe-hare",
@@ -8335,7 +8350,8 @@
       "Carrying a .22 into a shot only area such as the Hatzic or Nicomen lowland."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "columbian-ground-squirrel",
@@ -8631,7 +8647,8 @@
       "Shooting on Crown land where the rows are private land only (98%)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "raccoon",
@@ -9097,7 +9114,8 @@
       "Shooting a skunk in Region 2 between April and August, outside the season (95%)."
      ]
     }
-   }
+   },
+   "baseRegion": "3"
   },
   {
    "id": "opossum",
