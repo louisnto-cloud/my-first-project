@@ -304,7 +304,7 @@
     x.driveMin = Math.round((x.driveKm / 60) * 60) + (x.rideKm ? Math.round((x.rideKm / 10) * 60) : 0); // Assumption: about 60 km/h on average to the parking, 10 km/h on the rough part
     x.ride = /4x4|rough road/i.test((d.plan || []).find((t) => /^Ride:/.test(t)) || '') ? 'rough' : x.rideKm ? 'ride' : '';
     x.legal = legalOf(d.flags, plan.method);
-    x.evid = (d.evidence || []).filter((e) => e && (e.pts > 0)).sort((a, b) => b.pts - a.pts).slice(0, 3).map((e) => e.t);
+    x.evid = (d.evidence || []).filter((e) => e && (e.pts > 0)).sort((a, b) => b.pts - a.pts).slice(0, 3).map((e) => plainEvid(e.t));
     if (/FSR|forest service/i.test((d.driveVia || []).join(' '))) x.fsr = true;
   }
   // ---------- your own trips (after the hunt debriefs, hm.plandebrief.<planId>) ----------
@@ -326,6 +326,9 @@
     }
     return best;
   }
+  // spot evidence in plain words: "Mule deer winter range u-2-006 unit BS 4-6 (official)" keeps the official code and says what it is
+  // (lesson winter-range-legal: a UWR order sets logging and road rules, 99%; it does not by itself close hunting, 85%)
+  const plainEvid = (t) => { t = String(t || ''); const m = t.match(/^([A-Z][a-z ]+?) winter range \S+ unit .+? \(official\)/); return m ? `${t} In plain words: an official ungulate winter range, an area protected as ${/deer/i.test(m[1]) ? 'deer' : m[1].toLowerCase()} winter habitat. It sets logging and road rules, not hunting rules (85%).` : t; };
   const gmaps = (x) => `https://www.google.com/maps/search/?api=1&query=${x.lat.toFixed(5)},${x.lon.toFixed(5)}`;
   const mapLink = (x) => `#/map/@${x.lat.toFixed(5)},${x.lon.toFixed(5)},15`;
 
@@ -444,6 +447,8 @@
   const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight? Camping or day trips?', party: 'Who is going?', first: 'Is this your first hunt?',
     exp: 'Your hunting experience?', fit: 'How far can you walk, and carry?', hours: 'How many hours can you hunt each day?', travel: 'Longest drive from Mission, one way?', truck: 'What do you drive?',
     partner: 'Your partner on this hunt?', gun: 'Your gun and your longest practised shot?', budget: 'Budget for this trip?', success: 'What does success mean to you on this trip?' };
+  // Black tailed deer: the coast deer near Mission and Harrison. The synopsis lists them as mule deer (page 28), so this button makes a mule-deer plan (spName shows the black tailed name in Region 2)
+  const BTD_OPT = (d) => `<button type="button" class="pl-opt" data-sp="mule-deer" data-find="black tailed deer blacktail coast mule deer big game">Black tailed deer (coast mule deer)</button>`;
   let draft = null;
   const ss = { get() { try { return JSON.parse(sessionStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) { return null; } }, set(v) { try { sessionStorage.setItem(DRAFT_KEY, JSON.stringify(v)); } catch (e) { /* storage blocked */ } } };
   const getDraft = () => (draft = draft || ss.get() || {});
@@ -471,7 +476,7 @@
       body = `<input type="search" id="pl-find" class="pl-find" placeholder="Find an animal: deer, duck, quail" aria-label="Find an animal" autocomplete="off">
         <div id="pl-animals">${GROUPS.concat([['', 'Other']]).map(([g, label]) => {
           const ss2 = D.species.filter((s) => (g ? s.group === g : !GROUPS.some(([x]) => x === s.group)));
-          return ss2.length ? `<div class="pl-grp" data-g="${esc(g)}"><h3>${esc(label)}</h3><div class="pl-opts">${ss2.map((s) => `<button type="button" class="pl-opt${d.species === s.id ? ' on' : ''}" data-sp="${esc(s.id)}" data-find="${esc((s.name + ' ' + s.id + ' ' + (s.group || '') + ' ' + (s.seasonKeys || []).join(' ')).toLowerCase())}">${esc(s.name)}</button>`).join('')}</div></div>` : '';
+          return ss2.length ? `<div class="pl-grp" data-g="${esc(g)}"><h3>${esc(label)}</h3><div class="pl-opts">${ss2.map((s) => `<button type="button" class="pl-opt${d.species === s.id ? ' on' : ''}" data-sp="${esc(s.id)}" data-find="${esc((s.name + ' ' + s.id + ' ' + (s.group || '') + ' ' + (s.seasonKeys || []).join(' ')).toLowerCase())}">${esc(s.name)}</button>${s.id === 'mule-deer' ? BTD_OPT(d) : ''}`).join('')}</div></div>` : '';
         }).join('')}</div><p class="muted" id="pl-none" hidden>No animal matches. Try one word.</p>`;
     } else if (k === 'where') {
       body = `<div class="pl-opts">${places().map((p) => `<button type="button" class="pl-opt${d.where && d.where.id === p.id ? ' on' : ''}" data-place="${esc(p.id)}">${esc(p.name)}<small>${p.mu ? `MU (Management Unit) ${esc(p.mu)}` : 'MU found when you tap'}</small></button>`).join('')}
