@@ -3,9 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/english-center-app-yylgv3
-      - claude/pilgrimage-catholic-app-t572l3
       - main
+      - claude/pilgrimage-catholic-app-t572l3
   workflow_dispatch:
 
 permissions:
@@ -20,17 +19,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # The Sparkling Daily forecast model is a single self-contained HTML
+      # file plus the Excel workbook — nothing to build, just stage it.
+      - name: Stage the forecast model (site root)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p dist
+          cp organika_sparkling_daily_model.html dist/index.html
+          cp Organika_Sparkling_Daily_1YR_Scenario_Model.xlsx dist/
+          cp MODEL.md dist/
+
       - uses: actions/setup-node@v4
+        if: hashFiles('pilgrimage/package.json') != ''
         with:
           node-version: 20
           cache: npm
-
-      # The E'TOP app (repo root) — built for main deploys.
-      - name: Build E'TOP
-        if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
-        run: |
-          npm ci
-          npm run build
+          cache-dependency-path: pilgrimage/package-lock.json
 
       # The Pilgrimage (pilgrimage/) — served under /pilgrimage.
       - name: Build The Pilgrimage
@@ -42,17 +47,18 @@ jobs:
           npm ci
           npm run build
 
-      # On main: publish the whole site (E'TOP at the root, Pilgrimage under
-      # /pilgrimage). Publishing to the gh-pages branch auto-enables GitHub
-      # Pages, which the github-pages deployment API is not allowed to do
-      # with the default workflow token.
+      # On main: publish the whole site (forecast model at the root,
+      # Pilgrimage under /pilgrimage). Publishing to the gh-pages branch
+      # auto-enables GitHub Pages, which the github-pages deployment API is
+      # not allowed to do with the default workflow token.
       - name: Assemble full site (main)
         if: github.ref == 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+
       - name: Publish full site
-        if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
