@@ -810,9 +810,9 @@
     const O = window.HMPlanOdds;
     if (O && typeof O.compute === 'function' && typeof O.html === 'function') {
       try {
-        const r = await O.compute(p, X.spots, X); if (!alive()) return;
+        const r = await O.compute(p, sp, X.spots); if (!alive()) return;
         m.oddsX = r; X.oddsResult = r;
-        const out = addOn(O.html(r, p, X));
+        const out = addOn(O.html(r, p));
         $('#pl-odds').innerHTML = `<div class="pl2-x" id="pl-odds-x">${out.html}</div><details class="card pl-more"><summary>Official numbers, the 90% question and how to raise your odds</summary>${successHtml(od, sp, p, lg, C)}${oddsHtml(od, sp, p, lg, C)}</details>`;
         out.wire($('#pl-odds-x')); link($('#pl-odds'));
         board();
@@ -836,22 +836,23 @@
     const parts = [];
     let liveOk = false, daysOk = false;
     el.innerHTML = `<div id="pl-live-x">${L ? '<div class="card"><p class="muted">Getting the forecast for your top spots...</p></div>' : ''}</div><div id="pl-days-x"></div>`;
-    if (L && typeof L.fetch === 'function' && typeof L.html === 'function') {
+    // HMPlanLive.mount(el, plan, points): draws, saves a copy for no signal (hm.planlive.<planId>), wires Check again
+    const points = X.spots.map((x) => ({ id: x.id, name: x.name, lat: x.lat, lon: x.lon, elev: x._d && x._d.elev }));
+    if (L && typeof L.mount === 'function') {
       try {
-        const r = await L.fetch(p, X.spots.map((x) => ({ id: x.id, name: x.name, lat: x.lat, lon: x.lon, elev: x._d && x._d.elev }))); if (!alive()) return;
-        m.live = r; X.live = r;
-        const out = addOn(L.html(r, p, X)); const box = el.querySelector('#pl-live-x'); box.innerHTML = out.html; out.wire(box); liveOk = true;
+        const box = el.querySelector('#pl-live-x');
+        const r = await L.mount(box, X.plan, points); if (!alive()) return;
+        m.live = r || (typeof L.cached === 'function' ? L.cached(X.plan.id) : null); X.live = m.live; liveOk = true;
         board();
       } catch (e) { console.warn('plan live add on', e); }
     }
     if (!liveOk) el.querySelector('#pl-live-x').innerHTML = liveFallback(X);
-    if (Dd && typeof Dd.build === 'function' && typeof Dd.html === 'function') {
+    // HMPlanDays.mount(el, plan, spots, { dayOpen, live }): hour by hour per day, with the turnaround alarm buttons wired
+    if (Dd && typeof Dd.mount === 'function') {
       try {
-        let sps = X.spots.map((x) => ({ id: x.id, name: x.name, cat: x.cat, mu: x.mu, lat: x.lat, lon: x.lon, detail: x._d || null }));
-        if (sps.some((x) => !x.detail) && typeof Dd.enrich === 'function') sps = await Dd.enrich(sps);
-        const r = await Dd.build(p, m.live || null, sps, { dayOpen: X.legal.dayOpen, home: X.home, ask: X.ask, ctx: X }); if (!alive()) return;
-        m.daysX = r;
-        const out = addOn(Dd.html(r, p, X)); const box = el.querySelector('#pl-days-x'); box.innerHTML = out.html; out.wire(box); if (typeof Dd.wire === 'function') Dd.wire(box); daysOk = true;
+        const sps = X.spots.map((x) => ({ id: x.id, name: x.name, cat: x.cat, mu: x.mu, lat: x.lat, lon: x.lon, detail: x._d || null }));
+        const r = await Dd.mount(el.querySelector('#pl-days-x'), X.plan, sps, { dayOpen: X.legal.dayOpen, home: X.home, live: m.live || null }); if (!alive()) return;
+        m.daysX = r && r.days; daysOk = !!(r && r.days);
       } catch (e) { console.warn('plan days add on', e); }
     }
     if (!daysOk) el.querySelector('#pl-days-x').innerHTML = '<div class="card"><h3>Hour by hour</h3><p class="pl-small">The day by day plan with your hours is in part 3 below: legal light, your time on stand, and what to do in each part of the day.</p><button type="button" class="btn" data-pl-jump="pl-s3">Go to part 3, Day by day</button></div>';
@@ -1128,6 +1129,7 @@
     if (v == null || v === '') return '';
     if (typeof v === 'string') return v;
     if (typeof v.html === 'string') return v.html;
+    if (v.estimate && v.estimate.mid != null) return `about ${Math.round(v.estimate.mid * 100)}% over your days (range ${Math.round(v.estimate.low * 100)}% to ${Math.round(v.estimate.high * 100)}%), estimate (Tip)`;
     if (typeof v.text === 'string') return esc(v.text);
     const pc = (n) => (n == null ? '' : `${Math.round(n <= 1 ? n * 100 : n)}%`);
     if (v.likely != null) return `about ${pc(v.likely)}${v.low != null && v.high != null ? ` (range ${pc(v.low)} to ${pc(v.high)})` : ''}, estimate`;
@@ -1136,17 +1138,18 @@
   // wind fit at a spot on the first forecast hunt morning: HMPlanLive hourly wind and HMPlanDays._fit (walk in bearing)
   function liveWind(x, live, X) {
     const Lv = window.HMPlanLive, Dd = window.HMPlanDays;
-    if (!live || !Array.isArray(live.perPoint) || !Lv || typeof Lv._hourKey !== 'function') return null;
-    const P = live.perPoint.find((y) => String(y.id) === String(x.id)); if (!P) return null;
+    if (!live || !Lv || typeof Lv._hourKey !== 'function') return null;
     const open = (X && X.legal && X.legal.dayOpen) || {};
     const day = (live.days || []).find((d) => d && d.forecast && d.legalStart && (open[d.date] || []).length);
-    if (!day) return { text: 'No forecast yet for your hunt days. It shows here when they come into range.' };
+    if (!day) return { text: 'Forecast not out yet for your hunt days (it reaches about 16 days ahead). Rule: walk in with the wind in your face (Tip).' };
+    const P = (live.perPoint || []).find((y) => String(y.id) === String(x.id));
+    if (!P) return { text: 'The forecast did not load. Tap Check again in Live with signal. Rule: walk in with the wind in your face (Tip).' };
     const k = Lv._hourKey(day.legalStart + 30 * 6e4), h = (P.hourly || []).find((y) => String(y.t).slice(0, 13) === k);
     if (!h) return null;
     let t = '';
     try { if (Dd && typeof Dd._fit === 'function') t = Dd._fit({ id: x.id, lat: x.lat, lon: x.lon, detail: x._d || (x.park ? { park: [x.park.lon, x.park.lat] } : null) }, h).t; } catch (e) { t = ''; }
     if (!t && h.windDir != null) t = `Wind from ${Lv._dirWord ? Lv._dirWord(h.windDir) : Math.round(h.windDir) + ' degrees'}, ${Math.round(h.windKmh)} km/h.`;
-    return t ? { text: `${dLabel(day.date)}, first light: ${t} Forecast as of ${new Date(live.asOf || Date.now()).toLocaleString('en-CA', { timeZone: TZ, month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}.` } : null;
+    return t ? { text: `${dLabel(day.date)}, first light: ${t} Forecast as of ${new Date(live.asOf || Date.now()).toLocaleString('en-CA', { timeZone: TZ, month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).replace(/\.$/, '')}.` } : null;
   }
   function spotFrom(mod, fnName, x, res, X) {
     if (!mod) return null;
@@ -1406,7 +1409,8 @@
     const bl = boardList(m.spots, p);
     if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm} km` : ''}: ${gmaps(x)}`)); }
     if (m.check) { L.push(`Checklist: ${m.check.done} of ${m.check.total} done.`); if (m.check.left.length) L.push('Still to do: ' + m.check.left.slice(0, 12).map((i) => i.t).join('; ') + (m.check.left.length > 12 ? '; ...' : '')); }
-    L.push('Study aid only. The official regulations are the law.');
+    if (m.daysX && window.HMPlanDays && typeof window.HMPlanDays.text === 'function') { try { L.push(window.HMPlanDays.text(m.daysX)); } catch (e) { /* days text not available */ } }
+    if (!/The official regulations are the law\.\s*$/.test(L[L.length - 1] || '')) L.push('Study aid only. The official regulations are the law.');
     return L.join('\n');
   }
   function copy(text, C) {
