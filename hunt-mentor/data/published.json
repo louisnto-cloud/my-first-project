@@ -319,7 +319,17 @@
     "fw-grandpa-07",
     "fw-grandpa-08",
     "fw-grandpa-09",
-    "fw-grandpa-10"
+    "fw-grandpa-10",
+    "mc-cz457-01",
+    "mc-cz457-02",
+    "mc-cz457-03",
+    "mc-cz457-04",
+    "mc-cz457-05",
+    "mc-cz457-06",
+    "mc-cz457-07",
+    "mc-cz457-08",
+    "mc-cz457-09",
+    "mc-cz457-10"
   ],
   "flashcards": [
     "quail",
@@ -343,6 +353,7 @@
     "nav",
     "fw-rules",
     "fw-grandpa",
-    "mu"
+    "mu",
+    "cz457"
   ]
 }
