@@ -111,7 +111,8 @@
     const h = location.hash.replace(/^#\/?/, '');
     if (h !== '' || !isIOS || standalone() || ld(HIDE)) return;
     const v = document.getElementById('view'); if (!v || $('#hmi-card', v) || !v.firstElementChild) return;
-    v.insertAdjacentHTML('afterbegin', card());
+    const st = $('.pl-today', v); // with a plan, Today's study stays first on the screen and this tip goes under it
+    if (st) st.insertAdjacentHTML('afterend', card()); else v.insertAdjacentHTML('afterbegin', card());
     $('#hmi-hide', v).onclick = () => { sv(HIDE, '1'); const c = $('#hmi-card'); if (c) c.remove(); toast('Hidden. More, Install on iPhone or Android shows the steps any time.'); };
   }
 
