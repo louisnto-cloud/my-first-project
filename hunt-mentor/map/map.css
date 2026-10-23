@@ -1,7 +1,7 @@
 /* Hunt Map chrome: onX style. Round white buttons, floating bottom bar, Hunt Map Layers button, bottom sheets. */
 .hmm {
-  --hmm-btn: rgba(244, 246, 240, 0.95); --hmm-ink: #1f211b; --hmm-card: #fbfaf5; --hmm-soft: #efede4; --hmm-muted: #5d6152;
-  --hmm-line: #ddd6c4; --hmm-accent: #e8590c; --hmm-red: #e4472b; --hmm-moss: #2f3a2b; --hmm-warn-bg: #fff1e0;
+  --hmm-btn: rgba(255, 255, 255, 0.95); --hmm-ink: #17201a; --hmm-card: #fff; --hmm-soft: #eef1ea; --hmm-muted: #5b665e;
+  --hmm-line: #d5dbd2; --hmm-accent: #e8590c; --hmm-red: #e4472b; --hmm-moss: #1f3d2b; --hmm-warn-bg: #fff1e0;
   --hmm-bar: rgba(241, 244, 245, 0.95); --hmm-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.18);
   --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px);
   --low: calc(var(--sb) + 108px);
@@ -11,13 +11,13 @@
 }
 .hmm[hidden] { display: none; }
 :root[data-theme="dark"] .hmm {
-  --hmm-btn: rgba(36, 39, 32, 0.94); --hmm-ink: #ece6d6; --hmm-card: #1f221b; --hmm-soft: #2b2f26; --hmm-muted: #aaa792;
-  --hmm-line: #3a3d33; --hmm-moss: #56704a; --hmm-warn-bg: #3a2614; --hmm-bar: rgba(30, 33, 27, 0.95); --hmm-accent: #ff7a2e;
+  --hmm-btn: rgba(24, 32, 27, 0.94); --hmm-ink: #e6ece6; --hmm-card: #18201b; --hmm-soft: #222c25; --hmm-muted: #9aa79e;
+  --hmm-line: #2c3830; --hmm-moss: #56704a; --hmm-warn-bg: #3a2614; --hmm-bar: rgba(30, 33, 27, 0.95); --hmm-accent: #ff7a2e;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="sun"]) .hmm {
-    --hmm-btn: rgba(36, 39, 32, 0.94); --hmm-ink: #ece6d6; --hmm-card: #1f221b; --hmm-soft: #2b2f26; --hmm-muted: #aaa792;
-    --hmm-line: #3a3d33; --hmm-moss: #56704a; --hmm-warn-bg: #3a2614; --hmm-bar: rgba(30, 33, 27, 0.95); --hmm-accent: #ff7a2e;
+    --hmm-btn: rgba(24, 32, 27, 0.94); --hmm-ink: #e6ece6; --hmm-card: #18201b; --hmm-soft: #222c25; --hmm-muted: #9aa79e;
+    --hmm-line: #2c3830; --hmm-moss: #56704a; --hmm-warn-bg: #3a2614; --hmm-bar: rgba(30, 33, 27, 0.95); --hmm-accent: #ff7a2e;
   }
 }
 :root[data-theme="sun"] .hmm { --hmm-btn: #fff; --hmm-ink: #000; --hmm-card: #fff; --hmm-soft: #f1f1f1; --hmm-muted: #222; --hmm-line: #000; --hmm-bar: #fff; --hmm-accent: #d14600; }

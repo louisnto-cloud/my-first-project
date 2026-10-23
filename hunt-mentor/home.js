@@ -181,15 +181,19 @@
     const mu = where === 'gps' ? (gps && gps.mu) || '' : place.mu;
     const iso = todayIso();
 
-    // 1. countdown
+    // 1. hero: days to the next hunt (the next saved plan, else the first hunt date) and when legal light ends today here
     const fh = S.settings.firstHunt;
-    const d = fh ? C.daysTo(fh) : null;
-    const count = fh
-      ? `<div class="row"><div class="grow"><div class="muted">First hunt</div><div class="big">${d > 0 ? `${d} day${d === 1 ? '' : 's'}` : d === 0 ? 'Today' : 'Date passed'}</div>
-          <div class="muted">${esc(new Date(fh + 'T12:00:00').toLocaleDateString('en-CA', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }))}</div></div>
-          <button class="btn hmd-edit" id="hmd-fh-edit" type="button">Change</button></div>
-          <div id="hmd-fh-box" hidden><label class="f" for="hmd-fh">First hunt date</label><input type="date" id="hmd-fh" value="${esc(fh)}"></div>`
-      : `<div class="muted">First hunt</div><p class="hmd-q">When is your first hunt? Set the date for a countdown.</p><input type="date" id="hmd-fh" aria-label="First hunt date">`;
+    const plan = (Array.isArray(S.plans) ? S.plans : []).filter((p) => p.from && (p.to || p.from) >= iso).sort((a, b) => (a.from < b.from ? -1 : 1))[0];
+    const next = plan ? plan.from : fh;
+    const d = next ? Math.round((Date.parse(next + 'T00:00:00Z') - Date.parse(iso + 'T00:00:00Z')) / 864e5) : null; // same count as the plan and study card
+    const longDay = (x) => new Date(x + 'T12:00:00').toLocaleDateString('en-CA', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    const heroDays = next
+      ? `<div><p class="hero-k">${plan ? 'Next hunt' : 'First hunt'}</p><div class="hero-n">${d > 0 ? `${d}<small>day${d === 1 ? '' : 's'}</small>` : d === 0 ? 'Today' : 'Passed'}</div>
+          <div class="hero-sub">${esc(longDay(next))}${plan ? '' : ' <button class="hmd-link" id="hmd-fh-edit" type="button">Change</button>'}</div></div>`
+      : `<div><p class="hero-k"><label for="hmd-fh">First hunt date</label></p><input type="date" id="hmd-fh" class="hero-date"><div class="hero-sub">Set it for a countdown.</div></div>`;
+    const count = !plan ? (fh
+      ? `<div id="hmd-fh-box" class="card hmd-card" hidden><label class="f" for="hmd-fh">First hunt date</label><input type="date" id="hmd-fh" value="${esc(fh)}"></div>`
+      : '') : '';
 
     // 2. where
     const seg = Object.entries(PLACES).map(([k, p]) => `<button type="button" data-w="${k}" class="${k === where ? 'on' : ''}">${esc(p.short)}</button>`).join('');
@@ -198,12 +202,13 @@
     else whereLine = `<p class="hmd-where">${esc(place.label)}: ${mu ? `<b>MU (Management Unit) ${esc(mu)}</b>` : 'MU (Management Unit) not found here'}</p>${where === 'gps' ? `<p class="muted hmd-small">Location from ${esc(new Date(gps.t).toLocaleString('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit', day: 'numeric', month: 'short' }))}. <button type="button" class="hmd-link" id="hmd-gps-again">Update</button></p>` : ''}`;
 
     // 4 and 6. legal light, sun and moon
-    let light = '', sunMoon = '';
+    let light = '', sunMoon = '', lightEnd = '';
     if (pt && C.sunEvent) {
       const [y, m, dd] = iso.split('-').map(Number), day = new Date(y, m - 1, dd, 12);
       const rise = C.sunEvent(day, pt.lat, pt.lon, true), set = C.sunEvent(day, pt.lat, pt.lon, false);
       const Hh = (window.HM.regs && window.HM.regs.hours) || {};
       const span = (h) => (h && h.beforeSunriseMin != null ? `${C.hhmm(C.addMin(rise, -h.beforeSunriseMin))} to ${C.hhmm(C.addMin(set, h.afterSunsetMin))}` : '<span class="verify">VERIFY</span>');
+      if (Hh.bigGame && Hh.bigGame.afterSunsetMin != null) lightEnd = `<div><p class="hero-k">Legal light ends</p><div class="hero-d">${C.hhmm(C.addMin(set, Hh.bigGame.afterSunsetMin))}</div><div class="hero-sub">${esc(place.short)}, today, big game</div></div>`;
       light = `<div class="card hmd-card"><h2>Legal light today</h2>
         <div class="hmd-kv"><span>Big game and upland birds</span><b>${span(Hh.bigGame)}</b></div>
         <div class="hmd-kv"><span>Ducks and geese</span><b>${span(Hh.migratory)}</b></div>
@@ -217,21 +222,25 @@
     let planCard = '';
     try { planCard = C.planCard ? C.planCard() : ''; } catch (e) { planCard = ''; }
     const html = `<section class="hmd" id="hmd" aria-label="This week">
+      <div class="hero" id="hmd-hero" aria-label="Next hunt and legal light">${heroDays}${lightEnd}</div>
       ${planCard}
-      <div class="card hmd-card">${count}</div>
+      ${count}
       <div class="card hmd-card"><h2>Where</h2><div class="seg hmd-seg" role="group" aria-label="Where">${seg}</div>${whereLine}<div id="hmd-gps-msg"></div></div>
       ${mu ? `<div class="card hmd-card" id="hmd-open"><h2>Open today in MU ${esc(mu)}</h2><p class="muted">Loading seasons...</p></div>` : ''}
       ${light}
       ${pt ? `<div class="card hmd-card" id="hmd-wx"><h2>Wind and weather</h2><p class="muted">Loading forecast...</p></div>` : ''}
       ${sunMoon}
       <div class="hmd-links">
-        <a class="btn" href="#/map">Map</a><a class="btn" href="#/map/tool/canhunt">Can I hunt here?</a><a class="btn primary" href="#/field">Field Mode</a><a class="btn" href="#/safety">Safety</a><a class="btn" href="#/train">Practice</a>
+        <a class="btn" href="#/map">Map</a><a class="btn" href="#/map/tool/canhunt">Can I hunt here?</a><a class="btn" href="#/field">Field Mode</a><a class="btn" href="#/safety">Safety</a><a class="btn" href="#/train">Practice</a>
         ${C.mentorUrl ? `<a class="btn" href="${esc(C.mentorUrl)}" target="_blank" rel="noopener">Ask the mentor</a>` : ''}<a class="btn" href="#/lists">Checklists</a>${C.planCard ? '<a class="btn" href="#/plan">My hunt plans</a>' : ''}
       </div></section>`;
     view.insertAdjacentHTML('afterbegin', html);
     const root = view.querySelector('#hmd');
     const alive = () => root.isConnected;
-    const rerender = (o) => { if (!alive()) return; root.remove(); render(view, C, o); };
+    const hero = root.querySelector('#hmd-hero');
+    const rerender = (o) => { if (!alive()) return; root.remove(); hero.remove(); render(view, C, o); };
+    // the hero goes above everything app.js adds to Home after this call (study card, Continue card)
+    Promise.resolve().then(() => { if (hero.isConnected && view.firstElementChild !== hero) view.prepend(hero); });
 
     // events
     const fhIn = root.querySelector('#hmd-fh');
