@@ -48,8 +48,8 @@ checked: 2026-10-23
 - The drum sits behind it, under where the scope passes (95%).
 
 ```more the manual on rails and mounts
-- "Some Tikka models are equipped with a Picatinny rail (MIL-STD-1913) on top of the receiver, which can be fitted with any standard Picatinny type scope mount. In the Picatinny rail the base screw grooves on the rail will act as recoil stops" (95%, Tikka manual page 11).
-- "Before obtaining scope mounts, check their compatibility with the rifle (mounting rail type, etc.) and scope. Please refer to the instructions of the scope mounts for mounting, adjustments and use" (95%, page 11).
+- "Some Tikka models are equipped with a Picatinny-rail (MIL-STD-1913) on top of the receiver, which can be fitted with any standard Picatinny-type scope-mount. In the Picatinny rail the base screw grooves on the rail will act as recoil stops" (95%, Tikka manual page 11).
+- "Before obtaining scopemounts, check their compatibility with the rifle (mounting rail type, etc.) and scope. Please refer to the instructions of the scope mounts for mounting, adjustments and use" (95%, page 11).
 - "The rail is permanently fixed and should not be removed by the user. If you intend to remove the Picatinny rail, turn to qualified gunsmith" (95%, page 13).
 - The Arctic rail: 122 mm (4.8 in), flush with the receiver front (75%, all4shooters); "5 inch long (shortened to accommodate the rear aperture sight)", zero degree (70%, Recoil).
 - Short rail means the rings sit close together. Check that the rings land on the scope tube, not on the turret or the bells (Tip, [scope guide](#/s/scope-guide/0)).
