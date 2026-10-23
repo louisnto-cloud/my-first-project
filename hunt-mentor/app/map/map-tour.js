@@ -297,7 +297,7 @@ body.map-open:has(.hm-ask:not([hidden])) #hmm-stack-r:not(:has(.hma-btn)) #hm-he
 .hmtour-banner[hidden]{display:none}
 .hmtour-btns{display:flex;align-items:center;gap:8px}
 .hmtour-sp{flex:1}
-.hmtour button{min-height:44px;min-width:44px;padding:0 14px;border-radius:22px;font:700 16px/1 inherit;font-family:inherit;cursor:pointer}
+.hmtour button{min-height:44px;min-width:44px;padding:0 14px;border-radius:22px;font-weight:700;font-size:16px;line-height:1;font-family:inherit;cursor:pointer}
 .hmtour button[hidden]{display:none}
 .hmtour-skip{border:0;background:none;color:var(--hmm-ink,#1f211b);text-decoration:underline;padding:0 6px !important}
 .hmtour-back{border:1.5px solid var(--hmm-line,#ddd6c4);background:var(--hmm-card,#fbfaf5);color:var(--hmm-ink,#1f211b)}
