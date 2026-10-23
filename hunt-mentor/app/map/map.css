@@ -128,6 +128,9 @@ body:has(.hm-backchip:not([hidden])) .hmm-3d { top: calc(var(--st) + 186px); }
 .hmm-grip { width: 42px; height: 5px; border-radius: 3px; background: var(--hmm-line); margin: 8px auto 0; flex: none; }
 .hmm-sheet-h { display: flex; align-items: center; gap: 8px; padding: 2px 6px 2px 18px; flex: none; }
 .hmm-sheet-h h2 { flex: 1; margin: 0; font-size: 19px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hmm-grow { width: 44px; height: 44px; border: 0; background: none; display: none; place-items: center; border-radius: 50%; color: var(--hmm-muted); flex: none; }
+.hmm-grow svg { width: 24px; height: 24px; transform: rotate(-90deg); transition: transform 0.2s; }
+.hmm-full .hmm-grow svg { transform: rotate(90deg); }
 .hmm-x { width: 44px; height: 44px; border: 0; background: none; display: grid; place-items: center; border-radius: 50%; color: var(--hmm-muted); }
 .hmm-sheet-b { overflow-wrap: anywhere; overflow-y: auto; overflow-x: hidden; padding: 2px 18px 22px; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; -webkit-user-select: text; user-select: text; flex: 1 1 auto; }
 .hmm-sheet-b p { margin: 8px 0; }
@@ -391,3 +394,23 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 :root[data-theme="dark"] .hmw-arr { color: #7cc0ff; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-theme="sun"]) .hmw-arr { color: #7cc0ff; } }
 .hmm-seas .hmm-open { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 10px; background: #2e7d32; color: #fff; font-size: 14px; font-weight: 600; }
+
+/* Peek and expand (core.js setSheetFull). Phones: a sheet opens at about 45% of the screen; expanded, it stops 8 px below the
+   hunt chips (hunt-field.js sets --hmf-b, the chips' bottom edge, on .hmm). The chips sit above the scrim, so they stay
+   visible and tappable with any sheet open. Short sheets keep their own height. */
+@media (max-width: 699.98px) {
+  .hmm .hmm-sheet:not(.tall), .hmm .hmm-sheet.hh-peek { max-height: min(45%, calc(100% - var(--hmf-b, calc(var(--st) + 200px)) - 8px)); }
+  .hmm .hmm-sheet.tall { height: min(45%, calc(100% - var(--hmf-b, calc(var(--st) + 200px)) - 8px)); max-height: none; }
+  .hmm .hmm-sheet.hmm-full { max-height: calc(100% - var(--hmf-b, calc(var(--st) + 200px)) - 8px); }
+  .hmm .hmm-sheet.tall.hmm-full { height: calc(100% - var(--hmf-b, calc(var(--st) + 200px)) - 8px); max-height: none; }
+  .hmm .hmm-sheet.hmm-canmore .hmm-grow { display: grid; }
+  .hmm .hmm-sheet-h { touch-action: none; }
+  .hmm .hmm-grip { width: 56px; height: 6px; margin: 0 auto; border: solid transparent; border-width: 8px 0; background-clip: padding-box; box-sizing: content-box; cursor: pointer; }
+  /* expanded: the scale and centre readout hide behind the chips, which move up under the top buttons (hunt-field.js) */
+  .hmm.sheet-full .hmm-readout { visibility: hidden; }
+  /* in 3D with a sheet open, the 3D controls become one row below the chips (clear of the peek sheet);
+     expanded, the sheet would cover them, so they wait until it shrinks or closes */
+  .hmm.sheet-open .hmm-3d:not([hidden]) { top: calc(var(--hmf-b, calc(var(--st) + 200px)) + 8px); grid-template-columns: repeat(5, 44px); gap: 6px; }
+  .hmm.sheet-open .hmm-3d .hmm-btn, .hmm.sheet-open .hmm-3d .hmm-3d-n { width: 44px; height: 44px; grid-column: auto; }
+  .hmm.sheet-full .hmm-3d { visibility: hidden; }
+}
