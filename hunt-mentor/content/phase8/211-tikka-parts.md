@@ -44,7 +44,7 @@ checked: 2026-10-23
 - Tikka manual nomenclature, page 7 (95%): receiver, top rail, ejection port, bolt stop or bolt release, model and serial number, receiver screws, bolt, bolt handle, bolt shroud, barrel, trigger, trigger guard, trigger blade, stock, pistol grip, sling swivel, recoil pad, magazine, magazine release, safety, safety catch, cocking indicator.
 - Arctic specifics from Sako's page (95%): 508 mm (20 in) cold hammer forged, free floating, semi heavy stainless barrel; birch laminate stock; Picatinny rail; open sights with a rear wheel stepped to 600 m; two stage trigger; two position safety; two locking lug bolt with a 70 degree opening angle, a removable bolt handle and a plunger ejector.
 - Free floating: the barrel does not touch the stock in front of the action (Tip: slide a folded paper under it to see).
-- Assumption: your rifle matches Sako's Arctic page. You said the barrel is about 18 in (PLAN.md). The factory barrel is 508 mm (20 in). Measure it: see the barrel screen below. VERIFY.
+- Your barrel: 20 in, confirmed by you on 2026-10-23. That matches Sako's factory 508 mm (20 in). Want to double check? See the measuring how to on the barrel screen below (Tip).
 ```
 
 ## The action, right side
@@ -126,7 +126,7 @@ checked: 2026-10-23
 - Source: Criminal Code s. 84(1), current to 30 September 2026, read 2026-10-23 (99%).
 - How it is measured: "the distance from the muzzle of the barrel to and including the chamber, but does not include the length of any component, part or accessory including any component, part or accessory designed or intended to suppress the muzzle flash or reduce recoil" (99%, s. 84(2)).
 - Plain English: your factory 508 mm barrel is well over 457 mm. Cutting a rifle barrel or stock short can make it a prohibited firearm (99%). A gunsmith job that shortens a barrel is a legal question first: ask a qualified gunsmith and the RCMP (Royal Canadian Mounted Police) Canadian Firearms Program before anything is cut (Tip).
-- Measure it yourself (Tip): unloaded and proved, bolt closed, slide a cleaning rod down the bore from the muzzle until it touches the bolt face, mark the rod at the muzzle, measure the mark. Expect about 508 mm (VERIFY: your "about 18 in" was probably measured from the front of the stock or receiver).
+- Measure it yourself (Tip): unloaded and proved, bolt closed, slide a cleaning rod down the bore from the muzzle until it touches the bolt face, mark the rod at the muzzle, measure the mark. Expect about 508 mm (20 in), the length you confirmed.
 ```
 
 ## Before the first shot

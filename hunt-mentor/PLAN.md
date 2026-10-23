@@ -95,7 +95,8 @@ hunt-mentor/
 ## 7. Owner answers (logged 2026-10-01)
 - Phone: iPhone. Install via Safari "Add to Home Screen".
 - Hosting: GitHub Pages, this repo, path `/my-first-project/hunt-mentor/`.
-- Rifle: owner says "Tikka Arctic", barrel about 18 in, "the Canada version".
+- Rifle: owner says "Tikka Arctic", "the Canada version". Barrel 20 in, confirmed by the owner 2026-10-23 (earlier note said about 18 in).
+- Home: the owner lives in Mission (confirmed 2026-10-23); plan drive times start from Mission. Truck runs on regular gasoline (owner, 2026-10-23); litres per 100 km not given, so 15 L stays an Assumption.
   - Likely Tikka T3x Arctic (Canadian Rangers model): 20 in barrel, iron sights,
     removable Picatinny rail (90%, manufacturer page via search). Owner to confirm.
 - Budget: about $3,000 total for shotgun, scope, clothing and gear.

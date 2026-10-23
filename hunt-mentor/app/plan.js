@@ -270,7 +270,7 @@
     return `${l.detail.replace(/\{area\}/g, area).replace(/\{tile\}/g, `${Math.floor(x.lon / dg)}_${Math.floor(x.lat / dg)}`)}?v=${encodeURIComponent(l.dataDate || '1')}`;
   }
   const homePt = () => { const b = ((window.HM && window.HM.bases) || []).find((x) => x.id === 'mission'); return b ? { lat: b.lat, lon: b.lon } : { lat: 49.13, lon: -122.31 }; };
-  // Assumption (labelled where shown): a truck uses about 15 L per 100 km and fuel is about $1.80 a litre. Check your own truck and the pump.
+  // Assumption (labelled where shown): a truck uses about 15 L per 100 km and fuel is about $1.80 a litre. Check your own truck and the pump. The owner's truck runs on regular (2026-10-23).
   const FUEL_L100 = 15, FUEL_PRICE = 1.8;
   const fuelCost = (oneWayKm) => (oneWayKm * 2 * FUEL_L100 / 100) * FUEL_PRICE;
   // legal flags in the spot data, sorted into the three checks the board shows
@@ -1106,7 +1106,7 @@
     const G = A.gun || {};
     add('gun', 'Gun and max shot', A.gun ? [G.name, G.sights ? askLabel('sights', G.sights).toLowerCase() : '', G.maxShot ? `${G.maxShot} m (${yd(G.maxShot)} yd)` : G.maxShot === 0 ? 'not practised yet' : ''].filter(Boolean).join(', ') : '',
       A.gun ? (G.maxShot ? `Your max shot: ${G.maxShot} m (${yd(G.maxShot)} yd). Pass on anything further (Tip).` : G.maxShot === 0 ? 'Not practised yet: sight in and practise first. Sighted in is a readiness gate.' : '') + (G.id === 'tikka' && G.sights === 'iron' ? ' Tikka open sights are factory zeroed at 100 m (95%, Tikka manual).' : '') : skip);
-    add('budget', 'Budget', askLabel('budget', A.budget), A.budget ? `The board shows fuel per spot. Spots where fuel is over a third of your budget rank lower. Assumption: ${FUEL_L100} L per 100 km, about $${FUEL_PRICE.toFixed(2)} a litre.` : A.budget === 0 ? 'No spots lowered for fuel.' : skip);
+    add('budget', 'Budget', askLabel('budget', A.budget), A.budget ? `The board shows fuel per spot. Spots where fuel is over a third of your budget rank lower. Assumption: ${FUEL_L100} L per 100 km, about $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline.` : A.budget === 0 ? 'No spots lowered for fuel.' : skip);
     add('success', 'Success means', askLabel('success', A.success), A.success === 'see' ? 'Odds headline: seeing one. There is no official number for that; the plan says so.' : A.success === 'shot' ? 'Odds headline: a shot chance. No official number; at least the official kill rate.' : A.success === 'meat' ? 'Odds headline: an animal taken, the official harvest number.' : skip);
     return rows;
   }
@@ -1210,7 +1210,7 @@
       return `<li class="card pl2-spot" data-bi="${i}"><div class="row"><span class="pl-dn">${i + 1}</span><b class="grow">${esc(x.name)}</b>${x.pop ? `<span class="pill ${x.pop === 'quiet' ? 'soon' : ''}">${x.pop === 'quiet' ? 'Quiet' : 'Popular'}</span>` : ''}</div>
         <div class="pl2-strip" aria-label="Getting there"><span>Mission</span><i>${x.driveKm != null ? `${x.driveKm} km, about ${fmtMin(x.driveMin)}` : 'drive'}</i>${x.rideKm ? `<span>Park</span><i>${x.rideKm.toFixed(1)} km ${x.ride === 'rough' ? 'rough road' : 'ride'}</i>` : ''}<span>${x.rideKm ? 'Unload' : 'Park'}</span><i>${walk ? esc(walk.replace(/,.*/, '')) : 'walk'}</i><span>Spot</span></div>
         <div class="pl-kv"><span>Access</span><b>${esc(CAT[x.cat] || x.cat || '')}, MU ${esc(x.mu || '?')}</b></div>
-        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from Mission, about ${fmtMin(x.driveMin) || '?'} (estimate${x.driveSrc === 'data' ? ', road distance from the spot data' : ', straight line times 1.3'}).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre).` : ''}</p>
+        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from Mission, about ${fmtMin(x.driveMin) || '?'} (estimate${x.driveSrc === 'data' ? ', road distance from the spot data' : ', straight line times 1.3'}).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline).` : ''}</p>
         <div class="pl-kv"><span>Pressure</span><b>${esc(x.popLabel || (x.pop === 'quiet' ? 'Less popular (quieter)' : x.pop ? 'More popular (busier)' : x.busy || 'not in the data'))}</b></div>
         ${x.popWhy || x.pressWhy ? `<p class="pl-small muted">${esc(x.pressWhy || '')}${x.popCert != null ? ` Popularity is an estimate, about ${esc(x.popCert)}% sure.` : ''}</p>` : ''}
         <div class="pl-kv"><span>Pack out</span><b>Estimate</b></div><p class="pl-small">${esc(packOut(x, p, sp))}</p>
