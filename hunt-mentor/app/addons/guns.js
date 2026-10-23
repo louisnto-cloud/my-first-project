@@ -185,6 +185,7 @@
 .gn-src a { font-size: 15px; font-weight: 700; display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; }
 .gn-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .gn-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 15px; font-weight: 700; color: var(--ink); text-decoration: none; background: var(--card); }
+.gn .list .item, .gn .item { min-height: 44px; box-sizing: border-box; display: flex; align-items: center; }
 .gn-rem { list-style: none; margin: 0; padding: 0; font-size: 16px; }
 .gn-rem li { border-left: 5px solid var(--sage); padding: 6px 10px; margin: 0 0 8px; background: var(--bg); border-radius: 0 8px 8px 0; }
 .gn-rem li.lv-now { border-left-color: var(--blaze, #ff6a13); }
