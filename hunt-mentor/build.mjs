@@ -459,8 +459,22 @@ function build() {
   }
   const searchBody = photoUrl(JSON.stringify(searchData));
   const searchFile = `lessons/search.${shortHash(searchBody)}.json`;
-  const indexData = { ...data, lessonFiles, searchFile, ...(planJs && planFiles.length ? { planFiles } : {}),
-    sessions: sessions.map(({ steps, text, ...meta }) => ({ ...meta, steps: steps.map((st) => ({ title: st.title })) })) };
+  // quiz text, flashcard decks (about 6 MB, mostly diagrams) and photo credits: hashed files loaded on demand too.
+  // The index keeps only what Home and Learn need: quiz counts (qn) and card ids per deck (cardDecks: [deck, file, ids]).
+  const extraOut = [];
+  const hashed = (name, obj) => { const body = photoUrl(JSON.stringify(obj)); const f = `lessons/_${name}.${shortHash(body)}.json`; extraOut.push([f, body]); return f; };
+  const quizFile = hashed('quiz', Object.fromEntries(sessions.filter((s) => s.quiz.length).map((s) => [s.id, s.quiz])));
+  const slugs = new Set();
+  const cardDecks = [...new Set(data.flashcards.map((c) => c.deck))].map((d) => {
+    let slug = d.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'deck';
+    while (slugs.has(slug)) slug += '-x';
+    slugs.add(slug);
+    const cs = data.flashcards.filter((c) => c.deck === d);
+    return [d, hashed('cards-' + slug, Object.fromEntries(cs.map(({ id, deck, ...rest }) => [id, rest]))), cs.map((c) => c.id)];
+  });
+  const photosFile = hashed('photos', data.photos);
+  const indexData = { ...data, flashcards: undefined, photos: undefined, lessonFiles, searchFile, quizFile, cardDecks, photosFile, ...(planJs && planFiles.length ? { planFiles } : {}),
+    sessions: sessions.map(({ steps, text, quiz, ...meta }) => ({ ...meta, qn: quiz.length, steps: steps.map((st) => ({ title: st.title })) })) };
   const jsonIndex = photoUrl(JSON.stringify(indexData));
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
@@ -502,7 +516,8 @@ function build() {
   fs.mkdirSync(path.join(OUT, 'lessons'), { recursive: true });
   for (const [file, body] of lessonOut) fs.writeFileSync(path.join(OUT, file), body);
   fs.writeFileSync(path.join(OUT, searchFile), searchBody);
-  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...(planJs ? ['plan.js'] : []), ...(placesJs ? ['places.js'] : []), ...addons.map(([f]) => 'addons/' + f), ...addonData, ...mapFiles.map(([, rel]) => rel)])));
+  for (const [file, body] of extraOut) fs.writeFileSync(path.join(OUT, file), body);
+  fs.writeFileSync(path.join(OUT, 'sw.js'), read('app/sw.js').replace('__VERSION__', version).replace('__PHOTOS__', JSON.stringify(photoIds.map((id) => `photos/${id}.jpg`))).replace('__CONTENT__', JSON.stringify([...extraOut.map(([f]) => f), searchFile, ...lessonOut.map(([f]) => f)])).replace('__MAP__', JSON.stringify([...(askJs ? ['ask.js'] : []), ...(planJs ? ['plan.js'] : []), ...(placesJs ? ['places.js'] : []), ...addons.map(([f]) => 'addons/' + f), ...addonData, ...mapFiles.map(([, rel]) => rel)])));
   fs.mkdirSync(path.join(OUT, 'photos'), { recursive: true });
   for (const id of photoIds) fs.copyFileSync(path.join(ROOT, 'photos', `${id}.jpg`), path.join(OUT, 'photos', `${id}.jpg`));
   fs.copyFileSync(path.join(ROOT, 'app/manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));

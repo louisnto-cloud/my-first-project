@@ -45,9 +45,13 @@ self.addEventListener('message', (e) => { if (e.data && e.data.hm === 'offline-c
 // either (a phone with no signal often says "online" and lets requests hang for a minute). Then every waiting request
 // stops at once and for DOWN_MS nothing waits on the network. One slow request on a working link is allowed NET_WAIT.
 const DOWN_MS = 12000, NET_WAIT = 15000, NET_QUIET = 3000;
+// A request that fails at once on another site (an outage, a blocked or rate limited host, a bad certificate) marks only
+// that site down: before 2026-10-23 it marked everything down for DOWN_MS, so the first PMTiles header request of the
+// map (our own site) failed whenever a weather, terrain or tile request had just failed, and worked on the retry.
 let downUntil = 0, lastNetOk = 0;
-const inflight = new Set();
-const isDown = () => (self.navigator && self.navigator.onLine === false) || Date.now() < downUntil;
+const inflight = new Set(), hostDown = new Map(); // host -> down until
+const hostOf = (u) => { try { return new URL(u).host; } catch (e) { return ''; } };
+const isDown = (u) => (self.navigator && self.navigator.onLine === false) || Date.now() < downUntil || (u != null && Date.now() < (hostDown.get(hostOf(u)) || 0));
 function markDown() { downUntil = Date.now() + DOWN_MS; for (const c of inflight) c.abort(); inflight.clear(); }
 function net(req, ms = NET_WAIT) {
   const ctrl = new AbortController(), started = Date.now();
@@ -55,8 +59,13 @@ function net(req, ms = NET_WAIT) {
   const quiet = setTimeout(() => { if (lastNetOk < started) markDown(); }, NET_QUIET);
   const hard = setTimeout(() => { inflight.delete(ctrl); ctrl.abort(); }, ms);
   const end = () => { clearTimeout(quiet); clearTimeout(hard); inflight.delete(ctrl); };
-  return fetch(req, { signal: ctrl.signal }).then((res) => { end(); lastNetOk = Date.now(); downUntil = 0; return res; }, (err) => {
-    end(); if (!ctrl.signal.aborted || Date.now() - started >= NET_QUIET) downUntil = Math.max(downUntil, Date.now() + DOWN_MS);
+  const host = hostOf(req.url), own = host === self.location.host;
+  return fetch(req, { signal: ctrl.signal }).then((res) => { end(); lastNetOk = Date.now(); downUntil = 0; hostDown.delete(host); return res; }, (err) => {
+    end();
+    if (!ctrl.signal.aborted || Date.now() - started >= NET_QUIET) {
+      if (own) downUntil = Math.max(downUntil, Date.now() + DOWN_MS); // our own site unreachable: no signal
+      else hostDown.set(host, Date.now() + DOWN_MS);
+    }
     throw err;
   });
 }
@@ -96,7 +105,7 @@ async function shell(req) {
   const hit = await caches.open(CACHE).then((c) => c.match(req, { ignoreSearch: true }));
   if (hit) return hit;
   try {
-    if (isDown() && req.mode !== 'navigate') { const any = await caches.match(req, { ignoreSearch: true, ignoreVary: true }); if (any) return any; }
+    if (isDown(req.url) && req.mode !== 'navigate') { const any = await caches.match(req, { ignoreSearch: true, ignoreVary: true }); if (any) return any; }
     const res = await net(req);
     // a precache file that was skipped at install: keep it now (map code, vendor libraries, photos)
     if (res.ok && /\/(map|vendor|photos|seasons|harvest|lessons|places)\/[^/]+$|\/(home|places)\.js$|\/data\/migration\.json$/.test(new URL(req.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {}); }
@@ -112,7 +121,7 @@ async function tileFirst(req) {
   const key = normKey(req.url);
   const hit = await caches.match(key, MATCH);
   if (hit) return hit;
-  if (isDown()) return fail(); // no signal: answer now, do not wait for a network that is not there
+  if (isDown(req.url)) return fail(); // no signal: answer now, do not wait for a network that is not there
   let res;
   try { res = await net(req); } catch (err) { return fail(); }
   if (res.ok) {
@@ -133,7 +142,7 @@ async function dataFirst(req) {
   // No signal and never saved (a file next to a saved area): an empty layer, the same as what the map can show there.
   const none = () => (/\.(geo)?json$/.test(new URL(req.url).pathname)
     ? new Response('{"type":"FeatureCollection","features":[]}', { status: 200, headers: { 'Content-Type': 'application/json', 'X-Hm-Offline': 'not-saved' } }) : fail());
-  if (isDown()) { const old = await older(); return old || none(); }
+  if (isDown(req.url)) { const old = await older(); return old || none(); }
   try {
     const res = await net(req);
     if (res.ok) {
@@ -153,7 +162,7 @@ async function dataFirst(req) {
 /** Network first, but never a long wait: down means the saved copy at once; otherwise the saved copy after ms. */
 async function networkFirst(req, cacheName, ms) {
   const fromCache = () => caches.match(req, MATCH);
-  if (isDown()) { const hit = await fromCache(); if (hit) return hit; }
+  if (isDown(req.url)) { const hit = await fromCache(); if (hit) return hit; }
   return new Promise((resolve, reject) => {
     let done = false;
     const timer = setTimeout(async () => { const hit = await fromCache(); if (hit && !done) { done = true; resolve(hit); } }, ms);
@@ -196,7 +205,7 @@ const sliceRes = (blob, s, e, total, etag) => {
 };
 async function pmtiles(req) {
   const range = req.headers.get('range');
-  const hit = await caches.match(req.url, MATCH) || (isDown() && await caches.match(plain(req.url), { ignoreSearch: true, ignoreVary: true }));
+  const hit = await caches.match(req.url, MATCH) || (isDown(req.url) && await caches.match(plain(req.url), { ignoreSearch: true, ignoreVary: true }));
   const m = range && /bytes=(\d+)-(\d*)/.exec(range);
   if (hit && !hit.headers.get('x-hm-range')) { // a whole saved file
     if (!range) return hit;
@@ -207,7 +216,7 @@ async function pmtiles(req) {
     return sliceRes(blob.slice(start), start, end, blob.size);
   }
   if (m) {
-    const s = +m[1], e = m[2] ? +m[2] : Infinity, file = plain(req.url), down = isDown();
+    const s = +m[1], e = m[2] ? +m[2] : Infinity, file = plain(req.url), down = isDown(req.url);
     const list = (await pmIndex()).get(new URL(file).pathname) || [];
     const ok = (c) => c.s <= s && (c.e >= e || (c.t && c.e >= c.t - 1 && c.e >= s));
     const c = list.find((x) => x.file === file && ok(x)) || (down && list.find(ok));
@@ -217,6 +226,6 @@ async function pmtiles(req) {
       pmIdx = null; // the area was deleted: rebuild the index next time
     }
   }
-  if (isDown()) return fail();
+  if (isDown(req.url)) return fail();
   try { return await net(req); } catch (err) { return fail(); }
 }
