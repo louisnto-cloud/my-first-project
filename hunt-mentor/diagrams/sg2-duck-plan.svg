@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Duck plan card: 1 steel No. 2 or 3, non toxic only, 2 improved cylinder or modified, steel rated, 3 shoot inside 35 metres, the farthest decoy, 4 plug in, 3 shells total, 5 pattern at 35 metres.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Ducks: the setup</text>
+<rect x="12" y="44" width="376" height="42" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="65.0" r="12" fill="#FF6A13"/><text x="34" y="70.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="62.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Shell</text>
+<text x="54.0" y="79.0" font-size="14" fill="#17201A" text-anchor="start">Steel No. 2 or 3: non toxic only</text>
+<rect x="12" y="92" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="113.0" r="12" fill="#1F3D2B"/><text x="34" y="118.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="110.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Choke</text>
+<text x="54.0" y="127.0" font-size="14" fill="#17201A" text-anchor="start">IC or modified, steel rated</text>
+<rect x="12" y="140" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="161.0" r="12" fill="#1F3D2B"/><text x="34" y="166.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="158.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Range</text>
+<text x="54.0" y="175.0" font-size="14" fill="#17201A" text-anchor="start">Inside 35 m (38 yd): far decoy</text>
+<rect x="12" y="188" width="376" height="42" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="209.0" r="12" fill="#FF6A13"/><text x="34" y="214.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="54.0" y="206.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Plug in</text>
+<text x="54.0" y="223.0" font-size="14" fill="#17201A" text-anchor="start">3 shells in the gun, total</text>
+<rect x="12" y="236" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="257.0" r="12" fill="#1F3D2B"/><text x="34" y="262.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="54.0" y="254.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Pattern it</text>
+<text x="54.0" y="271.0" font-size="14" fill="#17201A" text-anchor="start">This shell, this choke, 35 m</text>
+</svg>

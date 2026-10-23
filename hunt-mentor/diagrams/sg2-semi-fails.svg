@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Common semi auto problems: 1 light loads in an inertia gun fail to cycle, 2 dirty gas piston or cylinder causes short cycling, 3 piston or seal fitted wrong after cleaning, 4 shooter holds the gun too loosely or rides the bolt, 5 too much oil gums up in the cold.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Semi auto: what goes wrong</text>
+<rect x="12" y="46" width="376" height="41" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="66" r="12" fill="#1F3D2B"/><text x="34" y="71.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="63.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Light loads (inertia)</text>
+<text x="54.0" y="81.0" font-size="14" fill="#17201A" text-anchor="start">M3000: at least 1 oz, 3 dram loads.</text>
+<rect x="12" y="93" width="376" height="41" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="113" r="12" fill="#1F3D2B"/><text x="34" y="118.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="110.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Dirty gas system</text>
+<text x="54.0" y="128.0" font-size="14" fill="#17201A" text-anchor="start">Clean piston and cylinder (A300).</text>
+<rect x="12" y="140" width="376" height="41" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="160" r="12" fill="#1F3D2B"/><text x="34" y="165.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="157.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Piston in wrong</text>
+<text x="54.0" y="175.0" font-size="14" fill="#17201A" text-anchor="start">Put it back the way the manual shows.</text>
+<rect x="12" y="187" width="376" height="41" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="207" r="12" fill="#1F3D2B"/><text x="34" y="212.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="54.0" y="204.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Thumb near the bolt</text>
+<text x="54.0" y="222.0" font-size="14" fill="#17201A" text-anchor="start">Keep hands off the moving parts.</text>
+<rect x="12" y="234" width="376" height="41" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="254" r="12" fill="#1F3D2B"/><text x="34" y="259.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="54.0" y="251.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Too much oil</text>
+<text x="54.0" y="269.0" font-size="14" fill="#17201A" text-anchor="start">Thin film only. Cold makes oil thick.</text>
+<text x="200.0" y="292.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Most problems are dirt, oil or light shells.</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shot sizes to scale, diameter in millimetres: No. 7.5 2.4, No. 6 2.8, No. 4 3.3, No. 2 3.8, BB 4.6. Bigger number, smaller pellet.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Shot sizes to scale</text>
+<circle cx="46" cy="130" r="14.5" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/>
+<text x="46.0" y="190.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">No. 7.5</text>
+<text x="46.0" y="212.0" font-size="14" fill="#17201A" text-anchor="middle">2.4 mm</text>
+<text x="46.0" y="236.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">grouse</text>
+<circle cx="122" cy="130" r="16.7" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/>
+<text x="122.0" y="190.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">No. 6</text>
+<text x="122.0" y="212.0" font-size="14" fill="#17201A" text-anchor="middle">2.8 mm</text>
+<text x="122.0" y="236.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">grouse</text>
+<circle cx="198" cy="130" r="19.8" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/>
+<text x="198.0" y="190.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">No. 4</text>
+<text x="198.0" y="212.0" font-size="14" fill="#17201A" text-anchor="middle">3.3 mm</text>
+<text x="198.0" y="236.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">teal</text>
+<circle cx="274" cy="130" r="22.9" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/>
+<text x="274.0" y="190.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">No. 2</text>
+<text x="274.0" y="212.0" font-size="14" fill="#17201A" text-anchor="middle">3.8 mm</text>
+<text x="274.0" y="236.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">ducks</text>
+<circle cx="350" cy="130" r="27.4" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/>
+<text x="350.0" y="190.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">BB</text>
+<text x="350.0" y="212.0" font-size="14" fill="#17201A" text-anchor="middle">4.6 mm</text>
+<text x="350.0" y="236.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">geese</text>
+<text x="200.0" y="280.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Bigger number, smaller pellet.</text>
+</svg>

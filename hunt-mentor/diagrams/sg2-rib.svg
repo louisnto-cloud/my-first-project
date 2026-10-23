@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Your eye is the rear sight. Eye high above the rib: the gun shoots high. Eye flat on the rib, you see a little rib: about right for most guns. Eye low, behind the receiver: the gun shoots low.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Your eye is the rear sight</text>
+<rect x="120" y="76" width="250" height="10" fill="#3b4045"/>
+<line x1="120" y1="75" x2="370" y2="75" stroke="#a7aeb3" stroke-width="2"/>
+<circle cx="366" cy="72" r="4" fill="#ffffff" stroke="#17201A"/>
+<ellipse cx="100" cy="60" rx="13" ry="8" fill="#ffffff" stroke="#17201A" stroke-width="1.5"/><circle cx="104" cy="60" r="4" fill="#17201A"/>
+<line x1="108" y1="60" x2="366" y2="72" stroke="#FF6A13" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="20.0" y="116.0" font-size="15" font-weight="bold" fill="#FF6A13" text-anchor="start">Eye high: shoots high</text>
+<rect x="120" y="148" width="250" height="10" fill="#3b4045"/>
+<line x1="120" y1="147" x2="370" y2="147" stroke="#a7aeb3" stroke-width="2"/>
+<circle cx="366" cy="144" r="4" fill="#ffffff" stroke="#17201A"/>
+<ellipse cx="100" cy="143" rx="13" ry="8" fill="#ffffff" stroke="#17201A" stroke-width="1.5"/><circle cx="104" cy="143" r="4" fill="#17201A"/>
+<line x1="108" y1="143" x2="366" y2="144" stroke="#1F3D2B" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="20.0" y="188.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">A little rib: about right</text>
+<rect x="120" y="220" width="250" height="10" fill="#3b4045"/>
+<line x1="120" y1="219" x2="370" y2="219" stroke="#a7aeb3" stroke-width="2"/>
+<circle cx="366" cy="216" r="4" fill="#ffffff" stroke="#17201A"/>
+<ellipse cx="100" cy="228" rx="13" ry="8" fill="#ffffff" stroke="#17201A" stroke-width="1.5"/><circle cx="104" cy="228" r="4" fill="#17201A"/>
+<line x1="108" y1="228" x2="366" y2="216" stroke="#FF6A13" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="20.0" y="260.0" font-size="15" font-weight="bold" fill="#FF6A13" text-anchor="start">Eye low: shoots low</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Fit decides where it shoots. Pattern to check.</text>
+</svg>

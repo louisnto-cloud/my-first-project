@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Price tiers for a new 12 gauge in Canada, checked 23 October 2026: entry pumps and inertia semi autos about 630 to 890 dollars; mid gas semi autos about 1,120 to 1,525 dollars; premium semi autos and over unders about 2,300 to 3,000 dollars and up.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">What it costs (CAD)</text>
+<line x1="40" y1="240" x2="380" y2="240" stroke="#1F3D2B" stroke-width="1.5"/>
+<line x1="40.0" y1="236" x2="40.0" y2="244" stroke="#1F3D2B"/>
+<text x="40.0" y="262.0" font-size="13" fill="#17201A" text-anchor="middle">$0</text>
+<line x1="140.0" y1="236" x2="140.0" y2="244" stroke="#1F3D2B"/>
+<text x="140.0" y="262.0" font-size="13" fill="#17201A" text-anchor="middle">$1,000</text>
+<line x1="240.0" y1="236" x2="240.0" y2="244" stroke="#1F3D2B"/>
+<text x="240.0" y="262.0" font-size="13" fill="#17201A" text-anchor="middle">$2,000</text>
+<line x1="340.0" y1="236" x2="340.0" y2="244" stroke="#1F3D2B"/>
+<text x="340.0" y="262.0" font-size="13" fill="#17201A" text-anchor="middle">$3,000</text>
+<text x="40.0" y="60.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Entry</text>
+<text x="97.4" y="60.0" font-size="14" fill="#17201A" text-anchor="start">pump, inertia</text>
+<rect x="103" y="68" width="26" height="20" rx="4" fill="#1F3D2B"/>
+<text x="135.0" y="83.0" font-size="13" font-weight="bold" fill="#17201A" text-anchor="start">$630 to $890</text>
+<text x="40.0" y="118.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Mid</text>
+<text x="77.5" y="118.0" font-size="14" fill="#17201A" text-anchor="start">gas semi auto</text>
+<rect x="152" y="126" width="40" height="20" rx="4" fill="#FF6A13"/>
+<text x="198.5" y="141.0" font-size="13" font-weight="bold" fill="#17201A" text-anchor="start">$1,120 to $1,525</text>
+<text x="40.0" y="176.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Premium</text>
+<text x="120.3" y="176.0" font-size="14" fill="#17201A" text-anchor="start">semi, over under</text>
+<rect x="270" y="184" width="72" height="20" rx="4" fill="#1F3D2B"/>
+<text x="263.5" y="199.0" font-size="13" font-weight="bold" fill="#17201A" text-anchor="end">$2,295 to $3,020</text>
+<text x="200.0" y="290.0" font-size="13" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Price checked 2026-10-23. Verify in store.</text>
+</svg>

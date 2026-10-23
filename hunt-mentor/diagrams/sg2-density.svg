@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shot density in grams per cubic centimetre: steel about 7.8, bismuth about 9.6 to 9.8, lead about 11.2 to 11.3, tungsten super shot about 18. Denser pellets keep more energy, so you can use a smaller size.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">How heavy is each shot?</text>
+<text x="20.0" y="82.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Steel</text>
+<rect x="150" y="64" width="82" height="26" rx="3" fill="#1F3D2B"/>
+<text x="237.9" y="83.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">7.8</text>
+<text x="20.0" y="132.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Bismuth</text>
+<rect x="150" y="114" width="102" height="26" rx="3" fill="#1F3D2B"/>
+<text x="257.9" y="133.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">9.7</text>
+<text x="20.0" y="182.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Lead</text>
+<rect x="150" y="164" width="119" height="26" rx="3" fill="#5d646b"/>
+<text x="274.6" y="183.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">11.3</text>
+<text x="20.0" y="232.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Tungsten (TSS)</text>
+<rect x="150" y="214" width="189" height="26" rx="3" fill="#1F3D2B"/>
+<text x="345.0" y="233.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">18</text>
+<rect x="20" y="262" width="16" height="12" fill="#1F3D2B"/>
+<text x="42.0" y="273.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">non toxic: legal for ducks</text>
+<rect x="250" y="262" width="16" height="12" fill="#5d646b"/>
+<text x="272.0" y="273.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">lead</text>
+<text x="200.0" y="290.0" font-size="13" fill="#17201A" text-anchor="middle">g/cm3, about</text>
+</svg>
