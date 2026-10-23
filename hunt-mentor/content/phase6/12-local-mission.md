@@ -146,7 +146,7 @@ checked: 2026-10-01
 ```more every other rule, quoted
 - Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview). VERIFY the hunting wording: the city's bylaw site would not open from here on 2026-10-23.
 - Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98% for the wording). The wording dates from 1996 and is unchanged in the consolidation current to 20 October 2026 (99%). Today's Area H "includes the beautiful communities of Columbia Valley, Cultus Lake, and Lindell Beach located south of Chilliwack", 121 km² (99%, FVRD Electoral Area H page, read 2026-10-23). Which outline the rule covers now, the 1996 one or today's: no official text says. VERIFY with the regional office, 604 586 4400.
-- Mount Judge Howay Park, north of Stave Lake in 2-8: a No Shooting Area, Closed Areas Regulation Schedule 5 section 115 (99%). The name is not in the BC Parks list or the BC parks map layer (checked 2026-10-23), so its boundary is VERIFY with the regional office.
+- Mount Judge Howay Park, north of Stave Lake in 2-8: a No Shooting Area, Closed Areas Regulation Schedule 5 section 115 (99%). The name is not in the BC Parks list or the BC parks map layer (checked 2026-10-23). BC Geographical Names lists it as rescinded in 2002, on the east side of Golden Ears Provincial Park, just north west of Stave Lake (99%). Either way you cannot shoot there: the regulation names it a No Shooting Area, and Golden Ears is not on Schedule B (99%). The exact boundary: VERIFY with the regional office.
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).
 - Schedule 11, Nicomen: rifles prohibited in the Nicomen Island lowland south of the CPR line, east to the District of Kent boundary and along the Chilliwack boundary (90%, long legal text read in part).
 - FVRD (Fraser Valley Regional District) map: "With the exception of persons engaged in lawful hunting or trapping, the discharge of firearms is prohibited within 400m of the indicated roads." (99%)
@@ -158,7 +158,7 @@ checked: 2026-10-01
 
 | Need | Place | Status |
 |---|---|---|
-| Range, Mission | Mission and District Rod and Gun Club, off Dewdney Trunk Road near Mill Pond, on the city bylaw map | 99% for the map. Access: VERIFY, club site did not load |
+| Range, Mission | Mission and District Rod and Gun Club, off Dewdney Trunk Road, on the city bylaw map | 99% for the map. Access: VERIFY, club site did not load |
 | Range, Abbotsford | Abbotsford Fish and Game Club, 4161 Lakemount Road. "a private member club with no access to the public" | 99%, club site |
 | Range, Chilliwack | Chilliwack Fish and Game Protective Association, 48685 Chilliwack Lake Road. Membership club | 90%, club site |
 | Butcher | Opening Day Game Cutting, Abbotsford, and Mission Meat Shop, cut and wrap for hunters | 90%, their own sites |
