@@ -22,7 +22,12 @@ function openDb(version, add = []) {
     if (typeof indexedDB === 'undefined') { rej(new Error('IndexedDB is not available')); return; }
     const r = version ? indexedDB.open(DB, version) : indexedDB.open(DB);
     r.onupgradeneeded = () => { const d = r.result; for (const s of add) if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath: 'id' }); };
-    r.onsuccess = () => { const d = r.result; cur = d; d.onversionchange = () => { d.close(); if (cur === d) { cur = null; dbp = null; } }; res(d); };
+    r.onsuccess = () => {
+      const d = r.result; cur = d;
+      d.onversionchange = () => { d.close(); if (cur === d) { cur = null; dbp = null; } };
+      d.onclose = () => { if (cur === d) { cur = null; dbp = null; } }; // closed by the browser (iPhone after the app was in the background)
+      res(d);
+    };
     r.onerror = () => rej(r.error);
     // onblocked is not an error: an older connection is finishing its transactions (or another tab must close); the open continues after.
   });
@@ -43,7 +48,19 @@ export function ensure(...names) {
   });
   return chain;
 }
+// iOS Safari can drop the database connection while the app sits in the background ("Connection to Indexed Database
+// server lost", or InvalidStateError on transaction()). Then every save failed until the app was reloaded. Now: open a
+// fresh connection and try once more.
+const lost = (e) => e && (e.name === 'InvalidStateError' || e.name === 'UnknownError');
 async function tx(names, mode, fn) {
+  try { return await tx1(names, mode, fn); } catch (e) {
+    if (!lost(e)) throw e;
+    try { if (cur) cur.close(); } catch (x) { /* already closed */ }
+    cur = null; dbp = null;
+    return tx1(names, mode, fn);
+  }
+}
+async function tx1(names, mode, fn) {
   const list = Array.isArray(names) ? names : [names];
   let d = await db();
   if (list.some((n) => !d.objectStoreNames.contains(n))) d = await ensure(...list);
