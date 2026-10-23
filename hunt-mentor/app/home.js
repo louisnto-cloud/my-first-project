@@ -189,10 +189,10 @@
     const heroDays = next
       ? `<div><p class="hero-k">${plan ? 'Next hunt' : 'First hunt'}</p><div class="hero-n">${d > 0 ? `${d}<small>day${d === 1 ? '' : 's'}</small>` : d === 0 ? 'Today' : 'Passed'}</div>
           <div class="hero-sub">${esc(longDay(next))}${plan ? '' : ' <button class="hmd-link" id="hmd-fh-edit" type="button">Change</button>'}</div></div>`
-      : `<div><p class="hero-k">First hunt</p><div class="hero-sub">Set the date for a countdown.</div></div>`;
+      : `<div><p class="hero-k"><label for="hmd-fh">First hunt date</label></p><input type="date" id="hmd-fh" class="hero-date"><div class="hero-sub">Set it for a countdown.</div></div>`;
     const count = !plan ? (fh
       ? `<div id="hmd-fh-box" class="card hmd-card" hidden><label class="f" for="hmd-fh">First hunt date</label><input type="date" id="hmd-fh" value="${esc(fh)}"></div>`
-      : `<div class="card hmd-card"><label class="f" for="hmd-fh">When is your first hunt?</label><input type="date" id="hmd-fh"></div>`) : '';
+      : '') : '';
 
     // 2. where
     const seg = Object.entries(PLACES).map(([k, p]) => `<button type="button" data-w="${k}" class="${k === where ? 'on' : ''}">${esc(p.short)}</button>`).join('');
