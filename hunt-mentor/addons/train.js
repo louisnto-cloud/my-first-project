@@ -85,7 +85,7 @@
       <p class="muted">Four trainers. 10 rounds each. Every answer explained. Works with no signal.</p>
       ${window.HMDecide ? `<a class="card tr-menu" href="#/train/decide"><b>Shoot or don't shoot</b><span>Short field situations, Harrison deer first: legal light, season, land, roads, partner, angle, wounded animal, bears. Make the call, see the rule.</span><small>Last: ${(() => { try { const h = (JSON.parse(localStorage.getItem('hm.train.decide') || '{}').hist || []); const r = h[h.length - 1]; return r ? r.score + ' of ' + r.n : 'not tried yet'; } catch (e) { return 'not tried yet'; } })()}</small></a>` : ''}
       <a class="card tr-menu" href="#/train/shot"><b>Shot placement</b><span>Tap where you would aim on a deer, moose, elk or black bear. Some rounds are a no shot.</span><small>Last: ${best('shot', (r) => r.score + ' of ' + r.n)}</small></a>
-      <a class="card tr-menu" href="#/train/buck"><b>Legal buck</b><span>Count the points on mule deer and white tailed deer antlers, then call it: legal or not in MU (Management Unit) 3-27.</span><small>Last: ${best('buck', (r) => r.score + ' of ' + r.n)}</small></a>
+      <a class="card tr-menu" href="#/train/buck"><b>Legal buck</b><span>${buckSet().set === 'r2' ? `Count the points on black tailed deer antlers, then call it: legal or not in MU (Management Unit) ${esc(buckSet().mu)}, Region 2. Region 3 example inside.` : 'Count the points on mule deer and white tailed deer antlers, then call it: legal or not in MU (Management Unit) 3-27.'}</span><small>Last: ${best('buck', (r) => r.score + ' of ' + r.n)}</small></a>
       <a class="card tr-menu" href="#/train/range"><b>Range guessing</b><span>Guess how far the deer stands. Within 10% scores. Your accuracy chart builds over time.</span><small>Last: ${best('range', (r) => r.within + ' of ' + r.n + ' within 10%')}</small></a>
       <p class="muted">Scores are kept in this phone's storage only.</p></div>`;
   }
@@ -316,7 +316,11 @@
   const roundList = (labels, res) => `<ol class="tr-rounds">${labels.map((l, k) => `<li class="${res[k] ? 'ok' : 'bad'}">${res[k] ? '✓' : '✗'} ${esc(l)}</li>`).join('')}</ol>`;
 
   // =====================================================================
-  // 2. LEGAL BUCK (Region 3, MU 3-27, synopsis pages 3, 4, 33, 34 as quoted in the Rule Book lessons)
+  // 2. LEGAL BUCK. Two rule sets:
+  //   r3: Region 3, MU 3-27, synopsis pages 3, 4, 33, 34 as quoted in the Rule Book lessons (the original example).
+  //   r2: Region 2, MUs 2-8, 2-18, 2-19 (one Bucks row, page 28), facts in facts.json buck.r2 copied from
+  //       rb-region-2, local-harrison-deer and mc-black-tailed-deer-01. Picked from the next saved plan's MU (hm.v1 plans,
+  //       soonest plan that has not ended), with a switch kept in hm-train-v1.buckSet.
   // Antlers drawn front on. Right antler in local units (x outward, y up is negative); left is the mirror.
   // Kinds: beam (main beam tip), tine, brow (brow tine), bump (under 2.5 cm: not a point).
   // =====================================================================
@@ -357,14 +361,57 @@
     { sp: 'wt', L: null, R: null, button: true, mo: 11, d: 20, label: 'button buck' },
     { sp: 'wt', L: null, R: null, doe: true, mo: 9, d: 20, label: 'doe' },
   ];
+  // Region 2 pool (black tailed deer, drawn with mule deer antlers: they fork, then fork again). Dates test the
+  // Bucks row 10 Sep to 15 Dec, the bow only days 1 to 9 Sep, after the close, no antlerless season, no white tails.
+  const BUCK_POOL_R2 = [
+    { sp: 'bt', L: MD.spike, R: MD.spike, mo: 11, d: 14, label: 'spike' },
+    { sp: 'bt', L: MD.spike, R: MD.spike, mo: 9, d: 5, label: 'spike' },
+    { sp: 'bt', L: MD.fork, R: MD.fork, mo: 11, d: 15, label: 'forked, 2 points a side' },
+    { sp: 'bt', L: MD.fork, R: MD.fork, mo: 12, d: 20, label: 'forked, 2 points a side' },
+    { sp: 'bt', L: withX(MD.three, MD_BROW), R: withX(MD.three, MD_BROW), mo: 12, d: 1, label: '3 points plus brow tines' },
+    { sp: 'bt', L: MD.three, R: MD.three, mo: 9, d: 10, label: '3 points a side' },
+    { sp: 'bt', L: withX(MD.three, MD_BUMP), R: MD.three, mo: 11, d: 25, label: '3 points and a short bump' },
+    { sp: 'bt', L: MD.four, R: MD.four, mo: 12, d: 14, label: '4 points a side' },
+    { sp: 'bt', L: withX(MD.four, MD_BROW), R: withX(MD.four, MD_BROW), mo: 12, d: 18, label: '4 points plus brow tines' },
+    { sp: 'bt', L: MD.fork, R: MD.three, mo: 10, d: 20, label: '2 points one side, 3 the other' },
+    { sp: 'bt', L: null, R: null, button: true, mo: 11, d: 15, label: 'button buck' },
+    { sp: 'bt', L: null, R: null, doe: true, mo: 11, d: 14, label: 'doe' },
+    { sp: 'wt', L: WT.five, R: WT.five, mo: 11, d: 15, label: '5 points a side' },
+    { sp: 'wt', L: WT.spike, R: WT.spike, mo: 11, d: 20, label: 'spike' },
+    { sp: 'wt', L: WT.fork, R: WT.fork, mo: 10, d: 1, label: 'forked' },
+  ];
+  const R2_MUS = ['2-8', '2-18', '2-19'];
+  function planMu() {
+    try {
+      const S = JSON.parse(localStorage.getItem('hm.v1') || '{}'); const t = dayISO();
+      const ps = (Array.isArray(S.plans) ? S.plans : []).filter((p) => p && p.from && p.where && p.where.mu && (p.to || p.from) >= t)
+        .sort((a, b) => a.from.localeCompare(b.from));
+      return ps[0] ? String(ps[0].where.mu) : null;
+    } catch (e) { return null; }
+  }
+  // { set: 'r2' or 'r3', mu, fromPlan }: the plan's region unless the switch says otherwise
+  function buckSet() {
+    const mu = planMu(), planR2 = R2_MUS.indexOf(mu) >= 0, pref = store().buckSet;
+    const set = pref === 'r2' || pref === 'r3' ? pref : planR2 ? 'r2' : 'r3';
+    return set === 'r2' ? { set, mu: planR2 ? mu : '2-18', fromPlan: planR2 } : { set, mu: '3-27', fromPlan: false };
+  }
+  const rule = (k) => (F.buck.r2 && F.buck.r2.rules[k]) || F.buck.rules[k];
+  const assumeOf = (r) => (r.set === 'r2' ? F.buck.r2.assume.replace('{mu}', r.mu) : F.buck.assume);
   const MON = ['', '', '', '', '', '', '', '', '', 'September', 'October', 'November', 'December'];
-  const BSP = { md: 'Mule deer', wt: 'White tailed deer' };
+  const BSP = { md: 'Mule deer', wt: 'White tailed deer', bt: 'Black tailed deer' };
   const countable = (sp, k) => k === 'beam' || k === 'tine' || (sp === 'wt' && k === 'brow');
   const sideCount = (sp, side) => (side || []).filter((b) => countable(sp, b.k)).length;
   function buckLegal(r) {
     const best = Math.max(sideCount(r.sp, r.L), sideCount(r.sp, r.R));
     const antlered = !!(r.L || r.R);
     const mmdd = r.mo * 100 + r.d;
+    if (r.set === 'r2') {
+      if (r.sp === 'wt') return { ok: false, best, why: ['r2Wt', 'wtFlag'] };
+      if (!antlered) return { ok: false, best, why: ['buck', 'r2Antlerless', 'r2Limit'] };
+      if (mmdd >= 910 && mmdd <= 1215) return { ok: true, best, why: ['r2Bucks', 'r2Spike', 'buck'] };
+      if (mmdd >= 901 && mmdd <= 909) return { ok: false, best, why: ['r2Bow', 'r2Bucks'] };
+      return { ok: false, best, why: ['r2Bucks'] };
+    }
     if (r.sp === 'md') {
       if (!antlered) return { ok: false, best, why: ['buck', 'mdAntlerless'] };
       if (mmdd >= 1001 && mmdd <= 1031) return { ok: true, best, why: ['mdSeason', 'buck'] };
@@ -373,10 +420,11 @@
     if (!antlered) return { ok: mmdd >= 1010 && mmdd <= 1031, best, why: ['buck', 'wtAntlerless'] };
     return { ok: mmdd >= 910 && mmdd <= 1210, best, why: ['wtBucks', 'buck'] };
   }
-  function buckRounds() {
-    const md = shuffle(BUCK_POOL.filter((r) => r.sp === 'md')).slice(0, 7);
-    const wt = shuffle(BUCK_POOL.filter((r) => r.sp === 'wt')).slice(0, 3);
-    return shuffle(md.concat(wt)).map((r) => Object.assign({}, r, Math.random() < 0.5 ? {} : { L: r.R, R: r.L }));
+  function buckRounds(cfg) {
+    const c = cfg || { set: 'r3', mu: '3-27' }, r2 = c.set === 'r2', pool = r2 ? BUCK_POOL_R2 : BUCK_POOL;
+    const md = shuffle(pool.filter((r) => r.sp !== 'wt')).slice(0, r2 ? 8 : 7);
+    const wt = shuffle(pool.filter((r) => r.sp === 'wt')).slice(0, r2 ? 2 : 3);
+    return shuffle(md.concat(wt)).map((r) => Object.assign({}, r, { set: c.set, mu: c.mu }, Math.random() < 0.5 ? {} : { L: r.R, R: r.L }));
   }
   const BASE_Y = 168, BASE_DX = 24;
   const toScr = (p, side) => [200 + side * (BASE_DX + p[0]), BASE_Y + p[1]];
@@ -386,7 +434,7 @@
     return out;
   }
   function buckSvg(r, marks, reveal) {
-    const isMd = r.sp === 'md';
+    const isMd = r.sp !== 'wt';
     const ear = isMd ? 'M-26 -6 C-70 -30 -96 -20 -102 -6 C-80 10 -50 10 -26 6z' : 'M-24 -4 C-52 -22 -70 -16 -74 -6 C-58 6 -40 8 -24 4z';
     const head = `<g transform="translate(200 ${BASE_Y + 10})"><path d="${ear}" fill="#a87b52" stroke="#5a3e26" stroke-width="1.5"/><path d="${ear}" transform="scale(-1 1)" fill="#a87b52" stroke="#5a3e26" stroke-width="1.5"/>
       <path d="M-30 -10 C-32 30 -18 80 -10 104 C-4 112 4 112 10 104 C18 80 32 30 30 -10 C20 -22 -20 -22 -30 -10z" fill="#a87b52" stroke="#5a3e26" stroke-width="1.6"/>
@@ -415,11 +463,22 @@
   }
   function buck() {
     const fmt = (r) => `${r.score} of ${r.n}${r.counts != null ? `, counts right ${r.counts}` : ''}`;
-    startScreen('buck', 'Legal buck trainer', `<ul class="tr-intro"><li>Each round: a buck seen from the front, a species and a date.</li><li>Tap each point on the antler with the most points.</li><li>Then call it: legal or not.</li></ul>
-      <p class="muted">${esc(F.buck.assume)}</p>`, fmt, () => buckRun(buckRounds(), 0, [], 0),
-      `<div class="card"><h2>The rules you need</h2>${factList(['mdPoint', 'brow', 'tine', 'mdSeason', 'wtBucks', 'wtAntlerless', 'mdAntlerless'].map((k) => F.buck.rules[k]))}
+    const cfg = buckSet(), r2 = cfg.set === 'r2' && !!F.buck.r2;
+    if (!r2) { cfg.set = 'r3'; cfg.mu = '3-27'; }
+    const pm = planMu(), r2mu = r2 ? cfg.mu : (R2_MUS.indexOf(pm) >= 0 ? pm : '2-18');
+    const sw = F.buck.r2 ? `<div class="card"><h2>Which rules?</h2><p class="muted">${r2 ? (cfg.fromPlan ? 'Region 2, picked from your hunt plan.' : 'Region 2 rules.') : 'The Region 3 example, from the Thompson Rule Book lesson.'}</p>
+      <div class="btn-row"><button class="btn${r2 ? ' on' : ''}" id="tr-set2" aria-pressed="${r2}">Region 2 <span class="tr-nw">MU ${esc(r2mu)}</span></button><button class="btn${r2 ? '' : ' on'}" id="tr-set3" aria-pressed="${!r2}">Region 3 example <span class="tr-nw">MU 3-27</span></button></div></div>` : '';
+    const ruleKeys = r2 ? ['r2Bucks', 'r2Spike', 'buck', 'r2Bow', 'r2Antlerless', 'r2Limit', 'r2Wt', 'btLaw', 'mdPoint', 'brow', 'tine'] : ['mdPoint', 'brow', 'tine', 'mdSeason', 'wtBucks', 'wtAntlerless', 'mdAntlerless'];
+    const intro = r2 ? `<ul class="tr-intro"><li>Each round: a deer seen from the front, a species and a date in MU (Management Unit) ${esc(cfg.mu)}.</li><li>Tap each point on the antler with the most points.</li><li>Then call it: legal or not.</li><li>In this MU points do not decide it. Season, antlers and species do.</li></ul>`
+      : '<ul class="tr-intro"><li>Each round: a buck seen from the front, a species and a date.</li><li>Tap each point on the antler with the most points.</li><li>Then call it: legal or not.</li></ul>';
+    startScreen('buck', 'Legal buck trainer', `${intro}
+      <p class="muted">${esc(assumeOf(cfg))}</p>`, fmt, () => buckRun(buckRounds(cfg), 0, [], 0),
+      `${sw}<div class="card"><h2>The rules you need</h2>${factList(ruleKeys.map(rule))}
         ${plateBox('rb-definitions', 'A mule deer buck head in side view', 'See the 4 point drawing from the Rule Book')}
         ${plateBox('rb-definitions', 'Two antler bumps in a 2.5 centimetre box', 'See how to measure a tine')}</div>`);
+    const setTo = (v) => { const o = store(); o.buckSet = v; keep(o); buck(); window.scrollTo(0, 0); };
+    if ($('#tr-set2')) $('#tr-set2').onclick = () => setTo('r2');
+    if ($('#tr-set3')) $('#tr-set3').onclick = () => setTo('r3');
   }
   function buckRun(rounds, i, res, counts) {
     if (i >= rounds.length) {
@@ -427,16 +486,16 @@
       addSession('buck', { date: dayISO(), n: rounds.length, score, counts });
       return summaryScreen('buck', 'Legal buck', `<p class="tr-big">${score} of ${rounds.length}</p><p>Point counts right: ${counts} of ${rounds.filter((r) => r.L || r.R).length}.</p>
         ${roundList(rounds.map((r) => `${BSP[r.sp]}, ${r.label}, ${r.d} ${MON[r.mo]}`), res)}
-        ${factList([{ t: 'Until you read your MU in the synopsis, count points on every buck as if the 4 point rule applies.', c: 'Tip', s: 'L_md' }])}`, () => buckRun(buckRounds(), 0, [], 0));
+        ${factList([rounds[0] && rounds[0].set === 'r2' ? { t: `In MU ${rounds[0].mu} points do not decide it, but keep counting them: Region 3 MUs such as 3-27 use the 4 point rule.`, c: 'Tip', s: 'L_r3' } : { t: 'Until you read your MU in the synopsis, count points on every buck as if the 4 point rule applies.', c: 'Tip', s: 'L_md' }])}`, () => buckRun(buckRounds(rounds[0] ? { set: rounds[0].set, mu: rounds[0].mu } : null), 0, [], 0));
     }
     const r = rounds[i];
     const L = buckLegal(r);
     const antlered = !!(r.L || r.R);
     const marks = []; let counted = false;
-    const q = `<p class="tr-q"><b>${esc(BSP[r.sp])}</b>, ${r.d} ${MON[r.mo]}, MU (Management Unit) 3-27.</p>`;
+    const q = `<p class="tr-q"><b>${esc(BSP[r.sp])}</b>, ${r.d} ${MON[r.mo]}, MU (Management Unit) ${esc(r.mu || '3-27')}.</p>`;
     const draw = () => { $('.tr-stage').innerHTML = buckSvg(r, marks, false); bindTaps(); };
     view().innerHTML = `<div class="tr">${dots(i, res)}${q}
-      <p class="muted">${antlered ? (r.sp === 'md' ? 'Tap each point on the antler with the most points. Mule deer rule: leave out the brow tine.' : 'Tap each point on the antler with the most points, beam tip included.') : 'Look for visible antlers first.'}</p>
+      <p class="muted">${antlered ? (r.sp === 'md' ? 'Tap each point on the antler with the most points. Mule deer rule: leave out the brow tine.' : r.sp === 'bt' ? 'Tap each point on the antler with the most points. Black tails count like mule deer: leave out the brow tine.' : 'Tap each point on the antler with the most points, beam tip included.') : 'Look for visible antlers first.'}</p>
       <div class="tr-stage"></div>
       <div id="tr-step">${antlered ? `<div class="btn-row"><button class="btn" id="tr-undo">Undo</button><button class="btn primary" id="tr-cnt">Done: <span id="tr-n">0</span> points</button></div>`
         : '<div class="btn-row"><button class="btn primary" id="tr-cnt">No antlers to count</button></div>'}</div>
@@ -465,21 +524,21 @@
       if (antlered && countOk) counts++;
       $('.tr-stage').innerHTML = buckSvg(r, null, true);
       const tp = tipsOf(r), notes = [];
-      if (tp.some((t) => t.k === 'brow')) notes.push(r.sp === 'md' ? '✗ on the brow tine: not counted on a mule deer 4 point.' : 'The brow tine counts in a white tail point count.');
+      if (tp.some((t) => t.k === 'brow')) notes.push(r.sp !== 'wt' ? '✗ on the brow tine: not counted on a mule deer 4 point.' : 'The brow tine counts in a white tail point count.');
       if (tp.some((t) => t.k === 'bump')) notes.push('✗ on the bump: under 2.5 cm, so not a point.');
-      const countLine = antlered ? `<p><b>${countOk ? '✓' : '✗'} Best antler: ${L.best} point${L.best === 1 ? '' : 's'}${r.sp === 'md' ? ', brow tine not counted' : ''}.</b> You counted ${ub}.</p>${notes.map((n) => `<p class="muted">${n}</p>`).join('')}<p class="muted">Green numbers: points that count.</p>`
+      const countLine = antlered ? `<p><b>${countOk ? '✓' : '✗'} Best antler: ${L.best} point${L.best === 1 ? '' : 's'}${r.sp !== 'wt' ? ', brow tine not counted' : ''}.</b> You counted ${ub}.</p>${notes.map((n) => `<p class="muted">${n}</p>`).join('')}<p class="muted">Green numbers: points that count.</p>`
         : `<p><b>No visible antlers.</b> ${r.button ? 'A button buck: skin covered bumps, not antlers.' : 'A doe.'} By law: antlerless.</p>`;
       $('#tr-step').innerHTML = `${countLine}<p class="tr-q">Legal for you to shoot today?</p><div class="btn-row"><button class="btn" id="tr-yes">Legal</button><button class="btn" id="tr-nope">Not legal</button></div>`;
       const answer = (say) => {
         const good = say === L.ok;
         res.push(good);
         $('#tr-step').innerHTML = countLine;
-        const extra = r.sp === 'md' ? ['mdShape', 'mdAge'] : ['wtCount', 'mdShape'];
-        const why = L.why.concat(extra).map((k) => F.buck.rules[k]);
+        const extra = r.set === 'r2' ? (r.sp === 'wt' ? ['wtCount', 'btShape'] : ['btShape', 'btAge', 'btLaw']) : r.sp === 'md' ? ['mdShape', 'mdAge'] : ['wtCount', 'mdShape'];
+        const why = L.why.concat(extra).map(rule);
         $('#tr-out').innerHTML = `<div class="card tr-res ${good ? 'tr-good' : 'tr-badc'}"><h2>${good ? '✓ Right' : '✗ Not quite'}: ${L.ok ? 'legal' : 'not legal'}.</h2>
           <p>${esc(plainWhy(r, L))}</p>${factList(why)}
-          <p class="muted">${esc(F.buck.assume)}</p>
-          <p class="muted">Rules from the ${srcLink('L_r3')} and ${srcLink('L_def')} lessons, read in the synopsis. Checked ${esc(F.checked)}.</p>
+          <p class="muted">${esc(assumeOf(r))}</p>
+          <p class="muted">${r.set === 'r2' ? `Rules from the ${srcLink('L_r2')}, ${srcLink('L_hd')} and ${srcLink('L_def')} lessons, read in the synopsis. Checked ${esc(F.buck.r2.checked)}.` : `Rules from the ${srcLink('L_r3')} and ${srcLink('L_def')} lessons, read in the synopsis. Checked ${esc(F.checked)}.`}</p>
           <button class="btn primary block" id="tr-next">${i + 1 < rounds.length ? 'Next round' : 'See my score'}</button></div>`;
         $('#tr-next').onclick = () => { buckRun(rounds, i + 1, res, counts); window.scrollTo(0, 0); };
         $('#tr-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -490,6 +549,14 @@
   }
   function plainWhy(r, L) {
     const mmdd = r.mo * 100 + r.d; const date = `${r.d} ${MON[r.mo]}`;
+    if (r.set === 'r2') {
+      const mu = `MU ${r.mu}`;
+      if (r.sp === 'wt') return `There is no white tailed deer season anywhere in Region 2. Not legal on ${date}, whatever the antlers. A wide tail that flags up white is your warning.`;
+      if (!(r.L || r.R)) return `No visible antlers, so it is antlerless${r.button ? ': a button buck counts as antlerless' : ''}. ${mu} has no antlerless general season. Not legal.`;
+      if (mmdd >= 910 && mmdd <= 1215) return `${date} is inside the ${mu} buck season, 10 September to 15 December. The row says Bucks, not 4 point bucks, so any buck with visible antlers is legal. Points do not matter here.`;
+      if (mmdd >= 901 && mmdd <= 909) return `${date} falls in 1 to 9 September: bucks in ${mu} are bow only then. With a rifle: not legal. The general season opens 10 September.`;
+      return `${date} is after the ${mu} buck season closed on 15 December. Not legal.`;
+    }
     if (r.sp === 'md') {
       if (!(r.L || r.R)) return `No visible antlers, so it is antlerless. Antlerless mule deer in Region 3 need an LEH (Limited Entry Hunting) draw. Not on a general licence.`;
       if (mmdd >= 1001 && mmdd <= 1031) return `${date} falls in 1 to 31 October: any buck with visible antlers is legal in MU 3-27. Points do not matter this month.`;
@@ -623,6 +690,7 @@
     st.textContent = `
 .tr { font-size: 16px; }
 .tr .btn { min-height: 48px; }
+.tr-nw { white-space: nowrap; }
 .tr .btn.on { background: var(--sage); color: #fff; border-color: var(--sage); }
 .tr-menu { display: block; text-decoration: none; color: var(--ink); min-height: 56px; }
 .tr-menu b { display: block; font-size: 19px; margin-bottom: 4px; }
@@ -664,5 +732,5 @@
   });
   // #/train/decide belongs to app/addons/decide.js (it loads its own data, so it skips the facts fetch)
   window.HMRoutes.train = (args) => (args && args[0] === 'decide' && window.HMDecide ? window.HMDecide.route(args.slice(1)) : trainRoute(args));
-  window.HMTrain = { classify, pose, buckLegal, BUCK_POOL, SPECIES, groundY, _rounds: { shotRounds, buckRounds, rangeRounds }, _draw: { shot: (R, rev) => shotScene(R, rev), buck: (r) => buckSvg(r, null, true), range: (R) => rangeSvg(R, {}, true) } };
+  window.HMTrain = { classify, pose, buckLegal, BUCK_POOL, BUCK_POOL_R2, buckSet, SPECIES, groundY, _rounds: { shotRounds, buckRounds, rangeRounds }, _draw: { shot: (R, rev) => shotScene(R, rev), buck: (r) => buckSvg(r, null, true), range: (R) => rangeSvg(R, {}, true) } };
 })();

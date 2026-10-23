@@ -989,6 +989,17 @@
 
   // Mission (home base, Harrison hunts) first, then the other bases.
   const homeFirst = () => (HM.bases || []).slice().sort((a, b) => (b.id === 'mission') - (a.id === 'mission'));
+  // The active plan's point (soonest saved plan that has not ended and has a lat and lon, e.g. the Harrison preset)
+  // goes first, labelled with the plan's place name. Same sun maths on the phone as the bases, so it works offline.
+  function planPlace() {
+    const t = new Date().toLocaleDateString('en-CA', { timeZone: TZ });
+    const ps = (S && Array.isArray(S.plans) ? S.plans : []).filter((p) => p && p.from && p.where && p.where.lat != null && p.where.lon != null && (p.to || p.from) >= t)
+      .sort((a, b) => a.from.localeCompare(b.from));
+    const p = ps[0]; if (!p) return null;
+    const name = String(p.where.label || 'Your plan').replace(/\s*\([^)]*\)\s*$/, '') || 'Your plan';
+    return { id: 'plan', name, lat: +p.where.lat, lon: +p.where.lon, sub: `Your plan${p.where.mu ? `, MU (Management Unit) ${p.where.mu}` : ''}` };
+  }
+  const lightPlaces = () => { const p = planPlace(); return (p ? [p] : []).concat(homeFirst()); };
   function lightView(dateStr) {
     setTitle('Legal light');
     const today = new Date().toLocaleDateString('en-CA', { timeZone: TZ });
@@ -996,13 +1007,13 @@
     const [y, m, d] = ds.split('-').map(Number);
     const date = new Date(y, m - 1, d, 12);
     const H = HM.regs.hours;
-    const rows = homeFirst().map((b) => {
+    const rows = lightPlaces().map((b) => {
       const rise = sunEvent(date, b.lat, b.lon, true), set = sunEvent(date, b.lat, b.lon, false);
       const col = (h) => h && h.beforeSunriseMin != null ? `${hhmm(addMin(rise, -h.beforeSunriseMin))} to ${hhmm(addMin(set, h.afterSunsetMin))}` : '<span class="verify">VERIFY</span>';
-      return `<tr><td><strong>${esc(b.name)}</strong></td><td>${hhmm(rise)}<br>${hhmm(set)}</td><td>${col(H.bigGame)}</td><td>${col(H.migratory)}</td></tr>`;
+      return `<tr${b.id === 'plan' ? ' class="light-plan"' : ''}><td><strong>${esc(b.name)}</strong>${b.sub ? `<br><small>${esc(b.sub)}</small>` : ''}</td><td>${hhmm(rise)}<br>${hhmm(set)}</td><td>${col(H.bigGame)}</td><td>${col(H.migratory)}</td></tr>`;
     }).join('');
     view.innerHTML = `<div class="card"><label class="f" for="ld">Date</label><input type="date" id="ld" value="${ds}"></div>
-      <div class="tbl light"><table><thead><tr><th>Base</th><th>Sunrise / sunset</th><th>Big game and upland</th><th>Ducks and geese</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="tbl light"><table><thead><tr><th>Place</th><th>Sunrise / sunset</th><th>Big game and upland</th><th>Ducks and geese</th></tr></thead><tbody>${rows}</tbody></table></div>
       <aside class="callout warn" role="note"><div class="callout-t">Verify with official tables</div>
       <p>Calculated on your phone, Pacific time. Can be off by a few minutes in hills and valleys.</p>
       <p>Big game rule: ${esc(H.bigGame.text)} ${certBadge(H.bigGame.certainty)}</p>
@@ -1322,7 +1333,8 @@
       for (let k = 0; out.length < max && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) out.push(byDeck[d].shift()); }
       return out;
     };
-    const rest = fresh.filter((c) => !readQuiz.includes(c)), first = pathIds.size ? mix(rest.filter(onPath), DAY_CARDS * 2) : [];
+    const rest = fresh.filter((c) => !readQuiz.includes(c)), local = (c) => (/black tailed|harrison/i.test(c.deck) ? 0 : 1); // local decks lead the turn order (a Harrison plan starts with black tailed deer, not the Interior mule deer deck)
+    const first = pathIds.size ? mix(rest.filter(onPath).sort((a, b) => local(a) - local(b)), DAY_CARDS * 2) : [];
     const mixed = first.concat(mix(rest.filter((c) => !first.includes(c) && !(pathIds.size && onPath(c))), Math.max(0, DAY_CARDS * 2 - first.length)));
     const newIds = readQuiz.concat(mixed).map((c) => c.id);
     day.q = due.concat(newIds).slice(0, more ? DAY_CARDS : Math.max(DAY_CARDS, Math.min(due.length, 50)));
@@ -1367,7 +1379,7 @@
     setTitle('Pocket cards'); tab('more');
     const F = HM.field; const H = HM.regs.hours;
     const today = new Date();
-    const light = homeFirst().map((b) => { const r = sunEvent(today, b.lat, b.lon, true), s = sunEvent(today, b.lat, b.lon, false); return `<tr><td>${esc(b.name)}</td><td>${hhmm(r)} / ${hhmm(s)}</td><td>${hhmm(addMin(r, -H.bigGame.beforeSunriseMin))} to ${hhmm(addMin(s, H.bigGame.afterSunsetMin))}</td><td>${hhmm(addMin(r, -H.migratory.beforeSunriseMin))} to ${hhmm(addMin(s, H.migratory.afterSunsetMin))}</td></tr>`; }).join('');
+    const light = lightPlaces().map((b) => { const r = sunEvent(today, b.lat, b.lon, true), s = sunEvent(today, b.lat, b.lon, false); return `<tr><td>${esc(b.name)}</td><td>${hhmm(r)} / ${hhmm(s)}</td><td>${hhmm(addMin(r, -H.bigGame.beforeSunriseMin))} to ${hhmm(addMin(s, H.bigGame.afterSunsetMin))}</td><td>${hhmm(addMin(r, -H.migratory.beforeSunriseMin))} to ${hhmm(addMin(s, H.migratory.afterSunsetMin))}</td></tr>`; }).join('');
     view.innerHTML = `<p class="muted no-print">Use your browser's Share or Print to make a PDF. Fold and keep in a zip bag. Study aid only.</p>
       <div class="print-grid">
       <div class="card"><h2>Legal to shoot? All must be YES</h2><ol>${F.legalFlow.map((s) => `<li>${esc(s.q)}</li>`).join('')}</ol><p><strong>Any NO = no shot.</strong></p></div>

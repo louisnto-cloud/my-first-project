@@ -165,7 +165,8 @@ function finish(skipped, quiet) {
   ov.remove(); ov = null;
   const hb = document.getElementById('hm-help-btn');
   if (hb && vis(hb)) hb.focus({ preventScroll: true }); else if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
-  if (!quiet) H.toast(skipped ? 'Tour skipped. Tap ? any time for help or to see it again.' : 'Tap ? any time for help or to see the tour again.', 4500);
+  // short (2.2 s) so it does not cover the chips under the search bar for long (clean room test 2026-10-23: 4.5 s)
+  if (!quiet) H.toast(skipped ? 'Tour skipped. Tap ? to see it again.' : 'Tap ? any time for help or the tour.', 2200);
 }
 /** The overlay sits outside .hmm (above the Ask the mentor button), so it takes the map colour tokens with it. */
 function copyTokens(el) {

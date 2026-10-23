@@ -72,6 +72,7 @@
 .hwt-btn svg { width: 22px; height: 22px; flex: none; }
 .hwt-row { display: flex; justify-content: flex-end; margin: 0 0 8px; }
 .hmm-sheet-h .hwt-btn { min-height: 44px; padding: 0 10px 0 8px; font-size: 14px; flex: none; }
+@media (max-width: 400px) { .hmm-sheet-h .hwt-btn { position: relative; min-width: 44px; padding: 0; justify-content: center; } .hmm-sheet-h .hwt-btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } } /* narrow phones: icon only (the aria label keeps the name), so the sheet title has room */
 .hmm-search .hwt-row { margin: 6px 12px 0; }
 .hwt-ov { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.45); display: flex; align-items: flex-end; justify-content: center; }
 .hwt-card { background: var(--card, #fff); color: var(--ink, #17201a); width: 100%; max-width: 560px; max-height: 92vh; overflow: auto; border-radius: 18px 18px 0 0; padding: 8px 16px calc(16px + env(safe-area-inset-bottom)); }
