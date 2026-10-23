@@ -75,12 +75,16 @@
     if (t && timerLeft(t) <= 0 && !t.buzzed) {
       t.buzzed = true; sv(K.timer, t);
       try { if (navigator.vibrate) navigator.vibrate([400, 200, 400]); } catch (e) { /* no vibration */ }
+      // iPhone has no navigator.vibrate: a short beep instead (Safety add on; the ring/silent switch still mutes it)
+      try { if (!navigator.vibrate && window.HMSafety && window.HMSafety.beep) window.HMSafety.beep(false); } catch (e) { /* no sound */ }
       const big = $('#as-timer'); if (big) renderStep(2);
       else { const chip = $('#as-chip'); if (chip) chip.classList.add('over'); }
     }
   }
+  // true when the screen is held on. False with no Wake Lock (iPhone before iOS 16.4, and Home Screen apps before iOS 18.4)
   async function keepAwake() {
     try { if ('wakeLock' in navigator && !wake && document.visibilityState === 'visible') { wake = await navigator.wakeLock.request('screen'); wake.addEventListener('release', () => { wake = null; }); } } catch (e) { wake = null; }
+    return !!wake;
   }
   function releaseWake() { try { if (wake) wake.release(); } catch (e) { /* ignore */ } wake = null; }
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && $('#as-timer')) keepAwake(); });
@@ -277,11 +281,14 @@
       $$('[data-hit]', W).forEach((b) => b.onclick = () => { patch((x) => { x.hit = b.dataset.hit; x.hitAt = Date.now(); }); renderStep(2); const w = $('#as-waits'); if (w) w.scrollIntoView({ block: 'start' }); });
       const start = (m, label) => {
         if (!m) { sv(K.timer, null); toast('No wait. Track slowly.'); location.hash = '#/aftershot/3'; return; }
-        const le2 = legalEnd(); const end = Date.now() + m * 6e4;
+        try { if (window.HMSafety && window.HMSafety.unlockAudio) window.HMSafety.unlockAudio(); } catch (e) { /* no sound */ } // inside the tap, for iPhone
+        const le2 = legalEnd(); const end = Date.now() + m * 6e4; let said = true;
         if (le2 && (Date.now() > le2.t || Date.now() < le2.s)) toast('Legal light is over. Do not follow with your rifle until first light.');
         else if (le2 && end > le2.t) toast('This wait runs past legal light. See the warning.');
+        else said = false;
         sv(K.timer, { start: Date.now(), ms: m * 6e4, label, hit: (getRun() || {}).hit || '' });
-        renderStep(2); keepAwake(); window.scrollTo(0, 0);
+        renderStep(2); window.scrollTo(0, 0);
+        keepAwake().then((on) => { if (!on && !said) toast('This phone may lock the screen. The timer keeps counting. Open the app to check it.'); });
       };
       $$('[data-min]', W).forEach((b) => b.onclick = () => { const m = +b.dataset.min; start(m, `${minTxt(m)} wait (${b.querySelector('small').textContent}) for ${hit.means.replace(/^Often /, '').toLowerCase()}`); });
       const own = $('#as-own'); if (own) own.onclick = () => { const m = Math.round(+$('#as-mins').value); if (!(m > 0 && m <= 1440)) { toast('Type a wait from 1 to 1440 minutes.'); return; } start(m, `${minTxt(m)} wait, your own choice, for ${hit.means.replace(/^Often /, '').toLowerCase()}`); };
