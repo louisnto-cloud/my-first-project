@@ -224,7 +224,7 @@ mu_json = {
 }
 
 # ---------- corpus: where place names are mentioned ----------
-REGION_FILES = {'local-heffley': '3', 'local-mission': '2', 'local-okanagan': '8'}
+REGION_FILES = {'local-heffley': '3', 'local-mission': '2', 'local-okanagan': '8', 'local-harrison-deer': '2'}
 corpus = []  # (source, ctx_region, line)
 def add_text(src, text, reg=None):
     for line in text.split('\n'):
