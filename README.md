@@ -1,53 +1,86 @@
-# ⭐ Anh Ngữ E’TOP
+# Organika Sparkling Daily — Forecast & Scenario Model
 
-A student progress & learning app for **Trung tâm Anh Ngữ E’TOP** (Phan Thiết, Vietnam).
-Built mobile-first as a web app, with a fully bilingual Vietnamese/English interface.
+A one-year operating and scenario model (with a 3-year projection) for the
+**Organika Sparkling Daily** line, delivered as two artifacts that produce
+**identical numbers**.
 
-> **Branding:** the official E’TOP logo shown across the app (login, header,
-> favicon) is the single file `public/logo.png` — replace it to update the
-> branding everywhere at once.
-
-See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
-
-## What's inside
-
-| Role | What they get |
+| File | What it is |
 |---|---|
-| 🧑‍🎓 **Student** | Dashboard with streak & points, grades with skill breakdown and progress chart, class schedule, homework checklist, vocabulary flashcards & quizzes, badges and a class leaderboard |
-| 🧑‍🏫 **Teacher** | Class overview, gradebook (enter scores + comments per student), assign homework, create vocabulary lists |
-| 👩‍💼 **Owner (admin)** | Everything teachers get, plus center-wide stats across all classes |
-| 👨‍👦 **Parent** | Read-only view of their child's grades, schedule, homework, and badges |
+| [`organika_sparkling_daily_model.html`](./organika_sparkling_daily_model.html) | Self-contained web app — open in any browser, no install, works offline |
+| [`Organika_Sparkling_Daily_1YR_Scenario_Model.xlsx`](./Organika_Sparkling_Daily_1YR_Scenario_Model.xlsx) | Excel workbook, 17 tabs |
+| [`build_model.py`](./build_model.py) | Generator for the Excel workbook |
 
-## Run it
+See [`MODEL.md`](./MODEL.md) for the full model spec and
+[`ROADMAP.md`](./ROADMAP.md) for the build log.
 
-```bash
-npm install
-npm run dev      # development server
-npm run build    # production build (also type-checks)
-npx tsx scripts/smoke.ts   # sanity-check the seeded demo data
+> All figures ship as **illustrative placeholders**. Enter your real numbers on
+> the Assumptions tab (or paste them via **Import SKUs** / Export CSV
+> round-trip) and every view updates.
+
+## Open it
+
+**The web app** — just double-click `organika_sparkling_daily_model.html`. No
+install, no server, no internet required. Edits auto-save to your browser.
+
+**The Excel model** — open the `.xlsx` in Excel, Google Sheets, or LibreOffice.
+Pick a scenario on the Dashboard; the Checks tab validates the whole workbook.
+
+## How the numbers work (per SKU)
+
+```
+Gross Revenue = Cases × CP (wholesale list price)
+Net Sales     = Gross Revenue − Trade Discounts (% of gross)
+Gross Profit  = Net Sales − Cost of Sales (COGS direct + indirect)
+Contribution  = Gross Profit − A&P
+EBITDA        = Σ Contribution − Operating Expenses (fixed + logistics)
+Net Income    = EBITDA − D&A − Interest − Tax   (tax floored at 0)
 ```
 
-## Demo accounts (password: `etop123`)
+Scenarios flex three levers against base: **Volume ×**, **Price ×**, and
+**Trade-discount Δ**. An optional **price-elasticity** setting makes volume
+respond to price. The 3-Year view compounds annual volume, price, and
+cost-inflation rates.
 
-| Role | Email |
+## Views in the web app
+
+Overview (KPIs, scenario comparison, portfolio mix) · Summary (print/PDF
+one-pager, copy-as-text) · P&L · Monthly (seasonality, break-even month) ·
+3-Year (growth projection, CAGR) · Pricing Lab (best wholesale price) · Unit
+Economics (per-unit, retail price ladder) · Targets (goal-seek) · Sensitivity
+(price×volume, cost×volume) · Assumptions · Guide + glossary.
+
+Custom scenarios (add/rename/remove/duplicate) · bulk % changes · snapshot
+save/compare · CSV import/export · dark mode · keyboard shortcuts (1–9
+scenarios, ←/→ views) · accessible (ARIA + focus) · never renders NaN.
+
+## Excel tabs (17)
+
+`Home` · `Assumptions` · `Dashboard` · `Base` · `Low` · `High` · `Stretch` ·
+`Monthly` · `3-Year` · `Pricing Lab` · `Unit Economics` · `Targets` ·
+`Sensitivity` · `Checks` · `Guide` · `Review Log` · `Cover`
+
+## Rebuild the Excel
+
+```bash
+pip install openpyxl
+python3 build_model.py      # writes the .xlsx
+```
+
+## Verification
+
+The HTML engine and the Excel formulas are recalculated and must agree. Current
+tie-out, with shipped placeholder assumptions:
+
+| Check | Value |
 |---|---|
-| Student | `minh@etop.vn` |
-| Parent | `phuhuynh@etop.vn` |
-| Teacher | `lan@etop.vn` |
-| Owner | `zhao@etop.vn` |
+| Excel `Checks` tab | **ALL PASS** (10/10) |
+| Base Net Sales | $927,920 |
+| Base GP% | 46.8% |
+| Base EBITDA | $19,143 |
+| 3-Year Net Sales Y2/Y1 | 1.2875 |
 
-The app ships with a seeded demo database — 6 classes, 40 students, score
-history, homework, and vocabulary lists — stored in the browser's
-localStorage. The **Reset demo data** link on the teacher overview restores it.
+## Also in this repo
 
-## Architecture notes
-
-- **Stack:** React 18 + TypeScript + Vite + Tailwind CSS + React Router.
-- **Data layer:** all reads/writes go through `src/store.tsx` (`useApp()`),
-  currently backed by localStorage with seed data from `src/seed.ts`. To move
-  to a real backend, replace `loadDB`/`mutate` with API calls — pages and
-  components don't need to change.
-- **i18n:** every UI string goes through `t()` in `src/i18n.tsx` with `vi`
-  and `en` dictionaries; the toggle persists per device.
-- **Mobile app path:** it's a responsive SPA, ready to be wrapped with
-  Capacitor or extended into a PWA (manifest + service worker) later.
+[`pilgrimage/`](./pilgrimage) is an unrelated, self-contained project (a
+bilingual Catholic companion app) that deploys to `/pilgrimage`. It shares no
+code with the forecast model.
