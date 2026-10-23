@@ -47,6 +47,7 @@
     if ((a === 'field' || a === 'lists' || a === 'cards' || a === 'journal' || a === 'safety' || a === 'train') && b != null && b !== '') return '#/' + a;
     if (['glossary', 'review', 'sources', 'install', 'print', 'credits', 'journal', 'cards', 'ask', 'train', 'guide'].includes(a)) return '#/more';
     if (a === 'huntweek' && b != null && b !== '') return '#/huntweek';
+    if (a === 'guns') return b != null && b !== '' ? '#/guns' : '#/more';
     return '#/';
   };
   $('#btn-back').onclick = () => {
@@ -416,6 +417,8 @@
     if (window.HMProgress) { const box = document.createElement('div'); (view.querySelector('.pl-today') || view.firstElementChild || view).insertAdjacentElement(view.querySelector('.pl-today') ? 'afterend' : 'beforebegin', box);
       window.HMProgress.score().then((r) => { if (!r || !r.plan || !box.isConnected || r.pct == null) return; box.innerHTML = `<a class="card cont" href="#/progress"><div class="cont-k">Hunt ready</div><div class="cont-t">${r.pct}%</div><div class="muted">${esc((r.missing || []).slice(0, 3).join(', ') || 'All counted parts done')}</div></a>`; }).catch(() => {}); }
     if (window.HMHuntWeek) try { const hw = window.HMHuntWeek.homeCard(S); if (hw) { if (today) today.insertAdjacentHTML('afterend', hw); else view.insertAdjacentHTML('afterbegin', hw); } } catch (e) { console.warn('Hunt week card', e); }
+    // My guns (app/addons/guns.js): a small link card in the plan and hunt week area (after the hunt week card, else after the plan card)
+    if (window.HMGuns) try { const gc = window.HMGuns.homeCard(S); const at = view.querySelector('#hw-home') || [...view.querySelectorAll('.pl-home')].pop(); if (gc) { if (at) at.insertAdjacentHTML('afterend', gc); else view.insertAdjacentHTML('beforeend', gc); } } catch (e) { console.warn('Guns card', e); }
     // new users: a card to the tour (app/addons/guide.js), first on the screen
     if (window.HMGuide) try { const g = window.HMGuide.homeCard(S); if (g) { view.insertAdjacentHTML('afterbegin', g); window.HMGuide.wireHome(view); } } catch (e) { console.warn('Guide card', e); }
     const warm = resumeInfo() ? resumeInfo().s : nextSession();
@@ -999,6 +1002,7 @@
         ${window.HMRoutes && window.HMRoutes.guide ? '<a class="item" href="#/guide"><span class="grow">How to use this app: a quick tour</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.progress ? '<a class="item" href="#/progress"><span class="grow">Hunt ready score and your weak spots</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.huntweek ? '<a class="item" href="#/huntweek"><span class="grow">Hunt week checklist: countdown to your hunt</span></a>' : ''}
+        ${window.HMRoutes && window.HMRoutes.guns ? '<a class="item" href="#/guns"><span class="grow">My guns: cleaning log, range day checklist, transport rules</span></a>' : ''}
         <a class="item" href="#/safety"><span class="grow">Safety: emergency card, trip plan, turnaround alarm, bears, conditions</span></a>
         <a class="item" href="#/train"><span class="grow">Practice: shot placement, legal buck, guess the range</span></a>
         <a class="item" href="#/daily"><span class="grow">Today's cards (spaced review, all decks)</span></a>
@@ -1021,7 +1025,7 @@
     $('#exp').onclick = async () => {
       let mp = null; try { mp = JSON.parse(localStorage.getItem(MAP_KEY) || 'null'); } catch (e) { mp = null; }
       let md = null; try { const m = await mapStore(); if (m) md = await m.exportAll(); } catch (e) { md = null; }
-      const ad = {}; try { for (let k = 0; k < localStorage.length; k++) { const key = localStorage.key(k); if (/^hm\.(safety|train|sight|huntweek|guide|progress|decide|aftershot|voice)\.|^hm-train-v1$/.test(key)) ad[key] = localStorage.getItem(key); } } catch (e) { /* storage blocked */ } // add on data (app/addons)
+      const ad = {}; try { for (let k = 0; k < localStorage.length; k++) { const key = localStorage.key(k); if (/^hm\.(safety|train|sight|huntweek|guide|progress|decide|aftershot|voice|guns)\.|^hm-train-v1$/.test(key)) ad[key] = localStorage.getItem(key); } } catch (e) { /* storage blocked */ } // add on data (app/addons)
       download(`hunt-mentor-backup-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(Object.assign({}, S, mp ? { mapPrefs: mp } : {}, md ? { mapData: md } : {}, Object.keys(ad).length ? { addonData: ad } : {})), 'application/json');
     };
     $('#imp').onchange = (e) => {
@@ -1030,7 +1034,7 @@
         try {
           const o = JSON.parse(t);
           if (o.mapPrefs) { try { localStorage.setItem(MAP_KEY, JSON.stringify(o.mapPrefs)); } catch (e) { /* storage blocked */ } delete o.mapPrefs; }
-          if (o.addonData) { try { for (const [k, v] of Object.entries(o.addonData)) if (/^hm\.(safety|train|sight|huntweek|guide|progress|decide|aftershot|voice)\.|^hm-train-v1$/.test(k)) localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } delete o.addonData; }
+          if (o.addonData) { try { for (const [k, v] of Object.entries(o.addonData)) if (/^hm\.(safety|train|sight|huntweek|guide|progress|decide|aftershot|voice|guns)\.|^hm-train-v1$/.test(k)) localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } delete o.addonData; }
           const md = o.mapData; delete o.mapData;
           S = Object.assign({}, blank, o); S.pos = S.pos || {}; S.max = S.max || {}; save(); applyTheme();
           const done = (n) => { alert(n ? "Backup restored, including your map items." : 'Backup restored.'); more(); };
