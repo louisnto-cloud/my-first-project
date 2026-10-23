@@ -204,7 +204,7 @@ function buildChrome() {
     <div class="hmm-scrim" hidden></div>
     <section class="hmm-sheet" role="dialog" aria-modal="false" hidden>
       <div class="hmm-grip" aria-hidden="true"></div>
-      <header class="hmm-sheet-h"><h2></h2><button class="hmm-x" aria-label="Close">${ICONS.close}</button></header>
+      <header class="hmm-sheet-h"><h2></h2><button class="hmm-grow" type="button" aria-label="Show more" aria-expanded="false">${ICONS.chevron}</button><button class="hmm-x" aria-label="Close">${ICONS.close}</button></header>
       <div class="hmm-sheet-b"></div>
     </section>
     <div class="hmm-toast" role="status" aria-live="polite"></div>`;
@@ -219,6 +219,9 @@ function buildChrome() {
   HuntMap.els = els;
   root.addEventListener('click', onChromeClick);
   q('.hmm-x').onclick = () => closeSheet();
+  q('.hmm-grow').onclick = () => setSheetFull(!els.sheet.classList.contains('hmm-full'));
+  q('.hmm-grip').onclick = () => setSheetFull(!els.sheet.classList.contains('hmm-full'));
+  watchSheetSize();
   els.scrim.onclick = () => closeSheet();
   dragToClose();
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && HuntMap.isOpen) { if (!search.close()) closeSheet(); } });
@@ -280,6 +283,7 @@ function openSheet({ title = '', html = '', onClose = null, modal = true, tall =
   s.style.transform = '';
   els.scrim.hidden = !modal;
   s.hidden = false; els.sheetB.scrollTop = 0;
+  root.classList.add('sheet-open'); setSheetFull(!!prefs.sheetFull, false);
   requestAnimationFrame(() => s.classList.add('on'));
   root.querySelectorAll('[data-bar]').forEach((b) => b.classList.toggle('on', b.dataset.bar === bar));
   sheetClose = onClose || (() => {});
@@ -289,15 +293,47 @@ function closeSheet() {
   if (!els.sheet || els.sheet.hidden) return false;
   const fn = sheetClose; sheetClose = null;
   els.sheet.classList.remove('on'); els.sheet.hidden = true; els.scrim.hidden = true; els.bar.classList.remove('over');
+  root.classList.remove('sheet-open', 'sheet-full');
   root.querySelectorAll('[data-bar]').forEach((b) => b.classList.remove('on'));
   if (fn) { try { fn(); } catch (err) { console.warn(err); } }
   return true;
 }
+/* Phones (under 700 px wide): every sheet opens at a peek height (about 45% of the screen) so the map and the hunt chips
+   (hunt-field.js: legal light, turnaround, truck) stay in view above it. Drag the grip or header up, or tap Show more, to
+   expand; the expanded sheet still stops below the chips (map.css, --hmf-b). The last choice is remembered (prefs.sheetFull). */
+function setSheetFull(on, save = true) {
+  const s = els.sheet, g = root.querySelector('.hmm-grow');
+  s.classList.toggle('hmm-full', !!on); root.classList.toggle('sheet-full', !!on);
+  g.setAttribute('aria-expanded', on ? 'true' : 'false'); g.setAttribute('aria-label', on ? 'Show less' : 'Show more');
+  if (save && !!prefs.sheetFull !== !!on) { prefs.sheetFull = !!on; savePrefs(); }
+  sizeSoon();
+}
+/** Show more only when it would show more: a tall sheet, an expanded one, or content that scrolls. */
+let sizeF = 0;
+function sizeSoon() {
+  if (sizeF) return;
+  sizeF = requestAnimationFrame(() => {
+    sizeF = 0;
+    const s = els.sheet, b = els.sheetB; if (s.hidden) return;
+    const more = s.classList.contains('tall') || s.classList.contains('hmm-full') || b.scrollHeight > b.clientHeight + 4;
+    s.classList.toggle('hmm-canmore', more);
+  });
+}
+function watchSheetSize() {
+  try { new MutationObserver(sizeSoon).observe(els.sheetB, { childList: true, subtree: true, characterData: true }); } catch (err) { /* old browser: Show more stays visible */ }
+  window.addEventListener('resize', sizeSoon);
+}
 function dragToClose() {
   const s = els.sheet; let y0 = null, dy = 0;
   const start = (e) => { if (!e.target.closest('.hmm-grip,.hmm-sheet-h') || e.target.closest('button')) return; y0 = e.touches[0].clientY; dy = 0; s.style.transition = 'none'; };
-  const move = (e) => { if (y0 == null) return; dy = Math.max(0, e.touches[0].clientY - y0); s.style.transform = `translateY(${dy}px)`; };
-  const end = () => { if (y0 == null) return; s.style.transition = ''; y0 = null; if (dy > 90) closeSheet(); else s.style.transform = ''; };
+  const move = (e) => { if (y0 == null) return; dy = e.touches[0].clientY - y0; s.style.transform = dy > 0 ? `translateY(${dy}px)` : ''; };
+  const end = () => {
+    if (y0 == null) return; s.style.transition = ''; y0 = null; s.style.transform = '';
+    const full = s.classList.contains('hmm-full');
+    if (dy < -40) setSheetFull(true); // drag up: expand
+    else if (full && dy > 60 && dy <= 200) setSheetFull(false); // drag down a little: back to peek
+    else if (dy > 90) closeSheet(); // drag down: close
+  };
   s.addEventListener('touchstart', start, { passive: true }); s.addEventListener('touchmove', move, { passive: true }); s.addEventListener('touchend', end);
 }
 
