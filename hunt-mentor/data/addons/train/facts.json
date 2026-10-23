@@ -20,6 +20,9 @@
     "syn": { "name": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition", "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf" },
     "L_def": { "name": "Hunt Mentor lesson: Rule Book definitions", "url": "#/s/rb-definitions" },
     "L_r3": { "name": "Hunt Mentor lesson: Rule Book Region 3 Thompson", "url": "#/s/rb-region-3" },
+    "L_r2": { "name": "Hunt Mentor lesson: Rule Book Region 2 Lower Mainland", "url": "#/s/rb-region-2" },
+    "L_btm": { "name": "Hunt Mentor Masterclass: Black tailed deer, meet the deer", "url": "#/s/mc-black-tailed-deer-01" },
+    "L_hd": { "name": "Hunt Mentor lesson: Your Harrison deer hunt", "url": "#/s/local-harrison-deer" },
     "L_md": { "name": "Hunt Mentor lesson: Mule deer", "url": "#/s/mule-deer" },
     "L_mdm": { "name": "Hunt Mentor Masterclass: Mule deer, meet the deer", "url": "#/s/mc-mule-deer-01" },
     "L_wt": { "name": "Hunt Mentor lesson: White tailed deer", "url": "#/s/white-tailed-deer" },
@@ -133,6 +136,24 @@
       "mdShape": { "t": "Mule deer antlers fork, and fork again. White tails grow one main beam with single tines rising from it.", "c": 85, "s": "L_md" },
       "mdAge": { "t": "Most yearling mule deer have 2 points a side. Older bucks have 4 or more plus a small eye guard (brow tine).", "c": 90, "s": "bcacct" },
       "mdOther": { "t": "Other Region 3 MUs open on other dates (3-15, 3-16, 3-32, 3-33 from 1 September; 3-46 from 20 September). Read your MU's row.", "c": 99, "s": "syn", "p": "page 34" }
+    },
+    "r2": {
+      "note": "Region 2 set for MUs 2-8, 2-18, 2-19 (one shared Bucks row on page 28). Facts copied from rb-region-2, local-harrison-deer and mc-black-tailed-deer-01, checked 2026-10-23.",
+      "checked": "2026-10-23",
+      "mus": ["2-8", "2-18", "2-19"],
+      "assume": "Assumption: you hunt MU (Management Unit) {mu} in Region 2 with a rifle, in the general open season, as an adult hunter, with the right licence, in legal hours.",
+      "rules": {
+        "r2Bucks": { "t": "Black tailed deer, MUs 2-8, 2-18 and 2-19: bucks 10 September to 15 December. The row says Bucks, not 4 point bucks.", "c": 99, "s": "syn", "p": "page 28" },
+        "r2Spike": { "t": "So any buck with visible bony antlers is legal there in season, a spike included.", "c": 95, "s": "L_btm" },
+        "r2Bow": { "t": "Bucks 1 to 9 September in these MUs are bow only. Not with a rifle.", "c": 99, "s": "syn", "p": "page 28" },
+        "r2Antlerless": { "t": "No antlerless (doe or fawn) general season in MUs 2-8, 2-18 or 2-19. A button buck is antlerless.", "c": 99, "s": "syn", "p": "page 28" },
+        "r2Limit": { "t": "Region 2 limit: 2 deer a licence year, at most 1 antlerless. A limit is not a season.", "c": 99, "s": "syn", "p": "page 27" },
+        "r2Wt": { "t": "No white tailed deer season anywhere in Region 2.", "c": 99, "s": "syn", "p": "pages 14 and 27" },
+        "btLaw": { "t": "In law a black tailed deer is a mule deer: same 4 point definition, same mule deer species licence.", "c": 99, "s": "syn", "p": "pages 4 and 8" },
+        "btShape": { "t": "Black tail antlers branch like a mule deer's: each beam forks, then forks again.", "c": 90, "s": "L_btm" },
+        "btAge": { "t": "On the south coast about 90% of yearling black tails are spikes; by 2.5 years most bucks have forks, 2 points a side.", "c": 90, "s": "L_btm" },
+        "wtFlag": { "t": "A wide tail that flags up white points to a white tail. If you cannot be sure, do not shoot.", "c": 85, "s": "L_hd" }
+      }
     }
   },
 
