@@ -951,7 +951,7 @@
       setTitle('Field Mode');
       view.innerHTML = `<div class="fgrid">
         <a class="ftile hot" href="#/field/legal">Legal to shoot?<small>Step by step check</small></a>
-        <a class="ftile" href="#/field/light">Legal light<small>3 bases, offline</small></a>
+        <a class="ftile" href="#/field/light">Legal light<small>Mission first, offline</small></a>
         ${F.cards.map((c) => `<a class="ftile ${c.hot ? 'hot' : ''}" href="#/field/c/${c.id}">${esc(c.title)}<small>${esc(c.sub || '')}</small></a>`).join('')}
       </div>`;
       return;
@@ -987,6 +987,8 @@
     };
   }
 
+  // Mission (home base, Harrison hunts) first, then the other bases.
+  const homeFirst = () => (HM.bases || []).slice().sort((a, b) => (b.id === 'mission') - (a.id === 'mission'));
   function lightView(dateStr) {
     setTitle('Legal light');
     const today = new Date().toLocaleDateString('en-CA', { timeZone: TZ });
@@ -994,7 +996,7 @@
     const [y, m, d] = ds.split('-').map(Number);
     const date = new Date(y, m - 1, d, 12);
     const H = HM.regs.hours;
-    const rows = HM.bases.map((b) => {
+    const rows = homeFirst().map((b) => {
       const rise = sunEvent(date, b.lat, b.lon, true), set = sunEvent(date, b.lat, b.lon, false);
       const col = (h) => h && h.beforeSunriseMin != null ? `${hhmm(addMin(rise, -h.beforeSunriseMin))} to ${hhmm(addMin(set, h.afterSunsetMin))}` : '<span class="verify">VERIFY</span>';
       return `<tr><td><strong>${esc(b.name)}</strong></td><td>${hhmm(rise)}<br>${hhmm(set)}</td><td>${col(H.bigGame)}</td><td>${col(H.migratory)}</td></tr>`;
@@ -1365,7 +1367,7 @@
     setTitle('Pocket cards'); tab('more');
     const F = HM.field; const H = HM.regs.hours;
     const today = new Date();
-    const light = HM.bases.map((b) => { const r = sunEvent(today, b.lat, b.lon, true), s = sunEvent(today, b.lat, b.lon, false); return `<tr><td>${esc(b.name)}</td><td>${hhmm(r)} / ${hhmm(s)}</td><td>${hhmm(addMin(r, -H.bigGame.beforeSunriseMin))} to ${hhmm(addMin(s, H.bigGame.afterSunsetMin))}</td><td>${hhmm(addMin(r, -H.migratory.beforeSunriseMin))} to ${hhmm(addMin(s, H.migratory.afterSunsetMin))}</td></tr>`; }).join('');
+    const light = homeFirst().map((b) => { const r = sunEvent(today, b.lat, b.lon, true), s = sunEvent(today, b.lat, b.lon, false); return `<tr><td>${esc(b.name)}</td><td>${hhmm(r)} / ${hhmm(s)}</td><td>${hhmm(addMin(r, -H.bigGame.beforeSunriseMin))} to ${hhmm(addMin(s, H.bigGame.afterSunsetMin))}</td><td>${hhmm(addMin(r, -H.migratory.beforeSunriseMin))} to ${hhmm(addMin(s, H.migratory.afterSunsetMin))}</td></tr>`; }).join('');
     view.innerHTML = `<p class="muted no-print">Use your browser's Share or Print to make a PDF. Fold and keep in a zip bag. Study aid only.</p>
       <div class="print-grid">
       <div class="card"><h2>Legal to shoot? All must be YES</h2><ol>${F.legalFlow.map((s) => `<li>${esc(s.q)}</li>`).join('')}</ol><p><strong>Any NO = no shot.</strong></p></div>

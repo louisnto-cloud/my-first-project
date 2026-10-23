@@ -139,7 +139,7 @@
     return { zone, band, e: Math.round(E), n: Math.round(Nn) };
   }
   const km = (a, b) => { const r = Math.PI / 180, x = Math.sin((b.lat - a.lat) * r / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin((b.lon - a.lon) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(x)); };
-  const bases = () => (window.HM && window.HM.bases) || [];
+  const bases = () => ((window.HM && window.HM.bases) || []).slice().sort((a, b) => (b.id === 'mission') - (a.id === 'mission')); // Mission (home base) first
 
   // Shared point picker (turnaround and live conditions). Saved point: K.pt {lat, lon, label, mu, src}
   function pickerHtml() {
@@ -153,7 +153,7 @@
       <label class="f" for="sf-base">A home base</label>
       <select id="sf-base"><option value="">Choose a base</option>${bases().map((b) => `<option value="${esc(b.id)}">${esc(b.name)}</option>`).join('')}</select>
       <label class="f" for="sf-mu">MU (Management Unit), centre point</label>
-      <div class="sf-row"><input type="text" id="sf-mu" inputmode="numeric" placeholder="for example 3-27" autocomplete="off"><button class="btn" data-pick="mu">Use</button></div>
+      <div class="sf-row"><input type="text" id="sf-mu" inputmode="numeric" placeholder="for example 2-18" autocomplete="off"><button class="btn" data-pick="mu">Use</button></div>
       <label class="f" for="sf-ll">Latitude, longitude</label>
       <div class="sf-row"><input type="text" id="sf-ll" inputmode="decimal" placeholder="50.86, -120.27" autocomplete="off"><button class="btn" data-pick="ll">Use</button></div>
     </div>`;
@@ -167,7 +167,7 @@
       try {
         if (k === 'trip') { const t = ld(K.trip, {}); set({ lat: +t.lat, lon: +t.lon, mu: t.mu || '', label: 'Trip plan: ' + (t.where || 'map point'), src: 'trip' }); }
         else if (k === 'gps') { b.disabled = true; b.textContent = 'Finding you...'; const f = await getFix(); const mu = await muAt(f.lat, f.lon); set({ lat: f.lat, lon: f.lon, mu: mu || '', label: `My GPS location (about ${f.acc} m)`, src: 'gps' }); }
-        else if (k === 'mu') { const mu = normMu($('#sf-mu', root).value); if (!mu) { toast('Type an MU like 3-27.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone. Open the Hunt Map once online, or type a point.`); return; } set({ lat: c.lat, lon: c.lon, mu, label: `Centre of MU ${mu} (approximate)`, src: 'mu' }); }
+        else if (k === 'mu') { const mu = normMu($('#sf-mu', root).value); if (!mu) { toast('Type an MU like 2-18.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone. Open the Hunt Map once online, or type a point.`); return; } set({ lat: c.lat, lon: c.lon, mu, label: `Centre of MU ${mu} (approximate)`, src: 'mu' }); }
         else if (k === 'll') { const m = $('#sf-ll', root).value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/); if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { toast('Type latitude, longitude like 50.86, -120.27'); return; } const lat = +m[1], lon = +m[2]; const mu = await muAt(lat, lon); set({ lat, lon, mu: mu || '', label: 'Typed point', src: 'typed' }); }
       } catch (e) { toast(e.message); }
       finally { if (k === 'gps') { b.disabled = false; b.textContent = 'My GPS location'; } }
@@ -301,7 +301,7 @@
   const TRIP_FIELDS = [
     ['who', 'Your name', 'text'], ['party', 'Who is with you (names)', 'text'], ['count', 'How many people in total', 'number'],
     ['contact', 'Your contact at home (name)', 'text'], ['cphone', 'Contact phone (for a text message)', 'tel'], ['cemail', 'Contact email', 'email'],
-    ['where', 'Where you are going (area, road, route)', 'textarea'], ['mu', 'MU (Management Unit), for example 3-27', 'text'],
+    ['where', 'Where you are going (area, road, route)', 'textarea'], ['mu', 'MU (Management Unit), for example 2-18', 'text'],
     ['lat', 'Map point latitude', 'text'], ['lon', 'Map point longitude', 'text'],
     ['vehicle', 'Vehicle (make, colour, licence plate)', 'text'], ['parked', 'Where the vehicle will be parked', 'text'],
     ['start', 'Leaving', 'datetime-local'], ['ret', 'Planned return', 'datetime-local'], ['overdue', 'Overdue: if no word by this time, call 911', 'datetime-local'],
@@ -392,7 +392,7 @@
     const setF = (k, v) => { t[k] = v; const el = $(`#sf-t-${k}`); if (el) el.value = v; };
     const toLocalInput = (d) => { const p = (n) => String(n).padStart(2, '0'); return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`; };
     $('#sf-t-gps').onclick = async (e) => { const b = e.currentTarget; b.disabled = true; b.textContent = 'Finding you...'; try { const f = await getFix(); setF('lat', f5(f.lat)); setF('lon', f5(f.lon)); const mu = await muAt(f.lat, f.lon); if (mu && !t.mu) setF('mu', mu); save(); refresh(); } catch (err) { toast(err.message); } b.disabled = false; b.textContent = 'Use my GPS'; };
-    $('#sf-t-muc').onclick = async () => { const mu = normMu(t.mu); if (!mu) { toast('Type the MU first, like 3-27.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone yet. Open it once online.`); return; } setF('mu', mu); setF('lat', String(c.lat)); setF('lon', String(c.lon)); save(); refresh(); toast(`Centre of MU ${mu} set. It is approximate: a real start point is better.`); };
+    $('#sf-t-muc').onclick = async () => { const mu = normMu(t.mu); if (!mu) { toast('Type the MU first, like 2-18.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone yet. Open it once online.`); return; } setF('mu', mu); setF('lat', String(c.lat)); setF('lon', String(c.lon)); save(); refresh(); toast(`Centre of MU ${mu} set. It is approximate: a real start point is better.`); };
     $('#sf-t-od2').onclick = () => { if (!t.ret) { toast('Set the planned return first.'); return; } setF('overdue', toLocalInput(new Date(+new Date(t.ret) + 2 * 36e5))); save(); refresh(); };
     $('#sf-t-od0').onclick = () => { if (!t.ret) { toast('Set the planned return first.'); return; } const d = new Date(t.ret); d.setDate(d.getDate() + 1); d.setHours(8, 0, 0, 0); setF('overdue', toLocalInput(d)); save(); refresh(); };
     const hpSel = $('#sf-hp');
