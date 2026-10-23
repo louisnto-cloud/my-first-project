@@ -608,3 +608,17 @@ body .sf-turnmini, body .sf-cd { border-color: var(--blaze); }
   .sheet:not([hidden]) .sheet-card { animation: hm-sheet-up .22s ease-out; }
   @keyframes hm-sheet-up { from { transform: translateY(24px); opacity: .6; } to { transform: none; opacity: 1; } }
 }
+
+/* ---------- iPhone Safari fixes (s6 iOS audit, 2026-10-23) ---------- */
+/* vh on iPhone Safari is the height with the toolbars hidden, so 80vh sheets ran under the status bar. dvh (iOS 15.4+) is the visible height; vh stays as the fallback. */
+.sheet-card { max-height: 80dvh; }
+.hm-tipsheet { max-height: 50dvh; }
+/* Landscape on a notched iPhone: keep the header, tabs and page clear of the notch and rounded corners. */
+.top { padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+.tabs { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+main { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+/* iOS shows an empty date or time box shorter than the others and centres its text (not on the map: its chip layout is its own). */
+body:not(.map-open) input[type="date"], body:not(.map-open) input[type="time"] { min-height: 50px; -webkit-appearance: none; appearance: none; }
+input[type="date"]::-webkit-date-and-time-value, input[type="time"]::-webkit-date-and-time-value { text-align: left; }
+/* Keyboard up (addons/install-ios.js sets body.hm-kb): iOS keeps fixed bars at the layout bottom, so they float over the text box. */
+body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
