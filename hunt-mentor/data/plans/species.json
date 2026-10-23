@@ -4,6 +4,7 @@
   {
    "id": "mule-deer",
    "name": "Mule deer",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "mule deer"
@@ -1063,6 +1064,7 @@
   {
    "id": "white-tailed-deer",
    "name": "White tailed deer",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "white tailed deer"
@@ -1482,7 +1484,286 @@
     "local-heffley",
     "top-areas",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No white tailed deer season anywhere in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "white-tailed-deer",
+      "mc-white-tailed-deer-01",
+      "mc-white-tailed-deer-07",
+      "local-mission",
+      "gallery-deer",
+      "deer-mind",
+      "the-rut",
+      "sign",
+      "landowner-permission",
+      "bc-calendar",
+      "shot-placement",
+      "blood-trailing",
+      "field-dressing",
+      "meat-care",
+      "cwd",
+      "tagging-legal",
+      "rb-region-2",
+      "rb-region-3",
+      "rb-region-8",
+      "rb-where-you-can-hunt"
+     ],
+     "methods": [
+      {
+       "id": "rifle",
+       "label": "Rifle (.308 Tikka T3x)",
+       "fit": "best",
+       "note": "Centrefire is legal for deer (99%). Valley shots often 50 to 150 m (Tip).",
+       "cert": 99
+      },
+      {
+       "id": "shotgun",
+       "label": "Shotgun (12 gauge)",
+       "fit": "ok",
+       "note": "20 gauge or larger with No. 1 Buck or larger, or slugs (99%). Fits close brush and field edges (Tip).",
+       "cert": 95
+      },
+      {
+       "id": "bow",
+       "label": "Bow",
+       "fit": "ok",
+       "note": "Bow B, C or D (99%). No white tailed deer season in Region 2 for any method (99%, pages 14 and 27).",
+       "cert": 99
+      },
+      {
+       "id": "rimfire",
+       "label": "Rimfire (.22 CZ 457)",
+       "fit": "no",
+       "note": "No .22 rimfire for deer (99%).",
+       "cert": 99
+      }
+     ],
+     "licence": [
+      {
+       "t": "BC resident hunting licence, $32, expires 31 March",
+       "why": "Needed for every hunt",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "White tailed deer species licence, $15, bought IN PERSON",
+       "why": "Separate from the mule deer licence",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "No white tailed deer season in Region 2. A white tailed deer licence is only for a hunt in another region, such as Region 3 or Region 8",
+       "cert": 99,
+       "lesson": "rb-region-2"
+      },
+      {
+       "t": "Written or clear permission for any farm you hunt",
+       "why": "Hunting cultivated land without consent is unlawful",
+       "cert": 99,
+       "lesson": "landowner-permission"
+      },
+      {
+       "t": "Carry every species licence bought this year, used and unused",
+       "why": "Unlawful to hunt without them",
+       "cert": 95,
+       "lesson": "tagging-legal"
+      },
+      {
+       "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+       "why": "An officer can ask",
+       "cert": 99,
+       "lesson": "licences"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No white tailed deer season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No white tailed deer row in the Region 2 table. The page 14 table gives Region 2 white tailed deer 0 (99%, pages 14 and 28)",
+        "Page 27: no open season for white tailed deer at Herrling Island near Hope (99%)",
+        "Deer you see near Mission are black tailed deer (85%)",
+        "Nearest general white tail seasons: Region 3, bucks 10 September to 10 December, antlerless 10 to 31 October (99%, page 34)",
+        "Region 8: bucks 10 September to 30 November, antlerless 10 to 31 October (99%, page 68)",
+        "Region 3 MUs 3-13 to 3-16 and Region 8 MUs 8-4 and 8-5 touch Region 2 on the app's MU map (85%, my reading; outlines approximate)"
+       ],
+       "when": [],
+       "tactics": [
+        "From Mission, your nearest white tail hunting is Region 3 or Region 8 (Tip)",
+        "Deer at home: make a black tailed deer plan. The mule deer licence covers them; bucks open 10 September (99%, page 28)"
+       ],
+       "cert": 99
+      }
+     ],
+     "dayPlan": {
+      "scout": [
+       "No white tail hunt in Region 2. Learn white tail from black tail before any deer hunt here (Tip)",
+       "Planning a Region 3 or Region 8 trip? Make a plan for that MU so the app shows its rows (Tip)"
+      ],
+      "dawn": [
+       "Legal light 1 hour before sunrise (99%)",
+       "Deer slip into cover at or before first light (75%)",
+       "Sit a trail between field and bedding brush (Tip)"
+      ],
+      "morning": [
+       "November: bucks cruise in daylight; stay until 11:00 (Tip)"
+      ],
+      "midday": [
+       "Deer bedded in thick brush near the field (75%)",
+       "Scout rubs and scrapes, or still hunt slowly (Tip)"
+      ],
+      "evening": [
+       "Be on the stand 2 hours before dark (Tip)",
+       "No noisy truck doors or voices near the field (Tip)"
+      ],
+      "dusk": [
+       "Peak movement (85%)",
+       "Big bucks often reach the field after dark. Hunt the trail, not the field (Tip)",
+       "Last legal shot 1 hour after sunset (99%)"
+      ],
+      "night": [
+       "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+       "Pressured white tails move more at night (70%)",
+       "No lights for hunting (95%)"
+      ]
+     },
+     "raiseOdds": [
+      {
+       "t": "Hunt black tailed deer at home instead",
+       "why": "Black tailed deer use the mule deer licence; Region 2 bucks open 10 September (99%, pages 8 and 28)",
+       "cert": 99
+      },
+      {
+       "t": "Make a Region 3 or Region 8 plan for white tails",
+       "why": "Both have a general antlerless white tail window, 10 to 31 October (99%, pages 34 and 68)",
+       "cert": 99
+      },
+      {
+       "t": "Learn the tail",
+       "why": "A white tail has a wide brown tail that flags up white (85%)",
+       "cert": 85
+      }
+     ],
+     "redFlags": [
+      "No white tailed deer season anywhere in Region 2 (99%, pages 14 and 27). Every deer you shoot here must be a legal black tailed deer.",
+      "Herrling Island near Hope: no open season for white tailed deer (99%, page 27).",
+      "Region 2 deer limit: 2 black tailed deer a licence year, at most 1 antlerless (99%, page 27).",
+      "No shooting within 100 m of an occupied house or farm building (99%). Valley farms make this the main limit.",
+      "Hunting cultivated land without consent is unlawful (99%)."
+     ],
+     "afterKill": [
+      "Notch the white tailed deer licence immediately, before handling (99%).",
+      "Evidence of sex attached: unskinned tail plus testicle or part of the penis, or part of the udder and teats for a doe (99%).",
+      "No compulsory inspection or report for deer (99%).",
+      "Take neck, ribs, four quarters and loins (98%).",
+      "No white tailed deer may be taken in Region 2 (99%). On a trip to another region, read that region's Rule Book first, including its CWD (Chronic Wasting Disease) rules (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "White tailed deer licence bought in person",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "Farm permission, with the boundary walked",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       },
+       {
+        "t": "Region 2 rows read: no white tailed deer season (pages 14 and 27)",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Zero confirmed at 100 m with the deer load",
+        "cert": 70,
+        "lesson": "sighting-in"
+       },
+       {
+        "t": "Backstop plan for flat fields: solid earth only",
+        "why": "Houses, livestock and roads nearby",
+        "cert": 85,
+        "lesson": "white-tailed-deer"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Rattling antlers or bag, grunt tube (November)",
+        "cert": 60,
+        "lesson": "white-tailed-deer"
+       },
+       {
+        "t": "Ground blind or stool for the trail sit",
+        "cert": 60,
+        "lesson": "white-tailed-deer"
+       },
+       {
+        "t": "Flagging tape for the blood trail",
+        "cert": 70,
+        "lesson": "blood-trailing"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Warm layers for a still sit at dusk",
+        "cert": 60,
+        "lesson": "what-to-wear"
+       },
+       {
+        "t": "Blaze orange vest and toque",
+        "cert": 90,
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Cooler and ice in the truck",
+        "cert": 60,
+        "lesson": "meat-care"
+       }
+      ],
+      "safety": [
+       {
+        "t": "Distance to every building over 100 m checked",
+        "cert": 99,
+        "lesson": "white-tailed-deer"
+       },
+       {
+        "t": "No shot toward roads, buildings or livestock",
+        "cert": 85,
+        "lesson": "white-tailed-deer"
+       }
+      ]
+     },
+     "sources": [
+      "white-tailed-deer",
+      "mc-white-tailed-deer-01",
+      "mc-white-tailed-deer-07",
+      "local-mission",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "fallow-deer",
@@ -1659,11 +1940,36 @@
    "sources": [
     "rb-region-1",
     "all-bc-species"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No fallow deer season in Region 2; Region 1 only. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "tactics": [
+      {
+       "id": "id-first",
+       "name": "Identify, then hunt",
+       "best": "Any day in MUs 1-1 to 1-7",
+       "steps": [
+        "Learn fallow deer from black tailed deer before the trip (99%)",
+        "Read the Region 1 no shooting maps (99%)",
+        "Glass and confirm species before the shot (Tip)"
+       ],
+       "pros": [
+        "Open all year"
+       ],
+       "cons": [
+        "Far from Mission: a Vancouver Island trip (Tip)"
+       ],
+       "cert": 60
+      }
+     ]
+    }
+   }
   },
   {
    "id": "moose",
    "name": "Moose",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "moose"
@@ -2094,11 +2400,279 @@
     "leh-strategy",
     "the-rut",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No general moose season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "moose",
+      "habitat-big-game",
+      "the-rut",
+      "migration",
+      "snow-tracking",
+      "mc-moose-07",
+      "bc-calendar",
+      "leh-strategy",
+      "shot-placement",
+      "ballistics-308",
+      "field-dressing",
+      "meat-care",
+      "packing-out",
+      "cwd",
+      "tagging-legal",
+      "rb-region-3",
+      "rb-region-8",
+      "rb-after-the-kill",
+      "rb-legal-methods",
+      "rb-region-2",
+      "local-mission"
+     ],
+     "licence": [
+      {
+       "t": "BC resident hunting licence, $32, expires 31 March",
+       "why": "Needed for every hunt",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "Moose species licence. Buy it in person to have it at once",
+       "why": "Online orders come by mail",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "No waiting period for a moose licence",
+       "cert": 99,
+       "lesson": "rb-licences-fees"
+      },
+      {
+       "t": "Mandatory Hunter Report by 31 March, hunt or no hunt",
+       "why": "Miss it and next year's licence and LEH are blocked",
+       "cert": 98,
+       "lesson": "moose"
+      },
+      {
+       "t": "No general moose season in Region 2 (page 28). The moose licence is for a trip to another region",
+       "cert": 99,
+       "lesson": "rb-region-2"
+      },
+      {
+       "t": "Carry every species licence bought this year, used and unused",
+       "why": "Unlawful to hunt without them",
+       "cert": 95,
+       "lesson": "tagging-legal"
+      },
+      {
+       "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+       "why": "An officer can ask",
+       "cert": 99,
+       "lesson": "licences"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No general moose season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No moose row in the Region 2 table, page 28 (99%)",
+        "Region 2 holds about 70 to 100 moose, 2022 estimate (90%)",
+        "Nearest general seasons, spike fork bulls only: Region 3 MUs 3-13 and 3-14, 1 to 15 November; MUs 3-15 and 3-16, 15 October to 15 November (99%, page 34)",
+        "Region 8, every MU: spike fork bulls 1 to 15 November (99%, page 68)",
+        "Those Region 3 MUs and Region 8 MUs 8-4 and 8-5 touch Region 2 on the app's MU map (85%, my reading; outlines approximate)"
+       ],
+       "when": [],
+       "tactics": [
+        "From Mission, moose hunting means a drive to Region 3 or Region 8 (Tip)",
+        "Make a plan for the MU you will hunt so the app shows its rows (Tip)"
+       ],
+       "cert": 99
+      }
+     ],
+     "dayPlan": {
+      "scout": [
+       "No moose hunt in Region 2. Pick a Region 3 or Region 8 MU and make a plan for it (Tip)",
+       "Look for snapped willow tips at chest to head height, huge heart shaped tracks, beds (Tip)",
+       "Plan the pack out route before the hunt (Tip)"
+      ],
+      "dawn": [
+       "Legal light 1 hour before sunrise (99%)",
+       "Most active at dawn and dusk (75%)",
+       "Glass a willow flat or wetland edge at first light (Tip)"
+      ],
+      "morning": [
+       "Cold mornings after frost keep moose on their feet longer (60%)"
+      ],
+      "midday": [
+       "Bedded in shade or thick cover close to feed (Tip)",
+       "Check sign, move to the evening seat (Tip)"
+      ],
+      "evening": [
+       "Get on a wetland trail 2 hours before dark (Tip)"
+      ],
+      "dusk": [
+       "Peak movement (75%)",
+       "Shoot only with enough light left to start the work. A moose is a 2 day job (Tip)",
+       "Last legal shot 1 hour after sunset (99%)"
+      ],
+      "night": [
+       "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+       "Meat open, propped, cooling. Moose hold heat for hours (Tip)"
+      ]
+     },
+     "raiseOdds": [
+      {
+       "t": "Hunt with your brother",
+       "why": "One person cannot pack a moose out in a day (Tip)",
+       "cert": 70
+      },
+      {
+       "t": "Apply for Region 3 antlerless moose LEH (Limited Entry Hunting)",
+       "why": "Codes 4001 to 4018: 1 to 10 November, odds 4 to 1 up to 58 to 1 (99%)",
+       "cert": 99
+      },
+      {
+       "t": "Apply as a shared hunt",
+       "why": "Moose shared hunt: each member entered separately, if one is drawn the group is drawn (99%)",
+       "cert": 99
+      },
+      {
+       "t": "Scout moose kitchens",
+       "why": "Willow flats with broken tips and big tracks in the mud (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Practise at 150 m with the moose load",
+       "why": "15 cm plate, field rest, 165 to 180 grain premium (Tip)",
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "No general moose season in Region 2 (99%, page 28). Not open near Mission: moose and elk (99%).",
+      "Region 3 and Region 8 general seasons: spike fork bulls only. No more than 2 tines on one antler (98%).",
+      "Cows, calves and bigger bulls: LEH (Limited Entry Hunting) only (98%).",
+      "Unlawful to hunt big game while it is swimming (99%).",
+      "Mandatory Hunter Report by 31 March or no licence next year (98%)."
+     ],
+     "afterKill": [
+      "Cancel the species licence immediately, before handling (98%).",
+      "Antlers stay naturally attached to part of the upper skull, with the licence, while returning (98%).",
+      "Evidence of sex: tail or a 6 cm² hide piece, plus a testicle or part of the penis (98%).",
+      "Edible portions home: neck, ribs, four quarters, loins (98%).",
+      "Quarter on the hide (gutless method), bag each quarter, hang in shade (Tip).",
+      "Plan 4 to 6 trips with 2 people, or a cart or sled (Tip).",
+      "Record of Receipt if your brother carries your meat (90%).",
+      "Mandatory Hunter Report by 31 March (98%)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "Moose rows read for the MU you will hunt: Region 3 page 34, Region 8 page 68",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       },
+       {
+        "t": "31 March report deadline in the phone",
+        "cert": 98,
+        "lesson": "moose"
+       },
+       {
+        "t": "Spike fork definition learned by heart",
+        "cert": 98,
+        "lesson": "moose"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "165 to 180 grain premium load zeroed",
+        "cert": 65,
+        "lesson": "moose"
+       },
+       {
+        "t": "Practised the 15 cm plate at 150 m from a field rest",
+        "cert": 60,
+        "lesson": "moose"
+       }
+      ],
+      "gear": [
+       {
+        "t": "8 game bags, bone saw, tarp, rope, small pulley",
+        "cert": 80,
+        "lesson": "field-dressing"
+       },
+       {
+        "t": "Cow call",
+        "cert": 60,
+        "lesson": "moose"
+       },
+       {
+        "t": "Cart, sled or frame pack for the pack out",
+        "cert": 60,
+        "lesson": "packing-out"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Boots for wet willow flats and swamp edges",
+        "cert": 60,
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Pack out plan agreed with your brother before the shot",
+        "cert": 70,
+        "lesson": "moose"
+       },
+       {
+        "t": "Meat cutter or cold storage arranged",
+        "cert": 60,
+        "lesson": "meat-care"
+       }
+      ],
+      "safety": [
+       {
+        "t": "Keep a tree between you and a close moose",
+        "why": "Rutting bulls and cows with calves can charge",
+        "cert": 60,
+        "lesson": "moose"
+       },
+       {
+        "t": "ATV (All Terrain Vehicle): magazine out, chamber empty",
+        "cert": 99,
+        "lesson": "packing-out"
+       }
+      ]
+     },
+     "sources": [
+      "moose",
+      "mc-moose-07",
+      "local-mission",
+      "rb-region-2",
+      "leh-strategy",
+      "the-rut",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "elk",
    "name": "Elk",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "elk"
@@ -2441,11 +3015,85 @@
     "the-rut",
     "habitat-big-game",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No general elk season in Region 2; Region 2 elk come from LEH draws. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "elk",
+      "habitat-big-game",
+      "the-rut",
+      "migration",
+      "leh-strategy",
+      "shot-placement",
+      "ballistics-308",
+      "field-dressing",
+      "meat-care",
+      "packing-out",
+      "cwd",
+      "tagging-legal",
+      "rb-region-8",
+      "rb-region-4",
+      "rb-region-7a",
+      "rb-region-7b",
+      "rb-region-6",
+      "rb-legal-methods",
+      "mc-elk-01",
+      "mc-elk-07",
+      "rb-region-2",
+      "local-mission"
+     ],
+     "raiseOdds": [
+      {
+       "t": "Go to Region 8 in September",
+       "why": "6 point bull season sits right on the rut (Tip); Okanagan elk 2,500 to 3,500 (80%)",
+       "cert": 75
+      },
+      {
+       "t": "Learn to count 6 points on photos and video",
+       "why": "Brow tine counts; tines at least 2.5 cm (98%)",
+       "cert": 98
+      },
+      {
+       "t": "Plan the pack for an animal 3 times a deer",
+       "why": "One elk, two men, three trips (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Check the LEH synopsis for Region 2 elk draws",
+       "why": "With no general season, Region 2 elk come from LEH (Limited Entry Hunting) draws (85%, my reading). Hunts and codes: VERIFY in the LEH synopsis",
+       "cert": 85
+      }
+     ],
+     "redFlags": [
+      "No general elk season in Region 2 (99%, page 28). Near Mission an elk is a Journal note, not a target, unless you hold an LEH (Limited Entry Hunting) authorization.",
+      "Mission is Roosevelt elk country. Roosevelt elk are Blue listed (vulnerable) since 1998 (85%, my reading of the ranges; Blue listed 90%).",
+      "Region 8 and most Region 4 rows: 6 point bulls only, 6 tines on one antler (98%).",
+      "Region 4 CWD (Chronic Wasting Disease) Management Zone: mandatory head submission and carcass transport rules (99%).",
+      "Mandatory Hunter Report by 31 March (98%)."
+     ],
+     "mistakes": [
+      "Shooting the first bull that bugles before counting 6 on one side.",
+      "Bugling at a herd bull on open ground.",
+      "Hunting elk in Region 2 on a species licence alone. There is no general season.",
+      "A 300 m shot because elk are big."
+     ],
+     "sources": [
+      "elk",
+      "the-rut",
+      "habitat-big-game",
+      "mc-elk-01",
+      "mc-elk-07",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "black-bear",
    "name": "Black bear",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "black bear"
@@ -2812,7 +3460,136 @@
     "shot-placement",
     "local-heffley",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 bear seasons: spring to 15 June, bow 1 to 9 September, fall 10 September to 30 November. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "black-bear",
+      "gallery-big-game",
+      "habitat-big-game",
+      "migration",
+      "local-mission",
+      "bc-calendar",
+      "shot-placement",
+      "blood-trailing",
+      "field-dressing",
+      "meat-care",
+      "cooking",
+      "tagging-legal",
+      "rb-region-2",
+      "rb-unlawful-acts",
+      "rb-legal-methods",
+      "bush-safety",
+      "mc-black-bear-01",
+      "mc-black-bear-05",
+      "mc-black-bear-07"
+     ],
+     "phases": [
+      {
+       "id": "r2-spring",
+       "label": "Spring bear, 1 April to 15 June (Region 2)",
+       "months": [
+        4,
+        5,
+        6
+       ],
+       "where": [
+        "South facing grassy slopes, logging road edges and cutblocks that green up first (65%)",
+        "Avalanche chutes higher up (65%)",
+        "Region 2 spring closes 15 June, not 30 June (99%, page 28)"
+       ],
+       "when": [
+        "dawn: glass green slopes (Tip)",
+        "midday: bears may feed any hour (70%)",
+        "dusk: last 2 hours of light on road edges and cutblocks (Tip)"
+       ],
+       "tactics": [
+        "Sows may have yearling cubs the size of a big dog (75%)",
+        "June to July is mating season; boars travel (75%)"
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-fall",
+       "label": "Fall bear: bow only 1 to 9 September, then 10 September to 30 November (Region 2)",
+       "months": [
+        9,
+        10,
+        11
+       ],
+       "where": [
+        "Fall berry patches, Himalayan blackberry on valley edges, young cutblocks (90%, Region 2 Rule Book strategy)",
+        "Berry fields in the Fraser Valley draw bears (65%)",
+        "Salmon streams where fish run; check local runs (VERIFY timing for each stream)",
+        "Bears live near farms and houses here: no hunting or shooting within 100 m (109 yd) of a dwelling, farm building, school or regional district park (99%)"
+       ],
+       "when": [
+        "dawn: glass food (Tip)",
+        "midday: fall bears feed almost nonstop (70%)",
+        "dusk: last hour of light on a berry slope (Tip)"
+       ],
+       "tactics": [
+        "Glass berry slopes in the evening (Tip)",
+        "August to October is hyperphagia (70%)",
+        "Den entry mid October to late November; adult males last (80%)",
+        "Fraser Valley bears are mostly black (90%)"
+       ],
+       "cert": 99
+      }
+     ],
+     "raiseOdds": [
+      {
+       "t": "Hunt the food",
+       "why": "Find the food, find the bear (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Use both seasons",
+       "why": "Region 2: spring 1 April to 15 June and fall 10 September to 30 November, bag 2 a licence year (99%, page 28)",
+       "cert": 98
+      },
+      {
+       "t": "Watch every bear for 5 minutes",
+       "why": "Cubs show up in the fourth minute (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Pick an adult male",
+       "why": "Synopsis asks hunters to select an adult male; big head like a basketball, belly near the ground (98%)",
+       "cert": 98
+      }
+     ],
+     "redFlags": [
+      "No open season on grizzly bears anywhere in BC (98%). Brown colour proves nothing.",
+      "No hunting a bear under 2 years old or any bear in its company (98%).",
+      "White (Kermode) and blue (Glacier) colour phases are closed (98%).",
+      "No baiting bears, and no dead animal as bait (98%).",
+      "You must take the meat: neck, ribs, four quarters, loins (98%).",
+      "No August bear season in Region 2 (99%, page 28).",
+      "Fraser Valley Special Area licence plus $1,000,000 insurance: all of MU 2-4, and MU 2-8 inside Mission, Maple Ridge, Pitt Meadows and Coquitlam (99%, page 29).",
+      "Unless lawfully hunting, no firearm discharge within 400 m of the FVRD (Fraser Valley Regional District) roads on page 27 (99%). Target shooting is out."
+     ],
+     "afterKill": [
+      "Cancel the species licence immediately, before handling (98%).",
+      "Thin blood trails: mark where it stood and where it went (85%).",
+      "Take the edible portions: neck, ribs, four quarters, loins (98%).",
+      "Gall bladder: leave it at the kill site, or dispose of the gut pile with the gall within 48 hours (98%).",
+      "Region 2: no compulsory inspection or report for black bear (95%).",
+      "Ear tagged or collared bear: contact the nearest Fish and Wildlife office (98%).",
+      "Cook every cut to 71°C (160°F) inside. Freezing does not kill the parasite (75%)."
+     ],
+     "sources": [
+      "black-bear",
+      "mc-black-bear-05",
+      "mc-black-bear-07",
+      "shot-placement",
+      "local-mission",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "grizzly-bear",
@@ -2916,11 +3693,34 @@
    "sources": [
     "black-bear",
     "all-bc-species"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No grizzly season anywhere in BC. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "black-bear",
+      "all-bc-species",
+      "bush-safety",
+      "bec-zones",
+      "rb-region-2"
+     ],
+     "redFlags": [
+      "No open season for grizzly bears anywhere in BC (98%). The province ended the hunt on 18 December 2017 (85%).",
+      "Grizzlies are listed among the mainland animals of the CWH (Coastal Western Hemlock) zone, which runs up the Fraser valley (95%). Never assume a brown bear here is a black bear (Tip).",
+      "A shot grizzly is a protected animal killed. Report wildlife crimes to RAPP (Report All Poachers and Polluters), 1 877 952 7277 (98%)."
+     ],
+     "sources": [
+      "black-bear",
+      "all-bc-species",
+      "bec-zones"
+     ]
+    }
+   }
   },
   {
    "id": "bighorn-sheep",
    "name": "Bighorn sheep",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "bighorn sheep"
@@ -3251,7 +4051,121 @@
     "mountain-sheep",
     "leh-strategy",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No general bighorn season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "mountain-sheep",
+      "gallery-big-game",
+      "migration",
+      "glassing",
+      "leh-strategy",
+      "shot-placement",
+      "ballistics-308",
+      "packing-out",
+      "meat-care",
+      "trophy-care",
+      "tagging-legal",
+      "rb-after-the-kill",
+      "rb-legal-methods",
+      "rb-region-3",
+      "rb-region-2"
+     ],
+     "phases": [
+      {
+       "id": "r3-r5",
+       "label": "Nearest general rams: Regions 3 and 5, 10 September to 20 October",
+       "months": [
+        9,
+        10
+       ],
+       "where": [
+        "No general bighorn season in Region 2 (95%, page 28: no row)",
+        "Region 3: MUs 3-31 and part of 3-32, full curl; part of 3-32 closed, Map C21 (98%)",
+        "Region 3: a portion of MU 3-17, mature rams, Map C2 (98%)",
+        "Region 5: MU 5-2, full curl (98%)",
+        "Dry canyons and grass slopes of the Thompson and Fraser (85%)"
+       ],
+       "when": [
+        "dawn: feed on open slopes (Tip)",
+        "midday: bed on ledges near escape cliffs (Tip)",
+        "dusk: feed again (Tip)"
+       ],
+       "tactics": [
+        "Region 3 LEH 3/4 curl hunts 20 September to 20 October (95%)",
+        "A trip from Mission, not a day hunt (Tip)"
+       ],
+       "cert": 98
+      },
+      {
+       "id": "north",
+       "label": "Northern bighorn, 15 August to 30 September",
+       "months": [
+        8,
+        9
+       ],
+       "where": [
+        "MU 7-18 and MU 7-19, full curl rams (98%)"
+       ],
+       "when": [
+        "dawn: glass basins (Tip)"
+       ],
+       "tactics": [
+        "Backpack trip (Tip)"
+       ],
+       "cert": 98
+      }
+     ],
+     "tactics": [
+      {
+       "id": "backpack-glass",
+       "name": "Backpack spot and stalk",
+       "best": "Alpine basins, first light",
+       "steps": [
+        "Camp high, glass basins at first light (Tip)",
+        "Pick one ram before you move (Tip)",
+        "Judge horns square from the side only (98%)",
+        "Plan the stalk out of sight, often from above (Tip)",
+        "Two yes votes with your partner or no shot (Tip)"
+       ],
+       "pros": [
+        "You choose the ram with time to judge"
+       ],
+       "cons": [
+        "Long days, hard packs, weather, remote recovery"
+       ],
+       "cert": 60
+      },
+      {
+       "id": "truck-glass",
+       "name": "Glass canyon walls from roads, then climb",
+       "best": "Region 3 draw zones, a drive from Mission",
+       "steps": [
+        "Win a Region 3 draw first (95%)",
+        "Glass canyon walls from the road (Tip)",
+        "Mark the ram's ledge, then climb (Tip)",
+        "Judge horns square from the side only (98%)"
+       ],
+       "pros": [
+        "Road access for glassing (Tip)"
+       ],
+       "cons": [
+        "Needs a draw first",
+        "Rams get pushed by many hunters"
+       ],
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "Legal by horn size only: full curl, 3/4 curl or mature ram, depending on the MU (Management Unit) (98%). Just legal is not legal (Tip).",
+      "Only a few general season MUs: 3-31, part of 3-32, part of 3-17, 5-2, 7-18, 7-19 (98%). The rest is LEH (Limited Entry Hunting).",
+      "No general bighorn season in Region 2 (95%, page 28: no row). Region 3 and Region 5 are the nearest general seasons (98%).",
+      "Every sheep goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%).",
+      "Provincial bag limit 1 a licence year (98%)."
+     ]
+    }
+   }
   },
   {
    "id": "thinhorn-sheep",
@@ -3527,11 +4441,35 @@
    "sources": [
     "mountain-sheep",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No thinhorn sheep in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "raiseOdds": [
+      {
+       "t": "Plan one backpack trip north under the general season",
+       "why": "The realistic path from Mission, when fit and with a partner (Lean)",
+       "cert": 60
+      },
+      {
+       "t": "Learn the full curl thinhorn test",
+       "why": "8 years by true horn rings, or a horn tip above the nose bridge plane (98%)",
+       "cert": 98
+      }
+     ],
+     "redFlags": [
+      "Full curl thinhorn rams only (98%). Do not age a live ram by horn rings in the field (98%).",
+      "Far north only: Regions 6, 7A and 7B (98%). A multi day trip from Mission.",
+      "Every sheep goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%).",
+      "Dall's sheep: only a few hundred in BC (80%)."
+     ]
+    }
+   }
   },
   {
    "id": "mountain-goat",
    "name": "Mountain goat",
+   "baseRegion": "3",
    "group": "big game",
    "seasonKeys": [
     "mountain goat"
@@ -3835,7 +4773,173 @@
     "mountain-goat",
     "leh-strategy",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 goat seasons: MU 2-5, MU 2-6 and MUs 2-12 to 2-15. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "rb-region-2",
+      "mountain-goat",
+      "gallery-big-game",
+      "migration",
+      "glassing",
+      "leh-strategy",
+      "shot-placement",
+      "packing-out",
+      "trophy-care",
+      "tagging-legal",
+      "rb-region-4",
+      "rb-region-1",
+      "rb-legal-methods"
+     ],
+     "licence": [
+      {
+       "t": "BC resident hunting licence, $32, expires 31 March",
+       "why": "Needed for every hunt",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "Mountain goat species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+       "cert": 99,
+       "lesson": "mountain-goat"
+      },
+      {
+       "t": "Region 2: general seasons in MU 2-5, MU 2-6 and MUs 2-12 to 2-15, bag 1 (99%, page 28)",
+       "cert": 99,
+       "lesson": "rb-region-2"
+      },
+      {
+       "t": "Compulsory Inspection within 30 days and before 5 December, by appointment",
+       "cert": 98,
+       "lesson": "mountain-goat"
+      },
+      {
+       "t": "Carry every species licence bought this year, used and unused",
+       "why": "Unlawful to hunt without them",
+       "cert": 95,
+       "lesson": "tagging-legal"
+      },
+      {
+       "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+       "why": "An officer can ask",
+       "cert": 99,
+       "lesson": "licences"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-goat",
+       "label": "Region 2 goats, 10 September to 31 October",
+       "months": [
+        9,
+        10
+       ],
+       "where": [
+        "MU 2-5: 10 September to 15 October (99%, page 28)",
+        "MU 2-6: 10 to 30 September. Stay out of the Map B9 goat closed area (99%)",
+        "MUs 2-12 to 2-15: 10 September to 31 October. Stay out of the Maps B18 and B19 goat closed areas (99% season, 95% my reading of the maps)",
+        "No goat season in Mission's MU 2-8 (99%, page 28)",
+        "At and above timberline, next to cliffs (85%)"
+       ],
+       "when": [
+        "dawn and dusk: feeding (Tip)",
+        "midday: bedded on ledges with a view (Tip)"
+       ],
+       "tactics": [
+        "Groups with kids are nannies, except in the rut (85%)",
+        "Region 2 seasons close before the goat rut, which peaks 15 to 20 November (99% season, 85% rut)"
+       ],
+       "cert": 99
+      }
+     ],
+     "raiseOdds": [
+      {
+       "t": "Hunt a Region 2 general season MU",
+       "why": "MUs 2-5, 2-6 and 2-12 to 2-15 open 10 September, no draw needed (99%, page 28)",
+       "cert": 99
+      },
+      {
+       "t": "Take billies only",
+       "why": "Ministry asks for males; nannies carry the herd (98%)",
+       "cert": 98
+      },
+      {
+       "t": "Bring a spotting scope, rope and a partner",
+       "why": "Recovery is the hidden danger on goat ground (Tip)",
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "Every goat goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%).",
+      "CI (Compulsory Inspection) in Region 2 is by appointment only, no drop ins: Agassiz, Langley, Squamish or Sunshine Coast (99%, page 26).",
+      "Region 2 goats: only MUs 2-5, 2-6 and 2-12 to 2-15 (99%, page 28).",
+      "Closed areas: Map B9 in 2-6, Maps B18 and B19 in 2-12 (95%, my reading; the maps are titled Mountain Goat Closed Area).",
+      "Unlawful to hunt a nanny with a kid or in a group with kids (98%). A kid has horns under 10 cm (98%).",
+      "A goat shot above a cliff is often lost (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "CI (Compulsory Inspection) appointment booked: Agassiz, Langley, Squamish or Sunshine Coast",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       },
+       {
+        "t": "Goat closed area maps read: B9 in 2-6, B18 and B19 in 2-12",
+        "cert": 95,
+        "lesson": "rb-region-2"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "165 to 180 grain bonded load zeroed",
+        "cert": 60,
+        "lesson": "mountain-goat"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Spotting scope and 30 m rope",
+        "cert": 60,
+        "lesson": "mountain-goat"
+       },
+       {
+        "t": "First aid kit and satellite messenger",
+        "cert": 70,
+        "lesson": "pack-kit"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Mountain boots, never running shoes",
+        "why": "Loose rock and wet grass kill goat hunters",
+        "cert": 60,
+        "lesson": "mountain-goat"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Salt for the hide",
+        "cert": 60,
+        "lesson": "mountain-goat"
+       }
+      ],
+      "safety": [
+       {
+        "t": "Partner on every climb",
+        "cert": 60,
+        "lesson": "mountain-goat"
+       }
+      ]
+     },
+     "sources": [
+      "mountain-goat",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "caribou",
@@ -4015,7 +5119,18 @@
    "sources": [
     "caribou-bison",
     "leh-strategy"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No caribou season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "redFlags": [
+      "No general season anywhere: LEH (Limited Entry Hunting) draw only (98%).",
+      "Region 2: no caribou season in the page 28 table (95%).",
+      "Southern Mountain and Boreal caribou are listed Threatened (95%).",
+      "Hunting caribou is prohibited in parts of MUs 7-39 and 7-40, Map G25 (98%)."
+     ]
+    }
+   }
   },
   {
    "id": "bison",
@@ -4203,11 +5318,23 @@
    ],
    "sources": [
     "caribou-bison"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No bison season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "redFlags": [
+      "Only portions of MUs 7-42, 7-57 and 7-58 (98%). Far north of Mission.",
+      "No bison season in Region 2 (95%, page 28: no row).",
+      "175 grain and 2,712 joules at 100 m rule (98%). A normal deer load fails it.",
+      "Bison authorizations are under review and subject to change (98%)."
+     ]
+    }
+   }
   },
   {
    "id": "cougar",
    "name": "Cougar",
+   "baseRegion": "3",
    "group": "predator",
    "seasonKeys": [
     "cougar"
@@ -4476,11 +5603,128 @@
    "sources": [
     "predators",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 cougar: every MU 2-2 to 2-19, 10 September to 31 March and 1 April to 15 June, bag 2, every cougar inspected. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "predators",
+      "snow-tracking",
+      "tracks",
+      "wind-thermals",
+      "shot-placement",
+      "rb-legal-methods",
+      "rb-after-the-kill",
+      "rb-bag-limits",
+      "bc-calendar",
+      "rb-region-2",
+      "bush-safety",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "r2-main",
+       "label": "Cougar, 10 September to 31 March (Region 2)",
+       "months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+       ],
+       "where": [
+        "Region 2: every MU 2-2 to 2-19, 10 September to 31 March, bag 2 (99%, page 28)",
+        "Deer winter range: cougars follow the deer (Tip)"
+       ],
+       "when": [
+        "dawn and dusk: cougars hunt mostly then (85%)",
+        "dawn: cut a fresh track in new snow (Tip)",
+        "midday: hounds tree the cat (60%)"
+       ],
+       "tactics": [
+        "Without snow, cougars are rarely seen (Tip)",
+        "Pelts prime about November to February (Tip)"
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-spring",
+       "label": "Spring cougar, 1 April to 15 June (Region 2)",
+       "months": [
+        4,
+        5,
+        6
+       ],
+       "where": [
+        "Region 2: every MU 2-2 to 2-19, 1 April to 15 June, bag 2 (99%, page 28)"
+       ],
+       "when": [
+        "dawn and dusk: cougars hunt mostly then (85%)"
+       ],
+       "tactics": [
+        "Without snow, cougars are rarely seen (Tip)"
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No hunting a cougar kitten (spots or under 1 year) or any cougar in its company (98%).",
+      "Every cougar taken in Region 2 goes to CI (Compulsory Inspection), by appointment (99%, pages 26 and 28).",
+      "You must take the meat: neck, ribs, four quarters, loins (98%).",
+      "Found a fresh cougar kill? Leave at once and call 1 877 952 7277 (85%)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "CI (Compulsory Inspection) appointment booked: Agassiz, Langley, Squamish or Sunshine Coast",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       }
+      ],
+      "firearm": [],
+      "gear": [
+       {
+        "t": "Gloves and a mask for skinning",
+        "cert": 60,
+        "lesson": "predators"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Warm layers for snow tracking",
+        "cert": 60,
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Meat thermometer; cook cougar through",
+        "cert": 85,
+        "lesson": "predators"
+       }
+      ],
+      "safety": [
+       {
+        "t": "Cougar encounter: never run, look large, back away; fight back if attacked",
+        "cert": 85,
+        "lesson": "predators"
+       }
+      ]
+     },
+     "sources": [
+      "predators",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "wolf",
    "name": "Wolf",
+   "baseRegion": "3",
    "group": "predator",
    "seasonKeys": [
     "wolf"
@@ -4711,11 +5955,111 @@
    "sources": [
     "predators",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 wolf: only MUs 2-5, 2-6 and 2-11 to 2-16. Not open in Mission's 2-8. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "predators",
+      "snow-tracking",
+      "tracks",
+      "wind-thermals",
+      "shot-placement",
+      "rb-legal-methods",
+      "rb-after-the-kill",
+      "rb-bag-limits",
+      "bc-calendar",
+      "rb-region-2"
+     ],
+     "phases": [
+      {
+       "id": "r2-wolf",
+       "label": "Wolf, only in MUs 2-5, 2-6 and 2-11 to 2-16 (Region 2)",
+       "months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "where": [
+        "Region 2: MUs 2-5, 2-6 and 2-11 to 2-16, 10 September to 31 March and 1 April to 15 June, bag 3 (99%, page 28)",
+        "No wolf season in 2-2 to 2-4, 2-7 to 2-10 or 2-17 to 2-19. That includes Mission's 2-8 (99%, page 28)",
+        "Meadows and frozen lakes at first light (Tip)"
+       ],
+       "when": [
+        "dawn: glass meadows and frozen lakes (Tip)",
+        "dusk: listen for howls (85%)"
+       ],
+       "tactics": [
+        "Carry a wolf mindset on deer hunts in the open MUs (Tip)",
+        "Pelts prime about November to February (Tip)"
+       ],
+       "cert": 99
+      }
+     ],
+     "tactics": [
+      {
+       "id": "incidental",
+       "name": "Incidental wolves",
+       "best": "On deer hunts, only in MUs 2-5, 2-6 and 2-11 to 2-16",
+       "steps": [
+        "Glass meadows and frozen lakes at first light (Tip)",
+        "Confirm wolf, not dog or coyote: tail out when running, big feet, broad muzzle (85%)",
+        "Clear backstop (Tip)"
+       ],
+       "pros": [
+        "No extra licence (98%)",
+        "Long season"
+       ],
+       "cons": [
+        "Rarely seen",
+        "Most wolves at distance are dogs or coyotes"
+       ],
+       "cert": 60
+      },
+      {
+       "id": "call",
+       "name": "Calling",
+       "best": "Winter dawns",
+       "steps": [
+        "Sit at dawn with the wind in your face (Tip)",
+        "Play a distress call for 20 to 30 minutes (Tip)",
+        "Expect the animal from downwind (Tip)",
+        "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)"
+       ],
+       "pros": [
+        "Legal electronic calls"
+       ],
+       "cons": [
+        "Wolves are rarely called in by beginners (Tip)"
+       ],
+       "cert": 50
+      }
+     ],
+     "redFlags": [
+      "A big dog at 200 m looks like a wolf. Shooting a neighbour's dog ends in court (Tip).",
+      "No wolf season in Mission's MU 2-8, or in 2-2 to 2-4, 2-7 to 2-10 and 2-17 to 2-19 (99%, page 28).",
+      "Regions 1 and 2: Compulsory Report for every wolf (98%).",
+      "No bag limit is not a goal. Use what you take (Tip)."
+     ],
+     "sources": [
+      "predators",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "coyote",
    "name": "Coyote",
+   "baseRegion": "3",
    "group": "predator",
    "seasonKeys": [
     "coyote"
@@ -4957,7 +6301,152 @@
     "predators",
     "all-bc-species",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 coyote: every MU 2-2 to 2-19, 10 September to 15 June, no bag limit. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "predators",
+      "snow-tracking",
+      "tracks",
+      "wind-thermals",
+      "shot-placement",
+      "rb-legal-methods",
+      "rb-after-the-kill",
+      "rb-bag-limits",
+      "bc-calendar",
+      "landowner-permission",
+      "rb-region-2",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "r2-fall",
+       "label": "Fall, from 10 September (Region 2)",
+       "months": [
+        9,
+        10,
+        11
+       ],
+       "where": [
+        "Region 2: every MU 2-2 to 2-19, 10 September to 15 June, no bag limit (99%, page 28)",
+        "Field edges with permission (Tip)"
+       ],
+       "when": [
+        "dawn: calling setups (Tip)",
+        "dusk: field edges (Tip)"
+       ],
+       "tactics": [
+        "By early winter more than half the coyotes are young of the year (85%)"
+       ],
+       "cert": 99
+      },
+      {
+       "id": "winter",
+       "label": "Winter calling, December to March",
+       "months": [
+        12,
+        1,
+        2,
+        3
+       ],
+       "where": [
+        "Snow fields and cutblock edges (Tip)"
+       ],
+       "when": [
+        "dawn: the best calling window (Tip)"
+       ],
+       "tactics": [
+        "Coyotes breed late January to mid March (85%)",
+        "Pelts prime about November to February (Tip)"
+       ],
+       "cert": 98
+      },
+      {
+       "id": "r2-spring",
+       "label": "Spring, to 15 June (Region 2)",
+       "months": [
+        4,
+        5,
+        6
+       ],
+       "where": [
+        "Region 2 season closes 15 June (99%, page 28)",
+        "Field edges with permission (Tip)"
+       ],
+       "when": [
+        "dawn: calling setups (Tip)",
+        "dusk: field edges (Tip)"
+       ],
+       "tactics": [],
+       "cert": 99
+      }
+     ],
+     "raiseOdds": [
+      {
+       "t": "Sit three dawns on a field edge with permission",
+       "why": "Keep a log of what came and from where (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Wind in your face, always",
+       "why": "The wind tells the coyote everything (Tip)",
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "No closed season below 1,100 m elevation in Region 7B (99%). Elsewhere, read your row.",
+      "No bag limit is not a goal. Use what you take (Tip).",
+      "No lights, no night vision, no infrared (98%).",
+      "Inside Mission: rifle only in bylaw Area D, shotgun only in Areas B and C, no discharge in Area A (99%, Mission Bylaw 5433-2014).",
+      "Fraser Valley Special Area licence plus $1,000,000 insurance inside Mission city limits and all of MU 2-4 (99%, page 29)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "Landowner permission for the field",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       }
+      ],
+      "firearm": [],
+      "gear": [
+       {
+        "t": "Mouth call; practise 3 distress sounds",
+        "cert": 60,
+        "lesson": "predators"
+       },
+       {
+        "t": "Gloves and a mask for skinning",
+        "cert": 60,
+        "lesson": "predators"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Warm layers for a still dawn sit",
+        "cert": 60,
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Licensed fur trader or tanner found before the hunt",
+        "why": "Fur is the product (Tip)",
+        "cert": 60,
+        "lesson": "predators"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from occupied buildings",
+        "cert": 99,
+        "lesson": "local-mission"
+       }
+      ]
+     }
+    }
+   }
   },
   {
    "id": "bobcat",
@@ -5187,11 +6676,52 @@
    ],
    "sources": [
     "predators"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Region 2 bobcat: 15 November to 15 February, bag 1, Compulsory Reporting. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "predators",
+      "snow-tracking",
+      "tracks",
+      "wind-thermals",
+      "shot-placement",
+      "rb-legal-methods",
+      "rb-after-the-kill",
+      "rb-bag-limits",
+      "bc-calendar",
+      "rb-region-2"
+     ],
+     "phases": [
+      {
+       "id": "winter",
+       "label": "15 November to 15 February (Region 2)",
+       "months": [
+        11,
+        12,
+        1,
+        2
+       ],
+       "where": [
+        "Region 2: every MU 2-2 to 2-19, 15 November to 15 February, bag 1 (99%, page 28)"
+       ],
+       "when": [
+        "dawn and dusk: calling setups (Tip)"
+       ],
+       "tactics": [
+        "Bag 1 (98%)",
+        "Not one with other bobcats (98%)"
+       ],
+       "cert": 98
+      }
+     ]
+    }
+   }
   },
   {
    "id": "lynx",
    "name": "Lynx",
+   "baseRegion": "3",
    "group": "predator",
    "seasonKeys": [
     "lynx"
@@ -5398,7 +6928,90 @@
    ],
    "sources": [
     "predators"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No lynx season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "lessons": [
+      "predators",
+      "snow-tracking",
+      "tracks",
+      "wind-thermals",
+      "shot-placement",
+      "rb-legal-methods",
+      "rb-after-the-kill",
+      "rb-bag-limits",
+      "bc-calendar",
+      "rb-region-2",
+      "small-game"
+     ],
+     "licence": [
+      {
+       "t": "BC resident hunting licence, $32, expires 31 March",
+       "why": "Needed for every hunt",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "Lynx species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+       "cert": 99,
+       "lesson": "predators"
+      },
+      {
+       "t": "No lynx season in Region 2 (95%, page 28). The licence is for a hunt in another region",
+       "cert": 95,
+       "lesson": "rb-region-2"
+      },
+      {
+       "t": "Carry every species licence bought this year, used and unused",
+       "why": "Unlawful to hunt without them",
+       "cert": 95,
+       "lesson": "tagging-legal"
+      },
+      {
+       "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+       "why": "An officer can ask",
+       "cert": 99,
+       "lesson": "licences"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No lynx season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No lynx row in the Region 2 table, page 28 (95%)",
+        "Nearest seasons: Region 3, 15 November to 15 February, bag 1 (99%, page 34)",
+        "Region 8: 15 November to 28 February, bag 1 (99%, page 68)",
+        "Region 3 MUs 3-13 to 3-16 and Region 8 MUs 8-4 and 8-5 touch Region 2 on the app's MU map (85%, my reading; outlines approximate)"
+       ],
+       "when": [],
+       "tactics": [
+        "A bobcat is legal in Region 2 from 15 November. Know bobcat from lynx before the shot (Tip)"
+       ],
+       "cert": 95
+      }
+     ],
+     "redFlags": [
+      "No lynx season in Regions 1 or 2 (95%).",
+      "No lynx with another lynx or bobcat (98%)."
+     ]
+    }
+   }
   },
   {
    "id": "wolverine",
@@ -5542,7 +7155,16 @@
    "sources": [
     "predators",
     "all-bc-species"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. No wolverine season in Region 2. Facts from data/seasons/region2.json and the other region tables, content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md and the species lessons named in sources. Neighbouring MUs read from data/places/mu.json (approximate outlines). Checked 2026-10-23.",
+     "redFlags": [
+      "No wolverine season in Region 2 (95%, page 28: no row). Regions 6, 7A and 7B only (98%).",
+      "Electronic calls are not allowed for wolverine (98%)."
+     ]
+    }
+   }
   }
  ]
 }
