@@ -444,7 +444,7 @@
       const g = $('.fgrid', v);
       if (g && !$('#as-ftile', g)) { const a = document.createElement('a'); a.id = 'as-ftile'; a.className = 'ftile hot'; a.href = '#/aftershot'; a.innerHTML = `Shot taken: guide me<small>${esc(sub)}</small>`; g.insertBefore(a, g.firstChild); }
     } else if (!h || h === '#' || h === '#/') {
-      if (v.firstElementChild && !$('#as-home', v)) { const a = document.createElement('a'); a.id = 'as-home'; a.className = 'btn block as-homebtn' + (r ? ' primary' : ''); a.href = '#/aftershot'; a.innerHTML = `${r ? 'Continue: after the shot' : 'After the shot: guided steps'}<small>${esc(sub)}</small>`; v.insertBefore(a, v.firstChild); }
+      if (r && v.firstElementChild && !$('#as-home', v)) { /* on Home only while a hunt is in progress; Field Mode and More always have it */ const a = document.createElement('a'); a.id = 'as-home'; a.className = 'btn block as-homebtn' + (r ? ' primary' : ''); a.href = '#/aftershot'; a.innerHTML = `${r ? 'Continue: after the shot' : 'After the shot: guided steps'}<small>${esc(sub)}</small>`; v.insertBefore(a, v.firstChild); }
     } else if (h === '#/more') {
       const list = $('.card.list', v);
       if (list && !$('#as-more', list)) { const a = document.createElement('a'); a.id = 'as-more'; a.className = 'item'; a.href = '#/aftershot'; a.innerHTML = '<span class="grow">After the shot: guided steps, wait timer, licence, meat, papers</span>'; list.insertBefore(a, list.children[2] || null); }
