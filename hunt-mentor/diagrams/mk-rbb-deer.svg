@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 369" font-family="sans-serif" role="img" aria-label="Deer: what you may take in one licence year. 3: White tailed only, with 3 white tailed licences. 3: Mule (black tailed) only, with 3 mule deer licences. 1 + 2: A mix: 1 + 2 or 2 + 1. 1: Mule deer buck in total from Regions 3, 4, 5, 6, 7A, 7B and 8. A region's own limit can stop you sooner (99%)..">
+<rect width="400" height="369" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Deer: what you may take in one</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">licence year</text>
+<text x="16" y="75" font-size="14" fill="#17201A">Every row: page 14 (99%)</text>
+<g><rect x="12" y="93" width="183" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="127" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">3</text><text x="103.5" y="149" font-size="14" fill="#17201A" text-anchor="middle">White tailed only, with</text>
+<text x="103.5" y="167" font-size="14" fill="#17201A" text-anchor="middle">3 white tailed licences</text></g>
+<g><rect x="205" y="93" width="183" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="296.5" y="127" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">3</text><text x="296.5" y="149" font-size="14" fill="#17201A" text-anchor="middle">Mule (black tailed)</text>
+<text x="296.5" y="167" font-size="14" fill="#17201A" text-anchor="middle">only, with 3 mule deer</text>
+<text x="296.5" y="185" font-size="14" fill="#17201A" text-anchor="middle">licences</text></g>
+<g><rect x="12" y="213" width="183" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="247" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">1 + 2</text><text x="103.5" y="269" font-size="14" fill="#17201A" text-anchor="middle">A mix: 1 + 2 or 2 + 1</text></g>
+<g><rect x="205" y="213" width="183" height="110" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="296.5" y="247" font-size="26" font-weight="bold" fill="#FF6A13" text-anchor="middle">1</text><text x="296.5" y="269" font-size="14" fill="#17201A" text-anchor="middle">Mule deer buck in total</text>
+<text x="296.5" y="287" font-size="14" fill="#17201A" text-anchor="middle">from Regions 3, 4, 5,</text>
+<text x="296.5" y="305" font-size="14" fill="#17201A" text-anchor="middle">6, 7A, 7B and 8</text></g>
+<text x="16" y="343" font-size="14" fill="#1F3D2B">A region's own limit can stop you sooner (99%).</text>
+</svg>

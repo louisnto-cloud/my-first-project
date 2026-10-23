@@ -76,6 +76,12 @@ checked: 2026-10-03
 
 - Geese: Canada and cackling 10, white fronted 5, snow and Ross's 5 a day (99%).
 
+## Ducks and geese: every daily limit
+
+```diagram mk-rbb-ducks
+```
+
+```more the table as text
 | Birds | Daily bag limit |
 |---|---|
 | Ducks, all species together | 8 |
@@ -87,6 +93,7 @@ checked: 2026-10-03
 | White fronted goose | 5 |
 | Snow and Ross's geese together | 5 |
 | Snow geese in MU (Management Unit) 2-4 and 2-5 | 15 |
+```
 
 ```more Official wording, synopsis page 12, the federal note and every row
 > [!law] Page 12
@@ -129,6 +136,10 @@ checked: 2026-10-03
 
 ## Provincial bag limits: big game
 
+```diagram mk-rbb-big
+```
+
+```more the table as text
 | Species | Provincial bag limit, per licence year | Regional limit flagged (*) |
 |---|---|---|
 | Bison | 1 | No |
@@ -144,6 +155,7 @@ checked: 2026-10-03
 | Mountain sheep | 1 | No |
 | Wolf | 3 | Yes |
 | Wolverine | 1 | No |
+```
 
 - One licence year, all of BC. A star means the region sets its own limit too (99%).
 
@@ -160,11 +172,16 @@ checked: 2026-10-03
 
 ## Provincial bag limits: small game and birds
 
+```diagram mk-rbb-small
+```
+
+```more the table as text
 | Group | Provincial bag limit as printed |
 |---|---|
 | Upland game birds | Turkey (Region 1*, 4* and 8*). Upland game birds: see page 12 |
 | Other small game | Snowshoe hare 10 a day. Raccoon, skunk, coyote: NBL* |
 | Migratory game birds | Ducks: see page 12*. Geese: see page 12* |
+```
 
 - Snowshoe hare 10 a day. Raccoon, skunk, coyote: no provincial limit (99%).
 
@@ -193,12 +210,17 @@ checked: 2026-10-03
 
 ## Deer bag limits article
 
+```diagram mk-rbb-deer
+```
+
+```more the table as text
 | You may take | In one licence year |
 |---|---|
 | White tailed only | 3, with 3 white tailed licences |
 | Mule (black tailed) only | 3, with 3 mule deer licences |
 | A mix | 1 + 2 or 2 + 1 |
 | Mule deer bucks from Regions 3, 4, 5, 6, 7A, 7B and 8 | 1 in total |
+```
 
 - Every row: page 14 (99%). A region's own limit can stop you sooner (99%).
 
@@ -218,11 +240,16 @@ checked: 2026-10-03
 
 ## Deer bag limits by region
 
+```diagram mk-rbb-regions
+```
+
+```more the table as text
 | Your region | Mule deer | White tailed | All deer |
 |---|---|---|---|
 | 2 Mission | up to 2 (1 antlerless) | 0 | 2 |
 | 3 Heffley Creek | 1 | up to 2 | 3 |
 | 8 Okanagan | 1 | up to 2 | 3 |
+```
 
 - Your three regions, from the page 14 table (99%). Full table below.
 
@@ -245,11 +272,16 @@ checked: 2026-10-03
 
 ## Deer table footnotes, and your three regions
 
+```diagram mk-rbb-marks
+```
+
+```more the table as text
 | Mark | Means |
 |---|---|
 | 1 star | Some exceptions apply |
 | 2 stars | Haida Gwaii deer are not in the table |
 | 3 stars | Region 4 Cranbrook hunt, 5 to 31 January: 1 extra deer, still 3 at most |
+```
 
 - Every row: page 14 (99%).
 
@@ -298,12 +330,17 @@ rb-notch-5 | Keep the licence with the meat.
 
 ## Keeping and replacing species licences
 
+```diagram mk-rbb-keep
+```
+
+```more the table as text
 | Rule | Detail |
 |---|---|
 | Carry | Every species licence this year, used or not (99%) |
 | Keep | Until the meat is eaten (99%) |
 | Lost one | Replace it for $10 (99%) |
 | Expires | 31 March (99%) |
+```
 
 ```more the official words and detail
 > [!law] Pages 5, 7, 8 and 12
@@ -367,10 +404,16 @@ rb-notch-5 | Keep the licence with the meat.
 > [!rule]
 > Count twice: what is in the bag today, and what is in the freezer this year.
 
+```diagram mk-rbb-mistakes
+```
+
+```more 3 common mistakes as text
 > [!mistake]
 > - Shooting a second mule deer buck in Region 8 after one in Region 3. Regions 3 to 8 share one mule buck.
 > - Forgetting the freezer. Ducks and geese at home still count toward the possession limit.
 > - Hauling a friend's deer with no Record of Receipt.
+
+```
 
 > [!field]
 > At the kill: cancel the licence, then a photo of it beside the animal. At home: log the date, region, MU and species in your journal.
@@ -378,6 +421,9 @@ rb-notch-5 | Keep the licence with the meat.
 ## Sources
 
 - Every source, page and date checked: tap below.
+
+```diagram mk-rbb-sources
+```
 
 ```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: page 3 (cancelled species licence), page 5 (carry all licences), page 7 (deer licences, records), page 8 (replacement, expiry), page 11 (item 1, dispatching), page 12 (Provincial Bag and Possession Limits, item 52), page 13 (the provincial bag limit column, checked cell by cell on a 200 dpi image), page 14 (Deer Bag Limits article and table on a 220 dpi image, Record of Receipt form), page 15 (Transporting Wildlife), page 18 (self report). Checked 2026-10-03 (99%).

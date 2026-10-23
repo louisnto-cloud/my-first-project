@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 328" font-family="sans-serif" role="img" aria-label="Provincial bag limits: small game and birds. Upland game birds: Turkey (Region 1*, 4* and 8*). Upland game birds: see page 12. Other small game: Snowshoe hare 10 a day. Raccoon, skunk, coyote: NBL*. Migratory game birds: Ducks: see page 12*. Geese: see page 12*.">
+<rect width="400" height="328" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Provincial bag limits: small game</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">and birds</text>
+<text x="16" y="75" font-size="14" fill="#17201A">As printed, page 13 (99%). * the regions set</text>
+<text x="16" y="93" font-size="14" fill="#17201A">limits too</text>
+<g><rect x="12" y="109" width="376" height="75" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="109" width="128" height="75" rx="8" fill="#1F3D2B"/><rect x="132" y="109" width="8" height="75" fill="#1F3D2B"/><text x="22" y="131" font-size="15" font-weight="bold" fill="#FFFFFF">Upland game</text>
+<text x="22" y="150" font-size="15" font-weight="bold" fill="#FFFFFF">birds</text><text x="150" y="131" font-size="15" fill="#17201A">Turkey (Region 1*, 4* and</text>
+<text x="150" y="150" font-size="15" fill="#17201A">8*). Upland game birds: see</text>
+<text x="150" y="169" font-size="15" fill="#17201A">page 12</text></g>
+<g data-tip="NBL|No provincial bag limit for raccoon, skunk and coyote (99%)."><rect x="12" y="192" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="192" width="128" height="56" rx="8" fill="#1F3D2B"/><rect x="132" y="192" width="8" height="56" fill="#1F3D2B"/><text x="22" y="214" font-size="15" font-weight="bold" fill="#FFFFFF">Other small</text>
+<text x="22" y="233" font-size="15" font-weight="bold" fill="#FFFFFF">game</text><text x="150" y="214" font-size="15" fill="#17201A">Snowshoe hare 10 a day.</text>
+<text x="150" y="233" font-size="15" fill="#17201A">Raccoon, skunk, coyote: NBL*</text></g>
+<g><rect x="12" y="256" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="256" width="128" height="56" rx="8" fill="#1F3D2B"/><rect x="132" y="256" width="8" height="56" fill="#1F3D2B"/><text x="22" y="278" font-size="15" font-weight="bold" fill="#FFFFFF">Migratory</text>
+<text x="22" y="297" font-size="15" font-weight="bold" fill="#FFFFFF">game birds</text><text x="150" y="278" font-size="15" fill="#17201A">Ducks: see page 12*. Geese:</text>
+<text x="150" y="297" font-size="15" fill="#17201A">see page 12*</text></g>
+
+</svg>

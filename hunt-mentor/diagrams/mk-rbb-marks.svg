@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" font-family="sans-serif" role="img" aria-label="Deer table footnotes. 1 star: Some exceptions apply. 2 stars: Haida Gwaii deer are not in the table. 3 stars: Region 4 Cranbrook hunt, 5 to 31 January: 1 extra deer, still 3 at most.">
+<rect width="400" height="268" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Deer table footnotes</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Every row: page 14 (99%)</text>
+<g><rect x="12" y="68" width="376" height="37" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="98" height="37" rx="8" fill="#1F3D2B"/><rect x="102" y="68" width="8" height="37" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">1 star</text><text x="120" y="90" font-size="15" fill="#17201A">Some exceptions apply</text></g>
+<g><rect x="12" y="113" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="113" width="98" height="56" rx="8" fill="#1F3D2B"/><rect x="102" y="113" width="8" height="56" fill="#1F3D2B"/><text x="22" y="135" font-size="15" font-weight="bold" fill="#FFFFFF">2 stars</text><text x="120" y="135" font-size="15" fill="#17201A">Haida Gwaii deer are not in the</text>
+<text x="120" y="154" font-size="15" fill="#17201A">table</text></g>
+<g><rect x="12" y="177" width="376" height="75" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="177" width="98" height="75" rx="8" fill="#1F3D2B"/><rect x="102" y="177" width="8" height="75" fill="#1F3D2B"/><text x="22" y="199" font-size="15" font-weight="bold" fill="#FFFFFF">3 stars</text><text x="120" y="199" font-size="15" fill="#17201A">Region 4 Cranbrook hunt, 5 to 31</text>
+<text x="120" y="218" font-size="15" fill="#17201A">January: 1 extra deer, still 3 at</text>
+<text x="120" y="237" font-size="15" fill="#17201A">most</text></g>
+
+</svg>
