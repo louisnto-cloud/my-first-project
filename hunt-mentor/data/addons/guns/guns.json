@@ -15,7 +15,7 @@
       "facts": [
         { "t": "Calibre .308 Winchester, iron sights only today.", "c": 99, "s": "Owner, 2026-10-23" },
         { "t": "Barrel 508 mm (20 in), stainless, twist 1 in 10, two stage trigger, two position safety, Picatinny rail.", "c": 95, "s": "Sako spec page, as carried in How a rifle works" },
-        { "t": "You noted the barrel as about 18 in. Read the stamp on your barrel: VERIFY.", "tip": true },
+        { "t": "Your barrel: 20 in, confirmed by you 2026-10-23. Matches the factory 508 mm.", "tip": true },
         { "t": "Open sights come zeroed at 100 m (109 yd) from the factory. Rear drum: six steps, 100 m to 600 m.", "c": 95, "s": "Tikka T1x and T3x manual v5.3, as carried in How a rifle works" },
         { "t": "Safety back is ON and locks the bolt closed. To unload the Arctic: muzzle safe, safety OFF, then lift the bolt.", "c": 95, "s": "Tikka manual, as carried in How a rifle works" },
         { "t": "Magazine capacity: 10 rounds per one retailer listing. VERIFY with your magazine.", "c": 65, "s": "How a rifle works" }
