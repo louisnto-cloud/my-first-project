@@ -44,7 +44,13 @@
   .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin:0 0 22px}
   .panel h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em}
   .panel .h-sub{color:var(--soft);font-size:13px;margin:0 0 16px}
+  .panel>div{overflow-x:auto;-webkit-overflow-scrolling:touch}
   table{width:100%;border-collapse:collapse;font-size:14px}
+  tbody tr:hover{background:rgba(10,132,255,.05)}
+  td:first-child[title]{text-decoration:underline dotted var(--soft);text-underline-offset:3px;cursor:help}
+  td.hl{background:#eef5ff}
+  body.dark td.hl{background:#16324e}
+  body.dark tbody tr:hover{background:rgba(255,255,255,.04)}
   th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
   th:first-child,td:first-child{text-align:left}
   thead th{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:var(--soft);font-weight:700;border-bottom:2px solid var(--line)}
@@ -63,23 +69,52 @@
   .foot{color:var(--soft);font-size:12px;margin-top:30px;text-align:center}
   .view{display:none}
   .view.on{display:block}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+  body.dark{--ink:#f5f5f7;--soft:#a1a1a6;--line:#38383c;--bg:#1c1c1e;--card:#2c2c2e;--amber:#4a431f;
+    --shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
+  body.dark .nav{background:rgba(28,28,30,.82)}
+  body.dark .pill,body.dark .tbtn,body.dark .seg button{background:#2c2c2e}
+  body.dark input.cell{color:#ffe08a}
+  body.dark .note{background:#20303f;border-color:#2b465e;color:#cfe0f2}
+  @media print{
+    .nav,.toolbar,.scen,.foot{display:none !important}
+    .panel{break-inside:avoid;box-shadow:none;border-color:#ccc}
+    header{padding:0 0 8px}
+    body{background:#fff}
+  }
   .note{background:#f3f7ff;border:1px solid #d9e6ff;border-radius:14px;padding:12px 16px;color:#274;font-size:13px;color:#33506e;margin-bottom:18px}
+  .warn{background:#fff3f3;border:1px solid #f2c4c4;color:#a1272f;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:12px}
+  body.dark .warn{background:#3a2226;border-color:#5e2b31;color:#f2b8bd}
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:14px}
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:-6px 0 22px}
+  .tbtn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;font-weight:600;
+    font-size:13px;cursor:pointer;color:var(--ink);transition:.15s}
+  .tbtn:hover{border-color:var(--accent);color:var(--accent)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Organika</div>
-    <h1>Sparkling Daily</h1>
-    <p class="sub">One-Year Operating Model · FY2026 · all $ CDN</p>
+    <div class="eyebrow" id="hCompany">Organika</div>
+    <h1 id="hProduct">Sparkling Daily</h1>
+    <p class="sub" id="hSub">One-Year Operating Model · FY2026 · all $ CDN</p>
   </header>
 
   <div class="nav" id="nav"></div>
 
   <div class="scen" id="scenBar"></div>
+  <div class="toolbar" id="toolbar">
+    <button class="tbtn" id="btnSave" aria-label="Save numbers to this browser">💾 Save</button>
+    <button class="tbtn" id="btnLoad" aria-label="Load saved numbers">📂 Load</button>
+    <button class="tbtn" id="btnReset" aria-label="Reset to default numbers">↺ Reset</button>
+    <button class="tbtn" id="btnCSV" aria-label="Export scenarios to CSV">⬇︎ Export CSV</button>
+    <button class="tbtn" id="btnTheme" aria-label="Toggle dark mode">🌙 Dark</button>
+    <button class="tbtn" id="btnPrint" aria-label="Print">🖨 Print</button>
+    <span class="hint" id="saveMsg" role="status" aria-live="polite"></span>
+  </div>
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
@@ -87,8 +122,27 @@
     <div class="kpis" id="kpis"></div>
     <div class="panel">
       <h2>Scenario comparison</h2>
-      <p class="h-sub">All four scenarios side by side — updates live as you edit Assumptions.</p>
+      <p class="h-sub">All scenarios side by side — updates live as you edit Assumptions.</p>
       <div id="cmp"></div>
+    </div>
+    <div class="panel">
+      <h2>Where the profit comes from</h2>
+      <p class="h-sub">Your SKUs ranked by contribution for the <span class="scn-name"></span> scenario.</p>
+      <div id="mix"></div>
+    </div>
+    <div class="panel">
+      <h2>Saved snapshots</h2>
+      <p class="h-sub">Save the whole model under a name to compare what-ifs later (stored in this browser).</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+        <input class="cell" type="text" id="snapName" placeholder="e.g. Aggressive pricing" style="width:200px;text-align:left">
+        <button class="tbtn" id="btnSnap">+ Save snapshot</button>
+      </div>
+      <div id="snaps"></div>
+      <div id="snapCompareWrap" style="margin-top:14px;display:none">
+        <span class="hint">Compare current model with:</span>
+        <select id="snapCompare" class="cell" style="text-align:left;width:auto"></select>
+        <div id="snapDiff" style="margin-top:10px"></div>
+      </div>
     </div>
   </section>
 
@@ -96,8 +150,43 @@
   <section class="view" data-view="P&amp;L">
     <div class="panel">
       <h2>Profit &amp; Loss — <span class="scn-name"></span></h2>
-      <p class="h-sub">6 SKUs across the columns, company total on the right, all the way to net income.</p>
+      <p class="h-sub">Your SKUs across the columns, company total on the right, all the way to net income.</p>
       <div id="pnl"></div>
+    </div>
+  </section>
+
+  <!-- SUMMARY (print-friendly one-pager) -->
+  <section class="view" data-view="Summary">
+    <div class="note">A one-page summary of the <b class="scn-name"></b> scenario. Press <b>Print</b> (or ⌘/Ctrl-P) and "Save as PDF" to share it.</div>
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <h2 id="sumTitle">Summary</h2>
+        <button class="tbtn" onclick="copySummary()">📋 Copy as text</button>
+      </div>
+      <div id="summary"></div>
+    </div>
+  </section>
+
+  <!-- 3-YEAR -->
+  <section class="view" data-view="3-Year">
+    <div class="panel">
+      <h2>3-Year projection</h2>
+      <p class="h-sub">Grows the current base year by your annual rates. Year 1 = today's numbers (base scenario, no levers).</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px">
+        <label class="hint">Volume growth / yr <input class="cell" id="pjVg" type="number" step="1" value="25" style="width:70px"> %</label>
+        <label class="hint">Price growth / yr <input class="cell" id="pjPg" type="number" step="0.5" value="3" style="width:70px"> %</label>
+        <label class="hint">Cost inflation / yr <input class="cell" id="pjCi" type="number" step="0.5" value="2" style="width:70px"> %</label>
+      </div>
+      <div id="proj"></div>
+    </div>
+  </section>
+
+  <!-- MONTHLY -->
+  <section class="view" data-view="Monthly">
+    <div class="panel">
+      <h2>Monthly — <span class="scn-name"></span></h2>
+      <p class="h-sub">The selected scenario spread across the year. Sales follow the seasonality curve; fixed costs are split evenly.</p>
+      <div style="overflow-x:auto" id="monthly"></div>
     </div>
   </section>
 
@@ -114,6 +203,37 @@
     </div>
   </section>
 
+  <!-- UNIT ECONOMICS -->
+  <section class="view" data-view="Unit Economics">
+    <div class="panel">
+      <h2>Unit economics &amp; retail price</h2>
+      <p class="h-sub">Per-unit view of each SKU, plus the suggested shelf price at your retailer's margin.</p>
+      <div style="margin-bottom:14px">Retailer margin
+        <input class="cell" type="number" step="1" id="retMargin" value="35" style="width:70px"> %
+        <span class="hint">shelf price = wholesale unit price ÷ (1 − margin)</span>
+      </div>
+      <div style="overflow-x:auto" id="uecon"></div>
+    </div>
+  </section>
+
+  <!-- TARGETS -->
+  <section class="view" data-view="Targets">
+    <div class="panel">
+      <h2>Targets — work backwards from a goal</h2>
+      <p class="h-sub">Set a goal and the model solves the price or volume needed to hit it. Exact, no guessing.</p>
+      <div class="grid2">
+        <div>
+          <table><tbody>
+            <tr><td>Target Gross Profit %</td><td style="text-align:right"><input class="cell" type="number" step="0.5" id="tgtGP" value="45"> %</td></tr>
+            <tr><td>Target EBITDA ($)</td><td style="text-align:right"><input class="cell" type="number" step="5000" id="tgtEB" value="150000"></td></tr>
+          </tbody></table>
+        </div>
+        <div></div>
+      </div>
+      <div id="targets" style="margin-top:16px"></div>
+    </div>
+  </section>
+
   <!-- SENSITIVITY -->
   <section class="view" data-view="Sensitivity">
     <div class="panel">
@@ -124,12 +244,51 @@
     </div>
   </section>
 
+  <!-- GUIDE -->
+  <section class="view" data-view="Guide">
+    <div class="panel">
+      <h2>How to use this</h2>
+      <ol style="line-height:1.9;color:var(--ink);padding-left:20px">
+        <li>Pick a <b>scenario</b> at the top. You can <b>add, rename or remove</b> scenarios in Assumptions.</li>
+        <li>Go to <b>Assumptions</b> — the only place you type. Change any yellow cell, or <b>Import SKUs</b> by pasting from Excel. Use <b>Bulk change</b> to move every SKU's price/volume/cost at once.</li>
+        <li>Read the results: <b>Overview</b> (headlines + which SKUs make the money), <b>P&amp;L</b>, <b>Monthly</b> (phasing + break-even month), <b>3-Year</b> (growth projection).</li>
+        <li>Use <b>Pricing Lab</b> for the best wholesale price, <b>Targets</b> to work backwards from a goal, <b>Sensitivity</b> to stress-test.</li>
+        <li><b>Summary</b> is a one-page P&amp;L — press <b>Print</b> to save it as a PDF for a buyer or your CEO.</li>
+        <li><b>Save snapshots</b> of whole what-ifs and <b>compare</b> them; <b>Export CSV</b> to take numbers elsewhere.</li>
+      </ol>
+      <p class="hint">Shortcuts: press <b>1–9</b> to switch scenarios, <b>←/→</b> to move between views. Your edits save automatically in this browser.</p>
+    </div>
+    <div class="panel">
+      <h2>Plain-English glossary</h2>
+      <div id="glossary"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
-    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
+    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly, and your changes save automatically in this browser.</div>
+    <div class="panel">
+      <h2>Brand &amp; year</h2>
+      <div id="asmpCfg"></div>
+    </div>
     <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
+      <div id="skuWarn"></div>
       <div id="asmpSku"></div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <span class="hint">Bulk change all SKUs:</span>
+        <input class="cell" id="bulkPct" type="number" step="1" value="5" style="width:70px"> %
+        <button class="tbtn" onclick="bulkApply('cp')">Price</button>
+        <button class="tbtn" onclick="bulkApply('vol')">Volume</button>
+        <button class="tbtn" onclick="bulkApply('cost')">Costs</button>
+        <span class="hint" id="bulkMsg"></span>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Import SKUs <span class="hint">(paste from Excel/CSV)</span></h2>
+      <p class="h-sub">Columns: Flavour, Format, Units/case, CP/case, Disc %, COGS Direct, COGS Indirect, A&amp;P/case, Volume. One SKU per line (comma or tab separated). A header row is fine. This matches Export CSV, so you can round-trip.</p>
+      <textarea id="importBox" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:13px;background:var(--amber)" placeholder="Pineapple, Singles, 12, 15.00, 7, 6.53, 0.72, 1.20, 15000"></textarea>
+      <div style="margin-top:10px"><button class="tbtn" onclick="parseImport()">Load SKUs from paste</button> <span class="hint" id="importMsg"></span></div>
     </div>
     <div class="grid2">
       <div class="panel">
@@ -153,13 +312,14 @@
 <script>
 // ---------------- model data (mirrors the Excel exactly) ----------------
 const SKUS = [
-  {fmt:"Singles", flav:"Pineapple",    cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
-  {fmt:"Singles", flav:"Passionfruit", cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
-  {fmt:"Singles", flav:"Lime Lemon",   cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
-  {fmt:"4-Pack",  flav:"Pineapple",    cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
-  {fmt:"4-Pack",  flav:"Passionfruit", cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
-  {fmt:"4-Pack",  flav:"Lime Lemon",   cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
+  {fmt:"Singles", flav:"Pineapple",    units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
+  {fmt:"Singles", flav:"Passionfruit", units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
+  {fmt:"Singles", flav:"Lime Lemon",   units:12, cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
+  {fmt:"4-Pack",  flav:"Pineapple",    units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
+  {fmt:"4-Pack",  flav:"Passionfruit", units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
+  {fmt:"4-Pack",  flav:"Lime Lemon",   units:6,  cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
 ];
+const RETAIL = {margin:0.35};  // retailer margin used for suggested shelf price
 const CO = {salaries:180000, ga:60000, mktg:40000, slotting:20000, log_pct:0.04,
             da:25000, interest:10000, tax:0.27, elast:0.0};
 const LEVERS = {
@@ -168,16 +328,19 @@ const LEVERS = {
   High:   {v:1.30, p:1.00, d:0.00},
   Stretch:{v:1.60, p:1.05, d:-0.01},
 };
-const SCEN = ["Low","Base","High","Stretch"];
+let SCEN = ["Low","Base","High","Stretch"];
+const CFG = {company:"Organika", product:"Sparkling Daily", fy:"FY2026", cur:"$"};
+const SEASON = [0.06,0.06,0.07,0.08,0.10,0.11,0.12,0.11,0.09,0.08,0.06,0.06];
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 let current = "Base";
 let priceMetric = "gp";
 
-// ---------------- formatting helpers ----------------
-const money = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
-const money2 = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
-const pct = v => (v*100).toFixed(1)+"%";
-const num = v => Math.round(v).toLocaleString();
-const mult = v => v.toFixed(2)+"×";
+// ---------------- formatting helpers (non-finite safe) ----------------
+const money = v => !isFinite(v)?"—":(v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
+const money2 = v => !isFinite(v)?"—":(v<0?"-":"")+CFG.cur+Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => !isFinite(v)?"—":(v*100).toFixed(1)+"%";
+const num = v => !isFinite(v)?"—":Math.round(v).toLocaleString();
+const mult = v => !isFinite(v)?"—":v.toFixed(2)+"×";
 
 // ---------------- core engine ----------------
 function skuLine(s, lev){
@@ -262,8 +425,10 @@ function renderCmp(){
   const data = SCEN.map(compute);
   let h = "<table><thead><tr><th>Metric</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
   rows.forEach(row=>{
-    h += `<tr class="${row[2]?'tot':''}"><td>${row[0]}</td>`+
-      data.map((r,i)=>`<td style="${SCEN[i]==current?'background:#eef5ff':''}">${row[1](r)}</td>`).join("")+"</tr>";
+    h += `<tr class="${row[2]?'tot':''}"><td${tip(row[0])}>${row[0]}</td>`+
+      data.map((r,i)=>{const val=row[1](r);const neg=/^-/.test(val);
+        const cls=SCEN[i]==current?' class="hl"':'';
+        return `<td${cls}${neg?' style="color:#d83a4b"':''}>${val}</td>`;}).join("")+"</tr>";
   });
   h += "</tbody></table>";
   el("cmp").innerHTML = h;
@@ -283,14 +448,17 @@ function renderPnl(){
     ["Net Sales", l=>money(l.net), ()=>money(tot("net")), 1],
     ["Cost of Sales", l=>money(l.cogs), ()=>money(tot("cogs"))],
     ["Gross Profit", l=>money(l.gp), ()=>money(tot("gp")), 1],
+    ["GP %", l=>pct(l.net?l.gp/l.net:0), ()=>pct(tot("net")?tot("gp")/tot("net"):0)],
     ["A&P", l=>money(l.ap), ()=>money(tot("ap"))],
     ["Contribution", l=>money(l.cm), ()=>money(tot("cm")), 1],
+    ["CM %", l=>pct(l.net?l.cm/l.net:0), ()=>pct(tot("net")?tot("cm")/tot("net"):0)],
   ];
   let h="<table><thead><tr><th>CDN $</th>"+cols.map(c=>`<th>${c}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  const red=v=>/^-/.test(v)?' style="color:#d83a4b"':'';
   rows.forEach(row=>{
-    h+=`<tr class="${row[3]?'major':''}"><td>${row[0]}</td>`+
-       L.map(l=>`<td>${row[1](l)}</td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700">${row[2](r)}</td></tr>`;
+    h+=`<tr class="${row[3]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
+       L.map(l=>{const v=row[1](l);return `<td${red(v)}>${v}</td>`;}).join("")+
+       (()=>{const v=row[2](r);return `<td class="hl" style="font-weight:700;${/^-/.test(v)?'color:#d83a4b':''}">${v}</td>`;})()+"</tr>";
   });
   // company block (total only)
   const comp = [
@@ -300,12 +468,139 @@ function renderPnl(){
     ["Net Income", money(r.ni), 1],
   ];
   comp.forEach(c=>{
-    h+=`<tr class="${c[2]?'major':''} muted"><td>${c[0]}</td>`+
+    h+=`<tr class="${c[2]?'major':''} muted"><td${tip(c[0])}>${c[0]}</td>`+
        SKUS.map(()=>`<td></td>`).join("")+
-       `<td style="background:#eef5ff;font-weight:700;color:var(--ink)">${c[1]}</td></tr>`;
+       `<td class="hl" style="font-weight:700">${c[1]}</td></tr>`;
   });
   h+="</tbody></table>";
   el("pnl").innerHTML=h;
+}
+
+function render3yr(){
+  const e=el("proj"); if(!e) return;
+  const vg=(parseFloat(el("pjVg")?.value)||0)/100, pg=(parseFloat(el("pjPg")?.value)||0)/100, ci=(parseFloat(el("pjCi")?.value)||0)/100;
+  const yr=y=>{const fV=Math.pow(1+vg,y),fP=Math.pow(1+pg,y),fC=Math.pow(1+ci,y);
+    const st={SKUS:SKUS.map(s=>Object.assign({},s,{cp:s.cp*fP,cosd:s.cosd*fC,cosi:s.cosi*fC,vol:s.vol*fV})),
+      CO:CO, LEVERS:Object.assign({},LEVERS,{_proj:{v:1,p:1,d:0}}), SCEN:SCEN.concat(["_proj"])};
+    return metricsFor(st,"_proj");};
+  const Y=[yr(0),yr(1),yr(2)];
+  const cagr=k=>{const a=Y[0][k],b=Y[2][k]; return (a>0&&b>0)? Math.pow(b/a,1/2)-1 : null;};
+  const rows=[["Physical Cases","cases",num,0],["Net Sales","net",money,1],["Gross Profit","gp",money,0],
+    ["GP %","gppct",pct,0],["Contribution","cm",money,0],["EBITDA","ebitda",money,1],["EBITDA %","ebitdapct",pct,0],
+    ["Net Income","ni",money,1]];
+  let h="<table><thead><tr><th>CDN $</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>CAGR</th></tr></thead><tbody>";
+  rows.forEach(r=>{
+    const cg=(r[2]===money)?cagr(r[1]):null;
+    h+=`<tr class="${r[3]?'major':''}"><td${tip(r[0])}>${r[0]}</td>`+
+       Y.map(y=>{const v=y[r[1]];return `<td${(typeof v==='number'&&v<0)?' style="color:#d83a4b"':''}>${r[2](v)}</td>`;}).join("")+
+       `<td>${cg==null?'—':(cg>=0?'+':'')+(cg*100).toFixed(0)+'%'}</td></tr>`;
+  });
+  h+="</tbody></table>";
+  h+=`<p class="hint" style="margin-top:10px">Year 1 = base scenario today. Years 2-3 compound your volume, price and cost rates. CAGR is the annual growth rate across the 3 years.</p>`;
+  e.innerHTML=h;
+}
+function copySummary(){
+  const r=compute(current);
+  const lines=[
+    `${CFG.product} — ${current} scenario · ${CFG.fy} (${CFG.company})`,
+    ``,
+    `Net Sales: ${money(r.net)}`,
+    `Gross Profit: ${money(r.gp)} (${pct(r.gppct)})`,
+    `Contribution: ${money(r.cm)}`,
+    `EBITDA: ${money(r.ebitda)} (${pct(r.ebitdapct)})`,
+    `Net Income: ${money(r.ni)}`,
+    `Physical Cases: ${num(r.cases)}`,
+    ``,
+    `Scenarios:`,
+    ...SCEN.map(s=>{const d=compute(s);return `  ${s}: net ${money(d.net)}, EBITDA ${money(d.ebitda)}, net income ${money(d.ni)}`;}),
+    ``,
+    `${SKUS.length} SKUs · blended CP ${money2(r.cppc)}/case · figures are internal.`
+  ];
+  const text=lines.join("\n");
+  const ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  let ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  document.body.removeChild(ta);
+  if(!ok && navigator.clipboard){ navigator.clipboard.writeText(text).catch(()=>{}); }
+  flash("Summary copied to clipboard.");
+}
+function renderSummary(){
+  const e=el("summary"); if(!e) return;
+  const r=compute(current);
+  const t=el("sumTitle"); if(t) t.textContent=`${CFG.product} — ${current} scenario · ${CFG.fy}`;
+  const kpi=[["Net Sales",money(r.net)],["Gross Profit %",pct(r.gppct)],["EBITDA",money(r.ebitda)],["Net Income",money(r.ni)],["Cases",num(r.cases)]];
+  let h=`<div class="kpis" style="margin-bottom:16px">`+kpi.map(k=>
+    `<div class="kpi"><div class="k">${k[0]}</div><div class="v ${/^-/.test(k[1])?'neg':''}">${k[1]}</div></div>`).join("")+`</div>`;
+  // condensed P&L
+  const pl=[["Gross Revenue",r.gross],["Trade Discounts",-r.tdisc],["Net Sales",r.net,1],["Cost of Sales",-r.cogs],
+    ["Gross Profit",r.gp,1],["A&P",-r.ap],["Contribution",r.cm,1],["Operating Expenses",-r.opex],["EBITDA",r.ebitda,1],
+    ["Depreciation",-r.da],["Interest",-r.interest],["Tax",-r.tax],["Net Income",r.ni,1]];
+  h+=`<table><thead><tr><th>P&L (CDN $)</th><th>${current}</th><th>% of net</th></tr></thead><tbody>`;
+  pl.forEach(row=>{const v=row[1];h+=`<tr class="${row[2]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
+    `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td><td>${r.net?pct(v/r.net):'—'}</td></tr>`;});
+  h+=`</tbody></table>`;
+  // scenario comparison mini
+  h+=`<table style="margin-top:16px"><thead><tr><th>Scenario</th><th>Cases</th><th>Net Sales</th><th>EBITDA</th><th>Net Income</th></tr></thead><tbody>`;
+  SCEN.forEach(s=>{const d=compute(s);h+=`<tr class="${s===current?'':''}"><td${s===current?' style="font-weight:700"':''}>${s}</td>`+
+    `<td>${num(d.cases)}</td><td>${money(d.net)}</td><td${d.ebitda<0?' style="color:#d83a4b"':''}>${money(d.ebitda)}</td>`+
+    `<td${d.ni<0?' style="color:#d83a4b"':''}>${money(d.ni)}</td></tr>`;});
+  h+=`</tbody></table>`;
+  h+=`<p class="hint" style="margin-top:12px">${SKUS.length} SKUs · blended CP ${money2(r.cppc)}/case · figures ${CFG.company} internal.</p>`;
+  e.innerHTML=h;
+}
+function renderMix(){
+  const e=el("mix"); if(!e) return;
+  const r=compute(current);
+  const rows=SKUS.map((s,i)=>({name:`${s.flav} ${s.fmt}`, cases:r.lines[i].cases, net:r.lines[i].net, cm:r.lines[i].cm}));
+  const totCm=rows.reduce((a,x)=>a+x.cm,0);
+  rows.sort((a,b)=>b.cm-a.cm);
+  let h="<table><thead><tr><th>SKU</th><th>Cases</th><th>Net Sales</th><th>Contribution</th><th>% of total</th></tr></thead><tbody>";
+  rows.forEach(x=>{
+    const share=totCm? x.cm/totCm:0;
+    h+=`<tr><td>${x.name}</td><td>${num(x.cases)}</td><td>${money(x.net)}</td>`+
+       `<td${x.cm<0?' style="color:#d83a4b"':''}>${money(x.cm)}</td><td>${pct(share)}</td></tr>`;
+  });
+  h+=`<tr class="tot"><td>Total</td><td>${num(rows.reduce((a,x)=>a+x.cases,0))}</td><td>${money(rows.reduce((a,x)=>a+x.net,0))}</td><td class="hl">${money(totCm)}</td><td>100.0%</td></tr>`;
+  h+="</tbody></table>";
+  e.innerHTML=h;
+}
+function renderMonthly(){
+  document.querySelectorAll(".scn-name").forEach(e=>e.textContent=current);
+  const r = compute(current);
+  const fixed = (CO.salaries+CO.ga+CO.mktg+CO.slotting)/12;
+  const M = MONTHS.map((m,i)=>{
+    const f = SEASON[i];
+    const net = r.net*f, cm = r.cm*f;
+    const logistics = net*CO.log_pct;
+    const ebitda = cm - logistics - fixed;
+    const ebit = ebitda - CO.da/12;
+    const ebt = ebit - CO.interest/12;
+    const tax = Math.max(0, ebt*CO.tax);
+    const ni = ebt - tax;
+    return {m, cases:r.cases*f, net, gp:r.gp*f, cm, ebitda, ni};
+  });
+  // cumulative net income
+  let run=0; M.forEach(x=>{run+=x.ni; x.cum=run;});
+  const rows = [
+    ["Physical Cases", "cases", num, 0],
+    ["Net Sales", "net", money, 1],
+    ["Gross Profit", "gp", money, 0],
+    ["Contribution", "cm", money, 0],
+    ["EBITDA", "ebitda", money, 1],
+    ["Net Income", "ni", money, 1],
+    ["Cumulative Net Income", "cum", money, 1],
+  ];
+  let h="<table><thead><tr><th>CDN $</th>"+MONTHS.map(m=>`<th>${m}</th>`).join("")+"<th>FY</th></tr></thead><tbody>";
+  rows.forEach(row=>{
+    const fy = row[1]==="cum" ? M[11].cum : M.reduce((a,x)=>a+x[row[1]],0);
+    h+=`<tr class="${row[3]?'major':''}"><td${tip(row[0])}>${row[0]}</td>`+
+       M.map(x=>`<td${row[2]===money&&x[row[1]]<0?' style="color:#d83a4b"':''}>${row[2](x[row[1]])}</td>`).join("")+
+       `<td class="hl" style="font-weight:700">${row[2](fy)}</td></tr>`;
+  });
+  h+="</tbody></table>";
+  const be=M.find(x=>x.cum>=0);
+  h+=`<p class="hint" style="margin-top:10px">${be?`Cumulative net income turns positive in <b>${be.m}</b>.`:`Cumulative net income stays negative all year — this scenario doesn't pay back within 12 months.`}</p>`;
+  el("monthly").innerHTML=h;
 }
 
 const LADDER=[0.85,0.90,0.95,1.00,1.05,1.10,1.15];
@@ -314,7 +609,7 @@ function renderPricing(){
   SKUS.forEach(s=>{
     const vals = LADDER.map(m=>{
       const netpc = s.cp*m*(1-s.disc);
-      if(priceMetric==="gp") return 1 - (s.cosd+s.cosi)/netpc;
+      if(priceMetric==="gp") return netpc? 1 - (s.cosd+s.cosi)/netpc : 0;
       return s.vol*Math.pow(m,CO.elast)*(netpc - (s.cosd+s.cosi) - s.ap);
     });
     const best = Math.max(...vals);
@@ -325,6 +620,51 @@ function renderPricing(){
   });
   h+="</tbody></table>";
   el("pricing").innerHTML=h;
+}
+
+function renderUecon(){
+  const m = (parseFloat(el("retMargin")?.value)||0)/100;
+  let h="<table><thead><tr><th>SKU</th><th>Units/case</th><th>Wholesale $/unit</th><th>COGS $/unit</th><th>Gross profit $/unit</th><th>GP %</th><th>Suggested shelf $/unit</th></tr></thead><tbody>";
+  SKUS.forEach(s=>{
+    const u=s.units||1;
+    const wUnit=s.cp/u;                       // wholesale (CP) per unit
+    const cUnit=(s.cosd+s.cosi)/u;            // cost per unit
+    const gpUnit=wUnit*(1-s.disc)-cUnit;      // net of trade discount
+    const gpPct=wUnit*(1-s.disc)? gpUnit/(wUnit*(1-s.disc)):0;
+    const shelf=m<1? wUnit/(1-m):0;           // retailer sells at this to make margin m
+    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
+       `<td>${num(u)}</td><td>${money2(wUnit)}</td><td>${money2(cUnit)}</td>`+
+       `<td>${money2(gpUnit)}</td><td>${pct(gpPct)}</td><td><b>${money2(shelf)}</b></td></tr>`;
+  });
+  h+="</tbody></table>";
+  el("uecon").innerHTML=h;
+}
+
+function renderTargets(){
+  const K1 = SKUS.reduce((a,s)=>a+s.vol*s.cp*(1-s.disc),0);
+  const Kcos = SKUS.reduce((a,s)=>a+s.vol*(s.cosd+s.cosi),0);
+  const Kap = SKUS.reduce((a,s)=>a+s.vol*s.ap,0);
+  const FX = CO.salaries+CO.ga+CO.mktg+CO.slotting;
+  const LOG = CO.log_pct, cases = SKUS.reduce((a,s)=>a+s.vol,0);
+  const gpT = (parseFloat(el("tgtGP").value)||0)/100;
+  const ebT = parseFloat(el("tgtEB").value)||0;
+  const denom = (K1-Kcos-Kap)-LOG*K1;
+  const ok = x => isFinite(x) && x>0;
+  const fm = x => ok(x)? mult(x) : "—";
+  const fc = x => ok(x)? "≈ "+num(x*cases)+" cases" : "not reachable with these costs";
+  const priceForGP = (gpT<1) ? Kcos/(K1*(1-gpT)) : NaN;
+  const volForEB = (ebT+FX)/denom;
+  const priceForEB = (ebT+FX+Kcos+Kap)/(K1*(1-LOG));
+  const beVol = FX/denom;
+  const rows = [
+    ["Price × to hit target GP %", fm(priceForGP), ok(priceForGP)?`implies CP ${((priceForGP-1)*100).toFixed(1)}% vs base`:"target GP % must be below 100%"],
+    ["Volume × to hit target EBITDA", fm(volForEB), fc(volForEB)],
+    ["Price × to hit target EBITDA", fm(priceForEB), "at base volume (ignores demand response)"],
+    ["Break-even volume ×", fm(beVol), ok(beVol)?`≈ ${num(beVol*cases)} cases at base price`:"already profitable at any volume"],
+  ];
+  el("targets").innerHTML = "<table><thead><tr><th>Answer</th><th>Result</th><th>Notes</th></tr></thead><tbody>"+
+    rows.map(r=>`<tr class="major"><td>${r[0]}</td><td style="font-weight:700">${r[1]}</td><td class="hint" style="text-align:left">${r[2]}</td></tr>`).join("")+
+    "</tbody></table>";
 }
 
 const VOLM=[0.70,0.90,1.00,1.10,1.30,1.50,1.70];
@@ -348,32 +688,107 @@ function renderSens(){
   PRM.forEach(mp=>{
     h+=`<tr><td><b>${mult(mp)}</b></td>`+VOLM.map(mv=>{
       const v=ebitdaAt(mv,mp);
-      return `<td${v<0?' style="color:#d83a4b"':''}>${money(v)}</td>`;
+      const isBase=Math.abs(mv-1)<1e-9&&Math.abs(mp-1)<1e-9;
+      const st=(v<0?'color:#d83a4b;':'')+(isBase?'font-weight:700;outline:2px solid var(--accent);outline-offset:-2px':'');
+      return `<td style="${st}" title="${isBase?'Today (base price & volume)':''}">${money(v)}</td>`;
+    }).join("")+"</tr>";
+  });
+  h+="</tbody></table>";
+  // second table: EBITDA vs COGS change × volume (price held at base)
+  const Kcos=SKUS.reduce((a,s)=>a+s.vol*(s.cosd+s.cosi),0);
+  const Kap=SKUS.reduce((a,s)=>a+s.vol*s.ap,0);
+  const {K1,FX,LOG}=kvals();
+  const ebitdaCost=(mv,mc)=> mv*(K1 - mc*Kcos - Kap) - FX - LOG*mv*K1;
+  const COSTM=[0.90,0.95,1.00,1.05,1.10,1.20];
+  h+=`<h2 style="margin-top:22px">EBITDA — cost risk</h2><p class="h-sub">EBITDA if COGS moves (price held at base). Losses in red.</p>`;
+  h+="<table><thead><tr><th>COGS × \\ Volume ×</th>"+VOLM.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
+  COSTM.forEach(mc=>{
+    h+=`<tr><td><b>${mult(mc)}</b></td>`+VOLM.map(mv=>{
+      const v=ebitdaCost(mv,mc);
+      const isBase=Math.abs(mv-1)<1e-9&&Math.abs(mc-1)<1e-9;
+      const st=(v<0?'color:#d83a4b;':'')+(isBase?'font-weight:700;outline:2px solid var(--accent);outline-offset:-2px':'');
+      return `<td style="${st}">${money(v)}</td>`;
     }).join("")+"</tr>";
   });
   h+="</tbody></table>";
   el("sens").innerHTML=h;
   const be=breakeven();
-  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
+  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases. The outlined cell in each grid is today.`;
 }
 
 // ---------- assumptions editor ----------
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
 }
+function tinp(val, onin){
+  return `<input class="cell" type="text" style="width:112px;text-align:left" value="${String(val).replace(/"/g,'&quot;')}" oninput="${onin}">`;
+}
+const GLOSSARY = [
+  ["CP (wholesale price)", "The price per case you charge your customer (retailer/distributor). The model's main lever."],
+  ["Case", "A shipping case. Singles and 4-Pack hold different unit counts — set 'Units/case' in Assumptions."],
+  ["Trade discount", "Off-invoice allowances and promo funding, shown as a % of gross revenue."],
+  ["Net Sales", "Gross revenue minus trade discounts — the real top line."],
+  ["COGS", "Cost of goods sold: ingredients, packaging, co-pack and freight (direct) plus warehousing (indirect)."],
+  ["Gross Profit", "Net Sales minus COGS. GP % = Gross Profit ÷ Net Sales."],
+  ["A&P", "Advertising & Promotion spend (consumer + trade + sales/broker)."],
+  ["Contribution", "Gross Profit minus A&P — what a SKU contributes before company overheads."],
+  ["EBITDA", "Earnings before interest, tax, depreciation & amortisation — operating profit."],
+  ["Net Income", "The bottom line after depreciation, interest and tax."],
+  ["Break-even", "The volume where EBITDA is exactly zero at today's prices."],
+  ["Price elasticity", "How much volume reacts to price. 0 = no reaction; more negative = more reaction (advanced)."],
+];
+function renderGlossary(){
+  const e=el("glossary"); if(!e) return;
+  e.innerHTML="<table><tbody>"+GLOSSARY.map(g=>
+    `<tr><td style="font-weight:700;white-space:normal;width:190px">${g[0]}</td><td style="text-align:left;white-space:normal">${g[1]}</td></tr>`).join("")+"</tbody></table>";
+}
+const TIP = {
+  "Physical Cases":"Number of shipping cases sold.",
+  "CP / case":"Your wholesale list price per case.",
+  "Gross Revenue":"Cases × CP (list price).",
+  "Trade Discounts":"Promo money/allowances given to customers (a % of gross).",
+  "Net Sales":"Gross revenue minus trade discounts — the real top line.",
+  "Cost of Sales":"COGS: making, packing and shipping the product in.",
+  "Gross Profit":"Net Sales minus Cost of Sales.",
+  "GP %":"Gross Profit ÷ Net Sales.",
+  "A&P":"Advertising & Promotion spend.",
+  "Contribution":"Gross Profit minus A&P — before company overheads.",
+  "CM %":"Contribution ÷ Net Sales.",
+  "Total Operating Expenses":"Company overheads: salaries, G&A, marketing, slotting, logistics.",
+  "EBITDA":"Operating profit before interest, tax, depreciation & amortisation.",
+  "EBITDA %":"EBITDA ÷ Net Sales.",
+  "Net Income":"The bottom line after depreciation, interest and tax.",
+};
+function tip(l){return TIP[l]?` title="${TIP[l]}"`:"";}
+function renderHeader(){
+  const a=el("hCompany"), b=el("hProduct"), c=el("hSub");
+  if(a) a.textContent=CFG.company;
+  if(b) b.textContent=CFG.product;
+  if(c) c.textContent=`One-Year Operating Model · ${CFG.fy} · amounts in ${CFG.cur}`;
+  document.title = `${CFG.company} · ${CFG.product} — One-Year Model`;
+}
+function setCfg(k,v){CFG[k]=v;renderHeader();autosave();if(k==="cur")refresh();}
 function renderAsmp(){
+  // brand & year
+  const cfgRows=[["Company","company"],["Product line","product"],["Fiscal year","fy"],["Currency symbol","cur"]];
+  el("asmpCfg").innerHTML="<table><tbody>"+cfgRows.map(r=>
+    `<tr><td>${r[0]}</td><td style="text-align:right">${tinp(CFG[r[1]],`setCfg('${r[1]}',this.value)`)}</td></tr>`).join("")+"</tbody></table>";
   // SKU table
-  let h="<table><thead><tr><th>SKU</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th></tr></thead><tbody>";
+  let h="<table><thead><tr><th>Flavour</th><th>Format</th><th>Units/case</th><th>CP / case</th><th>Disc %</th><th>COGS Direct</th><th>COGS Indir.</th><th>A&P</th><th>Volume</th><th></th></tr></thead><tbody>";
   SKUS.forEach((s,i)=>{
-    h+=`<tr><td>${s.flav} <span class="hint">${s.fmt}</span></td>`+
+    h+=`<tr><td>${tinp(s.flav,`setSt(${i},'flav',this.value)`)}</td>`+
+      `<td>${tinp(s.fmt,`setSt(${i},'fmt',this.value)`)}</td>`+
+      `<td>${inp(s.units||1,`setS(${i},'units',this.value)`,"1")}</td>`+
       `<td>${inp(s.cp,`setS(${i},'cp',this.value)`)}</td>`+
       `<td>${inp((s.disc*100).toFixed(1),`setS(${i},'disc',this.value/100)`,"0.1")}</td>`+
       `<td>${inp(s.cosd,`setS(${i},'cosd',this.value)`)}</td>`+
       `<td>${inp(s.cosi,`setS(${i},'cosi',this.value)`)}</td>`+
       `<td>${inp(s.ap,`setS(${i},'ap',this.value)`)}</td>`+
-      `<td>${inp(s.vol,`setS(${i},'vol',this.value)`,"100")}</td></tr>`;
+      `<td>${inp(s.vol,`setS(${i},'vol',this.value)`,"100")}</td>`+
+      `<td><button class="tbtn" style="padding:4px 9px" onclick="delSku(${i})" title="Remove SKU">×</button></td></tr>`;
   });
   h+="</tbody></table>";
+  h+=`<div style="margin-top:12px"><button class="tbtn" onclick="addSku()">+ Add SKU</button></div>`;
   el("asmpSku").innerHTML=h;
   // company
   const corows=[["Salaries & wages","salaries","1000"],["G&A / overhead","ga","1000"],
@@ -390,41 +805,235 @@ function renderAsmp(){
   c+="</tbody></table>";
   el("asmpCo").innerHTML=c;
   // levers
-  let lv="<table><thead><tr><th>Scenario</th><th>Volume ×</th><th>Price ×</th><th>Disc Δ %</th></tr></thead><tbody>";
-  SCEN.forEach(s=>{
+  let lv="<table><thead><tr><th>Scenario</th><th>Volume ×</th><th>Price ×</th><th>Disc Δ %</th><th></th></tr></thead><tbody>";
+  SCEN.forEach((s,si)=>{
     const L=LEVERS[s];
-    lv+=`<tr><td>${s}</td>`+
+    lv+=`<tr><td>${tinp(s,`renameScen(${si},this.value)`)}</td>`+
       `<td>${inp(L.v,`setLev('${s}','v',this.value)`)}</td>`+
       `<td>${inp(L.p,`setLev('${s}','p',this.value)`)}</td>`+
-      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td></tr>`;
+      `<td>${inp((L.d*100).toFixed(1),`setLev('${s}','d',this.value/100)`,"0.1")}</td>`+
+      `<td style="white-space:nowrap"><button class="tbtn" style="padding:4px 9px" onclick="dupScen(${si})" title="Duplicate scenario">⎘</button> `+
+      `<button class="tbtn" style="padding:4px 9px" onclick="delScen(${si})" title="Remove scenario">×</button></td></tr>`;
   });
   lv+="</tbody></table>";
+  lv+=`<div style="margin-top:10px"><button class="tbtn" onclick="addScen()">+ Add scenario</button></div>`;
   el("asmpLev").innerHTML=lv;
 }
+function parseImport(){
+  const txt=(el("importBox").value||"").trim();
+  const msg=el("importMsg"); const say=m=>{if(msg){msg.textContent=m;setTimeout(()=>msg.textContent="",3500);}};
+  if(!txt){ say("Paste some rows first."); return; }
+  const out=[];
+  txt.split(/\r?\n/).forEach(line=>{
+    if(!line.trim()) return;
+    const c=line.split(/\t|,/).map(x=>x.trim().replace(/^"|"$/g,""));
+    if(c.length<9) return;
+    if(isNaN(parseFloat(c[3]))) return;           // header row (CP not numeric)
+    let disc=parseFloat(c[4])||0; if(disc>1) disc/=100;   // accept 7 or 0.07
+    out.push({flav:c[0]||"SKU", fmt:c[1]||"", units:parseFloat(c[2])||1, cp:parseFloat(c[3])||0,
+      disc, cosd:parseFloat(c[5])||0, cosi:parseFloat(c[6])||0, ap:parseFloat(c[7])||0, vol:parseFloat(c[8])||0});
+  });
+  if(!out.length){ say("Couldn't read any SKU rows — check the columns."); return; }
+  SKUS.length=0; out.forEach(s=>SKUS.push(s)); el("importBox").value="";
+  renderAsmp(); refresh(); say("Loaded "+out.length+" SKUs.");
+}
+function bulkApply(kind){
+  const pct=parseFloat(el("bulkPct").value)||0; const f=1+pct/100;
+  SKUS.forEach(s=>{
+    if(kind==="cp") s.cp=+(s.cp*f).toFixed(2);
+    else if(kind==="vol") s.vol=Math.round(s.vol*f);
+    else if(kind==="cost"){ s.cosd=+(s.cosd*f).toFixed(2); s.cosi=+(s.cosi*f).toFixed(2); }
+  });
+  renderAsmp(); refresh();
+  const m=el("bulkMsg"); if(m){m.textContent=`Applied ${pct>=0?'+':''}${pct}% to ${kind==='cp'?'price':kind==='vol'?'volume':'costs'}.`; setTimeout(()=>m.textContent="",2600);}
+}
 function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
+function setSt(i,k,v){SKUS[i][k]=v;refresh();}
+function addSku(){const last=SKUS[SKUS.length-1]||{fmt:"Singles",flav:"New",cp:15,disc:0.07,cosd:6.5,cosi:0.7,ap:1.2,vol:5000};
+  SKUS.push(Object.assign({},last,{flav:"New flavour"}));renderAsmp();refresh();}
+function delSku(i){if(SKUS.length<=1){flash("Keep at least one SKU.");return;}SKUS.splice(i,1);renderAsmp();refresh();}
 function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
 function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
+function renameScen(i,name){
+  name=(name||"").trim(); const old=SCEN[i];
+  if(!name || name===old) return;
+  if(SCEN.includes(name)){ flash("That scenario name is taken."); return; }
+  LEVERS[name]=LEVERS[old]; delete LEVERS[old]; SCEN[i]=name;
+  if(current===old) current=name;
+  buildScenPills(); renderAsmp(); refresh(); saveUI();
+}
+function addScen(){
+  let n=1, name; do{ name="Scenario "+(SCEN.length+n); n++; }while(SCEN.includes(name));
+  LEVERS[name]={v:1,p:1,d:0}; SCEN.push(name);
+  buildScenPills(); renderAsmp(); refresh();
+}
+function dupScen(i){
+  const src=SCEN[i]; let n=1, name; do{ name=src+" copy"+(n>1?" "+n:""); n++; }while(SCEN.includes(name));
+  LEVERS[name]=Object.assign({},LEVERS[src]); SCEN.splice(i+1,0,name);
+  buildScenPills(); renderAsmp(); refresh();
+}
+function delScen(i){
+  if(SCEN.length<=1){ flash("Keep at least one scenario."); return; }
+  const name=SCEN[i]; delete LEVERS[name]; SCEN.splice(i,1);
+  if(current===name) current=SCEN[Math.max(0,i-1)];
+  buildScenPills(); renderAsmp(); refresh();
+}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
-function buildNav(){
-  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
-  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
-    el("nav").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
-    b.classList.add("on");
-    document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===b.dataset.v));
-  });
+const VIEWS=["Overview","Summary","P&L","Monthly","3-Year","Pricing Lab","Unit Economics","Targets","Sensitivity","Assumptions","Guide"];
+const UI_KEY="organika_ui_v1";
+let currentView="Overview";
+function saveUI(){try{localStorage.setItem(UI_KEY,JSON.stringify({view:currentView,scenario:current}));}catch(e){}}
+function showView(v){
+  currentView=v;
+  el("nav").querySelectorAll("button").forEach(x=>{const on=x.dataset.v===v;x.classList.toggle("on",on);x.setAttribute("aria-selected",on?"true":"false");});
+  document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on", s.dataset.view===v));
+  saveUI();
+}
+function setScenario(s){
+  current=s;
+  el("scenBar").querySelectorAll(".pill").forEach(x=>{const on=x.dataset.s===current;x.classList.toggle("on",on);x.setAttribute("aria-pressed",on?"true":"false");});
+  saveUI(); refresh();
+}
+function buildScenPills(){
+  if(!SCEN.includes(current)) current=SCEN[0];
+  el("scenBar").setAttribute("role","group"); el("scenBar").setAttribute("aria-label","Scenario");
   el("scenBar").innerHTML=`<span class="lab">SCENARIO</span>`+
-    SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}">${s}</button>`).join("");
-  el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>{current=b.dataset.s;
-    el("scenBar").querySelectorAll(".pill").forEach(x=>x.classList.toggle("on",x.dataset.s===current));
-    refresh();});
+    SCEN.map(s=>`<button class="pill ${s===current?'on':''}" data-s="${s}" aria-pressed="${s===current?'true':'false'}">${s}</button>`).join("");
+  el("scenBar").querySelectorAll(".pill").forEach(b=>b.onclick=()=>setScenario(b.dataset.s));
+}
+function buildNav(){
+  el("nav").setAttribute("role","tablist"); el("nav").setAttribute("aria-label","Views");
+  el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}" role="tab" aria-selected="${i===0?'true':'false'}">${v}</button>`).join("");
+  el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>showView(b.dataset.v));
+  buildScenPills();
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
+  // restore last view + scenario
+  try{const ui=JSON.parse(localStorage.getItem(UI_KEY)||"{}");
+    if(ui.scenario && SCEN.includes(ui.scenario)) setScenario(ui.scenario);
+    if(ui.view && VIEWS.includes(ui.view)) showView(ui.view);
+  }catch(e){}
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
-buildNav();renderAsmp();refresh();
+function renderSkuWarn(){
+  const e=el("skuWarn"); if(!e) return;
+  const bad=SKUS.filter(s=>s.cp*(1-s.disc) <= (s.cosd+s.cosi));
+  e.innerHTML = bad.length
+    ? `<div class="warn">⚠ ${bad.length} SKU${bad.length>1?'s':''} priced at or below cost: ${bad.map(s=>`${s.flav} ${s.fmt}`).join(', ')}. Check CP vs COGS.</div>`
+    : "";
+}
+function refresh(){renderKpis();renderCmp();renderMix();renderSummary();renderPnl();renderMonthly();render3yr();renderPricing();renderUecon();renderTargets();renderSens();renderSkuWarn();autosave();}
+["pjVg","pjPg","pjCi"].forEach(id=>{const e=el(id); if(e) e.oninput=render3yr;});
+
+// ---------- persistence ----------
+const STORE_KEY = "organika_sparkling_daily_v1";
+let ready = false;
+function snapshotState(){ return {SKUS,CO,LEVERS,CFG,SCEN}; }
+function autosave(){ if(!ready) return; try{ localStorage.setItem(STORE_KEY, JSON.stringify(snapshotState())); }catch(e){} }
+const DEFAULTS = JSON.parse(JSON.stringify(snapshotState()));
+function applyState(st){
+  if(st.SKUS){ SKUS.length=0; st.SKUS.forEach(s=>SKUS.push(s)); }
+  if(st.CO) Object.assign(CO, st.CO);
+  if(st.SCEN && Array.isArray(st.SCEN) && st.SCEN.length){ SCEN = st.SCEN.slice(); }
+  if(st.LEVERS){ Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.keys(st.LEVERS).forEach(k=>LEVERS[k]=st.LEVERS[k]); }
+  if(st.CFG) Object.assign(CFG, st.CFG);
+  SCEN.forEach(s=>{ if(!LEVERS[s]) LEVERS[s]={v:1,p:1,d:0}; });
+  if(!SCEN.includes(current)) current=SCEN[0];
+  renderHeader(); if(typeof buildScenPills==='function') buildScenPills(); renderAsmp(); refresh();
+}
+function flash(m){const e=el("saveMsg"); if(e){e.textContent=m; setTimeout(()=>{e.textContent="";},2500);}}
+function saveState(){ localStorage.setItem(STORE_KEY, JSON.stringify(snapshotState())); flash("Saved ✓"); }
+function loadState(){ const raw=localStorage.getItem(STORE_KEY); if(!raw){flash("Nothing saved yet.");return;} applyState(JSON.parse(raw)); flash("Loaded your saved numbers."); }
+function resetState(){ if(!confirm("Reset all numbers to the starting placeholders? This clears your current edits. (Saved snapshots are kept.)")) return; try{localStorage.removeItem(STORE_KEY);}catch(e){} applyState(JSON.parse(JSON.stringify(DEFAULTS))); flash("Reset to starting placeholders."); }
+function exportCSV(){
+  const rows=[["Sparkling Daily — scenario comparison (CDN $)"],[]];
+  rows.push(["Metric",...SCEN]);
+  const data=SCEN.map(compute);
+  const lines=[["Physical Cases","cases",num],["Gross Revenue","gross",money],["Trade Discounts","tdisc",money],
+    ["Net Sales","net",money],["Cost of Sales","cogs",money],["Gross Profit","gp",money],["GP %","gppct",pct],
+    ["A&P","ap",money],["Contribution","cm",money],["Total Opex","opex",money],["EBITDA","ebitda",money],
+    ["EBITDA %","ebitdapct",pct],["Net Income","ni",money],["Net Income %","nipct",pct]];
+  lines.forEach(l=>rows.push([l[0],...data.map(r=>l[2](r[l[1]]).replace(/[$,]/g,""))]));
+  rows.push([]); rows.push(["Per-SKU assumptions"]);
+  rows.push(["Flavour","Format","Units/case","CP/case","Disc %","COGS Direct","COGS Indirect","A&P/case","Base volume"]);
+  SKUS.forEach(s=>rows.push([s.flav,s.fmt,s.units||1,s.cp,(s.disc*100).toFixed(1),s.cosd,s.cosi,s.ap,s.vol]));
+  const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const a=document.createElement("a");
+  a.href="data:text/csv;charset=utf-8,"+encodeURIComponent(csv);
+  a.download="sparkling_daily_scenarios.csv"; a.click(); flash("CSV downloaded.");
+}
+["btnSave","btnLoad","btnReset","btnCSV"].forEach((id,i)=>{const e=el(id); if(e) e.onclick=[saveState,loadState,resetState,exportCSV][i];});
+// ---------- named snapshots ----------
+const SNAP_KEY="organika_snapshots_v1";
+function getSnaps(){try{return JSON.parse(localStorage.getItem(SNAP_KEY)||"{}");}catch(e){return {};}}
+function putSnaps(o){localStorage.setItem(SNAP_KEY, JSON.stringify(o));}
+function saveSnap(){const n=(el("snapName").value||"").trim(); if(!n){flash("Name your snapshot first.");return;}
+  const all=getSnaps(); all[n]=JSON.parse(JSON.stringify(snapshotState())); putSnaps(all); el("snapName").value=""; renderSnaps(); flash("Snapshot saved.");}
+function loadSnap(n){const s=getSnaps()[n]; if(s){applyState(JSON.parse(JSON.stringify(s))); flash("Loaded “"+n+"”.");}}
+function delSnap(n){const all=getSnaps(); delete all[n]; putSnaps(all); renderSnaps(); flash("Deleted “"+n+"”.");}
+function renderSnaps(){const e=el("snaps"); if(!e) return; const all=getSnaps(); const names=Object.keys(all);
+  const wrap=el("snapCompareWrap"), sel=el("snapCompare");
+  if(!names.length){e.innerHTML='<span class="hint">No snapshots yet.</span>'; if(wrap) wrap.style.display="none"; return;}
+  e.innerHTML="<table><tbody>"+names.map(n=>
+    `<tr><td style="text-align:left;font-weight:600">${n.replace(/</g,"&lt;")}</td>`+
+    `<td style="text-align:right"><button class="tbtn" onclick="loadSnap('${n.replace(/'/g,"\\'")}')">Load</button> `+
+    `<button class="tbtn" style="padding:4px 9px" onclick="delSnap('${n.replace(/'/g,"\\'")}')">×</button></td></tr>`).join("")+"</tbody></table>";
+  if(wrap && sel){ wrap.style.display=""; sel.innerHTML=names.map(n=>`<option>${n.replace(/</g,"&lt;")}</option>`).join("");
+    sel.onchange=()=>renderDiff(sel.value); renderDiff(sel.value); }
+}
+// compute metrics for an arbitrary saved state without disturbing the live model
+function metricsFor(state, scen){
+  const bakS=SKUS.slice(), bakCO=JSON.parse(JSON.stringify(CO)), bakL=JSON.parse(JSON.stringify(LEVERS)), bakSC=SCEN.slice();
+  try{
+    SKUS.length=0; (state.SKUS||bakS).forEach(s=>SKUS.push(JSON.parse(JSON.stringify(s))));
+    if(state.CO) Object.assign(CO, state.CO);
+    if(state.SCEN) SCEN=state.SCEN.slice();
+    if(state.LEVERS){ Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.assign(LEVERS, JSON.parse(JSON.stringify(state.LEVERS))); }
+    return compute(scen);
+  } finally {
+    SKUS.length=0; bakS.forEach(s=>SKUS.push(s));
+    Object.keys(CO).forEach(k=>delete CO[k]); Object.assign(CO,bakCO);
+    Object.keys(LEVERS).forEach(k=>delete LEVERS[k]); Object.assign(LEVERS,bakL);
+    SCEN=bakSC;
+  }
+}
+function renderDiff(name){
+  const e=el("snapDiff"); if(!e) return; const snap=getSnaps()[name]; if(!snap){e.innerHTML="";return;}
+  const cur=compute(current), oth=metricsFor(snap,current);
+  const rows=[["Net Sales","net",money],["Gross Profit %","gppct",pct],["EBITDA","ebitda",money],["Net Income","ni",money],["Cases","cases",num]];
+  let h=`<table><thead><tr><th>${current} scenario</th><th>Current</th><th>${name.replace(/</g,"&lt;")}</th><th>Δ</th></tr></thead><tbody>`;
+  rows.forEach(r=>{const a=cur[r[1]],b=oth[r[1]],d=a-b; const sign=d>=0?'+':'−'; const abs=Math.abs(d);
+    const dtxt = r[2]===pct ? sign+(abs*100).toFixed(1)+' pts' : sign+r[2](abs);
+    h+=`<tr><td${tip(r[0])}>${r[0]}</td><td>${r[2](a)}</td><td>${r[2](b)}</td><td${d<0?' style="color:#d83a4b"':''}>${dtxt}</td></tr>`;});
+  h+="</tbody></table>";
+  e.innerHTML=h;
+}
+if(el("btnSnap")) el("btnSnap").onclick=saveSnap;
+const THEME_KEY="organika_theme";
+function applyTheme(t){document.body.classList.toggle("dark",t==="dark");const b=el("btnTheme"); if(b) b.textContent=t==="dark"?"☀︎ Light":"🌙 Dark";}
+function toggleTheme(){const t=document.body.classList.contains("dark")?"light":"dark";applyTheme(t);try{localStorage.setItem(THEME_KEY,t);}catch(e){}}
+if(el("btnTheme")) el("btnTheme").onclick=toggleTheme;
+if(el("btnPrint")) el("btnPrint").onclick=()=>window.print();
+try{const sysDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(localStorage.getItem(THEME_KEY) || (sysDark?"dark":"light"));}catch(e){}
+
+["tgtGP","tgtEB"].forEach(id=>{const e=el(id); if(e) e.oninput=renderTargets;});
+{const e=el("retMargin"); if(e) e.oninput=renderUecon;}
+try{ const raw=localStorage.getItem(STORE_KEY); if(raw) applyState(JSON.parse(raw)); }catch(e){}
+renderHeader();renderGlossary();renderSnaps();buildNav();renderAsmp();refresh();
+ready = true;  // enable auto-save now that initial load is done
+
+// keyboard shortcuts: 1-4 scenarios, arrows switch views
+document.addEventListener("keydown", e=>{
+  const tag=(e.target.tagName||"").toLowerCase();
+  if(tag==="input"||tag==="textarea"||tag==="select") return;
+  if(e.key>="1" && e.key<="9" && SCEN[+e.key-1]){ setScenario(SCEN[+e.key-1]); }
+  else if(e.key==="ArrowRight" || e.key==="ArrowLeft"){
+    const i=VIEWS.indexOf(currentView);
+    showView(VIEWS[(i+(e.key==="ArrowRight"?1:-1)+VIEWS.length)%VIEWS.length]);
+  }
+});
 </script>
 </body>
 </html>
