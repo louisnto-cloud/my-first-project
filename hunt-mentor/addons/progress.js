@@ -205,7 +205,7 @@
     speciesP = Promise.resolve(P).then((d) => (d && d.byId) || {}).catch(() => { speciesP = null; return {}; });
     return speciesP;
   }
-  const MUST_RE = /^(rb-|local-harrison|tagging-legal|shot-placement|blood-trailing|field-dressing|meat-care|cwd|first-)/;
+  const MUST_RE = /^(rb-|local-harrison|tagging-legal|shot-placement|blood-trailing|field-dressing|meat-care|cwd|first-|mc-black-tailed-deer-0[156]$)/;
   const MUST_ALL = ['mc-skills-10', 'mc-nav-07'];
   function regionLessons(plan, lessons) {
     const r = String((plan.where && plan.where.mu) || '').split('-')[0].toLowerCase();
@@ -213,6 +213,7 @@
     const out = (lessons || []).filter((id) => !(r && r !== '3' && /^local-heffley/.test(id))).map((id) => (rb && /^rb-region-/.test(id) ? rb : id));
     if (rb && !out.includes(rb)) out.unshift(rb);
     if (/^2-(8|18|19)$/.test(String(plan.where && plan.where.mu)) && /deer/.test(plan.species) && byId['local-harrison-deer']) out.splice(1, 0, 'local-harrison-deer');
+    if (r === '2' && /deer/.test(plan.species)) out.push(...sessions.filter((x) => x.id.startsWith('mc-black-tailed-deer-')).map((x) => x.id).sort());
     return [...new Set(out)];
   }
   function studyPath(plan, sp) {
@@ -260,7 +261,8 @@
     const items = [], pid = encodeURIComponent(plan.id), mine = own().ticks[plan.id] || {};
     const item = (key, label, part, how, href, link, extra) => { const w = W[key]; items.push(Object.assign({ key, label, weight: w, counted: part != null, points: part == null ? 0 : Math.round(w * Math.max(0, Math.min(1, part)) * 10) / 10, how, href, link }, extra || {})); };
     // 1. must know screens (study path)
-    const sp = (await species())[plan.species];
+    const sp0 = (await species())[plan.species], spR = window.HMPlan && window.HMPlan._spInRegion; // Region 2 deer: the region's own lesson list, same as the plan and Home
+    const sp = spR ? spR(sp0, String((plan.where && plan.where.mu) || '').split('-')[0]) : sp0;
     const P = studyPath(plan, sp), ms = pathStats(S, P.must);
     if (!sp && !P.must.length) item('must', 'Must know screens read', null, 'The plan data is not on this phone yet, so the study path cannot be worked out. Open the plan once with signal.', `#/plan/${pid}`, 'Open the plan');
     else item('must', 'Must know screens read', ms.total ? ms.seen / ms.total : 0, `${ms.seen} of ${ms.total} must know screens read on this plan's study path (${pct(ms.seen, ms.total)}%). Points follow the share read.`, ms.next ? `#/s/${encodeURIComponent(ms.next.id)}/${ms.next.i}` : `#/plan/${pid}`, ms.next ? `Read next: ${ms.next.title}` : 'See the study path');

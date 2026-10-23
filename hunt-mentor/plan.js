@@ -1178,7 +1178,8 @@
       const lg = x.legal, nd = !x.det;
       const oddsV = addOnVal(spotFrom(O, 'spot', x, m.oddsX, X)), windV = addOnVal(spotFrom(Lv, 'windFit', x, m.live, X) || liveWind(x, m.live, X));
       const walk = x.walkKm != null ? `walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + ' m' : x.walkKm.toFixed(1) + ' km'}${x.climbM ? `, climb about ${Math.round(x.climbM)} m` : ''}${x.walkMin ? `, about ${x.walkMin} min` : ''}` : '';
-      const warnRoad = A.truck === '4wd' && x.ride === 'rough' ? ' Rough road: high clearance helps (Tip).' : A.truck === '2wd' && x.fsr ? ' Gravel FSR (Forest Service Road): check the road notices; 2 wheel drive in the wet is risky (Tip).' : '';
+      const noAtv = x.cat === 'atv' && x.rideKm && !(p.access || []).includes('atv') ? ` No ATV on this plan: the ${x.rideKm.toFixed(1)} km stretch is in your 4 wheel drive, slowly, or on foot (Tip).` : '';
+      const warnRoad = noAtv + (A.truck === '4wd' && x.ride === 'rough' ? ' Rough road: high clearance helps (Tip).' : A.truck === '2wd' && x.fsr ? ' Gravel FSR (Forest Service Road): check the road notices; 2 wheel drive in the wet is risky (Tip).' : '');
       const why = [...(x.own ? [`<li class="pl2-own"><span class="pill">From your own trips</span> ${esc(x.own.text.replace(/^From your own trips: /, ''))}</li>`] : []),
         ...(x.evid || []).map((t) => `<li>${esc(t)}</li>`), ...(x.why || []).filter((t) => !/^From your own trips/.test(t)).map((t) => `<li>${esc(t)}</li>`)];
       return `<li class="card pl2-spot" data-bi="${i}"><div class="row"><span class="pl-dn">${i + 1}</span><b class="grow">${esc(x.name)}</b>${x.pop ? `<span class="pill ${x.pop === 'quiet' ? 'soon' : ''}">${x.pop === 'quiet' ? 'Quiet' : 'Popular'}</span>` : ''}</div>
@@ -1409,10 +1410,10 @@
     if (ar.length) L.push('Answers: ' + ar.map((r) => `${r.label}: ${r.val}`).join('; ') + '.');
     if (m.ready) L.push(m.ready.left ? `Readiness: not ready, ${m.ready.left} of ${m.ready.total} gates to do.` : 'Readiness: all gates done.');
     if (m.legal) L.push(`Legal: ${{ open: 'Open', no: 'Not open', check: 'Check' }[m.legal.verdict]}. ${m.legal.why}`);
-    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, 2020 to 2024 average (${m.odds.scope === 'mu' ? 'MU' : 'region'}). 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
+    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, all 2020 to 2024 hunters pooled (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
     else if (m.odds && m.odds.none) L.push('Odds: no official success numbers for this animal.');
     const bl = boardList(m.spots, p);
-    if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm} km` : ''}: ${gmaps(x)}`)); }
+    if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + " m" : x.walkKm + " km"}` : ''}: ${gmaps(x)}`)); }
     if (m.check) { L.push(`Checklist: ${m.check.done} of ${m.check.total} done.`); if (m.check.left.length) L.push('Still to do: ' + m.check.left.slice(0, 12).map((i) => i.t).join('; ') + (m.check.left.length > 12 ? '; ...' : '')); }
     if (m.daysX && window.HMPlanDays && typeof window.HMPlanDays.text === 'function') { try { L.push(window.HMPlanDays.text(m.daysX)); } catch (e) { /* days text not available */ } }
     if (!/The official regulations are the law\.\s*$/.test(L[L.length - 1] || '')) L.push('Study aid only. The official regulations are the law.');
