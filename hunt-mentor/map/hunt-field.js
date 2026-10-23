@@ -26,6 +26,7 @@ const CLOCK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fil
 
 let H = null, map = null, box = null, el = {}, truck = null, pos = null, heading = null, headSrc = '', compassState = 'unknown';
 let watchId = null, orientOn = false, tick = null, sheetOn = false, frame = 0, n = 0;
+let edgeNow = () => {};
 let here = { ll: null, ele: null }; // elevation cache for the current position
 
 export default async function init(api) {
@@ -212,6 +213,12 @@ function build() {
     <button type="button" class="hmf-chip hmf-truck" data-f="truck"><i class="hmf-arr">${ARROW}</i>${H.icons.car}<span class="hmf-tt"><b></b><small></small></span></button>`;
   H.els.bar.parentNode.appendChild(box);
   el = { light: box.querySelector('.hmf-light'), turn: box.querySelector('.hmf-turn'), truck: box.querySelector('.hmf-truck'), arr: box.querySelector('.hmf-arr') };
+  // the chips' bottom edge, for map.css: an open sheet never grows over the chips
+  const edge = () => { const r = box.parentNode; if (r && r.style) r.style.setProperty('--hmf-b', `${Math.ceil(box.offsetTop + box.offsetHeight)}px`); };
+  try { new ResizeObserver(edge).observe(box); } catch (err) { /* old browser: map.css falls back to a fixed edge */ }
+  // a sheet opening or expanding moves the chips without resizing them (core.js sets sheet-open and sheet-full on .hmm)
+  try { new MutationObserver(edge).observe(box.parentNode, { attributes: true, attributeFilter: ['class'] }); } catch (err) { /* as above */ }
+  edgeNow = edge;
   box.addEventListener('click', (e) => {
     const b = e.target.closest('[data-f]'); if (!b) return;
     if (b.dataset.f === 'truck' && !truck) { markTruck(); return; }
@@ -252,7 +259,7 @@ function update() {
     b.setAttribute('aria-label', at ? 'You are at the truck.' : `Truck ${fmtDist(t.d)} away, bearing ${Math.round(t.brg)} degrees ${word(t.brg)}, about ${fmtMin(t.mins)} walk. Tap for details.`);
     b.classList.toggle('at', at);
   }
-  arrowSoon();
+  arrowSoon(); edgeNow();
   if (sheetOn) live();
 }
 function arrowSoon() { if (!frame) frame = requestAnimationFrame(() => { frame = 0; drawArrows(); }); }
@@ -394,9 +401,21 @@ function css() {
   if (document.getElementById('hmf-css')) return;
   const s = document.createElement('style'); s.id = 'hmf-css';
   s.textContent = `
-.hmf{position:absolute;z-index:3;left:calc(var(--sl) + 12px);top:calc(var(--st) + 140px);display:flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:calc(100% - var(--sl) - var(--sr) - 84px);pointer-events:none}
+.hmf{position:absolute;z-index:3;left:calc(var(--sl) + 12px);top:calc(var(--st) + 146px);display:flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:calc(100% - var(--sl) - var(--sr) - 84px);pointer-events:none}
 .hmm-3d:not([hidden]) ~ .hmf{top:calc(var(--st) + 330px)}
 .framing .hmf{display:none}
+body:has(.hm-backchip:not([hidden])) .hmm:not(.sheet-open) .hmf{top:calc(var(--st) + 182px)}
+body:has(.hm-backchip:not([hidden])) .hmm:not(.sheet-open) .hmm-3d:not([hidden]) ~ .hmf{top:calc(var(--st) + 366px)}
+.hmm.sheet-open .hmf.hmf{z-index:7;top:calc(var(--st) + 146px);flex-direction:row;flex-wrap:wrap;gap:6px}
+.hmm.sheet-open .hmf-chip{min-height:44px;padding:0 12px 0 8px;font-size:14px;gap:6px}
+.hmm.sheet-open .hmf-chip>svg{width:20px;height:20px}
+.hmm.sheet-open .hmf-truck{padding:0 12px 0 4px}
+.hmm.sheet-open .hmf-truck>svg{width:22px;height:22px}
+.hmm.sheet-open .hmf-arr{width:36px;height:36px}
+.hmm.sheet-open .hmf-tt b{font-size:14px}
+.hmm.sheet-open .hmf-tt small{display:none}
+@media (max-width:699.98px){.hmm.sheet-full .hmf.hmf{top:calc(var(--st) + 66px)}}
+@media (min-width:700px){.hmm.sheet-open .hmf.hmf{left:calc(var(--sl) + 448px);max-width:calc(100% - var(--sl) - var(--sr) - 532px)}}
 .hmf-chip{pointer-events:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 10px;border:0;border-radius:22px;background:var(--hmm-btn);color:var(--hmm-ink);box-shadow:var(--hmm-shadow);font:700 15px/1.15 -apple-system,system-ui,sans-serif;text-align:left;max-width:100%}
 .hmf-chip[hidden]{display:none}
 .hmf-chip>svg{width:22px;height:22px;flex:none}

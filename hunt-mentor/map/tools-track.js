@@ -60,13 +60,18 @@ async function openStore() {
     if (typeof indexedDB === 'undefined') { rej(new Error('IndexedDB is not available')); return; }
     const r = indexedDB.open('hm-tracks', 1);
     r.onupgradeneeded = () => { const d = r.result; ['tracks', 'meta'].forEach((n) => { if (!d.objectStoreNames.contains(n)) d.createObjectStore(n, { keyPath: 'id' }); }); };
-    r.onsuccess = () => res(r.result); r.onerror = () => { dbp = null; rej(r.error); };
+    r.onsuccess = () => { const d = r.result; d.onclose = () => { dbp = null; }; res(d); }; r.onerror = () => { dbp = null; rej(r.error); };
   }));
-  const tx = (n, mode, fn) => open().then((d) => new Promise((res, rej) => {
+  const tx1 = (n, mode, fn) => open().then((d) => new Promise((res, rej) => {
     const t = d.transaction(n, mode), r = fn(t.objectStore(n)); let out;
     if (r) r.onsuccess = () => { out = r.result; };
     t.oncomplete = () => res(out); t.onerror = t.onabort = () => rej(t.error);
   }));
+  // iOS Safari can drop the connection while the app is in the background: open a fresh one and try once more (same as map/store.js)
+  const tx = (n, mode, fn) => tx1(n, mode, fn).catch((e) => {
+    if (!e || (e.name !== 'InvalidStateError' && e.name !== 'UnknownError')) throw e;
+    dbp = null; return tx1(n, mode, fn);
+  });
   return {
     put: (v) => tx('tracks', 'readwrite', (s) => s.put(v)).then(() => v), get: (id) => tx('tracks', 'readonly', (s) => s.get(id)),
     list: () => tx('tracks', 'readonly', (s) => s.getAll()).then((v) => v || []), del: (id) => tx('tracks', 'readwrite', (s) => s.delete(id)),
