@@ -627,3 +627,6 @@ body:not(.map-open) input[type="date"], body:not(.map-open) input[type="time"] {
 input[type="date"]::-webkit-date-and-time-value, input[type="time"]::-webkit-date-and-time-value { text-align: left; }
 /* Keyboard up (addons/install-ios.js sets body.hm-kb): iOS keeps fixed bars at the layout bottom, so they float over the text box. */
 body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
+
+/* focus moved to the screen title for VoiceOver: no outline on touch, keep it for keyboard users */
+#top-title:focus:not(:focus-visible), main h1:focus:not(:focus-visible), main h2:focus:not(:focus-visible) { outline: none; }
