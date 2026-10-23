@@ -1371,6 +1371,9 @@
 .pl2-nav { overflow-x: auto; scrollbar-width: none; }
 .pl2-nav::-webkit-scrollbar { display: none; }
 .pl2-nav button { flex: 0 0 auto; padding: 0 12px; }
+.pl-spot .row > .grow, .pl2-spot .row > .grow { min-width: 0; overflow-wrap: anywhere; }
+.pl-spot .hmp, .pl2-spot .hmp { white-space: normal; }
+.pl2-spot .row > .pill { flex: 0 0 auto; }
 .pl2-optq { font-size: 15px; margin: 0 0 12px; }
 .pl2-gh { font-size: 17px; margin: 14px 0 8px; }
 .pl2-skip { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
