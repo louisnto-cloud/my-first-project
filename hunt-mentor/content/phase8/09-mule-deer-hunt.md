@@ -44,6 +44,9 @@ sa-md-sign-grid | Midday: walk for sign, beds, trails.
 - Use the Journal: after 10 trips you have your own pattern (Tip).
 ```
 
+```diagram mk-md9-scout
+```
+
 ```checklist mmd-scout-list
 3 glassing seats marked on the Hunt Map
 Land status checked for each seat
@@ -252,12 +255,17 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 
 ## Sources
 
+```diagram mk-md9-sources
+```
+
+```more every source and link
 - Mule Deer Foundation, M. Luby, [Early season mule deer tactics: spot and stalk](https://muledeer.org/early-season-mule-deer-tactics-spot-and-stalk-success-in-velvet/), search preview, checked 2026-10-11 (60%)
 - Steven Rinella, MeatEater (2018), [A guide to hunting mule deer](https://themeateater.com/hunt/big-game/a-guide-to-hunting-mule-deer), checked 2026-10-11 (65%)
 - Lingle (fawn distress calls), [ScienceDaily 2007](https://www.sciencedaily.com/releases/2007/05/070530123749.htm), search preview (70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 11 (hours, lights), page 12 (calls, dogs, item 51) (99%); calls my reading (95%)
 - Hunt Mentor sessions: [Glassing](#/s/glassing), [Still hunting](#/s/still-hunting), [the rut](#/s/the-rut), [What to wear](#/s/what-to-wear), [shot placement](#/s/shot-placement), [legal methods](#/s/rb-legal-methods).
 - Rattling: a Texas telemetry study, search preview, checked 2026-10-01 (70%). [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+```
 
 ```quiz
 [

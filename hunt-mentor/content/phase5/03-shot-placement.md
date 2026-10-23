@@ -9,6 +9,9 @@ checked: 2026-10-01
 > [!why]
 > One bullet through both lungs is a dead animal within sight. One bullet a hand too far back is a night of tracking and often a lost animal.
 
+```diagram mk-sp-why
+```
+
 ## Key points
 
 ```steps Find the spot in 3 steps
@@ -178,11 +181,16 @@ yt-shot-placement-bear | Bears are built differently. Aim lower and further forw
 
 ## Neck and head shots
 
+```diagram mk-sp-neck
+```
+
+```more the table as text
 | Target | Size | Call |
 |---|---|---|
 | Brain | Small, moving | No |
 | Spine in the neck | Pencil sized | No |
 | Lungs | Volleyball | Yes |
+```
 
 - Miss the spine by a few centimetres: a wounded animal (Tip).
 - Hunter Ed discourages neck, head and spine shots (85%).
@@ -220,6 +228,9 @@ yt-shot-placement-bear | Bears are built differently. Aim lower and further forw
 - The after the shot session covers tracking, tagging and field dressing.
 ```
 
+```diagram mk-sp-before
+```
+
 ```checklist s5-before-trigger
 Angle: broadside or quartering away
 Spot picked, not the whole animal
@@ -231,11 +242,8 @@ Breath half out, squeeze, follow through
 
 ## Grandpa's rule and mistakes
 
-| Mistake | Fix |
-|---|---|
-| Shooting at the whole animal | Pick a spot one third up |
-| "Almost broadside" quartering to | Wait for the turn |
-| Walking straight to a gut shot deer | Back out, wait hours |
+```diagram mk-sp-mistakes
+```
 
 > [!rule]
 > Pick a hair, not a deer. Shoot at an animal and you hit an animal somewhere. Shoot at a hair and you hit the lungs.
@@ -244,6 +252,12 @@ Breath half out, squeeze, follow through
 > Say the angle out loud: "Broadside." Say the spot: "Behind the shoulder, one third up." Then squeeze. Three words, then a bullet.
 
 ```more 3 common mistakes
+| Mistake | Fix |
+|---|---|
+| Shooting at the whole animal | Pick a spot one third up |
+| "Almost broadside" quartering to | Wait for the turn |
+| Walking straight to a gut shot deer | Back out, wait hours |
+
 - Shooting at the whole animal instead of a spot one third up behind the shoulder.
 - Taking the quartering to shot because the deer was "almost broadside".
 - Walking straight to a gut shot animal and pushing it off the property.
@@ -252,6 +266,9 @@ Breath half out, squeeze, follow through
 ## Sources
 
 - Hunter education, state agencies and bowhunter guides 85%. Magazines 65 to 70%. Checked 2026-10-01.
+
+```diagram mk-sp-sources
+```
 
 ```more all sources
 - [Hunter Ed: shot angles, broadside](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Broadside/201099_92932/), [quartering away](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Quartering-Away/201099_92933/), [quartering toward](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Quartering-Toward/201099_92934/), [head on](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Head-On/201099_92935/), [rear end](https://www.hunter-ed.com/national/studyGuide/Shot-Angles-Rear-End/201099_92936/), read directly, checked 2026-10-01 (85%)

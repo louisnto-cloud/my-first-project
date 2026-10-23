@@ -155,6 +155,10 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 
 ## What spoils meat
 
+```diagram mk-mc-spoil
+```
+
+```more the table as text
 | Cause | Example |
 |---|---|
 | Heat | Cavity, hide, sun, truck (80%) |
@@ -163,6 +167,7 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 | Gut contents | Cut paunch or bladder (80%) |
 | Delay | Slow gutting, slow cooling (80%) |
 | Stress | Animal run hard (80%) |
+```
 
 ```more what spoils meat in detail
 - Heat: the cavity, the hide, the sun, the truck (80%).
@@ -175,11 +180,16 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 
 ## Bear meat and trichinosis
 
+```diagram mk-mc-trich
+```
+
+```more the table as text
 | Method | Kills wild Trichinella? |
 |---|---|
 | Freezing | No (95%) |
 | Salting, drying, smoking, microwave | Not reliably (95%) |
 | Cooking to 71°C or more | Yes, federal advice (95%) |
+```
 
 - Cook all bear meat to at least 71°C (95%).
 
@@ -198,12 +208,17 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 
 ## Bird care
 
+```diagram mk-mc-birds
+```
+
+```more the table as text
 | Step | Do |
 |---|---|
 | 1 | Gut, remove the crop (80%) |
 | 2 | Cool apart, 2 to 4°C (80%) |
 | 3 | Leave a wing or head on until home (95%) |
 | 4 | Cook to 74°C (80%) |
+```
 
 ```more bird care details
 - Gut and remove the crop as soon as you can. It opens the cavity for cooling (80%, North Dakota State University).
@@ -217,16 +232,19 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 
 ## Grandpa's rule and mistakes
 
+```diagram mk-mc-mistakes
+```
+
+> [!rule]
+> If you would not leave a steak on the dashboard, do not leave a deer in the truck.
+
+```more 3 common mistakes and the field habit
 | Mistake | Fix |
 |---|---|
 | Warm quarters in a tarp | Game bags, open air |
 | Aging a gut shot deer trailed 5 hours | Cut and freeze |
 | Frozen bear called safe | Cook to 71°C |
 
-> [!rule]
-> If you would not leave a steak on the dashboard, do not leave a deer in the truck.
-
-```more 3 common mistakes and the field habit
 - Wrapping warm quarters in a tarp "to keep them clean" for the drive.
 - Aging a gut shot deer that was trailed for 5 hours in the sun.
 - Freezing bear meat and calling it safe. Freezing does not kill wild Trichinella.
@@ -249,6 +267,9 @@ Bear meat marked: cook to 71°C or more
 ## Sources
 
 - Canadian Food Inspection Agency and synopsis 95%. State and university food safety guides 80%. Checked 2026-10-01.
+
+```diagram mk-mc-sources
+```
 
 ```more all sources
 - [Washington Department of Fish and Wildlife, food safety guidelines for game meat](https://wdfw.wa.gov/hunting/requirements/food-safety), read directly, not BC law, 80%. Checked 2026-10-01.

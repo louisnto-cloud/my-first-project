@@ -107,12 +107,17 @@ sc-cwd-6 | Log the harvest location online.
 
 ## Drop off freezers near you
 
+```diagram mk-cwd-freezers
+```
+
+```more the table as text
 | Town | Freezer | Note |
 |---|---|---|
 | Kamloops | 3 butchers and shops | Book, clients only, or call ahead |
 | Barrière, Clearwater | Esso, Home Hardware | |
 | Merritt, Savona | Conservation Officer Service, Skeetchestn | |
 | Langley (nearest Mission) | 2 sites | By appointment |
+```
 
 - Full addresses and phone numbers in More (95%).
 - Live map: [gov.bc.ca/CWDdropoff](https://www.gov.bc.ca/CWDdropoff) (95%).
@@ -235,12 +240,17 @@ Tools bleached after the cut
 
 ## Sources
 
+```diagram mk-cwd-sources
+```
+
+```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 12 (50, 51), p. 15 (carcass transport restrictions), p. 18 (handling game meat safely), p. 32 (Region 3 baiting), p. 36 (Region 4 CWD notes), p. 81 (Chronic Wasting Disease). Checked 2026-10-01.
 - [BC Chronic wasting disease landing page](https://www.gov.bc.ca/chronicwastingdisease), [Preventing the spread](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-bc), [Surveillance and testing, with drop off list](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-surveillance-and-testing), all "Last updated on September 22, 2026", read directly. Checked 2026-10-01.
 - [BC positive detections map (PDF)](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/wildlife-health/wildlife-health-documents/map_cwd_positive_detection.pdf), mapping date 14 January 2026, read directly. Count not legible in text. VERIFY.
 - [BC Centre for Disease Control, Chronic wasting disease](https://www.bccdc.ca/health-info/diseases-conditions/chronic-wasting-disease), read directly, 95%. Checked 2026-10-01.
 - [cwdbc.ca drop off page](https://cwdbc.ca/cwd-sample-drop-off-locations/), a Hunters for BC project, used only to cross check the official list, 70%. Checked 2026-10-01.
 - Case count: synopsis 2026 to 2028, Minister's message, read directly 2026-10-17 (99%); CBC search summary agrees (65%).
+```
 
 ```quiz
 [

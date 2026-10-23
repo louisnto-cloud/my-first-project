@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 185" font-family="sans-serif" role="img" aria-label="Feeding, baiting and Region 2. 200 m feeding and baiting ban: Not printed (Regions 3 and 8 have one). Provincial rules: Still apply.">
+<rect width="400" height="185" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Feeding, baiting and Region 2</text>
+<text x="16" y="52" font-size="14" fill="#17201A">99%, pages 26 to 31</text>
+<g><rect x="12" y="68" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="165" height="56" rx="8" fill="#1F3D2B"/><rect x="169" y="68" width="8" height="56" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">200 m feeding</text>
+<text x="22" y="109" font-size="15" font-weight="bold" fill="#FFFFFF">and baiting ban</text><text x="187" y="90" font-size="15" fill="#17201A">Not printed (Regions 3</text>
+<text x="187" y="109" font-size="15" fill="#17201A">and 8 have one)</text></g>
+<g><rect x="12" y="132" width="376" height="37" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="132" width="165" height="37" rx="8" fill="#FF6A13"/><rect x="169" y="132" width="8" height="37" fill="#FF6A13"/><text x="22" y="154" font-size="15" font-weight="bold" fill="#17201A">Provincial rules</text><text x="187" y="154" font-size="15" fill="#17201A">Still apply</text></g>
+
+</svg>

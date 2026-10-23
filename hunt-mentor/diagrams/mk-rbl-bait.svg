@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 293" font-family="sans-serif" role="img" aria-label="Bait. Bears: Never over bait or a carcass (99%). Ducks and geese: Not within 400 m of bait until 7 days bait free (99%). Deer, grouse: No province wide ban on pages 11 to 13 (99%).">
+<rect width="400" height="293" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Bait</text>
+<g><rect x="12" y="46" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="46" width="120" height="59" rx="8" fill="#FF6A13"/><rect x="124" y="46" width="8" height="59" fill="#FF6A13"/><text x="22" y="68" font-size="15" font-weight="bold" fill="#17201A">Bears</text><text x="142" y="68" font-size="15" fill="#17201A">Never over bait or a carcass</text><text x="142" y="89" font-size="14" fill="#1F3D2B">99%</text></g>
+<g><rect x="12" y="113" width="376" height="78" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="113" width="120" height="78" rx="8" fill="#1F3D2B"/><rect x="124" y="113" width="8" height="78" fill="#1F3D2B"/><text x="22" y="135" font-size="15" font-weight="bold" fill="#FFFFFF">Ducks and</text>
+<text x="22" y="154" font-size="15" font-weight="bold" fill="#FFFFFF">geese</text><text x="142" y="135" font-size="15" fill="#17201A">Not within 400 m of bait until</text>
+<text x="142" y="154" font-size="15" fill="#17201A">7 days bait free</text><text x="142" y="175" font-size="14" fill="#1F3D2B">99%</text></g>
+<g><rect x="12" y="199" width="376" height="78" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="199" width="120" height="78" rx="8" fill="#1F3D2B"/><rect x="124" y="199" width="8" height="78" fill="#1F3D2B"/><text x="22" y="221" font-size="15" font-weight="bold" fill="#FFFFFF">Deer,</text>
+<text x="22" y="240" font-size="15" font-weight="bold" fill="#FFFFFF">grouse</text><text x="142" y="221" font-size="15" fill="#17201A">No province wide ban on pages</text>
+<text x="142" y="240" font-size="15" fill="#17201A">11 to 13</text><text x="142" y="261" font-size="14" fill="#1F3D2B">99%</text></g>
+
+</svg>

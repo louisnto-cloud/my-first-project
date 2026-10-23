@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 326" font-family="sans-serif" role="img" aria-label="Kill, cancel, touch. 1, Kill first. 2, Cancel the licence, The shooter cancels their own, never a partner's (99%). 3, Then touch the deer, 99%, page 11.">
+<rect width="400" height="326" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Kill, cancel, touch</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Each hunter: a resident hunting licence ($32.00)</text>
+<text x="16" y="70" font-size="14" fill="#17201A">plus a deer species licence ($15.00) (99%, page</text>
+<text x="16" y="88" font-size="14" fill="#17201A">8).</text>
+<path d="M28 132 V270" stroke="#1F3D2B" stroke-width="3" fill="none"/>
+<g><rect x="54" y="110" width="334" height="40" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><text x="66" y="135" font-size="16" font-weight="bold" fill="#17201A">Kill first</text><circle cx="28" cy="132" r="14" fill="#1F3D2B"/><text x="28" y="137" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text></g>
+<g><rect x="54" y="160" width="334" height="78" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><text x="66" y="185" font-size="16" font-weight="bold" fill="#17201A">Cancel the licence</text><text x="66" y="207" font-size="14" fill="#1F3D2B">The shooter cancels their own, never a</text>
+<text x="66" y="225" font-size="14" fill="#1F3D2B">partner's (99%)</text><circle cx="28" cy="182" r="14" fill="#FF6A13"/><text x="28" y="187" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text></g>
+<g><rect x="54" y="248" width="334" height="60" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><text x="66" y="273" font-size="16" font-weight="bold" fill="#17201A">Then touch the deer</text><text x="66" y="295" font-size="14" fill="#1F3D2B">99%, page 11</text><circle cx="28" cy="270" r="14" fill="#1F3D2B"/><text x="28" y="275" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text></g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 371" font-family="sans-serif" role="img" aria-label="3 common mistakes. A doe in the Stave hills in October: &quot;the limit is 2, one antlerless&quot;, fix: No antlerless season in 2-8. Ducks on the Fraser at Mission without the special licence, fix: Special licence and the $1,000,000 insurance. Driving into Pitt Addington Marsh in October, fix: Closed to vehicles all year.">
+<rect width="400" height="371" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">3 common mistakes</text>
+<circle cx="28" cy="52" r="11" fill="#17201A"/><path d="M23.5 47.5 l9 9 M32.5 47.5 l-9 9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><text x="46" y="57" font-size="15" font-weight="bold" fill="#17201A">Mistake</text><circle cx="244" cy="52" r="11" fill="#1F3D2B"/><path d="M239 52 l3.5 4 l6.5 -8" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="262" y="57" font-size="15" font-weight="bold" fill="#1F3D2B">Fix</text>
+<g><rect x="12" y="72" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="94" font-size="15" fill="#17201A">A doe in the Stave</text>
+<text x="22" y="113" font-size="15" fill="#17201A">hills in October:</text>
+<text x="22" y="132" font-size="15" fill="#17201A">&quot;the limit is 2,</text>
+<text x="22" y="151" font-size="15" fill="#17201A">one antlerless&quot;</text><path d="M178 119 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 119 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="72" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="94" font-size="15" font-weight="bold" fill="#1F3D2B">No antlerless</text>
+<text x="238" y="113" font-size="15" font-weight="bold" fill="#1F3D2B">season in 2-8</text></g>
+<g><rect x="12" y="176" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="198" font-size="15" fill="#17201A">Ducks on the</text>
+<text x="22" y="217" font-size="15" fill="#17201A">Fraser at Mission</text>
+<text x="22" y="236" font-size="15" fill="#17201A">without the</text>
+<text x="22" y="255" font-size="15" fill="#17201A">special licence</text><path d="M178 223 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 223 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="176" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="198" font-size="15" font-weight="bold" fill="#1F3D2B">Special licence</text>
+<text x="238" y="217" font-size="15" font-weight="bold" fill="#1F3D2B">and the</text>
+<text x="238" y="236" font-size="15" font-weight="bold" fill="#1F3D2B">$1,000,000</text>
+<text x="238" y="255" font-size="15" font-weight="bold" fill="#1F3D2B">insurance</text></g>
+<g><rect x="12" y="280" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="302" font-size="15" fill="#17201A">Driving into Pitt</text>
+<text x="22" y="321" font-size="15" fill="#17201A">Addington Marsh in</text>
+<text x="22" y="340" font-size="15" fill="#17201A">October</text><path d="M178 317.5 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 317.5 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="280" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="302" font-size="15" font-weight="bold" fill="#1F3D2B">Closed to</text>
+<text x="238" y="321" font-size="15" font-weight="bold" fill="#1F3D2B">vehicles all</text>
+<text x="238" y="340" font-size="15" font-weight="bold" fill="#1F3D2B">year</text></g>
+
+</svg>

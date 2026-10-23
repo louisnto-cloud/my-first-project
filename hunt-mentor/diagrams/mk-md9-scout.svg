@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 226" font-family="sans-serif" role="img" aria-label="Scouting done?. 3: Glassing seats marked on the Hunt Map. 1: Dusk glassing trip done. 1: Midday sign walk done. Land status checked for each seat. Wind direction noted at dawn and dusk..">
+<rect width="400" height="226" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Scouting done?</text>
+<g><rect x="12" y="48" width="118.66666666666667" height="114" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="71.33333333333334" y="86" font-size="30" font-weight="bold" fill="#1F3D2B" text-anchor="middle">3</text><text x="71.33333333333334" y="108" font-size="14" fill="#17201A" text-anchor="middle">Glassing seats</text>
+<text x="71.33333333333334" y="126" font-size="14" fill="#17201A" text-anchor="middle">marked on the</text>
+<text x="71.33333333333334" y="144" font-size="14" fill="#17201A" text-anchor="middle">Hunt Map</text></g>
+<g><rect x="140.66666666666669" y="48" width="118.66666666666667" height="114" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="200.00000000000003" y="86" font-size="30" font-weight="bold" fill="#1F3D2B" text-anchor="middle">1</text><text x="200.00000000000003" y="108" font-size="14" fill="#17201A" text-anchor="middle">Dusk glassing</text>
+<text x="200.00000000000003" y="126" font-size="14" fill="#17201A" text-anchor="middle">trip done</text></g>
+<g><rect x="269.33333333333337" y="48" width="118.66666666666667" height="114" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="328.6666666666667" y="86" font-size="30" font-weight="bold" fill="#1F3D2B" text-anchor="middle">1</text><text x="328.6666666666667" y="108" font-size="14" fill="#17201A" text-anchor="middle">Midday sign</text>
+<text x="328.6666666666667" y="126" font-size="14" fill="#17201A" text-anchor="middle">walk done</text></g>
+<text x="16" y="182" font-size="14" fill="#1F3D2B">Land status checked for each seat. Wind direction</text>
+<text x="16" y="200" font-size="14" fill="#1F3D2B">noted at dawn and dusk.</text>
+</svg>

@@ -12,10 +12,15 @@ checked: 2026-10-01
 > [!warn]
 > Study aid only. The official regulations are the law.
 
+```diagram mk-fd-methods
+```
+
+```more the table as text
 | Method | What it is | Lean |
 |---|---|---|
 | Gutted | Guts out, carry it whole | Deer within 300 m of the truck |
 | Gutless | Meat off, guts stay in | Far in, or any moose |
+```
 
 - Licence notched first. See Session 6.
 
@@ -46,12 +51,17 @@ checked: 2026-10-01
 
 ## Before the knife
 
+```diagram mk-fd-before
+```
+
+```more the table as text
 | Do this first | Why |
 |---|---|
 | Notch the licence, photo it | The law (95%) |
 | Plan which quarter keeps tail and sex parts | Evidence of sex (95%) |
 | Rifle unloaded, set aside | Safety (70%) |
 | Deer on its back, head uphill | Easier, cleaner (Tip) |
+```
 
 - Bear country: bear spray on your belt (70%).
 
@@ -224,12 +234,17 @@ yt-skin-deer-meatsmith | Skin a hanging deer and keep hair off the meat.
 
 ## Cold weather
 
+```diagram mk-fd-cold
+```
+
+```more the table as text
 | Below freezing | Do this |
 |---|---|
 | Carcass freezes outside first | Open it, prop it, get heat out (Tip) |
 | Long drag | Hide on (80%) |
 | Snow around | Bagged snow in the cavity (80%) |
 | Overnight | Hang high or take it home (Tip) |
+```
 
 ```more cold weather details
 - Below freezing the meat is safe for a long time, but a whole carcass can freeze before it cools inside. Open it, prop it, and get the heat out first. Tip.
@@ -258,6 +273,10 @@ yt-skin-deer-meatsmith | Skin a hanging deer and keep hair off the meat.
 
 ## The law while you cut
 
+```diagram mk-fd-law
+```
+
+```more the table as text
 | Rule | Page |
 |---|---|
 | Notch before handling (95%) | p. 11 |
@@ -265,6 +284,7 @@ yt-skin-deer-meatsmith | Skin a hanging deer and keep hair off the meat.
 | Neck, ribs, four quarters, loins (95%) | p. 3, p. 12 |
 | Bear gall bladder stays at the site (95%) | p. 12 |
 | No gut piles near towns or trails (95%) | p. 9, p. 15 |
+```
 
 ```more the law in full
 - Notch the licence before handling the animal (95%, synopsis p. 11).
@@ -277,16 +297,19 @@ yt-skin-deer-meatsmith | Skin a hanging deer and keep hair off the meat.
 
 ## Grandpa's rule and mistakes
 
+```diagram mk-fd-mistakes
+```
+
+> [!rule]
+> Hair out, guts in, meat clean. The hide is your table. If you are rushing, you are about to cut the paunch.
+
+```more 3 common mistakes and the field habit
 | Mistake | Fix |
 |---|---|
 | Knife point first into the paunch | Edge up, fingers guiding |
 | Gutless carcass left overnight | Gut it instead |
 | Tail or testicle cut off | Plan the cuts first |
 
-> [!rule]
-> Hair out, guts in, meat clean. The hide is your table. If you are rushing, you are about to cut the paunch.
-
-```more 3 common mistakes and the field habit
 - Cutting through the stomach because the knife went in point first, not edge up with fingers guiding.
 - Leaving the gutless carcass overnight "because it is cold". The gut cavity stays warm.
 - Skinning the tail or cutting the testicle off with the hide.
@@ -309,6 +332,9 @@ Knife and hands washed
 ## Sources
 
 - Synopsis and BC CWD (Chronic Wasting Disease) page 95%. Extension and agency guides 80%. Magazines 70%. Checked 2026-10-01.
+
+```diagram mk-fd-sources
+```
 
 ```more all sources
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 3 (edible portions), p. 9 (carcass disposal), p. 11 (cancel licence), p. 12 (44, 48), p. 15 (evidence of sex, attractants), p. 18 (Handling Game Meat Safely). Checked 2026-10-01.

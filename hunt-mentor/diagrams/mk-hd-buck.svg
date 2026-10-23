@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 246" font-family="sans-serif" role="img" aria-label="Is it legal here?. Visible bony antlers?. Yes: A buck: these rows say Bucks. No: Antlerless: out of reach here.">
+<rect width="400" height="246" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Is it legal here?</text>
+<text x="16" y="52" font-size="14" fill="#17201A">MUs 2-8, 2-18, 2-19: the only rows are bucks (99%,</text>
+<text x="16" y="70" font-size="14" fill="#17201A">page 28).</text>
+<rect x="20" y="88" width="360" height="40" rx="10" fill="#1F3D2B"/><text x="200" y="114" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Visible bony antlers?</text>
+<g data-tip="Buck|A buck is a deer &quot;bearing visible bony antlers&quot; (99%, page 4). These rows say Bucks, not 4 point bucks (99%, page 28)."><path d="M103.5 128 V161" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M103.5 168 l-6 -9 h12z" fill="#1F3D2B"/><rect x="55.5" y="136" width="96" height="22" rx="11" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="1.5"/><text x="103.5" y="152" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">Yes</text><rect x="12" y="172" width="183" height="58" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="196" font-size="15" fill="#17201A" text-anchor="middle">A buck: these rows</text>
+<text x="103.5" y="215" font-size="15" fill="#17201A" text-anchor="middle">say Bucks</text></g>
+<g data-tip="Antlerless|In these MUs the antlerless 1 is out of reach: the only rows are bucks (99%, page 28)."><path d="M296.5 128 V161" stroke="#FF6A13" stroke-width="3" fill="none"/><path d="M296.5 168 l-6 -9 h12z" fill="#FF6A13"/><rect x="248.5" y="136" width="96" height="22" rx="11" fill="#FF6A13" stroke="#FF6A13" stroke-width="1.5"/><text x="296.5" y="152" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">No</text><rect x="205" y="172" width="183" height="58" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="296.5" y="196" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">Antlerless: out of</text>
+<text x="296.5" y="215" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">reach here</text></g>
+
+</svg>

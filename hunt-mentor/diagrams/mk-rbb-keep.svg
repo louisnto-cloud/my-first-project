@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 275" font-family="sans-serif" role="img" aria-label="Keeping and replacing species licences. Carry: Every species licence this year, used or not. Keep: Until the meat is eaten. Lost one: Replace it for $10. Expires: 31 March.">
+<rect width="400" height="275" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Keeping and replacing species</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">licences</text>
+<text x="16" y="75" font-size="14" fill="#17201A">Every rule: 99%</text>
+<g><rect x="12" y="93" width="183" height="86" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="103.5" y="121" font-size="20" font-weight="bold" fill="#FF6A13" text-anchor="middle">Carry</text><text x="103.5" y="143" font-size="14" fill="#17201A" text-anchor="middle">Every species licence</text>
+<text x="103.5" y="161" font-size="14" fill="#17201A" text-anchor="middle">this year, used or not</text></g>
+<g><rect x="205" y="93" width="183" height="86" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="296.5" y="121" font-size="20" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Keep</text><text x="296.5" y="143" font-size="14" fill="#17201A" text-anchor="middle">Until the meat is eaten</text></g>
+<g><rect x="12" y="189" width="183" height="68" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="217" font-size="20" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Lost one</text><text x="103.5" y="239" font-size="14" fill="#17201A" text-anchor="middle">Replace it for $10</text></g>
+<g><rect x="205" y="189" width="183" height="68" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="296.5" y="217" font-size="20" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Expires</text><text x="296.5" y="239" font-size="14" fill="#17201A" text-anchor="middle">31 March</text></g>
+
+</svg>

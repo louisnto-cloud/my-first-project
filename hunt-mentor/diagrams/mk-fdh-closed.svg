@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 446" font-family="sans-serif" role="img" aria-label="Closed areas near your bases. Sun Peaks (Map C11): No hunting within 400 m of resort lifts, runs (99%). Kamloops, South Thompson (Map C7): No hunting or shooting (95%). McQueen Lake (Map C12): No shooting, MU 3-28 (99%). Lac du Bois in city: No firearms or bows (99%). Wells Gray Park (MU 3-45): No hunting, no shooting (99%).">
+<rect width="400" height="446" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Closed areas near your bases</text>
+<text x="22" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Place</text><text x="172" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Rule</text>
+<g><rect x="12" y="68" width="376" height="78" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="68" width="150" height="78" rx="8" fill="#FF6A13"/><rect x="154" y="68" width="8" height="78" fill="#FF6A13"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#17201A">Sun Peaks (Map</text>
+<text x="22" y="109" font-size="15" font-weight="bold" fill="#17201A">C11)</text><text x="172" y="90" font-size="15" fill="#17201A">No hunting within 400 m of</text>
+<text x="172" y="109" font-size="15" fill="#17201A">resort lifts, runs</text><text x="172" y="130" font-size="14" fill="#1F3D2B">99%</text></g>
+<g><rect x="12" y="154" width="376" height="75" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="154" width="150" height="75" rx="8" fill="#1F3D2B"/><rect x="154" y="154" width="8" height="75" fill="#1F3D2B"/><text x="22" y="176" font-size="15" font-weight="bold" fill="#FFFFFF">Kamloops,</text>
+<text x="22" y="195" font-size="15" font-weight="bold" fill="#FFFFFF">South Thompson</text>
+<text x="22" y="214" font-size="15" font-weight="bold" fill="#FFFFFF">(Map C7)</text><text x="172" y="176" font-size="15" fill="#17201A">No hunting or shooting</text><text x="172" y="197" font-size="14" fill="#1F3D2B">95%</text></g>
+<g><rect x="12" y="237" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="237" width="150" height="59" rx="8" fill="#1F3D2B"/><rect x="154" y="237" width="8" height="59" fill="#1F3D2B"/><text x="22" y="259" font-size="15" font-weight="bold" fill="#FFFFFF">McQueen Lake</text>
+<text x="22" y="278" font-size="15" font-weight="bold" fill="#FFFFFF">(Map C12)</text><text x="172" y="259" font-size="15" fill="#17201A">No shooting, MU 3-28</text><text x="172" y="280" font-size="14" fill="#1F3D2B">99%</text></g>
+<g><rect x="12" y="304" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="304" width="150" height="59" rx="8" fill="#1F3D2B"/><rect x="154" y="304" width="8" height="59" fill="#1F3D2B"/><text x="22" y="326" font-size="15" font-weight="bold" fill="#FFFFFF">Lac du Bois in</text>
+<text x="22" y="345" font-size="15" font-weight="bold" fill="#FFFFFF">city</text><text x="172" y="326" font-size="15" fill="#17201A">No firearms or bows</text><text x="172" y="347" font-size="14" fill="#1F3D2B">99%</text></g>
+<g><rect x="12" y="371" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="371" width="150" height="59" rx="8" fill="#1F3D2B"/><rect x="154" y="371" width="8" height="59" fill="#1F3D2B"/><text x="22" y="393" font-size="15" font-weight="bold" fill="#FFFFFF">Wells Gray</text>
+<text x="22" y="412" font-size="15" font-weight="bold" fill="#FFFFFF">Park (MU 3-45)</text><text x="172" y="393" font-size="15" fill="#17201A">No hunting, no shooting</text><text x="172" y="414" font-size="14" fill="#1F3D2B">99%</text></g>
+
+</svg>

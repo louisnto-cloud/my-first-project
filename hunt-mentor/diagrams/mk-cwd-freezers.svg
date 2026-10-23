@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" font-family="sans-serif" role="img" aria-label="Drop off freezers near you. Kamloops: 3 butchers and shops (Book, clients only, or call ahead). Barrière, Clearwater: Esso, Home Hardware. Merritt, Savona: Conservation Officer Service, Skeetchestn. Langley (nearest Mission): 2 sites (By appointment). Full addresses and phone numbers in More (95%)..">
+<rect width="400" height="388" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Drop off freezers near you</text>
+<text x="22" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Town</text><text x="165" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Freezer · Note</text>
+<g><rect x="12" y="68" width="376" height="77" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="143" height="77" rx="8" fill="#1F3D2B"/><rect x="147" y="68" width="8" height="77" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">Kamloops</text><text x="165" y="90" font-size="15" fill="#17201A">3 butchers and shops</text><text x="165" y="111" font-size="14" fill="#1F3D2B">Book, clients only, or call</text>
+<text x="165" y="129" font-size="14" fill="#1F3D2B">ahead</text></g>
+<g><rect x="12" y="153" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="153" width="143" height="56" rx="8" fill="#1F3D2B"/><rect x="147" y="153" width="8" height="56" fill="#1F3D2B"/><text x="22" y="175" font-size="15" font-weight="bold" fill="#FFFFFF">Barrière,</text>
+<text x="22" y="194" font-size="15" font-weight="bold" fill="#FFFFFF">Clearwater</text><text x="165" y="175" font-size="15" fill="#17201A">Esso, Home Hardware</text></g>
+<g><rect x="12" y="217" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="217" width="143" height="56" rx="8" fill="#1F3D2B"/><rect x="147" y="217" width="8" height="56" fill="#1F3D2B"/><text x="22" y="239" font-size="15" font-weight="bold" fill="#FFFFFF">Merritt,</text>
+<text x="22" y="258" font-size="15" font-weight="bold" fill="#FFFFFF">Savona</text><text x="165" y="239" font-size="15" fill="#17201A">Conservation Officer</text>
+<text x="165" y="258" font-size="15" fill="#17201A">Service, Skeetchestn</text></g>
+<g data-tip="Langley|Nearest to Mission: Langley, 2 sites, by appointment (95%). Addresses and phone numbers are in More."><rect x="12" y="281" width="376" height="75" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="281" width="143" height="75" rx="8" fill="#1F3D2B"/><rect x="147" y="281" width="8" height="75" fill="#1F3D2B"/><text x="22" y="303" font-size="15" font-weight="bold" fill="#FFFFFF">Langley</text>
+<text x="22" y="322" font-size="15" font-weight="bold" fill="#FFFFFF">(nearest</text>
+<text x="22" y="341" font-size="15" font-weight="bold" fill="#FFFFFF">Mission)</text><text x="165" y="303" font-size="15" fill="#17201A">2 sites</text><text x="165" y="324" font-size="14" fill="#1F3D2B">By appointment</text></g>
+<text x="16" y="376" font-size="14" fill="#17201A">Full addresses and phone numbers in More (95%).</text>
+</svg>

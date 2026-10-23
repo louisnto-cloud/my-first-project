@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" font-family="sans-serif" role="img" aria-label="LEH (Limited Entry Hunting) in Region 2. Lines on pages 26 to 31: None. Hunts, codes, dates: Separate LEH synopsis. You need: Draw authorization, hunting licence, species licence.">
+<rect width="400" height="310" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">LEH (Limited Entry Hunting) in</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">Region 2</text>
+<text x="16" y="75" font-size="14" fill="#17201A">99%</text>
+<g><rect x="12" y="91" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="91" width="150" height="56" rx="8" fill="#1F3D2B"/><rect x="154" y="91" width="8" height="56" fill="#1F3D2B"/><text x="22" y="113" font-size="15" font-weight="bold" fill="#FFFFFF">Lines on pages</text>
+<text x="22" y="132" font-size="15" font-weight="bold" fill="#FFFFFF">26 to 31</text><text x="172" y="113" font-size="15" font-weight="bold" fill="#17201A">None</text></g>
+<g><rect x="12" y="155" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="155" width="150" height="56" rx="8" fill="#1F3D2B"/><rect x="154" y="155" width="8" height="56" fill="#1F3D2B"/><text x="22" y="177" font-size="15" font-weight="bold" fill="#FFFFFF">Hunts, codes,</text>
+<text x="22" y="196" font-size="15" font-weight="bold" fill="#FFFFFF">dates</text><text x="172" y="177" font-size="15" fill="#17201A">Separate LEH synopsis</text></g>
+<g><rect x="12" y="219" width="376" height="75" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="219" width="150" height="75" rx="8" fill="#FF6A13"/><rect x="154" y="219" width="8" height="75" fill="#FF6A13"/><text x="22" y="241" font-size="15" font-weight="bold" fill="#17201A">You need</text><text x="172" y="241" font-size="15" fill="#17201A">Draw authorization,</text>
+<text x="172" y="260" font-size="15" fill="#17201A">hunting licence, species</text>
+<text x="172" y="279" font-size="15" fill="#17201A">licence</text></g>
+
+</svg>

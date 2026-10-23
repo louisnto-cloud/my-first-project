@@ -120,6 +120,9 @@ sk-gut-8 | Cool it in shade, off the ground.
 yt-field-dress-deer | How to gut a deer, step by step.
 ```
 
+```diagram mk-md10-after
+```
+
 ```more field care in detail
 > [!warn]
 > Study aid only. The official regulations are the law.
@@ -190,6 +193,9 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 ```regs deerR3
 ```
 
+```diagram mk-md10-limits
+```
+
 ```more the rules recap, with links (no new rules)
 - Seasons, MUs 3-27 and 3-28 (99%, page 34, 2 October 2026 edition): 10 to 30 September, 4 point bucks; 1 to 31 October, any buck; 1 November to 10 December, 4 point bucks. Full table: [Region 3](#/s/rb-region-3).
 - [[4 point buck]]: at least 4 tines on one antler, not counting the brow tine; each tine at least 2.5 cm and longer than wide (99%, pages 3 and 4, [definitions](#/s/rb-definitions)).
@@ -208,6 +214,10 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 
 ## Cheat sheet
 
+```diagram mk-md10-cheat
+```
+
+```more the table as text
 | Fact | Number | % |
 |---|---|---|
 | Buck weight | 68 to 113 kg (peak 180) | 90 |
@@ -250,8 +260,15 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 | Wait: lungs | 30 minutes | 70 to 85 |
 | Meat target | below 4°C | 80 |
 | Boneless meat | about 1/3 of live weight | 70 |
+```
 
 - Screenshot this screen for the field (Tip).
+
+## Cheat sheet: where each line comes from
+
+```diagram mk-md10-chapters
+```
+
 - Rules: see the screen above and the Rule Book (99%).
 
 ```more where each line comes from
@@ -313,6 +330,10 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 
 ## Sources
 
+```diagram mk-md10-sources
+```
+
+```more every source and link
 - Hunt Mentor sessions with their own sources: [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [field dressing](#/s/field-dressing), [meat care](#/s/meat-care), [cooking](#/s/cooking), [Mule deer](#/s/mule-deer) (70 to 99% as marked there)
 - Texas Parks and Wildlife, [hunter education: vital areas](https://tpwd.texas.gov/education/hunter-education/online-course/hunting-skills-1/vital-areas), checked 2026-10-11 (85%)
 - New Mexico Wildlife, [The math in the meat](https://magazine.wildlife.state.nm.us/the-math-in-the-meat/), via the quick lesson (70%)
@@ -320,6 +341,7 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 - Canadian Food Inspection Agency 71°C advice, via [cooking](#/s/cooking) (95%)
 - Chapter sources: chapters 1 to 9 of this Masterclass.
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+```
 
 ```quiz
 [
