@@ -364,15 +364,21 @@
       if (!it || !it.t) return;
       const n = it.key ? String(it.key) : String(it.t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
       if (seen.has(n)) return; seen.add(n);
-      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n), off: !itemFits(it.for, c2) });
+      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n), off: !itemFits(it.for, c2), n, cover: it.coveredBy, top: +it.top || 0 });
     };
     for (const [cat] of CATS) for (const it of ((sp && sp.checklist) || {})[cat] || []) add(cat, it, sp.name);
     for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(it.cat || l.category || 'gear', it, l.title || l.id);
+    // "coveredBy": the same thing said by other items on this list; hidden only when every one of them is here and fits this hunt
+    const fit = new Set(out.filter((i) => !i.off).map((i) => i.n));
+    for (const i of out) if (!i.off && Array.isArray(i.cover) && i.cover.length && i.cover.every((c) => fit.has(String(c)))) { i.off = true; i.dup = true; }
     return out;
   }
+  // "top" items (rank 1 first, at most 10 that fit) show first in a Most important group, moved there, not copied: same tick key
+  const TOP_CAT = ['top', 'Most important for this hunt'];
   function checklistHtml(items, ticked, C, attr, closed) {
-    return CATS.map(([cat, label]) => {
-      const its = items.filter((i) => i.cat === cat); if (!its.length) return '';
+    const top = new Set(items.filter((i) => i.top && !i.off).sort((a, b) => a.top - b.top).slice(0, 10));
+    return [TOP_CAT, ...CATS].map(([cat, label]) => {
+      const its = cat === 'top' ? [...top] : items.filter((i) => i.cat === cat && !top.has(i)); if (!its.length) return '';
       const n = its.filter((i) => ticked(i)).length;
       return `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3></summary>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
         <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(i.t)}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
@@ -405,7 +411,7 @@
   const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false,
     region: regionOf((p.where && p.where.mu) || ''), sights: (p.ask && p.ask.gun && p.ask.gun.sights) || '' });
   // the "N items hidden" line above a checklist (all = every item, off ones included)
-  const hiddenNote = (all, showAll, id) => { const h = all.filter((i) => i.off).length; return h ? `<p class="muted pl-small pl-hidden-note">${showAll ? `Showing every item, ${h} of them not for this hunt.` : `${h} ${h === 1 ? 'item' : 'items'} hidden that do not apply to this hunt.`} <button type="button" class="pl-showall" id="${id}">${showAll ? 'Hide them' : 'Show all'}</button></p>` : ''; };
+  const hiddenNote = (all, showAll, id) => { const h = all.filter((i) => i.off).length; return h ? `<p class="muted pl-small pl-hidden-note">${showAll ? `Showing every item, ${h} of them not for this hunt or repeats.` : `${h} ${h === 1 ? 'item' : 'items'} hidden: not for this hunt, or the same as an item you can see.`} <button type="button" class="pl-showall" id="${id}">${showAll ? 'Hide them' : 'Show all'}</button></p>` : ''; };
   // first hunt: yes until there is a saved plan whose last day has passed
   const firstDefault = (C) => !plansOf(C).some((p) => p.to && p.to < todayIso());
 

@@ -1,6 +1,6 @@
 {
  "updated": "2026-10-23",
- "note": "Common checklists added to every plan by the 'when' conditions. Each item has an optional 'cat' (paperwork, firearm, gear, clothing, meat, safety, vehicle, plan) for grouping inside a list. Study aid only. The official regulations are the law. Optional 'for' on an item: {method, group, region, species, sights} lists; the item shows only on a hunt that matches every tag it knows (untagged items show on every hunt; nothing is deleted, the plan has a Show all toggle). Optional 'key' on an item: a fixed tick key (the old item text, lower case, letters and numbers only) so the text can change without losing ticks.",
+ "note": "Common checklists added to every plan by the 'when' conditions. Each item has an optional 'cat' (paperwork, firearm, gear, clothing, meat, safety, vehicle, plan) for grouping inside a list. Study aid only. The official regulations are the law. Optional 'for' on an item: {method, group, region, species, sights} lists; the item shows only on a hunt that matches every tag it knows (untagged items show on every hunt; nothing is deleted, the plan has a Show all toggle). Optional 'key' on an item: a fixed tick key (the old item text, lower case, letters and numbers only) so the text can change without losing ticks. Optional 'coveredBy' on an item: a list of other items (lower case text, letters and numbers only, the same as a tick key) that say the same thing; the item is hidden behind Show all only when every one of them is on this plan's list and fits the hunt. Never used on a paperwork, licence, legal, safety or firearm safety item. Optional 'top' on an item: a rank (1 first); up to 10 top items that fit the hunt show first in a 'Most important' group, ticks unchanged.",
  "lists": [
   {
    "id": "base",
@@ -13,7 +13,8 @@
      "why": "Electronic only. Expires 31 March",
      "cert": 99,
      "lesson": "licences",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "top": 1
     },
     {
      "t": "Photo ID on me",
@@ -83,7 +84,8 @@
      "why": "Big game and upland: 1 hour each side of sunrise and sunset. Migratory birds: half an hour",
      "cert": 99,
      "lesson": "legal-to-shoot",
-     "cat": "plan"
+     "cat": "plan",
+     "top": 4
     },
     {
      "t": "No Shooting Areas, closed areas, parks and ecological reserves checked on the synopsis map",
@@ -139,13 +141,18 @@
      "t": "Weather checked",
      "why": "Tip",
      "lesson": "weather-moon",
-     "cat": "plan"
+     "cat": "plan",
+     "coveredBy": [
+      "forecast wind direction and speed for morning and evening",
+      "snow line and temperature checked for tomorrow"
+     ]
     },
     {
      "t": "Trip plan left: who, vehicle and plate, where you park, route, return time, call 911 if not back by",
      "cert": 75,
      "lesson": "bush-safety",
-     "cat": "plan"
+     "cat": "plan",
+     "top": 6
     },
     {
      "t": "Phone charged, offline maps downloaded, power bank packed",
@@ -219,7 +226,8 @@
      "t": "Knife and spare blades",
      "cert": 75,
      "lesson": "pack-kit",
-     "cat": "gear"
+     "cat": "gear",
+     "top": 9
     },
     {
      "t": "Game bags and 15 m of rope (big game)",
@@ -243,7 +251,11 @@
      "t": "Extra layer, rain shell, toque, spare gloves",
      "cert": 75,
      "lesson": "pack-kit",
-     "cat": "clothing"
+     "cat": "clothing",
+     "coveredBy": [
+      "rain shell plus wool or synthetic layers and a spare dry layer",
+      "toque neck gaiter thin shooting gloves plus warm mitts"
+     ]
     },
     {
      "t": "Blaze orange vest and toque",
@@ -303,13 +315,19 @@
      "t": "3 to 4 boxes of the SAME load bought",
      "why": "Tip",
      "lesson": "countdown",
-     "cat": "firearm"
+     "cat": "firearm",
+     "coveredBy": [
+      "week 1 3 to 4 boxes of the same rifle load"
+     ]
     },
     {
      "t": "Zero confirmed again before the season",
      "why": "Tip",
      "lesson": "bc-calendar",
-     "cat": "firearm"
+     "cat": "firearm",
+     "coveredBy": [
+      "zero confirmed with the deer load 150 to 165 grain expanding"
+     ]
     },
     {
      "t": "Range test done: 12 rounds, cold barrel, 20 cm circles, from the positions I hunt in. Result in the Journal",
@@ -321,13 +339,19 @@
      "t": "My tested maximum range known",
      "why": "Tip",
      "lesson": "shot-placement",
-     "cat": "firearm"
+     "cat": "firearm",
+     "coveredBy": [
+      "range test done 12 rounds cold barrel 20 cm circles from the positions i hunt in result in the journal"
+     ]
     },
     {
      "t": "Shooting sticks or the rest I carry",
      "why": "Tip",
      "lesson": "shooting-skills",
-     "cat": "gear"
+     "cat": "gear",
+     "coveredBy": [
+      "shooting sticks and practice kneeling"
+     ]
     },
     {
      "t": "Rangefinder",
@@ -1235,7 +1259,10 @@
      "t": "Spare dry layer in a dry bag",
      "why": "Tip",
      "lesson": "what-to-wear",
-     "cat": "gear"
+     "cat": "gear",
+     "coveredBy": [
+      "rain shell plus wool or synthetic layers and a spare dry layer"
+     ]
     },
     {
      "t": "Power bank kept warm: phone batteries die in the cold",
@@ -1253,7 +1280,11 @@
      "t": "Shovel, tow strap, booster cables",
      "why": "Tip",
      "lesson": "pack-kit",
-     "cat": "vehicle"
+     "cat": "vehicle",
+     "coveredBy": [
+      "shovel and tow strap",
+      "booster cables or a jump pack"
+     ]
     },
     {
      "t": "Full fuel tank before leaving pavement",
@@ -1468,13 +1499,19 @@
      "t": "Full fuel tank",
      "why": "Tip",
      "lesson": "pack-kit",
-     "cat": "vehicle"
+     "cat": "vehicle",
+     "coveredBy": [
+      "full fuel tank before leaving pavement"
+     ]
     },
     {
      "t": "Spare dry clothes and boots",
      "why": "Tip",
      "lesson": "pack-kit",
-     "cat": "vehicle"
+     "cat": "vehicle",
+     "coveredBy": [
+      "spare dry clothes and boots in a dry bag"
+     ]
     },
     {
      "t": "Extra water and food",
@@ -1504,7 +1541,10 @@
      "t": "Paper map of the area",
      "why": "Tip",
      "lesson": "pack-kit",
-     "cat": "vehicle"
+     "cat": "vehicle",
+     "coveredBy": [
+      "paper map and compass"
+     ]
     }
    ]
   },
@@ -1524,7 +1564,10 @@
      "t": "Temperature and any snow line for tomorrow",
      "why": "Tip",
      "lesson": "weather-moon",
-     "cat": "plan"
+     "cat": "plan",
+     "coveredBy": [
+      "snow line and temperature checked for tomorrow"
+     ]
     },
     {
      "t": "Plan A spot fits tomorrow's wind; plan B fits the other wind",
@@ -1560,7 +1603,10 @@
      "t": "Phone and power bank charged, offline maps downloaded",
      "why": "Tip",
      "lesson": "weather-moon",
-     "cat": "gear"
+     "cat": "gear",
+     "coveredBy": [
+      "phone charged offline maps downloaded power bank packed"
+     ]
     },
     {
      "t": "Day pack packed. Say what each item is for",
@@ -1590,7 +1636,10 @@
      "t": "Cooler pre chilled, ice ready",
      "cert": 65,
      "lesson": "pack-kit",
-     "cat": "meat"
+     "cat": "meat",
+     "coveredBy": [
+      "coolers pre chilled block ice or frozen jugs rack for the cooler bottom"
+     ]
     },
     {
      "t": "Alarm set so I am in place before legal light",
