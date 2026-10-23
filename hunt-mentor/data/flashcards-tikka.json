@@ -1,0 +1,337 @@
+[
+ {
+  "id": "mc-tikka-001",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Where is the safety catch on the T3x Arctic?",
+  "back": "Right side, just behind the bolt handle (95%, Tikka manual page 8).",
+  "diagram": "tk-action-right"
+ },
+ {
+  "id": "mc-tikka-002",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Tikka safety: what does the red dot mean?",
+  "back": "Safety OFF: the rifle can fire (95%, page 8).",
+  "diagram": "tk-safety-3pos"
+ },
+ {
+  "id": "mc-tikka-003",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Tikka safety ON locks which 3 things?",
+  "back": "The bolt closed, the firing pin cocked, the sear and trigger (95%, page 8).",
+  "diagram": "tk-safety-locks"
+ },
+ {
+  "id": "mc-tikka-004",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Can the Tikka safety go ON when the rifle is uncocked?",
+  "back": "No. It only engages when cocked. Unloaded, uncocked, safety forward is the transport position (95%).",
+  "diagram": "tk-safety-3pos"
+ },
+ {
+  "id": "mc-tikka-005",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "How do you take the bolt out?",
+  "back": "Lift the handle, press the bolt stop on the left side, pull the bolt fully back (95%, pages 8 and 13).",
+  "diagram": "tk-check-3"
+ },
+ {
+  "id": "mc-tikka-006",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "The 4 bolt moves?",
+  "back": "Up (unlock, cock), back (case out), forward (feed), down (lock) (95%).",
+  "diagram": "tk-bolt-cycle"
+ },
+ {
+  "id": "mc-tikka-007",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Load check, step 1?",
+  "back": "Muzzle safe, finger off, safety forward: red dot showing (95%, page 8).",
+  "diagram": "tk-check-1"
+ },
+ {
+  "id": "mc-tikka-008",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Load check: after the chamber is checked empty?",
+  "back": "Bolt in and closed: it is cocked. Muzzle safe, press the trigger to decock (95%, page 8).",
+  "diagram": "tk-check-4"
+ },
+ {
+  "id": "mc-tikka-009",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Unloading order on the Tikka?",
+  "back": "Safety forward, lift and pull back to extract the round, magazine out, check, close, decock (95%, page 10).",
+  "diagram": "tk-unload-2"
+ },
+ {
+  "id": "mc-tikka-010",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Why keep the bolt back until the magazine is out?",
+  "back": "Pushing it forward with the magazine in feeds the next round (Tip).",
+  "diagram": "tk-unload-3"
+ },
+ {
+  "id": "mc-tikka-011",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Loading the magazine?",
+  "back": "Round on the follower in front of the lips, press down, slide back under the lips. Never force extra (95%, page 10).",
+  "diagram": "tk-mag-load"
+ },
+ {
+  "id": "mc-tikka-012",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Emptying the magazine?",
+  "back": "Thumb pushes the rim forward, index finger tips the round up and out (95%, pages 10 and 11).",
+  "diagram": "tk-mag-unload"
+ },
+ {
+  "id": "mc-tikka-013",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Click, no bang?",
+  "back": "Muzzle safe, wait at least 1 minute, unload with extreme care (95%, pages 10 and 19).",
+  "diagram": "tk-misfire"
+ },
+ {
+  "id": "mc-tikka-014",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Hand the rifle over only when?",
+  "back": "Magazine out, bolt open, chamber visually checked (95%, page 8).",
+  "diagram": "tk-handover"
+ },
+ {
+  "id": "mc-tikka-015",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Your 10 round Tikka magazine and the 5 round limit?",
+  "back": "The limit is for magazines designed for semi automatic firearms. A bolt action magazine is not on that list (90%, my reading of SOR/98-462)."
+ },
+ {
+  "id": "mc-tikka-016",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Factory barrel length of the T3x Arctic?",
+  "back": "508 mm (20 in), 1 turn in 10 in twist (95%, Sako).",
+  "diagram": "tk-specs"
+ },
+ {
+  "id": "mc-tikka-017",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "How does the law measure barrel length?",
+  "back": "Muzzle to and including the chamber, without muzzle devices (99%, Criminal Code s. 84(2)).",
+  "diagram": "tk-barrel-legal"
+ },
+ {
+  "id": "mc-tikka-018",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Altered rifle: prohibited below what lengths?",
+  "back": "Under 660 mm overall, or a barrel under 457 mm (99%, s. 84(1)). Never cut it.",
+  "diagram": "tk-barrel-legal"
+ },
+ {
+  "id": "mc-tikka-019",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Arctic front sight: clockwise on the elevation screw does?",
+  "back": "Post goes down, shots go up. About 7 mm per click at 100 m (95%, page 11).",
+  "diagram": "tk-front-elev"
+ },
+ {
+  "id": "mc-tikka-020",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Arctic windage: how?",
+  "back": "Loosen the rear screw on the side you want the drum to move to, snug the other side (95%, page 12).",
+  "diagram": "tk-rear-wind"
+ },
+ {
+  "id": "mc-tikka-021",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Iron sight click math at 100 m?",
+  "back": "Clicks = cm off / 0.7 (95%).",
+  "diagram": "tk-iron-clicks"
+ },
+ {
+  "id": "mc-tikka-022",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "What must you never open on the rear drum?",
+  "back": "The screw in the drum centre: spring parts fly out (95%, page 12).",
+  "diagram": "tk-iron-parts"
+ },
+ {
+  "id": "mc-tikka-023",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Rear sight set screw torque? Front sight screw?",
+  "back": "0.8 Nm (7 in lb). 5 Nm (44 in lb) (95%, page 11).",
+  "diagram": "tk-sight-fit"
+ },
+ {
+  "id": "mc-tikka-024",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "How far is the bore sight target in the manual?",
+  "back": "About 25 to 30 m, bolt out. Final sighting in at 100 to 150 m (95%, page 12).",
+  "diagram": "tk-iron-zero"
+ },
+ {
+  "id": "mc-tikka-025",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Why is a scope tricky on the Arctic?",
+  "back": "The rear drum sits behind a short Picatinny rail, under where the scope passes. High rings, or drum off (75 to 95%).",
+  "diagram": "tk-clearance"
+ },
+ {
+  "id": "mc-tikka-026",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Receiver screw torque, metal trigger guard?",
+  "back": "7 Nm (62 in lb). Plastic guard: max 5 Nm (95%, page 13).",
+  "diagram": "tk-torque-card"
+ },
+ {
+  "id": "mc-tikka-027",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Leupold BackCountry cross slot ring torque?",
+  "back": "Ring top screws 28 in lb, keeper clamp 45 in lb (95%, Leupold).",
+  "diagram": "tk-torque-card"
+ },
+ {
+  "id": "mc-tikka-028",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Where do ring torque numbers come from?",
+  "back": "Only the ring maker's sheet. Tikka gives none (95%).",
+  "diagram": "tk-torque-card"
+ },
+ {
+  "id": "mc-tikka-029",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Eye relief on a .308?",
+  "back": "About 9 cm (3.5 in) or more. Set it on top power (65 to 85%).",
+  "diagram": "tk-eye-relief"
+ },
+ {
+  "id": "mc-tikka-030",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "1/4 MOA (minute of angle) scope click at 100 m?",
+  "back": "About 0.73 cm (70%).",
+  "diagram": "tk-scope-clicks"
+ },
+ {
+  "id": "mc-tikka-031",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Dry fire with a snap cap or a dummy round?",
+  "back": "Snap cap. Dummies do not protect the firing pin (95%, page 9).",
+  "diagram": "tk-dryfire"
+ },
+ {
+  "id": "mc-tikka-032",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "What does the plate test give you?",
+  "back": "Your range from each position: the last distance with 5 of 5 in a paper plate (Tip).",
+  "diagram": "tk-plate-test"
+ },
+ {
+  "id": "mc-tikka-033",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Can a bipod go on the Tikka?",
+  "back": "Yes, on the front sling stud (95%, page 16).",
+  "diagram": "tk-positions"
+ },
+ {
+  "id": "mc-tikka-034",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Which bullet is unlawful for hunting in BC?",
+  "back": "Full metal jacketed non expanding, tracer, incendiary or explosive (99%, synopsis).",
+  "diagram": "tk-bullet-types"
+ },
+ {
+  "id": "mc-tikka-035",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Tikka's ammunition rules?",
+  "back": "Factory CIP or SAAMI, inspect each round, nothing over 10 years, never steel jacketed bullets (95%, page 9).",
+  "diagram": "tk-ammo-rules"
+ },
+ {
+  "id": "mc-tikka-036",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Black tailed buck weight?",
+  "back": "About 48 to 90 kg (90%, BC deer account).",
+  "diagram": "tk-energy"
+ },
+ {
+  "id": "mc-tikka-037",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Cleaning rod direction?",
+  "back": "Breech to muzzle through a rod guide, bullet direction only (95%, page 18).",
+  "diagram": "tk-clean-3"
+ },
+ {
+  "id": "mc-tikka-038",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Before the first shot after cleaning?",
+  "back": "Wipe the chamber dry (95%, page 18).",
+  "diagram": "tk-clean-6"
+ },
+ {
+  "id": "mc-tikka-039",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "The 3 grease points?",
+  "back": "Locking lugs, cocking cam, cocking piece head (95%, page 7).",
+  "diagram": "tk-grease-points"
+ },
+ {
+  "id": "mc-tikka-040",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Bolt strip: when does the screwdriver come out of the gap?",
+  "back": "Only when you are ready to refit the shroud (95%, page 13).",
+  "diagram": "tk-strip-3"
+ },
+ {
+  "id": "mc-tikka-041",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Bolt shroud off a right handed T3x bolt?",
+  "back": "Turn it clockwise until it stops, pull it away (95%, page 13).",
+  "diagram": "tk-strip-2"
+ },
+ {
+  "id": "mc-tikka-042",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Lowest Tikka trigger weight allowed?",
+  "back": "11 N (2.5 lb). Factory 13 to 15 N (95%, page 15).",
+  "diagram": "tk-trigger"
+ },
+ {
+  "id": "mc-tikka-043",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Rust can start how soon if not cleaned?",
+  "back": "Within 24 hours, even on stainless (95%, page 18).",
+  "diagram": "tk-wet-night"
+ },
+ {
+  "id": "mc-tikka-044",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Wet rifle tonight?",
+  "back": "Out of the case, dry in warm, dry air, then the routine clean. No leather or fabric case for storage (95%, pages 18 and 19).",
+  "diagram": "tk-wet-night"
+ },
+ {
+  "id": "mc-tikka-045",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Muzzle went into snow?",
+  "back": "Unload, bolt out, look through. Any obstruction: gunsmith (95%, page 9).",
+  "diagram": "tk-cold"
+ },
+ {
+  "id": "mc-tikka-046",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Is a suppressor legal in Canada?",
+  "back": "No. A device to muffle a firearm is a prohibited device (99%, s. 84(1)).",
+  "diagram": "tk-legal-lines"
+ },
+ {
+  "id": "mc-tikka-047",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "More than 2 length of pull spacers need?",
+  "back": "Longer recoil pad screws. Do not overtighten (95%, page 15).",
+  "diagram": "tk-lop-spacers"
+ },
+ {
+  "id": "mc-tikka-048",
+  "deck": "Tikka T3x Arctic Masterclass",
+  "front": "Range day: what is the cold bore bull?",
+  "back": "Your first shot from a cold, clean barrel next time: like a hunting shot (Tip).",
+  "diagram": "tk-target-sheet"
+ }
+]
