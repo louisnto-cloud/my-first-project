@@ -389,7 +389,7 @@ function winBox() {
 function refresh(st) {
   if (st.raster) return;
   if (st.pm) { pmMonthFilter(st); return; }
-  const src = map.getSource(`hm-src-${st.l.id}`); if (!src) return;
+  const src = map.getSource(`hm-src-${st.l.id}`); if (!src) { st.dirty = true; return; } // data read while the layer was off (tap card, Can I hunt here?): draw it once added
   if (!lp(st.l.id).on) { st.dirty = true; return; } // drawn when it is turned on
   st.dirty = false;
   let feats = [].concat(...st.loaded.values());
