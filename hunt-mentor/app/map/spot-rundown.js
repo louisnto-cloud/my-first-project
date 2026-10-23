@@ -178,6 +178,7 @@ async function steepness(H, lng, lat) {
 // ---------- small render helpers ----------
 const badge = (c) => (c == null ? '' : ` <span class="srd-c ${c >= 95 ? 'hi' : c >= 80 ? 'mid' : c >= 60 ? 'lo' : 'tip'}">${esc(c)}%</span>`);
 const TIP = ' <span class="srd-c tip">Tip</span>';
+const SYN_URL = 'https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf';
 const EST = ' <span class="srd-c est">Estimate</span>';
 const srcTxt = (...a) => { const t = a.filter(Boolean).join(', '); return t ? `<small>${esc(t)}</small>` : ''; };
 const li = (html) => `<li>${html}</li>`;
@@ -331,7 +332,11 @@ function render(D, ctx) {
   const plays = plan && pb && pb[plan.species] ? [pb[plan.species]] : SP.filter((s) => D.tags.includes(s.tag)).map((s) => pb && pb[s.play]).filter(Boolean).slice(0, 2);
   // the species' region content (species.json "regions") for this spot's region, via plan.js, so a Region 2 spot never gets the Region 3 playbook
   const inRegion = (s) => (window.HMPlan && window.HMPlan._spInRegion ? window.HMPlan._spInRegion(s, D.region) : s);
-  for (const sp of plays.map(inRegion)) {
+  // base text written for another region (species.json "baseRegion") with no block for this one: say so once, never present it as local
+  const elsewhere = (s) => { const r = String(D.region || ''), b = String((s && s.baseRegion) || ''); return !!(b && r && r !== b && !(s.regions && s.regions[r])); };
+  for (const raw of plays) {
+    const sp = inRegion(raw);
+    if (elsewhere(raw)) tp.push(li(`This advice was written for Region ${esc(raw.baseRegion)}${String(raw.baseRegion) === '3' ? ' (Kamloops area)' : ''}. Check your region's rows in the <a href="${SYN_URL}" target="_blank" rel="noopener">synopsis</a>.`));
     const ph = (sp.phases || []).find((x) => (x.months || []).includes(month));
     if (ph) {
       tp.push(li(`<b>${esc(sp.name)}, ${esc(ph.label)}</b> (${esc(MONTH_NAMES[month - 1])} playbook)${badge(ph.cert)}`));

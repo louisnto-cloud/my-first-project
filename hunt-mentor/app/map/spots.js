@@ -20,6 +20,7 @@ export const POP = { popular: ['Popular (more hunters)', '#ff1744'], quiet: ['Le
 export const isSpotLayer = (l) => l.group === 'Spots' && (l.kind === 'spots' || l.type === 'circle' || l.type === 'symbol');
 export const iconHtml = (cat, size) => spotIconSvg(cat, size);
 
+const SYN_URL = 'https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf';
 const CAT_SYN = [[/^drive|road|car|truck/, 'drive'], [/atv|quad|ride|ohv|utv|side by side/, 'atv'], [/walk|hike|foot/, 'walk'], [/back ?country|backpack|multi|overnight/, 'backcountry'], [/camp/, 'camp']];
 const num = (v) => (v == null || v === '' || isNaN(+v) ? null : +v);
 export function prep(p) {
@@ -273,9 +274,10 @@ function fillBestTimes(body, p) {
     boxes.forEach((b) => {
       const s0 = d && (d.species || []).find((x) => x.id === b.dataset.best); if (!s0 || !b.isConnected) return;
       const reg = s0.regions && s0.regions[String(p.region || '')], s = reg ? Object.assign({}, s0, reg) : s0; // region content (species.json "regions") for this spot's region
+      const elsewhere = !reg && !!s0.baseRegion && !!p.region && String(p.region) !== String(s0.baseRegion); // base text written for another region (species.json "baseRegion")
       const ph = (s.phases || []).find((x) => (x.months || []).includes(m)) || null;
       const when = ph ? (ph.when || []).slice(0, 3) : [];
-      b.innerHTML = when.length ? `<small><b>Best times this month</b> (Tip, ${esc(s.name)} playbook, ${esc(ph.label)}${reg ? '' : "; written for Region 3, check your region's dates"}): ${when.map(esc).join('; ')}.</small>` : '';
+      b.innerHTML = when.length ? `<small><b>Best times this month</b> (Tip, ${esc(s.name)} playbook, ${esc(ph.label)}): ${when.map(esc).join('; ')}.${elsewhere ? ` This advice was written for Region ${esc(s0.baseRegion)}${String(s0.baseRegion) === '3' ? ' (Kamloops area)' : ''}. Check your region's rows in the <a href="${SYN_URL}" target="_blank" rel="noopener">synopsis</a>.` : ''}</small>` : '';
     });
   });
 }

@@ -401,6 +401,10 @@
   // (region = MU prefix before the dash). Every plan screen looks its species up through spOf, so a Region 2 deer plan never shows Region 3 advice.
   const spInRegion = (sp, region) => { const r = sp && sp.regions && sp.regions[String(region || '')]; if (!r) return sp; const o = Object.assign({}, sp, r); delete o.regions; delete o.note; return o; };
   const spFor = (sp, mu) => spInRegion(sp, regionOf(mu));
+  // base text written for one region (species.json "baseRegion"), shown in a region with no block of its own: one line, not presented as local advice
+  const SYN_URL = 'https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf';
+  const baseElsewhere = (raw, region) => { const r = String(region || ''), b = String((raw && raw.baseRegion) || ''); return !!(b && r && r !== b && !(raw.regions && raw.regions[r])); };
+  const regionWarn = (raw, mu) => (baseElsewhere(raw, regionOf(mu)) ? `<p class="pl-law pl-region-warn">This advice was written for Region ${esc(raw.baseRegion)}${String(raw.baseRegion) === '3' ? ' (Kamloops area)' : ''}. Check your region's rows in the <a href="${SYN_URL}" target="_blank" rel="noopener">synopsis</a>.</p>` : '');
   const spOf = (p, D) => (p && D ? spFor(D.byId[p.species], p.where && p.where.mu) : null);
   function planTitle(p, D) { const sp = spOf(p, D); return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
   function planProgress(p, D) {
@@ -718,7 +722,7 @@
         <div class="hero-sub">${esc(rangeLabel(p.from, end))}</div></div></div>${act}`;
     }
     view.innerHTML = `<div class="pl" id="pl">
-      ${hero}<p class="pl-law">Study aid only. The official regulations are the law.</p>
+      ${hero}<p class="pl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
@@ -1564,5 +1568,5 @@
   window.addEventListener('beforeprint', () => document.querySelectorAll('.pl details:not([open]), .pl-list details:not([open])').forEach((d) => { d.dataset.plClosed = '1'; d.open = true; }));
   window.addEventListener('afterprint', () => document.querySelectorAll('details[data-pl-closed]').forEach((d) => { d.open = false; delete d.dataset.plClosed; }));
 
-  window.HMPlan = { route, homeCard, animalIndex, animalList, _legal: legal, _odds: odds, _spots: spots, _load: loadData, _debriefs: allDebriefs, _ask: askRows, _tags: tagsN, _spInRegion: spInRegion };
+  window.HMPlan = { route, homeCard, animalIndex, animalList, _legal: legal, _odds: odds, _spots: spots, _load: loadData, _debriefs: allDebriefs, _ask: askRows, _tags: tagsN, _spInRegion: spInRegion, _baseElsewhere: baseElsewhere };
 })();
