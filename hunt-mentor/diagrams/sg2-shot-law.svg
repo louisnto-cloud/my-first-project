@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The shot rule as a flow: hunting ducks, geese, coots or snipe means non toxic shot only, and no lead shells in your possession in the hunting area. Grouse, ptarmigan and other upland birds: lead is legal, unless a local rule says otherwise.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Which shot is legal?</text>
+<rect x="90" y="44" width="220" height="40" rx="8" fill="#1F3D2B"/>
+<text x="200.0" y="70.0" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">What are you hunting?</text>
+<line x1="160.0" y1="86.0" x2="105.6" y2="113.2" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"/><path d="M100.0 116.0 L105.5 108.9 L109.0 115.9Z" fill="#1F3D2B"/>
+<line x1="240.0" y1="86.0" x2="294.4" y2="113.2" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"/><path d="M300.0 116.0 L291.0 115.9 L294.5 108.9Z" fill="#1F3D2B"/>
+<rect x="12" y="118" width="186" height="120" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="2.5"/>
+<text x="105.0" y="142.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">Ducks, geese,</text>
+<text x="105.0" y="162.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">coots, snipe</text>
+<text x="105.0" y="192.0" font-size="16" font-weight="bold" fill="#FF6A13" text-anchor="middle">Non toxic only</text>
+<text x="105.0" y="214.0" font-size="14" fill="#17201A" text-anchor="middle">No lead even</text>
+<text x="105.0" y="230.0" font-size="14" fill="#17201A" text-anchor="middle">in your pocket</text>
+<rect x="206" y="118" width="182" height="120" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<text x="297.0" y="142.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">Grouse, ptarmigan,</text>
+<text x="297.0" y="162.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">quail, pheasant</text>
+<text x="297.0" y="192.0" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Lead is legal</text>
+<text x="297.0" y="214.0" font-size="14" fill="#17201A" text-anchor="middle">unless a local</text>
+<text x="297.0" y="230.0" font-size="14" fill="#17201A" text-anchor="middle">rule bans it</text>
+<text x="200.0" y="270.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Migratory Birds Regulations, 2022, s. 38.</text>
+<text x="200.0" y="292.0" font-size="13" fill="#17201A" text-anchor="middle">Study aid only. The regulations are the law.</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Which shotgun first: ducks and geese with heavy steel loads point to a gas semi auto. Tight budget and simple care point to a pump. Mostly grouse and clay targets, and money for it, point to an over under.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Which action first?</text>
+<rect x="70" y="44" width="260" height="40" rx="8" fill="#1F3D2B"/>
+<text x="200.0" y="70.0" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">What will you hunt most?</text>
+<line x1="200.0" y1="86.0" x2="74.1" y2="118.4" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"/><path d="M68.0 120.0 L74.9 114.2 L76.8 121.8Z" fill="#1F3D2B"/>
+<rect x="4" y="124" width="128" height="96" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="3"/>
+<text x="68.0" y="150.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">Ducks, geese</text>
+<text x="68.0" y="182.0" font-size="15" font-weight="bold" fill="#FF6A13" text-anchor="middle">Gas semi auto</text>
+<line x1="200.0" y1="86.0" x2="200.0" y2="113.7" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"/><path d="M200.0 120.0 L196.1 111.9 L203.9 111.9Z" fill="#1F3D2B"/>
+<rect x="136" y="124" width="128" height="96" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<text x="200.0" y="150.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">Tight budget</text>
+<text x="200.0" y="182.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Pump</text>
+<line x1="200.0" y1="86.0" x2="325.9" y2="118.4" stroke="#1F3D2B" stroke-width="3" stroke-linecap="round"/><path d="M332.0 120.0 L323.2 121.8 L325.1 114.2Z" fill="#1F3D2B"/>
+<rect x="268" y="124" width="128" height="96" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<text x="332.0" y="150.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">Grouse, clays</text>
+<text x="332.0" y="182.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Over under</text>
+<text x="68.0" y="206.0" font-size="13" font-weight="bold" fill="#FF6A13" text-anchor="middle">my lean</text>
+<text x="200.0" y="262.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">One 12 gauge, 3 inch, chokes, steel rated.</text>
+<text x="200.0" y="288.0" font-size="13" font-weight="bold" fill="#17201A" text-anchor="middle">Price checked 2026-10-23.</text>
+</svg>

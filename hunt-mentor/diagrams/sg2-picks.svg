@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Starting shells by bird: teal steel No. 4; mallard and wigeon steel No. 2 or 3; Canada goose steel BB; ruffed grouse lead No. 7.5 or 6; bismuth or tungsten work for all of them at a higher price.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Starting shells by bird</text>
+<rect x="12" y="46" width="376" height="40" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.4"/>
+<text x="24.0" y="72.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Teal</text>
+<text x="376.0" y="72.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="end">Steel No. 4</text>
+<rect x="12" y="92" width="376" height="40" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.4"/>
+<text x="24.0" y="118.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Mallard, wigeon</text>
+<text x="376.0" y="118.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="end">Steel No. 2 or 3</text>
+<rect x="12" y="138" width="376" height="40" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.4"/>
+<text x="24.0" y="164.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Canada goose</text>
+<text x="376.0" y="164.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="end">Steel BB</text>
+<rect x="12" y="184" width="376" height="40" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.4"/>
+<text x="24.0" y="210.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Ruffed grouse</text>
+<text x="376.0" y="210.0" font-size="15" font-weight="bold" fill="#4e4132" text-anchor="end">Lead No. 7.5 or 6</text>
+<rect x="12" y="230" width="376" height="40" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.4"/>
+<text x="24.0" y="256.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Older gun</text>
+<text x="376.0" y="256.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="end">Bismuth (ask the maker)</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Starting points (Tip). Pattern to be sure.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Shotgun cleaning kit: 1 rod with the right gauge brush and jag, 2 patches, 3 solvent, 4 light gun oil, 5 grease for an over under hinge, 6 choke wrench, 7 old toothbrush and rag, 8 eye protection.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">The cleaning kit</text>
+<rect x="14" y="50" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="73" r="11" fill="#1F3D2B"/><text x="34" y="78.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="52.0" y="78.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Rod and brush</text>
+<rect x="204" y="50" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="224" cy="73" r="11" fill="#1F3D2B"/><text x="224" y="78.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="242.0" y="78.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Patches</text>
+<rect x="14" y="106" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="129" r="11" fill="#1F3D2B"/><text x="34" y="134.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="52.0" y="134.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Solvent</text>
+<rect x="204" y="106" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="224" cy="129" r="11" fill="#1F3D2B"/><text x="224" y="134.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="242.0" y="134.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Light gun oil</text>
+<rect x="14" y="162" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="185" r="11" fill="#1F3D2B"/><text x="34" y="190.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="52.0" y="190.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Grease</text>
+<rect x="204" y="162" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="224" cy="185" r="11" fill="#1F3D2B"/><text x="224" y="190.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text x="242.0" y="190.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Choke wrench</text>
+<rect x="14" y="218" width="182" height="46" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="241" r="11" fill="#1F3D2B"/><text x="34" y="246.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text x="52.0" y="246.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Toothbrush, rag</text>
+<rect x="204" y="218" width="182" height="46" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="224" cy="241" r="11" fill="#FF6A13"/><text x="224" y="246.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+<text x="242.0" y="246.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Eye protection</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Ammunition out of the room.</text>
+</svg>
