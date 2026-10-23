@@ -630,3 +630,6 @@ body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
 
 /* focus moved to the screen title for VoiceOver: no outline on touch, keep it for keyboard users */
 #top-title:focus:not(:focus-visible), main h1:focus:not(:focus-visible), main h2:focus:not(:focus-visible) { outline: none; }
+
+/* absolutely placed helpers (screen reader part lists, tap hints) inside a step strip must not widen the page */
+.steps-track { position: relative; }
