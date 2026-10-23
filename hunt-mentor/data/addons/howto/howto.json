@@ -1,0 +1,869 @@
+{
+ "note": "Picture how tos for every app feature. Made by scripts/build-howto.mjs: edit there, then run it.",
+ "features": [
+  {
+   "id": "home_study",
+   "title": "Home study card and pace",
+   "route": "#/",
+   "steps": [
+    {
+     "svg": "svg/home-study-1.svg",
+     "text": "Make a hunt plan. Tap Plan a hunt on Home.",
+     "alt": "Step 1: Home screen with the Plan a hunt button marked 1"
+    },
+    {
+     "svg": "svg/home-study-2.svg",
+     "text": "Home now shows Today's study at the top. Tap the orange button.",
+     "alt": "Step 2: Home with the Today's study card and the orange Read today's screens button marked 2"
+    },
+    {
+     "svg": "svg/home-study-3.svg",
+     "text": "About 10 minutes a day: a few screens plus 10 cards. Must know screens come first.",
+     "alt": "Step 3: A lesson screen with the Next button marked 3"
+    },
+    {
+     "svg": "svg/home-study-4.svg",
+     "text": "To change the pace, open the plan and tap part 5 Study.",
+     "alt": "Step 4: Plan page with the 5 Study part marked 4"
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": "Daily cards",
+   "route": "#/daily",
+   "steps": [
+    {
+     "svg": "svg/daily-1.svg",
+     "text": "Tap More, then Today's cards.",
+     "alt": "Step 1: More list with Today's cards marked 1"
+    },
+    {
+     "svg": "svg/daily-2.svg",
+     "text": "Read the card. Tap it to flip.",
+     "alt": "Step 2: A flashcard that says Tap to flip, marked 2"
+    },
+    {
+     "svg": "svg/daily-3.svg",
+     "text": "Say how well you knew it: Knew it or Missed it.",
+     "alt": "Step 3: Knew it and Missed it buttons marked 3"
+    },
+    {
+     "svg": "svg/daily-4.svg",
+     "text": "Cards you miss come back tomorrow. Cards you know come back later.",
+     "alt": "Step 4: Two cards: Missed it comes back tomorrow, Knew it comes back in 1 day, then 6 days"
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "title": "Hunt plans",
+   "route": "#/plan/new/0",
+   "steps": [
+    {
+     "svg": "svg/plan-1.svg",
+     "text": "On Home, tap Plan a hunt.",
+     "alt": "Step 1: Home with the Plan a hunt button marked 1"
+    },
+    {
+     "svg": "svg/plan-2.svg",
+     "text": "Answer 8 short questions: animal, place, dates and more.",
+     "alt": "Step 2: Plan a hunt, question 1 of 8, What animal?, with Black bear marked 2"
+    },
+    {
+     "svg": "svg/plan-3.svg",
+     "text": "Your plan: is it open, odds, days, checklist and study, in 5 parts.",
+     "alt": "Step 3: Plan page with parts 1 Legal to 5 Study and a green Open box"
+    },
+    {
+     "svg": "svg/plan-4.svg",
+     "text": "Share, Print, Change or Delete it any time. Plans stay on this phone.",
+     "alt": "Step 4: Plan buttons Share, Print, Change and Delete, marked 4"
+    }
+   ]
+  },
+  {
+   "id": "presets",
+   "title": "Harrison presets",
+   "route": "#/plan/preset/harrison-deer-two",
+   "steps": [
+    {
+     "svg": "svg/presets-1.svg",
+     "text": "On Home, under Plan a hunt, tap With my brother or Solo.",
+     "alt": "Step 1: Home with the two Harrison deer buttons marked 1"
+    },
+    {
+     "svg": "svg/presets-2.svg",
+     "text": "It fills in the animal, place and method. You pick the dates.",
+     "alt": "Step 2: When? question with This weekend, Next 7 days and Opening week, Next 7 days marked 2"
+    },
+    {
+     "svg": "svg/presets-3.svg",
+     "text": "Answer Staying overnight? Yes or No.",
+     "alt": "Step 3: Staying overnight? with Yes and No buttons, No marked 3"
+    },
+    {
+     "svg": "svg/presets-4.svg",
+     "text": "Read first: Your Harrison deer hunt. The rules that bite there.",
+     "alt": "Step 4: Plan page Read first card with the Your Harrison deer hunt button marked 4"
+    }
+   ]
+  },
+  {
+   "id": "huntweek",
+   "title": "Hunt week checklist",
+   "route": "#/huntweek",
+   "steps": [
+    {
+     "svg": "svg/huntweek-1.svg",
+     "text": "From 14 days before a saved plan starts, Home shows a Hunt week card.",
+     "alt": "Step 1: Home with a Hunt week card marked 1"
+    },
+    {
+     "svg": "svg/huntweek-2.svg",
+     "text": "Or tap More, then Hunt week checklist.",
+     "alt": "Step 2: More list with Hunt week checklist marked 2"
+    },
+    {
+     "svg": "svg/huntweek-3.svg",
+     "text": "Tick each line as you do it. Ticks stay on this phone.",
+     "alt": "Step 3: Hunt week list, 2 weeks out, with a tick box marked 3"
+    }
+   ]
+  },
+  {
+   "id": "ready",
+   "title": "Hunt ready score",
+   "route": "#/progress",
+   "steps": [
+    {
+     "svg": "svg/ready-1.svg",
+     "text": "Tap More, then Hunt ready score and your weak spots.",
+     "alt": "Step 1: More list with Hunt ready score marked 1"
+    },
+    {
+     "svg": "svg/ready-2.svg",
+     "text": "Hunt ready scores one saved plan: its dates, place and study path.",
+     "alt": "Step 2: Progress screen with the Hunt ready card"
+    },
+    {
+     "svg": "svg/ready-3.svg",
+     "text": "Weak spots come from your quizzes, cards and trainers. Tap one to practise.",
+     "alt": "Step 3: Weak spots card with Today's cards, Lessons and Trainers buttons marked 3"
+    }
+   ]
+  },
+  {
+   "id": "guide",
+   "title": "How to use this app",
+   "route": "#/guide",
+   "steps": [
+    {
+     "svg": "svg/guide-1.svg",
+     "text": "On Home, tap How to use this app. Or More, How to use this app.",
+     "alt": "Step 1: Home with the New here? card and How to use marked 1"
+    },
+    {
+     "svg": "svg/guide-2.svg",
+     "text": "Tap a topic to jump to it.",
+     "alt": "Step 2: Guide screen with topic buttons, Hunt Map marked 2"
+    },
+    {
+     "svg": "svg/guide-3.svg",
+     "text": "Each part: what it does, picture steps and a button to open it.",
+     "alt": "Step 3: A guide card with picture steps and an Open button marked 3"
+    },
+    {
+     "svg": "svg/guide-4.svg",
+     "text": "Inside a screen, tap How to for its picture steps.",
+     "alt": "Step 4: Safety screen with the small How to button marked 4"
+    }
+   ]
+  },
+  {
+   "id": "layer_sets",
+   "title": "Map layer sets",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/layer-sets-1.svg",
+     "text": "Open the Map tab.",
+     "alt": "Step 1: App tabs with Map marked 1"
+    },
+    {
+     "svg": "svg/layer-sets-2.svg",
+     "text": "Tap Layers, bottom left of the map.",
+     "alt": "Step 2: Hunt Map with the Layers button marked 2"
+    },
+    {
+     "svg": "svg/layer-sets-3.svg",
+     "text": "Tap Clean, Scouting or Hunt day to switch many layers at once.",
+     "alt": "Step 3: Hunt Map Layers sheet with Clean, Scouting and Hunt day, Hunt day marked 3"
+    },
+    {
+     "svg": "svg/layer-sets-4.svg",
+     "text": "Clean: base map. Scouting: spots, camps, winter range. Hunt day: no shooting areas, Crown land, MU lines.",
+     "alt": "Step 4: The three set buttons, Hunt day on"
+    }
+   ]
+  },
+  {
+   "id": "what_key",
+   "title": "What am I looking at?",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/what-key-1.svg",
+     "text": "On the map, tap What am I looking at?",
+     "alt": "Step 1: Hunt Map with the What am I looking at? button marked 1"
+    },
+    {
+     "svg": "svg/what-key-2.svg",
+     "text": "Read the key: every colour on screen and what it means.",
+     "alt": "Step 2: What am I looking at? sheet with colour swatches"
+    },
+    {
+     "svg": "svg/what-key-3.svg",
+     "text": "In Layers, tap the i button by a layer: what it shows, why it matters, how sure.",
+     "alt": "Step 3: Layers list with the i button marked 3"
+    }
+   ]
+  },
+  {
+   "id": "search",
+   "title": "Search the map",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/search-1.svg",
+     "text": "Tap the magnifying glass, top right of the map.",
+     "alt": "Step 1: Hunt Map with the search button marked 1"
+    },
+    {
+     "svg": "svg/search-2.svg",
+     "text": "Type a town, lake, MU, camp or coordinates.",
+     "alt": "Step 2: Search box with Harrison Lake typed, marked 2"
+    },
+    {
+     "svg": "svg/search-3.svg",
+     "text": "Tap a result to go there.",
+     "alt": "Step 3: A list of results with the first one marked 3"
+    },
+    {
+     "svg": "svg/search-4.svg",
+     "text": "Works with no signal for MUs, coordinates and your saved places.",
+     "alt": "Step 4: Hunt Map centred on the place found"
+    }
+   ]
+  },
+  {
+   "id": "tap_card",
+   "title": "Tap card: Here on the map",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/tap-card-1.svg",
+     "text": "Tap anywhere on the map, or press and hold.",
+     "alt": "Step 1: Hunt Map with a tap point marked 1"
+    },
+    {
+     "svg": "svg/tap-card-2.svg",
+     "text": "Read the card: MU, land, legal light now, and what is on the map here.",
+     "alt": "Step 2: Here on the map card with MU, Land and Legal light lines"
+    },
+    {
+     "svg": "svg/tap-card-3.svg",
+     "text": "Tap Can I hunt here now? for a yes, no or check.",
+     "alt": "Step 3: The orange Can I hunt here now? button marked 3"
+    },
+    {
+     "svg": "svg/tap-card-4.svg",
+     "text": "Or Save point, Directions, Log sighting or Mark my truck here.",
+     "alt": "Step 4: Card buttons Save point, Directions, Log sighting and Mark my truck here"
+    }
+   ]
+  },
+  {
+   "id": "can_hunt",
+   "title": "Can I hunt here now?",
+   "route": "#/map/tool/canhunt",
+   "steps": [
+    {
+     "svg": "svg/can-hunt-1.svg",
+     "text": "Tap Tools, at the bottom of the map.",
+     "alt": "Step 1: Hunt Map bottom bar with Tools marked 1"
+    },
+    {
+     "svg": "svg/can-hunt-2.svg",
+     "text": "Tap Can I hunt here now?",
+     "alt": "Step 2: Tools sheet with Can I hunt here now? marked 2"
+    },
+    {
+     "svg": "svg/can-hunt-3.svg",
+     "text": "Pick the animal and how you will shoot.",
+     "alt": "Step 3: Can I hunt here now? sheet with Animal and How you will shoot boxes marked 3"
+    },
+    {
+     "svg": "svg/can-hunt-4.svg",
+     "text": "Tap a point on the map. It checks the MU, season today, legal light and land.",
+     "alt": "Step 4: A point on the map with a YES, NO or CHECK answer"
+    },
+    {
+     "svg": "svg/can-hunt-5.svg",
+     "text": "Always read the Still check yourself lines. The map is a study aid, not the law.",
+     "alt": "Step 5: Still check yourself list under the answer"
+    }
+   ]
+  },
+  {
+   "id": "where_hunt",
+   "title": "Where can I hunt?",
+   "route": "#/map/tool/where",
+   "steps": [
+    {
+     "svg": "svg/where-hunt-1.svg",
+     "text": "Tap Tools, at the bottom of the map.",
+     "alt": "Step 1: Hunt Map bottom bar with Tools marked 1"
+    },
+    {
+     "svg": "svg/where-hunt-2.svg",
+     "text": "Tap Where can I hunt?",
+     "alt": "Step 2: Tools sheet with Where can I hunt? marked 2"
+    },
+    {
+     "svg": "svg/where-hunt-3.svg",
+     "text": "Bright green: likely open. Grey: check first.",
+     "alt": "Step 3: Map with bright green and grey areas"
+    },
+    {
+     "svg": "svg/where-hunt-4.svg",
+     "text": "A first look only. Before you hunt, use Can I hunt here now?",
+     "alt": "Step 4: Tools sheet with Can I hunt here now? marked 4"
+    }
+   ]
+  },
+  {
+   "id": "spots",
+   "title": "Spots and camp cards",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/spots-1.svg",
+     "text": "In Layers, tap Scouting: it shows spots and camps.",
+     "alt": "Step 1: Layers sheet with Scouting marked 1"
+    },
+    {
+     "svg": "svg/spots-2.svg",
+     "text": "Tap a spot or a camp on the map for its card.",
+     "alt": "Step 2: Hunt Map with a spot dot marked 2"
+    },
+    {
+     "svg": "svg/spots-3.svg",
+     "text": "Spot tags: Good for 2, Good solo, Beginner friendly, and popular or quieter (an estimate).",
+     "alt": "Step 3: Spot card with tags"
+    },
+    {
+     "svg": "svg/spots-4.svg",
+     "text": "Every spot is a candidate. Scout it first. Tap Full rundown for more.",
+     "alt": "Step 4: Spot card with the Full rundown button marked 4"
+    }
+   ]
+  },
+  {
+   "id": "truck",
+   "title": "Mark my truck",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/truck-1.svg",
+     "text": "At the truck, tap Mark my truck, top left of the map.",
+     "alt": "Step 1: Hunt Map with the Mark my truck chip marked 1"
+    },
+    {
+     "svg": "svg/truck-2.svg",
+     "text": "An arrow then points back to the truck, with the distance and a walk back time (Tip).",
+     "alt": "Step 2: Truck chip with an arrow and the distance"
+    },
+    {
+     "svg": "svg/truck-3.svg",
+     "text": "Tap the chip again: Show on map, Use the compass, Move truck or Remove truck.",
+     "alt": "Step 3: Hunt day sheet, Back to the truck, with the buttons marked 3"
+    }
+   ]
+  },
+  {
+   "id": "light_chips",
+   "title": "Legal light and turnaround chips",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/light-chips-1.svg",
+     "text": "Top left: minutes of legal shooting light left where you stand.",
+     "alt": "Step 1: Legal light chip marked 1"
+    },
+    {
+     "svg": "svg/light-chips-2.svg",
+     "text": "Orange under 30 minutes. Red under 10.",
+     "alt": "Step 2: Three legal light chips: normal, orange and red"
+    },
+    {
+     "svg": "svg/light-chips-3.svg",
+     "text": "Tap the chip to set a turnaround: walk out minutes, then Start.",
+     "alt": "Step 3: Hunt day sheet, Turnaround, with Start marked 3"
+    },
+    {
+     "svg": "svg/light-chips-4.svg",
+     "text": "A turnaround chip then counts down. It rings on any screen while the app is open.",
+     "alt": "Step 4: Turnaround chip with a countdown under the legal light chip"
+    }
+   ]
+  },
+  {
+   "id": "offline_area",
+   "title": "Save this hunt area for no signal",
+   "route": "#/plan",
+   "steps": [
+    {
+     "svg": "svg/offline-area-1.svg",
+     "text": "Open your saved plan: More, or Home, My hunt plans.",
+     "alt": "Step 1: Home quick links with My hunt plans marked 1"
+    },
+    {
+     "svg": "svg/offline-area-2.svg",
+     "text": "Find the Offline for no signal box. Red means not saved yet.",
+     "alt": "Step 2: Offline for no signal card with Not ready offline in red"
+    },
+    {
+     "svg": "svg/offline-area-3.svg",
+     "text": "On wifi, tap Save this hunt area for no signal. Keep the app open.",
+     "alt": "Step 3: Save this hunt area button marked 3, with wifi"
+    },
+    {
+     "svg": "svg/offline-area-4.svg",
+     "text": "Then tap Check again. It should say ready.",
+     "alt": "Step 4: Check again button marked 4 and a ready message"
+    }
+   ]
+  },
+  {
+   "id": "steep",
+   "title": "Steep ground",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/steep-1.svg",
+     "text": "Tap Layers, bottom left of the map.",
+     "alt": "Step 1: Hunt Map with the Layers button marked 1"
+    },
+    {
+     "svg": "svg/steep-2.svg",
+     "text": "Scroll to the Terrain group. Turn on Steep ground. It is off at first.",
+     "alt": "Step 2: Terrain group with the Steep ground switch marked 2"
+    },
+    {
+     "svg": "svg/steep-3.svg",
+     "text": "Yellow 25 to 30 degrees. Orange 30 to 35. Red over 35. An estimate.",
+     "alt": "Step 3: Map with yellow, orange and red slope bands"
+    },
+    {
+     "svg": "svg/steep-4.svg",
+     "text": "Plan the shot around the pack out: red ground is a hard, risky carry (Tip).",
+     "alt": "Step 4: Map with a red slope and a pack out path to the truck"
+    }
+   ]
+  },
+  {
+   "id": "help_tour",
+   "title": "Map help and tour",
+   "route": "#/map",
+   "steps": [
+    {
+     "svg": "svg/help-tour-1.svg",
+     "text": "Tap the ? button on the right of the map.",
+     "alt": "Step 1: Hunt Map with the help button marked 1"
+    },
+    {
+     "svg": "svg/help-tour-2.svg",
+     "text": "Read what every map button does, top, side and bottom.",
+     "alt": "Step 2: Help sheet listing map buttons with icons"
+    },
+    {
+     "svg": "svg/help-tour-3.svg",
+     "text": "Tap Show me the tour again for the 5 step tour.",
+     "alt": "Step 3: Help sheet with the orange Show me the tour again button marked 3"
+    }
+   ]
+  },
+  {
+   "id": "trip_plan",
+   "title": "Trip plan",
+   "route": "#/safety/trip",
+   "steps": [
+    {
+     "svg": "svg/trip-plan-1.svg",
+     "text": "On Home, tap Safety.",
+     "alt": "Step 1: Home quick links with Safety marked 1"
+    },
+    {
+     "svg": "svg/trip-plan-2.svg",
+     "text": "Tap Trip plan.",
+     "alt": "Step 2: Safety screen with Trip plan marked 2"
+    },
+    {
+     "svg": "svg/trip-plan-3.svg",
+     "text": "Fill in who, where and when back. It saves on this phone as you type.",
+     "alt": "Step 3: Trip plan form with Who, Where and Back by boxes"
+    },
+    {
+     "svg": "svg/trip-plan-4.svg",
+     "text": "Tap Send. Your phone opens Messages or Mail. You press send.",
+     "alt": "Step 4: Send, Copy, Text message and Email buttons, Send marked 4"
+    },
+    {
+     "svg": "svg/trip-plan-5.svg",
+     "text": "Back home? Tap Send \"I am back safe\". Nothing is sent without your tap.",
+     "alt": "Step 5: Send I am back safe button marked 5"
+    }
+   ]
+  },
+  {
+   "id": "turnaround",
+   "title": "Turnaround alarm",
+   "route": "#/safety/turn",
+   "steps": [
+    {
+     "svg": "svg/turnaround-1.svg",
+     "text": "On Home, tap Safety.",
+     "alt": "Step 1: Home quick links with Safety marked 1"
+    },
+    {
+     "svg": "svg/turnaround-2.svg",
+     "text": "Tap Turnaround alarm.",
+     "alt": "Step 2: Safety screen with Turnaround alarm marked 2"
+    },
+    {
+     "svg": "svg/turnaround-3.svg",
+     "text": "Type your walk out time, or tap 30, 60, 90 or 120 min.",
+     "alt": "Step 3: Walk out time box and 30, 60, 90, 120 minute buttons, 60 marked 3"
+    },
+    {
+     "svg": "svg/turnaround-4.svg",
+     "text": "Tap Start the alarm. It counts down while the app is open.",
+     "alt": "Step 4: Start the alarm button marked 4"
+    },
+    {
+     "svg": "svg/turnaround-5.svg",
+     "text": "iPhone pauses web apps when locked. Tap Set a phone alarm too.",
+     "alt": "Step 5: Make sure it rings card with Set a phone alarm too marked 5"
+    }
+   ]
+  },
+  {
+   "id": "emergency",
+   "title": "Emergency card",
+   "route": "#/safety/sos",
+   "steps": [
+    {
+     "svg": "svg/emergency-1.svg",
+     "text": "On Home, tap Safety. Or the Field tab, Emergency.",
+     "alt": "Step 1: Home quick links with Safety marked 1"
+    },
+    {
+     "svg": "svg/emergency-2.svg",
+     "text": "Tap Emergency card.",
+     "alt": "Step 2: Safety screen with Emergency card marked 2"
+    },
+    {
+     "svg": "svg/emergency-3.svg",
+     "text": "1. Call 911.",
+     "alt": "Step 3: Red Call 911 button marked 3"
+    },
+    {
+     "svg": "svg/emergency-4.svg",
+     "text": "2. Tap Get my GPS location. Read it out. GPS works with no signal.",
+     "alt": "Step 4: Get my GPS location button marked 4"
+    },
+    {
+     "svg": "svg/emergency-5.svg",
+     "text": "3. Tell dispatch, in the order on the card.",
+     "alt": "Step 5: Tell dispatch card with numbered lines"
+    }
+   ]
+  },
+  {
+   "id": "wildlife",
+   "title": "Bears and cougars",
+   "route": "#/safety/wildlife",
+   "steps": [
+    {
+     "svg": "svg/wildlife-1.svg",
+     "text": "On Home, tap Safety.",
+     "alt": "Step 1: Home quick links with Safety marked 1"
+    },
+    {
+     "svg": "svg/wildlife-2.svg",
+     "text": "Tap Bears and cougars.",
+     "alt": "Step 2: Safety screen with Bears and cougars marked 2"
+    },
+    {
+     "svg": "svg/wildlife-3.svg",
+     "text": "Jump to what you need: Bear, Attack, Cougar or Spray.",
+     "alt": "Step 3: Bear, Attack, Cougar and Spray buttons, Bear marked 3"
+    },
+    {
+     "svg": "svg/wildlife-4.svg",
+     "text": "Never run from a bear or a cougar (75%, WildSafeBC).",
+     "alt": "Step 4: A rule card: never run from a bear or a cougar, 75%"
+    }
+   ]
+  },
+  {
+   "id": "conditions",
+   "title": "Conditions check",
+   "route": "#/safety/live",
+   "steps": [
+    {
+     "svg": "svg/conditions-1.svg",
+     "text": "On Home, tap Safety.",
+     "alt": "Step 1: Home quick links with Safety marked 1"
+    },
+    {
+     "svg": "svg/conditions-2.svg",
+     "text": "Scroll down. Tap Conditions check.",
+     "alt": "Step 2: Safety screen with Conditions check marked 2"
+    },
+    {
+     "svg": "svg/conditions-3.svg",
+     "text": "Choose where, then tap Check now while you have signal.",
+     "alt": "Step 3: Check now button marked 3"
+    },
+    {
+     "svg": "svg/conditions-4.svg",
+     "text": "Read the results. They stay saved for when you lose signal.",
+     "alt": "Step 4: Results card with Last checked time"
+    }
+   ]
+  },
+  {
+   "id": "trainers",
+   "title": "Trainers",
+   "route": "#/train",
+   "steps": [
+    {
+     "svg": "svg/trainers-1.svg",
+     "text": "On Home, tap Practice.",
+     "alt": "Step 1: Home quick links with Practice marked 1"
+    },
+    {
+     "svg": "svg/trainers-2.svg",
+     "text": "Pick a trainer. Four trainers, 10 rounds each.",
+     "alt": "Step 2: Practice screen with trainer cards, Shot placement marked 2"
+    },
+    {
+     "svg": "svg/trainers-3.svg",
+     "text": "Shot placement: tap where you would aim, or pass when it is not a good shot.",
+     "alt": "Step 3: A deer outline with a tap point and a Pass button"
+    },
+    {
+     "svg": "svg/trainers-4.svg",
+     "text": "Every answer is explained from the lessons.",
+     "alt": "Step 4: Answer card with the rule, certainty and the lesson"
+    }
+   ]
+  },
+  {
+   "id": "decide",
+   "title": "Shoot or don't shoot",
+   "route": "#/train/decide",
+   "steps": [
+    {
+     "svg": "svg/decide-1.svg",
+     "text": "On Home, tap Practice. Then Shoot or don't shoot.",
+     "alt": "Step 1: Practice screen with Shoot or don't shoot marked 1"
+    },
+    {
+     "svg": "svg/decide-2.svg",
+     "text": "Tap Start 10 rounds. Harrison deer scenarios come first.",
+     "alt": "Step 2: Start 10 rounds button marked 2"
+    },
+    {
+     "svg": "svg/decide-3.svg",
+     "text": "Read the situation, look at the picture, make the call.",
+     "alt": "Step 3: A scenario picture with answer buttons, one marked 3"
+    },
+    {
+     "svg": "svg/decide-4.svg",
+     "text": "Each answer shows the rule, how sure the app is, the source and the lesson to reopen.",
+     "alt": "Step 4: Answer with the rule, a certainty badge and the lesson"
+    }
+   ]
+  },
+  {
+   "id": "aftershot",
+   "title": "After the shot",
+   "route": "#/aftershot",
+   "steps": [
+    {
+     "svg": "svg/aftershot-1.svg",
+     "text": "Tap the Field tab. Then Shot taken: guide me.",
+     "alt": "Step 1: Field Mode with Shot taken: guide me marked 1"
+    },
+    {
+     "svg": "svg/aftershot-2.svg",
+     "text": "Tap I just shot. Start. One step at a time, 10 steps.",
+     "alt": "Step 2: After the shot with I just shot. Start marked 2 and the step list"
+    },
+    {
+     "svg": "svg/aftershot-3.svg",
+     "text": "Step 1: tap Save my spot. Your phone finds you with GPS, no signal needed.",
+     "alt": "Step 3: Step 1 of 10, Mark the spot, with Save my spot marked 3"
+    },
+    {
+     "svg": "svg/aftershot-4.svg",
+     "text": "Tap Done for the next step. Back goes one step back.",
+     "alt": "Step 4: Back and Done buttons, Done marked 4"
+    }
+   ]
+  },
+  {
+   "id": "read_aloud",
+   "title": "Read aloud",
+   "route": "#/learn",
+   "steps": [
+    {
+     "svg": "svg/read-aloud-1.svg",
+     "text": "Open a lesson or Today's cards.",
+     "alt": "Step 1: Learn tab marked 1"
+    },
+    {
+     "svg": "svg/read-aloud-2.svg",
+     "text": "Tap Read aloud, above the screen. It reads the title, then the text.",
+     "alt": "Step 2: Lesson screen with the Read aloud button marked 2"
+    },
+    {
+     "svg": "svg/read-aloud-3.svg",
+     "text": "Tap 1× to change the speed. The slider button: voice and keep going.",
+     "alt": "Step 3: Speed and settings buttons marked 3"
+    },
+    {
+     "svg": "svg/read-aloud-4.svg",
+     "text": "It uses the phone's own voice, so it works offline with the voices on the phone.",
+     "alt": "Step 4: Phone speaker with no signal"
+    }
+   ]
+  },
+  {
+   "id": "field_mode",
+   "title": "Field Mode",
+   "route": "#/field",
+   "steps": [
+    {
+     "svg": "svg/field-mode-1.svg",
+     "text": "Tap the Field tab.",
+     "alt": "Step 1: App tabs with Field marked 1"
+    },
+    {
+     "svg": "svg/field-mode-2.svg",
+     "text": "Big buttons for the bush: Legal to shoot?, Legal light, Tag it, After the shot.",
+     "alt": "Step 2: Field Mode buttons, Legal to shoot? marked 2"
+    },
+    {
+     "svg": "svg/field-mode-3.svg",
+     "text": "Legal to shoot?: one check at a time. Tap YES or NO.",
+     "alt": "Step 3: Legal to shoot? check 1 of 9 with YES and NO, YES marked 3"
+    },
+    {
+     "svg": "svg/field-mode-4.svg",
+     "text": "Field Mode works with no signal.",
+     "alt": "Step 4: Field Mode with a no signal sign"
+    }
+   ]
+  },
+  {
+   "id": "journal",
+   "title": "Hunt journal",
+   "route": "#/journal",
+   "steps": [
+    {
+     "svg": "svg/journal-1.svg",
+     "text": "Tap More, then Hunt journal.",
+     "alt": "Step 1: More list with Hunt journal marked 1"
+    },
+    {
+     "svg": "svg/journal-2.svg",
+     "text": "Tap New entry. Log every trip, even blank ones.",
+     "alt": "Step 2: Hunt journal with New entry marked 2"
+    },
+    {
+     "svg": "svg/journal-3.svg",
+     "text": "Fill in date, place, weather and what you saw. Tap Save.",
+     "alt": "Step 3: Journal form with Save marked 3"
+    },
+    {
+     "svg": "svg/journal-4.svg",
+     "text": "Tap Export CSV for a spreadsheet file.",
+     "alt": "Step 4: Export CSV button marked 4"
+    }
+   ]
+  },
+  {
+   "id": "backup",
+   "title": "Backup and restore",
+   "route": "#/more",
+   "steps": [
+    {
+     "svg": "svg/backup-1.svg",
+     "text": "Everything lives on this phone only. Tap More.",
+     "alt": "Step 1: App tabs with More marked 1"
+    },
+    {
+     "svg": "svg/backup-2.svg",
+     "text": "Scroll to Backup. Tap Export backup. It saves one file.",
+     "alt": "Step 2: Backup card with Export backup marked 2"
+    },
+    {
+     "svg": "svg/backup-3.svg",
+     "text": "Keep the file in your files or email. Export one before the hunt.",
+     "alt": "Step 3: A backup file going to Files or email"
+    },
+    {
+     "svg": "svg/backup-4.svg",
+     "text": "New phone or cleared app? Tap Import and pick the file. Map items come back too.",
+     "alt": "Step 4: Import button marked 4"
+    }
+   ]
+  },
+  {
+   "id": "install",
+   "title": "Add to Home Screen",
+   "route": "#/install",
+   "steps": [
+    {
+     "svg": "svg/install-1.svg",
+     "text": "iPhone: open the app in Safari (not Chrome).",
+     "alt": "Step 1: Safari address bar at the bottom of the phone"
+    },
+    {
+     "svg": "svg/install-2.svg",
+     "text": "Tap the Share button: a square with an arrow up.",
+     "alt": "Step 2: Safari Share button marked 2"
+    },
+    {
+     "svg": "svg/install-3.svg",
+     "text": "Scroll down. Tap Add to Home Screen, then Add.",
+     "alt": "Step 3: Share sheet with Add to Home Screen marked 3"
+    },
+    {
+     "svg": "svg/install-4.svg",
+     "text": "Open it once from the home screen with signal. Then it works offline.",
+     "alt": "Step 4: Phone home screen with the Hunt Mentor icon marked 4"
+    },
+    {
+     "svg": "svg/install-5.svg",
+     "text": "Android: open it in Chrome. Tap the three dots, then Install app or Add to Home screen.",
+     "alt": "Step 5: Chrome three dots menu marked 5"
+    }
+   ]
+  }
+ ]
+}
