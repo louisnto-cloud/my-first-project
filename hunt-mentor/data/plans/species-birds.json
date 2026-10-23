@@ -580,7 +580,113 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Federal District 2 is MUs 2-2 to 2-19 (data/seasons/migratory.json). Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json, content/phase8/27-ducks-where.md and data/seasons/migratory.json. Checked 2026-10-23.",
+     "lessons": [
+      "ducks",
+      "first-duck-hunt",
+      "rb-region-2",
+      "sea-ducks",
+      "rb-migratory-birds",
+      "habitat-ducks",
+      "gallery-waterfowl",
+      "water-safety",
+      "local-mission",
+      "local-mission",
+      "mc-ducks-07",
+      "mc-ducks-09"
+     ],
+     "phases": [
+      {
+       "id": "r2-sept",
+       "label": "September: ducks closed in District 2",
+       "months": [
+        9
+       ],
+       "where": [
+        "District 2 (MUs 2-2 to 2-19) opens 10 October 2026 (99%, page 28; federal Table 1, item 2(a)).",
+        "Canada geese are open 5 to 15 September in District 2: see the Canada geese plan (99%, page 28).",
+        "Blue winged teal have a breeding cluster in the lower Fraser Valley (85%). Many leave in August or early September (75%)."
+       ],
+       "when": [
+        "dawn: birds lift off the night water toward feed (80%)",
+        "midday: ducks rest on the marsh (80%)",
+        "dusk: back to roost water (80%)"
+       ],
+       "tactics": [
+        "Scout sloughs and side channels the evening before: where do ducks land (Tip).",
+        "Check the Mission bylaw area for your spot and ask for permission now (Tip)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-peak",
+       "label": "Opening day, 10 October, to November",
+       "months": [
+        10,
+        11
+       ],
+       "where": [
+        "District 2: 10 October 2026 to 24 January 2027, 8 a day, 24 in possession (99%, page 28).",
+        "The lower Fraser Valley is the centre of wood duck country in BC (85%).",
+        "Sloughs and side channels off the Fraser (Tip).",
+        "Wintering ducks use Fraser delta fields and sloughs, Pitt Addington Marsh, Harrison Chehalis and Boundary Bay (65 to 90%). Every spot has its own rules: read the Mission local plan.",
+        "Mallards feed in cut grain fields early and late, rest on marsh and creeks (80%)."
+       ],
+       "when": [
+        "dawn: field feeders fly out, decoyers come in (80%)",
+        "midday: rafted on water, slow shooting (80%)",
+        "dusk: wigeon move from open water to marsh and ponds late afternoon (80%)"
+       ],
+       "tactics": [
+        "A cold front with north wind brings new birds. Hunt the morning after (65%).",
+        "Small decoy spread in a J hook on a pond you can wade (Tip)."
+       ],
+       "cert": 85
+      },
+      {
+       "id": "r2-late",
+       "label": "December to 24 January",
+       "months": [
+        12,
+        1
+       ],
+       "where": [
+        "District 2 closes 24 January 2027 (99%, page 28).",
+        "Goldeneyes and buffleheads arrive on wintering water in November and December (75%).",
+        "Common mergansers stay wherever water stays open (85%)."
+       ],
+       "when": [
+        "dawn: cold birds may sit tight; be set before legal light (Tip)",
+        "midday: sunny afternoons can be best in hard cold (Tip)",
+        "dusk: last half hour of legal light only (99%)"
+       ],
+       "tactics": [
+        "Remember goldeneyes: 2 a day inside the 8 (99%).",
+        "Check river flow and the tide before you launch. The Pitt River runs backward on a flood tide (99%); the Fraser at Mission rises and falls with the tide too (Tip)."
+       ],
+       "cert": 75
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "Ducks are closed in District 2 until 10 October 2026 (99%, page 28).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "Hatzic Lake and Harrison Bay are shot only areas. Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas (98%, Closed Areas Regulation). Read the legal text before you set up.",
+      "Pitt Addington Marsh (MU 2-8) and Bert Brink WMA (Wildlife Management Area, MU 2-4): no motor vehicles, all year (99%, page 27).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "Burns Bog (MU 2-4): no hunting (99%, page 27).",
+      "Lhá:lt Harrison Chehalis WMA and Bert Brink WMA: hunting status not stated. Using land in a WMA needs written permission of the regional manager (99%, Wildlife Act s. 4(4)). VERIFY with conservationlands@gov.bc.ca.",
+      "No way to fetch birds that fall in deep or fast water.",
+      "Already 2 goldeneyes, 2 harlequins, 4 pintails or 4 canvasbacks today: that species is done (99%).",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ]
+    }
+   }
   },
   {
    "id": "canada-geese",
@@ -1092,7 +1198,112 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Federal District 2 is MUs 2-2 to 2-19. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json, content/phase8/37-geese-where.md and data/seasons/migratory.json. Checked 2026-10-23.",
+     "lessons": [
+      "geese",
+      "rb-migratory-birds",
+      "rb-region-2",
+      "gallery-waterfowl",
+      "habitat-ducks",
+      "local-mission",
+      "local-mission",
+      "mc-geese-07",
+      "mc-geese-09"
+     ],
+     "phases": [
+      {
+       "id": "r2-sept",
+       "label": "September resident geese, 5 to 15 September",
+       "months": [
+        9
+       ],
+       "where": [
+        "District 2 (MUs 2-2 to 2-19): 5 to 15 September 2026, 10 a day, 30 in possession (99%, page 28; federal Table 1, item 2(b)).",
+        "Resident geese on fields, golf courses, parks and river bars (85%).",
+        "Fields that hold geese are almost all private cultivated land: written permission first (99% that consent is required)."
+       ],
+       "when": [
+        "dawn: fly to fields (80%)",
+        "midday: rest on a lake or big river (80%)",
+        "dusk: second feed in the field (80%)"
+       ],
+       "tactics": [
+        "Scout cut fields the evening before (65%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-fall",
+       "label": "Fall migration, 10 October to 22 November",
+       "months": [
+        10,
+        11
+       ],
+       "where": [
+        "District 2: 10 October to 22 November 2026 (99%, page 28).",
+        "Migrant flocks join residents with the first hard frosts of October (Tip, 65%).",
+        "Corn stubble and pasture fields in the Fraser Valley, almost all private (Tip, 65%).",
+        "District 2 closes 23 November to 18 December 2026 (99%)."
+       ],
+       "when": [
+        "dawn: back to the field they used yesterday afternoon (65%)",
+        "midday: loafing on water or bars (80%)",
+        "dusk: afternoon feed (80%)"
+       ],
+       "tactics": [
+        "Field decoys with permission; landing hole downwind (65%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-winter",
+       "label": "Winter and March",
+       "months": [
+        12,
+        1,
+        2,
+        3
+       ],
+       "where": [
+        "District 2: 19 December 2026 to 10 January 2027, and 10 February to 10 March 2027 (99%, page 28).",
+        "MU 2-4: the February and March season does not apply within 100 m of any Delta dyke, except Westham Island (99%, page 28).",
+        "Geese in corn stubble in winter: the Fraser Valley pattern (Tip, 65%)."
+       ],
+       "when": [
+        "dawn: in bitter cold they may sit on the roost all morning (65%)",
+        "afternoon: feed in the warmest part of the day (65%)"
+       ],
+       "tactics": [
+        "In hard cold, set up for the afternoon flight (65%)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "District 2 Canada geese are closed 23 November to 18 December 2026 (99%).",
+      "No written permission for the field you want to hunt.",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "Hatzic Lake and Harrison Bay are shot only areas. Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas (98%, Closed Areas Regulation). Read the legal text before you set up.",
+      "Pitt Addington Marsh (MU 2-8) and Bert Brink WMA (Wildlife Management Area, MU 2-4): no motor vehicles, all year (99%, page 27).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "Burns Bog (MU 2-4): no hunting (99%, page 27).",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ],
+     "mistakes": [
+      "Shooting at the first flock at 60 m because geese look close.",
+      "Hunting a field without written permission.",
+      "Calling non stop while the flock is already coming.",
+      "Forgetting the District 2 closure from 23 November to 18 December."
+     ]
+    }
+   }
   },
   {
    "id": "snow-geese",
@@ -1511,7 +1722,88 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json, content/phase7/11-migratory-birds-bc.md and content/phase8/35-geese-year.md. Checked 2026-10-23.",
+     "phases": [
+      {
+       "id": "r2-closed-sept",
+       "label": "September: closed in District 2",
+       "months": [
+        9
+       ],
+       "where": [
+        "Snow and Ross's geese open in District 2 (MUs 2-2 to 2-19) on 10 October 2026 (99%, page 28).",
+        "Snow geese reach the Fraser delta by early October (80%)."
+       ],
+       "when": [
+        "Tip: use the month to scout and ask for permission"
+       ],
+       "tactics": [
+        "Scout the water or field the evening before (Tip).",
+        "Written permission first on private, fenced or cultivated land (99%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-fall",
+       "label": "Fall and winter, 10 October to 5 January",
+       "months": [
+        10,
+        11,
+        12,
+        1
+       ],
+       "where": [
+        "District 2: 10 October 2026 to 5 January 2027 (99%, page 28).",
+        "Big flocks stage on the Fraser delta and the Westham Island area, peak mid October to mid December (80%).",
+        "Limit: 10 a day, at most 5 Ross's. MUs 2-4 and 2-5 add 5 snow geese a day (99%, page 28 notes)."
+       ],
+       "when": [
+        "dawn: flocks fly to fields (Tip)",
+        "midday: resting on water or flats (Tip)",
+        "dusk: return flights (Tip)"
+       ],
+       "tactics": [
+        "Field decoys like Canada geese, with permission (Tip)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "spring",
+       "label": "Late winter (District 2)",
+       "months": [
+        2,
+        3
+       ],
+       "where": [
+        "District 2: 20 February to 10 March 2027 (99%)."
+       ],
+       "when": [
+        "dawn: field flights (Tip)"
+       ],
+       "tactics": [
+        "Scout fields the day before (Tip)."
+       ],
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "District 2 limit: 10 a day with at most 5 Ross's; MUs 2-4 and 2-5: 15 a day (99%, page 28).",
+      "Page 12 prints a different snow goose day limit. Page 28 and the federal table govern: 10 a day near Mission (99%).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "Pitt Addington Marsh (MU 2-8) and Bert Brink WMA (Wildlife Management Area, MU 2-4): no motor vehicles, all year (99%, page 27).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "Burns Bog (MU 2-4): no hunting (99%, page 27).",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ]
+    }
+   }
   },
   {
    "id": "white-fronted-geese",
@@ -1875,7 +2167,71 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json and data/seasons/migratory.json. Checked 2026-10-23.",
+     "lessons": [
+      "geese",
+      "rb-migratory-birds",
+      "rb-region-2",
+      "gallery-waterfowl",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "r2-closed-sept",
+       "label": "September: closed in District 2",
+       "months": [
+        9
+       ],
+       "where": [
+        "White fronted geese open in District 2 (MUs 2-2 to 2-19) on 10 October 2026 (99%, page 28)."
+       ],
+       "when": [
+        "Tip: use the month to scout and ask for permission"
+       ],
+       "tactics": [
+        "Scout the water or field the evening before (Tip).",
+        "Written permission first on private, fenced or cultivated land (99%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-open",
+       "label": "Open 10 October to 24 January",
+       "months": [
+        10,
+        11,
+        12,
+        1
+       ],
+       "where": [
+        "District 2: 10 October 2026 to 24 January 2027, 5 a day, 15 in possession (99%, page 28).",
+        "They pass through on the Pacific and Central flyways (80%)."
+       ],
+       "when": [
+        "dawn: high laughing calls in V flocks (80%)"
+       ],
+       "tactics": [
+        "A bonus bird on a Canada goose hunt (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "Pitt Addington Marsh (MU 2-8) and Bert Brink WMA (Wildlife Management Area, MU 2-4): no motor vehicles, all year (99%, page 27).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "Burns Bog (MU 2-4): no hunting (99%, page 27).",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ]
+    }
+   }
   },
   {
    "id": "brant",
@@ -2251,7 +2607,23 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: only the red flags change. Facts from content/phase7/09-region-2-lower-mainland.md. Checked 2026-10-23.",
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4 or inside Mission without the Fraser Valley Special Area licence and the insurance.",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise.",
+      "Brant has no open season anywhere but MU 2-4, and only 1 to 10 March (98%).",
+      "The March Canada goose season in MU 2-4 does not apply within 100 m of any dyke in Delta except Westham Island (98%).",
+      "Burns Bog (MU 2-4) is a no hunting area (98%).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27)."
+     ]
+    }
+   }
   },
   {
    "id": "coot",
@@ -2590,7 +2962,70 @@
     "rb-migratory-birds",
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json. Checked 2026-10-23.",
+     "lessons": [
+      "ducks",
+      "rb-migratory-birds",
+      "rb-region-2",
+      "first-duck-hunt",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "r2-closed-sept",
+       "label": "September: closed in District 2",
+       "months": [
+        9
+       ],
+       "where": [
+        "Coots open in District 2 (MUs 2-2 to 2-19) on 10 October 2026 (99%, page 28)."
+       ],
+       "when": [
+        "Tip: use the month to scout and ask for permission"
+       ],
+       "tactics": [
+        "Scout the water or field the evening before (Tip).",
+        "Written permission first on private, fenced or cultivated land (99%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-open",
+       "label": "Open 10 October to 24 January",
+       "months": [
+        10,
+        11,
+        12,
+        1
+       ],
+       "where": [
+        "District 2: 10 October 2026 to 24 January 2027, 10 a day, 30 in possession (99%, page 28).",
+        "Coots have their own 10, apart from the 8 ducks (99%)."
+       ],
+       "when": [
+        "all day: on the same water as ducks (Tip)"
+       ],
+       "tactics": [
+        "Take it as a bonus on a duck hunt (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "Hatzic Lake and Harrison Bay are shot only areas. Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas (98%, Closed Areas Regulation). Read the legal text before you set up.",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ]
+    }
+   }
   },
   {
    "id": "snipe",
@@ -2926,7 +3361,69 @@
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "rb-region-3"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json. Checked 2026-10-23.",
+     "lessons": [
+      "rb-migratory-birds",
+      "ducks",
+      "rb-region-2",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "r2-closed-sept",
+       "label": "September: closed in District 2",
+       "months": [
+        9
+       ],
+       "where": [
+        "Snipe open in District 2 (MUs 2-2 to 2-19) on 10 October 2026 (99%, page 28)."
+       ],
+       "when": [
+        "Tip: use the month to scout and ask for permission"
+       ],
+       "tactics": [
+        "Scout the water or field the evening before (Tip).",
+        "Written permission first on private, fenced or cultivated land (99%)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-open",
+       "label": "Open 10 October to 24 January",
+       "months": [
+        10,
+        11,
+        12,
+        1
+       ],
+       "where": [
+        "District 2: 10 October 2026 to 24 January 2027, 10 a day, 30 in possession (99%, page 28).",
+        "Boundary Bay WMA (Wildlife Management Area, MU 2-4) is closed to snipe, out to the foreshore of Boundary, Mud and Semiahmoo bays (99%, page 27)."
+       ],
+       "when": [
+        "Tip: the app has no snipe timing content yet"
+       ],
+       "tactics": [
+        "Take it as a bonus on a duck hunt (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No federal open season in your district for this bird on that date.",
+      "MU (Management Unit) 2-1 is in no season row and outside federal District 2 (MUs 2-2 to 2-19): no open season there for any game or migratory bird (99%, Region 2 Rule Book, page 28).",
+      "Hunting MU 2-4, or MU 2-8 inside Mission, Maple Ridge, Pitt Meadows or Coquitlam, without the Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance (99%, pages 8 and 29).",
+      "Boundary Bay WMA (MU 2-4) is closed to snipe, including the foreshore (99%).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "No lead shot for any purpose on or seaward of any Delta dyke, or on the Surrey dykes facing Mud Bay (99%, page 27).",
+      "No way to fetch birds that fall in deep or fast water.",
+      "No official success data exists for birds. Any odds in a plan are rough math (Tip), not a promise."
+     ]
+    }
+   }
   },
   {
    "id": "doves",
@@ -3167,7 +3664,155 @@
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no dove season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28) and content/phase7/11-migratory-birds-bc.md (District 2: \"No open season\"). Checked 2026-10-23.",
+     "lessons": [
+      "rb-migratory-birds",
+      "rb-region-2",
+      "rb-region-3",
+      "rb-region-8",
+      "rb-region-4",
+      "all-bc-species",
+      "bc-calendar"
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No dove season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No dove row in the Region 2 table, so no general open season (99%, page 28). The federal District 2 row reads \"No open season\" (99%).",
+        "Seasons exist only in Regions 3, 4 and 8, 1 to 30 September, 5 a day, 15 in possession (99%). Read that region's rows before you travel."
+       ],
+       "when": [
+        "Tip: the app has no dove timing content yet"
+       ],
+       "tactics": [
+        "Plan a September trip to a region with a season, or pick another bird near Mission (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No dove season in Region 2 (99%, page 28; federal District 2).",
+      "Regions 3, 4 and 8 only, only September (99%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "BC hunting licence for this licence year, photo ID on me, FWID (Fish and Wildlife ID) number known",
+        "why": "Licence is electronic only. Expires 31 March",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "Federal MGBHP with the habitat conservation stamp for mourning dove",
+        "why": "BC lists mourning dove as a migratory game bird",
+        "cert": 99,
+        "lesson": "rb-licences-fees"
+       },
+       {
+        "t": "Season open where I hunt: none in Region 2. Regions 3, 4 and 8 only, 1 to 30 September, 5 (15)",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       },
+       {
+        "t": "Legal hours: half an hour before sunrise to half an hour after sunset",
+        "why": "Federal hours for migratory game birds",
+        "cert": 90,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Written permission for any private, fenced, posted or cultivated land",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Shotgun plugged to 3 shells",
+        "cert": 99,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Lead or steel: lead is legal for doves and pigeons",
+        "cert": 99,
+        "lesson": "rb-legal-methods"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Game bag and water for September heat",
+        "why": "Tip",
+        "lesson": "pack-kit"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Light earth tones for September",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "One fully feathered wing or the fully feathered head stays on every bird until preserved",
+        "why": "Lets an officer name the species (s. 52)",
+        "cert": 99,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Both breasts come home: they are the edible portions",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Cool birds fast in September heat",
+        "why": "Tip",
+        "lesson": "meat-care"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from any occupied house, barn, packing shed, school or playground. Rangefind them first",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Not on or across the road allowance: 15 m each side of the middle of a 2 lane road",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Gun unloaded in the truck. Walk 15 m off the road, then load",
+        "why": "Tip habit on top of the 99% law",
+        "lesson": "grouse"
+       }
+      ]
+     },
+     "mistakes": [
+      "Planning a dove hunt near Mission. Region 2 has no dove season (99%).",
+      "Planning a dove hunt in October. The season ends 30 September (99%).",
+      "Forgetting the federal permit for mourning dove (99%)."
+     ]
+    }
+   }
   },
   {
    "id": "band-tailed-pigeon",
@@ -3394,7 +4039,129 @@
     "Migratory Birds Regulations, 2022 (SOR/2022-105), Schedule 3, Part 10",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json and content/phase7/11-migratory-birds-bc.md. Checked 2026-10-23.",
+     "lessons": [
+      "rb-migratory-birds",
+      "rb-region-2",
+      "local-mission",
+      "all-bc-species"
+     ],
+     "phases": [
+      {
+       "id": "r2-sept",
+       "label": "Late September only",
+       "months": [
+        9
+       ],
+       "where": [
+        "Region 2, MUs 2-2 to 2-19: 15 to 30 September, 5 a day, 15 in possession (99%, page 28; federal District 2 table).",
+        "MU 2-1: no season (99%)."
+       ],
+       "when": [
+        "Tip: the app has no pigeon timing content yet"
+       ],
+       "tactics": [
+        "Tip: no pigeon tactics lesson in the app yet. VERIFY with a local club."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "Closed after 30 September (99%).",
+      "Inside Mission: no discharge in bylaw Area A; shotgun with shot only in Area B along the Fraser; shotgun in Area C; rifle or shotgun only in Area D (99%, Mission bylaw 5433-2014).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "BC hunting licence for this licence year, photo ID on me, FWID (Fish and Wildlife ID) number known",
+        "why": "Licence is electronic only. Expires 31 March",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "Federal MGBHP (Migratory Game Bird Hunting Permit) with the habitat conservation stamp on it, carried on me",
+        "why": "Needed on top of the BC licence. $17 for permit and stamp. Paper or phone (85%)",
+        "cert": 99,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Season and MU checked: 15 to 30 September in MUs 2-2 to 2-19, 5 (15)",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       },
+       {
+        "t": "Legal hours: half an hour before sunrise to half an hour after sunset",
+        "cert": 90,
+        "lesson": "rb-migratory-birds"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Shotgun plugged to 3 shells",
+        "cert": 99,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Lead or steel: lead is legal for pigeons",
+        "cert": 99,
+        "lesson": "rb-legal-methods"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Game bag and water",
+        "why": "Tip",
+        "lesson": "pack-kit"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Earth tones",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "One fully feathered wing or the fully feathered head stays on every bird until preserved",
+        "why": "Lets an officer name the species (s. 52)",
+        "cert": 99,
+        "lesson": "rb-migratory-birds"
+       },
+       {
+        "t": "Both breasts come home: they are the edible portions",
+        "cert": 99,
+        "lesson": "bc-rules"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from any occupied house, barn, packing shed, school or playground. Rangefind them first",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Not on or across the road allowance: 15 m each side of the middle of a 2 lane road",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Gun unloaded in the truck. Walk 15 m off the road, then load",
+        "why": "Tip habit on top of the 99% law",
+        "lesson": "grouse"
+       }
+      ]
+     },
+     "mistakes": [
+      "Hunting pigeons after 30 September (99% closed).",
+      "Forgetting the federal permit."
+     ]
+    }
+   }
   },
   {
    "id": "forest-grouse",
@@ -3841,7 +4608,335 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json, content/phase4/09-grouse.md and content/phase8/47-grouse-where.md. Checked 2026-10-23.",
+     "lessons": [
+      "grouse",
+      "mc-grouse-07",
+      "mc-grouse-09",
+      "habitat-upland",
+      "gallery-upland",
+      "rb-legal-methods",
+      "rb-region-2",
+      "local-mission",
+      "small-game"
+     ],
+     "licence": [
+      {
+       "t": "BC hunting licence",
+       "cert": 99,
+       "lesson": "licences"
+      },
+      {
+       "t": "No species licence and no federal permit for grouse (residents)",
+       "cert": 99,
+       "lesson": "grouse"
+      },
+      {
+       "t": "Bow only season 1 to 9 September in Region 2: bow class B, C or D",
+       "cert": 99,
+       "lesson": "rb-region-2"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-early",
+       "label": "Bow only 1 to 9 September, then from 10 September",
+       "months": [
+        9
+       ],
+       "where": [
+        "Region 2, MUs 2-2 to 2-19: bow only 1 to 9 September; general season opens 10 September (99%, page 28).",
+        "Young birds feed on berries and clover along road edges and cut blocks (65%)."
+       ],
+       "when": [
+        "dawn: feeding on road edges and cut blocks (75%)",
+        "midday: sitting in cover (75%)",
+        "dusk: last 2 hours feeding again (75%)"
+       ],
+       "tactics": [
+        "Walk old roads and cut block edges slowly (Tip)."
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-peak",
+       "label": "Late September and October",
+       "months": [
+        10
+       ],
+       "where": [
+        "Ruffed: aspen and poplar near water (85%).",
+        "Sooty grouse is the coast blue grouse: conifers, often higher in winter (65 to 85%).",
+        "Near Mission: sooty, ruffed and spruce grouse in the mountains north of the valley (99%, grouse lesson). Spruce grouse live mainly east of the Coast Mountains (85%)."
+       ],
+       "when": [
+        "dawn: road edges, dust bowls (75%)",
+        "midday: look up for spruce grouse in pines (Tip)",
+        "dusk: feeding again (75%)"
+       ],
+       "tactics": [
+        "Best weeks of the year (hunter lore, 65%)."
+       ],
+       "cert": 65
+      },
+      {
+       "id": "r2-late",
+       "label": "Late season, to 15 December",
+       "months": [
+        11,
+        12
+       ],
+       "where": [
+        "Region 2 closes 15 December (99%, page 28).",
+        "Sooty grouse winter in dense conifers, often higher than where they breed (55 to 65%). VERIFY near Mission.",
+        "Snow roosts: a hole and a burst of wing marks in soft snow (80%)."
+       ],
+       "when": [
+        "midday: birds up in conifers eating needles (80%)"
+       ],
+       "tactics": [
+        "Still hunt roosts and look up (Tip)."
+       ],
+       "cert": 60
+      }
+     ],
+     "dayPlan": {
+      "scout": [
+       "Walk one FSR edge at first light with no gun. Count grouse, note time, tree type and elevation (Tip).",
+       "Mark dust bowls and drum logs on your map (Tip).",
+       "North of Mission, no shooting within 400 m of the Florence Lake, Lost Creek, Terepocki, Murdo and Mount Kettley FSRs (Forest Service Roads) unless lawfully hunting. Hunting is allowed, plinking is not (99%, page 27)."
+      ],
+      "dawn": [
+       "Legal from 1 hour before sunrise (99%). Walk road edges and cut blocks (Tip)."
+      ],
+      "morning": [
+       "Aspen draws for ruffed grouse; higher pine and spruce for spruce and dusky (Tip, 65%)."
+      ],
+      "midday": [
+       "Still hunt roosts. Look up (Tip). Clean birds, one wing on (99%)."
+      ],
+      "evening": [
+       "Last 2 hours of light on edges again (75%)."
+      ],
+      "dusk": [
+       "Stop 1 hour after sunset (99%)."
+      ],
+      "night": [
+       "Tally in the Journal: Region 2 is 10 a day of the three kinds together, 30 in possession (99%, page 28)."
+      ]
+     },
+     "redFlags": [
+      "Region 2: 10 a day of sooty, ruffed and spruce together, 30 in possession (99%, page 28).",
+      "Bow only 1 to 9 September: no gun until 10 September (99%).",
+      "Shooting from the truck or across the road allowance (99% offence).",
+      "Inside Mission: rifles and .22s only in bylaw Area D; no discharge in Area A (99%, Mission bylaw 5433-2014).",
+      "Within 150 m of Highway 7 east of Mission, and on the Hatzic and Nicomen lowland: shot only, so no .22 or rifle (99%, Closed Areas Regulation; 85% my reading of the Nicomen lines).",
+      "Davis Lake, Golden Ears and Rolley Lake parks: no shooting (99%, Park, Conservancy and Recreation Area Regulation).",
+      "Chehalis Fleetwood FSR (Forest Service Road), Chehalis FSR and Morris Valley Road: a No Shooting Area, but discharge for hunting is permitted (99%, Map B33).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "afterKill": [
+      "Walk straight to the fall with your eyes on the spot. No dog means mark every bird (Tip).",
+      "The law: make all reasonable effort to find, finish and retrieve the bird, and count it in your bag (99%).",
+      "Leave one feathered wing on until home (99%).",
+      "Gut and take out the crop soon; cool the birds apart (80%).",
+      "Grouse and quail: soak 1 to 2 hours in cold water, then fridge (80%).",
+      "Cook birds to 74 C (80%).",
+      "Spruce grouse in late fall can taste of pine needles: soak or brine (Tip).",
+      "Count all three kinds together: the Region 2 limit is 10 a day (99%, page 28)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "BC hunting licence for this licence year, photo ID on me, FWID (Fish and Wildlife ID) number known",
+        "why": "Licence is electronic only. Expires 31 March",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "No species licence needed for this animal (BC resident)",
+        "why": "Page 8 fee table",
+        "cert": 99,
+        "lesson": "rb-licences-fees"
+       },
+       {
+        "t": "Season open today for this bird in my exact MU (Management Unit)",
+        "why": "Read your MU row, not the region headline",
+        "cert": 99,
+        "lesson": "all-bc-species"
+       },
+       {
+        "t": "Legal hours written down: 1 hour before sunrise to 1 hour after sunset",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Written permission for any private, fenced, posted or cultivated land. Orchards and vineyards count",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       },
+       {
+        "t": "Reserve land: permission from the band office before hunting on or crossing it",
+        "cert": 99,
+        "lesson": "indigenous-respect"
+       },
+       {
+        "t": "Mission bylaw area checked: rifles and .22s only in Area D, no discharge in Area A",
+        "why": "Town bylaws are not in the synopsis",
+        "cert": 99,
+        "lesson": "local-mission"
+       },
+       {
+        "t": "Aggregate limit written down for my region",
+        "cert": 99,
+        "lesson": "grouse"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Shotgun for flying birds: lead 6 or 7.5 is legal; steel 4 or 6 works",
+        "why": "Improved cylinder choke (Tip)",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": ".22 rimfire is legal for grouse: head shot on a sitting bird inside 25 m",
+        "why": "Body shots ruin the breast (Tip)",
+        "cert": 95,
+        "lesson": "grouse"
+       },
+       {
+        "t": "No handguns. No full metal jacket bullets in a rifle",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": "Single projectile ban zones apply to a .22 too, e.g. within 150 m of Highway 7 east of Mission (shot only)",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": "Pump or auto shotgun plugged: 3 shells in total",
+        "cert": 95,
+        "lesson": "upland-birds"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Binoculars for spotting sitting birds",
+        "why": "Tip",
+        "lesson": "grouse"
+       },
+       {
+        "t": "Offline map with FSRs and closures",
+        "why": "Tip",
+        "lesson": "maps-navigation"
+       },
+       {
+        "t": "Game vest",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Blaze orange vest and toque, especially in deer season",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       },
+       {
+        "t": "Quiet layers and good boots for logging roads",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "One feathered wing stays on each bird until home",
+        "why": "Synopsis page 15",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Both breasts come home: they are the edible portions",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Game vest with a mesh back, not a plastic bag",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Gut and take out the crop soon. Cool birds apart, 2 to 4 C",
+        "cert": 80,
+        "lesson": "meat-care"
+       },
+       {
+        "t": "Cooler with ice for the drive home",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Count birds by species. Tally in the Journal with date and MU",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from any occupied house, barn, packing shed, school or playground. Rangefind them first",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Not on or across the road allowance: 15 m each side of the middle of a 2 lane road",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Gun unloaded in the truck. Walk 15 m off the road, then load",
+        "why": "Tip habit on top of the 99% law",
+        "lesson": "grouse"
+       },
+       {
+        "t": "Blaze orange hat and vest on every hunter in brush",
+        "why": "Not required in BC (90%). Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Eye and ear protection on",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Only birds above head height with open sky or ground beyond",
+        "why": "Shot falls 150 to 250 m away. Tip",
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Sides agreed with my partner. Never swing through him",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Backstop for every .22 shot. No birds on a skyline branch",
+        "why": "Tip",
+        "lesson": "grouse"
+       }
+      ]
+     },
+     "mistakes": [
+      "Shooting from the open truck window at a grouse on the shoulder.",
+      "Losing count: 10 grouse a day in total, all three kinds together.",
+      "A .22 shot at a bird on a skyline branch.",
+      "Taking a .22 to the Hatzic or Nicomen lowland. It is shot only."
+     ]
+    }
+   }
   },
   {
    "id": "sharp-tailed-grouse",
@@ -4146,7 +5241,247 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no sharp tailed grouse season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28) and data/seasons/region2.json noRow. Checked 2026-10-23.",
+     "lessons": [
+      "grouse",
+      "rb-region-2",
+      "all-bc-species",
+      "rb-region-3",
+      "rb-region-7b"
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No sharp tailed grouse season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No sharp tailed grouse row in the Region 2 table, so no general open season (99%, page 28).",
+        "Seasons exist only in listed MUs of Regions 3, 5 and 7B (99%). Read that region's rows before you travel.",
+        "Grassland with aspen and shrub groves (80%)."
+       ],
+       "when": [
+        "dawn and late day: feeding (Tip)"
+       ],
+       "tactics": [
+        "Near Mission, hunt forest grouse instead: open 10 September to 15 December (99%, page 28)."
+       ],
+       "cert": 99
+      }
+     ],
+     "tactics": [
+      {
+       "id": "grass-edges",
+       "name": "Walk grass and aspen edges",
+       "best": "a trip to a region with a season",
+       "steps": [
+        "Confirm the region and MU rows before the trip.",
+        "Walk the edges two abreast.",
+        "Pointed tail and spotted belly: then shoot."
+       ],
+       "pros": [
+        "Open country, clear shots"
+       ],
+       "cons": [
+        "Few open MUs"
+       ],
+       "cert": 50
+      }
+     ],
+     "dayPlan": {
+      "scout": [
+       "Read the MU rows for the region you travel to (99%)."
+      ],
+      "dawn": [
+       "Legal from 1 hour before sunrise (99%)."
+      ],
+      "morning": [
+       "Walk edges (Tip)."
+      ],
+      "midday": [
+       "Clean birds, one wing on (99%)."
+      ],
+      "evening": [
+       "Edges again (Tip)."
+      ],
+      "dusk": [
+       "Stop 1 hour after sunset (99%)."
+      ],
+      "night": [
+       "Tally: possession is only 2 times the daily limit in Regions 3, 5 and 7B (99%)."
+      ]
+     },
+     "redFlags": [
+      "No sharp tailed grouse season in Region 2 (99%, page 28).",
+      "Possession is 2 times the daily limit in Regions 3, 5 and 7B (99%).",
+      "Many old populations are gone (85%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "BC hunting licence for this licence year, photo ID on me, FWID (Fish and Wildlife ID) number known",
+        "why": "Licence is electronic only. Expires 31 March",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "No species licence needed for this animal (BC resident)",
+        "why": "Page 8 fee table",
+        "cert": 99,
+        "lesson": "rb-licences-fees"
+       },
+       {
+        "t": "Season open today for this bird in my exact MU (Management Unit)",
+        "why": "Read your MU row, not the region headline",
+        "cert": 99,
+        "lesson": "all-bc-species"
+       },
+       {
+        "t": "Legal hours written down: 1 hour before sunrise to 1 hour after sunset",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Written permission for any private, fenced, posted or cultivated land. Orchards and vineyards count",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       },
+       {
+        "t": "Reserve land: permission from the band office before hunting on or crossing it",
+        "cert": 99,
+        "lesson": "indigenous-respect"
+       },
+       {
+        "t": "Mission bylaw area checked: rifles and .22s only in Area D, no discharge in Area A",
+        "why": "Town bylaws are not in the synopsis",
+        "cert": 99,
+        "lesson": "local-mission"
+       },
+       {
+        "t": "Region and MU rows checked: no season in Region 2",
+        "cert": 99,
+        "lesson": "rb-region-2"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Shotgun for flying birds: lead 6 or 7.5 is legal; steel 4 or 6 works",
+        "why": "Improved cylinder choke (Tip)",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": "Pump or auto shotgun plugged: 3 shells in total",
+        "cert": 95,
+        "lesson": "upland-birds"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Binoculars",
+        "why": "Tip",
+        "lesson": "grouse"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Blaze orange, good boots for grassland",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "One feathered wing stays on each bird until home",
+        "why": "Synopsis page 15",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Both breasts come home: they are the edible portions",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Game vest with a mesh back, not a plastic bag",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Gut and take out the crop soon. Cool birds apart, 2 to 4 C",
+        "cert": 80,
+        "lesson": "meat-care"
+       },
+       {
+        "t": "Cooler with ice for the drive home",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Count birds by species. Tally in the Journal with date and MU",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from any occupied house, barn, packing shed, school or playground. Rangefind them first",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Not on or across the road allowance: 15 m each side of the middle of a 2 lane road",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Gun unloaded in the truck. Walk 15 m off the road, then load",
+        "why": "Tip habit on top of the 99% law",
+        "lesson": "grouse"
+       },
+       {
+        "t": "Blaze orange hat and vest on every hunter in brush",
+        "why": "Not required in BC (90%). Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Eye and ear protection on",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Only birds above head height with open sky or ground beyond",
+        "why": "Shot falls 150 to 250 m away. Tip",
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Sides agreed with my partner. Never swing through him",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       }
+      ]
+     },
+     "mistakes": [
+      "Taking a sharp tailed grouse near Mission because it looked like a grouse. Region 2 has no season (99%)."
+     ]
+    }
+   }
   },
   {
    "id": "ptarmigan",
@@ -4451,7 +5786,193 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json and content/phase4/09-grouse.md. Checked 2026-10-23.",
+     "lessons": [
+      "grouse",
+      "rb-region-2",
+      "all-bc-species",
+      "bush-safety",
+      "weather-moon"
+     ],
+     "phases": [
+      {
+       "id": "r2-season",
+       "label": "Bow only 1 to 9 September, then to 15 December",
+       "months": [
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "Region 2, MUs 2-2, 2-3 and 2-5 to 2-19: 10 September to 15 December, 5 a day, 15 in possession. Bow only 1 to 9 September (99%, page 28).",
+        "Not open in MU 2-4 (99%).",
+        "Ptarmigan live above timberline (85%)."
+       ],
+       "when": [
+        "Snow comes early up there (Tip)"
+       ],
+       "tactics": [
+        "A steep climb above the trees; go with a weather window (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "Not open in MU 2-4 (99%, page 28).",
+      "Bow only 1 to 9 September: no gun until 10 September (99%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "BC hunting licence for this licence year, photo ID on me, FWID (Fish and Wildlife ID) number known",
+        "why": "Licence is electronic only. Expires 31 March",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "No species licence needed for this animal (BC resident)",
+        "why": "Page 8 fee table",
+        "cert": 99,
+        "lesson": "rb-licences-fees"
+       },
+       {
+        "t": "Season open today for this bird in my exact MU (Management Unit)",
+        "why": "Read your MU row, not the region headline",
+        "cert": 99,
+        "lesson": "all-bc-species"
+       },
+       {
+        "t": "Legal hours written down: 1 hour before sunrise to 1 hour after sunset",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Written permission for any private, fenced, posted or cultivated land. Orchards and vineyards count",
+        "cert": 99,
+        "lesson": "landowner-permission"
+       },
+       {
+        "t": "Reserve land: permission from the band office before hunting on or crossing it",
+        "cert": 99,
+        "lesson": "indigenous-respect"
+       },
+       {
+        "t": "Mission bylaw area checked: rifles and .22s only in Area D, no discharge in Area A",
+        "why": "Town bylaws are not in the synopsis",
+        "cert": 99,
+        "lesson": "local-mission"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Shotgun for flying birds: lead 6 or 7.5 is legal; steel 4 or 6 works",
+        "why": "Improved cylinder choke (Tip)",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": ".22 rimfire is legal for grouse: head shot on a sitting bird inside 25 m",
+        "why": "Body shots ruin the breast (Tip)",
+        "cert": 95,
+        "lesson": "grouse"
+       },
+       {
+        "t": "No handguns. No full metal jacket bullets in a rifle",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": "Single projectile ban zones apply to a .22 too, e.g. within 150 m of Highway 7 east of Mission (shot only)",
+        "cert": 99,
+        "lesson": "grouse"
+       },
+       {
+        "t": "Pump or auto shotgun plugged: 3 shells in total",
+        "cert": 95,
+        "lesson": "upland-birds"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Map, compass and offline map",
+        "why": "Tip",
+        "lesson": "maps-navigation"
+       },
+       {
+        "t": "Satellite messenger or iPhone SOS",
+        "cert": 85,
+        "lesson": "bush-safety"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Warm layers, toque, gloves: alpine weather turns fast",
+        "why": "Tip",
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "One feathered wing stays on each bird until home",
+        "why": "Synopsis page 15",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Both breasts come home: they are the edible portions",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Game vest with a mesh back, not a plastic bag",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Gut and take out the crop soon. Cool birds apart, 2 to 4 C",
+        "cert": 80,
+        "lesson": "meat-care"
+       },
+       {
+        "t": "Cooler with ice for the drive home",
+        "why": "Tip",
+        "lesson": "first-quail-trip"
+       },
+       {
+        "t": "Count birds by species. Tally in the Journal with date and MU",
+        "why": "Tip",
+        "lesson": "upland-birds"
+       }
+      ],
+      "safety": [
+       {
+        "t": "100 m from any occupied house, barn, packing shed, school or playground. Rangefind them first",
+        "cert": 99,
+        "lesson": "upland-birds"
+       },
+       {
+        "t": "Not on or across the road allowance: 15 m each side of the middle of a 2 lane road",
+        "cert": 99,
+        "lesson": "bc-rules"
+       },
+       {
+        "t": "Trip plan left; turn back time set",
+        "cert": 75,
+        "lesson": "bush-safety"
+       }
+      ]
+     },
+     "mistakes": [
+      "Hunting ptarmigan with a gun before 10 September. 1 to 9 September is bow only (99%).",
+      "Late start, caught by dark above the trees."
+     ]
+    }
+   }
   },
   {
    "id": "chukar",
@@ -4776,7 +6297,66 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no chukar season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28). Checked 2026-10-23.",
+     "lessons": [
+      "upland-birds",
+      "rb-region-2",
+      "first-quail-trip",
+      "habitat-upland",
+      "gallery-upland",
+      "rb-region-3",
+      "rb-region-8"
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No chukar season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No chukar row in the Region 2 table, so no general open season (99%, page 28).",
+        "Seasons: Regions 3 and 8, 1 October to 30 November, 5 (15); Region 5 MU 5-3, 10 September to 20 November (99%). Read that region's rows before you travel.",
+        "Dry, steep, rocky slopes with bunchgrass and sage, mostly 250 to 500 m (85%)."
+       ],
+       "when": [
+        "dawn: calling from the cliffs; listen first (Tip)",
+        "midday: loafing in cover (75%)",
+        "dusk: last 2 hours feeding (75%)"
+       ],
+       "tactics": [
+        "Start at springs and creek mouths below cliffs in dry weather (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No chukar season in Region 2 (99%, page 28).",
+      "Rifles and .22s are not legal for chukar (95%).",
+      "Road allowance and 100 m rules apply on every bench above the highway (99%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "mistakes": [
+      "Planning a chukar hunt near Mission. Region 2 has no chukar season (99%).",
+      "A .22 for sitting chukar. Rifles are not legal for these birds (95%).",
+      "Chasing a running covey uphill all day."
+     ]
+    }
+   }
   },
   {
    "id": "gray-partridge",
@@ -5809,7 +7389,72 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no quail season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28); Region 8 and Region 1 rows kept from the base entry. Checked 2026-10-23.",
+     "lessons": [
+      "first-quail-trip",
+      "upland-birds",
+      "rb-region-2",
+      "local-okanagan",
+      "habitat-upland",
+      "gallery-upland",
+      "rb-region-8",
+      "rb-region-1",
+      "landowner-permission"
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No quail season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No quail row in the Region 2 table, so no general open season (99%, page 28).",
+        "Region 8: 1 October to 30 November, 10 (30), MUs 8-1 to 8-15 and 8-21 to 8-26 (99%).",
+        "Region 1: California quail 5 (15), 1 October to 30 November (99%).",
+        "Read that region's rows and the Okanagan quail trip plan before you go (Tip)."
+       ],
+       "when": [
+        "dawn: coveys call; listen first (Tip)",
+        "midday: rest in shrubs (75%)",
+        "dusk: feeding (75%)"
+       ],
+       "tactics": [
+        "Knock on doors on day 1, hunt day 2 (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No quail season in Region 2 (99%, page 28).",
+      "Mountain quail: no open season in Region 1. Whether the Region 8 row covers them: VERIFY. Shoot California quail only (Tip).",
+      "Town bylaws ban shooting inside Vernon and likely Kelowna; others VERIFY. Hunt outside town limits.",
+      "No Shooting Areas: Kaleden, Okanagan Falls, Naramata, Upper Carmi Road, Swan Lake, Kalamalka Lake Park; Vaseux sanctuary closed (99%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ],
+     "mistakes": [
+      "Shooting a quail near Mission. Region 2 has no quail season (99%).",
+      "Hunting an orchard or vineyard edge without asking.",
+      "Swinging on a bird between you and your partner.",
+      "Shooting inside town limits because the synopsis showed no closure.",
+      "Breasting birds and tossing the wings."
+     ]
+    }
+   }
   },
   {
    "id": "wild-turkey",
@@ -6211,7 +7856,75 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no turkey season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28). Checked 2026-10-23.",
+     "lessons": [
+      "wild-turkey",
+      "rb-region-2",
+      "rb-region-8",
+      "rb-region-4",
+      "rb-region-1",
+      "rb-legal-methods"
+     ],
+     "phases": [
+      {
+       "id": "spring",
+       "label": "Spring gobblers",
+       "months": [
+        4,
+        5
+       ],
+       "where": [
+        "No turkey row in Region 2, so no general open season (99%, page 28). The rows below are for a trip.",
+        "Region 8: bearded birds 15 April to 15 May in MUs 8-1, 8-9, 8-10, 8-12 to 8-15, 8-22 to 8-26 (98%).",
+        "Region 4: bearded birds 15 April to 25 May (98%).",
+        "Roosts in big pines on ridges (75%)."
+       ],
+       "when": [
+        "dawn: toms gobble on the roost, fly down at first light (75%)",
+        "midday: loafing (75%)",
+        "dusk: back up to roost (75%)"
+       ],
+       "tactics": [
+        "Roost and call at dawn (Tip)."
+       ],
+       "cert": 65
+      },
+      {
+       "id": "fall",
+       "label": "Fall any turkey",
+       "months": [
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No turkey row in Region 2, so no general open season (99%, page 28). The rows below are for a trip.",
+        "Region 8: any turkey 1 to 15 October, 1 per season (98%).",
+        "Region 4: any turkey from 1 October in listed MUs, December on private land only (98%); bow only bearded 1 to 30 September (98%).",
+        "Region 1: MUs 1-1 to 1-7, any turkey, no closed season, no bag limit (98%)."
+       ],
+       "when": [
+        "dawn: flocks off the roost (75%)",
+        "afternoon: feeding (75%)"
+       ],
+       "tactics": [
+        "Bust a flock and call the young back (Tip)."
+       ],
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "No turkey season in Region 2 (99%, page 28).",
+      "Region 8: 1 bird in spring and 1 in fall (98%).",
+      "No season in MUs 8-2 to 8-8, 8-11 or 8-21 (90%).",
+      "No official success data exists for birds. Any odds are rough math (Tip)."
+     ]
+    }
+   }
   },
   {
    "id": "snowshoe-hare",
@@ -6550,7 +8263,79 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json. Checked 2026-10-23.",
+     "lessons": [
+      "small-game",
+      "snow-tracking",
+      "tracks",
+      "rb-legal-methods",
+      "rb-region-2",
+      "local-mission"
+     ],
+     "phases": [
+      {
+       "id": "fall",
+       "label": "Fall",
+       "months": [
+        8,
+        9,
+        10,
+        11
+       ],
+       "where": [
+        "Region 2, MUs 2-5 to 2-19: 1 August to 30 April, 10 a day (99%, page 28).",
+        "No hare season in MUs 2-2, 2-3 or 2-4 (99%).",
+        "Young cutblocks 10 to 20 years old, willow and alder, swampy edges (Tip)."
+       ],
+       "when": [
+        "dawn and dusk, and grey days (75%)"
+       ],
+       "tactics": [
+        "Carry a .22 on deer trips in October (Tip)."
+       ],
+       "cert": 60
+      },
+      {
+       "id": "winter",
+       "label": "Snow season",
+       "months": [
+        12,
+        1,
+        2,
+        3,
+        4
+       ],
+       "where": [
+        "Runways show after the first snow (85%).",
+        "Hares sit in forms under low branches in deep winter (75%)."
+       ],
+       "when": [
+        "morning after fresh snow: track to the form (Tip)"
+       ],
+       "tactics": [
+        "Still hunt the runways on a snowy morning (Tip)."
+       ],
+       "cert": 60
+      }
+     ],
+     "redFlags": [
+      "No snowshoe hare season in MUs 2-2, 2-3 or 2-4 (99%, page 28).",
+      "Numbers rise and crash on a cycle of about 10 years (85%).",
+      "Inside Mission: rifles and .22s only in bylaw Area D; no discharge in Area A (99%, Mission bylaw 5433-2014).",
+      "Within 150 m of Highway 7 east of Mission, and on the Hatzic and Nicomen lowland: shot only, so no .22 or rifle (99%, Closed Areas Regulation; 85% my reading of the Nicomen lines).",
+      "Davis Lake, Golden Ears and Rolley Lake parks: no shooting (99%, Park, Conservancy and Recreation Area Regulation).",
+      "No official success data exists for small game. Any odds are rough math (Tip)."
+     ],
+     "mistakes": [
+      "A .22 at a hare on a skyline or on ice with no backstop.",
+      "Skinning bare handed and nicking a finger.",
+      "Carrying a .22 into a shot only area such as the Hatzic or Nicomen lowland."
+     ]
+    }
+   }
   },
   {
    "id": "columbian-ground-squirrel",
@@ -6782,7 +8567,71 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override: no season here. Facts from content/phase7/09-region-2-lower-mainland.md (no row, page 28). Checked 2026-10-23.",
+     "lessons": [
+      "small-game",
+      "rb-region-2",
+      "landowner-permission",
+      "all-bc-species"
+     ],
+     "licence": [
+      {
+       "t": "BC hunting licence; no species licence",
+       "cert": 99,
+       "lesson": "all-bc-species"
+      },
+      {
+       "t": "Landowner's permission: the rows in Regions 3, 4, 5 and 7A are private land only",
+       "cert": 98,
+       "lesson": "small-game"
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-none",
+       "label": "No ground squirrel season in Region 2",
+       "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+       ],
+       "where": [
+        "No Columbian ground squirrel row in the Region 2 table, so no general open season (99%, page 28).",
+        "Regions 3, 4, 5 and 7A: no closed season, no bag limit, private land only (98%). Read that region's rows before you travel."
+       ],
+       "when": [
+        "Tip: the app has no timing content yet"
+       ],
+       "tactics": [
+        "Ask ranchers who want them gone, in a region with a season (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No Columbian ground squirrel season in Region 2 (99%, page 28).",
+      "Where a season exists: private land only, with the landowner's permission (98%).",
+      "Livestock on the land: shot placement and backstop come first (Tip).",
+      "No official success data exists for small game (Tip)."
+     ],
+     "mistakes": [
+      "Shooting ground squirrels near Mission. Region 2 has no season row (99%).",
+      "Shooting on Crown land where the rows are private land only (98%)."
+     ]
+    }
+   }
   },
   {
    "id": "raccoon",
@@ -7204,7 +9053,51 @@
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition",
     "all-bc-species",
     "rb-legal-methods"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override. Facts from content/phase7/09-region-2-lower-mainland.md, content/phase6/12-local-mission.md, data/seasons/region2.json. Checked 2026-10-23.",
+     "lessons": [
+      "small-game",
+      "rb-region-2",
+      "local-mission",
+      "all-bc-species"
+     ],
+     "phases": [
+      {
+       "id": "r2-season",
+       "label": "Open 1 September to 31 March",
+       "months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+       ],
+       "where": [
+        "Region 2, MUs 2-2 to 2-19: skunk and raccoon, 1 September to 31 March, no bag limit (99%, page 28)."
+       ],
+       "when": [
+        "Hunting hours still apply (99%)"
+       ],
+       "tactics": [
+        "Ask landowners with a problem (Tip)."
+       ],
+       "cert": 99
+      }
+     ],
+     "redFlags": [
+      "No skunk season in Region 2 from 1 April to 31 August (95%, page 28 row and page 5).",
+      "Inside Mission: rifles and .22s only in bylaw Area D; no discharge in Area A (99%, Mission bylaw 5433-2014).",
+      "No official success data exists for small game (Tip)."
+     ],
+     "mistakes": [
+      "Shooting a skunk in Region 2 between April and August, outside the season (95%)."
+     ]
+    }
+   }
   },
   {
    "id": "opossum",
