@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" font-family="sans-serif" role="img" aria-label="Where these facts come from. Hunter education, 85%. State agencies, 85%. Bowhunter guides, 85%. Magazines, 65 to 70%. Checked 2026-10-01..">
+<rect width="400" height="306" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Where these facts come from</text>
+<g><text x="16" y="66" font-size="15" font-weight="bold" fill="#17201A">Hunter education</text><text x="384" y="66" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="end">85%</text><rect x="16" y="76" width="368" height="12" rx="6" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="16" y="76" width="313" height="12" rx="6" fill="#4F6B58"/></g>
+<g><text x="16" y="122" font-size="15" font-weight="bold" fill="#17201A">State agencies</text><text x="384" y="122" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="end">85%</text><rect x="16" y="132" width="368" height="12" rx="6" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="16" y="132" width="313" height="12" rx="6" fill="#4F6B58"/></g>
+<g><text x="16" y="178" font-size="15" font-weight="bold" fill="#17201A">Bowhunter guides</text><text x="384" y="178" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="end">85%</text><rect x="16" y="188" width="368" height="12" rx="6" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="16" y="188" width="313" height="12" rx="6" fill="#4F6B58"/></g>
+<g><text x="16" y="234" font-size="15" font-weight="bold" fill="#17201A">Magazines</text><text x="384" y="234" font-size="16" font-weight="bold" fill="#1F3D2B" text-anchor="end">65 to 70%</text><rect x="16" y="244" width="368" height="12" rx="6" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="16" y="244" width="258" height="12" rx="6" fill="#8FA394"/></g>
+<text x="16" y="280" font-size="14" fill="#1F3D2B">Checked 2026-10-01.</text>
+</svg>

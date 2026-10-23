@@ -191,11 +191,16 @@ yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed grou
 
 ## You must try to recover it
 
+```diagram mk-bt-law
+```
+
+```more the table as text
 | Situation | What the law says |
 |---|---|
 | Wounded animal | All reasonable effort to find it (95%) |
 | Boat retrieval | No loaded firearm aboard, or motor off (99%) |
 | Wrong animal or accident | Cancel licence, report (95%) |
+```
 
 - Walking away after 10 minutes is not reasonable effort (95%).
 
@@ -231,11 +236,16 @@ yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed grou
 
 ## When to get help
 
+```diagram mk-bt-help
+```
+
+```more the table as text
 | Situation | Call |
 |---|---|
 | Thick timber, snow coming | Your brother, now |
 | Gut hit | More eyes, not more hours |
 | Private land, closed area | Conservation officer |
+```
 
 - Dogs on deer in BC must be on a leash (95%).
 
@@ -248,16 +258,19 @@ yt-blood-trail-beyond | When the blood stops, look for tracks and disturbed grou
 
 ## Grandpa's rule and mistakes
 
+```diagram mk-bt-mistakes
+```
+
+> [!rule]
+> The deer is not lost until you have walked every lane twice. Then go home, and come back at dawn.
+
+```more 3 common mistakes and the trailing kit
 | Mistake | Fix |
 |---|---|
 | In after 5 minutes on a gut hit | Back out for hours |
 | Rifle and headlamp after dark | That is hunting with a light |
 | Over the posted fence | Stop and ask |
 
-> [!rule]
-> The deer is not lost until you have walked every lane twice. Then go home, and come back at dawn.
-
-```more 3 common mistakes and the trailing kit
 > [!field]
 > Trailing kit in the pack: flagging tape, headlamp, spare batteries, spray bottle of hydrogen peroxide, 10 m of rope, phone with map pins, RAPP number saved.
 
@@ -280,6 +293,9 @@ Private land or closed area: stopped and called
 ## Sources
 
 - Synopsis, Trespass Act and Hunting Regulation 95%. Tracking skill sources 70% max. Checked 2026-10-01.
+
+```diagram mk-bt-sources
+```
 
 ```more all sources
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 3 (hunt definition), p. 9 (Trespass Act summary, parks), p. 11 (It's Unlawful 18 and 19), p. 12 (36 to 39, dogs, retrieval), p. 18 (accidental harvest). Checked 2026-10-01. Quotes have hyphens removed to match app style.

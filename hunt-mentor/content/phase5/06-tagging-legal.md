@@ -260,11 +260,16 @@ Compulsory report or Mandatory Hunter Report deadline noted
 
 ## Sources
 
+```diagram mk-tl-sources
+```
+
+```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly. Printed p. 3 (definitions), p. 5 (carry licences), p. 7 (keep documents), p. 8 (replacement), p. 11 (It's Unlawful 1), p. 12 (44, 48, 49, 52, 54), p. 14 (Record of Receipt form), p. 15 (evidence of sex, transport, birds, game checks), p. 16 (Mandatory Hunter Report), p. 17 (CI and CR), p. 28 (Region 2 table), p. 32 and p. 34 (Region 3). Checked 2026-10-01.
 - [Hunting Regulation, B.C. Reg. 190/84, s. 15 possession of carcass, s. 15.1 tampering with antlers](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01), read directly. Checked 2026-10-01.
 - [BC species licences page](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences), read directly. Checked 2026-10-01.
 - [BC compulsory reporting page](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/compulsory-reporting) and [compulsory inspection page](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/compulsory-inspection), read directly. Checked 2026-10-01.
 - [Alaska Department of Fish and Game, gutless method brochure](https://www.adfg.alaska.gov/static/hunting/pdfs/field_dressing_big_game_gutless_method.pdf) (not BC law, 80%): "Moose antlers are not proof of sex." Checked 2026-10-01.
+```
 
 ```quiz
 [
