@@ -37,8 +37,10 @@
 
   // ---------- drawings: simple side views, design colours, labelled (14 px or more on a 360 px screen) ----------
   const SP = '#1F3D2B', LI = '#EEF1EA', BZ = '#FF6A13', TX = '#17201A', WD = '#8A6A44', ST = '#6F7B72';
+  // a label row: y 24 or 52 above the gun, 206 or 232 below it; (px, py) is the part, in the gun's own coordinates (drawn 30 lower)
   function label(x, y, t, px, py, anchor) {
-    return `<line x1="${px}" y1="${py}" x2="${x}" y2="${y + (y < 100 ? 6 : -20)}" stroke="${TX}" stroke-width="1.5"/>` +
+    py += 30;
+    return `<line x1="${px}" y1="${py}" x2="${anchor === 'start' ? x + 20 : anchor === 'end' ? x - 20 : x}" y2="${y < 120 ? y + 6 : y - 20}" stroke="${TX}" stroke-width="1.5"/>` +
       `<text x="${x}" y="${y}" font-size="20" font-weight="700" fill="${TX}" text-anchor="${anchor || 'middle'}">${esc(t)}</text>`;
   }
   function drawing(type, name) {
@@ -55,8 +57,8 @@
         <rect x="186" y="116" width="26" height="16" fill="${SP}"/>
         <path d="M160 118 q2 16 18 14" stroke="${SP}" stroke-width="3" fill="none"/><path d="M168 118 l2 9" stroke="${TX}" stroke-width="3"/>
         <rect x="146" y="86" width="9" height="6" fill="${BZ}"/>`;
-      labels = label(30, 40, 'Stock', 40, 112) + label(150, 40, 'Safety', 150, 86) + label(242, 40, 'Rear sight', 242, 85) + label(372, 40, 'Front sight', 384, 87, 'end') +
-        label(150, 190, 'Bolt', 162, 118) + label(200, 190, 'Mag', 199, 132) + label(310, 190, 'Barrel', 310, 101);
+      labels = label(6, 24, 'Stock', 40, 112, 'start') + label(150, 24, 'Safety', 150, 86) + label(250, 52, 'Rear sight', 242, 85) + label(394, 24, 'Front sight', 384, 87, 'end') +
+        label(150, 206, 'Bolt', 162, 118) + label(210, 206, 'Mag', 199, 132) + label(320, 206, 'Barrel', 310, 101);
     } else if (type === 'rimfire') { // CZ 457: wood stock, slim barrel, dovetail on the receiver, small magazine
       g = `<path d="M20 106 L124 98 L156 98 L160 112 L126 118 L64 132 L24 132 Z" fill="${WD}"/>
         <rect x="156" y="92" width="70" height="15" rx="3" fill="${SP}"/>
@@ -67,8 +69,8 @@
         <rect x="178" y="115" width="16" height="12" fill="${SP}"/>
         <path d="M160 116 q2 14 16 12" stroke="${SP}" stroke-width="3" fill="none"/><path d="M167 116 l2 8" stroke="${TX}" stroke-width="3"/>
         <rect x="216" y="104" width="9" height="5" fill="${BZ}"/>`;
-      labels = label(32, 40, 'Stock', 44, 112) + label(190, 40, 'Scope base', 190, 88) + label(330, 40, 'Barrel', 330, 96) +
-        label(150, 190, 'Mag', 186, 127) + label(225, 190, 'Safety', 220, 109) + label(300, 190, 'Bolt', 198, 114);
+      labels = label(6, 24, 'Stock', 44, 112, 'start') + label(190, 24, 'Scope base', 190, 88) + label(330, 24, 'Barrel', 330, 96) +
+        label(150, 206, 'Mag', 186, 127) + label(225, 206, 'Safety', 220, 109) + label(300, 206, 'Bolt', 198, 114);
     } else if (type === 'sks') { // SKS: wood stock to the front, gas tube over the barrel, fixed magazine, folding bayonet
       g = `<path d="M16 102 L110 96 L140 98 L150 114 L112 118 L56 130 L20 132 Z" fill="${WD}"/>
         <rect x="140" y="90" width="78" height="16" rx="3" fill="${ST}"/>
@@ -82,8 +84,8 @@
         <rect x="300" y="106" width="70" height="4" fill="${ST}"/>
         <path d="M150 115 q2 15 16 13" stroke="${SP}" stroke-width="3" fill="none"/><path d="M157 115 l2 8" stroke="${TX}" stroke-width="3"/>
         <rect x="162" y="113" width="8" height="6" fill="${BZ}"/>`;
-      labels = label(28, 40, 'Stock', 40, 112) + label(228, 40, 'Rear sight', 230, 86) + label(300, 40, 'Gas tube', 290, 92) + label(380, 40, 'Front', 380, 88, 'end') +
-        label(100, 190, 'Safety', 165, 119) + label(190, 190, 'Fixed mag', 187, 128) + label(330, 190, 'Bayonet', 335, 110);
+      labels = label(6, 24, 'Stock', 40, 112, 'start') + label(200, 24, 'Rear sight', 230, 86) + label(300, 52, 'Gas tube', 290, 92) + label(394, 24, 'Front', 380, 88, 'end') +
+        label(110, 206, 'Safety', 165, 119) + label(200, 232, 'Fixed mag', 187, 128) + label(335, 206, 'Bayonet', 335, 110);
     } else { // shotgun: pump or semi auto, rib and bead, magazine tube, screw in choke
       g = `<path d="M16 102 L118 96 L146 96 L152 112 L118 118 L58 132 L20 132 Z" fill="${WD}"/>
         <rect x="146" y="88" width="66" height="22" rx="4" fill="${SP}"/>
@@ -95,11 +97,11 @@
         <circle cx="384" cy="87" r="3" fill="${TX}"/>
         <path d="M154 110 q2 15 18 13" stroke="${SP}" stroke-width="3" fill="none"/><path d="M162 110 l2 8" stroke="${TX}" stroke-width="3"/>
         <rect x="176" y="84" width="9" height="5" fill="${BZ}"/>`;
-      labels = label(30, 40, 'Stock', 40, 112) + label(180, 40, 'Safety', 180, 84) + label(300, 40, 'Rib', 300, 89) + label(380, 40, 'Bead', 384, 85, 'end') +
-        label(150, 190, 'Trigger', 163, 118) + label(258, 190, 'Forend', 258, 112) + label(366, 190, 'Choke', 378, 99, 'end');
+      labels = label(6, 24, 'Stock', 40, 112, 'start') + label(180, 24, 'Safety', 180, 84) + label(290, 24, 'Rib', 300, 89) + label(394, 24, 'Bead', 384, 85, 'end') +
+        label(150, 206, 'Trigger', 163, 118) + label(258, 206, 'Forend', 258, 112) + label(394, 232, 'Choke', 378, 99, 'end');
     }
-    return `<svg class="gn-svg" id="${id}" viewBox="0 0 400 200" role="img" aria-label="${esc(name)}: side view drawing with its main parts labelled" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="200" rx="10" fill="${LI}"/>${g}${labels}</svg>`;
+    return `<svg class="gn-svg" id="${id}" viewBox="0 0 400 240" role="img" aria-label="${esc(name)}: side view drawing with its main parts labelled" xmlns="http://www.w3.org/2000/svg">
+      <rect width="400" height="240" rx="10" fill="${LI}"/><g transform="translate(0 30)">${g}</g>${labels}</svg>`;
   }
 
   // ---------- log and reminders ----------
