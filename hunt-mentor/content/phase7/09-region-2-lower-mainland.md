@@ -22,6 +22,10 @@ mus: 2-8, 2-4, 2-3, 2-19
 
 ## Bag limits in plain numbers: big game
 
+```diagram mk-r2-big
+```
+
+```more the table as text
 | Game | Limit | Source |
 |---|---|---|
 | Black tailed deer, Region 2 | 2 a licence year, at most 1 antlerless | 99%, page 27 |
@@ -37,6 +41,7 @@ mus: 2-8, 2-4, 2-3, 2-19
 | Bobcat | 1 | 99%, page 28 |
 | Coyote, raccoon, skunk | No limit | 99%, page 28 |
 | Snowshoe hare | 10 a day | 99%, page 28 |
+```
 
 ```more how the deer numbers fit together
 - Page 27 is the Region 2 ceiling: 2 black tailed deer, 1 of them antlerless at most (99%).
@@ -48,6 +53,10 @@ mus: 2-8, 2-4, 2-3, 2-19
 
 ## Bag limits in plain numbers: birds
 
+```diagram mk-r2-birds
+```
+
+```more the table as text
 | Bird | A day (in possession) | Source |
 |---|---|---|
 | Grouse: sooty, ruffed, spruce together | 10 (30) | 99%, page 28 |
@@ -61,6 +70,7 @@ mus: 2-8, 2-4, 2-3, 2-19
 | Snow and Ross's geese, MUs 2-4 and 2-5 | 15 (45), Ross's 5 (15) at most | 99%, page 28 |
 | Snow and Ross's geese, MUs 2-2, 2-3 and 2-6 to 2-19 (includes Mission, 2-8) | 10 (30), at most 5 Ross's a day | 99%, page 28 note H; federal District 2 table and ECCC summary agree (90%). Page 12 prints 5: the regional page and federal table govern |
 | Brant. MU 2-4 only, March | 3 (9) | 99%, page 28 |
+```
 
 ```more the fine print
 - Inside the 8 ducks: no more than 4 pintails, 4 canvasbacks, 2 goldeneyes, 2 harlequins (99%, page 28).
@@ -69,6 +79,10 @@ mus: 2-8, 2-4, 2-3, 2-19
 
 ## 10 rules that catch hunters here
 
+```diagram mk-r2-ten
+```
+
+```more the 10 rules as text, with links
 | # | Rule | Source |
 |---|---|---|
 | 1 | Fraser Valley Special Area licence ($10) and $1,000,000 liability insurance: all of MU (Management Unit) 2-4, and MU 2-8 inside Maple Ridge, Pitt Meadows, Mission and Coquitlam. [Licences](#/s/fw-rules-01) | 99%, pages 8 and 29 |
@@ -81,11 +95,16 @@ mus: 2-8, 2-4, 2-3, 2-19
 | 8 | Highway 7, east of Mission to Highway 1: shot only within 150 m. More shot only and No Shooting land at Nicomen and Hatzic. Mission's bylaw adds more: [Local plan: Mission](#/s/local-mission) | 99%, Closed Areas Regulation; 85% my reading of the Nicomen lines |
 | 9 | Ducks and geese: federal permit, no lead shot on Delta and Mud Bay dykes, no snipe in Boundary Bay, no hunting in Burns Bog. [Migratory birds](#/s/fw-rules-07) | 99%, pages 3 and 27 |
 | 10 | Every cougar and mountain goat to Compulsory Inspection, by appointment. Wolf and bobcat: Compulsory Reporting. [After the kill](#/s/fw-rules-08) | 99%, pages 26 and 28 |
+```
 
-## Strategy here: deer, bear and grouse
+## Strategy here: deer and bear
 
 Strategy is opinion. Each line says Tip or gives its source.
 
+```diagram mk-r2-strat-deer
+```
+
+```more deer and bear: where, when, how, with links
 ### Black tailed deer, bucks, to 15 December
 - Where: cutblock edges, old roads, salal and alder. Logged openings spring to fall, old growth higher up in winter (90%, BC account). [Where](#/s/mc-mule-deer-07)
 - When: the rut runs November into early December (80%). Late season is your best window (Tip).
@@ -94,15 +113,25 @@ Strategy is opinion. Each line says Tip or gives its source.
 ### Black bear, to 30 November
 - Where and when: fall berry patches, Himalayan blackberry on valley edges, young cutblocks (90%). [Where](#/s/mc-black-bear-07)
 - How: glass berry slopes in the evening (Tip). [How to hunt](#/s/mc-black-bear-09)
+```
+
+## Strategy here: grouse
+
+```diagram mk-r2-strat-grouse
+```
 
 ### Grouse, to 15 December
 - Where: ruffed in aspen and poplar near water; sooty in conifers, often higher in winter (65 to 85%). [Where](#/s/mc-grouse-07)
 - How: walk a Forest Service road edge at first light, then step off the road to shoot (Tip). [How to hunt](#/s/mc-grouse-09)
 
-## Strategy here: ducks, geese and pheasant
+## Strategy here: ducks and geese
 
 Strategy is opinion. Each line says Tip or gives its source.
 
+```diagram mk-r2-strat-ducks
+```
+
+```more ducks and geese: where and how, with links
 ### Ducks, to 24 January
 - Where: the lower Fraser Valley is the centre of wood duck country in BC (85%). Sloughs and side channels off the Fraser (Tip). [Where](#/s/mc-ducks-07)
 - How: scout the evening before (Tip). Ducks land into the wind (80%), so set up with the wind at your back (Tip). [How to hunt](#/s/mc-ducks-09)
@@ -110,6 +139,12 @@ Strategy is opinion. Each line says Tip or gives its source.
 ### Canada geese, to 22 November, again 19 December
 - Where: corn stubble and pasture fields, almost all private: written permission first (Tip, 65%). Most BC geese come from MU 2-4 (99%, survey). [Where](#/s/mc-geese-07)
 - How: find yesterday's field, hide in it before first light (Tip). [How to hunt](#/s/mc-geese-09)
+```
+
+## Strategy here: pheasant and your spot
+
+```diagram mk-r2-strat-pheasant
+```
 
 ### Pheasant cocks, to 30 November, MUs (Management Units) 2-4 and 2-8
 - Where and how: farm edges and hedgerows with permission; walk slowly into cover (Tip).
@@ -121,6 +156,15 @@ Strategy is opinion. Each line says Tip or gives its source.
 
 Every row: page 28, 2 October 2026 edition (99%).
 
+```diagram mk-r2-mission-bars
+```
+
+## Mission: every row, class and limit
+
+```diagram mk-r2-mission-limits
+```
+
+```more the table as text
 | Game | Class | Dates in MUs 2-3, 2-4, 2-8, 2-19 | Limit |
 |---|---|---|---|
 | Mule deer (black tailed) | Bucks | Sept 10 to Dec 15 | 2, bucks only |
@@ -138,6 +182,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 | Coyote | None printed | Sept 10 to June 15 | NBL |
 | Raccoon, skunk | None printed | Sept 1 to Mar 31 | NBL |
 | Snowshoe hare | None printed | Aug 1 to Apr 30 | 10 a day. 2-8 and 2-19 only |
+```
 
 ```more what is not open near Mission
 - Every row: 99%, page 28, 2 October 2026 edition. The MU ranges on page 28 cover all four MUs unless the limit cell says otherwise (99%).
@@ -208,12 +253,17 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Compulsory inspection, RAPP and updates
 
+```diagram mk-r2-ci
+```
+
+```more the table as text
 | Need | Region 2 (99%, pages 26 and 28) |
 |---|---|
 | CI (Compulsory Inspection) | Book it. Agassiz, Langley, Squamish, Sunshine Coast |
 | Inspection | Mountain goats and every cougar |
 | Compulsory Reporting | Wolf and bobcat |
 | RAPP (Report All Poachers and Polluters) | 1 877 952 7277, 24 hours |
+```
 
 ```more Official wording (synopsis page 26)
 > [!law] Compulsory Inspection (CI) Centres, page 26
@@ -575,11 +625,16 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## LEH: what these pages print
 
+```diagram mk-r2-leh
+```
+
+```more the table as text
 | LEH (Limited Entry Hunting) | Region 2 (99%) |
 |---|---|
 | Lines on pages 26 to 31 | None |
 | Hunts, codes, dates | Separate LEH synopsis |
 | You need | Draw authorization, hunting licence, species licence |
+```
 
 ```more Official wording (synopsis page 5)
 > [!law] Limited Entry Hunting, page 5
@@ -594,6 +649,10 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Footnotes: deer
 
+```diagram mk-r2-deer-marks
+```
+
+```more the table as text
 | Mark | Means (99%, page 28) |
 |---|---|
 | ▲ | Bowen and Texada: deer limit 3(2) |
@@ -601,6 +660,7 @@ Every row: page 28, 2 October 2026 edition (99%).
 | `*` / `***` | Under 18 / under 18, or 65 and older |
 | `**` | Part of 2-11, Maps B15 and B20. Mostly private land |
 | ◆ | 2-5 and 2-12: 1 buck, Sept 10 to Nov 30 |
+```
 
 ```more Official wording: deer footnotes (synopsis page 28)
 > [!law] Mule deer footnotes, page 28
@@ -631,12 +691,17 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Footnotes: goat, bear, wolf, bobcat and cougar
 
+```diagram mk-r2-other-marks
+```
+
+```more the table as text
 | Animal | Footnote (99%, page 28) |
 |---|---|
 | Goat | Stay out of Maps B9, B18, B19. Inspection |
 | Black bear | 2 per licence year, Apr 1 to Mar 31 |
 | Wolf, bobcat | Compulsory Reporting |
 | Cougar | No kittens or cougars with them. Inspection |
+```
 
 ```more Official wording (synopsis pages 3 and 28)
 > [!law] Mountain goat footnotes, page 28
@@ -858,12 +923,17 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Map B11 Squamish River Valley
 
+```diagram mk-r2-b11
+```
+
+```more the table as text
 | Band, Map B11 | Width (page 29) |
 |---|---|
 | G Main, Elaho Main, E200 roads | 400 m (90%, map reading) |
 | Branch 800, Branch 700, first 1.5 km | 600 m (99%) |
 | Squamish Valley Forest Service Road | 800 m west, 400 m east (99% legend) |
 | Branch 200, first 3.5 km | 400 m (99% legend) |
+```
 
 ```more Official wording and map notes (synopsis page 29)
 > [!law] Map B11, page 29
@@ -880,10 +950,15 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Map B33 Chehalis and the 2-19 road areas
 
+```diagram mk-r2-b33
+```
+
+```more the table as text
 | Map B33, MU 2-19 | Rule (99%) |
 |---|---|
 | 400 m bands on roads and streams | No target shooting |
 | Hunting with a firearm | Allowed |
+```
 
 ```more Official wording (synopsis page 31 and the Closed Areas Regulation)
 > [!law] Map B33, page 31
@@ -1143,10 +1218,15 @@ Every row: page 28, 2 October 2026 edition (99%).
 
 ## Feeding, baiting and Region 2
 
+```diagram mk-r2-bait
+```
+
+```more the table as text
 | Rule | Region 2 (99%, pages 26 to 31) |
 |---|---|
 | 200 m feeding and baiting ban | Not printed (Regions 3 and 8 have one) |
 | Provincial rules | Still apply |
+```
 
 ```more the details
 - The Region 2 pages print no feeding or baiting ban like Region 3's 200 m rule (99%, pages 26 to 31).
@@ -1157,10 +1237,16 @@ Every row: page 28, 2 October 2026 edition (99%).
 > [!rule]
 > Read the row, then the map, then the bylaw. In the Fraser Valley the closure is usually the answer.
 
+```diagram mk-r2-mistakes
+```
+
+```more 3 common mistakes as text
 > [!mistake]
 > - Shooting a doe in the Stave hills in October because "the limit is 2, one antlerless". There is no antlerless season in 2-8.
 > - Hunting ducks on the Fraser at Mission without the special licence and the $1,000,000 insurance.
 > - Driving into Pitt Addington Marsh in October. It is closed to vehicles all year.
+
+```
 
 > [!field]
 > Before each trip: say your MU out loud, read its rows on the season screens, then check Map B10, the FVRD road map and the Mission bylaw map for the exact spot.
@@ -1168,6 +1254,9 @@ Every row: page 28, 2 October 2026 edition (99%).
 ## Sources
 
 - Synopsis pages 3 to 31, Closed Areas Regulation. Checked 2026-10-04 (99%).
+
+```diagram mk-r2-sources
+```
 
 ```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read from the PDF text and checked against rendered page images: page 26 (contacts, changes box, map, 150 dpi), page 27 (bag limits, notices, access, 150 dpi), page 28 (every row, 150 dpi plus 220 dpi crops), pages 29 to 31 (Maps B1 to B33, 150 dpi). Also pages 3, 4, 5, 8, 9, 10, 12 and 14. Checked 2026-10-04 (99%).
