@@ -39,7 +39,8 @@
   const topicOf = (s) => seriesOf(s) || PHASE[s.phase] || 'Other lessons';
   const titleIx = {}, seriesIx = {};
   sessions.forEach((s) => { titleIx[norm(s.title)] = s.id; const se = seriesOf(s); if (se) (seriesIx[norm(se)] = seriesIx[norm(se)] || []).push(s.id); });
-  const stepsN = (s) => (s.steps || []).length + ((s.quiz || []).length ? 1 : 0); // screens plus the quiz screen (app.js stepsOf)
+  const quizN = (s) => (s.quiz ? s.quiz.length : s.qn || 0); // installed app: quiz count only (qn), text loads on demand
+  const stepsN = (s) => (s.steps || []).length + (quizN(s) ? 1 : 0); // screens plus the quiz screen (app.js stepsOf)
   const seenOf = (S, s) => { const n = stepsN(s); return (S.done || {})[s.id] ? n : (S.max || {})[s.id] != null ? Math.min(n, S.max[s.id] + 1) : 0; };
 
   // ---------- flashcards: the same card ids as app.js allCards() ----------
@@ -49,8 +50,9 @@
     cardIx = {};
     for (const t of Object.keys(HM.glossary || {})) cardIx['g:' + t] = { deck: 'Terms' };
     for (const r of ((HM.regs && HM.regs.items) || [])) if (r.value) cardIx['r:' + r.key] = { deck: 'Rules' };
-    for (const c of (HM.flashcards || [])) cardIx['f:' + c.id] = { deck: c.deck };
-    for (const s of sessions) (s.quiz || []).forEach((q, n) => { cardIx['q:' + s.id + '#' + n] = { deck: 'Quiz', sid: s.id }; });
+    if (HM.flashcards) for (const c of HM.flashcards) cardIx['f:' + c.id] = { deck: c.deck };
+    else for (const [deck, , ids] of (HM.cardDecks || [])) for (const id of ids || []) cardIx['f:' + id] = { deck }; // installed app: card ids per deck, text loads on demand
+    for (const s of sessions) for (let n = 0; n < quizN(s); n++) cardIx['q:' + s.id + '#' + n] = { deck: 'Quiz', sid: s.id };
     return cardIx;
   }
   // a deck's topic: a quiz card goes to its lesson; a deck named like a lesson goes to that lesson; a deck named like a series to it
