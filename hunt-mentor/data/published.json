@@ -335,7 +335,15 @@
     "mc-cz457-07",
     "mc-cz457-08",
     "mc-cz457-09",
-    "mc-cz457-10"
+    "mc-cz457-10",
+    "mc-sks-01",
+    "mc-sks-02",
+    "mc-sks-03",
+    "mc-sks-04",
+    "mc-sks-05",
+    "mc-sks-06",
+    "mc-sks-07",
+    "mc-sks-08"
   ],
   "flashcards": [
     "quail",
@@ -361,6 +369,7 @@
     "fw-rules",
     "fw-grandpa",
     "mu",
-    "cz457"
+    "cz457",
+    "sks"
   ]
 }
