@@ -1,5 +1,5 @@
 /* Hunt Map Offline Maps: save an area once at home on wifi, then the map works with no signal.
-   Pick: "My base area" (Heffley Creek, 25 km around), "This view" (the box on screen) or "Draw a box".
+   Pick: "My base area" (Mission, 25 km around), "This view" (the box on screen) or "Draw a box".
    Shows the size per part before download, a progress bar, Stop and Resume (a stopped or interrupted download picks up
    where it left off), a storage meter, and asks the phone to keep the saved maps (navigator.storage.persist).
    Saved into Cache Storage "hm-offline-<id>":
@@ -19,8 +19,9 @@ import { OFM_TILEJSON, OFM_GLYPHS, FONTS, TERRARIUM, DEM_MAXZOOM } from './style
 import * as layers from './layers.js';
 import * as spots from './spots.js';
 
-// Heffley Creek base (same point as core.js DEFAULT_VIEW and SPOTS.md). Radius per the owner: about 25 km around.
-const BASE = { name: 'My base area (Heffley Creek)', lng: -120.2687, lat: 50.8581, km: 25 };
+// Mission base, the owner's home base (same point as core.js DEFAULT_VIEW and data/bases.json "mission"; was Heffley Creek before 2026-10-16).
+// Radius per the owner: about 25 km around.
+const BASE = { name: 'My base area (Mission)', lng: -122.31, lat: 49.13, km: 25 };
 const MAX_TILES = 30000;
 const PM_WHOLE_MAX = 1048576; // PMTiles files up to 1 MB are saved whole; bigger ones save only the byte ranges the area needs
 const CHUNK_GAP = 32 * 1024, CHUNK_MAX = 2 * 1048576;
@@ -60,7 +61,7 @@ export function openSheet() {
   const body = H.openSheet({ title: 'Offline Maps', bar: 'offline', tall: true, onClose: () => outlines(false), html: `
     <p class="hmm-muted">Save your hunting area at home on wifi. The map then works with no signal: Topo, contours, hillshade, 3D terrain, hunting layers and spots.</p>
     <div class="hmo-presets">
-      <button class="hmm-primary block" data-o="base">${H.icons.download}<span>My base area<small>Heffley Creek, about 25 km around</small></span></button>
+      <button class="hmm-primary block" data-o="base">${H.icons.download}<span>My base area<small>Mission, about 25 km around</small></span></button>
       <button class="hmm-btn2" data-o="view">${H.icons.target}<span>This view</span></button>
       <button class="hmm-btn2" data-o="draw">${H.icons.edit}<span>Draw a box</span></button>
     </div>
@@ -152,7 +153,7 @@ function bboxAround(lng, lat, km) {
   return [lng - dx, lat - dy, lng + dx, lat + dy].map((v) => +v.toFixed(5));
 }
 function baseArea() {
-  const b = (window.HM && Array.isArray(window.HM.bases) && window.HM.bases.find((x) => x.id === 'heffley')) || null;
+  const b = (window.HM && Array.isArray(window.HM.bases) && window.HM.bases.find((x) => x.id === 'mission')) || null;
   const lng = b && Number.isFinite(+b.lon) ? +b.lon : BASE.lng, lat = b && Number.isFinite(+b.lat) ? +b.lat : BASE.lat;
   return bboxAround(lng, lat, BASE.km);
 }

@@ -69,6 +69,8 @@ hunt-mentor/
 - Themes: light, dark, sunlight (max contrast).
 - Lives in folder `hunt-mentor/` of this repo, separate from the other apps.
 - Root CLAUDE.md is not changed. This folder has its own CLAUDE.md.
+- 2026-10-23: per region species content. A species in data/plans/species.json may carry `regions: { "2": {...} }` with the same fields (name, lessons, methods, phases, tactics, dayPlan, raiseOdds, redFlags, afterKill, checklist, mistakes, shot, sources). plan.js looks every plan's species up through spOf / spFor (shallow merge when the MU prefix matches); the plan's spot rundowns and the map's "Best times this month" use the same merge. First use: mule-deer Region 2 (black tailed deer near Harrison and Mission), so a Region 2 plan no longer shows Heffley, Kamloops, MU 3-27 or Region 3 advice. Region 3 content unchanged. Facts only from the Black tailed deer Masterclass, Your Harrison deer hunt, Local plan: Mission, Rule Book: Region 2 and data/seasons/region2.json.
+- 2026-10-23: map "My base area" offline preset moved from Heffley Creek to Mission (data/bases.json "mission", same point as the map's start view), still 25 km around. Vehicle checklist "Road and FSR closures checked" now links the Forest Service Roads lesson instead of the Heffley local plan.
 
 ## 5. Research plan
 - Parallel research agents by topic (licences, migratory birds, Region 2, 3, 8,
