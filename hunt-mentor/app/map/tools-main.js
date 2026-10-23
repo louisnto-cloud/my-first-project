@@ -19,7 +19,7 @@ ctx.KIND = KIND;
 
 export default async function init(H) {
   ctx.H = H; ctx.map = H.map;
-  Object.assign(ctx, { refresh, saveAny, deleteAny, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet });
+  Object.assign(ctx, { refresh, saveAny, deleteAny, openItem, drawOverlays, dropWaypoint, itemStats, profileHtml, fitItem, here, fieldRows, toolsSheet, spotMenu });
   const css = loadCss();
   // Layers and icon images are added on first use (lazy), so an empty map carries no tool layers.
   H.on('units', () => drawOverlays());
@@ -576,12 +576,18 @@ function longPress() {
   cv.addEventListener('touchstart', (e) => {
     cancel(); if (e.touches.length !== 1) return;
     x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
-    t = setTimeout(() => { t = null; const r = cv.getBoundingClientRect(); spotMenu(ctx.map.unproject([x0 - r.left, y0 - r.top])); if (navigator.vibrate) navigator.vibrate(15); }, 600);
+    t = setTimeout(() => { t = null; const r = cv.getBoundingClientRect(); pressAt(ctx.map.unproject([x0 - r.left, y0 - r.top])); if (navigator.vibrate) navigator.vibrate(15); }, 600);
   }, { passive: true });
   cv.addEventListener('touchmove', (e) => { if (t && Math.hypot(e.touches[0].clientX - x0, e.touches[0].clientY - y0) > 10) cancel(); }, { passive: true });
   cv.addEventListener('touchend', cancel); cv.addEventListener('touchcancel', cancel);
   ctx.map.on('movestart', cancel);
-  ctx.map.on('contextmenu', (e) => { if (!('ontouchstart' in window)) spotMenu(e.lngLat); });
+  ctx.map.on('contextmenu', (e) => { if (!('ontouchstart' in window)) pressAt(e.lngLat); });
+}
+// the one tap card (tap-card.js, set by layers.js) for a long press too; its "More tools here" opens spotMenu below
+function pressAt(ll) {
+  const H = ctx.H;
+  if (H.tapCard && typeof H.tapCard.open === 'function') H.tapCard.open(H, ll, { press: true });
+  else spotMenu(ll);
 }
 function spotMenu(ll) {
   const H = ctx.H, p = [ll.lng, ll.lat], txt = H.units.coord(p[0], p[1]);
