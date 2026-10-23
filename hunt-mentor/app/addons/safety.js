@@ -176,9 +176,21 @@
 
   // ---------- turnaround alarm (global watcher, so it fires on any screen of the app) ----------
   let audio = null;
-  const unlockAudio = () => { try { audio = audio || new (window.AudioContext || window.webkitAudioContext)(); if (audio.state === 'suspended') audio.resume(); } catch (e) { audio = null; } };
-  function beep() {
+  // iPhone: Web Audio only plays after a tap. unlockAudio runs inside the tap that sets the alarm, and plays one silent
+  // sample, which is what unlocks sound on older iOS. iOS pauses ("interrupted") the audio when the app goes to the
+  // background, so beep() resumes it first. The ring/silent switch mutes Web Audio unless the page asks for the
+  // "playback" audio session (navigator.audioSession, Safari 17+), which the turnaround alarm does (loud = true).
+  const unlockAudio = () => {
+    try {
+      audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+      if (audio.state !== 'running') audio.resume().catch(() => {});
+      const b = audio.createBuffer(1, 1, 22050), s = audio.createBufferSource(); s.buffer = b; s.connect(audio.destination); s.start(0);
+    } catch (e) { audio = null; }
+  };
+  function beep(loud) {
     if (!audio) return;
+    try { if (audio.state !== 'running') audio.resume().catch(() => {}); } catch (e) { /* no sound */ }
+    try { if (loud && navigator.audioSession) { navigator.audioSession.type = 'playback'; setTimeout(() => { try { navigator.audioSession.type = 'auto'; } catch (e) { /* ignore */ } }, 2500); } } catch (e) { /* older Safari */ }
     try { [0, 0.45, 0.9].forEach((t) => { const o = audio.createOscillator(), g = audio.createGain(); o.frequency.value = 880; o.connect(g); g.connect(audio.destination); g.gain.setValueAtTime(0.0001, audio.currentTime + t); g.gain.exponentialRampToValueAtTime(0.5, audio.currentTime + t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, audio.currentTime + t + 0.35); o.start(audio.currentTime + t); o.stop(audio.currentTime + t + 0.4); }); } catch (e) { /* no sound */ }
   }
   function notify(titleText, body) {
@@ -207,11 +219,11 @@
     if (left <= 0) {
       if (!st.fired) { st.fired = true; sv(K.turn, st); notify('Turn around now', dot(`Your turnaround time was ${fmtT(st.at)}`) + ' Head back.'); }
       overlay(st);
-      if (document.visibilityState === 'visible' && (!watch.last || Date.now() - watch.last > 8000)) { watch.last = Date.now(); beep(); try { navigator.vibrate && navigator.vibrate([400, 200, 400, 200, 400]); } catch (e) { /* no vibrate */ } }
+      if (document.visibilityState === 'visible' && (!watch.last || Date.now() - watch.last > 8000)) { watch.last = Date.now(); beep(true); try { navigator.vibrate && navigator.vibrate([400, 200, 400, 200, 400]); } catch (e) { /* no vibrate */ } }
     }
   }
   setInterval(watch, 2000);
-  window.HMSafety = { unlockAudio, check: watch }; // Hunt Map (map/hunt-field.js) sets the same alarm from the map
+  window.HMSafety = { unlockAudio, beep, check: watch }; // Hunt Map (map/hunt-field.js) sets the same alarm from the map; Aftershot uses beep
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') watch(); });
 
   // ---------- screens ----------
@@ -710,5 +722,6 @@
 
   window.HMRoutes = window.HMRoutes || {};
   window.HMRoutes.safety = route;
-  window.HMSafety = { utm, tripText, countdown, load };
+  // add to the object set above, not replace it: replacing it dropped unlockAudio, so the alarm set from the map had no sound
+  window.HMSafety = Object.assign(window.HMSafety || {}, { utm, tripText, countdown, load });
 })();
