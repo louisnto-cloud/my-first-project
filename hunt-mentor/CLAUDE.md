@@ -15,6 +15,9 @@
 - Work in phases. After each phase: fact check, show, wait for "go".
 - End every message with the live app link (owner rule, 2026-10-11): https://louisnto-cloud.github.io/my-first-project/hunt-mentor/ (map: add #/map).
 - Small build choices: decide, log in PLAN.md. Content or cost changes: ask.
+- Every new ask or addition from the owner (owner rule, 2026-10-23): first write a prompt that executes it, then run that prompt.
+  - Save it as `prompts/YYYY-MM-DD-short-name.md` (who it is for, goal, rules, parts, done means), commit it, and show it to the owner in chat.
+  - Agents are briefed from that prompt; the report back says what in the prompt is done and what is not.
 
 ## Writing style (app content and chat)
 - No em dashes. No hyphens in prose: "non toxic", "step by step", "4 point buck".
