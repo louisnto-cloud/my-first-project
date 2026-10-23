@@ -147,6 +147,9 @@
     return '';
   }
   const lessonArt = () => document.getElementById('ls-step');
+  const anchorOf = (m) => (m === 'lesson' ? lessonArt() : document.getElementById('fc'));
+  // a screen still fetching its text (lesson file, quiz or card deck loaded on demand) shows a "Loading..." line
+  const isLoading = (el) => !!el && (!!el.querySelector('.ls-wait, [aria-busy="true"]') || [...el.querySelectorAll('p, div, span')].some((x) => !x.children.length && /^Loading(\.\.\.|\u2026)?$/i.test(x.textContent.trim())));
   function screenKey() {
     const m = mode();
     if (m === 'lesson') { const h2 = lessonArt().querySelector('h2'); return 'L|' + location.hash + '|' + (h2 ? h2.textContent : ''); }
@@ -158,7 +161,7 @@
 
   // ---------- player ----------
   // state: idle | playing | paused | flipwait (card front read, waiting for the flip)
-  let cardSession = false, state = 'idle', queue = [], pos = 0, key = '', part = 'front', expectNew = false, gen = 0, cur = null, onEl = null;
+  let prevCardRoute = '', cardSession = false, state = 'idle', queue = [], pos = 0, key = '', part = 'front', expectNew = false, gen = 0, cur = null, onEl = null;
   const keep = []; // keep utterances referenced (some engines drop the end event of collected ones)
   function mark(el) { if (onEl) onEl.classList.remove('hmv-on'); onEl = el && el.classList ? el : null; if (onEl) onEl.classList.add('hmv-on'); }
   function buildQueue() {
@@ -226,8 +229,8 @@
     if (state === 'paused') { state = 'playing'; gen++; try { SS.cancel(); } catch (e) { /* ignore */ } const g = gen; speakNext(g); return; }
     if (state === 'flipwait') return;
     const m = mode(); if (!m) return;
-    if (m === 'lesson' && lessonArt().querySelector('.ls-wait')) { state = 'playing'; expectNew = true; key = screenKey(); queue = []; pos = 0; paint(); return; } // reads when the screen arrives
     part = 'front'; cardSession = m === 'card';
+    if (isLoading(anchorOf(m))) { gen++; state = 'playing'; expectNew = true; key = screenKey(); queue = []; pos = 0; paint(); return; } // reads when the text arrives
     start(0);
   }
   function pause() { if (state !== 'playing') return; gen++; state = 'paused'; try { SS.cancel(); } catch (e) { /* ignore */ } paint(); }
@@ -320,27 +323,36 @@
   // ---------- watch the app: inject, follow screen changes, stop when the screen is left ----------
   function sync() {
     const m = mode();
-    if (!m) { if (state !== 'idle') stop(); if (bar && bar.isConnected) bar.remove(); return; }
+    if (!m) {
+      if (cardSession && /^#\/(cards\/[^/]+|daily)/.test(location.hash) && location.hash.split('/')[1] === prevCardRoute && isLoading(view())) { // deck text still loading: wait for the card
+        gen++; try { SS.cancel(); } catch (e) { /* ignore */ } mark(null); queue = []; key = ''; return;
+      }
+      if (state !== 'idle') stop(); if (bar && bar.isConnected) bar.remove(); return;
+    }
     // place the bar
-    const anchor = m === 'lesson' ? lessonArt() : document.getElementById('fc');
+    const anchor = anchorOf(m);
     if (!bar || !bar.isConnected || bar.dataset.kind !== m || bar.nextElementSibling !== anchor) {
       if (bar && bar.isConnected) bar.remove();
       const b = bar && bar.dataset.kind === m ? bar : makeBar(m);
       anchor.parentNode.insertBefore(b, anchor); paint();
     }
-    const k = screenKey();
+    const k = screenKey(), loading = isLoading(anchor);
+    const route = k.split('|')[1], sameRoute = route === prevCardRoute;
+    if (m === 'card') prevCardRoute = route;
     if (k !== key) {
       const was = state;
       key = k;
-      const loading = m === 'lesson' && lessonArt().querySelector('.ls-wait');
-      if (expectNew && was === 'playing') { if (loading) return; expectNew = false; part = 'front'; start(0); return; }
-      if (m === 'card' && (was !== 'idle' || cardSession) && k.split('|')[1] === (prevCardRoute || '')) { part = 'front'; start(0); return; } // next card in the same deck: keep reading
+      const keepGoing = (expectNew && was === 'playing') || (m === 'card' && sameRoute && (was !== 'idle' || cardSession)); // our Next, keep going, or the next card of the same deck
+      if (keepGoing) {
+        gen++; try { SS.cancel(); } catch (e) { /* ignore */ } mark(null);
+        queue = []; pos = 0; part = 'front'; state = 'playing';
+        if (loading) { expectNew = true; paint(); return; } // wait for the text, never read "Loading..."
+        expectNew = false; start(0); return;
+      }
       if (was !== 'idle') stop();
-    } else if (expectNew && state === 'playing' && m === 'lesson' && !lessonArt().querySelector('.ls-wait') && !queue.length) { expectNew = false; start(0); return; }
-    if (m === 'card') prevCardRoute = k.split('|')[1];
+    } else if (expectNew && state === 'playing' && !queue.length && !loading) { expectNew = false; part = 'front'; start(0); return; }
     if (m === 'card' && state === 'flipwait') { const back = document.querySelector('#fc .fc-back'); if (back && !back.hidden) { part = 'back'; start(0); } }
   }
-  let prevCardRoute = '';
   let queued = false;
   const later = () => { if (queued) return; queued = true; Promise.resolve().then(() => { queued = false; try { sync(); } catch (e) { /* never break the app */ } }); };
   function watch() {
@@ -350,7 +362,7 @@
         if (r.type === 'attributes' ? !(r.target.closest && r.target.closest('.hmv-bar')) : [...r.addedNodes, ...r.removedNodes].some((n) => !(n.classList && n.classList.contains('hmv-bar')))) { later(); return; }
       }
     }).observe(v, { childList: true, subtree: true, attributes: true, attributeFilter: ['hidden'] });
-    window.addEventListener('hashchange', () => { if (!mode()) { if (state !== 'idle') stop(); } later(); });
+    window.addEventListener('hashchange', later);
     window.addEventListener('pagehide', () => { if (state !== 'idle') stop(); });
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && state === 'playing' && !SS.speaking && !SS.pending) { gen++; state = 'paused'; paint(); } // the phone stopped the voice (screen lock): Resume picks up here
