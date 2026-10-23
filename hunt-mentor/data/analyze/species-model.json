@@ -144,7 +144,7 @@
      "terrain": "bench",
      "cert": 85,
      "tip": "Be on the glass before first light. Watch south and west faces as the sun hits them.",
-     "source": "mc-mule-deer-06; mc-mule-deer-07; research/2026-10-11-masterclass-mule-deer.md",
+     "source": "mc-mule-deer-06; mc-mule-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 85,
       "slope": 50,
@@ -188,7 +188,7 @@
      "terrain": "ridge",
      "cert": 85,
      "tip": "After about 09:00 deer drift uphill into cover. Watch them to their beds.",
-     "source": "mc-mule-deer-06; mc-mule-deer-07; research/2026-10-11-masterclass-mule-deer.md",
+     "source": "mc-mule-deer-06; mc-mule-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 80,
       "slope": 50,
@@ -232,7 +232,7 @@
      "terrain": "bench",
      "cert": 80,
      "tip": "Noon is for finding beds with binoculars, not walking. Check shaded benches and draws.",
-     "source": "mc-mule-deer-06; mc-mule-deer-07; research/2026-10-11-masterclass-mule-deer.md",
+     "source": "mc-mule-deer-06; mc-mule-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 80,
       "slope": 50,
@@ -276,7 +276,7 @@
      "terrain": "bench",
      "cert": 80,
      "tip": "Late afternoon deer get up and browse near the bed. Be glassing by mid afternoon.",
-     "source": "mc-mule-deer-06; mc-mule-deer-07; research/2026-10-11-masterclass-mule-deer.md",
+     "source": "mc-mule-deer-06; mc-mule-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 80,
       "slope": 50,
@@ -322,7 +322,7 @@
      "terrain": "bench",
      "cert": 85,
      "tip": "Second peak sunset to about 21:00 (85%). Sit a seat that sees open feeding slopes.",
-     "source": "mc-mule-deer-06; mc-mule-deer-07; research/2026-10-11-masterclass-mule-deer.md",
+     "source": "mc-mule-deer-06; mc-mule-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 85,
       "slope": 50,
@@ -360,7 +360,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold day: look for bedded deer on sunny south and west slopes out of the wind.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 85,
         "slope": 85,
@@ -395,7 +395,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold afternoons: deer rise early and feed in the sun.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 80,
         "slope": 85,
@@ -475,7 +475,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold day: look for bedded deer on sunny south and west slopes out of the wind.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 85,
         "slope": 85,
@@ -510,7 +510,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold afternoons: deer rise early and feed in the sun.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 80,
         "slope": 85,
@@ -590,7 +590,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold day: look for bedded deer on sunny south and west slopes out of the wind.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 85,
         "slope": 85,
@@ -625,7 +625,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold afternoons: deer rise early and feed in the sun.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 80,
         "slope": 85,
@@ -775,7 +775,7 @@
        "terrain": "any",
        "cert": 70,
        "tip": "Rut: bucks follow does in daylight. Glass doe groups all day.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 85,
         "slope": 85,
@@ -810,7 +810,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold afternoons: deer rise early and feed in the sun.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 80,
         "slope": 85,
@@ -891,7 +891,7 @@
        "terrain": "any",
        "cert": 90,
        "tip": "Post rut bucks hide and rest (90%). Glass thick edges slowly.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 85,
         "slope": 85,
@@ -926,7 +926,7 @@
        "sun": "sun",
        "terrain": "any",
        "tip": "Cold afternoons: deer rise early and feed in the sun.",
-       "source": "mc-mule-deer-05; mc-mule-deer-06; research/2026-10-11-rl.md (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
+       "source": "mc-mule-deer-05; mc-mule-deer-06; Hunt Mentor research notes (BC Chilcotin mule deer model, US Forest Service 1998 as cited)",
        "factors": {
         "aspect": 80,
         "slope": 85,
@@ -1067,13 +1067,13 @@
    "sources": [
     "BC Ministry (2000), Mule and Black-tailed Deer in British Columbia, https://www.env.gov.bc.ca/wld/documents/muledeer.pdf, checked 2026-10-11 (90%)",
     "BC Ministry (2003), mule deer habitat model, Central Okanagan, https://a100.gov.bc.ca/pub/acat/documents/r1757/whr_4002_modhe_1224094596301_8e248a8d30d8a9320898638a4b82840986e6405f8898.pdf, checked 2026-10-11 (85%)",
-    "BC wildlife habitat rating account, mule deer, Chilcotin and Fraser Plateau (2004), https://a100.gov.bc.ca/pub/acat/documents/r1573/whr_4109_modhe_1097078581992_3f7c787cc7c9486aa185bdad7e4c4f53.pdf, via research/2026-10-11-rl.md, checked 2026-10-11 (85%)",
+    "BC wildlife habitat rating account, mule deer, Chilcotin and Fraser Plateau (2004), https://a100.gov.bc.ca/pub/acat/documents/r1573/whr_4109_modhe_1097078581992_3f7c787cc7c9486aa185bdad7e4c4f53.pdf, via; Hunt Mentor research notes, checked 2026-10-11 (85%)",
     "Stewart and others 2002, deer activity timing, https://academic.oup.com/jmammal/article/84/3/1076/905056, via research notes (85%)",
     "Mule Deer Working Group fact sheet 17, https://wildlife.utah.gov/pdf/deer/mdwg-17_winter_range_disturbance.pdf, checked 2026-10-11 (85%)",
     "Germaine and others 2004, mule deer day beds, https://www.esf.edu/biology/faculty/documents/Germaineetal2004muledeerdaybedsites.pdf, checked 2026-10-11 (60 to 80%)",
     "Willms 1976, deer diet near Kamloops, https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065, via research notes (85%)",
-    "Luloff and others 2004, Penn State hunter movement report, https://ecosystems.psu.edu/research/pacfwru/reports/hunting-seasons/@@download/file/Final-huntmvmt-082004.pdf, via research/2026-10-11-rl.md (85% Pennsylvania, 60% applied to BC)",
-    "Curtis and Du Toit 2017, Wildlife Society Bulletin 41, via Conservation Evidence, research/2026-10-11-rq.md, checked 2026-10-11 (70%)",
+    "Luloff and others 2004, Penn State hunter movement report, https://ecosystems.psu.edu/research/pacfwru/reports/hunting-seasons/@@download/file/Final-huntmvmt-082004.pdf, via Hunt Mentor research notes (85% Pennsylvania, 60% applied to BC)",
+    "Curtis and Du Toit 2017, Wildlife Society Bulletin 41, via Conservation Evidence,; Hunt Mentor research notes, checked 2026-10-11 (70%)",
     "App data: data/migration.json (mule deer months, 60 to 80%), checked 2026-10-03",
     "Hunt Mentor lessons mc-mule-deer-05, 06, 07; local-heffley; food-water-cover"
    ]
@@ -1216,7 +1216,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "At first light white tails drift from fields back to willow and cottonwood beds. Be set up before light, between field and bed.",
-     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; research/2026-10-11-masterclass-white-tailed-deer.md",
+     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 70,
@@ -1262,7 +1262,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Sit the first 2 hours of light, then scout or still hunt thick bottoms slowly.",
-     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; research/2026-10-11-masterclass-white-tailed-deer.md",
+     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 70,
@@ -1308,7 +1308,7 @@
      "terrain": "valley",
      "cert": 70,
      "tip": "Midday they are bedded in river brush, chewing cud. Under 50 m an hour of movement (75%).",
-     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; research/2026-10-11-masterclass-white-tailed-deer.md",
+     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 70,
@@ -1354,7 +1354,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Be in your evening stand at least 2 hours before dark. Deer stage at the field edge first.",
-     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; research/2026-10-11-masterclass-white-tailed-deer.md",
+     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 70,
@@ -1400,7 +1400,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Hayfield and alfalfa edges at dusk. Leave after dark without crossing the field.",
-     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; research/2026-10-11-masterclass-white-tailed-deer.md",
+     "source": "mc-white-tailed-deer-06; mc-white-tailed-deer-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 70,
@@ -2856,9 +2856,9 @@
     "US Forest Service species review, white tailed deer, https://www.fs.usda.gov/database/feis/animals/mammal/odvi/all.html, checked 2026-10-11 (85%)",
     "Idaho Fish and Game, Wildlife Express white tailed deer, https://idfg.idaho.gov/sites/default/files/wildlife-express_sept-2017-whitetalied-deer.pdf, checked 2026-10-11 (80%)",
     "Staudenmaier and others 2021, https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3813, checked 2026-10-01 (85%)",
-    "Penn State, Wandering in the moonlight, https://deer.psu.edu/wandering-in-the-moonlight, via research/2026-10-11-rq.md (75%)",
-    "Luloff and others 2004, Penn State hunter movement report, via research/2026-10-11-rq.md (85% Pennsylvania, 60% applied to BC)",
-    "Armstrong and others 1983, white tail winter day beds, search preview via research/2026-10-11-rl.md (60%)",
+    "Penn State, Wandering in the moonlight, https://deer.psu.edu/wandering-in-the-moonlight, via; Hunt Mentor research notes (75%)",
+    "Luloff and others 2004, Penn State hunter movement report, via; Hunt Mentor research notes (85% Pennsylvania, 60% applied to BC)",
+    "Armstrong and others 1983, white tail winter day beds, search preview via; Hunt Mentor research notes (60%)",
     "App data: data/migration.json (white tail months, 60 to 70%), checked 2026-10-03",
     "Hunt Mentor lessons mc-white-tailed-deer-05, 06, 07, 03"
    ]
@@ -3004,7 +3004,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Dawn: out at the willow flat, wetland edge or young cutblock. Glass the edges.",
-     "source": "mc-moose-06; mc-moose-07; research/2026-10-11-masterclass-moose.md; research/2026-10-11-analyze-model.md",
+     "source": "mc-moose-06; mc-moose-07; Hunt Mentor research notes; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 50,
@@ -3052,7 +3052,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Activity peaks about 2 hours after sunrise (75%, Minnesota GPS). Do not leave at sunrise.",
-     "source": "mc-moose-06; mc-moose-07; research/2026-10-11-masterclass-moose.md; research/2026-10-11-analyze-model.md",
+     "source": "mc-moose-06; mc-moose-07; Hunt Mentor research notes; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 50,
@@ -3100,7 +3100,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Midday: bedded in thick conifer or willow near water. Scout sign or still hunt timber slowly.",
-     "source": "mc-moose-06; mc-moose-07; research/2026-10-11-masterclass-moose.md; research/2026-10-11-analyze-model.md",
+     "source": "mc-moose-06; mc-moose-07; Hunt Mentor research notes; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 50,
@@ -3148,7 +3148,7 @@
      "terrain": "valley",
      "cert": 70,
      "tip": "Moose get up to feed several times a day (70%). Sit a wetland or cutblock edge for the last 3 hours.",
-     "source": "mc-moose-06; mc-moose-07; research/2026-10-11-masterclass-moose.md; research/2026-10-11-analyze-model.md",
+     "source": "mc-moose-06; mc-moose-07; Hunt Mentor research notes; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 50,
@@ -3196,7 +3196,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Dusk: back out to feed. Shoot early enough to deal with a moose before dark.",
-     "source": "mc-moose-06; mc-moose-07; research/2026-10-11-masterclass-moose.md; research/2026-10-11-analyze-model.md",
+     "source": "mc-moose-06; mc-moose-07; Hunt Mentor research notes; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 50,
@@ -4228,7 +4228,7 @@
      "terrain": "any",
      "cert": 80,
      "tip": "Elk feed in openings next to cover; most stay within 183 m of cover (80%). Glass meadow and burn edges.",
-     "source": "mc-elk-06; mc-elk-07; research/2026-10-11-masterclass-elk.md",
+     "source": "mc-elk-06; mc-elk-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 80,
@@ -4273,7 +4273,7 @@
      "terrain": "any",
      "cert": 80,
      "tip": "The morning peak can come almost 2 hours after first light (80%). Stay in your seat.",
-     "source": "mc-elk-06; mc-elk-07; research/2026-10-11-masterclass-elk.md",
+     "source": "mc-elk-06; mc-elk-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 80,
@@ -4318,7 +4318,7 @@
      "terrain": "any",
      "cert": 75,
      "tip": "Do not walk into midday beds: the herd leaves the drainage. Glass edges and wait.",
-     "source": "mc-elk-06; mc-elk-07; research/2026-10-11-masterclass-elk.md",
+     "source": "mc-elk-06; mc-elk-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 75,
       "slope": 80,
@@ -4363,7 +4363,7 @@
      "terrain": "any",
      "cert": 75,
      "tip": "Be set up over an opening next to timber before the evening move.",
-     "source": "mc-elk-06; mc-elk-07; research/2026-10-11-masterclass-elk.md",
+     "source": "mc-elk-06; mc-elk-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 75,
       "slope": 80,
@@ -4408,7 +4408,7 @@
      "terrain": "any",
      "cert": 80,
      "tip": "Dusk: out to feed. Under pressure elk go farther into the open only after dark.",
-     "source": "mc-elk-06; mc-elk-07; research/2026-10-11-masterclass-elk.md",
+     "source": "mc-elk-06; mc-elk-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 80,
@@ -5496,7 +5496,7 @@
     "BC habitat models for Rocky Mountain elk, La Biche and Sandy Creek, https://a100.gov.bc.ca/pub/acat/documents/r1651/whr_4012_mceel_1098209135230_07a33d337dd7428586868202f6bc05bd.pdf, and Muskwa, https://a100.gov.bc.ca/pub/acat/documents/r1583/whr_4069_mceel_1117055960977_ad101d33f76a47c38b67f114e5fbb078.pdf, checked 2026-10-11 (80%)",
     "Ensing and others 2014, GPS daily activity of elk, https://pmc.ncbi.nlm.nih.gov/articles/PMC4160215/, checked 2026-10-11 (80%)",
     "Millspaugh and others 1998, summer bed sites (abstract, search preview, 75%)",
-    "BHA literature review on roads and elk, via research/2026-10-11-rq.md, search preview (60%)",
+    "BHA literature review on roads and elk, via; Hunt Mentor research notes, search preview (60%)",
     "App data: data/migration.json (elk months, 55 to 70%), checked 2026-10-03",
     "Hunt Mentor lessons mc-elk-03, 05, 06, 07"
    ]
@@ -5639,7 +5639,7 @@
      "terrain": "draw",
      "cert": 70,
      "tip": "On a glassing knob before light. Glass berry slopes and cutblock edges.",
-     "source": "mc-black-bear-06; mc-black-bear-07; research/2026-10-11-masterclass-black-bear.md",
+     "source": "mc-black-bear-06; mc-black-bear-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -5684,7 +5684,7 @@
      "terrain": "draw",
      "cert": 65,
      "tip": "Fall bears feed much of the day (65%). Keep glassing the best food.",
-     "source": "mc-black-bear-06; mc-black-bear-07; research/2026-10-11-masterclass-black-bear.md",
+     "source": "mc-black-bear-06; mc-black-bear-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -5729,7 +5729,7 @@
      "terrain": "draw",
      "cert": 50,
      "tip": "Tip: beds in thick cover near food. Scout sign and check the wind.",
-     "source": "mc-black-bear-06; mc-black-bear-07; research/2026-10-11-masterclass-black-bear.md",
+     "source": "mc-black-bear-06; mc-black-bear-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -5774,7 +5774,7 @@
      "terrain": "draw",
      "cert": 65,
      "tip": "From about 15:00 be back on glass over the best food.",
-     "source": "mc-black-bear-06; mc-black-bear-07; research/2026-10-11-masterclass-black-bear.md",
+     "source": "mc-black-bear-06; mc-black-bear-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -5819,7 +5819,7 @@
      "terrain": "draw",
      "cert": 70,
      "tip": "Dawn and dusk peaks (70%). Big boars often use the last light (Tip).",
-     "source": "mc-black-bear-06; mc-black-bear-07; research/2026-10-11-masterclass-black-bear.md",
+     "source": "mc-black-bear-06; mc-black-bear-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -6539,7 +6539,7 @@
      "terrain": "bench",
      "cert": 75,
      "tip": "First light to mid morning: edges, old roads and trails for grit, clover and berries.",
-     "source": "mc-grouse-06; mc-grouse-07; research/2026-10-11-masterclass-grouse.md",
+     "source": "mc-grouse-06; mc-grouse-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 50,
       "slope": 0,
@@ -6586,7 +6586,7 @@
      "terrain": "bench",
      "cert": 75,
      "tip": "Walk an old closed road or trail away from traffic.",
-     "source": "mc-grouse-06; mc-grouse-07; research/2026-10-11-masterclass-grouse.md",
+     "source": "mc-grouse-06; mc-grouse-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 50,
       "slope": 0,
@@ -6633,7 +6633,7 @@
      "terrain": "bench",
      "cert": 70,
      "tip": "Midday birds loaf and dust bathe; spruce and dusky sit in conifers. Slow down and look up.",
-     "source": "mc-grouse-06; mc-grouse-07; research/2026-10-11-masterclass-grouse.md",
+     "source": "mc-grouse-06; mc-grouse-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -6682,7 +6682,7 @@
      "terrain": "bench",
      "cert": 70,
      "tip": "Last 2 hours of light: birds feed again on edges, berries and clover.",
-     "source": "mc-grouse-06; mc-grouse-07; research/2026-10-11-masterclass-grouse.md",
+     "source": "mc-grouse-06; mc-grouse-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -6731,7 +6731,7 @@
      "terrain": "bench",
      "cert": 75,
      "tip": "Birds go to roost in trees, on the ground or in soft snow. Timber gets dark before legal light ends.",
-     "source": "mc-grouse-06; mc-grouse-07; research/2026-10-11-masterclass-grouse.md",
+     "source": "mc-grouse-06; mc-grouse-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 0,
@@ -7080,7 +7080,7 @@
      "terrain": "valley",
      "cert": 70,
      "tip": "Be in place and quiet at first light. Listen for assembly calls before you walk.",
-     "source": "mc-quail-06; mc-quail-07; research/2026-10-11-masterclass-quail.md",
+     "source": "mc-quail-06; mc-quail-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 50,
       "slope": 60,
@@ -7126,7 +7126,7 @@
      "terrain": "valley",
      "cert": 70,
      "tip": "Feeding stays within about 15 to 30 m of cover (80%). Work brush edges.",
-     "source": "mc-quail-06; mc-quail-07; research/2026-10-11-masterclass-quail.md",
+     "source": "mc-quail-06; mc-quail-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 50,
       "slope": 60,
@@ -7172,7 +7172,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Midday: rest in thick cover, dust bathe, drink. Birds hold tight. Take your own break.",
-     "source": "mc-quail-06; mc-quail-07; research/2026-10-11-masterclass-quail.md",
+     "source": "mc-quail-06; mc-quail-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -7220,7 +7220,7 @@
      "terrain": "valley",
      "cert": 70,
      "tip": "Second feed in late afternoon. The last 2 hours before sunset are prime.",
-     "source": "mc-quail-06; mc-quail-07; research/2026-10-11-masterclass-quail.md",
+     "source": "mc-quail-06; mc-quail-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -7268,7 +7268,7 @@
      "terrain": "valley",
      "cert": 75,
      "tip": "Dusk chorus as coveys gather to roost in dense trees or shrubs. Stop early so coveys can regroup.",
-     "source": "mc-quail-06; mc-quail-07; research/2026-10-11-masterclass-quail.md",
+     "source": "mc-quail-06; mc-quail-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -7889,7 +7889,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Two flights a day: out to feed at first light. Be set up and quiet before the first bird can see.",
-     "source": "mc-ducks-06; mc-ducks-07; research/2026-10-11-masterclass-ducks.md",
+     "source": "mc-ducks-06; mc-ducks-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -7938,7 +7938,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "After the morning feed ducks rest on water. Puddle ducks in shallow bays; divers raft off points.",
-     "source": "mc-ducks-06; mc-ducks-07; research/2026-10-11-masterclass-ducks.md",
+     "source": "mc-ducks-06; mc-ducks-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -7986,7 +7986,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Midday on water. Windy days: ducks hold on the lee side of ponds (65%).",
-     "source": "mc-ducks-06; mc-ducks-07; research/2026-10-11-masterclass-ducks.md",
+     "source": "mc-ducks-06; mc-ducks-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8034,7 +8034,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Wigeon raft until late afternoon, then move into marshes to feed (80%).",
-     "source": "mc-ducks-06; mc-ducks-07; research/2026-10-11-masterclass-ducks.md",
+     "source": "mc-ducks-06; mc-ducks-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8079,7 +8079,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Late day: mallards to cut grain fields, then back to the marsh for the night.",
-     "source": "mc-ducks-06; mc-ducks-07; research/2026-10-11-masterclass-ducks.md",
+     "source": "mc-ducks-06; mc-ducks-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8552,7 +8552,7 @@
     "Ducks Unlimited, Ducks after dark (Humburg 2009), https://ducks.org/conservation/waterfowl-research-science/ducks-after-dark, checked 2026-10-11 (70 to 80%)",
     "Ducks Unlimited, the science of disturbance (2026), https://www.ducks.org/conservation/waterfowl-research-science/understanding-waterfowl-the-science-of-disturbance, checked 2026-10-11 (80%)",
     "Ducks Unlimited, BC Intermountain, https://www.ducks.org/conservation/international-conservation-plan/bc-intermountain, checked 2026-10-11 (70 to 75%)",
-    "Link and others 2011, Waterbirds 34(4), mallard day and night sites, via research/2026-10-11-rq.md (85%)",
+    "Link and others 2011, Waterbirds 34(4), mallard day and night sites, via; Hunt Mentor research notes (85%)",
     "BC Breeding Bird Atlas, https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?lang=en&sp=MALL, checked 2026-10-01 (85%)",
     "App data: data/migration.json (ducks months, 55 to 65%), checked 2026-10-03",
     "Hunt Mentor lessons mc-ducks-03, 05, 06, 07"
@@ -8696,7 +8696,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "First birds leave about 15 minutes before sunrise in clear weather; cloud delays it about 15 minutes (80%).",
-     "source": "mc-geese-06; mc-geese-07; research/2026-10-11-masterclass-geese.md",
+     "source": "mc-geese-06; mc-geese-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8742,7 +8742,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Morning feed in open fields for a few hours. Geese avoid feeding next to tall cover (60%).",
-     "source": "mc-geese-06; mc-geese-07; research/2026-10-11-masterclass-geese.md",
+     "source": "mc-geese-06; mc-geese-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8791,7 +8791,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Midday rest on lakes, big rivers, bars and points. Never shoot the roost.",
-     "source": "mc-geese-06; mc-geese-07; research/2026-10-11-masterclass-geese.md",
+     "source": "mc-geese-06; mc-geese-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8836,7 +8836,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Late afternoon feed. Cloudy days keep geese longer in the fields (80%).",
-     "source": "mc-geese-06; mc-geese-07; research/2026-10-11-masterclass-geese.md",
+     "source": "mc-geese-06; mc-geese-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
@@ -8885,7 +8885,7 @@
      "terrain": "valley",
      "cert": 80,
      "tip": "Return to the roost between sunset and civil twilight; a visible full moon makes it later (80%).",
-     "source": "mc-geese-06; mc-geese-07; research/2026-10-11-masterclass-geese.md",
+     "source": "mc-geese-06; mc-geese-07; Hunt Mentor research notes",
      "factors": {
       "aspect": 0,
       "slope": 60,
