@@ -1,69 +1,53 @@
-# Amazon.ca Beverage — Competitor Intelligence
+# ⭐ Anh Ngữ E’TOP
 
-A reproducible, **integrity-first** competitor-intelligence workbook for the
-ready-to-drink (RTD) beverage category on Amazon.ca: 124 product lines across
-~101 brands, exploded into ~2,900 candidate SKUs, with nutrition and positioning
-attributes verified against secondary sources and every commercial figure left
-blank until it can be captured live.
+A student progress & learning app for **Trung tâm Anh Ngữ E’TOP** (Phan Thiết, Vietnam).
+Built mobile-first as a web app, with a fully bilingual Vietnamese/English interface.
 
-## The honesty model (why this repo is unusual)
+> **Branding:** the official E’TOP logo shown across the app (login, header,
+> favicon) is the single file `public/logo.png` — replace it to update the
+> branding everywhere at once.
 
-This project was built in an environment with **no live Amazon access** (every
-request returns HTTP 403). Rather than guess, it splits every field into two layers:
+See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 
-| Layer | Fields | How they're handled |
-|-------|--------|---------------------|
-| **Stable attributes** | brand, size, flavours, caffeine/sodium/potassium/sugar/calories, sweetener, claims, positioning | Filled from manufacturer + secondary sources, **cited** in the Enrichment Log, flagged "approximate — verify on live label". |
-| **Live commercial** | price, Subscribe & Save, coupon, promo, rating, #ratings, badge, BSR, URL | **Left blank and amber-highlighted.** Never fabricated. Live formulas auto-compute the moment real prices are entered. |
+## What's inside
 
-"Nothing is fabricated" is not just a promise — it is **machine-enforced** (see
-Testing below).
+| Role | What they get |
+|---|---|
+| 🧑‍🎓 **Student** | Dashboard with streak & points, grades with skill breakdown and progress chart, class schedule, homework checklist, vocabulary flashcards & quizzes, badges and a class leaderboard |
+| 🧑‍🏫 **Teacher** | Class overview, gradebook (enter scores + comments per student), assign homework, create vocabulary lists |
+| 👩‍💼 **Owner (admin)** | Everything teachers get, plus center-wide stats across all classes |
+| 👨‍👦 **Parent** | Read-only view of their child's grades, schedule, homework, and badges |
 
-## Files
-
-| File | Purpose |
-|------|---------|
-| `build_competitor_intel.py` | Generator. Builds the 21-tab workbook with `openpyxl`; self-validates at the end. |
-| `test_competitor_intel.py` | Integrity test suite (~12,400 assertions). Fails if any commercial cell is fabricated, a computed column isn't a formula, nutrition is out of range, SKU counts don't reconcile, a TOC link is broken, or an Enrichment Log row lacks a source. |
-| `ingest_captures.py` | Ingests live-captured listing CSVs into a "Verified Listings (Live)" tab with computed columns. |
-| `BROWSE_AND_CAPTURE.md` | Two paths for getting real Amazon.ca data into the workbook. |
-| `capture_template.csv` | Column schema for captures. |
-| `Amazon_ca_Beverage_Competitor_Intel_<date>.xlsx` | The generated workbook (current dated build). |
-
-## Workbook tabs (21)
-
-README & Methodology · Executive Dashboard · **Strategic Insights** · Data
-Dictionary · 5 SKU-level Master tabs (one per category) · Brand Roll-up ·
-Category Benchmarks · Nutrition Scoreboard · Pricing & Promo Analysis ·
-Subscription Strategy · Why They Win · Velocity Estimate · Flavour Map ·
-Live-Capture Protocol · QA & Integrity · Enrichment Log · Sources.
-
-The in-workbook README has a **clickable table of contents** linking to every tab.
-
-## Usage
+## Run it
 
 ```bash
-pip install openpyxl
-
-# Build the workbook (runs the integrity self-check at the end)
-python build_competitor_intel.py
-
-# Run the integrity suite on its own
-python test_competitor_intel.py
+npm install
+npm run dev      # development server
+npm run build    # production build (also type-checks)
+npx tsx scripts/smoke.ts   # sanity-check the seeded demo data
 ```
 
-CI (GitHub Actions, `.github/workflows/ci.yml`) runs both on every push and pull
-request and uploads the generated workbook as a build artifact.
+## Demo accounts (password: `etop123`)
 
-## Getting real prices in
+| Role | Email |
+|---|---|
+| Student | `minh@etop.vn` |
+| Parent | `phuhuynh@etop.vn` |
+| Teacher | `lan@etop.vn` |
+| Owner | `zhao@etop.vn` |
 
-The workbook ships decision-*ready* but not decision-*complete*: the commercial
-columns await a live-capture pass. See **`BROWSE_AND_CAPTURE.md`** — capture
-listings into a CSV (browser path or manual), then:
+The app ships with a seeded demo database — 6 classes, 40 students, score
+history, homework, and vocabulary lists — stored in the browser's
+localStorage. The **Reset demo data** link on the teacher overview restores it.
 
-```bash
-python3 ingest_captures.py            # rebuilds "Verified Listings (Live)"
-```
+## Architecture notes
 
-All price/unit, price/100 mL, S&S price, effective-floor and health/functional
-scores compute automatically from the captured rows.
+- **Stack:** React 18 + TypeScript + Vite + Tailwind CSS + React Router.
+- **Data layer:** all reads/writes go through `src/store.tsx` (`useApp()`),
+  currently backed by localStorage with seed data from `src/seed.ts`. To move
+  to a real backend, replace `loadDB`/`mutate` with API calls — pages and
+  components don't need to change.
+- **i18n:** every UI string goes through `t()` in `src/i18n.tsx` with `vi`
+  and `en` dictionaries; the toggle persists per device.
+- **Mobile app path:** it's a responsive SPA, ready to be wrapped with
+  Capacitor or extended into a PWA (manifest + service worker) later.
