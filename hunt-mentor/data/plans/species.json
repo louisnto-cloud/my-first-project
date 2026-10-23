@@ -868,19 +868,22 @@
        {
         "t": "Mule deer species licence bought in person (black tailed deer use it)",
         "cert": 99,
-        "lesson": "licences"
+        "lesson": "licences",
+        "top": 2
        },
        {
         "t": "Your MU row on synopsis page 28 checked: bucks only, to 15 December in 2-8, 2-18, 2-19",
         "why": "No antlerless season in those MUs",
         "cert": 99,
-        "lesson": "local-harrison-deer"
+        "lesson": "local-harrison-deer",
+        "top": 3
        },
        {
         "t": "Chilliwack district road notices read for your FSR (Forest Service Road)",
         "why": "Closures and washouts change",
         "cert": 95,
-        "lesson": "local-harrison-deer"
+        "lesson": "local-harrison-deer",
+        "top": 7
        },
        {
         "t": "No shooting bands and closed areas checked on the Hunt Map",
@@ -894,7 +897,8 @@
         "t": "Zero confirmed with the deer load, 150 to 165 grain expanding",
         "why": "Same box you hunt with (Tip)",
         "cert": 70,
-        "lesson": "sighting-in"
+        "lesson": "sighting-in",
+        "top": 5
        },
        {
         "t": "Max range tested on a 15 cm plate from a field rest",
@@ -924,7 +928,8 @@
        {
         "t": "4 game bags, cloth, never plastic",
         "cert": 80,
-        "lesson": "field-dressing"
+        "lesson": "field-dressing",
+        "top": 8
        },
        {
         "t": "Small tarp and cord for a meat roof",
@@ -978,7 +983,10 @@
        {
         "t": "Cooler, ice or frozen jugs ready in the truck",
         "cert": 60,
-        "lesson": "meat-care"
+        "lesson": "meat-care",
+        "coveredBy": [
+         "coolers pre chilled block ice or frozen jugs rack for the cooler bottom"
+        ]
        },
        {
         "t": "Butcher booked before the hunt",
