@@ -237,3 +237,12 @@ Certainty scale: see CLAUDE.md.
 - BC Big Game Harvest Statistics 1976 to 2024 via data/harvest/bc-harvest.json (90%): resident mule deer rows for MUs 2-8, 2-18, 2-19 and the Region 2 total, 2020 to 2024. Hunt Mentor computed days per deer: 2-18 24.6, 2-19 27.5, 2-8 30.3, Region 2 13.5.
 - Rules: Synopsis 2026 to 2028, 2 October 2026 edition, pages 4, 8, 10, 11, 12, 13, 14, 15, 27, 28 (99%), as already logged for the Region 2 Rule Book and the Harrison deer lesson.
 - Not found, marked VERIFY: a black tail study on behaviour in rain; rattling and calling for black tails; the local Harrison rut peak; usual first snow and November night temperatures at Harrison hunting elevations. ADFG (Alaska Department of Fish and Game) Sitka black tailed deer page returned an empty page 2026-10-23.
+
+## 2026-10-23 Plan live conditions and hour by hour (app/addons/plan-live.js, app/addons/plan-days.js, data/addons/plan-live/plan-live.json)
+- Open-Meteo forecast API (CC BY 4.0), hourly wind, gusts, rain, temperature, freezing level, snowfall, up to 16 days ahead, fetched on the phone: https://open-meteo.com/ (model forecast, not a promise). Days beyond the window show climate and rules only.
+- BC government Forest Service Road Safety Information, South Coast (ArcGIS layer FSR_Safety_Information_View, owner governmentofbc), public, read live by the app within 40 km of the plan point; checked reachable and CORS open 2026-10-23, layer last edited 20 October 2026 (95%): https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/FSR_Safety_Information_View/FeatureServer/0 ; map: https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=a42873895b3d4ca084ea9730212cacb1
+- No signal fallback for road notices: the Chilliwack district lines saved in the Harrison deer lesson (page updated 21 October 2026, read 2026-10-23, 95%).
+- BC Wildfire Service bans and prohibition areas layer (same query as the Safety conditions check, 95%).
+- Rut phases: Black tailed deer Masterclass 4 (Nyberg and Janz 1990 page 36, BC deer account 2000, 90%); local Harrison peak VERIFY.
+- Climate lines: Environment Canada Climate Normals 1991 to 2020, Abbotsford (95%), as logged for the fitness and packs lessons.
+- Thermals: Wind and thermals lesson (75%); switch times are the Hunt Map's rule of thumb (Tip). Drive times: straight line times 1.3 at 60 km/h plus 15 min (Assumption, estimate).
