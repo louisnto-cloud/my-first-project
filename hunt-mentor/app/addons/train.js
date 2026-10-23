@@ -82,7 +82,8 @@
     setTitle('Practice');
     const best = (k, f) => { const h = histOf(k); return h.length ? f(h[h.length - 1]) : 'not tried yet'; };
     view().innerHTML = `<div class="tr">
-      <p class="muted">Three trainers. 10 rounds each. Every answer explained. Works with no signal.</p>
+      <p class="muted">Four trainers. 10 rounds each. Every answer explained. Works with no signal.</p>
+      ${window.HMDecide ? `<a class="card tr-menu" href="#/train/decide"><b>Shoot or don't shoot</b><span>Short field situations, Harrison deer first: legal light, season, land, roads, partner, angle, wounded animal, bears. Make the call, see the rule.</span><small>Last: ${(() => { try { const h = (JSON.parse(localStorage.getItem('hm.train.decide') || '{}').hist || []); const r = h[h.length - 1]; return r ? r.score + ' of ' + r.n : 'not tried yet'; } catch (e) { return 'not tried yet'; } })()}</small></a>` : ''}
       <a class="card tr-menu" href="#/train/shot"><b>Shot placement</b><span>Tap where you would aim on a deer, moose, elk or black bear. Some rounds are a no shot.</span><small>Last: ${best('shot', (r) => r.score + ' of ' + r.n)}</small></a>
       <a class="card tr-menu" href="#/train/buck"><b>Legal buck</b><span>Count the points on mule deer and white tailed deer antlers, then call it: legal or not in MU (Management Unit) 3-27.</span><small>Last: ${best('buck', (r) => r.score + ' of ' + r.n)}</small></a>
       <a class="card tr-menu" href="#/train/range"><b>Range guessing</b><span>Guess how far the deer stands. Within 10% scores. Your accuracy chart builds over time.</span><small>Last: ${best('range', (r) => r.within + ' of ' + r.n + ' within 10%')}</small></a>
@@ -657,9 +658,11 @@
   }
 
   window.HMRoutes = window.HMRoutes || {};
-  window.HMRoutes.train = withFacts((args) => {
+  const trainRoute = withFacts((args) => {
     const a = (args && args[0]) || '';
     if (a === 'shot') shot(); else if (a === 'buck') buck(); else if (a === 'range') range(); else menu();
   });
+  // #/train/decide belongs to app/addons/decide.js (it loads its own data, so it skips the facts fetch)
+  window.HMRoutes.train = (args) => (args && args[0] === 'decide' && window.HMDecide ? window.HMDecide.route(args.slice(1)) : trainRoute(args));
   window.HMTrain = { classify, pose, buckLegal, BUCK_POOL, SPECIES, groundY, _rounds: { shotRounds, buckRounds, rangeRounds }, _draw: { shot: (R, rev) => shotScene(R, rev), buck: (r) => buckSvg(r, null, true), range: (R) => rangeSvg(R, {}, true) } };
 })();
