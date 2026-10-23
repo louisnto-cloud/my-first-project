@@ -38,6 +38,11 @@ self.addEventListener('activate', (e) => {
 const normKey = (u) => u.replace(/^(https:\/\/tiles\.openfreemap\.org\/[a-z0-9_]+)\/[^/]+\/(\d+\/\d+\/\d+\.pbf)(\?.*)?$/, '$1/_/$2');
 const MATCH = { ignoreVary: true };
 
+// A tap on an alert (the turnaround alarm, addons/safety.js) opens the app. Without this, a tap did nothing on Android.
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((cs) => (cs.length ? cs[0].focus() : self.clients.openWindow('./'))).catch(() => {}));
+});
 self.addEventListener('message', (e) => { if (e.data && e.data.hm === 'offline-changed') pmIdx = null; });
 
 // ---------- no signal detection ----------
