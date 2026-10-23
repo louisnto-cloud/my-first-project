@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" font-family="sans-serif" role="img" aria-label="3 common mistakes here. Shooting a doe because &quot;the limit is 2, one antlerless&quot;, fix: No antlerless season in 2-8, 2-18 or 2-19. Taking a rifle onto the Harrison Mills flats, fix: That lowland bans rifles. Hunt deer up in the hills. Driving a closed or washed out FSR because a map shows it open, fix: The night before: read the Chilliwack road notices.">
+<rect width="400" height="390" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">3 common mistakes here</text>
+<circle cx="28" cy="52" r="11" fill="#17201A"/><path d="M23.5 47.5 l9 9 M32.5 47.5 l-9 9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><text x="46" y="57" font-size="15" font-weight="bold" fill="#17201A">Mistake</text><circle cx="244" cy="52" r="11" fill="#1F3D2B"/><path d="M239 52 l3.5 4 l6.5 -8" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="262" y="57" font-size="15" font-weight="bold" fill="#1F3D2B">Fix</text>
+<g data-tip="Shooting a doe|There is no antlerless season in 2-8, 2-18 or 2-19."><rect x="12" y="72" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="94" font-size="15" fill="#17201A">Shooting a doe</text>
+<text x="22" y="113" font-size="15" fill="#17201A">because &quot;the limit</text>
+<text x="22" y="132" font-size="15" fill="#17201A">is 2, one</text>
+<text x="22" y="151" font-size="15" fill="#17201A">antlerless&quot;</text><path d="M178 119 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 119 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="72" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="94" font-size="15" font-weight="bold" fill="#1F3D2B">No antlerless</text>
+<text x="238" y="113" font-size="15" font-weight="bold" fill="#1F3D2B">season in 2-8,</text>
+<text x="238" y="132" font-size="15" font-weight="bold" fill="#1F3D2B">2-18 or 2-19</text></g>
+<g data-tip="Harrison Mills flats|Harrison Mills and Nicomen lowland: no rifles, and shot only on much of it (99%; 85% my reading of the boundary)."><rect x="12" y="176" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="198" font-size="15" fill="#17201A">Taking a rifle</text>
+<text x="22" y="217" font-size="15" fill="#17201A">onto the Harrison</text>
+<text x="22" y="236" font-size="15" fill="#17201A">Mills flats</text><path d="M178 223 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 223 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="176" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="198" font-size="15" font-weight="bold" fill="#1F3D2B">That lowland</text>
+<text x="238" y="217" font-size="15" font-weight="bold" fill="#1F3D2B">bans rifles.</text>
+<text x="238" y="236" font-size="15" font-weight="bold" fill="#1F3D2B">Hunt deer up in</text>
+<text x="238" y="255" font-size="15" font-weight="bold" fill="#1F3D2B">the hills</text></g>
+<g data-tip="Road notices|No notice is not a promise the road is open (95%). Read the Chilliwack district page before you go."><rect x="12" y="280" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="302" font-size="15" fill="#17201A">Driving a closed</text>
+<text x="22" y="321" font-size="15" fill="#17201A">or washed out FSR</text>
+<text x="22" y="340" font-size="15" fill="#17201A">because a map</text>
+<text x="22" y="359" font-size="15" fill="#17201A">shows it open</text><path d="M178 327 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 327 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="280" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="302" font-size="15" font-weight="bold" fill="#1F3D2B">The night</text>
+<text x="238" y="321" font-size="15" font-weight="bold" fill="#1F3D2B">before: read the</text>
+<text x="238" y="340" font-size="15" font-weight="bold" fill="#1F3D2B">Chilliwack road</text>
+<text x="238" y="359" font-size="15" font-weight="bold" fill="#1F3D2B">notices</text></g>
+
+</svg>

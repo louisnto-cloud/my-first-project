@@ -16,7 +16,8 @@ checked: 2026-10-17
 ```
 
 - Harrison Lake: west side and the Chehalis are [[MU]] (Management Unit) 2-19, the east side and Agassiz are 2-18. Mission is 2-8 (90%, page 26 map).
-- Deer in all three: bucks only, 10 September to 15 December (99%, page 28).
+```diagram mk-hd-season
+```
 
 ```seasons
 region: 2
@@ -26,6 +27,10 @@ species: mule deer
 
 ## Key points
 
+```diagram mk-hd-rules
+```
+
+```more the table as text
 | Rule | MUs 2-8, 2-18, 2-19 | Source |
 |---|---|---|
 | General season | Bucks, Sept 10 to Dec 15 | 99%, page 28 |
@@ -34,6 +39,12 @@ species: mule deer
 | White tailed deer | No season in Region 2 | 99%, pages 14 and 27 |
 | Region 2 deer limit | 2 a licence year, at most 1 antlerless | 99%, page 27 |
 | Hours | 1 hour before sunrise to 1 hour after sunset | 99%, page 11, item 38 |
+```
+
+## Bucks only: what counts
+
+```diagram mk-hd-buck
+```
 
 - A buck is a deer "bearing visible bony antlers" (99%, page 4). These rows say Bucks, not 4 point bucks (99%, page 28).
 - In these MUs the antlerless 1 is out of reach: the only rows are bucks (99%, page 28).
@@ -51,6 +62,9 @@ species: mule deer
 ```
 
 ## Licence and tag
+
+```diagram mk-hd-tag
+```
 
 - Each hunter: a resident hunting licence ($32.00) plus a deer [[Species licence|species licence]] ($15.00) (99%, page 8).
 - Kill first, then cancel the licence, then touch the deer (99%, page 11).
@@ -82,6 +96,9 @@ g-md-buck-rear | Mule deer: thin white tail with a black tip.
 ```
 
 ## Where they are in November
+
+```diagram mk-hd-november
+```
 
 - November into early December is the black tailed rut (80%). Bucks move more by day (Tip).
 - Cutblock edges, old roads, salal and alder (90%, Region 2 Rule Book strategy).
@@ -138,18 +155,26 @@ fl-fsr-call-4 | Anything else the sign asks.
 - The Hunt Map: turn on No shooting / no hunting, and read "Still check yourself" in Can I hunt here now?
 ```
 
+```diagram mk-hd-mistakes
+```
+
 > [!rule]
 > Grandpa's rule: on a logging road, the truck always wins. Pull over early and let it by.
 
+```more 3 common mistakes as text
 > [!mistake]
 > - Shooting a doe because "the limit is 2, one antlerless". There is no antlerless season in 2-8, 2-18 or 2-19.
 > - Taking a rifle onto the Harrison Mills flats. That lowland bans rifles.
 > - Driving a closed or washed out FSR because a map shows it open.
+```
 
 > [!field]
 > The night before: read the Chilliwack road notices, check sunrise for your spot, cancel tags in your head (kill, cancel, touch), and tell someone at home where you will be.
 
 ## Sources
+
+```diagram mk-hd-sources
+```
 
 - Synopsis 2026 to 2028, 2 October 2026 edition, pages 4, 7, 8, 9, 10, 11, 13, 14, 26 to 31. Checked 2026-10-17 (99%).
 
