@@ -344,7 +344,7 @@
         ${sp && !opens.length ? '<p class="muted">No general season opening found ahead in this MU in the app\'s tables.</p>' : ''}
         <div class="pl-dates"><div><label class="f" for="pl-from">First day</label><input type="date" id="pl-from" value="${esc(d.from || t)}"></div>
         <div><label class="f" for="pl-to">Last day</label><input type="date" id="pl-to" value="${esc(d.to || dAdd(t, 2))}"></div></div>
-        <div id="pl-msg" class="pl-msg" role="status"></div><button type="button" class="btn primary block" id="pl-next">Next</button>`;
+        <div id="pl-msg" class="pl-msg" role="status"></div><button type="button" class="btn next block" id="pl-next">Next</button>`;
     } else if (k === 'how') {
       const ms = (sp && sp.methods) || [];
       const fitTxt = { best: 'Best fit', ok: 'Works', no: 'Not a fit' };
@@ -353,7 +353,7 @@
     } else if (k === 'access') {
       const a = d.access || [];
       body = `<p class="muted">Pick all that apply.</p><div class="pl-opts">${ACCESS.map(([id, l]) => `<button type="button" class="pl-opt pl-tog${a.includes(id) ? ' on' : ''}" data-acc="${id}" aria-pressed="${a.includes(id)}">${esc(l)}</button>`).join('')}</div>
-        <button type="button" class="btn primary block" id="pl-next" ${a.length ? '' : 'disabled'}>Next</button>`;
+        <button type="button" class="btn next block" id="pl-next" ${a.length ? '' : 'disabled'}>Next</button>`;
     } else if (k === 'overnight') {
       body = `<div class="pl-opts pl-two"><button type="button" class="pl-opt${d.overnight === true ? ' on' : ''}" data-on="1">Yes<small>Camp or stay out</small></button><button type="button" class="pl-opt${d.overnight === false ? ' on' : ''}" data-on="0">No<small>Home each night</small></button></div>`;
     } else if (k === 'first') {
@@ -473,7 +473,7 @@
     const all = plansOf(C);
     let D = null; try { D = await loadData(); } catch (e) { D = null; }
     if (!all.length) { goStep(0); return; }
-    view.innerHTML = `<a class="btn primary block pl-new" href="#/plan/new/0">Plan a new hunt</a>
+    view.innerHTML = `<a class="btn next block pl-new" href="#/plan/new/0">Plan a new hunt</a>
       <h2 class="pl-h">My plans</h2><div class="card list">${all.map((p) => { const pr = D && planProgress(p, D);
         return `<a class="item" href="#/plan/${esc(p.id)}"><span class="grow"><b>${esc(planTitle(p, D))}</b><br><span class="muted">${esc(p.where.label)}. ${esc(rangeLabel(p.from, p.to))}</span></span>${pr ? `<span class="pill">${pr.done}/${pr.total}</span>` : ''}</a>`; }).join('')}</div>
       <p class="muted pl-small">Plans live on this phone only. Export a backup in More to keep them safe.</p>`;
@@ -493,8 +493,16 @@
     const alive = () => view._plToken === token && view.isConnected;
     const days = dRange(p.from, p.to);
     const H = hoursFor(sp);
+    let hero = '';
+    if (p.from) {
+      const n = Math.round((Date.parse(p.from + 'T00:00:00Z') - Date.parse(todayIso() + 'T00:00:00Z')) / 864e5), end = p.to || p.from;
+      let act = '';
+      try { if (C.study) { const T = C.study.today(p, sp.lessons); if (T.leftToday && T.st.next) act = `<a class="btn next block pl-hero-go no-print" href="#/s/${esc(T.st.next.id)}/${T.st.next.i}">Study today: ${T.leftToday} screen${T.leftToday === 1 ? '' : 's'}</a>`; } } catch (e) { act = ''; }
+      hero = `<div class="hero pl-hero"><div><p class="hero-k">${n > 0 ? 'Hunt starts in' : end >= todayIso() ? 'Hunt is on' : 'Hunt done'}</p><div class="hero-n">${n > 0 ? `${n}<small>day${n === 1 ? '' : 's'} to go</small>` : end >= todayIso() ? 'Now' : 'Done'}</div>
+        <div class="hero-sub">${esc(rangeLabel(p.from, end))}</div></div></div>${act}`;
+    }
     view.innerHTML = `<div class="pl" id="pl">
-      <p class="pl-law">Study aid only. The official regulations are the law.</p>
+      ${hero}<p class="pl-law">Study aid only. The official regulations are the law.</p>
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
@@ -833,7 +841,7 @@
 
   function drawStudy(el, p, sp, C) {
     if (!el) return;
-    const b = studyBits(p, sp, C), P = b.T.path;
+    const b = studyBits(p, sp, C, true), P = b.T.path;
     const row = (id) => { const t = C.study.stats([id]); const done = t.left === 0; return `<a class="item" href="#/s/${esc(id)}${done ? '' : '/' + (t.next ? t.next.i : 0)}"><span class="grow">${done ? '&#10003; ' : ''}${esc(C.lessonTitle(id))}</span><span class="pill">${t.seen}/${t.total}</span></a>`; };
     el.innerHTML = `<div class="card">${b.html}
       <h3>Pace</h3><div class="seg pl-pace" role="group" aria-label="Pace">
@@ -853,7 +861,7 @@
   let Dc = null;
   const nextPlan = (C) => { const t = C.study.dayISO(); return plansOf(C).filter((p) => p.from && (p.to || p.from) >= t).sort((a, b) => (a.from < b.from ? -1 : 1))[0] || null; };
   const fmtDay = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
-  function studyBits(p, sp, C) {
+  function studyBits(p, sp, C, plain) { // plain: leave out today's button (the screen shows it higher up as its one blaze "next action")
     const T = C.study.today(p, sp.lessons), st = T.st, cl = C.study.cardsLeft(), cd = C.study.cardsDone();
     const late = p.from && T.finish > p.from, mustLate = p.from && T.mustFinish > p.from;
     const go = st.next ? `#/s/${esc(st.next.id)}/${st.next.i}` : '#/learn';
@@ -866,7 +874,7 @@
       ${mustLate && T.mustPerDay ? `<p class="pl-small"><b>Heads up:</b> at this pace the must know screens finish after your hunt starts. About ${T.mustPerDay} minutes a day gets them done first. Change the pace in the plan, part 5.</p>` : ''}
       <div class="pl-kv"><span>Whole path done</span><b>${st.left ? fmtDay(T.finish) : 'Done &#10003;'}${late ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
       ${st.next ? `<div class="muted pl-small">Next: ${esc(st.next.title)}</div>` : ''}
-      <div class="btn-row">${T.leftToday && st.next ? `<a class="btn primary" href="${go}">Read today's screens</a>` : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
+      <div class="btn-row">${T.leftToday && st.next ? (plain ? '' : `<a class="btn next" href="${go}">Read today's screens</a>`) : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
     </div>` };
   }
   function homeCard(C) {
@@ -875,7 +883,10 @@
     const np = C.study && nextPlan(C);
     if (np) {
       if (!Dc) loadData().then((d) => { if (d && d.species.length) { Dc = d; C.refresh && C.refresh(); } }).catch(() => {});
-      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C); homeC = C; study = `<div class="card pl-home pl-today"><h2>Study for ${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.</p>${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a>${offlineHomeHtml(np)}</div>`; } catch (e) { console.warn('study card', e); } }
+      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C, true), nx = b.T.st.next; homeC = C;
+        // today's task first: the one blaze button on Home sits right under the title
+        const go = b.T.leftToday && nx ? `<a class="btn next block pl-today-go" href="#/s/${esc(nx.id)}/${nx.i}">Read today's ${b.T.leftToday} screen${b.T.leftToday === 1 ? '' : 's'}</a>` : '';
+        study = `<div class="card pl-home pl-today"><p class="hero-k">Today's study</p><h2>${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.</p>${go}${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a>${offlineHomeHtml(np)}</div>`; } catch (e) { console.warn('study card', e); } }
     }
     return `${study}<div class="card pl-home"><h2>Plan a hunt</h2><p>Pick an animal, a place and dates. Get the rules, your odds, a day by day plan and a full checklist.</p>
       <a class="btn primary block" href="#/plan/new/0">Plan a hunt</a>
