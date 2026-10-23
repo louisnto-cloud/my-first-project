@@ -257,7 +257,7 @@ yt-stalking-mule-deer | Plan the stalk from where you glassed: landmarks, wind, 
 - Lingle (fawn distress calls), [ScienceDaily 2007](https://www.sciencedaily.com/releases/2007/05/070530123749.htm), search preview (70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 11 (hours, lights), page 12 (calls, dogs, item 51) (99%); calls my reading (95%)
 - Hunt Mentor sessions: [Glassing](#/s/glassing), [Still hunting](#/s/still-hunting), [the rut](#/s/the-rut), [What to wear](#/s/what-to-wear), [shot placement](#/s/shot-placement), [legal methods](#/s/rb-legal-methods).
-- Research notes: `research/2026-10-01-deer.md` (rattling study), `research/2026-10-11-masterclass-mule-deer.md`.
+- Rattling: a Texas telemetry study, search preview, checked 2026-10-01 (70%). [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

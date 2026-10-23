@@ -212,7 +212,7 @@ Score out of 20 noted in the Journal
 
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition, pages 10, 11, 33 to 35, as carried in the Rule Book and [Local plan: Heffley Creek](#/s/local-heffley/0) (99%).
 - [Forest Recreation Regulation, B.C. Reg. 16/2004](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/16_2004), sections 10, 11 and 13, via research notes 2026-10-03 (99%).
-- BC recreation site data layer: Sullivan Lake (Knouff) and Community Lake Southwest list hunting, location "Heffley", MU 3-27 (90%, via `research/2026-10-03-migration-and-areas.md`).
+- BC recreation site data layer: Sullivan Lake (Knouff) and Community Lake Southwest list hunting, location "Heffley", MU 3-27 (90%, BC government recreation site data, checked 2026-10-03).
 - [BC Parks, Paul Lake Park](https://bcparks.ca/paul-lake-park/) (95%).
 - [Penn State Deer Forest Study, Wandering in the moonlight](https://deer.psu.edu/wandering-in-the-moonlight), October movement by hour (75%).
 - Sunrise, sunset and moon: my calculation 2026-10-11 (85% sun, 70% moon).

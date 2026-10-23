@@ -239,7 +239,7 @@ These are widely repeated hunter habits, labelled opinion, not measured facts.
 
 ## Sources
 
-- Texas rattling telemetry study via `research/2026-10-01-deer.md` (70%)
+- Texas rattling telemetry study, search preview, checked 2026-10-01 (70%)
 - Atkeson, Marchinton and Miller 1988, [vocalizations](https://sportingroad.com/wp-content/uploads/2024/12/Atkeson-VocalizationsWhitetailedDeer-1988.pdf), search preview (80%)
 - Penn State GPS pressure findings, [Penn State news](https://www.psu.edu/news/research/story/oh-deer-study-uses-gps-explore-animals-relationship-forest), search preview (70%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), pages 10 to 12, via the Rule Book, read directly 2026-10-02 and 2026-10-03 (99%)

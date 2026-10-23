@@ -191,7 +191,7 @@ sg-stand-4 | Come in the back way. Keep a B spot.
   - [Let's Go Hunting, topographic maps for deer](https://www.letsgohunting.org/resources/articles/big-game/how-to-read-topographic-maps-for-deer-hunting/)
 - Staudenmaier and others 2021, [mule deer and white tail habitat](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3813), checked 2026-10-01 (85%): mule deer on steep open ground, white tails in valley bottoms and fields.
 - Stewart and others 2002, [deer activity timing](https://academic.oup.com/jmammal/article/84/3/1076/905056), checked 2026-10-01 (85%): dawn and dusk peaks.
-- Research notes: `research/2026-10-01-deer.md` (bedding, local reading).
+- Bedding: Germaine 2004 (80%, search previews, checked 2026-10-01). Local reading: [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

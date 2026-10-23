@@ -159,7 +159,7 @@ g-md-buck-rear | From behind: the white rump gives it away.
 - [Outdoor Benchmark: Glassing for big game](https://www.outdoorbenchmark.com/big-game-hunting/glassing-strategy-guide), checked 2026-10-01 (search preview)
 - [Wide Open Spaces: How to glass for mule deer](https://www.wideopenspaces.com/heres-glass-mule-deer-increase-odds-filling-tag/), checked 2026-10-01 (search preview)
 - [Sitka: What colours can deer see (crepuscular activity)](https://www.sitkagear.com/experience/what-colors-can-deer-see), checked 2026-10-01 (search preview)
-- Hunt Mentor deer research notes, research/2026-10-01-deer.md (60%, hunter consensus)
+- Glassing tactics, hunter consensus (60%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources)
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 11, item 38 (hunting hours, sunrise and sunset). Checked 2026-10-02 (99%)
 - Note: glassing is a skill, not a rule. Most points are hunter experience, labelled Tip.
 

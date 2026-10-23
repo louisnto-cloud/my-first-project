@@ -148,7 +148,7 @@ hf-wind-thread | Thread on the sling: always on.
 - [Realtree: How to read and understand mountain wind](https://realtree.com/articles/big-game-hunting/how-to-read-and-understand-mountain-wind), checked 2026-10-01 (search preview)
 - [Mossy Oak Gamekeeper: Deer hunting in wind and thermals](https://mossyoakgamekeeper.com/wildlife-management/whitetail-deer/deer-hunting-in-wind-and-thermals/), checked 2026-10-01 (search preview)
 - [Buckmasters: Natural wind detector (milkweed)](http://www.buckmasters.com/Hunting/Tips-and-Tactics/Articles/ID/543/Natural-Wind-Detector), checked 2026-10-01 (search preview)
-- Hunt Mentor deer research notes, research/2026-10-01-deer.md, thermals line (80%)
+- Thermals (80%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources)
 - Note: thermals are basic physics. Hunting use is hunter experience, labelled Tip.
 
 ```quiz

@@ -232,7 +232,7 @@ yt-moose-calling-eastmans | Hear real moose calls and when to use each one.
   - [HuntingBC forum, elk rut in the East Kootenay](https://www.huntingbc.ca/forum/printthread.php?t=20207&pp=40) and [onX, when is the elk rut](https://www.onxmaps.com/hunt/blog/elk-rut) (60% to 70%).
   - [WildSafeBC, deer](https://wildsafebc.com/species/deer/) and [Critter Care, black tailed deer](https://www.crittercarewildlife.org/the-black-tailed-deer) (80%): black tailed deer rut.
   - [Realtree, hunting scrapes](https://realtree.com/articles/deer-hunting/the-ultimate-guide-to-hunting-scrapes) (65%): scrape timing.
-- Research notes: `research/2026-10-01-deer.md` (mule deer and white tail rut, rattling, pre rut, Region 3 season notes).
+- Rut timing: BC Ministry of Transportation and Infrastructure and Penn State, search previews (80%).
 - Calling tactics are hunter lore, labelled Tip or 60%.
 
 ```quiz

@@ -223,7 +223,7 @@ mwt-follow-4 | Lost it? Small loops from the last sign.
 
 ## Sources
 
-- Research notes on deer sign, `research/2026-10-01-deer.md` (tracks, pellets, browse, rubs, scrapes, 60 to 75%)
+- Tracks, pellets, browse, rubs, scrapes (60 to 75%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources)
 - Mossy Oak, [The licking branch](https://www.mossyoak.com/our-obsession/blogs/deer/the-licking-branch) (Ozoga), search preview, checked 2026-10-11 (65%)
 - MeatEater Wired to Hunt, [whitetail buck glands](https://themeateater.com/wired-to-hunt/whitetail-management/what-you-need-to-know-about-whitetail-buck-glands), search preview, checked 2026-10-11 (65%)
 - Field and Stream, [whitetail buck bedding study](https://www.fieldandstream.com/hunting/whitetail-buck-bedding-study), search preview, checked 2026-10-11 (65%)

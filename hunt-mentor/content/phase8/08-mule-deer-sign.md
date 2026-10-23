@@ -206,7 +206,7 @@ mmd-follow-4 | Lost it? Circle out from the flag.
 
 ## Sources
 
-- Hunt Mentor research notes `research/2026-10-01-deer.md` (tracks, pellets, rubs, browse) (60 to 75%)
+- Tracks, pellets, rubs, browse (60 to 75%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources)
 - BC Ministry (2000), ["Mule and Black-tailed Deer in British Columbia"](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf), read directly, checked 2026-10-11 (90%)
 - Mule Deer Working Group fact sheets [27](https://wildlife.utah.gov/pdf/deer/mdwg-27_antler_development.pdf) and [35](https://wildlife.utah.gov/pdf/deer/mdwg-35_using_teeth_to_age.pdf), read directly, checked 2026-10-11 (85%)
 - US National Park Service, [Mule deer, Bryce Canyon](https://www.nps.gov/brca/learn/nature/mule-deer.htm), checked 2026-10-11 (80%)

@@ -267,7 +267,7 @@ hab-geese-stubble | Flooded stubble: ducks and geese in winter.
 - MeatEater, [thermal cover in conifers](https://www.themeateater.com/wired-to-hunt/whitetail-management/understanding-thermal-cover-in-conifers) (search preview), checked 2026-10-01 (65%).
 - WildSafeBC, [deer](https://wildsafebc.com/species/deer/) (search preview), checked 2026-10-01 (80%): black tailed deer rut.
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the downloaded synopsis text: page 12 items 43 and 53, Region 3 page 33. Checked 2026-10-01 (95%).
-- Research notes: `research/2026-10-01-deer.md` (diet, winter range, snow depth, browse list).
+- Diet: [Willms 1976](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065) (85%). Winter range: Armleder 1994 (85%). Snow depth: a University of British Columbia thesis (80%). Browse list: BC RN113 (80%). All search previews, checked 2026-10-01.
 - Plant identification lines are standard field guide features (75% to 85%). Berry timing and Fraser Valley farm notes are local knowledge, capped at 60% to 70%.
 
 ```quiz

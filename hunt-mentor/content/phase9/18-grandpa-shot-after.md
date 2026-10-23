@@ -278,7 +278,7 @@ checked: 2026-10-11
 - Texas Parks and Wildlife, [Vital areas](https://tpwd.texas.gov/education/hunter-education/online-course/hunting-skills-1/vital-areas) (85%, app research)
 - MeatEater, [Lies hunters believe about blood trailing deer](https://themeateater.com/wired-to-hunt/whitetail-hunting/lies-hunters-believe-about-blood-trailing-deer), and NC Wildlife, [Recovery of game](https://www.ncwildlife.org/Hunting/After-the-Hunt/Recovery-of-Game), search preview (60 to 65%)
 - Buckmasters, [Aim small, miss small](https://www.buckmasters.com/Hunting/Tips-and-Tactics/Articles/ID/6323/Aim-Small-Miss-Small), search preview (50%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`, `research/2026-10-11-wait-times.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -224,7 +224,7 @@ Red light headlamp
 
 - Penn State Deer Research, [The eyes have it](https://www.deer.psu.edu/the-eyes-have-it/), checked 2026-10-11 (80%)
 - D'Angelo and others 2007, [deer hearing](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326), via research notes, checked 2026-10-01 (85%)
-- Jacobs and others 1994, deer colour vision, via research notes `research/2026-10-01-deer.md` (85%)
+- Jacobs and others 1994, deer colour vision, search preview, checked 2026-10-01 (85%)
 - BC Ministry (2000), ["Mule and Black-tailed Deer in British Columbia"](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf), glands, read directly, checked 2026-10-11 (90%)
 - US National Park Service, [Mule deer, Bryce Canyon](https://www.nps.gov/brca/learn/nature/mule-deer.htm), checked 2026-10-11 (80%)
 - Steven Rinella, MeatEater (2018), [A guide to hunting mule deer](https://themeateater.com/hunt/big-game/a-guide-to-hunting-mule-deer), checked 2026-10-11 (65%, hunting educator)

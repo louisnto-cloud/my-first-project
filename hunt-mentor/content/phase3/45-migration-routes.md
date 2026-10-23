@@ -271,7 +271,7 @@ Mule deer month layer checked on the Hunt Map (general pattern only)
   - [Pacific Birds Habitat Joint Venture, Fraser River Delta guide (2024)](https://pacificbirds.org/wp-content/uploads/2025/01/Conservation-of-Mig-Bird-Habitat-Fraser-River-Delta-Guide-for-Local-Govts-2024.pdf) (80%).
   - [Audubon, dusky grouse](https://www.audubon.org/field-guide/bird/dusky-grouse) and [BC Breeding Bird Atlas, dusky grouse](https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=DUGR&lang=en) (70 to 85%).
 - [Rodgers and others 2021, Journal of Wildlife Management](https://pubs.usgs.gov/publication/70229038), abstract read directly 2026-10-11 (85%).
-- Research notes: `research/2026-10-03-migration-and-areas.md` and `research/2026-10-11-rq.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 - Tips and Grandpa's rule are opinion.
 
 ```quiz

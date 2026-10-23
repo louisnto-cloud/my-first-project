@@ -248,7 +248,7 @@ Journal: weather line plus every animal seen, with the time
 - [USDA Fire Effects Information System, chukar](https://www.fs.usda.gov/database/feis/animals/bird/alch/all.html), via research notes 2026-10-03 (75%).
 - [Goethlich thesis, Auburn University](https://etd.auburn.edu/handle/10415/7077) and [Mossy Oak on the Oklahoma study](https://www.mossyoak.com/our-obsession/blogs/deer/barometric-pressures-influence-on-whitetail-movement-4), search previews (65%).
 - [US Weather Prediction Center front definitions](https://www.wpc.ncep.noaa.gov/html/fntcodes2.shtml), search preview 2026-10-11 (70 to 80%).
-- Hunt Mentor research notes: `research/2026-10-01-deer.md`, `research/2026-10-03-migration-and-areas.md`, `research/2026-10-11-rq.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 - Tips and Grandpa's rule are opinion.
 
 ```quiz

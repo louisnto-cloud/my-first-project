@@ -200,14 +200,14 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 
 ## Sources
 
-- BC Ministry of Environment, [White tailed deer in BC](https://www.env.gov.bc.ca/wld/documents/whttail.pdf) (Blood 2000), via `research/2026-10-03-migration-and-areas.md` (85%, 70% for the Thompson)
+- BC Ministry of Environment, [White tailed deer in BC](https://www.env.gov.bc.ca/wld/documents/whttail.pdf) (Blood 2000), checked 2026-10-03 (85%, 70% for the Thompson)
 - Knight, Montana State University Extension, [White tailed deer management for Montana landowners](https://animalrangeextension.montana.edu/wildlife/documents/whitetail-mgmt.pdf), read 2026-10-11 (80%)
 - USDA Forest Service US Forest Service species review, [white tailed deer review](https://www.fs.usda.gov/database/feis/animals/mammal/odvi/all.html), checked 2026-10-11 (85%)
 - University of Georgia, [antlers grow and shed as days shorten](https://fieldreport.caes.uga.edu/news/deer-antlers-grow-and-shed-as-summer-days-shorten/), search preview, checked 2026-10-11 (75%)
 - Virginia DWR, [most important week of a fawn's life](https://dwr.virginia.gov/blog/the-most-important-week-of-a-fawns-life), search preview, checked 2026-10-11 (75%)
-- Penn State Extension breeding dates, via `research/2026-10-01-deer.md` (80%)
+- Penn State Extension breeding dates, search preview, checked 2026-10-01 (80%)
 - Guidefitter, [deer rut timeline](https://guidefitter.com/blog/deer-rut-timeline-the-7-stages-and-how-to-hunt-them), search preview, checked 2026-10-11 (60%)
-- Willms 1976, [Kamloops deer diets](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), via `research/2026-10-01-deer.md` (85%)
+- Willms 1976, [Kamloops deer diets](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), search preview, checked 2026-10-01 (85%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), Region 3 page 34, Region 8 page 68, read directly 2026-10-02 (99%)
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 

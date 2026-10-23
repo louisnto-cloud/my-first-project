@@ -189,7 +189,7 @@ hf-fsr-4 | Locked gate: walk. Closed sign: turn around.
 - [BC resource roads](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads) and [local road safety information](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information), read directly, checked 2026-10-01.
 - [BC Wildfire Service, fire bans and restrictions](https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions), read directly, checked 2026-10-01.
 - [BC Parks fishing and hunting guide](https://bcparks.ca/plan-your-trip/visit-responsibly/fishing-hunting-guide/), read directly, checked 2026-10-01.
-- Deer migration, winter range, snow depth: Hunt Mentor deer research notes, research/2026-10-01-deer.md (SIMDeer, Monteith 2011, Armleder 1994).
+- Deer migration, winter range, snow depth: BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), [Monteith 2011](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1), Armleder 1994; search previews, checked 2026-10-01.
 
 ```quiz
 [

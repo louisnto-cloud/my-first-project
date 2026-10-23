@@ -385,4 +385,4 @@ Walk a bench and look for trails and beds
 - [Natural Resources Canada, Topographic maps: tips and hints](https://natural-resources.canada.ca/maps-tools-publications/maps/topographic-maps/topographic-maps-tips-hints), as cited in Maps 1, checked 2026-10-01 (95%): contour numbers read uphill, water flow.
 - Hunt Mentor app code, read 2026-10-11 (99% for what the app does): 20 m contours and 100 m index lines (`app/map/style.js`), 3D button, tilt and height boost 1 to 2.5 (`app/map/core.js`), Slope steepness classes and Elevation profile (`app/map/tools-terrain.js`, `app/map/tools-main.js`).
 - Thermals up by day and down at night: as cited in [Wind and thermals](#/s/wind-thermals/0) (85%).
-- Animal use of each shape: hunter observation, labelled Tip or under 80%. Research log: `research/2026-10-11-rl.md`.
+- Animal use of each shape: hunter observation, labelled Tip or under 80%. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
