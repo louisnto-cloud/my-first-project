@@ -138,7 +138,7 @@
       "mdOther": { "t": "Other Region 3 MUs open on other dates (3-15, 3-16, 3-32, 3-33 from 1 September; 3-46 from 20 September). Read your MU's row.", "c": 99, "s": "syn", "p": "page 34" }
     },
     "r2": {
-      "note": "Region 2 set for MUs 2-8, 2-18, 2-19 (one shared Bucks row on page 28). Facts copied from rb-region-2, local-harrison-deer and mc-black-tailed-deer-01, checked 2026-10-23.",
+      "note": "Region 2 set for MUs 2-8, 2-18, 2-19 (one shared Bucks row on page 28). Facts copied from the Rule Book Region 2 lesson, Your Harrison deer hunt and Black tailed deer Masterclass 1 (sources L_r2, L_hd, L_btm), checked 2026-10-23.",
       "checked": "2026-10-23",
       "mus": ["2-8", "2-18", "2-19"],
       "assume": "Assumption: you hunt MU (Management Unit) {mu} in Region 2 with a rifle, in the general open season, as an adult hunter, with the right licence, in legal hours.",

@@ -467,7 +467,7 @@
     if (!r2) { cfg.set = 'r3'; cfg.mu = '3-27'; }
     const pm = planMu(), r2mu = r2 ? cfg.mu : (R2_MUS.indexOf(pm) >= 0 ? pm : '2-18');
     const sw = F.buck.r2 ? `<div class="card"><h2>Which rules?</h2><p class="muted">${r2 ? (cfg.fromPlan ? 'Region 2, picked from your hunt plan.' : 'Region 2 rules.') : 'The Region 3 example, from the Thompson Rule Book lesson.'}</p>
-      <div class="btn-row"><button class="btn${r2 ? ' on' : ''}" id="tr-set2" aria-pressed="${r2}">Region 2: MU ${esc(r2mu)}</button><button class="btn${r2 ? '' : ' on'}" id="tr-set3" aria-pressed="${!r2}">Region 3 example: MU 3-27</button></div></div>` : '';
+      <div class="btn-row"><button class="btn${r2 ? ' on' : ''}" id="tr-set2" aria-pressed="${r2}">Region 2 <span class="tr-nw">MU ${esc(r2mu)}</span></button><button class="btn${r2 ? '' : ' on'}" id="tr-set3" aria-pressed="${!r2}">Region 3 example <span class="tr-nw">MU 3-27</span></button></div></div>` : '';
     const ruleKeys = r2 ? ['r2Bucks', 'r2Spike', 'buck', 'r2Bow', 'r2Antlerless', 'r2Limit', 'r2Wt', 'btLaw', 'mdPoint', 'brow', 'tine'] : ['mdPoint', 'brow', 'tine', 'mdSeason', 'wtBucks', 'wtAntlerless', 'mdAntlerless'];
     const intro = r2 ? `<ul class="tr-intro"><li>Each round: a deer seen from the front, a species and a date in MU (Management Unit) ${esc(cfg.mu)}.</li><li>Tap each point on the antler with the most points.</li><li>Then call it: legal or not.</li><li>In this MU points do not decide it. Season, antlers and species do.</li></ul>`
       : '<ul class="tr-intro"><li>Each round: a buck seen from the front, a species and a date.</li><li>Tap each point on the antler with the most points.</li><li>Then call it: legal or not.</li></ul>';
@@ -690,6 +690,7 @@
     st.textContent = `
 .tr { font-size: 16px; }
 .tr .btn { min-height: 48px; }
+.tr-nw { white-space: nowrap; }
 .tr .btn.on { background: var(--sage); color: #fff; border-color: var(--sage); }
 .tr-menu { display: block; text-decoration: none; color: var(--ink); min-height: 56px; }
 .tr-menu b { display: block; font-size: 19px; margin-bottom: 4px; }
