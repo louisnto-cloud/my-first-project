@@ -159,7 +159,7 @@ const I3D = {
 
 function buildChrome() {
   root = document.createElement('div');
-  root.className = 'hmm'; root.id = 'hm-map';
+  root.className = 'hmm'; root.id = 'hm-map'; root.setAttribute('role', 'region'); root.setAttribute('aria-label', 'Hunt Map');
   root.innerHTML = `
     <div class="hmm-canvas" id="hmm-canvas"></div>
     <div class="hmm-fade" aria-hidden="true"></div>
@@ -221,6 +221,7 @@ function buildChrome() {
   q('.hmm-x').onclick = () => closeSheet();
   els.scrim.onclick = () => closeSheet();
   dragToClose();
+  if (window.HMDialog) window.HMDialog.watch(els.sheet, { head: '.hmm-sheet-h h2', name: 'Hunt Map' }); // focus in, back out; Tab stays inside only when modal (app.js)
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && HuntMap.isOpen) { if (!search.close()) closeSheet(); } });
   updatePill();
 }

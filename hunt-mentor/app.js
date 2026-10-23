@@ -17,6 +17,12 @@
   const applyTheme = () => { if (S.settings.theme) document.documentElement.dataset.theme = S.settings.theme; else delete document.documentElement.dataset.theme; };
   applyTheme();
 
+  // reduced motion: script scrolls asked for "smooth" jump instead (CSS cannot override a script's smooth scroll)
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const flat = (f) => function (o, ...r) { if (o && typeof o === 'object' && o.behavior === 'smooth') o = Object.assign({}, o, { behavior: 'auto' }); return f.call(this, o, ...r); };
+    [[window, 'scrollTo'], [window, 'scrollBy'], [Element.prototype, 'scrollTo'], [Element.prototype, 'scrollBy'], [Element.prototype, 'scrollIntoView']].forEach(([o, k]) => { if (o[k]) o[k] = flat(o[k]); });
+  }
+
   // ---------- helpers ----------
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const sessions = HM.sessions;
@@ -38,6 +44,38 @@
   }
   $('#sheet-close').onclick = () => { $('#sheet').hidden = true; };
   $('#sheet').onclick = (e) => { if (e.target.id === 'sheet') $('#sheet').hidden = true; };
+  // Dialog focus (VoiceOver and keyboards): on open, focus moves to the sheet's heading; a modal sheet keeps Tab inside;
+  // Escape closes (when asked); on close, focus goes back to what opened it. Watches the hidden attribute, so every caller is covered.
+  // Shared with the map (map/core.js). Non modal sheets (aria-modal="false") never trap focus.
+  window.HMDialog = {
+    watch(el, o = {}) {
+      if (!el || el.dataset.hmDlg) return; el.dataset.hmDlg = '1';
+      const FOC = 'a[href], button:not([disabled]), input:not([disabled]), select, textarea, summary, [tabindex]:not([tabindex="-1"])';
+      const head = () => el.querySelector(o.head || 'h2, h3');
+      const label = () => { const h = head(); if (h && h.textContent.trim()) { h.id = h.id || 'hm-dlg-' + Math.random().toString(36).slice(2, 8); el.setAttribute('aria-labelledby', h.id); el.removeAttribute('aria-label'); } else { el.removeAttribute('aria-labelledby'); el.setAttribute('aria-label', o.name || 'Details'); } };
+      let back = null;
+      new MutationObserver(() => {
+        if (!el.hidden) {
+          label();
+          const a = document.activeElement; if (!el.contains(a)) back = a;
+          requestAnimationFrame(() => { if (el.hidden || el.contains(document.activeElement)) return; const h = head(); const t = h && h.textContent.trim() ? h : el.querySelector(FOC); if (!t) return; if (t === h && !h.hasAttribute('tabindex')) h.tabIndex = -1; try { t.focus({ preventScroll: true }); } catch (e) { /* */ } });
+        } else if (back) {
+          const b = back; back = null; const a = document.activeElement;
+          if (b.isConnected && (!a || a === document.body || el.contains(a))) try { b.focus({ preventScroll: true }); } catch (e) { /* */ }
+        }
+      }).observe(el, { attributes: true, attributeFilter: ['hidden'] });
+      new MutationObserver(() => { if (!el.hidden) label(); }).observe(el, { childList: true, subtree: true, characterData: true });
+      document.addEventListener('keydown', (e) => {
+        if (el.hidden) return;
+        if (e.key === 'Escape' && o.close) { o.close(); return; }
+        if (e.key !== 'Tab' || el.getAttribute('aria-modal') !== 'true') return;
+        const f = [...el.querySelectorAll(FOC)].filter((x) => x.offsetParent !== null || x === document.activeElement); if (!f.length) return;
+        const i = f.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && (i === -1 || i === f.length - 1)) { e.preventDefault(); f[0].focus(); }
+      });
+    },
+  };
+  window.HMDialog.watch($('#sheet'), { close: () => { $('#sheet').hidden = true; } });
   // Back arrow: the previous place in the app (history.state.d counts in app steps), else the parent page. Never out of the app.
   const parentOf = (hash) => {
     const [a, b] = hash.replace(/^#\/?/, '').split('/');
@@ -657,7 +695,7 @@
     const { s, steps, i } = L, mx = S.max[s.id] || 0;
     sheet(`<h2>Contents</h2><p class="muted">${esc(lessonLabel(s))}. ${steps.length} screens.</p>
       <ol class="toc">${steps.map((st, n) => `<li><button type="button" class="toc-i ${n === i ? 'on' : ''} ${n <= mx && n !== i ? 'seen' : ''}" data-n="${n}" ${n === i ? 'aria-current="step"' : ''}>
-        <span class="toc-n">${n + 1}</span><span class="toc-t">${esc(st.title)}</span>${n === i ? '<span class="pill soon">Here</span>' : ''}</button></li>`).join('')}</ol>`);
+        <span class="toc-n">${n + 1}</span><span class="toc-t">${esc(st.title)}</span>${n === i ? '<span class="pill soon">Here</span>' : n <= mx ? '<span class="sr-only">, seen</span>' : ''}</button></li>`).join('')}</ol>`);
     const body = $('#sheet-body');
     body.querySelectorAll('.toc-i').forEach((b) => b.onclick = () => { $('#sheet').hidden = true; showScreen(+b.dataset.n); });
     const cur = body.querySelector('.toc-i.on');
@@ -687,9 +725,13 @@
         qel.dataset.answered = '1';
         const k = +b.dataset.k; const ok = k === q.answer;
         b.classList.add(ok ? 'right' : 'wrong');
-        qel.querySelector(`.opt[data-k="${q.answer}"]`).classList.add('right');
+        const rb = qel.querySelector(`.opt[data-k="${q.answer}"]`); rb.classList.add('right');
+        // not colour alone: a mark and words on the right answer, and on a wrong pick
+        rb.insertAdjacentHTML('beforeend', ' <span aria-hidden="true">&#10003;</span><span class="sr-only">, right answer</span>');
+        if (!ok) b.insertAdjacentHTML('beforeend', ' <span aria-hidden="true">&#10007;</span><span class="sr-only">, your answer</span>');
         const why = qel.querySelector('.why');
         why.hidden = false; why.innerHTML = `<strong>${ok ? 'Correct.' : 'Not quite.'}</strong> ${esc(q.why)}`;
+        if (window.HMSay) window.HMSay(why.textContent);
         S.quiz[qel.dataset.qid] = ok; save();
       });
     });
@@ -956,7 +998,7 @@
     }).join('');
     view.innerHTML = `<div class="card"><label class="f" for="ld">Date</label><input type="date" id="ld" value="${ds}"></div>
       <div class="tbl light"><table><thead><tr><th>Base</th><th>Sunrise / sunset</th><th>Big game and upland</th><th>Ducks and geese</th></tr></thead><tbody>${rows}</tbody></table></div>
-      <aside class="callout warn"><div class="callout-t">Verify with official tables</div>
+      <aside class="callout warn" role="note"><div class="callout-t">Verify with official tables</div>
       <p>Calculated on your phone, Pacific time. Can be off by a few minutes in hills and valleys.</p>
       <p>Big game rule: ${esc(H.bigGame.text)} ${certBadge(H.bigGame.certainty)}</p>
       <p>Migratory birds rule: ${esc(H.migratory.text)} ${certBadge(H.migratory.certainty)}</p></aside>`;
@@ -994,7 +1036,7 @@
     view.innerHTML = `
       <div class="card"><h2>Look</h2><div class="seg" id="theme">
         ${[['', 'Auto'], ['light', 'Light'], ['dark', 'Dark'], ['sun', 'Sunlight']].map(([v, l]) => `<button data-v="${v}" class="${th === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
-      <div class="card"><h2>First hunt date</h2><input type="date" id="fh" value="${esc(firstHunt())}"></div>
+      <div class="card"><h2 id="fh-l">First hunt date</h2><input type="date" id="fh" aria-labelledby="fh-l" value="${esc(firstHunt())}"></div>
       <div class="card list">
         ${window.HMRoutes && window.HMRoutes.guide ? '<a class="item" href="#/guide"><span class="grow">How to use this app: a quick tour</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.progress ? '<a class="item" href="#/progress"><span class="grow">Hunt ready score and your weak spots</span></a>' : ''}
@@ -1362,6 +1404,14 @@
   askBtn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4Z"/><path d="M9 10h.01M12 10h.01M15 10h.01" stroke-linecap="round" stroke-width="2.6"/></svg>';
   document.body.appendChild(askBtn);
   const toastEl = document.createElement('div'); toastEl.className = 'hm-toast'; toastEl.setAttribute('role', 'status'); document.body.appendChild(toastEl);
+  // screen reader only announcer (polite): countdowns call it once a minute, never every second
+  const sayEl = document.createElement('div'); sayEl.setAttribute('aria-live', 'polite'); sayEl.setAttribute('aria-atomic', 'true');
+  sayEl.style.cssText = 'position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap';
+  document.body.appendChild(sayEl);
+  window.HMSay = (msg) => { sayEl.textContent = ''; setTimeout(() => { sayEl.textContent = msg; }, 60); };
+  // minute steps of a countdown: say(key, msLeft, text) speaks only when the whole minutes left change
+  const minSaid = {};
+  window.HMSayMinutes = (key, ms, text) => { const m = Math.max(0, Math.ceil(ms / 6e4)); if (minSaid[key] === m) return; const first = minSaid[key] == null; minSaid[key] = m; if (!first) window.HMSay(text(m)); };
   let toastT;
   const toast = (msg) => { toastEl.textContent = msg; toastEl.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('on'), 3500); };
   function readingText() {
@@ -1388,7 +1438,7 @@
   });
 
   // ---------- in app trail: depth per history entry, the place at each depth (session only) ----------
-  let navDepth = 0, routed = false, curPage = '';
+  let navDepth = 0, routed = false, curPage = '', shownOnce = false;
   let trail = ssGet('hm.trail') || [];
   function syncDepth() {
     const st = history.state;
@@ -1468,7 +1518,21 @@
     if (a === 'learn' && goingBack) { const y = (ssGet(SS_LEARN) || {}).y; if (y) requestAnimationFrame(() => window.scrollTo(0, y)); }
     else if (a !== 's') window.scrollTo(0, 0);
     measureChrome();
+    // screen readers: the old screen's button is gone, so start the new screen at its title
+    const ae = document.activeElement;
+    if (shownOnce && (!ae || ae === document.body || !ae.isConnected)) try { $('#top-title').focus({ preventScroll: true }); } catch (e) { /* */ }
+    shownOnce = true;
   }
+  // wide tables that scroll sideways: reachable and named for keyboards and screen readers
+  let tblQ = 0;
+  new MutationObserver(() => { if (tblQ) return; tblQ = requestAnimationFrame(() => { tblQ = 0; document.querySelectorAll('.tbl:not([tabindex])').forEach((t) => { if (t.scrollWidth > t.clientWidth + 1) { t.tabIndex = 0; t.setAttribute('role', 'region'); t.setAttribute('aria-label', 'Table, scrolls sideways'); } }); }); }).observe(view, { childList: true, subtree: true });
+  // page title per screen (tab switcher, VoiceOver, history): follows the top bar title, which every screen sets
+  const syncDocTitle = () => {
+    const t = document.body.classList.contains('map-open') ? 'Hunt Map' : $('#top-title').textContent.trim();
+    document.title = !t || t === 'Hunt Mentor' ? 'Hunt Mentor' : `${t} | Hunt Mentor`;
+  };
+  new MutationObserver(syncDocTitle).observe($('#top-title'), { childList: true, characterData: true, subtree: true });
+  new MutationObserver(syncDocTitle).observe(document.body, { attributes: true, attributeFilter: ['class'] });
   window.addEventListener('hashchange', route);
   route();
 })();

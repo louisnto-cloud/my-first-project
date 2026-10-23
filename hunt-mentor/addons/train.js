@@ -66,7 +66,7 @@
     if (!h.length) return '<p class="muted">No sessions yet. Scores stay on this phone.</p>';
     return `<table class="tr-hist"><thead><tr><th>Date</th><th>Score</th></tr></thead><tbody>${h.map((r) => `<tr><td>${esc(r.date)}</td><td>${fmt(r)}</td></tr>`).join('')}</tbody></table>`;
   }
-  const dots = (i, res) => `<div class="tr-dots" aria-label="Round ${i + 1} of ${ROUNDS}">${Array.from({ length: ROUNDS }, (_, k) => `<i class="${k < res.length ? (res[k] ? 'ok' : 'bad') : k === i ? 'now' : ''}"></i>`).join('')}</div>`;
+  const dots = (i, res) => `<div class="tr-dots" role="img" aria-label="Round ${i + 1} of ${ROUNDS}, ${res.filter(Boolean).length} right so far">${Array.from({ length: ROUNDS }, (_, k) => `<i class="${k < res.length ? (res[k] ? 'ok' : 'bad') : k === i ? 'now' : ''}"></i>`).join('')}</div>`;
   const offlineMsg = '<div class="card"><p>The trainer facts are not saved on this phone yet. Connect to the internet once and open this page again. After that it works with no signal.</p></div>';
   function withFacts(fn) {
     return (args) => {
