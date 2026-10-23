@@ -1,0 +1,354 @@
+{
+  "checked": "2026-10-23",
+  "about": "After the shot: guided steps for a black tailed deer near Harrison (Region 2). Every fact is copied from the app's own lessons (named in each line). Rules show certainty, source and page. Tips are opinion.",
+  "sources": {
+    "syn": { "name": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (2 October 2026 edition)", "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf" },
+    "reg190": { "name": "Hunting Regulation, B.C. Reg. 190/84", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01" },
+    "lic899": { "name": "Hunting Licensing Regulation, B.C. Reg. 8/99", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_99" },
+    "splic": { "name": "BC species licences page", "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences" },
+    "faq": { "name": "BC hunting FAQ", "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/frequently-asked-questions" },
+    "trespass": { "name": "Trespass Act, RSBC 2018 c. 3", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18003" },
+    "nda2012": { "name": "National Deer Association: How to blood trail a deer (2012)", "url": "https://deerassociation.com/blood-trail-deer/" },
+    "nda2023": { "name": "National Deer Association: You just shot a deer (2023)", "url": "https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/" },
+    "huntered": { "name": "Hunter Ed blog: Deer anatomy for hunters (2026)", "url": "https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/" },
+    "bcout": { "name": "BC Outdoors Magazine: After the shot", "url": "https://www.bcoutdoorsmagazine.com/after-the-shot/" },
+    "wdfw": { "name": "Washington Department of Fish and Wildlife: food safety for game meat (not BC law)", "url": "https://wdfw.wa.gov/hunting/requirements/food-safety" },
+    "psu": { "name": "Penn State Extension: field dressing and handling of wild game", "url": "https://extension.psu.edu/proper-field-dressing-and-handling-of-wild-game-and-fish" },
+    "adfg": { "name": "Alaska Department of Fish and Game: gutless method brochure", "url": "https://www.adfg.alaska.gov/static/hunting/pdfs/field_dressing_big_game_gutless_method.pdf" },
+    "alberta": { "name": "Alberta: Bears and hunters (another province's advice)", "url": "https://www.alberta.ca/bears-and-hunters" },
+    "lesson": { "name": "Hunt Mentor lessons (common hunter practice)", "url": "#/s/after-the-shot/0" }
+  },
+  "lessons": {
+    "after": { "id": "after-the-shot", "screen": "After the shot", "label": "After the shot (overview)" },
+    "afterWait": { "id": "after-the-shot", "screen": "1. Wait and mark", "label": "After the shot: wait and mark" },
+    "afterTrack": { "id": "after-the-shot", "screen": "2. Track", "label": "After the shot: track" },
+    "afterLost": { "id": "after-the-shot", "screen": "Lost the trail?", "label": "Lost the trail?" },
+    "afterNotch": { "id": "after-the-shot", "screen": "3. Approach and notch", "label": "Approach and notch" },
+    "afterEvidence": { "id": "after-the-shot", "screen": "4. Evidence of sex", "label": "Evidence of sex" },
+    "afterGut": { "id": "after-the-shot", "screen": "5. Field dress", "label": "Field dress (gutted method)" },
+    "afterGutless": { "id": "after-the-shot", "screen": "6. Gutless", "label": "Gutless method (overview)" },
+    "afterCool": { "id": "after-the-shot", "screen": "7. Cool the meat", "label": "Cool the meat" },
+    "afterTransport": { "id": "after-the-shot", "screen": "8. Transport legally", "label": "Transport legally" },
+    "afterReport": { "id": "after-the-shot", "screen": "9. Report", "label": "Report" },
+    "btReactions": { "id": "blood-trailing", "screen": "Watch and listen", "label": "Blood trailing: watch and listen" },
+    "btWait": { "id": "blood-trailing", "screen": "Wait times by hit type", "label": "Wait times by hit type (all sources)" },
+    "btMark": { "id": "blood-trailing", "screen": "Mark the spot", "label": "Blood trailing: mark the spot" },
+    "btBlood": { "id": "blood-trailing", "screen": "Reading blood", "label": "Reading blood" },
+    "btHair": { "id": "blood-trailing", "screen": "Hair at the hit site", "label": "Hair at the hit site" },
+    "btTrail": { "id": "blood-trailing", "screen": "Trail it", "label": "Trail it" },
+    "btGrid": { "id": "blood-trailing", "screen": "Grid search", "label": "Grid search" },
+    "btHours": { "id": "blood-trailing", "screen": "The law on hours and lights", "label": "The law on hours and lights" },
+    "btRecover": { "id": "blood-trailing", "screen": "You must try to recover it", "label": "You must try to recover it" },
+    "btPrivate": { "id": "blood-trailing", "screen": "Private land, parks, closed areas", "label": "Private land, parks, closed areas" },
+    "downNotDead": { "id": "fw-grandpa-08", "screen": "7. Down is not dead", "label": "Grandpa: down is not dead" },
+    "tagCancel": { "id": "tagging-legal", "screen": "Cancel the species licence", "label": "Cancel the species licence" },
+    "tagNotches": { "id": "tagging-legal", "screen": "Where the notches go", "label": "Where the notches go" },
+    "tagEvidence": { "id": "tagging-legal", "screen": "Evidence of sex: deer", "label": "Evidence of sex: deer" },
+    "tagGutless": { "id": "tagging-legal", "screen": "Gutless method: keep it on one quarter", "label": "Gutless: keep it on one quarter" },
+    "rbCancel": { "id": "rb-bag-limits", "screen": "Cancelling your species licence", "label": "Rule Book: cancelling your species licence" },
+    "rbKeep": { "id": "rb-bag-limits", "screen": "Keeping and replacing species licences", "label": "Rule Book: keeping species licences" },
+    "rbRor": { "id": "rb-bag-limits", "screen": "The Record of Receipt form", "label": "Rule Book: the Record of Receipt form" },
+    "rbRorWhen": { "id": "rb-bag-limits", "screen": "Record of Receipt: when you need one", "label": "Rule Book: Record of Receipt, when" },
+    "rbEvidence": { "id": "rb-after-the-kill", "screen": "Evidence of sex: every species group", "label": "Rule Book: evidence of sex" },
+    "rbEvidenceOff": { "id": "rb-after-the-kill", "screen": "When the evidence may come off", "label": "Rule Book: when the evidence may come off" },
+    "rbPapers": { "id": "rb-after-the-kill", "screen": "Transporting wildlife: the paperwork", "label": "Rule Book: transport paperwork" },
+    "rbNotKilled": { "id": "rb-after-the-kill", "screen": "Carrying meat you did not kill", "label": "Rule Book: carrying meat you did not kill" },
+    "rbDisposal": { "id": "rb-after-the-kill", "screen": "Disposal, and game checks", "label": "Rule Book: disposal and game checks" },
+    "rbCi": { "id": "rb-after-the-kill", "screen": "Compulsory inspection and reporting: time limits", "label": "Rule Book: inspection and reporting lists" },
+    "rbAccident": { "id": "rb-after-the-kill", "screen": "Accidental illegal harvest", "label": "Rule Book: accidental illegal harvest" },
+    "fdTools": { "id": "field-dressing", "screen": "Tools", "label": "Field dressing: tools" },
+    "fdBefore": { "id": "field-dressing", "screen": "Before the knife", "label": "Before the knife" },
+    "fdGutted": { "id": "field-dressing", "screen": "Gutted method, step by step", "label": "Gutted method, step by step" },
+    "fdGutless": { "id": "field-dressing", "screen": "Gutless method, step by step", "label": "Gutless method, step by step" },
+    "fdGutlessAnim": { "id": "field-dressing", "screen": "The gutless order, animated", "label": "The gutless order, animated" },
+    "fdClean": { "id": "field-dressing", "screen": "Keeping meat clean", "label": "Keeping meat clean" },
+    "fdWarm": { "id": "field-dressing", "screen": "Warm weather", "label": "Warm weather" },
+    "fdLaw": { "id": "field-dressing", "screen": "The law while you cut", "label": "The law while you cut" },
+    "mcNumbers": { "id": "meat-care", "screen": "The numbers", "label": "Meat care: the numbers" },
+    "mcCooling": { "id": "meat-care", "screen": "Cooling in the field", "label": "Cooling in the field" },
+    "mcTarp": { "id": "meat-care", "screen": "Why never a tarp", "label": "Why never a tarp" },
+    "mcBags": { "id": "meat-care", "screen": "Game bags", "label": "Game bags" },
+    "mcFlies": { "id": "meat-care", "screen": "Flies, rain, warm October days", "label": "Flies, rain, warm days" },
+    "mcCooler": { "id": "meat-care", "screen": "Cooler and ice plan", "label": "Cooler and ice plan" },
+    "poEdible": { "id": "packing-out", "screen": "The edible portions rule", "label": "Packing out: the edible portions rule" },
+    "poAtvGun": { "id": "packing-out", "screen": "ATV: firearms and game on the rack", "label": "ATV: firearms and game on the rack" },
+    "poWeights": { "id": "packing-out", "screen": "Meat weights", "label": "Meat weights" },
+    "bearKill": { "id": "bear-cougar-encounters", "screen": "The kill site", "label": "Bears: the kill site" },
+    "bearReturn": { "id": "bear-cougar-encounters", "screen": "Going back for meat", "label": "Bears: going back for meat" },
+    "harrisonTag": { "id": "local-harrison-deer", "screen": "Licence and tag", "label": "Your Harrison deer hunt: licence and tag" },
+    "r2Ci": { "id": "rb-region-2", "screen": "Compulsory inspection, RAPP and updates", "label": "Region 2: inspection, RAPP and updates" }
+  },
+  "hits": [
+    { "id": "lungs", "label": "Mule kick, then a hard low run", "means": "Often heart or lungs", "c": 70, "s": "nda2012", "from": "Blood trailing lesson",
+      "waits": [
+        { "src": "Hunter Ed blog 2026", "text": "30 minutes minimum", "min": 30 },
+        { "src": "NDA (National Deer Association) 2012", "text": "Rifle 30 minutes, bow 1 hour", "min": 30 },
+        { "src": "NDA 2023", "text": "Rifle a few minutes, bow 15 to 30 minutes", "min": null }
+      ],
+      "note": "Sources agree on a short wait, about 30 minutes (70%). A rifle hit in the heart or lungs: the deer is usually dead within 137 m (150 yd) (70%, NDA 2012)." },
+    { "id": "dropped", "label": "Dropped on the spot", "means": "Spine or brain. It may get up. Be ready", "c": null, "tip": true, "from": "After the shot skills lesson",
+      "waits": [
+        { "src": "After the shot lesson (Tip)", "text": "Watch for 5 minutes in case it stands", "min": 5 }
+      ],
+      "note": "Reload, safety on, scope on it. Spine shock can wear off in about a minute (85%, Grandpa: down is not dead). Heart or lungs and it went down in sight: go when it stops moving (Tip)." },
+    { "id": "gut", "label": "Hunched back, short run, then a walk", "means": "Often a gut hit", "c": 70, "s": "nda2012", "from": "Blood trailing lesson",
+      "waits": [
+        { "src": "Hunter Ed blog 2026", "text": "6 to 8 hours, or overnight if late", "min": 360, "max": 480 },
+        { "src": "NDA 2012", "text": "4 to 6 hours, overnight if cool", "min": 240, "max": 360 },
+        { "src": "NDA 2023", "text": "10 to 12 hours", "min": 600, "max": 720 }
+      ],
+      "note": "Every source says hours, and gut is the longest wait (70%). Warm afternoon and a gut hit: the meat clock and the waiting clock fight (Tip)." },
+    { "id": "leg", "label": "Hard run with a limp", "means": "Often a leg hit", "c": 70, "s": "nda2012", "from": "Blood trailing lesson",
+      "waits": [
+        { "src": "Hunter Ed blog 2026", "text": "Muscle or leg: 30 to 60 minutes", "min": 30, "max": 60 },
+        { "src": "NDA 2023", "text": "Leg or bone: track at once", "min": 0 }
+      ],
+      "note": "NDA 2012 gives no wait for a leg hit (70%)." },
+    { "id": "liver", "label": "Dark red blood, no bubbles", "means": "Often the liver (blood sign at the hit site)", "c": 70, "s": "nda2012", "from": "Blood trailing lesson", "blood": true,
+      "waits": [
+        { "src": "Hunter Ed blog 2026", "text": "4 to 6 hours", "min": 240, "max": 360 },
+        { "src": "NDA 2012", "text": "2 hours minimum, sometimes 3 or 4", "min": 120, "max": 240 },
+        { "src": "NDA 2023", "text": "8 to 10 hours", "min": 480, "max": 600 }
+      ],
+      "note": "Every source says hours, longer than for a lung hit (70%)." },
+    { "id": "none", "label": "No clear reaction, or I am not sure", "means": "Not proof of a miss. Check the hit site later", "c": 70, "s": "nda2023", "from": "After the shot skills lesson",
+      "waits": [
+        { "src": "Hunter Ed blog 2026", "text": "Several hours", "min": null },
+        { "src": "NDA 2023", "text": "Count down from the gut wait: 10 to 12 hours", "min": 600, "max": 720 }
+      ],
+      "note": "Not sure where it hit: wait as for a gut hit is the safe reading (Tip)." }
+  ],
+  "callYourWait": "Your call. The sources disagree on liver and gut. The app shows them all and picks none (lesson: Wait times by hit type). Opinion, not law.",
+  "steps": [
+    {
+      "id": "mark", "title": "Mark the spot", "btn": "Mark the spot",
+      "why": "Most lost deer are lost in the first 10 minutes. A pin and a landmark give you a line to follow.",
+      "do": [
+        "Rifle reloaded and on safe. Keep watching where it went. Listen for a crash (Tip).",
+        "Tap Save my spot below: it pins where you shot from.",
+        "Note a landmark at the last place you saw it: a tree, a rock, a stump (Tip)."
+      ],
+      "rules": [],
+      "tips": [
+        "Drop a phone map pin where you shot from and where the deer stood. Note the time. Tip, from the After the shot lesson.",
+        "Flags you can see from the last flag show the line of travel. Tip, from the Blood trailing lesson."
+      ],
+      "img": ["sk-flag-line"],
+      "lessons": ["afterWait", "btMark"]
+    },
+    {
+      "id": "see", "title": "What did you see?", "btn": "What did you see?",
+      "why": "The reaction to the hit tells you how long to wait. Walk in too soon and you push a hit deer out of the country.",
+      "rules": [
+        { "t": "Following the trail of wildlife while you have a firearm is hunting.", "c": 95, "s": "syn", "p": "page 3 (hunt definition)" },
+        { "t": "No hunting game from 1 hour after sunset to 1 hour before sunrise.", "c": 95, "s": "reg190", "p": "s. 14; synopsis page 11" }
+      ],
+      "tips": [
+        "Reactions are hunter education advice (70%), not law.",
+        "Rain or snow coming: go sooner. Rain erases blood in an hour. Tip."
+      ],
+      "img": ["sk-reactions", "sk-wait-compare"],
+      "lessons": ["btReactions", "btWait", "downNotDead"]
+    },
+    {
+      "id": "track", "title": "Track it", "btn": "Track it",
+      "why": "Slow and beside the line finds deer. Fast and on the line loses them.",
+      "do": [
+        "Go to where it stood. Look for blood, hair, scuffed ground (Tip).",
+        "Flag every blood spot with tape or toilet paper. Collect the tape after (Tip).",
+        "Walk beside the blood line, not on it (70%, BC Outdoors Magazine).",
+        "Look ahead for the deer, not only down at blood (Tip).",
+        "Lost it? Back to the last flag. Circles at 20 m and 40 m, then lanes about 10 m apart, each person in sight of the next (70%, NDA, National Deer Association)."
+      ],
+      "rules": [
+        { "t": "You must make all reasonable effort to locate, dispatch, retrieve and include a wounded animal in your bag limit. Walking away after 10 minutes is not reasonable effort.", "c": 95, "s": "syn", "p": "page 12" },
+        { "t": "No hunting with a light. Tracking with your rifle and a headlamp after legal hours is hunting outside hours and with a light. Do not.", "c": 85, "s": "syn", "p": "page 11 (hours and lights); my reading in the Blood trailing lesson" },
+        { "t": "The trail goes into fenced or posted private land: stop. The Trespass Act has no tracking exception. Get the owner's permission, in writing if you can.", "c": 95, "s": "trespass", "p": "s. 2 to 4; BC hunting FAQ" },
+        { "t": "Dogs used on deer must be on a leash.", "c": 95, "s": "syn", "p": "page 12" }
+      ],
+      "tips": [
+        "Wounded deer often head downhill and to water (70%, NDA).",
+        "Hydrogen peroxide fizzes on blood you cannot see in leaves (70%, NDA).",
+        "Lost the light on a sure lung hit? Call RAPP (Report All Poachers and Polluters), 1 877 952 7277, and ask for direction (lesson lean). Doubtful hit: back out until legal light.",
+        "Nothing found: come back at first light. Ravens show you. Tip."
+      ],
+      "img": ["sk-blood-chart"],
+      "lessons": ["afterTrack", "btBlood", "btHair", "btTrail", "btGrid", "btHours", "btPrivate"]
+    },
+    {
+      "id": "approach", "title": "Approach and confirm", "btn": "Approach and confirm",
+      "why": "A deer that drops can get up. Approach ready, and check it is dead before anything else.",
+      "do": [
+        "Come in from behind its back, rifle ready (Tip).",
+        "Touch the eye with a stick. No blink: dead (Tip).",
+        "Alive and bedded? Only if it is legal hours and the backstop is safe, finish it. If not, back out again (Tip).",
+        "Do not handle it yet. The licence comes first (next step)."
+      ],
+      "rules": [
+        { "t": "You cannot shoot a wounded animal after legal hours. No exception.", "c": 95, "s": "reg190", "p": "s. 14; Blood trailing lesson" },
+        { "t": "Cancel the species licence immediately after the kill and before you handle the animal.", "c": 99, "s": "syn", "p": "page 11" }
+      ],
+      "tips": [
+        "Spine shock can wear off in about a minute (85%, Grandpa: down is not dead).",
+        "Pin where the deer lies (button below). Your map waypoint and the meat plan start here."
+      ],
+      "img": ["sk-approach-2"],
+      "lessons": ["afterNotch", "downNotDead"]
+    },
+    {
+      "id": "tag", "title": "Cancel the licence", "btn": "Cancel the licence",
+      "why": "A deer with no properly cancelled licence is an illegal deer, even if you did everything else right.",
+      "law": "\"Any person who kills any big game species must immediately after the kill and before handling the big game killed, cancel the appropriate species licence in accordance with the instructions on that licence.\"",
+      "lawSrc": { "c": 99, "s": "syn", "p": "page 11 (also Hunting Licensing Regulation s. 7(1))" },
+      "checks": [
+        "Animal down. Do not touch it yet.",
+        "Take out the species licence for it (your own deer licence, never your partner's).",
+        "Cancel it as the licence itself shows: notch it.",
+        "Now you may handle the animal.",
+        "Keep the cancelled licence with the meat."
+      ],
+      "checksSrc": { "c": 99, "s": "syn", "p": "Rule Book: Cancelling your species licence (5 steps), page 11" },
+      "rules": [
+        { "t": "How to cancel is printed on the species licence itself, not in the synopsis. Follow what is printed on yours.", "c": 99, "s": "syn", "p": "page 3 (cancelled species licence)" },
+        { "t": "You must notch your species licence to cancel it as soon as you harvest an animal.", "c": 95, "s": "splic", "p": "species licences page" },
+        { "t": "A cancelled licence records the date, the region number and, where it applies, the antler configuration. Harrison is Region 2.", "c": 95, "s": "splic", "p": "species licences page; region from the Harrison lesson" },
+        { "t": "Possessing a big game animal without a properly cancelled species licence is unlawful.", "c": 99, "s": "syn", "p": "page 11, item 1" },
+        { "t": "Each hunter cancels only their own licence, for their own kill. Never use another person's licence.", "c": 99, "s": "syn", "p": "page 11, item 2" },
+        { "t": "Carry all your species licences while hunting, cancelled and uncancelled.", "c": 99, "s": "syn", "p": "page 5" },
+        { "t": "Killed the wrong animal? Cancel at once, write in ink on the licence that you intend to self report, and call RAPP (Report All Poachers and Polluters), 1 877 952 7277.", "c": 99, "s": "syn", "p": "page 18" }
+      ],
+      "tips": [
+        "Cut cleanly with a knife or scissors. Make the notch obvious. Tip.",
+        "Carry a pen. Some fields may be written, not cut. VERIFY on your own licence before the hunt.",
+        "Photo the notched licence beside the deer (next step). Tip."
+      ],
+      "img": ["tag-notch"],
+      "lessons": ["rbCancel", "tagCancel", "tagNotches", "rbKeep", "harrisonTag"]
+    },
+    {
+      "id": "notes", "title": "Photos and notes", "btn": "Photos and notes",
+      "why": "Photos and a few notes now prove the cancelled licence, help the butcher, and teach you for next time.",
+      "do": [
+        "Photo 1: the deer.",
+        "Photo 2: the notched licence beside the deer.",
+        "Photo 3: the spot, with the landmark."
+      ],
+      "rules": [],
+      "tips": [
+        "Take photos: the deer, the notched licence, the spot. Tip, from the After the shot lesson.",
+        "At home: log the date, region, MU (Management Unit) and species in your journal. Tip, from the Rule Book."
+      ],
+      "img": [],
+      "lessons": ["afterNotch"]
+    },
+    {
+      "id": "dress", "title": "Field dress", "btn": "Field dress",
+      "why": "Meat starts to spoil the minute the heart stops. The next hour with a knife decides what ends up in your freezer.",
+      "before": [
+        { "t": "Licence notched and photographed.", "c": 95, "s": "syn", "p": "page 11" },
+        { "t": "Plan which hind quarter keeps the unskinned tail and the testicle (buck) or udder (doe). Cut around them, never through them.", "c": 95, "s": "syn", "p": "page 15; Tagging lesson" },
+        { "t": "Rifle unloaded and set where it will not fall or get blood in the action.", "c": 70, "s": "bcout", "p": "Field dressing lesson" },
+        { "t": "Bear spray on your belt, not in the pack.", "c": 70, "s": "bcout", "p": "Field dressing lesson" },
+        { "t": "Gloves on. Do not cut the stomach or guts.", "c": 75, "s": "wdfw", "p": "After the shot lesson" }
+      ],
+      "methods": [
+        { "id": "gutted", "label": "Gutted (whole deer, near the truck)", "steps": ["On its back, head uphill, gloves on.", "Belly cut, blade edge up, fingers guiding.", "Diaphragm, then windpipe. Pull it all out.", "Wipe dry, prop open."], "src": "After the shot lesson, 4 key steps (Tip)", "lesson": "fdGutted" },
+        { "id": "gutless", "label": "Gutless (deer far from the truck)", "steps": ["Cut around the knees, legs and belly line. Leave the sex parts attached.", "Skin the top half back. The hide is your mat.", "Front quarter off through the armpit.", "Hind quarter off at the hip joint.", "Backstrap off along the spine.", "Neck, rib meat and flank.", "Tenderloin from inside, behind the last rib.", "Bag every piece. Flip and repeat."], "src": "Field dressing lesson, 8 steps (80%, Alaska Department of Fish and Game)", "lesson": "fdGutless" }
+      ],
+      "lean": "Lesson lean (Tip): deer within 300 m of the truck or ATV (all terrain vehicle): gut it and drag or carry it whole. A kilometre into the timber: gutless, into bags, pack it out.",
+      "rules": [
+        { "t": "Deer evidence of sex stays naturally attached: the unskinned tail AND, for a buck, a testicle or part of the penis; for a doe, part of the udder and teats.", "c": 99, "s": "syn", "p": "page 15; Hunting Regulation s. 15(2.1)" },
+        { "t": "Antlers are not on the deer list. Keep the tail and sex parts even on a buck.", "c": 95, "s": "syn", "p": "page 15" },
+        { "t": "Take all the edible portions: neck, ribs, four quarters and the loins. Gutless does not excuse you.", "c": 99, "s": "syn", "p": "page 3 and page 12, item 44" },
+        { "t": "Boned meat: leave the unskinned tail and the sex parts naturally attached to one piece. Keep that piece with the rest, labelled.", "c": 95, "s": "faq", "p": "BC hunting FAQ; synopsis page 15" },
+        { "t": "A carcass or gut pile is a wildlife attractant. Never leave one where people are, or are likely to be.", "c": 99, "s": "syn", "p": "page 9 and page 15" }
+      ],
+      "bear": [
+        { "t": "One works and talks, one watches. Make noise while you dress it.", "c": 70, "s": "alberta", "p": "Bears lesson: the kill site" },
+        { "t": "Get the meat out fast. Avoid dressing at dusk if you can.", "c": 75, "s": "alberta", "p": "Bears lesson: the kill site" },
+        { "t": "Leaving meat? Move it at least 200 m from the gut pile. Hang it 3.5 m (11.5 ft) up and 1.5 m (5 ft) from trunks, where you can see it from a distance.", "c": 70, "s": "alberta", "p": "Bears lesson: the kill site" },
+        { "t": "Coming back: approach from upwind, glass it first, make noise. Bear at the site, or the carcass moved or buried? Do not approach. Leave and report.", "c": 70, "s": "alberta", "p": "Bears lesson: the kill site" },
+        { "t": "Do not drag the carcass back to camp: it lays a scent trail to you.", "c": 70, "s": "alberta", "p": "Bears lesson: the kill site" },
+        { "t": "Aggressive bear or a kill site near people: call RAPP (Report All Poachers and Polluters), 1 877 952 7277, 24 hours.", "c": 99, "s": "syn", "p": "page 2; Bears lesson: report it" }
+      ],
+      "tips": [
+        "If gut contents touch meat, wipe them off right away with a clean cloth (75%, Washington Department of Fish and Wildlife).",
+        "Never leave the guts in overnight and come back: it spoils regardless of temperature (80%, Alaska Department of Fish and Game)."
+      ],
+      "img": ["sk-evidence", "gutless-method"],
+      "lessons": ["fdBefore", "fdGutted", "fdGutless", "fdGutlessAnim", "tagGutless", "fdLaw", "afterEvidence", "bearKill", "bearReturn"]
+    },
+    {
+      "id": "cool", "title": "Cool the meat", "btn": "Cool the meat",
+      "why": "Nobody loses meat to a bad shot. They lose it to a warm afternoon, a tarp and a closed truck.",
+      "numbers": [
+        { "n": "Below 4°C (40°F)", "t": "Target for the carcass, as fast as you can. Slows bacteria, does not kill them.", "c": 80, "s": "psu" },
+        { "n": "4°C to 60°C (40°F to 140°F)", "t": "The danger zone. Bacteria can double every 20 minutes.", "c": 80, "s": "psu" },
+        { "n": "Within the hour", "t": "Guts out or meat off. The cavity is the hottest part and stays hot.", "c": 80, "s": "adfg" },
+        { "n": "Same day", "t": "Ideally into a cooler on the day of the kill.", "c": 80, "s": "wdfw" },
+        { "n": "1°C to 3°C (34°F to 37°F)", "t": "Aging range, 7 to 14 days at most.", "c": 80, "s": "wdfw" },
+        { "n": "Minus 18°C (0°F)", "t": "Freezer. Game keeps about a year.", "c": 80, "s": "psu" },
+        { "n": "71°C (160°F)", "t": "Minimum internal cooking temperature for all wild game.", "c": 95, "s": "syn", "p": "Canadian Food Inspection Agency, in the Meat care lesson" }
+      ],
+      "do": [
+        { "t": "Prop the chest open so air moves. Hang it, or lay it on logs, off the ground.", "c": 80, "s": "wdfw" },
+        { "t": "Shade. Never direct sun.", "c": 80, "s": "wdfw" },
+        { "t": "Above 4°C: bags of ice or snow in the cavity, tied shut.", "c": 80, "s": "psu" },
+        { "t": "No plastic, no tarp on a warm carcass. \"Plastic will hold heat in.\"", "c": 80, "s": "wdfw" },
+        { "t": "Flies: game bags. Black pepper or food grade citric acid on the surface helps.", "c": 80, "s": "wdfw" },
+        { "t": "Rain: a tarp as a roof above, with an air gap. Never wrapped around.", "c": 80, "s": "wdfw" }
+      ],
+      "rules": [],
+      "tips": [
+        "Wet meat spoils faster. Dry it with paper towel and keep it in bags under cover. Tip.",
+        "Warm day plan: skin, quarter, bag, shade by noon. Cooler by evening. Tip.",
+        "Never let a warm deer sit in a closed truck. Grandpa's rule (opinion)."
+      ],
+      "img": ["sk-temp-chart"],
+      "lessons": ["mcNumbers", "mcCooling", "mcTarp", "mcBags", "mcFlies", "mcCooler", "afterCool"]
+    },
+    {
+      "id": "papers", "title": "Papers and transport", "btn": "Papers and transport",
+      "why": "A legal kill can still become an illegal deer in the truck: the wrong part cut off, the wrong paper.",
+      "checks": [
+        "My cancelled species licence travels with the meat.",
+        "Tail unskinned and evidence of sex still attached.",
+        "Rifle unloaded in the truck: chamber and attached magazine empty.",
+        "All edible portions packed: neck, ribs, four quarters, loins.",
+        "No gut pile left near a road, trail or campsite."
+      ],
+      "rules": [
+        { "t": "Your own deer: carry the species licence it was taken under with the meat.", "c": 99, "s": "syn", "p": "page 15 (Transporting Wildlife)" },
+        { "t": "Anyone moving your deer without you (your brother, a friend) needs a Record of Receipt from you.", "c": 99, "s": "syn", "p": "page 15; form on page 14" },
+        { "t": "Record of Receipt shows: date and place of receipt; name and address of the hunter; name and address of who it goes to; the hunter's FWID (Fish and Wildlife ID) or permit number; the species licence number; the species and sex.", "c": 99, "s": "syn", "p": "page 15; form on page 14" },
+        { "t": "Evidence of sex may come off only: at home once butchered and stored there; at a meat cutter or cold storage plant; or after a compulsory inspector has inspected it.", "c": 99, "s": "syn", "p": "page 15" },
+        { "t": "No loaded firearm in or on a vehicle: chamber and attached magazine empty.", "c": 99, "s": "syn", "p": "page 11, item 28" },
+        { "t": "At the butcher: get a receipt showing the hunter's FWID (Fish and Wildlife ID), the species licence number, and the species and sex.", "c": 99, "s": "syn", "p": "page 15" },
+        { "t": "A meat cutter records the MU (Management Unit) where the deer was taken. Know your MU before you drop it off.", "c": 95, "s": "syn", "p": "page 14; my reading in the Rule Book" }
+      ],
+      "report": [
+        { "t": "Deer are not on the compulsory inspection or compulsory reporting lists. No report, no inspection trip for your Harrison deer.", "c": 99, "s": "syn", "p": "page 17" },
+        { "t": "In Region 2, compulsory inspection is for mountain goat and cougar, not deer.", "c": 99, "s": "syn", "p": "page 28 (Harrison lesson)" },
+        { "t": "Mandatory hunter reports cover elk, moose and caribou licences, not deer.", "c": 99, "s": "syn", "p": "page 16" },
+        { "t": "Chronic Wasting Disease carcass rules apply only to kills in the Kootenay zone, MUs 4-1 to 4-8 and 4-20 to 4-25. Harrison (Region 2) is outside it.", "c": 99, "s": "syn", "p": "page 15" },
+        { "t": "Stop at every game check.", "c": 99, "s": "syn", "p": "page 15 (Rule Book: disposal and game checks)" }
+      ],
+      "ror": ["Date", "Place of receipt", "Species", "Sex", "Hunter name, address and phone", "Hunter FWID (Fish and Wildlife ID) number", "Species licence number", "Delivered to: name and address", "Signature of hunter", "Witness"],
+      "rorSrc": { "c": 99, "s": "syn", "p": "page 14 (form fields)" },
+      "tips": [
+        "Write the Record of Receipt on paper the moment meat changes hands, and photograph it. Tip, from the Rule Book.",
+        "At the truck: tail on, evidence of sex on, cancelled licence in the cooler bag with the meat. Tip, from the Rule Book."
+      ],
+      "img": ["rb-transport-papers", "rb-record-receipt"],
+      "lessons": ["rbPapers", "rbRorWhen", "rbRor", "rbNotKilled", "rbEvidenceOff", "rbCi", "r2Ci", "afterTransport", "afterReport", "poEdible", "poAtvGun"]
+    },
+    {
+      "id": "done", "title": "Done: summary", "btn": "Summary",
+      "why": "Write it down tonight. One lesson from today is worth ten from a book.",
+      "rules": [],
+      "tips": ["Write it in your journal tonight. Tip."],
+      "img": [],
+      "lessons": ["after"]
+    }
+  ]
+}

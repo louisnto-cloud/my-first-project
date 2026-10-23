@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 384" role="img" aria-label="Sketch of the Record of Receipt form from page 14, with its fields: date and place of receipt; species and species sex; name, address and phone of the hunter who killed the animal; that hunter&#x27;s Fish and Wildlife Identification Number; the species licence number; name and address of the person the parts go to; signature of the hunter and a witness." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="384" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Record of Receipt (page 14 fields)</text>
+<rect x="14" y="40" width="372" height="330" rx="6" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<text x="26" y="66" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Date</text>
+<text x="206" y="66" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Place of Receipt</text>
+<line x1="26" y1="80" x2="194" y2="80" stroke="#8a9a6b" stroke-width="2"/><line x1="206" y1="80" x2="374" y2="80" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="110" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Species</text>
+<text x="206" y="110" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Species Sex</text>
+<line x1="26" y1="124" x2="194" y2="124" stroke="#8a9a6b" stroke-width="2"/><line x1="206" y1="124" x2="374" y2="124" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="154" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Hunter: name, address, phone</text>
+<line x1="26" y1="168" x2="374" y2="168" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="198" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Hunter: Fish and Wildlife ID Number</text>
+<line x1="26" y1="212" x2="374" y2="212" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="242" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Species Licence Number</text>
+<line x1="26" y1="256" x2="374" y2="256" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="286" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Deliver to: name and address</text>
+<line x1="26" y1="300" x2="374" y2="300" stroke="#8a9a6b" stroke-width="2"/>
+<text x="26" y="330" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Signature of hunter</text>
+<text x="206" y="330" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Witness</text>
+<line x1="26" y1="344" x2="194" y2="344" stroke="#8a9a6b" stroke-width="2"/><line x1="206" y1="344" x2="374" y2="344" stroke="#8a9a6b" stroke-width="2"/>
+</svg>
