@@ -22,7 +22,7 @@ const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct
 const TITLE = 'Can I hunt here now?';
 // season: names in data/seasons rows; fed: federal migratory.json species (ducks and geese, like Home "Open today")
 export const SPECIES = [
-  { k: 'muledeer', l: 'Mule deer', s: ['mule deer'] },
+  { k: 'muledeer', l: 'Mule or black tailed deer', s: ['mule deer'] },
   { k: 'whitetail', l: 'White tailed deer', s: ['white tailed deer'] },
   { k: 'moose', l: 'Moose', s: ['moose'] },
   { k: 'elk', l: 'Elk', s: ['elk'] },
