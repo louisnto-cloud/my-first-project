@@ -319,7 +319,15 @@
     "fw-grandpa-07",
     "fw-grandpa-08",
     "fw-grandpa-09",
-    "fw-grandpa-10"
+    "fw-grandpa-10",
+    "mc-sks-01",
+    "mc-sks-02",
+    "mc-sks-03",
+    "mc-sks-04",
+    "mc-sks-05",
+    "mc-sks-06",
+    "mc-sks-07",
+    "mc-sks-08"
   ],
   "flashcards": [
     "quail",
@@ -343,6 +351,7 @@
     "nav",
     "fw-rules",
     "fw-grandpa",
-    "mu"
+    "mu",
+    "sks"
   ]
 }
