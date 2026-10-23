@@ -154,6 +154,8 @@
   const countDone = (gs, ticks) => { let n = 0, d = 0; gs.forEach((g) => g.items.forEach((it) => { n++; if (ticks[it.id]) d++; })); return { n, d }; };
   // which group is "now": days to go falls inside it (after the hunt starts: Morning of and After the shot)
   const nowGroup = (gs, d) => (d == null ? '' : d <= 0 ? 'g0' : (gs.find((g) => d <= g.from && d >= g.to) || {}).id || (d > 14 ? 'g14' : ''));
+  // the pill on the "now" group: more days to go than the group covers (22 days out, first group 14 to 8) means start early, not "now"
+  const nowPill = (g, d) => (g && d != null && g.from != null && d > g.from ? 'Start now' : 'Now');
 
   function itemHtml(it, ticks) {
     const src = it.tip ? '<span class="pill">Tip</span>' : `${badge(it.c)} ${esc(it.s)}`;
@@ -189,7 +191,7 @@
     v.innerHTML = `<div class="hw">
       <p class="muted" style="margin:0 4px 10px">Study aid only. The official regulations are the law. Each rule shows its certainty and source.</p>
       ${head}
-      ${gs.map((g) => `<div class="card hw-g ${g.id === now ? 'now' : ''}" id="hw-${g.id}"><h2>${esc(g.h)}${g.id === now ? '<span class="hw-now">Now</span>' : ''}</h2>${g.sub ? `<p class="hw-sub">${esc(g.sub)}</p>` : ''}
+      ${gs.map((g) => `<div class="card hw-g ${g.id === now ? 'now' : ''}" id="hw-${g.id}"><h2>${esc(g.h)}${g.id === now ? `<span class="hw-now">${nowPill(g, d)}</span>` : ''}</h2>${g.sub ? `<p class="hw-sub">${esc(g.sub)}</p>` : ''}
         ${g.items.map((it) => itemHtml(it, ticks)).join('')}</div>`).join('')}
       ${others.length ? `<div class="card list hw-plans"><h2>Other plans</h2>${others.map((x) => `<a class="item" href="#/huntweek/${esc(x.id)}"><span class="grow">${esc(planName(x))}<br><span class="muted">${esc(dLabel(x.from))}</span></span></a>`).join('')}</div>` : ''}
       <div class="card"><button type="button" class="btn block" id="hw-reset">Untick all</button></div></div>`;
@@ -221,7 +223,7 @@
     return `<div class="card hw-home" id="hw-home"><h2>Hunt week</h2>
       <p><b>${esc(planName(p))}</b>: ${d > 0 ? `${d} day${d === 1 ? '' : 's'} to go` : d === 0 ? 'today' : 'under way'}.</p>
       <div class="hw-bar"><i style="width:${Math.round((cnt.d / Math.max(1, cnt.n)) * 100)}%"></i></div>
-      <p class="muted">${cnt.d} of ${cnt.n} done.${g ? ` ${esc(g.h)}: ${left ? `${left} left` : 'all done'}.` : ''}</p>
+      <p class="muted">${cnt.d} of ${cnt.n} done.${g ? ` ${esc(g.h)}${nowPill(g, d) === 'Now' ? '' : ' (coming up, start early)'}: ${left ? `${left} left` : 'all done'}.` : ''}</p>
       <a class="btn primary block" href="#/huntweek/${esc(p.id)}">Open the hunt week list</a></div>`;
   }
 

@@ -304,7 +304,7 @@
     x.driveMin = Math.round((x.driveKm / 60) * 60) + (x.rideKm ? Math.round((x.rideKm / 10) * 60) : 0); // Assumption: about 60 km/h on average to the parking, 10 km/h on the rough part
     x.ride = /4x4|rough road/i.test((d.plan || []).find((t) => /^Ride:/.test(t)) || '') ? 'rough' : x.rideKm ? 'ride' : '';
     x.legal = legalOf(d.flags, plan.method);
-    x.evid = (d.evidence || []).filter((e) => e && (e.pts > 0)).sort((a, b) => b.pts - a.pts).slice(0, 3).map((e) => e.t);
+    x.evid = (d.evidence || []).filter((e) => e && (e.pts > 0)).sort((a, b) => b.pts - a.pts).slice(0, 3).map((e) => plainEvid(e.t));
     if (/FSR|forest service/i.test((d.driveVia || []).join(' '))) x.fsr = true;
   }
   // ---------- your own trips (after the hunt debriefs, hm.plandebrief.<planId>) ----------
@@ -326,6 +326,9 @@
     }
     return best;
   }
+  // spot evidence in plain words: "Mule deer winter range u-2-006 unit BS 4-6 (official)" keeps the official code and says what it is
+  // (lesson winter-range-legal: a UWR order sets logging and road rules, 99%; it does not by itself close hunting, 85%)
+  const plainEvid = (t) => { t = String(t || ''); const m = t.match(/^([A-Z][a-z ]+?) winter range \S+ unit .+? \(official\)/); return m ? `${t} In plain words: an official ungulate winter range, an area protected as ${/deer/i.test(m[1]) ? 'deer' : m[1].toLowerCase()} winter habitat. It sets logging and road rules, not hunting rules (85%).` : t; };
   const gmaps = (x) => `https://www.google.com/maps/search/?api=1&query=${x.lat.toFixed(5)},${x.lon.toFixed(5)}`;
   const mapLink = (x) => `#/map/@${x.lat.toFixed(5)},${x.lon.toFixed(5)},15`;
 
@@ -346,13 +349,22 @@
       return false; // a condition this app does not know: leave the list out
     });
   }
+  // Item tags ("for": {"method": [...], "group": [...], "region": [...], "species": [...], "sights": [...]}): an item shows only when every
+  // tag the hunt knows matches. A tag the hunt does not know yet (no gun answer, no plan) never hides the item. Untagged items are for everyone.
+  function itemFits(f, cond) {
+    if (!f || !cond) return true;
+    return Object.keys(f).every((k) => { const v = cond[k]; return v == null || v === '' || (f[k] || []).map(String).includes(String(v)); });
+  }
+  // Every item comes back; the ones that do not fit this hunt carry off: true (hidden behind "Show all", never deleted).
+  // Tick key: hash of the category plus the item's fixed "key" when it has one, else its normalized text (old ticks keep working).
   function checkItems(sp, lists, cond) {
     const out = [], seen = new Set();
+    const c2 = Object.assign({ group: sp && sp.group, species: sp && sp.id }, cond || {});
     const add = (cat, it, from) => {
       if (!it || !it.t) return;
-      const n = String(it.t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      const n = it.key ? String(it.key) : String(it.t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
       if (seen.has(n)) return; seen.add(n);
-      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n) });
+      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n), off: !itemFits(it.for, c2) });
     };
     for (const [cat] of CATS) for (const it of ((sp && sp.checklist) || {})[cat] || []) add(cat, it, sp.name);
     for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(it.cat || l.category || 'gear', it, l.title || l.id);
@@ -387,10 +399,13 @@
   function planTitle(p, D) { const sp = spOf(p, D); return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
   function planProgress(p, D) {
     const sp = spOf(p, D); if (!sp) return null;
-    const items = checkItems(sp, D.lists, condOf(p));
+    const items = checkItems(sp, D.lists, condOf(p)).filter((i) => !i.off);
     return { done: items.filter((i) => p.ticks && p.ticks[i.key]).length, total: items.length };
   }
-  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false });
+  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false,
+    region: regionOf((p.where && p.where.mu) || ''), sights: (p.ask && p.ask.gun && p.ask.gun.sights) || '' });
+  // the "N items hidden" line above a checklist (all = every item, off ones included)
+  const hiddenNote = (all, showAll, id) => { const h = all.filter((i) => i.off).length; return h ? `<p class="muted pl-small pl-hidden-note">${showAll ? `Showing every item, ${h} of them not for this hunt.` : `${h} ${h === 1 ? 'item' : 'items'} hidden that do not apply to this hunt.`} <button type="button" class="pl-showall" id="${id}">${showAll ? 'Hide them' : 'Show all'}</button></p>` : ''; };
   // first hunt: yes until there is a saved plan whose last day has passed
   const firstDefault = (C) => !plansOf(C).some((p) => p.to && p.to < todayIso());
 
@@ -432,6 +447,8 @@
   const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight? Camping or day trips?', party: 'Who is going?', first: 'Is this your first hunt?',
     exp: 'Your hunting experience?', fit: 'How far can you walk, and carry?', hours: 'How many hours can you hunt each day?', travel: 'Longest drive from Mission, one way?', truck: 'What do you drive?',
     partner: 'Your partner on this hunt?', gun: 'Your gun and your longest practised shot?', budget: 'Budget for this trip?', success: 'What does success mean to you on this trip?' };
+  // Black tailed deer: the coast deer near Mission and Harrison. The synopsis lists them as mule deer (page 28), so this button makes a mule-deer plan (spName shows the black tailed name in Region 2)
+  const BTD_OPT = (d) => `<button type="button" class="pl-opt" data-sp="mule-deer" data-find="black tailed deer blacktail coast mule deer big game">Black tailed deer (coast mule deer)</button>`;
   let draft = null;
   const ss = { get() { try { return JSON.parse(sessionStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) { return null; } }, set(v) { try { sessionStorage.setItem(DRAFT_KEY, JSON.stringify(v)); } catch (e) { /* storage blocked */ } } };
   const getDraft = () => (draft = draft || ss.get() || {});
@@ -459,7 +476,7 @@
       body = `<input type="search" id="pl-find" class="pl-find" placeholder="Find an animal: deer, duck, quail" aria-label="Find an animal" autocomplete="off">
         <div id="pl-animals">${GROUPS.concat([['', 'Other']]).map(([g, label]) => {
           const ss2 = D.species.filter((s) => (g ? s.group === g : !GROUPS.some(([x]) => x === s.group)));
-          return ss2.length ? `<div class="pl-grp" data-g="${esc(g)}"><h3>${esc(label)}</h3><div class="pl-opts">${ss2.map((s) => `<button type="button" class="pl-opt${d.species === s.id ? ' on' : ''}" data-sp="${esc(s.id)}" data-find="${esc((s.name + ' ' + s.id + ' ' + (s.group || '') + ' ' + (s.seasonKeys || []).join(' ')).toLowerCase())}">${esc(s.name)}</button>`).join('')}</div></div>` : '';
+          return ss2.length ? `<div class="pl-grp" data-g="${esc(g)}"><h3>${esc(label)}</h3><div class="pl-opts">${ss2.map((s) => `<button type="button" class="pl-opt${d.species === s.id ? ' on' : ''}" data-sp="${esc(s.id)}" data-find="${esc((s.name + ' ' + s.id + ' ' + (s.group || '') + ' ' + (s.seasonKeys || []).join(' ')).toLowerCase())}">${esc(s.name)}</button>${s.id === 'mule-deer' ? BTD_OPT(d) : ''}`).join('')}</div></div>` : '';
         }).join('')}</div><p class="muted" id="pl-none" hidden>No animal matches. Try one word.</p>`;
     } else if (k === 'where') {
       body = `<div class="pl-opts">${places().map((p) => `<button type="button" class="pl-opt${d.where && d.where.id === p.id ? ' on' : ''}" data-place="${esc(p.id)}">${esc(p.name)}<small>${p.mu ? `MU (Management Unit) ${esc(p.mu)}` : 'MU found when you tap'}</small></button>`).join('')}
@@ -754,18 +771,20 @@
 
     // 4. checklist (needs nothing async)
     const drawCheck = () => {
-      const items = checkItems(sp, D.lists, condOf(p));
+      const all = checkItems(sp, D.lists, condOf(p)), items = p.showAllChecks ? all : all.filter((i) => !i.off);
       const t = (i) => !!(p.ticks && p.ticks[i.key]);
       const n = items.filter(t).length;
       m.check = { done: n, total: items.length, left: items.filter((i) => !t(i)) };
       $('#pl-check').innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b>
         <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((n / Math.max(1, items.length)) * 100) + '%"></i></div>'}
         <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
+        ${hiddenNote(all, p.showAllChecks, 'pl-showall')}
         <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
         ${n === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
       $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
       $('#pl-untick').onclick = () => { if (!n || confirm('Untick every item in this plan?')) { p.ticks = {}; C.save(); drawCheck(); } };
+      const sa = $('#pl-showall'); if (sa) sa.onclick = () => { p.showAllChecks = !p.showAllChecks; C.save(); drawCheck(); };
     };
     $('#pl-check').addEventListener('change', (e) => {
       const c = e.target.closest('input[data-pk]'); if (!c) return;
@@ -1431,7 +1450,7 @@
     const S = C.S;
     el.innerHTML = GROUPS.concat([['', 'Other']]).map(([g, label]) => {
       const ss2 = D.species.filter((s) => (g ? s.group === g : !GROUPS.some(([x]) => x === s.group)));
-      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, { firstHunt: firstDefault(C) }); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
+      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, { firstHunt: firstDefault(C) }).filter((i) => !i.off); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
         return `<a class="item" href="#/lists/animal/${esc(s.id)}"><span class="grow">${esc(s.name)}</span><span class="pill">${n}/${its.length}</span></a>`; }).join('')}</div>` : '';
     }).join('');
   }
@@ -1443,16 +1462,19 @@
     C.setTitle(`${sp.name} checklist`);
     const S = C.S, k = (i) => `an:${sp.id}:${i.key}`;
     const draw = () => {
-      const items = checkItems(sp, D.lists, { firstHunt: firstDefault(C) });
+      const showAll = !!(S.settings && S.settings.animalShowAll);
+      const all = checkItems(sp, D.lists, { firstHunt: firstDefault(C) }), items = showAll ? all : all.filter((i) => !i.off);
       const t = (i) => !!S.checks[k(i)], n = items.filter(t).length;
       const hide = !!(S.settings && S.settings.animalHideDone);
       view.innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b><label class="pl-hide"><input type="checkbox" id="pl-hide"${hide ? ' checked' : ''}> Hide done</label></div>
         <div class="bar"><i style="width:${Math.round((n / Math.max(1, items.length)) * 100)}%"></i></div>
         <p class="muted pl-small">${esc(sp.name)} list plus the lists for every hunt${firstDefault(C) ? ' and the first hunt list' : ''}. A plan adds lists for your method, access, overnight and party.</p>
+        ${hiddenNote(all, showAll, 'pl-showall')}
         <div class="pl-list${hide ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-ak', closedCats(view))}</div>
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button><button type="button" class="btn primary" id="pl-mk">Plan a hunt</button></div></div>
         ${lessonLinks(sp.lessons || [], C) ? `<div class="card"><h3>Lessons</h3><div class="pl-chips">${lessonLinks(sp.lessons || [], C)}</div></div>` : ''}`;
       view.querySelector('#pl-hide').onchange = (e) => { S.settings.animalHideDone = e.target.checked; C.save(); view.querySelector('.pl-list').classList.toggle('pl-hide-done', e.target.checked); };
+      const sa = view.querySelector('#pl-showall'); if (sa) sa.onclick = () => { S.settings.animalShowAll = !showAll; C.save(); draw(); };
       view.querySelector('#pl-untick').onclick = () => { if (!n || confirm('Untick every item in this list?')) { items.forEach((i) => delete S.checks[k(i)]); C.save(); draw(); } };
       view.querySelector('#pl-mk').onclick = () => { draft = { species: sp.id }; saveDraft(); goStep(1); };
     };

@@ -412,6 +412,7 @@ details.pl-day > :last-child { margin-bottom: 12px; }
 .pl-spot-a .btn { min-height: 44px; font-size: 16px; padding: 0 8px; }
 .pl-hide { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; font-weight: 700; }
 .pl-hide input { width: 24px; height: 24px; accent-color: var(--accent); }
+.pl-showall { min-height: 44px; padding: 0 6px; background: none; border: 0; color: var(--accent); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
 .pl-list { margin-top: 10px; }
 .pl-cat { margin-top: 14px; }
 .pl-hide-done .pl-item.done { display: none; }
@@ -435,10 +436,12 @@ details.pl-cat > summary::after { content: ""; width: 9px; height: 9px; margin: 
 details.pl-cat[open] > summary::after { transform: rotate(-135deg); margin-bottom: -4px; }
 
 /* ---------- tap a place: MUs, regions and place names (app/places.js) ---------- */
-.hmp { cursor: pointer; border-bottom: 1.5px dotted var(--accent); position: relative; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+.hmp { cursor: pointer; text-decoration: underline dotted var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 3px; position: relative; white-space: nowrap; -webkit-tap-highlight-color: transparent; padding: 14px 0; }
+/* inline links in plan text: vertical padding grows the tap box toward 44 px; padding on an inline box does not move the lines */
+.pl :not(.pl-why) > a:not([class]) { padding: 14px 0; }
 .hmp::after { content: ''; position: absolute; left: -4px; right: -4px; top: 50%; height: 44px; min-height: 100%; transform: translateY(-50%); } /* 44 px tap target, no layout change */
 .hmp .hmp-i { width: .72em; height: .72em; margin-left: .12em; vertical-align: -.02em; color: var(--accent); opacity: .85; }
-.hmp:active, .hmp:focus-visible { background: var(--sel-bg); outline: none; border-radius: 3px; }
+.hmp:active, .hmp:focus-visible { background: var(--sel-bg); outline: none; border-radius: 3px; background-clip: content-box; }
 .hmp-sheet h2 { margin: 0 0 8px; }
 .hmp-sheet h2 small { font-size: 14px; font-weight: 400; margin-left: 4px; }
 .hmp-svg { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }

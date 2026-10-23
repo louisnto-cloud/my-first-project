@@ -457,8 +457,8 @@
     if (window.HMHuntWeek) try { const hw = window.HMHuntWeek.homeCard(S); if (hw) { if (today) today.insertAdjacentHTML('afterend', hw); else view.insertAdjacentHTML('afterbegin', hw); } } catch (e) { console.warn('Hunt week card', e); }
     // My guns (app/addons/guns.js): a small link card in the plan and hunt week area (after the hunt week card, else after the plan card)
     if (window.HMGuns) try { const gc = window.HMGuns.homeCard(S); const at = view.querySelector('#hw-home') || [...view.querySelectorAll('.pl-home')].pop(); if (gc) { if (at) at.insertAdjacentHTML('afterend', gc); else view.insertAdjacentHTML('beforeend', gc); } } catch (e) { console.warn('Guns card', e); }
-    // new users: a card to the tour (app/addons/guide.js), first on the screen
-    if (window.HMGuide) try { const g = window.HMGuide.homeCard(S); if (g) { view.insertAdjacentHTML('afterbegin', g); window.HMGuide.wireHome(view); } } catch (e) { console.warn('Guide card', e); }
+    // new users: a card to the tour (app/addons/guide.js), first on the screen; with a plan, Today's study stays first and the tour goes under it
+    if (window.HMGuide) try { const g = window.HMGuide.homeCard(S); if (g) { const st = view.querySelector('.pl-today'); if (st) st.insertAdjacentHTML('afterend', g); else view.insertAdjacentHTML('afterbegin', g); window.HMGuide.wireHome(view); } } catch (e) { console.warn('Guide card', e); }
     const warm = resumeInfo() ? resumeInfo().s : nextSession();
     if (warm) idle(() => loadLesson(warm).catch(() => {}));
   }
@@ -1269,6 +1269,7 @@
   function studyToday(plan, lessons) {
     lessons = regionLessons(plan, lessons);
     const P = studyPath(plan.species, lessons), st = pathStats(P.all), ms = pathStats(P.must);
+    if (plan.id) { S.pathCache = S.pathCache && typeof S.pathCache === 'object' ? S.pathCache : {}; if (String(S.pathCache[plan.id]) !== String(P.all)) { S.pathCache = { [plan.id]: P.all }; save(); } } // daily cards put this path first
     const day = studyDay(), t = day.date, pace = plan.pace || 'must'; // owner default 2026-10-16: must know by the hunt
     const daysToGo = plan.from ? dayDiff(t, plan.from) : null;
     const key = plan.id + ':' + plan.species; // a changed animal starts a fresh count
@@ -1294,21 +1295,38 @@
     S.srs[id] = c;
     S.cards = S.cards || {}; S.cards[id] = knew ? Math.min(2, (S.cards[id] || 0) + 1) : 0; // keep the deck counts in step
   }
+  // the next saved plan's study path (lesson ids), for the daily cards: the path Home worked out last (S.pathCache),
+  // else the plan's region lessons and Masterclass chapters (the animal's own lesson list loads later with the plan data)
+  function planPath() {
+    const t = dayISO(), ps = (Array.isArray(S.plans) ? S.plans : []).filter((p) => p && p.species && (p.to || p.from) && (p.to || p.from) >= t).sort((a, b) => (String(a.from) < String(b.from) ? -1 : 1));
+    const p = ps[0]; if (!p) return null;
+    const c = S.pathCache && S.pathCache[p.id];
+    return { id: p.id, ids: Array.isArray(c) && c.length ? c : studyPath(p.species, regionLessons(p, [])).all };
+  }
   function dailyQueue(more) {
-    const day = studyDay();
+    const day = studyDay(), pp = planPath(), qFor = pp ? pp.id : '';
+    if (day.q && (day.qFor || '') !== qFor && !day.cardsDone && !more) day.q = null; // a plan made today: rebuild an untouched queue with its path first
     if (day.q) return day.q;
     const all = allCards(), t = dayISO(), srs = S.srs || {};
     const due = all.filter((c) => srs[c.id] && srs[c.id].d <= t).sort((a, b) => (srs[a.id].d < srs[b.id].d ? -1 : 1)).map((c) => c.id);
     // new cards: quiz questions from lessons already read come first, then every deck in turn (all decks mixed)
     const fresh = all.filter((c) => !srs[c.id]);
     const readQuiz = fresh.filter((c) => { const m = c.id.match(/^q:(.+)#/); return m && byId[m[1]] && seenOf(byId[m[1]]) > 0; });
-    const byDeck = {};
-    fresh.filter((c) => !readQuiz.includes(c)).forEach((c) => (byDeck[c.deck] = byDeck[c.deck] || []).push(c));
-    const decks = Object.keys(byDeck), mixed = [];
-    for (let k = 0; mixed.length < DAY_CARDS * 2 && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) mixed.push(byDeck[d].shift()); }
+    // with a plan: cards from the plan's study path first (its lessons' quiz questions, and the decks named after its lessons,
+    // like Black tailed deer Masterclass), then every other deck. Each group mixes its decks in turn.
+    const pathIds = new Set(pp ? pp.ids : []), titles = [...pathIds].map((id) => byId[id] && byId[id].title).filter(Boolean);
+    const onPath = (c) => (c.qs ? pathIds.has(c.qs.id) : titles.some((tt) => tt === c.deck || tt.startsWith(c.deck + ' ')));
+    const mix = (cs, max) => {
+      const byDeck = {}; cs.forEach((c) => (byDeck[c.deck] = byDeck[c.deck] || []).push(c));
+      const decks = Object.keys(byDeck), out = [];
+      for (let k = 0; out.length < max && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) out.push(byDeck[d].shift()); }
+      return out;
+    };
+    const rest = fresh.filter((c) => !readQuiz.includes(c)), first = pathIds.size ? mix(rest.filter(onPath), DAY_CARDS * 2) : [];
+    const mixed = first.concat(mix(rest.filter((c) => !first.includes(c) && !(pathIds.size && onPath(c))), Math.max(0, DAY_CARDS * 2 - first.length)));
     const newIds = readQuiz.concat(mixed).map((c) => c.id);
     day.q = due.concat(newIds).slice(0, more ? DAY_CARDS : Math.max(DAY_CARDS, Math.min(due.length, 50)));
-    day.dueCount = due.length;
+    day.dueCount = due.length; day.qFor = qFor;
     save();
     return day.q;
   }
