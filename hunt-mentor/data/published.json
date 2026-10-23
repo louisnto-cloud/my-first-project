@@ -319,7 +319,19 @@
     "fw-grandpa-07",
     "fw-grandpa-08",
     "fw-grandpa-09",
-    "fw-grandpa-10"
+    "fw-grandpa-10",
+    "mc-shotgun-01",
+    "mc-shotgun-02",
+    "mc-shotgun-03",
+    "mc-shotgun-04",
+    "mc-shotgun-05",
+    "mc-shotgun-06",
+    "mc-shotgun-07",
+    "mc-shotgun-08",
+    "mc-shotgun-09",
+    "mc-shotgun-10",
+    "mc-shotgun-11",
+    "mc-shotgun-12"
   ],
   "flashcards": [
     "quail",
@@ -343,6 +355,7 @@
     "nav",
     "fw-rules",
     "fw-grandpa",
-    "mu"
+    "mu",
+    "shotgun"
   ]
 }
