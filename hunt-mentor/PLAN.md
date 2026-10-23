@@ -176,3 +176,8 @@ hunt-mentor/
 - 2026-10-23: finish push published: guide, hunt week, speed (content.js 7.6 MB to 0.4 MB), style lint and real sources, Region 2 sweep (Harrison bylaw 1207, Mission bylaw areas, parks not on Schedule B, road notices 21 Oct), design upgrade, Hunt ready score, read aloud, after the shot, decision trainer (74 scenarios), map tour and Help, find anything search, one tap card. Final regression: 42 of 42, map deep links, truck and legal light tests pass; lint passes.
 - 2026-10-23: owner guns confirmed: Tikka T3x Arctic .308 Winchester (iron sights), CZ 457 (.22, variant VERIFY), SKS Chinese; no shotgun yet.
 - 2026-10-23: picture how tos (prompts/2026-10-23-pictures-for-everything.md Part 1): 32 app features, 128 step pictures (SVG, 400 by 300, phone drawn with the real buttons and a numbered blaze circle on the thing to tap) in data/addons/howto/ (precached), made by scripts/build-howto.mjs. Shown in the guide (swipe strip with 44 px arrows) and from a How to button in each feature's screen and map sheet (app/addons/howto.js, found by route and sheet title, no other feature code changed). Class prefix hwt- (the map already uses hh-).
+
+## 7z. Plan live conditions and hour by hour (2026-10-23, prompt 2026-10-23-plan-trip-v2 parts 3 and 4)
+- Two add ons, plan.js untouched: window.HMPlanLive (fetch, html, mount, cached) and window.HMPlanDays (build, html, wire, text, enrich, mount). plan.js calls them when present.
+- Cache: localStorage hm.planlive.<planId>, shown with "as of"; turnaround buttons write the Safety alarm key hm.safety.turn.
+- Road notices read live from the official South Coast FSR layer (machine readable, no scraping); lesson lines when offline.
