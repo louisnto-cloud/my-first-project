@@ -26,10 +26,20 @@ const MAX_TILES = 30000;
 const PM_WHOLE_MAX = 1048576; // PMTiles files up to 1 MB are saved whole; bigger ones save only the byte ranges the area needs
 const CHUNK_GAP = 32 * 1024, CHUNK_MAX = 2 * 1048576;
 const GLYPH_RANGES = ['0-255', '256-511', '512-767', '768-1023', '7680-7935', '8192-8447'];
-// Average stored tile size, from the Heffley Creek preset download (2026-10-11: topo 1,766 tiles 24.5 MB, terrain 282 tiles
-// 14.8 MB). Only for the estimate; the saved list shows the real size.
-const VEC_B = (z) => (z >= 13 ? 12.5e3 : z === 12 ? 16e3 : z === 11 ? 20e3 : z >= 9 ? 40e3 : 80e3);
-const DEM_B = (z) => (z >= 12 ? 35e3 : z === 11 ? 46e3 : z === 10 ? 58e3 : 80e3);
+// Average stored tile size per zoom. Only for the estimate; the saved list shows the real size.
+// First set from the Heffley Creek preset download (2026-10-11: topo 1,766 tiles 24.5 MB, terrain 282 tiles 14.8 MB).
+// Remeasured 2026-10-23 (a clean room test found the estimate about 30% low: base area 58 MB estimated vs 83 MB saved,
+// a Harrison view 26 MB vs 36 MB). Every tile of two areas fetched and its decoded (stored) size added up:
+//   Mission base area, 25 km: topo 1,742 tiles 42.3 MB, terrain 292 tiles 27.1 MB.
+//   Harrison Lake view (-121.86, 49.25 to -121.71, 49.35): topo 216 tiles 17.3 MB, terrain 124 tiles 9.1 MB.
+// The world tiles at zoom 0 to 9 are big (zoom 2 is about 900 kB each) and were priced far too low before.
+// Zoom 13 and 14 sit between the two areas (Mission 15.8 and 12.8 kB, Harrison 9.5 and 5.9 kB); terrain zoom 11 and 12 too.
+// With these the estimate is base 78.5 MB (measured 84.9 with layers and fonts; the test saved 83), Harrison view 41.7 MB
+// (measured 39.7): within about 8%.
+const VEC_KB = [81, 203, 899, 242, 156, 200, 142, 148, 119, 104, 57, 30, 18, 13, 10.5];
+const DEM_KB = [106, 96, 95, 89, 90, 82, 88, 94, 100, 84, 71, 95, 85];
+const VEC_B = (z) => VEC_KB[Math.min(z, VEC_KB.length - 1)] * 1e3;
+const DEM_B = (z) => DEM_KB[Math.min(z, DEM_KB.length - 1)] * 1e3;
 const FONT_B = 70e3;
 // Same rule as sw.js: one cache key for every OpenFreeMap tile set version.
 export const normKey = (u) => u.replace(/^(https:\/\/tiles\.openfreemap\.org\/[a-z0-9_]+)\/[^/]+\/(\d+\/\d+\/\d+\.pbf)(\?.*)?$/, '$1/_/$2');
