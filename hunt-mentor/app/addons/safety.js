@@ -88,7 +88,7 @@
   function sourcesBox(ids) {
     const rows = [...new Set(ids)].map((id) => [id, srcOf(id)]).filter(([, s]) => s);
     if (!rows.length) return '';
-    return `<details class="card sf-sources"><summary>Sources and dates checked</summary><ul>${rows.map(([, s]) => `<li><a href="${esc(s.url)}"${/^https?:/.test(s.url) ? ' target="_blank" rel="noopener"' : ''}>${esc(s.name)}</a>${s.how ? `, ${esc(s.how)}` : ''}. Checked ${esc(s.checked)}.</li>`).join('')}</ul>
+    return `<details class="card sf-sources"><summary>Sources and dates checked</summary><ul>${rows.map(([, s]) => `<li><a class="sf-a" href="${esc(s.url)}"${/^https?:/.test(s.url) ? ' target="_blank" rel="noopener"' : ''}>${esc(s.name)}</a>${s.how ? `, ${esc(s.how)}` : ''}. Checked ${esc(s.checked)}.</li>`).join('')}</ul>
       <p class="muted">Certainty: 95 to 100% read in the official source; 80 to 94% official, some interpretation; 60 to 79% reliable secondary source; Tip is opinion.</p></details>`;
   }
   const idsIn = (...arrs) => arrs.flat().filter(Boolean).map((f) => f.s).filter(Boolean);
@@ -246,7 +246,7 @@
         <a class="btn block sf-big" href="#/safety/live"><b>Conditions check</b><small>Weather, wind, wildfires, avalanche, ice.</small></a>
       </div>
       <p class="muted">Saved on this phone only. Nothing is ever sent without you tapping Send.</p>
-      <p class="muted">Full lessons: <a href="#/s/mc-skills-10">Safety Masterclass</a>, <a href="#/s/mc-nav-07">Lost</a>, <a href="#/s/bear-cougar-encounters">Bears and cougars</a>.</p>`;
+      <p class="muted">Full lessons: <a class="sf-a" href="#/s/mc-skills-10">Safety Masterclass</a>, <a class="sf-a" href="#/s/mc-nav-07">Lost</a>, <a class="sf-a" href="#/s/bear-cougar-encounters">Bears and cougars</a>.</p>`;
     if (on) { const m = $('#sf-mini'); const up = () => { const l = st.at - Date.now(); m.textContent = l > 0 ? ` in ${countdown(l)}` : ' now'; }; up(); stopTick(); tick = setInterval(() => { if (!document.body.contains(m)) { stopTick(); return; } up(); }, 1000); }
   }
 
@@ -515,7 +515,7 @@
     view().innerHTML = `
       <div class="sf-chips sf-noprint"><a class="btn" href="#sf-w-see">Bear</a><a class="btn" href="#sf-w-attack">Attack</a><a class="btn" href="#sf-w-cougar">Cougar</a><a class="btn" href="#sf-w-spray">Spray</a></div>
       <div class="card sf-first">${facts(W.first)}</div>
-      <div class="card"><h2>Black bear or grizzly?</h2>${facts(W.id)}<p class="muted">More photos: <a href="#/s/black-bear">Black bear lesson</a>.</p></div>
+      <div class="card"><h2>Black bear or grizzly?</h2>${facts(W.id)}<p class="muted">More photos: <a class="sf-a" href="#/s/black-bear">Black bear lesson</a>.</p></div>
       <div class="card" id="sf-w-see"><h2>You see a bear: match what it does</h2>
         ${W.see.map((x, i) => `<div class="sf-step"><span class="sf-stepn">${i + 1}</span><div><b>${esc(x.h)}</b><p>${esc(x.t)} ${badge(x.c)}${srcLink(x.s)}</p></div></div>`).join('')}</div>
       <div class="card" id="sf-w-attack"><h2>It makes contact: defensive or predatory?</h2>
@@ -527,7 +527,7 @@
         ${facts(W.sprayMore)}</div>
       <div class="card"><h2>Report it</h2><p>${esc(W.report.t)} ${badge(W.report.c)}${srcLink(W.report.s)}</p>
         ${(D.numbers || []).filter((n) => n.id === 'rapp').map(numHtml).join('')}<p>Someone hurt: call 911 first.</p></div>
-      <p class="muted">Full lesson with photos and quiz: <a href="#/s/bear-cougar-encounters">Bears and cougars</a>. Checked ${esc(D.checked)}.</p>
+      <p class="muted">Full lesson with photos and quiz: <a class="sf-a" href="#/s/bear-cougar-encounters">Bears and cougars</a>. Checked ${esc(D.checked)}.</p>
       ${sourcesBox(idsIn(W.first, W.id, W.see, W.contact, W.cougar, W.spray, W.sprayMore, [W.report]))}`;
     $$('.sf-chips a[href^="#sf-"]').forEach((a) => { a.onclick = (e) => { e.preventDefault(); const t = document.getElementById(a.getAttribute('href').slice(1)); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }; });
   }
@@ -608,7 +608,7 @@
     render();
   }
   function liveHtml(D, c) {
-    const link = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
+    const link = (u, t) => `<a class="sf-a" href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
     const fail = (k, what, u, t) => (c && c.err && c.err[k] ? `<p class="sf-err">Could not load ${what} (${esc(c.err[k])}). Open ${link(u, t)} instead.</p>` : '');
     const stamp = c ? `<div class="card sf-stamp"><b>Last checked ${esc(fmtDT(c.at))}</b> (${esc(ago(c.at))})<br>${esc(c.pt.label)}: <span class="sf-mono">${f5(c.pt.lat)}, ${f5(c.pt.lon)}</span>${c.pt.mu ? `, MU (Management Unit) ${esc(c.pt.mu)}` : ''}${Date.now() - c.at > 6 * 36e5 ? '<p class="sf-err">This is old. Conditions change. Check again when you have signal.</p>' : ''}</div>` : '<div class="card"><p class="muted">No check saved yet. Choose a point and tap Check now.</p></div>';
     // weather
@@ -645,8 +645,8 @@
         `<p class="muted">Official BC Wildfire Service data, updated about every 15 minutes, and it can lag ${badge(95)}${srcLink('firedata')}. ${link('https://wildfiresituation.nrs.gov.bc.ca/map', 'Wildfire map')}</p>${(D.numbers || []).filter((n) => n.id === 'fire').map(numHtml).join('')}`)
       + sec('Fire bans and area restrictions', (bans || '<p class="muted">No bans check saved yet.</p>') + fail('bans', 'fire bans', 'https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions', 'Fire bans and restrictions') + fail('restr', 'area restrictions', 'https://wildfiresituation.nrs.gov.bc.ca/map', 'the BC Wildfire Service map'),
         `<p class="muted">An empty result is not a promise. Read ${link('https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions', 'Fire bans and restrictions')} the night before you go ${TIP}.</p>`)
-      + sec('Avalanche', (avy || '<p class="muted">No avalanche check saved yet.</p>') + fail('avy', 'the avalanche forecast', 'https://avalanche.ca/map', 'avalanche.ca'), facts(D.avy && D.avy.rules) + `<p class="muted">Lesson: <a href="#/s/avalanche-hunters">Avalanche awareness</a>.</p>`)
-      + sec('Ice: general guidance', '<p class="sf-n">No live ice data exists. These are general rules, not a check of your lake.</p>' + facts(D.ice && D.ice.rules) + tips(D.ice && D.ice.tips), '<p class="muted">Lesson: <a href="#/s/ice-cold-water">Ice and cold water</a>.</p>');
+      + sec('Avalanche', (avy || '<p class="muted">No avalanche check saved yet.</p>') + fail('avy', 'the avalanche forecast', 'https://avalanche.ca/map', 'avalanche.ca'), facts(D.avy && D.avy.rules) + `<p class="muted">Lesson: <a class="sf-a" href="#/s/avalanche-hunters">Avalanche awareness</a>.</p>`)
+      + sec('Ice: general guidance', '<p class="sf-n">No live ice data exists. These are general rules, not a check of your lake.</p>' + facts(D.ice && D.ice.rules) + tips(D.ice && D.ice.tips), '<p class="muted">Lesson: <a class="sf-a" href="#/s/ice-cold-water">Ice and cold water</a>.</p>');
   }
 
   // ---------- router ----------
@@ -682,6 +682,7 @@
   .sf-facts{margin:8px 0;padding-left:20px}.sf-facts li{margin:6px 0;font-size:17px;overflow-wrap:anywhere}
   .sf-num{list-style:decimal}
   .sf-src{font-size:14px;margin-left:4px;overflow-wrap:anywhere}
+  .sf-src,.sf-a{display:inline-flex;align-items:center;min-height:44px;vertical-align:middle} /* 44 px tap area for inline links (clean room test 2026-10-23: they were 16 to 19 px tall) */
   .sf-n{font-size:14px;color:var(--muted);margin:4px 0}
   .sf-steps{padding-left:22px;margin:8px 0}.sf-steps li{margin:6px 0;font-size:17px}
   .sf-loc .sf-ll{display:grid;grid-template-columns:1fr;gap:8px}

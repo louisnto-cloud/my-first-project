@@ -200,7 +200,8 @@
   }
 
   // ---------- view ----------
-  const EXAMPLES = ['Is a 4 point buck legal in 3-27 in November?', 'What shot for ducks?', 'Can I use a .22 for grouse?', 'Legal shooting hours'];
+  // Region 2 first (the owner's Harrison hunt, MU 2-18); each tested 2026-10-23: the top screens give the right Region 2 answer
+  const EXAMPLES = ['Is a spike buck legal in 2-18 in November?', 'Is a doe legal in 2-18 in November?', 'Deer season dates in 2-18', 'Is a 4 point buck legal in 3-27 in November?', 'What shot for ducks?', 'Can I use a .22 for grouse?', 'Legal shooting hours'];
   const setTitle = (t) => { const h = $('#top-title'); if (h) h.textContent = t; };
   const tab = () => document.querySelectorAll('.tabs a').forEach((a) => a.classList.remove('on'));
   function card(r, terms, quick) {
@@ -273,7 +274,7 @@
     setTitle('Ask the app'); tab();
     root.innerHTML = `<form class="hma-form" id="hma-f" role="search">
         <label class="f" for="hma-q">Ask a question. Works with no signal.</label>
-        <div class="hma-row"><input type="search" id="hma-q" enterkeyhint="search" autocomplete="off" placeholder="Is a 4 point buck legal in 3-27?" value="${esc(q)}">
+        <div class="hma-row"><input type="search" id="hma-q" enterkeyhint="search" autocomplete="off" placeholder="Is a spike buck legal in 2-18?" value="${esc(q)}">
         <button class="btn primary" type="submit">Ask</button></div></form>
       <div id="hma-res">${q ? '' : `<p class="muted">Try one of these:</p><div class="hma-ex">${EXAMPLES.map((e) => `<a class="pill" href="#/ask/${encodeURIComponent(e)}">${esc(e)}</a>`).join('')}</div>
         <p class="muted">Answers come from the screens, rules and glossary in this app. Open the screen to read it all.</p>`}</div>`;

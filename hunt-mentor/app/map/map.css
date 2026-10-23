@@ -127,13 +127,14 @@ body:has(.hm-backchip:not([hidden])) .hmm-3d { top: calc(var(--st) + 186px); }
 .hmm-sheet[hidden] { display: none; }
 .hmm-grip { width: 42px; height: 5px; border-radius: 3px; background: var(--hmm-line); margin: 8px auto 0; flex: none; }
 .hmm-sheet-h { display: flex; align-items: center; gap: 8px; padding: 2px 6px 2px 18px; flex: none; }
-.hmm-sheet-h h2 { flex: 1; margin: 0; font-size: 19px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hmm-sheet-h h2 { flex: 1; min-width: 0; margin: 0; font-size: 19px; font-weight: 800; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow-wrap: anywhere; } /* two lines before it clips (360 px phones: "Here on the map", "Where can I hunt") */
 .hmm-grow { width: 44px; height: 44px; border: 0; background: none; display: none; place-items: center; border-radius: 50%; color: var(--hmm-muted); flex: none; }
 .hmm-grow svg { width: 24px; height: 24px; transform: rotate(-90deg); transition: transform 0.2s; }
 .hmm-full .hmm-grow svg { transform: rotate(90deg); }
 .hmm-x { width: 44px; height: 44px; border: 0; background: none; display: grid; place-items: center; border-radius: 50%; color: var(--hmm-muted); }
 .hmm-sheet-b { overflow-wrap: anywhere; overflow-y: auto; overflow-x: hidden; padding: 2px 18px 22px; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; -webkit-user-select: text; user-select: text; flex: 1 1 auto; }
 .hmm-sheet-b p { margin: 8px 0; }
+.hmm-sheet-b a[href$=".pdf"] { display: inline-flex; align-items: center; min-height: 44px; vertical-align: middle; } /* "Synopsis PDF" source links: 44 px tap area (clean room test 2026-10-23: 16 to 19 px tall) */
 .hmm-h { margin: 18px 0 6px; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--hmm-muted); }
 .hmm-muted { color: var(--hmm-muted); font-size: 14px; }
 .hmm-tight { margin-top: 0 !important; }
