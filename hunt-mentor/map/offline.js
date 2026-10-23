@@ -65,6 +65,7 @@ export function openSheet() {
       <button class="hmm-btn2" data-o="view">${H.icons.target}<span>This view</span></button>
       <button class="hmm-btn2" data-o="draw">${H.icons.edit}<span>Draw a box</span></button>
     </div>
+    <p class="hmm-muted">Hunting farther out, like Harrison? The base area box does not reach it. Move the map to your hunt area and tap This view, or save it from your hunt plan (Plan, Offline for no signal).</p>
     <h3 class="hmm-h">Saved areas</h3>
     <div class="hmm-olist">${list.length ? list.map(itemHtml).join('') : '<p class="hmm-muted">No saved areas yet.</p>'}</div>
     <h3 class="hmm-h">Storage on this phone</h3><div data-o="storage"><p class="hmm-muted">Checking</p></div>

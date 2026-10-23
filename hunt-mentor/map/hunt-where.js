@@ -18,7 +18,7 @@ export async function open() {
   }
   layers.setOn(ID, true);
   if (map.getZoom() < (st.l.minzoom || 8)) map.easeTo({ zoom: (st.l.minzoom || 8) + 1 });
-  const covered = (st.l.areas || []).join(', ');
+  const covered = (st.l.areas || []).slice().sort((a, b) => String(a).localeCompare(String(b), 'en', { numeric: true })).join(', ');
   const body = H.openSheet({ title: 'Where can I hunt?', modal: false, onClose: peek(), html: `${intro('a first look at where hunting is likely allowed. Bright green: likely open. Grey: check first.',
     ['The layer is now on. Zoom in to see it (it shows from zoom 8).', 'Tap a green or grey area for how the app worked it out and how sure it is.', 'Then tap “Can I hunt here now?” for one spot, one animal, right now.'])}
     <ul class="hmm-legend"><li><i style="background:#00c853"></i>Likely open to hunt (check season, MU (Management Unit) and signs)</li><li><i style="background:#9e9e9e"></i>Check first: Crown land with a tenure, federal land, or a park</li></ul>
