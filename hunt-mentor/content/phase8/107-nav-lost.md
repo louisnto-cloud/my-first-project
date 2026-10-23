@@ -229,7 +229,7 @@ fs-lost-found-3 | Hear searchers? Whistle 3 times. Stay put.
 - [Popular Science (Undark), The burgeoning science of search and rescue, 2024](https://www.popsci.com/environment/the-burgeoning-science-of-search-and-rescue/), read directly 2026-10-11 (65%).
 - Apple satellite SOS and Garmin inReach: via [GPS, phone and battery](#/s/gps-phone-battery) and [Hunting Skills Masterclass 10](#/s/mc-skills-10) (65 to 95%).
 - Area maths: geometry (95%). Mirror and call script: field habits (Tip).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

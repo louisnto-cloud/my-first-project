@@ -287,7 +287,7 @@ rb-notch-5 | Keep the licence with the meat.
 - Prince George Citizen, [B.C. hunter fined $3,000](https://www.princegeorgecitizen.com/latest/bc-hunter-fined-3000-for-poaching-deer-7014604) (60%, search preview).
 - Global News, [2 Vernon men fined for moose poaching](https://globalnews.ca/news/8859170/2-vernon-men-fined-moose-poaching/) (60%, search preview).
 - Lakes District News, [wild game poaching remains steady in Burns Lake area](https://www.burnslakelakesdistrictnews.com/news/wild-game-poaching-remains-steady-in-burns-lake-area/) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

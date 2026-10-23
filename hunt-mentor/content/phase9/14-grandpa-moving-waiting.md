@@ -265,7 +265,7 @@ checked: 2026-10-11
 - Outdoor Life, [One sit in the deer woods equals three days of pressure](https://outdoorlife.com/blogs/big-buck-zone/2014/07/study-one-sit-deer-woods-equals-three-days-pressure-mature-bucks), search preview (60%)
 - Mule Deer Foundation, [Glassing techniques for western mule deer](https://muledeer.org/glassing-techniques-for-western-mule-deer/), search preview (80%)
 - Penn State final report 2004 (hunters stationary in the morning), via `research/2026-10-11-rq.md` (85%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

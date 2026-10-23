@@ -324,7 +324,7 @@ Knife or coin for scale in photos
 - Washington Department of Fish and Wildlife, [Livestock injury and mortality investigations](https://wdfw.wa.gov/sites/default/files/publications/01581/wdfw01581.pdf), read directly, checked 2026-10-11 (85%): wolf or dog rule, measuring tips, track sizes.
 - Maine Inland Fisheries and Wildlife, [Pocket guide to Maine animal tracks](https://www.maine.gov/IFW/docs/MDIFW-Animal-Tracking-Card-color.pdf), read directly, checked 2026-10-11 (85%): adult deer and moose print sizes.
 - Search previews, checked 2026-10-11, capped at 60% to 70%: [Jack Raven Bushcraft, measuring tracks](https://www.jackravenbushcraft.co.uk/measuring-tracks/); [Murray State University mammalogy tracks](https://campus.murraystate.edu/faculty/tderting/mammalogy2001/tracks/Miscellaneous.html); [Outdoor Life, Making Tracks (Benoit family)](https://outdoorlife.com/articles/hunting/2007/09/making-tracks).
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

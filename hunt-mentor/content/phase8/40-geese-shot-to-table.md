@@ -268,7 +268,7 @@ mgs-care-4 | Label or preserve before you give a goose away.
 - [Oklahoma Department of Wildlife Conservation, avian influenza advice](https://wildlifedepartment.com/hunting/resources/waterfowl/avian-influenza) and [California Department of Fish and Wildlife guidance](https://wildlife.ca.gov/News/Archive/avian-influenza-guidance-for-waterfowl-hunters), search previews 2026-10-11 (80%).
 - Yield: hunter figures in the quick lesson [Geese](#/s/geese), 2026-10-01 (60%).
 - Cheat sheet numbers: chapters 1 to 9 of this Masterclass and their sources.
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

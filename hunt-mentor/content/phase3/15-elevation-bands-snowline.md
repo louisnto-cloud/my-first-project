@@ -265,4 +265,4 @@ Check your height before leaving a road on the ATV (All Terrain Vehicle)
 - Lapse rate and valley cold pools: weather teaching sources and mountain valley studies, search preview, checked 2026-10-11 (75 to 80%).
 - Region 3 and Region 8 1,700 m vehicle rules: [Rule Book: Region 3](#/s/rb-region-3/0), from the BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (99% as carried there).
 - Hunt Mentor app code and layer list (elevation readout, Habitat zones, by month layers, Insights), read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

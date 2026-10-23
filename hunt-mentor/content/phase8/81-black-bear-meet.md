@@ -256,7 +256,7 @@ bg-bb-cubs-tree-bc | Two cubs up a tree. Look for them first.
 - CBC (Canadian Broadcasting Corporation), [black bear numbers in BC](https://www.cbc.ca/news/canada/british-columbia/black-bear-numbers-in-b-c-1.7539540), search preview, via the quick lesson (60%)
 - BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json`, checked 2026-10-04 (90%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book ([unlawful acts](#/s/rb-unlawful-acts)) and the [quick lesson](#/s/black-bear): pages 11, 19, 80 (98 to 99%)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

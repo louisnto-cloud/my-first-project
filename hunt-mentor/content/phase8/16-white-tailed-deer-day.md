@@ -198,7 +198,7 @@ checked: 2026-10-11
 - Outdoor Life, [10 myths about deer movement](https://www.outdoorlife.com/10-myths-about-deer-movement/), search preview, checked 2026-10-11 (65%)
 - Penn State deer studies via the app's [Weather fronts](#/s/fronts-and-movement) session (75 to 80%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), page 11 item 38, read directly 2026-10-02 (99%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -214,7 +214,7 @@ bg-elk-spikes | Young bulls together: spikes.
 - Hinterland Who's Who, [North American elk](https://www.hww.ca/wildlife/mammals/north-american-elk/), checked 2026-10-11 (80%)
 - US National Park Service, [Yellowstone elk](https://www.nps.gov/yell/learn/nature/elk.htm), checked 2026-10-11 (80%)
 - Colorado Parks and Wildlife elk course (search preview, 75%); elk sound and calling guides (search preview, 65%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

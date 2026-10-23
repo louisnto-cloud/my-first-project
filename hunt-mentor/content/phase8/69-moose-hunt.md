@@ -262,7 +262,7 @@ yt-quarter-pack | Quarter the animal so you can carry it out.
 - BC Ministry of Transportation news release (2020), [watch for wildlife during rutting season](https://news.gov.bc.ca/releases/2020TRAN0163-001934), checked 2026-10-11 (85%); Wildlife Collision Prevention Program advice via search (70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 11 to 13, 33, via [unlawful acts](#/s/rb-unlawful-acts), [legal methods](#/s/rb-legal-methods), [Region 3](#/s/rb-region-3) (99%)
 - Hunt Mentor sessions with their own sources: [Moose](#/s/moose), [glassing](#/s/glassing), [moving quietly](#/s/still-hunting), [partner](#/s/hunting-partner), [water safety](#/s/water-safety), [ice and cold water](#/s/ice-cold-water), [packing out](#/s/packing-out) (60 to 99% as marked there)
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

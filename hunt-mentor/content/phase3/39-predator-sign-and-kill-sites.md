@@ -281,7 +281,7 @@ Return plan: from upwind, glass, loud
 - BC Hunting and Trapping Regulations Synopsis, RAPP line, as quoted in the app Rule Book (95%).
 - Earlier figures from [Reading sign](#/s/sign/0) (cougar feeding 6 to 8 days, scrapes).
 - Not used: Alberta and Idaho phone numbers and self defence rules, which do not apply in BC.
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

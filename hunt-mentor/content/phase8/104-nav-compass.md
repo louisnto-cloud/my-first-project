@@ -232,7 +232,7 @@ fn-tri-4 | Where the lines cross is you.
 - Hunt Map Measure tool bearing: app code, read 2026-10-11 (99%).
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 11 (hours), via the Rule Book (99%).
 - Two person leapfrog and white in the shed: common land navigation teaching (Tip).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

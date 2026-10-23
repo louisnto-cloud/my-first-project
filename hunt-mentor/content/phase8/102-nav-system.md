@@ -218,7 +218,7 @@ fn-hm-wpt-3 | Name it. Done. It saves by itself.
 - Naismith, Aitken, Tobler, via [Planning a route](#/s/route-planning) (75%).
 - Hunt Map waypoints, Line or route, Slope steepness, Offline Maps: app code, read 2026-10-11 (99%).
 - BC Forest Safety Council road warnings, via [Vehicles and roads](#/s/fsr-vehicles-radio) (85%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

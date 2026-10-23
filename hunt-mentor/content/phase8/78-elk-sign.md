@@ -211,7 +211,7 @@ yt-elk-cow-call | A cow mew: the most common elk sound.
 - US National Park Service, [Yellowstone elk](https://www.nps.gov/yell/learn/nature/elk.htm), checked 2026-10-11 (80%)
 - BC Species Habitat Models for Rocky Mountain Elk ([Muskwa](https://a100.gov.bc.ca/pub/acat/documents/r1583/whr_4069_mceel_1117055960977_ad101d33f76a47c38b67f114e5fbb078.pdf)), read directly (80%)
 - Hunt Mentor sign sessions and the quick lesson [Elk](#/s/elk) (65% lines as marked there)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

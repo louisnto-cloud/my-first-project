@@ -241,4 +241,4 @@ Test security cover: can you see a deer shape at 60 m?
 - Thomas and others 1979 elk cover, and Cook and others 1998, via a US Forest Service paper and a Foothills Research Institute report, search preview, checked 2026-10-11 (70%).
 - Mule deer bed aspects in Montana and Idaho (thesis), white tail winter beds in Ontario (Armstrong and others 1983), field guide article on bed position: search preview, checked 2026-10-11 (60%).
 - Hunt Mentor app tools (Slope steepness, Slope direction, What can I see from here, Sun and shade), read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

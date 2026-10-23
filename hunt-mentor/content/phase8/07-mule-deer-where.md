@@ -260,7 +260,7 @@ mmd-map-6 | Wind and scent cone: plan the approach.
 - Mule Deer Working Group fact sheet [17](https://wildlife.utah.gov/pdf/deer/mdwg-17_winter_range_disturbance.pdf) (85%)
 - Hunt Map layer and tool names: the app's map layer guide (checked 2026-10-11).
 - Hunt Mentor sessions: [Heffley Creek](#/s/local-heffley), [Mission](#/s/local-mission), [South Okanagan](#/s/local-okanagan), Rule Book [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2), [Region 8](#/s/rb-region-8).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

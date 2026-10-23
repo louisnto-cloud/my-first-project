@@ -239,7 +239,7 @@ mc-skills-mark-4 | Flag where it stood. Then flag the trail.
 - [United States National Institute of Justice, bloodstain tails](https://nij.ojp.gov/library/publications/bloodstain-tails-asymmetry-aids-reconstruction-oblique-impact), via [Blood, hair and tissue](#/s/rs-blood-hair-tissue) (80%)
 - [Alberta Environment, Be BearSmart: hunting in bear country](https://open.alberta.ca/dataset/76c8f428-30ac-4f0b-b4cd-184e1a6a13e3/resource/2f51f8f2-4386-4e9a-8db2-7a660df33a83/download/2013-bebearsmart-huntingbearsafety-mar2013a.pdf) (85%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (page 3, page 11, page 12), Trespass Act, via the Rule Book (95 to 99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

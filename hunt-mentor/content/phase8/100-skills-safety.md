@@ -325,7 +325,7 @@ Sun protection
 - [ISED (Innovation, Science and Economic Development Canada): radio licensing](https://ised-isde.canada.ca/site/spectrum-management-telecommunications/en/node/2178), via [Hunting with a partner](#/s/hunting-partner) (85%)
 - Firearm safety: Canadian Firearms Safety Course material, federal transport regulations SOR/98-209, BC Firearm Violence Prevention Act, via [Firearm safety](#/s/firearm-safety) (85 to 99%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

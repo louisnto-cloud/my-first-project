@@ -283,7 +283,7 @@ checked: 2026-10-11
 - Boundary Creek Times, [Midway RCMP want to interview suspected poacher](https://www.boundarycreektimes.com/news/midway-rcmp-want-to-interview-suspected-poacher/) (60%, search preview).
 - CTV News, [firearm, deer carcasses seized near Williams Lake](https://vancouverisland.ctvnews.ca/vancouver/article/firearm-deer-carcasses-seized-in-suspected-case-of-illegal-hunting-near-williams-lake) (60%, search preview).
 - Split Reed, "Top 5 Waterfowl Hunting Violations", 16 November 2020, [splitreed.com](https://splitreed.com/top-five-waterfowl-violations/), read directly (60%, US).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

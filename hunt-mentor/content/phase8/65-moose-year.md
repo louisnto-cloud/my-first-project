@@ -222,7 +222,7 @@ yt-moose-calling-eastmans | Hear real moose calls and when to use each one.
 - BC Ministry of Forests (2023), [moose research progress report, May 2022](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/moose/2022_moose_research_progress_report.pdf), read directly, checked 2026-10-11 (90%)
 - The Canadian Encyclopedia, [Moose](https://www.thecanadianencyclopedia.ca/en/article/moose), checked 2026-10-11 (75%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 34 and 68, via [Region 3](#/s/rb-region-3) and [Region 8](#/s/rb-region-8) (99%)
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

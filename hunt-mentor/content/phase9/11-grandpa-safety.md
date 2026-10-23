@@ -289,7 +289,7 @@ checked: 2026-10-11
 - AdventureSmart, [The three Ts](https://www.adventuresmart.ca/the-three-ts/), search preview (85%)
 - Canadian Safe Boating Council, [Cold Water Boot Camp](https://csbc.ca/en/cold-water-boot-camp), search preview (85%)
 - National Deer Association, ["The Hunter's Guide to Deer Vision"](https://deerassociation.com/hunters-guide-deer-vision/) (2012), read directly (85%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

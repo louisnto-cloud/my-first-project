@@ -273,7 +273,7 @@ checked: 2026-10-11
 - CBC News, [illegal hunting starting early this season](https://amp.cbc.ca/news/canada/british-columbia/illegal-hunting-starting-early-this-season-1.3224570) (60%, search preview).
 - Q101 News, 8 November 2023, [Boston Bar road check](http://q101.ca/2023/11/08/b-c-conservation-officers-rcmp-check-over-400-hunters-and-anglers-north-of-hope-seize-firearms/), read directly (70%).
 - KelownaNow, [BCCOS road check on Hwy 1](https://www.kelownanow.com/watercooler/news/news/Provincial/BCCOS_road_check_on_Hwy_1_produces_21_tickets_28_warnings_and_multiple_animals_seized/) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

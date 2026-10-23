@@ -175,7 +175,7 @@ checked: 2026-10-11
 - [Northern Woodlands, Why ruffed grouse take winter in stride](https://northernwoodlands.org/outside_story/article/why-ruffed-grouse-take-winter-in-stride), search preview (60%).
 - White and dark muscle in turkeys and chickens, extension and science articles, search preview (70%).
 - Ruffed grouse survival: University of Maine thesis, Maryland DNR report, Appalachian Wildlife Monograph, search previews (75%).
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

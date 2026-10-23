@@ -205,7 +205,7 @@ commons-black-bear-salmon | Black bears at a salmon run in fall.
 - Sierra Club BC, [Soopolallie](https://sierraclub.bc.ca/ecomap/soopolallie/), search preview, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: pages 28, 34, 68 (99%)
 - Hunt Mentor lessons: [berries and mast](#/s/berries-mast), [Black bear](#/s/black-bear)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

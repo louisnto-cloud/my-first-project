@@ -244,7 +244,7 @@ commons-elk-bull-yoho | A Rocky Mountain bull in Yoho, BC.
 - Habitat Conservation Trust Foundation, [Return of the Roosevelts](https://hctf.ca/return-of-the-roosevelts/), checked 2026-10-11 (85%)
 - BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json`, checked 2026-10-04 (90%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book ([definitions](#/s/rb-definitions), [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2), [Region 8](#/s/rb-region-8)): pages 3, 4, 28, 34, 68 (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

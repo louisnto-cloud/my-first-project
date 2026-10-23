@@ -206,7 +206,7 @@ checked: 2026-10-03
 - BC Outdoors Magazine, [Lower Mainland duck hunting](https://www.bcoutdoorsmagazine.com/lower-mainland-duck-hunting/), 2013 (65%).
 - Hunting BC blog, [Region 3](https://ihuntbc.blogspot.com/2011/04/region-3-one-of-most-pleasant-hunting.html), 2011 (55%). HuntingBC forum threads, search previews only (50%).
 - [South Okanagan Similkameen Conservation Program grassland field guide](https://soscp.org/wp-content/uploads/2017/08/Grassland-species-at-risk.pdf) (75%); [iNFOnews quail, 2015](https://infotel.ca/newsitem/everything-you-need-to-know-about-quail-in-the-southern-interior/it22857) (60%); [BC moose research report 2016](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/moose/2016_moose_research_progress_report.pdf) (85%); read 2026-10-03.
-- Full notes: `research/2026-10-03-migration-and-areas.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

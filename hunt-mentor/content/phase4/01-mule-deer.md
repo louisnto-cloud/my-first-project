@@ -500,7 +500,7 @@ Read my MU page in the Region 3 synopsis
 - BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: MU map page 32, bag limits page 33, season table page 34, Map C11 page 35, checked 2026-10-02 (99%)
 - New Mexico Wildlife, [The math in the meat](https://magazine.wildlife.state.nm.us/the-math-in-the-meat/) and [Backcountry Chronicles](https://www.backcountrychronicles.com/mule-deer-pack-out-weight/), reporting University of Wyoming carcass studies, checked 2026-10-01 (70%)
 - Region 3 [mule deer hunter survey 2017](http://lwdrodgun.com/wp-content/uploads/2017/12/Region-3-Mule-Deer-Hunter-Survey-Final-Report-December-2017.pdf), checked 2026-10-01 (70%)
-- Research notes: `research/2026-10-01-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

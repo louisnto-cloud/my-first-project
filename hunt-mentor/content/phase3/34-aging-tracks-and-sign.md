@@ -302,7 +302,7 @@ Weather log written each day
 - Search previews, checked 2026-10-11, capped at 60% to 65%: [Nature Mentor, how to tell if tracks are fresh](https://nature-mentor.com/how-to-tell-if-animal-tracks-are-fresh/) (dew, edges, mud); [Bear Tracker glossary](https://bear-tracker.com/glossary.html) and [Todd Stewart, glossary of tracking](https://todd-stewart.format.com/glossary-of-tracking) (aging, healing, dew, cobwebs); [Point Reyes Light, tracking](https://www.ptreyeslight.com/?p=51022) (sand, aging box); [Outdoor Life, animal tracks](https://www.outdoorlife.com/survival/animal-tracks/) (crushed vegetation); [Union Sportsmen, snow tracking](https://unionsportsmen.org/snow-tracking/) and [Hunting BC forum archive](https://www.huntingbc.ca/forum/archive/index.php/t-29633.html) (snow in tracks, frozen floors, warm weather).
 - [Bowhunter, blood variations](https://www.bowhunter.com/editorial/tactics_bh_variations_1009/310830) (search preview, 65%): rain lightens blood.
 - Tips and Grandpa's rules are opinion.
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

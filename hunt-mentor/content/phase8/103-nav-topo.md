@@ -228,7 +228,7 @@ hf-shape-cliff | Cliff: lines crowd or touch.
 - [BC Search and Rescue Association 2022 Year in Review](https://bcsara.com/wp-content/uploads/2023/09/BCSARA_2022_Year_In_Review_Report.pdf), read directly 2026-10-11 (95%).
 - Scale and slope angle maths, grid convergence: my calculation (85 to 99%).
 - Hunt Map contours, coordinates and readouts: app code and MAP.md, read 2026-10-11 (99%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

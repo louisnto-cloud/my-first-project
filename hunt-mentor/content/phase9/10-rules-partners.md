@@ -272,7 +272,7 @@ checked: 2026-10-11
 ```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), as carried in the Rule Book: [definitions](#/s/rb-definitions), [licences](#/s/rb-licences-fees), [it is unlawful](#/s/rb-unlawful-acts), [Region 3](#/s/rb-region-3) (99%).
 - [Migratory Birds Regulations, 2022](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html) s. 32, as carried in [Rule Book: ducks and geese](#/s/rb-migratory-birds) (99%).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

@@ -268,7 +268,7 @@ g-md-distance | Find the deer: grey bodies, white rumps.
 - [Petersen's Hunting, how to glass](https://www.petersenshunting.com/editorial/how-to-glass-while-hunting/502315), search preview 2026-10-11 (60%)
 - [Field and Stream, binoculars and spotting scopes](https://www.fieldandstream.com/hunting/how-to-use-your-binoculars-and-spotting-scope-to-hunt-elk-mule-deer-antelope), search preview 2026-10-11 (60%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 3 (hunt), page 11 items 22, 28, 38 (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

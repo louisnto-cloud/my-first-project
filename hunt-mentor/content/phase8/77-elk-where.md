@@ -235,7 +235,7 @@ mc-elk-map-5 | Wind and scent cone: plan the approach.
 - BC [Big Game Harvest Statistics](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json` (90%)
 - App data: `data/migration.json` (55 to 70%), `data/layers/manifest.json` (layer coverage)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 28, 32, 34, 68, via the Rule Book (99%); LEH Regulations Synopsis 2026 to 2027 via [LEH strategy](#/s/leh-strategy) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

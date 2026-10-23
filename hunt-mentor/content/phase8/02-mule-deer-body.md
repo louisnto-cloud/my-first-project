@@ -212,7 +212,7 @@ checked: 2026-10-11
 - Utah Tech University poster on hollow hair (mule deer, elk, pronghorn), search preview, checked 2026-10-11 (60%)
 - Wyoming mule deer fat dataset (Dryad, adult females 2017 to 2018), search preview, checked 2026-10-11 (65%)
 - Hunt Mentor sessions: [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [field dressing](#/s/field-dressing).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

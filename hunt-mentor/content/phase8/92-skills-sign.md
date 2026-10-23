@@ -260,7 +260,7 @@ mc-skills-follow-4 | Lost it? Circle 10 m, then 20 m.
 - Maine Inland Fisheries and Wildlife, [Pocket guide to Maine animal tracks](https://www.maine.gov/IFW/docs/MDIFW-Animal-Tracking-Card-color.pdf), via [Bird sign](#/s/rs-bird-sign) (85%)
 - Alberta Health, [Echinococcus tapeworm](https://ppe.myhealth.alberta.ca/alberta/Pages/echinococcus-tapeworm.aspx), via [Droppings](#/s/rs-droppings) (85%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 3 (hunt), migratory bird retrieval (95 to 99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

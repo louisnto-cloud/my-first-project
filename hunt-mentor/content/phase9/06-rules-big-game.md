@@ -278,7 +278,7 @@ checked: 2026-10-11
 ```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), as carried in the Rule Book: [definitions](#/s/rb-definitions), [it is unlawful](#/s/rb-unlawful-acts), [legal methods](#/s/rb-legal-methods), [bag limits](#/s/rb-bag-limits), [after the kill](#/s/rb-after-the-kill), [Region 3](#/s/rb-region-3), [Region 8](#/s/rb-region-8) (99%).
 - Prince George Citizen, [B.C. hunter fined $3,000 for poaching deer](https://www.princegeorgecitizen.com/latest/bc-hunter-fined-3000-for-poaching-deer-7014604) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

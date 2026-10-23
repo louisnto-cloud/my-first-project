@@ -175,7 +175,7 @@ mgs-map-4 | Weather and wind, Sun and shade: wind at your back, sun behind.
 - App lessons: [How animals move](#/s/migration), [Habitat tour: ducks](#/s/habitat-ducks), [First duck hunt](#/s/first-duck-hunt).
 - Rules: [Region 2](#/s/rb-region-2), [Region 3](#/s/rb-region-3), [Region 8](#/s/rb-region-8), [Where you can hunt](#/s/rb-where-you-can-hunt), checked 2026-10-03 and 2026-10-04 (99%).
 - Map layer names: the app's Hunt Map layer manifest, checked 2026-10-11.
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

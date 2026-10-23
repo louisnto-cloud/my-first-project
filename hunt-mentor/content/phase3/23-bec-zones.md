@@ -352,7 +352,7 @@ Note where you saw deer sign in each zone
 - BC Ministry of Environment, [Ecological restoration guidelines: natural disturbance](https://www.env.gov.bc.ca/fia/documents/TERP_eco_rest_guidelines/defgoals/natdisturb.htm), read directly, checked 2026-10-11 (90%): NDT definitions.
 - BC Ministry of Environment wildlife series, [Mule and Black tailed Deer in BC](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf) and [Moose in BC](https://www.env.gov.bc.ca/wld/documents/moose.pdf), read directly, checked 2026-10-11 (85%): snow limits.
 - Subzone first letter key: BC Species and Ecosystems Explorer, search preview, checked 2026-10-11 (80%).
-- Research log: `research/2026-10-11-rp.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

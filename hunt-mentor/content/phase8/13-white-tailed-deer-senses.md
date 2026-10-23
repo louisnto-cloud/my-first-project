@@ -200,7 +200,7 @@ g-wt-buck-front | Head on: both eyes forward, the only depth zone.
 - D'Angelo and others 2007, [deer hearing](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326), checked 2026-10-01 (85%)
 - Idaho Fish and Game, [Wildlife Express: White tailed deer](https://idfg.idaho.gov/sites/default/files/wildlife-express_sept-2017-whitetalied-deer.pdf), read 2026-10-11 (80%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), page 12 item 51, read directly 2026-10-02 (95%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

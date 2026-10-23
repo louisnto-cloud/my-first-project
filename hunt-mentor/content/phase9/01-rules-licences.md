@@ -280,7 +280,7 @@ checked: 2026-10-11
 - Prince George Citizen, "Hunting infraction blitz wracks up charges", [princegeorgecitizen.com](https://www.princegeorgecitizen.com/local-news/hunting-infraction-blitz-wracks-up-charges-3703685) (60%, search preview).
 - Global News, "2 Vernon men fined for moose poaching", [globalnews.ca](https://globalnews.ca/news/8859170/2-vernon-men-fined-moose-poaching/) (60%, search preview).
 - Castanet, "Four people facing a combined 43 charges", [castanetkamloops.net](https://www.castanetkamloops.net/news/BC/537335/Four-people-facing-a-combined-43-charges-for-unlawfully-hunting-and-killing-wildlife) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

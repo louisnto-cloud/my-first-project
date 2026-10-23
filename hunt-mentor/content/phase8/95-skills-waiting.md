@@ -220,7 +220,7 @@ yt-moose-calling-strategies | Cow calls, bull grunts and raking brush for moose.
 - [Bass Pro 1Source, coyote set up (Heath Wood)](https://1source.basspro.com/news-tips/predator/7612/hunters-are-coyotes-not-responding-maybe-its-your-set), read 2026-10-11 (65%)
 - [Mossberg, beat the wind (Brodie Swisher)](https://resources.mossberg.com/journal/beat-the-wind-to-kill-more-predators), read 2026-10-11 (60%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 12 items 41 and 42, via the Rule Book (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

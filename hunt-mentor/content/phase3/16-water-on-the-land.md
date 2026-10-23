@@ -285,4 +285,4 @@ Note the date of the first big fall rain
 - Moose, elk and wallows: BC species accounts and the app glossary, as cited in the species lessons (75 to 85%).
 - Rules on private land and the 100 m rule: [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt/0), 2 October 2026 edition (99% as carried there).
 - Plant indicators: [Habitat tour: deer](#/s/habitat-deer/0) and BC habitat accounts (70 to 75%); aspen clump as seep marker is hunter observation (Tip).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

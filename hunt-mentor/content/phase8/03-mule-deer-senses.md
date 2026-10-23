@@ -231,7 +231,7 @@ Red light headlamp
 - Vomeronasal organ and flehmen: fishgame.com (University of Georgia researcher) and Outdoor Life, search previews, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 11 (lights), page 12 item 51, inside back cover (99%)
 - Hunt Mentor sessions: [How a deer thinks](#/s/deer-mind), [Wind and thermals](#/s/wind-thermals), [Heffley Creek](#/s/local-heffley).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

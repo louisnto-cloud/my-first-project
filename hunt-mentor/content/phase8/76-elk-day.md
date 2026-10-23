@@ -170,7 +170,7 @@ hab-subalpine-forest | Subalpine timber next to basins.
 - Rocky Mountain Elk Foundation, [Elk facts](https://rmef.org/elk-facts/) (85%) and [wallow report](https://rmef.org/?p=15454) (70%)
 - Wyoming Game and Fish, collared elk news (search preview, 70%); deer moon studies (search summary, 70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 11, via [legal methods](#/s/rb-legal-methods) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

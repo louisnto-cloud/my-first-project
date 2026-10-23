@@ -259,4 +259,4 @@ Pick a seat downwind with a backstop and range rings
 - Rules on private land, the 100 m rule and road allowances: [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt/0), 2 October 2026 edition (99% as carried there).
 - Hunt Mentor app tools (3D, height boost, Slope steepness, Range rings, Scent cone, What can I see from here, layers), read 2026-10-11 (99%).
 - The scorecard, seat distances and mnemonics are hunter craft and teaching aids (Tip).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

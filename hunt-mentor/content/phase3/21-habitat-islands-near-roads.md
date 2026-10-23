@@ -237,4 +237,4 @@ Hunt the best one once, at dawn or dusk
 - Rules near roads, buildings, parks and boats, and the definition of hunting: [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt/0), [Rule Book: definitions](#/s/rb-definitions/0), [Rule Book: it is unlawful](#/s/rb-unlawful-acts/0), BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (99% as carried there; item 22 and the definition applied to glassing from a truck is my reading, 85%).
 - Hunt Mentor app layers and tools, read 2026-10-11 (99%).
 - Island types and hunting options: hunter craft (Tip).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

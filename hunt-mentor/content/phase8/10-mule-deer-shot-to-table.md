@@ -319,7 +319,7 @@ yt-meat-care-new-hunters | Field, truck and home: keep it cold, clean, dry.
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, read directly in the Rule Book sessions: pages 3, 4, 11, 12, 14, 15, 27, 33, 34, 67 (99%)
 - Canadian Food Inspection Agency 71°C advice, via [cooking](#/s/cooking) (95%)
 - Chapter sources: chapters 1 to 9 of this Masterclass.
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

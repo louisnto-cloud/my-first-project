@@ -356,7 +356,7 @@ bg-moose-big-bull | Mature bull: wide palms.
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, read directly in the Rule Book sessions: pages 3, 5, 11, 12, 13, 14, 15, 16, 28, 32, 33, 34, 68 (99%)
 - Hunt Mentor sessions with their own sources: [Moose](#/s/moose), [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [field dressing](#/s/field-dressing), [meat care](#/s/meat-care), [packing out](#/s/packing-out), [cooking](#/s/cooking) (60 to 99% as marked there)
 - Chapter sources: chapters 1 to 9 of this Masterclass.
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

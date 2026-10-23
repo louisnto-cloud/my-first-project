@@ -207,7 +207,7 @@ mwt-map-4 | Drop your stand. Check the Scent cone.
 - BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), figures computed 2026-10-11 (90%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), pages 14, 27, 67, read directly 2026-10-02 (99%)
 - Hunt Mentor map layers and tools (`data/layers/manifest.json`), checked 2026-10-11 (95%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

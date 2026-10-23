@@ -265,7 +265,7 @@ checked: 2026-10-11
 - MeatEater, [Does barometric pressure affect deer movement](https://themeateater.com/hunt/whitetail-deer/does-barometric-pressure-affect-deer-movement), Buckmasters and Outdoor Life wind articles, search preview (60%)
 - Auburn University thesis, [Effects of abiotic factors on white tailed deer activity in South Carolina](https://etd.auburn.edu/handle/10415/7077), search preview (75%)
 - Northern Woodlands, [Moon phase and the rut](https://northernwoodlands.org/outside_story/article/moon-phase-and-the-rut), search preview (70%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

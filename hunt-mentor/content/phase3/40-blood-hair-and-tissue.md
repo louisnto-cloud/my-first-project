@@ -297,7 +297,7 @@ Plan: one tracks, one watches
 - Bloodstain physics: [United States National Institute of Justice, bloodstain tails](https://nij.ojp.gov/library/publications/bloodstain-tails-asymmetry-aids-reconstruction-oblique-impact) and [AIP Publishing, written in blood](https://publishing.aip.org/publications/latest-content/written-in-blood/) (search preview, 80%).
 - Alberta Environment, [Be BearSmart: hunting in bear country](https://open.alberta.ca/dataset/76c8f428-30ac-4f0b-b4cd-184e1a6a13e3/resource/2f51f8f2-4386-4e9a-8db2-7a660df33a83/download/2013-bebearsmart-huntingbearsafety-mar2013a.pdf), read directly, checked 2026-10-11 (85%).
 - Law lines and wait tables as sourced in [Blood trailing](#/s/blood-trailing/0) (synopsis, Hunter Ed, National Deer Association).
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

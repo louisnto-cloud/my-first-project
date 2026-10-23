@@ -252,7 +252,7 @@ ff-ps-npoa-4 | Move your body around a pivot, not the rifle.
 - [American Rifleman: finding the natural point of aim (27 January 2026)](https://www.americanrifleman.org/content/finding-the-natural-point-of-aim/) (80%)
 - [Field and Stream: shooting sticks, Richard Mann](https://fieldandstream.com/stories/hunting/how-to-use-shooting-sticks) (70%)
 - [Tikka T1x and T3x manual v5.3](https://media.sako.global/image/upload/v1691658741/Tikka_T1x_T3x_Instruction_Manual_v5.3_cjggnu.pdf) and the [CZ 457 manual](https://czubpimstorage.blob.core.windows.net/strapi-pim/assets/735342000443_CZ_457_05_2025_en_es_cs_de_fr_8dc25ceb9d.pdf) (95%)
-- All via the foundation lessons, checked 2026-10-11. Research notes: `research/2026-10-11-masterclass-skills.md`.
+- All via the foundation lessons, checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

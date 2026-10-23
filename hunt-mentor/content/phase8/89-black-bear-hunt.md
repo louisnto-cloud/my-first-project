@@ -222,7 +222,7 @@ yt-spot-stalk-tips | Spot and stalk basics.
 - Boone and Crockett Club, [Field judging black bear](https://boone-crockett.org/node/621), checked 2026-10-11 (65%)
 - WildSafeBC, [Black bear](https://wildsafebc.com/species/black-bear/), checked 2026-10-11 (70 to 75%)
 - Hunt Mentor lessons: [glassing](#/s/glassing), [stalking](#/s/stalking-footwork), [still hunting](#/s/still-hunting), [hunting partner](#/s/hunting-partner), [ethics](#/s/ethics-fair-chase), [bear safety](#/s/bear-cougar-encounters)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

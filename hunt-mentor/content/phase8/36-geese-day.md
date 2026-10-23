@@ -144,7 +144,7 @@ checked: 2026-10-11
 - [Ducks Unlimited migration alert](https://www.ducks.org/contents/articles/hunting/migration-alerts/migration-alert-mid-latitude-lig.html), search preview 2026-10-11 (60%).
 - [Ducks Unlimited goose guide](https://www.ducks.org/hunting/goose-hunting-tips-tactics/the-ultimate-guide-to-hunting-canada-geese), read directly 2026-10-11 (65%).
 - [BC Hunter Sample Survey Estimates](https://catalogue.data.gov.bc.ca/dataset/8425b848-517e-4a20-b26c-6121720382af), downloaded 2026-10-11 (99% as published).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

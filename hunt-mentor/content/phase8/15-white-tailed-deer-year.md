@@ -209,7 +209,7 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 - Guidefitter, [deer rut timeline](https://guidefitter.com/blog/deer-rut-timeline-the-7-stages-and-how-to-hunt-them), search preview, checked 2026-10-11 (60%)
 - Willms 1976, [Kamloops deer diets](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), via `research/2026-10-01-deer.md` (85%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), Region 3 page 34, Region 8 page 68, read directly 2026-10-02 (99%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

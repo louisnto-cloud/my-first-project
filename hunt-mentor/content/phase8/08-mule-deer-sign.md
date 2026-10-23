@@ -212,7 +212,7 @@ mmd-follow-4 | Lost it? Circle out from the flag.
 - US National Park Service, [Mule deer, Bryce Canyon](https://www.nps.gov/brca/learn/nature/mule-deer.htm), checked 2026-10-11 (80%)
 - Steven Rinella, MeatEater (2018), [A guide to hunting mule deer](https://themeateater.com/hunt/big-game/a-guide-to-hunting-mule-deer), checked 2026-10-11 (65%)
 - Hunt Mentor sessions: [Tracks](#/s/tracks), [Reading sign](#/s/sign), [Snow tracking](#/s/snow-tracking), [blood trailing](#/s/blood-trailing).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -338,7 +338,7 @@ yt-game-bags | Game bags keep flies and dirt off the meat.
 - Boone and Crockett Club, [Field judging black bear](https://boone-crockett.org/node/621), checked 2026-10-11 (65%); scoring minimums and drying period via Idaho Fish and Game records and Pope and Young entry rules, search preview, checked 2026-10-11 (70 to 75%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, read directly in the Rule Book sessions: pages 8, 11, 12, 13, 15, 16, 18, 28, 34, 68 (99%)
 - Chapter sources: chapters 1 to 9 of this Masterclass.
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -141,7 +141,7 @@ checked: 2026-10-11
 - Geography Realm, [GPS (Global Positioning System) tracking shows black bears avoid humans during the day](https://www.geographyrealm.com/gps-tracking-shows-that-black-bears-avoid-humans-during-the-day/) (Massachusetts study of 86 bears), search preview, checked 2026-10-11 (65%)
 - Hyperphagia foraging hours: town and agency pages (Lake Lure, North Carolina Wildlife Resources Commission via WLOS television news), search preview, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via [legal methods](#/s/rb-legal-methods): page 11 (99%)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -190,7 +190,7 @@ fn-hm-sun | Sun and shade: who gets first and last light.
 - Sierra Club BC, [Soopolallie](https://sierraclub.bc.ca/ecomap/soopolallie/), search preview (65%); Washington State University, [huckleberries for bears](https://cas.wsu.edu/?p=29590), search preview (65%), checked 2026-10-11
 - Hunting media on bear meat flavour (Field and Stream, Outdoor Canada), search preview, checked 2026-10-11 (Tip)
 - Hunt Mentor: [Hunt Map](#/s/hunt-map-pro), [berries and mast](#/s/berries-mast), [where you can hunt](#/s/rb-where-you-can-hunt), regional Rule Book pages (99% where marked)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

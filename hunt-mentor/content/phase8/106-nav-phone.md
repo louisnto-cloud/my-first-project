@@ -203,7 +203,7 @@ mc-nav-ns-4 | Set the heading on the compass and walk.
 - [Garmin newsroom: inReach SOS](https://garmin.com/en-US/newsroom/?p=954), search preview, via [Hunting Skills Masterclass 10](#/s/mc-skills-10) (65%).
 - PLB versus messenger: [GPS Central comparison](https://www.gpscentral.ca/personal-locator-beacon-comparison/) and [Outfitter Satellite](https://www.outfittersatellite.com/blogs/news/plb-versus-satellite-messenger), search previews 2026-10-11 (60%).
 - [BC Search and Rescue Association 2022 Year in Review](https://bcsara.com/wp-content/uploads/2023/09/BCSARA_2022_Year_In_Review_Report.pdf), read directly 2026-10-11 (95%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

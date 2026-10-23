@@ -255,4 +255,4 @@ Drop five waypoints and write the plan in the Journal
 - Hunt Mentor app (Layers, 3D, Slope direction, Satellite, Offline Maps, Insights, elevation readout, Elevation profile, Scent cone), read 2026-10-11 (99%).
 - Video: "How To E-Scout For Whitetails: Key Terrain Features", as listed in the app video list (link card).
 - The 8 check read, the scouting loop and the mnemonics are teaching aids built from lessons 13 to 21 (Tip).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

@@ -265,7 +265,7 @@ checked: 2026-10-11
 - Iowa State University Extension, [SpendSmart knife safety](https://spendsmart.extension.iastate.edu/?p=7942), and Washington State University Extension, [knife safety podcast](https://news.cahnrs.wsu.edu/podcasts/episode-10-accidents-in-the-kitchen-knife-safety/), search preview (80%)
 - Alberta, [BearSmart hunting bear safety](https://open.alberta.ca/dataset/76c8f428-30ac-4f0b-b4cd-184e1a6a13e3/resource/2f51f8f2-4386-4e9a-8db2-7a660df33a83/download/2013-bebearsmart-huntingbearsafety-mar2013a.pdf), Porcupine Caribou Management Board, [Camping for caribou hunters](https://pcmb.ca/wp-content/uploads/2020/06/Camping-for-Caribou-Hunters.pdf), Wyoming Game and Fish, bear safety, search preview (75 to 80%)
 - Buckmasters, zero check article, search preview (65%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

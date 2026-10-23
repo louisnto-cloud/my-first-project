@@ -236,7 +236,7 @@ bg-wt-buck-rack | Mature buck: thick neck, big rack.
 - BC Species and Ecosystems Explorer, [white tailed deer](https://a100.gov.bc.ca/pub/eswp/esr.do?id=16144), search preview, checked 2026-10-11 (75%)
 - BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), checked 2026-10-04, figures computed 2026-10-11 (90%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), pages 3, 8, 14, 27, read directly 2026-10-02 (99%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

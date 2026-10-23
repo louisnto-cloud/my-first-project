@@ -176,7 +176,7 @@ yt-bear-spray-parks | Remove the clip, aim low, spray a cloud between you and th
 - Czetwertynski and others, Alberta black bear sexually selected infanticide study, Ursus, search preview, checked 2026-10-11 (65%)
 - Massachusetts black bear GPS (Global Positioning System) study, secondary write up, search preview, checked 2026-10-11 (65%)
 - Hunt Mentor: [Bears and cougars](#/s/bear-cougar-encounters), [unlawful acts](#/s/rb-unlawful-acts) (as marked there)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

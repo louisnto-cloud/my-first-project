@@ -136,7 +136,7 @@ checked: 2026-10-11
 - Capercaillie flush distance study, Journal of Wildlife Management 71, search preview (70%).
 - Sharp tailed grouse late season flocks: MeatEater and Project Upland guides, search preview (60%).
 - [Outdoor Life, Hit or miss grouse](https://www.outdoorlife.com/articles/hunting/2007/09/hit-or-miss-grouse) and [Outdoor Canada](https://www.outdoorcanada.ca/?p=68), search preview (60%).
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

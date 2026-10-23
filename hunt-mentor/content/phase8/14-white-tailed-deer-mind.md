@@ -232,7 +232,7 @@ bg-wt-fawn | Summer fawn: white spots.
 - Field and Stream, [whitetail buck bedding study](https://www.fieldandstream.com/hunting/whitetail-buck-bedding-study), search preview, checked 2026-10-11 (65%)
 - Field and Stream, [how high can deer jump](https://www.fieldandstream.com/hunting/how-high-can-deer-jump/), search preview, checked 2026-10-11 (60%)
 - Idaho Fish and Game, [Wildlife Express: White tailed deer](https://idfg.idaho.gov/sites/default/files/wildlife-express_sept-2017-whitetalied-deer.pdf), read 2026-10-11 (80%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

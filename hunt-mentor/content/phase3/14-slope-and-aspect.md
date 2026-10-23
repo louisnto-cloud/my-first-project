@@ -281,4 +281,4 @@ Compare grass and timber on the two sides of one valley
 - Luloff, Diefenbach, Stedman and others, Pennsylvania hunter movement report, August 2004, [PDF](https://ecosystems.psu.edu/research/pacfwru/reports/hunting-seasons/@@download/file/Final-huntmvmt-082004.pdf), read directly, checked 2026-10-11 (85% for that forest).
 - Sun height and slope maths: standard astronomy and trigonometry, worked out 2026-10-11 (95%).
 - Hunt Mentor app code (Slope steepness, Slope direction, Sun and shade, 20 m contours), read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

@@ -271,7 +271,7 @@ g-md-buck-4pt | Mature: deep chest, thick neck.
 - Texas Parks and Wildlife, [Vital areas](https://tpwd.texas.gov/education/hunter-education/online-course/hunting-skills-1/vital-areas) (85%, app research)
 - Grand View Outdoors, [How deer see UV brighteners](https://www.grandviewoutdoors.com/big-game-hunting/whitetail-deer/how-deer-see-uv-brighteners), search preview (65%)
 - Northern Woodlands, [Moon phase and the rut](https://northernwoodlands.org/outside_story/article/moon-phase-and-the-rut), search preview (70%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

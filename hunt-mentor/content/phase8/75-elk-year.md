@@ -194,7 +194,7 @@ yt-elk-bugle | Hear the bugle: low start, high whistle, grunts.
 - Rocky Mountain Elk Foundation, [Elk facts](https://rmef.org/elk-facts/) (85%) and [wallow scouting report](https://rmef.org/?p=15454) (70%), checked 2026-10-11
 - App migration data, `data/migration.json`, elk months (55 to 70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 28, 34, 68, via the Rule Book ([Region 8](#/s/rb-region-8), [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2)) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

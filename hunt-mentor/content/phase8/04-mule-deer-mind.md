@@ -227,7 +227,7 @@ g-md-young-bucks | Young bucks: in the open, together.
 - Stankowich 2008, Biological Conservation 141(9), via citing papers, search preview, checked 2026-10-11 (65%)
 - Idaho Fish and Game, buck vulnerability project, and Montana Fish, Wildlife and Parks 1998 deer policy, search previews, checked 2026-10-11 (65%)
 - Hunt Mentor sessions: [How a deer thinks](#/s/deer-mind), [the rut](#/s/the-rut).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

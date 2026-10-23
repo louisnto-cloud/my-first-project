@@ -249,7 +249,7 @@ g-pheasant-hen | Hen pheasant: long pointed tail.
 - AOU 2006 split of the blue grouse: [Wikipedia, Dendragapus](https://en.wikipedia.org/wiki/Dendragapus) and Sibley Guides, search preview, checked 2026-10-11 (85%).
 - [Southeastern Association of Fish and Wildlife Agencies, ruffed grouse survival paper](https://seafwa.org/sites/default/files/journal-articles/Jones-51-57.pdf), search preview, checked 2026-10-11 (75%).
 - BC Breeding Bird Atlas accounts (ptarmigan elevations), read 2026-10-01 to 2026-10-03 (85%).
-- Full log: `research/2026-10-11-masterclass-grouse.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

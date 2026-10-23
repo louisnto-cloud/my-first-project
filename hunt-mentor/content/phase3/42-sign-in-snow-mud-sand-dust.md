@@ -233,7 +233,7 @@ A tire overlap read on a dirt road
 - Maine Inland Fisheries and Wildlife, [Pocket guide to Maine animal tracks](https://www.maine.gov/IFW/docs/MDIFW-Animal-Tracking-Card-color.pdf), read directly, checked 2026-10-11 (85%): substrate variability.
 - Search previews, checked 2026-10-11, capped at 60% to 65%: [Nature Mentor, where to find animal tracks](https://nature-mentor.com/find-animal-tracks/) and [how to tell if tracks are fresh](https://nature-mentor.com/how-to-tell-if-animal-tracks-are-fresh/); [Point Reyes Light, tracking](https://www.ptreyeslight.com/?p=66939); [Northern Illinois University, tracking](https://www.lib.niu.edu/2002/oi020805.html); [Outdoor Life, animal tracks](https://www.outdoorlife.com/survival/animal-tracks/); [Hunting BC forum archive](https://www.huntingbc.ca/forum/archive/index.php/t-29633.html) and [bowhunting forum](https://forums.bowhunting.com/threads/how-old-is-this-buck-based-on-his-track.89036/page-2) (melt out); [Bear Tracker glossary](https://bear-tracker.com/glossary.html).
 - Snow depth, avalanche and ice lines as sourced in [Food, water and cover](#/s/food-water-cover/0) and [Snow tracking](#/s/snow-tracking/0).
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

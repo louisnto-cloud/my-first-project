@@ -284,7 +284,7 @@ checked: 2026-10-11
 - Hunting Regulation, B.C. Reg. 190/84, s. 17(1.2), as carried in the Rule Book (99%).
 - Wisconsin Waterfowl Association, [most common waterfowl violations](https://wisducks.org/what-are-the-most-common-waterfowl-violations/), read directly (70%, US flyway data).
 - Split Reed, [Top 5 Waterfowl Hunting Violations](https://splitreed.com/top-five-waterfowl-violations/), read directly (60%, US).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

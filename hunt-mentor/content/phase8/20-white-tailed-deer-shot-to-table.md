@@ -299,7 +299,7 @@ yt-field-dress-deer | How to field dress a deer.
 - onX Hunt, [what to do after shooting a deer](https://onxmaps.com/hunt/blog/what-to-do-after-shooting-deer), search preview, checked 2026-10-11 (60%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), pages 3, 8, 10, 11, 12, 14, 15, 27, 33, 34, 67, 68, read directly 2026-10-02 (99%)
 - All other cheat sheet facts: the sources of chapters 1 to 9.
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

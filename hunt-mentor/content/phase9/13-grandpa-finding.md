@@ -266,7 +266,7 @@ checked: 2026-10-11
 - American Hunter, [The facts about public land elk](https://www.americanhunter.org/content/the-facts-about-public-land-elk/), and Bend Bulletin, Montana safety zones story, search preview (65 to 70%)
 - Idaho Fish and Game, [Hunters ask first and treat landowners with respect](https://idfg.idaho.gov/press/hunters-ask-first-and-treat-landowners-respect-when-hunting-private-land-you-may-get-invited), search preview (80%)
 - Field and Stream, [Nocturnal whitetail bucks, the science](https://fieldandstream.com/stories/hunting/deer-hunting/whitetail-hunting/nocturnal-whitetail-bucks-science), and Outdoor Life, [one sit equals three days of pressure](https://outdoorlife.com/blogs/big-buck-zone/2014/07/study-one-sit-deer-woods-equals-three-days-pressure-mature-bucks), search preview (60 to 65%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -182,7 +182,7 @@ checked: 2026-10-11
 - [Hinterland Who's Who, Canada goose](https://www.hww.ca/en/wildlife/birds/canada-goose.html), read directly 2026-10-11 (80%).
 - [Ducks Unlimited, The ultimate guide to hunting Canada geese](https://www.ducks.org/hunting/goose-hunting-tips-tactics/the-ultimate-guide-to-hunting-canada-geese), read directly 2026-10-11 (65%).
 - [Raveling, Crews and Klimstra 1972, Wilson Bulletin 84:278](https://archive.org/download/biostor-200086/biostor-200086.pdf), read directly 2026-10-11 (80%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz
