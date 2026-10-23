@@ -6,6 +6,7 @@ import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText
 import * as spots from './spots.js';
 import { withOverrides, guideFor, BUILTIN_LAYERS, PRESETS } from './layer-guide.js';
 import { openCamp } from './place-card.js';
+import * as tapCard from './tap-card.js';
 
 const MANIFEST = 'data/layers/manifest.json';
 export const GROUPS = ['Land status', 'Hunting', 'Habitat and migration', 'Access', 'Camping', 'Spots', 'My Content'];
@@ -57,6 +58,7 @@ const raw = new Map(); // _hid -> { st, f }
 
 export function init(api) {
   H = api; map = api.map;
+  tapCard.init(window.HuntMap || api); // the one tap card (tap-card.js): sets HuntMap.tapCard for the long press
   if (!document.getElementById('hm-lyr-css')) { // small fixes for the panel chips (map.css is owned elsewhere)
     const css = document.createElement('style'); css.id = 'hm-lyr-css';
     css.textContent = CSS;
@@ -460,23 +462,39 @@ export function handleClick(e) {
     const r = hit && raw.get(hit.properties._hid);
     if (r) { openCamp(H, r.st.l, r.f); return true; }
   }
+  // everything else (empty map or layer areas): the one tap card (tap-card.js), with the layers under the finger
+  return tapCard.open(H, e.lngLat, { items: itemsAt(e.point) });
+}
+/** The layer features (not spots, not camps with their own card) under a screen point: [{ st, f }], at most 8. */
+export function itemsAt(p, pad = 12) {
+  const box = [[p.x - pad, p.y - pad], [p.x + pad, p.y + pad]];
+  const on = [...L.values()].filter((s) => s.added && lp(s.l.id).on);
   const ids = on.filter((s) => !s.spot && !s.raster).flatMap((s) => s.mapIds).filter((id) => map.getLayer(id));
-  if (!ids.length) return false;
+  if (!ids.length) return [];
   const seen = new Set(), items = [];
-  for (const h of map.queryRenderedFeatures(box, { layers: ids })) {
+  let hits = [];
+  try { hits = map.queryRenderedFeatures(box, { layers: ids }); } catch (err) { hits = []; }
+  for (const h of hits) {
     let r = null, k = h.properties._hid;
     if (k != null) r = raw.get(k);
     else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
     if (!r || seen.has(k)) continue;
     seen.add(k); items.push(r);
-    if (items.length >= 6) break;
+    if (items.length >= 8) break;
   }
-  if (!items.length) return false;
-  tapMarker(e.lngLat);
-  const legal = items.some((r) => r.st.legal);
-  H.openSheet({ title: items.length > 1 ? 'What is here' : items[0].st.l.label, modal: false, onClose: () => tapMarker(null), html: `${legal ? BANNER : ''}${items.map(featHtml).join('')}` });
-  return true;
+  return items;
 }
+/** The detailed layer sheet (every field, source, certainty) for these items. back: optional function for a "Back" button (the tap card). */
+export function openDetail(items, ll, back) {
+  if (!items || !items.length) return null;
+  if (ll) tapMarker(ll);
+  const legal = items.some((r) => r.st.legal);
+  const body = H.openSheet({ title: items.length > 1 ? 'What is here' : items[0].st.l.label, modal: false, onClose: () => tapMarker(null),
+    html: `${legal ? BANNER : ''}${items.map(featHtml).join('')}${back ? '<button class="hmm-btn2 tc-back" data-tc-back>Back to this spot</button>' : ''}` });
+  const b = body.querySelector('[data-tc-back]'); if (b) b.onclick = () => back();
+  return body;
+}
+export { swatch as swatchHtml, fmtVal as fmtValue };
 
 const HIDE = new Set(['_hid', '_area', '_m', '_cat', '_name', '_score', '_sp', 'months', 'MONTHS', 'OBJECTID', 'SE_ANNO_CAD_DATA', 'FEATURE_AREA_SQM', 'FEATURE_LENGTH_M', 'GEOMETRY', 'id']);
 const human = (k) => String(k).replace(/_/g, ' ').toLowerCase().replace(/^\w/, (c) => c.toUpperCase());
