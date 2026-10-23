@@ -22,6 +22,8 @@
 Also updated: the border crisis stranded **1,300+ vehicles/vessels** at gates by 30 Jan 2026 (VietnamNet, Vietnam News, 2026 — HIGH); the brief's "700+ shipments" was not corroborated. The brief's "health category growing up to 80%" on ecommerce could not be verified in any 2025–26 source; verified figures are +46.9% (health industry, full year 2025, Metric) and a −22% USD terms fall in the supplements sub category after the counterfeit scandals (VnExpress, 2026) — both are used instead.
 
 > **FRESHNESS UPDATE — 23 October 2026.** The body of this primer is dated as of 17–18 July 2026. A targeted re-check of the one time-sensitive item on 23 Oct 2026 confirms Chapter 5's conclusion still holds, with firmer dates: the amended Law on Food Safety has **not** passed — it is before the National Assembly's 2nd Session of the 16th legislature (17 Oct–20 Nov 2026); the Standing Committee reviewed it 24 Sep 2026 (Vietnam News; VietnamNet, 2026 — HIGH). Decree 46/2026 **remains suspended**; Decree 15/2018 is still operative. The proposed effective date for the new law has firmed to **1 January 2027** per the Ministry of Health's WTO notice (USDA FAS, Aug 2026 — MEDIUM), earlier than the ~March 2027 figure below. Everything else in this document remains as of July 2026 — refresh store counts, prices, FX, and platform fees before acting on them.
+>
+> **DATA REFRESH — 23 October 2026.** A spot re-check of the time-sensitive figures found them broadly stable since July: **FX** USD/VND ~26,200 (OFX, Aug 2026) and CAD/VND ~18,300–18,580 (exchange-rates.org, Oct 2026) — both within ~2% of the figures used in Chapter 6, so the worked example and the ~2.38× multiple stand; **Long Chau** Q3 2026 results were not yet published (latest remains 2,517 pharmacies, Q1 2026); **platform fees** unchanged, no new late-2026 Shopee/TikTok hikes found beyond those already in Chapter 6; **CPTPP** schedule Decree 115/2022 has since been amended by **Decree 13/2025/NĐ-CP** (the exact HS 2106.90.99 Vietnam import line is still unread, so the ~0%-with-C/O direction stands but is not line-confirmed). Sources: OFX, exchange-rates.org, The Investor/VNDirect, Tuổi Trẻ, LuatVietnam, 2026 — MEDIUM.
 
 ---
 
@@ -601,7 +603,7 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 |---|---|---|---|
 | HS classification | Finished supplements: 2106.90 (AHTN 2106.90.71–.79 "food/health supplements"); bulk vitamins 2936 | FreightAmigo; hptoancau 2025–26 | MEDIUM |
 | MFN duty on 2106.90 | **15%** for functional food preparations under 2106.90.99 (medical nutrition line 2106.90.96: 7%); ordinary/non MFN rate 22.5% | Vietnamese customs brokers: Luật Minh Khuê, zship.vn, ASC Trans, Ratraco, 2025–26 | MEDIUM-HIGH (multiple broker sources agree; tariff decree line not read directly) |
-| CPTPP rate for Canada | Governed by **Decree 115/2022/NĐ-CP** (Vietnam's CPTPP preferential import schedule, 2022–2027, 11,526 tariff lines); average CPTPP import duty falls to **0.74% (2026) → 0.4% (2027)**; a valid CPTPP C/O reaches **0%** on functional foods per broker guides → **Canada origin at or near 0% in 2026 with a CPTPP C/O** | Decree 115/2022 (VCCI/trungtamwto.vn; LuatVietnam, 2022); broker guides 2025–26 | MEDIUM-HIGH — decree named and confirmed; exact 2106.90.99 line and Canada staging year unread, confirm at vietnamtradeportal.gov.vn before quoting landed cost |
+| CPTPP rate for Canada | Governed by **Decree 115/2022/NĐ-CP** (Vietnam's CPTPP preferential import schedule, 2022–2027), **amended by Decree 13/2025/NĐ-CP** (verify the current-year line against the amendment); average CPTPP import duty falls to **0.74% (2026) → 0.4% (2027)**; a valid CPTPP C/O reaches **0%** on functional foods per broker guides → **Canada origin at or near 0% in 2026 with a CPTPP C/O** | Decree 115/2022; Decree 13/2025 (LuatVietnam; VCCI, 2022–25); broker guides 2025–26 | MEDIUM-HIGH — decrees named; exact 2106.90.99 Vietnam import line still unread (re-checked 23 Oct 2026), confirm at vietnamtradeportal.gov.vn before quoting landed cost |
 | VAT | **8%** (reduced from 10%) from 1 Jul 2025 through **31 Dec 2026** (Resolution 204/2025/QH15 + Decree 174/2025); supplements not on the exclusion list; assume reversion to 10% in 2027 unless extended | DFDL; The Investor; Bloomberg Tax 2025 | HIGH for the window; MEDIUM for supplement eligibility |
 
 ## 5.7 Import inspection
@@ -631,6 +633,7 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 |---|---|---|---|---|
 | USD/VND | ~26,250 mid market (Vietcombank 26,050–26,460) | 14–16 Jul 2026 | vietnam.vn daily FX; TradingEconomics | HIGH |
 | CAD/VND | **≈18,690** (quotes 18,638–18,687) | 14–16 Jul 2026 | exchange-rates.org; Wise/Yahoo via search | MEDIUM-HIGH |
+| USD/VND & CAD/VND (refresh) | USD/VND ~26,200; CAD/VND ~18,300–18,580 | 23 Oct 2026 | OFX; exchange-rates.org | MEDIUM — within ~2% of July; worked example unchanged |
 
 ## 6.2 Retail prices, real listings (2025–26; prices move with promos — treat as anchors, not quotes)
 

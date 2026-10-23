@@ -2,7 +2,7 @@
 
 A three-part research and planning package on entering Vietnam's dietary supplement market, prepared for **Louis To, Senior Sales Manager, Emerging Channels, Organika Health Products**.
 
-**As of:** body research 17–18 July 2026; regulatory freshness re-checked 23 Oct 2026 (see the note at the top of the primer). Refresh store counts, prices, FX, and platform fees before acting on them.
+**As of:** body research 17–18 July 2026; data and regulatory refresh 23 Oct 2026 (see the two dated notes at the top of the primer). The 23 Oct spot-check found figures broadly stable — FX within ~2%, Long Chau Q3 2026 not yet published, platform fees unchanged — so the analysis stands; still refresh prices and store counts before a live negotiation.
 
 ## The three files
 
@@ -25,7 +25,7 @@ Enter, on a narrow path: one committed distributor structure with **Organika con
 ## Status
 
 - All three files are on branch `claude/vietnam-supplement-market-8ruziw`, draft PR #40.
-- Deferred and still open: the exact HS 2106.90.99 line within CPTPP Decree 115/2022 for Canada (the decree is named and the near-zero direction confirmed; only the single line is unread). The primer's quality log lists every remaining UNVERIFIED item in one place.
+- Deferred and still open: the exact HS 2106.90.99 Vietnam import line within CPTPP Decree 115/2022 (amended by Decree 13/2025) for Canada — the decrees are named and the near-zero-with-C/O direction confirmed; only the single line is unread. The primer's quality log lists every remaining UNVERIFIED item in one place.
 
 ---
 
