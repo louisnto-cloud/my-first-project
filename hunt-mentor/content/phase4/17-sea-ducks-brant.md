@@ -288,7 +288,7 @@ Take a cold water safety course before any boat hunt
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, [full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: migratory bird definition page 3; fees page 8; power boat and bait page 11; hours and limits page 12; shot and retrieval page 13; wing rule page 15; Region 2 pages 27 and 28; Map B10 page 30; checked 2026-10-01 (98%)
 - Hinterland Who's Who, [Harlequin Duck](https://www.hww.ca/en/wildlife/birds/harlequin-duck.html), checked 2026-10-01 (85%)
 - Audubon field guide, [Surf Scoter](https://www.audubon.org/field-guide/bird/surf-scoter), [White winged Scoter](https://www.audubon.org/field-guide/bird/white-winged-scoter), [Black Scoter](https://www.audubon.org/field-guide/bird/black-scoter), [Long tailed Duck](https://www.audubon.org/field-guide/bird/long-tailed-duck), [Brant](https://www.audubon.org/field-guide/bird/brant), [Common Eider](https://www.audubon.org/field-guide/bird/common-eider), checked 2026-10-01 (75%)
-- Distance Mission to Boundary Bay: calculated from base coordinates in `data/bases.json`, straight line (85%)
+- Distance Mission to Boundary Bay: calculated from the app's base coordinates, straight line (85%)
 ```
 
 ```quiz

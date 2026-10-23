@@ -79,7 +79,7 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 - Fawns start following the doe at 3 to 4 weeks (70%).
 
 ```more summer detail
-- Summer: floodplains, river terraces, hay and alfalfa fields (85%, BC account; data/migration.json).
+- Summer: floodplains, river terraces, hay and alfalfa fields (85%, BC account; app migration data).
 - Bucks in velvet avoid fights and stay in cool, secure, insect free spots (80%, Montana State University Extension).
 - Bachelor groups of 2 to 4 bucks (80%).
 - Summer activity peaks at dawn and dusk (85%, BC account).
@@ -169,7 +169,7 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 
 ```more December detail
 - Post rut bucks rest, feed and stay tight to cover (70%).
-- Early winter: river groves first, then south slopes and conifer patches as snow deepens (65%, data/migration.json).
+- Early winter: river groves first, then south slopes and conifer patches as snow deepens (65%, app migration data).
 - Region 3: bucks to 10 December, then bow only either sex 11 to 20 December (99%, page 34).
 - Region 8: bow only either sex 1 to 20 December (99%, page 68).
 - Late season deer are lean. Food is the key: find the best remaining browse (Tip).

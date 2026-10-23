@@ -82,7 +82,7 @@ checked: 2026-10-11
 - Type a place, a lake, coordinates, or an MU like 3-27.
 
 ```more search in full
-- One box. It looks for coordinates (decimal, degrees minutes seconds, UTM), an MU number like 3-27, Hunt Mentor spots and recreation sites, then BC place names, BC addresses, and OpenStreetMap last (99%, MAP.md and app).
+- One box. It looks for coordinates (decimal, degrees minutes seconds, UTM), an MU number like 3-27, Hunt Mentor spots and recreation sites, then BC place names, BC addresses, and OpenStreetMap last (99%, the Hunt Mentor app).
 - Tap a result to fly there (99%).
 - Tip: paste coordinates from a friend's text straight into search.
 ```
@@ -415,7 +415,7 @@ Recorded and saved a short track
 ## Sources
 
 - Hunt Map app code in app/map, read directly 2026-10-11: the core file (chrome, menu, basemap), the layer guide (land colours and guide text), layers (groups, rows, month chips), the main, terrain, wind, insights and track tool files, offline and location (99%).
-- MAP.md, Hunt Mentor map design notes (search order, data sources) (99%).
+- Hunt Mentor app, Hunt Map search order and layer sources, read in the app (99%).
 - [Avalanche Canada glossary: slope angle](https://avalanche.ca/glossary/terms/slope-angle), search preview 2026-10-11 (85%).
 - Hunting uses labelled Tip are the app's own tips or hunter experience.
 

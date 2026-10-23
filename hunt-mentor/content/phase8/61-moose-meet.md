@@ -245,7 +245,7 @@ bg-moose-young-bull-points | Young bull, 3 or more points a side: not spike fork
 - Alaska Department of Fish and Game, [Moose species profile](https://www.adfg.alaska.gov/index.cfm?adfg=moose.printerfriendly) and [Moose notebook](https://www.adfg.alaska.gov/static/education/wns/moose.pdf), read directly, checked 2026-10-11 (85%)
 - Child and others (2010), [Potential vulnerability of bull moose in central BC to three antler based hunting regulations](https://alcesjournal.org/index.php/alces/article/view/62), *Alces* 46, abstract via search, checked 2026-10-11 (80%); Aitken and others (2021), *Alces* 57, search preview (75%)
 - The Canadian Encyclopedia, [Moose](https://www.thecanadianencyclopedia.ca/en/article/moose), checked 2026-10-11 (75%)
-- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json`, checked 2026-10-04 (90%)
+- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), checked 2026-10-04 (90%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book ([definitions](#/s/rb-definitions), [Region 7A](#/s/rb-region-7a)): pages 3, 4, 57 (99%)
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 

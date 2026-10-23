@@ -129,7 +129,7 @@ hf-shape-cliff | Cliff: lines crowd or touch.
 - USGS topo colours (95%, map symbols guide): brown for contours; blue for water; green for vegetation such as woods; black for roads, buildings, names and boundaries; red for main roads and survey lines; white for open ground or areas with no tree cover shown.
 - NTS sheets use a similar scheme. Always check the legend on the sheet (Tip).
 - On paper, green woods do not show cutblocks or burns made after the print date (98%, maps age).
-- The Hunt Map Topo: sage land, pale forest tint, white roads, blue water, brown contours (99%, MAP.md). Hunting layers use their own colours: orange private land, red stripes no hunting, purple dashed vehicle closures (99%, see [Hunt Map like a pro](#/s/hunt-map-pro)).
+- The Hunt Map Topo: sage land, pale forest tint, white roads, blue water, brown contours (99%, Hunt Map design). Hunting layers use their own colours: orange private land, red stripes no hunting, purple dashed vehicle closures (99%, see [Hunt Map like a pro](#/s/hunt-map-pro)).
 > [!warn]
 > Study aid only. The official regulations are the law.
 - Land status rules: [Maps 3: land status](#/s/maps-land-status) and [Rule Book: where you can hunt](#/s/rb-where-you-can-hunt).
@@ -227,7 +227,7 @@ hf-shape-cliff | Cliff: lines crowd or touch.
 - UTM zones, datum and NRCan rhyme: [Maps 2](#/s/maps-navigation), checked 2026-10-01 (90 to 98%).
 - [BC Search and Rescue Association 2022 Year in Review](https://bcsara.com/wp-content/uploads/2023/09/BCSARA_2022_Year_In_Review_Report.pdf), read directly 2026-10-11 (95%).
 - Scale and slope angle maths, grid convergence: my calculation (85 to 99%).
-- Hunt Map contours, coordinates and readouts: app code and MAP.md, read 2026-10-11 (99%).
+- Hunt Map contours, coordinates and readouts: the Hunt Mentor app, read 2026-10-11 (99%).
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz

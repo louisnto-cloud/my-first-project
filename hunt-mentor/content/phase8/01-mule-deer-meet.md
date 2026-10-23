@@ -246,7 +246,7 @@ bg-md-sitka-haida | Sitka black tailed doe, Haida Gwaii.
 - Mule Deer Working Group fact sheets [24](https://wildlife.utah.gov/pdf/deer/mdwg-24_managing_bucks.pdf) and [27](https://wildlife.utah.gov/pdf/deer/mdwg-27_antler_development.pdf), read directly, checked 2026-10-11 (85%)
 - BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-11 (85%)
 - US National Park Service, [Mule deer, Bryce Canyon](https://www.nps.gov/brca/learn/nature/mule-deer.htm), checked 2026-10-11 (80%)
-- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json`, checked 2026-10-04 (90%)
+- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), checked 2026-10-04 (90%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book sessions ([Region 3](#/s/rb-region-3), [bag limits](#/s/rb-bag-limits)): pages 4, 14, 34 (99%)
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 

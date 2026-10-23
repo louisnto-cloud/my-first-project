@@ -183,7 +183,7 @@ mql-map-4 | Sun and shade: shady slopes at midday, sunny edges at dawn.
 - [Audubon field guide: chukar](https://www.audubon.org/field-guide/bird/chukar) and [gray partridge](https://www.audubon.org/field-guide/bird/gray-partridge), read directly 2026-10-11 (75%).
 - [US Forest Service FEIS: chukar](https://www.fs.usda.gov/database/feis/animals/bird/alch/all.html), read directly 2026-10-11 (80%).
 - [BC Outdoors: chukar in BC (Harris 2019)](https://www.bcoutdoorsmagazine.com/chukar-asian-partridge-made-a-home-for-itself-in-bc/) and [California quail (Harris 2021)](https://www.bcoutdoorsmagazine.com/?p=9278), read directly 2026-10-11 (65%).
-- App: Hunt Map layer manifest (data/layers/manifest.json, updated 2026-10-11) and terrain tools; migration data (data/migration.json) (60 to 95% as marked).
+- App: Hunt Map layer list (updated 2026-10-11) and terrain tools; the app migration table, sources per species in [Migration routes](#/s/bc-migration-routes) (60 to 95% as marked).
 - Rules: [Rule Book, Region 8](#/s/rb-region-8), [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2), synopsis 2 October 2026 edition (97 to 99%). Town to MU table from the [Okanagan trip plan](#/s/local-okanagan) (80 to 90%).
 - Photos: Wikimedia Commons, credits under each photo.
 ```

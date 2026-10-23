@@ -252,7 +252,7 @@ mc-moose-map-5 | Wind: keep the scent cone off the swamp.
 - BC Ministry of Forests (2023), [moose research progress report, May 2022](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/moose/2022_moose_research_progress_report.pdf), read directly, checked 2026-10-11 (90%)
 - Alaska Department of Fish and Game, [Moose notebook](https://www.adfg.alaska.gov/static/education/wns/moose.pdf), read directly, checked 2026-10-11 (85%)
 - Hunt Mentor sessions with their own sources: [burn country](#/s/burn-country), [cutblock country](#/s/cutblock-country), [wetland country](#/s/wetland-country), [habitat tour](#/s/habitat-big-game), [Heffley Creek](#/s/local-heffley), [Hunt Map pro](#/s/hunt-map-pro) (60 to 99% as marked there)
-- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json` (90%)
+- BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024) (90%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 28, 33, 34, 68, via [Region 2](#/s/rb-region-2), [Region 3](#/s/rb-region-3), [Region 8](#/s/rb-region-8) (99%)
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
