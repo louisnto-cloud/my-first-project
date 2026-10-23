@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="How an inertia semi auto works: 1 the gun recoils back, 2 the bolt body stays still for an instant and squeezes a stiff inertia spring between it and the locking head, 3 the spring pushes the bolt body back, unlocking the head and ejecting the hull, 4 the recoil spring returns the bolt and loads the next shell. It needs enough recoil to work.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Inertia: how it cycles</text>
+<g data-tip="Bolt body|Stays put for an instant while the gun moves back under recoil." data-tip-dot="130,142"><rect x="60" y="120" width="140" height="44" rx="6" fill="#a7aeb3" stroke="#17201A" stroke-width="1.5"/></g>
+<g data-tip="Inertia spring|Short stiff spring between the bolt body and the locking head. Recoil squeezes it." data-tip-dot="220,142"><path d="M200 128 l5 28 l5 -28" fill="none" stroke="#FF6A13" stroke-width="3"/><path d="M210 128 l5 28 l5 -28" fill="none" stroke="#FF6A13" stroke-width="3"/><path d="M220 128 l5 28 l5 -28" fill="none" stroke="#FF6A13" stroke-width="3"/><path d="M230 128 l5 28 l5 -28" fill="none" stroke="#FF6A13" stroke-width="3"/></g>
+<g data-tip="Locking head|Turns to lock into the barrel. The spring kick unlocks it." data-tip-dot="270,142"><rect x="240" y="124" width="60" height="36" rx="4" fill="#5d646b" stroke="#17201A" stroke-width="1.5"/></g>
+<text x="130.0" y="148.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">bolt body</text>
+<text x="270.0" y="148.0" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">head</text>
+<line x1="330.0" y1="100.0" x2="257.7" y2="100.0" stroke="#1F3D2B" stroke-width="4" stroke-linecap="round"/><path d="M250.0 100.0 L259.9 95.2 L259.9 104.8Z" fill="#1F3D2B"/>
+<text x="345.0" y="90.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">recoil</text>
+<circle cx="42" cy="196" r="11" fill="#1F3D2B"/><text x="42" y="201.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="60.0" y="201.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Gun kicks back</text>
+<circle cx="222" cy="196" r="11" fill="#FF6A13"/><text x="222" y="201.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="240.0" y="201.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Spring squeezes</text>
+<circle cx="42" cy="230" r="11" fill="#1F3D2B"/><text x="42" y="235.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="60.0" y="235.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Bolt kicks back</text>
+<circle cx="222" cy="230" r="11" fill="#1F3D2B"/><text x="222" y="235.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="240.0" y="235.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Spring reloads</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Needs real recoil: light loads may not cycle.</text>
+</svg>

@@ -343,7 +343,19 @@
     "mc-sks-05",
     "mc-sks-06",
     "mc-sks-07",
-    "mc-sks-08"
+    "mc-sks-08",
+    "mc-shotgun-01",
+    "mc-shotgun-02",
+    "mc-shotgun-03",
+    "mc-shotgun-04",
+    "mc-shotgun-05",
+    "mc-shotgun-06",
+    "mc-shotgun-07",
+    "mc-shotgun-08",
+    "mc-shotgun-09",
+    "mc-shotgun-10",
+    "mc-shotgun-11",
+    "mc-shotgun-12"
   ],
   "flashcards": [
     "quail",
@@ -370,6 +382,7 @@
     "fw-grandpa",
     "mu",
     "cz457",
-    "sks"
+    "sks",
+    "shotgun"
   ]
 }

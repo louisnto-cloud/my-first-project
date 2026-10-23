@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Inertia field strip step 2: butt on your hip, pull the barrel and fore end forward off the magazine tube, then separate the fore end from the barrel.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<circle cx="24" cy="22" r="15" fill="#1F3D2B"/><text x="24" y="28" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="46" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Barrel and fore end off</text>
+<path d="M10 184 L102 190 L102 212 L80 220 L10 224 Z" fill="#6b5a45" stroke="#17201A" stroke-width="0.8"/><rect x="102" y="186" width="56" height="30" rx="3" fill="#5d646b" stroke="#17201A" stroke-width="0.8"/>
+<rect x="158" y="206" width="140" height="8" rx="3" fill="#5d646b" stroke="#17201A" stroke-width="0.8"/>
+<rect x="80" y="80" width="300" height="12" fill="#3b4045" stroke="#FF6A13" stroke-width="2.5"/><rect x="366" y="80" width="14" height="12" fill="#a7aeb3"/>
+<rect x="150" y="98" width="120" height="20" rx="5" fill="#6b5a45" stroke="#FF6A13" stroke-width="2.5"/>
+<line x1="220.0" y1="140.0" x2="283.0" y2="140.0" stroke="#FF6A13" stroke-width="4" stroke-linecap="round"/><path d="M290.0 140.0 L281.0 144.3 L281.0 135.7Z" fill="#FF6A13"/>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Fore end rotates off the barrel ring.</text>
+</svg>

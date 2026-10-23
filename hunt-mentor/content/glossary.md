@@ -453,3 +453,30 @@
 - **Debris shelter**: A shelter built from branches, boughs and leaves. It gives emergency insulation but takes hours and lots of dry material (65%).
 - **Three Ts**: AdventureSmart's trip planning, training and taking the essentials (75%).
 - **NDA**: National Deer Association. A North American deer conservation and hunting group; the app quotes its articles on tracking and wait times.
+- **Gauge**: The bore size of a shotgun. The number of lead balls of that bore that weigh one pound, so a smaller number is a bigger bore: a 12 gauge is wider than a 20 gauge (90%).
+- **Chamber length**: The longest shell a shotgun chamber is made for, such as 3 in (76 mm). It is stamped on the barrel. Never fire a shell longer than the stamp (95%).
+- **Pump action**: A shotgun you work by sliding the fore end back and forward to eject the empty and load the next shell (95%).
+- **Gas action**: A semi auto that uses a little gas from the fired shell to push a piston and cycle the action (90%).
+- **Inertia action**: A semi auto that uses recoil and a spring inside the bolt to cycle the action, with no gas system (90%).
+- **Over under**: A shotgun with two barrels, one above the other, that breaks open at a hinge to load (95%).
+- **Action bar lock**: The button on a pump shotgun that frees the fore end so you can open the action when it is cocked (95%, Remington 870 manual).
+- **Carrier**: The part under a pump or semi auto action that lifts a shell from the magazine up to the chamber (90%).
+- **Shell latch**: The small catch that holds shells in the tube magazine until the action releases one (90%).
+- **Short stroke**: Not pulling a pump fore end all the way back. The empty may not eject or the next shell may jam (85%).
+- **Rib**: The flat raised strip along the top of a shotgun barrel. Your eye looks along it (90%).
+- **Length of pull**: The distance from the trigger to the middle of the butt pad. It sets how well a gun fits you (90%).
+- **Cast**: A small sideways bend in a shotgun stock so your eye lines up with the rib. Cast off suits right handed shooters (85%).
+- **Drop at comb**: How far the top of the stock sits below the line of the rib, where your cheek rests. It sets how high your eye sits (85%).
+- **Bismuth shot**: Non toxic shot made mostly of bismuth. Softer than steel, closer to lead in how it carries (80%).
+- **TSS**: Tungsten super shot. Very dense non toxic shot. Check with the gun and choke maker before using it (Tip).
+- **Wad**: The plastic or fibre cup in a shell that holds the shot and seals the gas behind it (90%).
+- **Crimp**: The folded closure at the front of a shotgun shell that holds the shot in (90%).
+- **Pattern percentage**: The share of a shell's pellets that land in a 30 in (76 cm) circle at 40 yd (37 m). It shows how tight a choke throws (85%).
+- **Swing through**: A lead method. Start behind the bird, swing through it and fire as the muzzle passes ahead (Tip).
+- **Pull away**: A lead method. Start on the bird, then pull ahead of it and fire (Tip).
+- **Maintained lead**: A lead method. Start ahead of the bird and keep the same gap while you swing and fire (Tip).
+- **Headspace**: The fit between the cartridge and the chamber when the bolt is closed. Too much is dangerous; a gunsmith checks it with gauges (85%).
+- **Cosmoline**: A thick brown grease used to store surplus rifles. It must be cleaned out, above all from the bolt and firing pin channel, before firing (80%).
+- **Slam fire**: A rifle firing as the bolt closes, without the trigger being pulled. A stuck firing pin in an SKS can cause it (80%).
+- **Stripper clip**: A metal strip holding rounds that you push down into a fixed magazine from the top, as on an SKS (90%).
+- **Corrosive ammunition**: Old surplus ammunition with primers that leave salts in the bore. Clean with water based cleaner the same day or the barrel rusts (80%).

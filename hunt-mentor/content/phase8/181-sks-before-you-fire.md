@@ -1,7 +1,7 @@
 ---
 id: mc-sks-01
 phase: 8
-num: 171
+num: 181
 title: SKS (Chinese Type 56) course 1: Before you fire a surplus SKS
 minutes: 20
 checked: 2026-10-23

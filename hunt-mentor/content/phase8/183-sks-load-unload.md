@@ -1,7 +1,7 @@
 ---
 id: mc-sks-03
 phase: 8
-num: 173
+num: 183
 title: SKS (Chinese Type 56) course 3: Loading and unloading
 minutes: 15
 checked: 2026-10-23

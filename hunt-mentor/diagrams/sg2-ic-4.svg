@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Inertia field strip step 4: clean fouling from the receiver and bolt, oil the bolt rails and the outside of the magazine tube, clean the trigger area. The inertia spring must go back between head and bolt.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<circle cx="24" cy="22" r="15" fill="#1F3D2B"/><text x="24" y="28" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="46" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Clean, oil the rails</text>
+<circle cx="30" cy="70" r="11" fill="#1F3D2B"/><text x="30" y="75.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text><text x="50.0" y="75.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Wipe the receiver and bolt</text>
+<circle cx="30" cy="104" r="11" fill="#1F3D2B"/><text x="30" y="109.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text><text x="50.0" y="109.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Oil the bolt rails</text>
+<circle cx="30" cy="138" r="11" fill="#1F3D2B"/><text x="30" y="143.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text><text x="50.0" y="143.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Oil the outside of the tube</text>
+<circle cx="30" cy="172" r="11" fill="#FF6A13"/><text x="30" y="177.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text><text x="50.0" y="177.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Inertia spring back in its seat</text>
+<circle cx="30" cy="206" r="11" fill="#1F3D2B"/><text x="30" y="211.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text><text x="50.0" y="211.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="start">Function check, unloaded</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Runs cleaner than gas, still needs care.</text>
+</svg>

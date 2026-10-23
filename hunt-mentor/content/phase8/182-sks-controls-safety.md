@@ -1,7 +1,7 @@
 ---
 id: mc-sks-02
 phase: 8
-num: 172
+num: 182
 title: SKS (Chinese Type 56) course 2: Controls and safety
 minutes: 15
 checked: 2026-10-23

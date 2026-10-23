@@ -1,7 +1,7 @@
 ---
 id: mc-sks-04
 phase: 8
-num: 174
+num: 184
 title: SKS (Chinese Type 56) course 4: Sights and zero
 minutes: 15
 checked: 2026-10-23

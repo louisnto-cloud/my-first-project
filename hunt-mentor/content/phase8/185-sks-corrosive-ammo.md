@@ -1,7 +1,7 @@
 ---
 id: mc-sks-05
 phase: 8
-num: 175
+num: 185
 title: SKS (Chinese Type 56) course 5: Corrosive surplus ammunition and cleaning
 minutes: 15
 checked: 2026-10-23

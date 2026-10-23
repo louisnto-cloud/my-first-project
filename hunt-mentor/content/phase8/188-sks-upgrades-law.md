@@ -1,7 +1,7 @@
 ---
 id: mc-sks-08
 phase: 8
-num: 178
+num: 188
 title: SKS (Chinese Type 56) course 8: Legal upgrades and illegal ones
 minutes: 20
 checked: 2026-10-23

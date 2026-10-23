@@ -1,7 +1,7 @@
 ---
 id: mc-sks-06
 phase: 8
-num: 176
+num: 186
 title: SKS (Chinese Type 56) course 6: Full field strip and reassembly
 minutes: 25
 checked: 2026-10-23

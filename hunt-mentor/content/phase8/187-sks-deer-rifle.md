@@ -1,7 +1,7 @@
 ---
 id: mc-sks-07
 phase: 8
-num: 177
+num: 187
 title: SKS (Chinese Type 56) course 7: Is it a good deer rifle? BC rules
 minutes: 15
 checked: 2026-10-23

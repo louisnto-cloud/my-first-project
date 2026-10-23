@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Read the barrel stamp before you load: gauge, chamber length and, on some guns, a steel shot proof mark. Then read the shell box and match both.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Read the stamp, match the box</text>
+<rect x="20" y="70" width="360" height="44" rx="3" fill="#3b4045"/>
+<text x="200.0" y="99.0" font-size="19" font-weight="bold" fill="#e9ecee" text-anchor="middle">12 GA   3 in   CHAMBER</text>
+<line x1="200.0" y1="66.0" x2="200.0" y2="72.0" stroke="#1F3D2B" stroke-width="1.6"/><circle cx="200.0" cy="72.0" r="3" fill="#1F3D2B"/><rect x="118.1" y="42.0" width="163.8" height="24.0" rx="5" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.3"/><text x="200.0" y="60.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">1 the barrel stamp</text>
+<rect x="80" y="150" width="240" height="90" rx="6" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<text x="200.0" y="176.0" font-size="18" font-weight="bold" fill="#17201A" text-anchor="middle">12 GA   2 3/4 in</text>
+<text x="200.0" y="200.0" font-size="16" font-weight="bold" fill="#17201A" text-anchor="middle">STEEL  No. 2  1 1/8 oz</text>
+<text x="200.0" y="224.0" font-size="15" fill="#17201A" text-anchor="middle">1450 fps</text>
+<line x1="200.0" y1="148.0" x2="200.0" y2="152.0" stroke="#1F3D2B" stroke-width="1.6"/><circle cx="200.0" cy="152.0" r="3" fill="#1F3D2B"/><rect x="136.5" y="124.0" width="127.1" height="24.0" rx="5" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.3"/><text x="200.0" y="142.0" font-size="15" font-weight="bold" fill="#17201A" text-anchor="middle">2 the shell box</text>
+<path d="M336 196 L345.3 205.8 L364 184.8" fill="none" stroke="#1F3D2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="200.0" y="286.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Same gauge. Shell no longer than the chamber.</text>
+</svg>

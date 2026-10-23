@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bore sizes to scale: 12 gauge 18.5 mm, 16 gauge 16.8 mm, 20 gauge 15.6 mm, 28 gauge 14.0 mm, .410 bore 10.4 mm. A smaller gauge number means a bigger bore.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Gauge: bore to scale</text>
+<g data-tip="12 gauge|Bore about 18.5 mm." data-tip-dot="52,130"><circle cx="51.6" cy="130" r="29.6" fill="#1F3D2B" stroke="#1F3D2B" stroke-width="3"/></g>
+<text x="51.6" y="185.6" font-size="18" font-weight="bold" fill="#1F3D2B" text-anchor="middle">12</text>
+<text x="51.6" y="205.6" font-size="14" fill="#17201A" text-anchor="middle">18.5 mm</text>
+<g data-tip="16 gauge|Bore about 16.8 mm." data-tip-dot="134,130"><circle cx="134.1" cy="130" r="26.9" fill="#ffffff" stroke="#1F3D2B" stroke-width="3"/></g>
+<text x="134.1" y="182.9" font-size="18" font-weight="bold" fill="#1F3D2B" text-anchor="middle">16</text>
+<text x="134.1" y="202.9" font-size="14" fill="#17201A" text-anchor="middle">16.8 mm</text>
+<g data-tip="20 gauge|Bore about 15.6 mm." data-tip-dot="212,130"><circle cx="211.9" cy="130" r="25.0" fill="#ffffff" stroke="#1F3D2B" stroke-width="3"/></g>
+<text x="211.9" y="181.0" font-size="18" font-weight="bold" fill="#1F3D2B" text-anchor="middle">20</text>
+<text x="211.9" y="201.0" font-size="14" fill="#17201A" text-anchor="middle">15.6 mm</text>
+<g data-tip="28 gauge|Bore about 14.0 mm." data-tip-dot="285,130"><circle cx="285.3" cy="130" r="22.4" fill="#ffffff" stroke="#1F3D2B" stroke-width="3"/></g>
+<text x="285.3" y="178.4" font-size="18" font-weight="bold" fill="#1F3D2B" text-anchor="middle">28</text>
+<text x="285.3" y="198.4" font-size="14" fill="#17201A" text-anchor="middle">14.0 mm</text>
+<g data-tip=".410 bore|Bore about 10.4 mm." data-tip-dot="350,130"><circle cx="350.3" cy="130" r="16.6" fill="#ffffff" stroke="#1F3D2B" stroke-width="3"/></g>
+<text x="350.3" y="172.6" font-size="18" font-weight="bold" fill="#1F3D2B" text-anchor="middle">.410</text>
+<text x="350.3" y="192.6" font-size="14" fill="#17201A" text-anchor="middle">10.4 mm</text>
+<text x="200.0" y="280.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Bigger number, smaller bore.</text>
+</svg>
