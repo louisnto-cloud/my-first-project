@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Whole Foods Market (WFM) entered the UK in 2004 via the acquisition of Fresh & Wild (seven stores) and has operated exclusively in London ever since. After 22 years it has never recorded an annual profit in the UK, accumulating losses of more than £200 million through FY2024 (more than £219 million including FY2025). Revenue peaked at £93.1 million across seven stores in FY2023, fell to £86.4 million after two closures in 2024, and recovered modestly to £88.3 million in FY2025.
+Whole Foods Market (WFM) entered the UK in 2004 via the acquisition of Fresh & Wild (seven stores) and has operated exclusively in London ever since. After 22 years it has never recorded an annual profit in the UK, building an accumulated deficit of £243.5 million by 31 December 2025 (Companies House accounts for Fresh & Wild Ltd). Revenue peaked at £93.1 million across seven stores in FY2023, fell to £86.4 million after two closures in 2024, and recovered modestly to £88.3 million in FY2025.
 
 Yet Amazon — which acquired WFM globally for $13.7 billion in 2017 — is now making its most assertive UK bet. Having closed all 19 Amazon Fresh physical stores in September 2025, it converted five of those sites to Whole Foods "Daily Shop" format stores (3,300–10,000 sq ft) and opened a sixth at St James's, doubling the UK estate to twelve stores by June 2026. This expansion is paired with a major push on same-day online perishable delivery via Amazon.co.uk and a Deliveroo partnership for rapid local fulfilment.
 
@@ -58,7 +58,7 @@ All stores are in Greater London. There is no publicly visible strategy to expan
 | 2024 | £86.4m | -7% | £20.0m | ~32% | 608 |
 | 2025 | £88.3m | +2% | £19.4m | 31% | — |
 
-- **Cumulative UK losses since 2004: more than £200 million through FY2024** (The Grocer, Sept 2025), so **more than £219 million** once the FY2025 loss of £19.4m is added.
+- **Accumulated deficit: £224.0m at 31 Dec 2024, £243.5m at 31 Dec 2025** (Fresh & Wild Ltd accounts, Companies House). The press figure of "more than £200m" (The Grocer, Sept 2025) is a rounded floor of the same number. The deficit also includes Fresh & Wild's losses from before the 2004 acquisition.
 - The 2024 revenue decline was partly structural (two stores closed mid-year). The £9.2m combined sales of Fulham and Richmond were removed at a running operating loss of only £200k — their closure was therefore more about strategic rationalisation than store-level profitability alone.
 - Admin expenses fell 14% in 2024 (to £47.7m), providing partial margin relief.
 - Gross margin contracted from ~35% in 2022–2023 to 31% by 2025, driven by supply chain cost inflation, post-Brexit import friction, and staffing costs.
@@ -283,7 +283,7 @@ Natoora (Hampshire regenerative farm, 600+ grower network), Neal's Yard Dairy, M
 ## 9. Challenges & Competitive Threats
 
 ### Chronic Profitability
-WFM UK has never recorded an annual profit in 22 years of operation. Cumulative losses exceed £219m (more than £200m through FY2024, plus £19.4m in FY2025). The structural challenges — premium London rents, niche appeal constraining sales density, high supply chain costs — are not cyclical. They are endemic to the business model as currently configured.
+WFM UK has never recorded an annual profit in 22 years of operation. The accumulated deficit reached £243.5m at 31 December 2025 (Companies House accounts). The structural challenges — premium London rents, niche appeal constraining sales density, high supply chain costs — are not cyclical. They are endemic to the business model as currently configured.
 
 ### The Cost-of-Living Crisis (2022–2024)
 - 56% of UK shoppers switched their entire weekly shop to Aldi or Lidl during the crisis.
@@ -334,7 +334,7 @@ Amazon's "One Grocery" strategy represents the most coherent UK bet on Whole Foo
 - **Brand Pitch Day pipeline:** 500+ applications per quarter signals strong UK supplier interest and a potential competitive moat in local/emerging brand exclusives.
 
 ### Headwinds
-- **Profitability remains unproven:** £219m+ in cumulative losses with no year of profit. Losses are narrowing (£26.3m → £19.4m over four years), but the pace is slow relative to the investment required.
+- **Profitability remains unproven:** £243.5m accumulated deficit with no year of profit. Losses are narrowing (£26.3m → £19.4m over four years), but the pace is slow relative to the investment required.
 - **Margin compression:** Gross margin fell from 35% to 31% between 2022 and 2025. Further deterioration would call the business model into question.
 - **London concentration:** All twelve stores are in Greater London. The addressable market is structurally capped.
 - **Value perception:** No amount of price-cutting on 20,000 SKUs reverses a 22-year brand identity as the most expensive grocer in the UK.
