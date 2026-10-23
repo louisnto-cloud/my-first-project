@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" font-family="sans-serif" role="img" aria-label="Deer limits in your regions. 3: Region 3 deer in total, only 1 a mule deer. 1: Mule deer buck for Regions 3 to 8 combined. 2: Region 2 black tails, one may be antlerless. 1: Region 8 mule deer, antlerless by LEH only.">
+<rect width="400" height="282" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Deer limits in your regions</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Pages 14, 27, 33 and 67 (99%)</text>
+<g><rect x="12" y="70" width="183" height="92" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="104" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">3</text><text x="103.5" y="126" font-size="14" fill="#17201A" text-anchor="middle">Region 3 deer in total,</text>
+<text x="103.5" y="144" font-size="14" fill="#17201A" text-anchor="middle">only 1 a mule deer</text></g>
+<g><rect x="205" y="70" width="183" height="92" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="296.5" y="104" font-size="26" font-weight="bold" fill="#FF6A13" text-anchor="middle">1</text><text x="296.5" y="126" font-size="14" fill="#17201A" text-anchor="middle">Mule deer buck for</text>
+<text x="296.5" y="144" font-size="14" fill="#17201A" text-anchor="middle">Regions 3 to 8 combined</text></g>
+<g><rect x="12" y="172" width="183" height="92" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="103.5" y="206" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">2</text><text x="103.5" y="228" font-size="14" fill="#17201A" text-anchor="middle">Region 2 black tails,</text>
+<text x="103.5" y="246" font-size="14" fill="#17201A" text-anchor="middle">one may be antlerless</text></g>
+<g><rect x="205" y="172" width="183" height="92" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="296.5" y="206" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">1</text><text x="296.5" y="228" font-size="14" fill="#17201A" text-anchor="middle">Region 8 mule deer,</text>
+<text x="296.5" y="246" font-size="14" fill="#17201A" text-anchor="middle">antlerless by LEH only</text></g>
+
+</svg>

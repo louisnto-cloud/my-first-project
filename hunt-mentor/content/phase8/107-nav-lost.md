@@ -19,6 +19,9 @@ gr-stop-p | Plan. Stay put, or move only if sure.
 - STOP: Stop, Think, Observe, Plan (75%).
 - "It's always harder for search teams to find you if you move" (75%).
 
+```diagram mk-nav7-stay
+```
+
 ```more what this chapter adds
 - The quick version: [Lost and the survival kit](#/s/lost-survival-kit) (STOP, circles, stay or move, calling, signals, being found). This chapter goes deeper: the first 10 minutes, the decision in detail, what to say on the call, signalling by mirror, and what searchers want from you.
 - Previous: [Chapter 6](#/s/mc-nav-06). Next: [Chapter 8, Surviving the night](#/s/mc-nav-08).
@@ -180,12 +183,17 @@ fs-lost-found-3 | Hear searchers? Whistle 3 times. Stay put.
 
 ## "Hug a tree" is not only for kids
 
+```diagram mk-nav7-hug
+```
+
+```more the table as text
 | Hug a Tree (kids program) | Adult version |
 |---|---|
 | Stay put | STOP, then stay put |
 | Keep warm and dry | Shelter, fire, dry layers |
 | Answer searchers | Whistle 3, lights, orange |
 | Don't hide | Be seen in the open |
+```
 
 - Same core ideas, plus calling 911 and signals (70 to 75%).
 
@@ -222,6 +230,10 @@ fs-lost-found-3 | Hear searchers? Whistle 3 times. Stay put.
 
 ## Sources
 
+```diagram mk-nav7-sources
+```
+
+```more every source and link
 - [Global News: AdventureSmart STOP (25 January 2023)](https://globalnews.ca/news/9437036/b-c-adventure-smart-safety-plan-stop), read directly 2026-10-11 (75%); further AdventureSmart quotes via search preview (70%).
 - [North Shore Rescue: Outdoor safety](https://www.northshorerescue.com/education/outdoor-safety/), read directly 2026-10-11 (75%).
 - [BC Search and Rescue Association 2022 Year in Review](https://bcsara.com/wp-content/uploads/2023/09/BCSARA_2022_Year_In_Review_Report.pdf), read directly 2026-10-11 (95%).
@@ -230,6 +242,7 @@ fs-lost-found-3 | Hear searchers? Whistle 3 times. Stay put.
 - Apple satellite SOS and Garmin inReach: via [GPS, phone and battery](#/s/gps-phone-battery) and [Hunting Skills Masterclass 10](#/s/mc-skills-10) (65 to 95%).
 - Area maths: geometry (95%). Mirror and call script: field habits (Tip).
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+```
 
 ```quiz
 [

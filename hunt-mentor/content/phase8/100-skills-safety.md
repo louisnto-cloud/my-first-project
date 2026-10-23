@@ -91,10 +91,15 @@ fs-fa-press-4 | Press on top 3 minutes. Do not peek.
 - Sources differ on two points. Learn both. Ask your first aid instructor. Your call.
 - Both agree: above the wound, heart side, never on a joint, tight, write the time (75%).
 
+```diagram mk-sk10-tq
+```
+
+```more the table as text
 | Question | Answer A | Answer B |
 |---|---|---|
 | How far above the wound? | 5 to 8 cm (2 to 3 in): American Red Cross, Stop the Bleed guides (70%) | 5 to 10 cm (2 to 4 in): Canadian Red Cross skills sheet, 2012 (75%) |
 | Loosen it later? | Older Canadian Red Cross sheet (2012): slowly release after 10 minutes if bleeding has dropped a lot (75%) | Newer American Red Cross and Stop the Bleed: never loosen; only medical staff remove it (70%) |
+```
 
 ```more both sides in their words
 > [!lean]
@@ -205,6 +210,10 @@ Sun protection
 
 ## Cheat sheet: the whole Masterclass
 
+```diagram mk-sk10-cheat
+```
+
+```more the table as text
 | Fact | Number | % |
 |---|---|---|
 | Exit pupil | front lens ÷ power; 8x42 = 5.25 mm | 85 |
@@ -247,8 +256,15 @@ Sun protection
 | Tourniquet | 5 to 8 or 5 to 10 cm: your call | 70 to 75 |
 | Lost | STOP; doubt means stay | 75 |
 | Help | 911, then satellite SOS | 75 to 85 |
+```
 
 - Screenshot this screen for the field (Tip).
+
+## Cheat sheet: where each line comes from
+
+```diagram mk-sk10-chapters
+```
+
 - Rules: always the Rule Book, never this sheet (99%).
 
 ```more where each line comes from
@@ -315,6 +331,10 @@ Sun protection
 
 ## Sources
 
+```diagram mk-sk10-sources
+```
+
+```more every source and link
 - [Canadian Red Cross: Controlling External Bleeding skills summary (2012, PDF)](https://www.redcross.ca/crc/documents/What-We-Do/First-Aid-and-CPR/Workplace/Online-Tools/fa_onlinetools_skills_summaries_controlling_external_bleeding.pdf), via [First aid in the field](#/s/field-first-aid), checked 2026-10-11 (75%; dated 2012)
 - [American Red Cross: how to apply a tourniquet](https://www.redcross.org/take-a-class/resources/articles/how-to-apply-a-tourniquet), search preview (70%)
 - [Stop the Bleed](https://www.stopthebleed.org/) and [Los Angeles Fire Department, Stop the Bleed tourniquet](https://lafd.org/stop-the-bleed-tourniquet), search previews (70%)
@@ -326,6 +346,7 @@ Sun protection
 - Firearm safety: Canadian Firearms Safety Course material, federal transport regulations SOR/98-209, BC Firearm Violence Prevention Act, via [Firearm safety](#/s/firearm-safety) (85 to 99%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book (99%)
 - [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+```
 
 ```quiz
 [
