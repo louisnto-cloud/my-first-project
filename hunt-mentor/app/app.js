@@ -1038,6 +1038,7 @@
         ${[['', 'Auto'], ['light', 'Light'], ['dark', 'Dark'], ['sun', 'Sunlight']].map(([v, l]) => `<button data-v="${v}" class="${th === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
       <div class="card"><h2 id="fh-l">First hunt date</h2><input type="date" id="fh" aria-labelledby="fh-l" value="${esc(firstHunt())}"></div>
       <div class="card list">
+        ${window.HMRoutes && window.HMRoutes.iphone ? '<a class="item" href="#/iphone"><span class="grow">Add to Home Screen (iPhone): keep your data safe</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.guide ? '<a class="item" href="#/guide"><span class="grow">How to use this app: a quick tour</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.progress ? '<a class="item" href="#/progress"><span class="grow">Hunt ready score and your weak spots</span></a>' : ''}
         ${window.HMRoutes && window.HMRoutes.huntweek ? '<a class="item" href="#/huntweek"><span class="grow">Hunt week checklist: countdown to your hunt</span></a>' : ''}
