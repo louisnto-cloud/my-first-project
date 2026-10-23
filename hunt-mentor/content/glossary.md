@@ -480,3 +480,12 @@
 - **Slam fire**: A rifle firing as the bolt closes, without the trigger being pulled. A stuck firing pin in an SKS can cause it (80%).
 - **Stripper clip**: A metal strip holding rounds that you push down into a fixed magazine from the top, as on an SKS (90%).
 - **Corrosive ammunition**: Old surplus ammunition with primers that leave salts in the bore. Clean with water based cleaner the same day or the barrel rusts (80%).
+- **Cocking indicator**: A small part at the back of the bolt that shows when the rifle is cocked (90%).
+- **Bolt stop**: The catch that keeps the bolt in the rifle. Pressing it lets you pull the bolt out to clean it (90%).
+- **Free floating barrel**: A barrel that does not touch the stock along its length, so the stock cannot push it off aim (85%).
+- **Peep sight**: A rear sight with a small round hole. You look through it and centre the front post (90%).
+- **Bore guide**: A plug that goes in the action instead of the bolt and keeps the cleaning rod centred in the bore (85%).
+- **CLP**: Clean, lubricate, protect. A single product that cleans and oils a gun (85%).
+- **Two stage trigger**: A trigger with a light first take up, then a firm wall, then the break (90%).
+- **Hang fire**: A delay between the firing pin strike and the shot. Keep the muzzle in a safe direction for at least 30 seconds before opening the action (Tip, common range rule).
+- **Cold bore shot**: The first shot from a clean or cold barrel. It can land a little away from the later shots, and it is the shot that matters when hunting (Tip).

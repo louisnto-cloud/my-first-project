@@ -306,6 +306,16 @@
     "mc-nav-08",
     "mc-nav-09",
     "mc-nav-10",
+    "mc-tikka-01",
+    "mc-tikka-02",
+    "mc-tikka-03",
+    "mc-tikka-04",
+    "mc-tikka-05",
+    "mc-tikka-06",
+    "mc-tikka-07",
+    "mc-tikka-08",
+    "mc-tikka-09",
+    "mc-tikka-10",
     "fw-rules-01",
     "fw-rules-02",
     "fw-rules-03",
@@ -383,6 +393,7 @@
     "mu",
     "cz457",
     "sks",
-    "shotgun"
+    "shotgun",
+    "tikka"
   ]
 }
