@@ -23,7 +23,7 @@
   const title = (t) => { const e = document.getElementById('top-title'); if (e) e.textContent = t; };
   const tab = (name) => $$('.tabs a').forEach((a) => { const on = a.dataset.tab === name; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   const badge = (v) => (v == null ? '<span class="pill">Tip</span>' : `<span class="cert as-cert ${v >= 95 ? 'c-hi' : v >= 80 ? 'c-mid' : v >= 60 ? 'c-lo' : 'c-tip'}" title="Certainty">${v}%</span>`);
-  const BANNER = '<aside class="callout warn"><p>Study aid only. The official regulations are the law.</p></aside>';
+  const BANNER = '<aside class="callout warn" role="note"><p>Study aid only. The official regulations are the law.</p></aside>';
   const fmtT = (ms) => new Date(ms).toLocaleTimeString('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit' });
   const fmtDT = (ms) => new Date(ms).toLocaleString('en-CA', { timeZone: TZ, weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
   const todayIso = () => new Date().toLocaleDateString('en-CA', { timeZone: TZ });
@@ -70,6 +70,7 @@
   function stopTick() { if (tick) { clearInterval(tick); tick = null; } releaseWake(); }
   function paintTimer() {
     const t = getTimer();
+    if (t && window.HMSayMinutes && $('#as-timer')) window.HMSayMinutes('aftershot', timerLeft(t), (m) => (m > 0 ? `Wait timer: ${m} minute${m > 1 ? 's' : ''} left.` : 'Wait timer over.'));
     $$('[data-as-cd]').forEach((el) => { el.textContent = t ? (timerLeft(t) > 0 ? dur(timerLeft(t)) : '0:00') : ''; });
     $$('[data-as-cdlbl]').forEach((el) => { el.textContent = t ? (timerLeft(t) > 0 ? `left. Ends ${fmtT(t.start + t.ms)}` : `Wait over at ${fmtT(t.start + t.ms)}`) : ''; });
     if (t && timerLeft(t) <= 0 && !t.buzzed) {

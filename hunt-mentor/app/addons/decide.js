@@ -161,7 +161,7 @@
     round();
   }
 
-  const dots = () => `<div class="dc-dots" aria-label="Round ${cur.i + 1} of ${cur.list.length}">${cur.list.map((_, k) => `<i class="${k < cur.res.length ? (cur.res[k].ok ? 'ok' : 'bad') : k === cur.i ? 'now' : ''}"></i>`).join('')}</div>`;
+  const dots = () => `<div class="dc-dots" role="img" aria-label="Round ${cur.i + 1} of ${cur.list.length}, ${cur.res.filter((r) => r.ok).length} right so far">${cur.list.map((_, k) => `<i class="${k < cur.res.length ? (cur.res[k].ok ? 'ok' : 'bad') : k === cur.i ? 'now' : ''}"></i>`).join('')}</div>`;
 
   function round() {
     const sc = cur.list[cur.i], ord = cur.order[cur.i], done = cur.res[cur.i];
