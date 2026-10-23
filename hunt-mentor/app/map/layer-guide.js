@@ -39,7 +39,7 @@ export const STYLE = {
   // kind: nohunt (no hunting or no shooting by any method), noshoot (No Shooting Area: no firearms, bows unless restricted), check (part of it bans shooting)
   no_hunting: { short: 'No shooting', paint: { 'fill-color': ['match', ['get', 'kind'], 'noshoot', '#ef6c00', 'check', '#f9a825', '#d32f2f'], 'fill-opacity': 0.1 }, hatch: '#d32f2f',
     outline: { color: ['match', ['get', 'kind'], 'noshoot', '#e65100', 'check', '#c9a100', '#b71c1c'], width: zw(1.2, 2.2, 3), casing: true },
-    legend: [['No hunting and no shooting (every method)', '#b71c1c'], ['No Shooting Area: no firearms, bows allowed unless restricted', '#e65100'], ['Part bans shooting: check (City of Kamloops)', '#c9a100']] },
+    legend: [['No hunting and no shooting (every method)', '#b71c1c'], ['No Shooting Area: no firearms, bows allowed unless restricted', '#e65100'], ['Part of it or part of the year bans shooting: tap it to check', '#c9a100']] },
   // Hunting: thin dark lines, numbers on top
   mu: { label: 'Management Unit (MU) lines', paint: { 'fill-color': 'rgba(0,0,0,0)' }, outline: { color: '#1b1b1b', width: zw(1.1, 1.6, 2.2), casing: 8 },
     labelExpr: MU_TEXT, labelField: 'MU', labelMinzoom: 9, labelSize: ['interpolate', ['linear'], ['zoom'], 9, 14, 14, 17], labelColor: '#111111' },
