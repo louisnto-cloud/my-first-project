@@ -359,6 +359,52 @@
       "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf",
       "page": "page 34 and page 13",
       "checked": "2026-10-02"
+    },
+    {
+      "group": "deerR2",
+      "key": "r2deer",
+      "label": "Region 2 black tailed deer season (MU 2-18, 2-8, 2-19)",
+      "value": "Bucks only, 10 Sept to 15 Dec, so open all of Oct and Nov. No doe (antlerless) season. Bow only bucks 1 to 9 Sept.",
+      "note": "The synopsis row says MULE DEER (black tailed). The same row covers MUs 2-2 to 2-4, 2-6 to 2-8, 2-13 to 2-15 and 2-17 to 2-19.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028, edition dated 2 October 2026 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+      "page": "page 28",
+      "checked": "2026-10-04"
+    },
+    {
+      "group": "deerR2",
+      "key": "r2spike",
+      "label": "Spike buck in Region 2 (MU 2-18, 2-8, 2-19)",
+      "value": "Legal in the buck season, 10 Sept to 15 Dec. A buck is a deer with visible bony antlers, and these rows say Bucks, not 4 point bucks.",
+      "note": "This app's reading of the definitions with the page 28 row. Skin covered bumps on a fawn are not antlers: that deer is antlerless and not legal here.",
+      "certainty": 90,
+      "source": "BC Synopsis 2026 to 2028, edition dated 2 October 2026 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+      "page": "page 28; Buck and Antlerless animal definitions, page 3",
+      "checked": "2026-10-04"
+    },
+    {
+      "group": "deerR2",
+      "key": "r2bag",
+      "label": "Region 2 deer bag limit",
+      "value": "2 black tailed deer a licence year, at most 1 antlerless. All of BC: 3 deer a licence year.",
+      "certainty": 99,
+      "source": "BC Synopsis 2026 to 2028, edition dated 2 October 2026 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+      "page": "pages 27 and 14",
+      "checked": "2026-10-04"
+    },
+    {
+      "group": "deerR2",
+      "key": "r2wt",
+      "label": "Region 2 white tailed deer (MU 2-18 and all of Region 2)",
+      "value": "No season. Bag limit 0 in Region 2.",
+      "certainty": 97,
+      "source": "BC Synopsis 2026 to 2028, edition dated 2 October 2026 (official PDF, read directly)",
+      "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+      "page": "pages 14, 27 and 28",
+      "checked": "2026-10-04"
     }
   ]
 }

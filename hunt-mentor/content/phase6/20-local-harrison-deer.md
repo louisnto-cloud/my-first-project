@@ -49,6 +49,9 @@ species: mule deer
 - A buck is a deer "bearing visible bony antlers" (99%, page 4). These rows say Bucks, not 4 point bucks (99%, page 28).
 - In these MUs the antlerless 1 is out of reach: the only rows are bucks (99%, page 28).
 
+```regs deerR2
+```
+
 ```more the official wording
 > [!law] Regional Bag Limits, page 27
 > "Deer: Unless otherwise indicated, the bag limit for mule (black-tailed) deer is 2, one of which may be antlerless."
