@@ -239,7 +239,7 @@ yt-elk-bugle | Bugle step by step.
 - BC Ministry of Environment, Lands and Parks (2000), ["Elk in British Columbia"](https://www.env.gov.bc.ca/wld/documents/elk.pdf), read directly (90%)
 - Wisdom and others 2004 and 2018, Starkey recreation studies, read directly (85%)
 - Hunt Mentor sessions: [glassing](#/s/glassing), [still hunting](#/s/still-hunting), [hunting partner](#/s/hunting-partner), [map scouting](#/s/map-scouting)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

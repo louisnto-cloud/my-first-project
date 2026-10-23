@@ -150,7 +150,7 @@ mgs-x-5 | Plan the hide on the X or in cover nearby.
 - [Internet Center for Wildlife Damage Management](https://icwdm.org/species/birds/canada-geese/), read directly 2026-10-11 (75%).
 - [Wildfowl journal, food throughput time](https://wildfowl.wwt.org.uk/index.php/wildfowl/article/view/927), search preview 2026-10-11 (70%).
 - [Ducks Unlimited ID pages](https://www.ducks.org/hunting/waterfowl-id/canada-goose), read directly 2026-10-11 (75%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

@@ -190,7 +190,7 @@ Trip plan left with someone at home
 
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly, checked 2026-10-02: page 7 (in season changes), page 33 (Region 3 access, 1,700 m rule, thompsonaccess, gates), page 34 (Region 3 seasons). 99%.
 - [Region 3 motor vehicle prohibition maps](https://www.gov.bc.ca/thompsonaccess), address read in the synopsis, page 33 (99%). Map content not read here.
-- Hunt Mentor deer research notes, research/2026-10-01-deer.md: winter range aspect (Armleder 1994, 85%), migration trigger (Monteith 2011, 85%), Kamloops winter range study below 760 m (Willms 1976, 80%), valley elevations (55%, VERIFY).
+- Winter range aspect (Armleder 1994, 85%), migration trigger ([Monteith 2011](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1), 85%), Kamloops winter range study below 760 m ([Willms 1976](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), 80%), valley elevations (55%, VERIFY).
 - The 700 to 1,200 m band is the owner's working band, labelled Tip. Not a published figure.
 - Thermals: see Wind and thermals session sources (75%).
 - Benches, edges, glassing points: hunter observation, labelled Tip or 60%.

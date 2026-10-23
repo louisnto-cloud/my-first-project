@@ -192,9 +192,9 @@ yt-elk-bugle | Hear the bugle: low start, high whistle, grunts.
 - BC Species Habitat Models for Rocky Mountain Elk, [La Biche and Sandy Creek](https://a100.gov.bc.ca/pub/acat/documents/r1651/whr_4012_mceel_1098209135230_07a33d337dd7428586868202f6bc05bd.pdf) and [Muskwa](https://a100.gov.bc.ca/pub/acat/documents/r1583/whr_4069_mceel_1117055960977_ad101d33f76a47c38b67f114e5fbb078.pdf), read directly, checked 2026-10-11 (80%)
 - US National Park Service, [Yellowstone elk](https://www.nps.gov/yell/learn/nature/elk.htm), checked 2026-10-11 (80%)
 - Rocky Mountain Elk Foundation, [Elk facts](https://rmef.org/elk-facts/) (85%) and [wallow scouting report](https://rmef.org/?p=15454) (70%), checked 2026-10-11
-- App migration data, `data/migration.json`, elk months (55 to 70%)
+- App migration data, elk months ([sources](#/s/bc-migration-routes), 55 to 70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 28, 34, 68, via the Rule Book ([Region 8](#/s/rb-region-8), [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2)) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -245,7 +245,7 @@ Jacket and pack colours
 - [North Shore Rescue: Outdoor safety](https://www.northshorerescue.com/education/outdoor-safety/), read directly 2026-10-11 (75%).
 - AdventureSmart Three Ts and trip plan, via [Bush safety](#/s/bush-safety) (75%).
 - Sunset: my calculation with standard solar equations, as in [Planning a route](#/s/route-planning) (85%). Legal light: Rule Book (99%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

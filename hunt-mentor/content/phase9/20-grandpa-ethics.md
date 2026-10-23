@@ -284,7 +284,7 @@ checked: 2026-10-11
 - BC Wildlife Federation, [Learn to Hunt Academy](https://bcwf.bc.ca/learn-to-hunt-academy/) and [Learn to Hunt and Fish](https://bcwf.bc.ca/learn-to-hunt-and-fish/), search preview (80%)
 - NC State University, R3 research news, search preview (70%)
 - Union of BC Municipalities, [Allocation of wildlife revenues to conservation](https://www.ubcm.ca/convention-resolutions/resolutions/resolutions-database/allocation-wildlife-revenues-conservation), and Castanet, [Hunters and anglers pushed hard to create conservation institutions](https://www.castanetkamloops.net/news/Opinion/385242/Hunters-anglers-pushed-hard-to-create-conservation-institutions), search preview (75 to 80%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

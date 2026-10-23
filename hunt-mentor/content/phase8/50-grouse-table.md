@@ -260,7 +260,7 @@ Species tally in the Journal
 - Extension services citing USDA game bird cooking temperature, search preview (80%).
 - Meat yield: app quick lesson, Project Upland search preview (60%).
 - Biology facts on the cheat sheet: sources in chapters 1 to 9.
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

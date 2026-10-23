@@ -167,7 +167,7 @@ commons-canada-goose-family | A goose family: parents and young move as one.
 - [Hinterland Who's Who](https://www.hww.ca/en/wildlife/birds/canada-goose.html) and [Audubon](https://www.audubon.org/field-guide/bird/canada-goose), read directly 2026-10-11 (80%).
 - [Ducks Unlimited goose guide](https://www.ducks.org/hunting/goose-hunting-tips-tactics/the-ultimate-guide-to-hunting-canada-geese), read directly 2026-10-11 (65%).
 - [Outdoor Life, brush your blind first](https://outdoorlife.com/blogs/hunting/2013/12/waterfowl-hunting-tip-brush-your-blind-first), search preview 2026-10-11 (60%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

@@ -269,7 +269,7 @@ Turnaround time set
 - Search previews, checked 2026-10-11, capped at 60% to 65%: [Bear Tracker, tracking stick](https://bear-tracker.com/trackingstick.htm); [Wildwood Tracking, track stick](https://www.wildwoodtracking.com/measurements/jltrackingstick.html); [Wildwood Tracking, side heading](https://mail.wildwoodtracking.com/techniques/sideheading.html); [Realtree, scouting deer in the snow](https://realtree.com/deer-hunting/brow-tines-and-backstrap/scouting-deer-in-the-snow); [MeatEater, how to track down a buck fast](https://www.themeateater.com/wired-to-hunt/whitetail-hunting/how-to-track-down-a-buck-fast); [MeatEater, tracking a buck in different snow](https://themeateater.com/wired-to-hunt/whitetail-hunting/how-to-track-a-buck-in-different-snow-conditions); [Outdoor Life, Making Tracks (Benoit)](https://outdoorlife.com/articles/hunting/2007/09/making-tracks); [Outdoor Life, Hal Blood snow tracking](https://www.outdoorlife.com/story/hunting/hal-blood-snow-tracking-bucks-in-north-woods/).
 - Legal hours, lights and trespass as sourced in [Blood trailing](#/s/blood-trailing/0) (95%).
 - Earlier lines from [Snow tracking](#/s/snow-tracking/0) and [Tracks](#/s/tracks/0).
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

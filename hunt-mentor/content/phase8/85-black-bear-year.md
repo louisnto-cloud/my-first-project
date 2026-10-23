@@ -199,13 +199,13 @@ commons-black-bear-salmon | Black bears at a salmon run in fall.
 ## Sources
 
 - BC Ministry of Environment, Lands and Parks (2001), ["Black Bears in British Columbia"](https://www.env.gov.bc.ca/wld/documents/blackbear.pdf), read directly, checked 2026-10-11 (90%)
-- Gaines (2003), Canadian Field Naturalist 117(4), [black bear denning in the northeastern Cascades](https://www.canadianfieldnaturalist.ca/index.php/cfn/article/download/833/833/3326), via `research/2026-10-03-migration-and-areas.md` (80%)
+- Gaines (2003), Canadian Field Naturalist 117(4), [black bear denning in the northeastern Cascades](https://www.canadianfieldnaturalist.ca/index.php/cfn/article/download/833/833/3326), checked 2026-10-03 (80%)
 - WildSafeBC, [Black bear](https://wildsafebc.com/species/black-bear/), checked 2026-10-11 (75%)
 - Alaska Department of Fish and Game, [Black bear](https://www.adfg.alaska.gov/index.cfm?adfg=blackbear.main), checked 2026-10-11 (85%)
 - Sierra Club BC, [Soopolallie](https://sierraclub.bc.ca/ecomap/soopolallie/), search preview, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: pages 28, 34, 68 (99%)
 - Hunt Mentor lessons: [berries and mast](#/s/berries-mast), [Black bear](#/s/black-bear)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

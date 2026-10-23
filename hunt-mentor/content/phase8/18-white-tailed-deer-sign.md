@@ -223,13 +223,13 @@ mwt-follow-4 | Lost it? Small loops from the last sign.
 
 ## Sources
 
-- Research notes on deer sign, `research/2026-10-01-deer.md` (tracks, pellets, browse, rubs, scrapes, 60 to 75%)
+- Tracks, pellets, browse, rubs, scrapes (60 to 75%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources)
 - Mossy Oak, [The licking branch](https://www.mossyoak.com/our-obsession/blogs/deer/the-licking-branch) (Ozoga), search preview, checked 2026-10-11 (65%)
 - MeatEater Wired to Hunt, [whitetail buck glands](https://themeateater.com/wired-to-hunt/whitetail-management/what-you-need-to-know-about-whitetail-buck-glands), search preview, checked 2026-10-11 (65%)
 - Field and Stream, [whitetail buck bedding study](https://www.fieldandstream.com/hunting/whitetail-buck-bedding-study), search preview, checked 2026-10-11 (65%)
 - Knight, Montana State University Extension, [White tailed deer management for Montana landowners](https://animalrangeextension.montana.edu/wildlife/documents/whitetail-mgmt.pdf), read 2026-10-11 (80%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), page 12, read directly 2026-10-03 (99%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

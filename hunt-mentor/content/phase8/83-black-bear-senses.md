@@ -142,7 +142,7 @@ checked: 2026-10-11
 - University of Wisconsin Ophthalmology, [retinal cone distribution in the American black bear](https://www.ophth.wisc.edu/blog/2021/03/01/retinal-cone-photoreceptor-distribution-in-the-american-black-bear-ursus-americanus/), search preview, checked 2026-10-11 (70%)
 - BearWise, via the [quick lesson](#/s/black-bear) (70%)
 - Hunt Mentor lessons: [wind and thermals](#/s/wind-thermals), [wind mastery](#/s/wind-mastery), [How a deer thinks](#/s/deer-mind) (as marked there)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -17,7 +17,7 @@ checked: 2026-10-11
 
 ```more what this session covers and where the data lives
 - The overview is in [How animals move through the year](#/s/migration/0). This session is the route detail: numbers, timing, elevations and how to find a route yourself.
-- Every month and elevation here comes from the app's migration data file (`data/migration.json`, updated 2026-10-03) and its sources. Each species there carries its own certainty.
+- Every month and elevation here comes from the app's migration data (updated 2026-10-03) and its sources, listed under Sources. Each species there carries its own certainty.
 - Strong data: mule deer (BC collar study), snow geese (Reifel sanctuary counts), moose snow limits (BC account).
 - Weak data: elk near your bases (few animals), ducks month by month in the Interior (no local counts), black tailed deer in the Fraser Valley (Vancouver Island data). Those lines say so.
 - The Hunt Map has month layers for mule deer, white tails, moose, elk and sheep (general pattern, 60%). Open it at [#/map](#/map).
@@ -259,7 +259,7 @@ Mule deer month layer checked on the Hunt Map (general pattern only)
 
 ## Sources
 
-- Hunt Mentor migration data, `data/migration.json` (updated 2026-10-03), with its sources per species:
+- Hunt Mentor migration data (updated 2026-10-03), with its sources per species:
   - [BC Ministry of Environment, Mule and Black tailed Deer in BC (2000)](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf) (85%).
   - [BC Wildlife Federation, Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), [winter update 2020](https://bcwf.bc.ca/southern-interior-mule-deer-project-winter-update/), [update 2019](https://bcwf.bc.ca/southern-interior-mule-deer-project-update/) (85%).
   - [Monteith and others 2011, Ecosphere](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1) (85%).
@@ -271,7 +271,7 @@ Mule deer month layer checked on the Hunt Map (general pattern only)
   - [Pacific Birds Habitat Joint Venture, Fraser River Delta guide (2024)](https://pacificbirds.org/wp-content/uploads/2025/01/Conservation-of-Mig-Bird-Habitat-Fraser-River-Delta-Guide-for-Local-Govts-2024.pdf) (80%).
   - [Audubon, dusky grouse](https://www.audubon.org/field-guide/bird/dusky-grouse) and [BC Breeding Bird Atlas, dusky grouse](https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=DUGR&lang=en) (70 to 85%).
 - [Rodgers and others 2021, Journal of Wildlife Management](https://pubs.usgs.gov/publication/70229038), abstract read directly 2026-10-11 (85%).
-- Research notes: `research/2026-10-03-migration-and-areas.md` and `research/2026-10-11-rq.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 - Tips and Grandpa's rule are opinion.
 
 ```quiz

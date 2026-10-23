@@ -363,7 +363,7 @@ Read antlerless dates for my MU in the synopsis
 - Penn State Extension, white tail breeding dates, via research notes, checked 2026-10-01 (80%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: antlerless definition page 3, trespass and bylaws page 9, 100 m rule page 10, page 11 item 1, page 11 item 38, page 12 items 51 and 53, deer licences and bag limits page 14, transport and evidence of sex page 15, Wildlife Health inside back cover, checked 2026-10-02 (99%)
 - BC [Region 3 Thompson synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: MU map page 32, bag limits and Kamloops notice page 33, season table page 34, Map C11 page 35, checked 2026-10-02 (99%)
-- Research notes: `research/2026-10-01-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

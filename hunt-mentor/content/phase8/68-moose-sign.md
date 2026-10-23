@@ -197,7 +197,7 @@ hab-aspen-grove-snow | Aspen: look for teeth marks and stripped bark.
 - Alaska Department of Fish and Game, [Moose notebook](https://www.adfg.alaska.gov/static/education/wns/moose.pdf), read directly, checked 2026-10-11 (85%)
 - Maine Inland Fisheries and Wildlife, [animal tracking card](https://www.maine.gov/IFW/docs/MDIFW-Animal-Tracking-Card-color.pdf), via [measuring tracks](#/s/rs-track-measuring) (85%)
 - Hunt Mentor sessions with their own sources: [tracks](#/s/tracks), [reading sign](#/s/sign), [droppings](#/s/rs-droppings), [beds](#/s/rs-beds), [aging sign](#/s/rs-track-aging), [snow tracking](#/s/snow-tracking), [habitat tour](#/s/habitat-big-game) (60 to 85% as marked there)
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

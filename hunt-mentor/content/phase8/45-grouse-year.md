@@ -225,7 +225,7 @@ hab-grouse-tracks-snow | Tracks in soft snow.
 - Colorado Parks and Wildlife, dusky grouse; Audubon, dusky grouse, read 2026-10-03 (70%).
 - Sooty grouse hooting: Birdweb, search preview (65%).
 - [Animal Diversity Web, dusky grouse](https://animaldiversity.org/accounts/Dendragapus_obscurus/), read directly (65%).
-- All checked 2026-10-11 unless noted. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11 unless noted. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

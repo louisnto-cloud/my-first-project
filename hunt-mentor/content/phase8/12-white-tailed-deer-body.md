@@ -195,7 +195,7 @@ checked: 2026-10-11
 - Mossy Oak, [how whitetail deer survive winter](https://www.mossyoak.com/our-obsession/blogs/deer/winters-tale-how-whitetail-deer-survive-in-the-winter), search preview, checked 2026-10-11 (60%)
 - National Deer Association via the app's [Blood trailing](#/s/blood-trailing) session, checked 2026-10 (70%)
 - Hunter education aim advice, via [Shot placement](#/s/shot-placement) (75%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

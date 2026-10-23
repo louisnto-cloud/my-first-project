@@ -287,7 +287,7 @@ checked: 2026-10-11
 - Delta Waterfowl, [Hunt ducks, lose the guilt](https://deltawaterfowl.org/whats-new/hunting/hunt-ducks-lose-the-guilt/) (winter 2025), read directly (75%)
 - Maine Audubon, [Ruffed grouse behavior](https://maineaudubon.org/news/ruffed-grouse-behavior/), and Alaska Magazine, [spruce grouse](https://alaskamagazine.com/authentic-alaska/wildlife-nature/spruce-grouse/), search preview (70%)
 - Alaska Department of Fish and Game, ["Shoot Steel"](https://www.adfg.alaska.gov/static/home/library/pdfs/wildlife/research_pdfs/shoot_steel_solution_lead_poisoning_waterflow_1991.pdf) (1991), Hunter Ed course site, [choosing shot size](https://www.hunter-ed.com/nevada/studyGuide/Choosing-the-Correct-Type-and-Size-of-Shot/202034_71319/), and Randy Wakeman, [steel, lead and the rule of three](https://randywakeman.com/SteelLeadandtheRuleofThreeforShotshells.htm), search preview (55 to 80%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

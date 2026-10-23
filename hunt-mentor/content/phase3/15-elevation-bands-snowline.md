@@ -258,11 +258,11 @@ Check your height before leaving a road on the ATV (All Terrain Vehicle)
 
 ## Sources
 
-- Meidinger and Pojar 1991, Ecosystems of British Columbia, BC Ministry of Forests Special Report Series 6, as logged in `research/2026-10-03-migration-and-areas.md` (90%).
+- Meidinger and Pojar 1991, Ecosystems of British Columbia, BC Ministry of Forests Special Report Series 6, chapters 6 to 18 (for example [chapter 10, Interior Douglas fir](https://www.for.gov.bc.ca/hfd/pubs/docs/srs/Srs06/chap10.pdf)), checked 2026-10-03 (90%).
 - Wildlife habitat rating account, Mule deer, BC Ecological Reports Catalogue, 2004, [PDF](https://a100.gov.bc.ca/pub/acat/documents/r1573/whr_4109_modhe_1097078581992_3f7c787cc7c9486aa185bdad7e4c4f53.pdf), read directly, checked 2026-10-11 (85%): 25 cm and 50 cm snow, winter range below 1,500 m, south and west aspects.
 - BCWF Southern Interior Mule Deer Project updates, as logged in the research notes, checked 2026-10-03 (85%).
 - BC species accounts (moose 2000, bighorn sheep 2000) and BC Breeding Bird Atlas grouse and quail accounts, as logged in the research notes (85%).
 - Lapse rate and valley cold pools: weather teaching sources and mountain valley studies, search preview, checked 2026-10-11 (75 to 80%).
 - Region 3 and Region 8 1,700 m vehicle rules: [Rule Book: Region 3](#/s/rb-region-3/0), from the BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (99% as carried there).
 - Hunt Mentor app code and layer list (elevation readout, Habitat zones, by month layers, Insights), read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

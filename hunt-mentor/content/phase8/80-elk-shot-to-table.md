@@ -317,7 +317,7 @@ yt-gutless-vs-gutting | Gutless or gutting: take the meat, leave the guts.
 - Hunt Mentor sessions with their own sources: [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [field dressing](#/s/field-dressing), [meat care](#/s/meat-care), [packing out](#/s/packing-out), [cooking](#/s/cooking), [Elk](#/s/elk) (65 to 99% as marked there)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 3, 4, 8, 11 to 16, 28, 34, 68, via the Rule Book (99%); LEH Regulations Synopsis 2026 to 2027 via [LEH strategy](#/s/leh-strategy) (99%)
 - Canadian Food Inspection Agency 71°C advice, via [cooking](#/s/cooking) (95%)
-- Chapter sources: chapters 1 to 9 of this Masterclass. Research notes: `research/2026-10-11-masterclass-elk.md`.
+- Chapter sources: chapters 1 to 9 of this Masterclass. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -178,7 +178,7 @@ mdk-map-4 | Use What can I see from here to pick a glassing knoll.
 - [BC Breeding Bird Atlas](https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?lang=en&sp=MALL): where each duck breeds. Checked 2026-10-01 (85%).
 - [Ducks Unlimited Canada ID guide](https://www.ducks.ca/assets/2021/10/waterfowl-ID-guide-2020-EN-reader-spreads.pdf): foods. Checked 2026-10-01 (80%).
 - [Ducks Unlimited, duck digestion](https://ducks.org/conservation/waterfowl-research-science/understanding-waterfowl-duck-digestion): shoveler bill, hen protein. Read directly 2026-10-11 (75%).
-- App data: data/migration.json (ducks, months and named waters, checked 2026-10-03, 55 to 90%) and the Hunt Map layer guide.
+- App data: the app migration table, sources per species in [Migration routes](#/s/bc-migration-routes) (ducks, months and named waters, checked 2026-10-03, 55 to 90%) and the Hunt Map layer guide.
 - Local legal water and closures: the app local plans and Rule Book (99% where quoted there).
 ```
 

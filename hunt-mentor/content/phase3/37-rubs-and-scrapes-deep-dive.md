@@ -284,7 +284,7 @@ Ambush spot chosen with the wind right
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, as quoted in [Reading sign](#/s/sign/0) and [The rut](#/s/the-rut/0) (95% to 99%): wireless cameras, cervid parts, baiting.
 - Search previews, checked 2026-10-11, capped at 60% to 70%: [Deer and Deer Hunting, The Science of Buck Rubs](https://www.deeranddeerhunting.com/content/articles/the-science-of-buck-rubs); [Bowhunter, buck rubs](https://www.bowhunter.com/editorial/buck-rubs-what-can-they-tell-us/386677); [Outdoor Nebraska, the science of deer rubs](https://magazine.outdoornebraska.gov/stories/hunting/the-science-of-deer-rubs/); [Buckmasters, is hunting over scrapes worth your time](https://buckmasters.com/Magazines/Buckmasters/Articles/ID/5769/Store); [Outdoor Life, when bucks use scrapes](https://www.outdoorlife.com/when-bucks-use-scrapes-new-research-reveals-startling-facts-about-buck-activity); [Union Sportsmen, buck scrape myths](https://unionsportsmen.org/clearing-up-common-myths-about-buck-scrapes/).
 - Earlier figures from [Reading sign](#/s/sign/0) (rub height, tree size, licking branch, scrape timing).
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

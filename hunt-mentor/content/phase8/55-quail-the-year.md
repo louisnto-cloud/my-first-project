@@ -165,7 +165,7 @@ checked: 2026-10-11
 - [Friends of Edgewood: California quail (Franks 2002, from Calkins et al. 1999)](https://friendsofedgewood.org/?p=5231), read directly 2026-10-11 (70%).
 - [Audubon field guide: California quail](https://www.audubon.org/field-guide/bird/california-quail) and [gray partridge](https://www.audubon.org/field-guide/bird/gray-partridge), read directly 2026-10-11 (75%).
 - [US Forest Service FEIS: chukar (Sullivan 1994)](https://www.fs.usda.gov/database/feis/animals/bird/alch/all.html), read directly 2026-10-11 (80%).
-- App migration data (data/migration.json, quail entry, checked 2026-10-03) (60 to 75%).
+- App migration data, quail entry, checked 2026-10-03: the app migration table, sources per species in [Migration routes](#/s/bc-migration-routes) (60 to 75%).
 - [BC Outdoors: California quail (Harris 2021)](https://www.bcoutdoorsmagazine.com/?p=9278) (65%). [iNFOnews 2018](https://infonews.ca/?p=13774) (60%).
 - Rules: the [Rule Book, Region 8](#/s/rb-region-8), synopsis 2 October 2026 edition, page 68 (99%).
 ```

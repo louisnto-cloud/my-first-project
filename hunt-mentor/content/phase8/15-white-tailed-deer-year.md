@@ -79,7 +79,7 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 - Fawns start following the doe at 3 to 4 weeks (70%).
 
 ```more summer detail
-- Summer: floodplains, river terraces, hay and alfalfa fields (85%, BC account; data/migration.json).
+- Summer: floodplains, river terraces, hay and alfalfa fields (85%, BC account; app migration data).
 - Bucks in velvet avoid fights and stay in cool, secure, insect free spots (80%, Montana State University Extension).
 - Bachelor groups of 2 to 4 bucks (80%).
 - Summer activity peaks at dawn and dusk (85%, BC account).
@@ -169,7 +169,7 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 
 ```more December detail
 - Post rut bucks rest, feed and stay tight to cover (70%).
-- Early winter: river groves first, then south slopes and conifer patches as snow deepens (65%, data/migration.json).
+- Early winter: river groves first, then south slopes and conifer patches as snow deepens (65%, app migration data).
 - Region 3: bucks to 10 December, then bow only either sex 11 to 20 December (99%, page 34).
 - Region 8: bow only either sex 1 to 20 December (99%, page 68).
 - Late season deer are lean. Food is the key: find the best remaining browse (Tip).
@@ -200,16 +200,16 @@ hab-saskatoon-flowers | Saskatoon blooms: green up time.
 
 ## Sources
 
-- BC Ministry of Environment, [White tailed deer in BC](https://www.env.gov.bc.ca/wld/documents/whttail.pdf) (Blood 2000), via `research/2026-10-03-migration-and-areas.md` (85%, 70% for the Thompson)
+- BC Ministry of Environment, [White tailed deer in BC](https://www.env.gov.bc.ca/wld/documents/whttail.pdf) (Blood 2000), checked 2026-10-03 (85%, 70% for the Thompson)
 - Knight, Montana State University Extension, [White tailed deer management for Montana landowners](https://animalrangeextension.montana.edu/wildlife/documents/whitetail-mgmt.pdf), read 2026-10-11 (80%)
 - USDA Forest Service US Forest Service species review, [white tailed deer review](https://www.fs.usda.gov/database/feis/animals/mammal/odvi/all.html), checked 2026-10-11 (85%)
 - University of Georgia, [antlers grow and shed as days shorten](https://fieldreport.caes.uga.edu/news/deer-antlers-grow-and-shed-as-summer-days-shorten/), search preview, checked 2026-10-11 (75%)
 - Virginia DWR, [most important week of a fawn's life](https://dwr.virginia.gov/blog/the-most-important-week-of-a-fawns-life), search preview, checked 2026-10-11 (75%)
-- Penn State Extension breeding dates, via `research/2026-10-01-deer.md` (80%)
+- Penn State Extension breeding dates, search preview, checked 2026-10-01 (80%)
 - Guidefitter, [deer rut timeline](https://guidefitter.com/blog/deer-rut-timeline-the-7-stages-and-how-to-hunt-them), search preview, checked 2026-10-11 (60%)
-- Willms 1976, [Kamloops deer diets](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), via `research/2026-10-01-deer.md` (85%)
+- Willms 1976, [Kamloops deer diets](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), search preview, checked 2026-10-01 (85%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), Region 3 page 34, Region 8 page 68, read directly 2026-10-02 (99%)
-- Research log: `research/2026-10-11-masterclass-white-tailed-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

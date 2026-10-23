@@ -242,7 +242,7 @@ Area downloaded for offline use
 
 ## Sources
 
-- Hunt Mentor app Hunt Map, layer list in `data/layers/manifest.json` and tools in the map code, checked 2026-10-11 (95% for what the app shows; each layer carries its own source and certainty).
+- Hunt Mentor app Hunt Map, layer list and map tools, checked 2026-10-11 (95% for what the app shows; each layer carries its own source and certainty).
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition, pages 9 to 11, 33 to 35, as carried in the Rule Book and the Local plan (99%).
 - [Management Unit Regulation, B.C. Reg. 64/96](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/64_96), river bank rule (98%).
 - [Luloff and others 2004, Penn State](https://ecosystems.psu.edu/research/pacfwru/reports/deer-movement/@@download/file/FinalReportNFWF.pdf), hunters and roads (90%).

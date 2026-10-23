@@ -188,7 +188,7 @@ yt-shot-placement-bear | Bears are built differently. Study the vitals before th
 - Maryland Department of Natural Resources, [Bear hunt: care of your bear](https://dnr.maryland.gov/huntersguide/Pages/BearHunt_Care.aspx), checked 2026-10-11 (75%)
 - Virginia, [hunting tips](https://dwr.ar.virginia.gov/wp-content/uploads/hunting-tips.pdf) adapted from the National Bowhunter Education Foundation, search preview, checked 2026-10-11 (70%)
 - Hunt Mentor lessons: [Black bear](#/s/black-bear), [shot placement](#/s/shot-placement).
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

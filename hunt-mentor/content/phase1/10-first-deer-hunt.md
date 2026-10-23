@@ -328,7 +328,7 @@ Rifle unloaded on ATV and in vehicle
 - [Wyoming Game and Fish: how much meat from a deer](https://wgfd.wyo.gov/how-much-meat-can-i-get-deer), checked 2026-10-01, search preview, 75%.
 - [Rokslide: weight of bone in mule deer quarters](https://rokslide.com/forums/threads/weight-of-a-bone-in-mule-deer-hind-quarter.107100/), checked 2026-10-01, hunter reports, 60%.
 - [BC Wildlife Federation mule deer project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01, migration, 85%.
-- Research notes: `research/2026-10-01-deer.md` (ID, habitat, daily pattern, senses).
+- ID: Alberta Institute for Wildlife Conservation, [mule deer and white tails](https://www.aiwc.ca/blog/spotting-the-difference-a-guide-to-albertas-mule-deer-and-whitetails/), and [University of Nebraska](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1015&context=nebgamepubs) (85%). Habitat: [BC mule deer account](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf) and [Staudenmaier 2021](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3813) (85%). Daily pattern: [Stewart 2002](https://academic.oup.com/jmammal/article/84/3/1076/905056) (85%). Senses: Jacobs 1994 and [D'Angelo 2007](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326) (85%). All search previews, checked 2026-10-01.
 - MU for Heffley Creek and Sun Peaks: synopsis page 32 map and the official 2026 Region 3 map under the Management Unit Regulation, B.C. Reg. 64/96. Heffley Creek itself is not labelled (85 to 95%).
 - Note: every rule line now comes from the official texts above. ID, habitat, tactics and meat math keep their own badges.
 

@@ -272,7 +272,7 @@ yt-goose-calling-fields | Read the flock and call to match it.
 - [Raveling, Crews and Klimstra 1972](https://archive.org/download/biostor-200086/biostor-200086.pdf), read directly 2026-10-11 (80%).
 - Video card: Mastering the Art of Calling Geese in Fields with Fred Zink (YouTube, link verified by the app's video manifest).
 - Rules: [Rule Book: migratory birds](#/s/rb-migratory-birds), [Where you can hunt](#/s/rb-where-you-can-hunt), [Region 2](#/s/rb-region-2), checked 2026-10-03 and 2026-10-04 (99%). Permission: [Asking for permission](#/s/landowner-permission).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

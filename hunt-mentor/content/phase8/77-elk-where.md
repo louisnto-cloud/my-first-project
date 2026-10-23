@@ -232,10 +232,10 @@ mc-elk-map-5 | Wind and scent cone: plan the approach.
 - BC government, [2022 provincial ungulate population estimates](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/ungulates/2022_provincial_ungulate_population_estimates.pdf), read directly, checked 2026-10-11 (90%)
 - Habitat Conservation Trust Foundation, [Return of the Roosevelts](https://hctf.ca/return-of-the-roosevelts/), checked 2026-10-11 (85%); Lower Mainland release news (search preview, 65%)
 - Rocky Mountain Elk Foundation, [Elk facts](https://rmef.org/elk-facts/), checked 2026-10-11 (85%)
-- BC [Big Game Harvest Statistics](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024), via `data/harvest/bc-harvest.json` (90%)
-- App data: `data/migration.json` (55 to 70%), `data/layers/manifest.json` (layer coverage)
+- BC [Big Game Harvest Statistics](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024) (90%)
+- App data: the app migration table, sources per species in [Migration routes](#/s/bc-migration-routes) (55 to 70%); Hunt Map layer list (layer coverage)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, pages 28, 32, 34, 68, via the Rule Book (99%); LEH Regulations Synopsis 2026 to 2027 via [LEH strategy](#/s/leh-strategy) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

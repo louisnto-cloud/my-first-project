@@ -255,7 +255,7 @@ Left quietly, did not push deer twice
 - [BC Ministry of Environment, Mule and Black tailed Deer in BC](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf) (85%); [Willms 1976](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065) (80%).
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition, pages 9, 11, 33, 34 and maps C15, C16, as carried in the Rule Book (99%).
 - [Utah mule deer working group fact sheet: winter range disturbance](https://wildlife.utah.gov/pdf/mule_deer/mdwg-17_winter_range_disturbance.pdf), [US Forest Service, Ochoco winter range closures](https://www.fs.usda.gov/r06/ochoco/safety-ethics/winter-range-closures), [Backcountry Hunters and Anglers, mule deer](https://www.backcountryhunters.org/mule_deer), search previews 2026-10-11 (60 to 70%).
-- Research notes: `research/2026-10-01-deer.md`, `research/2026-10-03-migration-and-areas.md`, `research/2026-10-11-rq.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 - Tips and Grandpa's rule are opinion.
 
 ```quiz

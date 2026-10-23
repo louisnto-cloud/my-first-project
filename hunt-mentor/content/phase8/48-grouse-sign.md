@@ -158,7 +158,7 @@ hab-grouse-wing-prints | Wing prints where a grouse took off.
 - Drumming log study, Cloquet Forest, The Auk 84, search preview (75%).
 - Snow roosts: Wilson Bulletin; Heinrich; Idaho Fish and Game (70 to 75%).
 - Canadian Wildlife Federation ruffed grouse page, search preview (75%).
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

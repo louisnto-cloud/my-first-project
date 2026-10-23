@@ -255,8 +255,8 @@ g-ptarmigan-summer | Ptarmigan country: alpine rock.
 - Sharp tailed grouse hunting: [MeatEater guide](https://themeateater.com/hunt/grouse/a-guide-to-hunting-sharp-tailed-grouse) and Project Upland, search preview (60%).
 - Ptarmigan hunting: Colorado Outdoors and Outdoor Canada, search preview (60%).
 - .22 on grouse: HuntingBC and other forums, Game and Fish magazine, search preview (55%, Tip only).
-- App gear notes `research/2026-10-01-gear.md` (65%).
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- Gear notes (65%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

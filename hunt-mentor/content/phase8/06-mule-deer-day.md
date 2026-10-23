@@ -202,7 +202,7 @@ g-md-buck-bedded | Bedded buck: only the rack gives it away.
 - Bed site selection by desert mule deer, Southern Arizona 2001, [record](https://experts.arizona.edu/en/publications/bed-site-selection-by-desert-mule-deer-in-southern-arizona/), search preview (60%)
 - Stankowich 2008; Arizona 1988; Montana 1982; Idaho buck vulnerability: search previews, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028: page 11 (hours), via the [Rule Book](#/s/rb-legal-methods) (99%)
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

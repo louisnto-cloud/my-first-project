@@ -302,7 +302,7 @@ Ambush spot picked with the wind right
 - [eWash, Roosevelt elk beds](https://www.ewash.org/?p=138541) (search preview, 60%): elk bed length.
 - Earlier figures from [Reading sign](#/s/sign/0); thermals from [Wind and thermals](#/s/wind-thermals/0).
 - Hunter lore lines are labelled Tip or 60% or less.
-- Research log: `research/2026-10-11-rs.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

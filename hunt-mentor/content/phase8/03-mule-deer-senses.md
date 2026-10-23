@@ -224,14 +224,14 @@ Red light headlamp
 
 - Penn State Deer Research, [The eyes have it](https://www.deer.psu.edu/the-eyes-have-it/), checked 2026-10-11 (80%)
 - D'Angelo and others 2007, [deer hearing](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326), via research notes, checked 2026-10-01 (85%)
-- Jacobs and others 1994, deer colour vision, via research notes `research/2026-10-01-deer.md` (85%)
+- Jacobs and others 1994, deer colour vision, search preview, checked 2026-10-01 (85%)
 - BC Ministry (2000), ["Mule and Black-tailed Deer in British Columbia"](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf), glands, read directly, checked 2026-10-11 (90%)
 - US National Park Service, [Mule deer, Bryce Canyon](https://www.nps.gov/brca/learn/nature/mule-deer.htm), checked 2026-10-11 (80%)
 - Steven Rinella, MeatEater (2018), [A guide to hunting mule deer](https://themeateater.com/hunt/big-game/a-guide-to-hunting-mule-deer), checked 2026-10-11 (65%, hunting educator)
 - Vomeronasal organ and flehmen: fishgame.com (University of Georgia researcher) and Outdoor Life, search previews, checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book: page 11 (lights), page 12 item 51, inside back cover (99%)
 - Hunt Mentor sessions: [How a deer thinks](#/s/deer-mind), [Wind and thermals](#/s/wind-thermals), [Heffley Creek](#/s/local-heffley).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

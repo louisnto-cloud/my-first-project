@@ -155,7 +155,7 @@ hf-shape-cliff | Cliff: lines touch. Plan around it.
 - [Natural Resources Canada, Topographic maps: tips and hints](https://natural-resources.canada.ca/maps-tools-publications/maps/topographic-maps/topographic-maps-tips-hints), read directly, checked 2026-10-01: scale, contour spacing, numbers read uphill, water flow symbols, green and white.
 - [Natural Resources Canada, National Topographic System maps](https://natural-resources.canada.ca/maps-tools-publications/maps/topographic-maps/national-topographic-system-maps), read directly, checked 2026-10-01: 1:50,000 coverage, brown contours.
 - Contour interval of 20 m on newer sheets: search preview of the CanTopo 1:50,000 specification (70%).
-- Deer use of benches, saddles and aspects: Hunt Mentor deer research notes, research/2026-10-01-deer.md, winter range and bedding lines (Armleder 1994, Germaine 2004), plus hunter observation labelled Tip.
+- Deer use of benches, saddles and aspects: winter range and bedding (Armleder 1994, Germaine 2004; search previews, checked 2026-10-01), plus hunter observation labelled Tip.
 
 ```quiz
 [

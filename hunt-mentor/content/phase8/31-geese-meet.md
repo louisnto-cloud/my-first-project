@@ -228,7 +228,7 @@ brant | Brant: small dark sea goose, white necklace.
 - [BC Hunter Sample Survey Estimates 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/8425b848-517e-4a20-b26c-6121720382af), province, region and WMU CSVs downloaded 2026-10-11, species code GOOS (99% as published).
 - Vancouver Sun, 10 November 2017, snow goose count, via PressReader search preview (70%).
 - Rules: [Rule Book: migratory birds](#/s/rb-migratory-birds) and [Region 2](#/s/rb-region-2), checked 2026-10-04 (99%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

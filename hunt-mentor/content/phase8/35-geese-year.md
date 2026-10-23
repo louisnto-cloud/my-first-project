@@ -169,7 +169,7 @@ checked: 2026-10-11
 - [Regional District of Okanagan Similkameen](https://rdos.bc.ca/utilities/pest-control-webpages-and-links/goose-management-program), read directly 2026-10-11 (85%).
 - Snow goose calendar: the app's [How animals move](#/s/migration) lesson (80%).
 - Rules: [Rule Book: migratory birds](#/s/rb-migratory-birds), [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2), checked 2026-10-04 (99%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

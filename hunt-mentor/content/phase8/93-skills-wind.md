@@ -223,7 +223,7 @@ hf-wind-thread | Thread on the sling: always on.
 - National Deer Association on colour and scent, via [Stay unseen](#/s/stay-unseen) (75%)
 - Hunt Map wind tools: app text, read 2026-10-11 (99%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 12 item 51, via the Rule Book (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

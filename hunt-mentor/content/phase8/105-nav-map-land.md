@@ -196,7 +196,7 @@ mc-nav-shadow-3 | First mark west, second east.
 - Hunt Map compass mode and Slope direction: app code, read 2026-10-11 (99%).
 - Contour shapes: USGS map symbols guide, via [Topo maps deep dive](#/s/topo-deep-dive) (85 to 95%).
 - Terrain association, thumbing and the map bending warning: land navigation and orienteering habits (Tip).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

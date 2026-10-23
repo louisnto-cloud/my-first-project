@@ -266,7 +266,7 @@ yt-age-tracks | Sharp edges mean fresh. Rounded and filled means old.
   - [Crow's Path, gaits](https://crowspath.org/natural-history/wildlife/gaits/) and [Nature Mentor, deer tracks](https://nature-mentor.com/deer-tracks/) (search preview): walk, trot and gallop patterns.
   - [Nature Mentor, how to tell if tracks are fresh](https://nature-mentor.com/how-to-tell-if-animal-tracks-are-fresh/) and [Alaska Department of Fish and Game, winter tracking](https://www.adfg.alaska.gov/index.cfm?adfg=wildlifenews.view_article&articles_id=636) (search preview): aging tracks.
 - BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01 (85%): cougar as the top cause of mule deer death.
-- Research notes: `research/2026-10-01-deer.md` (stot spacing, track overlap, cougar).
+- Stot spacing and track overlap (60%): [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 - Hunter and tracker lore lines are labelled Tip or given 60%.
 
 ```quiz

@@ -178,7 +178,7 @@ checked: 2026-10-11
 - [Wildfowl journal, Canada goose vigilance](https://wildfowl.wwt.org.uk/index.php/wildfowl/article/download/833/833), search preview 2026-10-11 (75%).
 - [Ducks Unlimited goose hunting guide](https://www.ducks.org/hunting/goose-hunting-tips-tactics/the-ultimate-guide-to-hunting-canada-geese), read directly 2026-10-11 (65%).
 - [Grand View Outdoors, 12 tips for goose hunters](https://www.grandviewoutdoors.com/bird-hunting/waterfowl/12-tips-for-goose-hunters), search preview 2026-10-11 (60%).
-- Full log: `research/2026-10-11-masterclass-geese.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

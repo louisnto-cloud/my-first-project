@@ -159,7 +159,7 @@ hab-douglas-fir-stand | Thick Douglas fir: cooler, shadier faces.
 - Mule deer: spring feeding "on moderate to steep, south and west facing slopes"; winter in Douglas fir "with south facing, warm aspect slopes where the snowpack is lower"; north aspects used "during severe weather conditions" because their thick timber catches snow (85%, BC wildlife habitat rating account, mule deer, 2004).
 - Mule deer winter range definition: "10 to 45 % slope, having a south and/or west aspect, and below 1500 m" in shallow to moderate snow zones (85%, same account citing US Forest Service 1998).
 - Mule deer summer beds: in Montana and Idaho study sites, deer chose cooler northeast and east aspects with overhead cover (60%, thesis via search preview).
-- White tails: winter on "low, south facing warm slopes or floodplains" (80%, BC account, as logged in research/2026-10-03).
+- White tails: winter on south to southwest slopes, fans and terraces, and in aspen, cottonwood and willow groves along rivers in early winter (85% as read, mostly Kootenay data, so 70% for the Thompson; BC Ministry of Environment, [White tailed Deer in BC](https://www.env.gov.bc.ca/wld/documents/whttail.pdf), Blood 2000, checked 2026-10-03).
 - Bighorn sheep: winter ranges "tend to be steep, south to southwest facing" bunchgrass (85%, Bighorn Sheep in BC, 2000).
 - Mountain goat: "warm aspect" is a main factor in winter range choice (85%, BC Mountain Goat Management Plan, 2010).
 - Chukar: may move onto south facing slopes in heavy snow (75%, USDA Fire Effects Information System).
@@ -281,4 +281,4 @@ Compare grass and timber on the two sides of one valley
 - Luloff, Diefenbach, Stedman and others, Pennsylvania hunter movement report, August 2004, [PDF](https://ecosystems.psu.edu/research/pacfwru/reports/hunting-seasons/@@download/file/Final-huntmvmt-082004.pdf), read directly, checked 2026-10-11 (85% for that forest).
 - Sun height and slope maths: standard astronomy and trigonometry, worked out 2026-10-11 (95%).
 - Hunt Mentor app code (Slope steepness, Slope direction, Sun and shade, 20 m contours), read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

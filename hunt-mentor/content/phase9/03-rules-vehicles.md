@@ -283,7 +283,7 @@ checked: 2026-10-11
 - CJDC, "Man in Fort St. John gets $5K fine, 1 year hunting ban after shooting elk too close to public road", March 2026, [cjdctv.com](https://www.cjdctv.com/news/article/man-in-fort-st-john-gets-5k-fine-1-year-hunting-ban-after-shooting-elk-too-close-to-public-road), read directly 2026-10-11 (70%).
 - Revelstoke Review, [conservation officers give out multiple tickets](https://www.revelstokereview.com/news/conservation-officers-give-out-multiple-tickets-for-violations-in-revelstoke-area/) (60%, search preview).
 - CTV News, [firearm, deer carcasses seized near Williams Lake](https://vancouverisland.ctvnews.ca/vancouver/article/firearm-deer-carcasses-seized-in-suspected-case-of-illegal-hunting-near-williams-lake) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

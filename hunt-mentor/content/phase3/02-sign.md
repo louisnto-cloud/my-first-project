@@ -343,7 +343,7 @@ yt-bear-sign | Bear sign: scat, torn logs, tracks, rubbed trees.
   - [Grand View Outdoors, fences](https://www.grandviewoutdoors.com/big-game-hunting/whitetail-deer/creating-deer-funnels-by-altering-fences) and [Deer Hunter Forum, fences](https://deerhunterforum.com/threads/rutting-bucks-cattle-fences.5748/): hair on fences (hunter lore).
   - [Elk Hunting Tips, elk sign](https://www.elk-hunting-tips.net/elk-sign.html) and [North American Deer Hunter, deer tracks](https://nadeerhunter.com/deer-tracks/): bed sizes.
   - [Counter Assault, tracking black bear](https://counterassault.com/blogs/articles/tracking-black-bear): bear scat aging.
-- Research notes: `research/2026-10-01-deer.md` (pellets, browse, rubs, scrapes, cougar).
+- Pellets, browse, rubs, scrapes: [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

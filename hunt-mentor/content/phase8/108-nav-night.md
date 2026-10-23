@@ -239,7 +239,7 @@ Satellite SOS or messenger
 - Kamloops climate normals, via [Cold injuries](#/s/cold-injuries) (75%).
 - Shelter guides via [Shelter](#/s/shelter-night-out) (60 to 65%).
 - Night plan timing, wood piles and pockets: field habits (Tip).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

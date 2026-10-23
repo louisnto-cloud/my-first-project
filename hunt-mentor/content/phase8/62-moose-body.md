@@ -235,7 +235,7 @@ hab-moose-willows | Winter browse: a tick hit moose eats less.
 - Renecker and Hudson (1986, 1989) and McCann and others (2013), moose heat and activity, cited via [Alces journal](https://alcesjournal.org/) and search results, checked 2026-10-11 (70%)
 - *Alces* journal, [moose digestive system](https://alcesjournal.org/index.php/alces/article/view/1785), abstract via search, checked 2026-10-11 (70%)
 - Hunt Mentor sessions: [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [field dressing](#/s/field-dressing) (70 to 85% as marked there)
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

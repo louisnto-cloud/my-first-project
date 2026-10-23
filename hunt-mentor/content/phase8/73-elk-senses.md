@@ -181,7 +181,7 @@ yt-glassing-spotting-scope | Find elk at a distance so they never sense you.
 - US National Park Service, [Yellowstone elk](https://www.nps.gov/yell/learn/nature/elk.htm), checked 2026-10-11 (80%)
 - Elk calling articles (RMEF, Corey Jacobsen) and elk sound guides (search preview), checked 2026-10-11 (65%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 11, via [unlawful acts](#/s/rb-unlawful-acts) (99%)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

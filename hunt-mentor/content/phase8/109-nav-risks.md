@@ -229,7 +229,7 @@ yt-fence-crossing | Unload, pass it under, cross away from the muzzle.
 - [BC Search and Rescue Association 2022 Year in Review](https://bcsara.com/wp-content/uploads/2023/09/BCSARA_2022_Year_In_Review_Report.pdf), read directly (95%).
 - Hunt Map slope classes and terrain spacing: app code, read 2026-10-11 (99%). Avalanche angles: Avalanche Canada via [Hunt Map like a pro](#/s/hunt-map-pro) (95%).
 - Legal light times: my calculation, BC time (85%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

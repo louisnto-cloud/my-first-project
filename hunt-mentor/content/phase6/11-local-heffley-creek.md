@@ -316,7 +316,7 @@ Trip plan left, RAPP number saved
 - BC Assembly of First Nations profiles: [Tk'emlúps te Secwépemc](https://www.bcafn.ca/first-nations-bc/thompson-okanagan/tkemlups-te-secwepemc), [Simpcw](https://www.bcafn.ca/first-nations-bc/thompson-okanagan/simpcw-first-nation-0), [Whispering Pines/Clinton](https://www.bcafn.ca/first-nations-bc/thompson-okanagan/whispering-pinesclinton), [Adams Lake](https://www.bcafn.ca/first-nations-bc/thompson-okanagan/adams-lake-indian-band), read 2026-10-02 (99%).
 - [BC Wildlife Federation club list](https://bcwf.bc.ca/our-clubs/), [Kamloops Target Sports Association](https://ktsa.ca/range-info/), [Rainer Custom Cutting price list](https://rainercustomcutting.com/products/processing-price-list/), read 2026-10-02 (95%).
 - The Horse Barn and the Whispering Pines reserve location: not confirmed on 2026-10-02 (70%, To confirm).
-- Deer movement and winter range: `research/2026-10-01-deer.md` (BC Wildlife Federation mule deer project, Willms 1976, Armleder 1994), 75 to 85%.
+- Deer movement and winter range: BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), [Willms 1976](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), Armleder 1994; search previews, checked 2026-10-01 (75 to 85%).
 
 ```quiz
 [

@@ -147,7 +147,7 @@ hab-snowberry | Snowberry: a fall and winter food.
 - [Project Upland, Hunting ruffed grouse in the rain](https://projectupland.com/grouse-species/ruffed-grouse/hunting-ruffed-grouse-in-the-rain/), search preview (60%).
 - Weather and upland hunting blogs and Ruffed Grouse Society winter strategies, search preview (50 to 55%, Tip only).
 - Washington Department of Fish and Wildlife, spruce grouse, read 2026-10-01 (80%).
-- All checked 2026-10-11 unless noted. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11 unless noted. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

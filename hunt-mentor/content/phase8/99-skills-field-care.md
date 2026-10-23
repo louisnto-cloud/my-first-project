@@ -246,7 +246,7 @@ mc-skills-warm-5 | Cooler or cold room the same day.
 - [Canadian Food Inspection Agency, Trichinellosis fact sheet](https://inspection.canada.ca/en/animal-health/terrestrial-animals/diseases/reportable/trichinellosis/fact-sheet) (95%)
 - [Ohio DNR (Department of Natural Resources), venison meat yield](https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/wild-ohio-harvest-community/Venison%20Yield.pdf) (80%); [BC Outdoors Magazine, after the shot](https://www.bcoutdoorsmagazine.com/after-the-shot/) (70%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (pages 3, 9, 11, 12, 15, 18), via the Rule Book (95 to 99%)
-- All via the foundation lessons, checked 2026-10-11. Research notes: `research/2026-10-11-masterclass-skills.md`.
+- All via the foundation lessons, checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

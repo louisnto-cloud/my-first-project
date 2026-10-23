@@ -132,7 +132,7 @@ checked: 2026-10-11
 - [Outdoor Life, Hit or miss grouse](https://www.outdoorlife.com/articles/hunting/2007/09/hit-or-miss-grouse), search preview (60%).
 - [Outdoor Canada, Ruffed grouse tips](https://www.outdoorcanada.ca/?p=68), search preview (60%).
 - [Idaho Fish and Game, Field and forest grouse](https://idfg.idaho.gov/press/field-forest-grouse), read directly (75%).
-- All checked 2026-10-11. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

@@ -264,8 +264,8 @@ checked: 2026-10-11
 - Outdoor Life, [Creep and peek hunting](https://outdoorlife.com/blogs/game-changers/creep-and-peek-hunting-how-avoid-being-spotted-wary-mountain-game), and MeatEater, [Still hunting techniques](https://www.themeateater.com/hunt/big-game/still-hunting-techniques), search preview (70%)
 - Outdoor Life, [One sit in the deer woods equals three days of pressure](https://outdoorlife.com/blogs/big-buck-zone/2014/07/study-one-sit-deer-woods-equals-three-days-pressure-mature-bucks), search preview (60%)
 - Mule Deer Foundation, [Glassing techniques for western mule deer](https://muledeer.org/glassing-techniques-for-western-mule-deer/), search preview (80%)
-- Penn State final report 2004 (hunters stationary in the morning), via `research/2026-10-11-rq.md` (85%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- Luloff, Finley, Diefenbach and others, Penn State [final report, August 2004](https://ecosystems.psu.edu/research/pacfwru/reports/deer-movement/@@download/file/FinalReportNFWF.pdf) (hunters stationary in the morning), read directly 2026-10-11 (85%)
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

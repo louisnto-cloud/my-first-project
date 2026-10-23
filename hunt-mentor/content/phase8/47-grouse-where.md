@@ -236,7 +236,7 @@ mgr-map-4 | Check the Elevation profile for the right band.
 - Audubon, dusky grouse; Colorado Parks and Wildlife; Birdweb sooty grouse; Herzog and Keppie 1980, read 2026-10-03 (65 to 70%).
 - [Alaska Department of Fish and Game, grouse notebook](https://www.adfg.alaska.gov/static/education/wns/grouse.pdf), search preview (75%).
 - Hunt Map layers: app layer manifest, data dates in the map (95%).
-- All checked 2026-10-11 unless noted. Full log: `research/2026-10-11-masterclass-grouse.md`.
+- All checked 2026-10-11 unless noted. [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

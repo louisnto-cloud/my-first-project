@@ -198,7 +198,7 @@ sk-aim-3 | Stop one third up the chest.
 - [American Hunter, brush busting bullets: myth or reality](https://americanhunter.org/content/brush-busting-bullets-myth-or-reality), search preview 2026-10-11 (70%)
 - Buck fever: [Bowhunting.com](https://bowhunting.com/bowhunt101/how-to-handle-buck-fever), [Deer and Deer Hunting checklist](https://www.deeranddeerhunting.com/deer-hunt/deer-hunting-tips/follow-checklist-beat-buck-fever), [Guidefitter](https://www.guidefitter.com/blog/buck-fever-how-to-beat-it), search previews 2026-10-11 (60%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, via the Rule Book (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

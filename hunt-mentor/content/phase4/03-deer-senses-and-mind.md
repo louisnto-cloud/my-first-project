@@ -252,7 +252,7 @@ Red light headlamp
 - BC Wildlife Federation, [Southern Interior Mule Deer Project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-01 (85%)
 - Lingle 2003, deer group behaviour and predators, via research notes, checked 2026-10-01 (85%)
 - BC [Hunting and Trapping Regulations Synopsis 2026 to 2028](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: page 12 item 51 (deer, elk, moose and caribou parts or derivatives from outside BC), Wildlife Health inside back cover (CWD and urine based scents), checked 2026-10-02 (99%)
-- Research notes: `research/2026-10-01-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

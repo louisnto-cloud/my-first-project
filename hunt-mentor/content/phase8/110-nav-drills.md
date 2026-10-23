@@ -291,7 +291,7 @@ Roles swapped
 - AdventureSmart STOP and signals: via [Lost](#/s/lost-survival-kit) and Global News (75%).
 - Apple satellite SOS: [Apple support 101573](https://support.apple.com/en-us/101573), via [GPS, phone and battery](#/s/gps-phone-battery) (95%).
 - NOAA declination: via [Compass mastery](#/s/compass-mastery) (95%).
-- Research notes: `research/2026-10-11-masterclass-nav.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

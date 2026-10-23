@@ -200,7 +200,7 @@ checked: 2026-10-11
 - onX and Outdoor Life elk shot placement articles (search preview), checked 2026-10-11 (65%)
 - Texas Parks and Wildlife, [hunter education: vital areas](https://tpwd.texas.gov/education/hunter-education/online-course/hunting-skills-1/vital-areas), checked 2026-10-11 (85%)
 - Hunt Mentor sessions: [shot placement](#/s/shot-placement), [blood trailing](#/s/blood-trailing), [meat care](#/s/meat-care), [after the kill](#/s/rb-after-the-kill)
-- Research notes: `research/2026-10-11-masterclass-elk.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

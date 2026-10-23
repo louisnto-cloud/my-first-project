@@ -238,7 +238,7 @@ bg-md-one-antler | One antler left: check both sides.
 - Steven Rinella, MeatEater (2018), [A guide to hunting mule deer](https://themeateater.com/hunt/big-game/a-guide-to-hunting-mule-deer), checked 2026-10-11 (65%)
 - Estrus timing: Mississippi State Deer Lab and Kentucky Fish and Wildlife (white tails), search previews, checked 2026-10-11 (60%)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, Region 3 page 34, via the [Region 3 Rule Book](#/s/rb-region-3) (99%)
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

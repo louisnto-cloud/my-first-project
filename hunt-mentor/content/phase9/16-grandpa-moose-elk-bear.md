@@ -275,7 +275,7 @@ checked: 2026-10-11
 - Boone and Crockett Club, [Field judging black bear](https://boone-crockett.org/field-judging-black-bear), and Outdoor Life, [An outfitter's guide to field judging black bears](https://www.outdoorlife.com/an-outfitters-guide-to-field-judging-black-bears/), search preview (60 to 70%)
 - US Centers for Disease Control and Prevention, [Trichinellosis associated with bear meat](https://cdc.gov/mmwr/preview/mmwrhtml/mm5327a2.htm) (2004), search preview (90%)
 - BC synopsis rule on cubs and sows, via [Rule Book: unlawful acts](#/s/rb-unlawful-acts) (99%)
-- Research notes: `research/2026-10-11-fw-grandpa.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

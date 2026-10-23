@@ -945,7 +945,7 @@ region: 6
 - This session carries printed pages 48 to 54, the Region 6 section, in the order printed (99%, contents page and page footers).
 - Page 48: contacts, changes, region map. Page 49: bag limits, access, notices. Pages 50 and 51: every season row. Pages 51 to 54: Maps F1 to F40 (99%).
 - Green print marks new information and regulation changes (99%, page 2 key). Green cells are flagged "new" here (99%).
-- [[MU]] (Management Unit) codes like 6-12 are official codes, so they keep their hyphen (99%, AUTHORING.md).
+- [[MU]] (Management Unit) codes like 6-12 are official codes, so they keep their hyphen (99%, Hunt Mentor writing rules).
 ```
 
 ```quiz

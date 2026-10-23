@@ -231,7 +231,7 @@ fn-cam-s6 | Movement: head down, move. Head up, freeze.
 - Foundation lessons and their sources: [Moving quietly](#/s/still-hunting), [Stalking footwork](#/s/stalking-footwork) (Princeton outdoor action guide and Camp Kawartha, 65%), [Stay unseen](#/s/stay-unseen) (National Deer Association and the University of Georgia colour vision work, 75%; Australian Army concealment, 70%), checked 2026-10-11
 - Deer hearing: D'Angelo and others 2007, via [Moving quietly](#/s/still-hunting) (75%)
 - Hunt Map What can I see tool: app, read 2026-10-11 (99%)
-- Research notes: `research/2026-10-11-masterclass-skills.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

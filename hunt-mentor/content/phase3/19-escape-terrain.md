@@ -258,4 +258,4 @@ Agree zones of fire before watching an exit with your brother
 - Elk security areas (Hillis 1991) and the debate: search preview, checked 2026-10-11 (60%).
 - California quail cover distance: California Department of Fish and Wildlife, as logged 2026-10-03 (75%).
 - Hunt Mentor app tools and Insights, read 2026-10-11 (99%).
-- Research log: `research/2026-10-11-rl.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).

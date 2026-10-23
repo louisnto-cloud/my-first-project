@@ -199,7 +199,7 @@ fs-bc-kill-1 | Talk, keep spray and rifle in reach.
 - BC Ministry of Environment, Lands and Parks (2001), ["Black Bears in British Columbia"](https://www.env.gov.bc.ca/wld/documents/blackbear.pdf), read directly, checked 2026-10-11 (90%)
 - Boone and Crockett Club, [Field judging black bear](https://boone-crockett.org/node/621), checked 2026-10-11 (65%)
 - Hunt Mentor lessons with their own sources: [predator sign](#/s/rs-predator-sign) (Alberta Be BearSmart, Washington Department of Fish and Wildlife), [track measuring](#/s/rs-track-measuring), [track aging](#/s/rs-track-aging), [track following](#/s/rs-track-following), [Black bear](#/s/black-bear)
-- Research notes: `research/2026-10-11-masterclass-black-bear.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

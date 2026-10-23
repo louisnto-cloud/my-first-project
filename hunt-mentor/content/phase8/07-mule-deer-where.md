@@ -253,14 +253,14 @@ mmd-map-6 | Wind and scent cone: plan the approach.
 - BC Ministry (2003), [mule deer habitat model, Central Okanagan](https://a100.gov.bc.ca/pub/acat/documents/r1757/whr_4002_modhe_1224094596301_8e248a8d30d8a9320898638a4b82840986e6405f8898.pdf), read directly, checked 2026-10-11 (85%)
 - WAFWA (2020), ["Range-wide Status of Black-tailed and Mule Deer"](https://wafwa.org/wp-content/uploads/2020/08/2020_MuleDeer-and-BTD_Status-Update.pdf), read directly, checked 2026-10-11 (85%)
 - Willms 1976, [deer diet near Kamloops](https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065), via research notes (85%)
-- BC Parks pages and BC ungulate winter range data, via `research/2026-10-03-migration-and-areas.md` (90 to 95%)
+- BC Parks park pages and the BC [Ungulate Winter Range, Approved](https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved) data layer, checked 2026-10-03 (90 to 95%)
 - Tranquille ecological reserve description, [PDF](https://nrs.objectstore.gov.bc.ca/kuwyyf/tranquille_detailed_description_15c1b9befc.pdf), search preview, checked 2026-10-11 (70%)
 - BC Wildlife Federation, [SIMDeer project](https://bcwf.bc.ca/initiatives/mule-deer-project/), checked 2026-10-11 (85%)
 - BC [Big Game Harvest Statistics 1976 to 2024](https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024) (90%)
 - Mule Deer Working Group fact sheet [17](https://wildlife.utah.gov/pdf/deer/mdwg-17_winter_range_disturbance.pdf) (85%)
 - Hunt Map layer and tool names: the app's map layer guide (checked 2026-10-11).
 - Hunt Mentor sessions: [Heffley Creek](#/s/local-heffley), [Mission](#/s/local-mission), [South Okanagan](#/s/local-okanagan), Rule Book [Region 3](#/s/rb-region-3), [Region 2](#/s/rb-region-2), [Region 8](#/s/rb-region-8).
-- Research notes: `research/2026-10-11-masterclass-mule-deer.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

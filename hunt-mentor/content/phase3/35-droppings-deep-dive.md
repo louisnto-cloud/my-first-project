@@ -314,8 +314,8 @@ Hands washed with soap before lunch
 - Alberta Health, [Echinococcus tapeworm](https://ppe.myhealth.alberta.ca/alberta/Pages/echinococcus-tapeworm.aspx), read directly, checked 2026-10-11 (85%).
 - Alberta Environment, [Be BearSmart: hunting in bear country](https://open.alberta.ca/dataset/76c8f428-30ac-4f0b-b4cd-184e1a6a13e3/resource/2f51f8f2-4386-4e9a-8db2-7a660df33a83/download/2013-bebearsmart-huntingbearsafety-mar2013a.pdf), read directly, checked 2026-10-11 (85%).
 - Search previews, checked 2026-10-11, capped at 60% to 65%: [Huntwise, elk scat](https://huntwise.com/field-guide/big-game/what-does-elk-scat-look-like); [Northern Woodlands, tracking ruffed grouse](https://northernwoodlands.org/articles/article/tracking-tips-ruffed-grouse); [Wonder My Way, sworn to secrecy (cecal droppings)](https://wondermyway.com/2023/01/03/sworn-to-secrecy/); [Royal Society for the Protection of Birds, Loch of Strathbeg blog (goose droppings)](https://community.rspb.org.uk/placestovisit/lochofstrathbeg/b/lochofstrathbeg-blog/posts/white-out).
-- Earlier tables from [Reading sign](#/s/sign/0) and `research/2026-10-01-deer.md`.
-- Research log: `research/2026-10-11-rs.md`.
+- Earlier tables from [Reading sign](#/s/sign/0) and [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [

@@ -283,7 +283,7 @@ checked: 2026-10-11
 - CBC News, [illegal hunting starting early this season](https://amp.cbc.ca/news/canada/british-columbia/illegal-hunting-starting-early-this-season-1.3224570) (60%, search preview).
 - CTV News, [firearm, deer carcasses seized near Williams Lake](https://vancouverisland.ctvnews.ca/vancouver/article/firearm-deer-carcasses-seized-in-suspected-case-of-illegal-hunting-near-williams-lake) (60%, search preview).
 - Times Colonist, [hunters using drones risk stiff fines](https://www.timescolonist.com/bc-news/hunters-using-drones-risk-stiff-fines-4622616) (60%, search preview).
-- Research log: `research/2026-10-11-fw-rules.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 ```
 
 ```quiz

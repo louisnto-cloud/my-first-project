@@ -300,7 +300,7 @@ checked: 2026-10-11
 
 - [The BC hunter's year](#/s/bc-calendar/0) and the Region Rule Books in this app, from the BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition, and the 2026 to 2028 LEH synopsis (99%).
 - Synopsis page 8 fee table; page 11 item 30 (wireless cameras); page 7 in season changes (99%). See [Rule Book: licences, FWID and fees](#/s/rb-licences-fees/0).
-- App planner: app/plan.js design notes (95%).
+- App planner: the Hunt Mentor Plan a hunt screen (95%).
 - Calendar tasks, budget buckets, fuel method, weekly rhythm, gear timing: Hunt Mentor opinion (Tip).
 
 ```quiz

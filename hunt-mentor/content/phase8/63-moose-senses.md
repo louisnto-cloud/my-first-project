@@ -168,7 +168,7 @@ checked: 2026-10-11
 - Moose calling threads and guide articles found by search (Outdoor Life, Guidefitter, Rokslide), checked 2026-10-11 (60%, opinion)
 - Hunt Mentor sessions: [thermals](#/s/wind-thermals), [Moose](#/s/moose), [Mule deer Masterclass 3](#/s/mc-mule-deer-03) (75 to 85% as marked there)
 - BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 12, via [unlawful acts](#/s/rb-unlawful-acts) (99%)
-- Research notes: `research/2026-10-11-masterclass-moose.md`.
+- [Hunt Mentor research notes (summary of the sources listed in Sources)](#/sources).
 
 ```quiz
 [
