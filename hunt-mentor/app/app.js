@@ -1013,7 +1013,7 @@
         <a class="item" href="#/install"><span class="grow">Install on iPhone or Android</span></a>
       </div>
       <div class="card"><h2>Backup</h2><p class="muted">Your progress lives on this phone only. iPhone can clear it if the app goes unused for weeks. Export a backup now and then.</p>
-        <div class="btn-row"><button class="btn" id="exp">Export backup</button><label class="btn">Import<input type="file" id="imp" accept=".json" hidden></label></div></div>`;
+        <div class="btn-row"><button class="btn" id="exp">Export backup</button><label class="btn">Import<input type="file" id="imp" accept=".json,application/json" hidden></label></div></div>`;
     view.querySelectorAll('#theme button').forEach((b) => b.onclick = () => { S.settings.theme = b.dataset.v; save(); applyTheme(); more(); });
     $('#fh').onchange = (e) => { S.settings.firstHunt = e.target.value; save(); };
     // Hunt Map user data (waypoints, lines, areas, tracks, photos) lives in IndexedDB (map/store.js): added as mapData
@@ -1041,6 +1041,7 @@
     };
   }
   function download(name, text, type) {
+    if (window.HMSaveFile) { window.HMSaveFile(name, text, type); return; } // iPhone: Share sheet "Save to Files" (addons/install-ios.js)
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([text], { type }));
     a.download = name; document.body.appendChild(a); a.click(); a.remove();
@@ -1086,7 +1087,7 @@
     view.innerHTML = `<div class="card step"><h2>iPhone</h2><ol>
       <li>Open this page in <strong>Safari</strong> (not Chrome).</li><li>Tap the <strong>Share</strong> button (square with an arrow up).</li>
       <li>Scroll down. Tap <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li>
-      <li>Open it once from the home screen while you have signal. It then works offline.</li></ol></div>
+      <li>Open it once from the home screen while you have signal. It then works offline.</li></ol>${window.HMRoutes && window.HMRoutes.iphone ? '<a class="btn" href="#/iphone">iPhone guide with pictures, and how to move your progress</a>' : ''}</div>
       <div class="card step"><h2>Android</h2><ol><li>Open this page in <strong>Chrome</strong>.</li><li>Tap the three dots menu.</li>
       <li>Tap <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li><li>Open it once with signal.</li></ol></div>
       <div class="card"><h2>Test it</h2><p>Turn on airplane mode. Open the app. Sessions and Field Mode should still work.</p></div>`;

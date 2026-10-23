@@ -40,6 +40,7 @@
     return Promise.resolve(legacy());
   }
   function download(name, text, type) {
+    if (window.HMSaveFile) { window.HMSaveFile(name, text, type); return; } // iPhone: Share sheet (addons/install-ios.js)
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name;
     document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
   }
