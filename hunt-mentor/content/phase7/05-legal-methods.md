@@ -67,12 +67,17 @@ checked: 2026-10-03
 
 ## The methods table: how to read it
 
+```diagram mk-rbl-read
+```
+
+```more the table as text
 | In the table | Means |
 |---|---|
 | Yes | Legal province wide (99%) |
 | No | Not legal (99%) |
 | Yes, small number | Read that note (99%) |
 | Bow A, C, D | Those bow classes only (99%) |
+```
 
 ```more more on reading the table
 - Page 13 is one table: Firearms (rifles split into Air, Rimfire and Centrefire, then Shotguns), then Archery, then Provincial Bag Limits (99%, page 13, 2 October 2026 edition).
@@ -87,6 +92,10 @@ checked: 2026-10-03
 
 ## Methods table: big game, bison to elk
 
+```diagram mk-rbl-big1
+```
+
+```more the table as text
 | Species | Air rifle | Rimfire | Centrefire | Shotgun | Archery |
 |---|---|---|---|---|---|
 | Bison | No | No | Yes, note 7 | No | Bow E |
@@ -96,6 +105,12 @@ checked: 2026-10-03
 | Cougar | Yes, note 8 | No | Yes | Yes, note 1 | Bow A, C, D |
 | Deer | Yes, note 8 | No | Yes | Yes, note 1 | Bow B, C, D |
 | Elk | No | No | Yes | No | Bow A, C, D |
+```
+
+## Deer: the legal methods
+
+```diagram mk-rbl-deer
+```
 
 - Deer: centrefire, air rifle .35 or larger, 20 gauge or larger with No. 1 Buck, or bow B, C, D (99%).
 
@@ -106,6 +121,10 @@ checked: 2026-10-03
 
 ## Methods table: big game, lynx to wolverine
 
+```diagram mk-rbl-big2
+```
+
+```more the table as text
 | Species | Air rifle | Rimfire | Centrefire | Shotgun | Archery |
 |---|---|---|---|---|---|
 | Lynx | Yes, note 8 | Yes | Yes | Yes, note 1 | Bow B, C, D |
@@ -114,6 +133,7 @@ checked: 2026-10-03
 | Mountain sheep | Yes, note 8 | No | Yes | No | Bow A, C, D |
 | Wolf | Yes, note 8 | No | Yes | Yes, note 1 | Bow A, C, D |
 | Wolverine | Yes, note 8 | Yes | Yes | Yes, note 1 | Bow B, C, D |
+```
 
 - Moose: centrefire rifle or bow only (99%).
 
@@ -124,11 +144,16 @@ checked: 2026-10-03
 
 ## Methods table: small game and birds
 
+```diagram mk-rbl-small
+```
+
+```more the table as text
 | Species | Air rifle | Rimfire | Centrefire | Shotgun | Archery |
 |---|---|---|---|---|---|
 | Upland game birds | Yes | Yes, note 2 | Yes, note 3 | Yes | Bow B, C, D |
 | Other small game (includes coyote) | Yes | Yes | Yes | Yes for coyote, note 1 | Bow B, C, D |
 | Migratory game birds | No | No | No | Yes, notes 4 and 5 | Bow D |
+```
 
 - Ducks and geese: shotgun or a class D bow only (99%).
 
@@ -141,6 +166,10 @@ checked: 2026-10-03
 
 ## The 8 notes under the table
 
+```diagram mk-rbl-notes
+```
+
+```more the table as text
 | Note | In short |
 |---|---|
 | 1 | Shotgun: 20 gauge or larger, No. 1 Buck or larger |
@@ -151,6 +180,7 @@ checked: 2026-10-03
 | 6 | Bears: no bait |
 | 7 | Bison: 175 grain or more, 2,712 joules or more at 100 m |
 | 8 | Air rifle: .35 calibre or larger |
+```
 
 - Every note: page 13 (99%).
 
@@ -182,11 +212,16 @@ checked: 2026-10-03
 
 ## Snaring hares
 
+```diagram mk-rbl-snare
+```
+
+```more the table as text
 | Snaring snowshoe hare | Rule (99%) |
 |---|---|
 | When | Open season only |
 | You need | Hunting licence and trapper education |
 | Wire | Not braided, 20 gauge or lighter |
+```
 
 ```more Official wording, synopsis page 13
 > [!law] Page 13
@@ -216,6 +251,10 @@ checked: 2026-10-03
 
 ## Bows and crossbows: in plain numbers
 
+```diagram mk-rbl-bows
+```
+
+```more the table as text
 | Class | Bow | Minimum pull | Bolt or arrow | Big game broadhead |
 |---|---|---|---|---|
 | A | Crossbow, not compound | 68 kg (150 lb) | Bolt 16.2 g (250 gr) or more | At least 2.2 cm (7/8 in) wide |
@@ -223,6 +262,7 @@ checked: 2026-10-03
 | C | Compound crossbow | 45 kg (100 lb) at peak weight | Bolt 16.2 g (250 gr) or more | At least 2.2 cm (7/8 in) wide |
 | D | Longbow, recurve, compound | 18 kg (40 lb) within your draw length | No weight set | At least 2.2 cm (7/8 in) wide |
 | E | Any bow but a compound crossbow, bison only | 22.6 kg (50 lb) within your draw length | Arrow over 26 g (400 gr) | Over 8.1 g and 2.2 cm (7/8 in) wide |
+```
 
 - Deer: class B, C or D. Elk, moose, bear: class A, C or D (99%).
 
@@ -274,10 +314,15 @@ checked: 2026-10-03
 
 ## Lights and infrared optics
 
+```diagram mk-rbl-lights
+```
+
+```more the table as text
 | Item | Banned |
 |---|---|
 | 38 | Any light or illuminating device to hunt by (99%) |
 | 39 | Infrared optics, like thermal scopes, on the trip, even unused (99%) |
+```
 
 ```more items 38 and 39, page 11
 > [!law] Item 38 (second) and item 39, page 11
@@ -313,12 +358,17 @@ checked: 2026-10-03
 
 ## Calls and decoys
 
+```diagram mk-rbl-calls
+```
+
+```more the table as text
 | Call or decoy | Deer, ducks, grouse |
 |---|---|
 | Electronic or recorded call | No (99%) |
 | Mouth, grunt, rattle, hand call | Yes (95%, my reading) |
 | Live bird decoy | No (99%) |
 | Fake decoy | Yes (99%) |
+```
 
 ```more items 41 and 42, page 12
 > [!law] Items 41 and 42, page 12
@@ -334,11 +384,16 @@ checked: 2026-10-03
 
 ## Bait
 
+```diagram mk-rbl-bait
+```
+
+```more the table as text
 | Animal | Bait rule |
 |---|---|
 | Bears | Never over bait or a carcass (99%) |
 | Ducks and geese | Not within 400 m of bait until 7 days bait free (99%) |
 | Deer, grouse | No province wide ban on pages 11 to 13 (99%) |
+```
 
 - Tip: read your region's pages first.
 
@@ -362,10 +417,16 @@ checked: 2026-10-03
 > [!rule]
 > Match the load to the animal before you leave the house. The shell in your pocket is the one you will shoot.
 
+```diagram mk-rbl-mistakes
+```
+
+```more 3 common mistakes as text
 > [!mistake]
 > - Taking bird shot or a .22 for deer. Deer need a centrefire, a .35 calibre or larger air rifle, a 20 gauge or larger with No. 1 Buck or bigger, or a legal bow.
 > - A lead grouse load in the vest on a duck hunt. Possessing it is the offence.
 > - Pulling the plug for ducks because the season is busy. Three shells, total.
+
+```
 
 > [!field]
 > Night before: plug in, steel shells only in the duck bag, deer ammo in the deer bag, sunrise time written on your hand.
@@ -373,6 +434,9 @@ checked: 2026-10-03
 ## Sources
 
 - Every source, page and date checked: tap below.
+
+```diagram mk-rbl-sources
+```
 
 ```more every source, page and date checked
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, 2 October 2026 edition (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly from the PDF text and checked against rendered page images: page 3 (bait, crossbow and infrared definitions), page 11 (items 20, 21, 27, 37, both items 38, 39), page 12 (firearm rules, items 41 to 43, dogs, falconry), page 13 (the full methods table checked cell by cell on a 200 dpi image, notes 1 to 8, the snare line, bow classes A to E, the shot ban notice), page 20 (Region 1 baiting line). Checked 2026-10-03 (99%).

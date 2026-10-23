@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 249" font-family="sans-serif" role="img" aria-label="Snaring snowshoe hare. When: Open season only. You need: Hunting licence and trapper education. Wire: Not braided, 20 gauge or lighter.">
+<rect width="400" height="249" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Snaring snowshoe hare</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Rule (99%), page 13</text>
+<g><rect x="12" y="68" width="376" height="37" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="128" height="37" rx="8" fill="#1F3D2B"/><rect x="132" y="68" width="8" height="37" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">When</text><text x="150" y="90" font-size="15" fill="#17201A">Open season only</text></g>
+<g><rect x="12" y="113" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="113" width="128" height="56" rx="8" fill="#FF6A13"/><rect x="132" y="113" width="8" height="56" fill="#FF6A13"/><text x="22" y="135" font-size="15" font-weight="bold" fill="#17201A">You need</text><text x="150" y="135" font-size="15" fill="#17201A">Hunting licence and trapper</text>
+<text x="150" y="154" font-size="15" fill="#17201A">education</text></g>
+<g><rect x="12" y="177" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="177" width="128" height="56" rx="8" fill="#1F3D2B"/><rect x="132" y="177" width="8" height="56" fill="#1F3D2B"/><text x="22" y="199" font-size="15" font-weight="bold" fill="#FFFFFF">Wire</text><text x="150" y="199" font-size="15" fill="#17201A">Not braided, 20 gauge or</text>
+<text x="150" y="218" font-size="15" fill="#17201A">lighter</text></g>
+
+</svg>
