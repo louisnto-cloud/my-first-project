@@ -1333,7 +1333,8 @@
       for (let k = 0; out.length < max && decks.some((d) => byDeck[d].length); k++) { const d = decks[k % decks.length]; if (byDeck[d].length) out.push(byDeck[d].shift()); }
       return out;
     };
-    const rest = fresh.filter((c) => !readQuiz.includes(c)), first = pathIds.size ? mix(rest.filter(onPath), DAY_CARDS * 2) : [];
+    const rest = fresh.filter((c) => !readQuiz.includes(c)), local = (c) => (/black tailed|harrison/i.test(c.deck) ? 0 : 1); // local decks lead the turn order (a Harrison plan starts with black tailed deer, not the Interior mule deer deck)
+    const first = pathIds.size ? mix(rest.filter(onPath).sort((a, b) => local(a) - local(b)), DAY_CARDS * 2) : [];
     const mixed = first.concat(mix(rest.filter((c) => !first.includes(c) && !(pathIds.size && onPath(c))), Math.max(0, DAY_CARDS * 2 - first.length)));
     const newIds = readQuiz.concat(mixed).map((c) => c.id);
     day.q = due.concat(newIds).slice(0, more ? DAY_CARDS : Math.max(DAY_CARDS, Math.min(due.length, 50)));
