@@ -31,14 +31,15 @@ checked: 2026-10-01
 ```
 
 - Outside city limits in 2-8: normal licences (95%).
-- Insurance wording: VERIFY.
+- Insurance: $1,000,000 liability that covers you while hunting (99%).
 
 ```more the Map B10 words, cost and where to buy
 - Map B10, page 29: "All persons hunting within MU 2-4 and those portions of MU 2-8 within the corporate limits of the corporation of the district of Maple Ridge, the corporation of the district of Pitt Meadows, the district of Mission, the corporation of the district of Coquitlam are required to purchase a Fraser Valley Special Area Hunting Licence in addition to other Provincial licences and for hunting migratory game birds, the Migratory Bird Licence. $1,000,000.00 Public Liability and Property Damage insurance is required." (99%)
 - Plain English: any hunt inside Mission city limits, or anywhere in Abbotsford, Langley, Surrey and Delta (MU 2-4), needs this licence plus a million dollar liability policy (95%).
-- Cost: Fraser Valley special hunting area licence $8 plus $2 surcharge, GST (Goods and Services Tax) extra (99%, BC hunting licences page).
+- Cost: Fraser Valley special hunting area licence $8 plus $2 surcharge, GST (Goods and Services Tax) extra (99%, BC hunting licences page; Hunting Licensing Regulation, Schedule item 2.3).
 - Page 27: "These special licences are available through Service BC, FrontCounter BC, participating vendors and online at www.gov.bc.ca/hunting." (99%)
-- A BC Wildlife Federation membership is one common way hunters carry liability insurance. Confirm the policy wording covers hunting: VERIFY.
+- Hunting Licensing Regulation, section 27: you must hold "public liability and property damage insurance in the amount of $1 000 000 or more, sold by a licensed insurer in the Province, that covers the hunter while hunting in the Province." You declare it when you buy the licence (section 28). Hunters under 18 are exempt (section 26) (99%).
+- BC Wildlife Federation (BCWF) membership includes up to $5,000,000 of Excess Third Party Liability that names hunting (75%, BCWF insurance page). It is an excess policy, so whether it alone meets section 27 is not stated: VERIFY with BCWF in writing.
 - Outside the city limits in 2-8 (Stave Lake hills, Sylvester Road country, Chehalis) the normal licences are enough (95%).
 ```
 
@@ -57,10 +58,10 @@ checked: 2026-10-01
 - Season, page 28: "DUCKS 2-2 to 2-19 Oct 10, 2026 - Jan 24, 2027" with bag "8 (24)" (99%). Coots and snipe the same dates, 10 (30) (99%).
 - Canada and cackling geese, page 28: "Oct 10, 2026 - Nov 22, 2026" and "Dec 19, 2026 - Jan 10, 2027", 10 (30) (99%).
 - Pitt Addington Marsh WMA (Wildlife Management Area), MU 2-8, south end of Pitt Lake: a BC management plan says waterfowl hunting is permitted in some areas on certain days, with details posted on site (80%, search preview of the official plan). Motor vehicles closed "effective year round", page 27 (99%). Its south end sits in Pitt Meadows and Maple Ridge, so the special licence applies there (85%).
-- Fraser River at Mission, bylaw Area B: a shotgun with shot only while hunting, between the CPR (Canadian Pacific Railway) tracks and the river west of Nelson Street, plus Matsqui Island (99%, bylaw and map). Matsqui Island is I.R. 3 (Indian Reserve 3), reserve land. Permission from the band first (95%).
+- Fraser River at Mission, bylaw Area B: a shotgun with shot only while hunting, between the CPR (Canadian Pacific Railway) tracks and the river west of Nelson Street, at least 150 m from buildings and highways, plus Matsqui Island (99%, bylaw and map key). Matsqui Island is I.R. 3 (Indian Reserve 3), reserve land. Permission from the band first (95%).
 - Hatzic Lake and Harrison Bay are Firearms Using Shot Only areas, Closed Areas Regulation Schedule 9 item 9 (98%). Parts of Hatzic Slough, Hatzic Prairie and Deroche are No Shooting areas, Schedule 5 item 63 (98%). Read the legal text before you set up there.
-- Lhá:lt Harrison Chehalis WMA near Harrison Mills, 1,033 ha of river delta: hunting status not stated on the BC page. VERIFY with conservationlands@gov.bc.ca (99% for the contact).
-- Bert Brink WMA, MU 2-4 at the Fraser and Vedder Canal: motor vehicles closed year round, page 27 (99%). Hunting status: VERIFY.
+- Lhá:lt Harrison Chehalis WMA near Harrison Mills, 1,033 ha of river delta: hunting status not stated on the BC page (updated 18 August 2026). The Wildlife Act, section 4(4): "a person may not use land or resources in a wildlife management area without the written permission of the regional manager" (99%). No Closed Areas Regulation entry names it (95%). VERIFY with conservationlands@gov.bc.ca before you hunt it (99% for the contact).
+- Bert Brink WMA, MU 2-4 at the Fraser and Vedder Canal: motor vehicles closed year round, page 27 (99%). Hunting status is not on its BC page (updated 14 August 2026) or in the Closed Areas Regulation, and section 4(4) above applies: VERIFY with conservationlands@gov.bc.ca.
 - Boundary Bay WMA (MU 2-4) "is closed to snipe hunting", page 27 (99%).
 - How to find more: in iMapBC turn on parcel ownership and the WMA layer. Crown foreshore and bars below the high water mark are usually public; the dyke and the field behind it are usually not (Tip). Draw the 100 m circle around every house and barn (99% rule).
 ```
@@ -111,11 +112,11 @@ checked: 2026-10-01
 - There is no white tailed deer row for Region 2. Page 27 even warns there is "no open season for white tailed deer" at Herrling Island near Hope (99%). Do not shoot a white tail here (95%).
 - Grouse, page 28: "For Sooty/Dusky, Spruce, and Ruffed grouse, the daily aggregate bag limit is 10; the aggregate possession limit is 30." (99%)
 - Where, with legal access:
-  - Mission bylaw Area D, rifle or shotgun while hunting: west of Stave Lake between Kearsley Road and Rockwell Road, and the east side of Stave Lake north of Cannell Lake (99%, bylaw map). Area C around Hoover Lake: shotgun only, shot or slug (99%).
+  - Mission bylaw Area D, rifle or shotgun while hunting. D west: Kearsley Road on the north, Rockwell Road on the south, the city boundary on the west, and 500 m short of Florence Lake Road on the east. D east: the land east of Stave Lake, north of Cannell Lake (99%, bylaw Schedule A map and its boundary key). Area C around Hoover Lake: shotgun only, shot or slug (99%).
   - North of the Mission boundary on the Florence Lake, Lost Creek, Terepocki, Murdo and Mount Kettley FSRs (Forest Service Roads): no shooting within 400 m of the road "Unless lawfully hunting or trapping", page 27 (99%). So hunting is allowed, plinking is not (95%).
   - Chehalis, Map B33: "Chehalis Fleetwood No Shooting Area. Discharge of firearms for the purpose of hunting permitted (MU 2-19)." Along the Chehalis Fleetwood FSR, Chehalis FSR and Morris Valley Road (99%).
-  - Davis Lake Park, 19 km north of Mission on Sylvester Road: no hunting listed on the BC Parks page. Walk in only. Treat as closed (85%).
-  - Golden Ears and Rolley Lake parks: no hunting listed (85%). Treat as closed.
+  - Davis Lake Park, 19 km north of Mission on Sylvester Road: walk in only. Closed to hunting (99%, see the next line).
+  - Davis Lake, Golden Ears and Rolley Lake parks are not on Schedule B of the Park, Conservancy and Recreation Area Regulation. So no firearm or bow outside a vehicle, and no shooting, in those parks (99%, sections 28 and 29). Pinecone Burke Park is on Schedule B, but closed to hunting 16 June to 9 September (99%, Hunting Regulation section 19).
 - Black tailed bucks here are timber deer: edges of cutblocks, old roads, salal and alder. Still hunting and short shots, not long glassing (Tip).
 ```
 
@@ -143,8 +144,9 @@ checked: 2026-10-01
 - The BC 100 m and 15 m road rules still apply on top (99%).
 
 ```more every other rule, quoted
-- Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview, VERIFY the hunting wording).
-- Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98% for the wording). The wording dates from 1996; today's Area H, redrawn in 2022, is around Cultus Lake, not Sumas Mountain (95%, BC electoral area boundaries, read 2026-10-17). Which area the rule covers now: VERIFY with the regional office.
+- Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95: discharge inside the city limited to farmers protecting stock, slaughter and licensed ranges (70%, search preview). VERIFY the hunting wording: the city's bylaw site would not open from here on 2026-10-23.
+- Closed Areas Regulation Schedule 5 item 49, Huntingdon and Sumas Mountain: all of "Electoral Area H of the Fraser Valley Regional District" is a No Shooting Area (98% for the wording). The wording dates from 1996 and is unchanged in the consolidation current to 20 October 2026 (99%). Today's Area H "includes the beautiful communities of Columbia Valley, Cultus Lake, and Lindell Beach located south of Chilliwack", 121 km² (99%, FVRD Electoral Area H page, read 2026-10-23). Which outline the rule covers now, the 1996 one or today's: no official text says. VERIFY with the regional office, 604 586 4400.
+- Mount Judge Howay Park, north of Stave Lake in 2-8: a No Shooting Area, Closed Areas Regulation Schedule 5 section 115 (99%). The name is not in the BC Parks list or the BC parks map layer (checked 2026-10-23). BC Geographical Names lists it as rescinded in 2002, on the east side of Golden Ears Provincial Park, just north west of Stave Lake (99%). Either way you cannot shoot there: the regulation names it a No Shooting Area, and Golden Ears is not on Schedule B (99%). The exact boundary: VERIFY with the regional office.
 - Schedule 9 item 1: shot only within 150 m of "Highway 7 from the easterly boundary of Mission to its junction with Highway 1" and of Highway 1 east of Chilliwack (98%).
 - Schedule 11, Nicomen: rifles prohibited in the Nicomen Island lowland south of the CPR line, east to the District of Kent boundary and along the Chilliwack boundary (90%, long legal text read in part).
 - FVRD (Fraser Valley Regional District) map: "With the exception of persons engaged in lawful hunting or trapping, the discharge of firearms is prohibited within 400m of the indicated roads." (99%)
@@ -156,10 +158,10 @@ checked: 2026-10-01
 
 | Need | Place | Status |
 |---|---|---|
-| Range, Mission | Mission and District Rod and Gun Club, Dewdney Trunk Road, shown on the city bylaw map. Members and guests | 85%, city map plus search preview, VERIFY |
+| Range, Mission | Mission and District Rod and Gun Club, off Dewdney Trunk Road, on the city bylaw map | 99% for the map. Access: VERIFY, club site did not load |
 | Range, Abbotsford | Abbotsford Fish and Game Club, 4161 Lakemount Road. "a private member club with no access to the public" | 99%, club site |
-| Range, Chilliwack | Chilliwack Fish and Game Protective Association | VERIFY, site did not load |
-| Butcher | Opening Day Game Cutting, Abbotsford, and Mission Meat Shop, cut and wrap for hunters | 70%, search previews of their sites, VERIFY |
+| Range, Chilliwack | Chilliwack Fish and Game Protective Association, 48685 Chilliwack Lake Road. Membership club | 90%, club site |
+| Butcher | Opening Day Game Cutting, Abbotsford, and Mission Meat Shop, cut and wrap for hunters | 90%, their own sites |
 | Fish and Wildlife office | Unit 200, 10428 153 Street, Surrey, 604 586 4400 | 99%, page 26 |
 | Conservation Officer | Field offices in Mission, Chilliwack, Squamish, Sechelt, Powell River. By appointment via 1 877 952 7277 | 99%, page 26 |
 | RAPP (Report All Poachers and Polluters) line | 1 877 952 7277, 24 hours | 99%, page 26 |
@@ -221,7 +223,8 @@ Trip plan left, RAPP number saved
 - [Region 2 synopsis, pages 26 to 31](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-2-lower-mainland.pdf), read directly 2026-10-01, seasons, special licence, maps B10, B33, 95 to 99%.
 - [Full synopsis, pages 9 to 12](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly 2026-10-01, 99%.
 - [Closed Areas Regulation, B.C. Reg. 76/84, Schedules 5, 9 and 11](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01), read 2026-10-01, Nicomen, Hatzic, Sumas Mountain, FSR road closures, 98%.
-- [Mission Discharge of Firearms Regulation Bylaw 5433-2014](https://www.mission.ca/council-government/bylaws-policies/discharge-firearms-regulation-bylaw), read 2026-10-01 including Schedule A map, 99%.
+- [Mission Discharge of Firearms Regulation Bylaw 5433-2014](https://www.mission.ca/council-government/bylaws-policies/discharge-firearms-regulation-bylaw), PDF reread 2026-10-23 including Schedule A map and boundary key, 99%.
+- [Hunting Licensing Regulation, B.C. Reg. 8/99](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_99), sections 25 to 28, and [Park, Conservancy and Recreation Area Regulation, Schedule B](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/180_90_03), read 2026-10-23, 99%.
 - [City of Abbotsford Discharge of Firearms Regulation Bylaw No. 114-95](https://laws.abbotsford.ca/civix/document/id/coa/coabylaws/1995b114), search preview only 2026-10-01, 70%.
 - [FVRD No Shooting Areas map](https://www.fvrd.ca/assets/Government/Documents/NoShootingAreas.pdf), read 2026-10-01, April 2017 map, 99%.
 - [BC hunting licences and fees](https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/hunting-licences), read 2026-10-01, 99%.

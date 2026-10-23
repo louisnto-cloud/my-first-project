@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-23",
  "note": "Names found in the content but left out of places.json, with the reason. Not shipped in the app.",
  "names": [
   {
    "name": "Fraser Valley",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
-   "n": 181
+   "n": 183
   },
   {
    "name": "Pitt Addington Marsh",
@@ -255,6 +255,11 @@
   {
    "name": "Elephant Hills",
    "why": "not found in BC Geographical Names (may be outside BC, a road, or an unofficial name)",
+   "n": 2
+  },
+  {
+   "name": "Francis Lake",
+   "why": "ambiguous: 3 places in BC have this name",
    "n": 2
   },
   {

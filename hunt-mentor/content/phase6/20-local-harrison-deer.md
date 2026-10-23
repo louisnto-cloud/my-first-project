@@ -122,17 +122,19 @@ fl-fsr-call-4 | Anything else the sign asks.
 
 - Sts'ailes (West) [[FSR]] (Forest Service Road), locally Harrison West, is run by the Chilliwack district (95%, BC government).
 - Use the radio channel on the road entry sign. The app gives no channel numbers (95%).
-- Active hauling: no official schedule found. VERIFY at the road sign or the district office.
+- Active hauling: the district page posts no hauling schedule. VERIFY at the road sign or the district office.
 
 ```more road notices and no shooting bands
-- Chilliwack district notices, last updated 22 September 2026 (95%, BC government road safety page): Harrison East FSR, rockfall hazard "No Stopping" signs near 13 km, caution at 2, 13, 16.1 and 21.3 to 22.8 km, no access past 55 km. Francis Lake FSR narrow at about 1.3 km. Mystery 5500 FSR no access past 0 km. Read the page before you go: [Chilliwack road safety](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information).
+- Chilliwack district notices, page last updated 21 October 2026 (95%, BC government road safety page): Harrison East FSR, rockfall hazard "No Stopping" signs near 13 km, caution at 2, 13, 16.1 and 21.3 to 22.8 km, no access past 55 km through to the Kookipi FSR. Francis Lake FSR narrow at about 1.3 km (12 May 2026). Mystery 5500 FSR no access past 0 km, washout at 2.0 km. Hemlock Valley FSR no access at 0 km, four washed out culverts. Fleetwood FSR no vehicle access past 5.0 km. The district map also flags a post wildfire rockfall area on the Mystery FSR: do not stop. Read the page before you go: [Chilliwack road safety](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information).
+- Sts'ailes (West) FSR (Harrison West) and the Chehalis FSR: no notice posted on the district page or map on 23 October 2026 (95%). No notice is not a promise the road is open.
 - Unless lawfully hunting or trapping, no firearm discharge within 400 m of select FVRD (Fraser Valley Regional District) roads, the Chehalis area on Map B33, and Crown land along the Francis Lake, Weaver Lake and Sts'ailes (West) FSRs (99%, page 27; Closed Areas Regulation Schedule 5.1). Hunting is allowed; target shooting is not (90%, my reading).
 - Map B29 Elbow Lake: No Shooting Area 800 m either side of the Chehalis road for 2.4 km north of Elbow Lake (99%, page 31).
 - Map B32 Hemlock Valley: No Shooting Area 50 m, then 150 m, either side of the Hemlock Valley road (99%, page 31).
 - Harrison Mills and Nicomen lowland: no rifles, and shot only on much of it (99%, Closed Areas Regulation Schedules 9 and 11; 85% my reading of the boundary). Hunt deer up in the hills, not on the flats.
 - Highway 7 and Highway 1: shot only within 150 m (99%, Schedule 9 s. 1). Never shoot on or across a road allowance (99%, page 10).
 - No hunting or shooting within 100 m of a house, farm building, school or regional district park (99%, page 10 and 9).
-- Sasquatch and Kilby provincial parks: hunting status not checked. VERIFY on the BC Parks page; treat as closed (Tip).
+- Sasquatch and Kilby provincial parks: closed to hunting. Neither is on Schedule B of the Park, Conservancy and Recreation Area Regulation, so no firearm outside a vehicle and no shooting there (99%, sections 28 and 29).
+- Harrison Hot Springs village: no firearm discharge anywhere inside the village, and no shot that goes into, over or through it (99%, Discharge of Firearms Bylaw No. 1207, 2024, section 3). There is no hunting exception.
 - The Hunt Map: turn on No shooting / no hunting, and read "Still check yourself" in Can I hunt here now?
 ```
 
@@ -154,7 +156,8 @@ fl-fsr-call-4 | Anything else the sign asks.
 ```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (PDF)](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), edition dated 2 October 2026, read directly 2026-10-17 (99%).
 - [Closed Areas Regulation, B.C. Reg. 76/84](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01), Schedules 5.1, 9 and 11, consolidation current to 13 October 2026, read directly 2026-10-17 (99%; boundaries my reading, 85%).
-- [Chilliwack Natural Resource District road safety information](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information), last updated 22 September 2026, read directly 2026-10-17 (95%).
+- [Chilliwack Natural Resource District road safety information](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information), last updated 21 October 2026, read directly 2026-10-23, with the district's FSR safety map layer (95%).
+- [Park, Conservancy and Recreation Area Regulation, Schedule B](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/180_90_03), current to 20 October 2026, and [Harrison Hot Springs Discharge of Firearms Bylaw No. 1207](https://www.harrisonhotsprings.ca/sites/default/files/2024-06/Bylaw-1207---Discharge-of-Firearms.pdf), adopted 27 May 2024, read directly 2026-10-23 (99%).
 - [Sea to Sky district road conditions](https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/sea-to-sky-natural-resource-district-road-safety-information/road-conditions-in-sea-to-sky-district): "Sts'ailes (West) FSR (locally known as Harrison West)", managed by the Chilliwack district, read 2026-10-17 (95%).
 - App lessons used for ID, habitat and tactics: [Mule deer](#/s/mule-deer/0), [Deer gallery](#/s/gallery-deer/0), [Wet forests](#/s/wet-forest-country/0), [The rut](#/s/the-rut/0), [Hunting with a partner](#/s/hunting-partner/0), [Vehicles, Forest Service Roads and radio use](#/s/fsr-vehicles-radio/0), [Rule Book: Region 2](#/s/rb-region-2/0).
 ```
