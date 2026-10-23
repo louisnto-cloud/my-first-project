@@ -21,6 +21,8 @@
 
 Also updated: the border crisis stranded **1,300+ vehicles/vessels** at gates by 30 Jan 2026 (VietnamNet, Vietnam News, 2026 — HIGH); the brief's "700+ shipments" was not corroborated. The brief's "health category growing up to 80%" on ecommerce could not be verified in any 2025–26 source; verified figures are +46.9% (health industry, full year 2025, Metric) and a −22% USD terms fall in the supplements sub category after the counterfeit scandals (VnExpress, 2026) — both are used instead.
 
+> **FRESHNESS UPDATE — 23 October 2026.** The body of this primer is dated as of 17–18 July 2026. A targeted re-check of the one time-sensitive item on 23 Oct 2026 confirms Chapter 5's conclusion still holds, with firmer dates: the amended Law on Food Safety has **not** passed — it is before the National Assembly's 2nd Session of the 16th legislature (17 Oct–20 Nov 2026); the Standing Committee reviewed it 24 Sep 2026 (Vietnam News; VietnamNet, 2026 — HIGH). Decree 46/2026 **remains suspended**; Decree 15/2018 is still operative. The proposed effective date for the new law has firmed to **1 January 2027** per the Ministry of Health's WTO notice (USDA FAS, Aug 2026 — MEDIUM), earlier than the ~March 2027 figure below. Everything else in this document remains as of July 2026 — refresh store counts, prices, FX, and platform fees before acting on them.
+
 ---
 
 # READ THIS FIRST: THE BOTTOM LINE FOR ORGANIKA
@@ -563,7 +565,7 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 ## 5.2 Amended Law on Food Safety — status July 2026
 
 - Not passed. Four policy pillars published (state management apparatus; farm to fork chain management; preventing substance misuse; investment incentives) (vietnam.vn 2026 — HIGH).
-- Submission planned to the National Assembly October 2026 session; expected effective ~1 March 2027; direction: post market surveillance (hậu kiểm) and risk management (Tilleke & Gibbins 2026; FoodNavigator Asia Apr 2026 — HIGH on status, MEDIUM on the date).
+- Submission to the National Assembly's 2nd Session of the 16th legislature (17 Oct–20 Nov 2026); **as of 23 Oct 2026 still not passed** (Standing Committee review 24 Sep 2026); proposed effective date **1 Jan 2027** per MOH's WTO notice (earlier than the ~Mar 2027 first projected); direction: post market surveillance (hậu kiểm) and risk management (Tilleke & Gibbins 2026; USDA FAS Aug 2026; Vietnam News Oct 2026 — HIGH on status, MEDIUM on the date).
 - Planning consequence: register SKUs now under Decree 15/2018 and budget a re compliance round in 2027.
 
 ## 5.3 Registering a TPBVSK today (operative regime: Decree 15/2018)
