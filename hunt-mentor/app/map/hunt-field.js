@@ -9,7 +9,7 @@
         in My Content and in the app backup. Then a big arrow points back to it, with distance and a walk back estimate (Tip:
         4 km/h plus 1 minute per 10 m of net climb, climb from the terrain tiles via HuntMap.elevationAt).
         Arrow: phone compass (DeviceOrientation; iPhone asks on a tap) or GPS course when walking; without them it points on the map.
-   API: HuntMap.field = { markTruck(), truck(), open(section), refresh(), legalLight(lngLat, kind, now) } */
+   API: HuntMap.field = { markTruck([lng, lat] optional), truck(), open(section), refresh(), legalLight(lngLat, kind, now) } */
 import * as store from './store.js';
 import { esc, haversine, bearingTo } from './util.js';
 
@@ -109,10 +109,11 @@ function currentPosition() {
     navigator.geolocation.getCurrentPosition((p) => { onPos(p); res(pos); }, () => res(null), { enableHighAccuracy: true, maximumAge: 10000, timeout: 20000 });
   });
 }
-async function markTruck() {
+async function markTruck(at) { // at: optional [lng, lat] (the tap card's "Mark my truck here"); else GPS, then the map centre
   askCompass(); // inside the tap, for iPhone
-  H.toast('Finding where you are...', 20000);
-  let p = await currentPosition(), src = 'gps';
+  let p = null, src = 'gps';
+  if (Array.isArray(at) && isFinite(at[0]) && isFinite(at[1])) { p = { lng: +at[0], lat: +at[1], accuracy: null }; src = 'tap'; }
+  else { H.toast('Finding where you are...', 20000); p = await currentPosition(); }
   if (!p) {
     H.toast('No GPS fix.', 1500);
     if (!confirm('Your phone could not find your location. Mark the truck at the map centre (the cross) instead?')) return null;
@@ -127,7 +128,7 @@ async function markTruck() {
   truck = rec;
   if (H.tools && H.tools.refresh) await H.tools.refresh().catch(() => {});
   gps(); update();
-  H.toast(src === 'gps' ? `Truck marked${p.accuracy > 30 ? ` (GPS within about ${Math.round(p.accuracy)} m)` : ''}. The arrow points back to it.` : 'Truck marked at the map centre.', 4000);
+  H.toast(src === 'gps' ? `Truck marked${p.accuracy > 30 ? ` (GPS within about ${Math.round(p.accuracy)} m)` : ''}. The arrow points back to it.` : src === 'tap' ? 'Truck marked at the point you picked. The arrow points back to it.' : 'Truck marked at the map centre.', 4000);
   if (sheetOn) openSheet('truck');
   return rec;
 }
