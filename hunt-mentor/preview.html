@@ -678,6 +678,7 @@ body.hm-zoom-open { overflow: hidden; }
     if (near && Date.now() - s.t < WX_TTL) return { v: s.v, t: s.t, offline: false, away: 0 };
     try {
       if (navigator.onLine === false) throw new Error('offline');
+      if (location.protocol === 'file:') throw new Error('no map modules in the single file backup'); // a file:// page cannot import modules (console error)
       const W = await import('./map/tools-wind.js');
       const f = await W.forecast(lon, lat);
       return { v: f.v, t: f.t, offline: f.offline, away: (f.away || 0) / 1000 };
@@ -4636,6 +4637,19 @@ body.hm-zoom-open { overflow: hidden; }
       searchReady = true;
     }).catch((e) => { searchLoad = null; throw e; }));
   }
+  // quiz text, flashcard decks and photo credits: hashed files loaded on demand (inline in the single file backup)
+  const quizN = (s) => (s.quiz ? s.quiz.length : s.qn || 0);
+  let quizLoad = null;
+  function loadQuiz() {
+    if (sessions.every((s) => s.quiz)) return Promise.resolve();
+    return quizLoad || (quizLoad = getJSON(HM.quizFile).then((o) => { sessions.forEach((s) => { s.quiz = o[s.id] || []; }); })
+      .catch((e) => { quizLoad = null; throw e; }));
+  }
+  const deckLoads = {}, cardBody = {};
+  function loadDeck(file) {
+    return deckLoads[file] || (deckLoads[file] = getJSON(file).then((o) => { Object.assign(cardBody, o); })
+      .catch((e) => { delete deckLoads[file]; throw e; }));
+  }
   // shared with ask.js: screen html for the search index (diagrams and photos left out when loaded from the search file)
   window.HMContent = {
     loadLesson: (id) => (byId[id] ? loadLesson(byId[id]) : Promise.reject(new Error('no lesson ' + id))),
@@ -4646,7 +4660,7 @@ body.hm-zoom-open { overflow: hidden; }
   const idle = window.requestIdleCallback || ((f) => setTimeout(f, 1500));
 
   const stepCache = {};
-  const stepsOf = (s) => stepCache[s.id] || (stepCache[s.id] = s.quiz.length ? s.steps.concat([{ title: 'Quiz', quiz: true }]) : s.steps.slice());
+  const stepsOf = (s) => stepCache[s.id] || (stepCache[s.id] = quizN(s) ? s.steps.concat([{ title: 'Quiz', quiz: true }]) : s.steps.slice());
   const lessonLabel = (s) => `${s.phase}.${s.num} ${s.title}`;
   // where a lesson reopens: the last screen seen, or screen 1 when it was finished on its last screen
   function openAt(s) {
@@ -4845,10 +4859,10 @@ body.hm-zoom-open { overflow: hidden; }
     i = Math.max(0, Math.min(n - 1, i | 0));
     const prev = L.i, dir = prev < 0 ? 0 : Math.sign(i - prev);
     const st = steps[i];
-    if (!st.quiz && st.html == null) {
+    if (st.quiz ? !s.quiz : st.html == null) {
       // screens not loaded yet: show the title now, fill in when the lesson file arrives (cached offline after first load)
       L.art.innerHTML = `<h2>${esc(st.title)}<\/h2><p class="muted ls-wait">Loading...<\/p>`;
-      loadLesson(s).then(() => { if (L && L.s === s && L.i === i) { L.i = -1; showScreen(i); } }, () => {
+      (st.quiz ? loadQuiz() : loadLesson(s)).then(() => { if (L && L.s === s && L.i === i) { L.i = -1; showScreen(i); } }, () => {
         if (!(L && L.s === s && L.i === i)) return;
         L.art.innerHTML = `<h2>${esc(st.title)}<\/h2><div class="card"><p>This lesson is not saved on this phone yet. Connect to the internet once to download it.<\/p><button type="button" class="btn" id="ls-retry">Try again<\/button><\/div>`;
         $('#ls-retry', L.art).onclick = () => { L.i = -1; showScreen(i); };
@@ -4977,10 +4991,22 @@ body.hm-zoom-open { overflow: hidden; }
     });
   }
 
+  // a file that is not on the phone yet (first visit, then no signal): say so, with a retry
+  const notSaved = (what, retry) => {
+    view.innerHTML = `<div class="card"><p>${what} not saved on this phone yet. Connect to the internet once to download them.<\/p><button type="button" class="btn" id="ld-retry">Try again<\/button><\/div>`;
+    $('#ld-retry').onclick = retry;
+  };
+  // load a file, then draw the page (only if the page is still the same); no file and no signal: say so, with a retry
+  function whenLoaded(load, draw, what) {
+    const h = location.hash;
+    view.innerHTML = '<p class="muted">Loading...<\/p>';
+    load().then(() => { if (location.hash === h) draw(); }, () => { if (location.hash === h) notSaved(what, () => whenLoaded(load, draw, what)); });
+  }
   function review() {
     setTitle('Review'); tab('home');
     const missed = Object.entries(S.quiz).filter(([, v]) => !v).map(([k]) => k);
     if (!missed.length) { view.innerHTML = '<div class="card"><h2>Nothing to review<\/h2><p>Every quiz answer so far is right.<\/p><\/div>'; return; }
+    if (!sessions.every((s) => s.quiz)) { whenLoaded(loadQuiz, review, 'The quiz questions are'); return; }
     view.innerHTML = '<p class="muted">Questions you missed. Get them right to clear them.<\/p>' +
       [...new Set(missed.map((k) => k.split('#')[0]))].filter((id) => byId[id]).map((id) => `<div class="card"><h2>${esc(byId[id].title)}<\/h2>${quizHtml(byId[id], missed)}<\/div>`).join('');
     bindQuiz();
@@ -5386,10 +5412,23 @@ body.hm-zoom-open { overflow: hidden; }
     const cards = [];
     for (const [t, d] of Object.entries(HM.glossary)) cards.push({ id: 'g:' + t, deck: 'Terms', front: t, back: d });
     for (const r of HM.regs.items) if (r.value) cards.push({ id: 'r:' + r.key, deck: 'Rules', front: r.label, back: `${esc(r.value)} <span class="cert ${r.certainty >= 95 ? 'c-hi' : r.certainty >= 80 ? 'c-mid' : 'c-lo'}">${r.certainty}%<\/span>` });
-    for (const c of (HM.flashcards || [])) cards.push({ id: 'f:' + c.id, deck: c.deck, front: c.front, back: c.back, diagram: c.diagram, photo: c.photo });
-    for (const s of sessions) s.quiz.forEach((q, n) => cards.push({ id: 'q:' + s.id + '#' + n, deck: 'Quiz', front: q.q, back: `<strong>${esc(q.options[q.answer])}<\/strong><br>${esc(q.why)}` }));
+    if (HM.flashcards) for (const c of HM.flashcards) cards.push({ id: 'f:' + c.id, deck: c.deck, front: c.front, back: c.back, diagram: c.diagram, photo: c.photo });
+    else for (const [deck, file, ids] of (HM.cardDecks || [])) for (const id of ids) cards.push({ id: 'f:' + id, deck, file, key: id }); // text in the deck file
+    for (const s of sessions) for (let n = 0; n < quizN(s); n++) cards.push({ id: 'q:' + s.id + '#' + n, deck: 'Quiz', qs: s, qn: n });
     return cards;
   }
+  // a card's text: from its deck file or the quiz file once loaded (null until then)
+  function fillCard(c) {
+    if (c.front != null) return c;
+    if (c.qs) {
+      const q = c.qs.quiz && c.qs.quiz[c.qn]; if (!q) return null;
+      return Object.assign(c, { front: q.q, back: `<strong>${esc(q.options[q.answer])}<\/strong><br>${esc(q.why)}` });
+    }
+    const b = cardBody[c.key]; if (!b) return null;
+    return Object.assign(c, { front: b.front, back: b.back, diagram: b.diagram, photo: b.photo });
+  }
+  const cardLoader = (c) => () => (c.qs ? loadQuiz() : loadDeck(c.file));
+  const warmCard = (c) => { if (c && !fillCard(c)) idle(() => cardLoader(c)().catch(() => {})); };
   function cards(deckArg) {
     setTitle('Flashcards'); tab('more');
     S.cards = S.cards || {};
@@ -5410,6 +5449,7 @@ body.hm-zoom-open { overflow: hidden; }
     const due = order.filter((c) => (S.cards[c.id] || 0) < 2);
     const card = (due.length ? due : order)[0];
     if (!card) { view.innerHTML = '<div class="card"><h2>Empty deck<\/h2><\/div>'; return; }
+    if (!fillCard(card)) { whenLoaded(cardLoader(card), () => cards(deckArg), 'These cards are'); return; }
     const known = pool.filter((c) => S.cards[c.id] === 2).length;
     setTitle(deck);
     view.innerHTML = `<div class="muted">${known} of ${pool.length} known${due.length ? '' : '. All known, reviewing.'}<\/div>
@@ -5526,6 +5566,8 @@ body.hm-zoom-open { overflow: hidden; }
       return;
     }
     const card = byCard[left[0]];
+    if (!fillCard(card)) { whenLoaded(cardLoader(card), daily, 'Today\'s cards are'); return; }
+    warmCard(byCard[left[1]]);
     view.innerHTML = `<div class="muted">Card ${(day.cardsDone || 0) + 1} of ${(day.cardsDone || 0) + left.length}. Deck: ${esc(card.deck)}${S.srs && S.srs[card.id] ? '. Review' : '. New'}<\/div>
       <div class="card fc" id="fc"><div class="fc-front"><h2>${card.front}<\/h2>${card.diagram ? `<figure class="diagram">${card.diagram}<\/figure>` : ''}${card.photo || ''}<p class="muted">Tap to flip<\/p><\/div>
       <div class="fc-back" hidden><p>${card.back}<\/p><\/div><\/div>
@@ -5562,6 +5604,7 @@ body.hm-zoom-open { overflow: hidden; }
 
   function credits() {
     setTitle('Credits'); tab('more');
+    if (!HM.photos && HM.photosFile) { whenLoaded(() => getJSON(HM.photosFile).then((p) => { HM.photos = p; }), credits, 'The photo credits are'); return; }
     const P = HM.photos || [];
     const M = [
       ['MapLibre GL JS', 'The map engine. BSD (Berkeley Software Distribution) 3 clause licence.', 'https://maplibre.org/'],

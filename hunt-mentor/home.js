@@ -125,6 +125,7 @@
     if (near && Date.now() - s.t < WX_TTL) return { v: s.v, t: s.t, offline: false, away: 0 };
     try {
       if (navigator.onLine === false) throw new Error('offline');
+      if (location.protocol === 'file:') throw new Error('no map modules in the single file backup'); // a file:// page cannot import modules (console error)
       const W = await import('./map/tools-wind.js');
       const f = await W.forecast(lon, lat);
       return { v: f.v, t: f.t, offline: f.offline, away: (f.away || 0) / 1000 };
