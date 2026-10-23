@@ -24,7 +24,7 @@ Enter, on a narrow path: one committed distributor structure with **Organika con
 
 ## Status
 
-- All three files are on branch `claude/vietnam-supplement-market-8ruziw`, draft PR #40.
+- All four files are on branch `claude/vietnam-supplement-market-8ruziw`, PR #40 (ready for review).
 - Deferred and still open: the exact HS 2106.90.99 Vietnam import line within CPTPP Decree 115/2022 (amended by Decree 13/2025) for Canada — the decrees are named and the near-zero-with-C/O direction confirmed; only the single line is unread. The primer's quality log lists every remaining UNVERIFIED item in one place.
 
 ---
