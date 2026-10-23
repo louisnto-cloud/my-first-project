@@ -465,6 +465,7 @@ function build() {
   // Hunt Map: map modules and vendored libraries (precached), loaded only when the map opens
   const listFiles = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir), { recursive: true }).filter((f) => fs.statSync(path.join(ROOT, dir, f)).isFile()).map((f) => f.split(path.sep).join('/')).sort() : []);
   const mapDirs = [['app/vendor', 'vendor'], ['app/map', 'map'], ['data/seasons', 'data/seasons'], ['data/harvest', 'data/harvest'], ['data/plans', 'data/plans'], ['data/analyze', 'data/analyze'], ...(placesJs ? [['data/places', 'data/places']] : [])]; // season tables: home dashboard and planner; harvest: map area report and planner odds; plans: planner; analyze: map Area analysis species model; places: tap a place pop ups (app/places.js)
+  mapDirs.push(['app/fonts', 'fonts']); // app fonts (style.css @font-face, SIL OFL licences beside them): copied and precached
   const notShipped = (f) => /\.(txt|md)$/i.test(f) || /(^|\/)unresolved\.json$/.test(f); // data/places/unresolved.json: the build report of names left out
   const mapFiles = mapDirs.flatMap(([src, dst]) => listFiles(src).filter((f) => !notShipped(f)).map((f) => [path.join(ROOT, src, f), `${dst}/${f}`]));
   if (fs.existsSync(path.join(ROOT, 'data/migration.json'))) mapFiles.push([path.join(ROOT, 'data/migration.json'), 'data/migration.json']); // map area report (species month bands)
