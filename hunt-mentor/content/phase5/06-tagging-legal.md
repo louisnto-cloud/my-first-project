@@ -135,6 +135,7 @@ rb-notch-5 | The cancelled licence rides with the meat.
 ```
 
 - Region 3 mule deer: 4 point seasons in September and Nov to Dec 10. October is any buck (95%).
+- Harrison and Mission (MUs 2-8, 2-18 and 2-19): the deer season is "Bucks", no point rule (99%, page 28). So no 4 point count there; keeping the antlers on the skull with the licence is still a safe habit (Tip).
 
 ```more the law and the Region 3 seasons, word for word
 > [!law]

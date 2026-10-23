@@ -150,7 +150,7 @@ g-bt-buck | Columbian black tailed buck and doe, Washington.
 ```diagram mbt-mu-harvest
 ```
 
-- 2-18 (east side, Agassiz): about 25 hunter days per deer (90%).
+- 2-18 (east side, Agassiz): about 25 hunter days per deer, all 5 years pooled (90%). Your plan's odds use the middle year: about 21.
 - Region 2 average: about 13 days. Plan several trips (Tip).
 
 ```more the numbers behind the chart
@@ -205,6 +205,6 @@ g-bt-buck | Columbian black tailed buck and doe, Washington.
   {"q": "MU 2-18, 25 November. A yearling with two short spikes, no forks. Legal?", "options": ["No, it needs 4 points", "Yes, a deer with visible bony antlers is a buck, and the 2-18 row says Bucks", "Only with a special permit"], "answer": 1, "why": "Page 4: a buck bears visible bony antlers. Page 28: 2-8, 2-18 and 2-19 are Bucks rows, not 4 point rows (99%). About 90% of yearling black tails are spikes."},
   {"q": "A deer flicks up a wide tail showing a big white flag. Where you are, what does that mean?", "options": ["Probably a white tailed deer: no season in Region 2, no shot", "A black tailed buck in alarm: shoot", "Same species, same licence"], "answer": 0, "why": "A wide white flag is the white tail sign. Region 2 has no white tailed deer season (99%, pages 14 and 27). A black tail can raise its tail too (80%), so if you cannot be sure, do not shoot."},
   {"q": "About how heavy is an adult black tailed buck?", "options": ["20 to 35 kg", "48 to 90 kg", "120 to 180 kg"], "answer": 1, "why": "BC deer account: 48 to 90 kg for bucks, 40 to 65 kg for does (90%). Smaller than a mule deer buck at 68 to 113 kg."},
-  {"q": "From 2020 to 2024, about how many hunter days did each deer take in MU 2-18?", "options": ["About 5", "About 25", "About 100"], "answer": 1, "why": "Harvest statistics: 216 deer from 5,304 hunter days, about 24.6 days per deer (90%, computed). The Region 2 average was about 13.5."}
+  {"q": "From 2020 to 2024, about how many hunter days did each deer take in MU 2-18?", "options": ["About 5", "About 25", "About 100"], "answer": 1, "why": "Harvest statistics: 216 deer from 5,304 hunter days, about 24.6 days per deer (90%, computed). The Region 2 average was about 13.5. Your plan shows the middle year, about 21."}
 ]
 ```
