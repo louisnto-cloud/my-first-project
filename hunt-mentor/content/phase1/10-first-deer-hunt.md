@@ -34,12 +34,17 @@ g-wt-buck-flag | White tail: wide tail flags up white.
 
 ## Field marks grid
 
+```diagram mk-fdh-marks
+```
+
+```more the table as text
 | | Mule deer | White tailed deer |
 |---|---|---|
 | Antlers | Fork, then fork again | One main beam, single tines up |
 | Tail | Thin, rope like, black tip | Wide, brown on top, flags up white |
 | Ears | Very big | Smaller |
 | Runs | Bounces on all 4 feet | Gallops to cover |
+```
 
 ```more ID notes
 - These field marks are reliable on clear looks (85%).
@@ -102,11 +107,18 @@ g-wt-buck-flag | White tail: wide tail flags up white.
 - Legal hours: 1 hour before sunrise to 1 hour after sunset (99%).
 ```
 
+```diagram mk-fdh-no-mu
+```
+
 > [!warn]
 > No MU, no season dates, no hunt. Confirm your exact MU on the official map, and check gov.bc.ca/hunting for in season changes before opening day (99%).
 
 ## Closed areas near your bases
 
+```diagram mk-fdh-closed
+```
+
+```more the table as text
 | Place | Map | Rule |
 |---|---|---|
 | Sun Peaks | C11 | No hunting within 400 m of resort lifts, runs (99%) |
@@ -114,6 +126,7 @@ g-wt-buck-flag | White tail: wide tail flags up white.
 | McQueen Lake | C12 | No shooting, MU 3-28 (99%) |
 | Lac du Bois in city | none | No firearms or bows (99%) |
 | Wells Gray Park | MU 3-45 | No hunting, no shooting (99%) |
+```
 
 ```more closed areas in full
 - **Sun Peaks, Map C11, page 35:** No Shooting or Hunting Area "400 m from existing ski lift, run, facility or development of the Sun Peaks Resort (MU 3-27)." (99%)
@@ -322,6 +335,10 @@ Rifle unloaded on ATV and in vehicle
 
 ## Sources
 
+```diagram mk-fdh-sources
+```
+
+```more every source and link
 - [BC Hunting and Trapping Regulations Synopsis 2026 to 2028, full PDF](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf), read directly: pages 3 and 4 (loaded firearm, motor vehicle, ATV, edible portions, 4 point buck), 5 (carry species licences), 7 and 8 (deer licences), 9 (ATV registration, helmet, FSR insurance, BC Parks, bylaws), 10 (100 m rule, road allowance), 11 (items 22, 28 and 38), 12 (item 44), 14 (deer bag limits). Checked 2026-10-02 (99%).
 - [Region 3 synopsis](https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf), read directly: pages 32 (MU map), 33 (bag limits, access closures, Lac du Bois, Wells Gray), 34 (deer rows), 35 (Maps C7, C11, C12, C13). Checked 2026-10-02 (95 to 99%).
 - [Firearm Violence Prevention Act, Bill 4, 2021, third reading text (BC Laws)](https://www.bclaws.gov.bc.ca/civix/document/id/bills/billsprevious/1st42nd:gov04-3), section 4, read directly. In force 1 October 2026 per the [table of legislative changes](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc21007). Checked 2026-10-02 (95%).
@@ -331,6 +348,7 @@ Rifle unloaded on ATV and in vehicle
 - ID: Alberta Institute for Wildlife Conservation, [mule deer and white tails](https://www.aiwc.ca/blog/spotting-the-difference-a-guide-to-albertas-mule-deer-and-whitetails/), and [University of Nebraska](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1015&context=nebgamepubs) (85%). Habitat: [BC mule deer account](https://www.env.gov.bc.ca/wld/documents/muledeer.pdf) and [Staudenmaier 2021](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3813) (85%). Daily pattern: [Stewart 2002](https://academic.oup.com/jmammal/article/84/3/1076/905056) (85%). Senses: Jacobs 1994 and [D'Angelo 2007](https://wildlife.onlinelibrary.wiley.com/doi/abs/10.2193/2006-326) (85%). All search previews, checked 2026-10-01.
 - MU for Heffley Creek and Sun Peaks: synopsis page 32 map and the official 2026 Region 3 map under the Management Unit Regulation, B.C. Reg. 64/96. Heffley Creek itself is not labelled (85 to 95%).
 - Note: every rule line now comes from the official texts above. ID, habitat, tactics and meat math keep their own badges.
+```
 
 ```quiz
 [

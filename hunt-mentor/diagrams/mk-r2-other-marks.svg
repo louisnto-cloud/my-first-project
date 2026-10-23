@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 355" font-family="sans-serif" role="img" aria-label="Footnotes: goat, bear, wolf, bobcat and cougar. Goat: Stay out of Maps B9, B18, B19. Inspection. Black bear: 2 per licence year, Apr 1 to Mar 31. Wolf, bobcat: Compulsory Reporting. Cougar: No kittens or cougars with them. Inspection.">
+<rect width="400" height="355" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Footnotes: goat, bear, wolf, bobcat</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">and cougar</text>
+<text x="16" y="75" font-size="14" fill="#17201A">99%, page 28</text>
+<g><rect x="12" y="91" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="91" width="113" height="56" rx="8" fill="#1F3D2B"/><rect x="117" y="91" width="8" height="56" fill="#1F3D2B"/><text x="22" y="113" font-size="15" font-weight="bold" fill="#FFFFFF">Goat</text><text x="135" y="113" font-size="15" fill="#17201A">Stay out of Maps B9, B18, B19.</text>
+<text x="135" y="132" font-size="15" fill="#17201A">Inspection</text></g>
+<g><rect x="12" y="155" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="155" width="113" height="56" rx="8" fill="#1F3D2B"/><rect x="117" y="155" width="8" height="56" fill="#1F3D2B"/><text x="22" y="177" font-size="15" font-weight="bold" fill="#FFFFFF">Black bear</text><text x="135" y="177" font-size="15" fill="#17201A">2 per licence year, Apr 1 to</text>
+<text x="135" y="196" font-size="15" fill="#17201A">Mar 31</text></g>
+<g><rect x="12" y="219" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="219" width="113" height="56" rx="8" fill="#1F3D2B"/><rect x="117" y="219" width="8" height="56" fill="#1F3D2B"/><text x="22" y="241" font-size="15" font-weight="bold" fill="#FFFFFF">Wolf,</text>
+<text x="22" y="260" font-size="15" font-weight="bold" fill="#FFFFFF">bobcat</text><text x="135" y="241" font-size="15" fill="#17201A">Compulsory Reporting</text></g>
+<g><rect x="12" y="283" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="283" width="113" height="56" rx="8" fill="#FF6A13"/><rect x="117" y="283" width="8" height="56" fill="#FF6A13"/><text x="22" y="305" font-size="15" font-weight="bold" fill="#17201A">Cougar</text><text x="135" y="305" font-size="15" fill="#17201A">No kittens or cougars with</text>
+<text x="135" y="324" font-size="15" fill="#17201A">them. Inspection</text></g>
+
+</svg>
