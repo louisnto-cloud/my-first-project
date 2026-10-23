@@ -1383,7 +1383,7 @@
     {
      "t": "Road and FSR (Forest Service Road) closures checked; DriveBC for the highway",
      "cert": 95,
-     "lesson": "local-heffley",
+     "lesson": "fsr-vehicles-radio",
      "cat": "plan"
     },
     {

@@ -329,7 +329,9 @@ function render(D, ctx) {
   if (use) tp.push(li(`Gear: ${esc(use)}`));
   const pb = D.playbook && D.playbook.byId;
   const plays = plan && pb && pb[plan.species] ? [pb[plan.species]] : SP.filter((s) => D.tags.includes(s.tag)).map((s) => pb && pb[s.play]).filter(Boolean).slice(0, 2);
-  for (const sp of plays) {
+  // the species' region content (species.json "regions") for this spot's region, via plan.js, so a Region 2 spot never gets the Region 3 playbook
+  const inRegion = (s) => (window.HMPlan && window.HMPlan._spInRegion ? window.HMPlan._spInRegion(s, D.region) : s);
+  for (const sp of plays.map(inRegion)) {
     const ph = (sp.phases || []).find((x) => (x.months || []).includes(month));
     if (ph) {
       tp.push(li(`<b>${esc(sp.name)}, ${esc(ph.label)}</b> (${esc(MONTH_NAMES[month - 1])} playbook)${badge(ph.cert)}`));

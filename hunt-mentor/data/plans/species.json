@@ -560,7 +560,497 @@
     "top-areas",
     "cwd",
     "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
-   ]
+   ],
+   "regions": {
+    "2": {
+     "note": "Region 2 (Lower Mainland) override for plans whose MU starts with 2-. Deer here are coast black tailed deer; the synopsis lists them as mule (black tailed) deer. Facts from content/phase8/111 to 116, content/phase6/20-local-harrison-deer.md, content/phase6/12-local-mission.md, content/phase7/09-region-2-lower-mainland.md and data/seasons/region2.json. Checked 2026-10-23.",
+     "name": "Black tailed deer",
+     "lessons": [
+      "mc-black-tailed-deer-01",
+      "local-harrison-deer",
+      "mc-black-tailed-deer-02",
+      "mc-black-tailed-deer-03",
+      "mc-black-tailed-deer-04",
+      "mc-black-tailed-deer-05",
+      "mc-black-tailed-deer-06",
+      "gallery-deer",
+      "the-rut",
+      "wet-forest-country",
+      "cutblock-country",
+      "bedding-cover",
+      "browse-plants",
+      "sign",
+      "wind-thermals",
+      "still-hunting",
+      "hunting-partner",
+      "fsr-vehicles-radio",
+      "local-mission",
+      "shot-placement",
+      "blood-trailing",
+      "field-dressing",
+      "meat-care",
+      "packing-out",
+      "cold-injuries",
+      "tagging-legal",
+      "rb-region-2",
+      "rb-legal-methods",
+      "rb-bag-limits",
+      "first-deer-hunt"
+     ],
+     "methods": [
+      {
+       "id": "rifle",
+       "label": "Rifle (.308 Tikka T3x)",
+       "fit": "best",
+       "note": "Centrefire is legal for deer, no .22 rimfire (99%, page 13). 150 to 165 grain expanding bullet is plenty for a black tail (Tip). Shots in timber are short (Tip).",
+       "cert": 99
+      },
+      {
+       "id": "shotgun",
+       "label": "Shotgun (12 gauge)",
+       "fit": "ok",
+       "note": "Legal with 20 gauge or larger and No. 1 Buck or larger, or slugs (99%). Short range timber only (Tip). Much of the Harrison Mills and Nicomen lowland is shot only, no rifles (99%; boundary 85%, my reading).",
+       "cert": 95
+      },
+      {
+       "id": "bow",
+       "label": "Bow",
+       "fit": "ok",
+       "note": "Bow class B, C or D (99%). Bow only bucks 1 to 9 September in Region 2 MUs (Management Units) 2-2 to 2-19 (99%, page 28).",
+       "cert": 99
+      },
+      {
+       "id": "rimfire",
+       "label": "Rimfire (.22 CZ 457)",
+       "fit": "no",
+       "note": "No .22 rimfire for deer (99%).",
+       "cert": 99
+      }
+     ],
+     "phases": [
+      {
+       "id": "r2-early",
+       "label": "Bow only bucks 1 to 9 September, then bucks from 10 September",
+       "months": [
+        9,
+        10
+       ],
+       "where": [
+        "Logged openings: coast black tails use logged ground often in spring and summer (90%)",
+        "Most deer move higher in summer for new growth; some stay low all year (90%)",
+        "Cutblock edges, old roads, salal and alder (90%, Region 2 Rule Book strategy)"
+       ],
+       "when": [
+        "dawn: deer are most active near dawn and dusk, and can move any time (80%)",
+        "midday: favourite beds may be used daily for several weeks (90%)",
+        "dusk: watch the cutblock edge band within about 100 m of the timber (Tip)"
+       ],
+       "tactics": [
+        "Scout now for the November rut: note where does feed at dusk (Tip)",
+        "Log every deer, edge and time in the Journal (Tip)"
+       ],
+       "cert": 99
+      },
+      {
+       "id": "r2-rut",
+       "label": "Bucks and the rut, November to mid December",
+       "months": [
+        11,
+        12
+       ],
+       "where": [
+        "Cutblock edges, old roads, salal and alder (90%, Region 2 Rule Book strategy)",
+        "Deer used clearcuts most within 100 m of cover (90%, Vancouver Island data)",
+        "Snow over about 30 cm: deer move under old timber crowns, or to low south facing slopes (80 to 85%)",
+        "Winter range: old growth and steep south to west slopes (90%)",
+        "MUs 2-8, 2-18 and 2-19 close 15 December. MUs 2-5, 2-9 to 2-12 close 30 November (99%, page 28)"
+       ],
+       "when": [
+        "dawn: sit or still hunt the edge where does fed (Tip)",
+        "midday: in the rut bucks also move in daylight (80%). Stay out if you can (Tip)",
+        "dusk: back to the edge (Tip)"
+       ],
+       "tactics": [
+        "Coast deer breed in November and early December (90%)",
+        "Most does conceive 15 November to 5 December, Vancouver Island data (90%). Harrison peak dates: VERIFY",
+        "A doe that keeps looking back: wait, a buck may be behind her (Tip)",
+        "Bucks only in MUs 2-8, 2-18 and 2-19. Never shoot the doe (99%, page 28)"
+       ],
+       "cert": 99
+      }
+     ],
+     "tactics": [
+      {
+       "id": "edge-sit",
+       "name": "Watch a cutblock edge",
+       "best": "Dawn and dusk, young cuts next to standing timber",
+       "steps": [
+        "Pick a young cutblock with timber on at least one side (Tip)",
+        "Sit 100 m back from the far edge, wind in your face (Tip)",
+        "Watch the band within about 100 m of the trees: that is where deer used cuts most (90%)",
+        "Stay 2 hours (Tip)",
+        "Expect a shot under 150 m. Shoot only from a rest at a broadside buck (Tip)"
+       ],
+       "pros": [
+        "You see deer before they see you",
+        "A rest for the shot"
+       ],
+       "cons": [
+        "Cold and slow",
+        "Only dawn and dusk"
+       ],
+       "cert": 70
+      },
+      {
+       "id": "still-hunt",
+       "name": "Still hunt the timber",
+       "best": "Midday in the rut, wet quiet days",
+       "steps": [
+        "Go into the wind or across it. Check it every few minutes with a puffer (Tip)",
+        "A few steps, then stop and look. Move when cover hides you (Tip)",
+        "Look for parts: a leg, an ear, the white of a throat, a tail flick (Tip)",
+        "Good cover hides about 90% of a deer at 60 m (85%)",
+        "Expect a short, fast shot. Know your rifle off sticks and kneeling (Tip)"
+       ],
+       "pros": [
+        "You cover ground",
+        "Close, quiet shots"
+       ],
+       "cons": [
+        "Hard to do well",
+        "Easy to bump deer"
+       ],
+       "cert": 60
+      },
+      {
+       "id": "partner-walk",
+       "name": "Partner walk to a stander",
+       "best": "Two hunters, a cutblock edge or trail crossing",
+       "steps": [
+        "One sits at a crossing or edge; the other walks slowly toward him, wind at the walker's back (Tip)",
+        "Agree zones of fire, a meeting point and a clock time (Tip)",
+        "Pushes are on foot only. No vehicle to herd deer (99%, page 11, item 25)",
+        "Wear blaze orange with a partner. BC has no orange law (95% for the law, Tip for the advice)"
+       ],
+       "pros": [
+        "Moves deer to a waiting hunter"
+       ],
+       "cons": [
+        "Needs zones of fire and a plan"
+       ],
+       "cert": 60
+      },
+      {
+       "id": "rain-day",
+       "name": "Hunt the rain day",
+       "best": "Wet days, which are normal here",
+       "steps": [
+        "Wet ground is quiet underfoot: still hunt slowly (Tip)",
+        "Wool or synthetics, a rain shell, a spare dry layer (Tip)",
+        "Take only a sure shot. Rain can erase a blood trail within about an hour (Tip)",
+        "Shivering or clumsy hands: stop, get dry and warm, head for the truck (Tip)"
+       ],
+       "pros": [
+        "Quiet walking",
+        "Rain covers noise (Tip)"
+       ],
+       "cons": [
+        "You chill fast",
+        "Blood trails wash out"
+       ],
+       "cert": 60
+      }
+     ],
+     "dayPlan": {
+      "scout": [
+       "Early November: find does on cutblock edges at dusk. Note where (Tip)",
+       "Find one young cutblock edge and one steep sunny timbered slope within 1 km of the truck. Look for tracks and droppings on both (Tip)",
+       "Read the Chilliwack district road notices for your FSR (Forest Service Road) before you go (Tip)",
+       "Read your MU row on synopsis page 28 (99%)"
+      ],
+      "dawn": [
+       "Legal light starts 1 hour before sunrise (99%)",
+       "Deer are most active near dawn and dusk (80%)",
+       "Sit 100 m back from the far edge of a cut, wind in your face. Stay 2 hours (Tip)"
+      ],
+      "morning": [
+       "Morning sun: air drifts uphill (80%)",
+       "In tall timber and creek draws the wind swirls. Check it every few minutes (Tip)"
+      ],
+      "midday": [
+       "Still hunt slowly through cover between feeding and bedding areas. In the rut bucks cruise for does (Tip)",
+       "Favourite beds may be used daily for several weeks (90%)",
+       "Scout sign, still hunt, or rest and eat (Tip)"
+      ],
+      "evening": [
+       "Evening cooling sends scent downhill (80%)",
+       "Move back toward the edge you will watch at dusk (Tip)"
+      ],
+      "dusk": [
+       "Back to the edge (Tip)",
+       "Last legal shot 1 hour after sunset (99%)",
+       "Leave time and light to recover a deer (Tip)"
+      ],
+      "night": [
+       "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+       "Hang meat in game bags under a tarp roof with an air gap, never wrapped (80%)",
+       "Read tomorrow's road notices and check sunrise for your spot (Tip)"
+      ]
+     },
+     "raiseOdds": [
+      {
+       "t": "Hunt the November rut",
+       "why": "Most does conceive 15 November to 5 December, inside the 2-18 and 2-19 buck season to 15 December (90% rut, 99% season)",
+       "cert": 90
+      },
+      {
+       "t": "Watch the edge band of a young cutblock",
+       "why": "Collared coast deer used clearcuts most within 100 m of cover (90%)",
+       "cert": 90
+      },
+      {
+       "t": "Find the does first",
+       "why": "In the rut a buck follows a doe 2 to 3 days before her heat (90%). Watch her, then look behind her (Tip)",
+       "cert": 90
+      },
+      {
+       "t": "Stay out through midday in the rut",
+       "why": "Bucks also move in daylight in the November rut (80%)",
+       "cert": 80
+      },
+      {
+       "t": "Do not go home when it rains",
+       "why": "Rain is normal here; wet ground is quiet underfoot (Tip)",
+       "cert": 60
+      },
+      {
+       "t": "Look under big timber after a heavy snow",
+       "why": "About 50 cm in a clearcut left about 5 cm under 70% conifer cover (90%)",
+       "cert": 90
+      },
+      {
+       "t": "Keep the wind in your face",
+       "why": "Smell is the strongest deer sense (85%)",
+       "cert": 85
+      },
+      {
+       "t": "Know your max range",
+       "why": "The distance you hit a 15 cm (6 in) plate 9 of 10 from a field rest (Tip)",
+       "cert": 70
+      }
+     ],
+     "redFlags": [
+      "MUs 2-8, 2-18 and 2-19: bucks only, 10 September to 15 December. No antlerless season there, so a doe is never legal (99%, page 28).",
+      "Region 2 deer limit: 2 a licence year, at most 1 antlerless (99%, page 27). The antlerless 1 is out of reach in 2-8, 2-18 and 2-19 (99%, page 28).",
+      "No white tailed deer season anywhere in Region 2 (99%, pages 14 and 27). Be sure before you shoot.",
+      "Unless lawfully hunting, no firearm discharge within 400 m of the Francis Lake, Weaver Lake and Sts'ailes (West) FSRs (Forest Service Roads) and some FVRD (Fraser Valley Regional District) roads (99%, page 27). Target shooting is out (90%).",
+      "Never shoot on or across a road allowance (99%, page 10).",
+      "Harrison Mills and the Nicomen lowland: no rifles (99%, Closed Areas Regulation; 85% my reading of the boundary). Hunt the hills.",
+      "Harrison Hot Springs village: no firearm discharge anywhere inside it (99%, Bylaw No. 1207).",
+      "Sasquatch and Kilby provincial parks: closed to hunting (99%).",
+      "Region 2 near Mission: MU 2-8 general season is bucks only, and the Mission bylaw allows rifles only in Area D (99%).",
+      "Fraser Valley Special Area licence: needed inside Mission, Maple Ridge, Pitt Meadows and Coquitlam limits in 2-8, and all of 2-4 (99%, page 29). Harrison and the Chehalis are outside it (90%).",
+      "Closed or washed out FSR: read the Chilliwack district road notices before you go (95%). No notice is not a promise the road is open."
+     ],
+     "afterKill": [
+      "Kill, then cancel your licence, then touch the deer (99%, page 11). The shooter cancels their own licence, never a partner's (99%).",
+      "Mark where you stood and where it stood (Tip). Heart or lungs: wait about 30 minutes (70%).",
+      "Rain coming? Track sooner: rain can erase blood within about an hour (Tip).",
+      "Leave evidence of sex naturally attached: the unskinned tail, and a testicle or part of the penis (99%, page 15).",
+      "No compulsory inspection for deer in Region 2. It is for mountain goat and cougar (99%, page 28).",
+      "Take the neck, ribs, four quarters and loins (99%, page 12).",
+      "Wipe the cavity dry with clean towels (80%). Meat below 4°C as fast as you can (80%).",
+      "No plastic or tarps on meat until it is chilled. A tarp as a roof with an air gap in rain (80%).",
+      "Someone else carrying your meat needs a Record of Receipt (99%, page 14)."
+     ],
+     "checklist": {
+      "paperwork": [
+       {
+        "t": "Mule deer species licence bought in person (black tailed deer use it)",
+        "cert": 99,
+        "lesson": "licences"
+       },
+       {
+        "t": "Your MU row on synopsis page 28 checked: bucks only, to 15 December in 2-8, 2-18, 2-19",
+        "why": "No antlerless season in those MUs",
+        "cert": 99,
+        "lesson": "local-harrison-deer"
+       },
+       {
+        "t": "Chilliwack district road notices read for your FSR (Forest Service Road)",
+        "why": "Closures and washouts change",
+        "cert": 95,
+        "lesson": "local-harrison-deer"
+       },
+       {
+        "t": "No shooting bands and closed areas checked on the Hunt Map",
+        "why": "400 m FSR bands, Harrison Mills flats, village bylaw",
+        "cert": 99,
+        "lesson": "local-harrison-deer"
+       }
+      ],
+      "firearm": [
+       {
+        "t": "Zero confirmed with the deer load, 150 to 165 grain expanding",
+        "why": "Same box you hunt with (Tip)",
+        "cert": 70,
+        "lesson": "sighting-in"
+       },
+       {
+        "t": "Max range tested on a 15 cm plate from a field rest",
+        "cert": 70,
+        "lesson": "shooting-skills"
+       },
+       {
+        "t": "Expanding bullets only, no full metal jacket",
+        "why": "Unlawful for hunting",
+        "cert": 99,
+        "lesson": "rb-legal-methods"
+       },
+       {
+        "t": "Shooting sticks, and practice kneeling",
+        "why": "Timber shots are short and fast (Tip)",
+        "cert": 60,
+        "lesson": "shooting-skills"
+       }
+      ],
+      "gear": [
+       {
+        "t": "Puff bottle or wind checker",
+        "why": "Wind swirls in timber and creek draws (Tip)",
+        "cert": 60,
+        "lesson": "wind-thermals"
+       },
+       {
+        "t": "4 game bags, cloth, never plastic",
+        "cert": 80,
+        "lesson": "field-dressing"
+       },
+       {
+        "t": "Small tarp and cord for a meat roof",
+        "cert": 80,
+        "lesson": "meat-care"
+       },
+       {
+        "t": "Clean towels to dry the cavity",
+        "cert": 80,
+        "lesson": "mc-black-tailed-deer-06"
+       },
+       {
+        "t": "Flagging tape",
+        "why": "Mark where it stood before you move (85%)",
+        "cert": 85,
+        "lesson": "blood-trailing"
+       },
+       {
+        "t": "Pen and knife to cancel the licence",
+        "cert": 95,
+        "lesson": "tagging-legal"
+       },
+       {
+        "t": "FSR radio use: channel from the road entry sign",
+        "why": "The app gives no channel numbers (95%)",
+        "cert": 95,
+        "lesson": "fsr-vehicles-radio"
+       }
+      ],
+      "clothing": [
+       {
+        "t": "Quiet outer layer: no Velcro, nylon swish or zippers that click",
+        "why": "Deer hear best at 4 to 8 kHz, the range of those sounds (85%)",
+        "cert": 85,
+        "lesson": "mc-black-tailed-deer-03"
+       },
+       {
+        "t": "Rain shell plus wool or synthetic layers, and a spare dry layer",
+        "why": "Rain is normal here; you chill fast (Tip)",
+        "cert": 60,
+        "lesson": "cold-injuries"
+       },
+       {
+        "t": "Blaze orange vest and toque",
+        "why": "No orange rule in the synopsis, but a strong safety tip",
+        "cert": 90,
+        "lesson": "what-to-wear"
+       }
+      ],
+      "meat": [
+       {
+        "t": "Cooler, ice or frozen jugs ready in the truck",
+        "cert": 60,
+        "lesson": "meat-care"
+       },
+       {
+        "t": "Butcher booked before the hunt",
+        "why": "Opening Day Game Cutting, Abbotsford, and Mission Meat Shop cut and wrap for hunters (90%)",
+        "cert": 90,
+        "lesson": "local-mission"
+       }
+      ],
+      "safety": [
+       {
+        "t": "Solid backstop for every shot; no skylined deer",
+        "cert": 85,
+        "lesson": "shot-placement"
+       },
+       {
+        "t": "Never shoot on or across a road allowance",
+        "cert": 99,
+        "lesson": "local-harrison-deer"
+       },
+       {
+        "t": "100 m from any house, farm building, school or regional district park",
+        "cert": 99,
+        "lesson": "local-harrison-deer"
+       },
+       {
+        "t": "Zones of fire, meeting point and clock time agreed with your partner",
+        "cert": 60,
+        "lesson": "hunting-partner"
+       },
+       {
+        "t": "Trip plan left with someone at home: truck, road, time out",
+        "cert": 75,
+        "lesson": "local-harrison-deer"
+       },
+       {
+        "t": "RAPP (Report All Poachers and Polluters) number 1 877 952 7277 saved",
+        "cert": 99,
+        "lesson": "local-mission"
+       }
+      ]
+     },
+     "mistakes": [
+      "Shooting a doe because \"the limit is 2, one antlerless\". There is no antlerless season in 2-8, 2-18 or 2-19.",
+      "Taking a rifle onto the Harrison Mills flats. That lowland bans rifles.",
+      "Driving a closed or washed out FSR because a map shows it open.",
+      "Hunting only the first weekend of the season and missing the November rut.",
+      "Shooting the first deer out after a doe without checking for antlers.",
+      "Walking logging roads all day and never stepping into the timber edge.",
+      "Sitting in the middle of a big cut instead of where you can see the edge.",
+      "Going home when it rains.",
+      "Wrapping warm meat in a garbage bag or tarp."
+     ],
+     "shot": {
+      "range": "Your max: the distance you hit a 15 cm (6 in) plate 9 of 10 from a field rest (Tip). In timber and cutblocks expect under 150 m (Tip).",
+      "aim": "Broadside or quartering away. Up the back of the front leg, one third up the chest (85%). A black tail's vital zone is only about 20 to 25 cm (75%). Brush deflects bullets: find a clear lane or wait (Tip).",
+      "diagram": "vitals-deer",
+      "cert": 85
+     },
+     "sources": [
+      "mc-black-tailed-deer-01",
+      "mc-black-tailed-deer-02",
+      "mc-black-tailed-deer-03",
+      "mc-black-tailed-deer-04",
+      "mc-black-tailed-deer-05",
+      "mc-black-tailed-deer-06",
+      "local-harrison-deer",
+      "local-mission",
+      "rb-region-2",
+      "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+     ]
+    }
+   }
   },
   {
    "id": "white-tailed-deer",

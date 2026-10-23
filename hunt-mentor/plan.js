@@ -379,9 +379,14 @@
   const partyLabel = (p) => (PARTY.find(([k]) => k === p) || [p, p])[1];
   // Region 2 deer are black tailed deer; the synopsis season rows list them as mule deer (page 28). Display only: plan data stays "mule-deer".
   const spName = (sp, mu) => (sp && /^2-/.test(mu || '') && (sp.seasonKeys || []).includes('mule deer') ? 'Black tailed deer (listed as mule deer in the synopsis)' : sp ? sp.name : '');
-  function planTitle(p, D) { const sp = D && D.byId[p.species]; return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
+  // Region content (data/plans/species.json "regions": {"2": {...}}): shallow merged over the species when the plan's MU is in that region
+  // (region = MU prefix before the dash). Every plan screen looks its species up through spOf, so a Region 2 deer plan never shows Region 3 advice.
+  const spInRegion = (sp, region) => { const r = sp && sp.regions && sp.regions[String(region || '')]; if (!r) return sp; const o = Object.assign({}, sp, r); delete o.regions; delete o.note; return o; };
+  const spFor = (sp, mu) => spInRegion(sp, regionOf(mu));
+  const spOf = (p, D) => (p && D ? spFor(D.byId[p.species], p.where && p.where.mu) : null);
+  function planTitle(p, D) { const sp = spOf(p, D); return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
   function planProgress(p, D) {
-    const sp = D.byId[p.species]; if (!sp) return null;
+    const sp = spOf(p, D); if (!sp) return null;
     const items = checkItems(sp, D.lists, condOf(p));
     return { done: items.filter((i) => p.ticks && p.ticks[i.key]).length, total: items.length };
   }
@@ -391,7 +396,7 @@
 
   // ---------- wizard ----------
   // Harrison Lake area: Harrison Hot Springs, approximate town centre (Assumption), in MU 2-18 (point in polygon on the MU layer, checked 2026-10-16). Deer near Mission are black tailed deer; the Rule Book season rows list them as mule deer.
-  const HARRISON_LESSON = 'local-harrison-deer'; // content/phase6/20-local-harrison-deer.md: linked from the Harrison presets and plans (species lessons are not per region)
+  const HARRISON_LESSON = 'local-harrison-deer'; // content/phase6/20-local-harrison-deer.md: linked from the Harrison presets and plans (also in the Region 2 mule-deer lessons, species.json regions)
   const PRESETS = {
     'harrison-deer-two': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'two', firstHunt: true },
     'harrison-deer-solo': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'solo', firstHunt: true },
@@ -445,7 +450,7 @@
     const k = STEPS[n];
     C.setTitle(d.editId ? 'Change the plan' : 'Plan a hunt');
     css2();
-    const sp = D.byId[d.species];
+    const sp = spOf(d, D);
     const head = `<div class="pl-wiz-h"><div class="muted">Question ${n + 1} of ${STEPS.length}${sp && n > 0 ? `: ${esc(spName(sp, d.where && d.where.mu))}` : ''}</div><div class="bar"><i style="width:${Math.round(((n + 1) / STEPS.length) * 100)}%"></i></div>
       <h2 class="pl-q">${Q[k]}</h2></div>`;
     const done = (patch) => { Object.assign(d, patch); saveDraft(); let k = n + 1; if (d._preset) while (k < STEPS.length && answered(d, STEPS[k])) k++; if (k < STEPS.length) goStep(k); else finish(C, D); }; // a ready made plan skips what it already answered
@@ -556,7 +561,7 @@
     $('#pl-back') && ($('#pl-back').onclick = () => history.back());
     $('#pl-reset').onclick = () => { draft = {}; saveDraft(); if (n === 0) wizard(view, 0, C); else goStep(0); };
     if (k === 'animal') {
-      view.querySelectorAll('[data-sp]').forEach((b) => b.onclick = () => { const id = b.dataset.sp; const s2 = D.byId[id]; const patch = { species: id };
+      view.querySelectorAll('[data-sp]').forEach((b) => b.onclick = () => { const id = b.dataset.sp; const s2 = spFor(D.byId[id], d.where && d.where.mu); const patch = { species: id };
         if (d.species !== id && d.method && !((s2.methods || []).some((m) => m.id === d.method && m.fit !== 'no'))) patch.method = '';
         done(patch); });
       const f = $('#pl-find');
@@ -644,7 +649,7 @@
     return out.sort((a, b) => (a.from < b.from ? -1 : 1)).filter((o) => !seen.has(o.from) && seen.add(o.from)).slice(0, 3);
   }
   function finish(C, D) {
-    const d = getDraft(), all = plansOf(C), sp = D.byId[d.species];
+    const d = getDraft(), all = plansOf(C), sp = spOf(d, D);
     const base = { species: d.species, speciesName: sp ? sp.name : '', where: d.where, from: d.from, to: d.to, method: d.method, access: d.access, overnight: !!d.overnight, party: d.party, firstHunt: d.firstHunt !== false, ask: Object.assign({}, d.ask) };
     let id = d.editId;
     const old = id && all.find((p) => p.id === id);
@@ -674,7 +679,7 @@
     if (!p) { view.innerHTML = '<div class="card"><h2>Plan not found</h2><p>It may have been deleted, or it was saved on another phone.</p><a class="btn" href="#/plan">My plans</a></div>'; return; }
     let D; try { D = await loadData(); } catch (e) { D = null; }
     if (!D || !D.species.length) { view.innerHTML = noData(); return; }
-    const sp = D.byId[p.species];
+    const sp = spOf(p, D);
     if (!sp) { view.innerHTML = `<div class="card"><h2>${esc(p.speciesName || 'This animal')} is not in the planner data any more</h2><a class="btn" href="#/plan">My plans</a></div>`; return; }
     C.setTitle(planTitle(p, D));
     const token = (view._plToken = {});
@@ -896,7 +901,7 @@
   }
   document.addEventListener('click', (e) => {
     const b = e.target.closest && e.target.closest('[data-plo-home]'); if (!b || !homeC || !Dc) return;
-    const el = b.closest('[data-plo-plan]'), p = plansOf(homeC).find((x) => x.id === el.dataset.ploPlan), sp = p && Dc.byId[p.species];
+    const el = b.closest('[data-plo-plan]'), p = plansOf(homeC).find((x) => x.id === el.dataset.ploPlan), sp = p && spOf(p, Dc);
     if (!p || !sp) return;
     el.classList.add('pl-offline'); el.innerHTML = '<h3>Offline for no signal</h3><p class="muted">Loading...</p>';
     mountOffline(el, p, sp, homeC);
@@ -1502,7 +1507,7 @@
     const np = C.study && nextPlan(C);
     if (np) {
       if (!Dc) loadData().then((d) => { if (d && d.species.length) { Dc = d; C.refresh && C.refresh(); } }).catch(() => {});
-      else if (Dc.byId[np.species]) { try { const b = studyBits(np, Dc.byId[np.species], C, true), nx = b.T.st.next; homeC = C;
+      else if (spOf(np, Dc)) { try { const b = studyBits(np, spOf(np, Dc), C, true), nx = b.T.st.next; homeC = C;
         // today's task first: the one blaze button on Home sits right under the title
         const go = b.T.leftToday && nx ? `<a class="btn next block pl-today-go" href="#/s/${esc(nx.id)}/${nx.i}">Read today's ${b.T.leftToday} screen${b.T.leftToday === 1 ? '' : 's'}</a>` : '';
         study = `<div class="card pl-home pl-today"><p class="hero-k">Today's study</p><h2>${esc(planTitle(np, Dc))}</h2><p class="muted pl-small">About ${b.T.minPerDay} minutes today. Must know screens come first, finished before your hunt.</p>${go}${b.html}<a class="pl-small" href="#/plan/${esc(np.id)}">Pace and full path (plan, part 5)</a>${offlineHomeHtml(np)}</div>`; } catch (e) { console.warn('study card', e); } }
@@ -1530,5 +1535,5 @@
   window.addEventListener('beforeprint', () => document.querySelectorAll('.pl details:not([open]), .pl-list details:not([open])').forEach((d) => { d.dataset.plClosed = '1'; d.open = true; }));
   window.addEventListener('afterprint', () => document.querySelectorAll('details[data-pl-closed]').forEach((d) => { d.open = false; delete d.dataset.plClosed; }));
 
-  window.HMPlan = { route, homeCard, animalIndex, animalList, _legal: legal, _odds: odds, _spots: spots, _load: loadData, _debriefs: allDebriefs, _ask: askRows, _tags: tagsN };
+  window.HMPlan = { route, homeCard, animalIndex, animalList, _legal: legal, _odds: odds, _spots: spots, _load: loadData, _debriefs: allDebriefs, _ask: askRows, _tags: tagsN, _spInRegion: spInRegion };
 })();
