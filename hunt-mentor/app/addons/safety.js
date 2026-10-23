@@ -485,7 +485,7 @@
       toast('Calendar file made. Open it and tap Add. Calendar alerts ring even when the app is closed.');
     };
     if (on) {
-      const up = () => { const el = $('#sf-cd'); if (!el) { stopTick(); return; } const l = st.at - Date.now(); el.textContent = l > 0 ? countdown(l) : '0:00'; el.classList.toggle('sf-late', l <= 15 * 6e4); $('#sf-cd-sub').textContent = l > 0 ? 'left before you turn around' : `Turnaround time passed ${ago(st.at)}. Head back now.`; };
+      const up = () => { const el = $('#sf-cd'); if (!el) { stopTick(); return; } const l = st.at - Date.now(); el.textContent = l > 0 ? countdown(l) : '0:00'; el.classList.toggle('sf-late', l <= 15 * 6e4); if (window.HMSayMinutes) window.HMSayMinutes('turn', l, (m) => (m > 0 ? `${m} minute${m > 1 ? 's' : ''} left before you turn around.` : 'Turnaround time. Head back now.')); $('#sf-cd-sub').textContent = l > 0 ? (l <= 15 * 6e4 ? 'left before you turn around. Under 15 minutes.' : 'left before you turn around') : `Turnaround time passed ${ago(st.at)}. Head back now.`; };
       up(); tick = setInterval(up, 1000);
     }
   }

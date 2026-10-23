@@ -67,7 +67,7 @@ function blocks(md, ctx) {
       if (m) { kind = m[1]; title = m[2]; body.shift(); }
       const labels = { rule: "Grandpa's rule (wisdom, not law)", warn: 'Warning', tip: 'Tip (opinion)', law: 'The rule', note: '', lean: 'My lean (opinion)', mistake: 'Common mistakes', field: 'Do this in the field', why: 'Why it matters' };
       const label = title || labels[kind] || '';
-      html += `<aside class="callout ${kind}">${label ? `<div class="callout-t">${inline(label)}</div>` : ''}${blocks(body.join('\n'), ctx)}</aside>`;
+      html += `<aside class="callout ${kind}" role="note">${label ? `<div class="callout-t">${inline(label)}</div>` : ''}${blocks(body.join('\n'), ctx)}</aside>`;
       continue;
     }
     // tables

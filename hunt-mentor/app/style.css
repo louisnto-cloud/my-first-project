@@ -608,3 +608,9 @@ body .sf-turnmini, body .sf-cd { border-color: var(--blaze); }
   .sheet:not([hidden]) .sheet-card { animation: hm-sheet-up .22s ease-out; }
   @keyframes hm-sheet-up { from { transform: translateY(24px); opacity: .6; } to { transform: none; opacity: 1; } }
 }
+
+/* reduced motion (a11y): no slides, fades or smooth scrolls anywhere, the map included */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
