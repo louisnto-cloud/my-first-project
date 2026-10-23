@@ -271,10 +271,11 @@ function fillBestTimes(body, p) {
   playP.then((d) => {
     const m = new Date().getMonth() + 1;
     boxes.forEach((b) => {
-      const s = d && (d.species || []).find((x) => x.id === b.dataset.best); if (!s || !b.isConnected) return;
+      const s0 = d && (d.species || []).find((x) => x.id === b.dataset.best); if (!s0 || !b.isConnected) return;
+      const reg = s0.regions && s0.regions[String(p.region || '')], s = reg ? Object.assign({}, s0, reg) : s0; // region content (species.json "regions") for this spot's region
       const ph = (s.phases || []).find((x) => (x.months || []).includes(m)) || null;
       const when = ph ? (ph.when || []).slice(0, 3) : [];
-      b.innerHTML = when.length ? `<small><b>Best times this month</b> (Tip, ${esc(s.name)} playbook, ${esc(ph.label)}; written for Region 3, check your region's dates): ${when.map(esc).join('; ')}.</small>` : '';
+      b.innerHTML = when.length ? `<small><b>Best times this month</b> (Tip, ${esc(s.name)} playbook, ${esc(ph.label)}${reg ? '' : "; written for Region 3, check your region's dates"}): ${when.map(esc).join('; ')}.</small>` : '';
     });
   });
 }
