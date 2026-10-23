@@ -183,3 +183,10 @@ hunt-mentor/
 - Two add ons, plan.js untouched: window.HMPlanLive (fetch, html, mount, cached) and window.HMPlanDays (build, html, wire, text, enrich, mount). plan.js calls them when present.
 - Cache: localStorage hm.planlive.<planId>, shown with "as of"; turnaround buttons write the Safety alarm key hm.safety.turn.
 - Road notices read live from the official South Coast FSR layer (machine readable, no scraping); lesson lines when offline.
+
+## 7z2. Clean room fixes, Region 2 first (2026-10-23)
+- Legal buck trainer: Region 2 set (MUs 2-8, 2-18, 2-19) in data/addons/train/facts.json buck.r2, picked from the soonest saved plan's MU; a switch to the Region 3 example is kept in hm-train-v1.buckSet. No plan, or a plan outside those MUs: the Region 3 example, as before.
+- Ask the app: Region 2 examples first; the 3-27 example stays.
+- Field Mode legal light: the active plan's point is the top row, named from the plan (Harrison Lake area); also on the pocket cards.
+- Offline estimate: per zoom tile sizes remeasured (the offline.js comment has the numbers).
+- Map sheet titles wrap to 2 lines; How to shows its icon only under 401 px. Safety inline links and map "Synopsis PDF" links get a 44 px tap area. Tour toast 2.2 s.
