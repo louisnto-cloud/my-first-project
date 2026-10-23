@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-11",
- "note": "Common checklists added to every plan by the 'when' conditions. Each item has an optional 'cat' (paperwork, firearm, gear, clothing, meat, safety, vehicle, plan) for grouping inside a list. Study aid only. The official regulations are the law.",
+ "updated": "2026-10-23",
+ "note": "Common checklists added to every plan by the 'when' conditions. Each item has an optional 'cat' (paperwork, firearm, gear, clothing, meat, safety, vehicle, plan) for grouping inside a list. Study aid only. The official regulations are the law. Optional 'for' on an item: {method, group, region, species, sights} lists; the item shows only on a hunt that matches every tag it knows (untagged items show on every hunt; nothing is deleted, the plan has a Show all toggle). Optional 'key' on an item: a fixed tick key (the old item text, lower case, letters and numbers only) so the text can change without losing ticks.",
  "lists": [
   {
    "id": "base",
@@ -32,7 +32,20 @@
      "t": "Ducks, geese, coots, snipe, mourning doves or pigeons: federal bird permit with stamp, paper or on my phone",
      "cert": 99,
      "lesson": "rb-migratory-birds",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "species": [
+       "ducks",
+       "canada-geese",
+       "snow-geese",
+       "white-fronted-geese",
+       "brant",
+       "coot",
+       "snipe",
+       "doves",
+       "band-tailed-pigeon"
+      ]
+     }
     },
     {
      "t": "PAL (Possession and Acquisition Licence) in my wallet whenever I carry a firearm",
@@ -109,7 +122,18 @@
      "why": "Zone: MUs 4-1 to 4-8 and 4-20 to 4-25",
      "cert": 99,
      "lesson": "cwd",
-     "cat": "plan"
+     "cat": "plan",
+     "for": {
+      "region": [
+       "4"
+      ],
+      "species": [
+       "mule-deer",
+       "white-tailed-deer",
+       "elk",
+       "moose"
+      ]
+     }
     },
     {
      "t": "Weather checked",
@@ -201,7 +225,13 @@
      "t": "Game bags and 15 m of rope (big game)",
      "why": "Tip",
      "lesson": "pack-kit",
-     "cat": "gear"
+     "cat": "gear",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Sunglasses, sunscreen",
@@ -1059,7 +1089,13 @@
      "t": "Each hunter has his own bag limit. Do not pool birds",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "group": [
+       "waterfowl",
+       "upland bird"
+      ]
+     }
     },
     {
      "t": "Record of Receipt if the partner carries my game without me",
@@ -1253,7 +1289,12 @@
      "t": ".22 skips off frozen ground and ice: dirt backstop",
      "why": "Tip",
      "lesson": "small-game",
-     "cat": "safety"
+     "cat": "safety",
+     "for": {
+      "method": [
+       "rimfire"
+      ]
+     }
     },
     {
      "t": "Hard cold: open and prop the carcass so it cools inside before the outside freezes",
@@ -1331,10 +1372,11 @@
      "cat": "meat"
     },
     {
-     "t": "Dangerous bear or cougar: report to RAPP 1 877 952 7277",
+     "t": "Dangerous bear or cougar: report to RAPP (Report All Poachers and Polluters) 1 877 952 7277",
      "cert": 95,
      "lesson": "bush-safety",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "key": "dangerous bear or cougar report to rapp 1 877 952 7277"
     }
    ]
   },
@@ -1580,7 +1622,13 @@
      "t": "Wait before following: at least 30 minutes for big game",
      "why": "Tip",
      "lesson": "after-the-shot",
-     "cat": "plan"
+     "cat": "plan",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Read blood and hair at the hit site; flag every spot and walk beside the line",
@@ -1623,7 +1671,13 @@
      "t": "Big game: species licence notched right away, before I touch or move the animal",
      "cert": 99,
      "lesson": "tagging-legal",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Photo of the notched licence beside the animal",
@@ -1635,13 +1689,28 @@
      "t": "Evidence of sex left naturally attached: deer, unskinned tail plus testicle or udder",
      "cert": 99,
      "lesson": "tagging-legal",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "species": [
+       "mule-deer",
+       "white-tailed-deer",
+       "fallow-deer",
+       "elk",
+       "moose"
+      ]
+     }
     },
     {
      "t": "Antler restricted season: antlers on the skull plate kept with the licence",
      "cert": 99,
      "lesson": "tagging-legal",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Record of Receipt filled if anyone else transports it",
@@ -1653,7 +1722,13 @@
      "t": "Compulsory inspection, compulsory report or Mandatory Hunter Report deadline noted. Deer need neither inspection nor report",
      "cert": 99,
      "lesson": "tagging-legal",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Gloves on, rifle unloaded and set aside",
@@ -1683,7 +1758,13 @@
      "t": "Bear: gall bladder stays at the site, or the whole gut pile is disposed of within 48 hours",
      "cert": 95,
      "lesson": "field-dressing",
-     "cat": "meat"
+     "cat": "meat",
+     "for": {
+      "species": [
+       "black-bear",
+       "grizzly-bear"
+      ]
+     }
     },
     {
      "t": "Guts out or meat off within the hour",
@@ -1719,13 +1800,25 @@
      "t": "Birds: gutted, crop out, cooled apart; wing or head left on",
      "cert": 95,
      "lesson": "meat-care",
-     "cat": "meat"
+     "cat": "meat",
+     "for": {
+      "group": [
+       "waterfowl",
+       "upland bird"
+      ]
+     }
     },
     {
      "t": "Bear meat marked: cook to 71 C or more",
      "cert": 95,
      "lesson": "meat-care",
-     "cat": "meat"
+     "cat": "meat",
+     "for": {
+      "species": [
+       "black-bear",
+       "grizzly-bear"
+      ]
+     }
     },
     {
      "t": "Knife and hands washed",
@@ -1737,13 +1830,39 @@
      "t": "Giving away migratory birds: labelled with name, contact information, date, permit number and signature, or preserved",
      "cert": 99,
      "lesson": "rb-migratory-birds",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "species": [
+       "ducks",
+       "canada-geese",
+       "snow-geese",
+       "white-fronted-geese",
+       "brant",
+       "coot",
+       "snipe",
+       "doves",
+       "band-tailed-pigeon"
+      ]
+     }
     },
     {
      "t": "Unpreserved migratory birds count in my possession limit, home freezer too",
      "cert": 99,
      "lesson": "rb-migratory-birds",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "species": [
+       "ducks",
+       "canada-geese",
+       "snow-geese",
+       "white-fronted-geese",
+       "brant",
+       "coot",
+       "snipe",
+       "doves",
+       "band-tailed-pigeon"
+      ]
+     }
     },
     {
      "t": "Every edible portion bagged and packed out; licence travels with the meat",
@@ -1755,7 +1874,18 @@
      "t": "Kootenay CWD zone: head off with 8 cm of neck, to a freezer within a week, ear card filled, location submitted, meat held for the result, tools bleached",
      "cert": 99,
      "lesson": "cwd",
-     "cat": "plan"
+     "cat": "plan",
+     "for": {
+      "region": [
+       "4"
+      ],
+      "species": [
+       "mule-deer",
+       "white-tailed-deer",
+       "elk",
+       "moose"
+      ]
+     }
     },
     {
      "t": "Butcher: shop phoned, notched licence or Record of Receipt with the meat, evidence of sex on until butchered, receipt with FWID, licence number, species, sex",
@@ -1773,7 +1903,13 @@
      "t": "Mount? Decide before any cut. No throat or brisket cuts; cape frozen or salted within 24 to 48 hours",
      "why": "Tip",
      "lesson": "trophy-care",
-     "cat": "plan"
+     "cat": "plan",
+     "for": {
+      "group": [
+       "big game",
+       "predator"
+      ]
+     }
     },
     {
      "t": "Journal entry written: date, MU, species, what worked",
@@ -1815,7 +1951,20 @@
      "t": "Week 1: federal bird permit bought online and saved on my phone, if hunting ducks or geese",
      "cert": 99,
      "lesson": "licences",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "for": {
+      "species": [
+       "ducks",
+       "canada-geese",
+       "snow-geese",
+       "white-fronted-geese",
+       "brant",
+       "coot",
+       "snipe",
+       "doves",
+       "band-tailed-pigeon"
+      ]
+     }
     },
     {
      "t": "Partner: his own licences and permits bought",
@@ -1827,25 +1976,48 @@
      "t": "Week 1: shotgun picked and bought; plug present",
      "why": "Tip",
      "lesson": "shotgun-guide",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "shotgun"
+      ]
+     }
     },
     {
      "t": "Week 1: steel shot for ducks; lead or steel for upland birds",
      "why": "Tip",
      "lesson": "ammo-guide",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "shotgun"
+      ]
+     }
     },
     {
      "t": "Week 1: scope and rings mounted by the shop or with a torque wrench",
      "why": "Tip",
      "lesson": "scope-guide",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "rifle"
+      ],
+      "sights": [
+       "scope"
+      ]
+     }
     },
     {
      "t": "Week 1: 3 to 4 boxes of the SAME rifle load",
      "why": "Tip",
      "lesson": "countdown",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "rifle"
+      ]
+     }
     },
     {
      "t": "Week 1: ask the landowner where every house, barn and neighbour is",
@@ -1857,13 +2029,24 @@
      "t": "Week 2: bore sight, then zero the rifle at 100 m",
      "why": "Tip",
      "lesson": "sighting-in",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "rifle"
+      ]
+     }
     },
     {
      "t": "Week 2: 3 shot groups from a rest until they are tight",
      "why": "Tip",
      "lesson": "sighting-in",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "rifle",
+       "rimfire"
+      ]
+     }
     },
     {
      "t": "Week 2: shoot from sitting and kneeling with shooting sticks",
@@ -1875,13 +2058,23 @@
      "t": "Week 2: pattern the shotgun on paper with the hunting load",
      "why": "Tip",
      "lesson": "sighting-in",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "shotgun"
+      ]
+     }
     },
     {
      "t": "Week 2: at least one clay target session",
      "why": "Tip",
      "lesson": "shotgun-skills",
-     "cat": "firearm"
+     "cat": "firearm",
+     "for": {
+      "method": [
+       "shotgun"
+      ]
+     }
     },
     {
      "t": "Week 2: clothing, boots and waders bought; boots broken in for a week",

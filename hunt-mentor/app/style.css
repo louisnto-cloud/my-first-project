@@ -412,6 +412,7 @@ details.pl-day > :last-child { margin-bottom: 12px; }
 .pl-spot-a .btn { min-height: 44px; font-size: 16px; padding: 0 8px; }
 .pl-hide { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; font-weight: 700; }
 .pl-hide input { width: 24px; height: 24px; accent-color: var(--accent); }
+.pl-showall { min-height: 44px; padding: 0 6px; background: none; border: 0; color: var(--accent); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
 .pl-list { margin-top: 10px; }
 .pl-cat { margin-top: 14px; }
 .pl-hide-done .pl-item.done { display: none; }

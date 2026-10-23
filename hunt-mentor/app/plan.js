@@ -346,13 +346,22 @@
       return false; // a condition this app does not know: leave the list out
     });
   }
+  // Item tags ("for": {"method": [...], "group": [...], "region": [...], "species": [...], "sights": [...]}): an item shows only when every
+  // tag the hunt knows matches. A tag the hunt does not know yet (no gun answer, no plan) never hides the item. Untagged items are for everyone.
+  function itemFits(f, cond) {
+    if (!f || !cond) return true;
+    return Object.keys(f).every((k) => { const v = cond[k]; return v == null || v === '' || (f[k] || []).map(String).includes(String(v)); });
+  }
+  // Every item comes back; the ones that do not fit this hunt carry off: true (hidden behind "Show all", never deleted).
+  // Tick key: hash of the category plus the item's fixed "key" when it has one, else its normalized text (old ticks keep working).
   function checkItems(sp, lists, cond) {
     const out = [], seen = new Set();
+    const c2 = Object.assign({ group: sp && sp.group, species: sp && sp.id }, cond || {});
     const add = (cat, it, from) => {
       if (!it || !it.t) return;
-      const n = String(it.t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      const n = it.key ? String(it.key) : String(it.t).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
       if (seen.has(n)) return; seen.add(n);
-      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n) });
+      out.push({ cat: CATS.some(([k]) => k === cat) ? cat : 'gear', t: it.t, why: it.why, cert: it.cert, lesson: it.lesson, from, key: hashKey(cat + '|' + n), off: !itemFits(it.for, c2) });
     };
     for (const [cat] of CATS) for (const it of ((sp && sp.checklist) || {})[cat] || []) add(cat, it, sp.name);
     for (const l of lists) if (listMatches(l.when, cond)) for (const it of l.items) add(it.cat || l.category || 'gear', it, l.title || l.id);
@@ -387,10 +396,13 @@
   function planTitle(p, D) { const sp = spOf(p, D); return `${sp ? spName(sp, p.where.mu) : p.speciesName || 'Hunt'}${p.where.mu ? `, MU ${p.where.mu}` : ''}`; }
   function planProgress(p, D) {
     const sp = spOf(p, D); if (!sp) return null;
-    const items = checkItems(sp, D.lists, condOf(p));
+    const items = checkItems(sp, D.lists, condOf(p)).filter((i) => !i.off);
     return { done: items.filter((i) => p.ticks && p.ticks[i.key]).length, total: items.length };
   }
-  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false });
+  const condOf = (p) => ({ method: p.method, access: p.access || [], overnight: !!p.overnight, party: p.party, months: monthsOf(dRange(p.from, p.to)), firstHunt: p.firstHunt !== false,
+    region: regionOf((p.where && p.where.mu) || ''), sights: (p.ask && p.ask.gun && p.ask.gun.sights) || '' });
+  // the "N items hidden" line above a checklist (all = every item, off ones included)
+  const hiddenNote = (all, showAll, id) => { const h = all.filter((i) => i.off).length; return h ? `<p class="muted pl-small pl-hidden-note">${showAll ? `Showing every item, ${h} of them not for this hunt.` : `${h} ${h === 1 ? 'item' : 'items'} hidden that do not apply to this hunt.`} <button type="button" class="pl-showall" id="${id}">${showAll ? 'Hide them' : 'Show all'}</button></p>` : ''; };
   // first hunt: yes until there is a saved plan whose last day has passed
   const firstDefault = (C) => !plansOf(C).some((p) => p.to && p.to < todayIso());
 
@@ -754,18 +766,20 @@
 
     // 4. checklist (needs nothing async)
     const drawCheck = () => {
-      const items = checkItems(sp, D.lists, condOf(p));
+      const all = checkItems(sp, D.lists, condOf(p)), items = p.showAllChecks ? all : all.filter((i) => !i.off);
       const t = (i) => !!(p.ticks && p.ticks[i.key]);
       const n = items.filter(t).length;
       m.check = { done: n, total: items.length, left: items.filter((i) => !t(i)) };
       $('#pl-check').innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b>
         <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((n / Math.max(1, items.length)) * 100) + '%"></i></div>'}
         <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
+        ${hiddenNote(all, p.showAllChecks, 'pl-showall')}
         <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
         ${n === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
       $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
       $('#pl-untick').onclick = () => { if (!n || confirm('Untick every item in this plan?')) { p.ticks = {}; C.save(); drawCheck(); } };
+      const sa = $('#pl-showall'); if (sa) sa.onclick = () => { p.showAllChecks = !p.showAllChecks; C.save(); drawCheck(); };
     };
     $('#pl-check').addEventListener('change', (e) => {
       const c = e.target.closest('input[data-pk]'); if (!c) return;
@@ -1431,7 +1445,7 @@
     const S = C.S;
     el.innerHTML = GROUPS.concat([['', 'Other']]).map(([g, label]) => {
       const ss2 = D.species.filter((s) => (g ? s.group === g : !GROUPS.some(([x]) => x === s.group)));
-      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, { firstHunt: firstDefault(C) }); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
+      return ss2.length ? `<h3 class="pl-lh">${esc(label)}</h3><div class="list">${ss2.map((s) => { const its = checkItems(s, D.lists, { firstHunt: firstDefault(C) }).filter((i) => !i.off); const n = its.filter((i) => S.checks[`an:${s.id}:${i.key}`]).length;
         return `<a class="item" href="#/lists/animal/${esc(s.id)}"><span class="grow">${esc(s.name)}</span><span class="pill">${n}/${its.length}</span></a>`; }).join('')}</div>` : '';
     }).join('');
   }
@@ -1443,16 +1457,19 @@
     C.setTitle(`${sp.name} checklist`);
     const S = C.S, k = (i) => `an:${sp.id}:${i.key}`;
     const draw = () => {
-      const items = checkItems(sp, D.lists, { firstHunt: firstDefault(C) });
+      const showAll = !!(S.settings && S.settings.animalShowAll);
+      const all = checkItems(sp, D.lists, { firstHunt: firstDefault(C) }), items = showAll ? all : all.filter((i) => !i.off);
       const t = (i) => !!S.checks[k(i)], n = items.filter(t).length;
       const hide = !!(S.settings && S.settings.animalHideDone);
       view.innerHTML = `<div class="card"><div class="row"><b class="grow">${n} of ${items.length} done</b><label class="pl-hide"><input type="checkbox" id="pl-hide"${hide ? ' checked' : ''}> Hide done</label></div>
         <div class="bar"><i style="width:${Math.round((n / Math.max(1, items.length)) * 100)}%"></i></div>
         <p class="muted pl-small">${esc(sp.name)} list plus the lists for every hunt${firstDefault(C) ? ' and the first hunt list' : ''}. A plan adds lists for your method, access, overnight and party.</p>
+        ${hiddenNote(all, showAll, 'pl-showall')}
         <div class="pl-list${hide ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-ak', closedCats(view))}</div>
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button><button type="button" class="btn primary" id="pl-mk">Plan a hunt</button></div></div>
         ${lessonLinks(sp.lessons || [], C) ? `<div class="card"><h3>Lessons</h3><div class="pl-chips">${lessonLinks(sp.lessons || [], C)}</div></div>` : ''}`;
       view.querySelector('#pl-hide').onchange = (e) => { S.settings.animalHideDone = e.target.checked; C.save(); view.querySelector('.pl-list').classList.toggle('pl-hide-done', e.target.checked); };
+      const sa = view.querySelector('#pl-showall'); if (sa) sa.onclick = () => { S.settings.animalShowAll = !showAll; C.save(); draw(); };
       view.querySelector('#pl-untick').onclick = () => { if (!n || confirm('Untick every item in this list?')) { items.forEach((i) => delete S.checks[k(i)]); C.save(); draw(); } };
       view.querySelector('#pl-mk').onclick = () => { draft = { species: sp.id }; saveDraft(); goStep(1); };
     };
