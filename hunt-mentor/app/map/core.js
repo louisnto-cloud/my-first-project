@@ -33,7 +33,7 @@ import * as search from './search.js';
 import * as layers from './layers.js';
 import * as offline from './offline.js';
 
-const PLUGINS = ['./tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js', './tools-terrain.js', './tools-analyze.js', './tools-hunt.js', './hunt-field.js']; // for example './tools.js', './track.js'
+const PLUGINS = ['./map-tour.js', './tools-main.js', './tools-track.js', './tools-wind.js', './tools-insights.js', './tools-terrain.js', './tools-analyze.js', './tools-hunt.js', './hunt-field.js']; // for example './tools.js', './track.js'
 const DEFAULT_VIEW = { lng: -122.31, lat: 49.13, zoom: 11, bearing: 0, pitch: 0 }; // Mission, the owner's home base (2026-10-16); was Heffley Creek
 const EXAG = 1.5; // default 3D height boost
 const exag = () => clamp(+prefs.exag || EXAG, 1, 2.5);
