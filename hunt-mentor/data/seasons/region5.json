@@ -1,0 +1,1500 @@
+{
+ "edition": "2026-10-02",
+ "region": 5,
+ "source": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, edition dated 2 October 2026",
+ "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf",
+ "checked": "2026-10-04",
+ "note": "General open seasons only, Cariboo table page 44, regional bag limits page 43 (printed pages; PDF page minus 2). Read from the 150 dpi page image and matched to the PDF text. open and close are MM-DD (month and day); months lists every month the row touches. LEH hunts are in the separate LEH synopsis. MU 5-16 has no row in this table.",
+ "rows": [
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-15"
+   ],
+   "class": "4 point bucks",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "4 point bucks: antlers must accompany the species licence (page footnote)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "4 point bucks",
+   "open": "09-10",
+   "close": "09-30",
+   "notes": "4 point bucks: antlers must accompany the species licence (page footnote)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "4 point bucks",
+   "open": "11-01",
+   "close": "11-10",
+   "notes": "4 point bucks: antlers must accompany the species licence (page footnote)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "4 point bucks",
+   "open": "11-21",
+   "close": "11-30",
+   "notes": "4 point bucks: antlers must accompany the species licence (page footnote)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-7",
+    "5-8",
+    "5-9"
+   ],
+   "class": "Bucks",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "Any antlered buck",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Bucks",
+   "open": "10-01",
+   "close": "10-31",
+   "notes": "Any antlered buck",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    10
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14"
+   ],
+   "class": "Bucks",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-13",
+    "5-14"
+   ],
+   "class": "Bucks",
+   "open": "12-01",
+   "close": "12-10",
+   "notes": "bow only",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    12
+   ]
+  },
+  {
+   "species": "mule deer",
+   "mus": [
+    "5-8",
+    "5-11"
+   ],
+   "class": "Bucks",
+   "open": "12-01",
+   "close": "12-24",
+   "notes": "bow only; the table marks this MU list with a triangle: \"A portion of MU 5-11 only. See Map E17.\" Which MU is partial: VERIFY on Map E17",
+   "page": 44,
+   "cert": 85,
+   "months": [
+    12
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-8",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Bucks",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "Any antlered buck; MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-8",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Antlerless",
+   "open": "10-10",
+   "close": "10-31",
+   "notes": "MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    10
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-8",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Either sex",
+   "open": "11-01",
+   "close": "11-30",
+   "notes": "youth only: hunters under 18 (page footnote); MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    11
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-8",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Bucks",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "youth only: hunters under 18 (page footnote); MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-8",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Bucks",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "bow only; MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "white tailed deer",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-8",
+    "5-11",
+    "5-13",
+    "5-14"
+   ],
+   "class": "Bucks",
+   "open": "12-01",
+   "close": "12-10",
+   "notes": "bow only; MUs 5-8 and 5-11 printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    12
+   ]
+  },
+  {
+   "species": "bighorn sheep",
+   "mus": [
+    "5-2"
+   ],
+   "class": "Full curl bighorn rams",
+   "open": "09-10",
+   "close": "10-20",
+   "notes": "Bag 1; Compulsory Inspection required",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10
+   ]
+  },
+  {
+   "species": "mountain goat",
+   "mus": [
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-11",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "10-31",
+   "notes": "Bag 1; see Maps E14 and E22 and the LEH synopsis; hunters are asked to take males; Compulsory Inspection required",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "11-30",
+   "notes": "Bag 2; parts of MU 5-9 are closed to black bear hunting (Map F14, page 52) and the Mussel Inlet Special Management Area in MU 5-9 has no black bear season (page 43)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-30",
+   "notes": "Bag 2; parts of MU 5-9 are closed to black bear hunting (Map F14, page 52) and the Mussel Inlet Special Management Area in MU 5-9 has no black bear season (page 43)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "5-11"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "Bag 2",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "black bear",
+   "mus": [
+    "5-11"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "05-31",
+   "notes": "Bag 2",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    4,
+    5
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "5-7",
+    "5-8",
+    "5-9"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "06-15",
+   "notes": "Bag 3",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "5-7",
+    "5-8",
+    "5-9"
+   ],
+   "class": "",
+   "open": "08-01",
+   "close": "03-31",
+   "notes": "Bag 3",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "5-10",
+    "5-11"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "03-31",
+   "notes": "Bag 3",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "wolf",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": null,
+   "close": null,
+   "notes": "NBL; No closed season",
+   "page": 44,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "coyote",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "03-31",
+   "notes": "NBL",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "lynx",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "11-01",
+   "close": "01-31",
+   "notes": "Bag 1",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    11,
+    12,
+    1
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "04-30",
+   "notes": "Bag 2; no cougar kitten or any cougar with a kitten; Compulsory Inspection required",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "species": "cougar",
+   "mus": [
+    "5-11"
+   ],
+   "class": "",
+   "open": "11-15",
+   "close": "03-31",
+   "notes": "Bag 2; no cougar kitten or any cougar with a kitten; Compulsory Inspection required",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "species": "bobcat",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "12-01",
+   "close": "12-31",
+   "notes": "Bag 1",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    12
+   ]
+  },
+  {
+   "species": "raccoon",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": null,
+   "close": null,
+   "notes": "NBL; No closed season",
+   "page": 44,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "snowshoe hare",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "08-01",
+   "close": "04-30",
+   "notes": "10 (daily)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "species": "columbian ground squirrel",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": null,
+   "close": null,
+   "notes": "NBL. Private land only, with landowner permission; No closed season",
+   "page": 44,
+   "cert": 99,
+   "allYear": true,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Sooty (dusky, blue)",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "5 (15); daily aggregate for sooty (dusky), spruce and ruffed grouse is 10, possession 30",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Sooty (dusky, blue)",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "youth only: hunters under 18; 5 (15); printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Spruce and ruffed",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "10 (30); daily aggregate for sooty (dusky), spruce and ruffed grouse is 10, possession 30",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "grouse",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "Spruce and ruffed",
+   "open": "09-01",
+   "close": "09-09",
+   "notes": "youth only: hunters under 18; 10 (30); printed green (new)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9
+   ]
+  },
+  {
+   "species": "sharp tailed grouse",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-12",
+    "5-13",
+    "5-14"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-30",
+   "notes": "5 (10); closed areas in MUs 5-3 and 5-14, see Maps E7 and E25",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "ptarmigan",
+   "mus": [
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-01",
+   "close": "11-01",
+   "notes": "5 (15)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "chukar",
+   "mus": [
+    "5-3"
+   ],
+   "class": "",
+   "open": "09-10",
+   "close": "11-20",
+   "notes": "5 (15)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "species": "raven",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "03-01",
+   "close": "03-31",
+   "notes": "Bag 5; private land only",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    3
+   ]
+  },
+  {
+   "species": "raven",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "04-01",
+   "close": "05-31",
+   "notes": "Bag 5; private land only",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    4,
+    5
+   ]
+  },
+  {
+   "species": "snipe",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "10 (30)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "coot",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "10 (30)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "ducks",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "8 (24). Within the 8: 4 pintails, 4 canvasbacks, 2 goldeneyes (Barrow's and common together), 2 harlequins (page 12)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "snow and ross geese",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "5 (15)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "white fronted geese",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "5 (15)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "species": "canada and cackling geese",
+   "mus": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6",
+    "5-7",
+    "5-8",
+    "5-9",
+    "5-10",
+    "5-11",
+    "5-12",
+    "5-13",
+    "5-14",
+    "5-15"
+   ],
+   "class": "",
+   "open": "09-13",
+   "close": "12-25",
+   "notes": "10 (30)",
+   "page": 44,
+   "cert": 99,
+   "months": [
+    9,
+    10,
+    11,
+    12
+   ]
+  }
+ ],
+ "bag": [
+  {
+   "species": "deer",
+   "limit": "Deer: The bag limit for mule (black-tailed) deer is 2, but only one may be a buck. The bag limit for white-tailed deer is 2, but only one may be a buck. Antlerless mule (black-tailed) deer are under LEH only.",
+   "page": 43,
+   "cert": 99
+  },
+  {
+   "species": "wolf",
+   "limit": "Wolf: The bag limit for wolf is 3, except in MU's 5-1 to 5-6, 5-12 to 5-15 where there is no bag limit.",
+   "page": 43,
+   "cert": 99
+  },
+  {
+   "species": "bobcat",
+   "limit": "Bobcat: The bag limit for bobcat is 1.",
+   "page": 43,
+   "cert": 99
+  },
+  {
+   "species": "Mule deer",
+   "limit": "Refer to Regional Bag Limits, page 43, and the Deer Bag Limits article, page 14",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "White tailed deer",
+   "limit": "Refer to Regional Bag Limits, page 43, and the Deer Bag Limits article, page 14",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Bighorn mountain sheep",
+   "limit": "1",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Mountain goat",
+   "limit": "1",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Black bear",
+   "limit": "2",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Wolf, MUs 5-7 to 5-11",
+   "limit": "3",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Wolf, MUs 5-1 to 5-6, 5-12 to 5-15",
+   "limit": "NBL",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Coyote",
+   "limit": "NBL",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Lynx",
+   "limit": "1",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Cougar",
+   "limit": "2",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Bobcat",
+   "limit": "1",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Raccoon",
+   "limit": "NBL",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Snowshoe hare",
+   "limit": "10 (daily)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Columbian ground squirrel",
+   "limit": "NBL",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Grouse: sooty (dusky, blue)",
+   "limit": "5 (15)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Grouse: spruce and ruffed",
+   "limit": "10 (30)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Grouse: sooty, spruce and ruffed together",
+   "limit": "10 daily, 30 possession (aggregate)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Sharp tailed grouse",
+   "limit": "5 (10)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Ptarmigan",
+   "limit": "5 (15)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Chukar partridge",
+   "limit": "5 (15)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Raven",
+   "limit": "5",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Common snipe",
+   "limit": "10 (30)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Coots",
+   "limit": "10 (30)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Ducks",
+   "limit": "8 (24)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Geese: snow and Ross's",
+   "limit": "5 (15)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Geese: white fronted",
+   "limit": "5 (15)",
+   "page": 44,
+   "cert": 99
+  },
+  {
+   "species": "Geese: Canada and cackling",
+   "limit": "10 (30)",
+   "page": 44,
+   "cert": 99
+  }
+ ],
+ "leh": [
+  {
+   "species": "mule deer",
+   "class": "antlerless",
+   "notes": "LEH only",
+   "page": 43,
+   "cert": 99
+  }
+ ],
+ "noRow": {
+  "species": [
+   "moose",
+   "elk",
+   "caribou",
+   "quail",
+   "pheasant",
+   "gray partridge",
+   "turkey",
+   "band tailed pigeon",
+   "dove",
+   "wolverine",
+   "skunk"
+  ],
+  "page": 44,
+  "cert": 95,
+  "notes": "No row in the Region 5 table, so no general open season (page 5: open seasons are only those in the synopsis). Moose in Region 5: check the LEH synopsis."
+ }
+}

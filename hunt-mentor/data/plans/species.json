@@ -1,0 +1,5050 @@
+{
+ "updated": "2026-10-11",
+ "species": [
+  {
+   "id": "mule-deer",
+   "name": "Mule deer",
+   "group": "big game",
+   "seasonKeys": [
+    "mule deer"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "mule deer",
+   "lessons": [
+    "mule-deer",
+    "deer-mind",
+    "gallery-deer",
+    "the-rut",
+    "migration",
+    "habitat-deer",
+    "sign",
+    "snow-tracking",
+    "glassing",
+    "wind-thermals",
+    "still-hunting",
+    "local-heffley",
+    "bc-calendar",
+    "top-areas",
+    "leh-strategy",
+    "shot-placement",
+    "field-dressing",
+    "meat-care",
+    "packing-out",
+    "cwd",
+    "tagging-legal",
+    "rb-region-3",
+    "rb-legal-methods",
+    "rb-bag-limits",
+    "first-deer-hunt"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal for deer (99%). 150 to 165 grain expanding bullet, zeroed with the box you hunt with (Tip).",
+     "cert": 99
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "Legal with 20 gauge or larger and No. 1 Buck or larger, or slugs (99%). Short range timber only (Tip).",
+     "cert": 95
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow class B, C or D (99%). Bow only bucks 1 to 9 September in most Region 3 MUs (Management Units) (99%).",
+     "cert": 99
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No .22 rimfire for deer (99%).",
+     "cert": 99
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Mule deer species licence, $15. Buy it IN PERSON: online orders come by mail, about 14 days",
+     "why": "Paper licence, printed with a unique number",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "It is a separate licence from the white tailed deer licence",
+     "why": "Two deer, two tags",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No waiting period for a deer licence",
+     "why": "Buy it the day before if you must",
+     "cert": 99,
+     "lesson": "rb-licences-fees"
+    },
+    {
+     "t": "Antlerless mule deer: LEH (Limited Entry Hunting) authorization only in Regions 3, 5 and 8",
+     "why": "No draw, no doe",
+     "cert": 99,
+     "lesson": "leh-strategy"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "bow-youth",
+     "label": "Bow and youth bucks, 1 to 9 September",
+     "months": [
+      9
+     ],
+     "where": [
+      "Summer range: up toward Heffley Lake, Paul Lake and Sun Peaks (75%)",
+      "Openings, cutblocks and burns in moist high country (Tip)",
+      "4 point rifle season in MUs 3-15, 3-16, 3-32, 3-33 only, not 3-27 (99%)"
+     ],
+     "when": [
+      "dawn: glass openings from 45 minutes before legal light (Tip)",
+      "midday: bucks bedded in shade, north timber (80%)",
+      "dusk: bachelor groups show on feed (Tip)"
+     ],
+     "tactics": [
+      "Scout for the October hunt even without a bow (Tip)",
+      "Log every buck, slope and time in the Journal (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "early-4pt",
+     "label": "4 point bucks, 10 to 30 September",
+     "months": [
+      9
+     ],
+     "where": [
+      "High benches and openings near Heffley Lake and Paul Lake (75%)",
+      "Bucks still in bachelor groups of 2 to 4 (80%)"
+     ],
+     "when": [
+      "dawn: activity peak about 04:00 to 09:00 (85%)",
+      "midday: bedded 10:00 to 15:00 (80%)",
+      "dusk: second peak, sunset to 21:00 (85%)"
+     ],
+     "tactics": [
+      "Glass and count points from a rest before any stalk (Tip)",
+      "4 tines on one antler, brow tine not counted (99%)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "any-buck",
+     "label": "Any buck, 1 to 31 October",
+     "months": [
+      10
+     ],
+     "where": [
+      "No snow yet: mid slope, 900 to 1,500 m, open fir and burn edges (75%)",
+      "After snow: low, sunny winter range, south and west faces, old Douglas fir, grassland benches (85%)",
+      "Dewdrop range below 760 m north of Kamloops is a studied winter range (80%)",
+      "Home MU 3-27 first, then 3-28 across the river (Tip)"
+     ],
+     "when": [
+      "dawn: on the glassing seat 45 minutes before legal light (Tip)",
+      "morning: deer drift uphill to cover by about 09:00 (85%)",
+      "midday: scout trails and sign, or still hunt timber (Tip)",
+      "dusk: sit a feeding slope with a long view (Tip)"
+     ],
+     "tactics": [
+      "Late October is pre rut: bucks start checking doe groups (70%)",
+      "Glass doe groups at dusk (Tip)",
+      "First weekend is the busiest. Walk in (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "rut-4pt",
+     "label": "4 point bucks and the rut, 1 November to 10 December",
+     "months": [
+      11,
+      12
+     ],
+     "where": [
+      "Winter range: the rut and the snow bring bucks to the same open slopes (80%)",
+      "Saddles and benches between doe groups (Tip)",
+      "Snow tracking on winter range (75%)"
+     ],
+     "when": [
+      "dawn: sit from first light to 11:00. Rutting bucks move all morning (Tip)",
+      "midday: track in fresh snow, or glass beds facing the sun (Tip)",
+      "dusk: glass doe groups; bucks follow does (Tip)"
+     ],
+     "tactics": [
+      "Mule deer rut mid November to mid December, peak mid November (80%)",
+      "Hunt the does, the buck will find them (Tip)",
+      "Count 4 points on one antler every time (99%)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [
+    {
+     "id": "sit-glass",
+     "name": "Sit and glass a feeding slope",
+     "best": "First trip, dawn and dusk, open slopes",
+     "steps": [
+      "Pick a seat with a long view of an open feeding slope (Tip)",
+      "Walk in in the dark, wind in your face (Tip)",
+      "Be settled 45 minutes before legal light (Tip)",
+      "Glass in a grid with binoculars, slowly (Tip)",
+      "Shoot only from a rest at a broadside, counted buck (Tip)"
+     ],
+     "pros": [
+      "Quiet and safe",
+      "Steady rested shot",
+      "Great for learning"
+     ],
+     "cons": [
+      "Needs the right spot",
+      "Needs patience"
+     ],
+     "cert": 70
+    },
+    {
+     "id": "spot-stalk",
+     "name": "Spot and stalk",
+     "best": "Open hills, first and last light",
+     "steps": [
+      "Glass from high ground at first light (Tip)",
+      "Pick 2 landmarks near the deer (Tip)",
+      "Check the wind before every move (Tip)",
+      "Close in out of sight, behind cover (Tip)",
+      "Get a rest. Wait for broadside (Tip)"
+     ],
+     "pros": [
+      "The classic mule deer method",
+      "You see lots of country"
+     ],
+     "cons": [
+      "Hard for a beginner",
+      "Easy to bump the deer"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "still-hunt",
+     "name": "Still hunt timber",
+     "best": "Midday, when deer are bedded",
+     "steps": [
+      "Wind in your face (Tip)",
+      "10 steps, then stop for 1 minute (Tip)",
+      "Look for parts of a deer: an ear, a leg, an antler (Tip)",
+      "Expect a quick, close shot (Tip)"
+     ],
+     "pros": [
+      "Works midday"
+     ],
+     "cons": [
+      "Deer usually see you first",
+      "Shots are quick and close"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "snow-track",
+     "name": "Track in fresh snow",
+     "best": "November and early December on winter range",
+     "steps": [
+      "Find a fresh track with loose, unbonded crumbs (70%)",
+      "Wide straddle, big prints, drag marks: possible buck (60%)",
+      "Follow with the wind in your face or across you (Tip)",
+      "Look ahead, not down. Glass every few steps (Tip)",
+      "Set a turn around time and keep it (Tip)"
+     ],
+     "pros": [
+      "Snow shows who, which way and how long ago"
+     ],
+     "cons": [
+      "Pulls you far from the truck",
+      "A big doe can fool you"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "rut-sit",
+     "name": "Sit between doe groups in the rut",
+     "best": "Second week of November",
+     "steps": [
+      "Find 2 doe groups on winter range (Tip)",
+      "Sit a saddle or bench between them, first light to 11:00 (Tip)",
+      "Mouth calls only. Electronic calls are unlawful for deer (95%)",
+      "Log every deer and its direction (Tip)"
+     ],
+     "pros": [
+      "Bucks come to the does"
+     ],
+     "cons": [
+      "4 point rule applies in November in Region 3 (99%)"
+     ],
+     "cert": 65
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Drive the Heffley Lake road at dusk with binoculars. Note every deer, time and slope (Tip)",
+     "Find 2 glassing spots with a long view of open slope (Tip)",
+     "Learn 3 browse plants: saskatoon, red osier dogwood, Oregon grape (Tip)",
+     "Read your MU row on synopsis page 34 (99%)"
+    ],
+    "dawn": [
+     "Legal light starts 1 hour before sunrise (99%)",
+     "Activity peak about 04:00 to 09:00 (85%)",
+     "Be on the seat 45 minutes before legal light (Tip)",
+     "Cold morning: glass sunny east and south faces first (Tip)"
+    ],
+    "morning": [
+     "Deer feed, then drift uphill toward cover by about 09:00 (85%)",
+     "Valley air starts to rise in late morning. Glass from above in the morning (80%)"
+    ],
+    "midday": [
+     "Bedded 10:00 to 15:00, chewing cud (80%)",
+     "Warm days: north facing timber and shade. Cold days: sunny south and west slopes (80%)",
+     "Scout sign, still hunt, or rest and eat (Tip)"
+    ],
+    "evening": [
+     "Deer rise 16:00 to 18:00, browse, then move to open feeding slopes (80%)",
+     "Air sinks downhill in the evening. Glass from below or across (80%)"
+    ],
+    "dusk": [
+     "Second peak: sunset to about 21:00 (85%)",
+     "Last legal shot 1 hour after sunset (99%)",
+     "Leave time and light to recover a deer (Tip)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights for hunting (95%)",
+     "Hang meat in the cold, check the next day's MU row (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Hunt October in Region 3",
+     "why": "Any buck is legal 1 to 31 October; no point counting under pressure",
+     "cert": 99
+    },
+    {
+     "t": "Start in home MU 3-27",
+     "why": "Survey data rank it top three in Region 3 for mule deer harvest, with above average success (Lean)",
+     "cert": 85
+    },
+    {
+     "t": "Glass more, walk less",
+     "why": "The deer you see from far away is the one you can sneak up on (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Be on the seat 45 minutes before legal light",
+     "why": "The first and last hour are when you see deer (Tip)",
+     "cert": 70
+    },
+    {
+     "t": "Hunt below the snow line after early snow",
+     "why": "Snow and cold push deer down, not the rut (85%)",
+     "cert": 85
+    },
+    {
+     "t": "Try 3-28 and 3-29 on foot",
+     "why": "No ATV (All Terrain Vehicle) for hunting there 1 September to 10 December, so fewer quads (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Apply for the Region 3 antlerless LEH draw",
+     "why": "Example: hunt 7014, MU 3-27, 1 to 30 November, 25 authorizations, 22.4 to 1 (99%)",
+     "cert": 99
+    },
+    {
+     "t": "Know your max range",
+     "why": "The distance you hit a 15 cm (6 in) plate 9 of 10 from a field rest (Tip)",
+     "cert": 70
+    }
+   ],
+   "redFlags": [
+    "Region 3: 4 point bucks only 10 to 30 September and 1 November to 10 December (99%). Can't count points from a rest? Not realistic then.",
+    "Antlerless mule deer: LEH (Limited Entry Hunting) only in Regions 3, 5 and 8 (99%).",
+    "Mule deer buck bag limit is 1 for Regions 3 to 8 combined (99%). Already took one? You are done.",
+    "Region 4: CWD (Chronic Wasting Disease) Management Zone, MUs 4-1 to 4-8 and 4-20 to 4-25: mandatory head submission and carcass transport rules (99%).",
+    "Inside City of Kamloops limits: no firearm discharge at all (99%). The boundary near Heffley Creek: VERIFY.",
+    "No ATV (All Terrain Vehicle) for hunting in MUs 3-28, 3-29, 3-30 and part of 3-17, 1 September to 10 December (99%).",
+    "Wells Gray Park, MU 3-45: no hunting, no firearm discharge (99%).",
+    "Region 2 near Mission: MU 2-8 general season is bucks only, and the Mission bylaw allows rifles only in Area D (99%).",
+    "After 10 December most Region 3 deer seasons are closed (99%)."
+   ],
+   "shot": {
+    "range": "Your max: the distance you hit a 15 cm (6 in) plate 9 of 10 from a field rest. For most beginners 200 m (219 yd) (Tip).",
+    "aim": "Broadside or quartering away. Up the back of the front leg, one third up the chest. Wait for the near leg to step forward (85%).",
+    "diagram": "vitals-deer",
+    "cert": 85
+   },
+   "afterKill": [
+    "Notch (cancel) the species licence immediately, before you handle the deer (99%).",
+    "Heart or lung hit out of sight: wait 30 minutes, then follow (85%).",
+    "Leave evidence of sex attached: unskinned tail plus a testicle or part of the penis (99%).",
+    "4 point season buck: antlers stay attached to part of the upper skull, with the licence, on the way home (99%).",
+    "Deer need no compulsory inspection or report (99%).",
+    "Take the neck, ribs, four quarters and loins (98%).",
+    "Guts out or meat off within the hour, meat below 4°C as fast as you can (80%).",
+    "Submit the head for CWD (Chronic Wasting Disease) testing. Free, and asked for in Region 3 (95%).",
+    "Someone else carrying your meat needs a Record of Receipt (90%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Mule deer species licence bought in person",
+      "cert": 99,
+      "lesson": "licences"
+     },
+     {
+      "t": "Today's MU and its class checked: 4 point or any buck",
+      "why": "Rules change on 1 October and 1 November in Region 3",
+      "cert": 99,
+      "lesson": "local-heffley"
+     },
+     {
+      "t": "Official Region 3 MU map saved on the phone",
+      "why": "Map lines are approximate in the synopsis",
+      "cert": 99,
+      "lesson": "local-heffley"
+     },
+     {
+      "t": "CWD freezer location for the area saved",
+      "why": "Drop the head within a week",
+      "cert": 95,
+      "lesson": "cwd"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "Zero confirmed with the deer load, 150 to 165 grain expanding",
+      "why": "Same box you hunt with (Tip)",
+      "cert": 70,
+      "lesson": "sighting-in"
+     },
+     {
+      "t": "Max range tested on a 15 cm plate from a field rest",
+      "cert": 70,
+      "lesson": "shooting-skills"
+     },
+     {
+      "t": "Expanding bullets only, no full metal jacket",
+      "why": "Unlawful for hunting",
+      "cert": 99,
+      "lesson": "rb-legal-methods"
+     },
+     {
+      "t": "Shooting sticks or a pack for a rest",
+      "cert": 60,
+      "lesson": "shooting-skills"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Binoculars, and a tripod for long glassing sits",
+      "cert": 60,
+      "lesson": "glassing"
+     },
+     {
+      "t": "Puff bottle or wind checker",
+      "why": "Wind first, then the deer (Tip)",
+      "cert": 60,
+      "lesson": "wind-thermals"
+     },
+     {
+      "t": "4 game bags, cloth, never plastic",
+      "cert": 80,
+      "lesson": "field-dressing"
+     },
+     {
+      "t": "Strong garbage bag and zip ties for the CWD head",
+      "cert": 95,
+      "lesson": "cwd"
+     },
+     {
+      "t": "Pen and knife to notch the licence",
+      "cert": 95,
+      "lesson": "tagging-legal"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Quiet outer layer: no Velcro, nylon swish or zippers that click",
+      "why": "Deer hear best at 4 to 8 kHz, the range of those sounds (85%)",
+      "cert": 85,
+      "lesson": "mule-deer"
+     },
+     {
+      "t": "Blaze orange vest and toque",
+      "why": "No orange rule in the synopsis, but a strong safety tip",
+      "cert": 90,
+      "lesson": "what-to-wear"
+     },
+     {
+      "t": "Insulated layer for the dawn sit",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Cooler, ice or frozen jugs ready in the truck",
+      "cert": 60,
+      "lesson": "meat-care"
+     },
+     {
+      "t": "Butcher booked before the hunt",
+      "why": "Some Kamloops cutters are not taking game (95%)",
+      "cert": 95,
+      "lesson": "local-heffley"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Solid backstop for every shot; no skylined deer",
+      "cert": 85,
+      "lesson": "shot-placement"
+     },
+     {
+      "t": "100 m from any lived in house or barn; 15 m from a road centre",
+      "cert": 99,
+      "lesson": "local-heffley"
+     },
+     {
+      "t": "Trip plan left; RAPP (Report All Poachers and Polluters) number 1 877 952 7277 saved",
+      "cert": 99,
+      "lesson": "local-heffley"
+     }
+    ]
+   },
+   "mistakes": [
+    "Walking in at daylight. The deer were already up and leaving.",
+    "Hunting with the wind at your back, or ignoring the thermals.",
+    "Shooting a buck you did not count in a 4 point season.",
+    "Skylining yourself on a ridge, rushing a stalk, or a long shot you never practised.",
+    "Chasing a deer that stotted over the hill. Sit still and count to 60 (65%).",
+    "Bottled deer urine on a scrape: unlawful if it came from outside BC (95%).",
+    "Quitting at 9 am in November. Rutting bucks move all morning."
+   ],
+   "sources": [
+    "mule-deer",
+    "the-rut",
+    "migration",
+    "local-heffley",
+    "bc-calendar",
+    "top-areas",
+    "cwd",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "white-tailed-deer",
+   "name": "White tailed deer",
+   "group": "big game",
+   "seasonKeys": [
+    "white tailed deer"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "white tailed deer",
+   "lessons": [
+    "white-tailed-deer",
+    "deer-mind",
+    "gallery-deer",
+    "the-rut",
+    "migration",
+    "funnels",
+    "sign",
+    "landowner-permission",
+    "local-heffley",
+    "bc-calendar",
+    "top-areas",
+    "shot-placement",
+    "blood-trailing",
+    "field-dressing",
+    "meat-care",
+    "cwd",
+    "tagging-legal",
+    "rb-region-3",
+    "rb-region-4",
+    "rb-where-you-can-hunt"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal for deer (99%). Valley shots often 50 to 150 m (Tip).",
+     "cert": 99
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger, or slugs (99%). Fits close brush and field edges (Tip).",
+     "cert": 95
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (99%). Region 3 bow only either sex, 11 to 20 December, new for 2026 (99%).",
+     "cert": 99
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No .22 rimfire for deer (99%).",
+     "cert": 99
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "White tailed deer species licence, $15, bought IN PERSON",
+     "why": "Separate from the mule deer licence",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No LEH needed for Region 3 antlerless white tails, 10 to 31 October",
+     "cert": 99,
+     "lesson": "white-tailed-deer"
+    },
+    {
+     "t": "Written or clear permission for any farm you hunt",
+     "why": "Hunting cultivated land without consent is unlawful",
+     "cert": 99,
+     "lesson": "landowner-permission"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "early-bucks",
+     "label": "Bucks open, 10 September (Region 3)",
+     "months": [
+      9
+     ],
+     "where": [
+      "North Thompson hayfields and cottonwood bottoms (75%)",
+      "Riparian strips and farm fields (85%)",
+      "Salmon River side of 3-20 (75%)"
+     ],
+     "when": [
+      "dawn: deer slip back into cover at or before first light (75%)",
+      "midday: bedded in willow, cottonwood and young conifer (75%)",
+      "dusk: into the fields from late afternoon (75%)"
+     ],
+     "tactics": [
+      "Get farm permission now (Tip)",
+      "Find the trail from bedding brush to field (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "antlerless",
+     "label": "Antlerless open, 10 to 31 October (Region 3)",
+     "months": [
+      10
+     ],
+     "where": [
+      "Hayfield and alfalfa regrowth edges (80%)",
+      "Creek browse: willow, dogwood, rose, saskatoon (75%)"
+     ],
+     "when": [
+      "dawn: sit the trail downwind before light (Tip)",
+      "dusk: sit 2 hours before dark on the field edge trail (Tip)"
+     ],
+     "tactics": [
+      "Either sex, bag 2 white tails (99%)",
+      "Doe and button buck look alike; both count as antlerless (99%)",
+      "Rubs and scrapes start late October (60%)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "rut",
+     "label": "Rut, November",
+     "months": [
+      11
+     ],
+     "where": [
+      "Rub lines and scrapes near fields and bottoms (60%)",
+      "Where the does live (80%)"
+     ],
+     "when": [
+      "dawn: bucks move in daylight as the rut nears (70%)",
+      "morning: sit funnels and saddles all morning (Tip)",
+      "dusk: field edges"
+     ],
+     "tactics": [
+      "Peak rut November; most does conceive about 13 to 17 November (80%)",
+      "Rattling: about 65% of sessions pulled a buck in one Texas study, best cool calm mornings (70%)",
+      "Bucks only from 1 November in Region 3 (99%)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "late",
+     "label": "Late bucks and bow, to 10 December, bow 11 to 20 December",
+     "months": [
+      12
+     ],
+     "where": [
+      "Aspen, cottonwood and willow along rivers, then conifer patches as snow deepens (85%)"
+     ],
+     "when": [
+      "dawn and dusk: field edges near thick cover (Tip)",
+      "midday: track in snow (Tip)"
+     ],
+     "tactics": [
+      "Rifle bucks close 10 December in Region 3 (99%)",
+      "Bow only either sex 11 to 20 December (99%)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [
+    {
+     "id": "stand",
+     "name": "Stand or ground blind on a trail",
+     "best": "Hayfield edge at dusk",
+     "steps": [
+      "Get permission on one farm (Tip)",
+      "Find the most trampled trail with fresh tracks between bedding and field (Tip)",
+      "Sit downwind of it, 200 m back from a fence corner (Tip)",
+      "Go around the bedding brush, never through it (Tip)",
+      "Check distance to every building is over 100 m (99%)"
+     ],
+     "pros": [
+      "You are still, deer come to you",
+      "Easy steady shot"
+     ],
+     "cons": [
+      "Needs scouting and permission",
+      "Cold, needs patience"
+     ],
+     "cert": 65
+    },
+    {
+     "id": "still-hunt",
+     "name": "Still hunt the bottoms",
+     "best": "Thick bottoms, midday",
+     "steps": [
+      "Wind in your face (Tip)",
+      "10 steps, stop and look a minute or more (Tip)",
+      "Expect quick, close shots (Tip)"
+     ],
+     "pros": [
+      "Covers ground",
+      "Works midday"
+     ],
+     "cons": [
+      "Hard to sneak on in thick cover"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "rattle",
+     "name": "Rattle and grunt",
+     "best": "Early to mid November, cool calm mornings",
+     "steps": [
+      "Set up downwind of a rub line or scrape (Tip)",
+      "Rattle about 1 minute, then sit still 30 minutes (Tip)",
+      "Soft grunts every 15 to 20 minutes (60%)",
+      "Mouth or hand calls only: electronic calls are unlawful for deer (95%)"
+     ],
+     "pros": [
+      "Can pull a buck in close"
+     ],
+     "cons": [
+      "Weak in mid October",
+      "Less reliable on heavily hunted ground (50%)"
+     ],
+     "cert": 65
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Knock on one North Thompson farm door. Ask to scout the field edges (Tip)",
+     "Find trails, fresh rubs, and a downwind seat with a safe backstop (Tip)",
+     "Draw a 100 m circle round every house and barn (99%)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Deer slip into cover at or before first light (75%)",
+     "Sit a trail between field and bedding brush (Tip)"
+    ],
+    "morning": [
+     "November: bucks cruise in daylight; stay until 11:00 (Tip)"
+    ],
+    "midday": [
+     "Deer bedded in thick brush near the field (75%)",
+     "Scout rubs and scrapes, or still hunt slowly (Tip)"
+    ],
+    "evening": [
+     "Be on the stand 2 hours before dark (Tip)",
+     "No noisy truck doors or voices near the field (Tip)"
+    ],
+    "dusk": [
+     "Peak movement (85%)",
+     "Big bucks often reach the field after dark. Hunt the trail, not the field (Tip)",
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Pressured white tails move more at night (70%)",
+     "No lights for hunting (95%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Get farm permission",
+     "why": "White tails live on valley hayfields, which is mostly private land (Lean)",
+     "cert": 75
+    },
+    {
+     "t": "Hunt the antlerless window, 10 to 31 October",
+     "why": "Either sex doubles the legal deer, no draw needed (99%)",
+     "cert": 99
+    },
+    {
+     "t": "Sit the trail, not the field edge in the open",
+     "why": "Every deer sees you walk in on the open edge (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Look at MU 3-36",
+     "why": "Region 3 white tail numbers are thin except 3-36 (Lean)",
+     "cert": 70
+    },
+    {
+     "t": "Hunt early November mornings",
+     "why": "Seeking phase: daylight sightings rise (75%)",
+     "cert": 75
+    }
+   ],
+   "redFlags": [
+    "Region 2 (Mission): no white tailed deer season (99%).",
+    "Region 1: no white tailed deer season (95%).",
+    "No shooting within 100 m of an occupied house or farm building (99%). Valley farms make this the main limit.",
+    "Hunting cultivated land without consent is unlawful (99%).",
+    "Inside City of Kamloops limits and on Lac du Bois Crown land in the city: no discharge (99%).",
+    "Region 4 CWD (Chronic Wasting Disease) Management Zone: mandatory head submission and carcass transport rules (99%).",
+    "Region 3 bucks only after 31 October, except bow either sex 11 to 20 December and youth seasons (99%)."
+   ],
+   "shot": {
+    "range": "Valley shots often 50 to 150 m (55 to 164 yd). Max is your 15 cm plate distance (Tip).",
+    "aim": "Broadside, tight behind the front leg, one third up. White tails often run 50 to 100 m after a good hit: mark where it stood and where it entered cover (Tip).",
+    "diagram": "vitals-deer",
+    "cert": 85
+   },
+   "afterKill": [
+    "Notch the white tailed deer licence immediately, before handling (99%).",
+    "Evidence of sex attached: unskinned tail plus testicle or part of the penis, or part of the udder and teats for a doe (99%).",
+    "No compulsory inspection or report for deer (99%).",
+    "Take neck, ribs, four quarters and loins (98%).",
+    "October days can be warm in the valley. Cool the carcass fast (Tip).",
+    "Region 3: submit the head for CWD testing, free (95%). Region 4 zone: mandatory within a week (95%).",
+    "Thank the farmer. Bring them a package of sausage (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "White tailed deer licence bought in person",
+      "cert": 99,
+      "lesson": "licences"
+     },
+     {
+      "t": "Farm permission, with the boundary walked",
+      "cert": 99,
+      "lesson": "landowner-permission"
+     },
+     {
+      "t": "Antlerless dates for my MU read in the synopsis",
+      "cert": 99,
+      "lesson": "white-tailed-deer"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "Zero confirmed at 100 m with the deer load",
+      "cert": 70,
+      "lesson": "sighting-in"
+     },
+     {
+      "t": "Backstop plan for flat fields: solid earth only",
+      "why": "Houses, livestock and roads nearby",
+      "cert": 85,
+      "lesson": "white-tailed-deer"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Rattling antlers or bag, grunt tube (November)",
+      "cert": 60,
+      "lesson": "white-tailed-deer"
+     },
+     {
+      "t": "Ground blind or stool for the trail sit",
+      "cert": 60,
+      "lesson": "white-tailed-deer"
+     },
+     {
+      "t": "Flagging tape for the blood trail",
+      "cert": 70,
+      "lesson": "blood-trailing"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Warm layers for a still sit at dusk",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     },
+     {
+      "t": "Blaze orange vest and toque",
+      "cert": 90,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Cooler and ice in the truck",
+      "cert": 60,
+      "lesson": "meat-care"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Distance to every building over 100 m checked",
+      "cert": 99,
+      "lesson": "white-tailed-deer"
+     },
+     {
+      "t": "No shot toward roads, buildings or livestock",
+      "cert": 85,
+      "lesson": "white-tailed-deer"
+     }
+    ]
+   },
+   "mistakes": [
+    "Sitting right on the field edge in the open.",
+    "Hunting a farm without clear permission.",
+    "Shooting at a flagging white tail running away.",
+    "Walking through the bedding brush to reach your stand.",
+    "Calling a white tail a black tail in Region 2. There is no white tail season there."
+   ],
+   "sources": [
+    "white-tailed-deer",
+    "the-rut",
+    "migration",
+    "local-heffley",
+    "top-areas",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "fallow-deer",
+   "name": "Fallow deer",
+   "group": "big game",
+   "seasonKeys": [
+    "fallow deer"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": null,
+   "lessons": [
+    "rb-region-1",
+    "all-bc-species",
+    "rb-legal-methods",
+    "shot-placement",
+    "field-dressing",
+    "meat-care"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal for deer (99%).",
+     "cert": 99
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger, No. 1 Buck or larger, or slugs (99%).",
+     "cert": 95
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (99%).",
+     "cert": 99
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No .22 rimfire for deer (99%).",
+     "cert": 99
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No species licence needed for fallow deer",
+     "why": "Page 21 footnote",
+     "cert": 99,
+     "lesson": "rb-region-1"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "all-year",
+     "label": "No closed season, MUs 1-1 to 1-7",
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "where": [
+      "Region 1, Vancouver Island area, MUs 1-1 to 1-7 only (99%)"
+     ],
+     "when": [
+      "dawn and dusk: deer move most (Tip)"
+     ],
+     "tactics": [
+      "Either sex, no bag limit (99%)",
+      "Read the Region 1 maps and closures before you go (99%)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [
+    {
+     "id": "id-first",
+     "name": "Identify, then hunt",
+     "best": "Any day in MUs 1-1 to 1-7",
+     "steps": [
+      "Learn fallow deer from black tailed deer before the trip (99%)",
+      "Read the Region 1 no shooting maps (99%)",
+      "Glass and confirm species before the shot (Tip)"
+     ],
+     "pros": [
+      "Open all year"
+     ],
+     "cons": [
+      "Far from Heffley Creek and Mission"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Read the Region 1 Rule Book screens (99%)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)"
+    ],
+    "morning": [],
+    "midday": [],
+    "evening": [],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Learn the look alikes",
+     "why": "Black tail and fallow rules are very different (99%)",
+     "cert": 99
+    }
+   ],
+   "redFlags": [
+    "Only Region 1, MUs 1-1 to 1-7 (99%). Nowhere near your bases.",
+    "Black tailed deer in the same MUs have their own seasons, licence and bag (99%). Know which deer is in the scope."
+   ],
+   "shot": {
+    "range": "Your 15 cm plate distance (Tip).",
+    "aim": "Broadside, behind the front leg, one third up (85%).",
+    "diagram": "vitals-deer",
+    "cert": 85
+   },
+   "afterKill": [
+    "Take neck, ribs, four quarters and loins (98%).",
+    "Cool the meat below 4°C fast (80%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Region 1 maps and closures read",
+      "cert": 99,
+      "lesson": "rb-region-1"
+     }
+    ],
+    "firearm": [],
+    "gear": [],
+    "clothing": [],
+    "meat": [],
+    "safety": []
+   },
+   "mistakes": [
+    "Shooting a black tailed deer thinking it was a fallow deer."
+   ],
+   "sources": [
+    "rb-region-1",
+    "all-bc-species"
+   ]
+  },
+  {
+   "id": "moose",
+   "name": "Moose",
+   "group": "big game",
+   "seasonKeys": [
+    "moose"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "moose",
+   "lessons": [
+    "moose",
+    "habitat-big-game",
+    "the-rut",
+    "migration",
+    "snow-tracking",
+    "local-heffley",
+    "bc-calendar",
+    "leh-strategy",
+    "shot-placement",
+    "ballistics-308",
+    "field-dressing",
+    "meat-care",
+    "packing-out",
+    "cwd",
+    "tagging-legal",
+    "rb-region-3",
+    "rb-region-8",
+    "rb-region-4",
+    "rb-after-the-kill",
+    "rb-legal-methods"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire or bow only for moose (98%). .308 with a 165 to 180 grain premium controlled expansion bullet, inside about 200 m (65%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (99%). Bow only blocks exist in Regions 4, 6 and 7A (99%).",
+     "cert": 99
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun for moose (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for moose (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Moose species licence. Buy it in person to have it at once",
+     "why": "Online orders come by mail",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No waiting period for a moose licence",
+     "cert": 99,
+     "lesson": "rb-licences-fees"
+    },
+    {
+     "t": "Mandatory Hunter Report by 31 March, hunt or no hunt",
+     "why": "Miss it and next year's licence and LEH are blocked",
+     "cert": 98,
+     "lesson": "moose"
+    },
+    {
+     "t": "Cow, calf or bigger bull in Region 3: LEH (Limited Entry Hunting) authorization only",
+     "cert": 98,
+     "lesson": "leh-strategy"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "north-early",
+     "label": "Early northern seasons, August and September",
+     "months": [
+      8,
+      9
+     ],
+     "where": [
+      "Region 6: bulls, MUs 6-17 to 6-29, 23 August to 31 October; parts LEH only (99%)",
+      "Region 7A: spike fork bulls 15 August to 5 November in 7-37, 7-39 to 7-41 (99%)",
+      "Lake edges and subalpine basins in early fall (Tip)"
+     ],
+     "when": [
+      "dawn: glass wetland edges (Tip)",
+      "midday: bedded in shade near feed (Tip)",
+      "dusk: lake and swamp edges (Tip)"
+     ],
+     "tactics": [
+      "A trip hunt, not a Heffley Creek day hunt (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "rut",
+     "label": "Rut, late September to mid October",
+     "months": [
+      9,
+      10
+     ],
+     "where": [
+      "Region 3 MUs 3-34 to 3-38, 3-40 to 3-44, 3-46: spike fork bulls 20 September to 31 October (99%)",
+      "Willow swamps, lake edges, beaver ponds (85%)"
+     ],
+     "when": [
+      "dawn: call softly near a wetland, then glass (60%)",
+      "dusk: long cow moan, rake brush (60%)"
+     ],
+     "tactics": [
+      "Rut peak last week of September to first week of October (70%)",
+      "A bull coming to a call is dangerous. Keep a tree between you (Tip)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "mid-r3",
+     "label": "Mid Region 3 block, 15 October to 15 November",
+     "months": [
+      10,
+      11
+     ],
+     "where": [
+      "MUs 3-15 to 3-17, 3-31 to 3-33 (99%)",
+      "Cutblocks and willow flats (Tip)"
+     ],
+     "when": [
+      "dawn and dusk: most active (75%)",
+      "midday: bedded close to feed (Tip)"
+     ],
+     "tactics": [
+      "Rut winding down; bulls feed hard (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "home-nov",
+     "label": "Home block: 1 to 15 November (MU 3-27, 3-28)",
+     "months": [
+      11
+     ],
+     "where": [
+      "MUs 3-12 to 3-14, 3-18 to 3-20, 3-26 to 3-30, 3-39 (99%)",
+      "North Thompson wetlands, willow flats, young cutblocks toward Barriere and Clearwater (Tip)",
+      "Bonaparte Plateau: a provincial moose study area (90%)",
+      "Winter: river valleys, burns, cutblocks, wetland complexes (85%)"
+     ],
+     "when": [
+      "dawn: glass willow flats; cold mornings keep moose up longer (60%)",
+      "midday: track in snow, check browse (Tip)",
+      "dusk: sit a trail between timber and wetland (Tip)"
+     ],
+     "tactics": [
+      "Region 8 also 1 to 15 November, spike fork bulls (99%)",
+      "Mature bulls drop antlers in November (75%)",
+      "Snow under 40 cm barely slows moose (85%)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [
+    {
+     "id": "glass-still",
+     "name": "Glass and still hunt cutblocks and willow flats",
+     "best": "October and November, dawn and dusk",
+     "steps": [
+      "Walk slowly into the wind at dawn (Tip)",
+      "Stop and glass every opening (Tip)",
+      "Look for a dark shape and a pale antler palm (Tip)",
+      "Count every tine on one antler before you look at the chest (98%)"
+     ],
+     "pros": [
+      "Fits the November home block",
+      "You learn the country"
+     ],
+     "cons": [
+      "Lots of walking",
+      "Wind swirls in cut country"
+     ],
+     "cert": 65
+    },
+    {
+     "id": "wetland-sit",
+     "name": "Sit a wetland trail at dusk",
+     "best": "Trail between timber and a lake or swamp",
+     "steps": [
+      "Find fresh tracks at a pond edge (Tip)",
+      "Sit downwind the next evening (Tip)",
+      "Rest the rifle, wait for broadside (Tip)"
+     ],
+     "pros": [
+      "Quiet, safe, rested shot"
+     ],
+     "cons": [
+      "One spot, needs patience"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "calling",
+     "name": "Call in the rut",
+     "best": "Last week of September to first week of October",
+     "steps": [
+      "Set up near a wetland at dawn (Tip)",
+      "Cow call and bull grunt, then wait and glass (60%)",
+      "Rake a paddle or shoulder blade on brush (60%)",
+      "Mouth or hand calls only (95%)"
+     ],
+     "pros": [
+      "Pulls a bull close"
+     ],
+     "cons": [
+      "Rut mostly over by late October",
+      "A bull coming in is dangerous"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Find a willow flat or wetland within an hour of Heffley Creek (Tip)",
+     "Look for snapped willow tips at chest to head height, huge heart shaped tracks, beds (Tip)",
+     "Plan the pack out route before the hunt (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Most active at dawn and dusk (75%)",
+     "Glass a willow flat or wetland edge at first light (Tip)"
+    ],
+    "morning": [
+     "Cold mornings after frost keep moose on their feet longer (60%)"
+    ],
+    "midday": [
+     "Bedded in shade or thick cover close to feed (Tip)",
+     "Check sign, move to the evening seat (Tip)"
+    ],
+    "evening": [
+     "Get on a wetland trail 2 hours before dark (Tip)"
+    ],
+    "dusk": [
+     "Peak movement (75%)",
+     "Shoot only with enough light left to start the work. A moose is a 2 day job (Tip)",
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Meat open, propped, cooling. Moose hold heat for hours (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Hunt with your brother",
+     "why": "One person cannot pack a moose out in a day (Tip)",
+     "cert": 70
+    },
+    {
+     "t": "Apply for Region 3 antlerless moose LEH",
+     "why": "Codes 4001 to 4018: 1 to 10 November, odds 4 to 1 up to 58 to 1 (99%)",
+     "cert": 99
+    },
+    {
+     "t": "Apply as a shared hunt",
+     "why": "Moose shared hunt: each member entered separately, if one is drawn the group is drawn (99%)",
+     "cert": 99
+    },
+    {
+     "t": "Scout moose kitchens",
+     "why": "Willow flats with broken tips and big tracks in the mud (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Check the Bonaparte Plateau",
+     "why": "A provincial moose study area north of Kamloops (90%)",
+     "cert": 90
+    },
+    {
+     "t": "Practise at 150 m with the moose load",
+     "why": "15 cm plate, field rest, 165 to 180 grain premium (Tip)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "Region 3 general season: spike fork bulls only (98%). No more than 2 tines on one antler.",
+    "Home MUs 3-27 and 3-28: only 1 to 15 November (99%). A 15 day window.",
+    "Cows, calves and bigger bulls: LEH (Limited Entry Hunting) only (98%).",
+    "No general moose season in Regions 1, 2 or 5 (95%).",
+    "Unlawful to hunt big game while it is swimming (99%).",
+    "Region 4 CWD (Chronic Wasting Disease) Management Zone: mandatory head submission and carcass transport rules (99%).",
+    "Mandatory Hunter Report by 31 March or no licence next year (98%).",
+    "Region 3: no motor vehicles except snowmobiles above 1,700 m, except existing roads and trails (98%)."
+   ],
+   "shot": {
+    "range": "Inside about 200 m (219 yd), and inside your 15 cm plate distance (65%).",
+    "aim": "Broadside, up the back of the front leg, one third up. The hump fools you: aim lower than instinct says (65%). Moose seldom drop: wait a few minutes, then follow quietly (85%).",
+    "diagram": "vitals-moose",
+    "cert": 85
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Antlers stay naturally attached to part of the upper skull, with the licence, while returning (98%).",
+    "Evidence of sex: tail or a 6 cm² hide piece, plus a testicle or part of the penis (98%).",
+    "Edible portions home: neck, ribs, four quarters, loins (98%).",
+    "Quarter on the hide (gutless method), bag each quarter, hang in shade (Tip).",
+    "Plan 4 to 6 trips with 2 people, or a cart or sled (Tip).",
+    "Record of Receipt if your brother carries your meat (90%).",
+    "Mandatory Hunter Report by 31 March (98%).",
+    "Region 3: moose heads welcome for CWD testing (95%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Moose rows for my MU read, synopsis page 34",
+      "cert": 99,
+      "lesson": "moose"
+     },
+     {
+      "t": "31 March report deadline in the phone",
+      "cert": 98,
+      "lesson": "moose"
+     },
+     {
+      "t": "Spike fork definition learned by heart",
+      "cert": 98,
+      "lesson": "moose"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "165 to 180 grain premium load zeroed",
+      "cert": 65,
+      "lesson": "moose"
+     },
+     {
+      "t": "Practised the 15 cm plate at 150 m from a field rest",
+      "cert": 60,
+      "lesson": "moose"
+     }
+    ],
+    "gear": [
+     {
+      "t": "8 game bags, bone saw, tarp, rope, small pulley",
+      "cert": 80,
+      "lesson": "field-dressing"
+     },
+     {
+      "t": "Cow call",
+      "cert": 60,
+      "lesson": "moose"
+     },
+     {
+      "t": "Cart, sled or frame pack for the pack out",
+      "cert": 60,
+      "lesson": "packing-out"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Boots for wet willow flats and swamp edges",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Pack out plan agreed with your brother before the shot",
+      "cert": 70,
+      "lesson": "moose"
+     },
+     {
+      "t": "Meat cutter or cold storage arranged",
+      "cert": 60,
+      "lesson": "meat-care"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Keep a tree between you and a close moose",
+      "why": "Rutting bulls and cows with calves can charge",
+      "cert": 60,
+      "lesson": "moose"
+     },
+     {
+      "t": "ATV (All Terrain Vehicle): magazine out, chamber empty",
+      "cert": 99,
+      "lesson": "packing-out"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting a bull with 3 points on each side in a spike fork season.",
+    "Calling in a bull with no plan for the pack out.",
+    "Shooting a moose standing in a lake.",
+    "Forgetting the Mandatory Hunter Report because you never filled the tag.",
+    "Cutting the skull plate off the antlers before you are home."
+   ],
+   "sources": [
+    "moose",
+    "local-heffley",
+    "leh-strategy",
+    "the-rut",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "elk",
+   "name": "Elk",
+   "group": "big game",
+   "seasonKeys": [
+    "elk"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "elk",
+   "lessons": [
+    "elk",
+    "habitat-big-game",
+    "the-rut",
+    "migration",
+    "leh-strategy",
+    "shot-placement",
+    "ballistics-308",
+    "field-dressing",
+    "meat-care",
+    "packing-out",
+    "cwd",
+    "tagging-legal",
+    "rb-region-8",
+    "rb-region-4",
+    "rb-region-7a",
+    "rb-region-7b",
+    "rb-region-6",
+    "rb-legal-methods"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire or bow only for elk (98%). .308 with 165 to 180 grain premium, inside about 200 m (65%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (99%). Region 8 bow only 6 point bulls, 1 to 9 September (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun for elk (99%).",
+     "cert": 99
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for elk (99%).",
+     "cert": 99
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Elk species licence",
+     "cert": 98,
+     "lesson": "elk"
+    },
+    {
+     "t": "Mandatory Hunter Report by 31 March, kill or no kill. New in 2026: replaces compulsory inspection for elk",
+     "cert": 95,
+     "lesson": "elk"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "bow",
+     "label": "Bow only, 1 to 9 September",
+     "months": [
+      9
+     ],
+     "where": [
+      "Region 8: 6 point bulls, MUs 8-1 to 8-15, 8-21 to 8-26 (98%)",
+      "Region 4: bulls or 6 point bulls by MU (99%)"
+     ],
+     "when": [
+      "dawn: bugling peaks (70%)",
+      "dusk: back out to feed (80%)"
+     ],
+     "tactics": [
+      "Learn the bugle first (Tip)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "rut-rifle",
+     "label": "Rifle in the rut, 10 September to 20 October",
+     "months": [
+      9,
+      10
+     ],
+     "where": [
+      "Region 8: 6 point bulls, 10 September to 20 October (98%)",
+      "Region 4: 6 point bulls to 20 October or 5 October by MU (99%)",
+      "Burns, cutblocks and meadows next to dark timber (Tip)"
+     ],
+     "when": [
+      "dawn: feeding in meadows, then a drift into timber (80%)",
+      "midday: bedded in cool timber, north slopes (Tip)",
+      "dusk: back out to feed; bulls move all night in the rut (70%)"
+     ],
+     "tactics": [
+      "Rut early September to mid October, peak about the third week of September (70%)",
+      "Cow call is the safest call for a beginner (60%)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "north",
+     "label": "Northern seasons, mid August to October",
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "where": [
+      "Region 7A: 6 point bulls 10 September to 9 October in most MUs (99%)",
+      "Region 7B: 6 point and 3 point bull rows, antlerless 15 September to 15 October in some MUs (99%)",
+      "Region 6: 6 point bulls 1 to 9 October in 6-1 to 6-9 (99%)"
+     ],
+     "when": [
+      "dawn and dusk: two activity peaks (80%)"
+     ],
+     "tactics": [
+      "A trip hunt (Tip)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [
+    {
+     "id": "glass-openings",
+     "name": "Glass openings at dawn and dusk",
+     "best": "Burn or meadow next to timber",
+     "steps": [
+      "Sit high over the opening before light (Tip)",
+      "Find the herd, then move in with the wind (Tip)",
+      "Count 6 tines on one antler, bull standing, good light (98%)"
+     ],
+     "pros": [
+      "Time to count points",
+      "Safer shots"
+     ],
+     "cons": [
+      "Elk feed in the dark and are gone early"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "call-rut",
+     "name": "Call in the rut",
+     "best": "September, after you have heard real bulls",
+     "steps": [
+      "Set up downwind of a bugling bull at dawn (Tip)",
+      "Cow call from 100 m back in cover (60%)",
+      "Bugle sparingly; stay still (Tip)",
+      "Mouth calls only (95%)"
+     ],
+     "pros": [
+      "Bulls come to you"
+     ],
+     "cons": [
+      "Easy to over call",
+      "Must still count 6 on a moving bull"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "wallow",
+     "name": "Sit a wallow or water",
+     "best": "Afternoon in the rut",
+     "steps": [
+      "Find a fresh, stinking wallow near water (65%)",
+      "Sit downwind through the afternoon (Tip)",
+      "Count 6 tines on one antler before the shot (98%)"
+     ],
+     "pros": [
+      "Quiet, rested shot"
+     ],
+     "cons": [
+      "One spot, patience"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Sit a ridge at dawn and just listen for bugles (Tip)",
+     "Look for wallows, high rubs and many sizes of track together (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Bulls most vocal at dawn, dusk and night (70%)"
+    ],
+    "morning": [
+     "Herd drifts into timber after feeding (80%)"
+    ],
+    "midday": [
+     "Bedded in cool timber, often north slopes or benches (Tip)"
+    ],
+    "evening": [
+     "Sit a wallow or the timber edge of a meadow (Tip)"
+    ],
+    "dusk": [
+     "Elk back out to feed (80%)",
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Skin or quarter fast; elk hide holds heat (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Go to Region 8 in September",
+     "why": "6 point bull season sits right on the rut (Tip); Okanagan elk 2,500 to 3,500 (80%)",
+     "cert": 75
+    },
+    {
+     "t": "Learn to count 6 points on photos and video",
+     "why": "Brow tine counts; tines at least 2.5 cm (98%)",
+     "cert": 98
+    },
+    {
+     "t": "Plan the pack for an animal 3 times a deer",
+     "why": "One elk, two men, three trips (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Check the LEH synopsis for elk draws",
+     "why": "Region 3 elk draws, if any: VERIFY",
+     "cert": 50
+    }
+   ],
+   "redFlags": [
+    "Region 3 (Thompson): no general elk season (98%). Near Heffley Creek, elk are a Journal note, not a hunt.",
+    "No general elk season in Regions 1, 2 or 5 (95%).",
+    "Region 8 and most Region 4 rows: 6 point bulls only, 6 tines on one antler (98%).",
+    "Region 4 CWD (Chronic Wasting Disease) Management Zone: mandatory head submission and carcass transport rules (99%).",
+    "Mandatory Hunter Report by 31 March (98%)."
+   ],
+   "shot": {
+    "range": "Inside about 200 m (219 yd) and your 15 cm plate distance (65%). Elk are big animals, not big targets (Tip).",
+    "aim": "Up the back of the front leg, one third to one half up the chest. Lungs, not the heavy shoulder blade. Quartering away: far shoulder (85%).",
+    "diagram": "vitals-elk",
+    "cert": 85
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Antlers attached to part of the upper skull, with the licence, while returning (98%).",
+    "Evidence of sex: tail or 6 cm² hide piece plus a testicle or part of the penis (98%).",
+    "Edible portions home: neck, ribs, four quarters, loins (98%).",
+    "Gutless method, quarter, hang in shade, several loads (Tip).",
+    "Mandatory Hunter Report by 31 March (98%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Elk rows read for the region and MU",
+      "cert": 98,
+      "lesson": "elk"
+     },
+     {
+      "t": "31 March report in the phone",
+      "cert": 98,
+      "lesson": "elk"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "165 to 180 grain premium load zeroed",
+      "cert": 65,
+      "lesson": "elk"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Cow call",
+      "cert": 60,
+      "lesson": "elk"
+     },
+     {
+      "t": "8 game bags, saw, rope",
+      "cert": 80,
+      "lesson": "field-dressing"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Layers for warm September days and cold dawns",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Pack plan for 3 trips or more",
+      "cert": 60,
+      "lesson": "elk"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Six tines, broadside, in range, solid backstop: all four or no shot",
+      "cert": 85,
+      "lesson": "elk"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting the first bull that bugles before counting 6 on one side.",
+    "Bugling at a herd bull on open ground.",
+    "Hunting elk in Region 3 on a species licence alone.",
+    "A 300 m shot because elk are big."
+   ],
+   "sources": [
+    "elk",
+    "the-rut",
+    "habitat-big-game",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "black-bear",
+   "name": "Black bear",
+   "group": "big game",
+   "seasonKeys": [
+    "black bear"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "black bear",
+   "lessons": [
+    "black-bear",
+    "gallery-big-game",
+    "habitat-big-game",
+    "migration",
+    "local-heffley",
+    "local-mission",
+    "bc-calendar",
+    "shot-placement",
+    "blood-trailing",
+    "field-dressing",
+    "meat-care",
+    "cooking",
+    "tagging-legal",
+    "rb-region-3",
+    "rb-region-2",
+    "rb-region-8",
+    "rb-unlawful-acts",
+    "rb-legal-methods",
+    "bush-safety"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%). .308 with a 150 to 180 grain expanding bullet (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%). Close range only (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (99%). Bow only bears 1 to 9 September in Region 2 (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for bears (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Black bear species licence. No waiting period",
+     "cert": 99,
+     "lesson": "rb-licences-fees"
+    },
+    {
+     "t": "Region 2: Fraser Valley Special Area licence plus insurance in MU 2-4 and parts of 2-8 near Mission",
+     "cert": 95,
+     "lesson": "black-bear"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "spring",
+     "label": "Spring bear, 1 April to 30 June (Region 3)",
+     "months": [
+      4,
+      5,
+      6
+     ],
+     "where": [
+      "South facing grassy slopes, logging road edges and cutblocks that green up first (65%)",
+      "Avalanche chutes higher up (65%)",
+      "Region 2 closes 15 June (98%)"
+     ],
+     "when": [
+      "dawn: glass green slopes (Tip)",
+      "midday: bears may feed any hour (70%)",
+      "dusk: last 2 hours of light on road edges and cutblocks (Tip)"
+     ],
+     "tactics": [
+      "Sows may have yearling cubs the size of a big dog (75%)",
+      "June to July is mating season; boars travel (75%)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "aug-private",
+     "label": "August, private land only (Regions 4 and 8)",
+     "months": [
+      8
+     ],
+     "where": [
+      "Region 8 and Region 4: 1 to 31 August, private land only, with landowner permission (99%)"
+     ],
+     "when": [
+      "dusk: orchards and berry edges (Tip)"
+     ],
+     "tactics": [
+      "Permission first (99%)"
+     ],
+     "cert": 99
+    },
+    {
+     "id": "fall",
+     "label": "Fall bear, 1 September to 30 November (Region 3)",
+     "months": [
+      9,
+      10,
+      11
+     ],
+     "where": [
+      "Berry slopes, old orchards, cutblock edges (Tip)",
+      "Creek bottoms with hawthorn and rose hips, grassy road margins (Tip)",
+      "Fall foods: saskatoon, chokecherry, hawthorn, rose hips, fallen apples (Tip)"
+     ],
+     "when": [
+      "dawn: glass food (Tip)",
+      "midday: fall bears feed almost nonstop (70%)",
+      "dusk: last hour of light on a berry slope (Tip)"
+     ],
+     "tactics": [
+      "August to October is hyperphagia (70%)",
+      "Den entry mid October to late November; adult males last (80%)",
+      "Region 2 opens 10 September; Region 1 to 10 December (98%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "spot-stalk-food",
+     "name": "Spot and stalk the food",
+     "best": "Berry slopes, cutblocks, road edges; dawn and last 2 hours",
+     "steps": [
+      "Glass food sources from a distance (Tip)",
+      "Watch every bear at least 5 minutes (Tip)",
+      "Check hump, face, ears: 3 clues or no shot (80%)",
+      "Look for cubs; they lag, climb or sit in brush (Tip)",
+      "Stalk with the wind in your face (Tip)"
+     ],
+     "pros": [
+      "The standard BC bear method",
+      "Time to judge the bear"
+     ],
+     "cons": [
+      "Bears move",
+      "Brush hides cubs"
+     ],
+     "cert": 65
+    },
+    {
+     "id": "sit-feed",
+     "name": "Sit a feeding spot",
+     "best": "Orchard edge, berry patch or creek crossing with fresh scat",
+     "steps": [
+      "Find fresh scat and torn logs (Tip)",
+      "Sit downwind in the last hours of light (Tip)",
+      "No bait, ever (98%)"
+     ],
+     "pros": [
+      "Rested shot",
+      "Time to watch for cubs"
+     ],
+     "cons": [
+      "Needs fresh sign",
+      "Patience"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "calling",
+     "name": "Predator calling",
+     "best": "Thick country, experienced hunters",
+     "steps": [
+      "Learn with an experienced caller first (Tip)",
+      "A fawn or rabbit distress call can bring a bear (Tip)",
+      "Mouth calls only: electronic calls are unlawful for bears (95%)",
+      "Be ready for a fast, close bear (Tip)"
+     ],
+     "pros": [
+      "Works in thick country"
+     ],
+     "cons": [
+      "Bear comes fast and close",
+      "Not for a first hunt"
+     ],
+     "cert": 50
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Drive a cutblock road in the last hour of light; judge every bear: hump, face, ears, size, cubs (Tip)",
+     "Find a berry slope or orchard edge with fresh scat (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Most active at dawn and dusk, but any hour (70%)"
+    ],
+    "morning": [
+     "Glass green slopes (spring) or berry slopes (fall) (Tip)"
+    ],
+    "midday": [
+     "Fall bears may feed all day (70%)",
+     "Hot days: creek bottoms (Tip)"
+    ],
+    "evening": [
+     "Get on the food 2 hours before dark (Tip)"
+    ],
+    "dusk": [
+     "Best window: last hour of legal light (Tip)",
+     "After the shot: wait 30 minutes, then follow with your brother and a loaded rifle (Tip)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Skin the bear tonight. Fat and hide trap heat (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Hunt the food",
+     "why": "Find the food, find the bear (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Use both seasons",
+     "why": "Region 3: spring 1 April to 30 June and fall 1 September to 30 November, bag 2 (98%)",
+     "cert": 98
+    },
+    {
+     "t": "Watch every bear for 5 minutes",
+     "why": "Cubs show up in the fourth minute (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Pick an adult male",
+     "why": "Synopsis asks hunters to select an adult male; big head like a basketball, belly near the ground (98%)",
+     "cert": 98
+    }
+   ],
+   "redFlags": [
+    "No open season on grizzly bears anywhere in BC (98%). Brown colour proves nothing.",
+    "No hunting a bear under 2 years old or any bear in its company (98%).",
+    "White (Kermode) and blue (Glacier) colour phases are closed (98%).",
+    "No baiting bears, and no dead animal as bait (98%).",
+    "You must take the meat: neck, ribs, four quarters, loins (98%).",
+    "Region 5 MU 5-9: parts closed to black bear (99%).",
+    "Region 8 and Region 4 August season: private land only, with permission (99%)."
+   ],
+   "shot": {
+    "range": "Inside 150 m (164 yd) until you have done it once (Tip).",
+    "aim": "Broadside, near leg forward, halfway up the body, tight behind the shoulder. Hair and fat make it look bigger (85%). No head or shoulder shots (85%).",
+    "diagram": "vitals-bear",
+    "cert": 85
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Thin blood trails: mark where it stood and where it went (85%).",
+    "Take the edible portions: neck, ribs, four quarters, loins (98%).",
+    "Gall bladder: leave it at the kill site, or dispose of the gut pile with the gall within 48 hours (98%).",
+    "Compulsory inspection only in MUs 6-12 and 6-13 (98%).",
+    "Ear tagged or collared bear: contact the nearest Fish and Wildlife office (98%).",
+    "Cook every cut to 71°C (160°F) inside. Freezing does not kill the parasite (75%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Black bear rows for my MU read",
+      "cert": 98,
+      "lesson": "black-bear"
+     },
+     {
+      "t": "RAPP (Report All Poachers and Polluters) number in the phone",
+      "cert": 98,
+      "lesson": "black-bear"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "Expanding 150 to 180 grain load zeroed",
+      "cert": 60,
+      "lesson": "black-bear"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Bear ID card: hump, face, ears, claws, rump",
+      "cert": 80,
+      "lesson": "black-bear"
+     },
+     {
+      "t": "Skinning knife, game bags, tarp",
+      "cert": 60,
+      "lesson": "black-bear"
+     },
+     {
+      "t": "Bear spray on the belt",
+      "cert": 70,
+      "lesson": "field-dressing"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Quiet layers for the evening sit",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Meat thermometer that reads 71°C",
+      "cert": 80,
+      "lesson": "black-bear"
+     },
+     {
+      "t": "Bear meat marked: cook to 71°C",
+      "cert": 80,
+      "lesson": "meat-care"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Partner and loaded rifle for any follow up",
+      "cert": 60,
+      "lesson": "black-bear"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting a brown bear because grizzlies are not around here.",
+    "Shooting a lone bear without watching for cubs.",
+    "Leaving the meat and taking the hide.",
+    "A head on shot at a bear coming down the road.",
+    "Cooking bear medium rare."
+   ],
+   "sources": [
+    "black-bear",
+    "shot-placement",
+    "local-heffley",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "grizzly-bear",
+   "name": "Grizzly bear",
+   "group": "big game",
+   "seasonKeys": [],
+   "migratoryKeys": [],
+   "harvestKey": null,
+   "lessons": [
+    "black-bear",
+    "all-bc-species",
+    "bush-safety"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "no",
+     "note": "No open season (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No open season (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "no",
+     "note": "No open season (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No open season (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "No licence exists: there is no open season for grizzly bears in BC",
+     "cert": 98,
+     "lesson": "all-bc-species"
+    }
+   ],
+   "phases": [],
+   "tactics": [],
+   "dayPlan": {
+    "scout": [
+     "Learn the bear ID clues so you never shoot one by mistake (Tip)"
+    ],
+    "dawn": [],
+    "morning": [],
+    "midday": [],
+    "evening": [],
+    "dusk": [],
+    "night": []
+   },
+   "raiseOdds": [],
+   "redFlags": [
+    "No open season for grizzly bears anywhere in BC (98%). The province ended the hunt on 18 December 2017 (85%).",
+    "Grizzlies live in the North Thompson and Wells Gray (70%). Rarer near Kamloops, not absent (65%).",
+    "A shot grizzly is a protected animal killed. Report wildlife crimes to RAPP (Report All Poachers and Polluters), 1 877 952 7277 (98%)."
+   ],
+   "shot": {
+    "range": "No shot. No season (98%).",
+    "aim": "Hump, dished face, short round ears: walk away (80%).",
+    "diagram": "vitals-bear",
+    "cert": 98
+   },
+   "afterKill": [],
+   "checklist": {
+    "paperwork": [],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Bear spray on the belt in bear country",
+      "cert": 70,
+      "lesson": "field-dressing"
+     }
+    ],
+    "clothing": [],
+    "meat": [],
+    "safety": [
+     {
+      "t": "Use at least 3 ID clues on every bear",
+      "why": "One clue is never enough",
+      "cert": 80,
+      "lesson": "black-bear"
+     }
+    ]
+   },
+   "mistakes": [
+    "Calling a brown bear a black bear because grizzlies are not around here."
+   ],
+   "sources": [
+    "black-bear",
+    "all-bc-species"
+   ]
+  },
+  {
+   "id": "bighorn-sheep",
+   "name": "Bighorn sheep",
+   "group": "big game",
+   "seasonKeys": [
+    "bighorn sheep"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "mountain sheep",
+   "lessons": [
+    "mountain-sheep",
+    "gallery-big-game",
+    "migration",
+    "glassing",
+    "leh-strategy",
+    "shot-placement",
+    "ballistics-308",
+    "packing-out",
+    "meat-care",
+    "trophy-care",
+    "tagging-legal",
+    "rb-after-the-kill",
+    "rb-legal-methods",
+    "rb-region-3"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%). .308 with a 165 grain bonded bullet (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun for sheep (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for sheep (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Mountain sheep species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "mountain-sheep"
+    },
+    {
+     "t": "Most sheep hunts are LEH (Limited Entry Hunting). Main draw deadline 23 June 2026",
+     "cert": 98,
+     "lesson": "leh-strategy"
+    },
+    {
+     "t": "Compulsory Inspection within 30 days and before 5 December, by appointment",
+     "why": "Not legally yours until CI is done",
+     "cert": 98,
+     "lesson": "mountain-sheep"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "north",
+     "label": "Northern bighorn, 15 August to 30 September",
+     "months": [
+      8,
+      9
+     ],
+     "where": [
+      "MU 7-18 and MU 7-19, full curl rams (98%)"
+     ],
+     "when": [
+      "dawn: glass basins (Tip)"
+     ],
+     "tactics": [
+      "Backpack trip (Tip)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "r3-r5",
+     "label": "Region 3 and 5 rams, 10 September to 20 October",
+     "months": [
+      9,
+      10
+     ],
+     "where": [
+      "Region 3: MUs 3-31 and part of 3-32, full curl; part of 3-32 closed, Map C21 (98%)",
+      "Region 3: a portion of MU 3-17, mature rams, Map C2 (98%)",
+      "Region 5: MU 5-2, full curl (98%)",
+      "Dry canyons and grass slopes of the Thompson and Fraser (85%)"
+     ],
+     "when": [
+      "dawn: feed on open slopes (Tip)",
+      "midday: bed on ledges near escape cliffs (Tip)",
+      "dusk: feed again (Tip)"
+     ],
+     "tactics": [
+      "Region 3 LEH 3/4 curl hunts 20 September to 20 October (95%)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "r3-leh-late",
+     "label": "Region 3 LEH, November",
+     "months": [
+      11
+     ],
+     "where": [
+      "Spences Bridge (MU 3-17) and Kamloops Lake (MU 3-29), any ram, 1 to 20 November, draw only (95%)"
+     ],
+     "when": [
+      "dawn and dusk: rut, early November to mid December (85%)"
+     ],
+     "tactics": [
+      "Draw odds 1,259 to 1 and 3,667 to 1 in 2025 (95%)"
+     ],
+     "cert": 95
+    }
+   ],
+   "tactics": [
+    {
+     "id": "backpack-glass",
+     "name": "Backpack spot and stalk",
+     "best": "Alpine basins, first light",
+     "steps": [
+      "Camp high, glass basins at first light (Tip)",
+      "Pick one ram before you move (Tip)",
+      "Judge horns square from the side only (98%)",
+      "Plan the stalk out of sight, often from above (Tip)",
+      "Two yes votes with your partner or no shot (Tip)"
+     ],
+     "pros": [
+      "You choose the ram with time to judge"
+     ],
+     "cons": [
+      "Long days, hard packs, weather, remote recovery"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "truck-glass",
+     "name": "Glass canyon walls from roads, then climb",
+     "best": "Region 3 draw zones, close to home",
+     "steps": [
+      "Win a Region 3 draw first (95%)",
+      "Glass canyon walls from the road (Tip)",
+      "Mark the ram's ledge, then climb (Tip)",
+      "Judge horns square from the side only (98%)"
+     ],
+     "pros": [
+      "Cheaper, close to home"
+     ],
+     "cons": [
+      "Needs a draw first",
+      "Rams get pushed by many hunters"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Judge 20 ram photos with a partner using the diagram (Tip)",
+     "Train with a 15 kg pack (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Sheep see movement over a kilometre away (80%)",
+     "Glass basins at first light (Tip)"
+    ],
+    "morning": [
+     "Feeding on open slopes (Tip)"
+    ],
+    "midday": [
+     "Bedded on ledges or benches near cliffs (Tip)",
+     "Climb once, glass ten times (Tip)"
+    ],
+    "evening": [
+     "Feeding again on open slopes (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)",
+     "Only shoot a ram on ground you can reach (Tip)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Cool meat on the mountain; skin and salt the cape the same day (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Apply for Region 3 sheep LEH every year",
+     "why": "3/4 curl hunts had first choice odds about 82 to 1 up to 236 to 1 in 2025 (95%)",
+     "cert": 95
+    },
+    {
+     "t": "Hunt with an experienced partner",
+     "why": "Judge the ram together; two yes votes or no shot (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Plan two years out",
+     "why": "A fitness and judgment hunt (Tip)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "Legal by horn size only: full curl, 3/4 curl or mature ram, depending on the MU (Management Unit) (98%). Just legal is not legal (Tip).",
+    "Only a few general season MUs: 3-31, part of 3-32, part of 3-17, 5-2, 7-18, 7-19 (98%). The rest is LEH (Limited Entry Hunting).",
+    "Regions 1, 2, 4 and 8: no general bighorn season (95%).",
+    "Every sheep goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%).",
+    "Provincial bag limit 1 a licence year (98%)."
+   ],
+   "shot": {
+    "range": "Practise prone at 250 m (273 yd) before you go; hold for the level distance (Tip).",
+    "aim": "Broadside, behind the shoulder, one third up (75%). Never on a cliff edge (Tip).",
+    "diagram": "sc-cliff-shot",
+    "cert": 75
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Do not alter or tamper with the horns until home, a meat cutter or CI (98%).",
+    "Evidence of sex attached: a testicle or part of the penis (98%).",
+    "CI within 30 days and before 5 December: skull portion with nasal bones, whole eye socket, horns attached (98%).",
+    "Keep the licence and CI sheet with the horns for life (95%).",
+    "Take the edible portions (98%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Synopsis page 4 definitions and page 17 CI parts read",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "CI appointment number in the phone",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "Practised prone off a pack at 250 m (273 yd)",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "Hold for the level distance on steep shots",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Spotting scope and tripod",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "Horn judging diagram on the phone",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Mountain boots and full weather layers",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Game bags and salt for the cape",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Partner, satellite messenger, trip plan",
+      "cert": 70,
+      "lesson": "pack-kit"
+     },
+     {
+      "t": "No hunting with domestic goats or sheep as pack animals",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ]
+   },
+   "mistakes": [
+    "Judging a ram from the front or at an angle. The law says square from the side.",
+    "Counting rings on a live ram and calling him 8.",
+    "Shooting a ram that is just legal in the scope.",
+    "No training, a rifle only zeroed at 100 m, and no plan for packing 40 kg out.",
+    "Hunting a Region 3 MU without checking which part is closed (Maps C2 and C21)."
+   ],
+   "sources": [
+    "mountain-sheep",
+    "leh-strategy",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "thinhorn-sheep",
+   "name": "Thinhorn sheep (Stone's and Dall's)",
+   "group": "big game",
+   "seasonKeys": [
+    "thinhorn sheep"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "mountain sheep",
+   "lessons": [
+    "mountain-sheep",
+    "gallery-big-game",
+    "migration",
+    "glassing",
+    "leh-strategy",
+    "shot-placement",
+    "ballistics-308",
+    "packing-out",
+    "meat-care",
+    "trophy-care",
+    "tagging-legal",
+    "rb-after-the-kill",
+    "rb-legal-methods",
+    "rb-region-6",
+    "rb-region-7a",
+    "rb-region-7b"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%). .308 with a 165 grain bonded bullet (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun for sheep (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for sheep (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Mountain sheep species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "mountain-sheep"
+    },
+    {
+     "t": "Compulsory Inspection within 30 days and before 5 December, by appointment",
+     "why": "Not legally yours until CI is done",
+     "cert": 98,
+     "lesson": "mountain-sheep"
+    },
+    {
+     "t": "Region 6 parts are LEH only (Maps F26, F28, F30, F34, F36)",
+     "cert": 99,
+     "lesson": "rb-region-6"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "north",
+     "label": "Full curl thinhorn rams, 1 August to 15 October",
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "where": [
+      "Region 6: MUs 6-17 to 6-27 with map exceptions (98%)",
+      "Region 7A: 7-37, 7-39 to 7-41; Tatlatui Park closed (99%)",
+      "Region 7B: 7-36, 7-42, 7-43, 7-50 to 7-57; parts of Muncho Lake Park closed (99%)",
+      "Stone's sheep: Stikine east through the Cassiar, Omineca and Muskwa ranges (85%)"
+     ],
+     "when": [
+      "dawn: glass basins (Tip)",
+      "midday: rams bed near cliffs (Tip)",
+      "dusk: feed on open slopes (Tip)"
+     ],
+     "tactics": [
+      "Summer rams in bands of 5 to 15 away from ewes (85%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "backpack-glass",
+     "name": "Backpack spot and stalk",
+     "best": "Alpine basins, first light",
+     "steps": [
+      "Camp high, glass basins at first light (Tip)",
+      "Pick one ram before you move (Tip)",
+      "Judge horns square from the side only (98%)",
+      "Plan the stalk out of sight, often from above (Tip)",
+      "Two yes votes with your partner or no shot (Tip)"
+     ],
+     "pros": [
+      "You choose the ram with time to judge"
+     ],
+     "cons": [
+      "Long days, hard packs, weather, remote recovery"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Judge 20 ram photos with a partner using the diagram (Tip)",
+     "Train with a 15 kg pack (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Sheep see movement over a kilometre away (80%)",
+     "Glass basins at first light (Tip)"
+    ],
+    "morning": [
+     "Feeding on open slopes (Tip)"
+    ],
+    "midday": [
+     "Bedded on ledges or benches near cliffs (Tip)",
+     "Climb once, glass ten times (Tip)"
+    ],
+    "evening": [
+     "Feeding again on open slopes (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)",
+     "Only shoot a ram on ground you can reach (Tip)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Cool meat on the mountain; skin and salt the cape the same day (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Plan one backpack trip north under the general season",
+     "why": "The realistic path from Heffley Creek, when fit and with a partner (Lean)",
+     "cert": 60
+    },
+    {
+     "t": "Learn the full curl thinhorn test",
+     "why": "8 years by true horn rings, or a horn tip above the nose bridge plane (98%)",
+     "cert": 98
+    }
+   ],
+   "redFlags": [
+    "Full curl thinhorn rams only (98%). Do not age a live ram by horn rings in the field (98%).",
+    "Far north only: Regions 6, 7A and 7B (98%). A multi day trip from Heffley Creek.",
+    "Every sheep goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%).",
+    "Dall's sheep: only a few hundred in BC (80%)."
+   ],
+   "shot": {
+    "range": "Practise prone at 250 m (273 yd); hold for the level distance (Tip).",
+    "aim": "Broadside, behind the shoulder, one third up (75%). Never on a cliff edge (Tip).",
+    "diagram": "sc-cliff-shot",
+    "cert": 75
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Do not alter or tamper with the horns until home, a meat cutter or CI (98%).",
+    "Evidence of sex attached: a testicle or part of the penis (98%).",
+    "CI within 30 days and before 5 December: skull portion with nasal bones, whole eye socket, horns attached (98%).",
+    "Keep the licence and CI sheet with the horns for life (95%).",
+    "Take the edible portions (98%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Synopsis page 4 definitions and page 17 CI parts read",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "CI appointment number in the phone",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "Practised prone off a pack at 250 m (273 yd)",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "Hold for the level distance on steep shots",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Spotting scope and tripod",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     },
+     {
+      "t": "Horn judging diagram on the phone",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Mountain boots and full weather layers",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Game bags and salt for the cape",
+      "cert": 60,
+      "lesson": "mountain-sheep"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Partner, satellite messenger, trip plan",
+      "cert": 70,
+      "lesson": "pack-kit"
+     },
+     {
+      "t": "No hunting with domestic goats or sheep as pack animals",
+      "cert": 98,
+      "lesson": "mountain-sheep"
+     }
+    ]
+   },
+   "mistakes": [
+    "Judging a ram from the front or at an angle. The law says square from the side.",
+    "Counting rings on a live ram and calling him 8.",
+    "Shooting a ram that is just legal in the scope.",
+    "No training, a rifle only zeroed at 100 m, and no plan for packing 40 kg out."
+   ],
+   "sources": [
+    "mountain-sheep",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "mountain-goat",
+   "name": "Mountain goat",
+   "group": "big game",
+   "seasonKeys": [
+    "mountain goat"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "mountain goat",
+   "lessons": [
+    "mountain-goat",
+    "gallery-big-game",
+    "migration",
+    "glassing",
+    "leh-strategy",
+    "shot-placement",
+    "packing-out",
+    "trophy-care",
+    "tagging-legal",
+    "rb-region-2",
+    "rb-region-4",
+    "rb-region-1",
+    "rb-legal-methods"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%). 165 to 180 grain bonded bullet (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%). Region 6 MU 6-8 Blunt Mountain: bow only, billy only (99%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun for goats (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for goats (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Mountain goat species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "mountain-goat"
+    },
+    {
+     "t": "Region 3: LEH (Limited Entry Hunting) only. Main draw deadline 23 June 2026",
+     "cert": 98,
+     "lesson": "mountain-goat"
+    },
+    {
+     "t": "Compulsory Inspection within 30 days and before 5 December, by appointment",
+     "cert": 98,
+     "lesson": "mountain-goat"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "north",
+     "label": "Northern goats, August to mid October",
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "where": [
+      "Region 6: from 1 August (98%)",
+      "Region 7A: 15 August to 15 October (98%)",
+      "Region 7B: 25 August to 15 October (98%)",
+      "At and above timberline, next to cliffs (85%)"
+     ],
+     "when": [
+      "dawn: feed (Tip)",
+      "midday: bed on ledges (Tip)",
+      "dusk: feed (Tip)"
+     ],
+     "tactics": [
+      "Closed and LEH only areas on the regional maps (98%)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "south",
+     "label": "Southern goats, September to November",
+     "months": [
+      9,
+      10,
+      11
+     ],
+     "where": [
+      "Region 2: MU 2-5 to 15 October, MU 2-6 to 30 September, MUs 2-12 to 2-15 to 31 October (99%)",
+      "Region 1: MUs 1-14, 1-15, 10 September to 30 November (98%)",
+      "Region 4: parts of 4-28 to 4-40, 10 September to 30 November (99%)",
+      "Region 5: some MUs 1 September to 31 October (98%)",
+      "Region 3 LEH: Kamloops zones and Nahatlatch, 1 September to 30 November (95%)"
+     ],
+     "when": [
+      "dawn and dusk: feeding (Tip)",
+      "midday: bedded on ledges with a view (Tip)"
+     ],
+     "tactics": [
+      "Rut early November to early December, peak 15 to 20 November (85%)",
+      "Groups with kids are nannies, except in the rut (85%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "valley-glass",
+     "name": "Glass from the valley, then climb",
+     "best": "A first goat",
+     "steps": [
+      "Find goats from below with a spotting scope (Tip)",
+      "Watch 10 minutes or more: lone adults or groups of 2 or 3 with no kids are usually billies (85%)",
+      "Mark the exact cliff, climb to their level or above (Tip)",
+      "Shoot only where a dead goat will stay put (Tip)"
+     ],
+     "pros": [
+      "Sort billies before you sweat"
+     ],
+     "cons": [
+      "Long climbs, loose rock, fast weather"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "ridge-walk",
+     "name": "Ridge walk above the cliffs",
+     "best": "First light",
+     "steps": [
+      "Walk the ridge top at first light (Tip)",
+      "Glass down into basins and cliff bands (Tip)",
+      "Sort billy from nanny before the shot (85%)",
+      "Shoot only where recovery is below you (Tip)"
+     ],
+     "pros": [
+      "Downhill shots"
+     ],
+     "cons": [
+      "You skyline yourself"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Watch the goat sex video the synopsis points to; pass a goat ID quiz 3 times (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Glass cliffs and alpine meadows (Tip)"
+    ],
+    "morning": [
+     "Feeding (Tip)"
+    ],
+    "midday": [
+     "Bedded on ledges (Tip)",
+     "Climb to the shooting spot (Tip)"
+    ],
+    "evening": [
+     "Feeding again (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "Skin and salt the hide the same day if you want a mount (Tip)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Apply for Region 3 goat LEH",
+     "why": "2025 first choice odds from about 4.5 to 1 up to 76 to 1 (95%)",
+     "cert": 95
+    },
+    {
+     "t": "Take billies only",
+     "why": "Ministry asks for males; nannies carry the herd (98%)",
+     "cert": 98
+    },
+    {
+     "t": "Bring a spotting scope, rope and a partner",
+     "why": "Recovery is the hidden danger on goat ground (Tip)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "Region 3 (home): no general goat season, LEH (Limited Entry Hunting) only (95%).",
+    "Region 8: no general goat season (95%).",
+    "Unlawful to hunt a nanny with a kid or in a group with kids (98%). A kid has horns under 10 cm (98%).",
+    "A goat shot above a cliff is often lost (Tip).",
+    "Every goat goes to CI (Compulsory Inspection) within 30 days and before 5 December (98%)."
+   ],
+   "shot": {
+    "range": "Steep shots: hold for the level distance (Tip).",
+    "aim": "Broadside, behind the shoulder, aim lower than the long hair suggests (Tip). Be ready for a second shot (Tip).",
+    "diagram": "sc-cliff-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Cancel the species licence immediately, before handling (98%).",
+    "Evidence of sex attached: testicle or part of the penis, or part of the teats or mammary gland (98%).",
+    "Horns not altered until home, a meat cutter or CI (98%).",
+    "CI within 30 days and before 5 December (98%).",
+    "Plan 2 to 3 pack loads for a billy (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Kamloops CI appointment booked",
+      "cert": 95,
+      "lesson": "mountain-goat"
+     },
+     {
+      "t": "Region map for closed and LEH only areas read",
+      "cert": 98,
+      "lesson": "mountain-goat"
+     }
+    ],
+    "firearm": [
+     {
+      "t": "165 to 180 grain bonded load zeroed",
+      "cert": 60,
+      "lesson": "mountain-goat"
+     }
+    ],
+    "gear": [
+     {
+      "t": "Spotting scope and 30 m rope",
+      "cert": 60,
+      "lesson": "mountain-goat"
+     },
+     {
+      "t": "First aid kit and satellite messenger",
+      "cert": 70,
+      "lesson": "pack-kit"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Mountain boots, never running shoes",
+      "why": "Loose rock and wet grass kill goat hunters",
+      "cert": 60,
+      "lesson": "mountain-goat"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Salt for the hide",
+      "cert": 60,
+      "lesson": "mountain-goat"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Partner on every climb",
+      "cert": 60,
+      "lesson": "mountain-goat"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting the first white goat you see.",
+    "Shooting a goat above a cliff.",
+    "Climbing in running shoes.",
+    "No spotting scope, no rope, no partner."
+   ],
+   "sources": [
+    "mountain-goat",
+    "leh-strategy",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "caribou",
+   "name": "Caribou",
+   "group": "big game",
+   "seasonKeys": [],
+   "migratoryKeys": [],
+   "harvestKey": "caribou",
+   "lessons": [
+    "caribou-bison",
+    "leh-strategy",
+    "cwd",
+    "rb-region-6",
+    "rb-region-7a",
+    "rb-region-7b"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "LEH (Limited Entry Hunting) authorization: every caribou hunt in BC is a draw",
+     "cert": 98,
+     "lesson": "caribou-bison"
+    },
+    {
+     "t": "Caribou species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "caribou-bison"
+    },
+    {
+     "t": "Mandatory Hunter Report by 31 March, hunted or not",
+     "cert": 98,
+     "lesson": "caribou-bison"
+    }
+   ],
+   "phases": [
+    {
+     "id": "leh",
+     "label": "LEH hunts, 15 August to 15 October in the north",
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "where": [
+      "Regions 5, 6, 7A and 7B draw areas (98%)",
+      "Ridge tops and lichen flats (Tip)"
+     ],
+     "when": [
+      "dawn: glass ridge tops (Tip)"
+     ],
+     "tactics": [
+      "Most northern draws are 5 point bulls (98%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "glass-ridges",
+     "name": "Glass ridges and lichen flats",
+     "best": "Drawn hunt",
+     "steps": [
+      "Glass from high ground (Tip)",
+      "Move in across open ground with the wind (Tip)",
+      "Both sexes grow antlers: confirm a bull (85%)"
+     ],
+     "pros": [
+      "Caribou are curious"
+     ],
+     "cons": [
+      "They drift fast"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Read the caribou LEH tables and maps (98%)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)"
+    ],
+    "morning": [],
+    "midday": [],
+    "evening": [],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Apply every year",
+     "why": "2025 first choice odds from under 1 to 1 (Spatsizi, early) to 118 to 1 (95%)",
+     "cert": 95
+    }
+   ],
+   "redFlags": [
+    "No general season anywhere: LEH (Limited Entry Hunting) draw only (98%).",
+    "Region 3: no caribou season (98%).",
+    "Southern Mountain and Boreal caribou are listed Threatened (95%).",
+    "Hunting caribou is prohibited in parts of MUs 7-39 and 7-40, Map G25 (98%)."
+   ],
+   "shot": {
+    "range": "Your 15 cm plate distance (Tip).",
+    "aim": "Broadside, behind the shoulder, one third up (75%).",
+    "diagram": "vitals-deer",
+    "cert": 75
+   },
+   "afterKill": [
+    "Cancel the licence before handling (98%).",
+    "CI within 30 days: incisor tooth, antlers, and the hide with evidence of sex for a caribou without one main beam over 60 cm (98%).",
+    "Mandatory Hunter Report by 31 March (98%).",
+    "Skin, quarter and hang the same day in warm August weather (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "31 March report in the phone",
+      "cert": 98,
+      "lesson": "caribou-bison"
+     }
+    ],
+    "firearm": [],
+    "gear": [],
+    "clothing": [],
+    "meat": [],
+    "safety": [
+     {
+      "t": "Seen caribou on another hunt? Shut off the quad and let them pass",
+      "cert": 95,
+      "lesson": "caribou-bison"
+     }
+    ]
+   },
+   "mistakes": [
+    "Counting a cow caribou as a bull because it has antlers.",
+    "Forgetting the Mandatory Hunter Report."
+   ],
+   "sources": [
+    "caribou-bison",
+    "leh-strategy"
+   ]
+  },
+  {
+   "id": "bison",
+   "name": "Bison",
+   "group": "big game",
+   "seasonKeys": [
+    "bison"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": null,
+   "lessons": [
+    "caribou-bison",
+    "leh-strategy",
+    "rb-region-7b",
+    "rb-legal-methods"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "ok",
+     "note": "Bullet must be 175 grain or heavier and keep 2,712 joules (2,000 ft lb) at 100 m (98%). Your 165 grain .308 load does not qualify. Find a load that does: VERIFY.",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow E only (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "no",
+     "note": "No shotgun (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Bison species licence",
+     "cert": 98,
+     "lesson": "caribou-bison"
+    },
+    {
+     "t": "LEH (Limited Entry Hunting) for Liard zones; groups up to 4 may apply as a shared hunt",
+     "cert": 98,
+     "lesson": "caribou-bison"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "general",
+     "label": "General season, 1 September to 31 January",
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1
+     ],
+     "where": [
+      "Region 7B, portions of MUs 7-42, 7-57, 7-58, Map H25 (98%)",
+      "Pink Mountain plains bison herd (85%)"
+     ],
+     "when": [
+      "dawn: find the herd (Tip)"
+     ],
+     "tactics": [
+      "Snow machines often needed in November and December (98%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "herd-pick",
+     "name": "Pick one animal from the herd",
+     "best": "Open country",
+     "steps": [
+      "Find the herd (Tip)",
+      "Pick a single animal with a clear backstop (Tip)",
+      "Get within 100 m, wait for broadside (Tip)",
+      "Reload and stay ready; do not approach until it is down and still (Tip)"
+     ],
+     "pros": [
+      "Big target"
+     ],
+     "cons": [
+      "4 to 6 pack loads of meat"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Read Map H25 (98%)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)"
+    ],
+    "morning": [],
+    "midday": [],
+    "evening": [],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Form a shared hunt group of up to 4",
+     "why": "Shared hunt: each member is entered separately; if any one is drawn, the group is drawn (99%)",
+     "cert": 99
+    }
+   ],
+   "redFlags": [
+    "Only portions of MUs 7-42, 7-57 and 7-58 (98%). Far north of Heffley Creek.",
+    "Bison near Kamloops are strays, not a hunt. Report them to RAPP (Report All Poachers and Polluters), 1 877 952 7277 (98%).",
+    "175 grain and 2,712 joules at 100 m rule (98%). A normal deer load fails it.",
+    "Bison authorizations are under review and subject to change (98%)."
+   ],
+   "shot": {
+    "range": "Within 100 m (Tip).",
+    "aim": "Lungs sit lower and farther forward than the hump suggests: behind the front leg, low third, broadside (Tip).",
+    "diagram": "sc-bison-vitals",
+    "cert": 60
+   },
+   "afterKill": [
+    "Cancel the licence before handling (98%).",
+    "Evidence of sex attached (98%).",
+    "Take neck, ribs, four quarters and loins (98%).",
+    "Arrange a meat cutter before the hunt (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [],
+    "firearm": [
+     {
+      "t": "Load that meets 175 grain and 2,712 joules at 100 m",
+      "cert": 98,
+      "lesson": "caribou-bison"
+     }
+    ],
+    "gear": [],
+    "clothing": [],
+    "meat": [
+     {
+      "t": "Help and a truck for several hundred kilograms of meat",
+      "cert": 60,
+      "lesson": "caribou-bison"
+     }
+    ],
+    "safety": []
+   },
+   "mistakes": [
+    "Bringing a deer rifle load to a bison hunt."
+   ],
+   "sources": [
+    "caribou-bison"
+   ]
+  },
+  {
+   "id": "cougar",
+   "name": "Cougar",
+   "group": "predator",
+   "seasonKeys": [
+    "cougar"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "cougar",
+   "lessons": [
+    "predators",
+    "snow-tracking",
+    "tracks",
+    "wind-thermals",
+    "shot-placement",
+    "rb-legal-methods",
+    "rb-after-the-kill",
+    "rb-bag-limits",
+    "bc-calendar",
+    "rb-region-3",
+    "bush-safety"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for cougar (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Cougar species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "predators"
+    },
+    {
+     "t": "Compulsory Inspection within 30 days (4 days in Region 6), by appointment",
+     "why": "Not legally yours until CI is done",
+     "cert": 98,
+     "lesson": "predators"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "early",
+     "label": "Early cougar where open from 10 September",
+     "months": [
+      9,
+      10,
+      11
+     ],
+     "where": [
+      "Region 3: MUs 3-34 to 3-44 open 10 September (98%)",
+      "Regions 1, 2, 4, 5, 6, 7A, 7B: open 10 September in most MUs (99%)"
+     ],
+     "when": [
+      "dawn and dusk: cougars hunt mostly then (85%)"
+     ],
+     "tactics": [
+      "Without snow, cougars are rarely seen (Tip)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "snow",
+     "label": "Snow season, 15 November to 31 March",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "where": [
+      "Region 3 home MUs 3-12 to 3-20, 3-26 to 3-33: 15 November to 31 March, bag 2 (98%)",
+      "Region 8: 15 November to 31 March, bag 1 (99%)",
+      "Deer winter range: cougars follow the deer (Tip)"
+     ],
+     "when": [
+      "dawn: cut a fresh track in new snow (Tip)",
+      "midday: hounds tree the cat (60%)"
+     ],
+     "tactics": [
+      "Pelts prime about November to February (Tip)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "hounds",
+     "name": "Hounds",
+     "best": "Fresh snow, with an experienced houndsman",
+     "steps": [
+      "Join an experienced dog handler (Tip)",
+      "Cut a fresh track in snow (Tip)",
+      "Hounds tree the cat (60%)",
+      "Judge the cat for kittens and sex before the shot (Tip)",
+      "Shoot through the chest with a backstop (Tip)"
+     ],
+     "pros": [
+      "The only consistent cougar method (60%)",
+      "You can judge the cat"
+     ],
+     "cons": [
+      "Years of dog work"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "call",
+     "name": "Calling",
+     "best": "Dawn and dusk",
+     "steps": [
+      "Sit at dawn with the wind in your face (Tip)",
+      "Play a distress call for 20 to 30 minutes (Tip)",
+      "Expect the animal from downwind (Tip)",
+      "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)"
+     ],
+     "pros": [
+      "Legal, no dogs needed"
+     ],
+     "cons": [
+      "Cats come silently and close"
+     ],
+     "cert": 50
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Hunt with a houndsman after fresh snow",
+     "why": "Hounds are the steady cougar method (60%)",
+     "cert": 60
+    },
+    {
+     "t": "Hunt deer winter range",
+     "why": "Cougars stay near a covered kill for days (85%)",
+     "cert": 85
+    }
+   ],
+   "redFlags": [
+    "No hunting a cougar kitten (spots or under 1 year) or any cougar in its company (98%).",
+    "Home MU 3-27 opens 15 November, not September (98%).",
+    "Region 6 season closes 72 hours after notice that 5 female cougars were killed (99%).",
+    "You must take the meat: neck, ribs, four quarters, loins (98%).",
+    "Found a fresh cougar kill? Leave at once and call 1 877 952 7277 (85%)."
+   ],
+   "shot": {
+    "range": "Treed cat: close, with a clear angle and a backstop (Tip).",
+    "aim": "Broadside lungs behind the shoulder (Tip). A wounded cat in thick cover is the most dangerous moment (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Cancel the licence before handling (98%).",
+    "CI within 30 days: skull and hide with a testicle or part of the penis, or part of the teats, naturally attached (98%).",
+    "Take the meat: neck, ribs, four quarters, loins (98%).",
+    "Cook cougar meat through: Trichinella larvae are common; freezing does not reliably kill them (85%)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "CI appointment at Kamloops or a listed inspector",
+      "cert": 95,
+      "lesson": "predators"
+     }
+    ],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Gloves and a mask for skinning",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Warm layers for snow tracking",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Meat thermometer; cook cougar through",
+      "cert": 85,
+      "lesson": "predators"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Cougar encounter: never run, look large, back away; fight back if attacked",
+      "cert": 85,
+      "lesson": "predators"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting a cougar with kittens nearby. Watch the snow for small tracks first.",
+    "Leaving the meat."
+   ],
+   "sources": [
+    "predators",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "wolf",
+   "name": "Wolf",
+   "group": "predator",
+   "seasonKeys": [
+    "wolf"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "wolf",
+   "lessons": [
+    "predators",
+    "snow-tracking",
+    "tracks",
+    "wind-thermals",
+    "shot-placement",
+    "rb-legal-methods",
+    "rb-after-the-kill",
+    "rb-bag-limits",
+    "bc-calendar",
+    "rb-region-3",
+    "rb-region-4"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow A, C or D (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "no",
+     "note": "No rimfire for wolf (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No species licence for wolf for a BC resident",
+     "cert": 98,
+     "lesson": "predators"
+    },
+    {
+     "t": "Compulsory Report for wolves only in Regions 1 and 2",
+     "cert": 98,
+     "lesson": "predators"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "home",
+     "label": "Home MUs: no closed season",
+     "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "where": [
+      "Region 3: MU 3-17 and MUs 3-26 to 3-44 have no closed season, no bag limit (98%)",
+      "Region 3 MUs 3-12 to 3-16, 3-18 to 3-20: 10 September to 15 June, bag 3 (98%)",
+      "Meadows and frozen lakes at first light (Tip)"
+     ],
+     "when": [
+      "dawn: glass meadows and frozen lakes (Tip)",
+      "dusk: listen for howls (85%)"
+     ],
+     "tactics": [
+      "Carry a wolf mindset on deer and moose hunts (Tip)",
+      "Pelts prime about November to February (Tip)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "incidental",
+     "name": "Incidental wolves",
+     "best": "On deer and moose hunts",
+     "steps": [
+      "Glass meadows and frozen lakes at first light (Tip)",
+      "Confirm wolf, not dog or coyote: tail out when running, big feet, broad muzzle (85%)",
+      "Clear backstop (Tip)"
+     ],
+     "pros": [
+      "No extra licence (98%)",
+      "Long season"
+     ],
+     "cons": [
+      "Rarely seen",
+      "Most wolves at distance are dogs or coyotes"
+     ],
+     "cert": 60
+    },
+    {
+     "id": "call",
+     "name": "Calling",
+     "best": "Winter dawns",
+     "steps": [
+      "Sit at dawn with the wind in your face (Tip)",
+      "Play a distress call for 20 to 30 minutes (Tip)",
+      "Expect the animal from downwind (Tip)",
+      "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)"
+     ],
+     "pros": [
+      "Legal electronic calls"
+     ],
+     "cons": [
+      "Wolves are rarely called in by beginners (Tip)"
+     ],
+     "cert": 50
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Look in fresh snow",
+     "why": "Wolves travel in a straight line; tracks 10 to 13 cm with claws (60%)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "A big dog at 200 m looks like a wolf. Shooting a neighbour's dog ends in court (Tip).",
+    "Region 4: the no closed season parts of the East Kootenay Trench are not mapped in the synopsis (VERIFY).",
+    "Regions 1 and 2: Compulsory Report for every wolf (98%).",
+    "No bag limit is not a goal. Use what you take (Tip)."
+   ],
+   "shot": {
+    "range": "Your 15 cm plate distance; wolves are rarely close (Tip).",
+    "aim": "Broadside lungs behind the shoulder (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Furbearer: remove the hide, or the edible portions, to home, a meat cutter, cold storage, taxidermist, tanner or fur trader (98%).",
+    "Skin it cased (like a sock) the same day; freeze or salt if you cannot flesh it (Tip).",
+    "Wear gloves when skinning (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Gloves and a mask for skinning",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "clothing": [],
+    "meat": [
+     {
+      "t": "Licensed fur trader or tanner found before the hunt",
+      "why": "Fur is the product (Tip)",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "safety": [
+     {
+      "t": "Wolf close by: do not stare, scare it off, back away without running",
+      "cert": 85,
+      "lesson": "predators"
+     }
+    ]
+   },
+   "mistakes": [
+    "Shooting a wolf that is a dog.",
+    "Leaving a wolf to rot in a field."
+   ],
+   "sources": [
+    "predators",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "coyote",
+   "name": "Coyote",
+   "group": "predator",
+   "seasonKeys": [
+    "coyote"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": null,
+   "lessons": [
+    "predators",
+    "snow-tracking",
+    "tracks",
+    "wind-thermals",
+    "shot-placement",
+    "rb-legal-methods",
+    "rb-after-the-kill",
+    "rb-bag-limits",
+    "bc-calendar",
+    "landowner-permission",
+    "rb-region-3"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "best",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "ok",
+     "note": "Rimfire is legal for coyote, a small game animal (98%). Short range (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%). 40 m maximum, aim at the chest (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "No species licence for coyote",
+     "cert": 99,
+     "lesson": "all-bc-species"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "fall",
+     "label": "Fall, from 1 September (Region 3)",
+     "months": [
+      9,
+      10,
+      11
+     ],
+     "where": [
+      "Region 3: 1 September to 30 June, no bag limit (98%)",
+      "Hayfield edges with permission (Tip)"
+     ],
+     "when": [
+      "dawn: calling setups (Tip)",
+      "dusk: field edges (Tip)"
+     ],
+     "tactics": [
+      "By early winter more than half the coyotes are young of the year (85%)"
+     ],
+     "cert": 98
+    },
+    {
+     "id": "winter",
+     "label": "Winter calling, December to March",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "where": [
+      "Snow fields and cutblock edges (Tip)"
+     ],
+     "when": [
+      "dawn: the best calling window (Tip)"
+     ],
+     "tactics": [
+      "Coyotes breed late January to mid March (85%)",
+      "Pelts prime about November to February (Tip)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "call",
+     "name": "Calling coyotes",
+     "best": "Winter dawns on a hayfield edge with permission",
+     "steps": [
+      "Sit at dawn with the wind in your face (Tip)",
+      "Play a distress call for 20 to 30 minutes (Tip)",
+      "Expect the animal from downwind (Tip)",
+      "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)",
+      "Set up where the coyote must come to you to smell you (Tip)"
+     ],
+     "pros": [
+      "Legal all winter",
+      "Teaches wind and patience"
+     ],
+     "cons": [
+      "Many hunters never see one"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Sit three dawns on a Region 3 hayfield edge with permission",
+     "why": "Keep a log of what came and from where (Tip)",
+     "cert": 60
+    },
+    {
+     "t": "Wind in your face, always",
+     "why": "The wind tells the coyote everything (Tip)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "Region 1: no coyote season (95%).",
+    "No closed season below 1,100 m elevation in Region 7B (99%). Elsewhere, read your row.",
+    "No bag limit is not a goal. Use what you take (Tip).",
+    "No lights, no night vision, no infrared (98%)."
+   ],
+   "shot": {
+    "range": "Shotgun 40 m max with No. 1 Buck or larger (Tip). Rifle: your plate distance (Tip).",
+    "aim": "Broadside lungs behind the shoulder (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Furbearer: remove the hide, or the edible portions, to home, a meat cutter, cold storage, taxidermist, tanner or fur trader (98%).",
+    "Skin it cased (like a sock) the same day; freeze or salt if you cannot flesh it (Tip).",
+    "Gloves and a mask for skinning (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Landowner permission for the field",
+      "cert": 99,
+      "lesson": "landowner-permission"
+     }
+    ],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Mouth call; practise 3 distress sounds",
+      "cert": 60,
+      "lesson": "predators"
+     },
+     {
+      "t": "Gloves and a mask for skinning",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "clothing": [
+     {
+      "t": "Warm layers for a still dawn sit",
+      "cert": 60,
+      "lesson": "what-to-wear"
+     }
+    ],
+    "meat": [
+     {
+      "t": "Licensed fur trader or tanner found before the hunt",
+      "why": "Fur is the product (Tip)",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "safety": [
+     {
+      "t": "100 m from occupied buildings",
+      "cert": 99,
+      "lesson": "local-heffley"
+     }
+    ]
+   },
+   "mistakes": [
+    "Calling with the wind at your back.",
+    "Leaving three coyotes to rot in a field: legal and still wrong (Tip)."
+   ],
+   "sources": [
+    "predators",
+    "all-bc-species",
+    "BC Hunting and Trapping Regulations Synopsis 2026 to 2028"
+   ]
+  },
+  {
+   "id": "bobcat",
+   "name": "Bobcat",
+   "group": "predator",
+   "seasonKeys": [
+    "bobcat"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "bobcat",
+   "lessons": [
+    "predators",
+    "snow-tracking",
+    "tracks",
+    "wind-thermals",
+    "shot-placement",
+    "rb-legal-methods",
+    "rb-after-the-kill",
+    "rb-bag-limits",
+    "bc-calendar",
+    "rb-region-3",
+    "rb-region-2"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "ok",
+     "note": "Centrefire is legal (98%). Heavy for fur (Tip).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "best",
+     "note": "Rimfire is legal for bobcat (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Bobcat species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "predators"
+    },
+    {
+     "t": "Compulsory Report within 30 days in Regions 2 and 3",
+     "cert": 98,
+     "lesson": "predators"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "winter",
+     "label": "15 November to 15 February (Region 3)",
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "where": [
+      "Regions 2, 3 and 4: 15 November to 15 February (99%)",
+      "Region 8: to 28 February (99%)",
+      "Region 5: December only (99%)"
+     ],
+     "when": [
+      "dawn and dusk: calling setups (Tip)"
+     ],
+     "tactics": [
+      "Bag 1 (98%)",
+      "Not one with other bobcats (98%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "call",
+     "name": "Calling",
+     "best": "Winter",
+     "steps": [
+      "Sit at dawn with the wind in your face (Tip)",
+      "Play a distress call for 20 to 30 minutes (Tip)",
+      "Expect the animal from downwind (Tip)",
+      "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)",
+      "Cats come slowly: stay 30 minutes (Tip)"
+     ],
+     "pros": [
+      "Legal electronic calls"
+     ],
+     "cons": [
+      "Cats are hard to see"
+     ],
+     "cert": 50
+    },
+    {
+     "id": "hounds",
+     "name": "Hounds",
+     "best": "Fresh snow",
+     "steps": [
+      "Join an experienced houndsman (Tip)",
+      "Unleashed dogs are allowed for bobcat (98%)",
+      "Cut a fresh track in snow (Tip)",
+      "Check for another bobcat or lynx with it before the shot (98%)"
+     ],
+     "pros": [
+      "Steady method"
+     ],
+     "cons": [
+      "Needs dogs"
+     ],
+     "cert": 60
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Learn lynx from bobcat",
+     "why": "Bobcat tail black on top only, white underneath, spotted tan coat (70%)",
+     "cert": 70
+    }
+   ],
+   "redFlags": [
+    "No bobcat season in Regions 1, 6, 7A or 7B (95%).",
+    "No bobcat that is with another bobcat or lynx (98%).",
+    "Compulsory Report within 30 days in Regions 2 and 3 (98%)."
+   ],
+   "shot": {
+    "range": "Close, often under 100 m (Tip).",
+    "aim": "Broadside lungs behind the shoulder (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Furbearer: remove the hide, or the edible portions, to home, a meat cutter, cold storage, taxidermist, tanner or fur trader (98%).",
+    "Compulsory Report within 30 days: location, date, days hunted, weapon, class (98%).",
+    "Skin it cased (like a sock) the same day; freeze or salt if you cannot flesh it (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Compulsory Report plan: WILD (Wildlife Information and Licensing Data), FrontCounter BC or mail",
+      "cert": 98,
+      "lesson": "predators"
+     }
+    ],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Gloves and a mask for skinning",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "clothing": [],
+    "meat": [
+     {
+      "t": "Licensed fur trader or tanner found before the hunt",
+      "why": "Fur is the product (Tip)",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "safety": []
+   },
+   "mistakes": [
+    "Shooting a lynx that is a bobcat, or the other way round.",
+    "No Compulsory Report plan."
+   ],
+   "sources": [
+    "predators"
+   ]
+  },
+  {
+   "id": "lynx",
+   "name": "Lynx",
+   "group": "predator",
+   "seasonKeys": [
+    "lynx"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": "lynx",
+   "lessons": [
+    "predators",
+    "snow-tracking",
+    "tracks",
+    "wind-thermals",
+    "shot-placement",
+    "rb-legal-methods",
+    "rb-after-the-kill",
+    "rb-bag-limits",
+    "bc-calendar",
+    "rb-region-3",
+    "small-game"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "ok",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "best",
+     "note": "Rimfire is legal for lynx (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Lynx species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "predators"
+    },
+    {
+     "t": "Compulsory Report within 30 days in Region 3",
+     "cert": 98,
+     "lesson": "predators"
+    },
+    {
+     "t": "Carry every species licence bought this year, used and unused",
+     "why": "Unlawful to hunt without them",
+     "cert": 95,
+     "lesson": "tagging-legal"
+    },
+    {
+     "t": "Photo ID on you, and know your FWID (Fish and Wildlife ID) number",
+     "why": "An officer can ask",
+     "cert": 99,
+     "lesson": "licences"
+    }
+   ],
+   "phases": [
+    {
+     "id": "winter",
+     "label": "15 November to 15 February (Region 3)",
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "where": [
+      "Regions 3 and 6: 15 November to 15 February (99%)",
+      "Region 4: 15 November to 31 December (99%)",
+      "Regions 5, 7A, 7B: from 1 November (99%)",
+      "Where snowshoe hares boom (Tip)"
+     ],
+     "when": [
+      "dawn and dusk: calling (Tip)"
+     ],
+     "tactics": [
+      "Bag 1 (98%)",
+      "Not one with other lynx (98%)"
+     ],
+     "cert": 98
+    }
+   ],
+   "tactics": [
+    {
+     "id": "call",
+     "name": "Calling",
+     "best": "Hare country in winter",
+     "steps": [
+      "Sit at dawn with the wind in your face (Tip)",
+      "Play a distress call for 20 to 30 minutes (Tip)",
+      "Expect the animal from downwind (Tip)",
+      "Electronic calls are legal for wolf, coyote, cougar, lynx and bobcat (98%)"
+     ],
+     "pros": [
+      "Legal electronic calls"
+     ],
+     "cons": [
+      "Rarely seen"
+     ],
+     "cert": 50
+    }
+   ],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [
+    {
+     "t": "Hunt hare country",
+     "why": "Lynx follow snowshoe hares (Tip)",
+     "cert": 60
+    }
+   ],
+   "redFlags": [
+    "No lynx season in Regions 1 or 2 (95%).",
+    "No lynx with another lynx or bobcat (98%).",
+    "Compulsory Report within 30 days in Region 3 (98%)."
+   ],
+   "shot": {
+    "range": "Close (Tip).",
+    "aim": "Broadside lungs behind the shoulder (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Furbearer: remove the hide, or the edible portions, to home, a meat cutter, cold storage, taxidermist, tanner or fur trader (98%).",
+    "Compulsory Report within 30 days (98%).",
+    "Skin it cased (like a sock) the same day; freeze or salt if you cannot flesh it (Tip)."
+   ],
+   "checklist": {
+    "paperwork": [
+     {
+      "t": "Compulsory Report plan",
+      "cert": 98,
+      "lesson": "predators"
+     }
+    ],
+    "firearm": [],
+    "gear": [
+     {
+      "t": "Gloves and a mask for skinning",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "clothing": [],
+    "meat": [
+     {
+      "t": "Licensed fur trader or tanner found before the hunt",
+      "why": "Fur is the product (Tip)",
+      "cert": 60,
+      "lesson": "predators"
+     }
+    ],
+    "safety": []
+   },
+   "mistakes": [
+    "Calling a bobcat a lynx. Lynx tail tip is black all round (70%)."
+   ],
+   "sources": [
+    "predators"
+   ]
+  },
+  {
+   "id": "wolverine",
+   "name": "Wolverine",
+   "group": "predator",
+   "seasonKeys": [
+    "wolverine"
+   ],
+   "migratoryKeys": [],
+   "harvestKey": null,
+   "lessons": [
+    "predators",
+    "all-bc-species",
+    "rb-region-6",
+    "rb-region-7a",
+    "rb-region-7b",
+    "rb-legal-methods"
+   ],
+   "methods": [
+    {
+     "id": "rifle",
+     "label": "Rifle (.308 Tikka T3x)",
+     "fit": "ok",
+     "note": "Centrefire is legal (98%).",
+     "cert": 98
+    },
+    {
+     "id": "rimfire",
+     "label": "Rimfire (.22 CZ 457)",
+     "fit": "ok",
+     "note": "Rimfire is legal for wolverine (98%).",
+     "cert": 98
+    },
+    {
+     "id": "shotgun",
+     "label": "Shotgun (12 gauge)",
+     "fit": "ok",
+     "note": "20 gauge or larger with No. 1 Buck or larger (98%).",
+     "cert": 98
+    },
+    {
+     "id": "bow",
+     "label": "Bow",
+     "fit": "ok",
+     "note": "Bow B, C or D (98%).",
+     "cert": 98
+    }
+   ],
+   "licence": [
+    {
+     "t": "BC resident hunting licence, $32, expires 31 March",
+     "why": "Needed for every hunt",
+     "cert": 99,
+     "lesson": "licences"
+    },
+    {
+     "t": "Wolverine species licence. Not valid until 2 days after issue (99%). Buy it at least 3 days before the hunt (Tip).",
+     "cert": 99,
+     "lesson": "predators"
+    },
+    {
+     "t": "Compulsory Report within 30 days, anywhere",
+     "cert": 98,
+     "lesson": "predators"
+    }
+   ],
+   "phases": [
+    {
+     "id": "north",
+     "label": "Northern seasons",
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+     ],
+     "where": [
+      "Region 6: 15 September to 28 February (99%)",
+      "Regions 7A and 7B: 15 October to 15 January (99%)"
+     ],
+     "when": [],
+     "tactics": [
+      "Bag 1 (99%)"
+     ],
+     "cert": 99
+    }
+   ],
+   "tactics": [],
+   "dayPlan": {
+    "scout": [
+     "Look for tracks on trail junctions, road edges and fresh snow (Tip)",
+     "Ask a landowner about predators near stock (Tip)"
+    ],
+    "dawn": [
+     "Legal light 1 hour before sunrise (99%)",
+     "Calling setups at first light (Tip)"
+    ],
+    "morning": [
+     "Read fresh snow for tracks (Tip)"
+    ],
+    "midday": [
+     "Move to a new setup at least a ridge away (Tip)"
+    ],
+    "evening": [
+     "Last setup with the wind in your face (Tip)"
+    ],
+    "dusk": [
+     "Last legal shot 1 hour after sunset (99%)"
+    ],
+    "night": [
+     "No hunting from 1 hour after sunset to 1 hour before sunrise (99%)",
+     "No lights, no night vision, no infrared (98%)"
+    ]
+   },
+   "raiseOdds": [],
+   "redFlags": [
+    "No wolverine season in Region 3 or near your bases (98%). Regions 6, 7A and 7B only.",
+    "Electronic calls are not allowed for wolverine (98%)."
+   ],
+   "shot": {
+    "range": "Your plate distance (Tip).",
+    "aim": "Broadside lungs (Tip).",
+    "diagram": "sc-pred-shot",
+    "cert": 60
+   },
+   "afterKill": [
+    "Furbearer: remove the hide, or the edible portions, to home, a meat cutter, cold storage, taxidermist, tanner or fur trader (98%).",
+    "Compulsory Report within 30 days (98%)."
+   ],
+   "checklist": {
+    "paperwork": [],
+    "firearm": [],
+    "gear": [],
+    "clothing": [],
+    "meat": [],
+    "safety": []
+   },
+   "mistakes": [],
+   "sources": [
+    "predators",
+    "all-bc-species"
+   ]
+  }
+ ]
+}

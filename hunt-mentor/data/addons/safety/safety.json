@@ -1,0 +1,175 @@
+{
+  "checked": "2026-10-16",
+  "note": "Safety tools content (app/addons/safety.js). Every fact: text, certainty (c), source id (s). Tips have c 0 and are labelled Tip. Keep prose free of hyphens and em dashes.",
+  "sources": {
+    "rapp": { "name": "BC Conservation Officer Service: Report a conflict, violation or poaching (RAPP)", "url": "https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp", "how": "read directly, page last updated 31 May 2024", "checked": "2026-10-16" },
+    "synopsis": { "name": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028, page 2 (RAPP) and page 11 item 38 (hunting hours)", "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf", "how": "as read for the Rule Book", "checked": "2026-10-02" },
+    "mbr": { "name": "Migratory Birds Regulations, 2022, s. 28 (hunting hours south of 60 degrees north)", "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/", "how": "as read for the Rule Book", "checked": "2026-10-02" },
+    "bcws": { "name": "BC Wildfire Service: Report a wildfire", "url": "https://www2.gov.bc.ca/gov/content/safety/wildfire-status/contact-channels/report-a-wildfire", "how": "read directly, page last updated 9 February 2026", "checked": "2026-10-16" },
+    "bans": { "name": "BC Wildfire Service: Fire bans and restrictions", "url": "https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions", "how": "link checked", "checked": "2026-10-16" },
+    "bcwsmap": { "name": "BC Wildfire Service: wildfire map", "url": "https://wildfiresituation.nrs.gov.bc.ca/map", "how": "link checked", "checked": "2026-10-16" },
+    "firedata": { "name": "BC Data Catalogue: BC Wildfire Fire Locations, Current (ArcGIS Online feature service BCWS_ActiveFires_PublicView)", "url": "https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-locations-current", "how": "read directly: updated from operational systems every 15 minutes; may not reflect the most current fire situation; reference only", "checked": "2026-10-16" },
+    "ecomm": { "name": "E-Comm 911: Calling 9-1-1", "url": "https://ecomm911.ca/calling911/", "how": "read directly", "checked": "2026-10-16" },
+    "adventuresmart": { "name": "AdventureSmart: Trip plan", "url": "https://www.adventuresmart.ca/trip-plan/", "how": "page blocked to our fetch; content via search previews and BC search and rescue pages", "checked": "2026-10-16" },
+    "chwksar": { "name": "Chilliwack Search and Rescue: How a trip plan helps", "url": "https://chilliwacksar.org/how-a-trip-plan-helps-june-26-2018/", "how": "read directly", "checked": "2026-10-16" },
+    "wsbc-black": { "name": "WildSafeBC: Black bear", "url": "https://wildsafebc.com/species/black-bear/", "how": "read directly", "checked": "2026-10-16" },
+    "wsbc-griz": { "name": "WildSafeBC: Grizzly bear", "url": "https://wildsafebc.com/species/grizzly-bear/", "how": "read directly", "checked": "2026-10-16" },
+    "wsbc-cougar": { "name": "WildSafeBC: Cougar", "url": "https://wildsafebc.com/species/cougar/", "how": "read directly", "checked": "2026-10-16" },
+    "pc-spray": { "name": "Parks Canada (mountain parks): Bear spray", "url": "https://parks.canada.ca/pn-np/mtn/ours-bears/securite-safety/gaz-spray", "how": "read directly, page and video transcript, date modified 2024-06-28", "checked": "2026-10-16" },
+    "pc-spray-pr": { "name": "Parks Canada (Pacific Rim): Bear spray", "url": "https://parks.canada.ca/pn-np/bc/pacificrim/nature/faune-wildlife/gaz-spray", "how": "read directly, date modified 2025-02-11", "checked": "2026-10-16" },
+    "ab-bears": { "name": "Alberta: Bears and hunters", "url": "https://www.alberta.ca/bears-and-hunters", "how": "read directly for the Bears and cougars lesson (another province's advice)", "checked": "2026-10-11" },
+    "lesson-aid": { "name": "Hunt Mentor lesson: First aid in the field (Canadian Red Cross material)", "url": "#/s/field-first-aid", "how": "from the lesson's own sources", "checked": "2026-10-11" },
+    "lesson-cold": { "name": "Hunt Mentor lesson: Cold injuries (Wilderness Medical Society via American Family Physician)", "url": "#/s/cold-injuries", "how": "from the lesson's own sources", "checked": "2026-10-11" },
+    "lesson-lost": { "name": "Hunt Mentor lesson: Lost and the survival kit (AdventureSmart, BC Search and Rescue Association)", "url": "#/s/lost-survival-kit", "how": "from the lesson's own sources", "checked": "2026-10-11" },
+    "lesson-bush": { "name": "Hunt Mentor lesson: Bush safety (Apple Support pages)", "url": "#/s/bush-safety", "how": "from the lesson's own sources (search preview)", "checked": "2026-10-01" },
+    "redcross-ice": { "name": "Canadian Red Cross: Is that ice safe?", "url": "https://redcross.ca/blog/2016/1/is-that-ice-safe", "how": "page blocked to our fetch; numbers via search previews, matching the Ice and cold water lesson", "checked": "2026-10-16" },
+    "openmeteo": { "name": "Open-Meteo weather forecast API (free, no key, CC BY 4.0)", "url": "https://open-meteo.com/", "how": "live data", "checked": "2026-10-16" },
+    "avcan": { "name": "Avalanche Canada forecasts (public API api.avalanche.ca, and avalanche.ca)", "url": "https://avalanche.ca/map", "how": "live data; early season message read 2026-10-16", "checked": "2026-10-16" },
+    "avcan-early": { "name": "Avalanche Canada: Early season conditions", "url": "https://avalanche.ca/early-season-conditions", "how": "link checked", "checked": "2026-10-16" },
+    "webkit": { "name": "WebKit blog: Web Push for Web Apps on iOS and iPadOS (iOS 16.4)", "url": "https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/", "how": "read directly, post dated 16 February 2023 (push needs a server; this app has none, so it can only show a notification while it runs)", "checked": "2026-10-16" }
+  },
+  "numbers": [
+    { "id": "911", "label": "Emergency: police, fire, ambulance, search and rescue", "tel": "911", "show": "911", "c": 99, "s": "ecomm", "why": "Call first for any emergency. Police start a search." },
+    { "id": "fire", "label": "Report a wildfire", "tel": "18006635555", "show": "1 800 663 5555", "alt": { "tel": "*5555", "show": "*5555 on a cell" }, "c": 99, "s": "bcws" },
+    { "id": "rapp", "label": "Conservation Officer Service RAPP (Report All Poachers and Polluters): aggressive bear or cougar, attack, poaching", "tel": "18779527277", "show": "1 877 952 7277", "c": 99, "s": "rapp", "why": "Toll free in BC, open 24/7 for conflicts that threaten public safety." },
+    { "id": "satphone", "label": "Satellite phone (cannot dial 911): emergency coordination number", "show": "", "verify": true, "c": 0, "s": "", "why": "A search preview gave a number for satellite phones. Not confirmed on an official page. VERIFY before you rely on it." }
+  ],
+  "dispatch": [
+    { "t": "Say: \"I need help in the bush.\" Then your location first.", "c": 80, "s": "ecomm", "n": "E-Comm says the first operator confirms your location first." },
+    { "t": "Read your latitude and longitude from this screen, slowly, digit by digit.", "c": 0 },
+    { "t": "What happened, how many people, who is hurt and how.", "c": 0 },
+    { "t": "Your phone number. Then stay on the line and answer the questions.", "c": 0 },
+    { "t": "Save battery: screen dim, no games. Stay where you are unless told to move.", "c": 0 }
+  ],
+  "nosignal": [
+    { "t": "No signal: try 911 anyway. It can use any carrier's tower in range.", "c": 75, "s": "lesson-bush" },
+    { "t": "iPhone 14 or later: Emergency SOS via satellite works in Canada (iOS 16.1 or later).", "c": 85, "s": "lesson-bush" },
+    { "t": "Satellite messenger such as an inReach: press SOS. It needs an active plan.", "c": 65, "s": "lesson-bush" },
+    { "t": "911 does not reach everywhere in BC.", "c": 85, "s": "lesson-bush" }
+  ],
+  "stop": [
+    { "k": "S", "w": "Stop", "t": "Sit down. Do not keep walking." },
+    { "k": "T", "w": "Think", "t": "Where did you last know where you were?" },
+    { "k": "O", "w": "Observe", "t": "Map, compass, GPS, sun, creeks, roads." },
+    { "k": "P", "w": "Plan", "t": "Stay put, or move only if sure. Doubt means stay." }
+  ],
+  "stopSrc": { "c": 75, "s": "lesson-lost" },
+  "stopMore": [
+    { "t": "Staying put shrinks the area searchers must cover.", "c": 75, "s": "lesson-lost" },
+    { "t": "Signal in threes: 3 whistle blasts, 3 horn blasts, 3 fires.", "c": 75, "s": "lesson-lost" },
+    { "t": "Keep the phone in an inside pocket. Cold kills batteries.", "c": 70, "s": "lesson-lost" }
+  ],
+  "bleed": [
+    { "t": "Make it safe: unload guns. Call 911 or SOS.", "c": 75, "s": "lesson-aid" },
+    { "t": "Find the source. Press hard with both hands, arms locked.", "c": 75, "s": "lesson-aid" },
+    { "t": "Deep wound in groin or armpit: pack it with gauze, press at least 3 minutes.", "c": 70, "s": "lesson-aid" },
+    { "t": "Arm or leg bleed that pressure cannot stop: tourniquet above the wound, tight. Write the time.", "c": 75, "s": "lesson-aid" },
+    { "t": "Do not pack wounds of the chest or belly.", "c": 65, "s": "lesson-aid" }
+  ],
+  "hypo": [
+    { "t": "Early: stumbles, mumbles, fumbles, grumbles. Strong shivering.", "c": 75, "s": "lesson-cold" },
+    { "t": "Shivering slows or stops, drowsy: this is an emergency. Call.", "c": 75, "s": "lesson-cold" },
+    { "t": "Shelter, off the cold ground, dry layers, heat to the trunk first.", "c": 75, "s": "lesson-cold" },
+    { "t": "Mild and alert: warm sweet drink and food. Drowsy: nothing by mouth, keep flat, gentle.", "c": 75, "s": "lesson-cold" }
+  ],
+  "trip": {
+    "intro": [
+      { "t": "Leave a trip plan with someone you trust: who, where, when back.", "c": 75, "s": "adventuresmart" },
+      { "t": "Overdue: your contact calls 911 straight away and says you left a trip plan.", "c": 70, "s": "chwksar" },
+      { "t": "Tell them not to be afraid to call. A false alarm is better than a late search.", "c": 70, "s": "chwksar" },
+      { "t": "AdventureSmart also has its own online trip plan at adventuresmart.ca.", "c": 75, "s": "adventuresmart" }
+    ],
+    "gear": ["Headlamp and spare batteries", "Fire starter", "Whistle and mirror", "Extra food and water", "Extra warm layer and rain shell", "Map and compass", "First aid kit and tourniquet", "Emergency shelter or bivy bag", "Knife", "Bear spray", "Satellite messenger", "Power bank"],
+    "gearSrc": { "t": "Based on AdventureSmart's 10 essentials plus hunter extras (Tip).", "c": 75, "s": "lesson-lost" }
+  },
+  "turn": {
+    "legal": [
+      { "t": "Big game and upland birds: legal light ends 1 hour after sunset.", "c": 99, "s": "synopsis" },
+      { "t": "Ducks and geese: legal light ends half an hour after sunset.", "c": 99, "s": "mbr" }
+    ],
+    "tips": [
+      "Turn around at sunset minus your walk out time and you reach the truck in daylight (Tip).",
+      "Hunting until legal light ends means walking out in the dark. Headlamp, known route, partner told (Tip).",
+      "Add extra time if you may pack meat. A loaded pack walks at half speed or less (Tip)."
+    ],
+    "ios": [
+      "This screen counts down and alerts you while it is open on the screen.",
+      "iPhone pauses web apps in the background and when the screen locks. The alert may not ring then.",
+      "Notifications from web apps need iOS 16.4 or later and the app added to the Home Screen, and even then a timer cannot always wake it.",
+      "So: also set an alarm in the iPhone Clock app. It always rings."
+    ],
+    "iosSrc": { "c": 80, "s": "webkit" }
+  },
+  "wildlife": {
+    "first": [
+      { "t": "Never run from a bear or a cougar.", "c": 75, "s": "wsbc-black" },
+      { "t": "Bear spray on your chest or hip, never in the pack.", "c": 75, "s": "wsbc-griz" }
+    ],
+    "id": [
+      { "t": "Grizzly: big shoulder hump, dished face, short round ears.", "c": 75, "s": "wsbc-griz" },
+      { "t": "Black bear: no hump, straight face, taller ears.", "c": 75, "s": "wsbc-black" },
+      { "t": "Colour fools people. Black bears come brown and cinnamon too.", "c": 75, "s": "wsbc-black" },
+      { "t": "Grizzlies evolved in open country and tend to charge. Black bears more often flee to cover.", "c": 75, "s": "wsbc-griz" }
+    ],
+    "see": [
+      { "h": "Bear has not seen you", "t": "Leave quietly the way you came. Keep watching it.", "c": 75, "s": "wsbc-black" },
+      { "h": "Bear sees you, calm", "t": "Speak softly, back away slowly. If it leaves, do not follow.", "c": 75, "s": "wsbc-black" },
+      { "h": "Bear agitated: jaw popping, woofing, stomping, bluff charge", "t": "Speak calmly, back away slowly. No direct eye contact, keep it in sight. Spray out.", "c": 75, "s": "wsbc-black" },
+      { "h": "Bear keeps coming at you", "t": "Yield slowly. Still coming: it may be predatory. Yell, get to higher ground, spray, be ready to fight.", "c": 75, "s": "wsbc-griz" }
+    ],
+    "contact": [
+      { "h": "Defensive attack (surprise, cubs, food)", "steps": ["Spray it if you can.", "Knocked down: lie on your stomach.", "Hands clasped over the back of your head and neck. Feet slightly apart. Keep your pack on.", "Stay still until you are sure it has left."], "c": 75, "s": "wsbc-black", "note": "Same for black bear and grizzly. Keep your pack on is a Tip." },
+      { "h": "Predatory attack (stalks you, keeps coming, comes at night, the attack does not stop)", "steps": ["Spray it.", "Fight back with everything you have.", "Hit the face, eyes and nose."], "c": 75, "s": "wsbc-griz", "note": "Rare. Black bears may show predatory behaviour more often than grizzlies (WildSafeBC)." }
+    ],
+    "cougar": [
+      { "t": "Stay calm. Never run. Never turn your back.", "c": 75, "s": "wsbc-cougar" },
+      { "t": "Look as large as possible. Keep it in view.", "c": 75, "s": "wsbc-cougar" },
+      { "t": "Back away slowly. Leave it a clear exit.", "c": 75, "s": "wsbc-cougar" },
+      { "t": "It follows or acts aggressive: be aggressive back. Eye contact, yell, loud noise.", "c": 75, "s": "wsbc-cougar" },
+      { "t": "Attacked: always fight back. Never play dead. Face and eyes. Use spray.", "c": 75, "s": "wsbc-cougar" }
+    ],
+    "spray": [
+      { "h": "Carry", "t": "In a holster on your chest or hip, dominant hand side. Practise the draw in gloves.", "c": 85, "s": "pc-spray" },
+      { "h": "When", "t": "Bear within about 5 to 10 m (16 to 33 ft) and coming. It is a last resort tool.", "c": 80, "s": "wsbc-black", "n": "WildSafeBC: 5 to 10 m. Parks Canada: the can reaches about 10 m, effective range about 5 m." },
+      { "h": "Clip off", "t": "Pull the safety clip. Nozzle pointed away from you.", "c": 85, "s": "pc-spray" },
+      { "h": "Aim", "t": "At the bear's face, slightly down, so the cloud forms a wall between you.", "c": 85, "s": "pc-spray-pr" },
+      { "h": "Burst", "t": "Short bursts of 1 to 2 seconds until the bear turns away. Keep some in reserve.", "c": 80, "s": "pc-spray", "n": "Parks Canada's page says one second bursts, its video says two seconds; Alberta says 1 to 2 seconds." },
+      { "h": "Wind", "t": "Wind or rain weakens it. Strong wind in your face: it will hit you. Stay out of the cloud's path.", "c": 85, "s": "pc-spray" },
+      { "h": "After", "t": "Leave the area right away, watching the bear. Report it.", "c": 85, "s": "pc-spray" }
+    ],
+    "sprayMore": [
+      { "t": "Alberta by distance: 9 to 15 m a short warning blast; under 9 m bursts of 1 to 2 seconds aimed slightly down in front of the head.", "c": 75, "s": "ab-bears" },
+      { "t": "Cold weakens spray pressure. On frozen mornings keep it inside your jacket (Tip).", "c": 0 },
+      { "t": "In the truck: safety clip on, in a sealed container or the trunk. Avoid heat and cold extremes.", "c": 85, "s": "pc-spray" }
+    ],
+    "report": { "t": "Report aggressive bears or cougars, attacks and kill sites near people to the RAPP line.", "c": 99, "s": "rapp" }
+  },
+  "ice": {
+    "rules": [
+      { "t": "15 cm: one person walking or skating alone.", "c": 75, "s": "redcross-ice" },
+      { "t": "20 cm: a group, skating parties or games.", "c": 75, "s": "redcross-ice" },
+      { "t": "25 cm: a snowmobile.", "c": 75, "s": "redcross-ice" },
+      { "t": "These numbers are for clear blue ice, the strongest kind. White or grey ice is weaker.", "c": 75, "s": "redcross-ice" },
+      { "t": "Thickness changes across a lake. Springs, currents and inflows thin it. Check more than one spot.", "c": 75, "s": "redcross-ice" }
+    ],
+    "tips": [
+      "October and November ice is new. Most potholes will not reach 15 cm until well into winter (Tip).",
+      "Ducks on open water mean the ice near them is thin. Never walk out for a downed bird on new ice (Tip)."
+    ]
+  },
+  "avy": {
+    "rules": [
+      { "t": "Avalanches can happen wherever there is snow on a steep slope, even before daily forecasts start.", "c": 80, "s": "avcan-early" },
+      { "t": "2026 season: Avalanche Canada says daily forecasts begin 25 November at 4 PM.", "c": 95, "s": "avcan", "n": "From Avalanche Canada's early season message, read 2026-10-16." },
+      { "t": "Past seasons started 22 to 25 November. Forecasts usually end in spring: VERIFY the end date each year.", "c": 70, "s": "avcan" },
+      { "t": "Steep snow: transceiver, probe and shovel, and the training to use them.", "c": 75, "s": "avcan-early" }
+    ]
+  },
+  "weather": {
+    "tips": [
+      "Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).",
+      "Freezing level near your hunting height: rain turns to snow up there. Pack for both (Tip).",
+      "Wet and windy at about 0 to 10 degrees is prime hypothermia weather (Tip)."
+    ]
+  }
+}
