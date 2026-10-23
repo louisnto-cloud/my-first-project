@@ -269,8 +269,14 @@
   function rutCard(live) {
     const r = live.rut; if (!r) return '';
     if (r.verify) return `<div class="card"><h3>Rut</h3><p><span class="verify">VERIFY</span> ${esc(r.source || '')} ${lessonA(r.lesson, 'The rut')}</p></div>`;
-    return `<div class="card"><h3>Rut on your dates: ${esc(r.phase)}</h3>${rutBar(r, live.days || [])}
-      ${r.t ? `<p>${esc(r.t)} ${badge(r.cert)}</p>` : ''}${r.note ? `<p class="pll-small">${esc(r.note)}</p>` : ''}
+    // every phase your days fall in, in date order (a 14 to 15 November trip spans Rut starting and Peak breeding)
+    const per = (live.days || []).filter((d) => d.rut && !d.rut.verify && d.rut.phase), ph = [];
+    per.forEach((d) => { const x = ph.find((y) => y.phase === d.rut.phase); if (x) x.days.push(d.date); else ph.push({ phase: d.rut.phase, t: d.rut.t, cert: d.rut.cert, days: [d.date] }); });
+    if (!ph.length) ph.push({ phase: r.phase, t: r.t, cert: r.cert, days: [] });
+    const head = ph.map((x, i) => (i ? x.phase.charAt(0).toLowerCase() + x.phase.slice(1) : x.phase)).join(' to ');
+    const dayLine = (x) => (ph.length > 1 && x.days.length ? `<b>${esc(x.days.map(dLabel).join(', '))}: ${esc(x.phase)}.</b> ` : '');
+    return `<div class="card"><h3>Rut on your dates: ${esc(head)}</h3>${rutBar(r, live.days || [])}
+      ${ph.map((x) => (x.t ? `<p>${dayLine(x)}${esc(x.t)} ${badge(x.cert)}</p>` : '')).join('')}${r.note ? `<p class="pll-small">${esc(r.note)}</p>` : ''}
       <p class="pll-small muted">${esc(r.source || '')}. ${lessonA(r.lesson, 'Masterclass: The rut')}</p></div>`;
   }
   function roadsCard(live, plan) {
