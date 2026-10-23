@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 295" font-family="sans-serif" role="img" aria-label="3 common mistakes. Warm quarters in a tarp, fix: Game bags, open air. Aging a gut shot deer trailed 5 hours, fix: Cut and freeze. Frozen bear called safe, fix: Cook to 71°C.">
+<rect width="400" height="295" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">3 common mistakes</text>
+<circle cx="28" cy="52" r="11" fill="#17201A"/><path d="M23.5 47.5 l9 9 M32.5 47.5 l-9 9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><text x="46" y="57" font-size="15" font-weight="bold" fill="#17201A">Mistake</text><circle cx="244" cy="52" r="11" fill="#1F3D2B"/><path d="M239 52 l3.5 4 l6.5 -8" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="262" y="57" font-size="15" font-weight="bold" fill="#1F3D2B">Fix</text>
+<g><rect x="12" y="72" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="94" font-size="15" fill="#17201A">Warm quarters in a</text>
+<text x="22" y="113" font-size="15" fill="#17201A">tarp</text><path d="M178 100 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 100 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="72" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="94" font-size="15" font-weight="bold" fill="#1F3D2B">Game bags, open</text>
+<text x="238" y="113" font-size="15" font-weight="bold" fill="#1F3D2B">air</text></g>
+<g><rect x="12" y="138" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="160" font-size="15" fill="#17201A">Aging a gut shot</text>
+<text x="22" y="179" font-size="15" fill="#17201A">deer trailed 5</text>
+<text x="22" y="198" font-size="15" fill="#17201A">hours</text><path d="M178 175.5 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 175.5 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="138" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="160" font-size="15" font-weight="bold" fill="#1F3D2B">Cut and freeze</text></g>
+<g><rect x="12" y="223" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="245" font-size="15" fill="#17201A">Frozen bear called</text>
+<text x="22" y="264" font-size="15" fill="#17201A">safe</text><path d="M178 251 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 251 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="223" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="245" font-size="15" font-weight="bold" fill="#1F3D2B">Cook to 71°C</text></g>
+
+</svg>
