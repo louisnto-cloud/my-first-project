@@ -111,7 +111,7 @@
       "group": "licence",
       "key": "print",
       "label": "Buying species licences",
-      "value": "Cannot be printed at home. Online orders are mailed (about 14 days). Hunting soon: buy in person.",
+      "value": "Cannot be printed at home. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another. Hunting soon: buy in person.",
       "certainty": 85,
       "source": "BC species licences page (search extract)",
       "url": "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences",
