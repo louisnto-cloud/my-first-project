@@ -705,3 +705,9 @@ main .tl-step p { line-height: 1.4; }
 .pl-gix-b { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 4px 10px; border: 2px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); font: 700 14px/1.2 var(--font); text-align: left; }
 .pl-grp { border-top: 2px solid var(--line); padding: 12px 0 4px; margin-top: 8px; }
 .pl-grp > h3 { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+/* completeness: the must not miss line at the top of a stage, and the brother questions as a short list */
+main .tl-step.tl-key { margin: 0 0 8px; padding: 10px 12px; border: 0; border-left: 6px solid var(--blaze); border-radius: 8px; background: var(--warn-bg); }
+main .tl-key b { font-size: 17px; }
+main .tl-key .btn { margin-top: 6px; }
+.tl-bro { margin: 6px 0 0; padding-left: 20px; line-height: 1.5; font-size: 15px; }
+main .gc-v .gc-sm b { font-size: 14px; }

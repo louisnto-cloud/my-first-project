@@ -1034,7 +1034,7 @@
     let hitSteps = []; try { hitSteps = [...(sp.afterKill || []).filter((t) => /\bhit\b|wait|mark both|flag/i.test(t)), ...checkItems(sp, D.lists, condOf(p)).filter((i) => !i.off && /hit site|lost the trail|blood|stay still|mark (the|where)|flag/i.test(i.t)).map((i) => i.t + (i.why ? ` (${i.why})` : ''))].filter((t, i, a) => a.indexOf(t) === i).slice(0, 6); } catch (e) { hitSteps = []; }
     const body = {
       w1: `<div data-tl-steps="w1"></div>
-        ${p.party === 'two' ? '<div class="tl-step"><b>Agree with your brother, this week</b><p>Settle now: does he carry a tag (then he buys his own licences in person too), does he carry a rifle, who sits where, who walks in first. The party odds on this plan assume he carries a tag. <span class="verify">To confirm</span></p></div>' : ''}
+        ${p.party === 'two' ? '<div class="tl-step"><b>Agree with your brother, this week</b><p>Settle now: does he carry a tag (then he buys his own licences in person too), does he carry a rifle, who sits where, who walks in first. The party odds on this plan assume he carries a tag. <span class="verify">To confirm</span></p><ul class="tl-bro"><li>Does he carry a tag? Yes or no <span class="verify">To confirm</span></li><li>Does he carry a rifle? <span class="verify">To confirm</span></li><li>His phone number written on paper, in your pack <span class="verify">To confirm</span></li><li>Who at home holds the trip plan (name and phone) <span class="verify">To confirm</span></li></ul></div>' : ''}
         <div data-tl-check="w1"></div>
         ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
         ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
@@ -1045,14 +1045,16 @@
         ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', '2. Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
       hw: `<div data-tl-steps="hw"></div><div data-tl-check="hw"></div>
         <p class="tl-tip"><a class="btn" href="#/huntweek/${encodeURIComponent(p.id)}">Hunt week countdown list</a></p>`,
-      nb: `<div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
+      nb: `<div class="tl-step tl-key"><b>On you, not in the truck</b><p>Photo ID, your FWID (Fish and Wildlife ID) number, and every species licence you hold this licence year, used and unused (99%, synopsis pages 5, 7 and 8). No licence, no shot.</p></div>
+        <div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
         ${sec('pl-s0', 'Ready to go?', 'pl-ready', 'Checking your readiness gates...')}
         ${solo ? '' : '<div class="tl-step"><b>Agree six things with your partner (Tip)</b><p>Where each of you sits, back by what time, the meeting point, who shoots, your signals, and what to do if one of you is late.</p></div>'}
         <div data-tl-check="nb"></div>`,
       hunt: `<div id="tl-huntday"></div>
         ${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
         ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
-      shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
+      shot: `<div class="tl-step tl-key"><b>Kill, cancel the licence, then touch the deer</b><p>Cancel (notch) your deer licence as printed on it before you handle the deer. The shooter cancels their own, never a partner's (99%, synopsis page 11).</p><a class="btn" href="#/field/c/tag">Tag card</a></div>
+        ${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
         <div data-tl-check="shot"></div>`,
       after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
         <p class="tl-tip"><button type="button" class="btn" data-g-jump="pl-s4">Full checklist</button></p>
@@ -1161,13 +1163,16 @@
     // At a glance (graft from the Go card build): Ready, Legal, Where, When, Odds, each one tap from its detail
     const tmG = (ms) => (ms == null ? '?' : C.hhmm(new Date(ms)));
     const rowG = (go, key, state, head, lines) => `<button type="button" class="gc-row gc-${state}" data-g-jump="${go}"><span class="gc-v"><span class="gc-l1"><span class="gc-k">${key}</span> <b>${head}</b></span>${lines.filter(Boolean).map((l) => `<span>${l}</span>`).join('')}</span><span aria-hidden="true">›</span></button>`;
+    // what a legal buck is, in plain words: Region 2 facts from the Antler check set (data/addons/train/facts.json r2), same pages and certainty
+    const buckLine = () => (['2-8', '2-18', '2-19'].includes(p.where && p.where.mu) && /deer/i.test(sp.id + ' ' + sp.name)
+      ? `<span class="gc-sm"><b>What is a legal buck here:</b> bucks only, visible bony antlers (99%, pages 3 and 28). Any buck in season, a spike included (95%, Black tailed deer Masterclass 1). No doe, fawn or button buck (99%).</span>` : '');
     const drawGlance = () => {
       if (!alive()) return; const box = $('#gc-rows'); if (!box) return;
       const rows = [];
       if (Array.isArray(G) && G.length) { const left = G.filter((g) => !g.ok); rows.push(rowG('pl-ready', 'Ready?', left.length ? 'no' : 'ok', left.length ? `Not ready: ${left.length} of ${G.length} to do` : `Ready: all ${G.length} done`, [left.length ? `To do: ${esc(left.map((g) => g.label.toLowerCase()).join(', '))}` : ''])); }
       else rows.push(rowG('pl-ready', 'Ready?', 'wait', 'Checking...', []));
       const lg = m.legal;
-      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, '<span class="gc-sm">Legal light per day: on the Hunt day card.</span>'])); }
+      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, buckLine(), '<span class="gc-sm">Legal light per day: on the Hunt day card.</span>'])); }
       else rows.push(rowG('pl-s1', 'Legal?', 'wait', 'Checking the season tables...', []));
       const hd = (m.daysX || []).find((d) => d.kind === 'hunt' && d.primary), bl = (m.x && m.x.spots) || [];
       const s1 = (hd && bl.find((x) => String(x.id) === String(hd.primary.spot.id))) || bl[0];
