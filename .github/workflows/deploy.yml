@@ -49,8 +49,13 @@ jobs:
       - name: Assemble full site (main)
         if: github.ref == 'refs/heads/main' && hashFiles('pilgrimage/package.json') != ''
         run: |
-          mkdir -p dist/pilgrimage
+          mkdir -p dist/pilgrimage dist/model
           cp -r pilgrimage/out/. dist/pilgrimage/
+          # The Sparkling Daily planning tool is a single self-contained HTML
+          # file, so it needs no build — serve it at /model with its companion
+          # Excel workbook alongside for download.
+          cp organika_sparkling_daily_model.html dist/model/index.html
+          cp Organika_Sparkling_Daily_1YR_Scenario_Model.xlsx dist/model/
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4
