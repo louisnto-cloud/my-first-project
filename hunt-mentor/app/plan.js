@@ -386,7 +386,7 @@
       const n = its.filter((i) => ticked(i)).length;
       return `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3></summary>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
         <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
-        ${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
+        ${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${whyBadge(i, C)}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
     }).join('');
   }
   const closedCats = (root) => new Set([...root.querySelectorAll('details.pl-cat:not([open])')].map((d) => d.dataset.cat));
@@ -890,8 +890,9 @@
   }
   // display only (tick keys stay on i.key): the Week 1 online hunting licence line carries the in person Tip and the mail wait note
   const LIC_ONLINE = /^Week 1: BC hunting licence bought online$/;
-  const itemTx = (i) => (LIC_ONLINE.test(i.t) ? 'Week 1: BC hunting licence bought (Tip: this close to the hunt, buy it in person with the species licence)' : i.t);
-  const itemWhy = (i) => (LIC_ONLINE.test(i.t) ? 'Buy it in person: online orders are mailed, about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ).' + (i.why ? ' ' + i.why : '') : i.why || '');
+  const itemTx = (i) => (LIC_ONLINE.test(i.t) ? 'Week 1: BC hunting licence bought' : i.t);
+  const itemWhy = (i) => (LIC_ONLINE.test(i.t) ? 'Tip: this close to the hunt, buy it in person with the species licence. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another, sources differ' + (i.why ? '. ' + i.why : '') : i.why || '');
+  const whyBadge = (i, C) => (LIC_ONLINE.test(i.t) ? ' ' + C.certBadge(70) : ''); // the mail wait clause carries its own 70%, not the row's 99%
   // Licences card: a 99% line must name the official text its lesson quotes (CLAUDE.md scale), else it drops to the band it earns
   const LIC_SRC = {
     licences: 'Synopsis page 5 (2 October 2026 edition) and the BC species licences page, read 2026-10-02, as quoted in the lesson',
@@ -900,8 +901,9 @@
   };
   function licFix(l) {
     const t = String(l.t || '');
-    if (/online orders come by mail, about 14 days$/.test(t)) return { t: t.replace(/about 14 days$/, 'about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ). In person you get it at once'), cert: l.cert, src: LIC_SRC[l.lesson] };
-    if (/^Antlerless mule deer: LEH/.test(t)) return { t: t + '. Not matched in the synopsis text: To confirm', cert: Math.min(l.cert != null ? l.cert : 70, 70), src: 'App lesson only' };
+    if (/online orders come by mail, about 14 days$/.test(t)) return { t: t.replace(/: online orders come by mail, about 14 days$/, ': you get it at once'), cert: l.cert, src: LIC_SRC[l.lesson], sub: { t: 'Online orders come by mail: about 14 days in one source, 14 business days (about 3 weeks) in another. Sources differ', cert: 70 } };
+    // app lesson only, not matched in the synopsis text: under 60% on the CLAUDE.md scale, so VERIFY (certBadge(null)), no percent
+    if (/^Antlerless mule deer: LEH/.test(t)) return { t: t + '. Not matched in the synopsis text: To confirm', cert: null, src: 'App lesson only' };
     return { t, cert: l.cert, src: LIC_SRC[l.lesson] || (l.cert >= 95 ? 'App lesson only: To confirm' : '') };
   }
   // one Sources legend for the plan view: each fact keeps its own certainty badge; this names the base once
@@ -914,7 +916,7 @@
       ${li('Odds', yrs.length ? `BC resident harvest reports for your MU, ${Math.min(...yrs)} to ${Math.max(...yrs)} (${yrs.length} years)` : 'BC resident harvest reports for your MU')}
       ${li('Spots', `open map data, scored by the app${st && st.dataDate ? `, data dated ${esc(st.dataDate)}` : ''}${st && st.saved ? `, saved ${esc(st.saved)}` : ''}. Candidates only: scout first`)}
       ${li('Sun and legal light', 'sunrise and sunset worked out on the phone (sun formula, up to about 2 min off the full NOAA algorithm); legal light is 1 hour before sunrise to 1 hour after sunset (synopsis page 11), shown 3 min late at the start and 1 min early at the end')}
-      ${li('Drive and day times', 'estimates from straight line distance and the app day rules')}
+      ${li('Drive and day times', `Estimates. Drive is the straight line from Mission to the parking times 1.3, at about 60 km/h. Walk allowance is ${WALK_RULE}. The day plan adds 10 min to gear up and 15 min of slack`)}
       ${li('Certainty', '95 to 100%: read in the official source. 80 to 94%: official source, some reading. 60 to 79%: reliable secondary source. Tip: opinion. A lesson link holds the full citation')}
     </ul>`;
   }
@@ -929,7 +931,7 @@
     return { paperwork: 'w1', firearm: 'w1', meat: 'w2', gear: 'hw', clothing: 'hw', vehicle: 'hw', safety: 'hw', plan: 'hw' }[i.cat] || 'hw';
   }
   function tlItems(its, ticked, C) {
-    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
+    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${whyBadge(i, C)}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
   }
   function tlCss() {
     if (document.getElementById('tl-css')) return;
@@ -1201,7 +1203,7 @@
           ${B ? r('Backup spot', `${esc(B.spot.name)}: ${where(B)}${wb != null ? `, walk in about ${fmtMin(wb)}` : ''}`) : ''}
           ${long ? `<p class="tl-warn"><b>Backup walk is much longer:</b> about ${fmtMin(wb)} against ${fmtMin(wp)}. On a backup morning leave earlier, or you sit after first light.</p>` : ''}
         </div>`;
-      }).join('') + '<p class="pl-small muted">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Hour by hour, the turnaround alarm and the reasons are just below.</p>';
+      }).join('') + '<p class="pl-small muted">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Walk allowance: ' + WALK_RULE + '. Hour by hour, the turnaround alarm and the reasons are just below.</p>';
     };
     m.redraw = () => { drawGlance(); drawHuntDay(); };
     loadGates();
@@ -1430,7 +1432,7 @@
       ${other.length || migOther.length ? `<details class="card pl-more"><summary>Other seasons for ${esc(sp.name.toLowerCase())} in MU ${esc(p.where.mu)} (${other.length + migOther.length})</summary><ul class="pl-rows">${other.map(rowLi).join('')}${migOther.map(migLi).join('')}</ul></details>` : ''}
       ${lg.bag.length ? `<div class="card"><h3>Bag limits</h3><ul>${lg.bag.map((b) => `<li>${esc(b.t)} <span class="muted pl-small">${b.page ? `Synopsis page ${esc(b.page)}` : esc(b.src || '')}</span> ${C.certBadge(b.cert)}</li>`).join('')}</ul></div>` : ''}
       ${flags.length ? `<div class="card pl-flags"><h3>Red flags and watch outs</h3><ul>${flags.map((f) => `<li class="${f.bad ? 'pl-bad' : ''}">${f.bad ? '<b>Stop:</b> ' : ''}${esc(f.t)}${f.cert != null ? ' ' + C.certBadge(f.cert) : ''}</li>`).join('')}</ul></div>` : ''}
-      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => { const f = licFix(l); return `<li>${esc(f.t)} ${f.cert != null ? C.certBadge(f.cert) : ''}${f.src ? ` <span class="pl-src-n">${esc(f.src)}</span>` : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>`; }).join('')}</ul></div>` : ''}
+      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => { const f = licFix(l); return `<li>${esc(f.t)} ${C.certBadge(f.cert)}${f.src ? ` <span class="pl-src-n">${esc(f.src)}</span>` : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>${f.sub ? `<li>${esc(f.sub.t)} ${C.certBadge(f.sub.cert)}</li>` : ''}`; }).join('')}</ul></div>` : ''}
       <div class="card"><h3>Legal shooting hours</h3><p>${hrs ? esc(hrs.text) + ' ' + C.certBadge(hrs.certainty) : '<span class="verify">VERIFY</span>'}</p><p class="muted pl-small">Each day's times are in the day by day plan.</p></div>
       <div class="card"><h3>Rule Book lessons</h3><div class="pl-chips">${lessonLinks(lessons, C) || '<span class="muted">None in the app yet.</span>'}</div>
       ${more ? `<details class="pl-more"><summary>More lessons on ${esc(sp.name.toLowerCase())}</summary><div class="pl-chips">${more}</div></details>` : ''}
@@ -1544,6 +1546,10 @@
 
   // ---------- plan trip v2: answers and what they change (part 1) ----------
   const tagsN = (p) => { const A = p.ask || {}; return p.party === 'solo' ? 1 : p.party === 'two' ? (A.partner && A.partner.tag === false ? 1 : 2) : 3; };
+  // one walk rule for the whole plan view, the same one the hour by hour day plan uses (plan-days.js walkOf): the spot data walk time
+  // (3 km/h plus 1 min per 10 m of climb), never under 5 min
+  const WALK_RULE = 'the spot data walk time (3 km/h plus 1 min per 10 m of climb), 5 min minimum';
+  const walkAllow = (min) => (min == null ? null : Math.max(5, Math.round(+min)));
   const fmtMin = (n) => (n == null ? '' : n < 60 ? `${n} min` : `${Math.floor(n / 60)} h${n % 60 ? ` ${n % 60} min` : ''}`);
   function askRows(p) {
     const A = p.ask || {}, rows = [];
@@ -1658,7 +1664,7 @@
     const card = (x, i) => {
       const lg = x.legal, nd = !x.det;
       const oddsV = addOnVal(spotFrom(O, 'spot', x, m.oddsX, X)), windV = addOnVal(spotFrom(Lv, 'windFit', x, m.live, X) || liveWind(x, m.live, X));
-      const walk = x.walkKm != null ? `walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + ' m' : x.walkKm.toFixed(1) + ' km'}${x.climbM ? `, climb about ${Math.round(x.climbM)} m` : ''}${x.walkMin ? `, about ${x.walkMin} min` : ''}` : '';
+      const walk = x.walkKm != null ? `walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + ' m' : x.walkKm.toFixed(1) + ' km'}${x.climbM ? `, climb about ${Math.round(x.climbM)} m` : ''}${x.walkMin != null ? `, about ${fmtMin(walkAllow(x.walkMin))} (walk allowance)` : ''}` : '';
       const noAtv = x.cat === 'atv' && x.rideKm && !(p.access || []).includes('atv') ? ` No ATV on this plan: the ${x.rideKm.toFixed(1)} km stretch is in your 4 wheel drive, slowly, or on foot (Tip).` : '';
       const warnRoad = noAtv + (A.truck === '4wd' && x.ride === 'rough' ? ' Rough road: high clearance helps (Tip).' : A.truck === '2wd' && x.fsr ? ' Gravel FSR (Forest Service Road): check the road notices; 2 wheel drive in the wet is risky (Tip).' : '');
       const why = [...(x.own ? [`<li class="pl2-own"><span class="pill">From your own trips</span> ${esc(x.own.text.replace(/^From your own trips: /, ''))}</li>`] : []),
@@ -1666,7 +1672,7 @@
       return `<li class="card pl2-spot" data-bi="${i}"><div class="row"><span class="pl-dn">${i + 1}</span><b class="grow">${esc(x.name)}</b>${x.pop ? `<span class="pill ${x.pop === 'quiet' ? 'soon' : ''}">${x.pop === 'quiet' ? 'Quiet' : 'Popular'}</span>` : ''}</div>
         <div class="pl2-strip" aria-label="Getting there"><span>Mission</span><i>${x.driveKm != null ? `${x.driveKm} km, about ${fmtMin(x.driveMin)}` : 'drive'}</i>${x.rideKm ? `<span>Park</span><i>${x.rideKm.toFixed(1)} km ${x.ride === 'rough' ? 'rough road' : 'ride'}</i>` : ''}<span>${x.rideKm ? 'Unload' : 'Park'}</span><i>${walk ? esc(walk.replace(/,.*/, '')) : 'walk'}</i><span>Spot</span></div>
         <div class="pl-kv"><span>Access</span><b>${esc(CAT[x.cat] || x.cat || '')}, MU ${esc(x.mu || '?')}</b></div>
-        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from Mission, about ${fmtMin(x.driveMin) || '?'} (estimate${x.driveSrc === 'data' ? ', road distance from the spot data' : ', straight line times 1.3'}).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline).` : ''}</p>
+        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from Mission, about ${fmtMin(x.driveMin) || '?'} (estimate: straight line from Mission to the parking times 1.3${x.driveSrc === 'data' ? ', from the spot data' : ''}, at about 60 km/h).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline).` : ''}</p>
         <div class="pl-kv"><span>Pressure</span><b>${esc(x.popLabel || (x.pop === 'quiet' ? 'Less popular (quieter)' : x.pop ? 'More popular (busier)' : x.busy || 'not in the data'))}</b></div>
         ${x.popWhy || x.pressWhy ? `<p class="pl-small muted">${esc(x.pressWhy || '')}${x.popCert != null ? ` Popularity is an estimate, about ${esc(x.popCert)}% sure.` : ''}</p>` : ''}
         <div class="pl-kv"><span>Pack out</span><b>Estimate</b></div><p class="pl-small">${esc(packOut(x, p, sp))}</p>
@@ -1959,7 +1965,7 @@
         <button type="button" class="${b.T.pace === '10' ? 'on' : ''}" data-pace="10">10 min a day</button>
         <button type="button" class="${b.T.pace === 'must' ? 'on' : ''}" data-pace="must">Must know by the hunt${b.T.mustPerDay ? ` (about ${b.T.mustPerDay} min a day)` : ''}</button>
         <button type="button" class="${b.T.pace === 'fit' ? 'on' : ''}" data-pace="fit">All of it by the hunt${b.T.allPerDay ? ` (about ${b.T.allPerDay} min a day)` : ''}</button></div>
-      <p class="muted pl-small">Minutes come from each lesson's own time, plus about 2 minutes for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
+      <p class="muted pl-small">Minutes come from each lesson's own time: ${b.T.must.left ? `must know ${b.T.must.left} screens left, about ${Math.round(b.T.must.minLeft)} min; ` : ''}${b.T.st.left ? `whole path ${b.T.st.left} screens left, about ${Math.round(b.T.st.minLeft)} min` : 'whole path done'}${b.T.daysToGo > 0 ? `, over the ${b.T.daysToGo} day${b.T.daysToGo === 1 ? '' : 's'} to the hunt` : ''}, plus about 2 min a day for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
       <p class="muted pl-small">Cards use spaced repetition: a card you know comes back in 1 day, then 6 days, then further apart each time. A card you miss comes back tomorrow. Testing yourself this way beats rereading (Roediger and Karpicke, 2006). Assumption: about 12 seconds per card (not measured).</p>
       </div>
       <details class="pl-cat" open><summary>Must know first (${b.T.must.seen}/${b.T.must.total} screens)</summary><div class="list">${P.must.map(row).join('')}</div></details>
@@ -1972,6 +1978,7 @@
   let Dc = null;
   const nextPlan = (C) => { const t = C.study.dayISO(); return plansOf(C).filter((p) => p.from && (p.to || p.from) >= t).sort((a, b) => (a.from < b.from ? -1 : 1))[0] || null; };
   const fmtDay = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+  const PACE_LBL = { 10: '10 min a day', must: 'must know by the hunt', fit: 'all of it by the hunt' };
   function studyBits(p, sp, C, plain) { // plain: leave out today's button (the screen shows it higher up as its one blaze "next action")
     const T = C.study.today(p, sp.lessons), st = T.st, cl = C.study.cardsLeft(), cd = C.study.cardsDone();
     const late = p.from && T.finish > p.from, mustLate = p.from && T.mustFinish > p.from;
@@ -1984,6 +1991,7 @@
       <div class="pl-kv"><span>Must know done</span><b>${T.must.left ? fmtDay(T.mustFinish) : 'Done &#10003;'}${mustLate ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
       ${mustLate && T.mustPerDay ? `<p class="pl-small"><b>Heads up:</b> at this pace the must know screens finish after your hunt starts. About ${T.mustPerDay} minutes a day gets them done first. Change the pace in the plan, part 5.</p>` : ''}
       <div class="pl-kv"><span>Whole path done</span><b>${st.left ? fmtDay(T.finish) : 'Done &#10003;'}${late ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
+      ${st.left ? `<div class="muted pl-small">Both dates at your pace (${esc(PACE_LBL[T.pace] || PACE_LBL['10'])}): ${T.todayN} screen${T.todayN === 1 ? '' : 's'} a day, about ${T.minPerDay} min with the cards.</div>` : ''}
       ${st.next ? `<div class="muted pl-small">Next: ${esc(st.next.title)}</div>` : ''}
       <div class="btn-row">${T.leftToday && st.next ? (plain ? '' : `<a class="btn next" href="${go}">Read today's screens</a>`) : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
     </div>` };
