@@ -67,6 +67,9 @@
   .seg{display:inline-flex;border:1px solid var(--line);border-radius:980px;overflow:hidden;margin-bottom:14px}
   .seg button{border:0;background:#fff;padding:7px 14px;font-weight:600;font-size:13px;color:var(--soft);cursor:pointer}
   .seg button.on{background:var(--ink);color:#fff}
+  .bartrack{height:8px;border-radius:5px;background:var(--line);overflow:hidden;margin:4px 0 3px}
+  .barfill{height:100%;border-radius:5px}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 </style>
 </head>
 <body>
@@ -83,7 +86,7 @@
 
   <!-- OVERVIEW -->
   <section class="view on" data-view="Overview">
-    <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
+    <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type, and your edits are saved on this device.</div>
     <div class="kpis" id="kpis"></div>
     <div class="panel">
       <h2>Scenario comparison</h2>
@@ -98,6 +101,15 @@
       <h2>Profit &amp; Loss — <span class="scn-name"></span></h2>
       <p class="h-sub">6 SKUs across the columns, company total on the right, all the way to net income.</p>
       <div id="pnl"></div>
+    </div>
+  </section>
+
+  <!-- MONTHLY -->
+  <section class="view" data-view="Monthly">
+    <div class="panel">
+      <h2>Monthly phasing — <span class="scn-name"></span></h2>
+      <p class="h-sub">The full-year result spread across FY2026 on a seasonal curve (sparkling peaks in summer). Fixed overhead is spread evenly; sales, trade and logistics follow the season. Months total back to the annual figures.</p>
+      <div id="monthly"></div>
     </div>
   </section>
 
@@ -124,9 +136,38 @@
     </div>
   </section>
 
+  <!-- TARGETS -->
+  <section class="view" data-view="Targets">
+    <div class="grid2">
+      <div class="panel">
+        <h2>Annual targets</h2>
+        <p class="h-sub">Set the goals for the year. The $3M gross line is the North Star. Yellow cells are editable and saved on this device.</p>
+        <div id="tgtEdit"></div>
+      </div>
+      <div class="panel">
+        <h2>How each scenario tracks</h2>
+        <p class="h-sub">Attainment = scenario result ÷ target. Your current scenario is highlighted.</p>
+        <div id="tgt"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKS -->
+  <section class="view" data-view="Checks">
+    <div class="panel">
+      <h2>Model checks</h2>
+      <p class="h-sub">Automatic integrity tests — every P&amp;L identity, the monthly-to-annual tie-out, and a scan for broken math. Re-runs on every edit.</p>
+      <div id="checks"></div>
+    </div>
+  </section>
+
   <!-- ASSUMPTIONS -->
   <section class="view" data-view="Assumptions">
-    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly.</div>
+    <div class="note">This is the only place you type. Edit any yellow cell — every number everywhere updates instantly and is saved on this device.</div>
+    <div class="toolbar">
+      <span class="hint" id="saveStat">Your edits save automatically on this device.</span>
+      <button class="pill" id="resetBtn">Reset to defaults</button>
+    </div>
     <div class="panel">
       <h2>SKU assumptions <span class="hint">(per case)</span></h2>
       <div id="asmpSku"></div>
@@ -145,32 +186,72 @@
   </section>
 
   <div class="foot">
-    v3.0 · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
+    v3.1 · figures are illustrative placeholders — replace with your real numbers on the Assumptions tab.<br/>
     Mirrors the Excel workbook (Home · Assumptions · Dashboard · scenarios · Monthly · Pricing Lab · Targets · Sensitivity · Checks).
   </div>
 </div>
 
 <script>
-// ---------------- model data (mirrors the Excel exactly) ----------------
-const SKUS = [
-  {fmt:"Singles", flav:"Pineapple",    cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
-  {fmt:"Singles", flav:"Passionfruit", cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
-  {fmt:"Singles", flav:"Lime Lemon",   cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
-  {fmt:"4-Pack",  flav:"Pineapple",    cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
-  {fmt:"4-Pack",  flav:"Passionfruit", cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
-  {fmt:"4-Pack",  flav:"Lime Lemon",   cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
-];
-const CO = {salaries:180000, ga:60000, mktg:40000, slotting:20000, log_pct:0.04,
-            da:25000, interest:10000, tax:0.27, elast:0.0};
-const LEVERS = {
-  Low:    {v:0.70, p:0.95, d:0.01},
-  Base:   {v:1.00, p:1.00, d:0.00},
-  High:   {v:1.30, p:1.00, d:0.00},
-  Stretch:{v:1.60, p:1.05, d:-0.01},
+// ---------------- defaults (mirror the Excel exactly) ----------------
+const DEFAULTS = {
+  SKUS: [
+    {fmt:"Singles", flav:"Pineapple",    cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
+    {fmt:"Singles", flav:"Passionfruit", cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
+    {fmt:"Singles", flav:"Lime Lemon",   cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
+    {fmt:"4-Pack",  flav:"Pineapple",    cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
+    {fmt:"4-Pack",  flav:"Passionfruit", cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
+    {fmt:"4-Pack",  flav:"Lime Lemon",   cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
+  ],
+  CO: {salaries:180000, ga:60000, mktg:40000, slotting:20000, log_pct:0.04,
+       da:25000, interest:10000, tax:0.27, elast:0.0},
+  LEVERS: {
+    Low:    {v:0.70, p:0.95, d:0.01},
+    Base:   {v:1.00, p:1.00, d:0.00},
+    High:   {v:1.30, p:1.00, d:0.00},
+    Stretch:{v:1.60, p:1.05, d:-0.01},
+  },
+  TARGETS: {gross:3000000, net:1500000, ebitda:150000},
 };
 const SCEN = ["Low","Base","High","Stretch"];
+// FY monthly phasing — sparkling peaks in summer; sums to 1.00 (re-normalized at use).
+const SEASON = [0.06,0.06,0.07,0.08,0.10,0.11,0.12,0.11,0.09,0.08,0.06,0.06];
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const STORE_KEY = "organika_sparkling_v3_1";
+
+let SKUS, CO, LEVERS, TARGETS;
 let current = "Base";
 let priceMetric = "gp";
+
+// ---------------- state persistence ----------------
+const clone = o => JSON.parse(JSON.stringify(o));
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    if(raw){
+      const s = JSON.parse(raw);
+      if(s && Array.isArray(s.SKUS) && s.SKUS.length===DEFAULTS.SKUS.length && s.CO && s.LEVERS){
+        SKUS = s.SKUS;
+        CO = Object.assign(clone(DEFAULTS.CO), s.CO);
+        LEVERS = Object.assign(clone(DEFAULTS.LEVERS), s.LEVERS);
+        TARGETS = Object.assign(clone(DEFAULTS.TARGETS), s.TARGETS || {});
+        return true;
+      }
+    }
+  }catch(e){ /* ignore — fall through to defaults */ }
+  SKUS = clone(DEFAULTS.SKUS); CO = clone(DEFAULTS.CO);
+  LEVERS = clone(DEFAULTS.LEVERS); TARGETS = clone(DEFAULTS.TARGETS);
+  return false;
+}
+function saveState(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify({SKUS,CO,LEVERS,TARGETS})); }catch(e){}
+}
+function resetState(){
+  SKUS = clone(DEFAULTS.SKUS); CO = clone(DEFAULTS.CO);
+  LEVERS = clone(DEFAULTS.LEVERS); TARGETS = clone(DEFAULTS.TARGETS);
+  try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+  renderAsmp(); refresh();
+  const st = el("saveStat"); if(st){ st.textContent = "Restored the default assumptions."; }
+}
 
 // ---------------- formatting helpers ----------------
 const money = v => (v<0?"-":"")+"$"+Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
@@ -208,7 +289,7 @@ function compute(name){
   const ni = ebt - tax;
   return {lines, lev, cases:sum("cases"), gross:sum("gross"), tdisc:sum("tdisc"), net,
     cogs:sum("cogs"), gp, gppct: net? gp/net:0, ap:sum("ap"), cm, cmpct: net? cm/net:0,
-    salaries:CO.salaries, ga:CO.ga, mktg:CO.mktg, slotting:CO.slotting, logistics, opex,
+    salaries:CO.salaries, ga:CO.ga, mktg:CO.mktg, slotting:CO.slotting, fixed, logistics, opex,
     ebitda, ebitdapct: net? ebitda/net:0, da:CO.da, ebit, interest:CO.interest, ebt, tax, ni,
     nipct: net? ni/net:0, cppc: sum("cases")? sum("gross")/sum("cases"):0};
 }
@@ -229,6 +310,11 @@ function breakeven(){
   const {K1,K2,FX,LOG,cases} = kvals();
   const mv = FX/((K1-K2)-LOG*K1);
   return {mv, cases:mv*cases};
+}
+// normalized seasonality weights
+function seasonW(){
+  const s = SEASON.reduce((a,b)=>a+b,0) || 1;
+  return SEASON.map(x=>x/s);
 }
 
 // ---------------- rendering ----------------
@@ -308,6 +394,28 @@ function renderPnl(){
   el("pnl").innerHTML=h;
 }
 
+function renderMonthly(){
+  document.querySelectorAll(".scn-name").forEach(e=>e.textContent=current);
+  const r = compute(current);
+  const w = seasonW();
+  const wmax = Math.max(...w);
+  let h="<table><thead><tr><th>Month</th><th>Net Sales</th><th>EBITDA</th><th>% of year</th><th style=\"width:130px\">Phasing</th></tr></thead><tbody>";
+  let tn=0, te=0;
+  MONTHS.forEach((m,i)=>{
+    const nm = r.net*w[i];
+    const em = r.cm*w[i] - r.fixed/12 - r.logistics*w[i];
+    tn+=nm; te+=em;
+    const barw = Math.max(6, Math.round(w[i]/wmax*120));
+    h+=`<tr><td>${m}</td><td>${money(nm)}</td>`+
+       `<td${em<0?' style="color:var(--bad)"':''}>${money(em)}</td>`+
+       `<td>${pct(w[i])}</td>`+
+       `<td style="text-align:left"><span class="bar" style="width:${barw}px"></span></td></tr>`;
+  });
+  h+=`<tr class="tot"><td>Full year</td><td>${money(tn)}</td><td>${money(te)}</td><td>${pct(w.reduce((a,b)=>a+b,0))}</td><td></td></tr>`;
+  h+="</tbody></table>";
+  el("monthly").innerHTML=h;
+}
+
 const LADDER=[0.85,0.90,0.95,1.00,1.05,1.10,1.15];
 function renderPricing(){
   let h="<table><thead><tr><th>SKU \\ CP vs base</th>"+LADDER.map(m=>`<th>${mult(m)}</th>`).join("")+"</tr></thead><tbody>";
@@ -357,6 +465,71 @@ function renderSens(){
   el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`;
 }
 
+// ---------- targets ----------
+function renderTargets(){
+  const goals=[["Gross Revenue","gross"],["Net Sales","net"],["EBITDA","ebitda"]];
+  let t="<table><thead><tr><th>Goal</th><th>Annual target</th></tr></thead><tbody>";
+  goals.forEach(g=>{
+    t+=`<tr><td>${g[0]}</td><td>${inp(TARGETS[g[1]], `setTgt('${g[1]}',this.value)`, "10000")}</td></tr>`;
+  });
+  t+="</tbody></table>";
+  el("tgtEdit").innerHTML=t;
+
+  const data = SCEN.map(compute);
+  let h="<table><thead><tr><th>Goal \\ Scenario</th>"+SCEN.map(s=>`<th>${s}</th>`).join("")+"</tr></thead><tbody>";
+  goals.forEach(g=>{
+    h+=`<tr><td>${g[0]}<div class="hint">target ${money(TARGETS[g[1]])}</div></td>`;
+    data.forEach((r,i)=>{
+      const val=r[g[1]], tgt=TARGETS[g[1]], att= tgt? val/tgt:0;
+      const p=Math.max(0,Math.min(100, att*100));
+      const col = att>=1? 'var(--good)' : att>=0.6? '#e0a300' : 'var(--bad)';
+      h+=`<td style="${SCEN[i]===current?'background:#eef5ff;':''}text-align:left">`+
+         `<div style="font-weight:700">${pct(att)}</div>`+
+         `<div class="bartrack"><div class="barfill" style="width:${p}%;background:${col}"></div></div>`+
+         `<div class="hint">${money(val)}</div></td>`;
+    });
+    h+="</tr>";
+  });
+  h+="</tbody></table>";
+  el("tgt").innerHTML=h;
+}
+function setTgt(k,v){ TARGETS[k]=parseFloat(v)||0; saveState(); renderTargets(); }
+
+// ---------- checks ----------
+function approx(a,b,tol){ return Math.abs(a-b) <= (tol==null?0.5:tol); }
+function renderChecks(){
+  const items=[];
+  SCEN.forEach(scn=>{
+    const r=compute(scn);
+    const ok = approx(r.net, r.gross-r.tdisc) && approx(r.gp, r.net-r.cogs)
+            && approx(r.cm, r.gp-r.ap) && approx(r.ebitda, r.cm-r.opex);
+    items.push([`${scn}: P&L reconciles (Net, GP, Contribution, EBITDA identities)`, ok]);
+  });
+  const r=compute(current);
+  const w=seasonW();
+  const mNet=w.reduce((a,x)=>a+r.net*x,0);
+  const mEbit=w.reduce((a,x)=>a+(r.cm*x - r.fixed/12 - r.logistics*x),0);
+  items.push([`Monthly Net Sales sum ties to annual (${current})`, approx(mNet,r.net,1)]);
+  items.push([`Monthly EBITDA sum ties to annual (${current})`, approx(mEbit,r.ebitda,1)]);
+  items.push([`Seasonality weights sum to 100% (=${pct(w.reduce((a,b)=>a+b,0))})`, approx(w.reduce((a,b)=>a+b,0),1,0.001)]);
+  let clean=true;
+  SCEN.forEach(scn=>{const x=compute(scn);["net","gp","cm","ebitda","ni","cases"].forEach(k=>{ if(!isFinite(x[k])) clean=false; });});
+  items.push(["All KPIs finite across every scenario (no #DIV/0, no NaN)", clean]);
+  const be=breakeven();
+  items.push(["Break-even volume is finite and positive", isFinite(be.mv)&&be.mv>0]);
+
+  const allok = items.every(i=>i[1]);
+  let h=`<div class="note" style="background:${allok?'#eafaf0':'#fdecee'};border-color:${allok?'#bfe8cf':'#f5c2c7'};color:${allok?'#1e7d46':'#a12530'}">`+
+    `${allok?'All checks pass — the model is internally consistent.':'Some checks need attention.'}</div>`;
+  h+="<table><tbody>";
+  items.forEach(it=>{
+    h+=`<tr><td style="text-align:left">${it[0]}</td>`+
+       `<td style="text-align:right;font-weight:700;color:${it[1]?'var(--good)':'var(--bad)'}">${it[1]?'✓ Pass':'✗ Check'}</td></tr>`;
+  });
+  h+="</tbody></table>";
+  el("checks").innerHTML=h;
+}
+
 // ---------- assumptions editor ----------
 function inp(val, onin, step="0.01"){
   return `<input class="cell" type="number" step="${step}" value="${val}" oninput="${onin}">`;
@@ -401,12 +574,13 @@ function renderAsmp(){
   lv+="</tbody></table>";
   el("asmpLev").innerHTML=lv;
 }
-function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();}
-function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();}
-function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();}
+function bumpSaved(){ const st=el("saveStat"); if(st){ st.textContent="Saved on this device ✓"; } }
+function setS(i,k,v){SKUS[i][k]=parseFloat(v)||0;refresh();bumpSaved();}
+function setCo(k,v){CO[k]=parseFloat(v)||0;refresh();bumpSaved();}
+function setLev(s,k,v){LEVERS[s][k]=parseFloat(v)||0;refresh();bumpSaved();}
 
 // ---------- nav / scenario bar ----------
-const VIEWS=["Overview","P&L","Pricing Lab","Sensitivity","Assumptions"];
+const VIEWS=["Overview","P&L","Monthly","Pricing Lab","Sensitivity","Targets","Checks","Assumptions"];
 function buildNav(){
   el("nav").innerHTML=VIEWS.map((v,i)=>`<button class="${i===0?'on':''}" data-v="${v}">${v}</button>`).join("");
   el("nav").querySelectorAll("button").forEach(b=>b.onclick=()=>{
@@ -422,8 +596,14 @@ function buildNav(){
   el("priceSeg").querySelectorAll("button").forEach(b=>b.onclick=()=>{priceMetric=b.dataset.m;
     el("priceSeg").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.m===priceMetric));
     renderPricing();});
+  const rb=el("resetBtn"); if(rb){ rb.onclick=resetState; }
 }
-function refresh(){renderKpis();renderCmp();renderPnl();renderPricing();renderSens();}
+function refresh(){
+  renderKpis();renderCmp();renderPnl();renderMonthly();
+  renderPricing();renderSens();renderTargets();renderChecks();
+  saveState();
+}
+loadState();
 buildNav();renderAsmp();refresh();
 </script>
 </body>
