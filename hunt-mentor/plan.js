@@ -245,7 +245,7 @@
     const tiles = {};
     for (const x of pre) { const u = detailUrl(l, man, x); if (u) (tiles[u] = tiles[u] || []).push(x); }
     await Promise.all(Object.entries(tiles).map(([u, xs]) => getJSON(u).then((t) => xs.forEach((x) => { if (t && t[x.id]) addDetail(x, t[x.id], plan); })).catch(() => { /* tile not saved: index facts only */ })));
-    const home = homePt();
+    const home = homePt(plan);
     const pool = [];
     for (const x of pre) {
       if (!x.det) { const dk = km(home, x) * 1.3; x.driveKm = Math.round(dk); x.driveMin = Math.round((dk / 60) * 60); x.driveSrc = 'est'; }
@@ -273,7 +273,12 @@
     const dg = +l.tileDeg || 0.25;
     return `${l.detail.replace(/\{area\}/g, area).replace(/\{tile\}/g, `${Math.floor(x.lon / dg)}_${Math.floor(x.lat / dg)}`)}?v=${encodeURIComponent(l.dataDate || '1')}`;
   }
-  const homePt = () => { const b = ((window.HM && window.HM.bases) || []).find((x) => x.id === 'mission'); return b ? { lat: b.lat, lon: b.lon } : { lat: 49.13, lon: -122.31 }; };
+  // home: the plan's own base (plan.home, a bases.json id) or the app's home base; drive lines and the spot strip name it
+  const HOME_BASE = 'mission';
+  const homePt = (p) => { const B = (window.HM && window.HM.bases) || [], b = B.find((x) => x.id === ((p && p.home) || HOME_BASE)) || B.find((x) => x.id === HOME_BASE); return b ? { name: b.name, lat: b.lat, lon: b.lon } : { name: 'Mission', lat: 49.13, lon: -122.31 }; };
+  const homeName = (p) => homePt(p).name;
+  // partner: the plan's own word (plan.partner, the presets set it) for a party of two; 'partner' otherwise
+  const mate = (p) => (p && p.partner) || 'partner';
   // Assumption (labelled where shown): a truck uses about 15 L per 100 km and fuel is about $1.80 a litre. Check your own truck and the pump. The owner's truck runs on regular (2026-10-23).
   const FUEL_L100 = 15, FUEL_PRICE = 1.8;
   const fuelCost = (oneWayKm) => (oneWayKm * 2 * FUEL_L100 / 100) * FUEL_PRICE;
@@ -302,9 +307,9 @@
     x.press = d.pressure; x.pressWhy = d.pressureWhy; x.popLabel = d.popLabel; x.popCert = d.popCert; x.popWhy = d.popWhy; x.pop = d.pop || x.pop;
     x.park = Array.isArray(d.park) ? { lon: d.park[0], lat: d.park[1], what: d.parkWhat } : null;
     x.slope = num(d.slope); x.aspect = d.aspect; x.scoreLabel = d.scoreLabel; x.driveVia = (d.driveVia || []).slice(-3);
-    const drive = (d.plan || []).find((t) => /^Drive:/.test(t)) || '', m = drive.match(/from Mission, about ([\d,.]+) km/i);
+    const drive = (d.plan || []).find((t) => /^Drive:/.test(t)) || '', m = drive.match(new RegExp('from ' + homeName(plan) + ', about ([\\d,.]+) km', 'i'));
     if (m) { x.driveKm = Math.round(+m[1].replace(/,/g, '')); x.driveSrc = 'data'; }
-    else { x.driveKm = Math.round(km(homePt(), x.park || x) * 1.3); x.driveSrc = 'est'; }
+    else { x.driveKm = Math.round(km(homePt(plan), x.park || x) * 1.3); x.driveSrc = 'est'; }
     x.driveMin = Math.round((x.driveKm / 60) * 60) + (x.rideKm ? Math.round((x.rideKm / 10) * 60) : 0); // Assumption: about 60 km/h on average to the parking, 10 km/h on the rough part
     x.ride = /4x4|rough road/i.test((d.plan || []).find((t) => /^Ride:/.test(t)) || '') ? 'rough' : x.rideKm ? 'ride' : '';
     x.legal = legalOf(d.flags, plan.method);
@@ -379,14 +384,16 @@
   }
   // "top" items (rank 1 first, at most 10 that fit) show first in a Most important group, moved there, not copied: same tick key
   const TOP_CAT = ['top', 'Most important for this hunt'];
-  function checklistHtml(items, ticked, C, attr, closed) {
+  function checklistHtml(items, ticked, C, attr, closed, flat) {
     const top = new Set(items.filter((i) => i.top && !i.off).sort((a, b) => a.top - b.top).slice(0, 10));
-    return [TOP_CAT, ...CATS].map(([cat, label]) => {
-      const its = cat === 'top' ? [...top] : items.filter((i) => i.cat === cat && !top.has(i)); if (!its.length) return '';
-      const n = its.filter((i) => ticked(i)).length;
-      return `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3></summary>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
-        <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(i.t)}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
-        ${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
+    const groups = [TOP_CAT, ...CATS].map(([cat, label]) => { const its = cat === 'top' ? [...top] : items.filter((i) => i.cat === cat && !top.has(i)); return { cat, label, its, n: its.filter((i) => ticked(i)).length }; }).filter((g) => g.its.length);
+    // flat (trip plan full checklist): groups are headed sections inside the one fold, with a group index on top, so the fold depth stays at 2
+    const index = flat ? `<nav class="pl-gix no-print" aria-label="Checklist groups">${groups.map((g) => `<button type="button" class="pl-gix-b" data-g-jump="pl-grp-${g.cat}"><span>${esc(g.label)}</span><span class="pill">${g.n}/${g.its.length}</span></button>`).join('')}</nav>` : '';
+    return index + groups.map(({ cat, label, its, n }) => {
+      const head = `<h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3>`;
+      return `${flat ? `<section class="pl-cat pl-grp" data-cat="${cat}" id="pl-grp-${cat}">${head}` : `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary>${head}</summary>`}${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
+        <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
+        ${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${whyBadge(i, C)}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}${flat ? '</section>' : '</details>'}`;
     }).join('');
   }
   const closedCats = (root) => new Set([...root.querySelectorAll('details.pl-cat:not([open])')].map((d) => d.dataset.cat));
@@ -396,7 +403,7 @@
   const plansOf = (C) => (C.S.plans = Array.isArray(C.S.plans) ? C.S.plans : []);
   const METHOD_LABEL = { rifle: 'Rifle', shotgun: 'Shotgun', bow: 'Bow', rimfire: '.22 rimfire' };
   const ACCESS = [['truck', 'Truck'], ['atv', 'ATV (all terrain vehicle)'], ['boat', 'Boat'], ['kayak', 'Kayak'], ['walk', 'Walk in']];
-  const PARTY = [['solo', 'Solo'], ['two', 'With my brother'], ['group', 'Group (3 or more)']];
+  const PARTY = [['solo', 'Solo'], ['two', 'With a partner'], ['group', 'Group (3 or more)']];
   const accessLabel = (a) => (a || []).map((x) => (ACCESS.find(([k]) => k === x) || [x, x])[1].replace(/ \(.*\)/, '')).join(', ');
   const partyLabel = (p) => (PARTY.find(([k]) => k === p) || [p, p])[1];
   // Region 2 deer are black tailed deer; the synopsis season rows list them as mule deer (page 28). Display only: plan data stays "mule-deer".
@@ -425,10 +432,12 @@
 
   // ---------- wizard ----------
   // Harrison Lake area: Harrison Hot Springs, approximate town centre (Assumption), in MU 2-18 (point in polygon on the MU layer, checked 2026-10-16). Deer near Mission are black tailed deer; the Rule Book season rows list them as mule deer.
-  const HARRISON_LESSON = 'local-harrison-deer'; // content/phase6/20-local-harrison-deer.md: linked from the Harrison presets and plans (also in the Region 2 mule-deer lessons, species.json regions)
+  const HARRISON_LESSON = 'local-harrison-deer';
+  // the place's own read first lesson (where.lesson, set by the presets); older Harrison plans fall back to the Harrison lesson
+  const localLesson = (p) => (p && p.where && (p.where.lesson || (p.where.id === 'harrison' ? HARRISON_LESSON : ''))) || ''; // content/phase6/20-local-harrison-deer.md: linked from the Harrison presets and plans (also in the Region 2 mule-deer lessons, species.json regions)
   const PRESETS = {
-    'harrison-deer-two': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'two', firstHunt: true },
-    'harrison-deer-solo': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset' }, method: 'rifle', access: ['truck'], party: 'solo', firstHunt: true },
+    'harrison-deer-two': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset', lesson: 'local-harrison-deer' }, method: 'rifle', access: ['truck'], party: 'two', partner: 'brother', home: 'mission', firstHunt: true },
+    'harrison-deer-solo': { species: 'mule-deer', where: { id: 'harrison', mu: '2-18', label: 'Harrison Lake area (black tailed deer)', lat: 49.30, lon: -121.785, src: 'preset', lesson: 'local-harrison-deer' }, method: 'rifle', access: ['truck'], party: 'solo', home: 'mission', firstHunt: true },
   };
   // answer lists for the optional questions: [value, label, small print]
   const ASK = {
@@ -459,7 +468,7 @@
   const OPT = ['exp', 'fit', 'hours', 'travel', 'truck', 'partner', 'gun', 'budget', 'success'];
   const STEPS = ['animal', 'where', 'when', 'how', 'access', 'overnight', 'party', 'first', ...OPT];
   const Q = { animal: 'What animal?', where: 'Where?', when: 'When?', how: 'How will you hunt?', access: 'How do you get in?', overnight: 'Staying overnight? Camping or day trips?', party: 'Who is going?', first: 'Is this your first hunt?',
-    exp: 'Your hunting experience?', fit: 'How far can you walk, and carry?', hours: 'How many hours can you hunt each day?', travel: 'Longest drive from Mission, one way?', truck: 'What do you drive?',
+    exp: 'Your hunting experience?', fit: 'How far can you walk, and carry?', hours: 'How many hours can you hunt each day?', travel: 'Longest drive from home, one way?', truck: 'What do you drive?',
     partner: 'Your partner on this hunt?', gun: 'Your gun and your longest practised shot?', budget: 'Budget for this trip?', success: 'What does success mean to you on this trip?' };
   // Black tailed deer: the coast deer near Mission and Harrison. The synopsis lists them as mule deer (page 28), so this button makes a mule-deer plan (spName shows the black tailed name in Region 2)
   const BTD_OPT = (d) => `<button type="button" class="pl-opt" data-sp="mule-deer" data-find="black tailed deer blacktail coast mule deer big game">Black tailed deer (coast mule deer)</button>`;
@@ -681,7 +690,7 @@
   }
   function finish(C, D) {
     const d = getDraft(), all = plansOf(C), sp = spOf(d, D);
-    const base = { species: d.species, speciesName: sp ? sp.name : '', where: d.where, from: d.from, to: d.to, method: d.method, access: d.access, overnight: !!d.overnight, party: d.party, firstHunt: d.firstHunt !== false, ask: Object.assign({}, d.ask) };
+    const base = { species: d.species, speciesName: sp ? sp.name : '', where: d.where, from: d.from, to: d.to, method: d.method, access: d.access, overnight: !!d.overnight, party: d.party, ...(d.partner && d.party === 'two' ? { partner: d.partner } : {}), ...(d.home ? { home: d.home } : {}), firstHunt: d.firstHunt !== false, ask: Object.assign({}, d.ask) };
     let id = d.editId;
     const old = id && all.find((p) => p.id === id);
     if (old) { const moved = old.where.mu !== base.where.mu || old.species !== base.species; Object.assign(old, base, { updated: Date.now() }); if (moved) delete old.spots; }
@@ -738,7 +747,7 @@
         ${askHtml(p, sp)}
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
       </div>
-      ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}</a></div>` : ''}
+      ${localLesson(p) && C.hasSession(localLesson(p)) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${localLesson(p)}">${esc(C.lessonTitle(localLesson(p)))}</a></div>` : ''}
       <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal</h3><p class="muted">Loading...</p></div>
       <nav class="pl-nav pl2-nav no-print" aria-label="Plan sections"><button type="button" data-go="pl-s0">Ready</button><button type="button" data-go="pl-s1">1 Legal</button><button type="button" data-go="pl-s2">2 Odds</button><button type="button" data-go="pl-sb">Spots</button><button type="button" data-go="pl-sl">Live</button><button type="button" data-go="pl-s3">3 Days</button><button type="button" data-go="pl-s4">4 Checklist</button><button type="button" data-go="pl-s5">5 Study</button><button type="button" data-go="pl-sd">After</button></nav>
       <section class="pl-sec" id="pl-s0"><h2 class="pl-sh">Ready to go?</h2><div id="pl-ready"><p class="muted">Checking your readiness gates...</p></div></section>
@@ -838,6 +847,7 @@
     mountOffline($('#pl-offline'), p, sp, C);
 
     // Top spots board (part 5), then the add ons that other parts build: odds, live and day by day (each optional)
+    drawSources($('#pl-srcs-in'), lg, od, st);
     const X = extCtx(p, sp, lg, od, st, C, H, days);
     m.x = X;
     const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
@@ -887,6 +897,38 @@
     for (const s of S) { s.id = 'tl-' + s.k; s.now = cur === s || (s.also && cur.k === 'hunt'); s.past = !s.now && s.b != null && today > s.b; }
     return { S, home, cur: cur.k, idx: (k) => order.indexOf(home(k)) };
   }
+  // display only (tick keys stay on i.key): the Week 1 online hunting licence line carries the in person Tip and the mail wait note
+  const LIC_ONLINE = /^Week 1: BC hunting licence bought online$/;
+  const itemTx = (i) => (LIC_ONLINE.test(i.t) ? 'Week 1: BC hunting licence bought' : i.t);
+  const itemWhy = (i) => (LIC_ONLINE.test(i.t) ? 'Tip: this close to the hunt, buy it in person with the species licence. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another, sources differ' + (i.why ? '. ' + i.why : '') : i.why || '');
+  const whyBadge = (i, C) => (LIC_ONLINE.test(i.t) ? ' ' + C.certBadge(70) : ''); // the mail wait clause carries its own 70%, not the row's 99%
+  // Licences card: a 99% line must name the official text its lesson quotes (CLAUDE.md scale), else it drops to the band it earns
+  const LIC_SRC = {
+    licences: 'Synopsis page 5 (2 October 2026 edition) and the BC species licences page, read 2026-10-02, as quoted in the lesson',
+    'rb-licences-fees': 'Hunting Licensing Regulation s. 6 (the 2 day wait list has no deer), read 2026-10-02, as quoted in the Licences and tags lesson',
+    'tagging-legal': 'Synopsis page 5, as quoted in the lesson',
+  };
+  function licFix(l) {
+    const t = String(l.t || '');
+    if (/online orders come by mail, about 14 days$/.test(t)) return { t: t.replace(/: online orders come by mail, about 14 days$/, ': you get it at once'), cert: l.cert, src: LIC_SRC[l.lesson], sub: { t: 'Online orders come by mail: about 14 days in one source, 14 business days (about 3 weeks) in another. Sources differ', cert: 70 } };
+    // app lesson only, not matched in the synopsis text: under 60% on the CLAUDE.md scale, so VERIFY (certBadge(null)), no percent
+    if (/^Antlerless mule deer: LEH/.test(t)) return { t: t + '. Not matched in the synopsis text: To confirm', cert: null, src: 'App lesson only' };
+    return { t, cert: l.cert, src: LIC_SRC[l.lesson] || (l.cert >= 95 ? 'App lesson only: To confirm' : '') };
+  }
+  // one Sources legend for the plan view: each fact keeps its own certainty badge; this names the base once
+  function drawSources(el, lg, od, st) {
+    if (!el) return;
+    const yrs = od && Array.isArray(od.rows) ? od.rows.map((r) => +r.year).filter((y) => y) : [];
+    const li = (k, v) => `<li><b>${k}:</b> ${v}</li>`;
+    el.innerHTML = `<ul class="pl-srcs-l">
+      ${li('Seasons, bag limits, legal hours, rules', `${esc((lg && lg.src) || 'BC Hunting and Trapping Regulations Synopsis')}${lg && lg.edition && !/edition/i.test(lg.src || '') ? `, ${esc(lg.edition)} edition` : ''}, page given on each line${lg && lg.checked ? ` (checked ${esc(lg.checked)})` : ''}`)}
+      ${li('Odds', yrs.length ? `BC resident harvest reports for your MU, ${Math.min(...yrs)} to ${Math.max(...yrs)} (${yrs.length} years)` : 'BC resident harvest reports for your MU')}
+      ${li('Spots', `open map data, scored by the app${st && st.dataDate ? `, data dated ${esc(st.dataDate)}` : ''}${st && st.saved ? `, saved ${esc(st.saved)}` : ''}. Candidates only: scout first`)}
+      ${li('Sun and legal light', 'sunrise and sunset worked out on the phone (sun formula, up to about 2 min off the full NOAA algorithm); legal light is 1 hour before sunrise to 1 hour after sunset (synopsis page 11), shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times)')}
+      ${li('Drive and day times', `Estimates. Drive is the straight line from ${esc(homeName(st && st.plan))} to the parking times 1.3, at about 60 km/h. Walk allowance is ${WALK_RULE}. The day plan adds 10 min to gear up and 15 min of slack`)}
+      ${li('Certainty', '95 to 100%: read in the official source. 80 to 94%: official source, some reading. 60 to 79%: reliable secondary source. Tip: opinion. A lesson link holds the full citation')}
+    </ul>`;
+  }
   // where each checklist item belongs on the timeline (by its "Week 1:" style prefix, its list, then its category)
   function tlOfItem(i) {
     const t = String(i.t || '');
@@ -898,8 +940,7 @@
     return { paperwork: 'w1', firearm: 'w1', meat: 'w2', gear: 'hw', clothing: 'hw', vehicle: 'hw', safety: 'hw', plan: 'hw' }[i.cat] || 'hw';
   }
   function tlItems(its, ticked, C) {
-    const tx = (i) => /^Week 1: BC hunting licence bought online$/.test(i.t) ? 'Week 1: BC hunting licence bought (Tip: this close to the hunt, buy it in person with the species licence)' : i.t;
-    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(tx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
+    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${whyBadge(i, C)}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
   }
   function tlCss() {
     if (document.getElementById('tl-css')) return;
@@ -992,7 +1033,7 @@
     const solo = partyN(p.party) < 2;
     const hero = `<div class="hero pl-hero"><div><p class="hero-k">${n > 0 ? 'Hunt ' + esc(tlRange(p.from, end)) : end >= today ? 'Hunt is on' : 'Hunt done'}</p><div class="hero-n">${n > 0 ? `${n}<small>day${n === 1 ? '' : 's'} to go</small>` : end >= today ? 'Now' : 'Done'}</div>
       ${n > 0 ? '' : `<div class="hero-sub">${esc(rangeLabel(p.from, end))}</div>`}<p class="tl-sub">${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</p></div></div>`;
-    const stage = (s, body) => `<section class="tl-st${s.now ? ' tl-now' : ''}${s.past ? ' tl-past' : ''}" id="${s.id}"><details${s.now ? ' open' : ''}><summary><span class="tl-when">${esc(s.b == null ? 'From ' + tlD(s.a) : tlRange(s.a, s.b))}</span>${s.now ? '<span class="tl-tag">Now</span>' : s.past ? '<span class="tl-tag">Past</span>' : ''}<h2>${esc(s.label)}</h2></summary><div class="tl-in">${body}</div></details></section>`;
+    const stage = (s, body) => `<section class="tl-st${s.now ? ' tl-now' : ''}${s.past ? ' tl-past' : ''}" id="${s.id}"><details${s.now ? ' open' : ''}><summary><span class="tl-meta"><span class="tl-when">${esc(s.b == null ? 'From ' + tlD(s.a) : tlRange(s.a, s.b))}</span>${s.now ? '<span class="tl-tag">Now</span>' : s.past ? '<span class="tl-tag">Past</span>' : '<span class="tl-tag tl-tag-up">Coming up</span>'}</span><h2>${esc(s.label)}</h2></summary><div class="tl-in">${body}</div></details></section>`;
     const fold = (title, sub, inner) => `<details class="tl-fold"><summary>${esc(title)}${sub ? ` <small>${esc(sub)}</small>` : ''}</summary>${inner}</details>`;
     const sec = (sid, h, did, wait) => `<section class="pl-sec" id="${sid}"><h2 class="pl-sh">${esc(h)}</h2><div id="${did}">${wait ? `<p class="muted">${esc(wait)}</p>` : ''}</div></section>`;
     const forecastOn = tlAdd(p.from, -15);
@@ -1000,37 +1041,42 @@
     let hitSteps = []; try { hitSteps = [...(sp.afterKill || []).filter((t) => /\bhit\b|wait|mark both|flag/i.test(t)), ...checkItems(sp, D.lists, condOf(p)).filter((i) => !i.off && /hit site|lost the trail|blood|stay still|mark (the|where)|flag/i.test(i.t)).map((i) => i.t + (i.why ? ` (${i.why})` : ''))].filter((t, i, a) => a.indexOf(t) === i).slice(0, 6); } catch (e) { hitSteps = []; }
     const body = {
       w1: `<div data-tl-steps="w1"></div>
-        ${p.party === 'two' ? '<div class="tl-step"><b>Agree with your brother, this week</b><p>Settle now: does he carry a tag (then he buys his own licences in person too), does he carry a rifle, who sits where, who walks in first. The party odds on this plan assume he carries a tag. <span class="verify">To confirm</span></p></div>' : ''}
+        ${p.party === 'two' ? `<div class="tl-step"><b>Agree with your ${esc(mate(p))}, this week</b><p>Settle now: does your ${esc(mate(p))} carry a tag (then they buy their own licences in person too), carry a rifle, who sits where, who walks in first. The party odds on this plan assume your ${esc(mate(p))} carries a tag. <span class="verify">To confirm</span></p><ul class="tl-bro"><li>Does your ${esc(mate(p))} carry a tag? Yes or no <span class="verify">To confirm</span></li><li>Does your ${esc(mate(p))} carry a rifle? <span class="verify">To confirm</span></li><li>Your ${esc(mate(p))}'s phone number written on paper, in your pack <span class="verify">To confirm</span></li><li>Who at home holds the trip plan (name and phone) <span class="verify">To confirm</span></li></ul></div>` : ''}
         <div data-tl-check="w1"></div>
-        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
-        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
+        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', 'Legal and open', 'pl-legal', 'Checking the season tables...'))}
+        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', 'Study before you go', 'pl-study', ''))}`,
       w2: `<div data-tl-steps="w2"></div>
         <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal</h3><p class="muted">Loading...</p></div>
         <div data-tl-check="w2"></div>
         ${fold('Pick your spot', 'top 5 spots, drive, walk, legal checks', sec('pl-sb', 'Top spots board', 'pl-board', 'Finding and checking spots...'))}
-        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', '2. Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
+        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', 'Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
       hw: `<div data-tl-steps="hw"></div><div data-tl-check="hw"></div>
         <p class="tl-tip"><a class="btn" href="#/huntweek/${encodeURIComponent(p.id)}">Hunt week countdown list</a></p>`,
-      nb: `<div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
+      nb: `<div class="tl-step tl-key"><b>On you, not in the truck</b><p>Photo ID, your FWID (Fish and Wildlife ID) number, and every species licence you hold this licence year, used and unused (99%, synopsis pages 5, 7 and 8). No licence, no shot.</p></div>
+        <div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
         ${sec('pl-s0', 'Ready to go?', 'pl-ready', 'Checking your readiness gates...')}
         ${solo ? '' : '<div class="tl-step"><b>Agree six things with your partner (Tip)</b><p>Where each of you sits, back by what time, the meeting point, who shoots, your signals, and what to do if one of you is late.</p></div>'}
         <div data-tl-check="nb"></div>`,
-      hunt: `${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
-        ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
-      shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
+      hunt: `<div id="tl-huntday"></div>
+        ${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
+        ${fold('Day cards, tactics, the shot and after the kill', 'what the deer do, tactics, mistakes to skip', sec('pl-s3', 'Day by day', 'pl-days', 'Building your days...'))}`,
+      shot: `<div class="tl-step tl-key"><b>Kill, cancel the licence, then touch the deer</b><p>Cancel (notch) your deer licence as printed on it before you handle the deer. The shooter cancels their own, never a partner's (99%, synopsis page 11).</p><a class="btn" href="#/field/c/tag">Tag card</a></div>
+        ${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
         <div data-tl-check="shot"></div>`,
       after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
-        ${fold('Full checklist', 'every item for this plan, in one list', sec('pl-s4', '4. Checklist', 'pl-check', ''))}
+        <p class="tl-tip"><button type="button" class="btn" data-g-jump="pl-s4">Full checklist</button></p>
         <p class="tl-tip"><a class="btn" href="#/progress/${encodeURIComponent(p.id)}">Hunt ready score</a></p>`,
     };
     const nav = `<nav class="pl-nav tl-nav no-print" aria-label="Timeline"><button type="button" data-go="tl-today">Today</button>${T.S.map((s) => `<button type="button" data-go="${s.id}"${T.cur === s.k ? ' class="tl-cur"' : ''}>${esc(s.chip)}</button>`).join('')}</nav>`;
     view.innerHTML = `<div class="pl tl" id="pl">
       ${hero}
-      <div class="card tl-today" id="tl-today"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
-      <section class="card gc" id="tl-glance" aria-label="At a glance"><h2 class="gc-h">At a glance <span>five answers, tap for detail</span></h2><div id="gc-rows"><p class="muted">Checking your plan...</p></div></section>
-      <p class="pl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      <p class="pl-law tl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      <section class="card tl-today" id="tl-today" aria-label="Today and at a glance"><div id="tl-today-in"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
+        <div class="gc" id="tl-glance"><h3 class="gc-h">At a glance <span>five answers, tap for detail</span></h3><div id="gc-rows"><p class="muted">Checking your plan...</p></div></div></section>
       ${nav}
       ${T.S.map((s) => stage(s, body[s.k])).join('')}
+      <details class="card pl-srcs" id="pl-srcs"><summary><h2>Sources</h2> <small>where the facts on this plan come from</small></summary><div id="pl-srcs-in"><p class="muted">Loading...</p></div></details>
+      <details class="card tl-master" id="tl-master"><summary><h2>Full checklist</h2> <small>every item for this plan, by group</small></summary>${sec('pl-s4', 'Checklist', 'pl-check', '')}</details>
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
@@ -1042,7 +1088,7 @@
         ${askHtml(p, sp)}
         <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
       </div>
-      ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}</a></div>` : ''}
+      ${localLesson(p) && C.hasSession(localLesson(p)) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${localLesson(p)}">${esc(C.lessonTitle(localLesson(p)))}</a></div>` : ''}
     </div>`;
     css2(); tlCss();
     const $ = (s) => view.querySelector(s);
@@ -1090,9 +1136,9 @@
       let st = null; try { if (C.study) st = C.study.today(p, sp.lessons); } catch (e) { st = null; }
       const iron = p.method === 'rifle' && C.hasSession('mc-tikka-03');
       return [
-        { s: 'w1', k: 'species', ok: g('licence').ok || !!mineT().species, t: 'Buy your deer species licence in person', p: `Same day at Service BC or a vendor. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ; Canada Post times vary)${tlAdd(today, 14) >= tlAdd(p.from, -7) ? ': too close to ' + tlD(p.from) + ' to risk' : ''}.`, p2: 'The Ready gate also needs your hunting licence, FWID (Fish and Wildlife ID) and your partner\'s licences.', a: '<button type="button" class="btn" data-tl-tick="species">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
-        { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
-        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: g('must').how || 'The study path is in this week below.', a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
+        { s: 'w1', k: 'species', ok: g('licence').ok || !!mineT().species, t: 'Buy your deer species licence in person', p: `Same day at Service BC or a vendor. By mail it takes about 2 to 3 weeks (70%, sources differ)${tlAdd(today, 21) >= tlAdd(p.from, -7) ? ': too close to ' + tlD(p.from) + ', so go in person' : ''}.`, p2: 'For Ready? (the five checks before you go) you also need your hunting licence, FWID (Fish and Wildlife ID) and your partner\'s licences.', a: '<button type="button" class="btn" data-tl-tick="species">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
+        { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m (set the sights so it hits where you aim)' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
+        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: (g('must').how || 'The study path is in this week below.').replace(/\s*Points follow the share read\./, '').replace(/\s*Read them all for the full \d+ points; each one you read adds its share\./, ''), a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
         { s: 'w2', k: 'offline', ok: g('offline').ok, t: 'Save the hunt area for no signal', p: 'Do it at home on wifi. The offline card shows the size.', a: '<button type="button" class="btn" data-g-jump="pl-offline">Go to the offline card</button>' },
         { s: 'w2', k: 'scout', tip: true, t: 'Tip: scout your top spot before the hunt', p: 'Your hunt dates have no scout day inside them. Drive up on a free day and walk in.', a: '<button type="button" class="btn" data-g-jump="pl-board">See the top spots</button>' },
         { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help. Nobody watches a trip plan: your contact must call 911 if you are late (AdventureSmart, 95%).', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
@@ -1107,45 +1153,86 @@
       const blocks = () => { const left = G.filter((x) => !x.ok); return left.length ? `<div class="tl-step tl-block"><b>Blocks the hunt: ${left.length} left</b><ul>${left.map((x) => `<li>${esc(x.label)}</li>`).join('')}</ul><div class="btn-row no-print"><button type="button" class="btn" data-g-jump="pl-ready">Ready gates</button></div></div>` : '<div class="tl-step tl-done"><b>Nothing blocks the hunt</b><p>All Ready gates done.</p></div>'; };
       for (const s of T.S) {
         const box = view.querySelector(`[data-tl-steps="${s.k}"]`); if (!box) continue;
-        box.innerHTML = (s.k === 'hw' ? blocks() : '') + out.filter((x) => T.home(x.s) === s.k).map((x) => pickKeys.has(x.k) && T.idx(x.s) <= ci ? `<div class="tl-step"><b>${esc(x.t)}</b><p>In the Today card above.</p></div>` : `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${!x.ok && x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
+        box.innerHTML = (s.k === 'hw' ? blocks() : '') + out.filter((x) => T.home(x.s) === s.k && !(pickKeys.has(x.k) && T.idx(x.s) <= ci)).map((x) => `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${!x.ok && x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
       }
       // Today: steps not done whose stage has come, earliest first; then the next steps, up to 3
       const due = out.filter((x) => !x.ok && !x.tip && T.idx(x.s) <= ci), soon = out.filter((x) => !x.ok && T.idx(x.s) > ci);
       const pick = due.concat(soon).slice(0, 3);
       const nxt = T.S[T.S.findIndex((s) => s.k === T.cur) + 1];
       const huntNow = T.cur === 'hunt', nbNow = T.cur === 'nb';
-      $('#tl-today').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
-        ${huntNow ? '<p>Open the hour by hour plan: leave time, first light spot by the wind, turnaround alarm.</p><button type="button" class="btn next block" data-g-jump="pl-live">Hour by hour</button>'
+      $('#tl-today-in').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
+        ${huntNow ? '<p>Leave, park, sit, legal light, turnaround and the backup spot, on one card.</p><button type="button" class="btn next block" data-g-jump="tl-huntday">Hunt day card</button>'
           : nbNow ? '<p>Go, backup or stay home, the Ready gates and the pack list.</p><button type="button" class="btn next block" data-g-jump="tl-nb">Night before check</button>'
-          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p>${x.p2 ? `<p class="tl-p2">${esc(x.p2)}</p>` : ''}<div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
+          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p).split(/(?<=\.) (?=[A-Z])/).join('<br>')}</p>${x.p2 ? `<p class="pl-small">${esc(x.p2).split(/(?<=\.) (?=[A-Z])/).join('<br>')}</p>` : ''}<div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
         ${nxt && !nxt.also ? `<p class="tl-next muted">Then: <b>${esc(nxt.label)}</b>, ${esc(nxt.b == null ? 'from ' + tlD(nxt.a) : tlRange(nxt.a, nxt.b))}.</p>` : ''}`;
     };
     const loadGates = async () => { try { G = await gates(p, sp, C); } catch (e) { G = []; } drawSteps(); drawGlance(); };
     // At a glance (graft from the Go card build): Ready, Legal, Where, When, Odds, each one tap from its detail
     const tmG = (ms) => (ms == null ? '?' : C.hhmm(new Date(ms)));
     const rowG = (go, key, state, head, lines) => `<button type="button" class="gc-row gc-${state}" data-g-jump="${go}"><span class="gc-v"><span class="gc-l1"><span class="gc-k">${key}</span> <b>${head}</b></span>${lines.filter(Boolean).map((l) => `<span>${l}</span>`).join('')}</span><span aria-hidden="true">›</span></button>`;
+    // what a legal buck is, in plain words: Region 2 facts from the Antler check set (data/addons/train/facts.json r2), same pages and certainty
+    const buckLine = () => (['2-8', '2-18', '2-19'].includes(p.where && p.where.mu) && /deer/i.test(sp.id + ' ' + sp.name)
+      ? `<span class="gc-sm"><b>What is a legal buck here:</b> bucks only, visible bony antlers (99%, pages 3 and 28). Any buck in season, a spike included (95%, Black tailed deer Masterclass 1). No doe, fawn or button buck (99%).</span>` : '');
     const drawGlance = () => {
       if (!alive()) return; const box = $('#gc-rows'); if (!box) return;
       const rows = [];
       if (Array.isArray(G) && G.length) { const left = G.filter((g) => !g.ok); rows.push(rowG('pl-ready', 'Ready?', left.length ? 'no' : 'ok', left.length ? `Not ready: ${left.length} of ${G.length} to do` : `Ready: all ${G.length} done`, [left.length ? `To do: ${esc(left.map((g) => g.label.toLowerCase()).join(', '))}` : ''])); }
       else rows.push(rowG('pl-ready', 'Ready?', 'wait', 'Checking...', []));
       const lg = m.legal;
-      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, '<span class="gc-sm">Legal light per day: When, below.</span>'])); }
+      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, buckLine(), '<span class="gc-sm">Legal light per day: on the Hunt day card.</span>'])); }
       else rows.push(rowG('pl-s1', 'Legal?', 'wait', 'Checking the season tables...', []));
       const hd = (m.daysX || []).find((d) => d.kind === 'hunt' && d.primary), bl = (m.x && m.x.spots) || [];
       const s1 = (hd && bl.find((x) => String(x.id) === String(hd.primary.spot.id))) || bl[0];
       const s2 = (hd && hd.backup && bl.find((x) => String(x.id) === String(hd.backup.spot.id))) || bl.find((x) => x !== s1);
-      if (s1) rows.push(rowG('pl-sb', 'Where?', 'ok', esc(s1.name), [s1.driveKm != null ? `${s1.driveKm} km from Mission, about ${fmtMin(s1.driveMin)} (estimate)` : '', s2 ? `Backup: ${esc(s2.name)}` : '', '<span class="gc-sm">My pick from open data (60%). Scout and read posted signs first.</span>']));
+      if (s1) rows.push(rowG('pl-sb', 'Where?', 'ok', esc(s1.name), [s1.driveKm != null ? `${s1.driveKm} km from ${esc(homeName(p))}, about ${fmtMin(s1.driveMin)} (estimate)` : '', s2 ? `Backup: ${esc(s2.name)}` : '', '<span class="gc-sm">My pick from open data (60%). Scout and read posted signs first.</span>']));
       else rows.push(rowG('pl-sb', 'Where?', 'wait', m.spots === null ? 'Spots did not load. Open the Map once with signal.' : 'Finding and checking spots...', []));
       const hunt = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
-      if (hunt.length) rows.push(rowG('pl-sl', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Turnaround alarm inside.</i>'])));
+      if (hunt.length) rows.push(rowG('tl-huntday', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Tap for the Hunt day card.</i>'])));
       else rows.push(rowG('pl-sl', 'When?', 'wait', m.daysX ? 'No open hunt days in this plan' : 'Working out leave times...', []));
       const b = m.oddsX && m.oddsX.base;
       if (b && b.overPlanDays && b.planDays) { const P0 = (x) => `${Math.round(x * 100)}%`; rows.push(rowG('pl-s2', 'Odds?', 'odds', `About ${P0(b.overPlanDays.mid)} for you over ${b.planDays} day${b.planDays === 1 ? '' : 's'}`, [`Base: the middle year of ${b.years} years of MU ${esc(p.where.mu)} hunter reports (estimate). Range ${P0(b.overPlanDays.low)} to ${P0(b.overPlanDays.high)}.`])); }
       else rows.push(rowG('pl-s2', 'Odds?', 'wait', 'Working out your odds...', []));
       box.innerHTML = rows.join('');
     };
-    m.redraw = drawGlance;
+    // Hunt day card: one card per hunt day with leave, park (coordinates), sit, legal light, turnaround and the backup spot
+    const drawHuntDay = () => {
+      if (!alive()) return; const box = $('#tl-huntday'); if (!box) return;
+      const hd = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
+      if (!hd.length) { box.innerHTML = `<div class="card tl-hd"><h3>Hunt day</h3><p class="muted">${m.daysX ? 'No open hunt days in this plan.' : 'Working out your hunt days...'}</p></div>`; return; }
+      const ll = (o) => { const pk = o && o.spot && o.spot.detail && o.spot.detail.park; return Array.isArray(pk) && pk.length >= 2 ? { lat: +pk[1], lon: +pk[0], park: 1 } : o && o.spot && o.spot.lat != null ? { lat: +o.spot.lat, lon: +o.spot.lon } : null; };
+      const where = (o) => { const q = ll(o); return q ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${q.lat.toFixed(5)},${q.lon.toFixed(5)}" target="_blank" rel="noopener">${q.lat.toFixed(5)}, ${q.lon.toFixed(5)}</a>${q.park ? '' : ' (spot point: no parking point in the data)'}` : 'no point in the data'; };
+      const wk = (o) => (o && o.walk && o.walk.min != null ? +o.walk.min : null);
+      const ln = (s) => s.split(/(?<=\.) (?=[A-Z])/).map((x) => `<span class="tl-ln">${x}</span>`).join('');
+      box.innerHTML = hd.map((d) => {
+        const at = (k) => (d.steps.find((x) => x.key === k) || {}).at;
+        const P = d.primary, B = d.backup, wp = wk(P), wb = wk(B);
+        const long = wp != null && wb != null && wb >= wp + 15 && wb >= wp * 1.5;
+        // R5 design: every time sits right aligned in one column (t), its note on a short line under it (n); places get a full width line (w)
+        const tr = (k, t, n) => `<div class="tl-hr"><span class="tl-hk">${k}</span><b class="tl-t">${t}</b>${n ? `<span class="tl-hn">${n}</span>` : ''}</div>`;
+        const wr = (k, v) => `<div class="tl-hr tl-hw"><span class="tl-hk">${k}</span><b>${v}</b></div>`;
+        const backup = (() => {
+          if (!B) return '';
+          const qa = ll(P), qb = ll(B); let near = '';
+          if (qa && qb) { const t = Math.PI / 180, x = (qb.lat - qa.lat) * t, y = (qb.lon - qa.lon) * t, h = Math.sin(x / 2) ** 2 + Math.cos(qa.lat * t) * Math.cos(qb.lat * t) * Math.sin(y / 2) ** 2, dm = Math.round(2 * 6371000 * Math.asin(Math.sqrt(h))); if (dm <= 150) near = `Backup parks at the same pull off as your first pick (about ${dm} m apart), then walks to its own spot. To confirm on the ground (70%).`; }
+          const own = B.leave != null && B.turn != null;
+          return `<div class="tl-bk"><h4>On a backup day</h4>
+            ${wr('Backup spot', `${esc(B.spot.name)}: ${where(B)}${wb != null ? `<span class="tl-hn">walk in about ${fmtMin(wb)}</span>` : ''}`)}
+            ${own ? tr('Leave home', tmG(B.leave)) + tr('Turn back', tmG(B.turn)) : ''}
+            ${near ? `<p class="pl-small">${ln(near)}</p>` : ''}
+            ${long ? `<p class="tl-warn"><b>Backup walk is much longer:</b> about ${fmtMin(wb)} against ${fmtMin(wp)}.<span class="tl-ln">On a backup morning leave earlier, or you sit after first light.</span></p>` : ''}</div>`;
+        })();
+        return `<div class="card tl-hd"><h3>Hunt day: ${esc(dLabel(d.date))}</h3>
+          ${tr('Leave home', tmG(at('leave')), (() => { const dm = d.drive && d.drive.min != null ? +d.drive.min : null, a = at('leave'), b = at('setup'); if (dm == null || a == null || b == null) return ''; const spare = Math.round((b - a) / 60000 - dm - (wp || 0)); return spare > 0 ? `Leave time covers the drive${d.drive.km != null ? ` (about ${Math.round(d.drive.km)} km)` : ''}, the walk, and about ${spare} min spare to park and gear up in the dark (estimate).` : ''; })())}
+          ${P ? wr('Park', `${esc(P.spot.name)}: ${where(P)}`) : ''}
+          ${tr('Sit by', tmG(at('setup')), wp != null ? `walk in about ${fmtMin(wp)}` : '')}
+          <p class="pl-small tl-opt"><b>Option (Tip):</b> be in your seat 30 to 45 min before legal light starts, so you are still when deer move.<span class="tl-ln">If you take it, leave home that much earlier than the time above.</span></p>
+          ${tr('Legal light', `${tmG(d.legalStart)}<br>to ${tmG(d.legalEnd)}`)}
+          ${tr('Turn back', tmG(d.turnaround && d.turnaround.at != null ? d.turnaround.at : at('turn')))}
+          ${backup}
+        </div>`;
+      }).join('') + '<p class="pl-small muted tl-hd-n">' + ln('Estimates. Legal light is shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Walk allowance: ' + WALK_RULE + '. Hour by hour, the turnaround alarm and the reasons are just below.') + '</p>';
+    };
+    m.redraw = () => { drawGlance(); drawHuntDay(); };
     loadGates();
     // Tick buttons on the timeline write the same Ready gate tick (hm.progress.v1, same key and date format)
     $('#pl').addEventListener('click', (e) => {
@@ -1164,7 +1251,7 @@
         <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((nDone / Math.max(1, items.length)) * 100) + '%"></i></div>'}
         <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
         ${hiddenNote(all, p.showAllChecks, 'pl-showall')}
-        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
+        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view), true)}</div>
         ${nDone === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
         <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
       $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
@@ -1175,10 +1262,13 @@
         const box = view.querySelector(`[data-tl-check="${s.k}"]`); if (!box) continue;
         const its = items.filter((i) => T.home(tlOfItem(i)) === s.k);
         if (!its.length) { box.innerHTML = ''; continue; }
-        const was = box.querySelector('details'), open = was ? was.open : false;
-        const lead = its.filter((i) => top.includes(i)), rest = its.filter((i) => !top.includes(i));
-        box.innerHTML = `<details class="tl-fold"${open ? ' open' : ''}><summary>Checklist: ${esc(s.chip.toLowerCase())} <small>${its.filter(t).length} of ${its.length} done</small></summary>
-          ${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}</details>`;
+        // stage has come: the items not ticked yet, most important first; later stages: the count only
+        const due = T.idx(s.k) <= T.idx(T.cur), left = its.filter((i) => !t(i));
+        const lead = left.filter((i) => top.includes(i)), rest = left.filter((i) => !top.includes(i)).slice(0, Math.max(0, 5 - lead.length));
+        const more = left.length - lead.length - rest.length;
+        box.innerHTML = `<div class="tl-ck"><p class="tl-ck-h"><b>Checklist: ${esc(s.chip.toLowerCase())}</b> <small>${its.length - left.length} of ${its.length} done</small></p>
+          ${due && left.length ? `${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}` : ''}
+          <div class="btn-row no-print"><button type="button" class="btn" data-g-jump="pl-s4">${due ? (more > 0 ? `${more} more to do: full checklist` : left.length ? 'Full checklist, by group' : 'All done: see the full checklist') : `${left.length} to do: open the full checklist`}</button></div></div>`;
       }
     };
     $('#pl').addEventListener('change', (e) => {
@@ -1207,7 +1297,7 @@
     link($('#pl-odds'));
 
     // 3. days (spots fill in after)
-    $('#pl-days').innerHTML = daysHtml(sp, p, lg, C, H) + '<div id="pl-spots"><div class="card"><h3>Top spots</h3><p class="muted">Finding candidate spots near the MU...</p></div></div>';
+    $('#pl-days').innerHTML = daysHtml(sp, p, lg, C, H, true) + '<div id="pl-spots"><div class="card"><h3>Top spots</h3><p class="muted">Finding candidate spots near the MU...</p></div></div>';
     let st = null;
     try { st = await spots(p, sp); } catch (e) { console.warn('plan spots', e); st = null; }
     if (!alive()) return;
@@ -1219,6 +1309,7 @@
     wireRundowns($('#pl-spots'), st, p, C);
     mountOffline($('#pl-offline'), p, sp, C);
 
+    drawSources($('#pl-srcs-in'), lg, od, st);
     const X = extCtx(p, sp, lg, od, st, C, H, days);
     m.x = X;
     const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
@@ -1245,7 +1336,7 @@
   // what the add ons get: the plan, its answers, the legal and official odds results, the top spots and the app helpers
   function extCtx(p, sp, lg, od, st, C, H, days) {
     return { plan: p, ask: p.ask || {}, species: sp, speciesName: spName(sp, p.where.mu), mu: p.where.mu, days, from: p.from, to: p.to,
-      legal: lg, official: od, spots: boardList(st, p), camps: (st && st.camps) || [], hours: H, home: Object.assign({ name: 'Mission' }, homePt()),
+      legal: lg, official: od, spots: boardList(st, p), camps: (st && st.camps) || [], hours: H, home: homePt(p),
       party: partyN(p.party), tags: tagsN(p), getJSON, sunEvent: C.sunEvent, hhmm: C.hhmm, addMin: C.addMin, certBadge: C.certBadge,
       hasSession: C.hasSession, lessonTitle: C.lessonTitle, toast: C.toast, esc, todayIso };
   }
@@ -1292,13 +1383,13 @@
       <li><b>Fire bans:</b> <a href="https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions" target="_blank" rel="noopener">BC Wildfire Service fire bans and restrictions</a>.</li>
       ${r2 ? `<li><b>Road notices:</b> <a href="${ROADS}" target="_blank" rel="noopener">Chilliwack Natural Resource District road safety information</a> (Forest Service Roads near Harrison).</li>` : ''}
       <li><b>Highways:</b> <a href="https://www.drivebc.ca/" target="_blank" rel="noopener">DriveBC</a>.</li>
-      <li><b>Legal light:</b> each day's times are under Hunt days, Day by day, worked out on your phone.</li></ul></div>`;
+</ul></div>`;
   }
 
   // "Save this hunt area for no signal" (map/plan-offline.js, through map/offline.js): the plan point, its spots and nearest camp
   function offlineFiles(p, sp, C) {
     const HM = window.HM || {}, lf = HM.lessonFiles || {};
-    const ids = [...new Set([...(C.study ? C.study.today(p, sp.lessons).path.all : sp.lessons || []), ...(p.where && p.where.id === 'harrison' ? [HARRISON_LESSON] : [])])].filter((id) => lf[id]);
+    const ids = [...new Set([...(C.study ? C.study.today(p, sp.lessons).path.all : sp.lessons || []), ...(localLesson(p) ? [localLesson(p)] : [])])].filter((id) => lf[id]);
     const data = [...regionFiles(p.where.mu).map((f) => `data/seasons/${f}.json`), 'data/harvest/bc-harvest.json', ...(HM.plansInline ? [] : HM.planFiles && HM.planFiles.length ? HM.planFiles : DEFAULT_FILES)];
     return [{ label: 'Lessons for this hunt', urls: ids.map((id) => lf[id]) }, { label: 'Plan data (seasons, odds, checklists)', urls: data }];
   }
@@ -1325,9 +1416,14 @@
   });
 
   // Full rundown per spot: the shared renderer (map/spot-rundown.js), loaded and worked out only when opened
+  // first pick and backup carry the rundown fold; spots 3 to 5 draw it only when the button is tapped (nothing drawn before)
+  const rdFold = (i, open) => `<details class="pl-rd" data-rd="${i}"${open ? ' open' : ''}><summary class="btn">Full rundown</summary><div class="pl-rd-in"><p class="muted">Putting the rundown together...</p></div></details>`;
   function wireRundowns(root, st, p, C) {
     if (!root || !st || !st.list) return;
-    root.querySelectorAll('details.pl-rd').forEach((el) => el.addEventListener('toggle', async () => {
+    root.querySelectorAll('[data-rd-draw]').forEach((b) => b.onclick = () => {
+      b.insertAdjacentHTML('afterend', rdFold(+b.dataset.rdDraw)); const d = b.nextElementSibling; b.remove(); wire(d); d.open = true;
+    });
+    const wire = (el) => el.addEventListener('toggle', async () => {
       if (!el.open || el.dataset.done) return;
       el.dataset.done = '1';
       const x = st.list[+el.dataset.rd], box = el.querySelector('.pl-rd-in');
@@ -1340,7 +1436,8 @@
         delete el.dataset.done;
         box.innerHTML = `<p class="muted">The rundown did not load. ${navigator.onLine ? 'Close it and try again.' : 'Open the Map once with signal to save this area.'}</p>`;
       }
-    }));
+    });
+    root.querySelectorAll('details.pl-rd').forEach(wire);
   }
 
   function verdictHtml(lg) {
@@ -1368,7 +1465,7 @@
       ${other.length || migOther.length ? `<details class="card pl-more"><summary>Other seasons for ${esc(sp.name.toLowerCase())} in MU ${esc(p.where.mu)} (${other.length + migOther.length})</summary><ul class="pl-rows">${other.map(rowLi).join('')}${migOther.map(migLi).join('')}</ul></details>` : ''}
       ${lg.bag.length ? `<div class="card"><h3>Bag limits</h3><ul>${lg.bag.map((b) => `<li>${esc(b.t)} <span class="muted pl-small">${b.page ? `Synopsis page ${esc(b.page)}` : esc(b.src || '')}</span> ${C.certBadge(b.cert)}</li>`).join('')}</ul></div>` : ''}
       ${flags.length ? `<div class="card pl-flags"><h3>Red flags and watch outs</h3><ul>${flags.map((f) => `<li class="${f.bad ? 'pl-bad' : ''}">${f.bad ? '<b>Stop:</b> ' : ''}${esc(f.t)}${f.cert != null ? ' ' + C.certBadge(f.cert) : ''}</li>`).join('')}</ul></div>` : ''}
-      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => `<li>${esc(l.t)} ${l.cert != null ? C.certBadge(l.cert) : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>`).join('')}</ul></div>` : ''}
+      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => { const f = licFix(l); return `<li>${esc(f.t)} ${C.certBadge(f.cert)}${f.src ? ` <span class="pl-src-n">${esc(f.src)}</span>` : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>${f.sub ? `<li>${esc(f.sub.t)} ${C.certBadge(f.sub.cert)}</li>` : ''}`; }).join('')}</ul></div>` : ''}
       <div class="card"><h3>Legal shooting hours</h3><p>${hrs ? esc(hrs.text) + ' ' + C.certBadge(hrs.certainty) : '<span class="verify">VERIFY</span>'}</p><p class="muted pl-small">Each day's times are in the day by day plan.</p></div>
       <div class="card"><h3>Rule Book lessons</h3><div class="pl-chips">${lessonLinks(lessons, C) || '<span class="muted">None in the app yet.</span>'}</div>
       ${more ? `<details class="pl-more"><summary>More lessons on ${esc(sp.name.toLowerCase())}</summary><div class="pl-chips">${more}</div></details>` : ''}
@@ -1409,11 +1506,12 @@
 
   const scoutCount = (n) => (n >= 6 ? 2 : n >= 3 ? 1 : 0);
   const LEGAL_MARGIN = 3; // minutes added to legal light start (and 1 taken off the end): the phone's sun math runs up to 2 min off the full NOAA algorithm at the spots
-  function daysHtml(sp, p, lg, C, H) {
+  // lean (plan view v2): times, sun and legal light live on the Hunt day card and the hour by hour, so the day cards keep only what they alone carry
+  function daysHtml(sp, p, lg, C, H, lean) {
     const days = lg.days || dRange(p.from, p.to), dp = sp.dayPlan || {}, nS = scoutCount(days.length);
     const pt = p.where.lat != null ? p.where : null, hrs = H.h;
     const BL = [['dawn', 'Dawn'], ['morning', 'Morning'], ['midday', 'Midday'], ['evening', 'Evening'], ['dusk', 'Dusk']];
-    let firstHunt = true;
+    let firstHunt = true; const seen = {};
     const cards = days.map((d, i) => {
       const [y, mo, dd] = d.split('-').map(Number), month = mo;
       const phase = (sp.phases || []).find((ph) => (ph.months || []).includes(month));
@@ -1431,14 +1529,18 @@
         + (p.overnight && (dp.night || []).length ? `<div class="pl-blk"><b>Night</b><ul>${dp.night.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : '');
       const openAttr = (!scout && open && firstHunt) || i === 0 ? ' open' : '';
       if (!scout && open) firstHunt = false;
-      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${light}</span></span></summary>
+      if (lean) {
+        if (seen[body]) body = `<p class="pl-small">Same plan as Day ${seen[body]}, above.</p>`; else seen[body] = i + 1;
+        return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}${open ? `, open for ${esc(lg.dayOpen[d].join(', '))}` : ''}</span></summary>${body}</details>`;
+      }
+      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (shown a little late at the start and a little early at the end, for safety) ${light}</span></span></summary>
         <div class="pl-kv"><span>Sunrise</span><b>${rise ? C.hhmm(rise) : 'n/a'}</b></div><div class="pl-kv"><span>Sunset</span><b>${set ? C.hhmm(set) : 'n/a'}</b></div>
         ${open ? `<div class="pl-kv"><span>Open for</span><b>${esc(lg.dayOpen[d].join(', '))}</b></div>` : ''}${tl}${body}</details>`;
     }).join('');
     const phases = [...new Set(days.map((d) => +d.slice(5, 7)))].map((mo) => (sp.phases || []).find((ph) => (ph.months || []).includes(mo))).filter(Boolean);
     const uniq = [...new Set(phases)];
     const tactics = (sp.tactics || []);
-    return `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>
+    return `${lean ? '<p class="muted pl-small">Leave, sit, legal light and sun times for each day: the Hunt day card and the hour by hour above. Times of day plans below are Tip (opinion).</p>' : `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>`}
       ${nS === 0 ? `<div class="card pl-scout"><h3>Scout before you go</h3><ul>${(sp.dayPlan && sp.dayPlan.scout || []).map((t) => `<li>${esc(t)}</li>`).join('') || '<li>One trip before the hunt to learn the ground.</li>'}</ul><p class="muted pl-small">Your dates are short, so there is no scout day inside them (Tip).</p></div>` : ''}
       ${uniq.map((ph) => `<div class="card"><h3>${esc(ph.label)}: what the animals do</h3>${(ph.where || []).length ? `<p><b>Where</b></p><ul>${ph.where.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${(ph.tactics || []).length ? `<p><b>Tactics</b> (Tip)</p><ul>${ph.tactics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${ph.cert != null ? `<p class="muted pl-small">${C.certBadge(ph.cert)}</p>` : ''}</div>`).join('')}
       ${cards}
@@ -1482,6 +1584,10 @@
 
   // ---------- plan trip v2: answers and what they change (part 1) ----------
   const tagsN = (p) => { const A = p.ask || {}; return p.party === 'solo' ? 1 : p.party === 'two' ? (A.partner && A.partner.tag === false ? 1 : 2) : 3; };
+  // one walk rule for the whole plan view, the same one the hour by hour day plan uses (plan-days.js walkOf): the spot data walk time
+  // (3 km/h plus 1 min per 10 m of climb), never under 5 min
+  const WALK_RULE = 'the spot data walk time (3 km/h plus 1 min per 10 m of climb), 5 min minimum';
+  const walkAllow = (min) => (min == null ? null : Math.max(5, Math.round(+min)));
   const fmtMin = (n) => (n == null ? '' : n < 60 ? `${n} min` : `${Math.floor(n / 60)} h${n % 60 ? ` ${n % 60} min` : ''}`);
   function askRows(p) {
     const A = p.ask || {}, rows = [];
@@ -1492,7 +1598,7 @@
     add('fit', 'Walk and carry', A.fit ? [askLabel('walk', f.walk), askLabel('pack', f.pack)].filter(Boolean).join(', ') : '',
       A.fit ? `${f.walk ? `Top spots: walk in up to ${f.walk === 6 ? 'any distance' : f.walk + ' km'} one way${f.walk === 1 ? ', climb up to 100 m (Tip, from the Harrison lesson)' : ''}.` : ''}${f.pack ? ` Pack out estimate: ${f.pack} kg a trip each.` : ' Pack out estimate: 20 kg a trip each (Tip).'}` : skip);
     add('hours', 'Hours a day', askLabel('hours', A.hours), A.hours === 'full' ? 'Each hunt day timeline (Hunt days, Day by day) covers all of legal light.' : A.hours ? `Each hunt day timeline (Hunt days, Day by day) shows your ${A.hours} hours: half from first legal light, half up to last legal light.` : skip);
-    add('travel', 'Drive limit', A.travel === 0 ? 'No limit' : askLabel('travel', A.travel), A.travel ? `Top spots: drive up to ${fmtMin(A.travel)} from Mission. Drive time is an estimate (about 60 km/h on average).` : A.travel === 0 ? 'No spots left out for distance.' : skip);
+    add('travel', 'Drive limit', A.travel === 0 ? 'No limit' : askLabel('travel', A.travel), A.travel ? `Top spots: drive up to ${fmtMin(A.travel)} from ${esc(homeName(p))}. Drive time is an estimate (about 60 km/h on average).` : A.travel === 0 ? 'No spots left out for distance.' : skip);
     add('truck', 'Vehicle', askLabel('truck', A.truck), A.truck === '2wd' ? 'Rough road spots (ATV or 4x4) are left out unless you bring an ATV. Gravel FSR (Forest Service Road) spots get a road watch out.' : A.truck === '4wd' ? 'Rough road spots are in, with a watch out: high clearance helps (Tip).' : A.truck === '4wdhc' ? 'Rough road spots are in.' : skip);
     if (p.party !== 'solo') { const P = A.partner || {}; add('partner', 'Partner', A.partner ? [askLabel('pexp', P.exp), P.tag === true ? 'carries a tag' : P.tag === false ? 'no tag' : ''].filter(Boolean).join(', ') : '',
       A.partner ? `Party odds count ${tagsN(p)} tag${tagsN(p) === 1 ? '' : 's'}.${P.tag === false ? ' Your partner still spots, helps and packs out.' : ''}${P.exp === 'new' ? ' Two new hunters: agree zones of fire and a meeting time before you split up (Tip).' : ''}` : skip); }
@@ -1596,15 +1702,15 @@
     const card = (x, i) => {
       const lg = x.legal, nd = !x.det;
       const oddsV = addOnVal(spotFrom(O, 'spot', x, m.oddsX, X)), windV = addOnVal(spotFrom(Lv, 'windFit', x, m.live, X) || liveWind(x, m.live, X));
-      const walk = x.walkKm != null ? `walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + ' m' : x.walkKm.toFixed(1) + ' km'}${x.climbM ? `, climb about ${Math.round(x.climbM)} m` : ''}${x.walkMin ? `, about ${x.walkMin} min` : ''}` : '';
+      const walk = x.walkKm != null ? `walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + ' m' : x.walkKm.toFixed(1) + ' km'}${x.climbM ? `, climb about ${Math.round(x.climbM)} m` : ''}${x.walkMin != null ? `, about ${fmtMin(walkAllow(x.walkMin))} (walk allowance)` : ''}` : '';
       const noAtv = x.cat === 'atv' && x.rideKm && !(p.access || []).includes('atv') ? ` No ATV on this plan: the ${x.rideKm.toFixed(1)} km stretch is in your 4 wheel drive, slowly, or on foot (Tip).` : '';
       const warnRoad = noAtv + (A.truck === '4wd' && x.ride === 'rough' ? ' Rough road: high clearance helps (Tip).' : A.truck === '2wd' && x.fsr ? ' Gravel FSR (Forest Service Road): check the road notices; 2 wheel drive in the wet is risky (Tip).' : '');
       const why = [...(x.own ? [`<li class="pl2-own"><span class="pill">From your own trips</span> ${esc(x.own.text.replace(/^From your own trips: /, ''))}</li>`] : []),
         ...(x.evid || []).map((t) => `<li>${esc(t)}</li>`), ...(x.why || []).filter((t) => !/^From your own trips/.test(t)).map((t) => `<li>${esc(t)}</li>`)];
       return `<li class="card pl2-spot" data-bi="${i}"><div class="row"><span class="pl-dn">${i + 1}</span><b class="grow">${esc(x.name)}</b>${x.pop ? `<span class="pill ${x.pop === 'quiet' ? 'soon' : ''}">${x.pop === 'quiet' ? 'Quiet' : 'Popular'}</span>` : ''}</div>
-        <div class="pl2-strip" aria-label="Getting there"><span>Mission</span><i>${x.driveKm != null ? `${x.driveKm} km, about ${fmtMin(x.driveMin)}` : 'drive'}</i>${x.rideKm ? `<span>Park</span><i>${x.rideKm.toFixed(1)} km ${x.ride === 'rough' ? 'rough road' : 'ride'}</i>` : ''}<span>${x.rideKm ? 'Unload' : 'Park'}</span><i>${walk ? esc(walk.replace(/,.*/, '')) : 'walk'}</i><span>Spot</span></div>
+        <div class="pl2-strip" aria-label="Getting there"><span>${esc(homeName(p))}</span><i>${x.driveKm != null ? `${x.driveKm} km, about ${fmtMin(x.driveMin)}` : 'drive'}</i>${x.rideKm ? `<span>Park</span><i>${x.rideKm.toFixed(1)} km ${x.ride === 'rough' ? 'rough road' : 'ride'}</i>` : ''}<span>${x.rideKm ? 'Unload' : 'Park'}</span><i>${walk ? esc(walk.replace(/,.*/, '')) : 'walk'}</i><span>Spot</span></div>
         <div class="pl-kv"><span>Access</span><b>${esc(CAT[x.cat] || x.cat || '')}, MU ${esc(x.mu || '?')}</b></div>
-        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from Mission, about ${fmtMin(x.driveMin) || '?'} (estimate${x.driveSrc === 'data' ? ', road distance from the spot data' : ', straight line times 1.3'}).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline).` : ''}</p>
+        <p class="pl-small">Drive about ${x.driveKm != null ? x.driveKm : '?'} km from ${esc(homeName(p))}, about ${fmtMin(x.driveMin) || '?'} (estimate: straight line from ${esc(homeName(p))} to the parking times 1.3${x.driveSrc === 'data' ? ', from the spot data' : ''}, at about 60 km/h).${x.park && x.park.what ? ` Park: ${esc(x.park.what)}.` : ''}${walk ? ` Then ${esc(walk)}.` : ''}${esc(warnRoad)}${A.budget && x.driveKm != null ? ` Fuel about $${Math.round(fuelCost(x.driveKm))} round trip (Assumption: ${FUEL_L100} L per 100 km, $${FUEL_PRICE.toFixed(2)} a litre of regular gasoline).` : ''}</p>
         <div class="pl-kv"><span>Pressure</span><b>${esc(x.popLabel || (x.pop === 'quiet' ? 'Less popular (quieter)' : x.pop ? 'More popular (busier)' : x.busy || 'not in the data'))}</b></div>
         ${x.popWhy || x.pressWhy ? `<p class="pl-small muted">${esc(x.pressWhy || '')}${x.popCert != null ? ` Popularity is an estimate, about ${esc(x.popCert)}% sure.` : ''}</p>` : ''}
         <div class="pl-kv"><span>Pack out</span><b>Estimate</b></div><p class="pl-small">${esc(packOut(x, p, sp))}</p>
@@ -1613,13 +1719,12 @@
         <div class="pl-kv"><span>Wind fit</span><b>${windV || (Lv ? (m.live ? 'no forecast for this spot' : 'getting the forecast') : 'forecast coming')}</b></div>
         <h4 class="pl2-h4">Legal checks</h4><ul class="pl2-chk">${chk('Private land', nd ? [] : lg.rows.priv, nd)}${chk('Road allowance', nd ? [] : lg.rows.road, nd)}${chk('No shooting areas', nd ? [] : lg.rows.noshoot, nd)}
           ${!nd && lg.rows.other.length ? `<li class="pl2-w"><b>Also check:</b> ${lg.rows.other.slice(0, 2).map((r) => esc(r.t)).join(' ')}</li>` : ''}
-          <li class="pl2-ok"><b>Legal light:</b> each day's times are under Hunt days, Day by day.</li></ul>
+</ul>
         ${why.length || x.scoreLabel ? `<h4 class="pl2-h4">Why this spot</h4><ul class="pl2-why">${why.join('')}</ul>${x.scoreLabel ? `<p class="muted pl-small">${esc(x.scoreLabel)}.</p>` : ''}` : ''}
         <div class="pl2-acts no-print"><a class="btn" href="${mapLink(x)}">Map</a><button type="button" class="btn" data-b-off="${i}">Save offline</button><button type="button" class="btn" data-b-swap="${i}">Swap</button></div>
-        <details class="pl-rd" data-rd="${i}"><summary class="btn">Full rundown</summary><div class="pl-rd-in"><p class="muted">Putting the rundown together...</p></div></details></li>`;
+        ${i < 2 ? rdFold(i) : `<button type="button" class="btn block no-print" data-rd-draw="${i}">Full rundown</button>`}</li>`;
     };
-    el.innerHTML = `<p class="pl-law">Study aid only. The official regulations are the law.</p>
-      <div class="card"><p class="pl-small">The top ${show.length || ''} candidate spots for this plan, after your answers and the legal checks in the spot data (private land, road allowances, no shooting areas). Candidates from open data, my pick: scout first, check posted signs. ${C.certBadge(st.cert != null ? st.cert : 60)}${st.saved ? ` Saved copy from ${esc(st.saved)}.` : ''}</p>
+    el.innerHTML = `<div class="card"><p class="pl-small">The top ${show.length || ''} candidate spots for this plan, after your answers and the legal checks in the spot data (private land, road allowances, no shooting areas). Candidates from open data, my pick: scout first, check posted signs. ${C.certBadge(st.cert != null ? st.cert : 60)}${st.saved ? ` Saved copy from ${esc(st.saved)}.` : ''}</p>
         ${L.legal ? `<p class="pl-small"><b>${L.legal} spot${L.legal === 1 ? '' : 's'} left out:</b> failed a legal check (private land right here, on a road allowance, or inside a no shooting area).</p>` : ''}
         ${outN ? `<p class="pl-small"><b>${outN} left out by your answers:</b> ${[L.walk ? `${L.walk} walk` : '', L.travel ? `${L.travel} drive time` : '', L.truck ? `${L.truck} vehicle` : ''].filter(Boolean).join(', ')}.</p>` : ''}
         ${st.own ? `<p class="pl-small"><span class="pill">From your own trips</span> ${st.own} debrief${st.own === 1 ? '' : 's'} with a place can move spots up or down.</p>` : ''}
@@ -1835,7 +1940,7 @@
     if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, the middle year of the 2020 to 2024 reports (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
     else if (m.odds && m.odds.none) L.push('Odds: no official success numbers for this animal.');
     const bl = boardList(m.spots, p);
-    if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + " m" : x.walkKm + " km"}` : ''}: ${gmaps(x)}`)); }
+    if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from ${homeName(p)}` : ''}${x.walkKm != null ? `, walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + " m" : x.walkKm + " km"}` : ''}: ${gmaps(x)}`)); }
     if (m.check) { L.push(`Checklist: ${m.check.done} of ${m.check.total} done.`); if (m.check.left.length) L.push('Still to do: ' + m.check.left.slice(0, 12).map((i) => i.t).join('; ') + (m.check.left.length > 12 ? '; ...' : '')); }
     if (m.daysX && window.HMPlanDays && typeof window.HMPlanDays.text === 'function') { try { L.push(window.HMPlanDays.text(m.daysX)); } catch (e) { /* days text not available */ } }
     if (!/The official regulations are the law\.\s*$/.test(L[L.length - 1] || '')) L.push('Study aid only. The official regulations are the law.');
@@ -1894,11 +1999,11 @@
     const b = studyBits(p, sp, C, true), P = b.T.path;
     const row = (id) => { const t = C.study.stats([id]); const done = t.left === 0; return `<a class="item" href="#/s/${esc(id)}${done ? '' : '/' + (t.next ? t.next.i : 0)}"><span class="grow">${done ? '&#10003; ' : ''}${esc(C.lessonTitle(id))}</span><span class="pill">${t.seen}/${t.total}</span></a>`; };
     el.innerHTML = `<div class="card">${b.html}
-      <h3>Pace</h3><div class="seg pl-pace" role="group" aria-label="Pace">
-        <button type="button" class="${b.T.pace === '10' ? 'on' : ''}" data-pace="10">10 min a day</button>
-        <button type="button" class="${b.T.pace === 'must' ? 'on' : ''}" data-pace="must">Must know by the hunt${b.T.mustPerDay ? ` (about ${b.T.mustPerDay} min a day)` : ''}</button>
-        <button type="button" class="${b.T.pace === 'fit' ? 'on' : ''}" data-pace="fit">All of it by the hunt${b.T.allPerDay ? ` (about ${b.T.allPerDay} min a day)` : ''}</button></div>
-      <p class="muted pl-small">Minutes come from each lesson's own time, plus about 2 minutes for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
+      <h3>Pace <small class="muted">pick one</small></h3><div class="seg pl-pace" role="group" aria-label="Pace, pick one">
+        <button type="button" class="${b.T.pace === '10' ? 'on' : ''}" aria-pressed="${b.T.pace === '10'}" data-pace="10">10 min a day</button>
+        <button type="button" class="${b.T.pace === 'must' ? 'on' : ''}" aria-pressed="${b.T.pace === 'must'}" data-pace="must">Must know by the hunt${b.T.mustPerDay ? ` (about ${b.T.mustPerDay} min a day)` : ''}</button>
+        <button type="button" class="${b.T.pace === 'fit' ? 'on' : ''}" aria-pressed="${b.T.pace === 'fit'}" data-pace="fit">All of it by the hunt${b.T.allPerDay ? ` (about ${b.T.allPerDay} min a day)` : ''}</button></div>
+      <p class="muted pl-small">Minutes come from each lesson's own time: ${b.T.must.left ? `must know ${b.T.must.left} screens left, about ${Math.round(b.T.must.minLeft)} min; ` : ''}${b.T.st.left ? `whole path ${b.T.st.left} screens left, about ${Math.round(b.T.st.minLeft)} min` : 'whole path done'}${b.T.daysToGo > 0 ? `, over the ${b.T.daysToGo} day${b.T.daysToGo === 1 ? '' : 's'} to the hunt` : ''}, plus about 2 min a day for 10 cards. A new pace starts tomorrow. You can always read ahead.</p>
       <p class="muted pl-small">Cards use spaced repetition: a card you know comes back in 1 day, then 6 days, then further apart each time. A card you miss comes back tomorrow. Testing yourself this way beats rereading (Roediger and Karpicke, 2006). Assumption: about 12 seconds per card (not measured).</p>
       </div>
       <details class="pl-cat" open><summary>Must know first (${b.T.must.seen}/${b.T.must.total} screens)</summary><div class="list">${P.must.map(row).join('')}</div></details>
@@ -1911,6 +2016,7 @@
   let Dc = null;
   const nextPlan = (C) => { const t = C.study.dayISO(); return plansOf(C).filter((p) => p.from && (p.to || p.from) >= t).sort((a, b) => (a.from < b.from ? -1 : 1))[0] || null; };
   const fmtDay = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+  const PACE_LBL = { 10: '10 min a day', must: 'must know by the hunt', fit: 'all of it by the hunt' };
   function studyBits(p, sp, C, plain) { // plain: leave out today's button (the screen shows it higher up as its one blaze "next action")
     const T = C.study.today(p, sp.lessons), st = T.st, cl = C.study.cardsLeft(), cd = C.study.cardsDone();
     const late = p.from && T.finish > p.from, mustLate = p.from && T.mustFinish > p.from;
@@ -1923,6 +2029,8 @@
       <div class="pl-kv"><span>Must know done</span><b>${T.must.left ? fmtDay(T.mustFinish) : 'Done &#10003;'}${mustLate ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
       ${mustLate && T.mustPerDay ? `<p class="pl-small"><b>Heads up:</b> at this pace the must know screens finish after your hunt starts. About ${T.mustPerDay} minutes a day gets them done first. Change the pace in the plan, part 5.</p>` : ''}
       <div class="pl-kv"><span>Whole path done</span><b>${st.left ? fmtDay(T.finish) : 'Done &#10003;'}${late ? ' <span class="pl-late">after hunt starts</span>' : ''}</b></div>
+      ${late && !mustLate && T.pace !== 'fit' ? `<p class="pl-small"><b>That is fine:</b> only the must know screens need to be done by the hunt. The rest can wait. To finish everything first, pick All of it by the hunt${T.allPerDay ? ` (about ${T.allPerDay} min a day)` : ''} under Pace.</p>` : ''}
+      ${st.left ? `<div class="muted pl-small">Both dates at your pace (${esc(PACE_LBL[T.pace] || PACE_LBL['10'])}): ${T.todayN} screen${T.todayN === 1 ? '' : 's'} a day, about ${T.minPerDay} min with the cards.</div>` : ''}
       ${st.next ? `<div class="muted pl-small">Next: ${esc(st.next.title)}</div>` : ''}
       <div class="btn-row">${T.leftToday && st.next ? (plain ? '' : `<a class="btn next" href="${go}">Read today's screens</a>`) : st.next ? `<a class="btn" href="${go}">Read ahead</a>` : ''}${cl ? '<a class="btn primary" href="#/daily">Review cards</a>' : ''}</div>
     </div>` };

@@ -143,7 +143,8 @@
       const mo = +iso.slice(5, 7), clim = D && D.climate && D.climate[regionOf(plan.where && plan.where.mu)] && D.climate[regionOf(plan.where && plan.where.mu)][String(mo)];
       return Object.assign({ date: iso, moon: moon(Date.parse(iso + 'T20:00:00Z')), forecast: iso >= today && iso <= last, past: iso < today, forecastFrom: iso > last ? dAdd(iso, -(FORECAST_DAYS - 1)) : null, rut: rutFor(D, plan, iso), climate: clim || null }, L);
     });
-    const live = { v: 1, planId: plan.id || null, asOf: Date.now(), perPoint: [], days, rut: days.length ? days[Math.floor((days.length - 1) / 2)].rut : null, roads: null, fireBans: null, stale: false, offline: navigator.onLine === false, errors: {}, mig, center, data: !!D };
+    const route = (points || []).filter((p) => p && p.lat != null && p.lon != null).slice(0, 6).map((p) => ({ id: p.id, name: p.name || '', lat: +p.lat, lon: +p.lon, detail: p.detail ? { driveVia: p.detail.driveVia || [], park: p.detail.park || null } : null }));
+    const live = { v: 1, planId: plan.id || null, asOf: Date.now(), route, perPoint: [], days, rut: days.length ? days[Math.floor((days.length - 1) / 2)].rut : null, roads: null, fireBans: null, stale: false, offline: navigator.onLine === false, errors: {}, mig, center, data: !!D };
     const wxDates = dates.filter((x) => x >= today && x <= last);
     const online = navigator.onLine !== false;
     const jobs = [];
@@ -225,25 +226,31 @@
     const asOf = live.wxAsOf || live.asOf;
     const head = `<div class="card pll-head"><h3>Live conditions</h3>
       <p class="pll-law">Study aid only. The official regulations are the law.</p>
-      ${live.stale || live.offline ? `<p class="pll-stale" role="status"><b>${live.offline ? 'No signal.' : 'Saved copy.'}</b> Showing what was saved${asOf ? ` (as of ${esc(fmtDT(asOf))})` : ''}. Forecasts change: check again with signal the night before.</p>` : `<p class="pll-small">As of ${esc(fmtDT(asOf))}</p>`}
+      ${live.stale || live.offline ? `<p class="pll-stale" role="status"><b>${live.offline ? 'No signal.' : 'Saved copy.'}</b> Showing what was saved. Forecasts change: check again with signal the night before.</p>` : ''}
+      <p class="pll-small pll-asof"><b>As of ${asOf ? esc(fmtDT(asOf)) : 'not checked yet'}</b>${live.stale || live.offline ? ' (saved copy)' : ''}<br>Weather: Open-Meteo. Roads and fire bans: BC government layers, each checked time below.</p>
       <button type="button" class="btn block no-print" data-pll-refresh="1">Check again</button></div>`;
-    const days = (live.days || []).map((d, i) => dayCard(d, i, live, P0)).join('');
+    const seen = new Map(); // a check list or climate line already shown on an earlier day is said once
+    const days = (live.days || []).map((d, i) => dayCard(d, i, live, P0, seen)).join('');
     const others = (live.perPoint || []).length > 1 ? spotsTable(live) : '';
     return `<div class="pll">${head}${days}${others}${rutCard(live)}${roadsCard(live, plan)}${bansCard(live)}${srcCard(live)}</div>`;
   }
-  function dayCard(d, i, live, P0) {
+  function dayCard(d, i, live, P0, seen) {
+    seen = seen || new Map();
+    const first = (k) => { if (seen.has(k)) return seen.get(k) + 1; seen.set(k, i); return 0; };
     const L = d.legalStart ? `${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}` : '<span class="verify">VERIFY</span>';
     const s = d.forecast ? daySum(d, P0) : null;
     let wx;
     if (d.past) wx = '<p class="muted">This day has passed.</p>';
-    else if (!d.forecast) wx = `<div class="pll-noday"><p><b>Forecast not out yet.</b> Open-Meteo forecasts about ${FORECAST_DAYS} days ahead, so this day comes in on ${esc(dLabel(d.forecastFrom))}. No made up numbers here.</p>
-        ${d.climate ? `<p>What to expect: ${esc(d.climate.t)} ${badge(d.climate.cert)} <span class="pll-small muted">${esc(d.climate.src)}${d.climate.lesson && hasSession(d.climate.lesson) ? `, ${lessonA(d.climate.lesson, 'lesson')}` : ''}</span></p>` : '<p class="muted">No climate numbers in the app for this area and month.</p>'}
-        <p class="pll-small">Plan by the rules that do not change: legal light below, thermals (morning down, midday up, evening down) and the wind on the day.</p></div>`;
+    else if (!d.forecast) wx = `<div class="pll-noday"><p><b>Forecast not out yet. It comes in on ${esc(dLabel(d.forecastFrom))}</b> (Open-Meteo forecasts about ${FORECAST_DAYS} days ahead). No made up numbers here.</p>
+        ${(() => { const n = first('check'); return n ? `<p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal</b> and run the same checks as Day ${n}.</p>` : `<p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal and check:</b></p><ul class="pll-small"><li>Wind: direction and speed at first light. In your face at the spot, go; at your back, take the backup (Tip).</li><li>Rain in legal light.</li><li>Freezing level: within 300 m of the spot height, rain can turn to snow or ice. Pack for both (Tip).</li></ul>`; })()}
+        ${d.climate ? (() => { const n = first('clim' + d.climate.t); return n ? `<p class="pll-small">What to expect: same as Day ${n}.</p>` : `<p>What to expect: ${esc(d.climate.t)} ${badge(d.climate.cert)} <span class="pll-small muted">${esc(d.climate.src)}${d.climate.lesson && hasSession(d.climate.lesson) ? `, ${lessonA(d.climate.lesson, 'lesson')}` : ''}</span></p>`; })() : '<p class="muted">No climate numbers in the app for this area and month.</p>'}
+        ${first('rules') ? '' : '<p class="pll-small">Plan by the rules that do not change: legal light below, thermals (morning down, midday up, evening down) and the wind on the day.</p>'}</div>`;
     else if (!s) wx = `<p class="muted">${live.errors && live.errors.wx ? `Could not load the forecast (${esc(live.errors.wx)}). Open <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> with signal.` : 'No forecast hours for this day.'}</p>`;
     else {
       const elev = P0 && P0.elev;
       const snowy = s.fzMin != null && elev != null && s.fzMin <= elev + 300;
       wx = `${windStrip(d, P0)}
+        <div class="pll-wx" aria-label="Day weather at a glance">${s.first && s.first.windDir != null ? `<span class="pll-wa" style="transform:rotate(${Math.round((s.first.windDir + 180) % 360)}deg)" aria-hidden="true">&#8593;</span>` : ''}<span><b>${Math.round(s.windMin)} to ${Math.round(s.windMax)}</b> km/h</span>${s.gustMax != null ? `<span>Gusts <b>${Math.round(s.gustMax)}</b></span>` : ''}<span>Rain <b>${s.rain.toFixed(1)}</b> mm</span><span><b>${Math.round(s.tMin)} to ${Math.round(s.tMax)}</b> °C</span></div>
         <div class="pll-kv"><span>Wind</span><b>${s.first && s.first.windDir != null ? `From the ${esc(dirWord(s.first.windDir))} at first light. ` : ''}${Math.round(s.windMin)} to ${Math.round(s.windMax)} km/h${s.gustMax != null ? `, gusts to ${Math.round(s.gustMax)}` : ''}</b></div>
         <div class="pll-kv"><span>Rain in legal light</span><b>${s.rain.toFixed(1)} mm</b></div>
         <div class="pll-kv"><span>Temperature</span><b>${Math.round(s.tMin)} to ${Math.round(s.tMax)} °C</b></div>
@@ -253,7 +260,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${L}</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light ${L}${i === 0 ? ' (shown a little late at the start and a little early at the end, for safety)' : ''}</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}
@@ -286,11 +293,19 @@
     const pt = live.center;
     const li = (x) => `<li class="${x.kind === 'closure' || x.closed ? 'pll-bad' : ''}"><b>${x.kind === 'closure' ? 'Closure' : x.kind === 'none' ? 'No notice' : x.closed ? 'Warning, road closed' : 'Caution'}: ${esc(x.road || 'Road')}</b>${x.km != null ? ` <span class="muted pll-small">${Math.round(x.km)} km from ${pt ? 'the plan point' : 'here'}</span>` : ''}<br>${esc(x.t)}${x.notice && /^https?:/.test(x.notice) ? ` <a href="${esc(x.notice)}" target="_blank" rel="noopener">Notice</a>` : x.notice ? ` ${esc(x.notice)}` : ''}${x.contact ? `<br><span class="pll-small">Contact: ${esc(x.contact)}</span>` : ''}</li>`;
     const items = (R.items || []).slice(0, 12).sort((x, y) => (x.km == null ? 0 : x.km) - (y.km == null ? 0 : y.km));
+    // notices on the drive in to a plan spot, or within 2 km of one (the hour by hour's own test), come first; the rest fold
+    const NF = window.HMPlanDays && window.HMPlanDays._noticesFor, route = live.route || [];
+    const onRoute = new Map();
+    if (NF && route.length) for (const s of route) { try { NF(s, items).forEach((n) => { const k = items.findIndex((x) => x.road === n.road && x.t === n.t); if (k >= 0 && !onRoute.has(k)) onRoute.set(k, `${n.why}, ${s.name || 'a plan spot'}`); }); } catch (e) { /* no match */ } }
+    const liR = (x, k) => li(x).replace(/<\/li>$/, `<br><span class="pll-small"><b>On your route</b>: ${esc(onRoute.get(k))}</span></li>`);
+    const mine = items.map((x, k) => [x, k]).filter(([, k]) => onRoute.has(k)), rest = items.filter((x, k) => !onRoute.has(k));
+    const routeHtml = onRoute.size ? `<p class="pll-small"><b>On or near your route (${mine.length})</b></p><ul class="pll-roads">${mine.map(([x, k]) => liR(x, k)).join('')}</ul>
+      ${rest.length ? `<details class="pll-more"><summary>${rest.length} other notice${rest.length === 1 ? '' : 's'} within 40 km, not on your route</summary><ul class="pll-roads">${rest.map(li).join('')}</ul></details>` : ''}` : '';
     const when = R.live ? `Live from the official layer${R.stale ? ' (saved copy)' : ''}, checked ${esc(fmtDT(R.asOf))}${R.edited ? `; layer last edited ${esc(fmtDT(R.edited))}` : ''}. ${badge(R.cert)}`
       : R.saved ? `No live check (${live.offline ? 'no signal' : 'layer did not answer'}). Saved lines from the lesson: district page updated ${esc(R.pageUpdated)}, read ${esc(R.checked)}. ${badge(R.cert)} ${lessonA(R.lesson, 'Lesson')}`
       : 'No saved road notices for this area in the app.';
     return `<div class="card"><h3>Road notices (FSR, Forest Service Road)</h3>
-      ${items.length ? `<ul class="pll-roads">${items.slice(0, 5).map(li).join('')}</ul>${items.length > 5 ? `<details class="pll-more"><summary>${items.length - 5} more notices</summary><ul class="pll-roads">${items.slice(5).map(li).join('')}</ul></details>` : ''}` : `<p>${R.live ? 'No notices in the official layer within 40 km.' : ''} No notice is not a promise the road is open.</p>`}
+      ${routeHtml || (items.length ? `${route.length ? '<p class="pll-small">None of these is on the drive in to a plan spot (Estimate, from the spot road names). Check the km anyway.</p>' : ''}<ul class="pll-roads">${items.slice(0, 5).map(li).join('')}</ul>${items.length > 5 ? `<details class="pll-more"><summary>${items.length - 5} more notices</summary><ul class="pll-roads">${items.slice(5).map(li).join('')}</ul></details>` : ''}` : `<p>${R.live ? 'No notices in the official layer within 40 km.' : ''} No notice is not a promise the road is open.</p>`)}
       ${(R.items || []).length > 12 ? `<p class="pll-small muted">${R.items.length - 12} more on the official map.</p>` : ''}
       <p class="pll-small">${when}</p>
       <p class="pll-small"><a href="${esc(R.link)}" target="_blank" rel="noopener">${esc(R.linkName || 'Official road page')}</a>${R.map ? ` · <a href="${esc(R.map)}" target="_blank" rel="noopener">Official road map</a>` : ''}. Read it the night before. Signs at the road beat any app.</p>
@@ -305,7 +320,7 @@
       <p class="pll-small">${B.stale ? 'Saved copy, ' : ''}checked ${esc(fmtDT(B.asOf))}, BC Wildfire Service ${badge(B.cert || 95)}. An empty result is not a promise. <a href="${esc(B.link || page)}" target="_blank" rel="noopener">Fire bans and restrictions</a></p></div>`;
   }
   function srcCard(live) {
-    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
+    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
   }
 
   let cssDone = false;
@@ -313,8 +328,8 @@
     if (cssDone) return; cssDone = true;
     const st = document.createElement('style');
     st.textContent = `.pll svg{display:block;width:100%;height:auto;margin:6px 0}details.pl-day>svg.pll-strip{width:calc(100% - 28px)}
-.pll-t{font-size:13px;fill:var(--muted)}.pll-n{font-size:15px;font-weight:700;fill:var(--ink)}.pll-arw{fill:var(--accent)}.pll-rain{fill:#3b82c4}.pll-ax{stroke:var(--line);stroke-width:1}
-.pll-small{font-size:14px}.pll-kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}.pll-kv span{color:var(--muted)}.pll-kv b{text-align:right}
+.pll-t{font-size:15px;fill:var(--muted)}.pll-n{font-size:15px;font-weight:700;fill:var(--ink)}.pll-arw{fill:var(--accent)}.pll-rain{fill:#3b82c4}.pll-ax{stroke:var(--line);stroke-width:1}
+.pll-small{font-size:14px}.pll-wx{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:16px;padding:8px 10px;margin:6px 0;border-radius:10px;background:var(--sel-bg)}.pll-wx b{font-size:18px}.pll-wa{display:inline-block;font-size:24px;font-weight:800;line-height:1;color:var(--accent)}.pll-roads li{line-height:1.35}.pll-roads li>b{display:block}.pll-kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}.pll-kv span{color:var(--muted)}.pll-kv b{text-align:right}
 .pll-stale{background:var(--warn-bg);padding:8px 10px;border-radius:10px}.pll-warn{background:var(--warn-bg);padding:8px 10px;border-radius:10px}
 .pll-law{font-size:14px;color:var(--muted)}.pll-roads{padding-left:18px}.pll-roads li{margin:8px 0}.pll-bad b{color:var(--bad-ink)}
 .pll-r0{fill:#c9d8cc}.pll-r1{fill:#8fb79a}.pll-r2{fill:var(--blaze)}.pll-r3{fill:#b9a68a}.pll-you{fill:var(--ink)}

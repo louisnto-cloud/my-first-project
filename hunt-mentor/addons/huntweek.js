@@ -82,6 +82,7 @@
       ] },
       { id: 'g1', from: 1, to: 1, h: 'The day before', sub: '', items: [
         isDeerR2(p) && { id: 'night', t: 'The night before: road notices, sunrise for your spot, tag steps in your head (kill, cancel, touch), tell someone at home.', tip: true, links: [L('local-harrison-deer', /logging roads.*2 of 2/i, 'Harrison lesson'), [ROADS, 'Road notices']] },
+        { id: 'bed', t: 'Before bed: trip plan sent to your contact (who, where, when back). An alarm set for the leave time on the hour by hour plan (Tip). All your licences on you, and your FWID (Fish and Wildlife ID) number with photo ID.', c: 75, s: `Trip plan: AdventureSmart (75%). Carry all licences: ${SYN}, page 5 (99%). FWID: BC Fish and Wildlife ID page (95%). Alarm: Tip`, links: [['#/safety/trip', 'Trip plan'], L('licences', /FWID/i, 'Your hunter number')] },
         { id: 'charge', t: 'Phone and power bank charged. Offline area checked: Ready.', tip: true, links: [[plan, 'My plan']] },
         { id: 'pack', t: 'Packed: licences, ID, ammunition, knife, game bags, first aid, headlamp.', tip: true, links: [['#/lists/before', 'Before every hunt']] },
         { id: 'backup', t: 'Backup exported (More, Backup), in case the phone is lost.', tip: true, links: [['#/more', 'More']] },

@@ -10,7 +10,7 @@
    "items": [
     {
      "t": "BC hunting licence for this licence year, FWID (Fish and Wildlife ID) number known",
-     "why": "Electronic only. Expires 31 March",
+     "why": "Electronic only. Expires 31 March. Synopsis 2026 to 2028 pages 3 and 5",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork",
@@ -18,7 +18,7 @@
     },
     {
      "t": "Photo ID on me",
-     "why": "Show it with your FWID when an officer asks",
+     "why": "Show it with your FWID when an officer asks. BC Fish and Wildlife ID page, checked 2026-10-02",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork"
@@ -27,7 +27,8 @@
      "t": "Every species licence I hold this year, used and unused, on me",
      "cert": 99,
      "lesson": "licences",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "why": "Synopsis 2026 to 2028 page 5"
     },
     {
      "t": "Ducks, geese, coots, snipe, mourning doves or pigeons: federal bird permit with stamp, paper or on my phone",
@@ -91,7 +92,8 @@
      "t": "No Shooting Areas, closed areas, parks and ecological reserves checked on the synopsis map",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "plan"
+     "cat": "plan",
+     "why": "Synopsis 2026 to 2028 pages 4 and 9"
     },
     {
      "t": "Private, fenced, posted or cultivated land: written permission in my pocket",
@@ -108,7 +110,7 @@
     },
     {
      "t": "100 m ring around every occupied house, barn, school and playground marked on my map",
-     "why": "Your brother's house counts too (95%)",
+     "why": "A partner's or family member's house counts too (95%). Synopsis 2026 to 2028 page 10",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "plan"
@@ -164,7 +166,8 @@
      "t": "RAPP (Report All Poachers and Polluters) 1 877 952 7277 saved in my phone",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "plan"
+     "cat": "plan",
+     "why": "BC RAPP page, checked 2026-10-02"
     },
     {
      "t": "Tourniquet in the same pocket every hunt",
@@ -291,7 +294,8 @@
      "t": "Legal to shoot flowchart run before every shot: licence, hours, season, ID, road, 100 m, land, backstop, clean shot",
      "cert": 99,
      "lesson": "legal-to-shoot",
-     "cat": "firearm"
+     "cat": "firearm",
+     "why": "Synopsis 2026 to 2028 pages 3, 10, 11 and 13; Hunting Regulation s. 14 (hours)"
     }
    ]
   },
@@ -379,7 +383,7 @@
     },
     {
      "t": "Magazine out and chamber empty before the truck or ATV (all terrain vehicle)",
-     "why": "A loaded magazine clipped in counts as loaded in BC",
+     "why": "A loaded magazine clipped in counts as loaded in BC. Synopsis 2026 to 2028 page 3 (loaded)",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "safety"
@@ -392,7 +396,7 @@
     },
     {
      "t": "No rimfire on deer, moose, elk, bear, sheep or goat",
-     "why": "Rimfire big game: bobcat, lynx, wolverine only",
+     "why": "Rimfire big game: bobcat, lynx, wolverine only. Synopsis 2026 to 2028 page 13 (legal methods table)",
      "cert": 99,
      "lesson": "rb-legal-methods",
      "cat": "safety"
@@ -487,7 +491,8 @@
      "t": "Magazine empty and chamber empty before the vehicle",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "safety"
+     "cat": "safety",
+     "why": "Synopsis 2026 to 2028 page 3 (loaded)"
     }
    ]
   },
@@ -542,7 +547,8 @@
      "t": "Magazine out, chamber empty before the vehicle",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "safety"
+     "cat": "safety",
+     "why": "Synopsis 2026 to 2028 page 3 (loaded)"
     }
    ]
   },
@@ -700,7 +706,8 @@
      "t": "Magazine out and chamber empty before I touch the quad",
      "cert": 98,
      "lesson": "atv-rules",
-     "cat": "safety"
+     "cat": "safety",
+     "why": "Synopsis 2026 to 2028 page 3 (loaded)"
     },
     {
      "t": "Get off and step away from the quad, then load",
@@ -860,7 +867,8 @@
      "t": "Other game: no hunting from a boat while a motor propels it",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "firearm"
+     "cat": "firearm",
+     "why": "Synopsis 2026 to 2028 page 11 item 23"
     },
     {
      "t": "Never stand to shoot. Sit square, one shooter at a time, back to back",
@@ -1098,19 +1106,23 @@
    },
    "items": [
     {
-     "t": "Partner has his own BC licence, species licences and bird permit. No sharing",
+     "t": "Partner has their own BC licence, species licences and bird permit. No sharing",
+     "key": "partner has his own bc licence species licences and bird permit no sharing",
      "cert": 99,
      "lesson": "licences",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "why": "Synopsis 2026 to 2028 page 8 and page 11 item 2"
     },
     {
-     "t": "Each hunter notches only his own licence. No party hunting in BC",
+     "t": "Each hunter notches only their own licence. No party hunting in BC",
+     "key": "each hunter notches only his own licence no party hunting in bc",
      "cert": 95,
      "lesson": "licences",
      "cat": "paperwork"
     },
     {
-     "t": "Each hunter has his own bag limit. Do not pool birds",
+     "t": "Each hunter has their own bag limit. Do not pool birds",
+     "key": "each hunter has his own bag limit do not pool birds",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "paperwork",
@@ -1119,13 +1131,15 @@
        "waterfowl",
        "upland bird"
       ]
-     }
+     },
+     "why": "Synopsis 2026 to 2028 page 6"
     },
     {
      "t": "Record of Receipt if the partner carries my game without me",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "why": "Synopsis 2026 to 2028 page 14"
     },
     {
      "t": "Before the walk: who covers left, who covers right, and the stop signal",
@@ -1421,25 +1435,29 @@
      "t": "Every firearm unloaded: nothing in the chamber or an attached magazine",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "firearm"
+     "cat": "firearm",
+     "why": "Federal SOR/98-209 s. 1 and s. 10"
     },
     {
      "t": "Leaving the truck: locked trunk or locked compartment, or out of sight in the locked vehicle",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "firearm"
+     "cat": "firearm",
+     "why": "Federal SOR/98-209 s. 10"
     },
     {
      "t": "No hunting or shooting from a vehicle",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "safety"
+     "cat": "safety",
+     "why": "Synopsis 2026 to 2028 page 11 item 22"
     },
     {
      "t": "Not on or across the road allowance of a numbered highway or 2 lane public road: 15 m each side of the middle",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "safety"
+     "cat": "safety",
+     "why": "Synopsis 2026 to 2028 page 10"
     },
     {
      "t": "Walk 15 m off any road, then load",
@@ -1705,7 +1723,7 @@
     },
     {
      "t": "Trail onto posted or fenced land, a closed park or a No Shooting Area: stop and get permission or call an officer",
-     "why": "No Trespass Act exception for wounded game",
+     "why": "No Trespass Act exception for wounded game. BC hunting FAQ (wounded game and the Trespass Act), checked 2026-10-02",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "paperwork"
@@ -1765,7 +1783,8 @@
      "t": "Record of Receipt filled if anyone else transports it",
      "cert": 99,
      "lesson": "tagging-legal",
-     "cat": "paperwork"
+     "cat": "paperwork",
+     "why": "Synopsis 2026 to 2028 page 14"
     },
     {
      "t": "Compulsory inspection, compulsory report or Mandatory Hunter Report deadline noted. Deer need neither inspection nor report",
@@ -1801,7 +1820,8 @@
      "t": "Every edible portion taken: deer neck, ribs, all four quarters, loins; birds both breasts",
      "cert": 99,
      "lesson": "bc-rules",
-     "cat": "meat"
+     "cat": "meat",
+     "why": "Synopsis 2026 to 2028 page 3"
     },
     {
      "t": "Bear: gall bladder stays at the site, or the whole gut pile is disposed of within 48 hours",
@@ -1991,7 +2011,7 @@
     },
     {
      "t": "Week 1: species licences bought IN PERSON",
-     "why": "Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another",
+     "why": "Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another. Synopsis 2026 to 2028 page 5; BC species licences page, checked 2026-10-02",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork"
@@ -2016,7 +2036,8 @@
      }
     },
     {
-     "t": "Partner: his own licences and permits bought",
+     "t": "Partner: their own licences and permits bought",
+     "key": "partner his own licences and permits bought",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork"

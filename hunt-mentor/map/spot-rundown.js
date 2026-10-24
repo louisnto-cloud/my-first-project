@@ -180,7 +180,8 @@ const badge = (c) => (c == null ? '' : ` <span class="srd-c ${c >= 95 ? 'hi' : c
 const TIP = ' <span class="srd-c tip">Tip</span>';
 const SYN_URL = 'https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf';
 const EST = ' <span class="srd-c est">Estimate</span>';
-const srcTxt = (...a) => { const t = a.filter(Boolean).join(', '); return t ? `<small>${esc(t)}</small>` : ''; };
+const srcTxt0 = (...a) => { const t = a.filter(Boolean).join(', '); return t ? `<small>${esc(t)}</small>` : ''; };
+const srcTxt = srcTxt0; // module level (hazards); render() shadows it in plan mode
 const li = (html) => `<li>${html}</li>`;
 // Lesson link: the first published lesson of [id, title] pairs (drafts are not in the app, so they get no link)
 const published = (ctx, id) => (ctx.hasSession ? ctx.hasSession(id) : !(window.HM && Array.isArray(window.HM.sessions)) || window.HM.sessions.some((x) => x.id === id));
@@ -194,7 +195,13 @@ const ev = (d) => (Array.isArray(d.evidence) ? d.evidence : []).map((e) => (type
 const noDot = (t) => String(t).replace(/\.\s*$/, '');
 const CAT_LABEL = { drive: 'Drive to', atv: 'ATV (all terrain vehicle)', walk: 'Walk in', backcountry: 'Backcountry', camp: 'Camp' };
 const slopeWords = (s) => (s == null ? '' : s < 5 ? 'flat' : s < 15 ? 'gentle' : s < 25 ? 'moderate' : s < 35 ? 'steep' : 'very steep');
-const sec = (n, id, title, body) => `<details class="srd-sec" data-sec="${id}" open><summary><span class="srd-n">${n}</span>${esc(title)}</summary><ul class="srd-ul">${body}</ul></details>`;
+const secFull = (n, id, title, body) => `<details class="srd-sec" data-sec="${id}" open><summary><span class="srd-n">${n}</span>${esc(title)}</summary><ul class="srd-ul">${body}</ul></details>`;
+// plan mode: the same sections as plain headed blocks (no fold inside the plan's own fold)
+const secFlat = (n, id, title, body) => `<section class="srd-sec srd-flat" data-sec="${id}"><h4 class="srd-h"><span class="srd-n">${n}</span>${esc(title)}</h4><ul class="srd-ul">${body}</ul></section>`;
+/* ctx.shared (optional): true inside a plan. Facts that are the same for every spot in the plan (sources, MU harvest odds,
+   the banner and legal lines, MU level hazards, the month's playbook) go in one "Same for every spot" block, drawn once per
+   plan page; each spot keeps only what differs. Default: on when a plan is passed without the map (H), off on the map. */
+const isShared = (ctx) => (ctx.shared != null ? !!ctx.shared : !!(ctx.plan && !ctx.H));
 
 function render(D, ctx) {
   const { d, lng, lat, plan, month } = D;
@@ -203,7 +210,10 @@ function render(D, ctx) {
   const park = Array.isArray(d.park) && d.park.length >= 2 ? [+d.park[0], +d.park[1]] : null;
   const evs = ev(d), cat = String(d.category || '').toLowerCase();
   const flagsTxt = (Array.isArray(d.flags) ? d.flags : []).map((f) => String(f.t || f.text || ''));
-  const out = [];
+  const out = [], SH = isShared(ctx), sh = [];
+  const sec = SH ? secFlat : secFull;
+  // in plan mode the spot pipeline source is said once in the shared block, not on every line
+  const srcTxt = SH ? (...x) => srcTxt0(...x.map((t) => (t === PIPE ? '' : String(t || '').replace(', ' + PIPE, '')))) : srcTxt0;
   const planLbl = plan ? `${dLabel(plan.from)} to ${dLabel(plan.to)} ${plan.to.slice(0, 4)}` : '';
   const dec = `${lat.toFixed(5)}, ${lng.toFixed(5)}`, fmt = units.coords;
 
@@ -216,12 +226,12 @@ function render(D, ctx) {
   if (d.mu) w.push(li(`MU (Management Unit) ${esc(d.mu)}, Region ${esc(d.region || '')} ${esc(d.regionName || '')}${badge((d.flags || []).find((f) => /^MU/.test(f.t || ''))?.cert ?? 95)}${srcTxt('MU layer WAA_WILDLIFE_MGMT_UNITS_SVW')}`));
   w.push(li(`Coordinates: <b>${esc(dec)}</b> (decimal)${fmt !== 'dd' ? `<br>${esc(formatCoord(lng, lat, fmt))} (${fmt === 'utm' ? 'UTM (Universal Transverse Mercator), your setting' : 'degrees minutes seconds, your setting'})` : ''}`));
   if (d.elev != null) w.push(li(`Elevation ${esc(units.elev(d.elev))}, slope ${esc(d.slope)} degrees (${slopeWords(d.slope)}), ${esc(d.aspect || '')}${badge(pc)}${srcTxt('terrain model, ' + PIPE)}`));
-  if (dm) w.push(li(`Drive: from ${esc(dm[1])}, about ${esc(dm[2])} km${EST}${srcTxt('straight line times 1.3, ' + PIPE)}`));
+  if (dm) w.push(li(`Drive: from ${esc(dm[1])}, about ${esc(dm[2])} km${EST}${srcTxt('straight line from Mission to the parking times 1.3, ' + PIPE)}`));
   if (Array.isArray(d.driveVia) && d.driveVia.length) w.push(li(`Route: ${d.driveVia.map(esc).join(', then ')}`));
   if (park) w.push(li(`Park at ${esc(`${park[1].toFixed(5)}, ${park[0].toFixed(5)}`)}: ${esc(d.parkWhat || 'parking point')}${haversine([lng, lat], park) > 30 ? `, ${esc(units.dist(haversine([lng, lat], park)))} straight line from the spot` : ''}`));
   const wk = num(d.walkKm), rk = num(d.rideKm);
-  if (wk || rk) w.push(li(`${rk ? `Ride ${esc(fmtNum(rk, 1))} km` : `Walk ${esc(fmtNum(wk, wk < 1 ? 2 : 1))} km`}${num(d.climbM) ? `, climb about ${esc(fmtNum(d.climbM))} m` : ''}${num(d.walkMin) ? `, about ${esc(d.walkMin)} min one way at 3 km/h` : ''}${EST}`));
-  if (walkL) w.push(li(`${esc(walkL)}`));
+  if (wk || rk) w.push(li(`${rk ? `Ride ${esc(fmtNum(rk, 1))} km` : `Walk ${esc(fmtNum(wk, wk < 1 ? 2 : 1))} km`}${num(d.climbM) ? `, climb about ${esc(fmtNum(d.climbM))} m` : ''}${d.walkMin != null && num(d.walkMin) != null ? `, about ${esc(Math.max(5, +d.walkMin))} min one way (3 km/h plus 1 min per 10 m climb, at least 5 min)` : ''}${EST}`));
+  if (walkL) w.push(li(`${esc(walkL.replace(/about (\d+) min at 3 km\/h\.?/i, (m, n) => `about ${Math.max(5, +n)} min (3 km/h plus 1 min per 10 m climb, at least 5 min).`))}`));
   w.push(`<li class="srd-acts">
     ${ctx.H ? '<button type="button" class="srd-btn" data-rd="fly">Open on Hunt Map</button>' : `<a class="srd-btn" href="#/map/@${lat.toFixed(5)},${lng.toFixed(5)},15">Open on Hunt Map</a>`}
     <a class="srd-btn" href="${esc(d.gdir || `https://www.google.com/maps/dir/?api=1&destination=${park ? `${park[1]},${park[0]}` : dec.replace(' ', '')}`)}" target="_blank" rel="noopener">Google Maps directions</a>
@@ -265,6 +275,7 @@ function render(D, ctx) {
     }
   }
   // official harvest odds (big game) for the MU
+  const a0 = a.length; // harvest odds lines start here (plan mode moves them to the shared block)
   if (D.harvest && D.mu) {
     for (const s of SP.filter((x) => x.harvest && (D.tags.includes(x.tag) || likely.some((l) => l.s === x)))) {
       const rows = (D.harvest.rows || []).filter((r) => r.mu === D.mu && r.species === s.harvest && r.resident && r.year >= 2020 && r.year <= 2024);
@@ -275,6 +286,7 @@ function render(D, ctx) {
       } else if (rows.length) a.push(li(`${esc(s.label)} harvest odds, MU ${esc(D.mu)}: too few hunters reported (under 20 a year) for a reliable %${srcTxt('BC Big Game Harvest Statistics')}`));
     }
   } else if (SP.some((s) => s.harvest && D.tags.includes(s.tag)) && !D.harvest) a.push(li('Harvest odds: not loaded. Open the app once with signal.'));
+  if (SH && a.length > a0) { sh.push(...a.splice(a0)); a.push(li('Harvest odds for the MU: see Same for every spot below, and Your odds.')); }
   if (!a.length) a.push(li('This is a camp spot. See the hunting spots nearby on the map.'));
   out.push(sec(2, 'animals', 'What animals', a.join('')));
 
@@ -284,7 +296,7 @@ function render(D, ctx) {
   else ab.push(li('Habitat zone: not available here (layer not saved, or no signal).'));
   if (d.slope != null) ab.push(li(`Ground: ${slopeWords(d.slope)} (${esc(d.slope)} degrees). ${d.slope < 15 ? 'Easy walking and dragging.' : d.slope < 25 ? 'Steady climbing. Plan the drag downhill.' : 'Hard walking. Take it slow, plan the pack out.'}${TIP}`));
   const asp = String(d.aspect || '').toUpperCase();
-  if (/^(S|SW|W|SE)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: sun warms it first and snow melts early. Mule deer winter range is steep south and west faces${badge(80)}${srcTxt('data/migration.json, mule deer January band')}`));
+  if (/^(S|SW|W|SE)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: sun warms it first and snow melts early. Mule deer winter range is steep south and west faces${badge(80)}${srcTxt('app migration data, mule deer January band')}`));
   else if (/^(N|NE|NW|E)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: cooler and shadier, often thicker timber. Good bedding cover on warm days${TIP}`));
   else if (asp) ab.push(li(`${esc(cap(d.aspect))} ground: wind and thermals matter more than the slope here${TIP}`));
   const recEv = (t) => /rec site \(official\)|campsites?\b/i.test(t);
@@ -308,7 +320,9 @@ function render(D, ctx) {
   if (walkL) av.push(li(`Trail: ${/no trail/i.test(walkL) ? 'no trail mapped. Cross country.' : esc(walkL)}`));
   evs.filter((t) => /^Road:/i.test(t)).forEach((t) => av.push(li(esc(t))));
   if (d.parkWhat) av.push(li(`Parking: ${esc(d.parkWhat)}`));
-  av.push(li(`${d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.'} Bring your own water, toilet kit and garbage bags${TIP}`));
+  // plan mode: the bring your own tip is the same for every spot, so it is said once in the shared block
+  if (SH) { av.push(li(d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.')); sh.push(li(`Facilities: bring your own water, toilet kit and garbage bags${TIP}`)); }
+  else av.push(li(`${d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.'} Bring your own water, toilet kit and garbage bags${TIP}`));
   out.push(sec(4, 'avail', 'What is available', av.join('')));
 
   // 5. Where to camp
@@ -320,7 +334,7 @@ function render(D, ctx) {
     cp.push(li(`<b>Nearest camp spots</b> (straight line):`));
     for (const c of near) cp.push(`<li class="srd-sub">${esc(c.name)}, ${esc(units.dist(c.m))}${c.sites != null ? `, ${esc(c.sites)} campsite${c.sites === 1 ? '' : 's'} (official)` : ''}${c.mu ? `, MU ${esc(c.mu)}` : ''} ${ctx.H ? `<button type="button" class="srd-btn sm" data-rd="flyto" data-ll="${c.lng},${c.lat}">Map</button>` : `<a class="srd-btn sm" href="#/map/@${c.lat.toFixed(5)},${c.lng.toFixed(5)},15">Map</a>`}</li>`);
   } else if (cat !== 'camp') cp.push(li('No camp spots in the app data near here.'));
-  cp.push(li(`Camping rules on Crown land and at rec sites: not in the app yet. <span class="srd-verify">VERIFY</span> with Recreation Sites and Trails BC. Check fire bans (BC Wildfire Service) before any fire.${lessonA(ctx, 'rb-where-you-can-hunt', 'Rule Book, where you can hunt')}${lessonA(ctx, 'maps-land-status', 'land status')}`));
+  (SH ? sh : cp).push(li(`Camping rules on Crown land and at rec sites: not in the app yet. <span class="srd-verify">VERIFY</span> with Recreation Sites and Trails BC. Check fire bans (BC Wildfire Service) before any fire.${lessonA(ctx, 'rb-where-you-can-hunt', 'Rule Book, where you can hunt')}${lessonA(ctx, 'maps-land-status', 'land status')}`));
   out.push(sec(5, 'camp', 'Where to camp', cp.join('')));
 
   // 6. Tips (opinion)
@@ -336,33 +350,46 @@ function render(D, ctx) {
   const elsewhere = (s) => { const r = String(D.region || ''), b = String((s && s.baseRegion) || ''); return !!(b && r && r !== b && !(s.regions && s.regions[r])); };
   for (const raw of plays) {
     const sp = inRegion(raw);
-    if (elsewhere(raw)) tp.push(li(`This advice was written for Region ${esc(raw.baseRegion)}${String(raw.baseRegion) === '3' ? ' (Kamloops area)' : ''}. Check your region's rows in the <a href="${SYN_URL}" target="_blank" rel="noopener">synopsis</a>.`));
+    const tq = SH ? sh : tp;
+    if (elsewhere(raw)) tq.push(li(`This advice was written for Region ${esc(raw.baseRegion)}${String(raw.baseRegion) === '3' ? ' (Kamloops area)' : ''}. Check your region's rows in the <a href="${SYN_URL}" target="_blank" rel="noopener">synopsis</a>.`));
     const ph = (sp.phases || []).find((x) => (x.months || []).includes(month));
     if (ph) {
-      tp.push(li(`<b>${esc(sp.name)}, ${esc(ph.label)}</b> (${esc(MONTH_NAMES[month - 1])} playbook)${badge(ph.cert)}`));
-      (ph.where || []).slice(0, 3).forEach((t) => tp.push(`<li class="srd-sub">Where: ${esc(t)}</li>`));
-      (ph.when || []).slice(0, 4).forEach((t) => tp.push(`<li class="srd-sub">${esc(cap(t))}</li>`));
-      (ph.tactics || []).slice(0, 3).forEach((t) => tp.push(`<li class="srd-sub">${esc(t)}</li>`));
+      tq.push(li(`<b>${esc(sp.name)}, ${esc(ph.label)}</b> (${esc(MONTH_NAMES[month - 1])} playbook)${badge(ph.cert)}`));
+      (ph.where || []).slice(0, 3).forEach((t) => tq.push(`<li class="srd-sub">Where: ${esc(t)}</li>`));
+      (ph.when || []).slice(0, 4).forEach((t) => tq.push(`<li class="srd-sub">${esc(cap(t))}</li>`));
+      (ph.tactics || []).slice(0, 3).forEach((t) => tq.push(`<li class="srd-sub">${esc(t)}</li>`));
     }
     const tac = pickTactic(sp.tactics || [], cat);
     if (tac) tp.push(li(`For ${cat === 'atv' ? 'an ATV (all terrain vehicle)' : `a ${esc(cat)}`} spot: <b>${esc(tac.name)}</b>${tac.best ? `. Best: ${esc(tac.best)}` : ''}${TIP}${(tac.steps || []).length ? `<ul>${tac.steps.slice(0, 4).map((s) => li(esc(s))).join('')}</ul>` : ''}`));
   }
-  tp.push(li(`${windTip(d.aspect)}${TIP}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`));
+  if (SH) { tp.push(li(`${windTip(d.aspect, true)}${TIP}`)); sh.push(li(`${windTip('', false, true)}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`)); }
+  else tp.push(li(`${windTip(d.aspect)}${TIP}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`));
   out.push(sec(6, 'tips', 'Tips', tp.join('')));
 
   // 7. Key things to know and legal
-  const lg = [`<li class="srd-banner">${BANNER}</li>`];
+  const lg = SH ? [] : [`<li class="srd-banner">${BANNER}</li>`];
+  if (SH) sh.unshift(`<li class="srd-banner">${BANNER}</li>`);
   for (const f of d.flags || []) lg.push(li(`${esc(f.t || f.text || '')}${badge(num(f.cert))}${srcTxt(f.src || f.source, f.date ? `data ${f.date}` : '')}${f.cwd ? lessonA(ctx, 'cwd', 'CWD (Chronic Wasting Disease)') : ''}`));
   const closures = closureList(D);
   for (const c of closures) lg.push(li(`${c.m === 0 ? 'Inside' : `${esc(units.dist(c.m))} away`}: ${esc(c.name)}${c.type ? ` (${esc(c.type)})` : ''}${c.dates ? `. ${esc(c.dates)}` : ''}${c.exemption ? `. Exemption: ${esc(c.exemption)}` : ''}${badge(D.closeLayer && D.closeLayer.cert)}${srcTxt('Motor vehicle closures layer', D.closeLayer && D.closeLayer.dataDate ? `data ${D.closeLayer.dataDate}` : '')}`));
-  if (!flagsTxt.some((t) => /private land/i.test(t))) lg.push(li('No private land flag within the checked distance. Private land can still be unsigned: check posted signs.'));
+  if (!flagsTxt.some((t) => /private land/i.test(t))) lg.push(li(SH ? 'No private land flag within the checked distance.' : 'No private land flag within the checked distance. Private land can still be unsigned: check posted signs.'));
+  if (SH) sh.push(li('Private land can be unsigned: check posted signs at every spot.'));
   const verify = planLine(d, /^\s*Verify\s*:/i);
   if (verify) lg.push(li(esc(verify)));
-  lg.push(li(`Seasons above are general open seasons only. LEH (Limited Entry Hunting) draws and in season changes are not all shown.${D.region ? lessonA(ctx, `rb-region-${String(D.region).toLowerCase()}`, `Rule Book, Region ${D.region}`) : ''}`));
+  (SH ? sh : lg).push(li(`Seasons ${SH ? 'in each spot' : 'above'} are general open seasons only. LEH (Limited Entry Hunting) draws and in season changes are not all shown.${D.region ? lessonA(ctx, `rb-region-${String(D.region).toLowerCase()}`, `Rule Book, Region ${D.region}`) : ''}`));
   out.push(sec(7, 'legal', 'Key things to know and legal', lg.join('')));
 
   // 8. Risks and hazards (from data only; each says why and links the lesson)
-  out.push(sec(8, 'risks', 'Risks and hazards', hazards(D, ctx, { evs, water, flagsTxt, cat, dm, wk, rk, closures }).join('')));
+  out.push(sec(8, 'risks', 'Risks and hazards', hazards(D, ctx, { evs, water, flagsTxt, cat, dm, wk, rk, closures, shared: SH ? sh : null }).join('')));
+  if (SH) {
+    sh.push(li(`Sources: ${esc(PIPE)}; MU layer WAA_WILDLIFE_MGMT_UNITS_SVW; seasons from the synopsis pages named on each row. Each fact keeps its certainty %.`));
+    const key = plan ? `${plan.species}|${plan.from}|${plan.to}|${plan.mu || D.mu || ''}` : String(D.mu || '');
+    sh.unshift(li('Each spot is a candidate, my pick from open data. Scout it first. Facts show certainty and source. Tip means opinion.'));
+    return `<div class="srd srd-inplan" data-ms="${D.ms}">
+    ${out.join('')}
+    <section class="srd-shared" data-shared="${esc(key)}"><h4 class="srd-h">Same for every spot in this plan${D.mu ? `, MU ${esc(D.mu)}` : ''}</h4><p class="srd-muted">Shown once per plan. The spot rundowns above and below only list what differs.</p><ul class="srd-ul">${sh.join('')}</ul></section>
+    <p class="srd-muted srd-sharedptr" hidden>Facts that are the same for every spot (sources, MU harvest odds, banner and legal lines, bear and cell signal, the ${esc(MONTH_NAMES[month - 1])} playbook): in the first rundown you opened. <button type="button" class="srd-btn sm" data-rd="shared">Show them here</button></p></div>`;
+  }
 
   return `<div class="srd" data-ms="${D.ms}">
     ${ctx.onBack ? '<button type="button" class="srd-btn srd-back" data-rd="back">Back to the spot card</button>' : ''}
@@ -402,9 +429,12 @@ function pickTactic(ts, cat) {
   const re = { drive: /glass|sit|edge|road|field|decoy|pond/i, atv: /ride|glass|edge|walk/i, walk: /still|walk|stalk|edge|jump|decoy/i, backcountry: /backpack|stalk|still|glass|ridge|call/i, camp: /glass|sit/i }[cat];
   return (re && ts.find((t) => re.test(`${t.name} ${t.best || ''}`))) || ts[0] || null;
 }
-function windTip(aspect) {
+// own: only this slope's sentence (plan mode, the rule is in the shared block); rule: only the rule
+function windTip(aspect, own, rule) {
   const a = String(aspect || '').toUpperCase();
-  const base = 'Thermals: morning sun warms slopes and air drifts uphill; evening slopes cool and air sinks downhill (75%, Wind and thermals lesson). So in the morning hunt from above, in the evening from below';
+  const base0 = 'Thermals: morning sun warms slopes and air drifts uphill; evening slopes cool and air sinks downhill (75%, Wind and thermals lesson). So in the morning hunt from above, in the evening from below';
+  if (rule) return `${base0}.`;
+  const base = own ? 'Thermals (rule in Same for every spot)' : base0;
   if (/^(S|SE|SW)\b/.test(a)) return `${base}. This ${esc(aspect)} slope warms early, so the uphill drift starts sooner in the morning`;
   if (/^(N|NE|NW)\b/.test(a)) return `${base}. This ${esc(aspect)} slope stays cool longer, so the switch comes later`;
   if (/^(E)\b/.test(a)) return `${base}. This east facing slope gets the first sun, so the morning switch is early`;
@@ -427,8 +457,9 @@ function hazards(D, ctx, X) {
   const roads = [...(d.driveVia || []), d.parkWhat || '', ...X.evs.filter((t) => /^Road:/i.test(t))].join(' ');
   if (/\bFSR\b|forest service|gravel|main\b/i.test(roads)) h.push(li(`<b>Gravel and FSR (Forest Service Road) driving</b>: logging trucks own the road. Drive slow, lights on, pull over for trucks. Carry a spare tire and know how to change it${TIP}${L('atv-rules', 'ATV rules (FSR section)')}${L('pack-kit', 'pack and car kit')}`));
   if (X.cat === 'atv') h.push(li(`ATV (all terrain vehicle) on an FSR: driver's licence and at least $200,000 liability insurance${badge(98)}${srcTxt('Off Road Vehicle Act, see the ATV rules lesson')}`));
-  h.push(li(`<b>Bear country</b>: carry bear spray where you can reach it, make noise in thick cover, keep a clean camp and a clean kill site${TIP}${L('bush-safety', 'bush safety (bears and cougars)')}`));
-  h.push(li(`<b>No cell signal</b>: assume none here. Download this area for offline use, carry a paper map and compass, and a satellite messenger if you have one${TIP}${L('gps-phone-battery', 'GPS and phone battery', 'maps-navigation', 'Maps 2, navigation')}`));
+  const hs = X.shared || h;
+  hs.push(li(`<b>Bear country</b>: carry bear spray where you can reach it, make noise in thick cover, keep a clean camp and a clean kill site${TIP}${L('bush-safety', 'bush safety (bears and cougars)')}`));
+  hs.push(li(`<b>No cell signal</b>: assume none here. Download this area for offline use, carry a paper map and compass, and a satellite messenger if you have one${TIP}${L('gps-phone-battery', 'GPS and phone battery', 'maps-navigation', 'Maps 2, navigation')}`));
   if (d.pressure === 'busier') h.push(li(`<b>Other hunters</b>: ${esc(d.pressureWhy || 'busier spot')}. Wear orange, know where others are, be sure of your target and beyond${TIP}${L('firearm-safety', 'firearm safety')}`));
   const near = X.flagsTxt.filter((t) => /closed area|closure|Route enters|Route crosses|no hunting|no shooting|Hwy/i.test(t));
   if (near.length || X.closures.length) h.push(li(`<b>Closures and no shooting areas nearby</b>: ${near.length + X.closures.length} listed in Key things to know. Check the synopsis map before you drive or shoot${L('maps-land-status', 'land status')}`));
@@ -438,6 +469,12 @@ function hazards(D, ctx, X) {
 function wire(el, D, ctx) {
   injectStyle();
   const H = ctx.H;
+  const own = el.querySelector('.srd-shared');
+  if (own) {
+    const other = [...document.querySelectorAll('.srd-shared')].find((x) => x !== own && !el.contains(x) && !x.hidden && x.dataset.shared === own.dataset.shared);
+    const ptr = el.querySelector('.srd-sharedptr');
+    if (other && ptr) { own.hidden = true; ptr.hidden = false; }
+  }
   el.querySelectorAll('[data-rd]').forEach((b) => b.addEventListener('click', () => {
     const k = b.dataset.rd;
     if (k === 'copy') {
@@ -445,6 +482,7 @@ function wire(el, D, ctx) {
       (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(done, () => { if (H && H.toast) H.toast(t, 5000); else window.prompt('Copy', t); });
     } else if (k === 'fly' && H) { H.closeSheet(); H.flyTo(D.lng, D.lat, 15); } else if (k === 'flyto' && H) { const [x, y] = b.dataset.ll.split(',').map(Number); H.closeSheet(); H.flyTo(x, y, 15); } else if (k === 'report' && H) H.insightsAt([D.lng, D.lat], D.d.name);
     else if (k === 'back' && ctx.onBack) ctx.onBack();
+    else if (k === 'shared') { const o = el.querySelector('.srd-shared'), p = el.querySelector('.srd-sharedptr'); if (o) o.hidden = false; if (p) p.hidden = true; }
   }));
 }
 
@@ -460,15 +498,17 @@ function injectStyle() {
 .srd-sec > summary::-webkit-details-marker { display: none; }
 .srd-sec > summary::after { content: '\\25BE'; margin-left: auto; color: var(--srd-muted); }
 .srd-sec:not([open]) > summary::after { content: '\\25B8'; }
+.srd-h { min-height: 44px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05em; margin: 6px 0 0; }
+.srd-shared { border-top: 2px solid var(--srd-line); margin-top: 8px; padding-top: 4px; }
 .srd-n { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--srd-accent); color: #fff; font-size: .85em; flex: none; }
 .srd-ul { margin: 0 0 8px; padding-left: 20px; }
 .srd-ul li { margin: 6px 0; line-height: 1.4; overflow-wrap: anywhere; }
-.srd-ul li small { display: block; color: var(--srd-muted); font-size: .82em; }
+.srd-ul li small { display: block; color: var(--srd-muted); font-size: .9em; margin-top: 2px; }
 .srd-ul li.srd-sub { list-style: circle; margin-left: 12px; }
 .srd-ul li.srd-acts { list-style: none; margin-left: -20px; display: flex; flex-wrap: wrap; gap: 8px; }
 .srd-ul li.srd-banner { list-style: none; margin-left: -20px; padding: 10px 12px; border-radius: 10px; background: var(--hmm-warn-bg, var(--warn-bg, #fff4d6)); font-weight: 700; }
 .srd-btn { min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1.5px solid var(--srd-line); background: var(--srd-card); color: var(--srd-ink) !important; font: inherit; font-weight: 600; display: inline-flex; align-items: center; text-decoration: none; cursor: pointer; }
-.srd-btn.sm { min-height: 36px; padding: 0 10px; font-size: .9em; margin-left: 4px; vertical-align: middle; }
+.srd-btn.sm { min-height: 44px; padding: 0 10px; font-size: .9em; margin-left: 4px; vertical-align: middle; }
 .srd-back { margin: 0 0 6px; }
 .srd-c { display: inline-block; padding: 0 6px; border-radius: 8px; font-size: .78em; font-weight: 700; line-height: 1.6; vertical-align: 1px; white-space: nowrap; }
 .srd-c.hi { background: #d8efd9; color: #17501d; } .srd-c.mid { background: #e6efcf; color: #3d5113; } .srd-c.lo { background: #fbe9c6; color: #6a4500; }
