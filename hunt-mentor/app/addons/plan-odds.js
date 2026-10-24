@@ -210,7 +210,7 @@
     const out = [];
     if (base) {
       const N = base.planDays || 0, add = (k) => over(base.perDay.mid, N + k) - over(base.perDay.mid, N);
-      out.push({ name: 'More days', effect: `At the likely rate, day ${N + 1} adds about ${(add(1) * 100).toFixed(1)} points, each day after a bit less: ${N + 1} days ${(over(base.perDay.mid, N + 1) * 100).toFixed(0)}%, ${N + 3} days ${(over(base.perDay.mid, N + 3) * 100).toFixed(0)}%, ${N + 8} days ${(over(base.perDay.mid, N + 8) * 100).toFixed(0)}% (plus ${(add(8) * 100).toFixed(0)} points). Average hunter maths.`, source: 'BC harvest statistics and the method below', cert: 80 });
+      out.push({ name: 'More days', effect: `At the likely rate, day ${N + 1} adds about ${(add(1) * 100).toFixed(1)} points, each day after a bit less: ${N + 1} days ${(over(base.perDay.mid, N + 1) * 100).toFixed(0)}%, ${N + 3} days ${(over(base.perDay.mid, N + 3) * 100).toFixed(0)}%, ${N + 8} days ${(over(base.perDay.mid, N + 8) * 100).toFixed(0)}% (${(add(8) * 100).toFixed(0)} points more than ${N} days). Average hunter maths.`, source: 'BC harvest statistics and the method below', cert: 80 });
     }
     const coast = isCoastDeer(sp, mu);
     if (coast) {
@@ -350,8 +350,8 @@
     const sp = res.spots || [];
     if (!sp.length) return `<div class="card"><h3>Spot estimates</h3><p class="muted">No candidate spots for this plan yet, so no spot estimate.</p></div>`;
     const N = res.base.planDays;
-    const rows = sp.map((s, i) => `<tr><td>${i + 1}. ${esc(s.name)}<br><span class="po-sub">${fx(s.factor)}${s.capped ? ' (capped)' : ''}</span></td><td><b>${P0(s.estimate.mid)}</b><br><span class="po-sub">${R0(s.estimate)}</span></td></tr>`).join('');
-    return `<div class="card po-spt"><h3>Spot estimates <span class="po-tag">estimate, Tip</span></h3>
+    const rows = sp.map((s, i) => `<tr><td>${i + 1}. ${esc(s.name)}<br><span class="po-sub">${fx(s.factor)}${s.capped ? ' (held to the cap)' : ''}</span></td><td><b>${P0(s.estimate.mid)}</b><br><span class="po-sub">${R0(s.estimate)}</span></td></tr>`).join('');
+    return `<div class="card po-spt"><h3>Spot estimates <span class="po-tag">Tip</span></h3>
       <p class="po-sub">The official MU range for your ${N} day${N === 1 ? '' : 's'}, moved by each spot's multipliers. Not official, not precise. Scout first.</p>
       ${sp.length > 1 && new Set(sp.map((s) => P0(s.estimate.mid))).size === 1 ? '<p class="po-sub"><b>These estimates do not separate the spots.</b> They come out the same, so pick on scouting, wind, walk and access, not on this number.</p>' : ''}
       <div class="tbl"><table><thead><tr><th>Spot and multiplier</th><th>Your ${N} day${N === 1 ? '' : 's'}</th></tr></thead><tbody>${rows}</tbody></table></div>

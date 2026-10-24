@@ -286,7 +286,7 @@ function render(D, ctx) {
       } else if (rows.length) a.push(li(`${esc(s.label)} harvest odds, MU ${esc(D.mu)}: too few hunters reported (under 20 a year) for a reliable %${srcTxt('BC Big Game Harvest Statistics')}`));
     }
   } else if (SP.some((s) => s.harvest && D.tags.includes(s.tag)) && !D.harvest) a.push(li('Harvest odds: not loaded. Open the app once with signal.'));
-  if (SH && a.length > a0) { sh.push(...a.splice(a0)); a.push(li('Harvest odds for the MU: in Same for every spot, below, and in Your odds.')); }
+  if (SH && a.length > a0) { sh.push(...a.splice(a0)); a.push(li('Harvest odds for the MU: see Same for every spot below, and Your odds.')); }
   if (!a.length) a.push(li('This is a camp spot. See the hunting spots nearby on the map.'));
   out.push(sec(2, 'animals', 'What animals', a.join('')));
 
@@ -296,7 +296,7 @@ function render(D, ctx) {
   else ab.push(li('Habitat zone: not available here (layer not saved, or no signal).'));
   if (d.slope != null) ab.push(li(`Ground: ${slopeWords(d.slope)} (${esc(d.slope)} degrees). ${d.slope < 15 ? 'Easy walking and dragging.' : d.slope < 25 ? 'Steady climbing. Plan the drag downhill.' : 'Hard walking. Take it slow, plan the pack out.'}${TIP}`));
   const asp = String(d.aspect || '').toUpperCase();
-  if (/^(S|SW|W|SE)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: sun warms it first and snow melts early. Mule deer winter range is steep south and west faces${badge(80)}${srcTxt('data/migration.json, mule deer January band')}`));
+  if (/^(S|SW|W|SE)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: sun warms it first and snow melts early. Mule deer winter range is steep south and west faces${badge(80)}${srcTxt('app migration data, mule deer January band')}`));
   else if (/^(N|NE|NW|E)\b/.test(asp)) ab.push(li(`${esc(d.aspect)}: cooler and shadier, often thicker timber. Good bedding cover on warm days${TIP}`));
   else if (asp) ab.push(li(`${esc(cap(d.aspect))} ground: wind and thermals matter more than the slope here${TIP}`));
   const recEv = (t) => /rec site \(official\)|campsites?\b/i.test(t);
