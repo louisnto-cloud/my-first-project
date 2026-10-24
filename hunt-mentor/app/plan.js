@@ -180,7 +180,11 @@
     const g = good(rows);
     if (!g.length) return { thin: true, muRows, src: H.source, url: H.url };
     const sH = g.reduce((a, r) => a + r.hunters, 0), sK = g.reduce((a, r) => a + r.kills, 0), sD = g.reduce((a, r) => a + r.days, 0);
-    return { scope, rows, muRows, region: regionOf(mu), pct: (sK / sH) * 100, dph: sD / sH, dpk: sK ? sD / sK : null, perDay: sD ? sK / sD : 0, years: g.length, src: H.source, url: H.url, checked: H.checked, notes: H.notes };
+    // one base across the plan: the middle year of the reports, the same as the Your odds card (plan-odds.js); the pooled average is kept as a note
+    const midOf = (xs) => { const v = xs.filter((x) => isFinite(x)).sort((x, y) => x - y); return v.length ? v[Math.floor((v.length - 1) / 2)] : null; };
+    const mPer = midOf(g.filter((r) => r.days > 0).map((r) => r.kills / r.days)), mPct = midOf(g.filter((r) => r.hunters > 0).map((r) => (r.kills / r.hunters) * 100));
+    const pooled = { pct: (sK / sH) * 100, dpk: sK ? sD / sK : null, perDay: sD ? sK / sD : 0 };
+    return { scope, rows, muRows, region: regionOf(mu), pooled, pct: mPct != null ? mPct : pooled.pct, dph: sD / sH, dpk: mPer ? 1 / mPer : pooled.dpk, perDay: mPer != null ? mPer : pooled.perDay, years: g.length, src: H.source, url: H.url, checked: H.checked, notes: H.notes };
   }
   const partyN = (p) => (p === 'two' ? 2 : p === 'group' ? 3 : 1);
 
@@ -1386,7 +1390,7 @@
     let answer;
     if (od.pct >= 90) answer = `<p><b>Maybe, but never promised.</b> Hunters here have done very well on average.</p>`;
     else answer = `<p><b>No. 90% is not realistic here${huntDays ? ` in ${huntDays} hunt day${huntDays === 1 ? '' : 's'}` : ''}.</b></p>
-      <ul><li>5 year total: ${pct(od.pct)} of resident hunters got one over the whole season (all 2020 to 2024 hunters pooled). Your odds card uses the middle year, so its numbers differ a little.</li>
+      <ul><li>5 year total: ${pct(od.pct)} of resident hunters got one over the whole season (the middle year of the 2020 to 2024 reports, the same base as Your odds).</li>
       <li>So most hunters went home without one, even with ${od.dph.toFixed(1)} days each.</li>
       ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled${p.party === 'two' && !(p.ask && p.ask.partner && typeof p.ask.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
       ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the 5 year total rate.</li>` : ''}
@@ -1522,7 +1526,7 @@
         : `<p><b>No official number</b> for seeing one. It is at least your shot chance (about ${r5(trip)}% or more, rough math, Tip). Quiet spots at first and last light are where hunters see deer (Tip).</p>`;
     return `<div class="card pl2-goal"><p class="hero-k">Your goal${A.success ? '' : ' (not answered: meat in the freezer shown)'}</p><h3>${esc(head)}</h3>${body}
       <div class="pl2-bars" aria-hidden="true"><div><span>Chance per hunter day</span><i style="width:${Math.max(2, Math.round(per * 100))}%"></i><b>${oneIn ? `1 in ${oneIn}` : 'n/a'}</b></div><div><span>Your ${hd} day${hd === 1 ? '' : 's'}</span><i style="width:${Math.max(2, r5(trip))}%"></i><b>about ${r5(trip)}%</b></div></div>
-      <p class="muted pl-small">${medPer ? `These use the middle year of ${yr.length} years of reports, the same base as Your odds above. Pooled over all years the rate is ${(od.perDay * 100).toFixed(1)}% a hunter day, so about ${r5(1 - Math.pow(1 - od.perDay, hd))}% over your days: a different average of the same reports, not a second answer. ` : ''}Official base, 5 year total (2020 to 2024 pooled): ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
+      <p class="muted pl-small">${medPer ? `These use the middle year of ${yr.length} years of reports, the same base as Your odds above. ` : ''}Official base, the middle year of the 2020 to 2024 reports: ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
   }
 
   // ---------- Top spots board (part 5) ----------
@@ -1828,7 +1832,7 @@
     if (ar.length) L.push('Answers: ' + ar.map((r) => `${r.label}: ${r.val}`).join('; ') + '.');
     if (m.ready) L.push(m.ready.left ? `Readiness: not ready, ${m.ready.left} of ${m.ready.total} gates to do.` : 'Readiness: all gates done.');
     if (m.legal) L.push(`Legal: ${{ open: 'Open', no: 'Not open', check: 'Check' }[m.legal.verdict]}. ${m.legal.why}`);
-    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, all 2020 to 2024 hunters pooled (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
+    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, the middle year of the 2020 to 2024 reports (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
     else if (m.odds && m.odds.none) L.push('Odds: no official success numbers for this animal.');
     const bl = boardList(m.spots, p);
     if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + " m" : x.walkKm + " km"}` : ''}: ${gmaps(x)}`)); }
