@@ -1017,7 +1017,7 @@
         <div data-tl-check="nb"></div>`,
       hunt: `${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
         ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
-      shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}</ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
+      shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
         <div data-tl-check="shot"></div>`,
       after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
         ${fold('Full checklist', 'every item for this plan, in one list', sec('pl-s4', '4. Checklist', 'pl-check', ''))}
