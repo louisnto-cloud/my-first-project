@@ -231,7 +231,7 @@ function render(D, ctx) {
   if (park) w.push(li(`Park at ${esc(`${park[1].toFixed(5)}, ${park[0].toFixed(5)}`)}: ${esc(d.parkWhat || 'parking point')}${haversine([lng, lat], park) > 30 ? `, ${esc(units.dist(haversine([lng, lat], park)))} straight line from the spot` : ''}`));
   const wk = num(d.walkKm), rk = num(d.rideKm);
   if (wk || rk) w.push(li(`${rk ? `Ride ${esc(fmtNum(rk, 1))} km` : `Walk ${esc(fmtNum(wk, wk < 1 ? 2 : 1))} km`}${num(d.climbM) ? `, climb about ${esc(fmtNum(d.climbM))} m` : ''}${d.walkMin != null && num(d.walkMin) != null ? `, about ${esc(Math.max(5, +d.walkMin))} min one way (3 km/h plus 1 min per 10 m climb, at least 5 min)` : ''}${EST}`));
-  if (walkL) w.push(li(`${esc(walkL)}`));
+  if (walkL) w.push(li(`${esc(walkL.replace(/about (\d+) min at 3 km\/h\.?/i, (m, n) => `about ${Math.max(5, +n)} min (3 km/h plus 1 min per 10 m climb, at least 5 min).`))}`));
   w.push(`<li class="srd-acts">
     ${ctx.H ? '<button type="button" class="srd-btn" data-rd="fly">Open on Hunt Map</button>' : `<a class="srd-btn" href="#/map/@${lat.toFixed(5)},${lng.toFixed(5)},15">Open on Hunt Map</a>`}
     <a class="srd-btn" href="${esc(d.gdir || `https://www.google.com/maps/dir/?api=1&destination=${park ? `${park[1]},${park[0]}` : dec.replace(' ', '')}`)}" target="_blank" rel="noopener">Google Maps directions</a>

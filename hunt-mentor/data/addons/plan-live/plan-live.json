@@ -79,7 +79,7 @@
     "walkKmh": 3,
     "gearUpMin": 10,
     "bufferMin": 15,
-    "why": "Assumption: road distance is the straight line from Mission to the parking times 1.3 (the spot pipeline's rule), driven at 60 km/h on average, plus 15 minutes of slack. Walk: 3 km/h plus 1 min per 10 m of climb, at least 5 min (the spot pipeline's rule; the Hunt Map's own route tool uses 4 km/h). Check Google Maps directions the night before."
+    "why": "Assumption: road distance is the straight line from Mission to the parking times 1.3 (the spot pipeline's rule), driven at 60 km/h on average, plus 15 minutes of slack. Walk: 3 km/h plus 1 min per 10 m of climb, at least 5 min (the spot pipeline's rule, used for every walk time on this page; if you draw a route on the Hunt Map it shows its own estimate, so go by the times here). Check Google Maps directions the night before."
   },
   "roles": {
     "lesson": "hunting-partner",

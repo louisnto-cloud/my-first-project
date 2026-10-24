@@ -160,10 +160,21 @@
       const evSit = L.sunset - 120 * MIN, midEnd = evSit - evWalk * MIN - (EV && !day.evening.same ? 15 : 0) * MIN;
       const turn = L.sunset - evWalk * MIN, truck = L.sunset;
       day.turnaround = { at: turn, walkMin: evWalk, legalEnd: L.legalEnd };
+      // backup morning: its own leave and turnaround, so a long backup walk never borrows the first pick's times
+      if (day.backup && B && leave != null) {
+        const bw = B.w.min, bt = parkOf(B.c.s) || B.c.s, bKm = bt && from ? km(from, bt) * E.roadFactor : roadKm, bDrive = r5((bKm / E.driveKmh) * 60);
+        const bLeave = setup - (bw + E.gearUpMin + bDrive + E.bufferMin) * MIN, bTurn = L.sunset - bw * MIN;
+        const cm = /(\d+) m climb/.exec(String(B.w.how || '')), climb = cm ? +cm[1] : 0;
+        if (bw - walk >= 15) {
+          day.backup.leave = bLeave; day.backup.turn = bTurn;
+          day.backup.why = day.backup.why.map((t) => (/^Heavy rain:/.test(t) && !/mm in legal light/.test(t) ? `Heavy rain: the backup is the longer walk (${bw} min against ${walk} min), so stay at the first pick and still hunt in timber (Tip).` : t));
+          day.backup.why.unshift(`On a backup morning: leave ${day.drive.from} by ${fmtT(bLeave)} (not ${fmtT(leave)}): about ${bDrive} min drive plus ${E.bufferMin} min slack, ${E.gearUpMin} min to gear up and about ${bw} min walk in, to sit by ${fmtT(setup).replace(/\.$/, "")}. Turn back by ${fmtT(bTurn)} (sunset ${fmtT(L.sunset)} minus the ${bw} min walk out), not ${fmtT(turn)} (estimate).${climb >= 300 ? ` It climbs about ${climb} m cross country with no trail: walk it once in daylight before you try it in the dark, and pick another spot if you have not (Tip).` : ''}`);
+        }
+      }
       const th = D.thermals, thSrc = `${lessonA(th.lesson, 'Wind and thermals')} ${badge(th.cert)}`;
       const S = (at, key, title, t, extra) => day.steps.push(Object.assign({ at, key, title, t }, extra || {}));
       const pName = P ? P.c.s.name : 'your first spot';
-      if (leave != null) S(leave, 'leave', `Leave ${day.drive.from}`, `About ${Math.round(roadKm)} km and ${driveMin} min to ${esc(pName)}, plus ${E.bufferMin} min slack (estimate).`, { est: true });
+      if (leave != null) S(leave, 'leave', `Leave ${day.drive.from}`, `About ${Math.round(roadKm)} km and ${driveMin} min (rounded to 5 min) to ${esc(pName)}, plus ${E.bufferMin} min slack (estimate).`, { est: true });
       S(arrive, 'park', 'Park and gear up', P && P.c.s.detail && P.c.s.detail.parkWhat ? `Park: ${esc(P.c.s.detail.parkWhat)}. Load the rifle only where it is legal to hunt, never on or across the road.` : 'Park off the road. Load the rifle only where it is legal to hunt, never on or across the road.', { est: true });
       S(walkIn, 'walkin', 'Walk in quietly', `${walk} min to the spot (${P ? esc(P.w.how) : 'Assumption'}). Headlamp, red light if you have one.`, { est: true });
       S(setup, 'setup', 'Sit by: legal light starts', `Sit by ${fmtT(setup).replace(/\.$/, '')} (legal light starts). Earlier option ${TIP}: in your seat by ${fmtT(setup - 45 * MIN).replace(/\.$/, '')} to ${fmtT(setup - 30 * MIN).replace(/\.$/, '')} (30 to 45 min before), so you are still when deer move; then leave and walk in that much earlier than the times above. ${P ? esc(P.f.t) + ' ' : ''}Air still sinks downhill at first light: sit below or beside where deer will feed, so your scent drains away from them. ${thSrc} Dawn and dusk matter most ${badge(80)}. Sit still through the thermal switch, about ${fmtT(swA)} to ${fmtT(swB)}: air swirls, do not walk then ${TIP}.`, { legal: true });
@@ -174,7 +185,7 @@
       S(turn, 'turn', 'Turnaround', `Sunset ${fmtT(L.sunset)} minus your ${evWalk} min walk out = ${fmtT(turn).replace(/\.$/, '')}. Back at the truck in daylight ${TIP}. Staying to the end of legal light (${fmtT(L.legalEnd)}) means walking out in the dark: headlamp, known route, partner told ${TIP}.`, { turn: true });
       S(truck, 'truck', 'Back at the truck', `Unload the rifle before you get in. ${pair ? 'Both back: check in.' : 'Text home that you are out.'}`);
       S(L.legalEnd, 'legalEnd', 'Legal light ends', `No hunting from 1 hour after sunset ${badge(99)}.`, { legal: true });
-      if (homeMin != null && (!plan.overnight || iso === days[days.length - 1])) S(truck + (E.gearUpMin + homeMin) * MIN, 'home', `Home in ${home.name}`, 'Estimate. Add time if you are hauling a deer (cooling and meat care first).', { est: true });
+      if (homeMin != null && (!plan.overnight || iso === days[days.length - 1])) S(truck + (E.gearUpMin + homeMin) * MIN, 'home', `Home in ${home.name}`, `Estimate: ${E.gearUpMin} min to pack up and about ${homeMin} min drive (rounded to 5 min). Add time if you are hauling a deer: field dressing, then the carry out takes far longer than the ${evWalk} min walk out, and cooling and meat care come first.`, { est: true });
       day.steps.sort((a, b) => a.at - b.at);
       // wind arrows for the picture
       if (P) for (const t of [dawn, mid, eve]) { const h = hourAt(live, P.c.s, t); if (h && h.windDir != null) day.wind.push({ at: t, dir: h.windDir, kmh: h.windKmh }); }
