@@ -89,19 +89,19 @@
     },
     {
      "t": "No waiting period for a deer licence",
-     "why": "Buy it the day before if you must",
+     "why": "Buy it the day before if you must. Synopsis 2026 to 2028 page 8; Hunting Licensing Regulation s. 6",
      "cert": 99,
      "lesson": "rb-licences-fees"
     },
     {
      "t": "Antlerless mule deer: LEH (Limited Entry Hunting) authorization only in Regions 3, 5 and 8",
-     "why": "No draw, no doe",
-     "cert": 99,
+     "why": "No draw, no doe. Lesson reading; Region 2 has its own antlerless rows, so read your MU row (VERIFY)",
+     "cert": 80,
      "lesson": "leh-strategy"
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -389,7 +389,7 @@
    ],
    "redFlags": [
     "Region 3: 4 point bucks only 10 to 30 September and 1 November to 10 December (99%). Can't count points from a rest? Not realistic then.",
-    "Antlerless mule deer: LEH (Limited Entry Hunting) only in Regions 3, 5 and 8 (99%).",
+    "Antlerless mule deer: LEH (Limited Entry Hunting) only in Regions 3, 5 and 8 (80%, lesson reading; Region 2 rows: read your MU row, VERIFY).",
     "Mule deer buck bag limit is 1 for Regions 3 to 8 combined (99%). Already took one? You are done.",
     "Region 4: CWD (Chronic Wasting Disease) Management Zone, MUs 4-1 to 4-8 and 4-20 to 4-25: mandatory head submission and carcass transport rules (99%).",
     "Inside City of Kamloops limits: no firearm discharge at all (99%). The boundary near Heffley Creek: VERIFY.",
@@ -420,7 +420,8 @@
      {
       "t": "Mule deer species licence bought in person",
       "cert": 99,
-      "lesson": "licences"
+      "lesson": "licences",
+      "why": "Synopsis 2026 to 2028 page 5; BC species licences page, checked 2026-10-02"
      },
      {
       "t": "Today's MU and its class checked: 4 point or any buck",
@@ -844,11 +845,11 @@
       "MUs 2-8, 2-18 and 2-19: bucks only, 10 September to 15 December. No antlerless season there, so a doe is never legal (99%, page 28).",
       "Region 2 deer limit: 2 a licence year, at most 1 antlerless (99%, page 27). The antlerless 1 is out of reach in 2-8, 2-18 and 2-19 (99%, page 28).",
       "No white tailed deer season anywhere in Region 2 (99%, pages 14 and 27). Be sure before you shoot.",
-      "Unless lawfully hunting, no firearm discharge within 400 m of select FVRD (Fraser Valley Regional District) roads and the Chehalis area on Map B33 (99%, page 27), and of Crown land along the Francis Lake, Weaver Lake and Sts'ailes (West) FSRs (Forest Service Roads) (99%, Closed Areas Regulation Schedule 5.1). Target shooting is out (90%).",
+      "Unless lawfully hunting, no firearm discharge within 400 m of select FVRD (Fraser Valley Regional District) roads and the Chehalis area on Map B33 (99%, page 27), and of Crown land along the Francis Lake, Weaver Lake and Sts'ailes (West) FSRs (Forest Service Roads) (99%, Closed Areas Regulation Schedule 5.1, read 2026-10-17). Target shooting is out (90%).",
       "Never shoot on or across a road allowance (99%, page 10).",
-      "Harrison Mills and the Nicomen lowland: no rifles (99%, Closed Areas Regulation; 85% my reading of the boundary). Hunt the hills.",
-      "Harrison Hot Springs village: no firearm discharge anywhere inside it (99%, Bylaw No. 1207).",
-      "Sasquatch and Kilby provincial parks: closed to hunting (99%).",
+      "Harrison Mills and the Nicomen lowland: no rifles (99%, Closed Areas Regulation Schedules 9 and 11, read 2026-10-17; 85% my reading of the boundary). Hunt the hills.",
+      "Harrison Hot Springs village: no firearm discharge anywhere inside it (99%, Discharge of Firearms Bylaw No. 1207, 2024, section 3).",
+      "Sasquatch and Kilby provincial parks: closed to hunting (99%, Park, Conservancy and Recreation Area Regulation sections 28 and 29, not on Schedule B).",
       "Region 2 near Mission: MU 2-8 general season is bucks only, and the Mission bylaw allows rifles only in Area D (99%).",
       "Fraser Valley Special Area licence: needed inside Mission, Maple Ridge, Pitt Meadows and Coquitlam limits in 2-8, and all of 2-4 (99%, page 29). Harrison and the Chehalis are outside it (90%).",
       "Closed or washed out FSR: read the Chilliwack district road notices before you go (95%). No notice is not a promise the road is open."
@@ -870,7 +871,8 @@
         "t": "Mule deer species licence bought in person (black tailed deer use it)",
         "cert": 99,
         "lesson": "licences",
-        "top": 2
+        "top": 2,
+        "why": "Synopsis 2026 to 2028 page 5; BC species licences page, checked 2026-10-02"
        },
        {
         "t": "Your MU row on synopsis page 28 checked: bucks only, to 15 December in 2-8, 2-18, 2-19",
@@ -888,7 +890,7 @@
        },
        {
         "t": "No shooting bands and closed areas checked on the Hunt Map",
-        "why": "400 m FSR bands, Harrison Mills flats, village bylaw",
+        "why": "400 m FSR bands, Harrison Mills flats, village bylaw. Synopsis 2026 to 2028 page 27; Closed Areas Regulation Schedules 5.1, 9 and 11, read 2026-10-17 (boundaries my reading, 85%); Harrison Hot Springs Bylaw No. 1207 s. 3",
         "cert": 99,
         "lesson": "local-harrison-deer"
        }
@@ -1025,7 +1027,8 @@
        {
         "t": "RAPP (Report All Poachers and Polluters) number 1 877 952 7277 saved",
         "cert": 99,
-        "lesson": "local-mission"
+        "lesson": "local-mission",
+        "why": "BC RAPP page, checked 2026-10-02"
        }
       ]
      },
@@ -1149,7 +1152,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -1395,7 +1398,8 @@
      {
       "t": "White tailed deer licence bought in person",
       "cert": 99,
-      "lesson": "licences"
+      "lesson": "licences",
+      "why": "Synopsis 2026 to 2028 page 5; BC species licences page, checked 2026-10-02"
      },
      {
       "t": "Farm permission, with the boundary walked",
@@ -1566,7 +1570,7 @@
       },
       {
        "t": "Carry every species licence bought this year, used and unused",
-       "why": "Unlawful to hunt without them",
+       "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
        "cert": 95,
        "lesson": "tagging-legal"
       },
@@ -1679,7 +1683,8 @@
        {
         "t": "White tailed deer licence bought in person",
         "cert": 99,
-        "lesson": "licences"
+        "lesson": "licences",
+        "why": "Synopsis 2026 to 2028 page 5; BC species licences page, checked 2026-10-02"
        },
        {
         "t": "Farm permission, with the boundary walked",
@@ -2044,7 +2049,8 @@
     {
      "t": "No waiting period for a moose licence",
      "cert": 99,
-     "lesson": "rb-licences-fees"
+     "lesson": "rb-licences-fees",
+     "why": "Synopsis 2026 to 2028 page 8; Hunting Licensing Regulation s. 6"
     },
     {
      "t": "Mandatory Hunter Report by 31 March, hunt or no hunt",
@@ -2059,7 +2065,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -2443,7 +2449,8 @@
       {
        "t": "No waiting period for a moose licence",
        "cert": 99,
-       "lesson": "rb-licences-fees"
+       "lesson": "rb-licences-fees",
+       "why": "Synopsis 2026 to 2028 page 8; Hunting Licensing Regulation s. 6"
       },
       {
        "t": "Mandatory Hunter Report by 31 March, hunt or no hunt",
@@ -2458,7 +2465,7 @@
       },
       {
        "t": "Carry every species licence bought this year, used and unused",
-       "why": "Unlawful to hunt without them",
+       "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
        "cert": 95,
        "lesson": "tagging-legal"
       },
@@ -2748,7 +2755,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -3170,7 +3177,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -3798,7 +3805,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -4249,7 +4256,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -4545,7 +4552,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -4816,7 +4823,7 @@
       },
       {
        "t": "Carry every species licence bought this year, used and unused",
-       "why": "Unlawful to hunt without them",
+       "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
        "cert": 95,
        "lesson": "tagging-legal"
       },
@@ -5196,7 +5203,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -5404,7 +5411,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -6519,7 +6526,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -6790,7 +6797,7 @@
     },
     {
      "t": "Carry every species licence bought this year, used and unused",
-     "why": "Unlawful to hunt without them",
+     "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
      "cert": 95,
      "lesson": "tagging-legal"
     },
@@ -6964,7 +6971,7 @@
       },
       {
        "t": "Carry every species licence bought this year, used and unused",
-       "why": "Unlawful to hunt without them",
+       "why": "Unlawful to hunt without them. Synopsis 2026 to 2028 page 5",
        "cert": 95,
        "lesson": "tagging-legal"
       },

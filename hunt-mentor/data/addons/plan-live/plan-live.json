@@ -22,7 +22,7 @@
   "climate": {
     "2": {
       "10": { "t": "October is wet: about 145 mm of rain at Abbotsford.", "cert": 95, "src": "Environment Canada Climate Normals 1991 to 2020, Abbotsford", "url": "https://climate.weather.gc.ca/climate_normals/", "lesson": "hunt-fitness" },
-      "11": { "t": "November is wetter: about 225 mm of rain at Abbotsford. Plan for rain every day.", "cert": 95, "src": "Environment Canada Climate Normals 1991 to 2020, Abbotsford", "url": "https://climate.weather.gc.ca/climate_normals/", "lesson": "packs-carrying" }
+      "11": { "t": "November is wetter: about 225 mm of rain at Abbotsford. Plan for rain every day.", "cert": 95, "src": "Environment Canada Climate Normals 1991 to 2020, Abbotsford, read directly 2026-10-11", "url": "https://climate.weather.gc.ca/climate_normals/", "lesson": "packs-carrying" }
     }
   },
   "roads": {
