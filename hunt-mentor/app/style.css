@@ -653,3 +653,9 @@ body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
 .tl-master > summary small { font-size: 14px; color: var(--muted); }
 /* the app banner above every screen already carries the law line on screen; the plan's own copy is for print */
 @media screen { body > .banner ~ main .tl-law { display: none; } }
+
+/* R2 sources legend and per line source notes */
+.pl-src-n { display: block; font-size: 13px; color: var(--muted); }
+.pl-srcs-l { margin: 4px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.4; }
+.pl-srcs-l li { margin: 0 0 4px; overflow-wrap: anywhere; }
+.tl-opt { margin: 2px 0 6px; }

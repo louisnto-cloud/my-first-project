@@ -385,8 +385,8 @@
       const its = cat === 'top' ? [...top] : items.filter((i) => i.cat === cat && !top.has(i)); if (!its.length) return '';
       const n = its.filter((i) => ticked(i)).length;
       return `<details class="pl-cat" data-cat="${cat}"${closed && closed.has(cat) ? '' : ' open'}><summary><h3>${esc(label)} <span class="pill">${n}/${its.length}</span></h3></summary>${its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}">
-        <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(i.t)}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
-        ${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
+        <input type="checkbox" ${attr}="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}
+        ${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('')}</details>`;
     }).join('');
   }
   const closedCats = (root) => new Set([...root.querySelectorAll('details.pl-cat:not([open])')].map((d) => d.dataset.cat));
@@ -838,6 +838,7 @@
     mountOffline($('#pl-offline'), p, sp, C);
 
     // Top spots board (part 5), then the add ons that other parts build: odds, live and day by day (each optional)
+    drawSources($('#pl-srcs-in'), lg, od, st);
     const X = extCtx(p, sp, lg, od, st, C, H, days);
     m.x = X;
     const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
@@ -887,6 +888,36 @@
     for (const s of S) { s.id = 'tl-' + s.k; s.now = cur === s || (s.also && cur.k === 'hunt'); s.past = !s.now && s.b != null && today > s.b; }
     return { S, home, cur: cur.k, idx: (k) => order.indexOf(home(k)) };
   }
+  // display only (tick keys stay on i.key): the Week 1 online hunting licence line carries the in person Tip and the mail wait note
+  const LIC_ONLINE = /^Week 1: BC hunting licence bought online$/;
+  const itemTx = (i) => (LIC_ONLINE.test(i.t) ? 'Week 1: BC hunting licence bought (Tip: this close to the hunt, buy it in person with the species licence)' : i.t);
+  const itemWhy = (i) => (LIC_ONLINE.test(i.t) ? 'Buy it in person: online orders are mailed, about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ).' + (i.why ? ' ' + i.why : '') : i.why || '');
+  // Licences card: a 99% line must name the official text its lesson quotes (CLAUDE.md scale), else it drops to the band it earns
+  const LIC_SRC = {
+    licences: 'Synopsis page 5 (2 October 2026 edition) and the BC species licences page, read 2026-10-02, as quoted in the lesson',
+    'rb-licences-fees': 'Hunting Licensing Regulation s. 6 (the 2 day wait list has no deer), read 2026-10-02, as quoted in the Licences and tags lesson',
+    'tagging-legal': 'Synopsis page 5, as quoted in the lesson',
+  };
+  function licFix(l) {
+    const t = String(l.t || '');
+    if (/online orders come by mail, about 14 days$/.test(t)) return { t: t.replace(/about 14 days$/, 'about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ). In person you get it at once'), cert: l.cert, src: LIC_SRC[l.lesson] };
+    if (/^Antlerless mule deer: LEH/.test(t)) return { t: t + '. Not matched in the synopsis text: To confirm', cert: Math.min(l.cert != null ? l.cert : 70, 70), src: 'App lesson only' };
+    return { t, cert: l.cert, src: LIC_SRC[l.lesson] || (l.cert >= 95 ? 'App lesson only: To confirm' : '') };
+  }
+  // one Sources legend for the plan view: each fact keeps its own certainty badge; this names the base once
+  function drawSources(el, lg, od, st) {
+    if (!el) return;
+    const yrs = od && Array.isArray(od.rows) ? od.rows.map((r) => +r.year).filter((y) => y) : [];
+    const li = (k, v) => `<li><b>${k}:</b> ${v}</li>`;
+    el.innerHTML = `<ul class="pl-srcs-l">
+      ${li('Seasons, bag limits, legal hours, rules', `${esc((lg && lg.src) || 'BC Hunting and Trapping Regulations Synopsis')}${lg && lg.edition && !/edition/i.test(lg.src || '') ? `, ${esc(lg.edition)} edition` : ''}, page given on each line${lg && lg.checked ? ` (checked ${esc(lg.checked)})` : ''}`)}
+      ${li('Odds', yrs.length ? `BC resident harvest reports for your MU, ${Math.min(...yrs)} to ${Math.max(...yrs)} (${yrs.length} years)` : 'BC resident harvest reports for your MU')}
+      ${li('Spots', `open map data, scored by the app${st && st.dataDate ? `, data dated ${esc(st.dataDate)}` : ''}${st && st.saved ? `, saved ${esc(st.saved)}` : ''}. Candidates only: scout first`)}
+      ${li('Sun and legal light', 'sunrise and sunset worked out on the phone (sun formula, up to about 2 min off the full NOAA algorithm); legal light is 1 hour before sunrise to 1 hour after sunset (synopsis page 11), shown 3 min late at the start and 1 min early at the end')}
+      ${li('Drive and day times', 'estimates from straight line distance and the app day rules')}
+      ${li('Certainty', '95 to 100%: read in the official source. 80 to 94%: official source, some reading. 60 to 79%: reliable secondary source. Tip: opinion. A lesson link holds the full citation')}
+    </ul>`;
+  }
   // where each checklist item belongs on the timeline (by its "Week 1:" style prefix, its list, then its category)
   function tlOfItem(i) {
     const t = String(i.t || '');
@@ -898,8 +929,7 @@
     return { paperwork: 'w1', firearm: 'w1', meat: 'w2', gear: 'hw', clothing: 'hw', vehicle: 'hw', safety: 'hw', plan: 'hw' }[i.cat] || 'hw';
   }
   function tlItems(its, ticked, C) {
-    const tx = (i) => /^Week 1: BC hunting licence bought online$/.test(i.t) ? 'Week 1: BC hunting licence bought (Tip: this close to the hunt, buy it in person with the species licence)' : i.t;
-    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(tx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
+    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(itemTx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${itemWhy(i) || i.lesson ? `<small class="pl-why">${esc(itemWhy(i))}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
   }
   function tlCss() {
     if (document.getElementById('tl-css')) return;
@@ -1032,6 +1062,7 @@
         <div class="gc" id="tl-glance"><h3 class="gc-h">At a glance <span>five answers, tap for detail</span></h3><div id="gc-rows"><p class="muted">Checking your plan...</p></div></div></section>
       ${nav}
       ${T.S.map((s) => stage(s, body[s.k])).join('')}
+      <details class="card pl-srcs" id="pl-srcs"><summary><h2>Sources</h2> <small>where the facts on this plan come from</small></summary><div id="pl-srcs-in"><p class="muted">Loading...</p></div></details>
       <details class="card tl-master" id="tl-master"><summary><h2>Full checklist</h2> <small>every item for this plan, by group</small></summary>${sec('pl-s4', '4. Checklist', 'pl-check', '')}</details>
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
@@ -1119,7 +1150,7 @@
       $('#tl-today-in').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
         ${huntNow ? '<p>Leave, park, sit, legal light, turnaround and the backup spot, on one card.</p><button type="button" class="btn next block" data-g-jump="tl-huntday">Hunt day card</button>'
           : nbNow ? '<p>Go, backup or stay home, the Ready gates and the pack list.</p><button type="button" class="btn next block" data-g-jump="tl-nb">Night before check</button>'
-          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p><div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
+          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p>${x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}<div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
         ${nxt && !nxt.also ? `<p class="tl-next muted">Then: <b>${esc(nxt.label)}</b>, ${esc(nxt.b == null ? 'from ' + tlD(nxt.a) : tlRange(nxt.a, nxt.b))}.</p>` : ''}`;
     };
     const loadGates = async () => { try { G = await gates(p, sp, C); } catch (e) { G = []; } drawSteps(); drawGlance(); };
@@ -1164,6 +1195,7 @@
           ${r('Leave home', tmG(at('leave')))}
           ${P ? r('Park', `${esc(P.spot.name)}: ${where(P)}`) : ''}
           ${r('Sit by', tmG(at('setup')) + (wp != null ? `, walk in about ${fmtMin(wp)}` : ''))}
+          <p class="pl-small tl-opt"><b>Option (Tip):</b> be in your seat 30 to 45 min before legal light starts, so you are still when deer move. If you take it, leave home that much earlier than the time above.</p>
           ${r('Legal light', `${tmG(d.legalStart)} to ${tmG(d.legalEnd)}`)}
           ${r('Turn back', tmG(d.turnaround && d.turnaround.at != null ? d.turnaround.at : at('turn')))}
           ${B ? r('Backup spot', `${esc(B.spot.name)}: ${where(B)}${wb != null ? `, walk in about ${fmtMin(wb)}` : ''}`) : ''}
@@ -1248,6 +1280,7 @@
     wireRundowns($('#pl-spots'), st, p, C);
     mountOffline($('#pl-offline'), p, sp, C);
 
+    drawSources($('#pl-srcs-in'), lg, od, st);
     const X = extCtx(p, sp, lg, od, st, C, H, days);
     m.x = X;
     const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
@@ -1397,7 +1430,7 @@
       ${other.length || migOther.length ? `<details class="card pl-more"><summary>Other seasons for ${esc(sp.name.toLowerCase())} in MU ${esc(p.where.mu)} (${other.length + migOther.length})</summary><ul class="pl-rows">${other.map(rowLi).join('')}${migOther.map(migLi).join('')}</ul></details>` : ''}
       ${lg.bag.length ? `<div class="card"><h3>Bag limits</h3><ul>${lg.bag.map((b) => `<li>${esc(b.t)} <span class="muted pl-small">${b.page ? `Synopsis page ${esc(b.page)}` : esc(b.src || '')}</span> ${C.certBadge(b.cert)}</li>`).join('')}</ul></div>` : ''}
       ${flags.length ? `<div class="card pl-flags"><h3>Red flags and watch outs</h3><ul>${flags.map((f) => `<li class="${f.bad ? 'pl-bad' : ''}">${f.bad ? '<b>Stop:</b> ' : ''}${esc(f.t)}${f.cert != null ? ' ' + C.certBadge(f.cert) : ''}</li>`).join('')}</ul></div>` : ''}
-      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => `<li>${esc(l.t)} ${l.cert != null ? C.certBadge(l.cert) : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>`).join('')}</ul></div>` : ''}
+      ${(sp.licence || []).length ? `<div class="card"><h3>Licences and paperwork</h3><ul>${sp.licence.map((l) => { const f = licFix(l); return `<li>${esc(f.t)} ${f.cert != null ? C.certBadge(f.cert) : ''}${f.src ? ` <span class="pl-src-n">${esc(f.src)}</span>` : ''}${l.lesson && C.hasSession(l.lesson) ? ` <a href="#/s/${esc(l.lesson)}">Lesson</a>` : ''}</li>`; }).join('')}</ul></div>` : ''}
       <div class="card"><h3>Legal shooting hours</h3><p>${hrs ? esc(hrs.text) + ' ' + C.certBadge(hrs.certainty) : '<span class="verify">VERIFY</span>'}</p><p class="muted pl-small">Each day's times are in the day by day plan.</p></div>
       <div class="card"><h3>Rule Book lessons</h3><div class="pl-chips">${lessonLinks(lessons, C) || '<span class="muted">None in the app yet.</span>'}</div>
       ${more ? `<details class="pl-more"><summary>More lessons on ${esc(sp.name.toLowerCase())}</summary><div class="pl-chips">${more}</div></details>` : ''}
