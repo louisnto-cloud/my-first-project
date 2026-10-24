@@ -122,7 +122,7 @@
   "steps": [
     {
       "id": "mark", "title": "Mark the spot", "btn": "Mark the spot",
-      "why": "Most lost deer are lost in the first 10 minutes. A pin and a landmark give you a line to follow.",
+      "why": "Tip: the first minutes after the shot decide most recoveries. A pin and a landmark give you a line to follow.",
       "do": [
         "Rifle reloaded and on safe. Keep watching where it went. Listen for a crash (Tip).",
         "Tap Save my spot above: it pins where you shot from.",
@@ -161,7 +161,7 @@
         "Lost it? Back to the last flag. Circles at 20 m and 40 m, then lanes about 10 m apart, each person in sight of the next (70%, NDA, National Deer Association)."
       ],
       "rules": [
-        { "t": "You must make all reasonable effort to locate, dispatch, retrieve and include a wounded animal in your bag limit. Walking away after 10 minutes is not reasonable effort.", "c": 95, "s": "syn", "p": "page 12" },
+        { "t": "You must make all reasonable effort to locate, dispatch, retrieve and include a wounded animal in your bag limit.", "c": 95, "s": "syn", "p": "page 12" },
         { "t": "No hunting with a light. Tracking with your rifle and a headlamp after legal hours is hunting outside hours and with a light. Do not.", "c": 85, "s": "syn", "p": "page 11 (hours and lights); my reading in the Blood trailing lesson" },
         { "t": "The trail goes into fenced or posted private land: stop. The Trespass Act has no tracking exception. Get the owner's permission, in writing if you can.", "c": 95, "s": "trespass", "p": "s. 2 to 4; BC hunting FAQ" },
         { "t": "Dogs used on deer must be on a leash.", "c": 95, "s": "syn", "p": "page 12" }

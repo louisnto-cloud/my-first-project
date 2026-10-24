@@ -1313,7 +1313,8 @@
      "cat": "plan"
     },
     {
-     "t": "Turn back 1 hour before sunset: days are short",
+     "t": "Turn back by your turnaround time (sunset minus your walk out, on the plan): days are short",
+     "key": "turn back 1 hour before sunset days are short",
      "why": "Tip",
      "lesson": "bush-safety",
      "cat": "plan"

@@ -148,7 +148,7 @@
       <p class="sf-cur" id="sf-cur"></p>
       <div class="sf-grid2">
         ${tp.lat ? '<button class="btn" data-pick="trip">Trip plan point</button>' : ''}
-        <button class="btn" data-pick="gps">My GPS location</button>
+        <button class="btn" data-pick="gps">My GPS (Global Positioning System) location</button>
       </div>
       <label class="f" for="sf-base">A home base</label>
       <select id="sf-base"><option value="">Choose a base</option>${bases().map((b) => `<option value="${esc(b.id)}">${esc(b.name)}</option>`).join('')}</select>
@@ -170,7 +170,7 @@
         else if (k === 'mu') { const mu = normMu($('#sf-mu', root).value); if (!mu) { toast('Type an MU like 2-18.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone. Open the Hunt Map once online, or type a point.`); return; } set({ lat: c.lat, lon: c.lon, mu, label: `Centre of MU ${mu} (approximate)`, src: 'mu' }); }
         else if (k === 'll') { const m = $('#sf-ll', root).value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/); if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { toast('Type latitude, longitude like 50.86, -120.27'); return; } const lat = +m[1], lon = +m[2]; const mu = await muAt(lat, lon); set({ lat, lon, mu: mu || '', label: 'Typed point', src: 'typed' }); }
       } catch (e) { toast(e.message); }
-      finally { if (k === 'gps') { b.disabled = false; b.textContent = 'My GPS location'; } }
+      finally { if (k === 'gps') { b.disabled = false; b.textContent = 'My GPS (Global Positioning System) location'; } }
     }; });
     $('#sf-base', root).onchange = (e) => { const b = bases().find((x) => x.id === e.target.value); if (b) set({ lat: b.lat, lon: b.lon, mu: '', label: b.name + ' (approximate centre)', src: 'base' }); };
   }
@@ -328,7 +328,7 @@
     add('Gear with us', gear.join(', '));
     add('Notes', t.notes);
     add('Contact', [t.contact, t.cphone].filter(Boolean).join(', '));
-    L.push(''); L.push(`Sent by me, ${t.who || ''}, from the Hunt Mentor app on ${new Date().toLocaleString('en-CA', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}.`);
+    L.push(''); { const when = new Date().toLocaleString('en-CA', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).replace(/\.$/, ''); L.push(`Sent${t.who ? ` by ${t.who}` : ''} from the Hunt Mentor app on ${when}.`); }
     return L.join('\n');
   }
   function tripView(D) {
@@ -349,7 +349,7 @@
       <div class="card"><h2>Who</h2>${['who', 'party', 'count'].map((k) => field(F[k])).join('')}</div>
       <div class="card"><h2>Your contact</h2>${['contact', 'cphone', 'cemail'].map((k) => field(F[k])).join('')}</div>
       <div class="card"><h2>Where</h2>${['where', 'mu', 'lat', 'lon'].map((k) => field(F[k])).join('')}
-        <div class="sf-grid2"><button class="btn" id="sf-t-gps">Use my GPS</button><button class="btn" id="sf-t-muc">Use MU centre</button></div>
+        <div class="sf-grid2"><button class="btn" id="sf-t-gps">Use my GPS (Global Positioning System)</button><button class="btn" id="sf-t-muc">Use MU centre</button></div>
         <p class="muted">Tip: drop the point where you will park or start walking. The Hunt Map shows latitude and longitude when you tap a spot.</p>
         ${field(F.vehicle)}${field(F.parked)}</div>
       <div class="card"><h2>When</h2>${['start', 'ret', 'overdue'].map((k) => field(F[k])).join('')}

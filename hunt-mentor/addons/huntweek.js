@@ -49,7 +49,7 @@
     const two = !p || p.party !== 'solo';
     return [
       { id: 'g14', from: 14, to: 8, h: '2 weeks out', sub: '14 to 8 days before', items: [
-        { id: 'lic-hunt', t: 'BC hunting licence bought. Electronic only: buy online. $32 plus GST (Goods and Services Tax).', c: 99, s: `${SYN}, pages 5 and 8 (Licences and tags lesson)`, links: [L('licences', /hunting licence/i, 'Licences and tags')] },
+        { id: 'lic-hunt', t: 'BC hunting licence bought ($32 plus GST, Goods and Services Tax). Close to the hunt, buy it in person with the species licence: mail can take weeks.', c: 99, s: `${SYN}, pages 5 and 8 (Licences and tags lesson)`, links: [L('licences', /hunting licence/i, 'Licences and tags')] },
         { id: 'lic-deer', t: 'Deer species licence for each hunter, bought in person. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another. $15 plus GST. A black tailed deer uses the mule deer licence.', c: 99, s: `${SYN}, pages 5 and 8; BC species licences page (Licences and tags lesson)`, links: [L('licences', /deer tags/i, 'Deer tags')] },
         { id: 'lic-fwid', t: 'FWID (Fish and Wildlife ID) number known, photo ID in your wallet. No card needed.', c: 95, s: 'BC Fish and Wildlife ID page (Licences and tags lesson)', links: [L('licences', /FWID/i, 'Your hunter number')] },
         two && { id: 'lic-partner', t: `With your ${(p && p.partner) || 'partner'}: they buy their own licence and deer licence. No sharing.`, c: 99, s: `${SYN}, page 11 item 2 (Licences and tags lesson)`, links: [L('licences', /deer tags/i, 'Licences and tags')] },
@@ -95,7 +95,7 @@
         { id: 'legal', t: 'In doubt about a shot? Run Legal to shoot? in Field Mode.', tip: true, links: [['#/field/legal', 'Legal to shoot?']] },
       ] },
       { id: 'gA', from: -1, to: -999, h: 'After the shot', sub: 'Read it now, use it then', items: [
-        { id: 'wait', t: 'Stay still, watch, mark where it stood. Wait about 30 minutes before you follow.', tip: true, links: [L('after-the-shot', /wait/i, 'After the shot'), L('blood-trailing', null, 'Blood trailing')] },
+        { id: 'wait', t: 'Stay still, watch, mark where it stood. How long to wait depends on the hit: at least 30 minutes, much longer for a liver or gut hit (see After the shot, step 2).', tip: true, links: [L('after-the-shot', /wait/i, 'After the shot'), L('blood-trailing', null, 'Blood trailing')] },
         { id: 'cancel', t: 'Kill, cancel the licence, then touch the deer.', c: 99, s: `${SYN}, page 11`, links: [['#/field/c/tag', 'Tag card']] },
         { id: 'sex', t: 'Leave the unskinned tail and a testicle or part of the penis attached.', c: 99, s: `${SYN}, page 15 (Rule Book: after the kill)`, links: [L('rb-after-the-kill', /evidence of sex/i, 'Evidence of sex')] },
         { id: 'cool', t: 'Cool it: game bags, shade, no plastic or tarp on a warm carcass. Cooler the same day.', c: 80, s: 'Meat care lesson', links: [L('meat-care', /cooling/i, 'Cooling in the field'), ['#/field/c/dress', 'Field dressing card']] },
