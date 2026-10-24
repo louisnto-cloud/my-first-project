@@ -212,9 +212,13 @@
       ${x.fit ? `<div class="pll-small">${esc(x.fit.t)}</div>` : ''}
       ${(x.cautions || []).map((n) => `<div class="pll-small pld-caution">${n.partial ? 'Closure further up the road' : 'Caution'}, ${esc(n.why)}: ${esc(n.road)}: ${esc(n.t)}${n.partial ? ' Check your spot is before that km.' : ''}</div>`).join('')}
       <div class="pld-acts no-print"><a class="btn" href="${mapLink(x.spot)}">Map</a><a class="btn" href="${gdir(parkOf(x.spot) || x.spot)}" target="_blank" rel="noopener">Directions</a></div></div>`;
+  // "Saturday, November 14": the weekday is the heading, the date sits after it
+  const dayHead = (label) => { const m = String(label).match(/^(\w+),?\s+(.*)$/); return m ? `<b class="pld-wd">${esc(m[1])}</b> <b>${esc(m[2])}</b>` : `<b>${esc(label)}</b>`; };
+  // the legal light margin rule, said once for every day and time below
+  const LEGEND = 'Times: sit = legal light start + 3 min margin; turn back by legal light end \u2212 1 min. The legal light times shown already include both margins.';
   function dayHtml(d, i) {
     if (d.kind === 'nolight') return `<div class="card"><h3>Day ${i + 1}: ${esc(d.label)}</h3><p class="muted">Sun times are not ready on this screen, so no hour by hour plan. Open the Home page once, then come back.</p></div>`;
-    const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(d.label)}</b>${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
+    const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow">${dayHead(d.label)}${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
     if (d.kind === 'closed') return `<details class="card pl-day pl-closed pld-day">${head}<p><b>No open season for you on this day.</b> Scout, sight in or rest. No hunting.</p></details>`;
     const now = Date.now();
     const steps = d.steps.map((s) => `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b>${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small">${s.t}</span>
@@ -236,8 +240,9 @@
     css();
     if (!days || !days.length) return '<div class="card"><h3>Hour by hour</h3><p class="muted">No days in this plan.</p></div>';
     return `<div class="pld"><p class="pll-law">Study aid only. The official regulations are the law.</p>
+      <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
       ${days.map(dayHtml).join('')}
-      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; start shown 3 min late and end 1 min early on purpose, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
+      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; margins as in the line at the top, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {
     const L = [];
@@ -312,7 +317,7 @@
 .pld-spot{border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0}.pld-sl2{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
 .pld-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.pld-acts .btn{min-height:44px}.pld-caution{color:var(--bad-ink)}
 .pld-block,.pld-note{background:var(--warn-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pld-why{margin:4px 0 8px}.pld-roles{margin-top:8px}
-.pld summary{min-height:44px}.pll-small{font-size:14px}.pll-law{font-size:14px;color:var(--muted)}
+.pld summary{min-height:44px}.pld-wd{font-size:18px}.pld-legend{font-size:14px;background:var(--sel-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pll-small{font-size:14px}.pll-law{font-size:14px;color:var(--muted)}
 @media print{.pld-day{break-inside:avoid}.pld details,.pld-day{display:block}}`;
     document.head.appendChild(st);
   }

@@ -235,6 +235,7 @@
 
   const CSS = `<style id="po-css">
 .po .po-sub{font-size:14px;color:var(--muted);margin:2px 0 8px}
+.po .po-how>summary{min-height:44px;font-weight:700;cursor:pointer}.po .po-h4{margin:14px 0 4px;font-size:16px}.po .po-h5{margin:10px 0 2px;font-size:15px}
 .po .po-bar{margin:12px 0}
 .po .po-bar-h{display:flex;justify-content:space-between;gap:8px;font-size:16px}
 .po .po-bar-h b{font-family:var(--mono);font-weight:600;white-space:nowrap}
@@ -329,12 +330,14 @@
     const yrs = `<div class="card"><h3>5 years of reports</h3>${yearChart(res)}<p class="po-sub">Trend: ${esc(res.trend.text)}</p>
       <p class="po-sub">Deer taken a year: about ${Math.round(b.killsPerYear)}. Hunters a year: about ${Math.round(b.huntersPerYear)}. Hunter days a year: about ${Math.round(b.hunterDaysPerYear)}.</p></div>`;
     const spots = spotsHtml(res);
-    const meth = `<details class="card"><summary>Method and sources</summary><ul class="po-meth">${b.method.map((t) => `<li>${tx(t)}</li>`).join('')}
+    const meth = `<h4 class="po-h4">Method and sources</h4><ul class="po-meth">${b.method.map((t) => `<li>${tx(t)}</li>`).join('')}
       <li>Spot estimates: the range above times the multipliers shown on each spot, each day on its own, all together capped at x ${CAP.low} to x ${CAP.high}. Estimate (Tip), not official.</li>
       <li>${esc(res.seen.text)} <span class="verify">VERIFY</span></li></ul>
       <div class="tbl"><table><thead><tr><th>Year</th><th>Hunters</th><th>Deer</th><th>Days</th><th>A day</th></tr></thead><tbody>${res.years.map((y) => `<tr><td>${y.year}</td><td>${y.hunters != null ? y.hunters : 'n/a'}</td><td>${y.kills != null ? y.kills : 'n/a'}</td><td>${y.days != null ? y.days : 'n/a'}</td><td>${y.perDay != null ? P1(y.perDay) : 'left out'}</td></tr>`).join('')}</tbody></table></div>
-      <p class="po-sub">Source: <a href="${esc(res.source.url)}" target="_blank" rel="noopener">${esc(res.source.name)}</a>, checked ${esc(res.source.checked || '')} ${badge(res.source.cert)}. Rut: ${lessonLink(L.rut, 'Masterclass 4: The rut')}. Pressure: ${lessonLink(L.pressure, 'Hunting pressure')}.</p></details>`;
-    return `${head}${picture}${yrs}${lev}${spots}${meth}</div>`;
+      <p class="po-sub">Source: <a href="${esc(res.source.url)}" target="_blank" rel="noopener">${esc(res.source.name)}</a>, checked ${esc(res.source.checked || '')} ${badge(res.source.cert)}. Rut: ${lessonLink(L.rut, 'Masterclass 4: The rut')}. Pressure: ${lessonLink(L.pressure, 'Hunting pressure')}.</p>`;
+    // headline numbers stay on the card; the years, the per spot multipliers and the method fold under one heading
+    const how = `<details class="card po-how"><summary>How these odds are worked out</summary>${yrs.replace(/^<div class="card">/, '<div class="po-in">')}${spotsWhy(res)}${meth}</details>`;
+    return `${head}${picture}${lev}${spots}${how}</div>`;
   }
 
   function levHtml(lv) {
@@ -347,11 +350,23 @@
     if (!sp.length) return `<div class="card"><h3>Spot estimates</h3><p class="muted">No candidate spots for this plan yet, so no spot estimate.</p></div>`;
     const N = res.base.planDays;
     const rows = sp.map((s, i) => `<tr><td>${i + 1}. ${esc(s.name)}<br><span class="po-sub">${fx(s.factor)}${s.capped ? ' (capped)' : ''}</span></td><td><b>${P0(s.estimate.mid)}</b><br><span class="po-sub">${R0(s.estimate)}</span></td></tr>`).join('');
-    const det = sp.map((s, i) => `<details><summary>${i + 1}. ${esc(s.name)}: why ${P0(s.estimate.mid)}</summary><ul>${s.adjustments.map((a) => `<li><b>${fx(a.factor)}</b> ${tx(a.why)} <span class="po-sub">${esc(a.source)}</span> ${a.cert != null ? badge(a.cert) : '<span class="po-tag">not counted</span>'}${a.lesson ? ` ${lessonLink(a.lesson, 'Lesson')}` : ''}</li>`).join('')}</ul>${s.detail ? '' : '<p class="po-sub">Spot detail not saved on this phone, so the map index was used.</p>'}</details>`).join('');
     return `<div class="card po-spt"><h3>Spot estimates <span class="po-tag">estimate, Tip</span></h3>
       <p class="po-sub">The official MU range for your ${N} day${N === 1 ? '' : 's'}, moved by each spot's multipliers. Not official, not precise. Scout first.</p>
       ${sp.length > 1 && new Set(sp.map((s) => P0(s.estimate.mid))).size === 1 ? '<p class="po-sub"><b>These estimates do not separate the spots.</b> They come out the same, so pick on scouting, wind, walk and access, not on this number.</p>' : ''}
-      <div class="tbl"><table><thead><tr><th>Spot and multiplier</th><th>Your ${N} day${N === 1 ? '' : 's'}</th></tr></thead><tbody>${rows}</tbody></table></div>${det}</div>`;
+      <div class="tbl"><table><thead><tr><th>Spot and multiplier</th><th>Your ${N} day${N === 1 ? '' : 's'}</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="po-sub">Why each spot gets its number: How these odds are worked out, below.</p></div>`;
+  }
+  // per spot "why": the multipliers every spot shares are listed once, then only what differs per spot
+  function spotsWhy(res) {
+    const sp = res.spots || [];
+    if (!sp.length) return '';
+    const adj = (a) => `<li><b>${fx(a.factor)}</b> ${tx(a.why)} <span class="po-sub">${esc(a.source)}</span> ${a.cert != null ? badge(a.cert) : '<span class="po-tag">not counted</span>'}${a.lesson ? ` ${lessonLink(a.lesson, 'Lesson')}` : ''}</li>`;
+    const sig = (a) => `${a.factor}|${a.why}|${a.source}|${a.cert}`;
+    const shared = sp.length > 1 ? (sp[0].adjustments || []).filter((a) => sp.every((s) => (s.adjustments || []).some((b) => sig(b) === sig(a)))) : [];
+    const sk = new Set(shared.map(sig));
+    const one = sp.map((s, i) => { const own = (s.adjustments || []).filter((a) => !sk.has(sig(a)));
+      return `<h5 class="po-h5">${i + 1}. ${esc(s.name)}: why ${P0(s.estimate.mid)}</h5>${own.length ? `<ul>${own.map(adj).join('')}</ul>` : '<p class="po-sub">Only the shared multipliers above.</p>'}${s.detail ? '' : '<p class="po-sub">Spot detail not saved on this phone, so the map index was used.</p>'}`; }).join('');
+    return `<h4 class="po-h4">Why each spot gets its number</h4>${shared.length ? `<p class="po-sub"><b>Same for all ${sp.length} spots:</b></p><ul>${shared.map(adj).join('')}</ul>` : ''}${one}`;
   }
 
   window.HMPlanOdds = { compute, html, _rutFactor: rutFactor, _over: over };
