@@ -287,7 +287,7 @@
     <div class="panel">
       <h2>Import SKUs <span class="hint">(paste from Excel/CSV)</span></h2>
       <p class="h-sub">Columns: Flavour, Format, Units/case, CP/case, Disc %, COGS Direct, COGS Indirect, A&amp;P/case, Volume. One SKU per line (comma or tab separated). A header row is fine. This matches Export CSV, so you can round-trip.</p>
-      <textarea id="importBox" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:13px;background:var(--amber)" placeholder="Pineapple, Singles, 12, 15.00, 7, 6.53, 0.72, 1.20, 15000"></textarea>
+      <textarea id="importBox" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:13px;background:var(--amber)" placeholder="Raspberry, Singles, 12, 15.00, 7, 6.53, 0.72, 1.20, 15000"></textarea>
       <div style="margin-top:10px"><button class="tbtn" onclick="parseImport()">Load SKUs from paste</button> <span class="hint" id="importMsg"></span></div>
     </div>
     <div class="grid2">
@@ -312,11 +312,11 @@
 <script>
 // ---------------- model data (mirrors the Excel exactly) ----------------
 const SKUS = [
-  {fmt:"Singles", flav:"Pineapple",    units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
-  {fmt:"Singles", flav:"Passionfruit", units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
+  {fmt:"Singles", flav:"Raspberry",    units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:15000},
+  {fmt:"Singles", flav:"Passion Fruit Pineapple", units:12, cp:15.00, disc:0.07, cosd:6.53, cosi:0.72, ap:1.20, vol:11000},
   {fmt:"Singles", flav:"Lime Lemon",   units:12, cp:14.00, disc:0.07, cosd:6.28, cosi:0.70, ap:1.20, vol:9000},
-  {fmt:"4-Pack",  flav:"Pineapple",    units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
-  {fmt:"4-Pack",  flav:"Passionfruit", units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
+  {fmt:"4-Pack",  flav:"Raspberry",    units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:6000},
+  {fmt:"4-Pack",  flav:"Passion Fruit Pineapple", units:6,  cp:33.00, disc:0.08, cosd:14.86, cosi:1.44, ap:2.40, vol:5000},
   {fmt:"4-Pack",  flav:"Lime Lemon",   units:6,  cp:31.00, disc:0.08, cosd:14.36, cosi:1.40, ap:2.40, vol:4000},
 ];
 const RETAIL = {margin:0.35};  // retailer margin used for suggested shelf price

@@ -5,7 +5,7 @@ Single source of truth (Assumptions) -> formula-driven scenario P&Ls
 (Low/Base/High/Stretch) -> Monthly phasing -> Dashboard -> Sensitivity ->
 Checks, with Cover / Guide / Review Log governance tabs.
 
-3 flavours (Pineapple, Passionfruit, Lime Lemon) x (Singles 12-ct + 4-Pack) = 6 SKUs.
+3 flavours (Raspberry, Passion Fruit Pineapple, Lime Lemon) x (Singles 12-ct + 4-Pack) = 6 SKUs.
 """
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -22,7 +22,7 @@ LINE = "Sparkling Daily"
 VERSION = "v2.0"
 BUILT = "2026-06-05"
 
-FLAVOURS = ["Pineapple", "Passionfruit", "Lime Lemon"]
+FLAVOURS = ["Raspberry", "Passion Fruit Pineapple", "Lime Lemon"]
 FORMATS = ["Singles", "4-Pack"]
 SKU_COLS = ["C", "D", "E", "F", "G", "H"]          # 6 SKU columns
 TOT = "I"                                           # total column
@@ -34,11 +34,11 @@ SCEN = ["Low", "Base", "High", "Stretch"]
 SKU_DATA = [
     # fmt, flavour, units, cp, disc%, ingr, pack, mfg, frt, wh, apc, apt, aps, vol
     # Singles = case of 12 single cans;  4-Pack = case of 6 four-packs (24 cans)
-    ("Singles", "Pineapple",    12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 15000),
-    ("Singles", "Passionfruit", 12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 11000),
+    ("Singles", "Raspberry",    12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 15000),
+    ("Singles", "Passion Fruit Pineapple", 12, 15.00, 0.07, 2.16, 2.64, 1.44, 0.29, 0.72, 0.36, 0.60, 0.24, 11000),
     ("Singles", "Lime Lemon",   12, 14.00, 0.07, 2.06, 2.54, 1.40, 0.28, 0.70, 0.36, 0.60, 0.24, 9000),
-    ("4-Pack",  "Pineapple",     6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 6000),
-    ("4-Pack",  "Passionfruit",  6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 5000),
+    ("4-Pack",  "Raspberry",     6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 6000),
+    ("4-Pack",  "Passion Fruit Pineapple",  6, 33.00, 0.08, 4.32, 7.08, 2.88, 0.58, 1.44, 0.72, 1.20, 0.48, 5000),
     ("4-Pack",  "Lime Lemon",    6, 31.00, 0.08, 4.12, 6.88, 2.80, 0.56, 1.40, 0.72, 1.20, 0.48, 4000),
 ]
 SKU_KEYS = ["units", "cp", "disc", "ingr", "pack", "mfg", "frt", "wh", "apc", "apt", "aps", "vol"]
@@ -673,7 +673,7 @@ def build_cover(ws):
 
     meta = [
         ("Purpose", "Model FY net sales, margin and EBITDA for Sparkling Daily across pricing & volume scenarios."),
-        ("Scope", "3 flavours (Pineapple, Passionfruit, Lime Lemon) × Singles (12-ct) + 4-Pack = 6 SKUs; one fiscal year."),
+        ("Scope", "3 flavours (Raspberry, Passion Fruit Pineapple, Lime Lemon) × Singles (12-ct) + 4-Pack = 6 SKUs; one fiscal year."),
         ("Fiscal year", FY), ("Version", VERSION), ("Built", BUILT),
         ("Currency", "CDN $"), ("Owner", "Commercial Finance"),
         ("Status", "DRAFT — figures are placeholders pending real inputs"),
@@ -791,7 +791,7 @@ def build_review_log(ws):
         ("Inputs vs calcs indistinguishable.",
          "Colour coding: yellow = input, blue tint = calculated total; freeze panes throughout."),
         ("Flavour names were placeholders.",
-         "Set to Pineapple, Passionfruit, Lime Lemon (editable on Assumptions)."),
+         "Set to Raspberry, Passion Fruit Pineapple, Lime Lemon (editable on Assumptions)."),
         ("Price and volume were independent — raising CP with no volume loss is unrealistic.",
          "Added optional price elasticity; volume now responds to price. Pricing Lab finds the best CP."),
         ("Workbook opened on a dense tab — not approachable.",
@@ -1185,7 +1185,7 @@ wb._sheets.sort(key=lambda s: order.index(s.title) if s.title in order else 99)
 def dn(name, sheet, cell):
     ref = f"'{sheet}'!{cell}"
     wb.defined_names.add(DefinedName(name, attr_text=ref))
-dn("CP_Pineapple_Singles", "Assumptions", f"$C${A['cp']}")
+dn("CP_Raspberry_Singles", "Assumptions", f"$C${A['cp']}")
 dn("BaseVolume_Total", "Assumptions", f"$C${A['vol']}:$H${A['vol']}")
 dn("TaxRate", "Assumptions", f"$C${A['co_tax']}")
 dn("LogisticsPct", "Assumptions", f"$C${A['co_log_pct']}")
