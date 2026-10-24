@@ -14,7 +14,7 @@
 (function () {
   'use strict';
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const tx = (s) => esc(s).replace(/(\d)-(\d)/g, '$1&#8209;$2'); // keep codes like 2-18 on one line
+  const tx = (s) => esc(s).replace(/(\d+(?:-\d+)+)/g, '<span style="white-space:nowrap">$1</span>'); // keep codes like 2-18 and dates on one line, with a plain hyphen
   const badge = (v) => (v == null ? '<span class="verify">VERIFY</span>' : `<span class="cert ${v >= 95 ? 'c-hi' : v >= 80 ? 'c-mid' : v >= 60 ? 'c-lo' : 'c-tip'}" title="Certainty ${v}%">${v}%</span>`);
   const cache = {};
   const getJSON = (u) => (cache[u] = cache[u] || fetch(u, { credentials: 'omit' }).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); }).catch((e) => { delete cache[u]; throw e; }));
@@ -36,7 +36,7 @@
   const rng = (lo, hi) => ({ low: lo, mid: (lo + hi) / 2, high: hi });
   const dRange = (a, b) => { const out = []; if (!a) return out; b = b || a; for (let x = a; x <= b && out.length < 62;) { out.push(x); const [y, m, d] = x.split('-').map(Number); x = new Date(Date.UTC(y, m - 1, d + 1)).toISOString().slice(0, 10); } return out; };
   const dLabel = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
-  const partyN = (p) => (p === 'two' ? 2 : p === 'group' ? 3 : 1);
+  const partyN = (p, plan) => (p === 'two' ? (plan && plan.ask && plan.ask.partner && plan.ask.partner.tag === false ? 1 : 2) : p === 'group' ? 3 : 1); // same rule as plan.js tagsN: only hunters with a tag count
   const regionOf = (mu) => String(mu || '').split('-')[0];
 
   // ---------- rut timing (Masterclass 4, coast black tailed deer only) ----------
@@ -104,7 +104,7 @@
     const perDay = R(p), season = R(s);
     const days = dRange(plan.from, plan.to);
     const N = Number.isFinite(plan.huntDays) ? plan.huntDays : days.length;
-    const n = partyN(plan.party);
+    const n = partyN(plan.party, plan);
     const sum = (k) => g.reduce((a, r) => a + r[k], 0);
     const base = {
       successSeason: { low: season.low, mid: season.mid, high: season.high },
@@ -130,9 +130,9 @@
       `Range: low = the worst year, likely = the middle year, high = the best year${widen ? `; widened (low x ${WIDEN.low}, high x ${WIDEN.high}) because ${flags.join('; ')}` : ''}.`,
       `Season success = deer taken / hunters, same range rule: ${g.map((r) => `${r.year}: ${pct(r.kills / r.hunters, 1)}`).join('; ')}.`,
       `Days per deer = 1 / chance per day (${Math.round(base.daysPerDeer.low)} to ${Math.round(base.daysPerDeer.high)}, likely ${Math.round(base.daysPerDeer.mid)}).`,
-      `Your ${N} day${N === 1 ? '' : 's'}: chance = 1 minus (1 minus chance per day) to the power ${N}. Likely: 1 − (1 − ${perDay.mid.toFixed(4)})^${N} = ${pct(base.overPlanDays.mid, 1)}.`,
+      `Your ${N} day${N === 1 ? '' : 's'}: chance = 1 minus (1 minus chance per day) to the power ${N}. Likely: 1 minus (1 minus ${perDay.mid.toFixed(4)})^${N} = ${pct(base.overPlanDays.mid, 1)}.`,
       'Assumes an average hunter on an average season day, every day the same and independent. Your skill, your spot and your dates move it (see the estimates).',
-      n > 1 ? `Party of ${n}: 1 − (1 − p)^(${N} x ${n}), as if each hunter hunts apart at the average rate. Hunting side by side counts for less (Tip).` : null,
+      n > 1 ? `Party of ${n}: 1 minus (1 minus p)^(${N} x ${n}), as if each hunter hunts apart at the average rate. Hunting side by side counts for less (Tip).` : null,
       nonRes.length ? `Non resident rows exist (${nonRes.map((r) => `${r.year}: ${r.hunters} hunter${r.hunters === 1 ? '' : 's'}, ${r.kills == null ? 'kills not published' : r.kills + ' deer'}, ${r.days} days`).join('; ')}). They come from guide outfitter reports, a different count, and are under 20 hunters, so they are shown but not added.` : 'No non resident rows for this MU and species, so residents only.',
       'Hunt year runs 1 April to 31 March. The MU rate covers the whole MU, every spot and every week of the season.',
     ].filter(Boolean);
@@ -148,6 +148,7 @@
 
     out.levers = levers(sp, mu, base, plan);
     out.spots = await spotEstimates(plan, sp, mu, base, spotsList || [], days);
+    out.tagAssumed = plan.party === 'two' && !(plan.ask && plan.ask.partner && typeof plan.ask.partner.tag === 'boolean');
     out.seen = { verify: true, text: 'Deer you might see a day: VERIFY. No deer density count for these MUs was found in the lessons, so the app gives no number.' };
     return out;
   }
@@ -208,7 +209,7 @@
     const out = [];
     if (base) {
       const N = base.planDays || 0, add = (k) => over(base.perDay.mid, N + k) - over(base.perDay.mid, N);
-      out.push({ name: 'More days', effect: `At the likely rate, each extra day adds about ${(base.perDay.mid * 100).toFixed(1)} points: ${N + 1} days ${(over(base.perDay.mid, N + 1) * 100).toFixed(0)}%, ${N + 3} days ${(over(base.perDay.mid, N + 3) * 100).toFixed(0)}%, ${N + 8} days ${(over(base.perDay.mid, N + 8) * 100).toFixed(0)}% (plus ${(add(8) * 100).toFixed(0)} points). Average hunter maths.`, source: 'BC harvest statistics and the method below', cert: 80 });
+      out.push({ name: 'More days', effect: `At the likely rate, day ${N + 1} adds about ${(add(1) * 100).toFixed(1)} points, each day after a bit less: ${N + 1} days ${(over(base.perDay.mid, N + 1) * 100).toFixed(0)}%, ${N + 3} days ${(over(base.perDay.mid, N + 3) * 100).toFixed(0)}%, ${N + 8} days ${(over(base.perDay.mid, N + 8) * 100).toFixed(0)}% (plus ${(add(8) * 100).toFixed(0)} points). Average hunter maths.`, source: 'BC harvest statistics and the method below', cert: 80 });
     }
     const coast = isCoastDeer(sp, mu);
     if (coast) {
@@ -319,10 +320,10 @@
     const scale = Math.max(0.5, Math.ceil(Math.max(b.successSeason.high, b.overPlanDays.high, ...(res.spots || []).map((s) => s.estimate.high)) * 4) / 4);
     const dates = b.dates && b.dates.length ? `${dLabel(b.dates[0])}${b.dates.length > 1 ? ` to ${dLabel(b.dates[b.dates.length - 1])}` : ''}` : '';
     const picture = `<div class="card"><h3>Your odds: ${where}</h3>
-      <p class="po-sub">Official base, an average hunter. Range = worst year to best year, line = the middle year. Scale 0 to ${Math.round(scale * 100)}%.</p>
+      <p class="po-sub">Official base, an average hunter. Range = worst year to best year, line = the middle year (median of the 5 reports). The other odds cards on this plan use the same base. Scale 0 to ${Math.round(scale * 100)}%.</p>
       ${bar('po-b1', 'Whole season, one hunter', b.successSeason, scale, false, `${P0(b.successSeason.mid)} (${R0(b.successSeason)})`, `Average hunter spent ${b.daysPerHunter.toFixed(1)} days.`)}
       ${bar('po-b2', 'One hunter day', b.perDay, scale, false, `${P1(b.perDay.mid)} (${R1(b.perDay)})`, `About 1 deer per ${Math.round(b.daysPerDeer.mid)} hunter days (${Math.round(b.daysPerDeer.low)} to ${Math.round(b.daysPerDeer.high)}).`)}
-      ${N ? bar('po-b3', `Your ${N} day${N === 1 ? '' : 's'}${dates ? `, ${esc(dates)}` : ''}`, b.overPlanDays, scale, true, `${P0(b.overPlanDays.mid)} (${R0(b.overPlanDays)})`, b.partyOverPlanDays ? `Someone in your party of ${b.party}: about ${P0(b.partyOverPlanDays.mid)} (${R0(b.partyOverPlanDays)}), if you hunt apart (Tip).` : '') : '<p>No dates in this plan yet.</p>'}
+      ${N ? bar('po-b3', `Your ${N} day${N === 1 ? '' : 's'}${dates ? `, ${esc(dates)}` : ''}`, b.overPlanDays, scale, true, `${P0(b.overPlanDays.mid)} (${R0(b.overPlanDays)})`, b.partyOverPlanDays ? `Someone in your party of ${b.party}: about ${P0(b.partyOverPlanDays.mid)} (${R0(b.partyOverPlanDays)}), if you hunt apart, at the median year rate (Tip).${res.tagAssumed ? ' Assumption: your partner carries a tag; change it in Your answers.' : ''}` : '') : '<p>No dates in this plan yet.</p>'}
       ${N ? dots(b.overPlanDays, N) : ''}
       <p class="po-sub">Assumes an average hunter. Source: BC harvest statistics ${badge(res.source.cert)}. Data confidence: <b>${esc(b.confidence)}</b>${b.widened ? ' (range widened, see method)' : ''}.</p></div>`;
     const yrs = `<div class="card"><h3>5 years of reports</h3>${yearChart(res)}<p class="po-sub">Trend: ${esc(res.trend.text)}</p>
@@ -349,6 +350,7 @@
     const det = sp.map((s, i) => `<details><summary>${i + 1}. ${esc(s.name)}: why ${P0(s.estimate.mid)}</summary><ul>${s.adjustments.map((a) => `<li><b>${fx(a.factor)}</b> ${tx(a.why)} <span class="po-sub">${esc(a.source)}</span> ${a.cert != null ? badge(a.cert) : '<span class="po-tag">not counted</span>'}${a.lesson ? ` ${lessonLink(a.lesson, 'Lesson')}` : ''}</li>`).join('')}</ul>${s.detail ? '' : '<p class="po-sub">Spot detail not saved on this phone, so the map index was used.</p>'}</details>`).join('');
     return `<div class="card po-spt"><h3>Spot estimates <span class="po-tag">estimate, Tip</span></h3>
       <p class="po-sub">The official MU range for your ${N} day${N === 1 ? '' : 's'}, moved by each spot's multipliers. Not official, not precise. Scout first.</p>
+      ${sp.length > 1 && new Set(sp.map((s) => P0(s.estimate.mid))).size === 1 ? '<p class="po-sub"><b>These estimates do not separate the spots.</b> They come out the same, so pick on scouting, wind, walk and access, not on this number.</p>' : ''}
       <div class="tbl"><table><thead><tr><th>Spot and multiplier</th><th>Your ${N} day${N === 1 ? '' : 's'}</th></tr></thead><tbody>${rows}</tbody></table></div>${det}</div>`;
   }
 

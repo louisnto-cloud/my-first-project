@@ -180,7 +180,11 @@
     const g = good(rows);
     if (!g.length) return { thin: true, muRows, src: H.source, url: H.url };
     const sH = g.reduce((a, r) => a + r.hunters, 0), sK = g.reduce((a, r) => a + r.kills, 0), sD = g.reduce((a, r) => a + r.days, 0);
-    return { scope, rows, muRows, region: regionOf(mu), pct: (sK / sH) * 100, dph: sD / sH, dpk: sK ? sD / sK : null, perDay: sD ? sK / sD : 0, years: g.length, src: H.source, url: H.url, checked: H.checked, notes: H.notes };
+    // one base across the plan: the middle year of the reports, the same as the Your odds card (plan-odds.js); the pooled average is kept as a note
+    const midOf = (xs) => { const v = xs.filter((x) => isFinite(x)).sort((x, y) => x - y); return v.length ? v[Math.floor((v.length - 1) / 2)] : null; };
+    const mPer = midOf(g.filter((r) => r.days > 0).map((r) => r.kills / r.days)), mPct = midOf(g.filter((r) => r.hunters > 0).map((r) => (r.kills / r.hunters) * 100));
+    const pooled = { pct: (sK / sH) * 100, dpk: sK ? sD / sK : null, perDay: sD ? sK / sD : 0 };
+    return { scope, rows, muRows, region: regionOf(mu), pooled, pct: mPct != null ? mPct : pooled.pct, dph: sD / sH, dpk: mPer ? 1 / mPer : pooled.dpk, perDay: mPer != null ? mPer : pooled.perDay, years: g.length, src: H.source, url: H.url, checked: H.checked, notes: H.notes };
   }
   const partyN = (p) => (p === 'two' ? 2 : p === 'group' ? 3 : 1);
 
@@ -855,6 +859,389 @@
     // window.HMPlanLive (addons/plan-live.js): fetch(ctx) then html(result, ctx); window.HMPlanDays (addons/plan-days.js): build(ctx) then html(result, ctx)
     await drawLive($('#pl-live'), X, m, alive, board, C);
   }
+  // ---------- plan view v2 (countdown, time led): Today first, then the timeline from today to the drive home ----------
+  // Every part of the old view is placed on the timeline at the moment it matters; ids, storage keys and tick keys are unchanged.
+  const TL_DAY = 864e5;
+  const tlAdd = (iso, n) => new Date(Date.parse(iso + 'T00:00:00Z') + n * TL_DAY).toISOString().slice(0, 10);
+  const tlDiff = (a, b) => Math.round((Date.parse(a + 'T00:00:00Z') - Date.parse(b + 'T00:00:00Z')) / TL_DAY);
+  const tlD = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  const tlRange = (a, b) => a === b ? tlD(a) : `${tlD(a)} to ${tlD(b)}`;
+  // the stages, in order; a stage with no days left is dropped and its steps move to the next stage
+  function tlStages(p, today) {
+    const from = p.from, to = p.to || p.from, hw = tlAdd(from, -7), nb = tlAdd(from, -1);
+    const S = [];
+    if (today < hw) {
+      const e1 = tlAdd(today, 6) < tlAdd(hw, -1) ? tlAdd(today, 6) : tlAdd(hw, -1);
+      S.push({ k: 'w1', chip: 'This week', label: 'This week', a: today, b: e1 });
+      if (e1 < tlAdd(hw, -1)) { const a2 = tlAdd(e1, 1), b2 = tlAdd(hw, -1), long = tlDiff(b2, a2) > 6; S.push({ k: 'w2', chip: long ? 'Before hunt week' : 'Next week', label: long ? 'Before hunt week' : 'Next week', a: a2, b: b2 }); }
+    }
+    if (nb > hw && today < nb) S.push({ k: 'hw', chip: 'Hunt week', label: 'Hunt week', a: hw < today ? today : hw, b: tlAdd(nb, -1) });
+    if (today <= nb) S.push({ k: 'nb', chip: 'Night before', label: 'The night before', a: nb, b: nb });
+    S.push({ k: 'hunt', chip: 'Hunt days', label: 'Hunt days, hour by hour', a: from, b: to });
+    S.push({ k: 'shot', chip: 'After the shot', label: 'After the shot', a: from, b: to, also: true });
+    S.push({ k: 'after', chip: 'After the trip', label: 'After the trip', a: tlAdd(to, 1), b: null });
+    const order = ['w1', 'w2', 'hw', 'nb', 'hunt', 'shot', 'after'];
+    const has = new Set(S.map((s) => s.k));
+    const home = (k) => { let i = order.indexOf(k); while (i < order.length && !has.has(order[i])) i++; return order[i] || 'after'; };
+    const cur = S.find((s) => !s.also && (s.b == null || today <= s.b)) || S[S.length - 1];
+    for (const s of S) { s.id = 'tl-' + s.k; s.now = cur === s || (s.also && cur.k === 'hunt'); s.past = !s.now && s.b != null && today > s.b; }
+    return { S, home, cur: cur.k, idx: (k) => order.indexOf(home(k)) };
+  }
+  // where each checklist item belongs on the timeline (by its "Week 1:" style prefix, its list, then its category)
+  function tlOfItem(i) {
+    const t = String(i.t || '');
+    if (/^Week 1:/i.test(t)) return 'w1';
+    if (/^Week 2:/i.test(t)) return 'w2';
+    if (/^Hunt week:/i.test(t)) return 'hw';
+    if (i.from === 'The night before') return 'nb';
+    if (i.from === 'After the shot and the kill') return 'shot';
+    return { paperwork: 'w1', firearm: 'w1', meat: 'w2', gear: 'hw', clothing: 'hw', vehicle: 'hw', safety: 'hw', plan: 'hw' }[i.cat] || 'hw';
+  }
+  function tlItems(its, ticked, C) {
+    const tx = (i) => /^Week 1: BC hunting licence bought online$/.test(i.t) ? 'Week 1: BC hunting licence bought (Tip: this close to the hunt, buy it in person with the species licence)' : i.t;
+    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(tx(i))}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
+  }
+  function tlCss() {
+    if (document.getElementById('tl-css')) return;
+    const s = document.createElement('style'); s.id = 'tl-css';
+    s.textContent = `
+.gc { padding: 8px 12px 12px; }
+.gc-h { font-family: var(--display); font-size: 22px; margin: 0 0 4px; display: flex; align-items: baseline; gap: 8px; }
+.gc-h span { font-family: var(--font); font-size: 14px; font-weight: 400; color: var(--muted); }
+.gc-sm { font-style: normal; color: var(--muted); }
+.gc-v b.gc-d { font-weight: 700; font-size: 14px; }
+.gc-row { display: grid; grid-template-columns: 1fr 12px; gap: 6px; align-items: start; width: 100%; min-height: 48px; text-align: left; background: none; border: 0; border-top: 1px solid var(--line); padding: 6px 0 6px 10px; color: var(--ink); font: inherit; cursor: pointer; position: relative; }
+.gc-row::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 4px; border-radius: 2px; background: var(--line); }
+.gc-row.gc-ok::before { background: var(--ok); }
+.gc-row.gc-no::before { background: var(--bad); }
+.gc-row.gc-odds::before { background: var(--sage); }
+.gc-k { font-family: var(--display); font-size: 18px; font-weight: 700; margin-right: 4px; }
+.gc-l1 { display: block; }
+.gc-v { display: flex; flex-direction: column; gap: 1px; min-width: 0; font-size: 14px; line-height: 1.3; overflow-wrap: anywhere; }
+.gc-v b { font-size: 16px; }
+.gc-no .gc-v b { color: var(--bad-ink); }
+.gc-v span { color: var(--ink); }
+.gc-v .hmp, .gc-v .cert { font-family: var(--mono); }
+.tl .pl-hero { margin: 0 0 4px; }
+.tl .pl-hero .hero-n { font-size: 34px; }
+.tl .pl-hero .hero-k { margin: 0 0 2px; }
+.tl .pl-hero .hero-sub { font-size: 15px; margin-top: 2px; }
+.tl .pl-law { margin: 0 0 8px; }
+.tl-today .btn-row, .tl-step .btn-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; }
+.tl-today .btn-row .btn, .tl-step .btn-row .btn { flex: 1 1 auto; width: auto; min-height: 44px; margin: 0; padding: 8px 12px; font-size: 15px; line-height: 1.2; }
+.tl-sub { font: 500 15px/1.35 var(--font); color: var(--muted); margin: 2px 0 0; }
+.tl-today { border: 3px solid var(--blaze); }
+.tl-today h2 { font: 700 28px/1.05 var(--display); margin: 0 0 2px; }
+.tl-today ol { list-style: none; margin: 8px 0 0; padding: 0; counter-reset: tl; }
+.tl-today li { counter-increment: tl; position: relative; padding: 10px 0 10px 40px; border-top: 1px solid var(--line); }
+.tl-today li::before { content: counter(tl); position: absolute; left: 0; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font: 700 18px/30px var(--display); text-align: center; }
+.tl-today li:first-child::before { background: var(--blaze); color: var(--blaze-ink); }
+.tl-today li b { display: block; font-size: 17px; }
+.tl-today li p { margin: 2px 0 6px; font-size: 15px; color: var(--muted); }
+.tl-today .btn { min-height: 44px; }
+.tl-next { font-size: 15px; margin: 8px 0 0; }
+.tl-today li p.tl-p2 { font-size: 14px; }
+.tl-today li .btn-row .btn { flex: 1 1 0; min-width: 0; padding: 8px 6px; }
+.tl-nav { position: sticky; top: var(--top-h, 56px); z-index: 4; display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 4px; margin: 0 -16px 12px; padding: 3px 12px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tl-nav::-webkit-scrollbar { display: none; }
+.tl-nav button { flex: 0 0 auto; min-height: 44px; border: 2px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); font-size: 14px; font-weight: 800; line-height: 1.1; padding: 0 12px; white-space: nowrap; }
+.tl-block { border: 2px solid var(--blaze); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+.tl-block ul { margin: 4px 0 6px; padding-left: 20px; font-size: 15px; }
+.tl-nav button.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.tl-nav button.tl-cur { box-shadow: inset 0 -4px 0 var(--blaze); }
+.tl-st { margin: 0 0 10px; }
+.tl-st > details { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); border-left: 6px solid var(--line); }
+.tl-st.tl-now > details { border-left-color: var(--blaze); }
+.tl-st > details > summary { list-style: none; cursor: pointer; padding: 12px 14px; min-height: 44px; }
+.tl-st > details > summary::-webkit-details-marker { display: none; }
+.tl-st > details > summary h2 { font: 700 24px/1.1 var(--display); margin: 0; }
+.tl-when { font: 500 14px/1.3 var(--mono); color: var(--muted); }
+.tl-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 99px; font: 700 14px/1.6 var(--font); vertical-align: middle; background: var(--accent); color: var(--accent-ink); }
+.tl-now .tl-tag { background: var(--blaze); color: var(--blaze-ink); }
+.tl-in { padding: 0 12px 12px; }
+.tl-step { border-top: 1px solid var(--line); padding: 10px 0; }
+.tl-step b { display: block; font-size: 17px; }
+.tl-step p { margin: 2px 0 6px; font-size: 15px; }
+.tl-step.tl-done b::before { content: "\\2713  "; color: var(--ok); }
+.tl-fold { border-top: 1px solid var(--line); }
+.tl-fold > summary { cursor: pointer; padding: 12px 0; min-height: 44px; font-weight: 800; font-size: 16px; }
+.tl-fold > summary small { font-weight: 500; font-size: 14px; color: var(--muted); }
+.tl-call { border: 2px solid var(--blaze); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+.tl-call a { font: 700 22px/1.4 var(--mono); display: inline-block; min-height: 44px; padding-top: 6px; }
+.tl-tip { font-size: 15px; }
+.tl .pl-sec { margin: 0; }
+.tl .pl-sec > .pl-sh { font-size: 18px; margin: 10px 0 6px; }
+`;
+    document.head.appendChild(s);
+  }
+  async function planViewV2(view, id, C) {
+    const p = plansOf(C).find((x) => x.id === id);
+    if (!p) { view.innerHTML = '<div class="card"><h2>Plan not found</h2><p>It may have been deleted, or it was saved on another phone.</p><a class="btn" href="#/plan">My plans</a></div>'; return; }
+    let D; try { D = await loadData(); } catch (e) { D = null; }
+    if (!D || !D.species.length) { view.innerHTML = noData(); return; }
+    const sp = spOf(p, D);
+    if (!sp) { view.innerHTML = `<div class="card"><h2>${esc(p.speciesName || 'This animal')} is not in the planner data any more</h2><a class="btn" href="#/plan">My plans</a></div>`; return; }
+    if (!p.from) return planView(view, id, C); // no dates: no timeline to build
+    C.setTitle(planTitle(p, D));
+    const token = (view._plToken = {});
+    const alive = () => view._plToken === token && view.isConnected;
+    const days = dRange(p.from, p.to);
+    const H = hoursFor(sp);
+    const today = todayIso(), end = p.to || p.from, n = tlDiff(p.from, today);
+    const T = tlStages(p, today);
+    const solo = partyN(p.party) < 2;
+    const hero = `<div class="hero pl-hero"><div><p class="hero-k">${n > 0 ? 'Hunt ' + esc(tlRange(p.from, end)) : end >= today ? 'Hunt is on' : 'Hunt done'}</p><div class="hero-n">${n > 0 ? `${n}<small>day${n === 1 ? '' : 's'} to go</small>` : end >= today ? 'Now' : 'Done'}</div>
+      ${n > 0 ? '' : `<div class="hero-sub">${esc(rangeLabel(p.from, end))}</div>`}<p class="tl-sub">${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</p></div></div>`;
+    const stage = (s, body) => `<section class="tl-st${s.now ? ' tl-now' : ''}${s.past ? ' tl-past' : ''}" id="${s.id}"><details${s.now ? ' open' : ''}><summary><span class="tl-when">${esc(s.b == null ? 'From ' + tlD(s.a) : tlRange(s.a, s.b))}</span>${s.now ? '<span class="tl-tag">Now</span>' : s.past ? '<span class="tl-tag">Past</span>' : ''}<h2>${esc(s.label)}</h2></summary><div class="tl-in">${body}</div></details></section>`;
+    const fold = (title, sub, inner) => `<details class="tl-fold"><summary>${esc(title)}${sub ? ` <small>${esc(sub)}</small>` : ''}</summary>${inner}</details>`;
+    const sec = (sid, h, did, wait) => `<section class="pl-sec" id="${sid}"><h2 class="pl-sh">${esc(h)}</h2><div id="${did}">${wait ? `<p class="muted">${esc(wait)}</p>` : ''}</div></section>`;
+    const forecastOn = tlAdd(p.from, -15);
+    // deer hit, not down: the plan's own after the kill and checklist steps, open in the After the shot stage
+    let hitSteps = []; try { hitSteps = [...(sp.afterKill || []).filter((t) => /\bhit\b|wait|mark both|flag/i.test(t)), ...checkItems(sp, D.lists, condOf(p)).filter((i) => !i.off && /hit site|lost the trail|blood|stay still|mark (the|where)|flag/i.test(i.t)).map((i) => i.t + (i.why ? ` (${i.why})` : ''))].filter((t, i, a) => a.indexOf(t) === i).slice(0, 6); } catch (e) { hitSteps = []; }
+    const body = {
+      w1: `<div data-tl-steps="w1"></div>
+        ${p.party === 'two' ? '<div class="tl-step"><b>Agree with your brother, this week</b><p>Settle now: does he carry a tag (then he buys his own licences in person too), does he carry a rifle, who sits where, who walks in first. The party odds on this plan assume he carries a tag. <span class="verify">To confirm</span></p></div>' : ''}
+        <div data-tl-check="w1"></div>
+        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
+        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
+      w2: `<div data-tl-steps="w2"></div>
+        <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal</h3><p class="muted">Loading...</p></div>
+        <div data-tl-check="w2"></div>
+        ${fold('Pick your spot', 'top 5 spots, drive, walk, legal checks', sec('pl-sb', 'Top spots board', 'pl-board', 'Finding and checking spots...'))}
+        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', '2. Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
+      hw: `<div data-tl-steps="hw"></div><div data-tl-check="hw"></div>
+        <p class="tl-tip"><a class="btn" href="#/huntweek/${encodeURIComponent(p.id)}">Hunt week countdown list</a></p>`,
+      nb: `<div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
+        ${sec('pl-s0', 'Ready to go?', 'pl-ready', 'Checking your readiness gates...')}
+        ${solo ? '' : '<div class="tl-step"><b>Agree six things with your partner (Tip)</b><p>Where each of you sits, back by what time, the meeting point, who shoots, your signals, and what to do if one of you is late.</p></div>'}
+        <div data-tl-check="nb"></div>`,
+      hunt: `${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
+        ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
+      shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
+        <div data-tl-check="shot"></div>`,
+      after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
+        ${fold('Full checklist', 'every item for this plan, in one list', sec('pl-s4', '4. Checklist', 'pl-check', ''))}
+        <p class="tl-tip"><a class="btn" href="#/progress/${encodeURIComponent(p.id)}">Hunt ready score</a></p>`,
+    };
+    const nav = `<nav class="pl-nav tl-nav no-print" aria-label="Timeline"><button type="button" data-go="tl-today">Today</button>${T.S.map((s) => `<button type="button" data-go="${s.id}"${T.cur === s.k ? ' class="tl-cur"' : ''}>${esc(s.chip)}</button>`).join('')}</nav>`;
+    view.innerHTML = `<div class="pl tl" id="pl">
+      ${hero}
+      <div class="card tl-today" id="tl-today"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
+      <section class="card gc" id="tl-glance" aria-label="At a glance"><h2 class="gc-h">At a glance <span>five answers, tap for detail</span></h2><div id="gc-rows"><p class="muted">Checking your plan...</p></div></section>
+      <p class="pl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      ${nav}
+      ${T.S.map((s) => stage(s, body[s.k])).join('')}
+      <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
+        <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
+        <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
+        <div class="pl-kv"><span>How</span><b>${esc(((sp.methods || []).find((x) => x.id === p.method) || {}).label || METHOD_LABEL[p.method] || p.method || '')}</b></div>
+        <div class="pl-kv"><span>Access</span><b>${esc(accessLabel(p.access))}</b></div>
+        <div class="pl-kv"><span>Overnight</span><b>${p.overnight ? 'Yes' : 'No'}</b></div>
+        <div class="pl-kv"><span>Party</span><b>${esc(partyLabel(p.party))}</b></div>
+        <div class="pl-kv"><span>First hunt</span><b>${p.firstHunt !== false ? 'Yes' : 'No'}</b></div>
+        ${askHtml(p, sp)}
+        <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
+      </div>
+      ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}</a></div>` : ''}
+    </div>`;
+    css2(); tlCss();
+    const $ = (s) => view.querySelector(s);
+    const m = (memo[p.id] = { p, sp });
+    const link = (el) => { if (C.link && el) C.link(el); };
+    if (C.study) drawStudy($('#pl-study'), p, sp, C);
+    link($('.pl-sum'));
+
+    // open every fold around a target before a jump scrolls to it (gate jumps, the part 3 jump, timeline chips, Today buttons)
+    const openTo = (tid) => {
+      const el = document.getElementById(tid); if (!el) return null;
+      for (let d = el.parentElement; d && d !== view; d = d.parentElement) if (d.tagName === 'DETAILS') d.open = true;
+      if (el.firstElementChild && el.firstElementChild.tagName === 'DETAILS') el.firstElementChild.open = true;
+      return el;
+    };
+    const navEl = $('.tl-nav');
+    const goTo = (tid) => {
+      const el = openTo(tid); if (!el) return;
+      const off = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top-h')) || 56) + navEl.offsetHeight + 6;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
+    };
+    $('#pl').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-g-jump],[data-pl-jump]'); if (!b) return;
+      const tid = b.dataset.gJump || b.dataset.plJump; openTo(tid);
+      if (!b.closest('#pl-ready') && !b.closest('#pl-live')) { e.preventDefault(); goTo(tid); }
+    }, true);
+    { const cb = navEl.querySelector('.tl-cur'); if (cb) navEl.scrollLeft = Math.max(0, cb.offsetLeft - 80); }
+    navEl.querySelectorAll('button').forEach((b) => b.onclick = () => { goTo(b.dataset.go); navEl.scrollTo({ left: Math.max(0, b.offsetLeft - 80), behavior: 'smooth' }); navEl.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b)); });
+
+    // actions
+    $('#pl-print').onclick = () => window.print();
+    $('#pl-edit').onclick = () => { draft = { species: p.species, where: p.where, from: p.from, to: p.to, method: p.method, access: p.access, overnight: p.overnight, party: p.party, firstHunt: p.firstHunt !== false, ask: Object.assign({}, p.ask), editId: p.id }; saveDraft(); goStep(0); };
+    $('#pl-del').onclick = () => { if (!confirm('Delete this plan? Its ticks go too.')) return; const all = plansOf(C); all.splice(all.indexOf(p), 1); C.save(); location.hash = '#/plan'; };
+    $('#pl-share').onclick = () => {
+      const text = shareText(m, D, C);
+      if (navigator.share) navigator.share({ title: `Hunt plan: ${planTitle(p, D)}`, text }).catch((e) => { if (e && e.name !== 'AbortError') copy(text, C); });
+      else copy(text, C);
+    };
+
+    // the steps on the timeline, from the readiness gates and the study path; each knows when it is done
+    let G = [];
+    const mineT = () => (((ldJ(PROG, {}) || {}).ticks || {})[p.id] || {});
+    const steps = () => {
+      const g = (k) => G.find((x) => x.k === k) || {};
+      let st = null; try { if (C.study) st = C.study.today(p, sp.lessons); } catch (e) { st = null; }
+      const iron = p.method === 'rifle' && C.hasSession('mc-tikka-03');
+      return [
+        { s: 'w1', k: 'species', ok: g('licence').ok || !!mineT().species, t: 'Buy your deer species licence in person', p: `Same day at Service BC or a vendor. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another (70%, sources differ; Canada Post times vary)${tlAdd(today, 14) >= tlAdd(p.from, -7) ? ': too close to ' + tlD(p.from) + ' to risk' : ''}.`, p2: 'The Ready gate also needs your hunting licence, FWID (Fish and Wildlife ID) and your partner\'s licences.', a: '<button type="button" class="btn" data-tl-tick="species">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
+        { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
+        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: g('must').how || 'The study path is in this week below.', a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
+        { s: 'w2', k: 'offline', ok: g('offline').ok, t: 'Save the hunt area for no signal', p: 'Do it at home on wifi. The offline card shows the size.', a: '<button type="button" class="btn" data-g-jump="pl-offline">Go to the offline card</button>' },
+        { s: 'w2', k: 'scout', tip: true, t: 'Tip: scout your top spot before the hunt', p: 'Your hunt dates have no scout day inside them. Drive up on a free day and walk in.', a: '<button type="button" class="btn" data-g-jump="pl-board">See the top spots</button>' },
+        { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help. Nobody watches a trip plan: your contact must call 911 if you are late (AdventureSmart, 95%).', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
+        { s: 'hw', k: 'wx', tip: true, t: `Check the forecast from ${tlD(forecastOn)}`, p: 'The forecast reaches about 16 days ahead. The wind picks your spot.', a: '<button type="button" class="btn" data-g-jump="pl-live">Live conditions</button>' },
+      ];
+    };
+    const drawSteps = () => {
+      if (!alive()) return;
+      const out = steps(), ci = T.idx(T.cur);
+      const pickKeys = new Set(out.filter((x) => !x.ok && !x.tip && T.idx(x.s) <= ci).slice(0, 3).map((x) => x.k));
+      // Hunt week leads with what blocks the hunt: the Ready gates not done yet
+      const blocks = () => { const left = G.filter((x) => !x.ok); return left.length ? `<div class="tl-step tl-block"><b>Blocks the hunt: ${left.length} left</b><ul>${left.map((x) => `<li>${esc(x.label)}</li>`).join('')}</ul><div class="btn-row no-print"><button type="button" class="btn" data-g-jump="pl-ready">Ready gates</button></div></div>` : '<div class="tl-step tl-done"><b>Nothing blocks the hunt</b><p>All Ready gates done.</p></div>'; };
+      for (const s of T.S) {
+        const box = view.querySelector(`[data-tl-steps="${s.k}"]`); if (!box) continue;
+        box.innerHTML = (s.k === 'hw' ? blocks() : '') + out.filter((x) => T.home(x.s) === s.k).map((x) => pickKeys.has(x.k) && T.idx(x.s) <= ci ? `<div class="tl-step"><b>${esc(x.t)}</b><p>In the Today card above.</p></div>` : `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${!x.ok && x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
+      }
+      // Today: steps not done whose stage has come, earliest first; then the next steps, up to 3
+      const due = out.filter((x) => !x.ok && !x.tip && T.idx(x.s) <= ci), soon = out.filter((x) => !x.ok && T.idx(x.s) > ci);
+      const pick = due.concat(soon).slice(0, 3);
+      const nxt = T.S[T.S.findIndex((s) => s.k === T.cur) + 1];
+      const huntNow = T.cur === 'hunt', nbNow = T.cur === 'nb';
+      $('#tl-today').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
+        ${huntNow ? '<p>Open the hour by hour plan: leave time, first light spot by the wind, turnaround alarm.</p><button type="button" class="btn next block" data-g-jump="pl-live">Hour by hour</button>'
+          : nbNow ? '<p>Go, backup or stay home, the Ready gates and the pack list.</p><button type="button" class="btn next block" data-g-jump="tl-nb">Night before check</button>'
+          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p>${x.p2 ? `<p class="tl-p2">${esc(x.p2)}</p>` : ''}<div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
+        ${nxt && !nxt.also ? `<p class="tl-next muted">Then: <b>${esc(nxt.label)}</b>, ${esc(nxt.b == null ? 'from ' + tlD(nxt.a) : tlRange(nxt.a, nxt.b))}.</p>` : ''}`;
+    };
+    const loadGates = async () => { try { G = await gates(p, sp, C); } catch (e) { G = []; } drawSteps(); drawGlance(); };
+    // At a glance (graft from the Go card build): Ready, Legal, Where, When, Odds, each one tap from its detail
+    const tmG = (ms) => (ms == null ? '?' : C.hhmm(new Date(ms)));
+    const rowG = (go, key, state, head, lines) => `<button type="button" class="gc-row gc-${state}" data-g-jump="${go}"><span class="gc-v"><span class="gc-l1"><span class="gc-k">${key}</span> <b>${head}</b></span>${lines.filter(Boolean).map((l) => `<span>${l}</span>`).join('')}</span><span aria-hidden="true">›</span></button>`;
+    const drawGlance = () => {
+      if (!alive()) return; const box = $('#gc-rows'); if (!box) return;
+      const rows = [];
+      if (Array.isArray(G) && G.length) { const left = G.filter((g) => !g.ok); rows.push(rowG('pl-ready', 'Ready?', left.length ? 'no' : 'ok', left.length ? `Not ready: ${left.length} of ${G.length} to do` : `Ready: all ${G.length} done`, [left.length ? `To do: ${esc(left.map((g) => g.label.toLowerCase()).join(', '))}` : ''])); }
+      else rows.push(rowG('pl-ready', 'Ready?', 'wait', 'Checking...', []));
+      const lg = m.legal;
+      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, '<span class="gc-sm">Legal light per day: When, below.</span>'])); }
+      else rows.push(rowG('pl-s1', 'Legal?', 'wait', 'Checking the season tables...', []));
+      const hd = (m.daysX || []).find((d) => d.kind === 'hunt' && d.primary), bl = (m.x && m.x.spots) || [];
+      const s1 = (hd && bl.find((x) => String(x.id) === String(hd.primary.spot.id))) || bl[0];
+      const s2 = (hd && hd.backup && bl.find((x) => String(x.id) === String(hd.backup.spot.id))) || bl.find((x) => x !== s1);
+      if (s1) rows.push(rowG('pl-sb', 'Where?', 'ok', esc(s1.name), [s1.driveKm != null ? `${s1.driveKm} km from Mission, about ${fmtMin(s1.driveMin)} (estimate)` : '', s2 ? `Backup: ${esc(s2.name)}` : '', '<span class="gc-sm">My pick from open data (60%). Scout and read posted signs first.</span>']));
+      else rows.push(rowG('pl-sb', 'Where?', 'wait', m.spots === null ? 'Spots did not load. Open the Map once with signal.' : 'Finding and checking spots...', []));
+      const hunt = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
+      if (hunt.length) rows.push(rowG('pl-sl', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Turnaround alarm inside.</i>'])));
+      else rows.push(rowG('pl-sl', 'When?', 'wait', m.daysX ? 'No open hunt days in this plan' : 'Working out leave times...', []));
+      const b = m.oddsX && m.oddsX.base;
+      if (b && b.overPlanDays && b.planDays) { const P0 = (x) => `${Math.round(x * 100)}%`; rows.push(rowG('pl-s2', 'Odds?', 'odds', `About ${P0(b.overPlanDays.mid)} for you over ${b.planDays} day${b.planDays === 1 ? '' : 's'}`, [`Base: the middle year of ${b.years} years of MU ${esc(p.where.mu)} hunter reports (estimate). Range ${P0(b.overPlanDays.low)} to ${P0(b.overPlanDays.high)}.`])); }
+      else rows.push(rowG('pl-s2', 'Odds?', 'wait', 'Working out your odds...', []));
+      box.innerHTML = rows.join('');
+    };
+    m.redraw = drawGlance;
+    loadGates();
+    // Tick buttons on the timeline write the same Ready gate tick (hm.progress.v1, same key and date format)
+    $('#pl').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-tl-tick]'); if (!b) return;
+      const o = ldJ(PROG, {}) || {}; o.ticks = o.ticks || {}; const t = (o.ticks[p.id] = o.ticks[p.id] || {});
+      t[b.dataset.tlTick] = todayIso(); svJ(PROG, o); drawReady($('#pl-ready'), p, sp, C, m); loadGates();
+    });
+
+    // checklist: the full list (part 4) plus each item again in the stage where it is due; same tick keys, one handler
+    const drawCheck = () => {
+      const all = checkItems(sp, D.lists, condOf(p)), items = p.showAllChecks ? all : all.filter((i) => !i.off);
+      const t = (i) => !!(p.ticks && p.ticks[i.key]);
+      const nDone = items.filter(t).length;
+      m.check = { done: nDone, total: items.length, left: items.filter((i) => !t(i)) };
+      $('#pl-check').innerHTML = `<div class="card"><div class="row"><b class="grow">${nDone} of ${items.length} done</b>
+        <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((nDone / Math.max(1, items.length)) * 100) + '%"></i></div>'}
+        <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
+        ${hiddenNote(all, p.showAllChecks, 'pl-showall')}
+        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
+        ${nDone === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
+        <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
+      $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
+      $('#pl-untick').onclick = () => { if (!nDone || confirm('Untick every item in this plan?')) { p.ticks = {}; C.save(); drawCheck(); } };
+      const sa = $('#pl-showall'); if (sa) sa.onclick = () => { p.showAllChecks = !p.showAllChecks; C.save(); drawCheck(); };
+      const top = items.filter((i) => i.top).sort((a, b) => a.top - b.top).slice(0, 10);
+      for (const s of T.S) {
+        const box = view.querySelector(`[data-tl-check="${s.k}"]`); if (!box) continue;
+        const its = items.filter((i) => T.home(tlOfItem(i)) === s.k);
+        if (!its.length) { box.innerHTML = ''; continue; }
+        const was = box.querySelector('details'), open = was ? was.open : false;
+        const lead = its.filter((i) => top.includes(i)), rest = its.filter((i) => !top.includes(i));
+        box.innerHTML = `<details class="tl-fold"${open ? ' open' : ''}><summary>Checklist: ${esc(s.chip.toLowerCase())} <small>${its.filter(t).length} of ${its.length} done</small></summary>
+          ${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}</details>`;
+      }
+    };
+    $('#pl').addEventListener('change', (e) => {
+      const c = e.target.closest('input[data-pk]'); if (!c) return;
+      p.ticks = p.ticks || {}; if (c.checked) p.ticks[c.dataset.pk] = 1; else delete p.ticks[c.dataset.pk];
+      C.save();
+      const y = window.scrollY; drawCheck(); window.scrollTo(0, y);
+    });
+    drawCheck();
+
+    // 1. legal
+    let lg;
+    try { lg = await legal(p, sp); } catch (e) { lg = { verdict: 'check', why: 'Could not read the season tables.', rows: [], mig: [], bag: [], flags: [], dayOpen: {}, days }; }
+    if (!alive()) return;
+    m.legal = lg;
+    drawGlance();
+    $('#pl-legal').innerHTML = legalHtml(lg, sp, p, C, H);
+    link($('#pl-legal'));
+
+    // 2. odds
+    let od; try { od = await odds(p, sp, lg); } catch (e) { od = { missing: true }; }
+    if (!alive()) return;
+    m.odds = od;
+    od.shared = D.species.filter((x) => x.id !== sp.id && x.harvestKey && sp.harvestKey && x.harvestKey === sp.harvestKey).map((x) => x.name);
+    $('#pl-odds').innerHTML = successHtml(od, sp, p, lg, C) + oddsHtml(od, sp, p, lg, C);
+    link($('#pl-odds'));
+
+    // 3. days (spots fill in after)
+    $('#pl-days').innerHTML = daysHtml(sp, p, lg, C, H) + '<div id="pl-spots"><div class="card"><h3>Top spots</h3><p class="muted">Finding candidate spots near the MU...</p></div></div>';
+    let st = null;
+    try { st = await spots(p, sp); } catch (e) { console.warn('plan spots', e); st = null; }
+    if (!alive()) return;
+    if (st && st.list.length) { p.spots = { at: todayIso(), list: st.list.slice(0, 7), camps: st.camps }; C.save(); }
+    else if ((!st || !st.list.length) && p.spots && p.spots.list.length) st = Object.assign({ saved: p.spots.at }, p.spots);
+    m.spots = st;
+    $('#pl-spots').innerHTML = spotsHtml(st, sp, p, C);
+    link($('#pl-days'));
+    wireRundowns($('#pl-spots'), st, p, C);
+    mountOffline($('#pl-offline'), p, sp, C);
+
+    const X = extCtx(p, sp, lg, od, st, C, H, days);
+    m.x = X;
+    const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
+    board();
+    const ready = () => { drawReady($('#pl-ready'), p, sp, C, m); loadGates(); };
+    ready();
+    // ticks in the Ready card move the timeline steps too
+    $('#pl-ready').addEventListener('click', (e) => { if (e.target.closest('[data-g-tick],#pl-g-again')) setTimeout(loadGates, 80); });
+    drawDebrief($('#pl-debrief'), p, sp, st, C, ready);
+    const O = window.HMPlanOdds;
+    if (O && typeof O.compute === 'function' && typeof O.html === 'function') {
+      try {
+        const r = await O.compute(p, sp, X.spots); if (!alive()) return;
+        m.oddsX = r; X.oddsResult = r;
+        drawGlance();
+        const out = addOn(O.html(r, p));
+        $('#pl-odds').innerHTML = `<div class="pl2-x" id="pl-odds-x">${out.html}</div><details class="card pl-more"><summary>Official numbers, the 90% question and how to raise your odds</summary>${successHtml(od, sp, p, lg, C)}${oddsHtml(od, sp, p, lg, C)}</details>`;
+        out.wire($('#pl-odds-x')); link($('#pl-odds'));
+        board();
+      } catch (e) { console.warn('plan odds add on', e); }
+    }
+    await drawLive($('#pl-live'), X, m, alive, board, C);
+  }
   // what the add ons get: the plan, its answers, the legal and official odds results, the top spots and the app helpers
   function extCtx(p, sp, lg, od, st, C, H, days) {
     return { plan: p, ask: p.ask || {}, species: sp, speciesName: spName(sp, p.where.mu), mu: p.where.mu, days, from: p.from, to: p.to,
@@ -887,9 +1274,10 @@
         const sps = X.spots.map((x) => ({ id: x.id, name: x.name, cat: x.cat, mu: x.mu, lat: x.lat, lon: x.lon, detail: x._d || null }));
         const r = await Dd.mount(el.querySelector('#pl-days-x'), X.plan, sps, { dayOpen: X.legal.dayOpen, home: X.home, live: m.live || null }); if (!alive()) return;
         m.daysX = r && r.days; daysOk = !!(r && r.days);
+        if (typeof m.redraw === 'function') m.redraw();
       } catch (e) { console.warn('plan days add on', e); }
     }
-    if (!daysOk) el.querySelector('#pl-days-x').innerHTML = '<div class="card"><h3>Hour by hour</h3><p class="pl-small">The day by day plan with your hours is in part 3 below: legal light, your time on stand, and what to do in each part of the day.</p><button type="button" class="btn" data-pl-jump="pl-s3">Go to part 3, Day by day</button></div>';
+    if (!daysOk) el.querySelector('#pl-days-x').innerHTML = '<div class="card"><h3>Hour by hour</h3><p class="pl-small">The day by day plan with your hours is under Hunt days, in Day by day: legal light, your time on stand, and what to do in each part of the day.</p><button type="button" class="btn" data-pl-jump="pl-s3">Go to Day by day</button></div>';
     el.querySelectorAll('[data-pl-jump]').forEach((b) => { b.onclick = () => { const t = document.getElementById(b.dataset.plJump); if (t) t.scrollIntoView({ behavior: 'smooth' }); }; });
     parts.push(liveOk, daysOk);
     if (C.link) C.link(el);
@@ -904,7 +1292,7 @@
       <li><b>Fire bans:</b> <a href="https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions" target="_blank" rel="noopener">BC Wildfire Service fire bans and restrictions</a>.</li>
       ${r2 ? `<li><b>Road notices:</b> <a href="${ROADS}" target="_blank" rel="noopener">Chilliwack Natural Resource District road safety information</a> (Forest Service Roads near Harrison).</li>` : ''}
       <li><b>Highways:</b> <a href="https://www.drivebc.ca/" target="_blank" rel="noopener">DriveBC</a>.</li>
-      <li><b>Legal light:</b> each day's times are in part 3 below, worked out on your phone.</li></ul></div>`;
+      <li><b>Legal light:</b> each day's times are under Hunt days, Day by day, worked out on your phone.</li></ul></div>`;
   }
 
   // "Save this hunt area for no signal" (map/plan-offline.js, through map/offline.js): the plan point, its spots and nearest camp
@@ -997,15 +1385,15 @@
     const rough = (k) => 1 - Math.pow(1 - od.perDay, k);
     const you = rough(huntDays), party = rough(huntDays * n);
     const need = od.perDay > 0 && od.perDay < 1 ? Math.ceil(Math.log(0.1) / Math.log(1 - od.perDay)) : null;
-    const pct = (x) => `${Math.round(x)}%`, r5 = (x) => `about ${Math.min(95, Math.max(1, Math.round((x * 100) / 5) * 5 || 1))}%`;
+    const pct = (x) => `${Math.round(x)}%`, r5 = (x) => `about ${Math.min(95, Math.max(1, Math.round(x * 100) || 1))}%`; // whole percent (was nearest 5, which made 8% read as 10%)
     const where = od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)} (MU ${esc(p.where.mu)} has too few reports)`;
     let answer;
     if (od.pct >= 90) answer = `<p><b>Maybe, but never promised.</b> Hunters here have done very well on average.</p>`;
     else answer = `<p><b>No. 90% is not realistic here${huntDays ? ` in ${huntDays} hunt day${huntDays === 1 ? '' : 's'}` : ''}.</b></p>
-      <ul><li>On average, ${pct(od.pct)} of resident hunters got one over the whole season (2020 to 2024).</li>
+      <ul><li>Middle year: ${pct(od.pct)} of resident hunters got one over the whole season (the middle year of the 2020 to 2024 reports, the same base as Your odds).</li>
       <li>So most hunters went home without one, even with ${od.dph.toFixed(1)} days each.</li>
-      ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
-      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the average rate.</li>` : ''}
+      ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled${p.party === 'two' && !(p.ask && p.ask.partner && typeof p.ask.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
+      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the middle year rate.</li>` : ''}
       <li>You beat the average with scouting, time in the field and patience. See below.</li></ul>`;
     const years = od.rows.map((r) => `<tr class="${r.lowConfidence ? 'pl-low' : ''}"><td>${r.year}</td><td>${r.hunters != null ? r.hunters : 'n/a'}</td><td>${r.kills != null ? r.kills : 'n/a'}</td><td>${r.successPct != null && !r.lowConfidence ? r.successPct.toFixed(0) + '%' : r.lowConfidence ? 'Few hunters' : 'n/a'}</td><td>${r.days != null ? r.days : 'n/a'}</td></tr>`).join('');
     return `<div class="card pl-odds"><h3>Official success: ${where}</h3>
@@ -1020,6 +1408,7 @@
   }
 
   const scoutCount = (n) => (n >= 6 ? 2 : n >= 3 ? 1 : 0);
+  const LEGAL_MARGIN = 3; // minutes added to legal light start (and 1 taken off the end): the phone's sun math runs up to 2 min off the full NOAA algorithm at the spots
   function daysHtml(sp, p, lg, C, H) {
     const days = lg.days || dRange(p.from, p.to), dp = sp.dayPlan || {}, nS = scoutCount(days.length);
     const pt = p.where.lat != null ? p.where : null, hrs = H.h;
@@ -1031,9 +1420,9 @@
       const open = (lg.dayOpen[d] || []).length > 0, scout = i < nS;
       let rise = null, set = null;
       if (pt && C.sunEvent) { const day = new Date(y, mo - 1, dd, 12); rise = C.sunEvent(day, pt.lat, pt.lon, true); set = C.sunEvent(day, pt.lat, pt.lon, false); }
-      const light = hrs && hrs.beforeSunriseMin != null && rise ? `${C.hhmm(C.addMin(rise, -hrs.beforeSunriseMin))} to ${C.hhmm(C.addMin(set, hrs.afterSunsetMin))}` : '<span class="verify">VERIFY</span>';
+      const light = hrs && hrs.beforeSunriseMin != null && rise ? `${C.hhmm(C.addMin(rise, -hrs.beforeSunriseMin + LEGAL_MARGIN))} to ${C.hhmm(C.addMin(set, hrs.afterSunsetMin - 1))}` : '<span class="verify">VERIFY</span>';
       const kind = scout ? 'Scout day' : open ? 'Hunt day' : 'Not open';
-      const tl = !scout && open && hrs && hrs.beforeSunriseMin != null && rise ? timeline(C.addMin(rise, -hrs.beforeSunriseMin), C.addMin(set, hrs.afterSunsetMin), (p.ask || {}).hours, C) : '';
+      const tl = !scout && open && hrs && hrs.beforeSunriseMin != null && rise ? timeline(C.addMin(rise, -hrs.beforeSunriseMin + LEGAL_MARGIN), C.addMin(set, hrs.afterSunsetMin - 1), (p.ask || {}).hours, C) : '';
       const phaseWhen = (b) => ((phase && phase.when) || []).filter((w) => new RegExp('^' + b + '\\s*:', 'i').test(w)).map((w) => w.replace(/^\w+\s*:\s*/, ''));
       let body;
       if (scout) body = `<ul>${(dp.scout || []).map((t) => `<li>${esc(t)}</li>`).join('')}<li>Glass your top spots at first and last light. Find sign, trails and the wind.</li>${open ? '<li>It is open today: if a legal animal shows and the shot is right, you may take it.</li>' : ''}</ul>`;
@@ -1042,14 +1431,14 @@
         + (p.overnight && (dp.night || []).length ? `<div class="pl-blk"><b>Night</b><ul>${dp.night.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : '');
       const openAttr = (!scout && open && firstHunt) || i === 0 ? ' open' : '';
       if (!scout && open) firstHunt = false;
-      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light ${light}</span></span></summary>
+      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${light}</span></span></summary>
         <div class="pl-kv"><span>Sunrise</span><b>${rise ? C.hhmm(rise) : 'n/a'}</b></div><div class="pl-kv"><span>Sunset</span><b>${set ? C.hhmm(set) : 'n/a'}</b></div>
         ${open ? `<div class="pl-kv"><span>Open for</span><b>${esc(lg.dayOpen[d].join(', '))}</b></div>` : ''}${tl}${body}</details>`;
     }).join('');
     const phases = [...new Set(days.map((d) => +d.slice(5, 7)))].map((mo) => (sp.phases || []).find((ph) => (ph.months || []).includes(mo))).filter(Boolean);
     const uniq = [...new Set(phases)];
     const tactics = (sp.tactics || []);
-    return `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)}` : ''} Times of day plans are Tip (opinion).</p>
+    return `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>
       ${nS === 0 ? `<div class="card pl-scout"><h3>Scout before you go</h3><ul>${(sp.dayPlan && sp.dayPlan.scout || []).map((t) => `<li>${esc(t)}</li>`).join('') || '<li>One trip before the hunt to learn the ground.</li>'}</ul><p class="muted pl-small">Your dates are short, so there is no scout day inside them (Tip).</p></div>` : ''}
       ${uniq.map((ph) => `<div class="card"><h3>${esc(ph.label)}: what the animals do</h3>${(ph.where || []).length ? `<p><b>Where</b></p><ul>${ph.where.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${(ph.tactics || []).length ? `<p><b>Tactics</b> (Tip)</p><ul>${ph.tactics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${ph.cert != null ? `<p class="muted pl-small">${C.certBadge(ph.cert)}</p>` : ''}</div>`).join('')}
       ${cards}
@@ -1102,7 +1491,7 @@
     const f = A.fit || {};
     add('fit', 'Walk and carry', A.fit ? [askLabel('walk', f.walk), askLabel('pack', f.pack)].filter(Boolean).join(', ') : '',
       A.fit ? `${f.walk ? `Top spots: walk in up to ${f.walk === 6 ? 'any distance' : f.walk + ' km'} one way${f.walk === 1 ? ', climb up to 100 m (Tip, from the Harrison lesson)' : ''}.` : ''}${f.pack ? ` Pack out estimate: ${f.pack} kg a trip each.` : ' Pack out estimate: 20 kg a trip each (Tip).'}` : skip);
-    add('hours', 'Hours a day', askLabel('hours', A.hours), A.hours === 'full' ? 'Each hunt day timeline (part 3) covers all of legal light.' : A.hours ? `Each hunt day timeline (part 3) shows your ${A.hours} hours: half from first legal light, half up to last legal light.` : skip);
+    add('hours', 'Hours a day', askLabel('hours', A.hours), A.hours === 'full' ? 'Each hunt day timeline (Hunt days, Day by day) covers all of legal light.' : A.hours ? `Each hunt day timeline (Hunt days, Day by day) shows your ${A.hours} hours: half from first legal light, half up to last legal light.` : skip);
     add('travel', 'Drive limit', A.travel === 0 ? 'No limit' : askLabel('travel', A.travel), A.travel ? `Top spots: drive up to ${fmtMin(A.travel)} from Mission. Drive time is an estimate (about 60 km/h on average).` : A.travel === 0 ? 'No spots left out for distance.' : skip);
     add('truck', 'Vehicle', askLabel('truck', A.truck), A.truck === '2wd' ? 'Rough road spots (ATV or 4x4) are left out unless you bring an ATV. Gravel FSR (Forest Service Road) spots get a road watch out.' : A.truck === '4wd' ? 'Rough road spots are in, with a watch out: high clearance helps (Tip).' : A.truck === '4wdhc' ? 'Rough road spots are in.' : skip);
     if (p.party !== 'solo') { const P = A.partner || {}; add('partner', 'Partner', A.partner ? [askLabel('pexp', P.exp), P.tag === true ? 'carries a tag' : P.tag === false ? 'no tag' : ''].filter(Boolean).join(', ') : '',
@@ -1124,19 +1513,20 @@
   const huntDaysOf = (lg) => (lg.days || []).filter((d, i) => (lg.dayOpen[d] || []).length && i >= scoutCount(lg.days.length)).length;
   function successHtml(od, sp, p, lg, C) {
     if (!od || od.pct == null) return '';
-    const A = p.ask || {}, hd = huntDaysOf(lg), per = od.perDay || 0, trip = 1 - Math.pow(1 - per, hd), pty = 1 - Math.pow(1 - per, hd * tagsN(p));
-    const r5 = (x) => Math.min(95, Math.max(1, Math.round((x * 100) / 5) * 5 || 1));
+    const yr = (od.rows || []).filter((r) => r.days > 0).map((r) => r.kills / r.days).sort((x, y) => x - y), medPer = yr.length ? yr[Math.floor((yr.length - 1) / 2)] : null; // the middle year, the same base as the odds card
+    const A = p.ask || {}, hd = huntDaysOf(lg), per = medPer || od.perDay || 0, trip = 1 - Math.pow(1 - per, hd), pty = 1 - Math.pow(1 - per, hd * tagsN(p));
+    const r5 = (x) => Math.min(95, Math.max(1, Math.round(x * 100) || 1)); // whole percent
     const oneIn = per > 0 ? Math.round(1 / per) : null;
     const goal = A.success || 'meat';
     const head = { see: 'Seeing one', shot: 'A shot opportunity', meat: 'Meat in the freezer' }[goal];
     const body = goal === 'meat'
-      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled` : ''}. Rough math (Tip) at the official average rate.</p>`
+      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled${p.party === 'two' && !(A.partner && typeof A.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}. Rough math (Tip) at the ${medPer ? "middle year rate, the same base as Your odds" : "5 year total rate (all 2020 to 2024 hunters pooled)"}.</p>`
       : goal === 'shot'
         ? `<p><b>No official number</b> for shot chances. Every animal taken was a shot chance, so it is at least the kill rate: about ${r5(trip)}% or more over your ${hd} hunt day${hd === 1 ? '' : 's'} (rough math, Tip).</p>`
         : `<p><b>No official number</b> for seeing one. It is at least your shot chance (about ${r5(trip)}% or more, rough math, Tip). Quiet spots at first and last light are where hunters see deer (Tip).</p>`;
     return `<div class="card pl2-goal"><p class="hero-k">Your goal${A.success ? '' : ' (not answered: meat in the freezer shown)'}</p><h3>${esc(head)}</h3>${body}
       <div class="pl2-bars" aria-hidden="true"><div><span>Chance per hunter day</span><i style="width:${Math.max(2, Math.round(per * 100))}%"></i><b>${oneIn ? `1 in ${oneIn}` : 'n/a'}</b></div><div><span>Your ${hd} day${hd === 1 ? '' : 's'}</span><i style="width:${Math.max(2, r5(trip))}%"></i><b>about ${r5(trip)}%</b></div></div>
-      <p class="muted pl-small">Official base: ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
+      <p class="muted pl-small">${medPer ? `These use the middle year of ${yr.length} years of reports, the same base as Your odds above. ` : ''}Official base, the middle year of the 2020 to 2024 reports: ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
   }
 
   // ---------- Top spots board (part 5) ----------
@@ -1223,7 +1613,7 @@
         <div class="pl-kv"><span>Wind fit</span><b>${windV || (Lv ? (m.live ? 'no forecast for this spot' : 'getting the forecast') : 'forecast coming')}</b></div>
         <h4 class="pl2-h4">Legal checks</h4><ul class="pl2-chk">${chk('Private land', nd ? [] : lg.rows.priv, nd)}${chk('Road allowance', nd ? [] : lg.rows.road, nd)}${chk('No shooting areas', nd ? [] : lg.rows.noshoot, nd)}
           ${!nd && lg.rows.other.length ? `<li class="pl2-w"><b>Also check:</b> ${lg.rows.other.slice(0, 2).map((r) => esc(r.t)).join(' ')}</li>` : ''}
-          <li class="pl2-ok"><b>Legal light:</b> each day's times are in part 3.</li></ul>
+          <li class="pl2-ok"><b>Legal light:</b> each day's times are under Hunt days, Day by day.</li></ul>
         ${why.length || x.scoreLabel ? `<h4 class="pl2-h4">Why this spot</h4><ul class="pl2-why">${why.join('')}</ul>${x.scoreLabel ? `<p class="muted pl-small">${esc(x.scoreLabel)}.</p>` : ''}` : ''}
         <div class="pl2-acts no-print"><a class="btn" href="${mapLink(x)}">Map</a><button type="button" class="btn" data-b-off="${i}">Save offline</button><button type="button" class="btn" data-b-swap="${i}">Swap</button></div>
         <details class="pl-rd" data-rd="${i}"><summary class="btn">Full rundown</summary><div class="pl-rd-in"><p class="muted">Putting the rundown together...</p></div></details></li>`;
@@ -1262,7 +1652,7 @@
     const gun = p.method === 'shotgun' ? 'Shotgun patterned' : p.method === 'bow' ? 'Bow tuned and practised' : 'Rifle sighted in';
     const G = [
       { k: 'sighted', label: gun, tick: true, href: '#/s/sighting-in', link: 'Lesson: sighting in' },
-      { k: 'licence', label: 'Licence and tag bought', tick: true, href: '#/s/licences', link: 'Lesson: licences and tags' },
+      { k: 'licence', label: 'Hunting and species licences bought', tick: true, href: '#/s/licences', link: 'Lesson: licences and tags' },
       { k: 'offline', label: 'Hunt area saved for no signal', jump: 'pl-offline', link: 'Go to the offline card' },
       { k: 'trip', label: 'Trip plan saved and sent', href: '#/safety/trip', link: 'Open the trip plan' },
       { k: 'must', label: 'Must know screens read', href: '#/plan/' + encodeURIComponent(p.id), jump: 'pl-s5', link: 'Go to the study path' },
@@ -1442,7 +1832,7 @@
     if (ar.length) L.push('Answers: ' + ar.map((r) => `${r.label}: ${r.val}`).join('; ') + '.');
     if (m.ready) L.push(m.ready.left ? `Readiness: not ready, ${m.ready.left} of ${m.ready.total} gates to do.` : 'Readiness: all gates done.');
     if (m.legal) L.push(`Legal: ${{ open: 'Open', no: 'Not open', check: 'Check' }[m.legal.verdict]}. ${m.legal.why}`);
-    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, all 2020 to 2024 hunters pooled (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
+    if (m.odds && m.odds.pct != null) L.push(`Odds: ${Math.round(m.odds.pct)}% of resident hunters got one, the middle year of the 2020 to 2024 reports (${m.odds.scope === 'mu' ? 'MU' : 'region'}). The plan shows the year by year range and your days. 90% is ${m.odds.pct >= 90 ? 'possible but not promised' : 'not realistic'}.`);
     else if (m.odds && m.odds.none) L.push('Odds: no official success numbers for this animal.');
     const bl = boardList(m.spots, p);
     if (bl.length) { L.push('Top spots (candidates, scout first):'); bl.forEach((x, i) => L.push(`${i + 1}. ${x.name}${x.driveKm != null ? `, about ${x.driveKm} km from Mission` : ''}${x.walkKm != null ? `, walk ${x.walkKm < 1 ? Math.round(x.walkKm * 1000) + " m" : x.walkKm + " km"}` : ''}: ${gmaps(x)}`)); }
@@ -1565,7 +1955,7 @@
     // replace the preset entry (not push): Back from "When?" then leaves the wizard instead of reloading the preset
     if (a === 'preset' && PRESETS[b]) { draft = Object.assign({ _preset: true }, PRESETS[b]); saveDraft(); const n = STEPS.indexOf('when'); history.replaceState(history.state, '', `#/plan/new/${n}`); return wizard(view, n, C); }
     if (a === 'new') { if (b == null || b === '') { draft = {}; saveDraft(); } return wizard(view, Math.max(0, Math.min(STEPS.length - 1, +b || 0)), C); }
-    return planView(view, a, C);
+    return planViewV2(view, a, C).catch((e) => { console.warn('plan view v2', e); return planView(view, a, C); });
   }
   // print: open every folded part so the whole plan prints
   window.addEventListener('beforeprint', () => document.querySelectorAll('.pl details:not([open]), .pl-list details:not([open])').forEach((d) => { d.dataset.plClosed = '1'; d.open = true; }));

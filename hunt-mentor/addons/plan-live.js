@@ -61,7 +61,9 @@
     const syn = 29.530588853, age = ((((ms - Date.UTC(2000, 0, 6, 18, 14)) / 864e5) % syn) + syn) % syn;
     const lit = Math.round(((1 - Math.cos((2 * Math.PI * age) / syn)) / 2) * 100);
     const names = ['New moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
-    return { lit, name: names[Math.round((age / syn) * 8) % 8] };
+    // name by how much is lit (35% lit is still a crescent; quarter is about 50%)
+    const wax = age < syn / 2, q = lit < 3 ? 0 : lit < 45 ? 1 : lit <= 55 ? 2 : lit < 97 ? 3 : 4;
+    return { lit, name: q === 0 ? names[0] : q === 4 ? names[4] : wax ? names[q] : names[8 - q] };
   }
 
   // ---------- sun and legal light per day (app.js sunEvent, regs.json hours) ----------
@@ -71,7 +73,7 @@
     const [y, m, d] = iso.split('-').map(Number), noon = new Date(y, m - 1, d, 12);
     const rise = S && S.sunEvent && pt ? S.sunEvent(noon, pt.lat, pt.lon, true) : null, set = S && S.sunEvent && pt ? S.sunEvent(noon, pt.lat, pt.lon, false) : null;
     const ok = rise && set && h && h.beforeSunriseMin != null;
-    return { sunrise: rise ? +rise : null, sunset: set ? +set : null, legalStart: ok ? +rise - h.beforeSunriseMin * 6e4 : null, legalEnd: ok ? +set + h.afterSunsetMin * 6e4 : null, rule: h ? h.text : null, ruleCert: h ? h.certainty : null };
+    return { sunrise: rise ? +rise : null, sunset: set ? +set : null, legalStart: ok ? +rise - (h.beforeSunriseMin - 3) * 6e4 : null, legalMarginMin: 3, legalEnd: ok ? +set + (h.afterSunsetMin - 1) * 6e4 : null, rule: h ? h.text : null, ruleCert: h ? h.certainty : null };
   }
 
   // ---------- rut (Masterclass) ----------
@@ -251,7 +253,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light ${L}</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${L}</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}
@@ -291,7 +293,8 @@
       ${items.length ? `<ul class="pll-roads">${items.slice(0, 5).map(li).join('')}</ul>${items.length > 5 ? `<details class="pll-more"><summary>${items.length - 5} more notices</summary><ul class="pll-roads">${items.slice(5).map(li).join('')}</ul></details>` : ''}` : `<p>${R.live ? 'No notices in the official layer within 40 km.' : ''} No notice is not a promise the road is open.</p>`}
       ${(R.items || []).length > 12 ? `<p class="pll-small muted">${R.items.length - 12} more on the official map.</p>` : ''}
       <p class="pll-small">${when}</p>
-      <p class="pll-small"><a href="${esc(R.link)}" target="_blank" rel="noopener">${esc(R.linkName || 'Official road page')}</a>${R.map ? ` · <a href="${esc(R.map)}" target="_blank" rel="noopener">Official road map</a>` : ''}. Read it the night before. Signs at the road beat any app.</p></div>`;
+      <p class="pll-small"><a href="${esc(R.link)}" target="_blank" rel="noopener">${esc(R.linkName || 'Official road page')}</a>${R.map ? ` · <a href="${esc(R.map)}" target="_blank" rel="noopener">Official road map</a>` : ''}. Read it the night before. Signs at the road beat any app.</p>
+      <p class="pll-small">Use the RR (Resource Road) radio channel posted for your FSR (see the radio channel maps on the road page). Road problem: <a href="tel:6047025700">604 702 5700</a> (Chilliwack district road page, 90%).</p></div>`;
   }
   function bansCard(live) {
     const B = live.fireBans;
@@ -302,7 +305,7 @@
       <p class="pll-small">${B.stale ? 'Saved copy, ' : ''}checked ${esc(fmtDT(B.asOf))}, BC Wildfire Service ${badge(B.cert || 95)}. An empty result is not a promise. <a href="${esc(B.link || page)}" target="_blank" rel="noopener">Fire bans and restrictions</a></p></div>`;
   }
   function srcCard(live) {
-    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)}` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
+    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
   }
 
   let cssDone = false;
