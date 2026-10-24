@@ -238,7 +238,8 @@
     const s = d.forecast ? daySum(d, P0) : null;
     let wx;
     if (d.past) wx = '<p class="muted">This day has passed.</p>';
-    else if (!d.forecast) wx = `<div class="pll-noday"><p><b>Forecast not out yet.</b> Open-Meteo forecasts about ${FORECAST_DAYS} days ahead, so this day comes in on ${esc(dLabel(d.forecastFrom))}. No made up numbers here.</p>
+    else if (!d.forecast) wx = `<div class="pll-noday"><p><b>Forecast not out yet. It comes in on ${esc(dLabel(d.forecastFrom))}</b> (Open-Meteo forecasts about ${FORECAST_DAYS} days ahead). No made up numbers here.</p>
+        <p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal and check:</b></p><ul class="pll-small"><li>Wind: direction and speed at first light. In your face at the spot, go; at your back, take the backup (Tip).</li><li>Rain in legal light.</li><li>Freezing level: within 300 m of the spot height, rain can turn to snow or ice. Pack for both (Tip).</li></ul>
         ${d.climate ? `<p>What to expect: ${esc(d.climate.t)} ${badge(d.climate.cert)} <span class="pll-small muted">${esc(d.climate.src)}${d.climate.lesson && hasSession(d.climate.lesson) ? `, ${lessonA(d.climate.lesson, 'lesson')}` : ''}</span></p>` : '<p class="muted">No climate numbers in the app for this area and month.</p>'}
         <p class="pll-small">Plan by the rules that do not change: legal light below, thermals (morning down, midday up, evening down) and the wind on the day.</p></div>`;
     else if (!s) wx = `<p class="muted">${live.errors && live.errors.wx ? `Could not load the forecast (${esc(live.errors.wx)}). Open <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> with signal.` : 'No forecast hours for this day.'}</p>`;
