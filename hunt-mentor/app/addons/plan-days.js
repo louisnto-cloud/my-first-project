@@ -239,25 +239,33 @@
       <li>Neck, ribs, four quarters and loins all come out, however many trips ${badge(95)}${kg ? `. About ${kg} kg of boned meat ${TIP}` : ''} ${lessonA('packing-out', 'Packing out')}</li>
     </ul></div>`;
   }
-  function dayHtml(d, i, plan) {
+  // a block already shown word for word on an earlier day is said once: later days point back to it
+  const SAME = (n, what) => `<p class="pll-small muted pld-same">${what}: same as Day ${n}.</p>`;
+  function once(seen, i, key, h, what) {
+    if (!h || !seen) return h;
+    const k = key + '\u0000' + h;
+    if (seen.has(k)) return SAME(seen.get(k) + 1, what);
+    seen.set(k, i); return h;
+  }
+  function dayHtml(d, i, plan, seen) {
     if (d.kind === 'nolight') return `<div class="card"><h3>Day ${i + 1}: ${esc(d.label)}</h3><p class="muted">Sun times are not ready on this screen, so no hour by hour plan. Open the Home page once, then come back.</p></div>`;
     const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow">${dayHead(d.label)}${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
     if (d.kind === 'closed') return `<details class="card pl-day pl-closed pld-day">${head}<p><b>No open season for you on this day.</b> Scout, sight in or rest. No hunting.</p></details>`;
     const now = Date.now();
-    const steps = d.steps.map((s) => `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b class="pld-ti">${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small pld-tx">${s.t}</span>
-        ${s.turn && s.at > now ? `<span class="pld-acts no-print"><button type="button" class="btn" data-pld-turn="${s.at}" data-pld-walk="${d.turnaround.walkMin}">Set the turnaround alarm for ${esc(fmtT(s.at))}</button><a class="btn" href="#/safety/turn">Safety: turnaround</a></span>` : ''}</span></li>`).join('');
-    const wx = d.forecast ? (d.rainMm != null ? `<p class="pll-small">Forecast rain in legal light at the first pick: ${d.rainMm.toFixed(1)} mm.</p>` : '') : d.kind !== 'past' ? `<p class="pld-note">No forecast yet for this day${d.forecastFrom ? ` (it comes in on ${esc(dLabel(d.forecastFrom))})` : ''}. The first pick is the top ranked spot. On the morning, check the wind at the truck: in your face, go; at your back, take the backup.</p>` : '';
+    const steps = d.steps.map((s) => { const tx = s.turn || s.legal || s.key === 'truck' ? s.t : once(seen, i, 'step-' + s.key, s.t, 'Same words'); return `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b class="pld-ti">${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small pld-tx">${tx === s.t ? s.t : `Same as Day ${seen.get('step-' + s.key + '\u0000' + s.t) + 1}.`}</span>
+        ${s.turn && s.at > now ? `<span class="pld-acts no-print"><button type="button" class="btn" data-pld-turn="${s.at}" data-pld-walk="${d.turnaround.walkMin}">Set the turnaround alarm for ${esc(fmtT(s.at))}</button><a class="btn" href="#/safety/turn">Safety: turnaround</a></span>` : ''}</span></li>`; }).join('');
+    const wx = d.forecast ? (d.rainMm != null ? `<p class="pll-small">Forecast rain in legal light at the first pick: ${d.rainMm.toFixed(1)} mm.</p>` : '') : d.kind !== 'past' ? `<p class="pld-note">No forecast yet for this day${d.forecastFrom ? ` (it comes in on ${esc(dLabel(d.forecastFrom))})` : ''}. ${seen && seen.has('wxnote') ? ` Same morning check as Day ${seen.get('wxnote') + 1}.` : (seen && seen.set('wxnote', i), ' The first pick is the top ranked spot. On the morning, check the wind at the truck: in your face, go; at your back, take the backup.')}</p>` : '';
     const blocked = d.blocked.length ? `<div class="pld-block"><b>Left out: a road notice blocks it</b><ul>${d.blocked.map((b) => `<li>${esc(b.spot.name)}: ${b.notices.map((n) => `${esc(n.road)}, ${esc(n.t)} (${esc(n.why)})`).join('; ')}</li>`).join('')}</ul><p class="pll-small">A closure past a given km may still let you reach a spot before it. Check the km on the official notice.</p></div>` : '';
     const roles = (d.pair ? d.roles.pair : d.roles.solo) || [];
     return `<details class="card pl-day pl-open pld-day"${i === 0 ? ' open' : ''}>${head}
       ${timeline(d)}${wx}
-      ${d.primary ? spotLine(d.primary, 'First light') : d.blocked.length ? '<p class="pld-note">Every top spot is blocked by a road notice below. Pick another area on the Map, or check the notice km.</p>' : '<p class="muted">No candidate spots in the plan yet, so the times use the plan point.</p>'}
-      ${d.evening && !d.evening.same ? spotLine(d.evening, 'Evening') : ''}
-      ${d.backup ? `<div class="pld-bk"><div class="pld-bk-h">Backup plan and its own times</div>${spotLine(d.backup, 'Backup')}<ul class="pll-small pld-why">${d.backup.why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+      ${d.primary ? once(seen, i, 'spot', spotLine(d.primary, 'First light'), `First light, ${esc(d.primary.spot.name)}`) : d.blocked.length ? '<p class="pld-note">Every top spot is blocked by a road notice below. Pick another area on the Map, or check the notice km.</p>' : '<p class="muted">No candidate spots in the plan yet, so the times use the plan point.</p>'}
+      ${d.evening && !d.evening.same ? once(seen, i, 'spot', spotLine(d.evening, 'Evening'), `Evening, ${esc(d.evening.spot.name)}`) : ''}
+      ${d.backup ? `<div class="pld-bk"><div class="pld-bk-h">Backup plan and its own times</div>${once(seen, i, 'spot', spotLine(d.backup, 'Backup'), `Backup, ${esc(d.backup.spot.name)}`)}${once(seen, i, 'why', `<ul class="pll-small pld-why">${d.backup.why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>`, 'When to go to the backup')}</div>` : ''}
       ${blocked}
       <div class="pld-hh">Hour by hour</div><ol class="pld-steps">${steps}</ol>
-      ${d.kind === 'hunt' ? ifGot(plan) : ''}
-      ${roles.length ? `<div class="pld-roles"><b>${d.pair ? 'With your partner' : 'Solo'}</b><ul>${roles.map((r) => `<li>${esc(r.t)} ${badge(r.cert)}</li>`).join('')}</ul><p class="pll-small">${lessonA(d.roles.lesson, 'Lesson: Hunting with a partner')}${d.pair ? '' : ` · ${lessonA('local-harrison-deer', 'Your Harrison deer hunt')}`}</p></div>` : ''}
+      ${d.kind === 'hunt' ? once(seen, i, 'got', ifGot(plan), 'If you get one') : ''}
+      ${roles.length ? once(seen, i, 'roles', `<div class="pld-roles"><b>${d.pair ? 'With your partner' : 'Solo'}</b><ul>${roles.map((r) => `<li>${esc(r.t)} ${badge(r.cert)}</li>`).join('')}</ul><p class="pll-small">${lessonA(d.roles.lesson, 'Lesson: Hunting with a partner')}${d.pair ? '' : ` · ${lessonA('local-harrison-deer', 'Your Harrison deer hunt')}`}</p></div>`, d.pair ? 'With your partner' : 'Solo') : ''}
       </details>`;
   }
   // the timeline key, said once for every day
@@ -268,7 +276,7 @@
     return `<div class="pld"><p class="pll-law">Study aid only. The official regulations are the law.</p>
       <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
       ${KEY(days.some((d) => d.wind && d.wind.length))}
-      ${days.map((d, i) => dayHtml(d, i, plan)).join('')}
+      ${(() => { const seen = new Map(); return days.map((d, i) => dayHtml(d, i, plan, seen)).join(''); })()}
       <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; margins as in the line at the top, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {

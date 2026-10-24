@@ -122,13 +122,12 @@
       flags, widened: widen, years: g.length,
     };
     const pct = (x, d = 1) => `${(x * 100).toFixed(d)}%`;
-    const yrs = g.map((r) => `${r.year}: ${r.kills} / ${r.days} = ${pct(r.kills / r.days, 2)}`).join('; ');
     base.method = [
       `Source: ${H.source} (open data, updated ${H.datasetUpdated || 'n/a'}, checked ${H.checked || 'n/a'}). Resident hunters, ${YEARS[0]} to ${YEARS[1]}, ${scope === 'mu' ? `MU ${mu}` : `Region ${regionOf(mu)} total`}.`,
       'The numbers are Hunter Sample survey estimates: general season and LEH (Limited Entry Hunting) together, bucks and does together.',
-      `Chance per hunter day = deer taken / hunter days, each year. ${yrs}.`,
+      `Chance per hunter day = deer taken / hunter days, each year (table below; likely ${pct(perDay.mid, 2)}).`,
       `Range: low = the worst year, likely = the middle year, high = the best year${widen ? `; widened (low x ${WIDEN.low}, high x ${WIDEN.high}) because ${flags.join('; ')}` : ''}.`,
-      `Season success = deer taken / hunters, same range rule: ${g.map((r) => `${r.year}: ${pct(r.kills / r.hunters, 1)}`).join('; ')}.`,
+      'Season success = deer taken / hunters, same range rule (table below).',
       `Days per deer = 1 / chance per day (${Math.round(base.daysPerDeer.low)} to ${Math.round(base.daysPerDeer.high)}, likely ${Math.round(base.daysPerDeer.mid)}).`,
       `Your ${N} day${N === 1 ? '' : 's'}: chance = 1 minus (1 minus chance per day) to the power ${N}. Likely: 1 minus (1 minus ${perDay.mid.toFixed(4)})^${N} = ${pct(base.overPlanDays.mid, 1)}.`,
       'Assumes an average hunter on an average season day, every day the same and independent. Your skill, your spot and your dates move it (see the estimates).',
@@ -173,13 +172,15 @@
       const P = PRESS[pr];
       if (P) {
         const walk = det && det.walkKm != null ? ` Walk from parking about ${det.walkKm < 0.1 ? 'under 0.1' : det.walkKm.toFixed(1)} km${det.climbM ? `, ${Math.round(det.climbM)} m climb` : ''}.` : '';
-        adj.push({ key: 'pressure', why: `${P.t}${det && det.pressureWhy ? `: ${det.pressureWhy}` : ''}.${walk} 73% of hunters stayed within 0.5 km of a road (90%, Pennsylvania study; BC is an assumption). Hunted bucks pick cover away from roads (85%). But coast forest has so much cover that hunting barely changes deer numbers (90%), so the change is kept small.`, factor: rng(P.lo, P.hi), source: 'Hunting pressure lesson; Black tailed deer Masterclass 5', lesson: L.pressure, cert: 50 });
+        const own = `${P.t}${det && det.pressureWhy ? `: ${String(det.pressureWhy).replace(/\.$/, '')}` : ''}.${walk}`, rule = '73% of hunters stayed within 0.5 km of a road (90%, Pennsylvania study; BC is an assumption). Hunted bucks pick cover away from roads (85%). But coast forest has so much cover that hunting barely changes deer numbers (90%), so the change is kept small.';
+        adj.push({ key: 'pressure', why: `${own} ${rule}`, own, rule, label: 'Pressure', factor: rng(P.lo, P.hi), source: 'Hunting pressure lesson; Black tailed deer Masterclass 5', lesson: L.pressure, cert: 50 });
       } else adj.push({ key: 'pressure', why: 'No pressure estimate for this spot, so no change.', factor: rng(1, 1), source: 'none', cert: null });
       // habitat score (the app's own pick)
       const sc = det && det.score != null ? det.score : s.score;
       if (sc != null && Number.isFinite(+sc)) {
         const f = clamp(1 + 0.04 * (+sc - REF_SCORE), 0.85, 1.2);
-        adj.push({ key: 'habitat', why: `Habitat score ${sc}${det && det.scoreMax ? ` of ${det.scoreMax}` : ''} (my pick, from open data: winter range, cutblock age, burns, slope). A typical deer spot here scores ${REF_SCORE}. The score has never been tested against kills, so it moves the estimate only a little.`, factor: rng(Math.min(1, f), Math.max(1, f)), source: 'Hunt Mentor spot data (my pick), 60% for the spot list', cert: 40 });
+        const own = `Habitat score ${sc}${det && det.scoreMax ? ` of ${det.scoreMax}` : ''}.`, rule = `The score is my pick, from open data (winter range, cutblock age, burns, slope). A typical deer spot here scores ${REF_SCORE}. The score has never been tested against kills, so it moves the estimate only a little.`;
+        adj.push({ key: 'habitat', why: `Habitat score ${sc}${det && det.scoreMax ? ` of ${det.scoreMax}` : ''} (my pick, from open data: winter range, cutblock age, burns, slope). A typical deer spot here scores ${REF_SCORE}. The score has never been tested against kills, so it moves the estimate only a little.`, own, rule, label: 'Habitat', factor: rng(Math.min(1, f), Math.max(1, f)), source: 'Hunt Mentor spot data (my pick), 60% for the spot list', cert: 40 });
       }
       // owner answers: shown, not counted (no sourced number)
       if (plan.firstHunt || plan.experience) adj.push({ key: 'you', why: 'Your experience: the base is the average of all hunters, new and old. No source gives a number for a first season, so it is not counted. Expect to be at or below the average at first (Tip).', factor: rng(1, 1), source: 'none (Tip)', cert: null });
@@ -333,7 +334,7 @@
     const meth = `<h4 class="po-h4">Method and sources</h4><ul class="po-meth">${b.method.map((t) => `<li>${tx(t)}</li>`).join('')}
       <li>Spot estimates: the range above times the multipliers shown on each spot, each day on its own, all together capped at x ${CAP.low} to x ${CAP.high}. Estimate (Tip), not official.</li>
       <li>${esc(res.seen.text)} <span class="verify">VERIFY</span></li></ul>
-      <div class="tbl"><table><thead><tr><th>Year</th><th>Hunters</th><th>Deer</th><th>Days</th><th>A day</th></tr></thead><tbody>${res.years.map((y) => `<tr><td>${y.year}</td><td>${y.hunters != null ? y.hunters : 'n/a'}</td><td>${y.kills != null ? y.kills : 'n/a'}</td><td>${y.days != null ? y.days : 'n/a'}</td><td>${y.perDay != null ? P1(y.perDay) : 'left out'}</td></tr>`).join('')}</tbody></table></div>
+      <div class="tbl"><table><thead><tr><th>Year</th><th>Hunters</th><th>Deer</th><th>Days</th><th>A day</th><th>Season</th></tr></thead><tbody>${res.years.map((y) => `<tr><td>${y.year}</td><td>${y.hunters != null ? y.hunters : 'n/a'}</td><td>${y.kills != null ? y.kills : 'n/a'}</td><td>${y.days != null ? y.days : 'n/a'}</td><td>${y.perDay != null ? `${(y.perDay * 100).toFixed(2)}%` : 'left out'}</td><td>${y.hunters && y.kills != null ? `${(y.kills / y.hunters * 100).toFixed(1)}%` : 'n/a'}</td></tr>`).join('')}</tbody></table></div>
       <p class="po-sub">Source: <a href="${esc(res.source.url)}" target="_blank" rel="noopener">${esc(res.source.name)}</a>, checked ${esc(res.source.checked || '')} ${badge(res.source.cert)}. Rut: ${lessonLink(L.rut, 'Masterclass 4: The rut')}. Pressure: ${lessonLink(L.pressure, 'Hunting pressure')}.</p>`;
     // headline numbers stay on the card; the years, the per spot multipliers and the method fold under one heading
     const how = `<details class="card po-how"><summary>How these odds are worked out</summary><p class="po-sub">Official base, an average hunter. Range = worst year to best year, line = the middle year (median of the 5 reports). The other odds cards on this plan use the same base. Scale 0 to ${Math.round(scale * 100)}%.</p>${yrs.replace(/^<div class="card">/, '<div class="po-in">')}${spotsWhy(res)}${meth}</details>`;
@@ -364,9 +365,15 @@
     const sig = (a) => `${a.factor}|${a.why}|${a.source}|${a.cert}`;
     const shared = sp.length > 1 ? (sp[0].adjustments || []).filter((a) => sp.every((s) => (s.adjustments || []).some((b) => sig(b) === sig(a)))) : [];
     const sk = new Set(shared.map(sig));
+    // a rule every spot's multiplier uses (pressure, habitat) is said once; each spot then shows only its own part
+    const rules = new Map();
+    for (const s of sp) for (const a of s.adjustments || []) if (a.rule && !sk.has(sig(a))) { const r = rules.get(a.key); if (!r) rules.set(a.key, { a, n: 1 }); else if (r.a.rule === a.rule) r.n++; else r.bad = true; }
+    const rk = new Set([...rules].filter(([, r]) => !r.bad && r.n === sp.length && sp.length > 1).map(([k]) => k));
+    const ruleLi = (a) => `<li><b>${esc(a.label)}</b>: ${tx(a.rule)} <span class="po-sub">${esc(a.source)}</span> ${a.cert != null ? badge(a.cert) : ''}${a.lesson ? ` ${lessonLink(a.lesson, 'Lesson')}` : ''}</li>`;
+    const ownLi = (a) => (rk.has(a.key) ? `<li><b>${fx(a.factor)}</b> ${tx(a.own)}</li>` : adj(a));
     const one = sp.map((s, i) => { const own = (s.adjustments || []).filter((a) => !sk.has(sig(a)));
-      return `<h5 class="po-h5">${i + 1}. ${esc(s.name)}: why ${P0(s.estimate.mid)}</h5>${own.length ? `<ul>${own.map(adj).join('')}</ul>` : '<p class="po-sub">Only the shared multipliers above.</p>'}${s.detail ? '' : '<p class="po-sub">Spot detail not saved on this phone, so the map index was used.</p>'}`; }).join('');
-    return `<h4 class="po-h4">Why each spot gets its number</h4>${shared.length ? `<p class="po-sub"><b>Same for all ${sp.length} spots:</b></p><ul>${shared.map(adj).join('')}</ul>` : ''}${one}`;
+      return `<h5 class="po-h5">${i + 1}. ${esc(s.name)}: why ${P0(s.estimate.mid)}</h5>${own.length ? `<ul>${own.map(ownLi).join('')}</ul>` : '<p class="po-sub">Only the shared multipliers above.</p>'}${s.detail ? '' : '<p class="po-sub">Spot detail not saved on this phone, so the map index was used.</p>'}`; }).join('');
+    return `<h4 class="po-h4">Why each spot gets its number</h4>${shared.length || rk.size ? `<p class="po-sub"><b>Same for all ${sp.length} spots:</b></p><ul>${shared.map(adj).join('')}${[...rk].map((k) => ruleLi(rules.get(k).a)).join('')}</ul>` : ''}${one}`;
   }
 
   window.HMPlanOdds = { compute, html, _rutFactor: rutFactor, _over: over };

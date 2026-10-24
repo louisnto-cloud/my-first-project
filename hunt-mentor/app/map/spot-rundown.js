@@ -320,7 +320,9 @@ function render(D, ctx) {
   if (walkL) av.push(li(`Trail: ${/no trail/i.test(walkL) ? 'no trail mapped. Cross country.' : esc(walkL)}`));
   evs.filter((t) => /^Road:/i.test(t)).forEach((t) => av.push(li(esc(t))));
   if (d.parkWhat) av.push(li(`Parking: ${esc(d.parkWhat)}`));
-  av.push(li(`${d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.'} Bring your own water, toilet kit and garbage bags${TIP}`));
+  // plan mode: the bring your own tip is the same for every spot, so it is said once in the shared block
+  if (SH) { av.push(li(d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.')); sh.push(li(`Facilities: bring your own water, toilet kit and garbage bags${TIP}`)); }
+  else av.push(li(`${d.recName ? 'No other facilities are listed.' : 'No facilities are listed for this spot.'} Bring your own water, toilet kit and garbage bags${TIP}`));
   out.push(sec(4, 'avail', 'What is available', av.join('')));
 
   // 5. Where to camp
@@ -360,7 +362,8 @@ function render(D, ctx) {
     const tac = pickTactic(sp.tactics || [], cat);
     if (tac) tp.push(li(`For ${cat === 'atv' ? 'an ATV (all terrain vehicle)' : `a ${esc(cat)}`} spot: <b>${esc(tac.name)}</b>${tac.best ? `. Best: ${esc(tac.best)}` : ''}${TIP}${(tac.steps || []).length ? `<ul>${tac.steps.slice(0, 4).map((s) => li(esc(s))).join('')}</ul>` : ''}`));
   }
-  tp.push(li(`${windTip(d.aspect)}${TIP}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`));
+  if (SH) { tp.push(li(`${windTip(d.aspect, true)}${TIP}`)); sh.push(li(`${windTip('', false, true)}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`)); }
+  else tp.push(li(`${windTip(d.aspect)}${TIP}${lessonA(ctx, 'wind-thermals', 'wind and thermals')}`));
   out.push(sec(6, 'tips', 'Tips', tp.join('')));
 
   // 7. Key things to know and legal
@@ -369,7 +372,8 @@ function render(D, ctx) {
   for (const f of d.flags || []) lg.push(li(`${esc(f.t || f.text || '')}${badge(num(f.cert))}${srcTxt(f.src || f.source, f.date ? `data ${f.date}` : '')}${f.cwd ? lessonA(ctx, 'cwd', 'CWD (Chronic Wasting Disease)') : ''}`));
   const closures = closureList(D);
   for (const c of closures) lg.push(li(`${c.m === 0 ? 'Inside' : `${esc(units.dist(c.m))} away`}: ${esc(c.name)}${c.type ? ` (${esc(c.type)})` : ''}${c.dates ? `. ${esc(c.dates)}` : ''}${c.exemption ? `. Exemption: ${esc(c.exemption)}` : ''}${badge(D.closeLayer && D.closeLayer.cert)}${srcTxt('Motor vehicle closures layer', D.closeLayer && D.closeLayer.dataDate ? `data ${D.closeLayer.dataDate}` : '')}`));
-  if (!flagsTxt.some((t) => /private land/i.test(t))) lg.push(li('No private land flag within the checked distance. Private land can still be unsigned: check posted signs.'));
+  if (!flagsTxt.some((t) => /private land/i.test(t))) lg.push(li(SH ? 'No private land flag within the checked distance.' : 'No private land flag within the checked distance. Private land can still be unsigned: check posted signs.'));
+  if (SH) sh.push(li('Private land can be unsigned: check posted signs at every spot.'));
   const verify = planLine(d, /^\s*Verify\s*:/i);
   if (verify) lg.push(li(esc(verify)));
   (SH ? sh : lg).push(li(`Seasons ${SH ? 'in each spot' : 'above'} are general open seasons only. LEH (Limited Entry Hunting) draws and in season changes are not all shown.${D.region ? lessonA(ctx, `rb-region-${String(D.region).toLowerCase()}`, `Rule Book, Region ${D.region}`) : ''}`));
@@ -380,8 +384,8 @@ function render(D, ctx) {
   if (SH) {
     sh.push(li(`Sources: ${esc(PIPE)}; MU layer WAA_WILDLIFE_MGMT_UNITS_SVW; seasons from the synopsis pages named on each row. Each fact keeps its certainty %.`));
     const key = plan ? `${plan.species}|${plan.from}|${plan.to}|${plan.mu || D.mu || ''}` : String(D.mu || '');
+    sh.unshift(li('Each spot is a candidate, my pick from open data. Scout it first. Facts show certainty and source. Tip means opinion.'));
     return `<div class="srd srd-inplan" data-ms="${D.ms}">
-    <p class="srd-muted">Candidate spot, my pick from open data. Scout it first. Facts show certainty and source. Tip means opinion.</p>
     ${out.join('')}
     <section class="srd-shared" data-shared="${esc(key)}"><h4 class="srd-h">Same for every spot in this plan${D.mu ? `, MU ${esc(D.mu)}` : ''}</h4><p class="srd-muted">Shown once per plan. The spot rundowns above and below only list what differs.</p><ul class="srd-ul">${sh.join('')}</ul></section>
     <p class="srd-muted srd-sharedptr" hidden>Facts that are the same for every spot (sources, MU harvest odds, banner and legal lines, bear and cell signal, the ${esc(MONTH_NAMES[month - 1])} playbook): in the first rundown you opened. <button type="button" class="srd-btn sm" data-rd="shared">Show them here</button></p></div>`;
@@ -425,9 +429,12 @@ function pickTactic(ts, cat) {
   const re = { drive: /glass|sit|edge|road|field|decoy|pond/i, atv: /ride|glass|edge|walk/i, walk: /still|walk|stalk|edge|jump|decoy/i, backcountry: /backpack|stalk|still|glass|ridge|call/i, camp: /glass|sit/i }[cat];
   return (re && ts.find((t) => re.test(`${t.name} ${t.best || ''}`))) || ts[0] || null;
 }
-function windTip(aspect) {
+// own: only this slope's sentence (plan mode, the rule is in the shared block); rule: only the rule
+function windTip(aspect, own, rule) {
   const a = String(aspect || '').toUpperCase();
-  const base = 'Thermals: morning sun warms slopes and air drifts uphill; evening slopes cool and air sinks downhill (75%, Wind and thermals lesson). So in the morning hunt from above, in the evening from below';
+  const base0 = 'Thermals: morning sun warms slopes and air drifts uphill; evening slopes cool and air sinks downhill (75%, Wind and thermals lesson). So in the morning hunt from above, in the evening from below';
+  if (rule) return `${base0}.`;
+  const base = own ? 'Thermals (rule in Same for every spot)' : base0;
   if (/^(S|SE|SW)\b/.test(a)) return `${base}. This ${esc(aspect)} slope warms early, so the uphill drift starts sooner in the morning`;
   if (/^(N|NE|NW)\b/.test(a)) return `${base}. This ${esc(aspect)} slope stays cool longer, so the switch comes later`;
   if (/^(E)\b/.test(a)) return `${base}. This east facing slope gets the first sun, so the morning switch is early`;
