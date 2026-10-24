@@ -924,7 +924,7 @@
       ${li('Seasons, bag limits, legal hours, rules', `${esc((lg && lg.src) || 'BC Hunting and Trapping Regulations Synopsis')}${lg && lg.edition && !/edition/i.test(lg.src || '') ? `, ${esc(lg.edition)} edition` : ''}, page given on each line${lg && lg.checked ? ` (checked ${esc(lg.checked)})` : ''}`)}
       ${li('Odds', yrs.length ? `BC resident harvest reports for your MU, ${Math.min(...yrs)} to ${Math.max(...yrs)} (${yrs.length} years)` : 'BC resident harvest reports for your MU')}
       ${li('Spots', `open map data, scored by the app${st && st.dataDate ? `, data dated ${esc(st.dataDate)}` : ''}${st && st.saved ? `, saved ${esc(st.saved)}` : ''}. Candidates only: scout first`)}
-      ${li('Sun and legal light', 'sunrise and sunset worked out on the phone (sun formula, up to about 2 min off the full NOAA algorithm); legal light is 1 hour before sunrise to 1 hour after sunset (synopsis page 11), shown 3 min late at the start and 1 min early at the end')}
+      ${li('Sun and legal light', 'sunrise and sunset worked out on the phone (sun formula, up to about 2 min off the full NOAA algorithm); legal light is 1 hour before sunrise to 1 hour after sunset (synopsis page 11), shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times)')}
       ${li('Drive and day times', `Estimates. Drive is the straight line from ${esc(homeName(st && st.plan))} to the parking times 1.3, at about 60 km/h. Walk allowance is ${WALK_RULE}. The day plan adds 10 min to gear up and 15 min of slack`)}
       ${li('Certainty', '95 to 100%: read in the official source. 80 to 94%: official source, some reading. 60 to 79%: reliable secondary source. Tip: opinion. A lesson link holds the full citation')}
     </ul>`;
@@ -1043,13 +1043,13 @@
       w1: `<div data-tl-steps="w1"></div>
         ${p.party === 'two' ? `<div class="tl-step"><b>Agree with your ${esc(mate(p))}, this week</b><p>Settle now: does your ${esc(mate(p))} carry a tag (then they buy their own licences in person too), carry a rifle, who sits where, who walks in first. The party odds on this plan assume your ${esc(mate(p))} carries a tag. <span class="verify">To confirm</span></p><ul class="tl-bro"><li>Does your ${esc(mate(p))} carry a tag? Yes or no <span class="verify">To confirm</span></li><li>Does your ${esc(mate(p))} carry a rifle? <span class="verify">To confirm</span></li><li>Your ${esc(mate(p))}'s phone number written on paper, in your pack <span class="verify">To confirm</span></li><li>Who at home holds the trip plan (name and phone) <span class="verify">To confirm</span></li></ul></div>` : ''}
         <div data-tl-check="w1"></div>
-        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
-        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
+        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', 'Legal and open', 'pl-legal', 'Checking the season tables...'))}
+        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', 'Study before you go', 'pl-study', ''))}`,
       w2: `<div data-tl-steps="w2"></div>
         <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal</h3><p class="muted">Loading...</p></div>
         <div data-tl-check="w2"></div>
         ${fold('Pick your spot', 'top 5 spots, drive, walk, legal checks', sec('pl-sb', 'Top spots board', 'pl-board', 'Finding and checking spots...'))}
-        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', '2. Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
+        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', 'Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
       hw: `<div data-tl-steps="hw"></div><div data-tl-check="hw"></div>
         <p class="tl-tip"><a class="btn" href="#/huntweek/${encodeURIComponent(p.id)}">Hunt week countdown list</a></p>`,
       nb: `<div class="tl-step tl-key"><b>On you, not in the truck</b><p>Photo ID, your FWID (Fish and Wildlife ID) number, and every species licence you hold this licence year, used and unused (99%, synopsis pages 5, 7 and 8). No licence, no shot.</p></div>
@@ -1059,7 +1059,7 @@
         <div data-tl-check="nb"></div>`,
       hunt: `<div id="tl-huntday"></div>
         ${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
-        ${fold('Day cards, tactics, the shot and after the kill', 'what the deer do, tactics, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
+        ${fold('Day cards, tactics, the shot and after the kill', 'what the deer do, tactics, mistakes to skip', sec('pl-s3', 'Day by day', 'pl-days', 'Building your days...'))}`,
       shot: `<div class="tl-step tl-key"><b>Kill, cancel the licence, then touch the deer</b><p>Cancel (notch) your deer licence as printed on it before you handle the deer. The shooter cancels their own, never a partner's (99%, synopsis page 11).</p><a class="btn" href="#/field/c/tag">Tag card</a></div>
         ${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
         <div data-tl-check="shot"></div>`,
@@ -1076,7 +1076,7 @@
       ${nav}
       ${T.S.map((s) => stage(s, body[s.k])).join('')}
       <details class="card pl-srcs" id="pl-srcs"><summary><h2>Sources</h2> <small>where the facts on this plan come from</small></summary><div id="pl-srcs-in"><p class="muted">Loading...</p></div></details>
-      <details class="card tl-master" id="tl-master"><summary><h2>Full checklist</h2> <small>every item for this plan, by group</small></summary>${sec('pl-s4', '4. Checklist', 'pl-check', '')}</details>
+      <details class="card tl-master" id="tl-master"><summary><h2>Full checklist</h2> <small>every item for this plan, by group</small></summary>${sec('pl-s4', 'Checklist', 'pl-check', '')}</details>
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
@@ -1136,9 +1136,9 @@
       let st = null; try { if (C.study) st = C.study.today(p, sp.lessons); } catch (e) { st = null; }
       const iron = p.method === 'rifle' && C.hasSession('mc-tikka-03');
       return [
-        { s: 'w1', k: 'species', ok: g('licence').ok || !!mineT().species, t: 'Buy your deer species licence in person', p: `Same day at Service BC or a vendor. By mail it takes about 2 to 3 weeks (70%, sources differ)${tlAdd(today, 21) >= tlAdd(p.from, -7) ? ': too close to ' + tlD(p.from) + ', so go in person' : ''}.`, p2: 'Ready? (the five checks before you go) also needs your hunting licence, FWID (Fish and Wildlife ID) and your partner\'s licences.', a: '<button type="button" class="btn" data-tl-tick="species">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
+        { s: 'w1', k: 'species', ok: g('licence').ok || !!mineT().species, t: 'Buy your deer species licence in person', p: `Same day at Service BC or a vendor. By mail it takes about 2 to 3 weeks (70%, sources differ)${tlAdd(today, 21) >= tlAdd(p.from, -7) ? ': too close to ' + tlD(p.from) + ', so go in person' : ''}.`, p2: 'For Ready? (the five checks before you go) you also need your hunting licence, FWID (Fish and Wildlife ID) and your partner\'s licences.', a: '<button type="button" class="btn" data-tl-tick="species">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
         { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m (set the sights so it hits where you aim)' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
-        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: (g('must').how || 'The study path is in this week below.').replace(/\s*Points follow the share read\./, ''), a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
+        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: (g('must').how || 'The study path is in this week below.').replace(/\s*Points follow the share read\./, '').replace(/\s*Read them all for the full \d+ points; each one you read adds its share\./, ''), a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
         { s: 'w2', k: 'offline', ok: g('offline').ok, t: 'Save the hunt area for no signal', p: 'Do it at home on wifi. The offline card shows the size.', a: '<button type="button" class="btn" data-g-jump="pl-offline">Go to the offline card</button>' },
         { s: 'w2', k: 'scout', tip: true, t: 'Tip: scout your top spot before the hunt', p: 'Your hunt dates have no scout day inside them. Drive up on a free day and walk in.', a: '<button type="button" class="btn" data-g-jump="pl-board">See the top spots</button>' },
         { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help. Nobody watches a trip plan: your contact must call 911 if you are late (AdventureSmart, 95%).', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
@@ -1230,7 +1230,7 @@
           ${tr('Turn back', tmG(d.turnaround && d.turnaround.at != null ? d.turnaround.at : at('turn')))}
           ${backup}
         </div>`;
-      }).join('') + '<p class="pl-small muted tl-hd-n">' + ln('Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Walk allowance: ' + WALK_RULE + '. Hour by hour, the turnaround alarm and the reasons are just below.') + '</p>';
+      }).join('') + '<p class="pl-small muted tl-hd-n">' + ln('Estimates. Legal light is shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Walk allowance: ' + WALK_RULE + '. Hour by hour, the turnaround alarm and the reasons are just below.') + '</p>';
     };
     m.redraw = () => { drawGlance(); drawHuntDay(); };
     loadGates();
@@ -1533,14 +1533,14 @@
         if (seen[body]) body = `<p class="pl-small">Same plan as Day ${seen[body]}, above.</p>`; else seen[body] = i + 1;
         return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}${open ? `, open for ${esc(lg.dayOpen[d].join(', '))}` : ''}</span></summary>${body}</details>`;
       }
-      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${light}</span></span></summary>
+      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (shown a little late at the start and a little early at the end, for safety) ${light}</span></span></summary>
         <div class="pl-kv"><span>Sunrise</span><b>${rise ? C.hhmm(rise) : 'n/a'}</b></div><div class="pl-kv"><span>Sunset</span><b>${set ? C.hhmm(set) : 'n/a'}</b></div>
         ${open ? `<div class="pl-kv"><span>Open for</span><b>${esc(lg.dayOpen[d].join(', '))}</b></div>` : ''}${tl}${body}</details>`;
     }).join('');
     const phases = [...new Set(days.map((d) => +d.slice(5, 7)))].map((mo) => (sp.phases || []).find((ph) => (ph.months || []).includes(mo))).filter(Boolean);
     const uniq = [...new Set(phases)];
     const tactics = (sp.tactics || []);
-    return `${lean ? '<p class="muted pl-small">Leave, sit, legal light and sun times for each day: the Hunt day card and the hour by hour above. Times of day plans below are Tip (opinion).</p>' : `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>`}
+    return `${lean ? '<p class="muted pl-small">Leave, sit, legal light and sun times for each day: the Hunt day card and the hour by hour above. Times of day plans below are Tip (opinion).</p>' : `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>`}
       ${nS === 0 ? `<div class="card pl-scout"><h3>Scout before you go</h3><ul>${(sp.dayPlan && sp.dayPlan.scout || []).map((t) => `<li>${esc(t)}</li>`).join('') || '<li>One trip before the hunt to learn the ground.</li>'}</ul><p class="muted pl-small">Your dates are short, so there is no scout day inside them (Tip).</p></div>` : ''}
       ${uniq.map((ph) => `<div class="card"><h3>${esc(ph.label)}: what the animals do</h3>${(ph.where || []).length ? `<p><b>Where</b></p><ul>${ph.where.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${(ph.tactics || []).length ? `<p><b>Tactics</b> (Tip)</p><ul>${ph.tactics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${ph.cert != null ? `<p class="muted pl-small">${C.certBadge(ph.cert)}</p>` : ''}</div>`).join('')}
       ${cards}
