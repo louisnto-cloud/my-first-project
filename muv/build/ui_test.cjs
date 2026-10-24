@@ -1,6 +1,6 @@
 // Headless UI smoke test for the dashboard: loads the built HTML in jsdom with a
 // Chart.js stub, checks rendering + interactivity, and exits non-zero on any failure.
-// Run: NODE_PATH=<repo>/node_modules node build/ui_test.js   (needs jsdom installed)
+// Run: NODE_PATH=<repo>/node_modules node build/ui_test.cjs   (needs jsdom installed)
 const fs=require('fs'), path=require('path');
 const {JSDOM,VirtualConsole}=require('jsdom');
 const HTML=path.join(__dirname,'..','MUV_RTD_Forecast_Dashboard_v1.html');

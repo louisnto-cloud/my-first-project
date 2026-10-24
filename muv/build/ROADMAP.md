@@ -10,7 +10,7 @@ polish, robustness, a11y, performance) take priority; expansion is the occasiona
 1. `date -u` → if now ≥ deadline OR all items done, `ScheduleWakeup(stop:true)` + short wrap-up. Else continue.
 2. FIRST reschedule the next wakeup (resilience), THEN take the next unchecked `[ ]` item.
 3. Implement in `build/` generators only (never hand-edit built files). Rebuild.
-4. Verify green: `node build/ui_test.js` (HTML) + engine parity; `pycel` verify.py/verify2.py (Excel).
+4. Verify green: `node build/ui_test.cjs` (HTML) + engine parity; `pycel` verify.py/verify2.py (Excel).
 5. Clean npm artifacts, commit, push (retry). Tick `[x]`, append a one-line Log entry.
 Keep every change additive, reversible, and shipped working. Preserve the dark-glass / citrus-aqua look.
 If an item fails twice, skip it (note why) and move on.
@@ -33,4 +33,4 @@ If an item fails twice, skip it (note why) and move on.
 - [ ] I15 · [IMPROVE] Final QA sweep: dashboard == Excel to the cent, CSS/cross-browser sanity, README refresh
 
 ## Log
-- 06:56Z · #1 D1 — Canada tile map (10 provinces, colour=revenue, hover tooltip) + durable build/ui_test.js (16 checks). Green.
+- 06:56Z · #1 D1 — Canada tile map (10 provinces, colour=revenue, hover tooltip) + durable build/ui_test.cjs (16 checks). Green.
