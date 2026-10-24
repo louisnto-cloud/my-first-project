@@ -50,7 +50,7 @@ Likelihood (L) and impact (I): H / M / L. Owner is who at Organika drives the mi
 | 11 | Single distributor concentration risk | M | M | Accept in a small market, but keep IP and the ecommerce Mall stores under Organika control as negotiating strength | Ch8.2 |
 | 12 | Canada's low origin awareness slows pull through | M | M | Lead with Health Canada credential + category benefit, not flag waving; pharmacist education | Ch7.6, Ch4 W4 |
 | 13 | Lead SKUs priced above their Vietnamese bands (magnesium, greens in Canadian packs) | H | H | Set the SKU order on real COGS; Vietnam packs or a lower Vietnam price for magnesium and greens; collagen leads meanwhile | Ch6.5 |
-| 14 | Registration access: new registrations reported hard to obtain; new law proposed for 1 Jan 2027 | M | H | Written confirmation from the registration consultant on intake, turnaround and transition before committing dates | Ch5.3 |
+| 14 | Registration access: current intake and turnaround unconfirmed; new law proposed for 1 Jan 2027 | M | H | Written confirmation from the registration consultant on intake, turnaround and transition before committing dates | Ch5.3 |
 | 15 | Kids categories carry elevated regulatory and trust heat | M | M | Treat kids as later phase | Ch3.3, Ch7.8 |
 
 Top three to close before signing anything: #1 (registration ownership), #2 (trademark), #3 (grey market packs). All three are cheaper to fix now than after a contract is signed.
