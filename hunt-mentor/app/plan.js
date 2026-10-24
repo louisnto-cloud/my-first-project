@@ -976,7 +976,9 @@
     const sec = (sid, h, did, wait) => `<section class="pl-sec" id="${sid}"><h2 class="pl-sh">${esc(h)}</h2><div id="${did}">${wait ? `<p class="muted">${esc(wait)}</p>` : ''}</div></section>`;
     const forecastOn = tlAdd(p.from, -15);
     const body = {
-      w1: `<div data-tl-steps="w1"></div><div data-tl-check="w1"></div>
+      w1: `<div data-tl-steps="w1"></div>
+        ${p.party === 'two' ? '<div class="tl-step"><b>Agree with your brother, this week</b><p>Settle now: does he carry a tag (then he buys his own licences in person too), does he carry a rifle, who sits where, who walks in first. The party odds on this plan assume he carries a tag. <span class="verify">To confirm</span></p></div>' : ''}
+        <div data-tl-check="w1"></div>
         ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
         ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
       w2: `<div data-tl-steps="w2"></div>
