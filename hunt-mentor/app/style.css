@@ -659,3 +659,8 @@ body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
 .pl-srcs-l { margin: 4px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.4; }
 .pl-srcs-l li { margin: 0 0 4px; overflow-wrap: anywhere; }
 .tl-opt { margin: 2px 0 6px; }
+
+/* R4 recipient: gloved taps. Lesson links inside a checklist row sit on their own 44 px line, so a miss on the link does not tick the item */
+.pl-why a { display: flex; align-items: center; width: fit-content; min-height: 44px; }
+.pl .srd-btn.sm, .pl .srd-l { min-height: 44px; display: inline-flex; align-items: center; }
+.pl-pace button[aria-pressed="true"]::before { content: "\2713\00a0"; }
