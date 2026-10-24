@@ -49,7 +49,7 @@
     const two = !p || p.party !== 'solo';
     return [
       { id: 'g14', from: 14, to: 8, h: '2 weeks out', sub: '14 to 8 days before', items: [
-        { id: 'lic-hunt', t: 'BC hunting licence bought. Electronic only: buy online. $32 plus GST (Goods and Services Tax).', c: 99, s: `${SYN}, pages 5 and 8 (Licences and tags lesson)`, links: [L('licences', /hunting licence/i, 'Licences and tags')] },
+        { id: 'lic-hunt', t: 'BC hunting licence bought ($32 plus GST, Goods and Services Tax). Close to the hunt, buy it in person with the species licence: mail can take weeks.', c: 99, s: `${SYN}, pages 5 and 8 (Licences and tags lesson)`, links: [L('licences', /hunting licence/i, 'Licences and tags')] },
         { id: 'lic-deer', t: 'Deer species licence for each hunter, bought in person. Online orders are mailed: about 14 days in one source, 14 business days (about 3 weeks) in another. $15 plus GST. A black tailed deer uses the mule deer licence.', c: 99, s: `${SYN}, pages 5 and 8; BC species licences page (Licences and tags lesson)`, links: [L('licences', /deer tags/i, 'Deer tags')] },
         { id: 'lic-fwid', t: 'FWID (Fish and Wildlife ID) number known, photo ID in your wallet. No card needed.', c: 95, s: 'BC Fish and Wildlife ID page (Licences and tags lesson)', links: [L('licences', /FWID/i, 'Your hunter number')] },
         two && { id: 'lic-partner', t: `With your ${(p && p.partner) || 'partner'}: they buy their own licence and deer licence. No sharing.`, c: 99, s: `${SYN}, page 11 item 2 (Licences and tags lesson)`, links: [L('licences', /deer tags/i, 'Licences and tags')] },

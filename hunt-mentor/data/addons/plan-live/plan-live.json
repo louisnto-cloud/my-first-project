@@ -11,8 +11,8 @@
       "src": "Nyberg and Janz 1990, page 36, and the BC deer account (2000), via Black tailed deer Masterclass 4: The rut",
       "phases": [
         { "from": "09-01", "to": "10-31", "phase": "Before the rut", "t": "In the weeks before the rut, bucks show more dominance and thrash bushes with their antlers.", "cert": 90 },
-        { "from": "11-01", "to": "11-14", "phase": "Rut starting", "t": "Coast deer breed in November and early December. Bucks start moving in daylight (Tip).", "cert": 90 },
-        { "from": "11-15", "to": "12-05", "phase": "Peak breeding", "t": "Most does conceive 15 November to 5 December. Find the does, then glass behind them (Tip).", "cert": 90 },
+        { "from": "11-01", "to": "11-14", "phase": "Likely rut starting", "t": "Coast deer breed in November and early December. Bucks start moving in daylight (Tip).", "cert": 90 },
+        { "from": "11-15", "to": "12-05", "phase": "Likely peak breeding", "t": "Most does conceive 15 November to 5 December. Find the does, then glass behind them (Tip).", "cert": 90 },
         { "from": "12-06", "to": "12-31", "phase": "Late rut and after", "t": "After the rut, bucks are thin, some hurt, and they hide and rest.", "cert": 90 }
       ],
       "verify": "The dates come from a Vancouver Island study. Harrison is not Vancouver Island, so the exact local peak is VERIFY. Treat late November as the likely peak (Tip)."
