@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Khu Vườn Nhỏ — a quiet garden world.
+   Muted, low-saturation palette. Generous white space. Slow fades only.
+   Nothing flashes. Nothing surprises. Nothing shames.
+   ========================================================================== */
+
+:root {
+  --sand:      #f3eee3;   /* warm sand background */
+  --sand-2:    #ece4d4;
+  --card:      #fbf8f1;   /* card surface */
+  --ink:       #465247;   /* legible dark sage-grey text */
+  --ink-soft:  #7c8a7e;
+  --sage:      #a7c4a0;
+  --sage-deep: #7fa079;
+  --sky:       #a9c8d6;
+  --lav:       #c6bade;
+  --gold:      #dcc98a;
+  --correct:   #bcd9ac;   /* soft green for the right answer */
+  --correct-deep: #8fbf7e;
+  --glow:      #e7d99a;   /* gentle glow for the guided answer */
+  --radius:    28px;
+  --touch:     88px;      /* minimum touch target (> 80px) */
+  --fade:      0.5s;      /* slow fade */
+  --maxw:      1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0; height: 100%;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: 'Nunito', 'Baloo 2', 'Segoe UI', system-ui, -apple-system, 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+body {
+  display: flex; flex-direction: column;
+  min-height: 100vh; min-height: 100dvh;
+  user-select: none; -webkit-user-select: none;
+}
+
+h1, h2, h3 { font-family: 'Baloo 2', 'Nunito', sans-serif; font-weight: 700; }
+
+#app { flex: 1; display: flex; flex-direction: column; }
+
+.screen {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center;
+  padding: clamp(16px, 3vw, 40px);
+  max-width: var(--maxw); width: 100%; margin: 0 auto;
+  position: relative;
+}
+
+/* ---- Root-level fade transition (gated by .no-motion) ---- */
+#app { transition: opacity var(--fade) ease; }
+#app.fading-out { opacity: 0; }
+.stage { transition: opacity var(--fade) ease; width: 100%; }
+.stage.fading-out { opacity: 0; }
+body.no-motion #app,
+body.no-motion .stage { transition: none !important; }
+
+/* ============================ HOME ============================ */
+.home { justify-content: flex-start; gap: clamp(20px, 4vh, 48px); }
+.home-title {
+  font-size: clamp(28px, 5vw, 46px); color: var(--sage-deep);
+  margin: clamp(12px, 4vh, 40px) 0 0; letter-spacing: 0.5px;
+}
+.home-cards {
+  display: flex; gap: clamp(20px, 4vw, 48px);
+  width: 100%; justify-content: center; flex-wrap: wrap;
+}
+.home-card {
+  flex: 1 1 300px; max-width: 420px; min-height: 240px;
+  background: var(--card); border: none; border-radius: var(--radius);
+  box-shadow: 0 8px 26px rgba(90, 107, 95, 0.12);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px; cursor: pointer; padding: 32px;
+  transition: transform var(--fade) ease, box-shadow var(--fade) ease;
+}
+.home-card:active { transform: scale(0.98); }
+.home-card-numbers { background: linear-gradient(160deg, #eef4ea, #e3eddd); }
+.home-card-letters { background: linear-gradient(160deg, #eef1f6, #e6ecdf); }
+.home-card-icon { width: clamp(110px, 16vw, 170px); height: clamp(110px, 16vw, 170px); }
+.home-card-label { font-size: clamp(30px, 4vw, 44px); font-weight: 800; color: var(--ink); font-family: 'Baloo 2', sans-serif; }
+
+/* Sticker shelf */
+.shelf { width: 100%; max-width: 760px; margin-top: auto; padding-bottom: 80px; }
+.shelf-title { text-align: center; color: var(--ink-soft); font-size: 20px; margin-bottom: 14px; font-weight: 700; }
+.shelf-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.shelf-tile {
+  width: 84px; height: 84px; border-radius: 22px; background: var(--card);
+  box-shadow: inset 0 2px 6px rgba(90,107,95,0.08); position: relative;
+  display: flex; align-items: center; justify-content: center; padding: 10px;
+}
+.shelf-tile.empty { background: var(--sand-2); box-shadow: none; }
+.shelf-tile .svg-box { width: 100%; height: 100%; }
+.shelf-count {
+  position: absolute; bottom: -6px; right: -6px; background: var(--sage-deep);
+  color: #fff; font-size: 13px; font-weight: 700; border-radius: 12px; padding: 2px 8px;
+}
+
+/* ========================= ACTIVITY ========================= */
+.activity { justify-content: flex-start; gap: clamp(14px, 2.5vh, 30px); }
+
+/* First -> Then strip */
+.first-then {
+  display: flex; align-items: center; gap: clamp(14px, 3vw, 40px);
+  background: var(--card); border-radius: var(--radius);
+  padding: 12px clamp(16px, 3vw, 32px); margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(90,107,95,0.08);
+}
+.ft-cell { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.ft-label { font-size: 13px; letter-spacing: 1px; color: var(--ink-soft); font-weight: 700; }
+.ft-icon { width: 66px; height: 66px; }
+.ft-arrow { font-size: 32px; color: var(--sage); }
+
+/* Token board */
+.token-board { display: flex; gap: 16px; }
+.token {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--sand-2); box-shadow: inset 0 2px 4px rgba(90,107,95,0.12);
+  transition: background var(--fade) ease, transform var(--fade) ease;
+}
+.token.filled { background: var(--sage); transform: scale(1.05); }
+body.no-motion .token { transition: none; }
+
+/* Question layout — identical every time */
+.question { width: 100%; display: flex; flex-direction: column; align-items: center; gap: clamp(14px, 2.5vh, 28px); }
+
+.card {
+  background: var(--card); border: none; border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(90,107,95,0.10);
+  display: flex; align-items: center; justify-content: center;
+}
+.card.model {
+  width: clamp(150px, 24vw, 230px); height: clamp(150px, 24vw, 230px);
+  padding: 22px; background: #fff;
+}
+.card.model.outline-card { background: var(--sand-2); }
+
+.instruction { font-size: clamp(18px, 2.4vw, 24px); color: var(--ink-soft); font-weight: 700; text-align: center; }
+
+.choices { display: flex; gap: clamp(16px, 3vw, 40px); justify-content: center; flex-wrap: wrap; width: 100%; }
+.card.choice {
+  width: clamp(var(--touch), 22vw, 200px); height: clamp(var(--touch), 22vw, 200px);
+  min-width: var(--touch); min-height: var(--touch); padding: 18px; cursor: pointer;
+  transition: opacity var(--fade) ease, transform var(--fade) ease, box-shadow var(--fade) ease, background var(--fade) ease;
+}
+.card.choice:active { transform: scale(0.97); }
+
+/* LAW 1: an incorrect tap quietly fades + shrinks. Nothing else. */
+.card.choice.dimmed { opacity: 0.28; transform: scale(0.88); pointer-events: none; }
+
+/* After two, the correct answer glows gently and waits. */
+@keyframes gentleGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(231,217,154,0.0), 0 6px 20px rgba(90,107,95,0.10); }
+  50%      { box-shadow: 0 0 0 10px rgba(231,217,154,0.55), 0 6px 20px rgba(90,107,95,0.10); }
+}
+.card.choice.glow { animation: gentleGlow 2.4s ease-in-out infinite; background: #fdf7e3; }
+
+/* A correct tap turns soft green. */
+.card.choice.correct { background: var(--correct); box-shadow: 0 0 0 6px rgba(143,191,126,0.35), 0 6px 20px rgba(90,107,95,0.12); }
+
+body.no-motion .card.choice.glow { animation: none; background: #fdf3d0; box-shadow: 0 0 0 8px rgba(231,217,154,0.6); }
+body.no-motion .card.choice { transition: none; }
+
+/* Glyphs (numerals / letters / words) */
+.svg-box { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.svg-box svg { width: 100%; height: 100%; display: block; }
+.svg-box.small { width: 54px; height: 54px; }
+.glyph { font-family: 'Baloo 2', 'Nunito', sans-serif; font-weight: 700; color: var(--ink); line-height: 1; }
+.glyph.numeral { font-size: clamp(56px, 12vw, 120px); }
+.glyph.letter  { font-size: clamp(52px, 11vw, 110px); }
+.glyph.word    { font-size: clamp(34px, 6vw, 60px); }
+
+/* Object rows for counting */
+.obj-row { display: flex; flex-wrap: wrap; gap: clamp(4px, 1vw, 12px); align-items: center; justify-content: center; max-width: 100%; }
+.obj { width: 44px; height: 44px; flex: 0 0 auto; }
+.two-groups .obj-row { max-width: 108px; }
+.obj.added { position: relative; }
+.obj.added::after {
+  content: '+'; position: absolute; top: -10px; right: -8px;
+  background: var(--sage-deep); color: #fff; font-weight: 800; font-size: 15px;
+  width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.two-groups { display: flex; align-items: center; gap: 14px; }
+.plus-sign { font-size: 40px; color: var(--sage-deep); font-weight: 800; }
+
+/* Sequence cells for ordering */
+.seq-row { display: flex; gap: 14px; }
+.seq-cell {
+  width: clamp(52px, 8vw, 78px); height: clamp(60px, 9vw, 90px); border-radius: 18px;
+  background: #fff; display: flex; align-items: center; justify-content: center;
+  font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: clamp(30px, 6vw, 52px); color: var(--ink);
+  box-shadow: inset 0 2px 6px rgba(90,107,95,0.08);
+}
+.seq-cell.blank { background: var(--sand-2); }
+.letter-cue { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+
+.card.choice .svg-box.shape svg { padding: 6px; }
+.card .shape.outline .shape-fill { fill: transparent !important; stroke: var(--ink-soft); stroke-width: 4; stroke-dasharray: 6 5; }
+
+/* Praise line */
+.praise {
+  display: flex; align-items: center; gap: 8px; margin-top: 6px;
+  font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: var(--correct-deep);
+  opacity: 0; transform: translateY(6px); transition: opacity var(--fade) ease, transform var(--fade) ease;
+}
+.praise.show { opacity: 1; transform: translateY(0); }
+.praise-sprout { width: 34px; height: 34px; display: inline-block; }
+body.no-motion .praise { transition: none; }
+
+/* Turtle companion — always bottom-right */
+.turtle { position: fixed; bottom: 18px; right: 18px; width: 92px; height: 92px; z-index: 5; opacity: 0.95; }
+@keyframes turtleNod {
+  0% { transform: translateY(0) rotate(0); }
+  30% { transform: translateY(6px) rotate(-3deg); }
+  60% { transform: translateY(0) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+.turtle.nodding { animation: turtleNod 1.6s ease-in-out; }
+body.no-motion .turtle.nodding { animation: none; }
+
+/* Break button — always top-left, same spot */
+.break-btn {
+  position: fixed; top: 16px; left: 16px; z-index: 6;
+  min-width: var(--touch); min-height: 60px; border: none; border-radius: 22px;
+  background: var(--card); color: var(--ink-soft); cursor: pointer;
+  display: flex; align-items: center; gap: 8px; padding: 8px 18px 8px 12px;
+  box-shadow: 0 4px 14px rgba(90,107,95,0.12); font-weight: 700; font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+}
+.break-icon { width: 34px; height: 34px; display: inline-block; }
+.break-btn:active { transform: scale(0.97); }
+
+/* Parent gate — discreet bottom-left corner */
+.parent-gate { position: fixed; bottom: 14px; left: 14px; width: 54px; height: 54px; z-index: 6; opacity: 0.25; }
+.parent-gate .gate-ring {
+  width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--ink-soft);
+  position: absolute; top: 18px; left: 18px;
+}
+.parent-gate.holding .gate-ring { animation: gateFill 3s linear forwards; }
+@keyframes gateFill { from { box-shadow: 0 0 0 0 var(--sage); } to { box-shadow: 0 0 0 26px var(--sage); } }
+body.no-motion .parent-gate.holding .gate-ring { animation: none; }
+
+/* ====================== STICKER REWARD ====================== */
+.sticker-screen { justify-content: center; gap: clamp(24px, 5vh, 60px); }
+.sticker-prompt { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; color: var(--sage-deep); }
+.sticker-choices { display: flex; gap: clamp(20px, 4vw, 50px); flex-wrap: wrap; justify-content: center; }
+.sticker-option { width: clamp(140px, 22vw, 200px); height: clamp(140px, 22vw, 200px); padding: 20px; }
+.sticker-choices.chosen .sticker-option:not(.picked) { opacity: 0.3; transform: scale(0.9); transition: opacity var(--fade), transform var(--fade); }
+.sticker-option.picked { background: var(--correct); box-shadow: 0 0 0 6px rgba(143,191,126,0.4), 0 6px 20px rgba(90,107,95,0.12); }
+
+/* ========================== OVERLAYS ========================= */
+#overlay-layer { position: fixed; inset: 0; z-index: 50; pointer-events: none; }
+.overlay { position: fixed; inset: 0; pointer-events: auto; display: flex; align-items: center; justify-content: center;
+  animation: fadeIn var(--fade) ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+body.no-motion .overlay { animation: none; }
+
+/* Break overlay */
+.break-overlay { background: var(--sand); flex-direction: column; gap: 48px; }
+.breathe-wrap { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.breathe-circle {
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #c7ddc0, var(--sage));
+  box-shadow: 0 10px 40px rgba(127,160,121,0.3);
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(0.72); }
+  50%      { transform: scale(1.12); }
+}
+.breathe-circle.breathing { animation: breathe 8s ease-in-out infinite; }
+body.no-motion .breathe-circle { transform: scale(1); }
+.breathe-label { font-size: 30px; font-weight: 800; color: var(--sage-deep); font-family: 'Baloo 2', sans-serif; }
+.break-return {
+  min-height: var(--touch); min-width: 160px; border: none; border-radius: 24px;
+  background: var(--card); color: var(--ink); font-size: 22px; font-weight: 700; cursor: pointer;
+  padding: 14px 40px; box-shadow: 0 4px 14px rgba(90,107,95,0.14);
+}
+
+/* Parent overlay */
+.parent-overlay { background: rgba(70,82,71,0.35); padding: 20px; }
+.parent-panel {
+  background: var(--sand); border-radius: var(--radius); width: 100%; max-width: 560px;
+  max-height: 90vh; overflow-y: auto; padding: 24px clamp(18px, 3vw, 34px) 34px;
+  box-shadow: 0 20px 60px rgba(70,82,71,0.3);
+}
+.parent-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.parent-head h2 { margin: 0; color: var(--sage-deep); }
+.parent-close { border: none; background: var(--card); border-radius: 18px; padding: 12px 22px; font-size: 17px; font-weight: 700; cursor: pointer; color: var(--ink); min-height: 52px; }
+.parent-block { background: var(--card); border-radius: 22px; padding: 18px 20px; margin-top: 16px; }
+.parent-block h3 { margin: 0 0 12px; color: var(--ink); font-size: 20px; }
+.setting-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--sand-2); }
+.setting-row:first-of-type { border-top: none; }
+.setting-label { font-size: 18px; font-weight: 600; }
+
+.toggle {
+  position: relative; width: 92px; height: 46px; border-radius: 24px; border: none;
+  background: var(--sand-2); cursor: pointer; transition: background var(--fade) ease;
+}
+.toggle.on { background: var(--sage); }
+.toggle-knob {
+  position: absolute; top: 3px; left: 3px; height: 40px; min-width: 40px; padding: 0 10px;
+  border-radius: 20px; background: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--ink-soft); transition: left var(--fade) ease; white-space: nowrap;
+}
+.toggle.on .toggle-knob { left: calc(100% - 43px); color: var(--sage-deep); }
+body.no-motion .toggle, body.no-motion .toggle-knob { transition: none; }
+
+.segmented { display: flex; gap: 8px; }
+.seg {
+  min-width: 56px; min-height: 52px; border: none; border-radius: 16px; background: var(--sand-2);
+  font-size: 20px; font-weight: 700; color: var(--ink-soft); cursor: pointer;
+}
+.seg.active { background: var(--sage); color: #fff; }
+
+.progress-grid { display: flex; flex-direction: column; gap: 12px; }
+.progress-card { background: var(--sand); border-radius: 16px; padding: 14px 16px; }
+.progress-path { font-weight: 800; color: var(--sage-deep); margin-bottom: 6px; }
+.progress-line { font-size: 16px; color: var(--ink); padding: 2px 0; }
+.explain p { line-height: 1.7; color: var(--ink); font-size: 16px; margin: 0; }
+
+/* ===================== RESPONSIVE / LANDSCAPE ===================== */
+@media (max-width: 560px) {
+  .ft-icon { width: 52px; height: 52px; }
+  .token { width: 26px; height: 26px; }
+  .turtle { width: 70px; height: 70px; }
+}
+@media (orientation: landscape) and (max-height: 560px) {
+  .home-title { margin: 6px 0 0; }
+  .home-card { min-height: 180px; }
+  .shelf { padding-bottom: 60px; }
+}
+
+/* Honour the OS reduced-motion setting even before JS runs. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
