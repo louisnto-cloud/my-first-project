@@ -66,6 +66,26 @@ pip install openpyxl
 python3 build_model.py      # writes the .xlsx
 ```
 
+## Read this before quoting a number
+
+With the placeholder assumptions as shipped, **the Base case loses money**:
+
+| Scenario | Net sales | GP% | EBITDA | **Net income** | |
+|---|---|---|---|---|---|
+| Low | $610,397 | 43.4% | −$114,181 | **−$149,181** | loss |
+| Base | $927,920 | 46.8% | $19,143 | **−$15,857** | **loss** |
+| High | $1,206,296 | 46.8% | $114,886 | **+$58,317** | profit |
+| Stretch | $1,575,756 | 49.9% | $298,070 | **+$192,041** | profit |
+
+Base EBITDA is $19,143, but depreciation ($25,000) and interest ($10,000) sit
+below it — bottom line −$15,857. Bottom-line break-even needs **52,484 cases**
+(1.05×, ~2,484 more than Base). The EBITDA-only break-even of 47,001 cases is
+*below* Base volume, which makes Base look safely profitable; it isn't. Both
+figures are labelled in the app and the workbook.
+
+At 2.1% EBITDA margin Base is knife-edge — review the assumptions, not the
+formulas.
+
 ## Verification
 
 The HTML engine and the Excel formulas are recalculated and must agree. Current
@@ -77,6 +97,8 @@ tie-out, with shipped placeholder assumptions:
 | Base Net Sales | $927,920 |
 | Base GP% | 46.8% |
 | Base EBITDA | $19,143 |
+| Base Net Income | **−$15,857** |
+| Net-income break-even | 52,484 cases (1.05×) |
 | 3-Year Net Sales Y2/Y1 | 1.2875 |
 
 ## Also in this repo

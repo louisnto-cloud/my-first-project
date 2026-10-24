@@ -39,6 +39,13 @@
   .kpi .k{font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--soft);text-transform:uppercase}
   .kpi .v{font-size:26px;font-weight:700;margin-top:6px;letter-spacing:-.01em}
   .kpi .v.neg{color:var(--bad)}
+  /* bottom-line verdict: tints over the themed card colour so it stays
+     readable in light and dark without hardcoding a background */
+  .verdict{border:1px solid var(--line);border-left:4px solid var(--soft);border-radius:14px;
+    padding:14px 16px;margin:0 0 18px;font-size:14px;line-height:1.5;color:var(--ink);background:var(--card)}
+  .verdict:empty{display:none}
+  .verdict.ok{border-left-color:var(--good);background:rgba(30,158,87,.09)}
+  .verdict.bad{border-left-color:var(--bad);background:rgba(216,58,75,.09)}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   @media(max-width:820px){.grid2{grid-template-columns:1fr}}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);margin:0 0 22px}
@@ -120,6 +127,7 @@
   <section class="view on" data-view="Overview">
     <div class="note">Pick a scenario above. The cards show that scenario's full-year result. To change any number, open <b>Assumptions</b> — it's the only place you type.</div>
     <div class="kpis" id="kpis"></div>
+    <div id="verdict" class="verdict" role="status" aria-live="polite"></div>
     <div class="panel">
       <h2>Scenario comparison</h2>
       <p class="h-sub">All scenarios side by side — updates live as you edit Assumptions.</p>
@@ -393,6 +401,19 @@ function breakeven(){
   const mv = FX/((K1-K2)-LOG*K1);
   return {mv, cases:mv*cases};
 }
+// Break-even on the BOTTOM line, not just EBITDA: contribution has to cover
+// fixed opex AND depreciation AND interest. (Tax is floored at 0, so at
+// net income = 0 pre-tax is 0 and tax is 0 too.) Returns reachable:false when
+// per-case contribution can't even cover variable logistics, in which case no
+// volume fixes it.
+function breakevenNI(){
+  const {K1,K2,FX,LOG,cases} = kvals();
+  const slope = (K1-K2)-LOG*K1;
+  const need = FX + CO.da + CO.interest;
+  if(!isFinite(slope) || slope<=0) return {reachable:false, mv:NaN, cases:NaN};
+  const mv = need/slope;
+  return {reachable:isFinite(mv), mv, cases:mv*cases};
+}
 
 // ---------------- rendering ----------------
 function el(id){return document.getElementById(id);}
@@ -409,6 +430,31 @@ function renderKpis(){
   ];
   el("kpis").innerHTML = cards.map(c=>
     `<div class="kpi"><div class="k">${c[0]}</div><div class="v ${c[2]?'neg':''}">${c[1]}</div></div>`).join("");
+  renderVerdict(r);
+}
+
+// Plain-English bottom line. EBITDA can read positive while net income is a
+// loss, so say outright which it is and what break-even would take.
+function renderVerdict(r){
+  const e=el("verdict"); if(!e) return;
+  if(r.ni>=0){
+    e.className="verdict ok";
+    e.innerHTML=`<b>${current} is profitable.</b> Net income ${money(r.ni)}`+
+      `${r.net?` (${pct(r.nipct)} of net sales)`:""}, after ${money(r.da)} depreciation and ${money(r.interest)} interest.`;
+    return;
+  }
+  const be=breakevenNI();
+  let fix;
+  if(!be.reachable){
+    fix=`Volume alone can't fix it — per-case contribution doesn't cover variable logistics. Price or cost has to move.`;
+  } else {
+    const extra=be.cases-r.cases;
+    fix=`Break-even needs about <b>${num(be.cases)} cases</b> at today's prices`+
+        `${extra>0?` — ${num(extra)} more than ${current} (${be.mv.toFixed(2)}× base volume)`:""}.`;
+  }
+  e.className="verdict bad";
+  e.innerHTML=`<b>${current} loses ${money(Math.abs(r.ni))} at the bottom line.</b> `+
+    `EBITDA of ${money(r.ebitda)} doesn't cover depreciation (${money(r.da)}) plus interest (${money(r.interest)}). ${fix}`;
 }
 
 function renderCmp(){
@@ -712,8 +758,12 @@ function renderSens(){
   });
   h+="</tbody></table>";
   el("sens").innerHTML=h;
-  const be=breakeven();
-  el("beLine").textContent=`Break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases. The outlined cell in each grid is today.`;
+  const be=breakeven(), beN=breakevenNI();
+  const niPart = beN.reachable
+    ? ` Bottom-line break-even (also covering depreciation and interest) needs ${mult(beN.mv)} — about ${num(beN.cases)} cases.`
+    : ` Bottom-line break-even is unreachable on volume alone at these prices and costs.`;
+  el("beLine").textContent=`EBITDA break-even (at base price): ${mult(be.mv)} volume — about ${num(be.cases)} cases.`+
+    niPart+` The outlined cell in each grid is today.`;
 }
 
 // ---------- assumptions editor ----------

@@ -515,6 +515,23 @@ def build_dashboard(ws):
             if s == "Base": c.fill = fill_tot
     ws._dash_rows = {rk: first + i for i, (_, rk, _) in enumerate(metrics)}
 
+    # Bottom-line verdict. A scenario can show positive EBITDA and still lose
+    # money once depreciation and interest are taken off, so state it outright
+    # rather than leaving the reader to spot the sign on the Net Income row.
+    ni_row = first + [rk for _, rk, _ in metrics].index("ni")
+    vrow = first + len(metrics) + 1
+    setcell(ws, f"B{vrow}", "Bottom line", f_lblb, align=left, border=True)
+    for j, s in enumerate(SCEN):
+        col = get_column_letter(3 + j)
+        c = setcell(ws, f"{col}{vrow}",
+                    f'=IF({col}{ni_row}>=0,"PROFIT","LOSS")',
+                    f_calc, None, None, center, True)
+        if s == "Base": c.fill = fill_tot
+    setcell(ws, f"B{vrow+1}",
+            "LOSS means EBITDA did not cover depreciation + interest. "
+            "See Sensitivity for the volume needed to break even on net income.",
+            f_sub, align=left)
+
     ws.column_dimensions["A"].width = 2
     ws.column_dimensions["B"].width = 24
     for j in range(len(SCEN)): ws.column_dimensions[get_column_letter(3+j)].width = 14
@@ -574,10 +591,25 @@ def build_sensitivity(ws, A):
     setcell(ws, f"B{be}", "BREAK-EVEN (at Base price)", f_h2, align=left)
     setcell(ws, f"B{be+1}", "Volume x for EBITDA = 0", f_lbl, align=left)
     setcell(ws, f"C{be+1}", f"=IFERROR({FX}/(({K1}-{K2})-{LOG}*{K1}),0)", f_calc, MULT, fill_tot, rght, True)
-    setcell(ws, f"B{be+2}", "Break-even cases", f_lbl, align=left)
+    setcell(ws, f"B{be+2}", "Break-even cases (EBITDA)", f_lbl, align=left)
     setcell(ws, f"C{be+2}", f"=C{be+1}*{'$C$8'}", f_calc, CASES, fill_tot, rght, True)
     setcell(ws, f"B{be+3}", "Base case volume", f_lbl, align=left)
     setcell(ws, f"C{be+3}", "=$C$8", f_calc, CASES, fill_tot, rght, True)
+    # EBITDA = 0 is NOT break-even on the bottom line: depreciation and interest
+    # still sit below it. Solve for net income = 0 as well, or the EBITDA figure
+    # above reads more favourable than the business actually is.
+    da = f"'Assumptions'!C{A['co_da']}"
+    intr = f"'Assumptions'!C{A['co_interest']}"
+    setcell(ws, f"B{be+5}", "BREAK-EVEN ON THE BOTTOM LINE", f_h2, align=left)
+    setcell(ws, f"B{be+6}", "Must also cover D&A + interest", f_sub, align=left)
+    setcell(ws, f"C{be+6}", f"={da}+{intr}", f_calc, MON, fill_tot, rght, True)
+    setcell(ws, f"B{be+7}", "Volume x for Net Income = 0", f_lbl, align=left)
+    setcell(ws, f"C{be+7}", f"=IFERROR(({FX}+{da}+{intr})/(({K1}-{K2})-{LOG}*{K1}),0)",
+            f_calc, MULT, fill_tot, rght, True)
+    setcell(ws, f"B{be+8}", "Break-even cases (Net Income)", f_lbl, align=left)
+    setcell(ws, f"C{be+8}", f"=C{be+7}*{'$C$8'}", f_calc, CASES, fill_tot, rght, True)
+    setcell(ws, f"B{be+9}", "Extra cases vs Base", f_lbl, align=left)
+    setcell(ws, f"C{be+9}", f"=C{be+8}-$C$8", f_calc, CASES, fill_tot, rght, True)
 
     ws.column_dimensions["A"].width = 2
     ws.column_dimensions["B"].width = 30
