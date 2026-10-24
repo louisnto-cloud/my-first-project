@@ -3,6 +3,17 @@
 A student progress & learning app for **Trung tâm Anh Ngữ E’TOP** (Phan Thiết, Vietnam).
 Built mobile-first as a web app, with a fully bilingual Vietnamese/English interface.
 
+> **This repository holds more than one app.** The E’TOP app documented below
+> lives at the repository root. Alongside it:
+>
+> | Folder | App |
+> |---|---|
+> | *(root)* | **Anh Ngữ E’TOP** — student progress & learning app (this README) |
+> | [`cpg/`](./cpg) | **CPG Commercial Decision System** — enterprise pricing, trade, promotion and customer-P&L decision tool ([its README](./cpg/README.md)) |
+> | [`pilgrimage/`](./pilgrimage) | **The Pilgrimage** — bilingual Catholic companion app |
+>
+> Each app is self-contained with its own `package.json`, build and tests.
+
 > **Branding:** the official E’TOP logo shown across the app (login, header,
 > favicon) is the single file `public/logo.png` — replace it to update the
 > branding everywhere at once.
