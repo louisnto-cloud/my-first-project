@@ -140,18 +140,44 @@
   }
   const km = (a, b) => { const r = Math.PI / 180, x = Math.sin((b.lat - a.lat) * r / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin((b.lon - a.lon) * r / 2) ** 2; return 12742 * Math.asin(Math.sqrt(x)); };
   const bases = () => ((window.HM && window.HM.bases) || []).slice().sort((a, b) => (b.id === 'mission') - (a.id === 'mission')); // Mission (home base) first
+  // the active plan: the soonest saved plan (hm.v1 plans, made by plan.js) that has not ended
+  function activePlan() {
+    let ps = []; try { ps = (JSON.parse(localStorage.getItem('hm.v1') || '{}').plans || []); } catch (e) { ps = []; }
+    const t = todayIso();
+    return ps.filter((p) => p && p.from && p.where && p.where.lat != null && (p.to || p.from) >= t).sort((a, b) => (a.from < b.from ? -1 : 1))[0] || null;
+  }
+  const placeOf = (p) => String((p.where && p.where.label) || 'Your plan').replace(/\s*\(.*$/, '');
+  // walk out, the plan's rule (plan-days.js walkOf): saved walk minutes, at least 5; else 3 km/h plus 1 min per 10 m climb; else 20 (Assumption)
+  const walkOfSpot = (x) => (!x ? 20 : x.walkMin != null ? Math.max(5, +x.walkMin) : x.walkKm != null ? Math.max(5, Math.round((+x.walkKm / 3) * 60 + (+x.climbM || 0) / 10)) : 20);
+  const dRange = (a, b) => { const out = []; let x = a; while (x && x <= (b || a) && out.length < 62) { out.push(x); const [y, m, d] = x.split('-').map(Number); x = new Date(Date.UTC(y, m - 1, d + 1)).toISOString().slice(0, 10); } return out; };
+  const dShort = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { timeZone: 'UTC', weekday: 'short', month: 'short', day: 'numeric' });
+  // each hunt day's turnaround, the same time the plan's Hunt day card shows: the plan's saved day data (hm.plandays.<planId>,
+  // written by plan-days.js) when there is one, else the same rule: sunset at the plan point minus the first pick's walk out
+  function planTurns(p) {
+    if (!p) return null;
+    const saved = ld('hm.plandays.' + p.id, null), sd = saved && saved.from === p.from && saved.to === p.to && Array.isArray(saved.days) ? saved.days : null;
+    const s0 = (p.spots && Array.isArray(p.spots.list) && p.spots.list[0]) || null, wp = { lat: +p.where.lat, lon: +p.where.lon };
+    const t = todayIso();
+    const days = sd ? sd.filter((d) => d.date >= t).map((d) => ({ date: d.date, at: +d.turn, walk: +d.walk, set: d.sunset, spot: d.spot, from: 'plan' }))
+      : dRange(p.from, p.to).filter((d) => d >= t).map((d) => { const s = sunFor(wp, d), w = walkOfSpot(s0); return s ? { date: d, at: s.set - w * 6e4, walk: w, set: s.set, spot: s0 && { name: s0.name, lat: +s0.lat, lon: +s0.lon, mu: s0.mu || '' }, from: 'rule' } : null; }).filter(Boolean);
+    const sp = (days[0] && days[0].spot) || (s0 && { name: s0.name, lat: +s0.lat, lon: +s0.lon, mu: s0.mu || '' });
+    const pt = sp && sp.lat != null ? { lat: sp.lat, lon: sp.lon, mu: sp.mu || p.where.mu || '', label: `Hunt plan first pick: ${sp.name}`, src: 'plan', planId: p.id, sunLat: wp.lat, sunLon: wp.lon }
+      : { lat: wp.lat, lon: wp.lon, mu: p.where.mu || '', label: `Hunt plan point: ${placeOf(p)}`, src: 'plan', planId: p.id };
+    return { plan: p, days, pt, saved: !!sd };
+  }
 
   // Shared point picker (turnaround and live conditions). Saved point: K.pt {lat, lon, label, mu, src}
   function pickerHtml() {
-    const tp = ld(K.trip, {});
+    const tp = ld(K.trip, {}), ap = activePlan(), bs = bases(), opt = (b) => `<option value="${esc(b.id)}">${esc(b.name)}</option>`;
     return `<div class="card sf-pick sf-noprint"><h2>Where?</h2>
       <p class="sf-cur" id="sf-cur"></p>
       <div class="sf-grid2">
         ${tp.lat ? '<button class="btn" data-pick="trip">Trip plan point</button>' : ''}
+        ${ap ? '<button class="btn" data-pick="plan">Hunt plan spot</button>' : ''}
         <button class="btn" data-pick="gps">My GPS (Global Positioning System) location</button>
       </div>
       <label class="f" for="sf-base">A home base</label>
-      <select id="sf-base"><option value="">Choose a base</option>${bases().map((b) => `<option value="${esc(b.id)}">${esc(b.name)}</option>`).join('')}</select>
+      <select id="sf-base"><option value="">Choose a base</option>${ap ? `<option value="plan">${esc(placeOf(ap))} (your hunt plan)</option>` : ''}${bs.filter((b) => b.id === 'mission').map(opt).join('')}${bs.some((b) => b.id !== 'mission') ? `<optgroup label="Other regions">${bs.filter((b) => b.id !== 'mission').map(opt).join('')}</optgroup>` : ''}</select>
       <label class="f" for="sf-mu">MU (Management Unit), centre point</label>
       <div class="sf-row"><input type="text" id="sf-mu" inputmode="numeric" placeholder="for example 2-18" autocomplete="off"><button class="btn" data-pick="mu">Use</button></div>
       <label class="f" for="sf-ll">Latitude, longitude</label>
@@ -165,14 +191,15 @@
     $$('[data-pick]', root).forEach((b) => { b.onclick = async () => {
       const k = b.dataset.pick;
       try {
-        if (k === 'trip') { const t = ld(K.trip, {}); set({ lat: +t.lat, lon: +t.lon, mu: t.mu || '', label: 'Trip plan: ' + (t.where || 'map point'), src: 'trip' }); }
+        if (k === 'plan') { const P = planTurns(activePlan()); if (!P) { toast('No hunt plan on this phone.'); return; } set(P.pt); }
+        else if (k === 'trip') { const t = ld(K.trip, {}); set({ lat: +t.lat, lon: +t.lon, mu: t.mu || '', label: 'Trip plan: ' + (t.where || 'map point'), src: 'trip' }); }
         else if (k === 'gps') { b.disabled = true; b.textContent = 'Finding you...'; const f = await getFix(); const mu = await muAt(f.lat, f.lon); set({ lat: f.lat, lon: f.lon, mu: mu || '', label: `My GPS location (about ${f.acc} m)`, src: 'gps' }); }
         else if (k === 'mu') { const mu = normMu($('#sf-mu', root).value); if (!mu) { toast('Type an MU like 2-18.'); return; } const c = await muCentre(mu).catch(() => null); if (!c) { toast(`Could not find MU ${mu} on this phone. Open the Hunt Map once online, or type a point.`); return; } set({ lat: c.lat, lon: c.lon, mu, label: `Centre of MU ${mu} (approximate)`, src: 'mu' }); }
         else if (k === 'll') { const m = $('#sf-ll', root).value.match(/(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/); if (!m || Math.abs(+m[1]) > 90 || Math.abs(+m[2]) > 180) { toast('Type latitude, longitude like 50.86, -120.27'); return; } const lat = +m[1], lon = +m[2]; const mu = await muAt(lat, lon); set({ lat, lon, mu: mu || '', label: 'Typed point', src: 'typed' }); }
       } catch (e) { toast(e.message); }
       finally { if (k === 'gps') { b.disabled = false; b.textContent = 'My GPS (Global Positioning System) location'; } }
     }; });
-    $('#sf-base', root).onchange = (e) => { const b = bases().find((x) => x.id === e.target.value); if (b) set({ lat: b.lat, lon: b.lon, mu: '', label: b.name + ' (approximate centre)', src: 'base' }); };
+    $('#sf-base', root).onchange = (e) => { if (e.target.value === 'plan') { const P = planTurns(activePlan()); if (P) set(Object.assign({}, P.pt, { lat: +P.plan.where.lat, lon: +P.plan.where.lon, mu: P.plan.where.mu || '', label: `Hunt plan point: ${placeOf(P.plan)} (approximate centre)` })); return; } const b = bases().find((x) => x.id === e.target.value); if (b) set({ lat: b.lat, lon: b.lon, mu: '', label: b.name + ' (approximate centre)', src: 'base' }); };
   }
 
   // ---------- turnaround alarm (global watcher, so it fires on any screen of the app) ----------
@@ -424,21 +451,32 @@
     stopTick();
     const st = ld(K.turn, {}), T = D.turn || { legal: [], tips: [], ios: [] };
     const on = st.on && !st.acked;
-    const date = st.date || todayIso();
+    // active hunt plan: prefill the point (its first pick spot) and the first hunt day's turnaround, as on the plan's Hunt day card
+    const PT = planTurns(activePlan());
+    if (PT) { const cur = ld(K.pt, null); if (!cur || (cur.src === 'plan' && cur.planId !== PT.plan.id)) sv(K.pt, PT.pt); }
+    const fresh = !on && !(st.date && st.date >= todayIso() && st.time);
+    const pd = PT && PT.days[0];
+    const date = fresh && pd ? pd.date : st.date || todayIso();
+    const walk0 = fresh && pd ? String(pd.walk) : st.walk || '', time0 = fresh && pd ? hm24(pd.at) : st.time || '';
+    const planCard = PT && PT.days.length ? `<div class="card sf-plan"><h2>From your hunt plan</h2>
+        <p>${esc(placeOf(PT.plan))}${PT.plan.where.mu ? `, MU (Management Unit) ${esc(PT.plan.where.mu)}` : ''}. Turn back by, per hunt day:</p>
+        ${PT.days.map((d, i) => `<div class="sf-kv"><span>${esc(dShort(d.date))}: sunset ${esc(fmtT(d.set))} minus ${esc(d.walk)} min walk out</span><b>${esc(fmtT(d.at))}</b></div><button class="btn block" data-plan-day="${i}">Use ${esc(dShort(d.date))}, ${esc(fmtT(d.at))}</button>`).join('')}
+        <p class="muted">${PT.saved ? 'Same times as the Hunt day card in your plan (estimate).' : 'Open the plan once to match its Hunt day card exactly. Until then: sunset at the plan point minus the first pick\'s walk out (estimate).'} ${TIP}</p></div>` : '';
     view().innerHTML = `
       ${on ? `<div class="card sf-cd"><p>Turn around at</p><div class="sf-cd-at">${esc(fmtT(st.at))}</div><div class="sf-cd-big" id="sf-cd">--:--</div><p class="muted" id="sf-cd-sub"></p>
         <button class="btn block" id="sf-stop">Stop the alarm</button></div>` : ''}
+      ${planCard}
       ${pickerHtml()}
       <div class="card"><h2>Light at this point</h2>
         <label class="f" for="sf-date">Date</label><input type="date" id="sf-date" value="${esc(date)}">
         <div id="sf-sun"></div>${facts(T.legal)}</div>
       <div class="card"><h2>Pick your turnaround</h2>
         <label class="f" for="sf-walk">Walk out time to the truck (minutes)</label>
-        <div class="sf-row"><input class="sf-in" type="number" id="sf-walk" inputmode="numeric" min="0" max="600" value="${esc(st.walk || '')}" placeholder="minutes"></div>
+        <div class="sf-row"><input class="sf-in" type="number" id="sf-walk" inputmode="numeric" min="0" max="600" value="${esc(walk0)}" placeholder="minutes"></div>
         <div class="sf-chips">${[30, 60, 90, 120].map((m) => `<button class="btn" data-walk="${m}">${m} min</button>`).join('')}</div>
         <div id="sf-sugg" class="sf-sugg"></div>
         <label class="f" for="sf-time">Or set your own time</label>
-        <input class="sf-in" type="time" id="sf-time" value="${esc(st.time || '')}">
+        <input class="sf-in" type="time" id="sf-time" value="${esc(time0)}">
         <button class="btn primary block sf-go" id="sf-start">Start the alarm</button>
         ${tips(T.tips)}</div>
       <div class="card"><h2>Make sure it rings</h2>
@@ -454,17 +492,22 @@
       return vanMs(y, m, d, hh, mm);
     };
     const draw = () => {
-      const iso = $('#sf-date').value || todayIso(), s = sunFor(pt, iso);
+      const iso = $('#sf-date').value || todayIso(), s = sunFor(pt && pt.sunLat != null ? { lat: pt.sunLat, lon: pt.sunLon } : pt, iso);
       $('#sf-sun').innerHTML = !pt ? '<p class="muted">Choose a point above to see sunset and legal light.</p>' : !s ? '<p class="muted">Sun times are not ready on this screen. Open the Home page once, then come back.</p>'
         : `<div class="sf-kv"><span>Sunrise</span><b>${s.rise ? esc(fmtT(s.rise)) : 'n/a'}</b></div><div class="sf-kv"><span>Sunset</span><b>${esc(fmtT(s.set))}</b></div>
            <div class="sf-kv"><span>Legal light ends: big game and upland birds</span><b>${esc(fmtT(s.bigEnd))}</b></div><div class="sf-kv"><span>Legal light ends: ducks and geese</span><b>${esc(fmtT(s.migEnd))}</b></div>
-           <p class="muted">Worked out on the phone for ${esc(pt.label)}. Within a minute or two.</p>`;
+           <p class="muted">Worked out on the phone for ${esc(pt.label)}${pt.sunLat != null ? ', with the sun at the plan point, as on the Hunt day card' : ''}. Within a minute or two.</p>`;
       const w = +$('#sf-walk').value;
       $('#sf-sugg').innerHTML = s && w > 0 ? `<p>Suggested: sunset ${esc(fmtT(s.set))} minus ${w} min walk out =</p><div class="sf-sugg-t">${esc(fmtT(s.set - w * 6e4))}</div><button class="btn block" id="sf-use">Use ${esc(fmtT(s.set - w * 6e4))}</button>` : '<p class="muted">Enter your walk out time to get a suggested turnaround.</p>';
       const u = $('#sf-use'); if (u) u.onclick = () => { $('#sf-time').value = hm24(s.set - w * 6e4); toast('Time set. Now tap Start the alarm.'); };
     };
     wirePicker(root, (p) => { pt = p; draw(); });
     $('#sf-date').onchange = draw; $('#sf-walk').oninput = draw;
+    $$('[data-plan-day]', root).forEach((b) => { b.onclick = () => {
+      const d = PT.days[+b.dataset.planDay]; if (!d) return;
+      $('#sf-date').value = d.date; $('#sf-walk').value = String(d.walk); $('#sf-time').value = hm24(d.at); draw();
+      toast(`Time set to ${fmtT(d.at)} Now tap Start the alarm.`);
+    }; });
     $$('[data-walk]', root).forEach((b) => { b.onclick = () => { $('#sf-walk').value = b.dataset.walk; draw(); }; });
     draw();
     $('#sf-start').onclick = () => {

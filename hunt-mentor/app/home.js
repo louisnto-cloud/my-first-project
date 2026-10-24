@@ -173,8 +173,12 @@
   function render(view, C, opts) {
     const S = C.S;
     const st = (S.settings.home = S.settings.home || {});
-    const where = PLACES[st.where] ? st.where : 'mission';
-    const place = PLACES[where];
+    // the active plan's place (the soonest saved plan not ended) goes first, then Mission; the other regions stay one tap away
+    const isoP = todayIso();
+    const actP = (Array.isArray(S.plans) ? S.plans : []).filter((p) => p && p.from && (p.to || p.from) >= isoP && p.where && p.where.lat != null).sort((a, b) => (a.from < b.from ? -1 : 1))[0];
+    const PL = Object.assign({}, actP ? { plan: { label: String(actP.where.label || 'Your plan'), short: String(actP.where.label || 'Your plan').replace(/\s*\(.*$/, '').replace(/\s+area$/i, '') || 'Your plan', lat: +actP.where.lat, lon: +actP.where.lon, mu: actP.where.mu || '' } } : {}, PLACES);
+    const where = PL[st.where] ? st.where : actP ? 'plan' : 'mission';
+    const place = PL[where];
     const base = place.base && (window.HM.bases || []).find((b) => b.id === place.base);
     const gps = st.gps || null;
     const pt = where === 'gps' ? (gps ? { lat: gps.lat, lon: gps.lon } : null) : base ? { lat: base.lat, lon: base.lon } : { lat: place.lat, lon: place.lon };
@@ -196,7 +200,10 @@
       : '') : '';
 
     // 2. where
-    const seg = Object.entries(PLACES).map(([k, p]) => `<button type="button" data-w="${k}" class="${k === where ? 'on' : ''}">${esc(p.short)}</button>`).join('');
+    const MAIN = ['plan', 'mission', 'gps'];
+    const chip = ([k, p]) => `<button type="button" data-w="${k}" class="${k === where ? 'on' : ''}">${esc(p.short)}</button>`;
+    const seg = Object.entries(PL).filter(([k]) => MAIN.includes(k)).sort((a, b) => MAIN.indexOf(a[0]) - MAIN.indexOf(b[0])).map(chip).join('');
+    const segOther = Object.entries(PL).filter(([k]) => !MAIN.includes(k)).map(chip).join('');
     let whereLine;
     if (where === 'gps' && !gps) whereLine = '<p class="muted hmd-small">Tap My spot again to use your phone location. Optional. It stays on this phone.</p>';
     else whereLine = `<p class="hmd-where">${esc(place.label)}: ${mu ? `<b>MU (Management Unit) ${esc(mu)}</b>` : 'MU (Management Unit) not found here'}</p>${where === 'gps' ? `<p class="muted hmd-small">Location from ${esc(new Date(gps.t).toLocaleString('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit', day: 'numeric', month: 'short' }))}. <button type="button" class="hmd-link" id="hmd-gps-again">Update</button></p>` : ''}`;
@@ -225,7 +232,7 @@
       <div class="hero" id="hmd-hero" aria-label="Next hunt and legal light">${heroDays}${lightEnd}</div>
       ${planCard}
       ${count}
-      <div class="card hmd-card"><h2>Where</h2><div class="seg hmd-seg" role="group" aria-label="Where">${seg}</div>${whereLine}<div id="hmd-gps-msg"></div></div>
+      <div class="card hmd-card"><h2>Where</h2><div class="seg hmd-seg" role="group" aria-label="Where">${seg}</div>${segOther ? `<p class="muted hmd-small hmd-other-k" id="hmd-other-k">Other regions</p><div class="seg hmd-seg hmd-other" role="group" aria-labelledby="hmd-other-k">${segOther}</div>` : ''}${whereLine}<div id="hmd-gps-msg"></div></div>
       ${mu ? `<div class="card hmd-card" id="hmd-open"><h2>Open today in MU ${esc(mu)}</h2><p class="muted">Loading seasons...</p></div>` : ''}
       ${light}
       ${pt ? `<div class="card hmd-card" id="hmd-wx"><h2>Wind and weather</h2><p class="muted">Loading forecast...</p></div>` : ''}

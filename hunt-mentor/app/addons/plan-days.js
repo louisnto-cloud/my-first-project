@@ -10,6 +10,7 @@
      HMPlanDays.html(days, plan?) -> HTML (SVG timeline first). HMPlanDays.wire(root) wires the turnaround alarm buttons.
      HMPlanDays.text(days) -> plain text for Share and print. HMPlanDays.enrich(spots) -> Promise<spots with detail>.
      HMPlanDays.mount(el, plan, spots, opts) -> enrich, HMPlanLive.fetch (or opts.live), build, draw, wire. Resolves { live, days }.
+   Saves hm.plandays.<planId> { v, at, from, to, days[{ date, turn, walk, sunset, legalEnd, spot, park, evening }] } for the Safety turnaround screen.
    Turnaround: the Safety tool's alarm (localStorage hm.safety.turn { on, at, date, time, walk, set }, the same keys the Hunt Map uses).
    Every time is an estimate or a Tip and says so. Legal light is the rule (regs.json hours). */
 (function () {
@@ -326,6 +327,16 @@
     } catch (e) { /* no manifest: times use assumptions */ }
     return out;
   }
+  // a small copy of each hunt day's turnaround for the Safety tool (hm.plandays.<planId>), so its alarm shows the same time with no signal
+  function saveTurns(plan, days) {
+    if (!plan || !plan.id) return;
+    const rows = (days || []).filter((d) => d.kind === 'hunt' && d.turnaround && d.turnaround.at).map((d) => {
+      const s = d.primary && d.primary.spot, pk = s ? parkOf(s) : null;
+      return { date: d.date, turn: d.turnaround.at, walk: d.turnaround.walkMin, sunset: d.sunset, legalEnd: d.legalEnd,
+        spot: s ? { name: s.name, lat: +s.lat, lon: +s.lon, mu: s.mu || '' } : null, park: pk, evening: d.evening && !d.evening.same ? d.evening.spot.name : null };
+    });
+    try { localStorage.setItem('hm.plandays.' + plan.id, JSON.stringify({ v: 1, at: Date.now(), from: plan.from, to: plan.to, days: rows })); } catch (e) { /* storage full or blocked */ }
+  }
   async function mount(el, plan, spots, opts) {
     opts = opts || {};
     await loadData();
@@ -333,6 +344,7 @@
     let live = opts.live || null;
     if (!live && window.HMPlanLive) { try { live = await window.HMPlanLive.fetch(plan, sp); } catch (e) { live = null; } }
     const days = build(plan, live, sp, opts);
+    saveTurns(plan, days);
     if (el && el.isConnected) { el.innerHTML = html(days, plan); wire(el); }
     return { live, days, spots: sp };
   }
@@ -360,5 +372,5 @@
   }
 
   loadData();
-  window.HMPlanDays = { build, html, text, wire, enrich, mount, _setTurn: setTurn, _fit: fit, _noticesFor: noticesFor };
+  window.HMPlanDays = { build, html, text, wire, enrich, mount, saveTurns, _setTurn: setTurn, _fit: fit, _noticesFor: noticesFor };
 })();
