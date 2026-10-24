@@ -855,6 +855,329 @@
     // window.HMPlanLive (addons/plan-live.js): fetch(ctx) then html(result, ctx); window.HMPlanDays (addons/plan-days.js): build(ctx) then html(result, ctx)
     await drawLive($('#pl-live'), X, m, alive, board, C);
   }
+  // ---------- plan view v2 (countdown, time led): Today first, then the timeline from today to the drive home ----------
+  // Every part of the old view is placed on the timeline at the moment it matters; ids, storage keys and tick keys are unchanged.
+  const TL_DAY = 864e5;
+  const tlAdd = (iso, n) => new Date(Date.parse(iso + 'T00:00:00Z') + n * TL_DAY).toISOString().slice(0, 10);
+  const tlDiff = (a, b) => Math.round((Date.parse(a + 'T00:00:00Z') - Date.parse(b + 'T00:00:00Z')) / TL_DAY);
+  const tlD = (iso) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  const tlRange = (a, b) => a === b ? tlD(a) : `${tlD(a)} to ${tlD(b)}`;
+  // the stages, in order; a stage with no days left is dropped and its steps move to the next stage
+  function tlStages(p, today) {
+    const from = p.from, to = p.to || p.from, hw = tlAdd(from, -7), nb = tlAdd(from, -1);
+    const S = [];
+    if (today < hw) {
+      const e1 = tlAdd(today, 6) < tlAdd(hw, -1) ? tlAdd(today, 6) : tlAdd(hw, -1);
+      S.push({ k: 'w1', chip: 'This week', label: 'This week', a: today, b: e1 });
+      if (e1 < tlAdd(hw, -1)) { const a2 = tlAdd(e1, 1), b2 = tlAdd(hw, -1), long = tlDiff(b2, a2) > 6; S.push({ k: 'w2', chip: long ? 'Later' : 'Next week', label: long ? 'Before hunt week' : 'Next week', a: a2, b: b2 }); }
+    }
+    if (nb > hw && today < nb) S.push({ k: 'hw', chip: 'Hunt week', label: 'Hunt week', a: hw < today ? today : hw, b: tlAdd(nb, -1) });
+    if (today <= nb) S.push({ k: 'nb', chip: 'Night before', label: 'The night before', a: nb, b: nb });
+    S.push({ k: 'hunt', chip: 'Hunt days', label: 'Hunt days, hour by hour', a: from, b: to });
+    S.push({ k: 'shot', chip: 'After the shot', label: 'After the shot', a: from, b: to, also: true });
+    S.push({ k: 'after', chip: 'After the trip', label: 'After the trip', a: tlAdd(to, 1), b: null });
+    const order = ['w1', 'w2', 'hw', 'nb', 'hunt', 'shot', 'after'];
+    const has = new Set(S.map((s) => s.k));
+    const home = (k) => { let i = order.indexOf(k); while (i < order.length && !has.has(order[i])) i++; return order[i] || 'after'; };
+    const cur = S.find((s) => !s.also && (s.b == null || today <= s.b)) || S[S.length - 1];
+    for (const s of S) { s.id = 'tl-' + s.k; s.now = cur === s || (s.also && cur.k === 'hunt'); s.past = !s.now && s.b != null && today > s.b; }
+    return { S, home, cur: cur.k, idx: (k) => order.indexOf(home(k)) };
+  }
+  // where each checklist item belongs on the timeline (by its "Week 1:" style prefix, its list, then its category)
+  function tlOfItem(i) {
+    const t = String(i.t || '');
+    if (/^Week 1:/i.test(t)) return 'w1';
+    if (/^Week 2:/i.test(t)) return 'w2';
+    if (/^Hunt week:/i.test(t)) return 'hw';
+    if (i.from === 'The night before') return 'nb';
+    if (i.from === 'After the shot and the kill') return 'shot';
+    return { paperwork: 'w1', firearm: 'w1', meat: 'w2', gear: 'hw', clothing: 'hw', vehicle: 'hw', safety: 'hw', plan: 'hw' }[i.cat] || 'hw';
+  }
+  function tlItems(its, ticked, C) {
+    return its.map((i) => `<label class="check pl-item${ticked(i) ? ' done' : ''}"><input type="checkbox" data-pk="${esc(i.key)}"${ticked(i) ? ' checked' : ''}><span>${esc(i.t)}${i.cert != null ? ' ' + C.certBadge(i.cert) : ''}${i.why || i.lesson ? `<small class="pl-why">${esc(i.why || '')}${i.lesson && C.hasSession(i.lesson) ? ` <a href="#/s/${esc(i.lesson)}">Lesson: ${esc(C.lessonTitle(i.lesson))}</a>` : ''}</small>` : ''}</span></label>`).join('');
+  }
+  function tlCss() {
+    if (document.getElementById('tl-css')) return;
+    const s = document.createElement('style'); s.id = 'tl-css';
+    s.textContent = `
+.tl .pl-hero { margin: 0 0 4px; }
+.tl .pl-hero .hero-n { font-size: 34px; }
+.tl .pl-hero .hero-k { margin: 0 0 2px; }
+.tl .pl-hero .hero-sub { font-size: 15px; margin-top: 2px; }
+.tl .pl-law { margin: 0 0 8px; }
+.tl-today .btn-row, .tl-step .btn-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; }
+.tl-today .btn-row .btn, .tl-step .btn-row .btn { flex: 1 1 auto; width: auto; min-height: 44px; margin: 0; padding: 8px 12px; font-size: 15px; line-height: 1.2; }
+.tl-sub { font: 500 15px/1.35 var(--font); color: var(--muted); margin: 2px 0 0; }
+.tl-today { border: 3px solid var(--blaze); }
+.tl-today h2 { font: 700 28px/1.05 var(--display); margin: 0 0 2px; }
+.tl-today ol { list-style: none; margin: 8px 0 0; padding: 0; counter-reset: tl; }
+.tl-today li { counter-increment: tl; position: relative; padding: 10px 0 10px 40px; border-top: 1px solid var(--line); }
+.tl-today li::before { content: counter(tl); position: absolute; left: 0; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font: 700 18px/30px var(--display); text-align: center; }
+.tl-today li:first-child::before { background: var(--blaze); color: var(--blaze-ink); }
+.tl-today li b { display: block; font-size: 17px; }
+.tl-today li p { margin: 2px 0 6px; font-size: 15px; color: var(--muted); }
+.tl-today .btn { min-height: 44px; }
+.tl-next { font-size: 15px; margin: 8px 0 0; }
+.tl-nav { position: sticky; top: var(--top-h, 56px); z-index: 4; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 0 -16px 12px; padding: 6px 12px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tl-nav button { min-height: 44px; min-width: 0; border: 2px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); font-size: 14px; font-weight: 800; line-height: 1.1; padding: 2px 3px; white-space: normal; }
+.tl-nav button.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.tl-nav button.tl-cur { box-shadow: inset 0 -4px 0 var(--blaze); }
+.tl-st { margin: 0 0 10px; }
+.tl-st > details { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); border-left: 6px solid var(--line); }
+.tl-st.tl-now > details { border-left-color: var(--blaze); }
+.tl-st > details > summary { list-style: none; cursor: pointer; padding: 12px 14px; min-height: 44px; }
+.tl-st > details > summary::-webkit-details-marker { display: none; }
+.tl-st > details > summary h2 { font: 700 24px/1.1 var(--display); margin: 0; }
+.tl-when { font: 500 14px/1.3 var(--mono); color: var(--muted); }
+.tl-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 99px; font: 700 14px/1.6 var(--font); vertical-align: middle; background: var(--accent); color: var(--accent-ink); }
+.tl-now .tl-tag { background: var(--blaze); color: var(--blaze-ink); }
+.tl-in { padding: 0 12px 12px; }
+.tl-step { border-top: 1px solid var(--line); padding: 10px 0; }
+.tl-step b { display: block; font-size: 17px; }
+.tl-step p { margin: 2px 0 6px; font-size: 15px; }
+.tl-step.tl-done b::before { content: "\\2713  "; color: var(--ok); }
+.tl-fold { border-top: 1px solid var(--line); }
+.tl-fold > summary { cursor: pointer; padding: 12px 0; min-height: 44px; font-weight: 800; font-size: 16px; }
+.tl-fold > summary small { font-weight: 500; font-size: 14px; color: var(--muted); }
+.tl-call { border: 2px solid var(--blaze); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+.tl-call a { font: 700 22px/1.4 var(--mono); display: inline-block; min-height: 44px; padding-top: 6px; }
+.tl-tip { font-size: 15px; }
+.tl .pl-sec { margin: 0; }
+.tl .pl-sec > .pl-sh { font-size: 18px; margin: 10px 0 6px; }
+`;
+    document.head.appendChild(s);
+  }
+  async function planViewV2(view, id, C) {
+    const p = plansOf(C).find((x) => x.id === id);
+    if (!p) { view.innerHTML = '<div class="card"><h2>Plan not found</h2><p>It may have been deleted, or it was saved on another phone.</p><a class="btn" href="#/plan">My plans</a></div>'; return; }
+    let D; try { D = await loadData(); } catch (e) { D = null; }
+    if (!D || !D.species.length) { view.innerHTML = noData(); return; }
+    const sp = spOf(p, D);
+    if (!sp) { view.innerHTML = `<div class="card"><h2>${esc(p.speciesName || 'This animal')} is not in the planner data any more</h2><a class="btn" href="#/plan">My plans</a></div>`; return; }
+    if (!p.from) return planView(view, id, C); // no dates: no timeline to build
+    C.setTitle(planTitle(p, D));
+    const token = (view._plToken = {});
+    const alive = () => view._plToken === token && view.isConnected;
+    const days = dRange(p.from, p.to);
+    const H = hoursFor(sp);
+    const today = todayIso(), end = p.to || p.from, n = tlDiff(p.from, today);
+    const T = tlStages(p, today);
+    const solo = partyN(p.party) < 2;
+    const hero = `<div class="hero pl-hero"><div><p class="hero-k">${n > 0 ? 'Hunt starts in' : end >= today ? 'Hunt is on' : 'Hunt done'}</p><div class="hero-n">${n > 0 ? `${n}<small>day${n === 1 ? '' : 's'} to go</small>` : end >= today ? 'Now' : 'Done'}</div>
+      <div class="hero-sub">${esc(rangeLabel(p.from, end))}</div><p class="tl-sub">${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</p></div></div>`;
+    const stage = (s, body) => `<section class="tl-st${s.now ? ' tl-now' : ''}${s.past ? ' tl-past' : ''}" id="${s.id}"><details${s.now ? ' open' : ''}><summary><span class="tl-when">${esc(s.b == null ? 'From ' + tlD(s.a) : tlRange(s.a, s.b))}</span>${s.now ? '<span class="tl-tag">Now</span>' : s.past ? '<span class="tl-tag">Past</span>' : ''}<h2>${esc(s.label)}</h2></summary><div class="tl-in">${body}</div></details></section>`;
+    const fold = (title, sub, inner) => `<details class="tl-fold"><summary>${esc(title)}${sub ? ` <small>${esc(sub)}</small>` : ''}</summary>${inner}</details>`;
+    const sec = (sid, h, did, wait) => `<section class="pl-sec" id="${sid}"><h2 class="pl-sh">${esc(h)}</h2><div id="${did}">${wait ? `<p class="muted">${esc(wait)}</p>` : ''}</div></section>`;
+    const forecastOn = tlAdd(p.from, -15);
+    const body = {
+      w1: `<div data-tl-steps="w1"></div><div data-tl-check="w1"></div>
+        ${fold('The rules for your dates', 'season, bag limit, red flags, licences, legal hours', sec('pl-s1', '1. Legal and open', 'pl-legal', 'Checking the season tables...'))}
+        ${fold('Study path and pace', 'the screens to read before the hunt', sec('pl-s5', '5. Study before you go', 'pl-study', ''))}`,
+      w2: `<div data-tl-steps="w2"></div>
+        <div class="card pl-offline no-print" id="pl-offline"><h3>Offline for no signal</h3><p class="muted">Loading...</p></div>
+        <div data-tl-check="w2"></div>
+        ${fold('Pick your spot', 'top 5 spots, drive, walk, legal checks', sec('pl-sb', 'Top spots board', 'pl-board', 'Finding and checking spots...'))}
+        ${fold('Your odds', 'harvest reports for your MU', sec('pl-s2', '2. Odds', 'pl-odds', 'Loading harvest numbers...'))}`,
+      hw: `<div data-tl-steps="hw"></div><div data-tl-check="hw"></div>
+        <p class="tl-tip"><a class="btn" href="#/huntweek/${encodeURIComponent(p.id)}">Hunt week countdown list</a></p>`,
+      nb: `<div class="tl-step"><b>Go, backup or stay home (Tip)</b><p>Go: every Ready gate below is done and the road notices show no closure on your route.</p><p>Backup spot: the wind is wrong for plan A, heavy rain, a gate is shut or other hunters are there.</p><p>Stay home: the road in is closed, or you are not ready.</p></div>
+        ${sec('pl-s0', 'Ready to go?', 'pl-ready', 'Checking your readiness gates...')}
+        ${solo ? '' : '<div class="tl-step"><b>Agree six things with your partner (Tip)</b><p>Where each of you sits, back by what time, the meeting point, who shoots, your signals, and what to do if one of you is late.</p></div>'}
+        <div data-tl-check="nb"></div>`,
+      hunt: `${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
+        ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
+      shot: `<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
+        <div data-tl-check="shot"></div>`,
+      after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
+        ${fold('Full checklist', 'every item for this plan, in one list', sec('pl-s4', '4. Checklist', 'pl-check', ''))}
+        <p class="tl-tip"><a class="btn" href="#/progress/${encodeURIComponent(p.id)}">Hunt ready score</a></p>`,
+    };
+    const nav = `<nav class="pl-nav tl-nav no-print" aria-label="Timeline"><button type="button" data-go="tl-today">Today</button>${T.S.map((s) => `<button type="button" data-go="${s.id}"${T.cur === s.k ? ' class="tl-cur"' : ''}>${esc(s.chip)}</button>`).join('')}</nav>`;
+    view.innerHTML = `<div class="pl tl" id="pl">
+      ${hero}
+      <div class="card tl-today" id="tl-today"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
+      <p class="pl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      ${nav}
+      ${T.S.map((s) => stage(s, body[s.k])).join('')}
+      <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
+        <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
+        <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
+        <div class="pl-kv"><span>How</span><b>${esc(((sp.methods || []).find((x) => x.id === p.method) || {}).label || METHOD_LABEL[p.method] || p.method || '')}</b></div>
+        <div class="pl-kv"><span>Access</span><b>${esc(accessLabel(p.access))}</b></div>
+        <div class="pl-kv"><span>Overnight</span><b>${p.overnight ? 'Yes' : 'No'}</b></div>
+        <div class="pl-kv"><span>Party</span><b>${esc(partyLabel(p.party))}</b></div>
+        <div class="pl-kv"><span>First hunt</span><b>${p.firstHunt !== false ? 'Yes' : 'No'}</b></div>
+        ${askHtml(p, sp)}
+        <div class="pl-acts no-print"><button type="button" class="btn" id="pl-share">Share</button><button type="button" class="btn" id="pl-print">Print</button><button type="button" class="btn" id="pl-edit">Change</button><button type="button" class="btn" id="pl-del">Delete</button></div>
+      </div>
+      ${p.where && p.where.id === 'harrison' && C.hasSession(HARRISON_LESSON) ? `<div class="card pl-harrison no-print"><h3>Read first</h3><p class="pl-small">The rules, roads and tactics for this hunt on one page.</p><a class="btn block" href="#/s/${HARRISON_LESSON}">${esc(C.lessonTitle(HARRISON_LESSON))}</a></div>` : ''}
+    </div>`;
+    css2(); tlCss();
+    const $ = (s) => view.querySelector(s);
+    const m = (memo[p.id] = { p, sp });
+    const link = (el) => { if (C.link && el) C.link(el); };
+    if (C.study) drawStudy($('#pl-study'), p, sp, C);
+    link($('.pl-sum'));
+
+    // open every fold around a target before a jump scrolls to it (gate jumps, the part 3 jump, timeline chips, Today buttons)
+    const openTo = (tid) => {
+      const el = document.getElementById(tid); if (!el) return null;
+      for (let d = el.parentElement; d && d !== view; d = d.parentElement) if (d.tagName === 'DETAILS') d.open = true;
+      if (el.firstElementChild && el.firstElementChild.tagName === 'DETAILS') el.firstElementChild.open = true;
+      return el;
+    };
+    const navEl = $('.tl-nav');
+    const goTo = (tid) => {
+      const el = openTo(tid); if (!el) return;
+      const off = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--top-h')) || 56) + navEl.offsetHeight + 6;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
+    };
+    $('#pl').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-g-jump],[data-pl-jump]'); if (!b) return;
+      const tid = b.dataset.gJump || b.dataset.plJump; openTo(tid);
+      if (!b.closest('#pl-ready') && !b.closest('#pl-live')) { e.preventDefault(); goTo(tid); }
+    }, true);
+    navEl.querySelectorAll('button').forEach((b) => b.onclick = () => { goTo(b.dataset.go); navEl.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b)); });
+
+    // actions
+    $('#pl-print').onclick = () => window.print();
+    $('#pl-edit').onclick = () => { draft = { species: p.species, where: p.where, from: p.from, to: p.to, method: p.method, access: p.access, overnight: p.overnight, party: p.party, firstHunt: p.firstHunt !== false, ask: Object.assign({}, p.ask), editId: p.id }; saveDraft(); goStep(0); };
+    $('#pl-del').onclick = () => { if (!confirm('Delete this plan? Its ticks go too.')) return; const all = plansOf(C); all.splice(all.indexOf(p), 1); C.save(); location.hash = '#/plan'; };
+    $('#pl-share').onclick = () => {
+      const text = shareText(m, D, C);
+      if (navigator.share) navigator.share({ title: `Hunt plan: ${planTitle(p, D)}`, text }).catch((e) => { if (e && e.name !== 'AbortError') copy(text, C); });
+      else copy(text, C);
+    };
+
+    // the steps on the timeline, from the readiness gates and the study path; each knows when it is done
+    let G = [];
+    const steps = () => {
+      const g = (k) => G.find((x) => x.k === k) || {};
+      let st = null; try { if (C.study) st = C.study.today(p, sp.lessons); } catch (e) { st = null; }
+      const iron = p.method === 'rifle' && C.hasSession('mc-tikka-03');
+      return [
+        { s: 'w1', k: 'licence', ok: g('licence').ok, t: 'Buy your licence and deer tag', p: 'Your first hunt list says buy species licences in person. Online orders are mailed, about 14 days (70%).', a: '<button type="button" class="btn" data-tl-tick="licence">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
+        { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
+        { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: g('must').how || 'The study path is in this week below.', a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
+        { s: 'w2', k: 'offline', ok: g('offline').ok, t: 'Save the hunt area for no signal', p: 'Do it at home on wifi. The offline card shows the size.', a: '<button type="button" class="btn" data-g-jump="pl-offline">Go to the offline card</button>' },
+        { s: 'w2', k: 'scout', tip: true, t: 'Tip: scout your top spot before the hunt', p: 'Your hunt dates have no scout day inside them. Drive up on a free day and walk in.', a: '<button type="button" class="btn" data-g-jump="pl-board">See the top spots</button>' },
+        { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help.', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
+        { s: 'hw', k: 'wx', tip: true, t: `Check the forecast from ${tlD(forecastOn)}`, p: 'The forecast reaches about 16 days ahead. The wind picks your spot.', a: '<button type="button" class="btn" data-g-jump="pl-live">Live conditions</button>' },
+      ];
+    };
+    const drawSteps = () => {
+      if (!alive()) return;
+      const out = steps(), ci = T.idx(T.cur);
+      for (const s of T.S) {
+        const box = view.querySelector(`[data-tl-steps="${s.k}"]`); if (!box) continue;
+        box.innerHTML = out.filter((x) => T.home(x.s) === s.k).map((x) => `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
+      }
+      // Today: steps not done whose stage has come, earliest first; then the next steps, up to 3
+      const due = out.filter((x) => !x.ok && !x.tip && T.idx(x.s) <= ci), soon = out.filter((x) => !x.ok && T.idx(x.s) > ci);
+      const pick = due.concat(soon).slice(0, 3);
+      const nxt = T.S[T.S.findIndex((s) => s.k === T.cur) + 1];
+      const huntNow = T.cur === 'hunt', nbNow = T.cur === 'nb';
+      $('#tl-today').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
+        ${huntNow ? '<p>Open the hour by hour plan: leave time, first light spot by the wind, turnaround alarm.</p><button type="button" class="btn next block" data-g-jump="pl-live">Hour by hour</button>'
+          : nbNow ? '<p>Go, backup or stay home, the Ready gates and the pack list.</p><button type="button" class="btn next block" data-g-jump="tl-nb">Night before check</button>'
+          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p><div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
+        ${nxt && !nxt.also ? `<p class="tl-next muted">Then: <b>${esc(nxt.label)}</b>, ${esc(nxt.b == null ? 'from ' + tlD(nxt.a) : tlRange(nxt.a, nxt.b))}.</p>` : ''}`;
+    };
+    const loadGates = async () => { try { G = await gates(p, sp, C); } catch (e) { G = []; } drawSteps(); };
+    loadGates();
+    // Tick buttons on the timeline write the same Ready gate tick (hm.progress.v1, same key and date format)
+    $('#pl').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-tl-tick]'); if (!b) return;
+      const o = ldJ(PROG, {}) || {}; o.ticks = o.ticks || {}; const t = (o.ticks[p.id] = o.ticks[p.id] || {});
+      t[b.dataset.tlTick] = todayIso(); svJ(PROG, o); drawReady($('#pl-ready'), p, sp, C, m); loadGates();
+    });
+
+    // checklist: the full list (part 4) plus each item again in the stage where it is due; same tick keys, one handler
+    const drawCheck = () => {
+      const all = checkItems(sp, D.lists, condOf(p)), items = p.showAllChecks ? all : all.filter((i) => !i.off);
+      const t = (i) => !!(p.ticks && p.ticks[i.key]);
+      const nDone = items.filter(t).length;
+      m.check = { done: nDone, total: items.length, left: items.filter((i) => !t(i)) };
+      $('#pl-check').innerHTML = `<div class="card"><div class="row"><b class="grow">${nDone} of ${items.length} done</b>
+        <label class="pl-hide"><input type="checkbox" id="pl-hide"${p.hideDone ? ' checked' : ''}> Hide done</label></div>${'<div class="bar"><i style="width:' + Math.round((nDone / Math.max(1, items.length)) * 100) + '%"></i></div>'}
+        <p class="muted pl-small">Your animal's list plus the lists that match your plan: ${esc(D.lists.filter((l) => listMatches(l.when, condOf(p))).map((l) => l.title || l.id).join(', ') || 'none')}. Ticks save on this phone.</p>
+        ${hiddenNote(all, p.showAllChecks, 'pl-showall')}
+        <div class="pl-list${p.hideDone ? ' pl-hide-done' : ''}">${checklistHtml(items, t, C, 'data-pk', closedCats(view))}</div>
+        ${nDone === items.length && items.length ? '<p class="pl-alldone">All done. Good hunting.</p>' : ''}
+        <div class="btn-row no-print"><button type="button" class="btn" id="pl-untick">Untick all</button></div></div>`;
+      $('#pl-hide').onchange = (e) => { p.hideDone = e.target.checked; C.save(); $('#pl-check .pl-list').classList.toggle('pl-hide-done', p.hideDone); };
+      $('#pl-untick').onclick = () => { if (!nDone || confirm('Untick every item in this plan?')) { p.ticks = {}; C.save(); drawCheck(); } };
+      const sa = $('#pl-showall'); if (sa) sa.onclick = () => { p.showAllChecks = !p.showAllChecks; C.save(); drawCheck(); };
+      const top = items.filter((i) => i.top).sort((a, b) => a.top - b.top).slice(0, 10);
+      for (const s of T.S) {
+        const box = view.querySelector(`[data-tl-check="${s.k}"]`); if (!box) continue;
+        const its = items.filter((i) => T.home(tlOfItem(i)) === s.k);
+        if (!its.length) { box.innerHTML = ''; continue; }
+        const was = box.querySelector('details'), open = was ? was.open : false;
+        const lead = its.filter((i) => top.includes(i)), rest = its.filter((i) => !top.includes(i));
+        box.innerHTML = `<details class="tl-fold"${open ? ' open' : ''}><summary>Checklist: ${esc(s.chip.toLowerCase())} <small>${its.filter(t).length} of ${its.length} done</small></summary>
+          ${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}</details>`;
+      }
+    };
+    $('#pl').addEventListener('change', (e) => {
+      const c = e.target.closest('input[data-pk]'); if (!c) return;
+      p.ticks = p.ticks || {}; if (c.checked) p.ticks[c.dataset.pk] = 1; else delete p.ticks[c.dataset.pk];
+      C.save();
+      const y = window.scrollY; drawCheck(); window.scrollTo(0, y);
+    });
+    drawCheck();
+
+    // 1. legal
+    let lg;
+    try { lg = await legal(p, sp); } catch (e) { lg = { verdict: 'check', why: 'Could not read the season tables.', rows: [], mig: [], bag: [], flags: [], dayOpen: {}, days }; }
+    if (!alive()) return;
+    m.legal = lg;
+    $('#pl-legal').innerHTML = legalHtml(lg, sp, p, C, H);
+    link($('#pl-legal'));
+
+    // 2. odds
+    let od; try { od = await odds(p, sp, lg); } catch (e) { od = { missing: true }; }
+    if (!alive()) return;
+    m.odds = od;
+    od.shared = D.species.filter((x) => x.id !== sp.id && x.harvestKey && sp.harvestKey && x.harvestKey === sp.harvestKey).map((x) => x.name);
+    $('#pl-odds').innerHTML = successHtml(od, sp, p, lg, C) + oddsHtml(od, sp, p, lg, C);
+    link($('#pl-odds'));
+
+    // 3. days (spots fill in after)
+    $('#pl-days').innerHTML = daysHtml(sp, p, lg, C, H) + '<div id="pl-spots"><div class="card"><h3>Top spots</h3><p class="muted">Finding candidate spots near the MU...</p></div></div>';
+    let st = null;
+    try { st = await spots(p, sp); } catch (e) { console.warn('plan spots', e); st = null; }
+    if (!alive()) return;
+    if (st && st.list.length) { p.spots = { at: todayIso(), list: st.list.slice(0, 7), camps: st.camps }; C.save(); }
+    else if ((!st || !st.list.length) && p.spots && p.spots.list.length) st = Object.assign({ saved: p.spots.at }, p.spots);
+    m.spots = st;
+    $('#pl-spots').innerHTML = spotsHtml(st, sp, p, C);
+    link($('#pl-days'));
+    wireRundowns($('#pl-spots'), st, p, C);
+    mountOffline($('#pl-offline'), p, sp, C);
+
+    const X = extCtx(p, sp, lg, od, st, C, H, days);
+    m.x = X;
+    const board = () => { if (alive()) drawBoard($('#pl-board'), st, p, sp, C, m, X); };
+    board();
+    const ready = () => { drawReady($('#pl-ready'), p, sp, C, m); loadGates(); };
+    ready();
+    // ticks in the Ready card move the timeline steps too
+    $('#pl-ready').addEventListener('click', (e) => { if (e.target.closest('[data-g-tick],#pl-g-again')) setTimeout(loadGates, 80); });
+    drawDebrief($('#pl-debrief'), p, sp, st, C, ready);
+    const O = window.HMPlanOdds;
+    if (O && typeof O.compute === 'function' && typeof O.html === 'function') {
+      try {
+        const r = await O.compute(p, sp, X.spots); if (!alive()) return;
+        m.oddsX = r; X.oddsResult = r;
+        const out = addOn(O.html(r, p));
+        $('#pl-odds').innerHTML = `<div class="pl2-x" id="pl-odds-x">${out.html}</div><details class="card pl-more"><summary>Official numbers, the 90% question and how to raise your odds</summary>${successHtml(od, sp, p, lg, C)}${oddsHtml(od, sp, p, lg, C)}</details>`;
+        out.wire($('#pl-odds-x')); link($('#pl-odds'));
+        board();
+      } catch (e) { console.warn('plan odds add on', e); }
+    }
+    await drawLive($('#pl-live'), X, m, alive, board, C);
+  }
   // what the add ons get: the plan, its answers, the legal and official odds results, the top spots and the app helpers
   function extCtx(p, sp, lg, od, st, C, H, days) {
     return { plan: p, ask: p.ask || {}, species: sp, speciesName: spName(sp, p.where.mu), mu: p.where.mu, days, from: p.from, to: p.to,
@@ -1565,7 +1888,7 @@
     // replace the preset entry (not push): Back from "When?" then leaves the wizard instead of reloading the preset
     if (a === 'preset' && PRESETS[b]) { draft = Object.assign({ _preset: true }, PRESETS[b]); saveDraft(); const n = STEPS.indexOf('when'); history.replaceState(history.state, '', `#/plan/new/${n}`); return wizard(view, n, C); }
     if (a === 'new') { if (b == null || b === '') { draft = {}; saveDraft(); } return wizard(view, Math.max(0, Math.min(STEPS.length - 1, +b || 0)), C); }
-    return planView(view, a, C);
+    return planViewV2(view, a, C).catch((e) => { console.warn('plan view v2', e); return planView(view, a, C); });
   }
   // print: open every folded part so the whole plan prints
   window.addEventListener('beforeprint', () => document.querySelectorAll('.pl details:not([open]), .pl-list details:not([open])').forEach((d) => { d.dataset.plClosed = '1'; d.open = true; }));
