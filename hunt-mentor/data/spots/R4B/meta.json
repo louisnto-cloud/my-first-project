@@ -1,0 +1,493 @@
+{
+ "area": "R4B",
+ "name": "Region 4 Kootenay: around Boswell (48.2 to 49.7 N, 115.1 to 117.1 W)",
+ "box": [
+  -117.1,
+  48.2,
+  -115.1,
+  49.7
+ ],
+ "base": {
+  "name": "Boswell",
+  "lat": 49.4559,
+  "lon": -116.7649,
+  "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+ },
+ "generated": "2026-10-16",
+ "total": 63,
+ "counts": {
+  "byCategory": {
+   "atv": 19,
+   "backcountry": 3,
+   "drive": 32,
+   "walk": 36,
+   "camp": 38
+  },
+  "byPrimary": {
+   "bear": 15,
+   "camp": 38,
+   "deer": 18,
+   "duck": 27,
+   "grouse": 15,
+   "moose": 15
+  },
+  "bySpeciesTag": {
+   "bear": 43,
+   "deer": 19,
+   "elk": 3,
+   "moose": 16,
+   "duck": 27,
+   "grouse": 15
+  },
+  "byPressure": {
+   "average": 65,
+   "remote": 5,
+   "quieter": 10,
+   "busier": 48
+  },
+  "byPrimaryCategory": {
+   "bear:atv": 3,
+   "bear:backcountry": 2,
+   "bear:drive": 5,
+   "bear:walk": 5,
+   "camp:camp": 38,
+   "deer:atv": 7,
+   "deer:drive": 5,
+   "deer:walk": 6,
+   "duck:drive": 11,
+   "duck:walk": 16,
+   "grouse:atv": 5,
+   "grouse:drive": 5,
+   "grouse:walk": 5,
+   "moose:atv": 4,
+   "moose:backcountry": 1,
+   "moose:drive": 6,
+   "moose:walk": 4
+  }
+ },
+ "routes": 0,
+ "camps": 41,
+ "bytes": {
+  "index.geojson": 17590,
+  "detail": 299612,
+  "routes": 0,
+  "camps.geojson": 2705
+ },
+ "tiles": {
+  "deg": 0.25,
+  "detail": [
+   "-461_195",
+   "-462_195",
+   "-467_196",
+   "-467_197",
+   "-467_198",
+   "-468_196",
+   "-468_197",
+   "-468_198",
+   "-469_196",
+   "-469_198"
+  ],
+  "routes": {}
+ },
+ "layerDates": {
+  "roads": "2026-10-16",
+  "private": "2026-10-01",
+  "privateFetched": "2026-10-16",
+  "closures": "2026-10-16",
+  "mu": "2026-10-16",
+  "parks": "2026-10-16",
+  "reserves": "2026-10-16",
+  "cities": "2026-10-16",
+  "wma": "2026-10-16",
+  "cutblocks": "2026-10-16",
+  "burns": "2026-10-16",
+  "winterRange": "2026-10-16",
+  "dem": "2026-10-16"
+ },
+ "stats": {
+  "deer": {
+   "drive": {
+    "candidates": 128,
+    "droppedWeak": 121,
+    "droppedCap": 0,
+    "kept": 7
+   },
+   "atv": {
+    "candidates": 128,
+    "droppedWeak": 119,
+    "droppedCap": 0,
+    "kept": 9
+   },
+   "walk": {
+    "candidates": 199,
+    "droppedWeak": 191,
+    "droppedCap": 0,
+    "kept": 8
+   },
+   "backcountry": {
+    "candidates": 10,
+    "droppedWeak": 10,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "droppedExact": 5,
+   "droppedOnClosedLand": 1
+  },
+  "moose": {
+   "drive": {
+    "candidates": 125,
+    "droppedWeak": 106,
+    "droppedCap": 9,
+    "kept": 10
+   },
+   "atv": {
+    "candidates": 129,
+    "droppedWeak": 111,
+    "droppedCap": 8,
+    "kept": 10
+   },
+   "walk": {
+    "candidates": 193,
+    "droppedWeak": 161,
+    "droppedCap": 22,
+    "kept": 10
+   },
+   "backcountry": {
+    "candidates": 10,
+    "droppedWeak": 8,
+    "droppedCap": 0,
+    "kept": 2
+   },
+   "droppedOnClosedLand": 2,
+   "droppedExact": 6
+  },
+  "bear": {
+   "drive": {
+    "candidates": 155,
+    "droppedWeak": 115,
+    "droppedCap": 34,
+    "kept": 6
+   },
+   "atv": {
+    "candidates": 146,
+    "droppedWeak": 113,
+    "droppedCap": 27,
+    "kept": 6
+   },
+   "walk": {
+    "candidates": 372,
+    "droppedWeak": 315,
+    "droppedCap": 51,
+    "kept": 6
+   },
+   "backcountry": {
+    "candidates": 1214,
+    "droppedWeak": 1211,
+    "droppedCap": 0,
+    "kept": 3
+   },
+   "droppedExact": 4
+  },
+  "elk": {
+   "drive": {
+    "candidates": 168,
+    "droppedWeak": 168,
+    "droppedCap": 0,
+    "kept": 0
+   },
+   "atv": {
+    "candidates": 153,
+    "droppedWeak": 152,
+    "droppedCap": 0,
+    "kept": 1
+   },
+   "walk": {
+    "candidates": 259,
+    "droppedWeak": 257,
+    "droppedCap": 0,
+    "kept": 2
+   },
+   "backcountry": {
+    "candidates": 51,
+    "droppedWeak": 51,
+    "droppedCap": 0,
+    "kept": 0
+   }
+  },
+  "duck": {
+   "drive": {
+    "candidates": 22,
+    "kept": 11,
+    "droppedCap": 0
+   },
+   "walk": {
+    "candidates": 29,
+    "kept": 16,
+    "droppedCap": 0
+   },
+   "backcountry": {
+    "candidates": 0,
+    "kept": 0,
+    "droppedCap": 0
+   },
+   "droppedWeak": 83
+  },
+  "grouse": {
+   "drive": {
+    "candidates": 46,
+    "kept": 5,
+    "droppedCap": 34
+   },
+   "atv": {
+    "candidates": 45,
+    "kept": 5,
+    "droppedCap": 34
+   },
+   "walk": {
+    "candidates": 18,
+    "kept": 5,
+    "droppedCap": 8
+   },
+   "droppedWeak": 31
+  },
+  "camp": {
+   "official": 8,
+   "crownKept": 33,
+   "droppedWeak": 175,
+   "droppedCap": 0,
+   "droppedExact": 2
+  },
+  "outsideBC": 11,
+  "inOtherArea": 0,
+  "spacingRemoved": 4
+ },
+ "styleLinesFlagged": 3,
+ "scoring": {
+  "weights": {
+   "deer": {
+    "uwr": 3,
+    "cut": 2,
+    "burn": 2,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "fields": 1
+   },
+   "moose": {
+    "wetland": 2,
+    "cut_or_burn": 2,
+    "uwr": 3
+   },
+   "duck": {
+    "size_road": 3,
+    "complex": 2,
+    "backwater": 2,
+    "low": 1
+   },
+   "grouse": {
+    "zone": 1,
+    "cut_edge": 1,
+    "riparian": 1
+   },
+   "quail": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1,
+    "draw": 1
+   },
+   "elk": {
+    "uwr": 3,
+    "burn": 2,
+    "cut": 1,
+    "bec_low": 2,
+    "bec_ms": 1,
+    "aspect": 1,
+    "water": 1
+   },
+   "turkey": {
+    "zone": 2,
+    "farm": 2,
+    "creek": 1
+   },
+   "bear": {
+    "cut": 2,
+    "burn": 2,
+    "south": 1,
+    "riparian": 1,
+    "quiet": 1
+   },
+   "camp": {
+    "flat": 2,
+    "water": 2,
+    "named_water": 1,
+    "quiet": 1,
+    "spots_near": 1
+   }
+  },
+  "max": {
+   "deer": 11,
+   "moose": 7,
+   "duck": 8,
+   "grouse": 3,
+   "quail": 6,
+   "camp": 7,
+   "elk": 11,
+   "turkey": 5,
+   "bear": 7
+  },
+  "min": {
+   "deer": 7,
+   "moose": 4,
+   "duck": 4,
+   "grouse": 2,
+   "quail": 4,
+   "camp": 5,
+   "elk": 7,
+   "turkey": 4,
+   "bear": 5
+  },
+  "spacingM": 800,
+  "selectRadiusM": {
+   "drive": 1500,
+   "atv": 1500,
+   "walk": 2000,
+   "backcountry": 3000,
+   "camp": 3000
+  },
+  "capsPerCategory": {
+   "deer": 220,
+   "moose": 100,
+   "duck": 180,
+   "grouse": 120,
+   "quail": 300,
+   "camp": 60,
+   "elk": 120,
+   "turkey": 80,
+   "bear": 60
+  },
+  "cutAgeYears": [
+   5,
+   20
+  ],
+  "burnYears": [
+   2015,
+   2023
+  ],
+  "burnMinHa": 10,
+  "grouseZones": [
+   "BWBS",
+   "CWH",
+   "ESSF",
+   "ICH",
+   "IDF",
+   "MS",
+   "SBPS",
+   "SBS"
+  ]
+ },
+ "seasonRows": {},
+ "regsEdition": {
+  "edition": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028 (in force 1 July 2026 to 30 June 2028)",
+  "lastChecked": "2026-10-02"
+ },
+ "regsWarnings": [],
+ "seasonFiles": [
+  {
+   "region": 1,
+   "edition": "2026-10-02",
+   "rows": 38,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 2,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 3,
+   "edition": "2026-10-02",
+   "rows": 50,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 4,
+   "edition": "2026-10-02",
+   "rows": 53,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 5,
+   "edition": "2026-10-02",
+   "rows": 48,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 6,
+   "edition": "2026-10-02",
+   "rows": 59,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7A",
+   "edition": "2026-10-02",
+   "rows": 42,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": "7B",
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "region": 8,
+   "edition": "2026-10-02",
+   "rows": 43,
+   "checked": "2026-10-04"
+  },
+  {
+   "file": "migratory.json",
+   "edition": "2026-09-21",
+   "rows": 74,
+   "checked": "2026-10-04"
+  }
+ ],
+ "seasonCoverage": {
+  "withFileRows": 90,
+  "withRegsRows": 0,
+  "verify": 0
+ },
+ "notes": [
+  "Candidate spots from official open data. Nobody publishes where hunters go; nothing here says animals are present.",
+  "Scores are opinion (my pick). Busier, average, quieter and remote are estimates from access.",
+  "Targets are never on private land, parks, protected areas, ecological reserves, reserves, city limits or lakes.",
+  "Parking points are never inside parks, reserves, city limits or Motor Vehicle Closed Areas.",
+  "Drive: within 300 m of a paved or gravel road. ATV: rough roads and trails 1 to 10 km from a truck parking point and 1 km or more from pavement, outside closures. Walk: 0.3 to 5 km. Backcountry: more than 5 km.",
+  "Big game targets inside the Hwy 5 (Coquihalla) single projectile zone are left out.",
+  "Caps per species and category are spread round robin over 15 km tiles, so every part of the area keeps its best spots instead of one big winter range taking every slot (my pick).",
+  "Assumption: road surface from the Digital Road Atlas decides truck (paved, gravel) versus ATV (rough, overgrown, trails).",
+  "Assumption: named trails in the road atlas (rail, horse, snowmobile and bike trails) are walk only, because their motor vehicle rules are not in the data. Rec trails count as ATV only when their listed activities include motorized use.",
+  "Area F is Region 4 (Kootenay). Every spot in MUs 4-1 to 4-8 and 4-20 to 4-25 carries the CWD (Chronic Wasting Disease) Management Zone flag: head sampling at a CWD freezer and the brain and spine transport ban (synopsis pages 15, 36, 37).",
+  "Every Region 4 spot carries the region wide ungulate and turkey feeding and baiting ban and the snowmobile for hunting closure.",
+  "Elk spots (my pick weights: elk winter range, burns, cutblocks, open low habitat zones, sunny slopes, water) and wild turkey spots (valley bottom under 1,100 m, pine and fir zones, field edges, creeks) are scored only in area F.",
+  "Synopsis map areas without official polygons (Maps D9, D10, D13, D16, D19, D20, D22, D23 and the Whiteswan FSR) are drawn from OpenStreetMap, FWA water or road names with a margin (my pick); targets inside are left out and nearby spots are flagged.",
+  "Hwy 3 Map D14 strip: 400 m no hunting or shooting from the westernmost Hwy 3 bridge over Michel Creek east of Sparwood (Loop Bridge is not in the data, assumption) to the Alexander Creek crossing. Canal Flats Map D17 shot only area: big game targets within 3 km of the village and under 1,067 m are left out (my pick)."
+ ],
+ "trim": {
+  "keptPerSpeciesAndAccess": {
+   "deer": 6,
+   "moose": 5,
+   "duck": 3,
+   "grouse": 3,
+   "camp": 4,
+   "bear": 4,
+   "elk": 4,
+   "quail": 3,
+   "turkey": 3
+  },
+  "before": 128,
+  "after": 63,
+  "note": "Size budget: best ranked spots kept per species and access type; route lines and map link fields left out."
+ }
+}

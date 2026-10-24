@@ -1,0 +1,99 @@
+{
+  "checked": "2026-10-23",
+  "note": "Data for app/addons/plan-live.js and app/addons/plan-days.js: rut phases, climate lines, road notices saved from the lessons, thermals and the time estimates. Every value names its source and certainty.",
+  "rut": [
+    {
+      "id": "coast-blacktail",
+      "label": "Coast black tailed deer",
+      "species": ["mule-deer"],
+      "regions": ["1", "2"],
+      "lesson": "mc-black-tailed-deer-04",
+      "src": "Nyberg and Janz 1990, page 36, and the BC deer account (2000), via Black tailed deer Masterclass 4: The rut",
+      "phases": [
+        { "from": "09-01", "to": "10-31", "phase": "Before the rut", "t": "In the weeks before the rut, bucks show more dominance and thrash bushes with their antlers.", "cert": 90 },
+        { "from": "11-01", "to": "11-14", "phase": "Rut starting", "t": "Coast deer breed in November and early December. Bucks start moving in daylight (Tip).", "cert": 90 },
+        { "from": "11-15", "to": "12-05", "phase": "Peak breeding", "t": "Most does conceive 15 November to 5 December. Find the does, then glass behind them (Tip).", "cert": 90 },
+        { "from": "12-06", "to": "12-31", "phase": "Late rut and after", "t": "After the rut, bucks are thin, some hurt, and they hide and rest.", "cert": 90 }
+      ],
+      "verify": "The dates come from a Vancouver Island study. Harrison is not Vancouver Island, so the exact local peak is VERIFY. Treat late November as the likely peak (Tip)."
+    }
+  ],
+  "rutOther": { "t": "No rut dates for this animal and area in the app. Read The rut lesson.", "lesson": "the-rut" },
+  "climate": {
+    "2": {
+      "10": { "t": "October is wet: about 145 mm of rain at Abbotsford.", "cert": 95, "src": "Environment Canada Climate Normals 1991 to 2020, Abbotsford", "url": "https://climate.weather.gc.ca/climate_normals/", "lesson": "hunt-fitness" },
+      "11": { "t": "November is wetter: about 225 mm of rain at Abbotsford. Plan for rain every day.", "cert": 95, "src": "Environment Canada Climate Normals 1991 to 2020, Abbotsford, read directly 2026-10-11 (logged in the Packs and carrying lesson sources)", "url": "https://climate.weather.gc.ca/climate_normals/", "lesson": "packs-carrying" }
+    }
+  },
+  "roads": {
+    "feed": {
+      "name": "Forest Service Road Safety Information, South Coast (BC government map layer FSR_Safety_Information_View)",
+      "url": "https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/FSR_Safety_Information_View/FeatureServer/0",
+      "map": "https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=a42873895b3d4ca084ea9730212cacb1",
+      "cert": 95,
+      "covers": "South Coast natural resource region only"
+    },
+    "page": {
+      "name": "Chilliwack Natural Resource District road safety information",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information"
+    },
+    "allBc": {
+      "name": "BC local road safety information (every district)",
+      "url": "https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information"
+    },
+    "saved": {
+      "regions": ["2"],
+      "lesson": "local-harrison-deer",
+      "pageUpdated": "2026-10-21",
+      "checked": "2026-10-23",
+      "cert": 95,
+      "items": [
+        { "road": "Harrison East FSR", "kind": "warning", "t": "Rockfall hazard, No Stopping signs near 13 km. Caution at 2, 13, 16.1 and 21.3 to 22.8 km." },
+        { "road": "Harrison East FSR", "kind": "closure", "t": "No access past 55 km through to the Kookipi FSR." },
+        { "road": "Francis Lake FSR", "kind": "warning", "t": "Narrow at about 1.3 km (12 May 2026)." },
+        { "road": "Mystery 5500 FSR", "kind": "closure", "t": "No access past 0 km, washout at 2.0 km." },
+        { "road": "Mystery FSR", "kind": "warning", "t": "Post wildfire rockfall area: do not stop." },
+        { "road": "Hemlock Valley FSR", "kind": "closure", "t": "No access at 0 km, four washed out culverts." },
+        { "road": "Fleetwood FSR", "kind": "closure", "t": "No vehicle access past 5.0 km." },
+        { "road": "Sts'ailes (West) FSR and Chehalis FSR", "kind": "none", "t": "No notice posted on the district page or map on 23 October 2026. No notice is not a promise the road is open." }
+      ]
+    }
+  },
+  "fire": {
+    "feed": "https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/British_Columbia_Bans_and_Prohibition_Areas_-_View/FeatureServer/14",
+    "page": "https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions",
+    "cert": 95
+  },
+  "thermals": {
+    "lesson": "wind-thermals",
+    "more": "wind-mastery",
+    "cert": 75,
+    "down": "Cool air sinks downhill from night until the sun warms the slope.",
+    "up": "Warm air rises uphill while the sun heats the slopes.",
+    "switch": "Thermals switch mid morning and near sunset. Expect swirls; do not walk in then.",
+    "times": "Switch times: down until about 90 minutes after sunrise, switching to 150 minutes, up until 1 hour before sunset, switching to 30 minutes after sunset (Tip, the app's rule of thumb, same as the Hunt Map)."
+  },
+  "est": {
+    "driveKmh": 60,
+    "roadFactor": 1.3,
+    "walkKmh": 3,
+    "gearUpMin": 10,
+    "bufferMin": 15,
+    "why": "Assumption: road distance is the straight line from Mission to the parking times 1.3 (the spot pipeline's rule), driven at 60 km/h on average, plus 15 minutes of slack. Walk: 3 km/h plus 1 min per 10 m of climb, at least 5 min (the spot pipeline's rule, used for every walk time on this page; if you draw a route on the Hunt Map it shows its own estimate, so go by the times here). Check Google Maps directions the night before."
+  },
+  "roles": {
+    "lesson": "hunting-partner",
+    "pair": [
+      { "t": "At the truck, agree six things: where, back by, meeting point, who shoots, signals, if late.", "cert": null },
+      { "t": "Each hunter shoots only in their own zone of fire, about 45 degrees straight ahead.", "cert": 75 },
+      { "t": "One sits at a crossing or glasses; the other walks the edge slowly toward the stander. Pushes are on foot only.", "cert": null },
+      { "t": "Orange hat and vest on both of you, so you see each other in timber.", "cert": null },
+      { "t": "The shooter cancels their own licence, never the partner's.", "cert": 99 }
+    ],
+    "solo": [
+      { "t": "Leave a trip plan at home: truck, road and the time you will be out.", "cert": 75 },
+      { "t": "Pick a short pack out: 1 km or less and 100 m of climb or less.", "cert": null },
+      { "t": "Sit more, walk less: one hunter moving alone is easy to hear.", "cert": null }
+    ]
+  }
+}

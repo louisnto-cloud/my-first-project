@@ -1,0 +1,8 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"id":"R6K-bear-walk-0001","name":"160 m N of Sphaler Creek","cat":"walk","species":["bear"],"score":5,"busy":"average","mu":"6-21","months":[4,5,6,8,9,10,11],"pop":"quiet","tg":["solo"]},"geometry":{"type":"Point","coordinates":[-131.2112,57.05113]}},
+{"type":"Feature","properties":{"id":"R6K-camp-camp-0001","name":"By Sphaler Creek","cat":"camp","score":6,"busy":"average","mu":"6-21"},"geometry":{"type":"Point","coordinates":[-131.15856,57.06581]}},
+{"type":"Feature","properties":{"id":"R6K-camp-camp-0002","name":"3.4 km NE of Sphaler Creek","cat":"camp","score":5,"busy":"average","mu":"6-21"},"geometry":{"type":"Point","coordinates":[-131.10153,57.08514]}},
+{"type":"Feature","properties":{"id":"R6K-grouse-drive-0001","name":"4.1 km E of Sphaler Creek","cat":"drive","species":["grouse"],"score":2,"busy":"busier","mu":"6-21","months":[9,10,11],"pop":"quiet"},"geometry":{"type":"Point","coordinates":[-131.08491,57.07968]}},
+{"type":"Feature","properties":{"id":"R6K-bear-walk-0002","name":"130 m NE of Sphaler Creek","cat":"walk","species":["bear"],"score":5,"busy":"average","mu":"6-21","months":[4,5,6,8,9,10,11],"pop":"quiet","tg":["solo"]},"geometry":{"type":"Point","coordinates":[-131.26008,57.04557]}},
+{"type":"Feature","properties":{"id":"R6K-duck-walk-0001","name":"Unnamed wetland 300 m N of Galore Creek","cat":"walk","species":["duck"],"score":4,"busy":"busier","mu":"6-21","months":[9,10,11],"pop":"quiet","tg":["solo"]},"geometry":{"type":"Point","coordinates":[-131.44813,57.138]}}
+]}

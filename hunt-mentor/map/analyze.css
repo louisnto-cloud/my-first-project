@@ -1,0 +1,64 @@
+/* Hunt Map Area analysis (tools-analyze.js). Uses the .hmm colour tokens, so light, dark and sun themes follow. */
+.hma-honest { margin: 4px 0 10px !important; padding: 8px 12px; border-radius: 10px; background: var(--hmm-soft); border-left: 4px solid var(--hmm-moss); font-size: 15px; font-weight: 600; }
+.hma-species { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
+.hma-species button, .hma-months button { min-height: 48px; border-radius: 12px; border: 1.5px solid var(--hmm-line); background: var(--hmm-card); color: var(--hmm-ink); font-size: 16px; font-weight: 700; padding: 4px 6px; line-height: 1.15; }
+.hma-species button small { display: block; font-size: 14px; font-weight: 500; color: var(--hmm-muted); }
+.hma-species button[aria-checked="true"], .hma-months button[aria-checked="true"] { border-color: var(--hmm-accent); background: var(--hmm-accent); color: #fff; }
+.hma-species button:disabled { opacity: 0.5; }
+.hma-months { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.hma-months button { min-height: 44px; font-size: 15px; padding: 0; }
+.hma-go { width: 100%; min-height: 52px; margin: 10px 0 4px; font-size: 17px; }
+
+.hma-ebar { position: relative; height: 28px; border-radius: 8px; background: var(--hmm-soft); border: 1px solid var(--hmm-line); margin: 8px 0 2px; overflow: hidden; }
+.hma-ebar i { position: absolute; }
+.hma-ebar i.band { top: 0; bottom: 0; background: #2e7d32; opacity: 0.75; }
+.hma-ebar i.area { top: 9px; height: 10px; border-radius: 5px; background: var(--hmm-ink); opacity: 0.7; }
+.hma-eaxis i.sw { display: inline-block; width: 12px; height: 10px; border-radius: 3px; margin: 0 3px 0 6px; vertical-align: -1px; }
+.hma-eaxis i.sw.band { background: #2e7d32; } .hma-eaxis i.sw.area { background: var(--hmm-ink); opacity: 0.7; }
+.hma-eaxis { display: flex; justify-content: space-between; font-size: 14px; color: var(--hmm-muted); margin-bottom: 6px; }
+
+.hma-blk { border: 1.5px solid var(--hmm-line); border-radius: 14px; padding: 8px 12px 10px; margin: 8px 0; background: var(--hmm-card); }
+.hma-blk.on { border-color: var(--hmm-accent); box-shadow: inset 0 0 0 1px var(--hmm-accent); }
+.hma-bh { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.hma-bh b { font-size: 18px; }
+.hma-bh span { font-size: 15px; color: var(--hmm-muted); font-weight: 700; }
+.hma-blk ul { list-style: none; margin: 6px 0 8px; padding: 0; }
+.hma-blk li { padding: 4px 0; font-size: 16px; line-height: 1.35; border-bottom: 1px solid var(--hmm-line); }
+.hma-blk li:last-child { border-bottom: 0; }
+.hma-blk li > span:first-child:not(.hmm-verify) { display: inline-block; min-width: 86px; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--hmm-muted); }
+.hma-blk .hmm-btn2 { width: 100%; min-height: 44px; }
+
+.hma-slopes { margin: 6px 0; }
+.hma-srow { display: grid; grid-template-columns: 22px 1fr 44px 70px; align-items: center; gap: 8px; min-height: 40px; border-bottom: 1px solid var(--hmm-line); font-size: 15px; }
+.hma-srow i { width: 20px; height: 16px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.25); }
+.hma-srow small { display: block; font-size: 14px; color: var(--hmm-muted); }
+.hma-srow b { text-align: right; }
+.hma-srow em { height: 8px; border-radius: 4px; background: var(--hmm-soft); overflow: hidden; }
+.hma-srow u { display: block; height: 100%; background: var(--hmm-muted); }
+.hma-tips { margin: 6px 0; padding-left: 20px; }
+.hma-tips li { margin: 6px 0; line-height: 1.4; font-size: 16px; }
+.hma-flags { list-style: none; padding: 0; margin: 6px 0; }
+.hma-flags li { background: transparent !important; color: var(--hmm-ink) !important; border-left: 4px solid #8d6e00; padding: 6px 10px; margin: 4px 0; font-size: 16px; line-height: 1.4; }
+.hma-flags li.stop { border-left-color: #c62828; }
+
+/* on the map: legend and time block picker, in the chips column above Hunt Map Layers */
+.hma-panel { pointer-events: auto; order: 98; width: min(300px, 100%); padding: 6px; border-radius: 16px; background: var(--hmm-btn); color: var(--hmm-ink); box-shadow: var(--hmm-shadow); }
+.hma-lg { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; padding: 0 2px 4px; }
+.hma-lg i { flex: 1; height: 10px; border-radius: 5px; background: linear-gradient(90deg, rgba(255, 236, 150, 0.15), rgba(254, 196, 79, 0.8) 30%, rgba(240, 120, 30, 0.9) 62%, rgb(176, 22, 62)); border: 1px solid rgba(0, 0, 0, 0.15); }
+.hma-lg button { min-height: 32px; padding: 0 10px; border-radius: 16px; border: 1.5px solid var(--hmm-line); background: var(--hmm-card); color: var(--hmm-ink); font-weight: 800; font-size: 14px; }
+.hma-seg { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+.hma-seg button { min-height: 46px; padding: 2px 0; border: 0; border-radius: 10px; background: var(--hmm-soft); color: var(--hmm-ink); line-height: 1.1; }
+.hma-seg button b { display: block; font-size: 14px; }
+.hma-seg button small { display: block; font-size: 14px; color: var(--hmm-muted); }
+.hma-seg button[aria-checked="true"] { background: var(--hmm-accent); color: #fff; }
+.hma-seg button[aria-checked="true"] small { color: #fff; }
+.hma-pin { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; border-radius: 50%;
+  border: 2.5px solid #fff; background: #7a0f35; color: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45); cursor: pointer; line-height: 1; }
+.hma-pin b { font-size: 17px; color: #fff; }
+.hma-pin small { font-size: 14px; font-weight: 700; color: #fff; }
+.framing .hma-panel { display: none; }
+.hma-bc { margin: 2px 0 0 !important; font-size: 14px; color: var(--hmm-muted); }
+.hma-den { padding: 12px 14px; border-radius: 12px; background: var(--hmm-soft); border-left: 4px solid #5d4037; margin: 8px 0; }
+.hma-den b { font-size: 18px; }
+/* the app's "Ask the mentor" button floats in the second slot of the right stack on the map: sit below it */
+body.map-open:has(.hm-ask:not([hidden])) .hma-btn { margin-top: 52px; }

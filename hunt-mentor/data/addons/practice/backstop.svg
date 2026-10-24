@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Look past the deer. Left, crossed: a deer stands on a skyline with a house beyond it, no shot. Right, ticked: a deer stands in front of a steep dirt hillside that stops the bullet, a safe backstop.">
+  <rect width="400" height="340" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Look past the deer</text>
+  <g data-tip="No: house beyond|A bullet that misses or passes through keeps going: a .308 bullet can travel kilometres. Never shoot toward a road, house or trail.">
+    <rect x="8" y="40" width="188" height="204" rx="10" fill="#efe2d6"/>
+    <path d="M8 168 Q 100 150 196 160 L196 244 L8 244 Z" fill="#d8ccb2"/>
+    <g fill="#2f3a2b"><rect x="146" y="136" width="34" height="24"/><polygon points="140,136 163,116 186,136"/><rect x="158" y="146" width="9" height="14" fill="#efe2d6"/></g>
+    <path d="M8 196 Q 100 172 196 190 L196 244 L8 244 Z" fill="#c9b79c"/>
+    <g transform="translate(78 172)">
+      <path d="M-14 4 L-16 22 M-8 6 L-8 22 M10 6 L11 22 M15 4 L17 22" stroke="#6b4423" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      <ellipse cx="0" cy="0" rx="22" ry="10" fill="#8b5a2b"/>
+      <path d="M14 -4 L22 -18 L28 -16 L22 0 Z" fill="#8b5a2b"/><ellipse cx="28" cy="-18" rx="8" ry="5" fill="#8b5a2b"/>
+      <path d="M22 -22 L18 -30 M26 -22 L30 -30" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+    <path d="M14 186 L150 146" stroke="#c0392b" stroke-width="2.6" stroke-dasharray="6 4" fill="none"/>
+    <path d="M70 66 L126 118 M126 66 L70 118" stroke="#c0392b" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+    <text x="102" y="232" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">House beyond: no</text>
+  </g>
+  <g data-tip="Yes: dirt bank|Only shoot into a solid earth backstop. The bank stops the bullet if you miss or it passes through.">
+    <rect x="204" y="40" width="188" height="204" rx="10" fill="#dfe6d3"/>
+    <path d="M204 244 L204 120 C 250 96, 320 70, 392 74 L392 244 Z" fill="#a47148"/>
+    <path d="M240 130 l10 6 M300 100 l12 4 M350 92 l10 8 M270 160 l8 6 M340 140 l10 4" stroke="#7a4f2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M204 206 L392 200 L392 244 L204 244 Z" fill="#c9b79c"/>
+    <g transform="translate(290 196)">
+      <path d="M-14 4 L-16 22 M-8 6 L-8 22 M10 6 L11 22 M15 4 L17 22" stroke="#6b4423" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      <ellipse cx="0" cy="0" rx="22" ry="10" fill="#8b5a2b"/>
+      <path d="M14 -4 L22 -18 L28 -16 L22 0 Z" fill="#8b5a2b"/><ellipse cx="28" cy="-18" rx="8" ry="5" fill="#8b5a2b"/>
+      <path d="M22 -22 L18 -30 M26 -22 L30 -30" stroke="#8b5a2b" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+    <path d="M210 206 L352 182" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="6 4" fill="none"/>
+    <path d="M352 182 l-6 -8 M352 182 l8 -5 M352 182 l4 9 M352 182 l-9 4" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M226 70 l14 14 l30 -34" fill="none" stroke="#2f6e3b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="298" y="232" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Dirt bank: yes</text>
+  </g>
+  <g data-tip="Nothing behind it|A grouse on a road edge often has the road, a cut bank, or nothing behind it. Find dirt behind every shot.">
+    <text x="200" y="272" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Know what the bullet hits after the deer</text>
+  </g>
+  <g data-tip="A .22 carries too|A .22 bullet travels over 1 km and skips off frozen ground and water. Find a dirt backstop for every shot (Tip).">
+    <rect x="8" y="286" width="188" height="44" rx="8" fill="#f6dccb"/>
+    <text x="102" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.22: over 1 km</text>
+  </g>
+  <g data-tip="Map it first (Tip)|Draw a 100 m circle around every house and barn. Mark safe shooting lanes and earth backstops before the hunt.">
+    <rect x="204" y="286" width="188" height="44" rx="8" fill="#eef3e6"/>
+    <text x="298" y="314" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100 m circle per house</text>
+  </g>
+</svg>

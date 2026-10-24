@@ -1,0 +1,46 @@
+{
+ "title": "Target shooting on Crown land: the rules",
+ "checked": "2026-10-16",
+ "note": "Rules for shooting a firearm or bow for practice outside a range. Crown land means public land owned by the province. Hunting seasons do not matter for practice; these place rules do.",
+ "sources": {
+  "syn": { "name": "BC Hunting and Trapping Regulations Synopsis 2026 to 2028", "url": "https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026-2028/hunting-trapping-synopsis.pdf" },
+  "wa": { "name": "BC Wildlife Act", "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01" },
+  "fa": { "name": "Firearms Act (Canada), section 17", "url": "https://laws-lois.justice.gc.ca/eng/acts/F-11.6/section-17.html" },
+  "cc": { "name": "Criminal Code (Canada), section 86", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-46/section-86.html" },
+  "fvrd": { "name": "BC Gov News, 5 April 2017: new no shooting areas in the Fraser Valley", "url": "https://news.gov.bc.ca/releases/2017FLNR0073-001092" },
+  "bcws": { "name": "BC Wildfire Service: fire bans and restrictions", "url": "https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions" },
+  "bcwf": { "name": "BC Wildlife Federation: affiliated clubs", "url": "https://bcwf.bc.ca/our-clubs/" }
+ },
+ "rules": [
+  { "id": "general", "h": "Is target shooting on Crown land allowed?", "t": "VERIFY. No official BC page was found that says, in plain words, that target shooting on open Crown land is allowed or banned in general. The bans below are tied to places. Outside them, ask the regional Fish and Wildlife office or the Conservation Officer Service before you set up.", "cert": null, "verify": true, "src": "", "where": "", "checked": "2026-10-16" },
+  { "id": "noshoot", "h": "No Shooting Areas", "t": "No firing a firearm in a No Shooting Area. Bows and crossbows are allowed there unless the region restricts them. Most are drawn only on the synopsis maps, not in this app.", "cert": 99, "src": "syn", "where": "page 10; Wildlife Act section 32", "checked": "2026-10-16" },
+  { "id": "m100", "h": "100 m (109 yd) from houses, schools and farm buildings", "t": "No firing a firearm within 100 m of a church, school building or school yard, playground, regional district park, dwelling house, or a farm or ranch building with people or domestic animals in it. The rule says \"hunt or discharge a firearm\", so it covers target practice too.", "cert": 95, "src": "syn", "where": "page 10", "checked": "2026-10-02" },
+  { "id": "road", "h": "Roads and highways", "t": "No firing across, or within, the road allowance of a numbered highway or a 2 lane or wider public road: 15 m (16 yd) each side of the middle of a road under 3 lanes. The Wildlife Act also bans firing on or across the travelled part of a highway.", "cert": 99, "src": "syn", "where": "page 10; Wildlife Act section 31", "checked": "2026-10-16" },
+  { "id": "vehicle", "h": "Not from a vehicle or motorboat", "t": "No firing a firearm from a motor vehicle, or from a boat pushed by a motor.", "cert": 99, "src": "wa", "where": "section 27(1)", "checked": "2026-10-16" },
+  { "id": "recsite", "h": "Recreation sites and trails", "t": "No firing a firearm, bow or crossbow on or into the developed part of a recreation site or interpretive forest: 100 m (109 yd) in every direction from a structure, day use area, campsite or trail staging area. On a recreation trail, only where a ban is posted.", "cert": 99, "src": "syn", "where": "page 9 (Forest Recreation Regulation)", "checked": "2026-10-02" },
+  { "id": "parks", "h": "BC Parks", "t": "When a park is closed to hunting, or no season is open, both carrying and firing a firearm or bow are banned unless a park officer allows it. Hunting is the only shooting the synopsis allows in a park, so do not target shoot in a park (my reading).", "cert": 85, "src": "syn", "where": "page 9", "checked": "2026-10-02" },
+  { "id": "ecores", "h": "Ecological reserves and national parks", "t": "No firing a firearm or bow in an ecological reserve. No hunting in any national park.", "cert": 99, "src": "syn", "where": "page 9", "checked": "2026-10-02" },
+  { "id": "town", "h": "Cities, towns and districts", "t": "Most municipalities restrict firearms and bows by bylaw. Bylaws are not in the synopsis: ask the municipal clerk. Many regional district parks ban firearms and bows too.", "cert": 99, "src": "syn", "where": "page 9", "checked": "2026-10-02" },
+  { "id": "kamloops", "h": "City of Kamloops", "t": "No firing firearms or bows on Crown land, or in Lac du Bois Grasslands Protected Area, inside the City of Kamloops boundary. The city bylaw for other land: VERIFY with the city.", "cert": 95, "src": "syn", "where": "page 33", "checked": "2026-10-16" },
+  { "id": "fvrd", "h": "Fraser Valley Regional District (Region 2)", "t": "In 2017 the province made no shooting zones within 400 m (437 yd) of select roads on Crown land outside towns in the Fraser Valley Regional District. They cover recreational shooting and target practice, not licensed hunting. Check the current maps: the zones may have changed since 2017.", "cert": 85, "src": "fvrd", "where": "news release 2017FLNR0073-001092", "checked": "2026-10-16" },
+  { "id": "private", "h": "Private land and First Nations reserves", "t": "You need the owner's permission. A reserve is treated like private land: ask the Nation. Town bylaws and the 100 m rule still apply on private land.", "cert": 90, "src": "syn", "where": "page 9 (my reading for target practice)", "checked": "2026-10-02" },
+  { "id": "restricted", "h": "Handguns and other restricted firearms", "t": "A restricted or prohibited firearm may be kept only at your home or at a place a chief firearms officer authorizes, such as an approved range. So no handgun practice on Crown land.", "cert": 95, "src": "fa", "where": "section 17", "checked": "2026-10-16" },
+  { "id": "fire", "h": "Fire season: exploding targets", "t": "When a campfire ban is on, the BC Wildfire Service often also bans binary exploding targets. Check the bans for your fire centre on the day. Tracer ammunition: VERIFY (no official BC rule found).", "cert": 95, "src": "bcws", "where": "Fire bans and restrictions, FAQ (page updated 8 October 2026)", "checked": "2026-10-16" },
+  { "id": "careless", "h": "Careless use", "t": "It is a crime to use or handle a firearm or ammunition in a careless way, or without reasonable care for other people's safety.", "cert": 99, "src": "cc", "where": "section 86(1)", "checked": "2026-10-16" }
+ ],
+ "backstop": {
+  "h": "Safe backstop checklist",
+  "diagram": "data/addons/practice/backstop.svg",
+  "from": "From the lessons: Is it legal to shoot? (step 8), Firearm safety, The .22 rimfire",
+  "items": [
+   { "t": "A solid earth bank or hillside behind the target, tall enough to catch a miss. Never the sky or a ridge top.", "tag": "Tip, and your safety course rule" },
+   { "t": "Nothing past it: no people, road, trail, livestock, house or building.", "tag": "Tip, and your safety course rule" },
+   { "t": "A bullet that misses keeps going: a .308 bullet can travel kilometres, a .22 well over 1 km.", "tag": "65% for the .22 figure" },
+   { "t": "No rocks, water or frozen ground in front of or behind the target: low bullets skip.", "tag": "Tip" },
+   { "t": "Paper or cardboard targets on a stand. No glass, cans or steel close up.", "tag": "Tip" },
+   { "t": "At least 100 m (109 yd) from any house or occupied farm building, and out of the road allowance.", "tag": "99%, synopsis page 10" },
+   { "t": "Walk the shooting lane before you load. Look past the target every time.", "tag": "Tip" },
+   { "t": "Pack out every target, shell and piece of brass.", "tag": "Tip" }
+  ]
+ }
+}

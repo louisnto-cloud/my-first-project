@@ -1,0 +1,3 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"spotId":"A-deer-drive-0107","kind":"walk","km":0.16,"climbM":0,"name":"2.0 km S of Thompson River","flags":[]},"geometry":{"type":"LineString","coordinates":[[-121.43147,50.23855],[-121.43364,50.23865]]}}
+]}
