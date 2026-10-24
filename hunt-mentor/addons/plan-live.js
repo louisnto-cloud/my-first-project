@@ -320,7 +320,7 @@
       <p class="pll-small">${B.stale ? 'Saved copy, ' : ''}checked ${esc(fmtDT(B.asOf))}, BC Wildfire Service ${badge(B.cert || 95)}. An empty result is not a promise. <a href="${esc(B.link || page)}" target="_blank" rel="noopener">Fire bans and restrictions</a></p></div>`;
   }
   function srcCard(live) {
-    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
+    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Times include a small safety margin. Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
   }
 
   let cssDone = false;
