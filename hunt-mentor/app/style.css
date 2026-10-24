@@ -636,3 +636,20 @@ body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
 
 /* absolutely placed helpers (screen reader part lists, tap hints) inside a step strip must not widen the page */
 .steps-track { position: relative; }
+
+/* trip plan (planViewV2): one merged Today and at a glance card, the Hunt day card, stage checklist summaries, the full checklist fold */
+.tl-today .gc { padding: 10px 0 0; margin-top: 10px; border-top: 2px solid var(--line); }
+.tl-today .gc-h { font-size: 20px; }
+.tl-hd { border: 2px solid var(--accent); padding: 10px 12px; margin: 8px 0; }
+.tl-hd h3 { margin: 0 0 6px; font-size: 18px; }
+.tl-hd .pl-kv b { overflow-wrap: anywhere; }
+.tl-hd a { display: inline-block; min-height: 44px; padding-top: 10px; font-family: var(--mono); }
+.tl-warn { margin: 8px 0 0; padding: 8px 10px; border-left: 4px solid var(--bad); font-size: 15px; }
+.tl-ck { border-top: 1px solid var(--line); padding: 10px 0 4px; }
+.tl-ck-h { margin: 0 0 6px; font-size: 16px; }
+.tl-ck-h small { font-size: 14px; color: var(--muted); }
+.tl-master > summary { cursor: pointer; min-height: 44px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.tl-master > summary h2 { display: inline; margin: 0; font-size: 22px; }
+.tl-master > summary small { font-size: 14px; color: var(--muted); }
+/* the app banner above every screen already carries the law line on screen; the plan's own copy is for print */
+@media screen { body > .banner ~ main .tl-law { display: none; } }

@@ -1015,22 +1015,24 @@
         ${sec('pl-s0', 'Ready to go?', 'pl-ready', 'Checking your readiness gates...')}
         ${solo ? '' : '<div class="tl-step"><b>Agree six things with your partner (Tip)</b><p>Where each of you sits, back by what time, the meeting point, who shoots, your signals, and what to do if one of you is late.</p></div>'}
         <div data-tl-check="nb"></div>`,
-      hunt: `${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
+      hunt: `<div id="tl-huntday"></div>
+        ${sec('pl-sl', 'Live conditions and hour by hour', 'pl-live', 'Waiting for the top spots...')}
         ${fold('Day cards, tactics, the shot and after the kill', 'sun times, what the deer do, mistakes to skip', sec('pl-s3', '3. Day by day', 'pl-days', 'Building your days...'))}`,
       shot: `${hitSteps.length ? `<div class="tl-step"><b>Deer hit, not down: do this</b><ol>${hitSteps.map((t) => `<li>${esc(t)}</li>`).join('')}<li>Liver or gut hit (dark blood, or green matter): back out quietly and do not push the deer (70%). Sources differ on how long to wait, so this plan gives no single number: use the wait table in <a href="#/s/blood-trailing/0">Blood trailing</a>.</li></ol></div>` : ''}<div class="tl-call"><b>Deer hit and not found, or a problem with the law</b><p class="pl-small">Conservation Officer and RAPP (Report All Poachers and Polluters), 24 hours (99%, synopsis page 26):</p><a href="tel:18779527277">1 877 952 7277</a><p class="pl-small">Someone hurt or lost: call 911.</p></div>
         <div data-tl-check="shot"></div>`,
       after: `${sec('pl-sd', 'After the hunt', 'pl-debrief', '')}
-        ${fold('Full checklist', 'every item for this plan, in one list', sec('pl-s4', '4. Checklist', 'pl-check', ''))}
+        <p class="tl-tip"><button type="button" class="btn" data-g-jump="pl-s4">Full checklist</button></p>
         <p class="tl-tip"><a class="btn" href="#/progress/${encodeURIComponent(p.id)}">Hunt ready score</a></p>`,
     };
     const nav = `<nav class="pl-nav tl-nav no-print" aria-label="Timeline"><button type="button" data-go="tl-today">Today</button>${T.S.map((s) => `<button type="button" data-go="${s.id}"${T.cur === s.k ? ' class="tl-cur"' : ''}>${esc(s.chip)}</button>`).join('')}</nav>`;
     view.innerHTML = `<div class="pl tl" id="pl">
       ${hero}
-      <div class="card tl-today" id="tl-today"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
-      <section class="card gc" id="tl-glance" aria-label="At a glance"><h2 class="gc-h">At a glance <span>five answers, tap for detail</span></h2><div id="gc-rows"><p class="muted">Checking your plan...</p></div></section>
-      <p class="pl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      <p class="pl-law tl-law">Study aid only. The official regulations are the law.</p>${regionWarn(D.byId[p.species], p.where.mu)}
+      <section class="card tl-today" id="tl-today" aria-label="Today and at a glance"><div id="tl-today-in"><p class="hero-k">Today, ${esc(tlD(today))}</p><h2>Do these next</h2><p class="muted">Working out today...</p></div>
+        <div class="gc" id="tl-glance"><h3 class="gc-h">At a glance <span>five answers, tap for detail</span></h3><div id="gc-rows"><p class="muted">Checking your plan...</p></div></div></section>
       ${nav}
       ${T.S.map((s) => stage(s, body[s.k])).join('')}
+      <details class="card tl-master" id="tl-master"><summary><h2>Full checklist</h2> <small>every item for this plan, by group</small></summary>${sec('pl-s4', '4. Checklist', 'pl-check', '')}</details>
       <div class="card pl-sum"><h2>${esc(spName(sp, p.where.mu))}</h2>
         <div class="pl-kv"><span>Where</span><b>${esc(p.where.label)}${p.where.mu ? `, MU (Management Unit) ${esc(p.where.mu)}` : ''}</b></div>
         <div class="pl-kv"><span>When</span><b>${esc(rangeLabel(p.from, p.to))} (${days.length} day${days.length === 1 ? '' : 's'})</b></div>
@@ -1107,17 +1109,17 @@
       const blocks = () => { const left = G.filter((x) => !x.ok); return left.length ? `<div class="tl-step tl-block"><b>Blocks the hunt: ${left.length} left</b><ul>${left.map((x) => `<li>${esc(x.label)}</li>`).join('')}</ul><div class="btn-row no-print"><button type="button" class="btn" data-g-jump="pl-ready">Ready gates</button></div></div>` : '<div class="tl-step tl-done"><b>Nothing blocks the hunt</b><p>All Ready gates done.</p></div>'; };
       for (const s of T.S) {
         const box = view.querySelector(`[data-tl-steps="${s.k}"]`); if (!box) continue;
-        box.innerHTML = (s.k === 'hw' ? blocks() : '') + out.filter((x) => T.home(x.s) === s.k).map((x) => pickKeys.has(x.k) && T.idx(x.s) <= ci ? `<div class="tl-step"><b>${esc(x.t)}</b><p>In the Today card above.</p></div>` : `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${!x.ok && x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
+        box.innerHTML = (s.k === 'hw' ? blocks() : '') + out.filter((x) => T.home(x.s) === s.k && !(pickKeys.has(x.k) && T.idx(x.s) <= ci)).map((x) => `<div class="tl-step${x.ok ? ' tl-done' : ''}"><b>${esc(x.t)}</b><p>${esc(x.ok ? 'Done.' : x.p)}</p>${!x.ok && x.p2 ? `<p class="pl-small">${esc(x.p2)}</p>` : ''}${x.ok ? '' : `<div class="btn-row no-print">${x.a}</div>`}</div>`).join('');
       }
       // Today: steps not done whose stage has come, earliest first; then the next steps, up to 3
       const due = out.filter((x) => !x.ok && !x.tip && T.idx(x.s) <= ci), soon = out.filter((x) => !x.ok && T.idx(x.s) > ci);
       const pick = due.concat(soon).slice(0, 3);
       const nxt = T.S[T.S.findIndex((s) => s.k === T.cur) + 1];
       const huntNow = T.cur === 'hunt', nbNow = T.cur === 'nb';
-      $('#tl-today').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
-        ${huntNow ? '<p>Open the hour by hour plan: leave time, first light spot by the wind, turnaround alarm.</p><button type="button" class="btn next block" data-g-jump="pl-live">Hour by hour</button>'
+      $('#tl-today-in').innerHTML = `<p class="hero-k">Today, ${esc(tlD(today))}</p><h2>${huntNow ? 'Hunt day' : nbNow ? 'The night before' : pick.length ? 'Do these next' : 'Nothing due today'}</h2>
+        ${huntNow ? '<p>Leave, park, sit, legal light, turnaround and the backup spot, on one card.</p><button type="button" class="btn next block" data-g-jump="tl-huntday">Hunt day card</button>'
           : nbNow ? '<p>Go, backup or stay home, the Ready gates and the pack list.</p><button type="button" class="btn next block" data-g-jump="tl-nb">Night before check</button>'
-          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p>${x.p2 ? `<p class="tl-p2">${esc(x.p2)}</p>` : ''}<div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
+          : `<ol>${pick.map((x, i) => `<li><b>${esc(x.t)}</b><p>${esc(x.p)}</p><div class="btn-row no-print">${i === 0 ? x.a.replace('class="btn', 'class="btn next') : x.a}</div></li>`).join('')}</ol>`}
         ${nxt && !nxt.also ? `<p class="tl-next muted">Then: <b>${esc(nxt.label)}</b>, ${esc(nxt.b == null ? 'from ' + tlD(nxt.a) : tlRange(nxt.a, nxt.b))}.</p>` : ''}`;
     };
     const loadGates = async () => { try { G = await gates(p, sp, C); } catch (e) { G = []; } drawSteps(); drawGlance(); };
@@ -1130,7 +1132,7 @@
       if (Array.isArray(G) && G.length) { const left = G.filter((g) => !g.ok); rows.push(rowG('pl-ready', 'Ready?', left.length ? 'no' : 'ok', left.length ? `Not ready: ${left.length} of ${G.length} to do` : `Ready: all ${G.length} done`, [left.length ? `To do: ${esc(left.map((g) => g.label.toLowerCase()).join(', '))}` : ''])); }
       else rows.push(rowG('pl-ready', 'Ready?', 'wait', 'Checking...', []));
       const lg = m.legal;
-      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, '<span class="gc-sm">Legal light per day: When, below.</span>'])); }
+      if (lg) { const V = { open: 'Open on your dates', no: 'Not open on your dates', check: 'Check the synopsis' }[lg.verdict] || 'Check the synopsis'; const what = (lg.rows || []).filter((x) => x.days.length && x.ok).slice(0, 2).map((x) => `${esc(cap(x.r.class || x.r.species))}: ${x.r.allYear ? 'all year' : `${md(x.r.open)} to ${md(x.r.close)}`} ${C.certBadge(x.r.cert)}`); rows.push(rowG('pl-s1', 'Legal?', lg.verdict === 'open' ? 'ok' : lg.verdict === 'no' ? 'no' : 'wait', V, [...what, '<span class="gc-sm">Legal light per day: on the Hunt day card.</span>'])); }
       else rows.push(rowG('pl-s1', 'Legal?', 'wait', 'Checking the season tables...', []));
       const hd = (m.daysX || []).find((d) => d.kind === 'hunt' && d.primary), bl = (m.x && m.x.spots) || [];
       const s1 = (hd && bl.find((x) => String(x.id) === String(hd.primary.spot.id))) || bl[0];
@@ -1138,14 +1140,38 @@
       if (s1) rows.push(rowG('pl-sb', 'Where?', 'ok', esc(s1.name), [s1.driveKm != null ? `${s1.driveKm} km from Mission, about ${fmtMin(s1.driveMin)} (estimate)` : '', s2 ? `Backup: ${esc(s2.name)}` : '', '<span class="gc-sm">My pick from open data (60%). Scout and read posted signs first.</span>']));
       else rows.push(rowG('pl-sb', 'Where?', 'wait', m.spots === null ? 'Spots did not load. Open the Map once with signal.' : 'Finding and checking spots...', []));
       const hunt = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
-      if (hunt.length) rows.push(rowG('pl-sl', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Turnaround alarm inside.</i>'])));
+      if (hunt.length) rows.push(rowG('tl-huntday', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Tap for the Hunt day card.</i>'])));
       else rows.push(rowG('pl-sl', 'When?', 'wait', m.daysX ? 'No open hunt days in this plan' : 'Working out leave times...', []));
       const b = m.oddsX && m.oddsX.base;
       if (b && b.overPlanDays && b.planDays) { const P0 = (x) => `${Math.round(x * 100)}%`; rows.push(rowG('pl-s2', 'Odds?', 'odds', `About ${P0(b.overPlanDays.mid)} for you over ${b.planDays} day${b.planDays === 1 ? '' : 's'}`, [`Base: the middle year of ${b.years} years of MU ${esc(p.where.mu)} hunter reports (estimate). Range ${P0(b.overPlanDays.low)} to ${P0(b.overPlanDays.high)}.`])); }
       else rows.push(rowG('pl-s2', 'Odds?', 'wait', 'Working out your odds...', []));
       box.innerHTML = rows.join('');
     };
-    m.redraw = drawGlance;
+    // Hunt day card: one card per hunt day with leave, park (coordinates), sit, legal light, turnaround and the backup spot
+    const drawHuntDay = () => {
+      if (!alive()) return; const box = $('#tl-huntday'); if (!box) return;
+      const hd = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
+      if (!hd.length) { box.innerHTML = `<div class="card tl-hd"><h3>Hunt day</h3><p class="muted">${m.daysX ? 'No open hunt days in this plan.' : 'Working out your hunt days...'}</p></div>`; return; }
+      const ll = (o) => { const pk = o && o.spot && o.spot.detail && o.spot.detail.park; return Array.isArray(pk) && pk.length >= 2 ? { lat: +pk[1], lon: +pk[0], park: 1 } : o && o.spot && o.spot.lat != null ? { lat: +o.spot.lat, lon: +o.spot.lon } : null; };
+      const where = (o) => { const q = ll(o); return q ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${q.lat.toFixed(5)},${q.lon.toFixed(5)}" target="_blank" rel="noopener">${q.lat.toFixed(5)}, ${q.lon.toFixed(5)}</a>${q.park ? '' : ' (spot point: no parking point in the data)'}` : 'no point in the data'; };
+      const wk = (o) => (o && o.walk && o.walk.min != null ? +o.walk.min : null);
+      const r = (k, v) => `<div class="pl-kv"><span>${k}</span><b>${v}</b></div>`;
+      box.innerHTML = hd.map((d) => {
+        const at = (k) => (d.steps.find((x) => x.key === k) || {}).at;
+        const P = d.primary, B = d.backup, wp = wk(P), wb = wk(B);
+        const long = wp != null && wb != null && wb >= wp + 15 && wb >= wp * 1.5;
+        return `<div class="card tl-hd"><h3>Hunt day: ${esc(dLabel(d.date))}</h3>
+          ${r('Leave home', tmG(at('leave')))}
+          ${P ? r('Park', `${esc(P.spot.name)}: ${where(P)}`) : ''}
+          ${r('Sit by', tmG(at('setup')) + (wp != null ? `, walk in about ${fmtMin(wp)}` : ''))}
+          ${r('Legal light', `${tmG(d.legalStart)} to ${tmG(d.legalEnd)}`)}
+          ${r('Turn back', tmG(d.turnaround && d.turnaround.at != null ? d.turnaround.at : at('turn')))}
+          ${B ? r('Backup spot', `${esc(B.spot.name)}: ${where(B)}${wb != null ? `, walk in about ${fmtMin(wb)}` : ''}`) : ''}
+          ${long ? `<p class="tl-warn"><b>Backup walk is much longer:</b> about ${fmtMin(wb)} against ${fmtMin(wp)}. On a backup morning leave earlier, or you sit after first light.</p>` : ''}
+        </div>`;
+      }).join('') + '<p class="pl-small muted">Estimates. Legal light is shown 3 min late at the start and 1 min early at the end, for safety. Hour by hour, the turnaround alarm and the reasons are just below.</p>';
+    };
+    m.redraw = () => { drawGlance(); drawHuntDay(); };
     loadGates();
     // Tick buttons on the timeline write the same Ready gate tick (hm.progress.v1, same key and date format)
     $('#pl').addEventListener('click', (e) => {
@@ -1175,10 +1201,13 @@
         const box = view.querySelector(`[data-tl-check="${s.k}"]`); if (!box) continue;
         const its = items.filter((i) => T.home(tlOfItem(i)) === s.k);
         if (!its.length) { box.innerHTML = ''; continue; }
-        const was = box.querySelector('details'), open = was ? was.open : false;
-        const lead = its.filter((i) => top.includes(i)), rest = its.filter((i) => !top.includes(i));
-        box.innerHTML = `<details class="tl-fold"${open ? ' open' : ''}><summary>Checklist: ${esc(s.chip.toLowerCase())} <small>${its.filter(t).length} of ${its.length} done</small></summary>
-          ${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}</details>`;
+        // stage has come: the items not ticked yet, most important first; later stages: the count only
+        const due = T.idx(s.k) <= T.idx(T.cur), left = its.filter((i) => !t(i));
+        const lead = left.filter((i) => top.includes(i)), rest = left.filter((i) => !top.includes(i)).slice(0, Math.max(0, 5 - lead.length));
+        const more = left.length - lead.length - rest.length;
+        box.innerHTML = `<div class="tl-ck"><p class="tl-ck-h"><b>Checklist: ${esc(s.chip.toLowerCase())}</b> <small>${its.length - left.length} of ${its.length} done</small></p>
+          ${due && left.length ? `${lead.length ? `<p class="pl-small"><b>Most important first</b></p>${tlItems(lead, t, C)}` : ''}${tlItems(rest, t, C)}` : ''}
+          <div class="btn-row no-print"><button type="button" class="btn" data-g-jump="pl-s4">${due ? (more > 0 ? `${more} more to do: full checklist` : left.length ? 'Full checklist, by group' : 'All done: see the full checklist') : `${left.length} to do: open the full checklist`}</button></div></div>`;
       }
     };
     $('#pl').addEventListener('change', (e) => {
@@ -1292,7 +1321,7 @@
       <li><b>Fire bans:</b> <a href="https://www2.gov.bc.ca/gov/content/safety/wildfire-status/prevention/fire-bans-and-restrictions" target="_blank" rel="noopener">BC Wildfire Service fire bans and restrictions</a>.</li>
       ${r2 ? `<li><b>Road notices:</b> <a href="${ROADS}" target="_blank" rel="noopener">Chilliwack Natural Resource District road safety information</a> (Forest Service Roads near Harrison).</li>` : ''}
       <li><b>Highways:</b> <a href="https://www.drivebc.ca/" target="_blank" rel="noopener">DriveBC</a>.</li>
-      <li><b>Legal light:</b> each day's times are under Hunt days, Day by day, worked out on your phone.</li></ul></div>`;
+</ul></div>`;
   }
 
   // "Save this hunt area for no signal" (map/plan-offline.js, through map/offline.js): the plan point, its spots and nearest camp
@@ -1613,13 +1642,12 @@
         <div class="pl-kv"><span>Wind fit</span><b>${windV || (Lv ? (m.live ? 'no forecast for this spot' : 'getting the forecast') : 'forecast coming')}</b></div>
         <h4 class="pl2-h4">Legal checks</h4><ul class="pl2-chk">${chk('Private land', nd ? [] : lg.rows.priv, nd)}${chk('Road allowance', nd ? [] : lg.rows.road, nd)}${chk('No shooting areas', nd ? [] : lg.rows.noshoot, nd)}
           ${!nd && lg.rows.other.length ? `<li class="pl2-w"><b>Also check:</b> ${lg.rows.other.slice(0, 2).map((r) => esc(r.t)).join(' ')}</li>` : ''}
-          <li class="pl2-ok"><b>Legal light:</b> each day's times are under Hunt days, Day by day.</li></ul>
+</ul>
         ${why.length || x.scoreLabel ? `<h4 class="pl2-h4">Why this spot</h4><ul class="pl2-why">${why.join('')}</ul>${x.scoreLabel ? `<p class="muted pl-small">${esc(x.scoreLabel)}.</p>` : ''}` : ''}
         <div class="pl2-acts no-print"><a class="btn" href="${mapLink(x)}">Map</a><button type="button" class="btn" data-b-off="${i}">Save offline</button><button type="button" class="btn" data-b-swap="${i}">Swap</button></div>
         <details class="pl-rd" data-rd="${i}"><summary class="btn">Full rundown</summary><div class="pl-rd-in"><p class="muted">Putting the rundown together...</p></div></details></li>`;
     };
-    el.innerHTML = `<p class="pl-law">Study aid only. The official regulations are the law.</p>
-      <div class="card"><p class="pl-small">The top ${show.length || ''} candidate spots for this plan, after your answers and the legal checks in the spot data (private land, road allowances, no shooting areas). Candidates from open data, my pick: scout first, check posted signs. ${C.certBadge(st.cert != null ? st.cert : 60)}${st.saved ? ` Saved copy from ${esc(st.saved)}.` : ''}</p>
+    el.innerHTML = `<div class="card"><p class="pl-small">The top ${show.length || ''} candidate spots for this plan, after your answers and the legal checks in the spot data (private land, road allowances, no shooting areas). Candidates from open data, my pick: scout first, check posted signs. ${C.certBadge(st.cert != null ? st.cert : 60)}${st.saved ? ` Saved copy from ${esc(st.saved)}.` : ''}</p>
         ${L.legal ? `<p class="pl-small"><b>${L.legal} spot${L.legal === 1 ? '' : 's'} left out:</b> failed a legal check (private land right here, on a road allowance, or inside a no shooting area).</p>` : ''}
         ${outN ? `<p class="pl-small"><b>${outN} left out by your answers:</b> ${[L.walk ? `${L.walk} walk` : '', L.travel ? `${L.travel} drive time` : '', L.truck ? `${L.truck} vehicle` : ''].filter(Boolean).join(', ')}.</p>` : ''}
         ${st.own ? `<p class="pl-small"><span class="pill">From your own trips</span> ${st.own} debrief${st.own === 1 ? '' : 's'} with a place can move spots up or down.</p>` : ''}
