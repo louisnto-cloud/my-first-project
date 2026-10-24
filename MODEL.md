@@ -14,9 +14,12 @@ Assumptions tab (or paste them via **Import SKUs** / Export CSV round-trip).
 
 ## The web app (primary)
 
-Open the HTML file and drive everything from the top: pick a **scenario**, and every
-view updates. **Assumptions** is the only place you type; edits **auto-save** to your
-browser.
+**Live:** https://louisnto-cloud.github.io/my-first-project/model/ — nothing to install.
+(The Excel workbook sits next to it at `/model/Organika_Sparkling_Daily_1YR_Scenario_Model.xlsx`.)
+You can also download the HTML file and open it locally; it works offline either way.
+
+Drive everything from the top: pick a **scenario**, and every view updates.
+**Assumptions** is the only place you type; edits **auto-save** to your browser.
 
 **Views:** Overview (KPIs + scenario comparison + portfolio mix) · Summary (print/PDF
 one-pager + copy-as-text) · P&L · Monthly (seasonality + break-even month) · 3-Year
