@@ -130,7 +130,7 @@ footer b{color:var(--ink)}
 
 <header>
   <div class="bar">
-    <div class="brand"><b>Organika RTD</b><span>FY26–27 Forecast</span></div>
+    <div class="brand"><b>Organika RTD</b><span>FY26 to FY27 Forecast</span></div>
     <div class="seg ml" role="group" aria-label="Scenario">
       <button data-scn="0.85" aria-pressed="false">Conservative</button>
       <button data-scn="1"    aria-pressed="true">Base</button>
@@ -143,30 +143,30 @@ footer b{color:var(--ink)}
 <div class="wrap">
   <section class="hero">
     <h1>The whole year, on one screen.</h1>
-    <p>Nine channels, four SKUs, ten provinces, 52 weeks — distilled to the numbers that decide the year.
+    <p>Nine channels, four SKUs, ten provinces, 52 weeks, distilled to the numbers that decide the year.
        Move a slider; everything recalculates live and shows the change against the base plan.</p>
   </section>
 
   <section class="kpis">
     <div class="kpi"><span class="rail"></span>
       <div class="lab">Revenue <span class="chip hide" id="d-rev"></span></div>
-      <div class="val num" id="k-rev">—</div><div class="sub">Annual sales, CAD</div></div>
+      <div class="val num" id="k-rev">…</div><div class="sub">Annual sales, CAD</div></div>
     <div class="kpi"><span class="rail"></span>
       <div class="lab">Gross profit <span class="chip hide" id="d-gp"></span></div>
-      <div class="val num" id="k-gp">—</div><div class="sub" id="k-gpm">after landed cost</div></div>
+      <div class="val num" id="k-gp">…</div><div class="sub" id="k-gpm">after landed cost</div></div>
     <div class="kpi ebitda"><span class="rail"></span>
       <div class="lab">EBITDA <span class="chip hide" id="d-eb"></span></div>
-      <div class="val num" id="k-eb">—</div><div class="sub" id="k-ebm">operating income</div></div>
+      <div class="val num" id="k-eb">…</div><div class="sub" id="k-ebm">operating income</div></div>
     <div class="kpi"><span class="rail"></span>
       <div class="lab">Cases to produce <span class="chip hide" id="d-cs"></span></div>
-      <div class="val num" id="k-cs">—</div><div class="sub">with buffer</div></div>
+      <div class="val num" id="k-cs">…</div><div class="sub">with buffer</div></div>
   </section>
 
   <section class="ministrip">
-    <div class="mini"><div class="l">GP margin</div><div class="v num" id="m-gpm">—</div></div>
-    <div class="mini"><div class="l">EBITDA margin</div><div class="v num" id="m-ebm">—</div></div>
-    <div class="mini"><div class="l">Revenue / door</div><div class="v num" id="m-rpd">—</div></div>
-    <div class="mini"><div class="l">Trade % of revenue</div><div class="v num" id="m-tr">—</div></div>
+    <div class="mini"><div class="l">GP margin</div><div class="v num" id="m-gpm">…</div></div>
+    <div class="mini"><div class="l">EBITDA margin</div><div class="v num" id="m-ebm">…</div></div>
+    <div class="mini"><div class="l">Revenue / door</div><div class="v num" id="m-rpd">…</div></div>
+    <div class="mini"><div class="l">Trade % of revenue</div><div class="v num" id="m-tr">…</div></div>
   </section>
 
   <div class="grid">
@@ -180,7 +180,7 @@ footer b{color:var(--ink)}
         <div class="ctrl">
           <div class="row"><label for="buf">Production buffer</label><span class="out num" id="o-buf"></span></div>
           <input type="range" id="buf" min="0" max="0.25" step="0.01" value="0.10">
-          <div class="hint">Cushion above demand for the co-man PO.</div></div>
+          <div class="hint">Cushion above demand for the co manufacturer PO.</div></div>
         <div class="ctrl">
           <div class="row"><label for="muv">MUV price / case</label><span class="out num" id="o-muv"></span></div>
           <input type="range" id="muv" min="22" max="34" step="0.5" value="28">
@@ -192,7 +192,7 @@ footer b{color:var(--ink)}
         <div class="ctrl">
           <div class="row"><label for="cost">Landed cost</label><span class="out num" id="o-cost"></span></div>
           <input type="range" id="cost" min="0.8" max="1.25" step="0.01" value="1">
-          <div class="hint">Multiplier on co-man + freight-in cost.</div></div>
+          <div class="hint">Multiplier on co manufacturer + freight in cost.</div></div>
       </div>
       <button class="reset" id="reset">↺ Reset to base plan</button>
     </aside>
@@ -219,7 +219,7 @@ footer b{color:var(--ink)}
           </div>
         </div>
         <canvas id="cMix" height="240" class="click" aria-label="Volume mix chart"></canvas>
-        <div class="drill" id="drill">Tap a bar to see its month-by-month trend.</div>
+        <div class="drill" id="drill">Tap a bar to see its month by month trend.</div>
         <div class="legend" id="mixLeg"></div>
       </div>
     </div>
@@ -232,9 +232,9 @@ footer b{color:var(--ink)}
 
   <footer>
     <b>How to read it.</b> Green channels are today's business (Natural, Specialty, FDM, Costco);
-    warm and berry tones are the five new channels (On-Premise, Convenience, Gym&nbsp;&amp;&nbsp;Fitness,
+    warm and berry tones are the five new channels (On-Premise, Convenience, Gym and Fitness,
     Private Liquor, RAS). EBITDA is negative in year one because listing and slotting fees land up front
-    and operating costs run at full scale — the path turns positive as revenue grows and those one-time
+    and operating costs run at full scale, and the path turns positive as revenue grows and those one time
     costs amortise.<br>
     <b>Source of truth</b> is the workbook. This screen mirrors it exactly and is for exploring, not editing. Owner: Louis.
   </footer>
@@ -456,7 +456,7 @@ el("cMix").addEventListener("click",e=>{
 });
 function updateDrill(){
   const d=el("drill");
-  if(!focus){d.innerHTML="Tap a bar to see its month-by-month trend.";return;}
+  if(!focus){d.innerHTML="Tap a bar to see its month by month trend.";return;}
   const series=focus.series.map(v=>v*state.mult);
   const fy=sum(series), peak=BASE.months[series.indexOf(Math.max(...series))];
   const spark=sparkline(series,focus.c);
