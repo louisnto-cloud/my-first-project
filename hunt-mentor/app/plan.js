@@ -1056,12 +1056,12 @@
       let st = null; try { if (C.study) st = C.study.today(p, sp.lessons); } catch (e) { st = null; }
       const iron = p.method === 'rifle' && C.hasSession('mc-tikka-03');
       return [
-        { s: 'w1', k: 'licence', ok: g('licence').ok, t: 'Buy your licence and deer tag', p: 'Your first hunt list says buy species licences in person. Online orders are mailed, about 14 days (70%).', a: '<button type="button" class="btn" data-tl-tick="licence">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
+        { s: 'w1', k: 'licence', ok: g('licence').ok, t: 'Buy your licence and deer tag', p: 'Buy the deer species licence in person (Service BC or a vendor): you get it the same day. Online orders are mailed, about 14 days (70%), and you must carry it to hunt (95%, synopsis, Before Your Hunt).', a: '<button type="button" class="btn" data-tl-tick="licence">Tick: bought</button><a class="btn" href="#/s/licences">How to buy it</a>' },
         { s: 'w1', k: 'sighted', ok: g('sighted').ok, t: p.method === 'rifle' ? 'Range day: zero your rifle at 100 m' : (g('sighted').label || 'Practise with your gear'), p: iron ? 'Iron sights: short shots win. With a 100 m zero a .308 is about 12 cm low at 200 m (75%).' : 'Use the same load you will hunt with.', a: `<button type="button" class="btn" data-tl-tick="sighted">Tick: done</button><a class="btn" href="#/s/${iron ? 'mc-tikka-03' : 'sighting-in'}">${iron ? 'Iron sights and zero' : 'How to sight in'}</a>` },
         { s: 'w1', k: 'must', ok: g('must').ok, t: st && st.leftToday ? `Study today: ${st.leftToday} screen${st.leftToday === 1 ? '' : 's'}` : 'Read the must know screens', p: g('must').how || 'The study path is in this week below.', a: st && st.st && st.st.next ? `<a class="btn pl-hero-go no-print" href="#/s/${esc(st.st.next.id)}/${st.st.next.i}">Start studying</a>` : '<button type="button" class="btn" data-g-jump="pl-s5">Go to the study path</button>' },
         { s: 'w2', k: 'offline', ok: g('offline').ok, t: 'Save the hunt area for no signal', p: 'Do it at home on wifi. The offline card shows the size.', a: '<button type="button" class="btn" data-g-jump="pl-offline">Go to the offline card</button>' },
         { s: 'w2', k: 'scout', tip: true, t: 'Tip: scout your top spot before the hunt', p: 'Your hunt dates have no scout day inside them. Drive up on a free day and walk in.', a: '<button type="button" class="btn" data-g-jump="pl-board">See the top spots</button>' },
-        { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help.', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
+        { s: 'hw', k: 'trip', ok: g('trip').ok, t: 'Fill in the trip plan and send it', p: 'Who, where, back by, and when to call for help. Nobody watches a trip plan: your contact must call 911 if you are late (AdventureSmart, 95%).', a: '<a class="btn" href="#/safety/trip">Open the trip plan</a>' },
         { s: 'hw', k: 'wx', tip: true, t: `Check the forecast from ${tlD(forecastOn)}`, p: 'The forecast reaches about 16 days ahead. The wind picks your spot.', a: '<button type="button" class="btn" data-g-jump="pl-live">Live conditions</button>' },
       ];
     };
@@ -1320,15 +1320,15 @@
     const rough = (k) => 1 - Math.pow(1 - od.perDay, k);
     const you = rough(huntDays), party = rough(huntDays * n);
     const need = od.perDay > 0 && od.perDay < 1 ? Math.ceil(Math.log(0.1) / Math.log(1 - od.perDay)) : null;
-    const pct = (x) => `${Math.round(x)}%`, r5 = (x) => `about ${Math.min(95, Math.max(1, Math.round((x * 100) / 5) * 5 || 1))}%`;
+    const pct = (x) => `${Math.round(x)}%`, r5 = (x) => `about ${Math.min(95, Math.max(1, Math.round(x * 100) || 1))}%`; // whole percent (was nearest 5, which made 8% read as 10%)
     const where = od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)} (MU ${esc(p.where.mu)} has too few reports)`;
     let answer;
     if (od.pct >= 90) answer = `<p><b>Maybe, but never promised.</b> Hunters here have done very well on average.</p>`;
     else answer = `<p><b>No. 90% is not realistic here${huntDays ? ` in ${huntDays} hunt day${huntDays === 1 ? '' : 's'}` : ''}.</b></p>
-      <ul><li>On average, ${pct(od.pct)} of resident hunters got one over the whole season (2020 to 2024).</li>
+      <ul><li>5 year total: ${pct(od.pct)} of resident hunters got one over the whole season (all 2020 to 2024 hunters pooled). Your odds card uses the middle year, so its numbers differ a little.</li>
       <li>So most hunters went home without one, even with ${od.dph.toFixed(1)} days each.</li>
-      ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
-      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the average rate.</li>` : ''}
+      ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled${p.party === 'two' && !(p.ask && p.ask.partner && typeof p.ask.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
+      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the 5 year total rate.</li>` : ''}
       <li>You beat the average with scouting, time in the field and patience. See below.</li></ul>`;
     const years = od.rows.map((r) => `<tr class="${r.lowConfidence ? 'pl-low' : ''}"><td>${r.year}</td><td>${r.hunters != null ? r.hunters : 'n/a'}</td><td>${r.kills != null ? r.kills : 'n/a'}</td><td>${r.successPct != null && !r.lowConfidence ? r.successPct.toFixed(0) + '%' : r.lowConfidence ? 'Few hunters' : 'n/a'}</td><td>${r.days != null ? r.days : 'n/a'}</td></tr>`).join('');
     return `<div class="card pl-odds"><h3>Official success: ${where}</h3>
@@ -1343,6 +1343,7 @@
   }
 
   const scoutCount = (n) => (n >= 6 ? 2 : n >= 3 ? 1 : 0);
+  const LEGAL_MARGIN = 2; // minutes added to legal light start: the phone's sun math runs 1 to 2 min early vs the full NOAA algorithm
   function daysHtml(sp, p, lg, C, H) {
     const days = lg.days || dRange(p.from, p.to), dp = sp.dayPlan || {}, nS = scoutCount(days.length);
     const pt = p.where.lat != null ? p.where : null, hrs = H.h;
@@ -1354,9 +1355,9 @@
       const open = (lg.dayOpen[d] || []).length > 0, scout = i < nS;
       let rise = null, set = null;
       if (pt && C.sunEvent) { const day = new Date(y, mo - 1, dd, 12); rise = C.sunEvent(day, pt.lat, pt.lon, true); set = C.sunEvent(day, pt.lat, pt.lon, false); }
-      const light = hrs && hrs.beforeSunriseMin != null && rise ? `${C.hhmm(C.addMin(rise, -hrs.beforeSunriseMin))} to ${C.hhmm(C.addMin(set, hrs.afterSunsetMin))}` : '<span class="verify">VERIFY</span>';
+      const light = hrs && hrs.beforeSunriseMin != null && rise ? `${C.hhmm(C.addMin(rise, -hrs.beforeSunriseMin + LEGAL_MARGIN))} to ${C.hhmm(C.addMin(set, hrs.afterSunsetMin))}` : '<span class="verify">VERIFY</span>';
       const kind = scout ? 'Scout day' : open ? 'Hunt day' : 'Not open';
-      const tl = !scout && open && hrs && hrs.beforeSunriseMin != null && rise ? timeline(C.addMin(rise, -hrs.beforeSunriseMin), C.addMin(set, hrs.afterSunsetMin), (p.ask || {}).hours, C) : '';
+      const tl = !scout && open && hrs && hrs.beforeSunriseMin != null && rise ? timeline(C.addMin(rise, -hrs.beforeSunriseMin + LEGAL_MARGIN), C.addMin(set, hrs.afterSunsetMin), (p.ask || {}).hours, C) : '';
       const phaseWhen = (b) => ((phase && phase.when) || []).filter((w) => new RegExp('^' + b + '\\s*:', 'i').test(w)).map((w) => w.replace(/^\w+\s*:\s*/, ''));
       let body;
       if (scout) body = `<ul>${(dp.scout || []).map((t) => `<li>${esc(t)}</li>`).join('')}<li>Glass your top spots at first and last light. Find sign, trails and the wind.</li>${open ? '<li>It is open today: if a legal animal shows and the shot is right, you may take it.</li>' : ''}</ul>`;
@@ -1372,7 +1373,7 @@
     const phases = [...new Set(days.map((d) => +d.slice(5, 7)))].map((mo) => (sp.phases || []).find((ph) => (ph.months || []).includes(mo))).filter(Boolean);
     const uniq = [...new Set(phases)];
     const tactics = (sp.tactics || []);
-    return `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)}` : ''} Times of day plans are Tip (opinion).</p>
+    return `<p class="muted pl-small">Sun times worked out on your phone for ${esc(p.where.label)}${p.where.src === 'typed' ? ' (centre of the MU, approximate)' : ''}, Pacific time. Can be a few minutes off in valleys. ${hrs ? `Legal light: ${esc(H.label.toLowerCase())} rule. ${C.certBadge(hrs.certainty)} Start shown 2 min late on purpose (phone sun math can run 1 to 2 min early). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Times of day plans are Tip (opinion).</p>
       ${nS === 0 ? `<div class="card pl-scout"><h3>Scout before you go</h3><ul>${(sp.dayPlan && sp.dayPlan.scout || []).map((t) => `<li>${esc(t)}</li>`).join('') || '<li>One trip before the hunt to learn the ground.</li>'}</ul><p class="muted pl-small">Your dates are short, so there is no scout day inside them (Tip).</p></div>` : ''}
       ${uniq.map((ph) => `<div class="card"><h3>${esc(ph.label)}: what the animals do</h3>${(ph.where || []).length ? `<p><b>Where</b></p><ul>${ph.where.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${(ph.tactics || []).length ? `<p><b>Tactics</b> (Tip)</p><ul>${ph.tactics.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}${ph.cert != null ? `<p class="muted pl-small">${C.certBadge(ph.cert)}</p>` : ''}</div>`).join('')}
       ${cards}
@@ -1448,18 +1449,18 @@
   function successHtml(od, sp, p, lg, C) {
     if (!od || od.pct == null) return '';
     const A = p.ask || {}, hd = huntDaysOf(lg), per = od.perDay || 0, trip = 1 - Math.pow(1 - per, hd), pty = 1 - Math.pow(1 - per, hd * tagsN(p));
-    const r5 = (x) => Math.min(95, Math.max(1, Math.round((x * 100) / 5) * 5 || 1));
+    const r5 = (x) => Math.min(95, Math.max(1, Math.round(x * 100) || 1)); // whole percent
     const oneIn = per > 0 ? Math.round(1 / per) : null;
     const goal = A.success || 'meat';
     const head = { see: 'Seeing one', shot: 'A shot opportunity', meat: 'Meat in the freezer' }[goal];
     const body = goal === 'meat'
-      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled` : ''}. Rough math (Tip) at the official average rate.</p>`
+      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled${p.party === 'two' && !(A.partner && typeof A.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}. Rough math (Tip) at the 5 year total rate (all 2020 to 2024 hunters pooled).</p>`
       : goal === 'shot'
         ? `<p><b>No official number</b> for shot chances. Every animal taken was a shot chance, so it is at least the kill rate: about ${r5(trip)}% or more over your ${hd} hunt day${hd === 1 ? '' : 's'} (rough math, Tip).</p>`
         : `<p><b>No official number</b> for seeing one. It is at least your shot chance (about ${r5(trip)}% or more, rough math, Tip). Quiet spots at first and last light are where hunters see deer (Tip).</p>`;
     return `<div class="card pl2-goal"><p class="hero-k">Your goal${A.success ? '' : ' (not answered: meat in the freezer shown)'}</p><h3>${esc(head)}</h3>${body}
       <div class="pl2-bars" aria-hidden="true"><div><span>Chance per hunter day</span><i style="width:${Math.max(2, Math.round(per * 100))}%"></i><b>${oneIn ? `1 in ${oneIn}` : 'n/a'}</b></div><div><span>Your ${hd} day${hd === 1 ? '' : 's'}</span><i style="width:${Math.max(2, r5(trip))}%"></i><b>about ${r5(trip)}%</b></div></div>
-      <p class="muted pl-small">Official base: ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
+      <p class="muted pl-small">Official base, 5 year total (2020 to 2024 pooled): ${Math.round(od.pct)}% of resident hunters a season, ${od.dpk ? `about ${Math.round(od.dpk)} hunter days per animal` : 'days per animal n/a'} (${od.scope === 'mu' ? `MU ${esc(p.where.mu)}` : `Region ${esc(od.region)}`}, 2020 to 2024). Everything finer is an estimate. ${C.certBadge(90)}</p></div>`;
   }
 
   // ---------- Top spots board (part 5) ----------
