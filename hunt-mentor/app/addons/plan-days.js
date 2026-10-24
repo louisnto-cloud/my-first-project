@@ -214,15 +214,14 @@
     const arrows = d.wind.map((w) => { const x = X(w.at); return w.kmh < 2 ? `<text x="${x}" y="28" class="pld-t" text-anchor="middle">calm</text>` : `<g transform="translate(${x.toFixed(1)} 22) rotate(${((w.dir + 180) % 360).toFixed(0)})"><path d="M0 -12 7.5 4H2.5V12H-2.5V4H-7.5Z" class="pld-arw"/></g><text x="${(x + 14).toFixed(1)}" y="27" class="pld-t">${Math.round(w.kmh)}</text>`; }).join('');
     return `<svg class="pld-svg" viewBox="0 0 ${W} 118" role="img" aria-label="Timeline for ${esc(d.label)}: drive, walk, sit, still hunt, sit, turnaround, with legal light shaded and forecast wind arrows">
       ${legal}${parts}<line x1="6" y1="88" x2="${W - 6}" y2="88" class="pld-ax"/>${ticks.join('')}
-      ${mark(d.sunrise, 'pld-sun', '', 0)}${mark(d.sunset, 'pld-sun', '', 0)}${mark(d.turnaround && d.turnaround.at, 'pld-turn', 'Turn', 50)}${arrows}</svg>
-      <ul class="pld-key no-print"><li><i class="pld-legal"></i>Legal light</li><li><i class="pld-sit"></i>Sit</li><li><i class="pld-mid"></i>Still hunt or scout</li><li><i class="pld-walk"></i>Walk</li><li><i class="pld-drive"></i>Drive</li><li><i class="pld-turnk"></i>Turnaround</li>${d.wind.length ? '<li>Arrow: forecast wind, pointing where it blows; number: km/h</li>' : ''}</ul>`;
+      ${mark(d.sunrise, 'pld-sun', '', 0)}${mark(d.sunset, 'pld-sun', '', 0)}${mark(d.turnaround && d.turnaround.at, 'pld-turn', 'Turn', 50)}${arrows}</svg>`;
   }
 
   // ---------- html ----------
   const spotLine = (x, label) => !x ? '' : `<div class="pld-spot"><div class="pld-sl2">${label}</div><b>${esc(x.spot.name)}</b>
       <div class="pll-small muted">${x.walk ? `Walk ${x.walk.min} min (${esc(x.walk.how)}). ` : ''}${x.spot.mu ? `MU (Management Unit) <span class="pld-nw">${esc(x.spot.mu)}</span>.` : ''}</div>
       ${x.fit ? `<div class="pll-small">${esc(x.fit.t)}</div>` : ''}
-      ${(x.cautions || []).map((n) => `<div class="pll-small pld-caution">${n.partial ? 'Closure further up the road' : 'Caution'}, ${esc(n.why)}: ${esc(n.road)}: ${esc(n.t)}${n.partial ? ' Check your spot is before that km.' : ''}</div>`).join('')}
+      ${(x.cautions || []).map((n) => `<div class="pll-small pld-caution"><b>${n.partial ? 'Closure further up the road' : 'Caution'}, ${esc(n.why)}:</b><br>${esc(n.road)}:<br>${esc(n.t)}${n.partial ? '<br>Check your spot is before that km.' : ''}</div>`).join('')}
       <div class="pld-acts no-print"><a class="btn" href="${mapLink(x.spot)}">Map</a><a class="btn" href="${gdir(parkOf(x.spot) || x.spot)}" target="_blank" rel="noopener">Directions</a></div></div>`;
   // "Saturday, November 14": the weekday is the heading, the date sits after it
   const dayHead = (label) => { const m = String(label).match(/^(\w+),?\s+(.*)$/); return m ? `<b class="pld-wd">${esc(m[1])}</b> <b>${esc(m[2])}</b>` : `<b>${esc(label)}</b>`; };
@@ -233,7 +232,7 @@
     const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow">${dayHead(d.label)}${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
     if (d.kind === 'closed') return `<details class="card pl-day pl-closed pld-day">${head}<p><b>No open season for you on this day.</b> Scout, sight in or rest. No hunting.</p></details>`;
     const now = Date.now();
-    const steps = d.steps.map((s) => `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b>${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small">${s.t}</span>
+    const steps = d.steps.map((s) => `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b class="pld-ti">${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small pld-tx">${s.t}</span>
         ${s.turn && s.at > now ? `<span class="pld-acts no-print"><button type="button" class="btn" data-pld-turn="${s.at}" data-pld-walk="${d.turnaround.walkMin}">Set the turnaround alarm for ${esc(fmtT(s.at))}</button><a class="btn" href="#/safety/turn">Safety: turnaround</a></span>` : ''}</span></li>`).join('');
     const wx = d.forecast ? (d.rainMm != null ? `<p class="pll-small">Forecast rain in legal light at the first pick: ${d.rainMm.toFixed(1)} mm.</p>` : '') : d.kind !== 'past' ? `<p class="pld-note">No forecast yet for this day${d.forecastFrom ? ` (it comes in on ${esc(dLabel(d.forecastFrom))})` : ''}. The first pick is the top ranked spot. On the morning, check the wind at the truck: in your face, go; at your back, take the backup.</p>` : '';
     const blocked = d.blocked.length ? `<div class="pld-block"><b>Left out: a road notice blocks it</b><ul>${d.blocked.map((b) => `<li>${esc(b.spot.name)}: ${b.notices.map((n) => `${esc(n.road)}, ${esc(n.t)} (${esc(n.why)})`).join('; ')}</li>`).join('')}</ul><p class="pll-small">A closure past a given km may still let you reach a spot before it. Check the km on the official notice.</p></div>` : '';
@@ -242,17 +241,20 @@
       ${timeline(d)}${wx}
       ${d.primary ? spotLine(d.primary, 'First light') : d.blocked.length ? '<p class="pld-note">Every top spot is blocked by a road notice below. Pick another area on the Map, or check the notice km.</p>' : '<p class="muted">No candidate spots in the plan yet, so the times use the plan point.</p>'}
       ${d.evening && !d.evening.same ? spotLine(d.evening, 'Evening') : ''}
-      ${d.backup ? `${spotLine(d.backup, 'Backup')}<ul class="pll-small pld-why">${d.backup.why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+      ${d.backup ? `<div class="pld-bk"><div class="pld-bk-h">Backup plan and its own times</div>${spotLine(d.backup, 'Backup')}<ul class="pll-small pld-why">${d.backup.why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
       ${blocked}
-      <ol class="pld-steps">${steps}</ol>
+      <div class="pld-hh">Hour by hour</div><ol class="pld-steps">${steps}</ol>
       ${roles.length ? `<div class="pld-roles"><b>${d.pair ? 'With your partner' : 'Solo'}</b><ul>${roles.map((r) => `<li>${esc(r.t)} ${badge(r.cert)}</li>`).join('')}</ul><p class="pll-small">${lessonA(d.roles.lesson, 'Lesson: Hunting with a partner')}${d.pair ? '' : ` · ${lessonA('local-harrison-deer', 'Your Harrison deer hunt')}`}</p></div>` : ''}
       </details>`;
   }
+  // the timeline key, said once for every day
+  const KEY = (wind) => `<ul class="pld-key no-print"><li><i class="pld-legal"></i>Legal light</li><li><i class="pld-sit"></i>Sit</li><li><i class="pld-mid"></i>Still hunt or scout</li><li><i class="pld-walk"></i>Walk</li><li><i class="pld-drive"></i>Drive</li><li><i class="pld-turnk"></i>Turnaround</li>${wind ? '<li>Arrow: forecast wind, pointing where it blows; number: km/h</li>' : ''}</ul>`;
   function html(days, plan) {
     css();
     if (!days || !days.length) return '<div class="card"><h3>Hour by hour</h3><p class="muted">No days in this plan.</p></div>';
     return `<div class="pld"><p class="pll-law">Study aid only. The official regulations are the law.</p>
       <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
+      ${KEY(days.some((d) => d.wind && d.wind.length))}
       ${days.map(dayHtml).join('')}
       <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; margins as in the line at the top, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
@@ -319,15 +321,17 @@
     if (cssDone) return; cssDone = true;
     const st = document.createElement('style');
     st.textContent = `.pld-svg{display:block;width:100%;height:auto;margin:6px 0}details.pl-day>svg.pld-svg{width:calc(100% - 28px)}
-.pld-t{font-size:13px;fill:var(--muted)}.pld-sl{font-size:13px;font-weight:700;fill:#fff}.pld-ax{stroke:var(--muted);stroke-width:1}
+.pld-t{font-size:16px;fill:var(--muted)}.pld-sl{font-size:15px;font-weight:700;fill:#fff}.pld-ax{stroke:var(--muted);stroke-width:1}
 .pld-legal{fill:var(--sel-bg)}.pld-sit{fill:var(--accent)}.pld-mid{fill:var(--sage)}.pld-walk{fill:#b9a68a}.pld-drive{fill:#7d8a80}
 .pld-sun{stroke:var(--blaze);stroke-width:2;stroke-dasharray:3 3}.pld-turn{stroke:var(--bad);stroke-width:3}.pld-turn-t{fill:var(--bad-ink);font-weight:700}.pld-arw{fill:var(--ink)}
 .pld-key{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:14px}.pld-key li{display:flex;align-items:center;gap:6px}
 .pld-key i{display:inline-block;width:16px;height:12px;border-radius:3px}.pld-key i.pld-legal{background:var(--sel-bg);border:1px solid var(--line)}.pld-key i.pld-sit{background:var(--accent)}.pld-key i.pld-mid{background:var(--sage)}.pld-key i.pld-walk{background:#b9a68a}.pld-key i.pld-drive{background:#7d8a80}.pld-key i.pld-turnk{background:var(--bad);width:4px}
-.pld-steps{list-style:none;padding:0;margin:10px 0}.pld-st{display:grid;grid-template-columns:86px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.pld-steps{list-style:none;padding:0;margin:10px 0}.pld-st{display:grid;grid-template-columns:76px 1fr;gap:8px;padding:10px 0;align-items:start;border-bottom:1px solid var(--line)}
 .pld-nw{white-space:nowrap}.pld-tm{font-weight:700;white-space:nowrap;font-size:15px;font-variant-numeric:tabular-nums}.pld-turn .pld-tm{color:var(--bad-ink)}.pld-st.pld-turn{border-left:4px solid var(--bad);padding-left:6px}
 .pld-spot{border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0}.pld-sl2{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-.pld-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.pld-acts .btn{min-height:44px}.pld-caution{color:var(--bad-ink)}
+.pld-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.pld-acts .btn{min-height:44px}.pld-ti{font-size:16px}.pld-tx{color:var(--ink);display:block;margin-top:2px}
+.pld-bk{border:2px dashed var(--line);border-radius:12px;padding:8px 10px;margin:16px 0;background:var(--sel-bg)}.pld-bk-h,.pld-hh{font-weight:800;font-size:16px;margin:4px 0}.pld-hh{margin-top:16px;border-top:2px solid var(--line);padding-top:10px}
+.pld-caution{margin:6px 0;line-height:1.35}.pld-key li{min-height:28px}.pld-caution{color:var(--bad-ink)}
 .pld-block,.pld-note{background:var(--warn-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pld-why{margin:4px 0 8px}.pld-roles{margin-top:8px}
 .pld summary{min-height:44px}.pld-wd{font-size:18px}.pld-legend{font-size:14px;background:var(--sel-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pll-small{font-size:14px}.pll-law{font-size:14px;color:var(--muted)}
 @media print{.pld-day{break-inside:avoid}.pld details,.pld-day{display:block}}`;

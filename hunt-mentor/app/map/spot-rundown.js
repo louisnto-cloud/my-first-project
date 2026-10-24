@@ -496,12 +496,12 @@ function injectStyle() {
 .srd-n { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--srd-accent); color: #fff; font-size: .85em; flex: none; }
 .srd-ul { margin: 0 0 8px; padding-left: 20px; }
 .srd-ul li { margin: 6px 0; line-height: 1.4; overflow-wrap: anywhere; }
-.srd-ul li small { display: block; color: var(--srd-muted); font-size: .82em; }
+.srd-ul li small { display: block; color: var(--srd-muted); font-size: .9em; margin-top: 2px; }
 .srd-ul li.srd-sub { list-style: circle; margin-left: 12px; }
 .srd-ul li.srd-acts { list-style: none; margin-left: -20px; display: flex; flex-wrap: wrap; gap: 8px; }
 .srd-ul li.srd-banner { list-style: none; margin-left: -20px; padding: 10px 12px; border-radius: 10px; background: var(--hmm-warn-bg, var(--warn-bg, #fff4d6)); font-weight: 700; }
 .srd-btn { min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1.5px solid var(--srd-line); background: var(--srd-card); color: var(--srd-ink) !important; font: inherit; font-weight: 600; display: inline-flex; align-items: center; text-decoration: none; cursor: pointer; }
-.srd-btn.sm { min-height: 36px; padding: 0 10px; font-size: .9em; margin-left: 4px; vertical-align: middle; }
+.srd-btn.sm { min-height: 44px; padding: 0 10px; font-size: .9em; margin-left: 4px; vertical-align: middle; }
 .srd-back { margin: 0 0 6px; }
 .srd-c { display: inline-block; padding: 0 6px; border-radius: 8px; font-size: .78em; font-weight: 700; line-height: 1.6; vertical-align: 1px; white-space: nowrap; }
 .srd-c.hi { background: #d8efd9; color: #17501d; } .srd-c.mid { background: #e6efcf; color: #3d5113; } .srd-c.lo { background: #fbe9c6; color: #6a4500; }

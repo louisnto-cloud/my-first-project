@@ -246,6 +246,7 @@
       const elev = P0 && P0.elev;
       const snowy = s.fzMin != null && elev != null && s.fzMin <= elev + 300;
       wx = `${windStrip(d, P0)}
+        <div class="pll-wx" aria-label="Day weather at a glance">${s.first && s.first.windDir != null ? `<span class="pll-wa" style="transform:rotate(${Math.round((s.first.windDir + 180) % 360)}deg)" aria-hidden="true">&#8593;</span>` : ''}<span><b>${Math.round(s.windMin)} to ${Math.round(s.windMax)}</b> km/h</span>${s.gustMax != null ? `<span>Gusts <b>${Math.round(s.gustMax)}</b></span>` : ''}<span>Rain <b>${s.rain.toFixed(1)}</b> mm</span><span><b>${Math.round(s.tMin)} to ${Math.round(s.tMax)}</b> °C</span></div>
         <div class="pll-kv"><span>Wind</span><b>${s.first && s.first.windDir != null ? `From the ${esc(dirWord(s.first.windDir))} at first light. ` : ''}${Math.round(s.windMin)} to ${Math.round(s.windMax)} km/h${s.gustMax != null ? `, gusts to ${Math.round(s.gustMax)}` : ''}</b></div>
         <div class="pll-kv"><span>Rain in legal light</span><b>${s.rain.toFixed(1)} mm</b></div>
         <div class="pll-kv"><span>Temperature</span><b>${Math.round(s.tMin)} to ${Math.round(s.tMax)} °C</b></div>
@@ -323,8 +324,8 @@
     if (cssDone) return; cssDone = true;
     const st = document.createElement('style');
     st.textContent = `.pll svg{display:block;width:100%;height:auto;margin:6px 0}details.pl-day>svg.pll-strip{width:calc(100% - 28px)}
-.pll-t{font-size:13px;fill:var(--muted)}.pll-n{font-size:15px;font-weight:700;fill:var(--ink)}.pll-arw{fill:var(--accent)}.pll-rain{fill:#3b82c4}.pll-ax{stroke:var(--line);stroke-width:1}
-.pll-small{font-size:14px}.pll-kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}.pll-kv span{color:var(--muted)}.pll-kv b{text-align:right}
+.pll-t{font-size:15px;fill:var(--muted)}.pll-n{font-size:15px;font-weight:700;fill:var(--ink)}.pll-arw{fill:var(--accent)}.pll-rain{fill:#3b82c4}.pll-ax{stroke:var(--line);stroke-width:1}
+.pll-small{font-size:14px}.pll-wx{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:16px;padding:8px 10px;margin:6px 0;border-radius:10px;background:var(--sel-bg)}.pll-wx b{font-size:18px}.pll-wa{display:inline-block;font-size:24px;font-weight:800;line-height:1;color:var(--accent)}.pll-roads li{line-height:1.35}.pll-roads li>b{display:block}.pll-kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}.pll-kv span{color:var(--muted)}.pll-kv b{text-align:right}
 .pll-stale{background:var(--warn-bg);padding:8px 10px;border-radius:10px}.pll-warn{background:var(--warn-bg);padding:8px 10px;border-radius:10px}
 .pll-law{font-size:14px;color:var(--muted)}.pll-roads{padding-left:18px}.pll-roads li{margin:8px 0}.pll-bad b{color:var(--bad-ink)}
 .pll-r0{fill:#c9d8cc}.pll-r1{fill:#8fb79a}.pll-r2{fill:var(--blaze)}.pll-r3{fill:#b9a68a}.pll-you{fill:var(--ink)}
