@@ -253,7 +253,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start +2 min safety) ${L}</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 2 min late, for safety) ${L}</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}

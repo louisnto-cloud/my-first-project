@@ -1132,7 +1132,7 @@
       if (s1) rows.push(rowG('pl-sb', 'Where?', 'ok', esc(s1.name), [s1.driveKm != null ? `${s1.driveKm} km from Mission, about ${fmtMin(s1.driveMin)} (estimate)` : '', s2 ? `Backup: ${esc(s2.name)}` : '', '<span class="gc-sm">My pick from open data (60%). Scout and read posted signs first.</span>']));
       else rows.push(rowG('pl-sb', 'Where?', 'wait', m.spots === null ? 'Spots did not load. Open the Map once with signal.' : 'Finding and checking spots...', []));
       const hunt = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
-      if (hunt.length) rows.push(rowG('pl-sl', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Legal light start +2 min safety. Turnaround alarm inside.</i>'])));
+      if (hunt.length) rows.push(rowG('pl-sl', 'When?', 'ok', hunt.length === 1 ? esc(hunt[0].label) : `${hunt.length} hunt days${p.overnight ? '' : ', day trips'}`, hunt.slice(0, 3).map((d) => { const at = (k) => (d.steps.find((x) => x.key === k) || {}).at; return `<b class="gc-d">${esc(dLabel(d.date).replace(/,.*/, ''))}</b> leave ${tmG(at('leave'))}, sit ${tmG(at('setup'))}, turn back ${tmG(at('turn'))}`; }).concat(['<i class="gc-sm">Estimates. Legal light starts are shown 2 min late, for safety. Turnaround alarm inside.</i>'])));
       else rows.push(rowG('pl-sl', 'When?', 'wait', m.daysX ? 'No open hunt days in this plan' : 'Working out leave times...', []));
       const b = m.oddsX && m.oddsX.base;
       if (b && b.overPlanDays && b.planDays) { const P0 = (x) => `${Math.round(x * 100)}%`; rows.push(rowG('pl-s2', 'Odds?', 'odds', `About ${P0(b.overPlanDays.mid)} for you over ${b.planDays} day${b.planDays === 1 ? '' : 's'}`, [`Base: the middle year of ${b.years} years of MU ${esc(p.where.mu)} hunter reports (estimate). Range ${P0(b.overPlanDays.low)} to ${P0(b.overPlanDays.high)}.`])); }
@@ -1425,7 +1425,7 @@
         + (p.overnight && (dp.night || []).length ? `<div class="pl-blk"><b>Night</b><ul>${dp.night.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : '');
       const openAttr = (!scout && open && firstHunt) || i === 0 ? ' open' : '';
       if (!scout && open) firstHunt = false;
-      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (start +2 min safety) ${light}</span></span></summary>
+      return `<details class="card pl-day ${scout ? 'pl-scout' : open ? 'pl-open' : 'pl-closed'}"${openAttr}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d))}</b>: ${kind}<br><span class="muted pl-small">Legal light (start shown 2 min late, for safety) ${light}</span></span></summary>
         <div class="pl-kv"><span>Sunrise</span><b>${rise ? C.hhmm(rise) : 'n/a'}</b></div><div class="pl-kv"><span>Sunset</span><b>${set ? C.hhmm(set) : 'n/a'}</b></div>
         ${open ? `<div class="pl-kv"><span>Open for</span><b>${esc(lg.dayOpen[d].join(', '))}</b></div>` : ''}${tl}${body}</details>`;
     }).join('');
