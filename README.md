@@ -9,6 +9,9 @@ Built mobile-first as a web app, with a fully bilingual Vietnamese/English inter
 
 See [`APP_PROMPT.md`](./APP_PROMPT.md) for the full product spec.
 
+> **Also in this repo:** the MÜV RTD FY2027 sales forecast (Excel engine +
+> interactive dashboard) lives in [`muv/`](./muv/README.md).
+
 ## What's inside
 
 | Role | What they get |
