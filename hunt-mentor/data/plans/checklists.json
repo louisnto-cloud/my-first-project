@@ -110,7 +110,7 @@
     },
     {
      "t": "100 m ring around every occupied house, barn, school and playground marked on my map",
-     "why": "Your brother's house counts too (95%). Synopsis 2026 to 2028 page 10",
+     "why": "A partner's or family member's house counts too (95%). Synopsis 2026 to 2028 page 10",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "plan"
@@ -1106,20 +1106,23 @@
    },
    "items": [
     {
-     "t": "Partner has his own BC licence, species licences and bird permit. No sharing",
+     "t": "Partner has their own BC licence, species licences and bird permit. No sharing",
+     "key": "partner has his own bc licence species licences and bird permit no sharing",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork",
      "why": "Synopsis 2026 to 2028 page 8 and page 11 item 2"
     },
     {
-     "t": "Each hunter notches only his own licence. No party hunting in BC",
+     "t": "Each hunter notches only their own licence. No party hunting in BC",
+     "key": "each hunter notches only his own licence no party hunting in bc",
      "cert": 95,
      "lesson": "licences",
      "cat": "paperwork"
     },
     {
-     "t": "Each hunter has his own bag limit. Do not pool birds",
+     "t": "Each hunter has their own bag limit. Do not pool birds",
+     "key": "each hunter has his own bag limit do not pool birds",
      "cert": 99,
      "lesson": "bc-rules",
      "cat": "paperwork",
@@ -2033,7 +2036,8 @@
      }
     },
     {
-     "t": "Partner: his own licences and permits bought",
+     "t": "Partner: their own licences and permits bought",
+     "key": "partner his own licences and permits bought",
      "cert": 99,
      "lesson": "licences",
      "cat": "paperwork"

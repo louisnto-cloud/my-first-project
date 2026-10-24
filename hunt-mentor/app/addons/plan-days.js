@@ -226,7 +226,7 @@
   // "Saturday, November 14": the weekday is the heading, the date sits after it
   const dayHead = (label) => { const m = String(label).match(/^(\w+),?\s+(.*)$/); return m ? `<b class="pld-wd">${esc(m[1])}</b> <b>${esc(m[2])}</b>` : `<b>${esc(label)}</b>`; };
   // the legal light margin rule, said once for every day and time below
-  const LEGEND = 'Legal light times on this plan are shown 3 min late at the start and 1 min early at the end, for safety (phone sun times can be up to 2 min off).';
+  const LEGEND = 'Legal light times on this plan are shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times).';
   // after a kill: meat care and pack out, only what the lessons already say (Meat care, Packing out, After the shot)
   function ifGot(plan) {
     const sp = String((plan && plan.species) || ''), deer = /deer/.test(sp), r2 = /^2-/.test(String((plan && plan.where && plan.where.mu) || ''));
@@ -277,7 +277,7 @@
       <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
       ${KEY(days.some((d) => d.wind && d.wind.length))}
       ${(() => { const seen = new Map(); return days.map((d, i) => dayHtml(d, i, plan, seen)).join(''); })()}
-      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; margins as in the line at the top, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
+      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times); check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {
     const L = [];
