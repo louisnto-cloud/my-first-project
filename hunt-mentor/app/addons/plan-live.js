@@ -229,19 +229,22 @@
       ${live.stale || live.offline ? `<p class="pll-stale" role="status"><b>${live.offline ? 'No signal.' : 'Saved copy.'}</b> Showing what was saved. Forecasts change: check again with signal the night before.</p>` : ''}
       <p class="pll-small pll-asof"><b>As of ${asOf ? esc(fmtDT(asOf)) : 'not checked yet'}</b>${live.stale || live.offline ? ' (saved copy)' : ''}<br>Weather: Open-Meteo. Roads and fire bans: BC government layers, each checked time below.</p>
       <button type="button" class="btn block no-print" data-pll-refresh="1">Check again</button></div>`;
-    const days = (live.days || []).map((d, i) => dayCard(d, i, live, P0)).join('');
+    const seen = new Map(); // a check list or climate line already shown on an earlier day is said once
+    const days = (live.days || []).map((d, i) => dayCard(d, i, live, P0, seen)).join('');
     const others = (live.perPoint || []).length > 1 ? spotsTable(live) : '';
     return `<div class="pll">${head}${days}${others}${rutCard(live)}${roadsCard(live, plan)}${bansCard(live)}${srcCard(live)}</div>`;
   }
-  function dayCard(d, i, live, P0) {
+  function dayCard(d, i, live, P0, seen) {
+    seen = seen || new Map();
+    const first = (k) => { if (seen.has(k)) return seen.get(k) + 1; seen.set(k, i); return 0; };
     const L = d.legalStart ? `${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}` : '<span class="verify">VERIFY</span>';
     const s = d.forecast ? daySum(d, P0) : null;
     let wx;
     if (d.past) wx = '<p class="muted">This day has passed.</p>';
     else if (!d.forecast) wx = `<div class="pll-noday"><p><b>Forecast not out yet. It comes in on ${esc(dLabel(d.forecastFrom))}</b> (Open-Meteo forecasts about ${FORECAST_DAYS} days ahead). No made up numbers here.</p>
-        <p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal and check:</b></p><ul class="pll-small"><li>Wind: direction and speed at first light. In your face at the spot, go; at your back, take the backup (Tip).</li><li>Rain in legal light.</li><li>Freezing level: within 300 m of the spot height, rain can turn to snow or ice. Pack for both (Tip).</li></ul>
-        ${d.climate ? `<p>What to expect: ${esc(d.climate.t)} ${badge(d.climate.cert)} <span class="pll-small muted">${esc(d.climate.src)}${d.climate.lesson && hasSession(d.climate.lesson) ? `, ${lessonA(d.climate.lesson, 'lesson')}` : ''}</span></p>` : '<p class="muted">No climate numbers in the app for this area and month.</p>'}
-        <p class="pll-small">Plan by the rules that do not change: legal light below, thermals (morning down, midday up, evening down) and the wind on the day.</p></div>`;
+        ${(() => { const n = first('check'); return n ? `<p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal</b> and run the same checks as Day ${n}.</p>` : `<p><b>On ${esc(dLabel(d.forecastFrom))}, open this plan with signal and check:</b></p><ul class="pll-small"><li>Wind: direction and speed at first light. In your face at the spot, go; at your back, take the backup (Tip).</li><li>Rain in legal light.</li><li>Freezing level: within 300 m of the spot height, rain can turn to snow or ice. Pack for both (Tip).</li></ul>`; })()}
+        ${d.climate ? (() => { const n = first('clim' + d.climate.t); return n ? `<p class="pll-small">What to expect: same as Day ${n}.</p>` : `<p>What to expect: ${esc(d.climate.t)} ${badge(d.climate.cert)} <span class="pll-small muted">${esc(d.climate.src)}${d.climate.lesson && hasSession(d.climate.lesson) ? `, ${lessonA(d.climate.lesson, 'lesson')}` : ''}</span></p>`; })() : '<p class="muted">No climate numbers in the app for this area and month.</p>'}
+        ${first('rules') ? '' : '<p class="pll-small">Plan by the rules that do not change: legal light below, thermals (morning down, midday up, evening down) and the wind on the day.</p>'}</div>`;
     else if (!s) wx = `<p class="muted">${live.errors && live.errors.wx ? `Could not load the forecast (${esc(live.errors.wx)}). Open <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> with signal.` : 'No forecast hours for this day.'}</p>`;
     else {
       const elev = P0 && P0.elev;
@@ -257,7 +260,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light ${L} (margins: see Sources below)</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light ${L}${i === 0 ? ' (margins: see Sources below)' : ''}</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}
