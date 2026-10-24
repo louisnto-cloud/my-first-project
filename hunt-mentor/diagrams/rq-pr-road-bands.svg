@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif" role="img" aria-label="Bands of distance from a road open to vehicles. 0 to 0.5 km: 73% of hunters, drawn as many orange dots. 0.5 to 1 km: a few dots. Over 1 km: few hunters, and the deer.">
+<rect width="400" height="420" fill="#fffaf0"/>
+<defs>
+  <g id="rq-pr-road-bands-deer">
+    <path d="M-12 -2 L-10 16 M-6 0 L-6 16 M10 0 L9 16 M15 -2 L16 16" stroke="#6b4a2b" stroke-width="2.6" stroke-linecap="round"/>
+    <ellipse cx="2" cy="-4" rx="17" ry="8" fill="#8b5a2b"/>
+    <path d="M-12 -8 L-18 -22 L-11 -24 L-6 -9z" fill="#8b5a2b"/>
+    <ellipse cx="-20" cy="-24" rx="7" ry="4" fill="#8b5a2b"/>
+    <ellipse cx="-14" cy="-30" rx="2.4" ry="4.5" fill="#8b5a2b" transform="rotate(30 -14 -30)"/>
+    <ellipse cx="17" cy="-6" rx="4" ry="4" fill="#f1e7d2"/>
+  </g>
+</defs>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Where hunters go, from the road</text>
+<text x="200" y="44" font-size="14" fill="#6b5b4b" text-anchor="middle">Pennsylvania study (90%). Drawn to scale.</text>
+<!-- bands: 90 px = 0.5 km, road at y 330 -->
+<g data-tip="Over 1 km|Each 1 km closer to a road: about 3 times more hunters (90%). Hunted deer go thick, steep, far or into the night." data-tip-dot="384,62">
+<rect x="0" y="52" width="400" height="98" fill="#dfe8d5"/>
+<g fill="#2f3a2b"><path d="M160 120 L172 84 L184 120z"/><path d="M296 134 L306 104 L316 134z"/></g>
+<use href="#rq-pr-road-bands-deer" transform="translate(116 132)"/>
+<use href="#rq-pr-road-bands-deer" transform="translate(250 114)"/>
+<circle cx="340" cy="132" r="7" fill="#e8590c"/>
+<text x="16" y="78" font-size="15" font-weight="bold" fill="#2f3a2b">Over 1 km</text>
+<text x="16" y="97" font-size="15" fill="#2f3a2b">few hunters</text>
+</g>
+<g data-tip="0.5 to 1 km|Hunters did best 460 to 910 m (500 to 1,000 yd) from the nearest road, on 10 to 20 degree slopes (70%)." data-tip-dot="384,160">
+<rect x="0" y="150" width="400" height="90" fill="#f1ead6"/>
+<g fill="#e8590c"><circle cx="150" cy="222" r="7"/><circle cx="236" cy="196" r="7"/><circle cx="292" cy="228" r="7"/></g>
+<text x="16" y="172" font-size="15" font-weight="bold" fill="#6b4f35">0.5 to 1 km</text>
+</g>
+<g data-tip="0 to 0.5 km|73% of hunters were within 0.5 km of a road (90%). The deer there have learned. Tip." data-tip-dot="384,250">
+<rect x="0" y="240" width="400" height="90" fill="#f7d9c4"/>
+<g fill="#e8590c"><circle cx="176" cy="256" r="7"/><circle cx="214" cy="278" r="7"/><circle cx="252" cy="254" r="7"/><circle cx="290" cy="272" r="7"/><circle cx="330" cy="290" r="7"/><circle cx="362" cy="258" r="7"/><circle cx="196" cy="308" r="7"/><circle cx="244" cy="304" r="7"/><circle cx="300" cy="312" r="7"/><circle cx="150" cy="296" r="7"/><circle cx="362" cy="312" r="7"/></g>
+<text x="16" y="262" font-size="15" font-weight="bold" fill="#c2410c">0 to 0.5 km</text>
+<text x="16" y="281" font-size="15" font-weight="bold" fill="#c2410c">73% of hunters</text>
+</g>
+<!-- 0.84 km line -->
+<g data-tip="0.84 km|The average farthest point hunters went from a road (90%)." data-tip-dot="384,170">
+<line x1="0" y1="179" x2="400" y2="179" stroke="#2f3a2b" stroke-width="2.4" stroke-dasharray="8 5"/>
+<rect x="238" y="167" width="156" height="24" rx="5" fill="#2f3a2b"/>
+<text x="316" y="184" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">avg farthest 0.84 km</text>
+</g>
+<g data-tip="What hunters said|Hunters said they went 2.23 km from a road. GPS (Global Positioning System) said 0.84 km (80%)." data-tip-dot="384,68">
+<path d="M384 150 V66" stroke="#6b5b4b" stroke-width="2.4"/><path d="M384 58 l-6 10 h12z" fill="#6b5b4b"/>
+<text x="374" y="74" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">they said 2.23 km</text>
+</g>
+<!-- route: park, walk past, sit -->
+<g data-tip="Grandpa's rule|Walk past the last boot print, then sit where the boot prints push the deer. Wisdom." data-tip-dot="232,92">
+<path d="M80 324 C100 290 120 250 150 210 C170 180 190 150 206 128" fill="none" stroke="#2f3a2b" stroke-width="2.6" stroke-dasharray="3 5" stroke-linecap="round"/>
+<circle cx="80" cy="318" r="11" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/><text x="80" y="323" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="150" cy="179" r="11" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/><text x="150" y="184" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="222" cy="112" r="11" fill="#2f3a2b" stroke="#fffaf0" stroke-width="2"/><text x="222" y="117" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+</g>
+<!-- road -->
+<g data-tip="Road open to vehicles|Shade about 1 km around open roads on your map: that is where most hunters are (90%)." data-tip-dot="384,334">
+<rect x="0" y="330" width="400" height="16" fill="#2f3a2b"/>
+<path d="M0 338 H400" stroke="#f6d47a" stroke-width="2" stroke-dasharray="14 10"/>
+<g fill="#3b4a35"><rect x="26" y="316" width="36" height="14" rx="3"/><rect x="56" y="319" width="14" height="11" rx="2"/></g>
+<g fill="#1a1a1a"><circle cx="34" cy="331" r="4"/><circle cx="62" cy="331" r="4"/></g>
+<text x="200" y="364" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Road open to vehicles</text>
+</g>
+<rect x="8" y="374" width="384" height="40" rx="8" fill="#f4eedf"/>
+<text x="200" y="391" font-size="14" fill="#2f3a2b" text-anchor="middle"><tspan font-weight="bold">1</tspan> Park, <tspan font-weight="bold">2</tspan> Walk past the last boot print</text>
+<text x="200" y="408" font-size="14" fill="#2f3a2b" text-anchor="middle"><tspan font-weight="bold">3</tspan> Sit where the boot prints push the deer</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif" role="img" aria-label="Flowchart: can I hunt this pond? Inside Kamloops city limits? Verify with the city, skip until confirmed. Inside the Map C7 no shooting area? No. A BC Park? Verify on its park page, skip until confirmed. Within 100 metres of a house or occupied farm building? No. Private land? Written permission. Otherwise, Crown land: check the map, then go.">
+  <rect width="400" height="420" fill="#fffaf0"/>
+  <g font-size="14" font-weight="bold">
+    <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2">
+      <rect x="10" y="10" width="240" height="48" rx="8"/><rect x="10" y="80" width="240" height="48" rx="8"/><rect x="10" y="150" width="240" height="48" rx="8"/><rect x="10" y="220" width="240" height="48" rx="8"/><rect x="10" y="290" width="240" height="48" rx="8"/>
+    </g>
+    <g fill="#2f3a2b" text-anchor="middle"><text x="130" y="39">Inside Kamloops city limits?</text><text x="130" y="109">Inside Map C7 closure?</text><text x="130" y="179">A BC Park?</text><text x="130" y="242">Within 100 m of a house or</text><text x="130" y="260">occupied farm building?</text><text x="130" y="319">Private land?</text></g>
+    <g fill="#e8590c"><rect x="280" y="14" width="110" height="40" rx="8"/><rect x="280" y="84" width="110" height="40" rx="8"/><rect x="280" y="154" width="110" height="40" rx="8"/><rect x="280" y="224" width="110" height="40" rx="8"/><rect x="280" y="294" width="110" height="40" rx="8"/></g>
+    <g fill="#fff" text-anchor="middle"><text x="335" y="39">VERIFY, skip</text><text x="335" y="109">No</text><text x="335" y="179">VERIFY, skip</text><text x="335" y="249">No</text><text x="335" y="312">Written</text><text x="335" y="328">permission</text></g>
+    <rect x="10" y="360" width="240" height="50" rx="8" fill="#2f6e3b"/>
+    <text x="130" y="382" fill="#fff" text-anchor="middle">Crown land: check the map,</text><text x="130" y="400" fill="#fff" text-anchor="middle">then go</text>
+  </g>
+  <g stroke="#2f3a2b" stroke-width="2.5"><line x1="250" y1="34" x2="278" y2="34"/><line x1="250" y1="104" x2="278" y2="104"/><line x1="250" y1="174" x2="278" y2="174"/><line x1="250" y1="244" x2="278" y2="244"/><line x1="250" y1="314" x2="278" y2="314"/>
+  <line x1="130" y1="58" x2="130" y2="78"/><line x1="130" y1="128" x2="130" y2="148"/><line x1="130" y1="198" x2="130" y2="218"/><line x1="130" y1="268" x2="130" y2="288"/><line x1="130" y1="338" x2="130" y2="358"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b"><text x="254" y="28">yes</text><text x="254" y="98">yes</text><text x="254" y="168">yes</text><text x="254" y="238">yes</text><text x="254" y="308">yes</text>
+  <text x="136" y="74">no</text><text x="136" y="144">no</text><text x="136" y="214">no</text><text x="136" y="284">no</text><text x="136" y="354">no</text></g>
+</svg>

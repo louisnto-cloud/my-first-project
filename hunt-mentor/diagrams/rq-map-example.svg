@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="A made up example of a finished hunting map. A road crosses the lower part with a tan pressure band. A red private block, no go, sits at upper right. A green south facing burn, habitat, at upper left. A dashed trail runs from the burn down toward the road. Two orange sign pins on the trail. A glassing point across from the burn, noted for a morning north wind. A parking spot on the road. Legend: tan road pressure band, red no go, green habitat.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="200" y="27" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Example finished map (made up area)</text>
+<clipPath id="rq-map-example-clip"><rect x="8" y="40" width="384" height="224" rx="8"/></clipPath>
+<g clip-path="url(#rq-map-example-clip)">
+<rect x="8" y="40" width="384" height="224" fill="#e6ecd8"/>
+<path d="M0 250 C110 244 170 216 220 202 C280 186 330 178 400 172" stroke="#e3c9a0" stroke-width="54" fill="none" opacity=".85"/>
+<path d="M0 250 C110 244 170 216 220 202 C280 186 330 178 400 172" stroke="#5b5f58" stroke-width="6" fill="none"/>
+<rect x="300" y="40" width="92" height="48" fill="#e07b6e" opacity=".8"/>
+<path d="M24 70 L146 58 L166 128 L56 146 Z" fill="#8a9a6b"/>
+<path d="M150 70 C190 110 214 140 236 176" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+</g>
+<rect x="8" y="40" width="384" height="224" rx="8" fill="none" stroke="#8a9a6b" stroke-width="1.5"/>
+<text x="95" y="104" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">S facing</text>
+<text x="95" y="123" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">burn</text>
+<text x="346" y="60" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Private:</text>
+<text x="346" y="79" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">no go</text>
+<path d="M186 112 l-8 -13 a9 9 0 1 1 16 0z" fill="#e8590c" stroke="#fffaf0" stroke-width="1.2"/><circle cx="186" cy="95" r="3.2" fill="#fffaf0"/>
+<path d="M210 144 l-8 -13 a9 9 0 1 1 16 0z" fill="#e8590c" stroke="#fffaf0" stroke-width="1.2"/><circle cx="210" cy="127" r="3.2" fill="#fffaf0"/>
+<rect x="116.6" y="156.0" width="46.7" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="140" y="175" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sign</text>
+<line x1="196" y1="140" x2="155.371" y2="156" stroke="#e8590c" stroke-width="1.4"/>
+<g transform="translate(250 110)"><rect x="-14" y="-9" width="11" height="19" rx="3" fill="#2f3a2b"/><rect x="3" y="-9" width="11" height="19" rx="3" fill="#2f3a2b"/><rect x="-4" y="-5" width="8" height="7" fill="#2f3a2b"/><circle cx="-8.5" cy="10" r="4" fill="#4a7fb0"/><circle cx="8.5" cy="10" r="4" fill="#4a7fb0"/></g>
+<rect x="272.0" y="94.0" width="101.3" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="322.656" y="113" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Glass</text>
+<text x="322.656" y="131" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">AM: N wind</text>
+<g transform="translate(300 204)"><rect x="-22" y="-14" width="28" height="14" fill="#2f3a2b"/><path d="M6 -14 h10 l8 8 v6 h-18 Z" fill="#2f3a2b"/><circle cx="-12" cy="2" r="5" fill="#23261f"/><circle cx="14" cy="2" r="5" fill="#23261f"/></g>
+<rect x="306.0" y="226.0" width="48.0" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="330" y="245" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Park</text>
+<rect x="10" y="274" width="18" height="18" rx="3" fill="#e3c9a0"/><text x="36" y="289" font-size="15" fill="#2f3a2b">Road pressure</text>
+<rect x="150" y="274" width="18" height="18" rx="3" fill="#e07b6e"/><text x="176" y="289" font-size="15" fill="#2f3a2b">No go</text>
+<rect x="240" y="274" width="18" height="18" rx="3" fill="#8a9a6b"/><text x="266" y="289" font-size="15" fill="#2f3a2b">Habitat</text>
+</svg>

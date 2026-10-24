@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 398" font-family="sans-serif" role="img" aria-label="A year planner, January to December. Paperwork: licences expire 31 March (red), new licences from 1 April (dark), LEH (Limited Entry Hunting) applications in May and June. Training: a 12 week block from July to September. Range: zero in June, confirm in August. Scouting: maps in January and February, sheds in March and April, glassing June to August. Hunt: seasons September to December. Review: January and December. Deadlines are 99 percent; the timing of tasks is a Tip.">
+<rect width="400" height="398" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A year on one page</text>
+<text x="98.7" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="124" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">F</text>
+<text x="149.3" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="174.7" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="200" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">M</text>
+<text x="225.3" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="250.7" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">J</text>
+<text x="276" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">A</text>
+<text x="301.3" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">S</text>
+<text x="326.7" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">O</text>
+<text x="352" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">N</text>
+<text x="377.3" y="54" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="middle">D</text>
+<rect x="86" y="64" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="84" font-size="16" font-weight="bold" fill="#2f3a2b">Paper</text>
+<rect x="137.7" y="66" width="23.3" height="26" rx="5" fill="#b3261e"/>
+<rect x="163.0" y="66" width="23.3" height="26" rx="5" fill="#2f3a2b"/>
+<rect x="188.3" y="66" width="48.7" height="26" rx="5" fill="#e8590c"/>
+<text x="212.7" y="84" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LEH</text>
+<rect x="86" y="102" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="122" font-size="16" font-weight="bold" fill="#2f3a2b">Train</text>
+<rect x="239.0" y="104" width="74.0" height="26" rx="5" fill="#8b5a2b"/>
+<text x="276" y="122" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">12 weeks</text>
+<rect x="86" y="140" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="160" font-size="16" font-weight="bold" fill="#2f3a2b">Range</text>
+<rect x="213.7" y="142" width="23.3" height="26" rx="5" fill="#2f3a2b"/>
+<rect x="264.3" y="142" width="23.3" height="26" rx="5" fill="#2f3a2b"/>
+<rect x="86" y="178" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="198" font-size="16" font-weight="bold" fill="#2f3a2b">Scout</text>
+<rect x="87.0" y="180" width="48.7" height="26" rx="5" fill="#5b6b3e"/>
+<text x="111.3" y="198" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Maps</text>
+<rect x="137.7" y="180" width="48.7" height="26" rx="5" fill="#8b5a2b"/>
+<text x="162" y="198" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Sheds</text>
+<rect x="213.7" y="180" width="74.0" height="26" rx="5" fill="#5b6b3e"/>
+<text x="250.7" y="198" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Glass</text>
+<rect x="86" y="216" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="236" font-size="16" font-weight="bold" fill="#2f3a2b">Hunt</text>
+<rect x="289.7" y="218" width="99.3" height="26" rx="5" fill="#e8590c"/>
+<text x="339.3" y="236" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Seasons</text>
+<rect x="86" y="254" width="304" height="30" rx="5" fill="#ece5d3"/>
+<text x="14" y="274" font-size="16" font-weight="bold" fill="#2f3a2b">Review</text>
+<rect x="87.0" y="256" width="23.3" height="26" rx="5" fill="#2f3a2b"/>
+<rect x="365.7" y="256" width="23.3" height="26" rx="5" fill="#2f3a2b"/>
+<text x="14" y="315" font-size="15" fill="#2f3a2b"><tspan fill="#2f3a2b" font-weight="bold">Paper: </tspan><tspan fill="#b3261e" font-weight="bold">red</tspan><tspan fill="#2f3a2b"> = Mar 31 expire, </tspan><tspan fill="#2f3a2b" font-weight="bold">dark</tspan><tspan fill="#2f3a2b"> = Apr 1 new</tspan></text>
+<text x="14" y="336" font-size="15" fill="#2f3a2b"><tspan fill="#2f3a2b" font-weight="bold">Range: </tspan><tspan fill="#2f3a2b">zero Jun, confirm Aug</tspan></text>
+<text x="14" y="357" font-size="15" fill="#2f3a2b"><tspan fill="#2f3a2b" font-weight="bold">Review: </tspan><tspan fill="#2f3a2b">Dec, Jan</tspan></text>
+<text x="14" y="382" font-size="15" font-weight="bold" fill="#6b5b4b">Deadlines: 99%. Timing of tasks: Tip</text>
+</svg>

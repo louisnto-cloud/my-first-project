@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 618" font-family="sans-serif" role="img" aria-label="Duck water near Kamloops. Open, confirmed on official pages, 99 percent: Lac du Bois Grasslands potholes north of the city line, Deep Lake walk in only. Roche Lake Park south of Kamloops, 7 lakes, 2 with gravel roads. Bonaparte Park, by logging roads up Jamieson Creek or float plane. Closed to shooting: Tranquille marsh, a No Shooting or Hunting Area; McQueen, Griffin and Isobel Lakes within 1 kilometre; and farther out Logan Lake, Salmon Arm bay, Blind Bay, Mara Lake and the Sicamous end of Shuswap Lake. North and South Thompson rivers: no official spot, Crown land or written permission only.">
+<rect width="400" height="618" fill="#fffaf0"/>
+<text x="14" y="24" font-size="16" font-weight="bold" fill="#2f6e3b">Open: confirmed on an official page (99%)</text>
+<rect x="10" y="34" width="380" height="57" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.4"/>
+<circle cx="34" cy="62.5" r="14" fill="#2f6e3b"/><path d="M26.9 64.0 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="56" font-size="16" font-weight="bold" fill="#2f3a2b">Lac du Bois potholes</text>
+<text x="60" y="76" font-size="15" fill="#2f3a2b">North of the city line. Deep Lake: walk in.</text>
+<rect x="10" y="98" width="380" height="76" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.4"/>
+<circle cx="34" cy="136.0" r="14" fill="#2f6e3b"/><path d="M26.9 137.5 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="120" font-size="16" font-weight="bold" fill="#2f3a2b">Roche Lake Park</text>
+<text x="60" y="140" font-size="15" fill="#2f3a2b">South of Kamloops. 7 lakes, 2 with gravel</text>
+<text x="60" y="159" font-size="15" fill="#2f3a2b">roads.</text>
+<rect x="10" y="181" width="380" height="76" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.4"/>
+<circle cx="34" cy="219.0" r="14" fill="#2f6e3b"/><path d="M26.9 220.5 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="203" font-size="16" font-weight="bold" fill="#2f3a2b">Bonaparte Park</text>
+<text x="60" y="223" font-size="15" fill="#2f3a2b">Logging roads up Jamieson Creek, or float</text>
+<text x="60" y="242" font-size="15" fill="#2f3a2b">plane.</text>
+<text x="14" y="282" font-size="16" font-weight="bold" fill="#c0392b">Closed to shooting</text>
+<rect x="10" y="292" width="380" height="57" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.4"/>
+<circle cx="34" cy="320.5" r="14" fill="#c0392b"/><path d="M28.9 315.4 l10.2 10.2 M39.1 315.4 l-10.2 10.2" stroke="#fffaf0" stroke-width="2.7" stroke-linecap="round"/>
+<text x="60" y="314" font-size="16" font-weight="bold" fill="#2f3a2b">Tranquille marsh</text>
+<text x="60" y="334" font-size="15" fill="#2f3a2b">No Shooting or Hunting Area.</text>
+<rect x="10" y="356" width="380" height="57" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.4"/>
+<circle cx="34" cy="384.5" r="14" fill="#c0392b"/><path d="M28.9 379.4 l10.2 10.2 M39.1 379.4 l-10.2 10.2" stroke="#fffaf0" stroke-width="2.7" stroke-linecap="round"/>
+<text x="60" y="378" font-size="16" font-weight="bold" fill="#2f3a2b">McQueen, Griffin, Isobel</text>
+<text x="60" y="398" font-size="15" fill="#2f3a2b">No shooting within 1 km.</text>
+<rect x="10" y="420" width="380" height="76" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.4"/>
+<circle cx="34" cy="458.0" r="14" fill="#c0392b"/><path d="M28.9 452.9 l10.2 10.2 M39.1 452.9 l-10.2 10.2" stroke="#fffaf0" stroke-width="2.7" stroke-linecap="round"/>
+<text x="60" y="442" font-size="16" font-weight="bold" fill="#2f3a2b">Farther out</text>
+<text x="60" y="462" font-size="15" fill="#2f3a2b">Logan Lake, Salmon Arm bay, Blind Bay,</text>
+<text x="60" y="481" font-size="15" fill="#2f3a2b">Mara Lake, Sicamous end.</text>
+<text x="14" y="521" font-size="16" font-weight="bold" fill="#2c5d86">Rivers</text>
+<rect x="10" y="531" width="380" height="76" rx="8" fill="#eaf0f6" stroke="#2c5d86" stroke-width="1.4"/>
+<circle cx="34" cy="569.0" r="14" fill="#2c5d86"/><text x="34" y="575" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="60" y="553" font-size="16" font-weight="bold" fill="#2f3a2b">North and South Thompson</text>
+<text x="60" y="573" font-size="15" fill="#2f3a2b">No official spot. Crown land or permission</text>
+<text x="60" y="592" font-size="15" fill="#2f3a2b">only.</text>
+</svg>

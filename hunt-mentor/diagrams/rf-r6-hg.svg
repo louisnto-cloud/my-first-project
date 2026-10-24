@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 208" role="img" aria-label="Three tiles from page 7. Up to 3 mule deer licences can be used for Haida Gwaii deer, and they count toward the Skeena and provincial mule deer limits. Up to 12 Haida Gwaii deer licences can be used without counting toward regional or provincial limits. Any Haida Gwaii deer over 12 counts toward the regional and provincial deer limits." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="208" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Haida Gwaii deer licences</text>
+<rect x="6" y="40" width="124" height="156" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">3</text>
+<text x="68" y="96" font-size="14" fill="#23261f" text-anchor="middle">mule deer</text>
+<text x="68" y="114" font-size="14" fill="#23261f" text-anchor="middle">licences may be</text>
+<text x="68" y="132" font-size="14" fill="#23261f" text-anchor="middle">used. They</text>
+<text x="68" y="150" font-size="14" fill="#23261f" text-anchor="middle">count toward</text>
+<text x="68" y="168" font-size="14" fill="#23261f" text-anchor="middle">Skeena and BC</text>
+<text x="68" y="186" font-size="14" fill="#23261f" text-anchor="middle">limits</text>
+<rect x="138" y="40" width="124" height="156" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="200" y="74" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">12</text>
+<text x="200" y="96" font-size="14" fill="#23261f" text-anchor="middle">Haida Gwaii</text>
+<text x="200" y="114" font-size="14" fill="#23261f" text-anchor="middle">deer licences</text>
+<text x="200" y="132" font-size="14" fill="#23261f" text-anchor="middle">count toward</text>
+<text x="200" y="150" font-size="14" fill="#23261f" text-anchor="middle">nothing else</text>
+<rect x="270" y="40" width="124" height="156" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332" y="74" font-size="18" fill="#c92a2a" text-anchor="middle" font-weight="bold">Over 12</text>
+<text x="332" y="96" font-size="14" fill="#23261f" text-anchor="middle">count toward</text>
+<text x="332" y="114" font-size="14" fill="#23261f" text-anchor="middle">regional and</text>
+<text x="332" y="132" font-size="14" fill="#23261f" text-anchor="middle">provincial</text>
+<text x="332" y="150" font-size="14" fill="#23261f" text-anchor="middle">limits</text>
+</svg>

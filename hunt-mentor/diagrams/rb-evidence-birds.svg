@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 486" font-family="sans-serif" role="img" aria-label="Birds: what stays attached until the bird is preserved. Grouse, quail and other upland birds: one feathered wing. Ducks and geese: one feathered wing or the feathered head. Turkey in a bearded only season: the beard and one feathered wing. Three steps: field, cooler and travel, preserved at home. The wing stays on until the bird is preserved.">
+  <rect width="400" height="486" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="20" font-weight="bold" fill="#23261f" text-anchor="middle">Birds: what stays on</text>
+  <!-- grouse panel -->
+  <rect x="10" y="44" width="184" height="236" rx="12" fill="#f2ecdd" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="102" y="70" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Grouse, quail</text>
+  <g transform="translate(0 6)">
+    <ellipse cx="102" cy="190" rx="70" ry="4" fill="#d8ccb2"/>
+    <path d="M40 140 L18 118 L16 132 L14 148 L22 162 L46 156z" fill="#8b6a48" stroke="#4a3522" stroke-width="1.4"/>
+    <path d="M22 124 L40 146 M16 140 L40 150 M20 156 L42 154" stroke="#4a3522" stroke-width="1"/>
+    <path d="M40 150 C40 124 70 112 102 116 C126 118 140 128 142 146 C144 168 120 180 92 180 C62 180 40 170 40 150z" fill="#a07a52" stroke="#4a3522" stroke-width="1.6"/>
+    <path d="M60 162 C80 172 112 172 132 160" fill="none" stroke="#e6d6b8" stroke-width="3" stroke-dasharray="3 5"/>
+    <circle cx="146" cy="116" r="17" fill="#a07a52" stroke="#4a3522" stroke-width="1.6"/>
+    <path d="M140 100 L146 90 L152 100z" fill="#7a5a3a"/>
+    <path d="M162 114 L174 118 L162 122z" fill="#3a2a1a"/>
+    <circle cx="151" cy="112" r="2.4" fill="#111"/>
+    <path d="M86 180 L84 196 M100 180 L102 196" stroke="#4a3522" stroke-width="2.6" stroke-linecap="round"/>
+    <g data-tip="Upland birds: one feathered wing|Grouse, quail and other non migratory game birds: leave one feathered wing attached to the carcass (99%, synopsis page 15).">
+      <path d="M58 140 C70 124 104 122 124 134 C120 150 96 160 70 158 C62 156 56 150 58 140z" fill="#6f5236" stroke="#e8590c" stroke-width="3"/>
+      <path d="M70 146 C84 140 100 140 114 138 M66 152 C82 150 98 148 112 146" stroke="#c9a37a" stroke-width="1.4" fill="none"/>
+    </g>
+  </g>
+  <rect x="26" y="222" width="152" height="46" rx="8" fill="#e8590c"/>
+  <text x="102" y="243" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">1 feathered</text>
+  <text x="102" y="261" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">wing</text>
+  <!-- duck panel -->
+  <rect x="206" y="44" width="184" height="236" rx="12" fill="#f2ecdd" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="298" y="70" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Ducks, geese</text>
+  <g transform="translate(0 6)">
+    <path d="M220 168 C240 184 330 186 356 170 C350 186 330 196 290 196 C250 196 228 186 220 168z" fill="#7fb0d6" opacity=".6"/>
+    <path d="M226 150 L214 140 L222 156z" fill="#2f3a2b"/>
+    <path d="M222 152 C224 132 252 124 290 126 C320 128 336 136 338 150 C340 166 316 176 282 176 C246 176 222 168 222 152z" fill="#b7a58a" stroke="#4a3a2a" stroke-width="1.6"/>
+    <path d="M300 128 C318 126 334 132 338 148 C330 142 316 138 300 138z" fill="#7a4a32"/>
+    <path d="M334 118 L330 140 C336 142 344 140 346 136 L344 118z" fill="#fffaf0"/>
+    <g data-tip="Ducks and geese: a wing|Keep at least one fully feathered wing or the fully feathered head attached to any unpreserved duck you possess or transport (99%, section 52(1)).">
+      <path d="M244 146 C258 130 296 130 316 142 C310 158 282 164 258 162 C248 160 242 154 244 146z" fill="#8a7a62" stroke="#e8590c" stroke-width="3"/>
+      <rect x="274" y="144" width="22" height="8" rx="2" fill="#3b5fa8"/>
+    </g>
+    <g data-tip="...or the head|The fully feathered head also counts, instead of a wing (99%). It lets an officer count and identify the species in your cooler (Tip).">
+      <path d="M332 122 C326 104 336 88 352 88 C366 88 372 100 368 112 C366 120 356 124 346 124z" fill="#2f7a46" stroke="#e8590c" stroke-width="3"/>
+      <path d="M366 102 L384 106 L382 112 L366 112z" fill="#e0b040" stroke="#4a3a2a" stroke-width="1"/>
+      <circle cx="356" cy="100" r="2.4" fill="#111"/>
+    </g>
+  </g>
+  <rect x="222" y="222" width="152" height="46" rx="8" fill="#e8590c"/>
+  <text x="298" y="243" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">wing</text>
+  <text x="298" y="261" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">OR head</text>
+  <!-- turkey -->
+  <g data-tip="Turkey beard|Spring is a bearded only season: the beard stays on, along with one feathered wing, until the bird is home (98%).">
+    <rect x="10" y="292" width="380" height="62" rx="12" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/>
+    <path d="M44 344 C40 324 44 310 54 304 C62 300 70 304 70 312 C70 318 64 320 62 326 C70 330 76 338 76 344z" fill="#5a4636" stroke="#2f241a" stroke-width="1.4"/>
+    <circle cx="60" cy="308" r="7" fill="#9fb8d0" stroke="#2f241a" stroke-width="1.2"/>
+    <path d="M67 308 L74 310 L67 312z" fill="#c9a040"/>
+    <path d="M64 316 C66 320 64 326 62 328" stroke="#c92a2a" stroke-width="3" fill="none"/>
+    <path d="M58 328 L52 350 M60 328 L56 350 M62 328 L60 350" stroke="#2f241a" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="57" cy="338" r="13" fill="none" stroke="#e8590c" stroke-width="2.5"/>
+    <text x="92" y="318" font-size="16" font-weight="bold" fill="#23261f">Turkey, bearded only season</text>
+    <text x="92" y="340" font-size="16" fill="#23261f">beard <tspan font-weight="bold" fill="#c2410c">+</tspan> 1 feathered wing</text>
+  </g>
+  <!-- three steps -->
+  <text x="200" y="380" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">How long it stays on</text>
+  <g data-tip="Until preserved|Preserved means gutted and plucked, then frozen, cooked, canned, dried or smoked away from the hunting area, or breasted out and then frozen or cooked (99%). Tip: leave a wing on until the bird is in your home freezer.">
+    <rect x="40" y="398" width="246" height="14" rx="7" fill="#e8590c"/>
+    <circle cx="40" cy="405" r="15" fill="#2f3a2b"/><text x="40" y="411" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+    <circle cx="166" cy="405" r="15" fill="#2f3a2b"/><text x="166" y="411" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+    <circle cx="300" cy="405" r="15" fill="#2f6e3b"/><text x="300" y="411" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+    <text x="40" y="442" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Field</text>
+    <text x="166" y="442" font-size="14" font-weight="bold" fill="#23261f" text-anchor="middle">Cooler, truck</text>
+    <text x="300" y="442" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Preserved</text>
+    <text x="300" y="459" font-size="14" fill="#2f6e3b" text-anchor="middle">at home</text>
+  </g>
+  <g data-tip="Both breasts|The edible portions of a game bird are both breasts. You must take them home (99%). Store birds so each can be counted and its species identified: no bag of loose breasts (99%).">
+    <rect x="10" y="464" width="380" height="20" fill="#fffaf0" fill-opacity=".01"/>
+    <text x="200" y="478" font-size="14" fill="#5d6152" text-anchor="middle">Take both breasts home. Each bird countable.</text>
+  </g>
+</svg>

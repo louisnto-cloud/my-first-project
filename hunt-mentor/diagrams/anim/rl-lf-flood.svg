@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation. A hill is shown side on with water rising around it in four steps, every 20 m. Each time the water stops, its shoreline is drawn as a ring on the map view below. On the steep left side the rings sit close together. On the gentle right side they spread far apart. The last label says each shoreline is one contour line.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Flood the hill</text>
+<text x="388" y="24" font-size="15" fill="#6b5b4b" text-anchor="end">side view</text>
+<rect x="0" y="36" width="400" height="108" fill="#e3ecf3"/>
+<rect x="0" y="140" width="400" height="0" fill="#4a7fb0" opacity=".45"><animate attributeName="y" values="140;120;120;100;100;80;80;60;60" keyTimes="0;.12;.25;.37;.5;.62;.75;.87;1" dur="8s" fill="freeze"/><animate attributeName="height" values="0;20;20;40;40;60;60;80;80" keyTimes="0;.12;.25;.37;.5;.62;.75;.87;1" dur="8s" fill="freeze"/></rect>
+<path d="M40 140 L120 100 L150 70 L170 50 L195 70 L215 95 L260 100 L300 120 L370 140 Z" fill="#cfd8bd" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M0 140 H400" stroke="#2f3a2b" stroke-width="2"/>
+<text x="14" y="96" font-size="16" font-weight="bold" fill="#2f3a2b">steep side</text>
+<text x="388" y="96" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">gentle side</text>
+<rect x="0" y="148" width="400" height="116" fill="#e6ead9"/>
+<text x="12" y="168" font-size="16" font-weight="bold" fill="#2f3a2b">Map view</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="0.96s" dur="0.4s" fill="freeze"/><ellipse cx="190" cy="210" rx="110" ry="45.1" fill="none" stroke="#8b5a2b" stroke-width="3"/><path d="M80 120 H300" stroke="#e8590c" stroke-width="3"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.96s" dur="0.4s" fill="freeze"/><ellipse cx="190" cy="210" rx="70" ry="32.8" fill="none" stroke="#8b5a2b" stroke-width="2.2"/><path d="M120 100 H260" stroke="#e8590c" stroke-width="3"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.96s" dur="0.4s" fill="freeze"/><ellipse cx="171.5" cy="210" rx="31.5" ry="21.3" fill="none" stroke="#8b5a2b" stroke-width="2.2"/><path d="M140 80 H203" stroke="#e8590c" stroke-width="3"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="6.96s" dur="0.4s" fill="freeze"/><ellipse cx="171" cy="210" rx="11" ry="9.0" fill="none" stroke="#8b5a2b" stroke-width="2.2"/><path d="M160 60 H182" stroke="#e8590c" stroke-width="3"/></g>
+<text x="14" y="252" font-size="15" font-weight="bold" fill="#2f3a2b">lines close</text>
+<text x="388" y="252" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">lines far apart</text>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="7.4s" dur="0.5s" fill="freeze"/><rect x="8" y="268" width="384" height="28" rx="6" fill="#2f3a2b"/><text x="200" y="288" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Each shoreline is one contour line</text></g>
+</svg>

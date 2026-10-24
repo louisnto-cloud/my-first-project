@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 523" font-family="sans-serif" role="img" aria-label="Duck water near Mission. Read the legal text before you set up. Fraser River in bylaw Area B: shotgun with shot only while hunting, 99 percent. Hatzic Lake and Harrison Bay: firearms using shot only, 98 percent. Pitt Addington Marsh: some areas on certain days, posted on site, 80 percent, special licence applies. Matsqui Island is Indian Reserve 3, reserve land, ask the band first, 95 percent. Lhá:lt Harrison Chehalis and Bert Brink Wildlife Management Areas: hunting status VERIFY. Parts of Hatzic Slough, Hatzic Prairie and Deroche: No Shooting areas, 98 percent. Boundary Bay Wildlife Management Area: closed to snipe hunting, 99 percent.">
+<rect width="400" height="523" fill="#fffaf0"/>
+<text x="14" y="22" font-size="15" font-weight="bold" fill="#6b5b4b">Read the legal text before you set up</text>
+<rect x="10" y="32" width="380" height="57" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.4"/>
+<circle cx="34" cy="60.5" r="14" fill="#2f6e3b"/><path d="M26.9 62.0 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="54" font-size="16" font-weight="bold" fill="#2f3a2b">Fraser, bylaw Area B</text>
+<text x="60" y="74" font-size="15" fill="#2f3a2b">Shotgun with shot only, while hunting (99%).</text>
+<rect x="10" y="96" width="380" height="57" rx="8" fill="#eef2e6" stroke="#2f6e3b" stroke-width="1.4"/>
+<circle cx="34" cy="124.5" r="14" fill="#2f6e3b"/><path d="M26.9 126.0 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="118" font-size="16" font-weight="bold" fill="#2f3a2b">Hatzic Lake, Harrison Bay</text>
+<text x="60" y="138" font-size="15" fill="#2f3a2b">Firearms using shot only (98%).</text>
+<rect x="10" y="160" width="380" height="76" rx="8" fill="#eaf0f6" stroke="#2c5d86" stroke-width="1.4"/>
+<circle cx="34" cy="198.0" r="14" fill="#2c5d86"/><text x="34" y="204" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="60" y="182" font-size="16" font-weight="bold" fill="#2f3a2b">Pitt Addington Marsh</text>
+<text x="60" y="202" font-size="15" fill="#2f3a2b">Some areas, some days, posted on site</text>
+<text x="60" y="221" font-size="15" fill="#2f3a2b">(80%). Special licence.</text>
+<rect x="10" y="243" width="380" height="57" rx="8" fill="#eaf0f6" stroke="#2c5d86" stroke-width="1.4"/>
+<circle cx="34" cy="271.5" r="14" fill="#2c5d86"/><text x="34" y="277.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="60" y="265" font-size="16" font-weight="bold" fill="#2f3a2b">Matsqui Island</text>
+<text x="60" y="285" font-size="15" fill="#2f3a2b">I.R. 3, reserve land. Ask the band first (95%).</text>
+<rect x="10" y="307" width="380" height="57" rx="8" fill="#eaf0f6" stroke="#2c5d86" stroke-width="1.4"/>
+<circle cx="34" cy="335.5" r="14" fill="#2c5d86"/><text x="34" y="341.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="60" y="329" font-size="16" font-weight="bold" fill="#2f3a2b">Harrison Chehalis, Bert Brink WMAs</text>
+<text x="60" y="349" font-size="15" fill="#2f3a2b">Hunting status: VERIFY.</text>
+<rect x="10" y="371" width="380" height="77" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.4"/>
+<circle cx="34" cy="409.5" r="14" fill="#c0392b"/><path d="M28.9 404.4 l10.2 10.2 M39.1 404.4 l-10.2 10.2" stroke="#fffaf0" stroke-width="2.7" stroke-linecap="round"/>
+<text x="60" y="393" font-size="16" font-weight="bold" fill="#2f3a2b">Parts of Hatzic Slough, Prairie,</text>
+<text x="60" y="413" font-size="16" font-weight="bold" fill="#2f3a2b">Deroche</text>
+<text x="60" y="433" font-size="15" fill="#2f3a2b">No Shooting areas (98%).</text>
+<rect x="10" y="455" width="380" height="57" rx="8" fill="#f8e9e5" stroke="#c0392b" stroke-width="1.4"/>
+<circle cx="34" cy="483.5" r="14" fill="#c0392b"/><path d="M28.9 478.4 l10.2 10.2 M39.1 478.4 l-10.2 10.2" stroke="#fffaf0" stroke-width="2.7" stroke-linecap="round"/>
+<text x="60" y="477" font-size="16" font-weight="bold" fill="#2f3a2b">Boundary Bay WMA</text>
+<text x="60" y="497" font-size="15" fill="#2f3a2b">Closed to snipe hunting (99%).</text>
+</svg>

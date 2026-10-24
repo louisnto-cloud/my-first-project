@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" font-family="sans-serif" role="img" aria-label="Registering your ATV with ICBC. One time fee of 48 dollars for plate and registration. The plate or sticker goes on the front, back or left side, flat and readable. Carry a copy of the registration. Riding unregistered on Crown land: 230 dollar fine.">
+<rect width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Register once, plate on</text>
+<g transform="translate(150 150)"><ellipse cx="0" cy="44" rx="128" ry="7" fill="#d8ccb2"/><path d="M-96 -6 C-96 -20 -84 -26 -70 -26 H-30 L-20 -40 H22 L34 -26 H74 C90 -26 98 -16 98 -4 L94 6 H-92z" fill="#4f6b3a" stroke="#2f3a2b" stroke-width="2" stroke-linejoin="round"/><path d="M-20 -40 H22 L28 -32 H-26z" fill="#2b2b2b"/><path d="M-110 -30 H-62 M-104 -30 V-22 M-70 -30 V-22 M62 -30 H108 M70 -30 V-22 M100 -30 V-22" stroke="#2b2b2b" stroke-width="3.2" stroke-linecap="round"/><path d="M40 -26 L50 -56 M38 -58 H62" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/><circle cx="92" cy="-14" r="5" fill="#f5d77a" stroke="#2b2b2b" stroke-width="1.5"/><circle cx="-62" cy="14" r="30" fill="#2b2b2b"/><circle cx="-62" cy="14" r="22" fill="#3d3d3d" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><circle cx="-62" cy="14" r="9" fill="#a8a8a8"/><circle cx="64" cy="14" r="30" fill="#2b2b2b"/><circle cx="64" cy="14" r="22" fill="#3d3d3d" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><circle cx="64" cy="14" r="9" fill="#a8a8a8"/></g>
+<line x1="42" y1="138" x2="58" y2="138" stroke="#2b2b2b" stroke-width="3"/>
+<rect x="4" y="125" width="38" height="26" rx="3" fill="#fffaf0" stroke="#e8590c" stroke-width="2.4"/>
+<text x="23" y="143" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">ORV</text>
+<rect x="246.1" y="44.0" width="107.8" height="49.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="300" y="64.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Plate: front,</text>
+<text x="300" y="84.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">back or left</text>
+<line x1="23" y1="125" x2="246.091" y2="68.5" stroke="#e8590c" stroke-width="1.4"/><circle cx="23" cy="125" r="2.6" fill="#e8590c"/>
+<rect x="8" y="214" width="124" height="76" rx="8" fill="#8a9a6b" stroke="#8a9a6b" stroke-width="1.6"/>
+<text x="70" y="252" font-size="28" font-weight="bold" fill="#fffaf0" text-anchor="middle">$48</text>
+<text x="70" y="276" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">one time</text>
+<rect x="138" y="214" width="124" height="76" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.6"/>
+<text x="200" y="248" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Carry the</text>
+<text x="200" y="268" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">registration</text>
+<rect x="268" y="214" width="124" height="76" rx="8" fill="#c0392b" stroke="#c0392b" stroke-width="1.6"/>
+<text x="330" y="252" font-size="28" font-weight="bold" fill="#fffaf0" text-anchor="middle">$230</text>
+<text x="330" y="276" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">unregistered</text>
+</svg>

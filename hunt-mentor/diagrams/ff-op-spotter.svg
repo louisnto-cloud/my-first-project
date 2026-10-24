@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" font-family="sans-serif" role="img" aria-label="A spotting scope on a tripod, 20 to 60x85: 20 to 60 power zoom and an 85 mm front lens. It must sit on a tripod. Angled eyepieces sit lower and are easy to share between people of different heights; straight ones are fast to find targets. More power means a dimmer image (85%, Vortex).">
+<rect width="400" height="362" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spotting scope: always on a tripod</text>
+<text x="200" y="56" font-size="22" font-weight="bold" fill="#e8590c" text-anchor="middle">20 to 60x85</text>
+<g transform="translate(176 120) scale(1.0)"><path d="M-60 -14 L60 -22 L60 22 L-60 14z" fill="#3c4a3a"/><rect x="56" y="-26" width="34" height="52" rx="5" fill="#2b332a"/><ellipse cx="90" cy="0" rx="5" ry="22" fill="#6d8fb0"/><rect x="-20" y="-20" width="44" height="6" rx="3" fill="#5c6b58"/><g transform="rotate(-45 -60 0)"><rect x="-104" y="-11" width="48" height="22" rx="4" fill="#2b332a"/><rect x="-116" y="-13" width="14" height="26" rx="4" fill="#1f241e"/></g><rect x="-10" y="14" width="20" height="10" fill="#1f241e"/></g>
+<path d="M176 144 L136 236 M176 144 L176 240 M176 144 L216 236" stroke="#2b332a" stroke-width="5" stroke-linecap="round"/>
+<rect x="164" y="136" width="24" height="12" rx="3" fill="#1f241e"/>
+<line x1="96" y1="92" x2="76" y2="172" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="96" cy="92" r="2.6" fill="#2f3a2b"/><rect x="20.4" y="172.0" width="111.2" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="76" y="192.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">20 to 60x</text>
+<text x="76" y="211.5" font-size="14" fill="#2f3a2b" text-anchor="middle">zoom power</text>
+<line x1="266" y1="132" x2="320" y2="172" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="266" cy="132" r="2.6" fill="#2f3a2b"/><rect x="275.2" y="172.0" width="89.7" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="320" y="192.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">85 mm</text>
+<text x="320" y="211.5" font-size="14" fill="#2f3a2b" text-anchor="middle">front lens</text>
+<rect x="8" y="250" width="188" height="76" rx="8" fill="#f1ead9"/>
+<g transform="translate(58 294) scale(0.36)"><path d="M-60 -14 L60 -22 L60 22 L-60 14z" fill="#3c4a3a"/><rect x="56" y="-26" width="34" height="52" rx="5" fill="#2b332a"/><ellipse cx="90" cy="0" rx="5" ry="22" fill="#6d8fb0"/><rect x="-20" y="-20" width="44" height="6" rx="3" fill="#5c6b58"/><g transform="rotate(-45 -60 0)"><rect x="-104" y="-11" width="48" height="22" rx="4" fill="#2b332a"/><rect x="-116" y="-13" width="14" height="26" rx="4" fill="#1f241e"/></g><rect x="-10" y="14" width="20" height="10" fill="#1f241e"/></g>
+<text x="100" y="280" font-size="16" font-weight="bold" fill="#2f3a2b">Angled:</text>
+<text x="100" y="300" font-size="14" fill="#2f3a2b">lower, easy</text>
+<text x="100" y="317" font-size="14" fill="#2f3a2b">to share</text>
+<rect x="204" y="250" width="188" height="76" rx="8" fill="#f1ead9"/>
+<g transform="translate(254 294) scale(0.36)"><path d="M-60 -14 L60 -22 L60 22 L-60 14z" fill="#3c4a3a"/><rect x="56" y="-26" width="34" height="52" rx="5" fill="#2b332a"/><ellipse cx="90" cy="0" rx="5" ry="22" fill="#6d8fb0"/><rect x="-20" y="-20" width="44" height="6" rx="3" fill="#5c6b58"/><rect x="-100" y="-11" width="44" height="22" rx="4" fill="#2b332a"/><rect x="-112" y="-13" width="14" height="26" rx="4" fill="#1f241e"/><rect x="-10" y="14" width="20" height="10" fill="#1f241e"/></g>
+<text x="296" y="280" font-size="16" font-weight="bold" fill="#2f3a2b">Straight:</text>
+<text x="296" y="300" font-size="14" fill="#2f3a2b">fast to find</text>
+<text x="296" y="317" font-size="14" fill="#2f3a2b">targets</text>
+<text x="200" y="350" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">More power = dimmer image (85%, Vortex)</text>
+</svg>

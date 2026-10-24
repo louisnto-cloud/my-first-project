@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 516" font-family="sans-serif" role="img" aria-label="Season bars for Region 3 grouse and ptarmigan, synopsis page 34, September to November. Dusky, ruffed and spruce grouse in 3-12 to 3-20 and 3-26 to 3-44: 10 September to 30 November. Dusky, ruffed and spruce grouse in 3-46: 20 September to 30 November. Grouse, youth only, in 3-12 to 3-20 and 3-26 to 3-44: 1 to 9 September, new, printed green. Sharp tailed grouse in 3-30 and 3-31: 10 September to 30 November; the star marks the Map C18 closure. Ptarmigan in 3-12 to 3-20 and 3-26 to 3-44: 1 September to 30 November.">
+<rect width="400" height="516" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Region 3, page 34</text>
+<text x="75.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="200" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="324.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Dusky, ruffed, spruce grouse</text>
+<text x="14" y="92" font-size="15" font-weight="bold" fill="#c2410c">Sept 10 to Nov 30</text>
+<text x="14" y="112" font-size="14" fill="#6b5b4b">3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="14.0" y="119" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="136.6" y="119" width="126.7" height="16" fill="#f8f3e6"/>
+<rect x="263.4" y="119" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="50.8" y="120" width="335.2" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="165" font-size="16" font-weight="bold" fill="#2f3a2b">Dusky, ruffed, spruce grouse</text>
+<text x="14" y="185" font-size="15" font-weight="bold" fill="#c2410c">Sept 20 to Nov 30</text>
+<text x="14" y="205" font-size="14" fill="#6b5b4b">3-46</text>
+<rect x="14.0" y="212" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="136.6" y="212" width="126.7" height="16" fill="#f8f3e6"/>
+<rect x="263.4" y="212" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="91.7" y="213" width="294.3" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="258" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, youth only</text>
+<text x="386" y="258" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 1 to 9</text>
+<text x="14" y="278" font-size="14" fill="#6b5b4b">3-12 to 3-20, 3-26 to 3-44</text>
+<text x="14" y="297" font-size="14" fill="#6b5b4b">New, printed green</text>
+<rect x="14.0" y="304" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="136.6" y="304" width="126.7" height="16" fill="#f8f3e6"/>
+<rect x="263.4" y="304" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="305" width="36.8" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="350" font-size="16" font-weight="bold" fill="#2f3a2b">Sharp tailed grouse</text>
+<text x="386" y="350" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="370" font-size="14" fill="#6b5b4b">✻3-30, 3-31   ✻ Map C18 closure</text>
+<rect x="14.0" y="377" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="136.6" y="377" width="126.7" height="16" fill="#f8f3e6"/>
+<rect x="263.4" y="377" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="50.8" y="378" width="335.2" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="423" font-size="16" font-weight="bold" fill="#2f3a2b">Ptarmigan</text>
+<text x="386" y="423" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 1 to Nov 30</text>
+<text x="14" y="443" font-size="14" fill="#6b5b4b">3-12 to 3-20, 3-26 to 3-44</text>
+<rect x="14.0" y="450" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="136.6" y="450" width="126.7" height="16" fill="#f8f3e6"/>
+<rect x="263.4" y="450" width="122.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="451" width="372.0" height="14" rx="3" fill="#e8590c"/>
+<rect x="14" y="485" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="34" y="497" font-size="14" fill="#2f3a2b">General season</text>
+<rect x="151.12" y="485" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="171.12" y="497" font-size="14" fill="#2f3a2b">Youth only (under 18)</text>
+</svg>

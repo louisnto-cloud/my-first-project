@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 653" font-family="sans-serif" role="img" aria-label="Places in Area A, Kamloops and North Thompson, named by government, grouped by status. MU means Management Unit, WMA means Wildlife Management Area. Hunting allowed in season: Lac du Bois Grasslands Protected Area, a park with bighorn, mule and white tailed deer, moose, waterfowl and sharp tailed grouse; no shooting inside Kamloops city limits; ATVs closed for hunting 1 September to 10 December, 95 percent. Bonaparte Park: moose, mule deer, black bear, waterfowl and grouse, reached by logging roads up Jamieson Creek or by float plane, 95 percent. Tunkwa Park, MU 3-18: moose, deer, Canada goose, mallard and snipe, vehicles on designated trails only, 90 percent. Dunn Peak Park: a park with mule deer, mountain goat and black bear, 90 percent. Check first: Dewdrop Rosseau Creek WMA, MU 3-29, mule deer and bighorn winter range, motor vehicle closed, Map C16, 90 percent. Closed: Tranquille WMA, geese and swans, No Shooting, Map C17, 85 percent. Wells Gray Park, MU 3-45: no hunting and no firearms, 99 percent.">
+<rect width="400" height="653" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Area A: Kamloops</text>
+<text x="200" y="53" font-size="14" fill="#6b5b4b" text-anchor="middle">Places named by government</text>
+<text x="200" y="73" font-size="14" fill="#6b5b4b" text-anchor="middle">MU = Management Unit. WMA = Wildlife Management Area</text>
+<rect x="8" y="82" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="103" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">HUNTING ALLOWED IN SEASON</text>
+<rect x="8" y="118" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="155.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 155.0) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="141" font-size="16" font-weight="bold" fill="#2f3a2b">Lac du Bois Grasslands</text>
+<text x="78" y="160" font-size="15" fill="#2f3a2b">Park. No shooting inside city limits. No</text>
+<text x="78" y="179" font-size="15" fill="#2f3a2b">ATV 1 Sep to 10 Dec (95%)</text>
+<circle cx="41.0" cy="221.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 221.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="217" font-size="16" font-weight="bold" fill="#2f3a2b">Bonaparte Park</text>
+<text x="78" y="236" font-size="15" fill="#2f3a2b">Jamieson Creek roads or float plane (95%)</text>
+<rect x="8" y="251" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="278.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 278.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="274" font-size="16" font-weight="bold" fill="#2f3a2b">Tunkwa Park</text>
+<text x="78" y="293" font-size="15" fill="#2f3a2b">MU 3-18. Vehicles on trails only (90%)</text>
+<circle cx="41.0" cy="335.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 335.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="331" font-size="16" font-weight="bold" fill="#2f3a2b">Dunn Peak Park</text>
+<text x="78" y="350" font-size="15" fill="#2f3a2b">Park (90%)</text>
+<rect x="8" y="373" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="394" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CHECK FIRST</text>
+<rect x="8" y="409" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="431.0" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="451.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C16</text>
+<text x="78" y="432" font-size="16" font-weight="bold" fill="#2f3a2b">Dewdrop Rosseau Creek WMA</text>
+<text x="78" y="451" font-size="15" fill="#2f3a2b">MU 3-29. Motor vehicle closed, Map C16</text>
+<text x="78" y="470" font-size="15" fill="#2f3a2b">(90%)</text>
+<rect x="8" y="493" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 508) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="514" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CLOSED</text>
+<rect x="8" y="529" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="541.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="562.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C17</text>
+<text x="78" y="552" font-size="16" font-weight="bold" fill="#2f3a2b">Tranquille WMA</text>
+<text x="78" y="571" font-size="15" fill="#2f3a2b">No Shooting, Map C17 (85%)</text>
+<circle cx="41.0" cy="613.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 613.5) scale(0.8)" fill="#c0392b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<circle cx="41.0" cy="613.5" r="20" fill="none" stroke="#c0392b" stroke-width="3"/><path d="M27.0 599.5 L55.0 627.5" stroke="#c0392b" stroke-width="3"/>
+<text x="78" y="609" font-size="16" font-weight="bold" fill="#2f3a2b">Wells Gray Park</text>
+<text x="78" y="628" font-size="15" fill="#2f3a2b">MU 3-45. No hunting, no firearms (99%)</text>
+</svg>

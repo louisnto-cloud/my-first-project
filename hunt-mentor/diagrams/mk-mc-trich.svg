@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Bear meat: what kills wild Trichinella?. Freezing: No (95%). Salting, drying, smoking, microwave: Not reliably (95%). Cooking to 71°C or more: Yes, federal advice (95%).">
+<rect width="400" height="300" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Bear meat: what kills wild</text>
+<text x="16" y="53" font-size="18" font-weight="bold" fill="#1F3D2B">Trichinella?</text>
+<text x="22" y="81" font-size="14" font-weight="bold" fill="#1F3D2B">Method</text><text x="202" y="81" font-size="14" font-weight="bold" fill="#1F3D2B">Kills it?</text>
+<g><rect x="12" y="91" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="91" width="180" height="59" rx="8" fill="#1F3D2B"/><rect x="184" y="91" width="8" height="59" fill="#1F3D2B"/><text x="22" y="113" font-size="15" font-weight="bold" fill="#FFFFFF">Freezing</text><text x="202" y="113" font-size="15" font-weight="bold" fill="#17201A">No</text><text x="202" y="134" font-size="14" fill="#1F3D2B">95%</text></g>
+<g><rect x="12" y="158" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="158" width="180" height="59" rx="8" fill="#1F3D2B"/><rect x="184" y="158" width="8" height="59" fill="#1F3D2B"/><text x="22" y="180" font-size="15" font-weight="bold" fill="#FFFFFF">Salting, drying,</text>
+<text x="22" y="199" font-size="15" font-weight="bold" fill="#FFFFFF">smoking, microwave</text><text x="202" y="180" font-size="15" font-weight="bold" fill="#17201A">Not reliably</text><text x="202" y="201" font-size="14" fill="#1F3D2B">95%</text></g>
+<g data-tip="Cook to 71°C|&quot;All wild game meat, pork and horse meat should be cooked to an internal temperature of at least 71°C&quot; (95%, Canadian Food Inspection Agency)."><rect x="12" y="225" width="376" height="59" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="225" width="180" height="59" rx="8" fill="#FF6A13"/><rect x="184" y="225" width="8" height="59" fill="#FF6A13"/><text x="22" y="247" font-size="15" font-weight="bold" fill="#17201A">Cooking to 71°C or</text>
+<text x="22" y="266" font-size="15" font-weight="bold" fill="#17201A">more</text><text x="202" y="247" font-size="15" font-weight="bold" fill="#17201A">Yes, federal advice</text><text x="202" y="268" font-size="14" fill="#1F3D2B">95%</text></g>
+
+</svg>

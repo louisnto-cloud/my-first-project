@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 303" font-family="sans-serif" role="img" aria-label="Season bars for Region 3 deer, September to December, synopsis page 34 (99%). White tailed deer bucks: 10 September to 10 December. White tailed deer antlerless: 10 to 31 October. Mule deer bucks: 1 to 31 October. Mule deer 4 point bucks only: 1 November to 10 December. The class is the rule, not just the date. Units are listed in the synopsis rows.">
+<rect width="400" height="303" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Region 3, synopsis page 34 (99%)</text>
+<text x="59.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="245.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="338.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">White tail bucks</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">Sep 10 to Dec 10</text>
+<rect x="14.0" y="80" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="80" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="80" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="80" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="81" width="280.5" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">White tail antlerless</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">Oct 10 to 31</text>
+<rect x="14.0" y="134" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="134" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="134" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="134" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="132.9" y="135" width="67.1" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer bucks</text>
+<text x="386" y="180" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Oct 1 to 31</text>
+<rect x="14.0" y="188" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="188" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="188" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="188" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="105.5" y="189" width="94.5" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="234" font-size="16" font-weight="bold" fill="#2f3a2b">Mule deer, 4 point only</text>
+<text x="386" y="234" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Nov 1 to Dec 10</text>
+<rect x="14.0" y="242" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="242" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="242" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="242" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="243" width="122.0" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="289" font-size="15" font-weight="bold" fill="#c0392b">The class is the rule, not just the date</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Gas semi auto field strip step 5: clean the piston, its seal and the magazine tube shaft with oil and a brush, scrub the gas cylinder, wipe them dry. These parts must not be lubricated.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<circle cx="24" cy="22" r="15" fill="#1F3D2B"/><text x="24" y="28" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="46" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Clean the gas parts</text>
+<rect x="60" y="70" width="120" height="26" rx="3" fill="#a7aeb3" stroke="#FF6A13" stroke-width="2.5"/>
+<text x="120.0" y="89.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="middle">piston, seal</text>
+<rect x="220" y="70" width="140" height="26" rx="3" fill="#5d646b" stroke="#FF6A13" stroke-width="2.5"/>
+<text x="290.0" y="89.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">gas cylinder</text>
+<circle cx="30" cy="140" r="10" fill="#1F3D2B"/><text x="30" y="144.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text><text x="48.0" y="145.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Oil and a bronze brush to lift residue</text>
+<circle cx="30" cy="170" r="10" fill="#1F3D2B"/><text x="30" y="174.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text><text x="48.0" y="175.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Wipe it all dry</text>
+<circle cx="30" cy="200" r="10" fill="#FF6A13"/><text x="30" y="204.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text><text x="48.0" y="205.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Gas parts: no oil left on them</text>
+<circle cx="30" cy="230" r="10" fill="#1F3D2B"/><text x="30" y="234.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text><text x="48.0" y="235.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Piston glides free on the tube</text>
+<text x="200.0" y="290.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Seal goes in the cylinder first (manual).</text>
+</svg>

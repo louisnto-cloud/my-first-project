@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 476" font-family="sans-serif" role="img" aria-label="Two checklists. ACTS, every time you handle a firearm: assume every firearm is loaded, control the muzzle, trigger finger off, see that it is unloaded. PROVE it safe: point it safe, remove all cartridges, observe the chamber, verify the feeding path, examine the bore. Do them every time you pick up, put down or hand over a firearm. 85 percent, Canadian Firearms Safety Course.">
+<rect width="400" height="476" fill="#fffaf0"/>
+<rect x="10" y="8" width="380" height="190" rx="10" fill="#f6f1e2" stroke="#2f3a2b" stroke-width="1.6"/>
+<path d="M10 44 V18 a10 10 0 0 1 10 -10 H380 a10 10 0 0 1 10 10 V44z" fill="#2f3a2b"/>
+<text x="26" y="33" font-size="18" font-weight="bold" fill="#fffaf0">ACTS: every time you handle it</text>
+<text x="374" y="32" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="end">85%</text>
+<circle cx="42" cy="66" r="14" fill="#2f3a2b"/>
+<text x="42" y="72.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">A</text>
+<text x="68" y="72" font-size="16" fill="#2f3a2b">Assume it is loaded</text>
+<circle cx="42" cy="102" r="14" fill="#2f3a2b"/>
+<text x="42" y="108.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">C</text>
+<text x="68" y="108" font-size="16" fill="#2f3a2b">Control the muzzle</text>
+<circle cx="42" cy="138" r="14" fill="#2f3a2b"/>
+<text x="42" y="144.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">T</text>
+<text x="68" y="144" font-size="16" fill="#2f3a2b">Trigger finger off</text>
+<circle cx="42" cy="174" r="14" fill="#2f3a2b"/>
+<text x="42" y="180.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">S</text>
+<text x="68" y="180" font-size="16" fill="#2f3a2b">See it is unloaded</text>
+<rect x="10" y="210" width="380" height="226" rx="10" fill="#f6f1e2" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M10 246 V220 a10 10 0 0 1 10 -10 H380 a10 10 0 0 1 10 10 V246z" fill="#e8590c"/>
+<text x="26" y="235" font-size="18" font-weight="bold" fill="#fffaf0">PROVE it safe</text>
+<text x="374" y="234" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="end">85%</text>
+<circle cx="42" cy="268" r="14" fill="#e8590c"/>
+<text x="42" y="274.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">P</text>
+<text x="68" y="274" font-size="16" fill="#2f3a2b">Point it safe</text>
+<circle cx="42" cy="304" r="14" fill="#e8590c"/>
+<text x="42" y="310.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">R</text>
+<text x="68" y="310" font-size="16" fill="#2f3a2b">Remove all cartridges</text>
+<circle cx="42" cy="340" r="14" fill="#e8590c"/>
+<text x="42" y="346.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">O</text>
+<text x="68" y="346" font-size="16" fill="#2f3a2b">Observe the chamber</text>
+<circle cx="42" cy="376" r="14" fill="#e8590c"/>
+<text x="42" y="382.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">V</text>
+<text x="68" y="382" font-size="16" fill="#2f3a2b">Verify the feeding path</text>
+<circle cx="42" cy="412" r="14" fill="#e8590c"/>
+<text x="42" y="418.5" font-size="18" font-weight="bold" fill="#fffaf0" text-anchor="middle">E</text>
+<text x="68" y="418" font-size="16" fill="#2f3a2b">Examine the bore</text>
+<text x="200" y="462" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Every time you pick up, put down, hand over</text>
+</svg>

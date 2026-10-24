@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 528" font-family="sans-serif" role="img" aria-label="Status grid under the federal Species at Risk Act. Southern Mountain caribou: Threatened, no hunt. Boreal caribou: Threatened, no hunt. Northern Mountain caribou: Special Concern, draw hunts only. Wood bison: Threatened. Plains bison: the Pink Mountain herd is over 1,000 animals, 85 percent. Bison hunts are only in parts of Management Units 7-42, 7-57 and 7-58, 98 percent. Every caribou hunt is a draw.">
+<rect width="400" height="528" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Caribou and bison: status</text>
+<text x="200" y="48" font-size="15" fill="#8b5a2b" text-anchor="middle">Federal Species at Risk Act listing</text>
+<rect x="8" y="62" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<text x="20" y="83" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CARIBOU</text>
+<rect x="8" y="98" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="20" y="120" font-size="16" font-weight="bold" fill="#2f3a2b">Southern Mountain caribou</text>
+<rect x="20" y="128" width="103.1" height="22" rx="11" fill="#e8590c"/>
+<text x="71.6" y="144" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Threatened</text>
+<text x="135.1" y="144" font-size="15" font-weight="bold" fill="#c0392b">No hunt</text>
+<text x="20" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Boreal caribou</text>
+<rect x="20" y="188" width="103.1" height="22" rx="11" fill="#e8590c"/>
+<text x="71.6" y="204" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Threatened</text>
+<text x="135.1" y="204" font-size="15" font-weight="bold" fill="#c0392b">No hunt</text>
+<rect x="8" y="218" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="20" y="240" font-size="16" font-weight="bold" fill="#2f3a2b">Northern Mountain caribou</text>
+<rect x="20" y="248" width="140.4" height="22" rx="11" fill="#b7791f"/>
+<text x="90.2" y="264" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Special Concern</text>
+<text x="172.4" y="264" font-size="15" font-weight="bold" fill="#2f3a2b">Draw only</text>
+<rect x="8" y="284" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<text x="20" y="305" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">BISON</text>
+<rect x="8" y="320" width="384" height="58" rx="6" fill="#f4eedf"/>
+<text x="20" y="342" font-size="16" font-weight="bold" fill="#2f3a2b">Wood bison</text>
+<rect x="20" y="350" width="103.1" height="22" rx="11" fill="#e8590c"/>
+<text x="71.6" y="366" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Threatened</text>
+<text x="135.1" y="366" font-size="15" font-weight="bold" fill="#2f3a2b">See below</text>
+<text x="20" y="402" font-size="16" font-weight="bold" fill="#2f3a2b">Plains bison, Pink Mountain</text>
+<rect x="20" y="410" width="100.2" height="22" rx="11" fill="#2f6e3b"/>
+<text x="70.1" y="426" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Over 1,000</text>
+<text x="132.2" y="426" font-size="15" font-weight="bold" fill="#2f3a2b">See below</text>
+<rect x="8" y="448" width="384" height="70" rx="8" fill="#f4eedf" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200" y="473" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bison hunts: parts of MUs 7-42, 7-57,</text>
+<text x="200" y="493" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">7-58 only (98%).</text>
+<text x="200" y="511" font-size="15" fill="#2f3a2b" text-anchor="middle">Caribou: every hunt is a draw.</text>
+</svg>

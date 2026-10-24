@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 248" font-family="sans-serif" role="img" aria-label="Lights and infrared optics. 38: Any light or illuminating device to hunt by (99%). 39: Infrared optics, like thermal scopes, on the trip, even unused (99%).">
+<rect width="400" height="248" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Lights and infrared optics</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Banned (page 11)</text>
+<g data-tip="Item 38|No light of any kind to hunt by (99%). That covers a spotlight, a headlamp, a weapon light or the truck's lights used to find, hold or shoot game (95%, my reading)."><rect x="12" y="68" width="376" height="78" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="68" width="75" height="78" rx="8" fill="#FF6A13"/><rect x="79" y="68" width="8" height="78" fill="#FF6A13"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#17201A">38</text><text x="97" y="90" font-size="15" fill="#17201A">Any light or illuminating device to</text>
+<text x="97" y="109" font-size="15" fill="#17201A">hunt by</text><text x="97" y="130" font-size="14" fill="#1F3D2B">99%</text></g>
+<g data-tip="Item 39|Possession on the trip is enough (99%). Leave them at home, not in the truck (95%, my reading)."><rect x="12" y="154" width="376" height="78" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="154" width="75" height="78" rx="8" fill="#FF6A13"/><rect x="79" y="154" width="8" height="78" fill="#FF6A13"/><text x="22" y="176" font-size="15" font-weight="bold" fill="#17201A">39</text><text x="97" y="176" font-size="15" fill="#17201A">Infrared optics, like thermal</text>
+<text x="97" y="195" font-size="15" fill="#17201A">scopes, on the trip, even unused</text><text x="97" y="216" font-size="14" fill="#1F3D2B">99%</text></g>
+
+</svg>

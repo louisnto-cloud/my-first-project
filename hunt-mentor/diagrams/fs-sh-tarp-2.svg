@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Tarp step 2: drape the tarp over the cord.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Drape the tarp</text><rect x="0" y="230" width="400" height="70" rx="0" fill="#dfe6d3"/><rect x="57" y="198" width="6" height="32" rx="0" fill="#8b5a2b"/><polygon points="60,70 24,198 96,198" fill="#8a9a6b"/><rect x="337" y="198" width="6" height="32" rx="0" fill="#8b5a2b"/><polygon points="340,70 304,198 376,198" fill="#8a9a6b"/><line x1="70" y1="150" x2="330" y2="150" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><polygon points="110,150 290,150 290,226 110,226" fill="#4f7a52" opacity=".85"/><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Over the cord</text>
+</svg>

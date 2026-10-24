@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Before you go, step 2: check for area restriction orders. Inside one, no entry, and that includes hunting.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Area restrictions</text><rect x="70" y="50" width="260" height="180" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/><path d="M110 80 L260 70 L280 200 L120 210 Z" fill="#fbe9e7" stroke="#c0392b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 6"/><text x="195" y="145" font-size="20" font-weight="bold" fill="#c0392b" text-anchor="middle">No entry</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Restricted area: no hunting inside</text>
+</svg>

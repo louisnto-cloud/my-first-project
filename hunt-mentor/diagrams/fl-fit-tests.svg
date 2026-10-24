@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 332" font-family="sans-serif" role="img" aria-label="Three field tests before the hunt: a 2 hour hill hike with your own hunting pack, getting up from the ground with your pack on, and a steady shot after a climb, calm enough to hold steady.">
+<rect width="400" height="332" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three tests before the hunt</text>
+<rect x="8" y="44" width="384" height="88" rx="10" fill="#e9eedd"/>
+<rect x="16" y="52" width="112" height="72" rx="8" fill="#f8f4e8"/>
+<path d="M20 118 L60 70 L92 90 L124 118z" fill="#a9b37f"/>
+<g transform="translate(70 94) scale(0.85)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#e8590c"/><rect x="5" y="-42" width="12" height="20" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M-5 -36 L-12 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<path d="M18 118 H126" stroke="#8a9a6b" stroke-width="2"/>
+<text x="146" y="84" font-size="20" font-weight="bold" fill="#2f3a2b">Hill hike</text>
+<text x="146" y="110" font-size="17" fill="#2f3a2b">2 h, your pack</text>
+<rect x="8" y="140" width="384" height="88" rx="10" fill="#e9eedd"/>
+<rect x="16" y="148" width="112" height="72" rx="8" fill="#f8f4e8"/>
+<path d="M20 214 H124" stroke="#8a9a6b" stroke-width="3"/>
+<g transform="translate(70 214) scale(1.05)"><path d="M-2 -16 L-14 -10 L-14 0 M2 -16 L12 -16 L12 0" stroke="#4a4136" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M-6 -36 C-6 -40 6 -40 6 -36 L4 -15 H-5z" fill="#e8590c"/><rect x="-17" y="-38" width="12" height="20" rx="3" fill="#7a5a3a"/><circle cx="2" cy="-43" r="5.5" fill="#e0b48c"/><path d="M4 -32 L12 -20" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/><path d="M12 -26 l6 -10" stroke="#2f3a2b" stroke-width="2" stroke-linecap="round"/></g>
+<text x="146" y="180" font-size="20" font-weight="bold" fill="#2f3a2b">Get up</text>
+<text x="146" y="206" font-size="17" fill="#2f3a2b">from the ground</text>
+<rect x="8" y="236" width="384" height="88" rx="10" fill="#e9eedd"/>
+<rect x="16" y="244" width="112" height="72" rx="8" fill="#f8f4e8"/>
+<circle cx="72" cy="280.0" r="28" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/>
+<circle cx="72" cy="280.0" r="16" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="72" cy="280.0" r="6" fill="#e8590c"/>
+<path d="M72 244 V262 M72 298 V316 M22 280.0 H40 M104 280.0 H122" stroke="#2f3a2b" stroke-width="2"/>
+<text x="146" y="276" font-size="20" font-weight="bold" fill="#2f3a2b">Steady shot</text>
+<text x="146" y="302" font-size="17" fill="#2f3a2b">after a climb</text>
+</svg>

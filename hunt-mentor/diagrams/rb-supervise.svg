@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" role="img" aria-label="One supervising hunter may supervise at most two youth licence hunters, or two initiation licence hunters, or one of each. Youth who hold a basic hunting licence do not count toward that maximum. Animals taken under youth or initiation licences count in the supervising adult&#x27;s bag limit." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="430" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">One supervisor, at most:</text>
+<g data-tip="Youth licence|Age 10 to under 18, always accompanied and closely supervised by a qualified adult (99%). No one under 10 may hunt (99%, page 6).">
+<rect x="10" y="44" width="380" height="70" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(50 90) scale(1.3)"><circle cx="0" cy="-16" r="7" fill="#2f3a2b"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#2f3a2b"/></g>
+<g transform="translate(110 92) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#e8590c"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#e8590c"/></g><g transform="translate(150 92) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#e8590c"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#e8590c"/></g>
+<text x="190" y="86" font-size="17" fill="#23261f" text-anchor="start" font-weight="bold">2 youth</text>
+<text x="370" y="86" font-size="15" fill="#2f3a2b" text-anchor="end">or</text>
+</g>
+<g data-tip="Initiation licence|Once in a lifetime, 18 or older, $19, no hunter safety training needed. Supervised at all times; the supervisor signs a form before each day (99%, pages 6 and 8).">
+<rect x="10" y="122" width="380" height="70" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(50 168) scale(1.3)"><circle cx="0" cy="-16" r="7" fill="#2f3a2b"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#2f3a2b"/></g>
+<g transform="translate(110 170) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#4a7fb0"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#4a7fb0"/></g><g transform="translate(150 170) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#4a7fb0"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#4a7fb0"/></g>
+<text x="190" y="164" font-size="17" fill="#23261f" text-anchor="start" font-weight="bold">2 initiation</text>
+<text x="370" y="164" font-size="15" fill="#2f3a2b" text-anchor="end">or</text>
+</g>
+<g data-tip="At most two|No more than two youth licence hunters, two initiation licence hunters, or one of each at a time (99%, page 6).">
+<rect x="10" y="200" width="380" height="70" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+<g transform="translate(50 246) scale(1.3)"><circle cx="0" cy="-16" r="7" fill="#2f3a2b"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#2f3a2b"/></g>
+<g transform="translate(110 248) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#e8590c"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#e8590c"/></g><g transform="translate(150 248) scale(1.0)"><circle cx="0" cy="-16" r="7" fill="#4a7fb0"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#4a7fb0"/></g>
+<text x="190" y="242" font-size="17" fill="#23261f" text-anchor="start" font-weight="bold">1 of each</text>
+</g>
+<g data-tip="Their game is in your bag|Wildlife taken under a youth or initiation licence counts in the supervising adult's bag limit (99%, page 6). Count the youth's deer as yours before you shoot.">
+<rect x="10" y="282" width="186" height="64" rx="10" fill="#2f3a2b"/>
+<text x="103" y="308" font-size="16" fill="#fffaf0" text-anchor="middle" font-weight="bold">Their animals</text>
+<text x="103" y="330" font-size="16" fill="#f6b98f" text-anchor="middle" font-weight="bold">= your bag limit</text>
+</g>
+<g data-tip="Youth with a basic licence|Youth who hold a basic hunting licence do not count toward the two (99%, page 6).">
+<rect x="204" y="282" width="186" height="64" rx="10" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.5"/>
+<text x="297" y="308" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Youth with a basic</text>
+<text x="297" y="330" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">licence: not counted</text>
+</g>
+<g data-tip="Who may supervise|An FWID (Fish and Wildlife ID) with residency and hunting credentials, a licence (not initiation) in at least 3 earlier licence years, and no firearms prohibition (99%, page 6). Your first seasons: you cannot supervise (95%).">
+<rect x="10" y="354" width="380" height="40" rx="10" fill="#f4eedf" stroke="#c9bb9c"/>
+<g transform="translate(34 384) scale(0.8)"><circle cx="0" cy="-16" r="7" fill="#2f3a2b"/><path d="M-8 -6 L8 -6 L6 14 L-6 14 Z" fill="#2f3a2b"/></g>
+<text x="56" y="380" font-size="15" fill="#23261f" font-weight="bold">Supervisor: 3 earlier licence years</text>
+</g>
+<text x="200" y="418" font-size="14" fill="#2f3a2b" text-anchor="middle"><tspan fill="#c2410c" font-weight="bold">Orange</tspan>: youth licence. <tspan fill="#3d6f9e" font-weight="bold">Blue</tspan>: initiation licence.</text>
+</svg>

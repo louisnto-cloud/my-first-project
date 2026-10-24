@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" role="img" aria-label="Top view of a recreation site. The developed portion reaches 100 metres in every direction from a structure, day use area, camping area or trail staging area. No firing a firearm, bow or crossbow on or into it, and no game residue there. On a recreation trail the ban applies only where posted." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="336" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Recreation site: developed portion</text>
+<rect x="0" y="40" width="400" height="210" fill="#dfe6d3"/>
+<circle cx="150" cy="146" r="90" fill="#c92a2a" opacity=".14" stroke="#c92a2a" stroke-width="2.5" stroke-dasharray="8 6"/>
+<circle cx="230" cy="150" r="90" fill="#c92a2a" opacity=".14" stroke="#c92a2a" stroke-width="2.5" stroke-dasharray="8 6"/>
+<path d="M136 156 L150 130 L164 156 Z" fill="#e8590c"/><rect x="214" y="138" width="34" height="22" rx="2" fill="#8b5a2b" stroke="#8b5a2b" stroke-width="2"/>
+<text x="150" y="176" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">camp</text><text x="231" y="176" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">outhouse</text>
+<line x1="230" y1="150" x2="312.0" y2="150.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="318,150 309.0,154.3 309.0,145.7" fill="#c92a2a"/><text x="286" y="142" font-size="14" fill="#c92a2a" text-anchor="middle" font-weight="bold">100 m</text>
+<text x="14" y="274" font-size="15" fill="#23261f" text-anchor="start">No firing a firearm, bow or crossbow on or into it.</text>
+<text x="14" y="294" font-size="15" fill="#23261f" text-anchor="start">No gut piles or scraps there.</text>
+<text x="14" y="314" font-size="15" fill="#23261f" text-anchor="start">Recreation trails: only where posted.</text>
+</svg>

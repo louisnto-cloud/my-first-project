@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 305" font-family="sans-serif" role="img" aria-label="A graph of trigger pressure. Stage 1, take up: light slack. Stage 2, the wall: pressure rises and you squeeze through it. Stage 3, the break: the shot goes and you keep pressing to follow through. Sako lists a two stage trigger on the Arctic; most T3x rifles have a single stage trigger.">
+<rect width="400" height="305" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A two stage trigger</text>
+<rect x="34" y="70" width="122" height="126" fill="#e3eedc"/>
+<rect x="156" y="70" width="112" height="126" fill="#fde3d3"/>
+<rect x="268" y="70" width="118" height="126" fill="#ece6d8"/>
+<path d="M34 196 V62" stroke="#2f3a2b" stroke-width="2"/><path d="M34.0 58.0 L29.1 67.0 L39.0 67.0z" fill="#2f3a2b"/>
+<path d="M34 196 H386" stroke="#2f3a2b" stroke-width="2"/>
+<text x="42" y="62" font-size="14" fill="#6b5b4b">pressure</text>
+<path d="M34 184 L156 176 L166 116 L258 108 L268 184 L386 184" fill="none" stroke="#e8590c" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="263" cy="108" r="6" fill="#c0392b"/>
+<text x="95" y="150" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">1. Take up</text>
+<text x="212" y="96" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">2. The wall</text>
+<text x="327" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Break</text>
+<text x="95" y="218" font-size="15" fill="#2f3a2b" text-anchor="middle">light slack</text>
+<text x="212" y="218" font-size="15" fill="#2f3a2b" text-anchor="middle">squeeze through</text>
+<text x="327" y="218" font-size="15" fill="#2f3a2b" text-anchor="middle">keep pressing</text>
+<rect x="8" y="240" width="384" height="57" rx="8" fill="#2f3a2b"/><text x="200" y="263.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Arctic: two stage per Sako.</text><text x="200" y="284.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Most T3x: single stage.</text>
+</svg>

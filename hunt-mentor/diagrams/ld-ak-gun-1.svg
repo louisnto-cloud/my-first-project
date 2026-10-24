@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1: buy the Alaska nonresident alien hunting licence first, because ATF wants a copy of it with the Form 6NIA application.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Buy the Alaska licence first</text>
+<circle cx="133" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 124) scale(1.6)"><rect x="-28" y="-18" width="56" height="36" rx="5" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><rect x="-22" y="-11" width="15" height="19" fill="#8a9a6b"/><path d="M-2 -8 h22 M-2 -1 h22 M-2 6 h15" stroke="#2f3a2b" stroke-width="2.5"/></g>
+<circle cx="267" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 124) scale(1.6)"><rect x="-24" y="-18" width="48" height="30" rx="3" fill="#4a7fb0" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-30 14 h60 l-4 6 h-52 z" fill="#2f3a2b"/><path d="M-14 -6 h28 M-14 2 h18" stroke="#fff" stroke-width="2.5"/></g>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">ATF wants a copy with the 6NIA (85%).</text>
+</svg>

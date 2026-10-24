@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" font-family="sans-serif" role="img" aria-label="Before the trigger: 6 checks. 1: Broadside or quartering away. 2: Spot picked, not the whole animal. 3: Range inside my tested max. 4: Backstop solid, no animal behind. 5: Sitting or sticks, not offhand. 6: Breath half out, squeeze, follow through.">
+<rect width="400" height="296" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Before the trigger: 6 checks</text>
+<g><rect x="12" y="48" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="71.33333333333334" y="82" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">1</text><text x="71.33333333333334" y="104" font-size="14" fill="#17201A" text-anchor="middle">Broadside or</text>
+<text x="71.33333333333334" y="122" font-size="14" fill="#17201A" text-anchor="middle">quartering</text>
+<text x="71.33333333333334" y="140" font-size="14" fill="#17201A" text-anchor="middle">away</text></g>
+<g><rect x="140.66666666666669" y="48" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="200.00000000000003" y="82" font-size="26" font-weight="bold" fill="#FF6A13" text-anchor="middle">2</text><text x="200.00000000000003" y="104" font-size="14" fill="#17201A" text-anchor="middle">Spot picked,</text>
+<text x="200.00000000000003" y="122" font-size="14" fill="#17201A" text-anchor="middle">not the whole</text>
+<text x="200.00000000000003" y="140" font-size="14" fill="#17201A" text-anchor="middle">animal</text></g>
+<g><rect x="269.33333333333337" y="48" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="328.6666666666667" y="82" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">3</text><text x="328.6666666666667" y="104" font-size="14" fill="#17201A" text-anchor="middle">Range inside</text>
+<text x="328.6666666666667" y="122" font-size="14" fill="#17201A" text-anchor="middle">my tested max</text></g>
+<g><rect x="12" y="168" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3.5"/><text x="71.33333333333334" y="202" font-size="26" font-weight="bold" fill="#FF6A13" text-anchor="middle">4</text><text x="71.33333333333334" y="224" font-size="14" fill="#17201A" text-anchor="middle">Backstop</text>
+<text x="71.33333333333334" y="242" font-size="14" fill="#17201A" text-anchor="middle">solid, no</text>
+<text x="71.33333333333334" y="260" font-size="14" fill="#17201A" text-anchor="middle">animal behind</text></g>
+<g><rect x="140.66666666666669" y="168" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="200.00000000000003" y="202" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">5</text><text x="200.00000000000003" y="224" font-size="14" fill="#17201A" text-anchor="middle">Sitting or</text>
+<text x="200.00000000000003" y="242" font-size="14" fill="#17201A" text-anchor="middle">sticks, not</text>
+<text x="200.00000000000003" y="260" font-size="14" fill="#17201A" text-anchor="middle">offhand</text></g>
+<g><rect x="269.33333333333337" y="168" width="118.66666666666667" height="110" rx="10" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="2"/><text x="328.6666666666667" y="202" font-size="26" font-weight="bold" fill="#1F3D2B" text-anchor="middle">6</text><text x="328.6666666666667" y="224" font-size="14" fill="#17201A" text-anchor="middle">Breath half</text>
+<text x="328.6666666666667" y="242" font-size="14" fill="#17201A" text-anchor="middle">out, squeeze,</text>
+<text x="328.6666666666667" y="260" font-size="14" fill="#17201A" text-anchor="middle">follow through</text></g>
+
+</svg>

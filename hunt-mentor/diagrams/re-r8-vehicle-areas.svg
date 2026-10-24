@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 741" font-family="sans-serif" role="img" aria-label="List of Region 8 vehicle closures, synopsis page 67. Star means no driving, triangle means no vehicle for hunting, cross means no All Terrain Vehicle, e bike or snowmobile. Star, Oliver Mountain, 8-1: no motor vehicles. Star, Osoyoos Oxbows, 8-1: established roadways only. Star, Crater Mountain, 8-3: no motor vehicles. Star, Placer Mountain to Border Lake, 8-3 and 8-4: no motor vehicles. Star, Garnet Valley, 8-8: no motor vehicles, trapper exempt. Triangle, Tulameen Forest Service Road, 8-5: south of Vuich Creek, no vehicle for hunting. Star, Skaha Lake Eastside, 8-9: the lots named, no motor vehicles. Star, Granby, 8-14 and 8-15: snowmobiles allowed 1 November to 31 May. Cross, Galloping Hills, 8-15: no ATVs, e bikes or snowmobiles 1 June to 31 October. Star, Joss, Tsuius and Mabel, 8-23 and 8-24: permitted Forest Service Roads only 1 May to 30 November, snowmobiles allowed.">
+<rect width="400" height="741" fill="#fffaf0"/>
+<text x="8" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 67. FSR: Forest Service Road</text>
+<rect x="8" y="32" width="20" height="20" rx="4" fill="#c92a2a"/>
+<g transform="translate(18 42) scale(0.62) translate(-18 -42)"><path d="M18.0 31.0 L20.7 38.3 L28.5 38.6 L22.4 43.4 L24.5 50.9 L18.0 46.6 L11.5 50.9 L13.6 43.4 L7.5 38.6 L15.3 38.3z" fill="#fffaf0"/></g>
+<text x="34" y="47" font-size="14" fill="#2f3a2b">No driving</text>
+<rect x="113.24000000000001" y="32" width="20" height="20" rx="4" fill="#e8590c"/>
+<g transform="translate(123.24000000000001 42) scale(0.62) translate(-123.24000000000001 -42)"><path d="M123.24000000000001 32 L133.24 50 L113.24000000000001 50z" fill="#fffaf0"/></g>
+<text x="139.24" y="47" font-size="14" fill="#2f3a2b">Not for hunting</text>
+<rect x="8" y="56" width="20" height="20" rx="4" fill="#8b5a2b"/>
+<g transform="translate(18 66) scale(0.62) translate(-18 -66)"><path d="M10 58 L26 74 M26 58 L10 74" stroke="#fffaf0" stroke-width="4.5" stroke-linecap="round"/></g>
+<text x="34" y="71" font-size="14" fill="#2f3a2b">No ATV, e bike, snowmobile</text>
+<rect x="4" y="86" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="90" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 102.5 L38.7 109.8 L46.5 110.1 L40.4 114.9 L42.5 122.4 L36.0 118.1 L29.5 122.4 L31.6 114.9 L25.5 110.1 L33.3 109.8z" fill="#fffaf0"/>
+<text x="74" y="109" font-size="16" font-weight="bold" fill="#2f3a2b">Oliver Mountain</text>
+<text x="388" y="109" font-size="14" fill="#6b5b4b" text-anchor="end">8-1</text>
+<text x="74" y="129" font-size="15" fill="#b02525">No motor vehicles</text>
+<rect x="8" y="148" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 160.5 L38.7 167.8 L46.5 168.1 L40.4 172.9 L42.5 180.4 L36.0 176.1 L29.5 180.4 L31.6 172.9 L25.5 168.1 L33.3 167.8z" fill="#fffaf0"/>
+<text x="74" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Osoyoos Oxbows</text>
+<text x="388" y="167" font-size="14" fill="#6b5b4b" text-anchor="end">8-1</text>
+<text x="74" y="187" font-size="15" fill="#b02525">Established roadways only</text>
+<rect x="4" y="202" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="206" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 218.5 L38.7 225.8 L46.5 226.1 L40.4 230.9 L42.5 238.4 L36.0 234.1 L29.5 238.4 L31.6 230.9 L25.5 226.1 L33.3 225.8z" fill="#fffaf0"/>
+<text x="74" y="225" font-size="16" font-weight="bold" fill="#2f3a2b">Crater Mountain</text>
+<text x="388" y="225" font-size="14" fill="#6b5b4b" text-anchor="end">8-3</text>
+<text x="74" y="245" font-size="15" fill="#b02525">No motor vehicles</text>
+<rect x="8" y="264" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 276.5 L38.7 283.8 L46.5 284.1 L40.4 288.9 L42.5 296.4 L36.0 292.1 L29.5 296.4 L31.6 288.9 L25.5 284.1 L33.3 283.8z" fill="#fffaf0"/>
+<text x="74" y="283" font-size="16" font-weight="bold" fill="#2f3a2b">Placer Mtn to Border Lake</text>
+<text x="388" y="283" font-size="14" fill="#6b5b4b" text-anchor="end">8-3, 8-4</text>
+<text x="74" y="303" font-size="15" fill="#b02525">No motor vehicles</text>
+<rect x="4" y="318" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="322" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 334.5 L38.7 341.8 L46.5 342.1 L40.4 346.9 L42.5 354.4 L36.0 350.1 L29.5 354.4 L31.6 346.9 L25.5 342.1 L33.3 341.8z" fill="#fffaf0"/>
+<text x="74" y="341" font-size="16" font-weight="bold" fill="#2f3a2b">Garnet Valley</text>
+<text x="388" y="341" font-size="14" fill="#6b5b4b" text-anchor="end">8-8</text>
+<text x="74" y="361" font-size="15" fill="#b02525">No motor vehicles. Trapper exempt</text>
+<rect x="8" y="380" width="56" height="47" rx="6" fill="#e8590c"/>
+<path d="M36.0 393.5 L46.0 411.5 L26.0 411.5z" fill="#fffaf0"/>
+<text x="74" y="399" font-size="16" font-weight="bold" fill="#2f3a2b">Tulameen FSR</text>
+<text x="388" y="399" font-size="14" fill="#6b5b4b" text-anchor="end">8-5</text>
+<text x="74" y="419" font-size="15" fill="#c2410c">South of Vuich Creek: no vehicle for hunting</text>
+<rect x="4" y="434" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="438" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 450.5 L38.7 457.8 L46.5 458.1 L40.4 462.9 L42.5 470.4 L36.0 466.1 L29.5 470.4 L31.6 462.9 L25.5 458.1 L33.3 457.8z" fill="#fffaf0"/>
+<text x="74" y="457" font-size="16" font-weight="bold" fill="#2f3a2b">Skaha Lake Eastside</text>
+<text x="388" y="457" font-size="14" fill="#6b5b4b" text-anchor="end">8-9</text>
+<text x="74" y="477" font-size="15" fill="#b02525">The lots named: no motor vehicles</text>
+<rect x="8" y="496" width="56" height="47" rx="6" fill="#c92a2a"/>
+<path d="M36.0 508.5 L38.7 515.8 L46.5 516.1 L40.4 520.9 L42.5 528.4 L36.0 524.1 L29.5 528.4 L31.6 520.9 L25.5 516.1 L33.3 515.8z" fill="#fffaf0"/>
+<text x="74" y="515" font-size="16" font-weight="bold" fill="#2f3a2b">Granby</text>
+<text x="388" y="515" font-size="14" fill="#6b5b4b" text-anchor="end">8-14, 8-15</text>
+<text x="74" y="535" font-size="15" fill="#b02525">Snowmobiles allowed Nov 1 to May 31</text>
+<rect x="4" y="550" width="392" height="75" rx="6" fill="#f4eedf"/>
+<rect x="8" y="554" width="56" height="67" rx="6" fill="#8b5a2b"/>
+<path d="M28.0 579.5 L44.0 595.5 M44.0 579.5 L28.0 595.5" stroke="#fffaf0" stroke-width="4.5" stroke-linecap="round"/>
+<text x="74" y="573" font-size="16" font-weight="bold" fill="#2f3a2b">Galloping Hills</text>
+<text x="388" y="573" font-size="14" fill="#6b5b4b" text-anchor="end">8-15</text>
+<text x="74" y="593" font-size="15" fill="#8b5a2b">No ATVs, e bikes, snowmobiles Jun 1 to</text>
+<text x="74" y="613" font-size="15" fill="#8b5a2b">Oct 31</text>
+<rect x="8" y="632" width="56" height="67" rx="6" fill="#c92a2a"/>
+<path d="M36.0 654.5 L38.7 661.8 L46.5 662.1 L40.4 666.9 L42.5 674.4 L36.0 670.1 L29.5 674.4 L31.6 666.9 L25.5 662.1 L33.3 661.8z" fill="#fffaf0"/>
+<text x="74" y="651" font-size="16" font-weight="bold" fill="#2f3a2b">Joss, Tsuius, Mabel</text>
+<text x="388" y="651" font-size="14" fill="#6b5b4b" text-anchor="end">8-23, 8-24</text>
+<text x="74" y="671" font-size="15" fill="#b02525">Permitted FSRs only May 1 to Nov 30.</text>
+<text x="74" y="691" font-size="15" fill="#b02525">Snowmobiles allowed</text>
+<text x="8" y="727" font-size="15" fill="#6b5b4b">ATV: All Terrain Vehicle</text>
+</svg>

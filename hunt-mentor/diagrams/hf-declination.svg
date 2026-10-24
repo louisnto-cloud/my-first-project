@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Declination near Kamloops. True north, toward the pole, points straight up. Magnetic north, where the needle points, is about 15 degrees to the right, east. Map bearing to compass bearing: subtract 15. Compass bearing to map bearing: add 15.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <line x1="120" y1="190" x2="120" y2="56" stroke="#2f3a2b" stroke-width="4"/>
+  <polygon points="110,62 130,62 120,42" fill="#2f3a2b"/>
+  <text x="120" y="32" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">True north (map)</text>
+  <line x1="120" y1="190" x2="157" y2="58" stroke="#c0392b" stroke-width="4"/>
+  <polygon points="150,62 166,66 162,44" fill="#c0392b"/>
+  <text x="176" y="62" font-size="15" font-weight="bold" fill="#c0392b">Magnetic north (needle)</text>
+  <path d="M120 110 A 80 80 0 0 1 141 113" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="160" y="120" font-size="19" font-weight="bold" fill="#e8590c">about 15 degrees east</text>
+  <text x="160" y="142" font-size="14" fill="#2f3a2b">near Kamloops, October 2026</text>
+  <circle cx="120" cy="190" r="6" fill="#2f3a2b"/>
+  <rect x="12" y="206" width="376" height="86" rx="8" fill="#2f3a2b"/>
+  <text x="200" y="232" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Map to compass: subtract 15</text>
+  <text x="200" y="256" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Compass to map: add 15</text>
+  <text x="200" y="280" font-size="14" fill="#fff" text-anchor="middle">Or set 15 east once on an adjustable compass</text>
+</svg>

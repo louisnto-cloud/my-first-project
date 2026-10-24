@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Chart of bird hearing on a pitch scale from 0.1 to 20 kilohertz. Birds hear best from about 1 to 4 kilohertz, avian hearing reviews, 75 percent, and do not hear ultrasound. Human voices, boots on gravel and gun clicks fall in that range. Tip: whisper, use hand signals and close truck doors softly.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Hearing: where birds hear best</text>
+<rect x="183.4140365931109" y="70" width="86.34385362755643" height="90" rx="4" fill="#e8590c"/>
+<text x="226.5859634068891" y="112" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">best</text>
+<text x="226.5859634068891" y="132" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1 to 4 kHz</text>
+<line x1="40" y1="170" x2="370" y2="170" stroke="#2f3a2b" stroke-width="2"/>
+<line x1="40.0" y1="170" x2="40.0" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="40.0" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">0.1</text>
+<line x1="140.24210977933268" y1="170" x2="140.24210977933268" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="140.24210977933268" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">0.5</text>
+<line x1="183.4140365931109" y1="170" x2="183.4140365931109" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="183.4140365931109" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">1</text>
+<line x1="269.7578902206673" y1="170" x2="269.7578902206673" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="269.7578902206673" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">4</text>
+<line x1="326.8280731862218" y1="170" x2="326.8280731862218" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="326.8280731862218" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">10</text>
+<line x1="370.0" y1="170" x2="370.0" y2="177" stroke="#2f3a2b" stroke-width="2"/>
+<text x="370.0" y="194" font-size="14" fill="#2f3a2b" text-anchor="middle">20</text>
+<text x="205" y="214" font-size="14" fill="#2f3a2b" text-anchor="middle">pitch, kilohertz (kHz)</text>
+<rect x="10" y="226" width="380" height="66" rx="8" fill="#dfe6d3"/>
+<text x="200" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Voices, boots on gravel, gun clicks: all in range</text>
+<text x="200" y="274" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Hush, hand signals, close doors softly (Tip)</text>
+<text x="40" y="60" font-size="14" fill="#2f3a2b" text-anchor="start">low</text>
+<text x="370" y="60" font-size="14" fill="#2f3a2b" text-anchor="end">high</text>
+</svg>

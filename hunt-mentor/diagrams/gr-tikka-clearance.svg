@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Your Tikka T3x Arctic has a tall rear drum sight on the receiver. With low rings, the scope hits the drum. With high rings, the scope clears it. Dry fit at the store before you pay.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Clear the rear drum sight</text>
+  <!-- low rings -->
+  <text x="20" y="54" font-size="15" font-weight="bold" fill="#c0392b">Low rings ✗</text>
+  <rect x="20" y="110" width="340" height="18" fill="#6b6f68"/><rect x="110" y="102" width="70" height="8" fill="#2f3a2b"/>
+  <rect x="80" y="84" width="22" height="26" rx="4" fill="#8b5a2b"/><text x="91" y="146" font-size="14" fill="#2f3a2b" text-anchor="middle">Drum</text>
+  <path d="M30 80 L60 84 L60 98 L30 102 Z" fill="#2f3a2b"/><rect x="60" y="84" width="96" height="14" fill="#2f3a2b"/><path d="M156 84 L176 72 L210 72 L210 110 L176 110 L156 98 Z" fill="#2f3a2b" opacity=".85"/>
+  <g fill="#8a9a6b"><rect x="114" y="82" width="10" height="22"/><rect x="164" y="80" width="10" height="24"/></g>
+  <circle cx="91" cy="84" r="12" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="232" y="92" font-size="14" font-weight="bold" fill="#c0392b">Scope hits it</text>
+  <!-- high rings -->
+  <text x="20" y="182" font-size="15" font-weight="bold" fill="#2f6b3a">High rings ✓</text>
+  <rect x="20" y="250" width="340" height="18" fill="#6b6f68"/><rect x="110" y="242" width="70" height="8" fill="#2f3a2b"/>
+  <rect x="80" y="224" width="22" height="26" rx="4" fill="#8b5a2b"/>
+  <path d="M30 194 L60 198 L60 212 L30 216 Z" fill="#2f3a2b"/><rect x="60" y="198" width="96" height="14" fill="#2f3a2b"/><path d="M156 198 L176 186 L210 186 L210 224 L176 224 L156 212 Z" fill="#2f3a2b" opacity=".85"/>
+  <g fill="#8a9a6b"><rect x="114" y="196" width="10" height="46"/><rect x="164" y="196" width="10" height="46"/></g>
+  <text x="232" y="214" font-size="14" font-weight="bold" fill="#2f6b3a">Clears the drum</text>
+  <text x="232" y="290" font-size="14" fill="#2f3a2b">Dry fit at the store</text>
+  <text x="300" y="148" font-size="14" fill="#2f3a2b" text-anchor="middle">Receiver and rail</text>
+</svg>

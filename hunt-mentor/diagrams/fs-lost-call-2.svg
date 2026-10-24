@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Call step 2: read your GPS coordinates from the phone and give them first. Turn on location services before the trip.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Read your coordinates</text><rect x="120" y="50" width="160" height="190" rx="14" fill="#2f3a2b"/><rect x="132" y="66" width="136" height="150" rx="4" fill="#e3eef8"/><text x="200" y="110" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">50.xxxx N</text><text x="200" y="134" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">120.xxxx W</text><text x="200" y="170" font-size="14" fill="#9a9a8f" text-anchor="middle">example</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Location first</text>
+</svg>

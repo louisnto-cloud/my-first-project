@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Same rifle, same zero, two loads. Load A, the one you zeroed with, groups on the bullseye. Load B groups somewhere else. Switch loads and you must re zero.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Same zero, different load</text>
+  <rect x="20" y="40" width="220" height="220" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="130" cy="150" r="80" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="130" cy="150" r="44" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="130" cy="150" r="10" fill="#e8590c"/>
+  <g fill="#2f6b3a"><circle cx="126" cy="146" r="6"/><circle cx="136" cy="154" r="6"/><circle cx="130" cy="140" r="6"/></g>
+  <g fill="#4a7fb0"><circle cx="186" cy="96" r="6"/><circle cx="196" cy="106" r="6"/><circle cx="182" cy="110" r="6"/></g>
+  <g font-size="15" font-weight="bold"><circle cx="262" cy="80" r="8" fill="#2f6b3a"/><text x="278" y="86" fill="#2f3a2b">Load A</text><text x="278" y="106" font-size="14" font-weight="normal" fill="#2f3a2b">zeroed with it</text>
+    <circle cx="262" cy="150" r="8" fill="#4a7fb0"/><text x="278" y="156" fill="#2f3a2b">Load B</text><text x="278" y="176" font-size="14" font-weight="normal" fill="#2f3a2b">hits elsewhere</text></g>
+  <rect x="254" y="206" width="136" height="54" rx="8" fill="#e8590c"/>
+  <text x="322" y="230" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Switch load?</text><text x="322" y="250" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Re zero</text>
+  <text x="130" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Example only. Your gap will differ</text>
+</svg>

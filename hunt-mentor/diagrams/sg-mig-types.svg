@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Four ways animals use the year. Up and down: mule deer, black tails, moose, elk, sheep, goats, summer high and winter low. Upside down: dusky grouse, winters higher. Residents: white tails, ruffed and spruce grouse, quail, chukar, black bear, short moves only. Long distance: ducks and geese on the Pacific Flyway.">
+  <rect width="400" height="320" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4 ways to use the year</text>
+  <g><rect x="10" y="42" width="185" height="128" rx="10" fill="#dfe6d3"/>
+    <path d="M40 140 L80 70 L120 140 Z" fill="#8a9a6b"/><path d="M135 80 V130 M127 90 l8 -10 l8 10 M127 120 l8 10 l8 -10" stroke="#e8590c" stroke-width="3" fill="none"/>
+    <text x="102" y="160" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Up and down</text>
+    <text x="150" y="62" font-size="14" fill="#2f3a2b" text-anchor="middle">deer, moose</text></g>
+  <g><rect x="205" y="42" width="185" height="128" rx="10" fill="#dfe6d3"/>
+    <path d="M235 140 L275 70 L315 140 Z" fill="#8a9a6b"/><path d="M330 130 V80 M322 90 l8 -10 l8 10" stroke="#e8590c" stroke-width="3" fill="none"/>
+    <text x="297" y="160" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Upside down</text>
+    <text x="345" y="62" font-size="14" fill="#2f3a2b" text-anchor="middle">dusky grouse</text></g>
+  <g><rect x="10" y="180" width="185" height="128" rx="10" fill="#dfe6d3"/>
+    <circle cx="102" cy="235" r="30" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 4"/><circle cx="102" cy="235" r="6" fill="#8b5a2b"/>
+    <text x="102" y="298" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Residents</text>
+    <text x="102" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">white tails, quail</text></g>
+  <g><rect x="205" y="180" width="185" height="128" rx="10" fill="#dfe6d3"/>
+    <path d="M230 260 Q300 190 370 230" stroke="#4a7fb0" stroke-width="3" fill="none" stroke-dasharray="8 5"/><path d="M360 222 l12 9 l-14 4" stroke="#4a7fb0" stroke-width="3" fill="none"/>
+    <text x="297" y="298" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Long distance</text>
+    <text x="297" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">ducks, geese</text></g>
+</svg>

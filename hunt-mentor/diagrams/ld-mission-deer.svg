@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif" role="img" aria-label="Rows for deer, bear and grouse near Mission with legal access. Hunting allowed: Mission bylaw Area D, rifle or shotgun while hunting, 99 percent. Area C around Hoover Lake: shotgun with shot or slug, 99 percent. Forest Service Roads (FSRs) north of Mission, such as Florence Lake and Lost Creek: no shooting within 400 metres unless lawfully hunting, so hunting is allowed and plinking is not, 95 percent. Chehalis, Map B33: discharge for the purpose of hunting permitted, 99 percent. Treat as closed: Davis Lake Park, and Golden Ears and Rolley Lake parks, no hunting listed, 85 percent.">
+<rect width="400" height="470" fill="#fffaf0"/>
+<text x="14" y="25" font-size="18" font-weight="bold" fill="#2f3a2b">Deer, bear, grouse: legal access</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">HUNTING ALLOWED</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Mission bylaw Area D</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Rifle or shotgun while hunting (99%)</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Area C, Hoover Lake</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">Shotgun, shot or slug (99%)</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="209.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 209.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">FSRs north of Mission</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">Hunting allowed, plinking not (95%)</text>
+<rect x="14" y="251.5" width="54" height="30" rx="6" fill="#2f6e3b"/>
+<text x="41" y="272.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">B33</text>
+<text x="78" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">Chehalis, Map B33</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">Shooting to hunt permitted (99%)</text>
+<rect x="8" y="304" width="384" height="30" rx="6" fill="#c0392b"/>
+<text x="18" y="325" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">TREAT AS CLOSED</text>
+<rect x="8" y="340" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="367.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 367.5) scale(0.8)" fill="#c0392b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="363" font-size="16" font-weight="bold" fill="#2f3a2b">Davis Lake Park</text>
+<text x="78" y="382" font-size="15" fill="#2f3a2b">No hunting listed (85%)</text>
+<circle cx="41.0" cy="424.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 424.5) scale(0.8)" fill="#c0392b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="420" font-size="16" font-weight="bold" fill="#2f3a2b">Golden Ears, Rolley Lake</text>
+<text x="78" y="439" font-size="15" fill="#2f3a2b">No hunting listed (85%)</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="sans-serif" role="img" aria-label="Meat hanging in camp in game bags on a pole between two trees, in the shade, well away from and downwind of the tents, where you can still see it from camp. The wind blows from the tents toward the meat.">
+<rect width="400" height="260" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Meat in camp: hang it, watch it</text>
+<rect x="0" y="40" width="400" height="160" fill="#e3edf3"/>
+<path d="M0 200 C80 194 160 198 240 195 C300 193 360 196 400 194 V260 H0z" fill="#dfe6d3"/>
+<path d="M32 225 l2 -6 M36 225 l0 -7 M40 225 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M362 244 l2 -6 M366 244 l0 -7 M370 244 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M303 217 l2 -6 M307 217 l0 -7 M311 217 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M89 251 l2 -6 M93 251 l0 -7 M97 251 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M328 245 l2 -6 M332 245 l0 -7 M336 245 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M317 215 l2 -6 M321 215 l0 -7 M325 215 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M126 236 l2 -6 M130 236 l0 -7 M134 236 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M290 247 l2 -6 M294 247 l0 -7 M298 247 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M347 210 l2 -6 M351 210 l0 -7 M355 210 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M369 248 l2 -6 M373 248 l0 -7 M377 248 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M359 233 l2 -6 M363 233 l0 -7 M367 233 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/><path d="M348 247 l2 -6 M352 247 l0 -7 M356 247 l-2 -6" stroke="#a9b37f" stroke-width="1.3" fill="none"/>
+<ellipse cx="312" cy="202" rx="84" ry="9" fill="#000" opacity=".14"/>
+<rect x="310.5" y="196.0" width="3" height="5" fill="#5a3d22"/><path d="M312.0 44.0 L348.0 114.2 L331.7 114.2 L377.5 197.0 L246.5 197.0 L292.3 114.2 L276.0 114.2z" fill="#3a5a31"/>
+<path d="M253 200 L254 96 L258 96 L259 200z" fill="#6b4f35"/>
+<path d="M365 200 L366 96 L370 96 L371 200z" fill="#6b4f35"/>
+<line x1="250" y1="100" x2="374" y2="100" stroke="#6b4f35" stroke-width="5" stroke-linecap="round"/>
+<path d="M284 100 V104" stroke="#6b5b4b" stroke-width="1.6"/><path d="M274.0 104 H294.0 C298.0 123.2 298.0 152 284 155 C270.0 152 270.0 123.2 274.0 104z" fill="#f2e8d2" stroke="#b9a882" stroke-width="1.4"/><path d="M279 114 C281 122 281 130 279 136" stroke="#e2c9a6" stroke-width="3" fill="none"/>
+<path d="M312 100 V104" stroke="#6b5b4b" stroke-width="1.6"/><path d="M302.0 104 H322.0 C326.0 123.2 326.0 152 312 155 C298.0 152 298.0 123.2 302.0 104z" fill="#f2e8d2" stroke="#b9a882" stroke-width="1.4"/><path d="M307 114 C309 122 309 130 307 136" stroke="#e2c9a6" stroke-width="3" fill="none"/>
+<path d="M340 100 V104" stroke="#6b5b4b" stroke-width="1.6"/><path d="M330.0 104 H350.0 C354.0 123.2 354.0 152 340 155 C326.0 152 326.0 123.2 330.0 104z" fill="#f2e8d2" stroke="#b9a882" stroke-width="1.4"/><path d="M335 114 C337 122 337 130 335 136" stroke="#e2c9a6" stroke-width="3" fill="none"/>
+<g transform="translate(48 198) scale(1.1)"><path d="M-26 0 C-22 -22 -8 -32 0 -32 C8 -32 22 -22 26 0z" fill="#e8590c"/><path d="M-6 0 C-5 -12 -2 -22 0 -24 C2 -22 5 -12 6 0z" fill="#7a2f06"/><path d="M-26 0 C-18 -18 -6 -28 0 -32 M26 0 C18 -18 6 -28 0 -32" stroke="#ffffff55" stroke-width="1.4" fill="none"/><path d="M-30 0 H30" stroke="#6b5b4b" stroke-width="2"/></g>
+<g transform="translate(116 198) scale(0.85)"><path d="M-26 0 C-22 -22 -8 -32 0 -32 C8 -32 22 -22 26 0z" fill="#d9822b"/><path d="M-6 0 C-5 -12 -2 -22 0 -24 C2 -22 5 -12 6 0z" fill="#7a2f06"/><path d="M-26 0 C-18 -18 -6 -28 0 -32 M26 0 C18 -18 6 -28 0 -32" stroke="#ffffff55" stroke-width="1.4" fill="none"/><path d="M-30 0 H30" stroke="#6b5b4b" stroke-width="2"/></g>
+<text x="82" y="224" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tents</text>
+<line x1="154" y1="226" x2="248" y2="226" stroke="#e8590c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M150.0 226.0 L159.0 230.9 L159.0 221.1z" fill="#e8590c"/><path d="M252.0 226.0 L243.0 221.1 L243.0 230.9z" fill="#e8590c"/>
+<text x="201" y="248" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">well away</text>
+<g transform="translate(82 148) scale(1.0)"><path d="M-12 0 C-6 -8 6 -8 12 0 C6 8 -6 8 -12 0z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><circle r="4" fill="#2f3a2b"/></g>
+<path d="M96 147 L268 134" stroke="#2f3a2b" stroke-width="1.6" stroke-dasharray="3 4"/>
+<rect x="95.5" y="94.0" width="145.0" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="168" y="113" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Can you see it</text>
+<text x="168" y="131" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">from camp? Good</text>
+<line x1="18" y1="58" x2="104.0" y2="58.0" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round"/><path d="M112.0 58.0 L99.0 50.9 L99.0 65.2z" fill="#4a7fb0"/>
+<text x="18" y="82" font-size="16" font-weight="bold" fill="#2c5d86">Wind</text>
+<rect x="120.9" y="46.0" width="150.1" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="196" y="65" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Game bags, shade</text>
+<line x1="286" y1="118" x2="271.052" y2="60" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="286" cy="118" r="2.6" fill="#2f3a2b"/>
+</svg>

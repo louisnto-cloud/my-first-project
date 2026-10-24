@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 4: Check for sign on the ground. Fresh trails in October and November (Tip).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Check for sign on the ground</text>
+<rect x="60" y="150" width="280" height="40" fill="#dfe6d3"/><ellipse cx="90" cy="170" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="130" cy="176" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="170" cy="170" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="210" cy="176" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="250" cy="170" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="290" cy="176" rx="7" ry="4" fill="#8b5a2b"/><ellipse cx="330" cy="170" rx="7" ry="4" fill="#8b5a2b"/><text x="200" y="225" font-family="sans-serif" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">trails, tracks, pellets</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Fresh trails in October and November (Tip).</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" font-family="sans-serif" role="img" aria-label="Cards for Region 4 Maps D13 to D18, page 41. D13 Teck Coal Limited Coal Mountain Mine, MU 4-23: No Shooting Area. D14 Highway 3, MU 4-23: No Hunting or Shooting Area, 400 metres from Highway 3. D15 Mount Assiniboine Park, MU 4-25: No Hunting Area. D16 Fording River, Greenhills, Line Creek, Elkview and Coal Mountain operations, the Elk Valley mines, MU 4-23: No Hunting or Shooting and No Shooting Areas on private property; company permission required before entry. D17 Canal Flats, MU 4-25: firearms using shot only. D18 Sunshine Meadows, MU 4-25: No Hunting Area.">
+<rect width="400" height="480" fill="#fffaf0"/>
+<text x="12" y="25" font-size="14" font-weight="bold" fill="#6b5b4b">Region 4 maps D13 to D18, page 41</text>
+<rect x="10" y="34" width="380" height="56" rx="7" fill="#fffaf0" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M17 34 H72 V90 H17 A7 7 0 0 1 10 83 V41 A7 7 0 0 1 17 34z" fill="#e8590c"/>
+<text x="41" y="56" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D13</text>
+<g transform="translate(41.0 76.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="9"/><path d="M0 -13 V-5 M0 5 V13 M-13 0 H-5 M5 0 H13"/><path d="M-9 9 L9 -9" stroke-width="3"/></g>
+<text x="86" y="57" font-size="16" font-weight="bold" fill="#2f3a2b">Coal Mountain Mine</text>
+<text x="86" y="76" font-size="15" fill="#2f3a2b">No Shooting Area, MU 4-23</text>
+<rect x="10" y="98" width="380" height="70" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 98 H72 V168 H17 A7 7 0 0 1 10 161 V105 A7 7 0 0 1 17 98z" fill="#c92a2a"/>
+<text x="41" y="127" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D14</text>
+<g transform="translate(41.0 147.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="121" font-size="16" font-weight="bold" fill="#2f3a2b">Highway 3</text>
+<text x="86" y="140" font-size="15" fill="#2f3a2b">No Hunting or Shooting Area, 400 m from</text>
+<text x="86" y="159" font-size="15" fill="#2f3a2b">Hwy 3, MU 4-23</text>
+<rect x="10" y="176" width="380" height="56" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 176 H72 V232 H17 A7 7 0 0 1 10 225 V183 A7 7 0 0 1 17 176z" fill="#c92a2a"/>
+<text x="41" y="198" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D15</text>
+<g transform="translate(41.0 218.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="199" font-size="16" font-weight="bold" fill="#2f3a2b">Mount Assiniboine Park</text>
+<text x="86" y="218" font-size="15" fill="#2f3a2b">No Hunting Area, MU 4-25</text>
+<rect x="10" y="240" width="380" height="70" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 240 H72 V310 H17 A7 7 0 0 1 10 303 V247 A7 7 0 0 1 17 240z" fill="#c92a2a"/>
+<text x="41" y="269" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D16</text>
+<g transform="translate(41.0 289.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="263" font-size="16" font-weight="bold" fill="#2f3a2b">Elk Valley mines</text>
+<text x="86" y="282" font-size="15" fill="#2f3a2b">No hunting or shooting areas. Private:</text>
+<text x="86" y="301" font-size="15" fill="#2f3a2b">company permission before entry</text>
+<rect x="10" y="318" width="380" height="56" rx="7" fill="#fffaf0" stroke="#5b6b3e" stroke-width="1.6"/>
+<path d="M17 318 H72 V374 H17 A7 7 0 0 1 10 367 V325 A7 7 0 0 1 17 318z" fill="#5b6b3e"/>
+<text x="41" y="340" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D17</text>
+<g transform="translate(41.0 360.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><rect x="-6" y="-13" width="12" height="18" rx="2"/><rect x="-7" y="5" width="14" height="7" rx="1" fill="#fffaf0" stroke="none"/><path d="M-6 -6 H6"/></g>
+<text x="86" y="341" font-size="16" font-weight="bold" fill="#2f3a2b">Canal Flats</text>
+<text x="86" y="360" font-size="15" fill="#2f3a2b">Firearms using shot only, MU 4-25</text>
+<rect x="10" y="382" width="380" height="56" rx="7" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.6"/>
+<path d="M17 382 H72 V438 H17 A7 7 0 0 1 10 431 V389 A7 7 0 0 1 17 382z" fill="#c92a2a"/>
+<text x="41" y="404" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">D18</text>
+<g transform="translate(41.0 424.0)" fill="none" stroke="#fffaf0" stroke-width="2.4" stroke-linecap="round"><circle r="10"/><path d="M-7 7 L7 -7" stroke-width="3"/></g>
+<text x="86" y="405" font-size="16" font-weight="bold" fill="#2f3a2b">Sunshine Meadows</text>
+<text x="86" y="424" font-size="15" fill="#2f3a2b">No Hunting Area, MU 4-25</text>
+<rect x="12" y="451" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="32" y="463" font-size="14" fill="#2f3a2b">No shooting</text>
+<rect x="126.44000000000001" y="451" width="14" height="14" rx="3" fill="#c92a2a"/>
+<text x="146.44" y="463" font-size="14" fill="#2f3a2b">No hunting</text>
+<rect x="233.32" y="451" width="14" height="14" rx="3" fill="#5b6b3e"/>
+<text x="253.32" y="463" font-size="14" fill="#2f3a2b">Shot only</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" font-family="sans-serif" role="img" aria-label="A truck cooler cut open, side view, in the shade of a tree. Ice on top. Raw meat sealed at the bottom. Ready to eat food on top, kept apart behind a divider. Melt water drains out of the plug. In the shade, drain the melt water. Tip.">
+<rect width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Truck cooler: keep it cold, keep it apart</text>
+<rect x="0" y="254" width="400" height="10" fill="#d8ccb2"/>
+<rect x="360" y="120" width="10" height="134" fill="#6b4f35"/><ellipse cx="362" cy="96" rx="34" ry="40" fill="#55783f"/><ellipse cx="350" cy="84" rx="18" ry="14" fill="#6f8a46"/>
+<ellipse cx="200" cy="255" rx="170" ry="7" fill="#6b5b4b" opacity=".35"/>
+<rect x="44" y="66" width="284" height="182" rx="10" fill="#3d6f99"/>
+<rect x="40" y="54" width="292" height="16" rx="5" fill="#2f5f88"/><rect x="166" y="46" width="40" height="8" rx="3" fill="#2f3a2b"/>
+<rect x="56" y="76" width="260" height="160" rx="4" fill="#eef4f8"/>
+<rect x="194" y="76" width="5" height="160" fill="#9fb3c2"/>
+<rect x="62" y="82" width="40" height="30" rx="4" fill="#bfe0f2" stroke="#4a7fb0" stroke-width="1.4"/><path d="M68 90 l8 8 M82 88 l10 10" stroke="#ffffff" stroke-width="1.6"/>
+<rect x="104" y="82" width="40" height="30" rx="4" fill="#bfe0f2" stroke="#4a7fb0" stroke-width="1.4"/><path d="M110 90 l8 8 M124 88 l10 10" stroke="#ffffff" stroke-width="1.6"/>
+<rect x="146" y="82" width="40" height="30" rx="4" fill="#bfe0f2" stroke="#4a7fb0" stroke-width="1.4"/><path d="M152 90 l8 8 M166 88 l10 10" stroke="#ffffff" stroke-width="1.6"/>
+<rect x="96" y="116" width="62" height="22" rx="4" fill="#eef4f8"/><text x="127" y="133" font-size="17" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Ice</text>
+<text x="126" y="166" font-size="16" font-weight="bold" fill="#a12a2a" text-anchor="middle">Raw meat</text>
+<text x="126" y="184" font-size="15" fill="#2f3a2b" text-anchor="middle">sealed, bottom</text>
+<rect x="62" y="196" width="62" height="30" rx="5" fill="#d98c8c" stroke="#a12a2a" stroke-width="1.4"/><path d="M66 202 H120" stroke="#ffffff" stroke-width="2"/>
+<rect x="128" y="196" width="60" height="30" rx="5" fill="#d98c8c" stroke="#a12a2a" stroke-width="1.4"/><path d="M132 202 H184" stroke="#ffffff" stroke-width="2"/>
+<rect x="206" y="82" width="104" height="58" rx="4" fill="#fbf7ee" stroke="#9fb3c2" stroke-width="1.4"/>
+<path d="M214 130 h30 l-15 -18z" fill="#e0b55a" stroke="#8a6d1f" stroke-width="1"/><rect x="252" y="112" width="26" height="20" rx="3" fill="#8a9a6b"/><rect x="282" y="104" width="20" height="28" rx="3" fill="#e8590c"/>
+<text x="258" y="166" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ready food</text>
+<text x="258" y="184" font-size="15" fill="#2f3a2b" text-anchor="middle">on top, apart</text>
+<rect x="56" y="224" width="260" height="12" fill="#8fb6d4" opacity=".8"/>
+<rect x="328" y="224" width="10" height="10" rx="2" fill="#2f3a2b"/>
+<path d="M343 230 c-3 4 -3 7 0 7 c3 0 3 -3 0 -7z" fill="#4a7fb0"/>
+<path d="M343 239 c-3 4 -3 7 0 7 c3 0 3 -3 0 -7z" fill="#4a7fb0"/>
+<path d="M343 247 c-3 4 -3 7 0 7 c3 0 3 -3 0 -7z" fill="#4a7fb0"/>
+<rect x="0" y="264" width="400" height="34" fill="#fffaf0"/>
+<text x="200" y="288" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">In the shade. Drain melt water (Tip)</text>
+</svg>

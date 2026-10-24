@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="PFD stowed under the seat does not help: in cold water you will not get it on. PFD worn and zipped over your hunting jacket works. About 87 percent of boaters who drowned were not wearing one.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Worn, not stowed</text>
+  <rect x="0" y="200" width="400" height="100" fill="#4a7fb0" opacity=".25"/>
+  <path d="M20 190 L180 190 L166 220 L34 220 Z" fill="#8a8f88" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="70" y="164" width="60" height="10" fill="#6b4f35"/><rect x="80" y="176" width="40" height="12" rx="3" fill="#e8590c"/>
+  <circle cx="100" cy="110" r="13" fill="#d9b48f"/><rect x="86" y="124" width="28" height="40" rx="6" fill="#6b6f48"/>
+  <path d="M60 60 l80 80 M140 60 l-80 80" stroke="#c0392b" stroke-width="6" opacity=".85"/>
+  <path d="M220 190 L380 190 L366 220 L234 220 Z" fill="#8a8f88" stroke="#2f3a2b" stroke-width="2"/>
+  <circle cx="300" cy="110" r="13" fill="#d9b48f"/><rect x="284" y="124" width="32" height="44" rx="6" fill="#6b6f48"/>
+  <rect x="280" y="124" width="40" height="38" rx="8" fill="#e8590c"/><line x1="300" y1="126" x2="300" y2="160" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="270" y="168" width="60" height="10" fill="#6b4f35"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle"><text x="100" y="246" fill="#c0392b">Under the seat ✗</text><text x="300" y="246" fill="#2f6b3a">On and zipped ✓</text></g>
+  <text x="200" y="284" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">About 87% who drowned wore none</text>
+</svg>

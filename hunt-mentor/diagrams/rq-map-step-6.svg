@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 6: Your sign, seats and routes. Pins, glassing points, range rings, scent cone.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">6</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Your sign, seats and routes</text>
+<rect x="80" y="70" width="240" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><g><path d="M150 130 l-7 -12 a8 8 0 1 1 14 0 Z" fill="#e8590c"/><circle cx="150" cy="115" r="3" fill="#fff"/></g><g><path d="M180 160 l-7 -12 a8 8 0 1 1 14 0 Z" fill="#e8590c"/><circle cx="180" cy="145" r="3" fill="#fff"/></g><g transform="translate(260 110)"><g transform="translate(0 0) scale(0.9)"><rect x="-14" y="-8" width="11" height="18" rx="3" fill="#2f3a2b"/><rect x="3" y="-8" width="11" height="18" rx="3" fill="#2f3a2b"/><rect x="-4" y="-4" width="8" height="6" fill="#2f3a2b"/><circle cx="-8.5" cy="10" r="4" fill="#4a7fb0"/><circle cx="8.5" cy="10" r="4" fill="#4a7fb0"/></g></g><circle cx="260" cy="110" r="50" fill="none" stroke="#e8590c" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Pins, glassing points, range rings, scent cone.</text>
+</svg>

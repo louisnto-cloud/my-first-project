@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 368" font-family="sans-serif" role="img" aria-label="Memory hook HILLS: Heart first, base before the pack. Incline: hills or stairs every week. Legs: strength twice a week. Load a little: small steps up, an easy 4th week. Sleep 7 to 9 hours. Talk, not sing. Add a little, add often.">
+<rect width="400" height="368" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hook: HILLS</text>
+<rect x="8" y="44" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="44" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="79" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">H</text>
+<text x="74" y="66" font-size="18" font-weight="bold" fill="#2f3a2b">Heart first</text>
+<text x="74" y="87" font-size="15" fill="#2f3a2b">Base before the pack</text>
+<rect x="8" y="102" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="102" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="137" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">I</text>
+<text x="74" y="124" font-size="18" font-weight="bold" fill="#2f3a2b">Incline</text>
+<text x="74" y="145" font-size="15" fill="#2f3a2b">Hills or stairs every week</text>
+<rect x="8" y="160" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="160" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="195" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">L</text>
+<text x="74" y="182" font-size="18" font-weight="bold" fill="#2f3a2b">Legs</text>
+<text x="74" y="203" font-size="15" fill="#2f3a2b">Strength twice a week</text>
+<rect x="8" y="218" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="218" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="253" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">L</text>
+<text x="74" y="240" font-size="18" font-weight="bold" fill="#2f3a2b">Load a little</text>
+<text x="74" y="261" font-size="15" fill="#2f3a2b">Small steps up, easy 4th week</text>
+<rect x="8" y="276" width="384" height="52" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="1.5"/>
+<rect x="8" y="276" width="52" height="52" rx="8" fill="#e8590c"/>
+<text x="34" y="311" font-size="26" font-weight="bold" fill="#fffaf0" text-anchor="middle">S</text>
+<text x="74" y="298" font-size="18" font-weight="bold" fill="#2f3a2b">Sleep</text>
+<text x="74" y="319" font-size="15" fill="#2f3a2b">7 to 9 hours</text>
+<text x="200" y="352" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Talk, not sing. Add a little, add often.</text>
+</svg>

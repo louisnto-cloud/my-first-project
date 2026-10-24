@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 524" font-family="sans-serif" role="img" aria-label="Bar chart of Alaska fees for a nonresident alien, US dollars, 85 percent. Locking tags: brown or grizzly bear 1,300, Dall sheep 1,100, moose 1,000, caribou 850, mountain goat 800, black bear 600, wolverine 500, deer 400, wolf 100. The annual hunting licence is 630. Guide fees are extra: get written quotes.">
+<rect x="0" y="0" width="400" height="524" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Alaska fees, nonresident alien</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">USD, locking tags and licence (85%)</text>
+<line x1="120.0" y1="84" x2="120.0" y2="484" stroke="#dfe6d3" stroke-width="2"/>
+<text x="120" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0</text>
+<line x1="211.4" y1="84" x2="211.4" y2="484" stroke="#dfe6d3" stroke-width="2"/>
+<text x="211.429" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">500</text>
+<line x1="302.9" y1="84" x2="302.9" y2="484" stroke="#dfe6d3" stroke-width="2"/>
+<text x="302.857" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1000</text>
+<text x="8" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">Brown bear</text>
+<rect x="120.0" y="92" width="237.7" height="22" rx="4" fill="#e8590c"/>
+<text x="124" y="108" font-size="14" font-weight="bold" fill="#fff">$1,300</text>
+<text x="8" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">Dall sheep</text>
+<rect x="120.0" y="132" width="201.1" height="22" rx="4" fill="#4a7fb0"/>
+<text x="327.143" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">$1,100</text>
+<text x="8" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">Moose</text>
+<rect x="120.0" y="172" width="182.9" height="22" rx="4" fill="#4a7fb0"/>
+<text x="308.857" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">$1,000</text>
+<text x="8" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">Caribou</text>
+<rect x="120.0" y="212" width="155.4" height="22" rx="4" fill="#4a7fb0"/>
+<text x="281.429" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">$850</text>
+<text x="8" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">Goat</text>
+<rect x="120.0" y="252" width="146.3" height="22" rx="4" fill="#4a7fb0"/>
+<text x="272.286" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">$800</text>
+<text x="8" y="308" font-size="14" font-weight="bold" fill="#2f3a2b">Licence</text>
+<rect x="120.0" y="292" width="115.2" height="22" rx="4" fill="#8a9a6b"/>
+<text x="241.2" y="308" font-size="14" font-weight="bold" fill="#2f3a2b">$630</text>
+<text x="8" y="348" font-size="14" font-weight="bold" fill="#2f3a2b">Black bear</text>
+<rect x="120.0" y="332" width="109.7" height="22" rx="4" fill="#4a7fb0"/>
+<text x="235.714" y="348" font-size="14" font-weight="bold" fill="#2f3a2b">$600</text>
+<text x="8" y="388" font-size="14" font-weight="bold" fill="#2f3a2b">Wolverine</text>
+<rect x="120.0" y="372" width="91.4" height="22" rx="4" fill="#4a7fb0"/>
+<text x="217.429" y="388" font-size="14" font-weight="bold" fill="#2f3a2b">$500</text>
+<text x="8" y="428" font-size="14" font-weight="bold" fill="#2f3a2b">Deer</text>
+<rect x="120.0" y="412" width="73.1" height="22" rx="4" fill="#4a7fb0"/>
+<text x="199.143" y="428" font-size="14" font-weight="bold" fill="#2f3a2b">$400</text>
+<text x="8" y="468" font-size="14" font-weight="bold" fill="#2f3a2b">Wolf</text>
+<rect x="120.0" y="452" width="18.3" height="22" rx="4" fill="#4a7fb0"/>
+<text x="144.286" y="468" font-size="14" font-weight="bold" fill="#2f3a2b">$100</text>
+<text x="200" y="502" font-size="14" fill="#2f3a2b" text-anchor="middle">Plus guide fees: get written quotes.</text>
+</svg>

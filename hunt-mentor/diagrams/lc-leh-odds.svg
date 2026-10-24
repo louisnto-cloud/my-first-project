@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 537" font-family="sans-serif" role="img" aria-label="Bar chart of 2025 first choice LEH (Limited Entry Hunting) odds near your bases, applicants per authorization; shorter is easier. Hunt code, species, MU (Management Unit). Antlerless elk 2218 in MU 8-04: 111.0 to 1. Antlerless deer 7017 MU 3-30: 28.4. Deer 7014 MU 3-27: 22.4. Deer 7011 MU 3-19: 21.0. Deer 7013 MU 3-26: 19.5. Bull moose 4051 MU 3-12: 17.8. Deer 7002 MU 2-11: 17.4. Deer 7012 MU 3-20: 17.1. Moose 4547 MU 8-10: 15.7. Deer 7015 MU 3-28: 14.9. Deer 7018 MU 3-31: 10.4. Deer 7005 MU 3-13: 9.2. Moose 4061 MU 3-28: 5.6. Deer 7020 MU 3-33: 5.3. Deer 7006 MU 3-14: 4.9. Moose 4069 MU 3-32: 2.5. Moose 4081 MU 3-46: 0.7. Source: LEH synopsis 2026 to 2027. Codes change yearly.">
+<rect width="400" height="537" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Published odds near your bases</text>
+<text x="200" y="47" font-size="15" fill="#6b5b4b" text-anchor="middle">Applicants per tag, 2025 first choice</text>
+<text x="200" y="67" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Shorter is easier</text>
+<rect x="6" y="82" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="99" font-size="15" font-weight="bold" fill="#2f3a2b">2218</text>
+<text x="58" y="99" font-size="15" fill="#2f3a2b">elk</text>
+<text x="144" y="99" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">8-04</text>
+<rect x="150" y="86.5" width="180" height="14" rx="2" fill="#8b5a2b"/>
+<path d="M308 102.5 L314 84.5 M314 102.5 L320 84.5" stroke="#fffaf0" stroke-width="3"/>
+<text x="335" y="99" font-size="15" font-weight="bold" fill="#2f3a2b">111.0:1</text>
+<text x="12" y="122" font-size="15" font-weight="bold" fill="#2f3a2b">7017</text>
+<text x="58" y="122" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="122" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-30</text>
+<rect x="150" y="109.5" width="172.0" height="14" rx="2" fill="#8a9a6b"/>
+<text x="327" y="122" font-size="15" font-weight="bold" fill="#2f3a2b">28.4:1</text>
+<rect x="6" y="128" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="145" font-size="15" font-weight="bold" fill="#2f3a2b">7014</text>
+<text x="58" y="145" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="145" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-27</text>
+<rect x="150" y="132.5" width="135.7" height="14" rx="2" fill="#8a9a6b"/>
+<text x="290.7" y="145" font-size="15" font-weight="bold" fill="#2f3a2b">22.4:1</text>
+<text x="12" y="168" font-size="15" font-weight="bold" fill="#2f3a2b">7011</text>
+<text x="58" y="168" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="168" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-19</text>
+<rect x="150" y="155.5" width="127.2" height="14" rx="2" fill="#8a9a6b"/>
+<text x="282.2" y="168" font-size="15" font-weight="bold" fill="#2f3a2b">21.0:1</text>
+<rect x="6" y="174" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="191" font-size="15" font-weight="bold" fill="#2f3a2b">7013</text>
+<text x="58" y="191" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="191" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-26</text>
+<rect x="150" y="178.5" width="118.1" height="14" rx="2" fill="#8a9a6b"/>
+<text x="273.1" y="191" font-size="15" font-weight="bold" fill="#2f3a2b">19.5:1</text>
+<text x="12" y="214" font-size="15" font-weight="bold" fill="#2f3a2b">4051</text>
+<text x="58" y="214" font-size="15" fill="#2f3a2b">moose</text>
+<text x="144" y="214" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-12</text>
+<rect x="150" y="201.5" width="107.8" height="14" rx="2" fill="#e8590c"/>
+<text x="262.8" y="214" font-size="15" font-weight="bold" fill="#2f3a2b">17.8:1</text>
+<rect x="6" y="220" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="237" font-size="15" font-weight="bold" fill="#2f3a2b">7002</text>
+<text x="58" y="237" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="237" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">2-11</text>
+<rect x="150" y="224.5" width="105.4" height="14" rx="2" fill="#8a9a6b"/>
+<text x="260.4" y="237" font-size="15" font-weight="bold" fill="#2f3a2b">17.4:1</text>
+<text x="12" y="260" font-size="15" font-weight="bold" fill="#2f3a2b">7012</text>
+<text x="58" y="260" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="260" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-20</text>
+<rect x="150" y="247.5" width="103.6" height="14" rx="2" fill="#8a9a6b"/>
+<text x="258.6" y="260" font-size="15" font-weight="bold" fill="#2f3a2b">17.1:1</text>
+<rect x="6" y="266" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="283" font-size="15" font-weight="bold" fill="#2f3a2b">4547</text>
+<text x="58" y="283" font-size="15" fill="#2f3a2b">moose</text>
+<text x="144" y="283" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">8-10</text>
+<rect x="150" y="270.5" width="95.1" height="14" rx="2" fill="#e8590c"/>
+<text x="250.1" y="283" font-size="15" font-weight="bold" fill="#2f3a2b">15.7:1</text>
+<text x="12" y="306" font-size="15" font-weight="bold" fill="#2f3a2b">7015</text>
+<text x="58" y="306" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="306" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-28</text>
+<rect x="150" y="293.5" width="90.2" height="14" rx="2" fill="#8a9a6b"/>
+<text x="245.2" y="306" font-size="15" font-weight="bold" fill="#2f3a2b">14.9:1</text>
+<rect x="6" y="312" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="329" font-size="15" font-weight="bold" fill="#2f3a2b">7018</text>
+<text x="58" y="329" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="329" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-31</text>
+<rect x="150" y="316.5" width="63.0" height="14" rx="2" fill="#8a9a6b"/>
+<text x="218" y="329" font-size="15" font-weight="bold" fill="#2f3a2b">10.4:1</text>
+<text x="12" y="352" font-size="15" font-weight="bold" fill="#2f3a2b">7005</text>
+<text x="58" y="352" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="352" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-13</text>
+<rect x="150" y="339.5" width="55.7" height="14" rx="2" fill="#8a9a6b"/>
+<text x="210.7" y="352" font-size="15" font-weight="bold" fill="#2f3a2b">9.2:1</text>
+<rect x="6" y="358" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="375" font-size="15" font-weight="bold" fill="#2f3a2b">4061</text>
+<text x="58" y="375" font-size="15" fill="#2f3a2b">moose</text>
+<text x="144" y="375" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-28</text>
+<rect x="150" y="362.5" width="33.9" height="14" rx="2" fill="#e8590c"/>
+<text x="188.9" y="375" font-size="15" font-weight="bold" fill="#2f3a2b">5.6:1</text>
+<text x="12" y="398" font-size="15" font-weight="bold" fill="#2f3a2b">7020</text>
+<text x="58" y="398" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="398" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-33</text>
+<rect x="150" y="385.5" width="32.1" height="14" rx="2" fill="#8a9a6b"/>
+<text x="187.1" y="398" font-size="15" font-weight="bold" fill="#2f3a2b">5.3:1</text>
+<rect x="6" y="404" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="421" font-size="15" font-weight="bold" fill="#2f3a2b">7006</text>
+<text x="58" y="421" font-size="15" fill="#2f3a2b">deer</text>
+<text x="144" y="421" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-14</text>
+<rect x="150" y="408.5" width="29.7" height="14" rx="2" fill="#8a9a6b"/>
+<text x="184.7" y="421" font-size="15" font-weight="bold" fill="#2f3a2b">4.9:1</text>
+<text x="12" y="444" font-size="15" font-weight="bold" fill="#2f3a2b">4069</text>
+<text x="58" y="444" font-size="15" fill="#2f3a2b">moose</text>
+<text x="144" y="444" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-32</text>
+<rect x="150" y="431.5" width="15.1" height="14" rx="2" fill="#e8590c"/>
+<text x="170.1" y="444" font-size="15" font-weight="bold" fill="#2f3a2b">2.5:1</text>
+<rect x="6" y="450" width="388" height="23" rx="4" fill="#f4eedf"/>
+<text x="12" y="467" font-size="15" font-weight="bold" fill="#2f3a2b">4081</text>
+<text x="58" y="467" font-size="15" fill="#2f3a2b">moose</text>
+<text x="144" y="467" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">3-46</text>
+<rect x="150" y="454.5" width="4.2" height="14" rx="2" fill="#e8590c"/>
+<text x="159.2" y="467" font-size="15" font-weight="bold" fill="#2f3a2b">0.7:1</text>
+<rect x="12" y="486" width="14" height="14" rx="3" fill="#8a9a6b"/>
+<text x="32" y="498" font-size="15" fill="#2f3a2b">antlerless deer</text>
+<rect x="152.9" y="486" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="172.9" y="498" font-size="15" fill="#2f3a2b">bull moose</text>
+<rect x="266.20000000000005" y="486" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="286.2" y="498" font-size="15" fill="#2f3a2b">antlerless elk</text>
+<text x="12" y="523" font-size="14" fill="#6b5b4b">LEH synopsis 2026 to 2027. Codes change yearly.</text>
+</svg>

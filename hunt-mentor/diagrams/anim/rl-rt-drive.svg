@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation. A truck drives a valley road. As it passes, labels appear on what to notice through the window: a bench on the slope, an old burn with standing dead trees, a saddle on the skyline, tracks crossing the road, timber on the cool face, and grass on the sunny face.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Read the land through the window</text>
+<rect x="0" y="34" width="400" height="206" fill="#e3ecf3"/>
+<path d="M0 128 L48 92 L100 104 L150 80 L205 112 L262 64 L330 94 L400 82 L400 240 L0 240z" fill="#e8e3bf"/>
+<path d="M262 64 L330 94 L400 82 L400 240 L244 240 C258 190 266 120 262 64z" fill="#8fa077"/>
+<path d="M205 112 L262 64 C266 120 258 190 244 240 L196 240 C210 200 214 150 205 112z" fill="#dcdcb6"/>
+<path d="M40 150 l-3 -7 M40 150 l0 -8 M40 150 l3 -7" stroke="#a89a5a" stroke-width="1.6"/>
+<path d="M96 160 l-3 -7 M96 160 l0 -8 M96 160 l3 -7" stroke="#a89a5a" stroke-width="1.6"/>
+<path d="M118 140 l-3 -7 M118 140 l0 -8 M118 140 l3 -7" stroke="#a89a5a" stroke-width="1.6"/>
+<path d="M110 214 l-3 -7 M110 214 l0 -8 M110 214 l3 -7" stroke="#a89a5a" stroke-width="1.6"/>
+<path d="M30 160 l-3 -7 M30 160 l0 -8 M30 160 l3 -7" stroke="#a89a5a" stroke-width="1.6"/>
+<path d="M28 176 C60 172 100 172 132 174 L132 180 C100 178 60 178 28 182z" fill="#c9bf8a"/>
+<path d="M28 176 C60 172 100 172 132 174" stroke="#8b7a4a" stroke-width="2.4" fill="none"/>
+<path d="M158 158 v-30 M158 140 l6 -5 M158 146 l-5 -4" stroke="#4a4a46" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M172 150 v-34 M172 130 l6 -5 M172 136 l-5 -4" stroke="#4a4a46" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M186 160 v-28 M186 143 l6 -5 M186 149 l-5 -4" stroke="#4a4a46" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M198 152 v-30 M198 134 l6 -5 M198 140 l-5 -4" stroke="#4a4a46" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M166 172 v-22 M166 159 l6 -5 M166 163 l-5 -4" stroke="#4a4a46" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M292 86 L300.32 112 L283.68 112z" fill="#2f4a32"/><rect x="290.5" y="112" width="3" height="4" fill="#5a412a"/>
+<path d="M318 94 L327.6 124 L308.4 124z" fill="#2f4a32"/><rect x="316.5" y="124" width="3" height="4" fill="#5a412a"/>
+<path d="M346 82 L354.32 108 L337.68 108z" fill="#2f4a32"/><rect x="344.5" y="108" width="3" height="4" fill="#5a412a"/>
+<path d="M374 88 L383.6 118 L364.4 118z" fill="#2f4a32"/><rect x="372.5" y="118" width="3" height="4" fill="#5a412a"/>
+<path d="M300 128 L308.96 156 L291.04 156z" fill="#2f4a32"/><rect x="298.5" y="156" width="3" height="4" fill="#5a412a"/>
+<path d="M334 136 L343.6 166 L324.4 166z" fill="#2f4a32"/><rect x="332.5" y="166" width="3" height="4" fill="#5a412a"/>
+<path d="M368 124 L376.96 152 L359.04 152z" fill="#2f4a32"/><rect x="366.5" y="152" width="3" height="4" fill="#5a412a"/>
+<path d="M390 154 L398.32 180 L381.68 180z" fill="#2f4a32"/><rect x="388.5" y="180" width="3" height="4" fill="#5a412a"/>
+<circle cx="205" cy="112" r="4" fill="#c2410c"/>
+<path d="M0 248 H400" stroke="#b8b0a0" stroke-width="18"/>
+<path d="M202 236 l-2 4 h2.4z M205 236 l2 4 h-2.4z" fill="#6b4f35"/>
+<path d="M210 242 l-2 4 h2.4z M213 242 l2 4 h-2.4z" fill="#6b4f35"/>
+<path d="M202 248 l-2 4 h2.4z M205 248 l2 4 h-2.4z" fill="#6b4f35"/>
+<path d="M210 254 l-2 4 h2.4z M213 254 l2 4 h-2.4z" fill="#6b4f35"/>
+<g><g transform="translate(0 248)"><rect x="-22" y="-12" width="30" height="14" rx="2" fill="#5c6f8a"/><rect x="8" y="-18" width="16" height="20" rx="3" fill="#5c6f8a"/><rect x="12" y="-15" width="9" height="7" fill="#cfe0f0"/><circle cx="-12" cy="4" r="5" fill="#2f3a2b"/><circle cx="16" cy="4" r="5" fill="#2f3a2b"/></g><animateMotion dur="8s" fill="freeze" path="M-20 0 H420"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.2s" dur=".4s" fill="freeze"/><line x1="60" y1="176" x2="75.582" y2="204" stroke="#e8590c" stroke-width="1.8"/><circle cx="60" cy="176" r="2.6" fill="#e8590c"/><rect x="14.0" y="198.0" width="61.6" height="28.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="44.791" y="217.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Bench</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.6s" dur=".4s" fill="freeze"/><line x1="176" y1="160" x2="150.816" y2="196" stroke="#e8590c" stroke-width="1.8"/><circle cx="176" cy="160" r="2.6" fill="#e8590c"/><rect x="112.0" y="196.0" width="77.6" height="28.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="150.816" y="215.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Old burn</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.8s" dur=".4s" fill="freeze"/><line x1="205" y1="108" x2="205" y2="68" stroke="#e8590c" stroke-width="1.8"/><circle cx="205" cy="108" r="2.6" fill="#e8590c"/><rect x="172.0" y="40.0" width="66.1" height="28.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="205" y="59.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Saddle</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="4.6s" dur=".4s" fill="freeze"/><line x1="210" y1="252" x2="221.969" y2="268" stroke="#8b5a2b" stroke-width="1.8"/><circle cx="210" cy="252" r="2.6" fill="#8b5a2b"/><rect x="212.0" y="268.0" width="180.0" height="28.0" rx="5" fill="#8b5a2b" stroke="#8b5a2b" stroke-width="1.2"/>
+<text x="301.985" y="287.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Tracks cross the road</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="5.2s" dur=".4s" fill="freeze"/><rect x="252.7" y="194.0" width="139.3" height="28.0" rx="5" fill="#2f3a2b" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="322.368" y="213.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Cool face timber</text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" begin="6.4s" dur=".4s" fill="freeze"/><line x1="70" y1="142" x2="60" y2="72" stroke="#e8590c" stroke-width="1.8"/><circle cx="70" cy="142" r="2.6" fill="#e8590c"/><rect x="14.0" y="44.0" width="145.4" height="28.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="86.6815" y="63.5" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Sunny face grass</text></g>
+</svg>

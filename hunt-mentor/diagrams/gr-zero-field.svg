@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Once zeroed, shoot from sitting with shooting sticks, the way you will shoot a deer. Confirm with a fresh 3 shot group.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Then shoot like you hunt</text>
+  <rect x="0" y="240" width="400" height="60" fill="#dfe6d3"/>
+  <g stroke="#2f3a2b" stroke-width="4" stroke-linecap="round" fill="none">
+    <line x1="210" y1="240" x2="250" y2="140"/><line x1="290" y1="240" x2="250" y2="140"/>
+  </g>
+  <circle cx="140" cy="126" r="16" fill="#2f3a2b"/>
+  <path d="M140 142 L130 200 L176 210 L196 240" stroke="#2f3a2b" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M136 156 L200 150 L250 142" stroke="#2f3a2b" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M110 152 L160 146 L340 128" stroke="#8b5a2b" stroke-width="7" stroke-linecap="round"/>
+  <rect x="150" y="134" width="60" height="8" fill="#2f3a2b"/>
+  <text x="300" y="200" font-size="15" font-weight="bold" fill="#2f3a2b">Sticks</text>
+  <text x="60" y="230" font-size="15" font-weight="bold" fill="#2f3a2b">Sitting</text>
+  <text x="200" y="280" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Know your hit range from here (Tip)</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Phone sketch of the slope steepness tool, side view. Gentle benches of 15 to 30 percent, used most by elk, in green. Steep ground past 40 to 50 percent, used far less, in red.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<defs><clipPath id="mc-elk-map-3-clip"><rect x="92" y="68" width="216" height="222" rx="14"/></clipPath></defs>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="#f4ecdc" stroke="#23261f" stroke-width="2"/>
+<g clip-path="url(#mc-elk-map-3-clip)"><rect x="92" y="68" width="216" height="222" fill="#e3ecf3"/>
+<path d="M92 272 L220 238 L304 92 L308 92 L308 290 L92 290z" fill="#dfe6d3"/>
+<path d="M96 271 L220 238" stroke="#2f6e3b" stroke-width="7" stroke-linecap="round"/>
+<path d="M220 238 L302 96" stroke="#c0392b" stroke-width="7" stroke-linecap="round"/>
+<line x1="162" y1="256" x2="150" y2="225" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="162" cy="256" r="2.6" fill="#2f3a2b"/>
+<rect x="101.7" y="176.0" width="96.5" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="150" y="196.5" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">15 to 30%</text>
+<text x="150" y="216" font-size="15" fill="#2f3a2b" text-anchor="middle">used most</text>
+<line x1="270" y1="152" x2="235.893" y2="119" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="270" cy="152" r="2.6" fill="#2f3a2b"/>
+<rect x="104.1" y="80.0" width="131.8" height="49.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="170" y="100.5" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Past 40 to 50%</text>
+<text x="170" y="120" font-size="15" fill="#2f3a2b" text-anchor="middle">used far less</text></g>
+<rect x="90" y="36" width="220" height="256" rx="16" fill="none" stroke="#23261f" stroke-width="2"/>
+<path d="M90 68 V52 A16 16 0 0 1 106 36 H294 A16 16 0 0 1 310 52 V68z" fill="#2f3a2b"/>
+<text x="200" y="58" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Slope steepness</text>
+</svg>

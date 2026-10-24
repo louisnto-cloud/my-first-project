@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 416" font-family="sans-serif" role="img" aria-label="Four groups of BC ducks, each drawn in its typical pose. Puddle ducks: mallard, wigeon, pintail, gadwall, two teal, shoveler, wood duck; they tip up to feed, tail in the air. Divers: goldeneyes, bufflehead, scaup, ring necked duck, canvasback, redhead; they dive under to feed. Mergansers: common and hooded, red breasted on the coast; thin toothed bill, eat fish. Sea ducks: scoters, long tailed duck, harlequin; mostly the coast, covered in their own lesson.">
+<rect width="400" height="416" fill="#fffaf0"/>
+<defs><clipPath id="mdk-groups-sc"><rect x="0" y="0" width="188" height="74"/></clipPath></defs>
+<rect x="8" y="8" width="188" height="196" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="1.6"/>
+<path d="M8 38 V18 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V38z" fill="#8b5a2b"/>
+<text x="102" y="29" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Puddle ducks</text>
+<g transform="translate(8 38)" clip-path="url(#mdk-groups-sc)"><rect x="0" y="0" width="188" height="74" fill="#eef4f8"/><g transform="translate(94 46) rotate(-62)"><ellipse cx="0" cy="0" rx="22" ry="11" fill="#9a8a72" stroke="#5a4e3e" stroke-width="1"/><path d="M18 -4 L30 -8 L28 4z" fill="#2a2a2a"/><path d="M26 -6 C30 -12 26 -14 24 -10" stroke="#2a2a2a" stroke-width="1.6" fill="none"/><path d="M-6 -6 C2 -8 10 -6 14 -2" stroke="#6b6456" stroke-width="1.4" fill="none"/><circle cx="-26" cy="0" r="8" fill="#2f6e3b"/><path d="M-32 -3 L-42 -1 L-32 3z" fill="#d9b13c"/></g><rect x="0" y="40" width="188" height="34" fill="#a9c8e0" opacity=".78"/><path d="M0 40 H188" stroke="#6f9cc2" stroke-width="1.6"/><path d="M66 44 q6 -3 12 0 M108 44 q6 -3 12 0" stroke="#6f9cc2" stroke-width="1.4" fill="none"/></g>
+<text x="102" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">Mallard, wigeon, pintail</text>
+<text x="102" y="152" font-size="15" fill="#2f3a2b" text-anchor="middle">Gadwall, 2 teal</text>
+<text x="102" y="172" font-size="15" fill="#2f3a2b" text-anchor="middle">Shoveler, wood duck</text>
+<text x="102" y="194" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Tip up to feed</text>
+<rect x="204" y="8" width="188" height="196" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="1.6"/>
+<path d="M204 38 V18 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V38z" fill="#4a7fb0"/>
+<text x="298" y="29" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Divers</text>
+<g transform="translate(204 38)" clip-path="url(#mdk-groups-sc)"><rect x="0" y="0" width="188" height="16" fill="#eef4f8"/><rect x="0" y="16" width="188" height="58" fill="#a9c8e0"/><path d="M0 16 H188" stroke="#6f9cc2" stroke-width="1.6"/><g transform="translate(96 46) rotate(30)"><ellipse cx="0" cy="0" rx="20" ry="9" fill="#f4f4f0" stroke="#2a2a2a" stroke-width="1.2"/><path d="M-4 -8 C4 -10 14 -6 18 -2" stroke="#2a2a2a" stroke-width="5" fill="none"/><circle cx="-20" cy="-4" r="8" fill="#1f3a2a"/><circle cx="-23" cy="-2" r="2" fill="#fff"/><path d="M-27 -3 L-33 0 L-27 1z" fill="#2a2a2a"/><path d="M14 2 L26 8 L22 0z" fill="#2a2a2a"/></g><circle cx="122" cy="34" r="3" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="128" cy="26" r="2.4" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="118" cy="22" r="2" fill="none" stroke="#fff" stroke-width="1.4"/></g>
+<text x="298" y="132" font-size="15" fill="#2f3a2b" text-anchor="middle">Goldeneyes, bufflehead</text>
+<text x="298" y="152" font-size="15" fill="#2f3a2b" text-anchor="middle">Scaup, ring necked</text>
+<text x="298" y="172" font-size="15" fill="#2f3a2b" text-anchor="middle">Canvasback, redhead</text>
+<text x="298" y="194" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Dive to feed</text>
+<rect x="8" y="212" width="188" height="196" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.6"/>
+<path d="M8 242 V222 a10 10 0 0 1 10 -10 H186 a10 10 0 0 1 10 10 V242z" fill="#2f3a2b"/>
+<text x="102" y="233" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Mergansers</text>
+<g transform="translate(8 242)" clip-path="url(#mdk-groups-sc)"><rect x="0" y="0" width="188" height="46" fill="#eef4f8"/><rect x="0" y="46" width="188" height="28" fill="#a9c8e0"/><path d="M0 46 H188" stroke="#6f9cc2" stroke-width="1.6"/><g transform="translate(96 44)"><path d="M-24 0 C-24 -10 -8 -12 8 -10 C18 -8 22 -2 20 2 C10 6 -14 6 -24 0z" fill="#e9e6de" stroke="#4a4a4a" stroke-width="1.2"/><path d="M-6 -10 C2 -12 12 -10 18 -4 L20 2 C10 0 0 -2 -6 -4z" fill="#8a8f96"/><path d="M-20 -4 C-24 -12 -22 -22 -16 -24 C-10 -26 -8 -20 -10 -12z" fill="#1f3a2a"/><path d="M-16 -24 C-12 -28 -6 -28 -4 -24 C-8 -22 -12 -21 -14 -20z" fill="#1f3a2a"/><path d="M-21 -19 L-40 -16 L-21 -16z" fill="#c0392b"/><path d="M-38 -17 l2 2 M-34 -17 l2 2 M-30 -17 l2 2 M-26 -17 l2 2" stroke="#7e2318" stroke-width=".9"/><circle cx="-17" cy="-20" r="1.5" fill="#fff"/><path d="M-38 -16 C-42 -12 -48 -12 -52 -14 L-56 -10 L-56 -20 L-52 -16 C-48 -18 -42 -20 -38 -18z" fill="#9fb2b8" stroke="#5b6f78" stroke-width="1"/></g></g>
+<text x="102" y="336" font-size="15" fill="#2f3a2b" text-anchor="middle">Common, hooded</text>
+<text x="102" y="356" font-size="15" fill="#2f3a2b" text-anchor="middle">(red breasted: coast)</text>
+<text x="102" y="376" font-size="15" fill="#2f3a2b" text-anchor="middle">Thin toothed bill</text>
+<text x="102" y="398" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Eat fish</text>
+<rect x="204" y="212" width="188" height="196" rx="10" fill="#ffffff" stroke="#4a5560" stroke-width="1.6"/>
+<path d="M204 242 V222 a10 10 0 0 1 10 -10 H382 a10 10 0 0 1 10 10 V242z" fill="#4a5560"/>
+<text x="298" y="233" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Sea ducks</text>
+<g transform="translate(204 242)" clip-path="url(#mdk-groups-sc)"><rect x="0" y="0" width="188" height="74" fill="#eef4f8"/><path d="M0 44 C14 36 28 36 42 44 C56 52 70 52 84 44 C98 36 112 36 126 44 C140 52 154 52 168 44 C176 40 182 40 188 42 V74 H0z" fill="#a9c8e0" stroke="#6f9cc2" stroke-width="1.6"/><g transform="translate(96 40)"><path d="M-22 2 C-22 -8 -8 -10 6 -8 C16 -6 20 0 18 4 C8 8 -14 8 -22 2z" fill="#1d1d1d"/><path d="M-18 -2 C-22 -10 -20 -18 -14 -20 C-8 -21 -6 -16 -8 -8z" fill="#1d1d1d"/><path d="M-20 -14 L-30 -10 L-20 -9z" fill="#e8762c"/><circle cx="-21" cy="-13" r="2.6" fill="#e8762c"/><circle cx="-14" cy="-15" r="2.2" fill="#fff"/><circle cx="-14" cy="-15" r="1" fill="#111"/></g></g>
+<text x="298" y="336" font-size="15" fill="#2f3a2b" text-anchor="middle">Scoters, long tailed</text>
+<text x="298" y="356" font-size="15" fill="#2f3a2b" text-anchor="middle">Harlequin</text>
+<text x="298" y="376" font-size="15" fill="#2f3a2b" text-anchor="middle">Mostly the coast</text>
+<text x="298" y="398" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Own lesson</text>
+</svg>

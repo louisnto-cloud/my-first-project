@@ -1,0 +1,1010 @@
+[
+ {
+  "id": "rq-wx-01",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Which weather has the strongest evidence for moving Interior mule deer in fall?",
+  "back": "Snow and cold. They trigger the move to winter range (85%).",
+  "diagram": "rq-wx-evidence"
+ },
+ {
+  "id": "rq-wx-02",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "What is a cold front?",
+  "back": "The edge of colder, denser air pushing under and replacing warmer air (80%).",
+  "diagram": "rq-wx-front-cross"
+ },
+ {
+  "id": "rq-wx-03",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Wind before and after a cold front?",
+  "back": "Before: south or southwest. After: west or northwest, colder, pressure rising (70%)."
+ },
+ {
+  "id": "rq-wx-04",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Penn State, 30 winter storms: deer before the storm?",
+  "back": "No real change in movement before storms (80%).",
+  "diagram": "rq-wx-storm-bars"
+ },
+ {
+  "id": "rq-wx-05",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Penn State, 30 winter storms: deer during the storm?",
+  "back": "They moved less during the storm (80%)."
+ },
+ {
+  "id": "rq-wx-06",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Glass the calm after a storm: fact or tip?",
+  "back": "A tip. No study here measured movement right after a front."
+ },
+ {
+  "id": "rq-wx-07",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Barometric pressure evidence for deer movement?",
+  "back": "Weak and mixed. Do not cancel a hunt for it (Tip)."
+ },
+ {
+  "id": "rq-wx-08",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "What explained most change in movement in one Oklahoma collar study?",
+  "back": "Temperature (65%).",
+  "diagram": "rq-wx-temp"
+ },
+ {
+  "id": "rq-wx-09",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Time of day versus weather: which matters more for deer activity?",
+  "back": "Time of day. Weather effects were smaller than the daily rhythm (65%)."
+ },
+ {
+  "id": "rq-wx-10",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Snow depth: when do mule deer struggle and when do they leave?",
+  "back": "Trouble near 30 cm, leave slopes near 50 cm (75%).",
+  "diagram": "hf-snow-depth"
+ },
+ {
+  "id": "rq-wx-11",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Wyoming mule deer: what set migration timing?",
+  "back": "Temperature and snowfall. Rifle season added only about 2% for does (85%)."
+ },
+ {
+  "id": "rq-wx-12",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "What best explained duck numbers in the Missouri weather study?",
+  "back": "A cumulative weather severity index: freezing days, snow depth and snow cover days (75%).",
+  "diagram": "rq-wx-wsi"
+ },
+ {
+  "id": "rq-wx-13",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "When does most BC Interior duck migration end?",
+  "back": "Late November, with freeze up (75%)."
+ },
+ {
+  "id": "rq-wx-14",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Canada geese on stormy days?",
+  "back": "Increased flights through the whole day (70%).",
+  "diagram": "rq-wx-birds"
+ },
+ {
+  "id": "rq-wx-15",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Pheasants in worse weather?",
+  "back": "They go deeper into thick cover (70%)."
+ },
+ {
+  "id": "rq-wx-16",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Chukar in heavy snow?",
+  "back": "They move lower and onto south facing slopes (75%)."
+ },
+ {
+  "id": "rq-wx-17",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "First step when reading a forecast for hunting?",
+  "back": "Wind: direction and speed for dawn, midday and dusk (Tip).",
+  "diagram": "rq-wx-step-1"
+ },
+ {
+  "id": "rq-wx-18",
+  "deck": "Weather fronts and game movement: what the evidence says",
+  "front": "Memory hook SCRaP?",
+  "back": "Snow and cold, Rut, and Pressure from hunters move deer most."
+ },
+ {
+  "id": "rq-pr-01",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Pennsylvania aerial survey: share of hunters within 0.5 km of a road?",
+  "back": "73% (90%).",
+  "diagram": "rq-pr-road-bands"
+ },
+ {
+  "id": "rq-pr-02",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Average farthest distance hunters got from a road (Pennsylvania)?",
+  "back": "0.84 km (90%).",
+  "diagram": "rq-pr-odds"
+ },
+ {
+  "id": "rq-pr-03",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Each 1 km closer to a road: how many more hunters?",
+  "back": "About 3 times more likely to be hunted (90%)."
+ },
+ {
+  "id": "rq-pr-04",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Each 10 degrees flatter: how many more hunters?",
+  "back": "About 1.25 times (90%)."
+ },
+ {
+  "id": "rq-pr-05",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "What do hunted white tailed deer do with their movement?",
+  "back": "Move less and use smaller areas more intensively (65%).",
+  "diagram": "rq-pr-deer-resp"
+ },
+ {
+  "id": "rq-pr-06",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Wyoming mule deer bucks in rifle season?",
+  "back": "They chose security habitat away from motorized routes (85%)."
+ },
+ {
+  "id": "rq-pr-07",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Oregon mule deer: distance to closed versus open roads in season?",
+  "back": "About 190 m from closed roads, 1,250 m from open roads (70%).",
+  "diagram": "rq-pr-roads-deer"
+ },
+ {
+  "id": "rq-pr-08",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Utah elk on public land: before hunt versus rifle season?",
+  "back": "Up to 64% before, 29% in rifle season (80%).",
+  "diagram": "rq-pr-elk-public"
+ },
+ {
+  "id": "rq-pr-09",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Where does pushed game go? (TSFD)",
+  "back": "Thick, Steep, Far, Dark (Tip).",
+  "diagram": "rq-pr-where"
+ },
+ {
+  "id": "rq-pr-10",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Opening morning plan to use other hunters?",
+  "back": "Sit the trail between the crowd and the nearest thick, steep cover, before light (Tip).",
+  "diagram": "rq-pr-crossing"
+ },
+ {
+  "id": "rq-pr-11",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Region 3 ATV for hunting closure on the west bank?",
+  "back": "MUs 3-28, 3-29, 3-30, 1 September to 10 December (99%)."
+ },
+ {
+  "id": "rq-pr-12",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Is it legal to drive at deer to push them?",
+  "back": "No. Item 25: no motor vehicle or other machine to herd or harass wildlife (99%)."
+ },
+ {
+  "id": "rq-pr-13",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Item 45, page 12?",
+  "back": "Do not block or harass a legal hunter or trapper (99%)."
+ },
+ {
+  "id": "rq-pr-14",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "You bumped the same spot twice this week. Tip?",
+  "back": "Rest it 3 or more days.",
+  "diagram": "rq-pr-bumped"
+ },
+ {
+  "id": "rq-pr-15",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "First step to find the pressure gap?",
+  "back": "Mark every open road and gate on the map (Tip).",
+  "diagram": "rq-pr-step-1"
+ },
+ {
+  "id": "rq-pr-16",
+  "deck": "Hunting pressure: how people push game and where it goes",
+  "front": "Elk traffic study at Starkey: how little traffic changed elk use?",
+  "back": "About 1 vehicle every 12 hours (60%)."
+ },
+ {
+  "id": "rq-mg-01",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Four ways animals move in BC?",
+  "back": "Long distance (ducks, geese), up and down (mule deer, elk, moose, dusky grouse), short shifts (white tails), stay home (quail, chukar, ruffed grouse).",
+  "diagram": "rq-mg-types"
+ },
+ {
+  "id": "rq-mg-02",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "SIMDeer: share of collared mule deer that migrated?",
+  "back": "74% (78% in the 2020 update) (85%).",
+  "diagram": "rq-mg-md-numbers"
+ },
+ {
+  "id": "rq-mg-03",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "SIMDeer: average migration distance?",
+  "back": "47.2 km a year on the current page; 55 km in the 2020 update (85%)."
+ },
+ {
+  "id": "rq-mg-04",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Longest SIMDeer migration?",
+  "back": "102 km straight line, Apex Mountain area to west of Aspen Grove, 1 to 12 May (85%)."
+ },
+ {
+  "id": "rq-mg-05",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Do mule deer change routes each year?",
+  "back": "No. Most choose nearly the same path both ways (85%).",
+  "diagram": "rq-mg-md-route"
+ },
+ {
+  "id": "rq-mg-06",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "When do collared mule deer return to winter range?",
+  "back": "October to November; one year nearly all by mid October (85%)."
+ },
+ {
+  "id": "rq-mg-07",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Which leaves the high country last: deer, elk or moose?",
+  "back": "Moose (85%).",
+  "diagram": "rq-mg-big"
+ },
+ {
+  "id": "rq-mg-08",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Moose and snow?",
+  "back": "Little trouble to 40 cm; often winter in 50 cm or more (85%)."
+ },
+ {
+  "id": "rq-mg-09",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Studied Kamloops winter range elevation?",
+  "back": "Below about 760 m (80%).",
+  "diagram": "rq-mg-elev"
+ },
+ {
+  "id": "rq-mg-10",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "White tailed deer seasonal moves?",
+  "back": "Short: along major valleys or across from north slopes in summer to south slopes in winter (85%)."
+ },
+ {
+  "id": "rq-mg-11",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Snow geese on the Fraser delta come from where?",
+  "back": "Wrangel Island, about 5,000 km (80%).",
+  "diagram": "rq-mg-flyway"
+ },
+ {
+  "id": "rq-mg-12",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "When do Fraser delta snow geese shift to the Skagit?",
+  "back": "Late December (70 to 75%)."
+ },
+ {
+  "id": "rq-mg-13",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Interior ducks when plateau ponds freeze?",
+  "back": "They move to open valley water and the coast (65%)."
+ },
+ {
+  "id": "rq-mg-14",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Dusky grouse in fall?",
+  "back": "Move from open breeding areas into dense conifers, usually uphill (70%)."
+ },
+ {
+  "id": "rq-mg-15",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Fraser delta waterfowl food demand runs which months?",
+  "back": "September to April (80%)."
+ },
+ {
+  "id": "rq-mg-16",
+  "deck": "Migration routes in BC: deer, elk, moose and birds",
+  "front": "Memory hook 74, 47, 102?",
+  "back": "74% migrate, 47 km a year, 102 km the record (85%)."
+ },
+ {
+  "id": "rq-wr-01",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "What does Interior winter range look like?",
+  "back": "Steep south and west faces, broken rock, shrubs, old Douglas fir, in the dry forest zone (85%).",
+  "diagram": "rq-wr-what"
+ },
+ {
+  "id": "rq-wr-02",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "What is snow interception cover?",
+  "back": "Big conifer crowns that catch snow so deer can walk and feed below (80%).",
+  "diagram": "rq-wr-sic"
+ },
+ {
+  "id": "rq-wr-03",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Under what law are Ungulate Winter Ranges made?",
+  "back": "Sections 9 and 12 of the Government Actions Regulation, Forest and Range Practices Act (90%)."
+ },
+ {
+  "id": "rq-wr-04",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "What does order u-3-003 control?",
+  "back": "Primary forest activities: timber harvest, silviculture, roads. Keep snow interception cover (99%).",
+  "diagram": "rq-wr-order"
+ },
+ {
+  "id": "rq-wr-05",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Does a UWR order close hunting?",
+  "back": "Not by itself. Hunting rules come from the synopsis (85%, my reading).",
+  "diagram": "rq-wr-legal"
+ },
+ {
+  "id": "rq-wr-06",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Approved UWR polygons around Heffley Creek?",
+  "back": "None found in the layer query; nearest mule deer orders south toward Merritt and on the North Okanagan side (90%).",
+  "diagram": "rq-wr-map"
+ },
+ {
+  "id": "rq-wr-07",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Dewdrop Rosseau Creek WMA is winter range for what?",
+  "back": "Mule deer and California bighorn sheep (90%). Map C16: open lines only for vehicles."
+ },
+ {
+  "id": "rq-wr-08",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Before hunting a conservation land or WMA?",
+  "back": "Contact the regional office (99%, page 9)."
+ },
+ {
+  "id": "rq-wr-09",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Grazing lease with cattle on it?",
+  "back": "No hunting without the consent of the lessee or occupant (99%, page 9)."
+ },
+ {
+  "id": "rq-wr-10",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Region 3 mule deer bucks from 1 November in your MUs?",
+  "back": "4 points or better, to 10 December (99%)."
+ },
+ {
+  "id": "rq-wr-11",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Item 25, page 11?",
+  "back": "No power boat, aircraft, motor vehicle or other machine to herd or harass wildlife (99%)."
+ },
+ {
+  "id": "rq-wr-12",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "What disturbs wintering deer most, per agency fact sheets?",
+  "back": "Dogs, then ATVs and mountain bikes, then people off trail (70%).",
+  "diagram": "rq-wr-disturb"
+ },
+ {
+  "id": "rq-wr-13",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Why glass winter range instead of walking it?",
+  "back": "Each flight in snow costs fat and feeding time (70%)."
+ },
+ {
+  "id": "rq-wr-14",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Can I hunt here? The 4 checks in order?",
+  "back": "Season and class, No Shooting or closed area, land owner, vehicle closure (Tip).",
+  "diagram": "rq-wr-flow"
+ },
+ {
+  "id": "rq-wr-15",
+  "deck": "Winter ranges: what they are and how to hunt near them legally",
+  "front": "Snowmobile for hunting closure in MU 3-28?",
+  "back": "1 April to 14 December (99%)."
+ },
+ {
+  "id": "rq-wf-01",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "The four parts of a waterfowl day?",
+  "back": "Roost, feed, loaf, commute.",
+  "diagram": "rq-wf-day"
+ },
+ {
+  "id": "rq-wf-02",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Louisiana mallards: distance between day and night sites?",
+  "back": "3.1 to 15 km (85%).",
+  "diagram": "rq-wf-roost-feed"
+ },
+ {
+  "id": "rq-wf-03",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Missouri mallards: average daily local move?",
+  "back": "About 3 km (2 miles); most under 13 km (65%).",
+  "diagram": "rq-wf-dist"
+ },
+ {
+  "id": "rq-wf-04",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "When do Dutch GPS mallards commute?",
+  "back": "At dusk and dawn between a day roost and night feeding sites (65%)."
+ },
+ {
+  "id": "rq-wf-05",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Canada geese feeding flights?",
+  "back": "Early morning and late afternoon; more all day in storms (70%)."
+ },
+ {
+  "id": "rq-wf-06",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Ducks land facing which way?",
+  "back": "Into the wind (70%).",
+  "diagram": "rq-wf-wind"
+ },
+ {
+  "id": "rq-wf-07",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Where should the wind be at your blind?",
+  "back": "At your back or quartering from behind (70%)."
+ },
+ {
+  "id": "rq-wf-08",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Dabbler versus diver takeoff?",
+  "back": "Dabblers jump straight up; divers patter across the water (80%)."
+ },
+ {
+  "id": "rq-wf-09",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Legal hours for ducks and geese?",
+  "back": "30 minutes before sunrise to 30 minutes after sunset (99%)."
+ },
+ {
+  "id": "rq-wf-10",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Heffley Creek legal duck start on 15 October 2026?",
+  "back": "About 6:52 (sunrise about 7:22) (85%)."
+ },
+ {
+  "id": "rq-wf-11",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Boat rule for ducks and geese?",
+  "back": "Not from a moving boat with a motor or sail; beached or anchored is fine (99%, 95%)."
+ },
+ {
+  "id": "rq-wf-12",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Scouting rule of thumb (Tip)?",
+  "back": "Watch the evening flight from far away, hunt the morning.",
+  "diagram": "rq-wf-step-1"
+ },
+ {
+  "id": "rq-wf-13",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Should you shoot the roost every day?",
+  "back": "No. Hunt the feed and rest the roost (Tip).",
+  "diagram": "rq-wf-step-5"
+ },
+ {
+  "id": "rq-wf-14",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Bert Brink WMA flooded fields attract which birds?",
+  "back": "Wigeon and Canada geese (90%)."
+ },
+ {
+  "id": "rq-wf-15",
+  "deck": "Waterfowl daily flights: roost, feed, loaf, weather",
+  "front": "Draw what circle round a roost to find the fields?",
+  "back": "About 15 km (Tip, from the 3 to 15 km range)."
+ },
+ {
+  "id": "rq-up-01",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "The common upland bird day?",
+  "back": "Feed early, hide midday, feed late, roost at dusk (75%).",
+  "diagram": "rq-up-day"
+ },
+ {
+  "id": "rq-up-02",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "How far from cover do California quail usually feed?",
+  "back": "Seldom more than 15 to 30 m (75%).",
+  "diagram": "rq-up-quail-cover"
+ },
+ {
+  "id": "rq-up-03",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Where do California quail roost?",
+  "back": "Dense trees or shrubs (75%)."
+ },
+ {
+  "id": "rq-up-04",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Quail and water?",
+  "back": "In hot weather they need free water daily (75%)."
+ },
+ {
+  "id": "rq-up-05",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Chukar in the morning?",
+  "back": "Feeding on slopes; on cool nights they may roost on warmer south slopes (70%).",
+  "diagram": "rq-up-chukar"
+ },
+ {
+  "id": "rq-up-06",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Chukar at midday?",
+  "back": "Shady slopes, draws, dust baths and water (70%)."
+ },
+ {
+  "id": "rq-up-07",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Chukar late afternoon?",
+  "back": "Moving back toward steeper roosts (70%)."
+ },
+ {
+  "id": "rq-up-08",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Best approach to chukar?",
+  "back": "From above. They usually run uphill (70%)."
+ },
+ {
+  "id": "rq-up-09",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Ruffed grouse most common height in BC?",
+  "back": "750 to 1,250 m (85%).",
+  "diagram": "rq-up-grouse-band"
+ },
+ {
+  "id": "rq-up-10",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Ruffed grouse daily pattern?",
+  "back": "Feed and pick grit early and late, cover midday (75%)."
+ },
+ {
+  "id": "rq-up-11",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Dusky grouse breeding heights in BC?",
+  "back": "Many records 1,500 to 2,250 m (85%)."
+ },
+ {
+  "id": "rq-up-12",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Spruce grouse food?",
+  "back": "Needles of pine or spruce (85%)."
+ },
+ {
+  "id": "rq-up-13",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Pheasant first light?",
+  "back": "Grit on roadsides, then feeding about 8 am (70%)."
+ },
+ {
+  "id": "rq-up-14",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Pheasant midday?",
+  "back": "The densest, thickest cover nearby (70%)."
+ },
+ {
+  "id": "rq-up-15",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "California quail season?",
+  "back": "Region 8 MUs 8-1 to 8-15 and 8-21 to 8-26, 1 October to 30 November, 10 a day (99%)."
+ },
+ {
+  "id": "rq-up-16",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Region 3 grouse limits?",
+  "back": "5 of each kind, 10 in total a day, 10 September to 30 November (99%)."
+ },
+ {
+  "id": "rq-up-17",
+  "deck": "Upland birds' daily pattern by terrain",
+  "front": "Sign that birds use a spot?",
+  "back": "Dust bowls, droppings under roosts, tracks, feathers.",
+  "diagram": "rq-up-sign"
+ },
+ {
+  "id": "rq-map-01",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "The 6 map layers, bottom up?",
+  "back": "Legal base, closures, access and pressure, habitat and season, terrain and wind, your sign and seats.",
+  "diagram": "rq-map-stack"
+ },
+ {
+  "id": "rq-map-02",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Which layer first?",
+  "back": "The legal base: MU and land status.",
+  "diagram": "rq-map-step-1"
+ },
+ {
+  "id": "rq-map-03",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Ring round every occupied house or barn?",
+  "back": "100 m (99%, page 10).",
+  "diagram": "rq-map-step-2"
+ },
+ {
+  "id": "rq-map-04",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Road centre setback for shooting?",
+  "back": "15 m from the centre of numbered highways and 2 lane public roads (99%)."
+ },
+ {
+  "id": "rq-map-05",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Pressure band width (Tip)?",
+  "back": "About 1 km around open roads.",
+  "diagram": "rq-map-step-3"
+ },
+ {
+  "id": "rq-map-06",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Habitat layer contents?",
+  "back": "Winter range, burns, cutblocks, wetlands, water, this month's pattern.",
+  "diagram": "rq-map-step-4"
+ },
+ {
+  "id": "rq-map-07",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Terrain and wind layer contents?",
+  "back": "Aspect, slope, benches, saddles, draws, the wind each seat needs.",
+  "diagram": "rq-map-step-5"
+ },
+ {
+  "id": "rq-map-08",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Hunt Map range rings?",
+  "back": "100, 200 and 300 m (109, 219, 328 yd)."
+ },
+ {
+  "id": "rq-map-09",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Drone rule?",
+  "back": "No drone on the trip and no drone information from less than 6 hours before it (99%, item 36)."
+ },
+ {
+  "id": "rq-map-10",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Wireless trail camera rule outside Region 1?",
+  "back": "Not for hunting from 1 August to 10 December (99%, item 30)."
+ },
+ {
+  "id": "rq-map-11",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Month layer versus fresh sign: which wins?",
+  "back": "Fresh sign. Month layers are a general pattern (60%)."
+ },
+ {
+  "id": "rq-map-12",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Seats per area (Tip)?",
+  "back": "Two: one for each common wind."
+ },
+ {
+  "id": "rq-map-13",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "Map legend colours (Tip)?",
+  "back": "Red no go, tan pressure, green habitat, pins for sign.",
+  "diagram": "rq-map-legend"
+ },
+ {
+  "id": "rq-map-14",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "When to check and update the map?",
+  "back": "Check the night before, update the night after (Tip).",
+  "diagram": "rq-map-gonogo"
+ },
+ {
+  "id": "rq-map-15",
+  "deck": "Putting it together: building your own hunting map of an area",
+  "front": "What changes on 1 November in your MUs?",
+  "back": "Mule deer bucks need 4 points (99%)."
+ },
+ {
+  "id": "rq-dr-01",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "The 6 drill stops?",
+  "back": "Park, walk in, glass, read sign, seat, walk out.",
+  "diagram": "rq-dr-overview"
+ },
+ {
+  "id": "rq-dr-02",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Legal deer hours at Heffley Creek, 24 October 2026?",
+  "back": "About 6:37 to 18:52 (sunrise 7:37, sunset 17:52) (85%).",
+  "diagram": "rq-dr-timeline"
+ },
+ {
+  "id": "rq-dr-03",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Mule deer legal in MU 3-27 on 24 October?",
+  "back": "Any buck (99%)."
+ },
+ {
+  "id": "rq-dr-04",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Antlerless white tails in your MUs?",
+  "back": "10 to 31 October (99%)."
+ },
+ {
+  "id": "rq-dr-05",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Sun Peaks No Shooting rule?",
+  "back": "Not within 400 m of any lift, run, facility or development, Map C11 (99%)."
+ },
+ {
+  "id": "rq-dr-06",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Recreation site firearm rule?",
+  "back": "No firearm on or into the developed portion: structures plus a 100 m buffer (99%)."
+ },
+ {
+  "id": "rq-dr-07",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Paul Lake Park for hunting?",
+  "back": "Lists no hunting. Treat as closed (95%)."
+ },
+ {
+  "id": "rq-dr-08",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Glassing: what to look for?",
+  "back": "Parts: an ear, a leg, a rump, a horizontal line in timber (Tip).",
+  "diagram": "rq-dr-glass"
+ },
+ {
+  "id": "rq-dr-09",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Track points lead uphill, shiny pellets, fresh rub: story?",
+  "back": "A buck fed below and went up to bed recently (Tip).",
+  "diagram": "rq-dr-sign"
+ },
+ {
+  "id": "rq-dr-10",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Morning thermal on a sunny slope?",
+  "back": "Rises uphill (80%). Come in from the side.",
+  "diagram": "rq-dr-wind"
+ },
+ {
+  "id": "rq-dr-11",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Where do you load the rifle?",
+  "back": "At legal light, walking in to hunt, well clear of a developed rec site (Tip; rules 99%)."
+ },
+ {
+  "id": "rq-dr-12",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Drill pass mark (Tip)?",
+  "back": "16 out of 20.",
+  "diagram": "rq-dr-score"
+ },
+ {
+  "id": "rq-dr-13",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "When to write the Journal?",
+  "back": "The same night (Tip)."
+ },
+ {
+  "id": "rq-dr-14",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Real or made up in the drill pictures?",
+  "back": "Place and rules real; ridge, bench, draw and deer made up."
+ },
+ {
+  "id": "rq-dr-15",
+  "deck": "Field drill: read a piece of land near Heffley Creek",
+  "front": "Hunting with any light?",
+  "back": "Unlawful (99%, item 38)."
+ },
+ {
+  "id": "rq-mn-01",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Mississippi State: moon effect on buck movement?",
+  "back": "About 4 m an hour, within GPS error (75%).",
+  "diagram": "rq-mn-moon-bars"
+ },
+ {
+  "id": "rq-mn-02",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Penn State: new moon versus full moon?",
+  "back": "About 6 m an hour more at new moon, not meaningful (75%)."
+ },
+ {
+  "id": "rq-mn-03",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Penn State October deer at dawn and dusk?",
+  "back": "120 to 140 m an hour (75%)."
+ },
+ {
+  "id": "rq-mn-04",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "What nearly doubled buck travel in the Mississippi data?",
+  "back": "The rut (75%)."
+ },
+ {
+  "id": "rq-mn-05",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "What sets deer breeding timing?",
+  "back": "Day length (photoperiod) (70 to 80%).",
+  "diagram": "rq-mn-photoperiod"
+ },
+ {
+  "id": "rq-mn-06",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Spring longer days do what to melatonin and antlers?",
+  "back": "Melatonin falls, antler growth starts (80%)."
+ },
+ {
+  "id": "rq-mn-07",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "After the rut, testosterone?",
+  "back": "Falls; antlers drop (80%)."
+ },
+ {
+  "id": "rq-mn-08",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Mule deer rut timing in BC?",
+  "back": "Mid November to mid December, peak mid November (80%).",
+  "diagram": "rq-mn-moons-rut"
+ },
+ {
+  "id": "rq-mn-09",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Full moons in fall 2026 (about)?",
+  "back": "26 October, 24 November, 24 December, about a day either way (70%)."
+ },
+ {
+  "id": "rq-mn-10",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Daylight lost per day mid October at Heffley?",
+  "back": "About 3.8 minutes (85%).",
+  "diagram": "rq-mn-daylength"
+ },
+ {
+  "id": "rq-mn-11",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Day length 1 October vs 30 November at Heffley?",
+  "back": "About 11.7 h versus 8.3 h (85%)."
+ },
+ {
+  "id": "rq-mn-12",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Legal hours for game?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%).",
+  "diagram": "rq-mn-legal"
+ },
+ {
+  "id": "rq-mn-13",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Does a bright moon change legal hours?",
+  "back": "No (99%)."
+ },
+ {
+  "id": "rq-mn-14",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Clock change and legal hours?",
+  "back": "Legal hours follow the sun; the clock just moves the numbers. 1 November change: VERIFY."
+ },
+ {
+  "id": "rq-mn-15",
+  "deck": "Moon and daylight: what actually matters (evidence based)",
+  "front": "Ducks and the full moon?",
+  "back": "No study found isolating it; many ducks feed at night anyway (65%, VERIFY)."
+ },
+ {
+  "id": "rq-rw-01",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Rain pits inside a track mean?",
+  "back": "Made before the rain (70%).",
+  "diagram": "rq-rw-raintrack"
+ },
+ {
+  "id": "rq-rw-02",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Clean track on rain spattered ground?",
+  "back": "Made after the rain (70%)."
+ },
+ {
+  "id": "rq-rw-03",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Track on top of new snow?",
+  "back": "Made since the snow stopped (70%)."
+ },
+ {
+  "id": "rq-rw-04",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Does crisp mean fresh on a cold still morning?",
+  "back": "Not always; cold still air keeps tracks crisp for days (65%)."
+ },
+ {
+  "id": "rq-rw-05",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Strong wind: where to glass first (Tip)?",
+  "back": "Sheltered lee slopes and timber edges.",
+  "diagram": "rq-rw-lee"
+ },
+ {
+  "id": "rq-rw-06",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Wind and deer movement evidence?",
+  "back": "Mixed: little change, small effects, or a drop then rebound (55 to 65%).",
+  "diagram": "rq-rw-wind-evidence"
+ },
+ {
+  "id": "rq-rw-07",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Deer in rain (Penn State)?",
+  "back": "Moved less during storms (80%); bucks less than does in rain (65%)."
+ },
+ {
+  "id": "rq-rw-08",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "What fresh snow shows?",
+  "back": "Trails, beds, urine, grouse snow roosts.",
+  "diagram": "rq-rw-snow"
+ },
+ {
+  "id": "rq-rw-09",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Ruffed grouse in soft snow?",
+  "back": "Dive in to roost, burst out leaving wing marks (80%)."
+ },
+ {
+  "id": "rq-rw-10",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Does hypothermia need frost?",
+  "back": "No. Wind and rain raise the risk (75%).",
+  "diagram": "rq-rw-cold"
+ },
+ {
+  "id": "rq-rw-11",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "The umbles?",
+  "back": "Fumbles, mumbles, stumbles, grumbles: mild hypothermia, turn back (75%)."
+ },
+ {
+  "id": "rq-rw-12",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Shivering stops, confused, stiff?",
+  "back": "Severe hypothermia: an emergency."
+ },
+ {
+  "id": "rq-rw-13",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Fog rule (Tip)?",
+  "back": "Close range only; never shoot at a shape."
+ },
+ {
+  "id": "rq-rw-14",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "First step on any weather morning?",
+  "back": "Note when the weather changed (Tip).",
+  "diagram": "rq-rw-step-1"
+ },
+ {
+  "id": "rq-rw-15",
+  "deck": "Reading land in the rain, wind and snow",
+  "front": "Wind safety in timber (Tip)?",
+  "back": "Do not sit under dead snags in a windstorm."
+ }
+]

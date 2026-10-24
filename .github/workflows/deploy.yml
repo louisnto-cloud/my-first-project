@@ -51,6 +51,11 @@ jobs:
         run: |
           mkdir -p dist/pilgrimage
           cp -r pilgrimage/out/. dist/pilgrimage/
+      # Hunt Mentor (hunt-mentor/), served under /hunt-mentor. Built into the
+      # full site so a main deploy does not wipe it.
+      - name: Build Hunt Mentor (main)
+        if: github.ref == 'refs/heads/main' && hashFiles('hunt-mentor/build.mjs') != ''
+        run: node hunt-mentor/build.mjs --out dist/hunt-mentor
       - name: Publish full site
         if: github.ref == 'refs/heads/main' || hashFiles('pilgrimage/package.json') == ''
         uses: peaceiris/actions-gh-pages@v4

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="STOP, step P: Plan. Stay put, or move only if you are sure. Build shelter and a fire before dark.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="220" width="400" height="80" fill="#dfe6d3"/>
+  <g fill="#2f3a2b" opacity=".35"><polygon points="20,220 40,140 60,220"/><polygon points="340,220 360,130 380,220"/><polygon points="300,220 316,160 332,220"/></g>
+  <circle cx="54" cy="54" r="34" fill="#e8590c"/><text x="54" y="68" font-size="40" font-weight="bold" fill="#fff" text-anchor="middle">P</text>
+  <text x="102" y="50" font-size="24" font-weight="bold" fill="#2f3a2b">Plan</text>
+  <text x="102" y="74" font-size="15" fill="#2f3a2b">Stay put, or move only if sure</text>
+  <rect x="160" y="196" width="80" height="20" rx="8" fill="#8b5a2b"/><circle cx="200" cy="140" r="13" fill="#2f3a2b"/><line x1="200" y1="154" x2="200" y2="192" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/><path d="M200 192 L226 196 L230 220" stroke="#2f3a2b" stroke-width="8" fill="none"/><path d="M270 216 L310 160 L350 216 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2"/><path d="M120 216 q-12 -20 0 -40 q4 14 10 16 q6 10 -10 24 Z" fill="#e8590c"/><text x="200" y="262" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Shelter and fire before dark</text>
+</svg>

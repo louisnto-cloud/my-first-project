@@ -1,0 +1,286 @@
+[
+ {
+  "id": "mbt-001",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Black tailed deer from behind: what do you see?",
+  "back": "Wide tail, dark brown or black on top for most of its length; small white rump patch (90%).",
+  "diagram": "mbt-id-card"
+ },
+ {
+  "id": "mbt-002",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Mule deer tail vs black tail?",
+  "back": "Mule deer: thin white tail, black tip only. Black tail: wide, dark on top almost all the way (90%).",
+  "diagram": "mmd-tail-compare"
+ },
+ {
+  "id": "mbt-003",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Black tailed deer ears vs mule deer?",
+  "back": "About 3 cm shorter (90%, Nyberg and Janz 1990)."
+ },
+ {
+  "id": "mbt-004",
+  "deck": "Black tailed deer Masterclass",
+  "front": "What does a raised black tail show?",
+  "back": "A broad white underside (80%, WDFW)."
+ },
+ {
+  "id": "mbt-005",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Black tailed buck weight in BC?",
+  "back": "About 48 to 90 kg (90%, BC deer account).",
+  "diagram": "mbt-size-bars"
+ },
+ {
+  "id": "mbt-006",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Black tailed doe weight in BC?",
+  "back": "About 40 to 65 kg (90%)."
+ },
+ {
+  "id": "mbt-007",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Chest height of an adult coast black tail?",
+  "back": "About 57 cm (90%, Vancouver Island data)."
+ },
+ {
+  "id": "mbt-008",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Where do the biggest south coast bucks come from?",
+  "back": "The fertile lower Fraser Valley, and migratory deer that feed high in summer (90%, Nyberg and Janz)."
+ },
+ {
+  "id": "mbt-009",
+  "deck": "Black tailed deer Masterclass",
+  "front": "What share of yearling black tailed bucks are spikes?",
+  "back": "About 90% (90%). About 10% have one more point a side.",
+  "diagram": "mbt-antler-ages"
+ },
+ {
+  "id": "mbt-010",
+  "deck": "Black tailed deer Masterclass",
+  "front": "By what age do most black tailed bucks have forks?",
+  "back": "About 2.5 years: 2 points a side (90%)."
+ },
+ {
+  "id": "mbt-011",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Is a spike legal in MUs 2-8, 2-18, 2-19?",
+  "back": "Yes. A buck bears visible bony antlers (page 4), and those rows say Bucks (page 28) (99%)."
+ },
+ {
+  "id": "mbt-012",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Antlerless deer season in 2-8, 2-18, 2-19?",
+  "back": "None. Bucks only (99%, page 28)."
+ },
+ {
+  "id": "mbt-013",
+  "deck": "Black tailed deer Masterclass",
+  "front": "White tailed deer season in Region 2?",
+  "back": "None (99%, pages 14 and 27).",
+  "diagram": "mbt-id-flow"
+ },
+ {
+  "id": "mbt-014",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Which licence does a black tailed buck use?",
+  "back": "The deer species licence that covers mule deer: \"mule (black-tailed) deer\" (99%, pages 8 and 27)."
+ },
+ {
+  "id": "mbt-015",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Days of hunting per deer in MU 2-18, 2020 to 2024?",
+  "back": "About 25 (24.6, computed, 90%). Region 2 average about 13.5.",
+  "diagram": "mbt-mu-harvest"
+ },
+ {
+  "id": "mbt-016",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Where are coast black tails in spring and summer?",
+  "back": "Often in logged openings for new green food (90%, BC deer account).",
+  "diagram": "mbt-year-places"
+ },
+ {
+  "id": "mbt-017",
+  "deck": "Black tailed deer Masterclass",
+  "front": "What is key coast winter range?",
+  "back": "Old growth, and steep south to west facing slopes (90%)."
+ },
+ {
+  "id": "mbt-018",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Snow depth that is hard going for deer?",
+  "back": "Deeper than about 30 cm (90%, BC deer account)."
+ },
+ {
+  "id": "mbt-019",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Same snowfall: clearcut vs 70% conifer cover?",
+  "back": "About 50 cm in the clearcut, about 5 cm under the trees (90%, Nyberg and Janz).",
+  "diagram": "mbt-snow-canopy"
+ },
+ {
+  "id": "mbt-020",
+  "deck": "Black tailed deer Masterclass",
+  "front": "How far apart are a migrant's summer and winter ranges?",
+  "back": "Often 2 to 5 km (90%).",
+  "diagram": "mbt-resident-migrant"
+ },
+ {
+  "id": "mbt-021",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Share of deer that migrate: moderate vs deep snow zone?",
+  "back": "About 20 to 25% vs 70% or more (90%)."
+ },
+ {
+  "id": "mbt-022",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Winter range order near Harrison?",
+  "back": "UWR (Ungulate Winter Range) U-2-006, Chilliwack district, for mule deer and black tailed deer (95%).",
+  "diagram": "mbt-uwr-slope"
+ },
+ {
+  "id": "mbt-023",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Capable winter range in U-2-006: which slope directions?",
+  "back": "135 to 285 degrees: south east through south to west; slopes 40 to 100% (95%)."
+ },
+ {
+  "id": "mbt-024",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Snow zones in U-2-006?",
+  "back": "Shallow under 400 m, moderate 400 to 800 m, deep over 800 m (95%)."
+ },
+ {
+  "id": "mbt-025",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Coast winter foods?",
+  "back": "Douglas fir, western redcedar, red huckleberry, salal, deer fern, tree lichens (90%).",
+  "diagram": "mbt-food"
+ },
+ {
+  "id": "mbt-026",
+  "deck": "Black tailed deer Masterclass",
+  "front": "When are deer most active?",
+  "back": "Near dawn and dusk; they can move any time (80%, WDFW).",
+  "diagram": "mbt-day-clock"
+ },
+ {
+  "id": "mbt-027",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Legal hunting hours for deer?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%, page 11, item 38)."
+ },
+ {
+  "id": "mbt-028",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Good security cover hides how much of a deer at 60 m?",
+  "back": "About 90% (85%). Look for parts, not a whole deer.",
+  "diagram": "mbt-cover-60m"
+ },
+ {
+  "id": "mbt-029",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Strongest deer sense?",
+  "back": "Smell (85%). Keep the wind in your face."
+ },
+ {
+  "id": "mbt-030",
+  "deck": "Black tailed deer Masterclass",
+  "front": "When do Vancouver Island black tails breed?",
+  "back": "November and early December; most does conceive 15 November to 5 December (90%).",
+  "diagram": "mbt-rut-calendar"
+ },
+ {
+  "id": "mbt-031",
+  "deck": "Black tailed deer Masterclass",
+  "front": "How long is a doe receptive?",
+  "back": "About a day. Not bred? She cycles again in 22 to 29 days (90%).",
+  "diagram": "mbt-tending"
+ },
+ {
+  "id": "mbt-032",
+  "deck": "Black tailed deer Masterclass",
+  "front": "How long does a buck tend a doe?",
+  "back": "Follows 2 to 3 days before her heat, stays 3 to 4 days after (90%)."
+ },
+ {
+  "id": "mbt-033",
+  "deck": "Black tailed deer Masterclass",
+  "front": "When are black tailed bucks heaviest?",
+  "back": "About mid November to early December; they lose 20 to 25% over winter (90%)."
+ },
+ {
+  "id": "mbt-034",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Where do coast deer use a clearcut most?",
+  "back": "Within about 100 m of cover (90%, Nyberg and Janz).",
+  "diagram": "mbt-cutblock-100m"
+ },
+ {
+  "id": "mbt-035",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Clearcut width that gets the most deer use?",
+  "back": "Under 200 m wide, so under 100 m to cover from anywhere (90%)."
+ },
+ {
+  "id": "mbt-036",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Can you push deer with a truck?",
+  "back": "No. Using a motor vehicle to herd or harass wildlife is unlawful (99%, page 11, item 25)."
+ },
+ {
+  "id": "mbt-037",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Rain and a blood trail?",
+  "back": "Rain can erase blood within about an hour: only sure shots, track sooner (Tip).",
+  "diagram": "mbt-rain-plan"
+ },
+ {
+  "id": "mbt-038",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Broadside aim point?",
+  "back": "Up the back of the front leg, one third up the chest (85%).",
+  "diagram": "vitals-deer"
+ },
+ {
+  "id": "mbt-039",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Kill. What comes first?",
+  "back": "Cancel your licence, then touch the deer (99%, page 11).",
+  "diagram": "mbt-shot-to-table"
+ },
+ {
+  "id": "mbt-040",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Evidence of sex for a buck?",
+  "back": "The unskinned tail AND a testicle or part of the penis, naturally attached (99%, page 15)."
+ },
+ {
+  "id": "mbt-041",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Region 2 compulsory inspection for deer?",
+  "back": "No. Region 2 inspection is for mountain goat and cougar (99%, page 28)."
+ },
+ {
+  "id": "mbt-042",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Meat cooling target?",
+  "back": "Below 4°C (40°F) as fast as you can (80%, WDFW).",
+  "diagram": "mbt-wet-meat"
+ },
+ {
+  "id": "mbt-043",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Plastic on warm meat?",
+  "back": "No plastic bags or tarps until it is chilled. A tarp as a roof with an air gap is fine (80%)."
+ },
+ {
+  "id": "mbt-044",
+  "deck": "Black tailed deer Masterclass",
+  "front": "Ageing temperature and time?",
+  "back": "1 to 3°C (34 to 37°F), no longer than two weeks (80%, WDFW)."
+ }
+]

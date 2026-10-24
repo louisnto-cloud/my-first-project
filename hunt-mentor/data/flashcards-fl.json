@@ -1,0 +1,1001 @@
+[
+ {
+  "id": "fl-fit-01",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "How many minutes of moderate to vigorous activity a week do Canadian guidelines suggest?",
+  "back": "At least 150 minutes a week, plus strength twice a week (CSEP, 95%)."
+ },
+ {
+  "id": "fl-fit-02",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "How many strength sessions a week?",
+  "back": "At least 2, using the major muscle groups (CSEP, 95%).",
+  "diagram": "fl-fit-engines"
+ },
+ {
+  "id": "fl-fit-03",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Talk test: you can talk but not sing. What intensity?",
+  "back": "Moderate. Vigorous means only a few words before a breath (70%).",
+  "diagram": "fl-fit-talk"
+ },
+ {
+  "id": "fl-fit-04",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Name the three engines to train.",
+  "back": "Heart (walks, hikes), legs (strength), carry (pack on hills).",
+  "diagram": "fl-fit-engines"
+ },
+ {
+  "id": "fl-fit-05",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "When does the weighted pack start in the 12 week plan?",
+  "back": "Week 5, light, then small steps up. Base first (Tip).",
+  "diagram": "fl-fit-12wk"
+ },
+ {
+  "id": "fl-fit-06",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Which weeks are easy weeks?",
+  "back": "Weeks 4, 8 and 12 (Tip).",
+  "diagram": "fl-fit-12wk"
+ },
+ {
+  "id": "fl-fit-07",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Biggest training pack in week 12 for an 80 kg person?",
+  "back": "About 16 kg, about 20% of body weight (Tip, REI guideline 70%).",
+  "diagram": "fl-fit-12wk"
+ },
+ {
+  "id": "fl-fit-08",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Your first hunt is in 10 days. What fitness work?",
+  "back": "Walk most days with hills, boots and socks on, a light pack twice, sleep 7 to 9 hours. No cramming (Tip).",
+  "diagram": "fl-fit-timeline"
+ },
+ {
+  "id": "fl-fit-09",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Who should check with a health professional first?",
+  "back": "Anyone pregnant, with a medical condition or disability, or with chest pain or dizzy spells. Use the Get Active Questionnaire (95%).",
+  "diagram": "fl-fit-check"
+ },
+ {
+  "id": "fl-fit-10",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Name the six strength moves.",
+  "back": "Step up, split squat, goblet squat, hip hinge, plank or carry, calf raise (Tip).",
+  "diagram": "fl-fit-move-1"
+ },
+ {
+  "id": "fl-fit-11",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Downhill technique?",
+  "back": "Short steps, soft knees, poles (Tip).",
+  "diagram": "fl-fit-downhill"
+ },
+ {
+  "id": "fl-fit-12",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "First sign of a blister?",
+  "back": "A hot spot. Stop now, cover it, dry socks (Tip).",
+  "diagram": "fl-feet-3"
+ },
+ {
+  "id": "fl-fit-13",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "MET value for hunting, hiking with hunting gear?",
+  "back": "9.5 METs (Compendium 2024, 95%).",
+  "diagram": "fl-fit-met"
+ },
+ {
+  "id": "fl-fit-14",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "MET value for dragging a carcass?",
+  "back": "9.8 METs (Compendium 2024, 95%).",
+  "diagram": "fl-fit-met"
+ },
+ {
+  "id": "fl-fit-15",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "How do you estimate calories from METs?",
+  "back": "METs x body weight in kg x hours (85%)."
+ },
+ {
+  "id": "fl-fit-16",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "How much sleep do the guidelines suggest?",
+  "back": "7 to 9 hours, consistent bed and wake times (95%).",
+  "diagram": "fl-fit-recover"
+ },
+ {
+  "id": "fl-fit-17",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "Three tests before the hunt?",
+  "back": "A 2 hour hill hike with your pack, getting up from the ground with the pack, a steady hold after a climb (Tip).",
+  "diagram": "fl-fit-tests"
+ },
+ {
+  "id": "fl-fit-18",
+  "deck": "Fitness for hunting: a 12 week plan for hills, packs and long days",
+  "front": "What does HILLS stand for?",
+  "back": "Heart first, Incline, Legs, Load a little, Sleep.",
+  "diagram": "fl-fit-hooks"
+ },
+ {
+  "id": "fl-pk-01",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "What decides pack size: height or torso length?",
+  "back": "Torso length (REI, 70%).",
+  "diagram": "fl-pk-torso-3"
+ },
+ {
+  "id": "fl-pk-02",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Torso length runs from where to where?",
+  "back": "From the bony bump at the base of the neck to a line between your thumbs on top of your hip bones (70%).",
+  "diagram": "fl-pk-torso-2"
+ },
+ {
+  "id": "fl-pk-03",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Where does the hip belt sit?",
+  "back": "Centred on top of your hip bones (the iliac crest) (70%).",
+  "diagram": "fl-pk-adjust-2"
+ },
+ {
+  "id": "fl-pk-04",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Strap order when fitting a pack?",
+  "back": "Hips, shoulders, load lifters, sternum. \"Hungry Sheep Like Salt.\"",
+  "diagram": "fl-pk-hooks"
+ },
+ {
+  "id": "fl-pk-05",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "What do load lifters do?",
+  "back": "Pull the top of the load close to your back. Snug, not cranked (Tip).",
+  "diagram": "fl-pk-adjust-4"
+ },
+ {
+  "id": "fl-pk-06",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Where do the heaviest items go?",
+  "back": "Centre of the pack, close to your spine (65%).",
+  "diagram": "fl-pk-zones"
+ },
+ {
+  "id": "fl-pk-07",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "What goes at the bottom?",
+  "back": "Light, bulky things you need least, like a puffy or sleep gear (65%).",
+  "diagram": "fl-pk-order-1"
+ },
+ {
+  "id": "fl-pk-08",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "What goes in the lid?",
+  "back": "Quick items: headlamp, map, first aid, rain shell (65%).",
+  "diagram": "fl-pk-order-4"
+ },
+ {
+  "id": "fl-pk-09",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Day pack weight guideline?",
+  "back": "About 10% of body weight (REI, 70%).",
+  "diagram": "fl-pk-weight"
+ },
+ {
+  "id": "fl-pk-10",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Loaded backpacking pack guideline?",
+  "back": "No more than about 20% of body weight (REI, 70%).",
+  "diagram": "fl-pk-weight"
+ },
+ {
+  "id": "fl-pk-11",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Sustainable meat load per trip for a fit adult?",
+  "back": "About 20 to 30 kg on rough ground (Tip).",
+  "diagram": "fl-pk-weight"
+ },
+ {
+  "id": "fl-pk-12",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "How does meat ride on a frame pack?",
+  "back": "High and close to your back, straps cinched, in breathable game bags (Tip).",
+  "diagram": "fl-pk-meat-high"
+ },
+ {
+  "id": "fl-pk-13",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Five lifting steps (BC Forest Safety Council)?",
+  "back": "Size it up, firm footing and grip, bend knees and brace, load close and lift with legs, turn with your feet (85%).",
+  "diagram": "fl-lift-3"
+ },
+ {
+  "id": "fl-pk-14",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Turning with a heavy load?",
+  "back": "Turn with your feet. Never twist at the waist (85%).",
+  "diagram": "fl-lift-5"
+ },
+ {
+  "id": "fl-pk-15",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Getting up with a heavy pack from the ground?",
+  "back": "Sit into it, buckle the hip belt, roll to a knee, push up on the front knee, stand (Tip)."
+ },
+ {
+  "id": "fl-pk-16",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Rifle in or on a vehicle with a full attached magazine?",
+  "back": "Unlawful. No live round in the breech or attached magazine in or on a vehicle (99%, item 28)."
+ },
+ {
+  "id": "fl-pk-17",
+  "deck": "Packs and carrying loads: fit, packing order, and safe lifting",
+  "front": "Keep a pack dry how?",
+  "back": "Liner bag inside, small dry bags for papers and phone, game bags for meat (Tip).",
+  "diagram": "fl-pk-dry"
+ },
+ {
+  "id": "fl-fsr-01",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Where do you get the radio channel for a resource road?",
+  "back": "The sign at the road entry. The sign beats any map (95%).",
+  "diagram": "fl-fsr-sign"
+ },
+ {
+  "id": "fl-fsr-02",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Kilometre signs going up. What do you call?",
+  "back": "Up. Numbers falling: down (65%)."
+ },
+ {
+  "id": "fl-fsr-03",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "The basic radio call, in order?",
+  "back": "Road name, kilometre, up or down, plus anything the sign asks (65 to 95%).",
+  "diagram": "fl-fsr-call-1"
+ },
+ {
+  "id": "fl-fsr-04",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Do you need a licence for a resource road mobile radio?",
+  "back": "Yes, a mobile radio licence (ISED); a radio shop programs it (95%).",
+  "diagram": "fl-fsr-radios"
+ },
+ {
+  "id": "fl-fsr-05",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Do FRS handhelds need a licence?",
+  "back": "No, FRS radios are on the ISED licence exempt list (85%). They do not reach the trucks (Tip).",
+  "diagram": "fl-fsr-radios"
+ },
+ {
+  "id": "fl-fsr-06",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "No radio on an active haul road?",
+  "back": "Wait at the start, follow a radio vehicle and pull over when it does; if none comes, go with extreme caution (85%).",
+  "diagram": "fl-fsr-noradio-2"
+ },
+ {
+  "id": "fl-fsr-07",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Top speed on a resource road with no posted limit?",
+  "back": "80 km/h (BC Forest Safety Council, 85%).",
+  "diagram": "fl-fsr-rules"
+ },
+ {
+  "id": "fl-fsr-08",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "What does dust ahead mean?",
+  "back": "Traffic. Slow down, keep right (85%).",
+  "diagram": "fl-fsr-rules"
+ },
+ {
+  "id": "fl-fsr-09",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Where should you stop?",
+  "back": "A pullout on a straight with clear sight both ways, never on a curve or crest (85%).",
+  "diagram": "fl-fsr-stop"
+ },
+ {
+  "id": "fl-fsr-10",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "ATV on a Forest Service Road needs?",
+  "back": "A valid driver's licence and at least $200,000 third party liability insurance (99%, synopsis page 9).",
+  "diagram": "fl-fsr-atv"
+ },
+ {
+  "id": "fl-fsr-11",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Is hunting from a motor vehicle legal?",
+  "back": "No (99%, item 22)."
+ },
+ {
+  "id": "fl-fsr-12",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Stuck or broken down?",
+  "back": "Stay with the vehicle: shelter, and easier to find (85%).",
+  "diagram": "fl-fsr-stuck"
+ },
+ {
+  "id": "fl-fsr-13",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Does 911 work everywhere in BC?",
+  "back": "No (85%). Carry a satellite messenger.",
+  "diagram": "fl-fsr-numbers"
+ },
+ {
+  "id": "fl-fsr-14",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Wildfire report number?",
+  "back": "1 800 663 5555 or *5555 on a cell (85%, 2017 guide: VERIFY current).",
+  "diagram": "fl-fsr-numbers"
+ },
+ {
+  "id": "fl-fsr-15",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Winter tire tread minimum?",
+  "back": "3.5 mm (80%).",
+  "diagram": "fl-fsr-highway"
+ },
+ {
+  "id": "fl-fsr-16",
+  "deck": "Vehicles, Forest Service Roads and radio use",
+  "front": "Name, Number, Up or Down is a memory hook for?",
+  "back": "The resource road radio call.",
+  "diagram": "fl-fsr-hooks"
+ },
+ {
+  "id": "fl-camp-01",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "The bear triangle?",
+  "back": "Tent, cooking area and food storage about 100 m apart (WildSafeBC, 85%).",
+  "diagram": "fl-camp-triangle"
+ },
+ {
+  "id": "fl-camp-02",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Tent upwind or downwind of the kitchen?",
+  "back": "Upwind, so smell drifts away from where you sleep (Tip)."
+ },
+ {
+  "id": "fl-camp-03",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Food hang height and distance?",
+  "back": "At least 4 m up and 3 m from the tree (WildSafeBC, 75%).",
+  "diagram": "fl-hang-1"
+ },
+ {
+  "id": "fl-camp-04",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "No lockers at a truck camp?",
+  "back": "Food in the vehicle trunk or a hard sided RV (85%).",
+  "diagram": "fl-camp-storage"
+ },
+ {
+  "id": "fl-camp-05",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "A snack in the tent?",
+  "back": "Never. Not even toothpaste (85%).",
+  "diagram": "fl-camp-mistakes"
+ },
+ {
+  "id": "fl-camp-06",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Cooking clothes?",
+  "back": "Cook in clothes other than the ones you sleep in; store them with the food (85%)."
+ },
+ {
+  "id": "fl-camp-07",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Is a carcass an attractant in law?",
+  "back": "Yes. Leaving one where people are likely to be can be fined up to $50,000 (99%, synopsis page 15).",
+  "diagram": "fl-camp-meat"
+ },
+ {
+  "id": "fl-camp-08",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Category 1 campfire size?",
+  "back": "No larger than 0.5 m high by 0.5 m wide (95%).",
+  "diagram": "fl-campfire"
+ },
+ {
+  "id": "fl-camp-09",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "What must be at the campfire?",
+  "back": "Someone watching with a hand tool or 8 L of water, and a fuel break (95%).",
+  "diagram": "fl-campfire"
+ },
+ {
+  "id": "fl-camp-10",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Sleeping bag Comfort vs Limit?",
+  "back": "Comfort: sleep relaxed. Limit: curled for 8 hours. Extreme: survival only (70%).",
+  "diagram": "fl-sleep-ratings"
+ },
+ {
+  "id": "fl-camp-11",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Do pad R values add when stacked?",
+  "back": "Yes, under ASTM F3340 (75%).",
+  "diagram": "fl-sleep-rvalue"
+ },
+ {
+  "id": "fl-camp-12",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Five tricks for a warm night?",
+  "back": "Eat before bed, pee first, dry layers and a toque, vent the tent, hot water bottle in a sock (Tip).",
+  "diagram": "fl-sleep-3"
+ },
+ {
+  "id": "fl-camp-13",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Propane heater in the tent with the flap open?",
+  "back": "No. Carbon monoxide still builds up (80%).",
+  "diagram": "fl-camp-co"
+ },
+ {
+  "id": "fl-camp-14",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Carbon monoxide symptoms?",
+  "back": "Headache, dizziness, nausea, sleepiness: looks like flu. Get out, call 911 (80%).",
+  "diagram": "fl-camp-co"
+ },
+ {
+  "id": "fl-camp-15",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "Where does meat hang in camp?",
+  "back": "In game bags, in shade, well away from and downwind of tents, where you can see it (Tip).",
+  "diagram": "fl-camp-meat"
+ },
+ {
+  "id": "fl-camp-16",
+  "deck": "Hunting camp: base camp setup, sleeping warm, keeping food from bears",
+  "front": "BEAR camp hook?",
+  "back": "Bag it high, Eat away, All smells out, Rubbish out.",
+  "diagram": "fl-camp-hooks"
+ },
+ {
+  "id": "fl-fw-01",
+  "deck": "Food and water for long hunt days",
+  "front": "Energy per gram of fat, carbohydrate, protein?",
+  "back": "Fat 9, carbohydrate 4, protein 4 kcal (FAO, 95%).",
+  "diagram": "fl-fw-density"
+ },
+ {
+  "id": "fl-fw-02",
+  "deck": "Food and water for long hunt days",
+  "front": "Calories an hour hiking with hunting gear, 80 kg?",
+  "back": "About 760 (9.5 METs x 80 kg) (estimate).",
+  "diagram": "fl-fw-kcal"
+ },
+ {
+  "id": "fl-fw-03",
+  "deck": "Food and water for long hunt days",
+  "front": "How often should you eat on a hunt day?",
+  "back": "Something every 2 to 3 hours (Tip).",
+  "diagram": "fl-fw-clock"
+ },
+ {
+  "id": "fl-fw-04",
+  "deck": "Food and water for long hunt days",
+  "front": "Sweat test?",
+  "back": "Weigh before, count drinks, weigh after. 1 kg lost is about 1 L (65%).",
+  "diagram": "fl-fw-sweat-3"
+ },
+ {
+  "id": "fl-fw-05",
+  "deck": "Food and water for long hunt days",
+  "front": "Pee colour check?",
+  "back": "Pale is good; dark yellow means drink now (60%).",
+  "diagram": "fl-fw-pee"
+ },
+ {
+  "id": "fl-fw-06",
+  "deck": "Food and water for long hunt days",
+  "front": "Boil time for water?",
+  "back": "At least 1 minute; 2 minutes above 2,000 m (HealthLink BC, 95%).",
+  "diagram": "fl-fw-treat"
+ },
+ {
+  "id": "fl-fw-07",
+  "deck": "Food and water for long hunt days",
+  "front": "Bleach dose for water?",
+  "back": "2 drops of household bleach per litre, wait 30 minutes (95%).",
+  "diagram": "fl-fw-treat"
+ },
+ {
+  "id": "fl-fw-08",
+  "deck": "Food and water for long hunt days",
+  "front": "Water cloudy or colder than 10 °C?",
+  "back": "Double the bleach and wait 1 to 2 hours (95%).",
+  "diagram": "fl-fw-treat"
+ },
+ {
+  "id": "fl-fw-09",
+  "deck": "Food and water for long hunt days",
+  "front": "Most effective way to disinfect water?",
+  "back": "Boiling (HealthLink BC, 95%)."
+ },
+ {
+  "id": "fl-fw-10",
+  "deck": "Food and water for long hunt days",
+  "front": "Why store a bottle upside down in the cold?",
+  "back": "Ice forms at the bottom first, not in the lid (Tip).",
+  "diagram": "fl-fw-cold"
+ },
+ {
+  "id": "fl-fw-11",
+  "deck": "Food and water for long hunt days",
+  "front": "Food danger zone?",
+  "back": "4 °C to 60 °C. No more than 2 hours (95%).",
+  "diagram": "fl-fw-danger"
+ },
+ {
+  "id": "fl-fw-12",
+  "deck": "Food and water for long hunt days",
+  "front": "Fridge or cooler temperature?",
+  "back": "4 °C or colder (95%).",
+  "diagram": "fl-fw-danger"
+ },
+ {
+  "id": "fl-fw-13",
+  "deck": "Food and water for long hunt days",
+  "front": "Alcohol while hunting?",
+  "back": "No. Synopsis ethics code, page 77 (99%)."
+ },
+ {
+  "id": "fl-fw-14",
+  "deck": "Food and water for long hunt days",
+  "front": "Kamloops average November low?",
+  "back": "Minus 1.1 °C (95%)."
+ },
+ {
+  "id": "fl-fw-15",
+  "deck": "Food and water for long hunt days",
+  "front": "FUEL hook?",
+  "back": "Frequent snacks, Upside down bottles, Every stream treated, Look at your pee.",
+  "diagram": "fl-fw-hooks"
+ },
+ {
+  "id": "fl-pt-01",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Six things to agree at the truck?",
+  "back": "Where each goes, back by time, meeting point, who shoots what, signals, what if someone is late (Tip).",
+  "diagram": "fl-pt-plan"
+ },
+ {
+  "id": "fl-pt-02",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Zone of fire when walking side by side?",
+  "back": "About 45 degrees straight ahead each. The middle and behind are no shot zones (75%).",
+  "diagram": "fl-pt-formation"
+ },
+ {
+  "id": "fl-pt-03",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "A deer runs between you and your partner?",
+  "back": "Hold fire (75%).",
+  "diagram": "fl-pt-formation"
+ },
+ {
+  "id": "fl-pt-04",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "You lose sight of your partner?",
+  "back": "Muzzles up or down, no shooting, call out (75%)."
+ },
+ {
+  "id": "fl-pt-05",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Is blaze orange required in BC?",
+  "back": "No (95%). Wear it with a partner anyway (Tip)."
+ },
+ {
+  "id": "fl-pt-06",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Three whistle blasts mean?",
+  "back": "Distress, help (BC Search and Rescue Association, 80%).",
+  "diagram": "fl-pt-whistle"
+ },
+ {
+  "id": "fl-pt-07",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Flat hand up in your hand code?",
+  "back": "Stop, freeze (your agreed code, Tip).",
+  "diagram": "fl-pt-hands"
+ },
+ {
+  "id": "fl-pt-08",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Best meeting plan?",
+  "back": "A landmark both know, a clock time, a wait window, then the truck as plan B (Tip).",
+  "diagram": "fl-pt-meet-1"
+ },
+ {
+  "id": "fl-pt-09",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Who cancels the licence for a deer?",
+  "back": "The person who killed it, immediately, before handling (99%, item 1).",
+  "diagram": "fl-pt-tag"
+ },
+ {
+  "id": "fl-pt-10",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Can your brother use his licence on your deer?",
+  "back": "No. Using another person's licence is unlawful (99%, item 2).",
+  "diagram": "fl-pt-tag"
+ },
+ {
+  "id": "fl-pt-11",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "On a push, where may the stander shoot?",
+  "back": "Only in a zone that points away from the pusher's line (Tip).",
+  "diagram": "fl-pt-push"
+ },
+ {
+  "id": "fl-pt-12",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Can you herd deer with an ATV?",
+  "back": "No. No motor vehicle or mechanical device to herd or harass wildlife (99%, item 25)."
+ },
+ {
+  "id": "fl-pt-13",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "After a shot, two hunters?",
+  "back": "Shooter calls it, both watch, both unload, mark two spots, one tracks one watches, walk up together (Tip).",
+  "diagram": "fl-pt-after-2"
+ },
+ {
+  "id": "fl-pt-14",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "Partner missing: first step?",
+  "back": "Go to the meeting point and wait the agreed window, then whistle and call (Tip).",
+  "diagram": "fl-pt-lost"
+ },
+ {
+  "id": "fl-pt-15",
+  "deck": "Hunting with a partner: plans, signals, safe zones of fire, splitting up and meeting",
+  "front": "PLANS hook?",
+  "back": "Place to meet, Leave and back times, Arcs of fire, No shot in the middle, Signals.",
+  "diagram": "fl-pt-hooks"
+ },
+ {
+  "id": "fl-eth-01",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Synopsis ethics: when may you shoot?",
+  "back": "Only with a clear shot of a vital part. \"You can't pull the bullet back.\" (99%)",
+  "diagram": "fl-eth-code"
+ },
+ {
+  "id": "fl-eth-02",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Retrieval law in one line?",
+  "back": "All reasonable effort to locate, dispatch, retrieve and include it in your bag limit (99%).",
+  "diagram": "fl-eth-wound-5"
+ },
+ {
+  "id": "fl-eth-03",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Killed or wounded wildlife by accident?",
+  "back": "Report promptly to an officer (99%, item 18).",
+  "diagram": "fl-eth-accident"
+ },
+ {
+  "id": "fl-eth-04",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "RAPP number?",
+  "back": "1 877 952 7277 (99%).",
+  "diagram": "fl-eth-accident"
+ },
+ {
+  "id": "fl-eth-05",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Fair chase (Boone and Crockett)?",
+  "back": "Ethical, sportsmanlike and lawful pursuit of free ranging game without an improper or unfair advantage (90%)."
+ },
+ {
+  "id": "fl-eth-06",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "When is an advantage unfair?",
+  "back": "When the game has no reasonable chance of escape (90%)."
+ },
+ {
+  "id": "fl-eth-07",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "LISTEN before the shot?",
+  "back": "Legal, Identified, Safe backstop, Tested range, Easy and steady, No doubt.",
+  "diagram": "fl-eth-hooks"
+ },
+ {
+  "id": "fl-eth-08",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Running buck. Lean?",
+  "back": "Let it go or wait for it to stop (Tip).",
+  "diagram": "fl-eth-case-1"
+ },
+ {
+  "id": "fl-eth-09",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Last light at the timber edge. Lean?",
+  "back": "Pass if you could not trail it before dark (Tip). No lights to hunt (99%).",
+  "diagram": "fl-eth-case-2"
+ },
+ {
+  "id": "fl-eth-10",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Hit deer crosses into posted land?",
+  "back": "No Trespass Act exception for tracking. Get permission or call an officer (99% and Tip).",
+  "diagram": "fl-eth-case-4"
+ },
+ {
+  "id": "fl-eth-11",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Drones on a hunt?",
+  "back": "Banned, and no drone info from during or less than 6 hours before (99%, item 36).",
+  "diagram": "fl-eth-tech"
+ },
+ {
+  "id": "fl-eth-12",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Hunting after flying in a small plane?",
+  "back": "Not within 6 hours of being airborne, except scheduled commercial flights (99%, item 33).",
+  "diagram": "fl-eth-tech"
+ },
+ {
+  "id": "fl-eth-13",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Infrared optics on a hunt?",
+  "back": "Unlawful to use or possess (99%, item 39).",
+  "diagram": "fl-eth-tech"
+ },
+ {
+  "id": "fl-eth-14",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Wireless trail cameras?",
+  "back": "Not for hunting 1 August to 10 December, except Region 1 (99%, item 30).",
+  "diagram": "fl-eth-tech"
+ },
+ {
+  "id": "fl-eth-15",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "Display your kill?",
+  "back": "\"Do not display your kill or firearms where it may offend other people.\" (99%)",
+  "diagram": "fl-eth-respect"
+ },
+ {
+  "id": "fl-eth-16",
+  "deck": "Ethics and fair chase: the hard calls, wounded game, respect",
+  "front": "False statement to an officer?",
+  "back": "Unlawful (99%, item 3). Honesty is the ethic."
+ },
+ {
+  "id": "fl-plan-01",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Licence year?",
+  "back": "1 April to 31 March (99%).",
+  "diagram": "fl-plan-year"
+ },
+ {
+  "id": "fl-plan-02",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "2026 main LEH deadline?",
+  "back": "11:59 pm, 23 June 2026 (99%). 2027 date: VERIFY."
+ },
+ {
+  "id": "fl-plan-03",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "LEH application fee?",
+  "back": "$6.30 including taxes, not refundable (99%).",
+  "diagram": "fl-plan-fees"
+ },
+ {
+  "id": "fl-plan-04",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Resident hunting licence fee?",
+  "back": "$32.00 (99%).",
+  "diagram": "fl-plan-fees"
+ },
+ {
+  "id": "fl-plan-05",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Deer species licence fee, resident?",
+  "back": "$15.00 (99%).",
+  "diagram": "fl-plan-fees"
+ },
+ {
+  "id": "fl-plan-06",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Fraser Valley Special Area licence?",
+  "back": "$10.00 (99%).",
+  "diagram": "fl-plan-fees"
+ },
+ {
+  "id": "fl-plan-07",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Federal migratory bird permit fee?",
+  "back": "$17.00 (99%).",
+  "diagram": "fl-plan-fees"
+ },
+ {
+  "id": "fl-plan-08",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Region 3 any mule deer buck dates?",
+  "back": "1 to 31 October (99%).",
+  "diagram": "fl-plan-now"
+ },
+ {
+  "id": "fl-plan-09",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Region 3 4 point mule deer bucks?",
+  "back": "1 November to 10 December (99%).",
+  "diagram": "fl-plan-now"
+ },
+ {
+  "id": "fl-plan-10",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Region 8 quail?",
+  "back": "1 October to 30 November, 10 a day, 30 in possession (99%).",
+  "diagram": "fl-plan-now"
+ },
+ {
+  "id": "fl-plan-11",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Region 2 ducks 2026?",
+  "back": "10 October 2026 to 24 January 2027 (99%).",
+  "diagram": "fl-plan-now"
+ },
+ {
+  "id": "fl-plan-12",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "How often must you prove BC residency?",
+  "back": "Every three years (99%)."
+ },
+ {
+  "id": "fl-plan-13",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Online licence purchase vs counter?",
+  "back": "Online is mailed; counter is immediate (99%)."
+ },
+ {
+  "id": "fl-plan-14",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "What does the app planner give?",
+  "back": "Legal and open, odds for big game, day by day, checklist. Open #/plan.",
+  "diagram": "fl-plan-app"
+ },
+ {
+  "id": "fl-plan-15",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Three budget buckets?",
+  "back": "Once, each season, each trip (Tip).",
+  "diagram": "fl-plan-budget"
+ },
+ {
+  "id": "fl-plan-16",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "Fuel cost formula?",
+  "back": "km / 100 x L per 100 km x price per litre (Tip).",
+  "diagram": "fl-plan-fuel"
+ },
+ {
+  "id": "fl-plan-17",
+  "deck": "Planning a season: calendar, budget, licences timeline, scouting schedule",
+  "front": "PREP hook?",
+  "back": "Paper, Range, Exercise, Places.",
+  "diagram": "fl-plan-hooks"
+ },
+ {
+  "id": "fl-wx-01",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Do BC clocks fall back on 1 November 2026?",
+  "back": "No. BC stays on UTC minus 7 all year (95%).",
+  "diagram": "fl-wx-clock"
+ },
+ {
+  "id": "fl-wx-02",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Big game legal hours?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%, item 38).",
+  "diagram": "fl-wx-legal-heffley"
+ },
+ {
+  "id": "fl-wx-03",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Duck and goose legal hours?",
+  "back": "Half an hour before sunrise to half an hour after sunset (99%, item 37)."
+ },
+ {
+  "id": "fl-wx-04",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Who decides sunrise and sunset in the field?",
+  "back": "The hunter, based on terrain and circumstances (99%)."
+ },
+ {
+  "id": "fl-wx-05",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Heffley Creek sunrise and sunset, 15 October 2026?",
+  "back": "About 7:22 and 18:12 (90%).",
+  "diagram": "fl-wx-legal-heffley"
+ },
+ {
+  "id": "fl-wx-06",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Heffley Creek sunrise, 15 November 2026?",
+  "back": "About 8:15, legal start about 7:15 (90%).",
+  "diagram": "fl-wx-legal-heffley"
+ },
+ {
+  "id": "fl-wx-07",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Daylight lost near Heffley Creek in October?",
+  "back": "Almost 2 hours: 11 h 43 min to 9 h 51 min (90%).",
+  "diagram": "fl-wx-daylength"
+ },
+ {
+  "id": "fl-wx-08",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Mission sunset 31 October 2026 and last duck time?",
+  "back": "About 17:52; ducks until about 18:22 (90%)."
+ },
+ {
+  "id": "fl-wx-09",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Kamloops October average high and low?",
+  "back": "13.6 °C and 3.5 °C (95%).",
+  "diagram": "fl-wx-kam-oct"
+ },
+ {
+  "id": "fl-wx-10",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Kamloops November average high and low?",
+  "back": "5.8 °C and minus 1.1 °C (95%).",
+  "diagram": "fl-wx-kam-nov"
+ },
+ {
+  "id": "fl-wx-11",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Frosty nights at Kamloops in October and November?",
+  "back": "About 6 and 16 (95%).",
+  "diagram": "fl-wx-kam-nov"
+ },
+ {
+  "id": "fl-wx-12",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Abbotsford November precipitation?",
+  "back": "About 233 mm (95%).",
+  "diagram": "fl-wx-precip"
+ },
+ {
+  "id": "fl-wx-13",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Coldest November at Kamloops 1991 to 2020?",
+  "back": "Minus 24.9 °C (95%).",
+  "diagram": "fl-wx-extremes"
+ },
+ {
+  "id": "fl-wx-14",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Average cooling with height?",
+  "back": "About 6.5 °C per 1,000 m, not always (Tip).",
+  "diagram": "fl-wx-elev"
+ },
+ {
+  "id": "fl-wx-15",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "Mule deer rut timing?",
+  "back": "Mid November to mid December (80%).",
+  "diagram": "fl-wx-season"
+ },
+ {
+  "id": "fl-wx-16",
+  "deck": "Weather, daylight and season timing in BC for your areas",
+  "front": "What moves mule deer to winter range?",
+  "back": "Snow and cold (85%).",
+  "diagram": "fl-wx-season"
+ }
+]

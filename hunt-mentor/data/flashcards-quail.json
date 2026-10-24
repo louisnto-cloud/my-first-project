@@ -1,0 +1,613 @@
+[
+ {
+  "id": "mql-001",
+  "deck": "California quail Masterclass",
+  "front": "Name the 5 marks of a male California quail.",
+  "back": "Curled black plume, black face rimmed in white, scaled belly, chestnut belly patch, white streaks on grey brown sides (80%).",
+  "diagram": "mql-id-marks"
+ },
+ {
+  "id": "mql-002",
+  "deck": "California quail Masterclass",
+  "front": "How do you tell a female California quail?",
+  "back": "Plain grey brown face, small brown plume, no black face or white rim. Same scaled belly (80%)."
+ },
+ {
+  "id": "mql-003",
+  "deck": "California quail Masterclass",
+  "front": "Weight and length of a California quail?",
+  "back": "140 to 230 g, 24 to 27 cm long (75%, Audubon).",
+  "diagram": "mql-size-bars"
+ },
+ {
+  "id": "mql-004",
+  "deck": "California quail Masterclass",
+  "front": "Quail, Hun, chukar weights: the number trick?",
+  "back": "2, 4, 6: about 200 g, 400 g, 600 g. Real ranges 140 to 230, 300 to 500, 538 to 765 g (75%).",
+  "diagram": "mql-three-birds"
+ },
+ {
+  "id": "mql-005",
+  "deck": "California quail Masterclass",
+  "front": "Straight upright plume, barred red sides. Shoot?",
+  "back": "No. Mountain quail: no open season (99%). Shoot California quail only.",
+  "diagram": "mql-lookalikes"
+ },
+ {
+  "id": "mql-006",
+  "deck": "California quail Masterclass",
+  "front": "How do you age a young quail in fall?",
+  "back": "Buff tips on the upper primary coverts and pointed outer flight feathers (70%).",
+  "diagram": "mql-age-wing"
+ },
+ {
+  "id": "mql-007",
+  "deck": "California quail Masterclass",
+  "front": "Chukar field marks?",
+  "back": "Red bill and legs, black band through the eye to a necklace, barred black, white and chestnut flanks. 538 to 765 g (75%)."
+ },
+ {
+  "id": "mql-008",
+  "deck": "California quail Masterclass",
+  "front": "Gray partridge (Hun) field marks?",
+  "back": "Orange face, chestnut horseshoe on the belly, rusty outer tail in flight. 300 to 500 g (75%).",
+  "diagram": "sb-partridge-id"
+ },
+ {
+  "id": "mql-009",
+  "deck": "California quail Masterclass",
+  "front": "When were California quail introduced to BC?",
+  "back": "Between 1860 and 1912 (85%, BC Breeding Bird Atlas).",
+  "diagram": "mql-bc-timeline"
+ },
+ {
+  "id": "mql-010",
+  "deck": "California quail Masterclass",
+  "front": "Two main BC quail areas?",
+  "back": "Okanagan and Kettle valleys, and southeast Vancouver Island (85%). Fraser Valley birds appear gone (85%)."
+ },
+ {
+  "id": "mql-011",
+  "deck": "California quail Masterclass",
+  "front": "BC quail harvest, then and now?",
+  "back": "Up to 4,600 a year in the 1970s, under 1,000 a year recently (65%, BC Outdoors)."
+ },
+ {
+  "id": "mql-012",
+  "deck": "California quail Masterclass",
+  "front": "Where in BC did chukar take hold best?",
+  "back": "Low slopes of the Thompson from Kamloops to Lytton; also South Okanagan and Similkameen (65%)."
+ },
+ {
+  "id": "mql-013",
+  "deck": "California quail Masterclass",
+  "front": "Where are a quail's heart and lungs?",
+  "back": "Front half: lungs high under the back between the ribs, heart low behind the crop (70%).",
+  "diagram": "mql-body-cutaway"
+ },
+ {
+  "id": "mql-014",
+  "deck": "California quail Masterclass",
+  "front": "How many air sacs does a fowl have?",
+  "back": "Nine. They pump air but do not exchange gas (70%, poultry anatomy)."
+ },
+ {
+  "id": "mql-015",
+  "deck": "California quail Masterclass",
+  "front": "What pumps air in a bird, with no diaphragm?",
+  "back": "The ribs and breastbone, moving the air sacs (70%).",
+  "diagram": "anim/mql-airsac-breath"
+ },
+ {
+  "id": "mql-016",
+  "deck": "California quail Masterclass",
+  "front": "How many breaths for one gulp of air to pass through?",
+  "back": "Two: rear sacs, lung, front sacs, out. Fresh air crosses the lung both ways (70%)."
+ },
+ {
+  "id": "mql-017",
+  "deck": "California quail Masterclass",
+  "front": "What does the crop do? The gizzard?",
+  "back": "Crop stores a meal. Gizzard grinds it with grit (70%).",
+  "diagram": "mql-gut-path"
+ },
+ {
+  "id": "mql-018",
+  "deck": "California quail Masterclass",
+  "front": "Field trick with the crop?",
+  "back": "Open it after the hunt: it shows what the covey eats right now (Tip)."
+ },
+ {
+  "id": "mql-019",
+  "deck": "California quail Masterclass",
+  "front": "Why are quail flights short?",
+  "back": "Breast muscle is mostly white fibre: fast, little staying power. Burst, glide, land, run (70%).",
+  "diagram": "mql-muscle-burst"
+ },
+ {
+  "id": "mql-020",
+  "deck": "California quail Masterclass",
+  "front": "Fowl body temperature?",
+  "back": "About 41 to 41.7 °C (70%, chicken figure).",
+  "diagram": "mql-heat"
+ },
+ {
+  "id": "mql-021",
+  "deck": "California quail Masterclass",
+  "front": "Hot weather water rule for quail?",
+  "back": "Free water every day in hot weather; dew and green plants are enough in cool weather (80%)."
+ },
+ {
+  "id": "mql-022",
+  "deck": "California quail Masterclass",
+  "front": "How long do quail live?",
+  "back": "Few past one year; about six years at most (65%). Most of a fall covey is young.",
+  "diagram": "mql-survival"
+ },
+ {
+  "id": "mql-023",
+  "deck": "California quail Masterclass",
+  "front": "Early banding study: of 101 quail, how many seen at 1 year?",
+  "back": "15. Then 4 at two years, 1 at three (60%)."
+ },
+ {
+  "id": "mql-024",
+  "deck": "California quail Masterclass",
+  "front": "Which sense does a quail trust most?",
+  "back": "Eyes, then ears. Nose is weak (70 to 85%).",
+  "diagram": "mql-sense-ranks"
+ },
+ {
+  "id": "mql-025",
+  "deck": "California quail Masterclass",
+  "front": "How wide is the chicken's two eyed (binocular) field?",
+  "back": "About 26°. The rest is seen one eye at a time; near full circle view (70%).",
+  "diagram": "mql-vision-field"
+ },
+ {
+  "id": "mql-026",
+  "deck": "California quail Masterclass",
+  "front": "How many colour cone types do birds have?",
+  "back": "Four, including ultraviolet. Humans have three (85%)."
+ },
+ {
+  "id": "mql-027",
+  "deck": "California quail Masterclass",
+  "front": "Best hearing band of birds?",
+  "back": "About 1 to 4 kHz: voices, boots on gravel, gun clicks (75%).",
+  "diagram": "mql-hearing-band"
+ },
+ {
+  "id": "mql-028",
+  "deck": "California quail Masterclass",
+  "front": "Who watches while the covey feeds?",
+  "back": "A sentinel, usually a male, on a high perch. He gives the alarm (70%).",
+  "diagram": "anim/mql-sentinel-alarm"
+ },
+ {
+  "id": "mql-029",
+  "deck": "California quail Masterclass",
+  "front": "How far from cover do quail feed?",
+  "back": "Seldom more than 15 to 30 m (80%)."
+ },
+ {
+  "id": "mql-030",
+  "deck": "California quail Masterclass",
+  "front": "Does scent control matter for quail?",
+  "back": "Little. Smell is weak in fowl (70%). Wind still carries your noise and helps a dog (Tip)."
+ },
+ {
+  "id": "mql-031",
+  "deck": "California quail Masterclass",
+  "front": "What is the assembly call and when is it given?",
+  "back": "\"Chi CA go\", loudest middle note. A separated bird, or a covey on the move; repeated 10 or more times (70%).",
+  "diagram": "mql-call-chart"
+ },
+ {
+  "id": "mql-032",
+  "deck": "California quail Masterclass",
+  "front": "Spring call of an unpaired cock?",
+  "back": "One loud \"cow\" from a high perch (70%)."
+ },
+ {
+  "id": "mql-033",
+  "deck": "California quail Masterclass",
+  "front": "What is the \"squill\" call?",
+  "back": "Males fighting over rank in spring (70%)."
+ },
+ {
+  "id": "mql-034",
+  "deck": "California quail Masterclass",
+  "front": "A quail's first answer to danger?",
+  "back": "Run into cover. Fly as a last resort (70%).",
+  "diagram": "anim/mql-run-then-fly"
+ },
+ {
+  "id": "mql-035",
+  "deck": "California quail Masterclass",
+  "front": "After a covey flush, what do singles do?",
+  "back": "Land a few dozen yards off, hold tight, then call to regroup (75%).",
+  "diagram": "mql-regroup-clock"
+ },
+ {
+  "id": "mql-036",
+  "deck": "California quail Masterclass",
+  "front": "When does the dusk chorus happen and why?",
+  "back": "At dusk, scattered birds call as they gather to roost (75%)."
+ },
+ {
+  "id": "mql-037",
+  "deck": "California quail Masterclass",
+  "front": "Huns flushed twice: what next?",
+  "back": "They flush farther each time. Make the first chance count (75%).",
+  "diagram": "mql-pressure"
+ },
+ {
+  "id": "mql-038",
+  "deck": "California quail Masterclass",
+  "front": "Typical BC covey size?",
+  "back": "Usually under 30, sometimes 100 or more (85%).",
+  "diagram": "mql-covey-size"
+ },
+ {
+  "id": "mql-039",
+  "deck": "California quail Masterclass",
+  "front": "Who gets mates in a covey?",
+  "back": "Males in the dominance hierarchy; older birds pair earlier (70%)."
+ },
+ {
+  "id": "mql-040",
+  "deck": "California quail Masterclass",
+  "front": "California winter range of a covey?",
+  "back": "About 10.5 ha, from 6.9 to 18 ha (80%)."
+ },
+ {
+  "id": "mql-041",
+  "deck": "California quail Masterclass",
+  "front": "When do coveys break up?",
+  "back": "March; about 2 months to sort into pairs (70%).",
+  "diagram": "mql-year-wheel"
+ },
+ {
+  "id": "mql-042",
+  "deck": "California quail Masterclass",
+  "front": "Clutch and incubation?",
+  "back": "About 14 eggs; the hen sits 22 to 23 days (80%).",
+  "diagram": "mql-nest-timeline"
+ },
+ {
+  "id": "mql-043",
+  "deck": "California quail Masterclass",
+  "front": "When do chicks fly?",
+  "back": "Short hops at about 10 days; they run within a day of hatching (75%)."
+ },
+ {
+  "id": "mql-044",
+  "deck": "California quail Masterclass",
+  "front": "Peak hatch month?",
+  "back": "June (80%, California records). BC may run later: VERIFY."
+ },
+ {
+  "id": "mql-045",
+  "deck": "California quail Masterclass",
+  "front": "What drives a good hatch?",
+  "back": "Rain and green growth the winter and spring before (80%)."
+ },
+ {
+  "id": "mql-046",
+  "deck": "California quail Masterclass",
+  "front": "Region 8 quail season and limits?",
+  "back": "1 October to 30 November, 10 a day, 30 in possession, MUs 8-1 to 8-15 and 8-21 to 8-26 (99%).",
+  "diagram": "re-r8-upland-bars"
+ },
+ {
+  "id": "mql-047",
+  "deck": "California quail Masterclass",
+  "front": "Best window inside the season (Tip)?",
+  "back": "Late October to mid November: leaves down, coveys formed (Tip).",
+  "diagram": "mql-octnov"
+ },
+ {
+  "id": "mql-048",
+  "deck": "California quail Masterclass",
+  "front": "Chukar clutch and incubation?",
+  "back": "10 to 20 eggs, average 15; about 24 days (80%, FEIS)."
+ },
+ {
+  "id": "mql-049",
+  "deck": "California quail Masterclass",
+  "front": "What do chukar do in deep snow?",
+  "back": "Move to lower ground and south slopes (80%)."
+ },
+ {
+  "id": "mql-050",
+  "deck": "California quail Masterclass",
+  "front": "When do quail feed in fall?",
+  "back": "Twice: just after dawn and late afternoon (70%).",
+  "diagram": "mql-day-clock"
+ },
+ {
+  "id": "mql-051",
+  "deck": "California quail Masterclass",
+  "front": "What do quail do at midday?",
+  "back": "Loaf in cover, dust bathe, drink (75%)."
+ },
+ {
+  "id": "mql-052",
+  "deck": "California quail Masterclass",
+  "front": "When do quail pick grit?",
+  "back": "Before the morning and afternoon feeds, at road edges (75%)."
+ },
+ {
+  "id": "mql-053",
+  "deck": "California quail Masterclass",
+  "front": "Storm day behaviour?",
+  "back": "They feed in the breaks of the storm (70%).",
+  "diagram": "mql-evidence-bars"
+ },
+ {
+  "id": "mql-054",
+  "deck": "California quail Masterclass",
+  "front": "Cold fronts and moon: proven effects?",
+  "back": "No good quail data. Tip only."
+ },
+ {
+  "id": "mql-055",
+  "deck": "California quail Masterclass",
+  "front": "Covey flew up into trees. What now?",
+  "back": "Walk away, come back in 30 to 60 minutes (75%). No shots at sitting birds (Tip)."
+ },
+ {
+  "id": "mql-056",
+  "deck": "California quail Masterclass",
+  "front": "Where are chukar late in the afternoon?",
+  "back": "Moving back up to steeper roost areas (75%)."
+ },
+ {
+  "id": "mql-057",
+  "deck": "California quail Masterclass",
+  "front": "Legal hunting hours for quail?",
+  "back": "1 hour before sunrise to 1 hour after sunset (99%)."
+ },
+ {
+  "id": "mql-058",
+  "deck": "California quail Masterclass",
+  "front": "BC quail elevation band?",
+  "back": "Mostly 250 to 500 m, rarely above 750 m (85%).",
+  "diagram": "mql-habitat-section"
+ },
+ {
+  "id": "mql-059",
+  "deck": "California quail Masterclass",
+  "front": "Which biogeoclimatic zones hold Interior quail?",
+  "back": "Ponderosa Pine and Bunchgrass (85%)."
+ },
+ {
+  "id": "mql-060",
+  "deck": "California quail Masterclass",
+  "front": "Key plant of chukar country?",
+  "back": "Cheatgrass (80%), with sage, bitterbrush and rock."
+ },
+ {
+  "id": "mql-061",
+  "deck": "California quail Masterclass",
+  "front": "Quail at Heffley Creek legal?",
+  "back": "No. Region 3 has no quail row (97%). Chukar and Huns are open there (99%).",
+  "diagram": "hf-quail-regions"
+ },
+ {
+  "id": "mql-062",
+  "deck": "California quail Masterclass",
+  "front": "Quail near Mission?",
+  "back": "No quail row in Region 2 (97%) and the Fraser Valley birds appear gone (85%)."
+ },
+ {
+  "id": "mql-063",
+  "deck": "California quail Masterclass",
+  "front": "First three Hunt Map layers for quail?",
+  "back": "California quail habitat, Private land, City and town limits (Tip).",
+  "diagram": "mql-map-layers"
+ },
+ {
+  "id": "mql-064",
+  "deck": "California quail Masterclass",
+  "front": "Which terrain tool shows warm, snow free slopes?",
+  "back": "Slope direction: south slopes warm and melt first (75% for chukar use).",
+  "diagram": "mql-map-2"
+ },
+ {
+  "id": "mql-065",
+  "deck": "California quail Masterclass",
+  "front": "Which Hunt Map area to download for the quail trip?",
+  "back": "Area C: South Okanagan and Similkameen (95%)."
+ },
+ {
+  "id": "mql-066",
+  "deck": "California quail Masterclass",
+  "front": "How do quail tracks lie?",
+  "back": "Three toes forward, short hind toe, prints in one line (60%).",
+  "diagram": "mql-track-grid"
+ },
+ {
+  "id": "mql-067",
+  "deck": "California quail Masterclass",
+  "front": "Quail track length?",
+  "back": "About 3.5 cm: Tip, VERIFY. Grouse about 5 cm (75%)."
+ },
+ {
+  "id": "mql-068",
+  "deck": "California quail Masterclass",
+  "front": "What is the white cap on a dropping?",
+  "back": "Uric acid, the bird's nitrogen waste (70%).",
+  "diagram": "mql-droppings"
+ },
+ {
+  "id": "mql-069",
+  "deck": "California quail Masterclass",
+  "front": "Where do California quail roost?",
+  "back": "Dense trees or shrubs, not on the ground (70%). Look for piles under them."
+ },
+ {
+  "id": "mql-070",
+  "deck": "California quail Masterclass",
+  "front": "Three signs that say quail are near a lane?",
+  "back": "Tracks, droppings and dusting holes (75%).",
+  "diagram": "mql-dust-bowl"
+ },
+ {
+  "id": "mql-071",
+  "deck": "California quail Masterclass",
+  "front": "Is a mouth quail call legal? An electronic one?",
+  "back": "Mouth call: yes (95%, my reading). Recorded or electronic calls for game birds: no (99%)."
+ },
+ {
+  "id": "mql-072",
+  "deck": "California quail Masterclass",
+  "front": "Steps to follow a covey?",
+  "back": "Listen at dawn or dusk, read sign on the lanes, stop and go along cover, mark the singles (Tip, 75%).",
+  "diagram": "mql-follow-4"
+ },
+ {
+  "id": "mql-073",
+  "deck": "California quail Masterclass",
+  "front": "Is an unsigned orchard open to hunt?",
+  "back": "No. Cultivated land needs consent of the owner, lessee or occupant (99%). Orchards count (95%).",
+  "diagram": "hf-orchard-buffer"
+ },
+ {
+  "id": "mql-074",
+  "deck": "California quail Masterclass",
+  "front": "The 100 m rule?",
+  "back": "No hunting or shooting within 100 m of a dwelling, school, playground or occupied farm building (99%).",
+  "diagram": "rb-100m-ring"
+ },
+ {
+  "id": "mql-075",
+  "deck": "California quail Masterclass",
+  "front": "Are town bylaws in the synopsis?",
+  "back": "No (99%). Hunt outside every town boundary.",
+  "diagram": "ld-town-bylaws"
+ },
+ {
+  "id": "mql-076",
+  "deck": "California quail Masterclass",
+  "front": "Vernon Bylaw 5399 says?",
+  "back": "No discharge of a firearm, air guns included, inside the city (99%)."
+ },
+ {
+  "id": "mql-077",
+  "deck": "California quail Masterclass",
+  "front": "How long to stop on a stop and go?",
+  "back": "15 to 20 seconds at each patch of cover (75%).",
+  "diagram": "anim/mql-stop-go"
+ },
+ {
+  "id": "mql-078",
+  "deck": "California quail Masterclass",
+  "front": "How far apart do two hunters walk a draw?",
+  "back": "15 to 25 m, level, each owning one side (Tip)."
+ },
+ {
+  "id": "mql-079",
+  "deck": "California quail Masterclass",
+  "front": "Where do most hunters miss a straightaway quail?",
+  "back": "High. Hold a hair under (75%)."
+ },
+ {
+  "id": "mql-080",
+  "deck": "California quail Masterclass",
+  "front": "Best time to hunt singles?",
+  "back": "Right after the flush, while they hold tight (75%).",
+  "diagram": "anim/mql-singles-call"
+ },
+ {
+  "id": "mql-081",
+  "deck": "California quail Masterclass",
+  "front": "Tall Timbers manners rule for a covey?",
+  "back": "Three or more birds from a rise, then let the covey go (Tip, 60%)."
+ },
+ {
+  "id": "mql-082",
+  "deck": "California quail Masterclass",
+  "front": "How to approach chukar?",
+  "back": "From above; then follow the same contour line (75%).",
+  "diagram": "mql-chukar-contour"
+ },
+ {
+  "id": "mql-083",
+  "deck": "California quail Masterclass",
+  "front": "Huns: the key tactic?",
+  "back": "Cover a lot of ground; feed edges of grain fields, hide in hay, grass, fence lines (75%)."
+ },
+ {
+  "id": "mql-084",
+  "deck": "California quail Masterclass",
+  "front": "Are dogs legal for quail?",
+  "back": "Yes, unleashed dogs may hunt small game (99%)."
+ },
+ {
+  "id": "mql-085",
+  "deck": "California quail Masterclass",
+  "front": "Standard quail loads and choke?",
+  "back": "Lead 7.5 or 8 (steel 6 or 7), skeet or improved cylinder (75%).",
+  "diagram": "mql-shot-window"
+ },
+ {
+  "id": "mql-086",
+  "deck": "California quail Masterclass",
+  "front": "Is lead shot legal for quail?",
+  "back": "Yes, the shot ban does not apply to upland game birds (99%)."
+ },
+ {
+  "id": "mql-087",
+  "deck": "California quail Masterclass",
+  "front": "Plug rule?",
+  "back": "No more than 3 shells in total in a pump or auto (95%)."
+ },
+ {
+  "id": "mql-088",
+  "deck": "California quail Masterclass",
+  "front": "A bird falls as another flushes. First move?",
+  "back": "Mark the fall, drop your hat, walk straight to it (60%). Retrieval is the law (99%).",
+  "diagram": "anim/mql-mark-fall"
+ },
+ {
+  "id": "mql-089",
+  "deck": "California quail Masterclass",
+  "front": "What must stay on a quail until home?",
+  "back": "One feathered wing (99%). Both breasts go home (99%).",
+  "diagram": "mql-care-3"
+ },
+ {
+  "id": "mql-090",
+  "deck": "California quail Masterclass",
+  "front": "Meat from one quail?",
+  "back": "About 60 to 80 g (Tip, 60%)."
+ },
+ {
+  "id": "mql-091",
+  "deck": "California quail Masterclass",
+  "front": "Safe cooking temperature for birds?",
+  "back": "74 °C (165 °F) inside (85%).",
+  "diagram": "mql-care-4"
+ },
+ {
+  "id": "mql-092",
+  "deck": "California quail Masterclass",
+  "front": "Region 8 chukar and Hun limits?",
+  "back": "Chukar 5 (15), gray partridge 3 (9), 1 Oct to 30 Nov (99%)."
+ },
+ {
+  "id": "mql-093",
+  "deck": "California quail Masterclass",
+  "front": "Legal firearms for quail?",
+  "back": "Shotgun, air gun or bows B, C, D. No .22, no centrefire (95%).",
+  "diagram": "sb-upland-weapons"
+ },
+ {
+  "id": "mql-094",
+  "deck": "California quail Masterclass",
+  "front": "Licence needed for quail as a BC resident?",
+  "back": "The BC hunting licence only, no species licence (99%)."
+ }
+]

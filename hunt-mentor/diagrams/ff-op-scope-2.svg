@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The eyepiece is for the reticle only. Do not use it to focus on the deer.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Not for focusing the target</text><circle cx="200" cy="140" r="80" fill="#f7f4ec" stroke="#2f3a2b" stroke-width="2"/><line x1="120" y1="140" x2="280" y2="140" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><line x1="200" y1="60" x2="200" y2="220" stroke="#23261f" stroke-width="2" stroke-linecap="round"/><path d="M291 61 l18 18 M309 61 l-18 18" fill="none" stroke="#b3261e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="250" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="middle">leave the eyepiece alone after</text>
+</svg>

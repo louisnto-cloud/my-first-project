@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Top view of a dust bowl beside a road: a shallow oval scrape in dry dirt with a few small brown feathers around it. Size around 20 to 30 centimetres across is an estimate, Tip." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A dust bowl on a road edge</text>
+<rect x="0" y="40" width="400" height="260" fill="#d9c9a6"/>
+<rect x="0" y="40" width="400" height="80" fill="#c4b48a"/>
+<text x="390" y="64" font-size="14" fill="#23261f" text-anchor="end" font-weight="bold">Road</text>
+<ellipse cx="200" cy="200" rx="70" ry="38" fill="#b9a57e" stroke="#8c7a55" stroke-width="3"/>
+<ellipse cx="200" cy="200" rx="42" ry="20" fill="#a8946c"/>
+<g transform="translate(150 170) rotate(20)"><path d="M0 0 q6 -14 0 -26 q-6 12 0 26" fill="#8b5a2b"/><line x1="0" y1="0" x2="0" y2="-26" stroke="#23261f" stroke-width="1"/></g>
+<g transform="translate(250 235) rotate(-30)"><path d="M0 0 q6 -14 0 -26 q-6 12 0 26" fill="#8b5a2b"/><line x1="0" y1="0" x2="0" y2="-26" stroke="#23261f" stroke-width="1"/></g>
+<g transform="translate(280 185) rotate(60)"><path d="M0 0 q6 -14 0 -26 q-6 12 0 26" fill="#8b5a2b"/><line x1="0" y1="0" x2="0" y2="-26" stroke="#23261f" stroke-width="1"/></g>
+<text x="10" y="262" font-size="14" fill="#23261f" text-anchor="start">Shallow scrape in dry dirt, 20 to 30 cm across,</text>
+<text x="10" y="280" font-size="14" fill="#23261f" text-anchor="start">a few small feathers (Tip, size my estimate).</text>
+</svg>

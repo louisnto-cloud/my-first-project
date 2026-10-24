@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 378" font-family="sans-serif" role="img" aria-label="Flowchart of how to apply in Manitoba. One: create an account on the elicensing site. Two: buy the Canadian resident white tailed deer licence or the game bird licence online. Three: read the current Manitoba Hunting Guide for Game Hunting Area boundaries, dates and tags. Four: check the Chronic Wasting Disease zones and any testing, VERIFY. Five: plan the export step, VERIFY whether the 20 dollar permit applies.">
+<rect x="0" y="0" width="400" height="378" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Manitoba: how to apply</text>
+<rect x="16" y="42" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">1. Create an elicensing account, one each</text>
+<line x1="200.0" y1="77" x2="200.0" y2="99" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,97 207.0,97 200.0,107" fill="#2f3a2b"/>
+<rect x="16" y="107" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="131" font-size="15" fill="#2f3a2b">2. Buy the deer or game bird licence online</text>
+<line x1="200.0" y1="142" x2="200.0" y2="164" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,162 207.0,162 200.0,172" fill="#2f3a2b"/>
+<rect x="16" y="172" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="196" font-size="15" fill="#2f3a2b">3. Read the Hunting Guide: GHAs, dates, tags</text>
+<line x1="200.0" y1="207" x2="200.0" y2="229" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,227 207.0,227 200.0,237" fill="#2f3a2b"/>
+<rect x="16" y="237" width="368" height="35" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="261" font-size="15" font-weight="bold" fill="#2f3a2b">4. Check CWD zones and testing. VERIFY</text>
+<line x1="200.0" y1="272" x2="200.0" y2="294" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,292 207.0,292 200.0,302" fill="#2f3a2b"/>
+<rect x="16" y="302" width="368" height="54" rx="18" fill="#f3ead6" stroke="#6b4f35" stroke-width="2.5"/>
+<text x="28" y="326" font-size="15" font-weight="bold" fill="#2f3a2b">5. Plan the export step. VERIFY the $20</text>
+<text x="28" y="345" font-size="15" font-weight="bold" fill="#2f3a2b">permit</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2: drop a flag or a pin where you shot from, so you can line up later.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Flag where you stood</text>
+<rect x="0" y="200" width="400" height="100" rx="0" fill="#cfdcb5"/><g transform="translate(60 230)"><circle cx="0" cy="-30" r="9" fill="#e8590c"/><rect x="-9" y="-21" width="18" height="30" rx="5" fill="#e8590c"/></g><line x1="80" y1="200" x2="80" y2="150" stroke="#23261f" stroke-width="2"/><path d="M80 150 L96 156 L80 162 Z" fill="#e8590c" stroke="#e8590c" stroke-width="1"/><text x="220" y="110" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Flag your shooting spot</text><text x="220" y="134" font-size="15" fill="#23261f" text-anchor="middle">Phone pin too</text>
+</svg>

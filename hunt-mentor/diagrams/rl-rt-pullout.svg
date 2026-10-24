@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a pullout beside a road. The truck is parked well off the road. The rifle stays unloaded and cased. The hunter stands away from the truck with binoculars. Caption: glassing for wildlife with a firearm on you counts as hunting.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Glass from a pullout, the safe way</text>
+  <rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".7"/>
+  <rect x="0" y="200" width="400" height="34" fill="#d9c9a3"/>
+  <rect x="40" y="166" width="120" height="30" rx="6" fill="#e8e1c9" stroke="#2f3a2b" stroke-dasharray="4 3"/>
+  <g transform="translate(90 186)"><rect x="-22" y="-12" width="30" height="14" rx="2" fill="#5c6f8a"/><rect x="8" y="-18" width="16" height="20" rx="3" fill="#5c6f8a"/></g>
+  <g transform="translate(230 150) scale(1)"><circle cy="-22" r="6" fill="#e8590c"/><path d="M0 -16 v16 M0 0 l-6 12 M0 0 l6 12 M0 -12 l-8 6 M0 -12 l8 4" stroke="#e8590c" stroke-width="3.5" stroke-linecap="round"/></g>
+  <circle cx="234" cy="128" r="5" fill="#2f3a2b"/><circle cx="242" cy="128" r="5" fill="#2f3a2b"/>
+  <rect x="10" y="240" width="234" height="24" rx="6" fill="#2f3a2b"/><text x="127.0" y="257" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Truck off the road, safely</text>
+  <rect x="185" y="66" width="209" height="24" rx="6" fill="#e8590c"/><text x="289.5" y="83" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">You away from the truck</text>
+  <rect x="10" y="110" width="217" height="24" rx="6" fill="#2f3a2b"/><text x="118.5" y="127" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Rifle unloaded and cased</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Glassing with a firearm on you counts as hunting</text>
+</svg>

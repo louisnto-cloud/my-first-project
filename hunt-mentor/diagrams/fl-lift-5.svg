@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Turn with your feet, not by twisting at the waist.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">5</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Turn with your feet</text>
+<circle cx="200" cy="70" r="12" fill="#2f3a2b"/><line x1="200" y1="82" x2="200" y2="150" stroke="#2f3a2b" stroke-width="7" stroke-linecap="round"/><line x1="200" y1="150" x2="190" y2="228" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/><line x1="200" y1="150" x2="210" y2="228" stroke="#2f3a2b" stroke-width="6" stroke-linecap="round"/><path d="M150 238 A60 22 0 0 0 250 238" fill="none" stroke="#e8590c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="240" y1="240" x2="252" y2="236" stroke="#e8590c" stroke-width="4" stroke-linecap="round"/><polygon points="252.0,236.0 244.8,243.0 242.1,234.7" fill="#e8590c"/><text x="320" y="120" font-family="sans-serif" font-size="16" font-weight="bold" fill="#b3261e" text-anchor="middle">No twist</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Step around. Do not twist.</text>
+</svg>

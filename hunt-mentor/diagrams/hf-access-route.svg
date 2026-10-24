@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Route to a bench, traced from home: highway, then Forest Service Road, then spur road, to the last legal parking spot. A closure line blocks the spur beyond. From parking, a dashed foot route climbs about 40 minutes to the bench. Write the start time on your plan.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#dfe6d3" opacity=".5"/>
+  <g fill="none" stroke="#8b5a2b" stroke-width="1.5" opacity=".7"><path d="M200 0 C 260 60, 330 70, 400 60"/><path d="M180 0 C 240 80, 320 100, 400 92"/><path d="M160 0 C 220 100, 310 130, 400 124"/></g>
+  <path d="M0 270 L400 270" stroke="#2f3a2b" stroke-width="8"/>
+  <path d="M60 270 C 80 220, 120 200, 160 190" stroke="#8b5a2b" stroke-width="5" fill="none"/>
+  <path d="M160 190 C 190 180, 210 160, 230 150" stroke="#8b5a2b" stroke-width="3" fill="none"/>
+  <path d="M230 150 C 250 140, 270 130, 300 126" stroke="#8b5a2b" stroke-width="3" fill="none" stroke-dasharray="4 4" opacity=".6"/>
+  <path d="M236 132 L236 168" stroke="#c0392b" stroke-width="5"/>
+  <text x="244" y="182" font-size="14" font-weight="bold" fill="#c0392b">closure</text>
+  <rect x="210" y="140" width="18" height="14" rx="3" fill="#4a7fb0"/>
+  <text x="168" y="134" font-size="14" font-weight="bold" fill="#2f3a2b">Park here</text>
+  <path d="M220 140 C 230 110, 220 80, 260 50" stroke="#e8590c" stroke-width="3.5" fill="none" stroke-dasharray="8 6"/>
+  <ellipse cx="290" cy="42" rx="40" ry="14" fill="#e8590c" opacity=".3"/><text x="300" y="30" font-size="15" font-weight="bold" fill="#e8590c">Bench</text>
+  <text x="250" y="96" font-size="14" font-weight="bold" fill="#e8590c">walk 40 min</text>
+  <text x="12" y="292" font-size="14" fill="#2f3a2b">Highway</text>
+  <text x="90" y="232" font-size="14" fill="#2f3a2b">FSR</text>
+  <text x="190" y="206" font-size="14" fill="#2f3a2b">spur</text>
+  <rect x="270" y="196" width="122" height="54" rx="8" fill="#2f3a2b"/>
+  <text x="331" y="218" font-size="14" fill="#fff" text-anchor="middle">Dark climb?</text>
+  <text x="331" y="238" font-size="14" fill="#fff" text-anchor="middle">Plan a start time</text>
+</svg>

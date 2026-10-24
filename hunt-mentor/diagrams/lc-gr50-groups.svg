@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" font-family="sans-serif" role="img" aria-label="Grandpa&#x27;s 50 rules in six groups: safety, rules 1 to 10; ethics, 11 to 18; finding game, 19 to 28; the shot, 29 to 35; after the shot, 36 to 42; camp and people, 43 to 50. Wisdom, not law, unless marked law.">
+<rect width="400" height="420" fill="#fffaf0"/>
+<text x="200" y="27" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grandpa&#x27;s 50 rules, six groups</text>
+<rect x="8" y="42" width="384" height="50" rx="8" fill="#f4eedf" stroke="#2f3a2b" stroke-width="1.8"/>
+<rect x="8" y="42" width="7" height="50" rx="3" fill="#2f3a2b"/>
+<g transform="translate(46 67.0) scale(0.9)"><path d="M-22 4 L-6 0 L20 -2 L20 2 L-4 6 L-10 12 L-22 12 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -2 h12" stroke="#2f3a2b" stroke-width="4"/></g>
+<text x="82" y="73" font-size="17" font-weight="bold" fill="#2f3a2b">Safety</text>
+<text x="382" y="73" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 1 to 10</text>
+<rect x="8" y="98" width="384" height="50" rx="8" fill="#f4eedf" stroke="#8b5a2b" stroke-width="1.8"/>
+<rect x="8" y="98" width="7" height="50" rx="3" fill="#8b5a2b"/>
+<g transform="translate(46 123.0) scale(0.9)"><path d="M-10 18 V-2 M-10 -2 V-14 Q-6 -18 -3 -14 V-4 V-18 Q0 -22 3 -18 V-4 V-16 Q6 -20 9 -16 V2 L14 -6 Q19 -6 16 2 L6 18 Z" fill="#f2d6c0" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82" y="129" font-size="17" font-weight="bold" fill="#8b5a2b">Ethics</text>
+<text x="382" y="129" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 11 to 18</text>
+<rect x="8" y="154" width="384" height="50" rx="8" fill="#f4eedf" stroke="#55663f" stroke-width="1.8"/>
+<rect x="8" y="154" width="7" height="50" rx="3" fill="#55663f"/>
+<g transform="translate(46 179.0) scale(0.9)"><rect x="-18" y="-10" width="14" height="22" rx="6" fill="#2f3a2b"/><rect x="4" y="-10" width="14" height="22" rx="6" fill="#2f3a2b"/><rect x="-6" y="-4" width="12" height="8" fill="#2f3a2b"/><circle cx="-11" cy="10" r="4" fill="#dbe7f2"/><circle cx="11" cy="10" r="4" fill="#dbe7f2"/></g>
+<text x="82" y="185" font-size="17" font-weight="bold" fill="#55663f">Finding game</text>
+<text x="382" y="185" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 19 to 28</text>
+<rect x="8" y="210" width="384" height="50" rx="8" fill="#f4eedf" stroke="#c2410c" stroke-width="1.8"/>
+<rect x="8" y="210" width="7" height="50" rx="3" fill="#c2410c"/>
+<g transform="translate(46 235.0) scale(0.9)"><circle r="16" fill="none" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -20 V-6 M0 6 V20 M-20 0 H-6 M6 0 H20" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="82" y="241" font-size="17" font-weight="bold" fill="#c2410c">The shot</text>
+<text x="382" y="241" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 29 to 35</text>
+<rect x="8" y="266" width="384" height="50" rx="8" fill="#f4eedf" stroke="#2c5d86" stroke-width="1.8"/>
+<rect x="8" y="266" width="7" height="50" rx="3" fill="#2c5d86"/>
+<g transform="translate(46 291.0) scale(0.9)"><path d="M-20 6 L6 -4 Q16 -8 20 -12 Q18 2 6 6 Z" fill="#cfd6bf" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="-24" y="2" width="14" height="9" rx="3" fill="#8b5a2b" transform="rotate(-20 -17 6)"/></g>
+<text x="82" y="297" font-size="17" font-weight="bold" fill="#2c5d86">After the shot</text>
+<text x="382" y="297" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 36 to 42</text>
+<rect x="8" y="322" width="384" height="50" rx="8" fill="#f4eedf" stroke="#6b4f35" stroke-width="1.8"/>
+<rect x="8" y="322" width="7" height="50" rx="3" fill="#6b4f35"/>
+<g transform="translate(46 347.0) scale(0.9)"><path d="M-22 16 L0 -16 L22 16 Z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -16 L-6 16 M0 -16 L6 16" stroke="#2f3a2b" stroke-width="2"/></g>
+<text x="82" y="353" font-size="17" font-weight="bold" fill="#6b4f35">Camp and people</text>
+<text x="382" y="353" font-size="16" fill="#2f3a2b" text-anchor="end">Rules 43 to 50</text>
+<text x="14" y="403" font-size="15" font-weight="bold" fill="#c2410c">Wisdom, not law, unless marked</text>
+<rect x="254" y="386" width="50" height="24" rx="12" fill="#4a7fb0"/><text x="279" y="403" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+</svg>

@@ -1,0 +1,64 @@
+[
+ {
+  "id": "dusky-grouse-hen",
+  "species": "Dusky grouse",
+  "caption": "Dusky grouse hen in aspen. Mottled brown and grey, long dark tail.",
+  "author": "Great Sand Dunes National Park and Preserve",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Dusky_Grouse_in_Aspen_Tree_(51699770724).jpg"
+ },
+ {
+  "id": "dusky-grouse-male",
+  "species": "Dusky grouse",
+  "caption": "Dusky grouse male displaying in sagebrush. Slate grey body, red air sacs and a yellow orange comb over the eye.",
+  "author": "YellowstoneNPS",
+  "licence": "Public domain",
+  "licenceUrl": "https://en.wikipedia.org/wiki/Public_domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Dusky_grouse_male_in_the_sagebrush_(53482944105).jpg",
+  "card": true,
+  "cardBack": "Dusky grouse male. Slate grey, long dark tail with a pale grey band at the tip. Big for a grouse."
+ },
+ {
+  "id": "ruffed-grouse-hen",
+  "species": "Ruffed grouse",
+  "caption": "Ruffed grouse in fall leaves. Barred brown and grey, small crest, fan shaped tail with a dark band near the tip.",
+  "author": "Mdf",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Bonasa-umbellus-001edit1.jpg",
+  "card": true,
+  "cardBack": "Ruffed grouse. Fan tail with one dark band near the tip, small crest, barred body. Aspen and alder bottoms."
+ },
+ {
+  "id": "sharp-tailed-grouse",
+  "species": "Sharp tailed grouse",
+  "caption": "Sharp tailed grouse in summer grass. Pale and spotted, short pointed tail.",
+  "author": "Cephas",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tympanuchus_phasianellus_campestris_GNP_03.jpg",
+  "card": true,
+  "cardBack": "Sharp tailed grouse. Pale, spotted (not barred) below, short pointed tail with white sides in flight. Grassland and aspen edges."
+ },
+ {
+  "id": "sharp-tailed-grouse-snow",
+  "species": "Sharp tailed grouse",
+  "caption": "Sharp tailed grouse in snow near Fort St. John, BC. Spotted body, pale tail.",
+  "author": "Gerry from Fort St. John, BC, Canada",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tympanuchus_phasianellus_in_snow.jpg"
+ },
+ {
+  "id": "spruce-grouse-hen",
+  "species": "Spruce grouse",
+  "caption": "Spruce grouse hen. Heavy black and white barring on a brown body. Conifer forest floor.",
+  "author": "Alan Covington",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Canachites_canadensis_323749881.jpg",
+  "card": true,
+  "cardBack": "Spruce grouse hen. Heavily barred, smaller than a dusky grouse, sits tight in pine and spruce."
+ }
+]

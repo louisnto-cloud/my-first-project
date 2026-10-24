@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" role="img" aria-label="Tiles: Region 6 bag limits. Mule deer on the mainland 2, at most 1 buck and 1 antlerless. Haida Gwaii deer in Management Units 6-12 and 6-13: bag 15, but at most 5 in possession. White tailed deer 2, at most 1 buck and 1 antlerless. Cougar 1. Haida Gwaii black bear 1 a licence year." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="264" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 6 bag limits</text>
+<rect x="6" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="68" y="96" font-size="14" fill="#23261f" text-anchor="middle">mule deer: 1</text>
+<text x="68" y="114" font-size="14" fill="#23261f" text-anchor="middle">buck, 1</text>
+<text x="68" y="132" font-size="14" fill="#23261f" text-anchor="middle">antlerless</text>
+<rect x="138" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#4a7fb0" stroke-width="2.5"/>
+<text x="200" y="74" font-size="26" fill="#4a7fb0" text-anchor="middle" font-weight="bold">15</text>
+<text x="200" y="96" font-size="14" fill="#23261f" text-anchor="middle">Haida Gwaii</text>
+<text x="200" y="114" font-size="14" fill="#23261f" text-anchor="middle">deer bag</text>
+<rect x="270" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332" y="74" font-size="26" fill="#c92a2a" text-anchor="middle" font-weight="bold">5</text>
+<text x="332" y="96" font-size="14" fill="#23261f" text-anchor="middle">Haida Gwaii</text>
+<text x="332" y="114" font-size="14" fill="#23261f" text-anchor="middle">deer in</text>
+<text x="332" y="132" font-size="14" fill="#23261f" text-anchor="middle">possession</text>
+<rect x="6" y="150" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="184" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="68" y="206" font-size="14" fill="#23261f" text-anchor="middle">white tails: 1</text>
+<text x="68" y="224" font-size="14" fill="#23261f" text-anchor="middle">buck, 1</text>
+<text x="68" y="242" font-size="14" fill="#23261f" text-anchor="middle">antlerless</text>
+<rect x="138" y="150" width="124" height="102" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="200" y="184" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">1</text>
+<text x="200" y="206" font-size="14" fill="#23261f" text-anchor="middle">cougar</text>
+<rect x="270" y="150" width="124" height="102" rx="10" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="332" y="184" font-size="26" fill="#8b5a2b" text-anchor="middle" font-weight="bold">1</text>
+<text x="332" y="206" font-size="14" fill="#23261f" text-anchor="middle">Haida Gwaii</text>
+<text x="332" y="224" font-size="14" fill="#23261f" text-anchor="middle">black bear a</text>
+<text x="332" y="242" font-size="14" fill="#23261f" text-anchor="middle">year</text>
+</svg>

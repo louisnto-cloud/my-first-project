@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" font-family="sans-serif" role="img" aria-label="Region 6 Motor Vehicle Closed Areas: no motor vehicle for any purpose. Above 1,400 metres all year, roads included, on Tsatia Mountain in 6-20, Klastline Plateau in 6-21, Level Mountain in 6-22 and 6-26, and Gnat Pass east of Highway 37 in 6-19. Management Unit 6-18 above 1,450 metres: closed, trappers exempt, commercial vehicles allowed on existing roads. Netalzul Mountain in 6-8, Map F6, above 1,500 metres, 1 October to 30 April. Telkwa Mountains in 6-9, Map F10, all year, except Grizzly Plateau open 1 November to 30 April and the Meat Cache open 15 December to 1 April.">
+<rect width="400" height="388" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Year round and winter vehicle closures</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO MOTOR VEHICLE, ANY PURPOSE</text>
+<rect x="8" y="68" width="384" height="93" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="114.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 114.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-16 12 L-4 -12 L2 -2 L7 -8 L16 12z"/><path d="M-4 -12 L0 -4 L-7 -4z" fill="#fffaf0"/><path d="M-16 0 H16" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 2"/></g>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Above 1,400 m, all year</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">Tsatia Mountain, Klastline Plateau, Level</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">Mountain, Gnat Pass east of Hwy 37.</text>
+<text x="78" y="148" font-size="15" fill="#2f3a2b">Roads too</text>
+<circle cx="41.0" cy="200.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 200.0) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-16 12 L-4 -12 L2 -2 L7 -8 L16 12z"/><path d="M-4 -12 L0 -4 L-7 -4z" fill="#fffaf0"/><path d="M-16 0 H16" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 2"/></g>
+<text x="78" y="186" font-size="16" font-weight="bold" fill="#2f3a2b">MU 6-18 above 1,450 m</text>
+<text x="78" y="205" font-size="15" fill="#2f3a2b">Closed. Trappers exempt. Commercial</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">vehicles on existing roads</text>
+<rect x="8" y="239" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="251.5" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="272.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">F6</text>
+<text x="78" y="262" font-size="16" font-weight="bold" fill="#2f3a2b">Netalzul Mountain</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">Above 1,500 m, Oct 1 to Apr 30</text>
+<rect x="14" y="318.0" width="54" height="30" rx="6" fill="#8b5a2b"/>
+<text x="41" y="338.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">F10</text>
+<text x="78" y="319" font-size="16" font-weight="bold" fill="#2f3a2b">Telkwa Mountains</text>
+<text x="78" y="338" font-size="15" fill="#2f3a2b">All year. Grizzly Plateau open Nov 1 to Apr</text>
+<text x="78" y="357" font-size="15" fill="#2f3a2b">30. Meat Cache open Dec 15 to Apr 1</text>
+</svg>

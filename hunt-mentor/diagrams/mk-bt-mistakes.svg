@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" font-family="sans-serif" role="img" aria-label="3 common mistakes. In after 5 minutes on a gut hit, fix: Back out for hours. Rifle and headlamp after dark, fix: That is hunting with a light. Over the posted fence, fix: Stop and ask.">
+<rect width="400" height="276" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">3 common mistakes</text>
+<circle cx="28" cy="52" r="11" fill="#17201A"/><path d="M23.5 47.5 l9 9 M32.5 47.5 l-9 9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><text x="46" y="57" font-size="15" font-weight="bold" fill="#17201A">Mistake</text><circle cx="244" cy="52" r="11" fill="#1F3D2B"/><path d="M239 52 l3.5 4 l6.5 -8" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="262" y="57" font-size="15" font-weight="bold" fill="#1F3D2B">Fix</text>
+<g><rect x="12" y="72" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="94" font-size="15" fill="#17201A">In after 5 minutes</text>
+<text x="22" y="113" font-size="15" fill="#17201A">on a gut hit</text><path d="M178 100 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 100 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="72" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="94" font-size="15" font-weight="bold" fill="#1F3D2B">Back out for</text>
+<text x="238" y="113" font-size="15" font-weight="bold" fill="#1F3D2B">hours</text></g>
+<g><rect x="12" y="138" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="160" font-size="15" fill="#17201A">Rifle and headlamp</text>
+<text x="22" y="179" font-size="15" fill="#17201A">after dark</text><path d="M178 166 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 166 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="138" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="160" font-size="15" font-weight="bold" fill="#1F3D2B">That is hunting</text>
+<text x="238" y="179" font-size="15" font-weight="bold" fill="#1F3D2B">with a light</text></g>
+<g><rect x="12" y="204" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="226" font-size="15" fill="#17201A">Over the posted</text>
+<text x="22" y="245" font-size="15" fill="#17201A">fence</text><path d="M178 232 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 232 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="204" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="226" font-size="15" font-weight="bold" fill="#1F3D2B">Stop and ask</text></g>
+
+</svg>

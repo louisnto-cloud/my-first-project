@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2 of cleaning the rifle: if it got wet, take it out of any case and dry it in a warm, dry place, such as a warm room.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Wet? Dry it in a warm room</text>
+<path d="M18 92 H170 C178 92 182 98 182 106 V124 C182 132 178 136 170 136 H18z" fill="#4f5d3c" stroke="#2f3a24" stroke-width="1.4"/>
+<path d="M24 98 H168 C172 98 176 102 176 108 V122 C176 128 172 130 168 130 H24z" fill="#c7b68a"/>
+<path d="M100 186 C120 200 160 196 196 178" stroke="#e8590c" stroke-width="3" fill="none"/><path d="M202.0 175.0 L189.5 174.2 L194.6 185.1z" fill="#e8590c"/>
+<rect x="16.9" y="150.0" width="134.2" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="84" y="170.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">out of the case</text>
+<rect x="160" y="196" width="230" height="10" rx="3" fill="#cfe0ee"/>
+<g transform="translate(268 186) rotate(0) scale(0.78)"><path d="M-150 -6 C-120 -6 -90 -4 -66 -2 C-58 -1 -52 -6 -44 -5 H44 V5 C20 6 -20 6 -36 7 C-40 12 -46 20 -50 20 L-58 19 C-56 13 -58 9 -64 8 C-92 12 -122 18 -150 22z" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1"/><path d="M-150 -6 V22" stroke="#2b2b2b" stroke-width="4"/><rect x="-46" y="-9" width="62" height="6" rx="2" fill="#2b2b2b"/><rect x="16" y="-6.5" width="134" height="4" rx="1.5" fill="#2b2b2b"/><path d="M-46 -22 h10 l6 3 h42 l6 -3 h10 v12 h-10 l-6 -3 h-42 l-6 3 h-10z" fill="#2f3a2b"/><rect x="-26" y="-12" width="4" height="4" fill="#2b2b2b"/><rect x="0" y="-12" width="4" height="4" fill="#2b2b2b"/><path d="M-34 -5 L-30 6" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round"/><circle cx="-29.5" cy="7" r="3" fill="#2b2b2b"/><rect x="-22" y="5" width="14" height="9" rx="1.5" fill="#2b2b2b"/><path d="M-44 7 C-44 14 -34 14 -32 8" stroke="#2b2b2b" stroke-width="1.8" fill="none"/></g>
+<path d="M200 168 c-3 5 -3 8 0 8 c3 0 3 -3 0 -8z" fill="#4a7fb0"/>
+<path d="M318 172 c-3 5 -3 8 0 8 c3 0 3 -3 0 -8z" fill="#4a7fb0"/>
+<path d="M348 180 c-3 5 -3 8 0 8 c3 0 3 -3 0 -8z" fill="#4a7fb0"/>
+<rect x="300" y="60" width="74" height="50" rx="6" fill="#e9e2cf" stroke="#8a7a5a" stroke-width="1.4"/>
+<rect x="308" y="66" width="7" height="38" rx="3" fill="#d8cdb0"/>
+<rect x="321" y="66" width="7" height="38" rx="3" fill="#d8cdb0"/>
+<rect x="334" y="66" width="7" height="38" rx="3" fill="#d8cdb0"/>
+<rect x="347" y="66" width="7" height="38" rx="3" fill="#d8cdb0"/>
+<rect x="360" y="66" width="7" height="38" rx="3" fill="#d8cdb0"/>
+<path d="M312 54 c-6 -8 6 -12 0 -20" stroke="#e8590c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M334 54 c-6 -8 6 -12 0 -20" stroke="#e8590c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M356 54 c-6 -8 6 -12 0 -20" stroke="#e8590c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<rect x="274.2" y="120.0" width="123.6" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="336" y="140.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">warm and dry</text>
+<text x="200" y="282" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Out of the case, warm and dry</text>
+</svg>

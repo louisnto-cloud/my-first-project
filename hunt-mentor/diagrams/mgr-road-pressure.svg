@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-label="Bar chart from a Pennsylvania Game Commission study, 75 percent. Share of grouse shot each year: 48 percent near open roads, 19 percent farther away. Males alive after a year: 23 percent within 201 metres of a road, 36 percent beyond 201 metres." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="310" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Roads get birds shot (Pennsylvania study)</text>
+<text x="20" y="60" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Share of birds shot each year</text>
+<text x="20" y="84" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Near open roads</text><rect x="20" y="92" width="240.0" height="24" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/><text x="266.0" y="110" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">48%</text>
+<text x="20" y="134" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Farther away</text><rect x="20" y="142" width="95.0" height="24" rx="4" fill="#8a9a6b" stroke="none" stroke-width="0"/><text x="121.0" y="160" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">19%</text>
+<text x="20" y="196" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">Males alive after a year</text>
+<text x="20" y="220" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Within 201 m of a road</text><rect x="20" y="228" width="115.00000000000001" height="24" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/><text x="141.0" y="246" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">23%</text>
+<text x="20" y="270" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Beyond 201 m</text><rect x="20" y="278" width="180.0" height="24" rx="4" fill="#8a9a6b" stroke="none" stroke-width="0"/><text x="206.0" y="296" font-size="15" fill="#23261f" text-anchor="start" font-weight="bold">36%</text>
+</svg>

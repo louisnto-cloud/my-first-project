@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Seen from above. In a blind, you take the left side and your partner the right side, muzzles out the front, never across each other. In a boat, sit back to back: the bow shooter faces forward, the stern shooter faces back. Shoot sitting.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="100" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Blind</text>
+  <text x="300" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Boat</text>
+  <path d="M70 200 L10 70 A 140 140 0 0 1 100 50 Z" fill="#8a9a6b" opacity=".55"/>
+  <path d="M130 200 L100 50 A 140 140 0 0 1 190 70 Z" fill="#4a7fb0" opacity=".35"/>
+  <rect x="30" y="196" width="140" height="44" rx="4" fill="#8b5a2b" opacity=".8"/>
+  <circle cx="70" cy="218" r="12" fill="#2f3a2b"/><circle cx="130" cy="218" r="12" fill="#2f3a2b"/>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="55" y="120">Left</text><text x="145" y="120">Right</text><text x="70" y="262">You</text><text x="130" y="262">Brother</text></g>
+  <rect x="200" y="0" width="200" height="300" fill="#4a7fb0" opacity=".12"/>
+  <g transform="translate(-40 0)"><path d="M300 40 Q 340 110 330 250 L270 250 Q 260 110 300 40 Z" fill="#8a8f88" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M300 120 L250 40 A 95 95 0 0 1 350 40 Z" fill="#8a9a6b" opacity=".55"/>
+  <path d="M300 200 L250 290 A 100 100 0 0 0 350 290 Z" fill="#8a9a6b" opacity=".55"/>
+  <circle cx="300" cy="128" r="11" fill="#2f3a2b"/><circle cx="300" cy="190" r="11" fill="#2f3a2b"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b"><text x="300" y="132">Bow: faces</text><text x="300" y="148">forward</text><text x="300" y="190">Stern: faces</text><text x="300" y="206">back</text></g>
+  <text x="260" y="166" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Sit</text>
+  <text x="100" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Agree sides before first light</text>
+</svg>

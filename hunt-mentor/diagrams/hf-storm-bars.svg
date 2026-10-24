@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Schematic from the Penn State storm study, 30 winter storms with collared does. Before the storm: no real change in movement. During the storm: deer moved less. Not real data values, just the pattern.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer movement and winter storms</text>
+  <line x1="40" y1="230" x2="380" y2="230" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="60" y="90" width="80" height="140" rx="4" fill="#8a9a6b"/>
+  <rect x="160" y="90" width="80" height="140" rx="4" fill="#8a9a6b"/>
+  <rect x="260" y="150" width="80" height="80" rx="4" fill="#4a7fb0"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="100" y="252">Normal day</text><text x="200" y="252">Before storm</text><text x="300" y="252">During storm</text></g>
+  <text x="200" y="80" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">no change</text>
+  <text x="300" y="140" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">less</text>
+  <text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">Pattern only, Penn State, 30 storms (80%)</text>
+</svg>

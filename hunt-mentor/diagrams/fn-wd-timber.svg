@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A forested slope in the morning, 75 percent: sun warms the canopy and air rises up over the treetops, while a thin layer of cool air keeps sinking downhill along the shaded forest floor. Two winds at once.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="0" y="0" width="400" height="300" fill="#e6eef3"/>
+<text x="14" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Timber: two winds at once (75%)</text>
+<line x1="375.0" y1="34.0" x2="379.0" y2="34.0" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="370.6" y1="44.6" x2="373.4" y2="47.4" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="360.0" y1="49.0" x2="360.0" y2="53.0" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="349.4" y1="44.6" x2="346.6" y2="47.4" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="345.0" y1="34.0" x2="341.0" y2="34.0" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="349.4" y1="23.4" x2="346.6" y2="20.6" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="360.0" y1="19.0" x2="360.0" y2="15.0" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><line x1="370.6" y1="23.4" x2="373.4" y2="20.6" stroke="#f2b134" stroke-width="2" stroke-linecap="round"/><circle cx="360" cy="34" r="12" fill="#f2b134"/>
+<path d="M0 278.0 L400 118.0 V300 H0z" fill="#c9d1b0"/>
+<path d="M0 278.0 L400 118.0" stroke="#8a6a44" stroke-width="2"/>
+<rect x="19.5" y="257.2" width="5" height="12" fill="#5a3e26"/>
+<path d="M22 199.2 L7 243.2 H37z M22 219.2 L4 259.2 H40z" fill="#3e5b37"/>
+<rect x="53.5" y="243.6" width="5" height="12" fill="#5a3e26"/>
+<path d="M56 177.6 L41 229.6 H71z M56 197.6 L38 245.6 H74z" fill="#3e5b37"/>
+<rect x="87.5" y="230.0" width="5" height="12" fill="#5a3e26"/>
+<path d="M90 156.0 L75 216.0 H105z M90 176.0 L72 232.0 H108z" fill="#3e5b37"/>
+<rect x="121.5" y="216.4" width="5" height="12" fill="#5a3e26"/>
+<path d="M124 158.4 L109 202.4 H139z M124 178.4 L106 218.4 H142z" fill="#3e5b37"/>
+<rect x="155.5" y="202.8" width="5" height="12" fill="#5a3e26"/>
+<path d="M158 136.8 L143 188.8 H173z M158 156.8 L140 204.8 H176z" fill="#3e5b37"/>
+<rect x="189.5" y="189.2" width="5" height="12" fill="#5a3e26"/>
+<path d="M192 115.19999999999999 L177 175.2 H207z M192 135.2 L174 191.2 H210z" fill="#3e5b37"/>
+<rect x="223.5" y="175.6" width="5" height="12" fill="#5a3e26"/>
+<path d="M226 117.6 L211 161.6 H241z M226 137.6 L208 177.6 H244z" fill="#3e5b37"/>
+<rect x="257.5" y="162.0" width="5" height="12" fill="#5a3e26"/>
+<path d="M260 96.0 L245 148.0 H275z M260 116.0 L242 164.0 H278z" fill="#3e5b37"/>
+<rect x="291.5" y="148.39999999999998" width="5" height="12" fill="#5a3e26"/>
+<path d="M294 74.39999999999998 L279 134.39999999999998 H309z M294 94.39999999999998 L276 150.39999999999998 H312z" fill="#3e5b37"/>
+<rect x="325.5" y="134.79999999999998" width="5" height="12" fill="#5a3e26"/>
+<path d="M328 76.79999999999998 L313 120.79999999999998 H343z M328 96.79999999999998 L310 136.79999999999998 H346z" fill="#3e5b37"/>
+<rect x="359.5" y="121.19999999999999" width="5" height="12" fill="#5a3e26"/>
+<path d="M362 55.19999999999999 L347 107.19999999999999 H377z M362 75.19999999999999 L344 123.19999999999999 H380z" fill="#3e5b37"/>
+<path d="M0 278.0 L400 118.0 L400 94.0 L0 254.0z" fill="#2f4a5c" opacity=".16"/>
+<path d="M40 158.0 C140 110.0 240 68.0 330 26.0" stroke="#e8590c" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M338.0 21.8 L323.2 20.6 L329.0 33.6z" fill="#e8590c"/>
+<path d="M330 138.0 L70 242.0" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="7 5" fill="none"/><path d="M62.0 245.2 L74.5 246.7 L70.0 235.5z" fill="#4a7fb0"/>
+<rect x="14.0" y="40.0" width="132.1" height="49.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="80.064" y="60.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Sunny: up over</text>
+<text x="80.064" y="80.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">the treetops</text>
+<line x1="240" y1="173" x2="250" y2="238" stroke="#4a7fb0" stroke-width="1.3"/><circle cx="240" cy="173" r="2.6" fill="#4a7fb0"/>
+<rect x="213.1" y="240.0" width="172.9" height="45.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="299.553" y="259" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">Shady floor: thin cool</text>
+<text x="299.553" y="277" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">air still sinks</text>
+</svg>

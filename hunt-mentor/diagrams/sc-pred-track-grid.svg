@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 424" font-family="sans-serif" role="img" aria-label="Predator tracks and sign in a 2 by 2 grid. Cougar track: round, 4 toes, no claws, a wide three lobed heel pad, about 8 to 10 centimetres, 85 percent. Lynx track: huge and furry, toes hard to see, 70 percent. Wolf and coyote tracks: claws show; wolf 10 to 13 centimetres long, coyote 6 to 7, 60 percent. Covered kill: a carcass with leaves and debris raked over it, a leg sticking out. Leave at once and report it, 85 percent.">
+<rect width="400" height="424" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Predator tracks and sign</text>
+<rect x="8" y="42" width="189" height="184" rx="9" fill="#f4eedf" stroke="#b9ad92" stroke-width="1.2"/>
+<rect x="14" y="72" width="177" height="88" rx="6" fill="#e9e1cd"/>
+<text x="102.5" y="64" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cougar</text>
+<g transform="translate(102.5 128) scale(1.05)"><path d="M-20 10 C-22 -2 -12 -8 0 -8 C12 -8 22 -2 20 10 C18 18 12 18 7 14 C4 19 -4 19 -7 14 C-12 18 -18 18 -20 10z" fill="#5a3e26"/><ellipse cx="-21" cy="-16" rx="6.4" ry="8.4" transform="rotate(-25 -21 -16)" fill="#5a3e26"/><ellipse cx="-8" cy="-26" rx="6.4" ry="8.4" transform="rotate(-8 -8 -26)" fill="#5a3e26"/><ellipse cx="8" cy="-27" rx="6.4" ry="8.4" transform="rotate(8 8 -27)" fill="#5a3e26"/><ellipse cx="21" cy="-18" rx="6.4" ry="8.4" transform="rotate(25 21 -18)" fill="#5a3e26"/></g>
+<text x="102.5" y="182" font-size="15" fill="#2f3a2b" text-anchor="middle">Round, 4 toes, no claws</text>
+<text x="102.5" y="200" font-size="15" fill="#2f3a2b" text-anchor="middle">about 8 to 10 cm (85%)</text>
+<rect x="203" y="42" width="189" height="184" rx="9" fill="#f4eedf" stroke="#b9ad92" stroke-width="1.2"/>
+<rect x="209" y="72" width="177" height="88" rx="6" fill="#e9e1cd"/>
+<text x="297.5" y="64" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lynx</text>
+<g transform="translate(297.5 126) scale(0.95)"><path d="M0 -40 C24 -40 36 -20 34 2 C32 26 16 36 0 36 C-16 36 -32 26 -34 2 C-36 -20 -24 -40 0 -40z" fill="#d9cfbd" stroke="#b5a68b" stroke-width="1.6" stroke-dasharray="3 2"/><g opacity=".35" fill="#5a3e26"><path d="M-12 14 C-12 4 12 4 12 14 C12 20 -12 20 -12 14z"/><ellipse cx="-16" cy="-6" rx="5" ry="6"/><ellipse cx="-6" cy="-16" rx="5" ry="6"/><ellipse cx="6" cy="-16" rx="5" ry="6"/><ellipse cx="16" cy="-6" rx="5" ry="6"/></g></g>
+<text x="297.5" y="182" font-size="15" fill="#2f3a2b" text-anchor="middle">Huge, furry, toes hard</text>
+<text x="297.5" y="200" font-size="15" fill="#2f3a2b" text-anchor="middle">to see (70%)</text>
+<rect x="8" y="232" width="189" height="184" rx="9" fill="#f4eedf" stroke="#b9ad92" stroke-width="1.2"/>
+<rect x="14" y="262" width="177" height="88" rx="6" fill="#e9e1cd"/>
+<text x="102.5" y="254" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wolf and coyote</text>
+<g transform="translate(68.5 316) scale(1.15)"><path d="M-11 4 C-12 -4 -6 -8 0 -6 C6 -8 12 -4 11 4 C10 11 4 13 0 10 C-4 13 -10 11 -11 4z" fill="#5a3e26"/><ellipse cx="-14" cy="-12" rx="5" ry="7" transform="rotate(-15 -14 -12)" fill="#5a3e26"/><path d="M-15.7 -18.1 L-17 -23" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="-5" cy="-24" rx="5" ry="7" transform="rotate(-4 -5 -24)" fill="#5a3e26"/><path d="M-5.5 -30.6 L-6 -36" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="5" cy="-24" rx="5" ry="7" transform="rotate(4 5 -24)" fill="#5a3e26"/><path d="M5.5 -30.6 L6 -36" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="14" cy="-12" rx="5" ry="7" transform="rotate(15 14 -12)" fill="#5a3e26"/><path d="M15.7 -18.1 L17 -23" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(148.5 320) scale(0.66)"><path d="M-11 4 C-12 -4 -6 -8 0 -6 C6 -8 12 -4 11 4 C10 11 4 13 0 10 C-4 13 -10 11 -11 4z" fill="#5a3e26"/><ellipse cx="-14" cy="-12" rx="5" ry="7" transform="rotate(-15 -14 -12)" fill="#5a3e26"/><path d="M-15.7 -18.1 L-17 -23" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="-5" cy="-24" rx="5" ry="7" transform="rotate(-4 -5 -24)" fill="#5a3e26"/><path d="M-5.5 -30.6 L-6 -36" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="5" cy="-24" rx="5" ry="7" transform="rotate(4 5 -24)" fill="#5a3e26"/><path d="M5.5 -30.6 L6 -36" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="14" cy="-12" rx="5" ry="7" transform="rotate(15 14 -12)" fill="#5a3e26"/><path d="M15.7 -18.1 L17 -23" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/></g>
+<text x="68.5" y="345" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">wolf</text><text x="148.5" y="345" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">coyote</text>
+<text x="102.5" y="372" font-size="15" fill="#2f3a2b" text-anchor="middle">Claws show. Wolf 10 to</text>
+<text x="102.5" y="390" font-size="15" fill="#2f3a2b" text-anchor="middle">13 cm, coyote 6 to 7 cm</text>
+<text x="102.5" y="408" font-size="15" fill="#2f3a2b" text-anchor="middle">(60%)</text>
+<rect x="203" y="232" width="189" height="184" rx="9" fill="#f4eedf" stroke="#b9ad92" stroke-width="1.2"/>
+<rect x="209" y="262" width="177" height="88" rx="6" fill="#e9e1cd"/>
+<text x="297.5" y="254" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Covered kill</text>
+<path d="M231.5 342 C247.5 298 337.5 290 363.5 342z" fill="#8a6a48"/>
+<ellipse cx="294" cy="318" rx="5" ry="2.6" transform="rotate(-43 294 318)" fill="#c08a3e"/>
+<ellipse cx="281" cy="321" rx="5" ry="2.6" transform="rotate(13 281 321)" fill="#6f8a46"/>
+<ellipse cx="303" cy="326" rx="5" ry="2.6" transform="rotate(-55 303 326)" fill="#d4a24c"/>
+<ellipse cx="263" cy="336" rx="5" ry="2.6" transform="rotate(54 263 336)" fill="#d4a24c"/>
+<ellipse cx="257" cy="322" rx="5" ry="2.6" transform="rotate(51 257 322)" fill="#c08a3e"/>
+<ellipse cx="326" cy="318" rx="5" ry="2.6" transform="rotate(30 326 318)" fill="#c08a3e"/>
+<ellipse cx="269" cy="331" rx="5" ry="2.6" transform="rotate(47 269 331)" fill="#6f8a46"/>
+<ellipse cx="281" cy="307" rx="5" ry="2.6" transform="rotate(25 281 307)" fill="#c08a3e"/>
+<ellipse cx="285" cy="322" rx="5" ry="2.6" transform="rotate(-57 285 322)" fill="#d4a24c"/>
+<ellipse cx="322" cy="333" rx="5" ry="2.6" transform="rotate(56 322 333)" fill="#c08a3e"/>
+<ellipse cx="258" cy="325" rx="5" ry="2.6" transform="rotate(47 258 325)" fill="#a0703c"/>
+<ellipse cx="280" cy="335" rx="5" ry="2.6" transform="rotate(-44 280 335)" fill="#c08a3e"/>
+<ellipse cx="298" cy="324" rx="5" ry="2.6" transform="rotate(5 298 324)" fill="#a0703c"/>
+<ellipse cx="289" cy="319" rx="5" ry="2.6" transform="rotate(17 289 319)" fill="#c08a3e"/>
+<ellipse cx="318" cy="311" rx="5" ry="2.6" transform="rotate(53 318 311)" fill="#c08a3e"/>
+<ellipse cx="251" cy="324" rx="5" ry="2.6" transform="rotate(13 251 324)" fill="#a0703c"/>
+<ellipse cx="323" cy="330" rx="5" ry="2.6" transform="rotate(9 323 330)" fill="#c08a3e"/>
+<ellipse cx="258" cy="329" rx="5" ry="2.6" transform="rotate(54 258 329)" fill="#a0703c"/>
+<ellipse cx="262" cy="322" rx="5" ry="2.6" transform="rotate(28 262 322)" fill="#c08a3e"/>
+<ellipse cx="337" cy="318" rx="5" ry="2.6" transform="rotate(-35 337 318)" fill="#a0703c"/>
+<ellipse cx="247" cy="332" rx="5" ry="2.6" transform="rotate(-21 247 332)" fill="#d4a24c"/>
+<ellipse cx="274" cy="332" rx="5" ry="2.6" transform="rotate(-23 274 332)" fill="#6f8a46"/>
+<ellipse cx="256" cy="331" rx="5" ry="2.6" transform="rotate(-57 256 331)" fill="#d4a24c"/>
+<ellipse cx="297" cy="329" rx="5" ry="2.6" transform="rotate(-30 297 329)" fill="#c08a3e"/>
+<ellipse cx="290" cy="313" rx="5" ry="2.6" transform="rotate(56 290 313)" fill="#d4a24c"/>
+<ellipse cx="299" cy="337" rx="5" ry="2.6" transform="rotate(7 299 337)" fill="#a0703c"/>
+<ellipse cx="315" cy="311" rx="5" ry="2.6" transform="rotate(41 315 311)" fill="#6f8a46"/>
+<ellipse cx="249" cy="336" rx="5" ry="2.6" transform="rotate(37 249 336)" fill="#6f8a46"/>
+<ellipse cx="344" cy="338" rx="5" ry="2.6" transform="rotate(13 344 338)" fill="#c08a3e"/>
+<ellipse cx="327" cy="315" rx="5" ry="2.6" transform="rotate(-58 327 315)" fill="#6f8a46"/>
+<ellipse cx="275" cy="321" rx="5" ry="2.6" transform="rotate(-27 275 321)" fill="#c08a3e"/>
+<ellipse cx="323" cy="315" rx="5" ry="2.6" transform="rotate(-46 323 315)" fill="#d4a24c"/>
+<path d="M257.5 312 l-10 -18 M317.5 302 l12 -16 M293.5 298 l-2 -14" stroke="#5d4630" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M349.5 332 l20 -22 l4 3 l-18 22z" fill="#9a8166" stroke="#5a3e26" stroke-width="1"/><path d="M369.5 310 l5 -4 l3 4 l-4 3z" fill="#2b2620"/>
+<text x="297.5" y="372" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Leaves raked over it:</text>
+<text x="297.5" y="390" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">leave at once, report</text>
+<text x="297.5" y="408" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">(85%)</text>
+</svg>

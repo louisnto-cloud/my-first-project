@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 338" font-family="sans-serif" role="img" aria-label="Average precipitation, 1991 to 2020 normals. Kamloops: October 23.1 mm, November 25.6 mm. Abbotsford: October 144.4 mm, November 233.1 mm. Osoyoos: October 21.8 mm, November 29.4 mm. The Fraser Valley is 6 to 9 times wetter, 95 percent.">
+<rect width="400" height="338" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">October and November precipitation</text>
+<text x="14" y="50" font-size="14" font-weight="bold" fill="#6b5b4b">Average, 1991 to 2020 normals, mm</text>
+<text x="14" y="96" font-size="16" font-weight="bold" fill="#2f3a2b">Kamloops</text>
+<rect x="112" y="72" width="21.8" height="20" rx="3" fill="#e8590c"/>
+<text x="140.8" y="88" font-size="15" font-weight="bold" fill="#c2410c">23.1</text>
+<rect x="112" y="98" width="24.2" height="20" rx="3" fill="#8b5a2b"/>
+<text x="143.2" y="114" font-size="15" font-weight="bold" fill="#8b5a2b">25.6</text>
+<text x="14" y="168" font-size="16" font-weight="bold" fill="#2f3a2b">Abbotsford</text>
+<rect x="112" y="144" width="136.3" height="20" rx="3" fill="#e8590c"/>
+<text x="255.3" y="160" font-size="15" font-weight="bold" fill="#c2410c">144.4</text>
+<rect x="112" y="170" width="220.0" height="20" rx="3" fill="#8b5a2b"/>
+<text x="339" y="186" font-size="15" font-weight="bold" fill="#8b5a2b">233.1</text>
+<text x="14" y="240" font-size="16" font-weight="bold" fill="#2f3a2b">Osoyoos</text>
+<rect x="112" y="216" width="20.6" height="20" rx="3" fill="#e8590c"/>
+<text x="139.6" y="232" font-size="15" font-weight="bold" fill="#c2410c">21.8</text>
+<rect x="112" y="242" width="27.7" height="20" rx="3" fill="#8b5a2b"/>
+<text x="146.7" y="258" font-size="15" font-weight="bold" fill="#8b5a2b">29.4</text>
+<line x1="112" y1="62" x2="112" y2="276" stroke="#2f3a2b" stroke-width="1.6"/>
+<rect x="14" y="284" width="14" height="14" rx="3" fill="#e8590c"/><text x="34" y="296" font-size="14" fill="#2f3a2b">October</text>
+<rect x="130" y="284" width="14" height="14" rx="3" fill="#8b5a2b"/><text x="150" y="296" font-size="14" fill="#2f3a2b">November</text>
+<text x="14" y="326" font-size="16" font-weight="bold" fill="#4a7fb0">Fraser Valley: 6 to 9 times wetter (95%)</text>
+</svg>

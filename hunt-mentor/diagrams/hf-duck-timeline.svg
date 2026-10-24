@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="First duck hunt timeline. Night before: check sunrise, legal start and wind, pack. Arrive 1 hour before legal light and set 6 to 12 decoys by flashlight. Hide with the wind at your side or back, guns unloaded until set. Legal start, half an hour before sunrise: shoot your own side when ducks commit. Fetch each bird. Done by about 10 o'clock or at your bag: pick up every decoy and shell.">
+  <rect width="400" height="330" fill="#fffaf0"/>
+  <line x1="40" y1="20" x2="40" y2="314" stroke="#8a9a6b" stroke-width="4"/>
+  <g font-size="14" fill="#2f3a2b">
+    <circle cx="40" cy="30" r="10" fill="#2f3a2b"/><text x="62" y="28" font-weight="bold">Night before</text><text x="62" y="46">sunrise, legal start, wind, pack</text>
+    <circle cx="40" cy="90" r="10" fill="#4a7fb0"/><text x="62" y="88" font-weight="bold">Legal light minus 1 hour</text><text x="62" y="106">arrive, set 6 to 12 decoys, flashlights</text>
+    <circle cx="40" cy="150" r="10" fill="#8a9a6b"/><text x="62" y="148" font-weight="bold">Hide</text><text x="62" y="166">wind at side or back, guns unloaded</text>
+    <circle cx="40" cy="210" r="12" fill="#e8590c"/><text x="62" y="208" font-weight="bold" fill="#e8590c">30 min before sunrise: legal</text><text x="62" y="226">ducks commit, call it, your side</text>
+    <circle cx="40" cy="262" r="10" fill="#8b5a2b"/><text x="62" y="260" font-weight="bold">Between flocks</text><text x="62" y="278">fetch each bird, count by species</text>
+    <circle cx="40" cy="306" r="10" fill="#2f3a2b"/><text x="62" y="304" font-weight="bold">About 10:00 or bag</text><text x="62" y="322">pick up decoys and every shell</text>
+  </g>
+</svg>

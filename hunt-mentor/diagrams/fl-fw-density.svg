@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-label="Energy per gram: fat 9 calories, carbohydrate 4, protein 4. Fat packs the most energy for its weight.">
+  <rect x="0" y="0" width="400" height="214" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Energy per gram (Atwater)</text>
+<text x="132" y="73" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Fat</text>
+<rect x="140" y="56" width="180.0" height="26" rx="4" fill="#e8590c"/>
+<text x="326.0" y="75" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">9 kcal/g</text>
+<text x="132" y="115" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Carbohydrate</text>
+<rect x="140" y="98" width="80.0" height="26" rx="4" fill="#2f3a2b"/>
+<text x="226.0" y="117" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">4 kcal/g</text>
+<text x="132" y="157" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="end">Protein</text>
+<rect x="140" y="140" width="80.0" height="26" rx="4" fill="#8a9a6b"/>
+<text x="226.0" y="159" font-family="sans-serif" font-size="15" font-weight="bold" fill="#23261f" text-anchor="start">4 kcal/g</text>
+<text x="200" y="204" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">FAO food energy factors (95%)</text>
+</svg>

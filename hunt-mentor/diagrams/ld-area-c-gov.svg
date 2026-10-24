@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 692" font-family="sans-serif" role="img" aria-label="Places in Area C, South Okanagan, named by government, grouped by status. MU means Management Unit, WMA means Wildlife Management Area. Quail open in MUs 8-1 to 8-15 and 8-21 to 8-26 from 1 October to 30 November, 99 percent. Hunting allowed in season: South Okanagan Grasslands Protected Area, Kilpoola MU 8-2, Mount Kobau MU 8-1 and Chopaka, a park with bighorn and mule deer winter range, 95 percent. White Lake Grasslands, MU 8-1: park, no vehicles, 95 percent. Vaseux Protected Area: park, bighorn winter range, next to the closed sanctuary, 90 percent. Check first: Osoyoos Oxbows, MU 8-1, no shooting or hunting 1 March to 30 September, 99 percent. South Okanagan WMA: status VERIFY with the Penticton office, 85 percent. McTaggart Cowan nsək&#x27;łniw&#x27;t WMA east of Skaha Lake: status VERIFY, 85 percent. Closed: Vaseux Lake, MU 8-1, bird sanctuary and National Wildlife Areas, 99 percent.">
+<rect width="400" height="692" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Area C: South Okanagan</text>
+<text x="200" y="53" font-size="14" fill="#6b5b4b" text-anchor="middle">Places named by government</text>
+<text x="200" y="73" font-size="14" fill="#6b5b4b" text-anchor="middle">MU = Management Unit. WMA = Wildlife Management Area</text>
+<rect x="8" y="82" width="384" height="50" rx="7" fill="#2f6e3b"/>
+<text x="200" y="103" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Quail: MUs 8-1 to 8-15 and 8-21 to 8-26</text>
+<text x="200" y="122" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1 Oct to 30 Nov (99%)</text>
+<rect x="8" y="140" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="161" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">HUNTING ALLOWED IN SEASON</text>
+<rect x="8" y="176" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="213.0" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 213.0) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="199" font-size="16" font-weight="bold" fill="#2f3a2b">South Okanagan Grasslands</text>
+<text x="78" y="218" font-size="15" fill="#2f3a2b">Kilpoola 8-2, Mount Kobau 8-1, Chopaka.</text>
+<text x="78" y="237" font-size="15" fill="#2f3a2b">Park (95%)</text>
+<circle cx="41.0" cy="279.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 279.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="275" font-size="16" font-weight="bold" fill="#2f3a2b">White Lake Grasslands</text>
+<text x="78" y="294" font-size="15" fill="#2f3a2b">MU 8-1. Park, no vehicles (95%)</text>
+<rect x="8" y="309" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="336.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 336.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="332" font-size="16" font-weight="bold" fill="#2f3a2b">Vaseux Protected Area</text>
+<text x="78" y="351" font-size="15" fill="#2f3a2b">Park, next to the closed sanctuary (90%)</text>
+<rect x="8" y="374" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="395" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CHECK FIRST</text>
+<rect x="8" y="410" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="437.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 437.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-15 -4 C-10 -9 -5 1 0 -4 C5 -9 10 1 15 -4 M-15 4 C-10 -1 -5 9 0 4 C5 -1 10 9 15 4" stroke="#8b5a2b" stroke-width="3" fill="none"/></g>
+<text x="78" y="433" font-size="16" font-weight="bold" fill="#2f3a2b">Osoyoos Oxbows</text>
+<text x="78" y="452" font-size="15" fill="#2f3a2b">MU 8-1. Closed 1 Mar to 30 Sep (99%)</text>
+<circle cx="41.0" cy="494.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 494.5) scale(0.8)" fill="#8b5a2b" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="78" y="490" font-size="16" font-weight="bold" fill="#2f3a2b">South Okanagan WMA</text>
+<text x="78" y="509" font-size="15" fill="#2f3a2b">Status: VERIFY, Penticton office (85%)</text>
+<rect x="8" y="524" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="551.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 551.5) scale(0.8)" fill="#8b5a2b" stroke="none"><rect x="-8" y="-14" width="16" height="28" rx="3"/><rect x="-5.5" y="-10" width="11" height="17" fill="#fffaf0"/><circle cy="10.5" r="1.6" fill="#fffaf0"/></g>
+<text x="78" y="547" font-size="16" font-weight="bold" fill="#2f3a2b">McTaggart Cowan WMA</text>
+<text x="78" y="566" font-size="15" fill="#2f3a2b">East of Skaha Lake. Status: VERIFY (85%)</text>
+<rect x="8" y="589" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 604) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="610" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CLOSED</text>
+<rect x="8" y="625" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="652.5" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(41.0 652.5) scale(0.8)" fill="#c0392b" stroke="none"><rect x="-15" y="-12" width="30" height="24" rx="2" fill="#2f63a6"/><path d="M-10 5 C-6 -1 4 -1 8 3 L12 1 L10 5 C6 8 -6 8 -10 5z M8 3 C8 -2 4 -4 2 -2" fill="#fffaf0"/></g>
+<text x="78" y="648" font-size="16" font-weight="bold" fill="#2f3a2b">Vaseux Lake</text>
+<text x="78" y="667" font-size="15" fill="#2f3a2b">MU 8-1. Closed: bird sanctuary (99%)</text>
+</svg>

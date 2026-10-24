@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Drill stop 5, a slope drawn as a map. A timbered ridge across the top, a grass bench below it where deer feed. A north wind blows down from the ridge, while the morning thermal rises up the slope. Two possible routes to a seat: A from straight below, B from the side, across the slope. The answer is in the More section.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stop 5: which way in to the seat?</text>
+<defs><clipPath id="rq-dr-wind-map"><rect x="8" y="40" width="384" height="252" rx="8"/></clipPath><marker id="rq-dr-wind-ab" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#4a7fb0"/></marker><marker id="rq-dr-wind-ao" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#e8590c"/></marker><marker id="rq-dr-wind-ai" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#2f3a2b"/></marker></defs>
+<g clip-path="url(#rq-dr-wind-map)">
+<rect x="8" y="40" width="384" height="252" fill="#e3e8cf"/>
+<path d="M8 40 H392 V100 C330 110 280 104 230 98 C180 92 130 106 80 104 C50 103 30 106 8 110z" fill="#4f6b3f"/>
+<path d="M87 34 L94 49 L80 49z" fill="#2f4a2a"/>
+<path d="M43 32 L50 50 L36 50z" fill="#2f4a2a"/>
+<path d="M94 33 L101 53 L87 53z" fill="#2f4a2a"/>
+<path d="M53 34 L60 54 L46 54z" fill="#3a5a31"/>
+<path d="M321 47 L328 64 L314 64z" fill="#3a5a31"/>
+<path d="M66 50 L73 65 L59 65z" fill="#3a5a31"/>
+<path d="M326 53 L333 71 L319 71z" fill="#3a5a31"/>
+<path d="M123 51 L130 72 L116 72z" fill="#3a5a31"/>
+<path d="M344 56 L351 76 L337 76z" fill="#3a5a31"/>
+<path d="M148 57 L155 77 L141 77z" fill="#3a5a31"/>
+<path d="M32 58 L39 78 L25 78z" fill="#3a5a31"/>
+<path d="M372 61 L379 82 L365 82z" fill="#2f4a2a"/>
+<path d="M151 68 L158 83 L144 83z" fill="#2f4a2a"/>
+<path d="M389 68 L396 84 L382 84z" fill="#2f4a2a"/>
+<path d="M36 70 L43 84 L29 84z" fill="#456b3a"/>
+<path d="M119 73 L126 88 L112 88z" fill="#3a5a31"/>
+<path d="M117 80 L124 94 L110 94z" fill="#3a5a31"/>
+<path d="M371 76 L378 95 L364 95z" fill="#456b3a"/>
+<path d="M119 77 L126 96 L112 96z" fill="#2f4a2a"/>
+<path d="M128 77 L135 97 L121 97z" fill="#456b3a"/>
+<path d="M26 81 L33 103 L19 103z" fill="#456b3a"/>
+<path d="M53 83 L60 103 L46 103z" fill="#2f4a2a"/>
+<path d="M60 128 C140 114 240 114 330 128 L328 168 C240 158 140 158 64 170z" fill="#cdd9a8"/>
+<path d="M299 152 l2 -6 M303 152 l0 -7 M307 152 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M306 145 l2 -6 M310 145 l0 -7 M314 145 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<path d="M203 160 l2 -6 M207 160 l0 -7 M211 160 l-2 -6" stroke="#9fb06e" stroke-width="1.3" fill="none"/>
+<g transform="translate(222 140) scale(0.55 0.55)"><ellipse rx="20" ry="9" fill="#7a6248"/><path d="M14 -4 L22 -14 L27 -12 L20 0z" fill="#7a6248"/><ellipse cx="25" cy="-14" rx="6.5" ry="4.5" fill="#7a6248"/><path d="M24 -18 l2 -6 l3 5z" fill="#7a6248"/><rect x="-15" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="-7" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="8" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="14" y="5" width="3.5" height="14" fill="#7a6248"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/><path d="M23 -18 l-3 -10 m1 4 l-5 -2 M27 -18 l3 -10 m-1 4 l5 -2" stroke="#5c3b1c" stroke-width="2" fill="none"/></g>
+<g transform="translate(258 146) scale(-0.5 0.5)"><ellipse rx="20" ry="9" fill="#7a6248"/><path d="M14 -4 L22 -14 L27 -12 L20 0z" fill="#7a6248"/><ellipse cx="25" cy="-14" rx="6.5" ry="4.5" fill="#7a6248"/><path d="M24 -18 l2 -6 l3 5z" fill="#7a6248"/><rect x="-15" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="-7" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="8" y="5" width="3.5" height="14" fill="#7a6248"/><rect x="14" y="5" width="3.5" height="14" fill="#7a6248"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/></g>
+<path d="M346 258 q-7 -14 0 -28 q7 -14 0 -28 q-7 -10 0 -20" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#rq-dr-wind-ab)"/>
+<path d="M378 258 q-7 -14 0 -28 q7 -14 0 -28 q-7 -10 0 -20" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#rq-dr-wind-ab)"/>
+<path d="M290 50 C292 74 296 92 300 116" fill="none" stroke="#4a7fb0" stroke-width="6" marker-end="url(#rq-dr-wind-ab)"/>
+<path d="M206 266 L206 178" fill="none" stroke="#e8590c" stroke-width="3.5" stroke-dasharray="9 6" marker-end="url(#rq-dr-wind-ao)"/>
+<path d="M40 230 C80 222 120 200 154 176" fill="none" stroke="#2f3a2b" stroke-width="3.5" stroke-dasharray="9 6" marker-end="url(#rq-dr-wind-ai)"/>
+</g>
+<rect x="8" y="40" width="384" height="252" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<rect x="161.0" y="48.0" width="119.0" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="220.517" y="67" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">north wind,</text>
+<text x="220.517" y="85" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">from the ridge</text>
+<text x="130" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#cdd9a8" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">bench, deer feed</text>
+<rect x="222.0" y="192.0" width="97.5" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="270.73" y="211" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">morning</text>
+<text x="270.73" y="229" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">thermal: up</text>
+<circle cx="206.0" cy="276.0" r="12" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/><text x="206" y="281" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">A</text>
+<rect x="224.0" y="264.0" width="126.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="287.154" y="284.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">A: from below</text>
+<circle cx="24.0" cy="232.0" r="12" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/><text x="24" y="237" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">B</text>
+<rect x="22.0" y="246.0" width="132.5" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="88.2352" y="266.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">B: side, across</text>
+</svg>

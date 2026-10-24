@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" font-family="sans-serif" role="img" aria-label="A hillside split into a 3 by 3 grid. Scan order runs 1 to 9 in a snake pattern: bottom row left to right, middle row right to left, top row left to right. Start near, finish far.">
+  <rect x="0" y="0" width="400" height="440" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Glass in a grid: near to far</text>
+  <path d="M10 340 L10 120 Q 90 44 170 84 Q 240 38 310 74 Q 360 94 390 84 L390 340 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <g fill="#2f3a2b">
+    <polygon points="40,140 50,108 60,140"/>
+    <polygon points="56,148 67,112 78,148"/>
+    <polygon points="232,104 242,74 252,104"/>
+    <polygon points="250,110 261,78 272,110"/>
+    <polygon points="268,116 278,88 288,116"/>
+    <polygon points="20,300 29,272 38,300"/>
+  </g>
+  <g stroke="#6b4f35" stroke-width="2" stroke-dasharray="6 5" fill="none">
+    <line x1="137" y1="74" x2="137" y2="340"/>
+    <line x1="263" y1="58" x2="263" y2="340"/>
+    <line x1="10" y1="166" x2="390" y2="166"/>
+    <line x1="10" y1="253" x2="390" y2="253"/>
+  </g>
+  <g stroke="#e8590c" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M95 298 L178 298 M222 298 L304 298"/>
+    <path d="M347 298 Q 376 254 347 212"/>
+    <path d="M304 210 L222 210 M178 210 L95 210"/>
+    <path d="M53 210 Q 26 170 92 134"/>
+    <path d="M132 128 L178 128 M222 128 L304 128"/>
+  </g>
+  <g fill="#e8590c">
+    <path d="M178 298 l-9 -6 v12z M304 298 l-9 -6 v12z M347 212 l-9 2 l7 8z M95 210 l9 -6 v12z M178 128 l-9 -6 v12z M304 128 l-9 -6 v12z"/>
+  </g>
+  <g data-tip="Look for parts|A flat back, legs, an ear flick or a white rump. Movement is the giveaway.">
+    <ellipse cx="248" cy="152" rx="16" ry="7" fill="#8f7a5e"/>
+    <ellipse cx="233" cy="152" rx="5" ry="5" fill="#ffffff" stroke="#8f7a5e" stroke-width="1"/>
+    <path d="M260 148 l8 -9 l5 2 l-3 8z" fill="#8f7a5e"/>
+    <path d="M267 139 l-2 -6 M271 140 l3 -6" stroke="#8f7a5e" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+  <g font-size="22" font-weight="bold" text-anchor="middle">
+    <g data-tip="Step 1: start near|Begin at the bottom corner, the slope closest to you. Spend 1 to 2 minutes on each square."><circle cx="73" cy="298" r="20" fill="#e8590c"/><text x="73" y="306" fill="#ffffff">1</text></g>
+    <circle cx="200" cy="298" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="200" y="306" fill="#e8590c">2</text>
+    <circle cx="326" cy="298" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="326" y="306" fill="#e8590c">3</text>
+    <g data-tip="Steps 4 to 6: snake back|Move up one strip and come back the other way. Overlap each binocular view by about a third so nothing falls in a gap."><circle cx="326" cy="210" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="326" y="218" fill="#e8590c">4</text>
+    <circle cx="200" cy="210" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="200" y="218" fill="#e8590c">5</text>
+    <circle cx="73" cy="210" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="73" y="218" fill="#e8590c">6</text></g>
+    <circle cx="112" cy="128" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="112" y="136" fill="#e8590c">7</text>
+    <circle cx="200" cy="128" r="20" fill="#fffaf0" stroke="#e8590c" stroke-width="2.5"/><text x="200" y="136" fill="#e8590c">8</text>
+    <g data-tip="Step 9, then again|Finish far, then glass it all again. Deer stand up, move and turn as the light changes."><circle cx="326" cy="128" r="20" fill="#2f3a2b"/><text x="326" y="136" fill="#ffffff">9</text></g>
+  </g>
+  <g data-tip="Finish far|The far squares hold ridges, benches and timber edges. At midday, glass shade and timber edges where deer bed (Tip).">
+    <text x="200" y="56" font-size="15" fill="#23261f" text-anchor="middle">Far: ridges, benches, timber edges</text>
+  </g>
+  <rect x="10" y="340" width="380" height="92" fill="#c9b79c"/>
+  <g data-tip="You, on a rest|Sit high on a rest before first light. A tripod steadies the binoculars and stops arm fatigue.">
+    <circle cx="200" cy="364" r="12" fill="#2f3a2b"/>
+    <rect x="186" y="376" width="28" height="22" rx="4" fill="#2f3a2b"/>
+    <rect x="190" y="356" width="20" height="8" rx="3" fill="#6b4f35"/>
+    <text x="200" y="420" font-size="15" fill="#23261f" text-anchor="middle">You, sitting, binoculars on a rest</text>
+  </g>
+  <text x="20" y="362" font-size="15" font-weight="bold" fill="#23261f">Start near</text>
+  <text x="290" y="362" font-size="15" font-weight="bold" fill="#23261f">1 to 2 min</text>
+  <text x="290" y="380" font-size="15" font-weight="bold" fill="#23261f">per square</text>
+</svg>

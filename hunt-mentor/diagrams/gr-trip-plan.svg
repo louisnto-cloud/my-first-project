@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Trip plan card to leave with someone at home: who is going, vehicle and plate, where you park, your route by car, ATV and boat, the time you will be back, and the time to call 911 if you are not.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="40" y="16" width="320" height="270" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="40" y="16" width="320" height="40" rx="10" fill="#2f3a2b"/>
+  <text x="200" y="43" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Trip plan</text>
+  <g font-size="15" fill="#2f3a2b">
+    <text x="56" y="84" font-weight="bold">Who:</text><text x="56" y="114" font-weight="bold">Vehicle, plate:</text><text x="56" y="144" font-weight="bold">Parked at:</text><text x="56" y="174" font-weight="bold">Route:</text><text x="160" y="174" font-size="14">car, ATV, boat</text>
+    <text x="56" y="210" font-weight="bold">Back by:</text>
+    <text x="56" y="246" font-weight="bold" fill="#c0392b">Call 911 if not</text><text x="56" y="266" font-weight="bold" fill="#c0392b">back by:</text>
+  </g>
+  <g stroke="#8a9a6b" stroke-width="1.5"><line x1="100" y1="86" x2="340" y2="86"/><line x1="176" y1="116" x2="340" y2="116"/><line x1="140" y1="146" x2="340" y2="146"/><line x1="130" y1="214" x2="340" y2="214"/><line x1="130" y1="270" x2="340" y2="270"/></g>
+  <circle cx="300" cy="196" r="16" fill="none" stroke="#2f3a2b" stroke-width="2"/><path d="M300 196 v-10 M300 196 h8" stroke="#2f3a2b" stroke-width="2"/>
+</svg>

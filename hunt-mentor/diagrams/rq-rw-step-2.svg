@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Find sign newer than the change. Clean tracks after rain or snow (70%).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Find sign newer than the change</text>
+<g transform="translate(200 150) scale(2.4)"><path d="M-7 10 q 0 -16 6 -20 q 3 8 3 20 Z" fill="#8f7f62"/><path d="M1 10 q 0 -12 3 -20 q 6 4 6 20 Z" fill="#8f7f62"/></g><text x="200" y="225" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Newer than the change = fresh</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Clean tracks after rain or snow (70%).</text>
+</svg>

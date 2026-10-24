@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A slope with short footprints going downhill and a hunter using a pole. Take short steps, keep knees soft, use poles.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Downhill: save your knees</text>
+<polygon points="10,90 390,250 10,250" fill="#dfe6d3"/>
+<ellipse cx="70" cy="132" rx="12" ry="6" fill="#8b5a2b"/>
+<ellipse cx="130" cy="158" rx="12" ry="6" fill="#8b5a2b"/>
+<ellipse cx="190" cy="183" rx="12" ry="6" fill="#8b5a2b"/>
+<ellipse cx="250" cy="208" rx="12" ry="6" fill="#8b5a2b"/>
+<rect x="282.0" y="175.8" width="16.2" height="30.6" rx="4.5" fill="#8b5a2b"/>
+<circle cx="300" cy="165.0" r="8.1" fill="#2f3a2b"/>
+<line x1="300" y1="173.1" x2="300" y2="202.8" stroke="#2f3a2b" stroke-width="5.4" stroke-linecap="round"/>
+<line x1="300" y1="202.8" x2="291.9" y2="226.2" stroke="#2f3a2b" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="300" y1="202.8" x2="308.1" y2="226.2" stroke="#2f3a2b" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="300" y1="179.4" x2="290.1" y2="195.6" stroke="#2f3a2b" stroke-width="3.6" stroke-linecap="round"/>
+<line x1="300" y1="179.4" x2="309.9" y2="195.6" stroke="#2f3a2b" stroke-width="3.6" stroke-linecap="round"/>
+<line x1="318" y1="165" x2="340" y2="235" stroke="#23261f" stroke-width="3" stroke-linecap="round"/>
+<text x="150" y="280" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Short steps, knees soft, poles</text>
+<text x="70" y="112" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Short</text>
+</svg>

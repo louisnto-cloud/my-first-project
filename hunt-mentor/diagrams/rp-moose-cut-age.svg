@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" font-family="sans-serif" role="img" aria-label="Bar chart from one BC study of 46 GPS (Global Positioning System) collared moose, 2004 to 2019, 65 percent. Cutblocks 0 to 9 years old: avoided. 10 to 30 years old, tall shrubs: selected. Over 30 years old, dense young trees: avoided. Bar heights show the pattern, not exact values.">
+<rect width="400" height="330" fill="#fffaf0"/>
+<g data-tip="Logging and moose|BC account: logging may temporarily benefit moose when willows and other shrubs become abundant in cutblocks, but removing too much forest cover can be detrimental (90%).">
+<text x="200" y="26" font-size="19" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Moose and cutblock age</text>
+<text x="200" y="46" font-size="15" fill="#6b4f35" text-anchor="middle">one BC study (65%)</text>
+</g>
+<g data-tip="0 to 9 years: avoided|Moose avoided blocks under 10 years old in every season (65%). Fresh blocks, years 0 to 2, are mostly stumps and slash (90%).">
+<rect x="14" y="56" width="120" height="226" fill="#000" fill-opacity="0"/>
+<rect x="29" y="160" width="90" height="60" rx="6" fill="#b5b0a4"/>
+<text x="74" y="150" font-size="16" fill="#5a5648" text-anchor="middle" font-weight="bold">avoided</text>
+<rect x="24" y="226" width="100" height="30" rx="4" fill="#e9dcc0"/>
+<g fill="#8b5a2b"><rect x="34" y="244" width="8" height="8"/><rect x="62" y="246" width="8" height="6"/><rect x="100" y="244" width="8" height="8"/></g>
+<g fill="#7c9a4a"><ellipse cx="52" cy="250" rx="6" ry="4"/><ellipse cx="84" cy="250" rx="7" ry="4"/><ellipse cx="114" cy="251" rx="5" ry="3"/></g>
+<text x="74" y="276" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">0 to 9 yrs</text>
+</g>
+<g data-tip="10 to 30 years: selected|Moose strongly selected cutblocks 10 to 30 years since cut (65%). Tall shrub, 2 to 10 m, is usually under 40 years after cutting: moose browse height (90%).">
+<rect x="140" y="56" width="120" height="226" fill="#000" fill-opacity="0"/>
+<rect x="155" y="86" width="90" height="134" rx="6" fill="#e8590c"/>
+<text x="200" y="78" font-size="16" fill="#c2410c" text-anchor="middle" font-weight="bold">selected</text>
+<rect x="150" y="226" width="100" height="30" rx="4" fill="#e9dcc0"/>
+<g fill="#5f8a3a"><ellipse cx="164" cy="242" rx="9" ry="12"/><ellipse cx="184" cy="240" rx="9" ry="14"/><ellipse cx="204" cy="242" rx="9" ry="12"/><ellipse cx="224" cy="240" rx="9" ry="14"/><ellipse cx="240" cy="244" rx="7" ry="10"/></g>
+<text x="200" y="276" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">10 to 30 yrs</text>
+</g>
+<g data-tip="Over 30 years: avoided|Moose avoided blocks over 30 years old (65%). Grandpa&apos;s rule (wisdom): dark poles hide nothing worth finding.">
+<rect x="266" y="56" width="120" height="226" fill="#000" fill-opacity="0"/>
+<rect x="281" y="160" width="90" height="60" rx="6" fill="#b5b0a4"/>
+<text x="326" y="150" font-size="16" fill="#5a5648" text-anchor="middle" font-weight="bold">avoided</text>
+<rect x="276" y="226" width="100" height="30" rx="4" fill="#e9dcc0"/>
+<g fill="#2f5a32"><path d="M286 254 L292 230 L298 254z"/><path d="M298 254 L304 228 L310 254z"/><path d="M310 254 L316 230 L322 254z"/><path d="M322 254 L328 228 L334 254z"/><path d="M334 254 L340 230 L346 254z"/><path d="M346 254 L352 228 L358 254z"/><path d="M358 254 L364 230 L370 254z"/></g>
+<text x="326" y="276" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">over 30 yrs</text>
+</g>
+<line x1="16" y1="220" x2="384" y2="220" stroke="#2f3a2b" stroke-width="2"/>
+<g data-tip="The study|UBC (University of British Columbia) thesis using GPS (Global Positioning System) data from 46 mostly adult female moose, 2004 to 2019 (65%, search preview; study area not confirmed).">
+<rect x="10" y="286" width="380" height="40" rx="8" fill="#f4eedf"/>
+<text x="200" y="303" font-size="14" fill="#6b4f35" text-anchor="middle">46 collared moose, 2004 to 2019 (65%)</text>
+<text x="200" y="320" font-size="14" fill="#6b4f35" text-anchor="middle">Bars show the pattern, not exact values</text>
+</g>
+</svg>

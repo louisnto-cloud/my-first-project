@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" font-family="sans-serif" role="img" aria-label="Aging a track in snow. Fresh: sharp walls and loose snow crumbs that fall apart when poked. Hours: crumbs bonded into a crust, trackers call it sintering. Sun: edges rounded, floor glazed. Wind or new snow: drifted in or filled. Ice floor and ice walls: made before last night's freeze. Cold clear nights keep tracks crisp for days, so trust the crumbs and your own test print.">
+<rect width="400" height="392" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aging a track in snow</text>
+<text x="200" y="48" font-size="15" fill="#6b4f35" text-anchor="middle">One print cut in half, seen from the side</text>
+<g data-tip="1. Fresh|Sharp walls, and loose crumbs of snow around the print that have not bonded.">
+<rect x="6" y="56" width="92" height="160" fill="#fffaf0"/>
+<circle cx="18" cy="68" r="11" fill="#2c5d86"/><text x="18" y="73.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<path d="M10 90 H34 V125 H70 V90 H94 V145 H10 Z" fill="#eef2f6" stroke="#4a7fb0" stroke-width="2"/>
+<g fill="#fff" stroke="#4a7fb0" stroke-width="1.5"><circle cx="40" cy="84" r="4"/><circle cx="80" cy="82" r="4"/><circle cx="90" cy="84" r="3"/><circle cx="50" cy="83" r="3"/></g>
+<text x="52" y="170" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Fresh</text>
+<text x="52" y="191" font-size="15" fill="#2f3a2b" text-anchor="middle">loose</text>
+<text x="52" y="209" font-size="15" fill="#2f3a2b" text-anchor="middle">crumbs</text>
+</g>
+<g data-tip="2. Hours|The crumbs bond into a crust within hours. Trackers call this sintering.">
+<rect x="104" y="56" width="92" height="160" fill="#fffaf0"/>
+<circle cx="116" cy="68" r="11" fill="#2c5d86"/><text x="116" y="73.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<path d="M108 90 H132 V125 H168 V90 H192 V145 H108 Z" fill="#eef2f6" stroke="#4a7fb0" stroke-width="2"/>
+<path d="M134 86 q8 -6 16 0 M168 86 q8 -6 16 0" stroke="#4a7fb0" stroke-width="4" fill="none"/>
+<text x="150" y="170" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Hours</text>
+<text x="150" y="191" font-size="15" fill="#2f3a2b" text-anchor="middle">crumbs</text>
+<text x="150" y="209" font-size="15" fill="#2f3a2b" text-anchor="middle">bonded</text>
+</g>
+<g data-tip="3. Sun|Sun rounds the edges and glazes the floor. Over sunny days a print melts out bigger and rounder.">
+<rect x="202" y="56" width="94" height="160" fill="#fffaf0"/>
+<circle cx="214" cy="68" r="11" fill="#2c5d86"/><text x="214" y="73.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<path d="M206 90 H222 Q234 96 236 118 Q240 125 250 125 Q262 125 264 118 Q266 96 278 90 H294 V145 H206 Z" fill="#eef2f6" stroke="#4a7fb0" stroke-width="2"/>
+<path d="M238 124 Q250 120 262 124" stroke="#9cc3e6" stroke-width="4" fill="none"/>
+<text x="250" y="170" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Sun</text>
+<text x="250" y="191" font-size="15" fill="#2f3a2b" text-anchor="middle">rounded,</text>
+<text x="250" y="209" font-size="15" fill="#2f3a2b" text-anchor="middle">glazed</text>
+</g>
+<g data-tip="4. Wind or new snow|Wind drifts snow into the print and new snow fills it. Snow in the track means it was made before or during the snowfall.">
+<rect x="300" y="56" width="94" height="160" fill="#fffaf0"/>
+<circle cx="312" cy="68" r="11" fill="#2c5d86"/><text x="312" y="73.5" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+<path d="M304 90 H322 Q330 104 334 116 Q348 120 362 116 Q366 104 374 90 H392 V145 H304 Z" fill="#eef2f6" stroke="#4a7fb0" stroke-width="2"/>
+<path d="M322 104 Q348 114 372 104" stroke="#4a7fb0" stroke-width="2" fill="#fff"/>
+<text x="348" y="170" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Wind, snow</text>
+<text x="348" y="191" font-size="15" fill="#2f3a2b" text-anchor="middle">drifted</text>
+<text x="348" y="209" font-size="15" fill="#2f3a2b" text-anchor="middle">or filled</text>
+</g>
+<rect x="8" y="224" width="384" height="162" rx="10" fill="#eef2f6"/>
+<text x="22" y="250" font-size="16" font-weight="bold" fill="#2c5d86">Tests</text>
+<g data-tip="Poke a crumb|If it holds together, time has passed. Loose crumbs that fall apart mean fresh.">
+<rect x="14" y="258" width="372" height="32" fill="#eef2f6"/>
+<circle cx="30" cy="274" r="6" fill="#fff" stroke="#4a7fb0" stroke-width="2"/>
+<text x="46" y="280" font-size="15" fill="#2f3a2b">Poke a crumb: if it holds, it is older</text>
+</g>
+<g data-tip="Ice floor|A print with an ice floor and ice walls was made before last night's freeze.">
+<rect x="14" y="290" width="372" height="32" fill="#eef2f6"/>
+<path d="M22 299 V312 H38 V299" stroke="#9cc3e6" stroke-width="3.4" fill="none"/>
+<text x="46" y="312" font-size="15" fill="#2f3a2b">Ice floor, ice walls: before the freeze</text>
+</g>
+<g data-tip="Your clock|Make your own print beside it every hour and watch how yours ages (Tip). Cold, clear, still nights keep a track crisp for days.">
+<rect x="14" y="322" width="372" height="58" fill="#eef2f6"/>
+<g transform="translate(30 340)" fill="#6b4f35"><path d="M-6 -11 h9 v12 h6 q4 0 4 4 v4 h-19z"/></g>
+<text x="46" y="346" font-size="15" fill="#2f3a2b">Your own print each hour: your clock</text>
+<text x="46" y="368" font-size="15" fill="#6b4f35">Cold, still nights keep tracks crisp</text>
+</g>
+</svg>

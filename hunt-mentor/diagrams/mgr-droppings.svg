@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Grouse droppings. Normal droppings: fibrous, about pencil thick, curved, with a white cap, about 3 centimetres long, left every day, 85 percent. Caecal droppings: soft, dark and tar like, from the ceca, green at first and dark soon after, 65 percent. A pile of droppings marks a roost or a drum log." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Grouse droppings</text>
+<path d="M40 120 q10 -26 30 -26" fill="none" stroke="#c4b48a" stroke-width="10" stroke-linecap="round"/><path d="M68 94 l4 0" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+<path d="M50 150 q14 -20 34 -20" fill="none" stroke="#b5a47a" stroke-width="10" stroke-linecap="round"/><path d="M82 130 l4 0" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+<line x1="40" y1="178" x2="80" y2="178" stroke="#23261f" stroke-width="2"/>
+<text x="60" y="196" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">3 cm</text>
+<text x="110" y="104" font-size="14" fill="#23261f" text-anchor="start">Fibrous, pencil thick,</text>
+<text x="110" y="122" font-size="14" fill="#23261f" text-anchor="start">curved, white cap.</text>
+<text x="110" y="140" font-size="14" fill="#23261f" text-anchor="start">Daily, everywhere (85%).</text>
+<path d="M50 240 q10 -14 26 -6 q14 8 2 16 q-16 8 -28 -10" fill="#3d2f22"/>
+<text x="110" y="226" font-size="14" fill="#23261f" text-anchor="start">Soft, dark, tar like:</text>
+<text x="110" y="244" font-size="14" fill="#23261f" text-anchor="start">from the ceca. Green</text>
+<text x="110" y="262" font-size="14" fill="#23261f" text-anchor="start">at first, dark fast (65%).</text>
+<g transform="translate(330 150)"><path d="M-20 0 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M-6 4 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M8 -2 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M-14 14 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M2 16 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M14 10 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/><path d="M-4 -10 q4 -8 10 -8" fill="none" stroke="#c4b48a" stroke-width="6" stroke-linecap="round"/></g>
+<text x="330" y="196" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">A pile =</text>
+<text x="330" y="214" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">a roost or</text>
+<text x="330" y="232" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">drum log</text>
+</svg>

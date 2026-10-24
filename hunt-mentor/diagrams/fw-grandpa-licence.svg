@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Flow chart. Your BC hunting licence includes a conservation surcharge. The surcharge goes to the Habitat Conservation Trust Foundation, set up after hunters and anglers asked for it. The foundation funds fish, wildlife and habitat projects across BC.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <g font-family="sans-serif" font-size="15" text-anchor="middle">
+    <rect x="20" y="30" width="360" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="200" y="54" font-weight="bold" fill="#2f3a2b">Your licence</text><text x="200" y="74" fill="#23261f">includes a conservation surcharge</text>
+    <rect x="20" y="120" width="360" height="54" rx="10" fill="#e8590c"/>
+    <text x="200" y="144" font-weight="bold" fill="#ffffff">Habitat Conservation Trust</text><text x="200" y="164" fill="#ffffff">Foundation (HCTF)</text>
+    <rect x="20" y="210" width="360" height="54" rx="10" fill="#8a9a6b"/>
+    <text x="200" y="234" font-weight="bold" fill="#ffffff">Fish, wildlife and habitat</text><text x="200" y="254" fill="#ffffff">projects across BC</text>
+  </g>
+  <g stroke="#2f3a2b" stroke-width="3"><line x1="200" y1="84" x2="200" y2="116"/><line x1="200" y1="174" x2="200" y2="206"/></g>
+  <path d="M192 108 L200 120 L208 108 Z M192 198 L200 210 L208 198 Z" fill="#2f3a2b"/>
+</svg>

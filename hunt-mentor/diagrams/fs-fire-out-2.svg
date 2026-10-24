@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Put it out step 2: stir the ashes with a stick or shovel so water reaches the coals underneath.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Stir it</text><rect x="0" y="220" width="400" height="80" rx="0" fill="#dfe6d3"/><rect x="130" y="200" width="140" height="18" rx="6" fill="#555"/><line x1="240" y1="120" x2="200" y2="206" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/><path d="M170 196 q20 -20 40 0 q20 20 40 0" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stir, then more water</text>
+</svg>

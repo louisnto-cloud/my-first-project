@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" role="img" aria-label="Five cards. Limited Entry Hunting, a draw, in Region 7B. Moose: part of 7-43, LEH Synopsis map 7P, new, and part of 7-52, map 7R. Mountain goats: parts of the Sikanni Muskwa foothills, Map H18, and Toad River, Map H29, are closed or draw only. Bison: Map H25 splits draw only and general season ground. The Map H12 farm area applies to the youth any elk draw." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="304" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Draw only (LEH) in Region 7B</text>
+<rect x="6" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Moose, part of 7-43</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">(new)</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">LEH only area: LEH</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">Synopsis map 7P</text>
+<rect x="204" y="40" width="190" height="96" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#6a4c93"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Moose, part of 7-52</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">LEH only area: LEH</text>
+<text x="212" y="124" font-size="14" fill="#23261f" text-anchor="start">Synopsis map 7R</text>
+<rect x="6" y="144" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Goats, Maps H18, H29</text>
+<text x="14" y="192" font-size="14" fill="#23261f" text-anchor="start">Parts closed or LEH</text>
+<text x="14" y="210" font-size="14" fill="#23261f" text-anchor="start">only</text>
+<rect x="204" y="144" width="190" height="78" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M204 154 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="299" y="162" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Bison, Map H25</text>
+<text x="212" y="192" font-size="14" fill="#23261f" text-anchor="start">LEH only and general</text>
+<text x="212" y="210" font-size="14" fill="#23261f" text-anchor="start">season ground</text>
+<rect x="6" y="230" width="190" height="60" rx="10" fill="#ffffff" stroke="#6a4c93" stroke-width="2.5"/>
+<path d="M6 240 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#6a4c93"/>
+<text x="101" y="248" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Map H12 farm area</text>
+<text x="14" y="278" font-size="14" fill="#23261f" text-anchor="start">Youth any elk LEH hunt</text>
+</svg>

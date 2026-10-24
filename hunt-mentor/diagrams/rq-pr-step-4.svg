@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4: Pick the trail between. Map sketch: a road with its shaded pressure band on the left, steep dark timber, the refuge, on the right, and a trail through a saddle between them where you sit. Caption: a saddle or draw between pressure and refuge.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/><text x="30" y="37" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">4</text><text x="60" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Pick the trail between</text>
+<rect x="60" y="80" width="280" height="150" fill="#dfe6d3" stroke="#8a9a6b"/>
+<clipPath id="rq-pr-step-4-c"><rect x="60" y="80" width="280" height="150"/></clipPath><g clip-path="url(#rq-pr-step-4-c)">
+</g>
+<ellipse cx="288" cy="155" rx="50" ry="70" fill="#9fb08a" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="288" cy="155" rx="38" ry="54" fill="#7f9a6c" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="288" cy="155" rx="26" ry="38" fill="#5f7f50" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="288" cy="155" rx="14" ry="22" fill="#4a6b3e" stroke="#8b5a2b" stroke-width="1.2"/>
+<rect x="270.5" y="118.0" width="3" height="5" fill="#5a3d22"/><path d="M272.0 106.0 L275.7 113.2 L274.0 113.2 L278.7 119.0 L265.3 119.0 L270.0 113.2 L268.3 113.2z" fill="#2c4527"/>
+<rect x="298.5" y="124.0" width="3" height="5" fill="#5a3d22"/><path d="M300.0 112.0 L303.7 119.2 L302.0 119.2 L306.7 125.0 L293.3 125.0 L298.0 119.2 L296.3 119.2z" fill="#2c4527"/>
+<rect x="286.5" y="156.0" width="3" height="5" fill="#5a3d22"/><path d="M288.0 144.0 L291.7 151.2 L290.0 151.2 L294.7 157.0 L281.3 157.0 L286.0 151.2 L284.3 151.2z" fill="#2c4527"/>
+<rect x="266.5" y="182.0" width="3" height="5" fill="#5a3d22"/><path d="M268.0 170.0 L271.7 177.2 L270.0 177.2 L274.7 183.0 L261.3 183.0 L266.0 177.2 L264.3 177.2z" fill="#2c4527"/>
+<rect x="302.5" y="186.0" width="3" height="5" fill="#5a3d22"/><path d="M304.0 174.0 L307.7 181.2 L306.0 181.2 L310.7 187.0 L297.3 187.0 L302.0 181.2 L300.3 181.2z" fill="#2c4527"/>
+<rect x="284.5" y="208.0" width="3" height="5" fill="#5a3d22"/><path d="M286.0 196.0 L289.7 203.2 L288.0 203.2 L292.7 209.0 L279.3 209.0 L284.0 203.2 L282.3 203.2z" fill="#2c4527"/>
+<rect x="314.5" y="158.0" width="3" height="5" fill="#5a3d22"/><path d="M316.0 146.0 L319.7 153.2 L318.0 153.2 L322.7 159.0 L309.3 159.0 L314.0 153.2 L312.3 153.2z" fill="#2c4527"/>
+<g clip-path="url(#rq-pr-step-4-c)">
+<path d="M80 80 C90 120 70 170 96 230" stroke="#e8590c" stroke-width="58" fill="none" opacity=".33"/>
+<path d="M80 80 C90 120 70 170 96 230" stroke="#23261f" stroke-width="5" fill="none"/>
+</g>
+<path d="M110 186 C160 176 190 150 238 152" stroke="#8b5a2b" stroke-width="3.5" stroke-dasharray="3 6" stroke-linecap="round" fill="none"/>
+<g transform="translate(200 166) scale(0.8 0.8)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#e8590c"/><rect x="-15" y="-41" width="10" height="17" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M4 -36 L11 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<text x="200" y="112" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle" stroke="#dfe6d3" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">You</text>
+<text x="140" y="250" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">pressure</text>
+<text x="288" y="250" font-size="15" font-weight="bold" fill="#3f5a35" text-anchor="middle">refuge</text>
+<text x="200" y="288" font-size="14" fill="#2f3a2b" text-anchor="middle">A saddle or draw between pressure and refuge.</text>
+</svg>

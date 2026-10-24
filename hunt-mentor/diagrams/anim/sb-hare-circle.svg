@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view of a thicket. The pusher walks slowly into the thicket. A snowshoe hare jumps up and runs away along its runway, then circles back around its home range to the runway crossing where the stander waits. Tip: hares circle back home. Agree zones of fire first.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#dfe6d3"/>
+  <g fill="#8a9a6b"><ellipse cx="200" cy="140" rx="150" ry="80"/></g>
+  <path id="sb-hare-circle-p" d="M150 150 C 220 90, 330 110, 320 170 S 160 250, 110 200 S 90 130, 60 150" fill="none" stroke="#8b5a2b" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="200" y="30" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Runway</text>
+  <g><g transform="translate(0 0) scale(1.0)"><circle r="9" fill="#e8590c"/><text x="0" y="-18" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Pusher</text></g><animateTransform attributeName="transform" type="translate" values="360 260;220 160;220 160" keyTimes="0;.5;1" dur="9s" fill="freeze"/></g>
+  <g transform="translate(60 180) scale(1.0)"><circle r="9" fill="#4a7fb0"/></g>
+  <text x="60" y="214" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Stander</text>
+  <g><g transform="translate(0 0) scale(0.6)"><ellipse rx="22" ry="13" fill="#9b8466"/><circle cx="18" cy="-8" r="9" fill="#9b8466"/><ellipse cx="14" cy="-26" rx="4" ry="12" fill="#9b8466" transform="rotate(-15 14 -26)"/><ellipse cx="20" cy="-26" rx="4" ry="12" fill="#9b8466" transform="rotate(10 20 -26)"/><circle cx="22" cy="-10" r="2" fill="#2f3a2b"/><ellipse cx="-14" cy="12" rx="12" ry="4" fill="#9b8466"/></g><animateMotion dur="5s" begin="3s" fill="freeze" rotate="auto"><mpath href="#sb-hare-circle-p"/></animateMotion></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="8s"/><rect x="110" y="250" width="280" height="40" rx="8" fill="#2f3a2b"/><text x="250" y="276" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">It circles back home (Tip)</text></g>
+</svg>

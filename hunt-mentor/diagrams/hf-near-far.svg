@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Mistake, top view. The hunter's eyes are fixed far ahead, a long narrow sight cone. A deer is bedded only 20 metres away, off to the side and outside the cone. Look near as well as far.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#dfe6d3" opacity=".5"/>
+  <path d="M80 250 L330 30 L380 80 Z" fill="#e8590c" opacity=".15"/>
+  <circle cx="80" cy="250" r="10" fill="#e8590c"/><text x="60" y="284" font-size="14" font-weight="bold" fill="#2f3a2b">You</text>
+  <g transform="translate(150 260)"><ellipse rx="16" ry="8" fill="#8b5a2b"/><circle cx="-12" cy="-6" r="6" fill="#8b5a2b"/><path d="M-14 -11 l-4 -8 M-9 -11 l2 -8" stroke="#8b5a2b" stroke-width="2"/></g>
+  <path d="M92 254 L132 260" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="3 4"/>
+  <text x="180" y="266" font-size="15" font-weight="bold" fill="#c0392b">bedded, 20 m (22 yd)</text>
+  <text x="250" y="140" font-size="15" font-weight="bold" fill="#e8590c">eyes only far</text>
+  <rect x="12" y="12" width="230" height="34" rx="8" fill="#2f3a2b"/>
+  <text x="127" y="35" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Look near, then far (65%)</text>
+</svg>

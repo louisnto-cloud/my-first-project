@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 454" font-family="sans-serif" role="img" aria-label="Sketch map, not to scale, not a legal map, of no shooting places near Heffley Creek, your base. The North Thompson River runs south from the base to Kamloops. The City of Kamloops is shaded red: no firing at all. The Map C7 band runs east along the South Thompson to the Pritchard Bridge. Sun Peaks, to the northeast, has a 400 metre ring. McQueen Lake, on the west side, has a 1 kilometre ring. Tranquille marsh at the head of Kamloops Lake is closed. Paul Lake Park is treated as closed. Wells Gray Park, MU 3-45, to the north is closed to hunting. Orange means no shooting, and often no hunting. Plus everywhere: 100 metres from any house or barn and 15 metres from the centre of a public road (99%).">
+<rect width="400" height="454" fill="#fffaf0"/>
+<text x="14" y="18" font-size="14" font-weight="bold" fill="#6b5b4b">Sketch, not to scale. Not a legal map.</text>
+<defs><clipPath id="ld-heffley-noshoot-map"><rect x="8" y="8" width="384" height="340" rx="8"/></clipPath></defs>
+<g transform="translate(0 26)">
+<g clip-path="url(#ld-heffley-noshoot-map)">
+<rect x="8" y="8" width="384" height="340" fill="#e6e9d4"/>
+<rect x="47.5" y="117.1" width="3" height="5" fill="#5a3d22"/><path d="M49.0 108.7 L51.9 114.3 L50.6 114.3 L54.2 118.1 L43.8 118.1 L47.4 114.3 L46.1 114.3z" fill="#8aa070"/>
+<rect x="43.5" y="101.3" width="3" height="5" fill="#5a3d22"/><path d="M45.0 90.3 L48.5 97.0 L46.9 97.0 L51.3 102.3 L38.7 102.3 L43.1 97.0 L41.5 97.0z" fill="#8aa070"/>
+<rect x="44.9" y="126.4" width="3" height="5" fill="#5a3d22"/><path d="M46.4 114.5 L50.1 121.7 L48.4 121.7 L53.1 127.4 L39.7 127.4 L44.4 121.7 L42.7 121.7z" fill="#7d9466"/>
+<rect x="18.3" y="138.0" width="3" height="5" fill="#5a3d22"/><path d="M19.8 127.5 L23.1 134.0 L21.6 134.0 L25.9 139.0 L13.7 139.0 L18.0 134.0 L16.5 134.0z" fill="#7d9466"/>
+<rect x="18.7" y="106.1" width="3" height="5" fill="#5a3d22"/><path d="M20.2 96.3 L23.4 102.5 L21.9 102.5 L26.0 107.1 L14.4 107.1 L18.5 102.5 L17.0 102.5z" fill="#7d9466"/>
+<rect x="29.8" y="110.2" width="3" height="5" fill="#5a3d22"/><path d="M31.3 100.1 L34.6 106.4 L33.1 106.4 L37.2 111.2 L25.4 111.2 L29.5 106.4 L28.0 106.4z" fill="#7d9466"/>
+<rect x="145.5" y="119.8" width="3" height="5" fill="#5a3d22"/><path d="M147.0 111.7 L149.8 117.1 L148.5 117.1 L152.1 120.8 L141.9 120.8 L145.5 117.1 L144.2 117.1z" fill="#8aa070"/>
+<path d="M8 262 Q 40 248 95 256 Q 125 262 152 268 Q 125 282 95 282 Q 40 286 8 274 Z" fill="#9cc0dc" stroke="#4a7fb0" stroke-width="1.6"/>
+<ellipse cx="126" cy="256" rx="20" ry="9" fill="#e8590c" fill-opacity=".6" stroke="#e8590c" stroke-width="1.6"/>
+<path d="M118 257 l2 -6 M122 257 l0 -7 M126 257 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/><path d="M121 258 l2 -6 M125 258 l0 -7 M129 258 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/><path d="M127 253 l2 -6 M131 253 l0 -7 M135 253 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/><path d="M112 260 l2 -6 M116 260 l0 -7 M120 260 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/><path d="M118 254 l2 -6 M122 254 l0 -7 M126 254 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/><path d="M136 257 l2 -6 M140 257 l0 -7 M144 257 l-2 -6" stroke="#6b5530" stroke-width="1.3" fill="none"/>
+<path d="M132 236 L196 230 L214 258 L206 292 L150 298 L128 282 Z" fill="#c92a2a" fill-opacity=".2" stroke="#c92a2a" stroke-width="2" stroke-dasharray="6 4"/>
+<path d="M180 256 Q 220 246 280 248 Q 340 252 392 230" fill="none" stroke="#e8590c" stroke-width="18" stroke-opacity=".5" stroke-linecap="round"/>
+<path d="M188 8 C182 60 176 100 181 150 C178 200 170 236 158 268" fill="none" stroke="#4a7fb0" stroke-width="5" stroke-linecap="round"/>
+<path d="M158 268 Q 220 256 280 258 Q 340 262 392 240" fill="none" stroke="#4a7fb0" stroke-width="5" stroke-linecap="round"/>
+<rect x="156" y="264" width="9" height="9" fill="#6b6559" stroke="#fffaf0" stroke-width=".8"/>
+<rect x="167" y="260" width="8" height="12" fill="#6b6559" stroke="#fffaf0" stroke-width=".8"/>
+<rect x="177" y="265" width="9" height="8" fill="#6b6559" stroke="#fffaf0" stroke-width=".8"/>
+<rect x="160" y="276" width="8" height="7" fill="#6b6559" stroke="#fffaf0" stroke-width=".8"/>
+<rect x="172" y="275" width="10" height="8" fill="#6b6559" stroke="#fffaf0" stroke-width=".8"/>
+<circle cx="96" cy="120" r="26" fill="#e8590c" fill-opacity=".18" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+<ellipse cx="96" cy="120" rx="10" ry="6" fill="#9cc0dc" stroke="#4a7fb0" stroke-width="1.3"/>
+<circle cx="316" cy="68" r="30" fill="#e8590c" fill-opacity=".18" stroke="#e8590c" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M296 84 L316 52 L336 84z" fill="#7b8a7a"/><path d="M316 52 L323 63 L318 60 L312 65 L309 63z" fill="#fbfbf7"/>
+<ellipse cx="282" cy="206" rx="22" ry="8" fill="#9cc0dc" stroke="#4a7fb0" stroke-width="1.4"/>
+<g transform="translate(316 206)"><circle r="9" fill="#e8590c"/><path d="M-4 -4 L4 4 M4 -4 L-4 4" stroke="#fffaf0" stroke-width="2.6" stroke-linecap="round"/></g>
+<circle cx="181" cy="150" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<path d="M190 48 V24" stroke="#2f3a2b" stroke-width="2.4"/><path d="M190.0 16.0 L183.9 27.0 L196.1 27.0z" fill="#2f3a2b"/>
+</g>
+<rect x="8" y="8" width="384" height="340" rx="8" fill="none" stroke="#6b5b4b" stroke-width="1.5"/>
+<rect x="21.8" y="16.0" width="154.2" height="60.0" rx="5" fill="#fffaf0" stroke="#2f3a2b" stroke-width="1.2"/>
+<text x="98.8936" y="34" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">North to Wells Gray,</text>
+<text x="98.8936" y="51" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">MU 3-45:</text>
+<text x="98.8936" y="68" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="middle">closed to hunting</text>
+<rect x="194.0" y="139.0" width="167.4" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="277.719" y="158" font-size="15" font-weight="bold" fill="#b8450a" text-anchor="middle">Heffley Creek (base)</text>
+<text x="316" y="118" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Sun Peaks: 400 m</text>
+<text x="96" y="166" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">McQueen Lake: 1 km</text>
+<text x="298" y="190" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Paul Lake Park</text>
+<text x="14" y="232" font-size="15" font-weight="bold" fill="#b8450a" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Tranquille marsh</text>
+<line x1="120" y1="249" x2="104" y2="238" stroke="#b8450a" stroke-width="1.4"/><circle cx="120" cy="249" r="2.6" fill="#b8450a"/>
+<text x="14" y="304" font-size="15" font-weight="bold" fill="#2c5a80" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Kamloops Lake</text>
+<text x="386" y="284" font-size="15" font-weight="bold" fill="#b8450a" text-anchor="end" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Map C7 band, east</text>
+<text x="386" y="303" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end" stroke="#e6e9d4" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">to Pritchard Bridge</text>
+<rect x="41.3" y="314.0" width="257.3" height="27.0" rx="5" fill="#fffaf0" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="170" y="333" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">City of Kamloops: no firing at all</text>
+</g>
+<rect x="14" y="382" width="26" height="14" rx="7" fill="#e8590c" fill-opacity=".5"/>
+<text x="48" y="394" font-size="15" font-weight="bold" fill="#b8450a">No shooting (and often no hunting)</text>
+<text x="14" y="420" font-size="15" fill="#2f3a2b">Plus everywhere: 100 m from any house or barn,</text>
+<text x="14" y="440" font-size="15" fill="#2f3a2b">15 m from the centre of a public road (99%).</text>
+</svg>

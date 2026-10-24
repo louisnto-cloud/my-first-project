@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 457" font-family="sans-serif" role="img" aria-label="Timeline chart of grouse and ptarmigan seasons, September to December, 99 percent. Region 3 grouse: youth only 1 to 9 September, then 10 September to 30 November, 5 of each kind, 10 total a day. Region 3 ptarmigan: 1 September to 30 November, 5 a day. Region 3 sharp tailed grouse in MUs (Management Units) 3-30 and 3-31 only: 10 September to 30 November, 5 a day, 10 in possession. Region 2 grouse: bow only 1 to 9 September, then 10 September to 15 December, 10 a day. Region 8 grouse: youth only 1 to 9 September, then 10 September to 30 November, bow only 1 to 10 December, 5 total a day. Pale bars: youth only or bow only.">
+<rect width="400" height="457" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#2f3a2b">Grouse seasons (99%)</text>
+<text x="59.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Sep</text>
+<text x="152.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct</text>
+<text x="245.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="338.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 grouse</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="92" font-size="14" fill="#6b5b4b">5 of each kind, 10 total a day</text>
+<rect x="14.0" y="99" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="99" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="99" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="99" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="100" width="27.4" height="14" rx="3" fill="#d9cbb0"/>
+<rect x="41.4" y="100" width="250.0" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="145" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 ptarmigan</text>
+<text x="386" y="145" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">Sept 1 to Nov 30</text>
+<text x="14" y="165" font-size="14" fill="#6b5b4b">5 a day</text>
+<rect x="14.0" y="172" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="172" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="172" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="172" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="173" width="277.5" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 sharp tailed</text>
+<text x="386" y="218" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="238" font-size="14" fill="#6b5b4b">MUs 3-30 and 3-31 only, 5 a day</text>
+<rect x="14.0" y="245" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="245" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="245" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="245" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="41.4" y="246" width="250.0" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="291" font-size="16" font-weight="bold" fill="#2f3a2b">Region 2 grouse</text>
+<text x="386" y="291" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="end">Sept 10 to Dec 15</text>
+<text x="14" y="311" font-size="14" fill="#6b5b4b">10 a day</text>
+<rect x="14.0" y="318" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="318" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="318" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="318" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="319" width="27.4" height="14" rx="3" fill="#d9cbb0"/>
+<rect x="41.4" y="319" width="295.8" height="14" rx="3" fill="#2f6e3b"/>
+<text x="14" y="364" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8 grouse</text>
+<text x="386" y="364" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Sept 10 to Nov 30</text>
+<text x="14" y="384" font-size="14" fill="#6b5b4b">5 total a day</text>
+<rect x="14.0" y="391" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="105.5" y="391" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="200.0" y="391" width="91.5" height="16" fill="#efe8d6"/>
+<rect x="291.5" y="391" width="94.5" height="16" fill="#f8f3e6"/>
+<rect x="14.0" y="392" width="27.4" height="14" rx="3" fill="#d9cbb0"/>
+<rect x="41.4" y="392" width="250.0" height="14" rx="3" fill="#8b5a2b"/>
+<rect x="291.5" y="392" width="30.5" height="14" rx="3" fill="#d9cbb0"/>
+<rect x="14" y="426" width="14" height="14" rx="3" fill="#8b5a2b"/>
+<text x="34" y="438" font-size="14" fill="#2f3a2b">Grouse</text>
+<rect x="96.80000000000001" y="426" width="14" height="14" rx="3" fill="#d9cbb0"/>
+<text x="116.8" y="438" font-size="14" fill="#2f3a2b">Youth only or bow only</text>
+</svg>

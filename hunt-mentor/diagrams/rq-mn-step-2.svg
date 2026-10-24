@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 292" font-family="sans-serif" role="img" aria-label="Step 2: Be in place before legal light. A hunter sits still on a stump in the dark before dawn, under a half moon. Set and still before legal light. Moon or not, the timing is the same (Tip).">
+<rect width="400" height="292" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/><text x="30" y="37" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text><text x="60" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Be in place before legal light</text>
+<defs><linearGradient id="rq-mn-step-2-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324a"/><stop offset="1" stop-color="#6b7a96"/></linearGradient></defs>
+<rect x="20" y="62" width="360" height="190" rx="10" fill="url(#rq-mn-step-2-sky)"/>
+<path d="M20 196 C80 170 140 182 200 166 C260 150 320 170 380 160 V242 Q380 252 370 252 H30 Q20 252 20 242z" fill="#2d3a2a"/>
+<rect x="58.5" y="192.0" width="3" height="5" fill="#5a3d22"/><path d="M60.0 156.0 L69.2 174.0 L65.0 174.0 L76.8 193.0 L43.2 193.0 L55.0 174.0 L50.8 174.0z" fill="#1f2a1d"/>
+<rect x="82.5" y="192.0" width="3" height="5" fill="#5a3d22"/><path d="M84.0 166.0 L90.9 179.5 L87.8 179.5 L96.6 193.0 L71.4 193.0 L80.2 179.5 L77.1 179.5z" fill="#1f2a1d"/>
+<rect x="298.5" y="168.0" width="3" height="5" fill="#5a3d22"/><path d="M300.0 128.0 L310.2 147.8 L305.5 147.8 L318.5 169.0 L281.5 169.0 L294.5 147.8 L289.8 147.8z" fill="#1f2a1d"/>
+<rect x="328.5" y="168.0" width="3" height="5" fill="#5a3d22"/><path d="M330.0 138.0 L337.9 153.3 L334.3 153.3 L344.3 169.0 L315.7 169.0 L325.7 153.3 L322.1 153.3z" fill="#1f2a1d"/>
+<rect x="350.5" y="168.0" width="3" height="5" fill="#5a3d22"/><path d="M352.0 132.0 L361.2 150.0 L357.0 150.0 L368.8 169.0 L335.2 169.0 L347.0 150.0 L342.8 150.0z" fill="#1f2a1d"/>
+<circle cx="342" cy="104" r="16" fill="#f4e7b8"/><path d="M342 88 A16 16 0 0 1 342 120z" fill="#3a4660"/>
+<circle cx="60" cy="120" r="1.6" fill="#fff"/>
+<circle cx="130" cy="124" r="1.6" fill="#fff"/>
+<circle cx="220" cy="116" r="1.6" fill="#fff"/>
+<circle cx="250" cy="136" r="1.6" fill="#fff"/>
+<circle cx="360" cy="128" r="1.6" fill="#fff"/>
+<g transform="translate(170 230) scale(1.5 1.5)"><path d="M-12 0 V-16 H12 V0z" fill="#7a5a3a"/><ellipse cx="0" cy="-16" rx="12" ry="3.5" fill="#a07a52"/><path d="M-2 -20 L16 -20 L18 0" stroke="#4a5a3a" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M-8 -46 C-8 -52 8 -52 8 -46 L6 -20 H-6z" fill="#e8590c"/><circle cx="0" cy="-56" r="6.5" fill="#e0b48c"/><path d="M-7 -57 C-7 -66 7 -66 7 -57z" fill="#e8590c"/><path d="M2 -36 L30 -42" stroke="#3b2a1a" stroke-width="3" stroke-linecap="round"/><path d="M4 -36 L14 -32" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<rect x="50.9" y="72.0" width="250.3" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="176" y="92.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Set and still before legal light</text>
+<text x="200" y="280" font-size="15" fill="#2f3a2b" text-anchor="middle">Moon or not, the timing is the same (Tip).</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 218" font-family="sans-serif" role="img" aria-label="No MU, no season dates, no hunt. 1, Confirm your exact MU on the official map. 2, Check gov.bc.ca/hunting for in season changes, Before opening day (99%).">
+<rect width="400" height="218" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">No MU, no season dates, no hunt</text>
+<path d="M28 74 V142" stroke="#1F3D2B" stroke-width="3" fill="none"/>
+<g><rect x="54" y="52" width="334" height="58" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><text x="66" y="77" font-size="16" font-weight="bold" fill="#17201A">Confirm your exact MU on the</text>
+<text x="66" y="97" font-size="16" font-weight="bold" fill="#17201A">official map</text><circle cx="28" cy="74" r="14" fill="#1F3D2B"/><text x="28" y="79" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text></g>
+<g><rect x="54" y="120" width="334" height="80" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><text x="66" y="145" font-size="16" font-weight="bold" fill="#17201A">Check gov.bc.ca/hunting for in</text>
+<text x="66" y="165" font-size="16" font-weight="bold" fill="#17201A">season changes</text><text x="66" y="187" font-size="14" fill="#1F3D2B">Before opening day (99%)</text><circle cx="28" cy="142" r="14" fill="#FF6A13"/><text x="28" y="147" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text></g>
+</svg>

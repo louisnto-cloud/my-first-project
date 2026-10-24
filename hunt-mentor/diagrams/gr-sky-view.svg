@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Satellite SOS needs open sky. Under trees, hills or in a canyon it is slow or blocked. Step into a clearing or onto a ridge with a clear view of the sky.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Satellite SOS needs open sky</text>
+  <circle cx="200" cy="58" r="10" fill="#4a7fb0"/><rect x="176" y="54" width="14" height="8" fill="#4a7fb0"/><rect x="210" y="54" width="14" height="8" fill="#4a7fb0"/>
+  <rect y="230" width="400" height="70" fill="#dfe6d3"/>
+  <g fill="#2f3a2b"><polygon points="40,230 70,110 100,230"/><polygon points="80,230 110,100 140,230"/><polygon points="120,230 150,120 180,230"/></g>
+  <circle cx="110" cy="222" r="8" fill="#e8590c"/>
+  <path d="M190 68 L120 200" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="6 5"/>
+  <path d="M100 160 l20 20 M120 160 l-20 20" stroke="#c0392b" stroke-width="5"/>
+  <circle cx="310" cy="222" r="8" fill="#e8590c"/>
+  <path d="M210 68 L306 212" stroke="#4a7fb0" stroke-width="3"/>
+  <path d="M320 160 l8 10 l16 -20" stroke="#2f6b3a" stroke-width="5" fill="none"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle"><text x="110" y="258" fill="#c0392b">Under trees ✗</text><text x="310" y="258" fill="#2f6b3a">Clearing ✓</text></g>
+  <text x="200" y="286" font-size="14" fill="#2f3a2b" text-anchor="middle">iPhone 14 or later, or a satellite messenger</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Fit check in the store: 1 wear your hunting jacket, 2 mount with eyes closed, open them: you should look straight down the rib, 3 length of pull: the butt sits in the shoulder pocket without stretching, 4 try 3 guns, 10 mounts each.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Fit check in the store</text>
+<rect x="12" y="48" width="376" height="48" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="72.0" r="12" fill="#1F3D2B"/><text x="34" y="77.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="69.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Hunting jacket on</text>
+<text x="54.0" y="86.0" font-size="14" fill="#17201A" text-anchor="start">It changes length of pull</text>
+<rect x="12" y="104" width="376" height="48" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="128.0" r="12" fill="#FF6A13"/><text x="34" y="133.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="125.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Eyes shut, mount, open</text>
+<text x="54.0" y="142.0" font-size="14" fill="#17201A" text-anchor="start">Straight down the rib?</text>
+<rect x="12" y="160" width="376" height="48" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="184.0" r="12" fill="#1F3D2B"/><text x="34" y="189.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="181.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Length of pull</text>
+<text x="54.0" y="198.0" font-size="14" fill="#17201A" text-anchor="start">Shoulder pocket, no stretch</text>
+<rect x="12" y="216" width="376" height="48" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="240.0" r="12" fill="#1F3D2B"/><text x="34" y="245.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="54.0" y="237.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">3 guns, 10 mounts each</text>
+<text x="54.0" y="254.0" font-size="14" fill="#17201A" text-anchor="start">Pick the one that points itself</text>
+</svg>

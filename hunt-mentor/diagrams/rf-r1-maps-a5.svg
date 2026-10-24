@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 432" font-family="sans-serif" role="img" aria-label="Maps A5 to A9, grouped by rule. No shooting or hunting: A5 Nitinat River, MU 1-4, 500 metres either side of the river midline; A6 Cowichan Lake, MU 1-4, a 100 metre corridor from North Shore Road; A7 Sooke and Metchosin, No Shooting or Hunting Area plus No Shooting Areas, Management Units 1-1, 1-2 and 1-3. No shooting: A8 Cowichan Bay, MU 1-4, year round and seasonal No Shooting Areas, and the Ex Dinsdale property, hunting by permission only; A9 Mayo Lake, MU 1-4, No Shooting Area, plus the Cowichan River 100 metre buffer.">
+<rect width="400" height="432" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps A5 to A9. All MU 1-4 except A7</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING OR HUNTING</text>
+<rect x="8" y="68" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="80.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="101.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A5</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Nitinat River</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">500 m either side of the river midline</text>
+<rect x="14" y="137.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="158.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A6</text>
+<text x="78" y="148" font-size="16" font-weight="bold" fill="#2f3a2b">Cowichan Lake</text>
+<text x="78" y="167" font-size="15" fill="#2f3a2b">100 m corridor from North Shore Rd</text>
+<rect x="8" y="182" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="194.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="215.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A7</text>
+<text x="78" y="205" font-size="16" font-weight="bold" fill="#2f3a2b">Sooke, Metchosin</text>
+<text x="78" y="224" font-size="15" fill="#2f3a2b">Plus No Shooting Areas. MUs 1-1 to 1-3</text>
+<rect x="8" y="247" width="384" height="30" rx="6" fill="#d9480f"/>
+<g transform="translate(31 262) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="268" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SHOOTING</text>
+<rect x="8" y="283" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="305.0" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="325.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A8</text>
+<text x="78" y="306" font-size="16" font-weight="bold" fill="#2f3a2b">Cowichan Bay</text>
+<text x="78" y="325" font-size="15" fill="#2f3a2b">Year round and seasonal. Ex Dinsdale: by</text>
+<text x="78" y="344" font-size="15" fill="#2f3a2b">permission only</text>
+<rect x="14" y="371.5" width="54" height="30" rx="6" fill="#d9480f"/>
+<text x="41" y="392.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A9</text>
+<text x="78" y="382" font-size="16" font-weight="bold" fill="#2f3a2b">Mayo Lake</text>
+<text x="78" y="401" font-size="15" fill="#2f3a2b">Plus the Cowichan River 100 m buffer</text>
+</svg>

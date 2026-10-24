@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 358" font-family="sans-serif" role="img" aria-label="Trucks and hunters crowd the road at the bottom of a hill. A deer moves away from them along a trail toward thick timber on the ridge. You sit beside that trail, between the crowd and the timber, before first light. A tip, not a study result.">
+<rect width="400" height="358" fill="#fffaf0"/>
+<text x="200" y="27" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Let other hunters move deer to you (Tip)</text>
+<rect x="0" y="40" width="400" height="260" fill="#eef2f6"/>
+<path d="M0 300 L0 236 C80 226 150 200 220 168 C280 140 330 112 400 96 L400 300z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M296 87.32 L306.692 111.61999999999999 L302.804 111.61999999999999 L315.44 134.84 L276.56 134.84 L289.196 111.61999999999999 L285.308 111.61999999999999z" fill="#35553a"/><rect x="294" y="134.84" width="4" height="6.4799999999999995" fill="#5a412a"/>
+<path d="M318 70.06 L330.672 98.86 L326.064 98.86 L341.04 126.38 L294.96 126.38 L309.936 98.86 L305.328 98.86z" fill="#2f4a32"/><rect x="316" y="126.38" width="4" height="7.68" fill="#5a412a"/>
+<path d="M340 68.8 L351.484 94.89999999999999 L347.308 94.89999999999999 L360.88 119.84 L319.12 119.84 L332.692 94.89999999999999 L328.516 94.89999999999999z" fill="#35553a"/><rect x="338" y="119.84" width="4" height="6.96" fill="#5a412a"/>
+<path d="M360 54.2 L373.068 83.9 L368.316 83.9 L383.76 112.28 L336.24 112.28 L351.684 83.9 L346.932 83.9z" fill="#2f4a32"/><rect x="358" y="112.28" width="4" height="7.92" fill="#5a412a"/>
+<path d="M374 59.58 L385.088 84.78 L381.056 84.78 L394.16 108.86 L353.84 108.86 L366.944 84.78 L362.912 84.78z" fill="#35553a"/><rect x="372" y="108.86" width="4" height="6.72" fill="#5a412a"/>
+<path d="M328 98.75999999999999 L337.108 119.46 L333.796 119.46 L344.56 139.23999999999998 L311.44 139.23999999999998 L322.204 119.46 L318.892 119.46z" fill="#2f4a32"/><rect x="326" y="139.23999999999998" width="4" height="5.52" fill="#5a412a"/>
+<path d="M352 86.84 L361.9 109.34 L358.3 109.34 L370.0 130.84 L334.0 130.84 L345.7 109.34 L342.1 109.34z" fill="#35553a"/><rect x="350" y="130.84" width="4" height="6.0" fill="#5a412a"/>
+<rect x="0" y="268" width="400" height="14" fill="#5b5f58"/><path d="M0 275 H400" stroke="#fffaf0" stroke-width="1.5" stroke-dasharray="10 8"/>
+<g transform="translate(46 268) scale(1.0)"><path d="M-26 -4 V-14 H2 V-22 H14 L22 -12 H26 V-4z" fill="#4f5a48"/><path d="M5 -20 H12 L17 -13 H5z" fill="#cfe0f0"/><circle cx="-15" cy="-3" r="5.5" fill="#23261f"/><circle cx="15" cy="-3" r="5.5" fill="#23261f"/></g>
+<g transform="translate(112 268) scale(1.0)"><path d="M-26 -4 V-14 H2 V-22 H14 L22 -12 H26 V-4z" fill="#4f5a48"/><path d="M5 -20 H12 L17 -13 H5z" fill="#cfe0f0"/><circle cx="-15" cy="-3" r="5.5" fill="#23261f"/><circle cx="15" cy="-3" r="5.5" fill="#23261f"/></g>
+<g transform="translate(72 248) scale(0.9)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g>
+<g transform="translate(140 248) scale(0.9)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g>
+<g transform="translate(168 248) scale(0.9)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g>
+<path d="M150 236 C200 214 240 186 290 150" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="6 5"/>
+<path d="M250 178 L272 162" stroke="#8b5a2b" stroke-width="3"/><path d="M280 156 l-14 2 l6 9z" fill="#8b5a2b"/>
+<g transform="translate(222 202) scale(-0.42 0.42)"><path d="M-18 -32 L-19 0 M-11 -32 L-10 0" stroke="#5a3e26" stroke-width="3.4" stroke-linecap="round"/><path d="M14 -34 L19 -16 L16 0 M21 -34 L26 -16 L23 0" stroke="#5a3e26" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M-24 -44 C-24 -52 -10 -55 6 -54 C20 -54 31 -51 31 -41 C31 -33 25 -29 15 -29 L-16 -29 C-22 -29 -24 -35 -24 -44z" fill="#9a7350"/><path d="M-22 -44 L-31 -66 L-21 -70 L-11 -50z" fill="#9a7350"/><path d="M-29 -65 C-36 -68 -44 -64 -47 -59 L-45 -56 C-39 -56 -32 -57 -25 -61z" fill="#9a7350"/><path d="M-47 -59 L-45 -56" stroke="#1d1a16" stroke-width="2.6" stroke-linecap="round"/><path d="M-25 -68 C-18 -78 -12 -80 -10 -78 C-13 -72 -18 -67 -23 -65z" fill="#9a7350" stroke="#5a3e26" stroke-width=".8"/><circle cx="-34" cy="-63" r="1.3" fill="#111"/><ellipse cx="28" cy="-42" rx="4.5" ry="8" fill="#f3ead8"/><path d="M30 -48 C34 -44 34 -40 31 -37 L29 -45z" fill="#1d1a16"/><path d="M-28 -69 C-30 -80 -26 -90 -16 -95 M-26 -84 L-36 -94 M-16 -95 L-10 -104 M-16 -95 L-24 -105 M-34 -92 L-38 -100 M-34 -92 L-30 -101" stroke="#6b4f35" stroke-width="2.4" stroke-linecap="round" fill="none"/></g>
+<g transform="translate(278 145) scale(1.0)"><circle cx="2" cy="-22" r="6" fill="#e8590c"/><path d="M-4 -16 h12 v14 h-12z" fill="#e8590c"/><path d="M-4 -4 h-12 v4 h12z M-16 -4 v8 h4 v-8z" fill="#2f3a2b"/></g>
+<line x1="272" y1="124" x2="254.066" y2="110.5" stroke="#e8590c" stroke-width="1.6"/><circle cx="272" cy="124" r="2.6" fill="#e8590c"/>
+<rect x="209.9" y="96.0" width="44.1" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="232" y="116.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">You</text>
+<line x1="304" y1="96" x2="254.187" y2="63.5" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="304" cy="96" r="2.6" fill="#2f3a2b"/>
+<rect x="145.8" y="50.0" width="108.4" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Thick timber</text>
+<rect x="25.1" y="200.0" width="61.8" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="56" y="219" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Crowd</text>
+<rect x="8" y="298" width="0" height="0"/>
+<text x="200" y="324" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sit the trail between the crowd</text>
+<text x="200" y="345" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">and the thick timber, before first light</text>
+</svg>

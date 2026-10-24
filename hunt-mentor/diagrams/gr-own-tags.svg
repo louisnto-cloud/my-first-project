@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two hunters, each with their own licence and tags. Passing a tag to your brother is not allowed. The hunter who kills the deer cancels his own tag.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Each hunter, own tags</text>
+  <g fill="#2f3a2b">
+    <circle cx="90" cy="80" r="18"/><rect x="70" y="100" width="40" height="70" rx="10"/>
+    <circle cx="310" cy="80" r="18"/><rect x="290" y="100" width="40" height="70" rx="10"/>
+  </g>
+  <rect x="70" y="102" width="40" height="22" fill="#e8590c"/><rect x="290" y="102" width="40" height="22" fill="#e8590c"/>
+  <text x="90" y="196" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <text x="310" y="196" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brother</text>
+  <g font-size="14" font-weight="bold" text-anchor="middle">
+    <rect x="30" y="210" width="120" height="30" rx="5" fill="#8a9a6b"/><text x="90" y="230" fill="#fff">Own licence</text>
+    <rect x="30" y="246" width="120" height="30" rx="5" fill="#e8590c"/><text x="90" y="266" fill="#fff">Own tags</text>
+    <rect x="250" y="210" width="120" height="30" rx="5" fill="#8a9a6b"/><text x="310" y="230" fill="#fff">Own licence</text>
+    <rect x="250" y="246" width="120" height="30" rx="5" fill="#e8590c"/><text x="310" y="266" fill="#fff">Own tags</text>
+  </g>
+  <!-- tag passing crossed -->
+  <path d="M140 120 L260 120" stroke="#2f3a2b" stroke-width="3" stroke-dasharray="6 5"/>
+  <path d="M250 112 l12 8 l-12 8" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+  <rect x="182" y="96" width="36" height="22" rx="3" fill="#e8590c"/>
+  <line x1="170" y1="86" x2="230" y2="150" stroke="#c0392b" stroke-width="6"/><line x1="230" y1="86" x2="170" y2="150" stroke="#c0392b" stroke-width="6"/>
+  <text x="200" y="176" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">No sharing</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 692" font-family="sans-serif" role="img" aria-label="Places in Area B, Mission, Fraser Valley and Hope, named by government, grouped by status. MU means Management Unit, WMA means Wildlife Management Area. Special licence and insurance in MU 2-4 and Mission, 99 percent. Hunting allowed in season: Pinecone Burke Park, with black tailed deer, goats, black bear and Widgeon Slough waterfowl, 90 percent. Skagit Valley Park south of Hope, black tailed deer and black bears, 90 percent. Check first: Pitt Addington Marsh WMA, MU 2-8, waterfowl only, marked parts, on set days: Saturdays, Sundays and Wednesdays, 85 percent. Boundary Bay WMA, MU 2-4: closed to snipe, no lead shot on the Delta and Surrey dykes, 85 percent. Bert Brink WMA, MU 2-4: hunting status VERIFY, 85 percent. Lhá:lt Harrison Chehalis WMA at Harrison Mills: status VERIFY, 85 percent. No season: Herrling Island near Hope, MU 2-3, resident white tailed deer but no open season, 99 percent.">
+<rect width="400" height="692" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Area B: Fraser Valley</text>
+<text x="200" y="53" font-size="14" fill="#6b5b4b" text-anchor="middle">Places named by government</text>
+<text x="200" y="73" font-size="14" fill="#6b5b4b" text-anchor="middle">MU = Management Unit. WMA = Wildlife Management Area</text>
+<rect x="8" y="82" width="384" height="31" rx="7" fill="#2f6e3b"/>
+<text x="200" y="103" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Special licence in MU 2-4 and Mission (99%)</text>
+<rect x="8" y="121" width="384" height="30" rx="6" fill="#2f6e3b"/>
+<text x="18" y="142" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">HUNTING ALLOWED IN SEASON</text>
+<rect x="8" y="157" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="184.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 184.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Pinecone Burke Park</text>
+<text x="78" y="199" font-size="15" fill="#2f3a2b">Park. Widgeon Slough waterfowl (90%)</text>
+<circle cx="41.0" cy="241.5" r="20" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<g transform="translate(41.0 241.5) scale(0.8)" fill="#2f6e3b" stroke="none"><path d="M0 -15 L9 -1 H5 L12 9 H-12 L-5 -1 H-9z"/><rect x="-2" y="9" width="4" height="5"/></g>
+<text x="78" y="237" font-size="16" font-weight="bold" fill="#2f3a2b">Skagit Valley Park</text>
+<text x="78" y="256" font-size="15" fill="#2f3a2b">Park, south of Hope (90%)</text>
+<rect x="8" y="279" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="300" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CHECK FIRST</text>
+<rect x="8" y="315" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="352.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 352.0) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-14 2 C-10 -4 -2 -4 2 -1 L6 -6 C9 -9 13 -7 14 -4 L10 -3 L9 1 C7 7 -4 9 -14 2z"/></g>
+<text x="78" y="338" font-size="16" font-weight="bold" fill="#2f3a2b">Pitt Addington Marsh WMA</text>
+<text x="78" y="357" font-size="15" fill="#2f3a2b">MU 2-8. Waterfowl only, marked parts, set</text>
+<text x="78" y="376" font-size="15" fill="#2f3a2b">days (85%)</text>
+<circle cx="41.0" cy="428.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 428.0) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-14 2 C-10 -4 -2 -4 2 -1 L6 -6 C9 -9 13 -7 14 -4 L10 -3 L9 1 C7 7 -4 9 -14 2z"/></g>
+<text x="78" y="414" font-size="16" font-weight="bold" fill="#2f3a2b">Boundary Bay WMA</text>
+<text x="78" y="433" font-size="15" fill="#2f3a2b">MU 2-4. No snipe. No lead on the dykes</text>
+<text x="78" y="452" font-size="15" fill="#2f3a2b">(85%)</text>
+<rect x="8" y="467" width="384" height="55" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="494.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 494.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-14 2 C-10 -4 -2 -4 2 -1 L6 -6 C9 -9 13 -7 14 -4 L10 -3 L9 1 C7 7 -4 9 -14 2z"/></g>
+<text x="78" y="490" font-size="16" font-weight="bold" fill="#2f3a2b">Bert Brink WMA</text>
+<text x="78" y="509" font-size="15" fill="#2f3a2b">MU 2-4. Hunting status: VERIFY (85%)</text>
+<circle cx="41.0" cy="551.5" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(41.0 551.5) scale(0.8)" fill="#8b5a2b" stroke="none"><path d="M-14 2 C-10 -4 -2 -4 2 -1 L6 -6 C9 -9 13 -7 14 -4 L10 -3 L9 1 C7 7 -4 9 -14 2z"/></g>
+<text x="78" y="547" font-size="16" font-weight="bold" fill="#2f3a2b">Harrison Chehalis WMA</text>
+<text x="78" y="566" font-size="15" fill="#2f3a2b">Harrison Mills. Status: VERIFY (85%)</text>
+<rect x="8" y="589" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 604) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="610" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO SEASON</text>
+<rect x="8" y="625" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="637.5" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="658.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">2-3</text>
+<text x="78" y="648" font-size="16" font-weight="bold" fill="#2f3a2b">Herrling Island</text>
+<text x="78" y="667" font-size="15" fill="#2f3a2b">MU 2-3. White tails, but no season (99%)</text>
+</svg>

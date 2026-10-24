@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Which way did it go? Top view: the pointed end of a hoof print leads. Side view: the animal pushes soil or snow backward, leaving a lip of loose material at the rear of the print, and kicks a small spray of snow ahead.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which way did it go?</text>
+  <g transform="translate(90 140) rotate(90) scale(2.4)" fill="#8b5a2b">
+    <path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/>
+  </g>
+  <path d="M60 205 H160 m-14 -9 l14 9 l-14 9" stroke="#e8590c" stroke-width="4" fill="none"/>
+  <text x="105" y="240" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Top view</text>
+  <text x="105" y="262" font-size="14" fill="#2f3a2b" text-anchor="middle">pointed end leads</text>
+  <path d="M200 150 H245 Q250 150 252 156 L258 180 H318 L328 156 Q330 150 336 150 H390 V200 H200 Z" fill="#c9b79c" stroke="#6b4f35" stroke-width="2"/>
+  <path d="M236 150 Q244 132 254 148" fill="#a88f6d" stroke="#6b4f35" stroke-width="2"/>
+  <g fill="#6b4f35"><circle cx="350" cy="140" r="3"/><circle cx="362" cy="132" r="2.5"/><circle cx="372" cy="142" r="2.5"/></g>
+  <path d="M240 115 H370 m-14 -9 l14 9 l-14 9" stroke="#e8590c" stroke-width="4" fill="none"/>
+  <text x="225" y="130" font-size="14" fill="#2f3a2b" text-anchor="middle">lip</text>
+  <text x="365" y="170" font-size="14" fill="#2f3a2b" text-anchor="middle">spray</text>
+  <text x="295" y="240" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Side view</text>
+  <text x="295" y="262" font-size="14" fill="#2f3a2b" text-anchor="middle">pushed lip at the back</text>
+  <text x="295" y="280" font-size="14" fill="#2f3a2b" text-anchor="middle">kicked spray ahead</text>
+</svg>

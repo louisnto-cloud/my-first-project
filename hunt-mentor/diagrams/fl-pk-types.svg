@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Three kinds of pack. Day pack: short hunts and scouting. Frame pack: long days and overnight, carries heavy loads. Frame with a load shelf: carries meat quarters between the frame and the bag.">
+  <rect x="0" y="0" width="400" height="250" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three packs, three jobs</text>
+<rect x="10.0" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="10.0" y="46" width="121.33333333333333" height="36" rx="10" fill="#8a9a6b"/>
+<text x="70.66666666666666" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Day pack</text>
+<text x="70.66666666666666" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Short hunts</text>
+<text x="70.66666666666666" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Scouting</text>
+<text x="70.66666666666666" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Essentials,</text>
+<text x="70.66666666666666" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">water, layers</text>
+<text x="70.66666666666666" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">No meat</text>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="139.33333333333331" y="46" width="121.33333333333333" height="36" rx="10" fill="#2f3a2b"/>
+<text x="199.99999999999997" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Frame pack</text>
+<text x="199.99999999999997" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Long days</text>
+<text x="199.99999999999997" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Overnight</text>
+<text x="199.99999999999997" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Hip belt</text>
+<text x="199.99999999999997" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">carries most</text>
+<text x="199.99999999999997" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">of the load</text>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="194" rx="10" fill="#dfe6d3" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="268.66666666666663" y="46" width="121.33333333333333" height="36" rx="10" fill="#8b5a2b"/>
+<text x="329.3333333333333" y="70" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Load shelf</text>
+<text x="329.3333333333333" y="106" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Meat between</text>
+<text x="329.3333333333333" y="128" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">frame and bag</text>
+<text x="329.3333333333333" y="150" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Quarters</text>
+<text x="329.3333333333333" y="172" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">in game bags</text>
+<text x="329.3333333333333" y="194" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Pack out</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 607" font-family="sans-serif" role="img" aria-label="Gaits: the pattern on the ground, travel to the right. Walk: zig zag, the hind lands on or just behind the front, relaxed. Trot: nearly one line, longer steps, hind on front, purposeful. Bound: hare, two big hind prints ahead of two small front prints, a Y shape. Stot: mule deer bounce, 4 prints in a tight group, then a big gap of 2.4 to 4.6 m. Gallop: groups of 4 in a line, hind beyond front, long gaps, running. Dark prints are hind feet, light prints are front feet. Measure stride from the same foot to the same foot.">
+<rect width="400" height="607" fill="#fffaf0"/>
+<text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Gaits: the pattern on the ground</text>
+<line x1="300" y1="46" x2="368" y2="46" stroke="#e8590c" stroke-width="3"/><path d="M380 46 L364 38 L364 54z" fill="#e8590c"/>
+<text x="290" y="51" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">Travel</text>
+<rect x="8" y="64" width="384" height="77" rx="7" fill="#f4eedf"/>
+<text x="16" y="98" font-size="17" font-weight="bold" fill="#2f3a2b">Walk</text>
+<line x1="96" y1="92" x2="388" y2="92" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 5"/>
+<g transform="translate(111 82) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(151 102) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(191 82) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(231 102) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(271 82) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(311 102) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(351 82) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(117 84) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(157 100) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(197 84) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(237 100) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(277 84) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(317 100) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(357 84) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<text x="16" y="128" font-size="15" fill="#2f3a2b">Zig zag. Hind lands on or just behind front. Relaxed.</text>
+<text x="16" y="179" font-size="17" font-weight="bold" fill="#2f3a2b">Trot</text>
+<line x1="96" y1="173" x2="388" y2="173" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 5"/>
+<g transform="translate(112 170) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(172 176) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(232 170) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(292 176) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(352 170) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(116 170) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(176 176) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(236 170) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(296 176) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(356 170) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<text x="16" y="209" font-size="15" fill="#2f3a2b">Nearly one line, longer steps, hind on front.</text>
+<text x="16" y="228" font-size="15" fill="#2f3a2b">Purposeful.</text>
+<rect x="8" y="245" width="384" height="96" rx="7" fill="#f4eedf"/>
+<text x="16" y="279" font-size="17" font-weight="bold" fill="#2f3a2b">Bound</text>
+<line x1="96" y1="273" x2="388" y2="273" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 5"/>
+<circle cx="108" cy="271" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><circle cx="116" cy="279" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><ellipse cx="130" cy="264" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/><ellipse cx="130" cy="282" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/>
+<circle cx="213" cy="271" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><circle cx="221" cy="279" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><ellipse cx="235" cy="264" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/><ellipse cx="235" cy="282" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/>
+<circle cx="318" cy="271" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><circle cx="326" cy="279" r="4" fill="#a9b78a" stroke="#23261f" stroke-width=".8"/><ellipse cx="340" cy="264" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/><ellipse cx="340" cy="282" rx="9" ry="4.5" fill="#6b4f35" stroke="#23261f" stroke-width=".8"/>
+<text x="16" y="309" font-size="15" fill="#2f3a2b">Hare: two big hind prints ahead of two small front.</text>
+<text x="16" y="328" font-size="15" fill="#2f3a2b">Y shape.</text>
+<text x="16" y="391" font-size="17" font-weight="bold" fill="#2f3a2b">Stot</text>
+<line x1="96" y1="385" x2="388" y2="385" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 5"/>
+<g transform="translate(116 375) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(132 379) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(117 391) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(133 395) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(318 375) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(334 379) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(319 391) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(335 395) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<path d="M146 367 H304 M146 363 V371 M304 363 V371" stroke="#e8590c" stroke-width="1.8" fill="none"/>
+<text x="225" y="361" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">gap 2.4 to 4.6 m</text>
+<text x="16" y="421" font-size="15" fill="#2f3a2b">Mule deer bounce: 4 prints in a tight group, then a</text>
+<text x="16" y="440" font-size="15" fill="#2f3a2b">big gap.</text>
+<rect x="8" y="457" width="384" height="96" rx="7" fill="#f4eedf"/>
+<text x="16" y="491" font-size="17" font-weight="bold" fill="#2f3a2b">Gallop</text>
+<line x1="96" y1="485" x2="388" y2="485" stroke="#8a9a6b" stroke-width="1" stroke-dasharray="3 5"/>
+<g transform="translate(112 491) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(126 477) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(272 491) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(286 477) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(156 489) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(170 479) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(316 489) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<g transform="translate(330 479) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g>
+<text x="16" y="521" font-size="15" fill="#2f3a2b">Groups of 4 in a line, hind beyond front, long gaps.</text>
+<text x="16" y="540" font-size="15" fill="#2f3a2b">Running.</text>
+<g transform="translate(26 565) scale(1.25)" fill="#6b4f35" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g><text x="38" y="570" font-size="15" font-weight="bold" fill="#2f3a2b">Dark = hind foot,</text>
+<g transform="translate(178 565) scale(1.25)" fill="#a9b78a" stroke="#23261f" stroke-width=".8"><path d="M9 -0.8 C5 -3 1 -7 -4 -6.5 C-8 -6 -8 -1.5 -6 -0.8z"/><path d="M9 0.8 C5 3 1 7 -4 6.5 C-8 6 -8 1.5 -6 0.8z"/></g><text x="190" y="570" font-size="15" font-weight="bold" fill="#2f3a2b">light = front foot.</text>
+<text x="200" y="595" font-size="15" fill="#2f3a2b" text-anchor="middle">Measure stride same foot to same foot.</text>
+</svg>

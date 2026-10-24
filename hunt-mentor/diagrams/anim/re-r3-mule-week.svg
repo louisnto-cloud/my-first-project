@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 231" role="img" aria-label="Animation: a cursor moves from September to December over the MU 3-27 mule deer general seasons. 1 to 9 September: general season not open yet. 10 to 30 September: 4 point bucks only. 1 to 31 October: any antlered buck. 1 November to 10 December: 4 point bucks only again. From 11 December: closed. Youth and bow only rows are not shown." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="231" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Mule deer, MU 3-27: which buck is legal?</text>
+<text x="64.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Sep</text>
+<text x="154.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Oct</text>
+<text x="244.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Nov</text>
+<text x="334.3" y="117" font-size="14" fill="#23261f" text-anchor="middle">Dec</text>
+<line x1="20.0" y1="125" x2="20.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="108.5" y1="125" x2="108.5" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="200.0" y1="125" x2="200.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="288.5" y1="125" x2="288.5" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<line x1="380.0" y1="125" x2="380.0" y2="221" stroke="#8a9a6b" stroke-width="1" stroke-opacity="0.6"/>
+<rect x="10" y="49" width="380" height="46" rx="8" fill="#dfe6d3"/>
+<text x="20" y="141" font-size="14" font-weight="bold" fill="#23261f">4 point bucks</text>
+<rect x="46.6" y="147" width="62.0" height="20" rx="3" fill="#8b5a2b"/>
+<rect x="200.0" y="147" width="118.0" height="20" rx="3" fill="#8b5a2b"/>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.66s" fill="freeze"/>CLOSED</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.66s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="2.21s" fill="freeze"/>OPEN</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="2.21s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="4.50s" fill="freeze"/>CLOSED</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="4.50s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="7.45s" fill="freeze"/>OPEN</text>
+<text x="380" y="141" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="7.45s" fill="freeze"/>CLOSED</text>
+<text x="20" y="191" font-size="14" font-weight="bold" fill="#23261f">Any antlered buck</text>
+<rect x="108.5" y="197" width="91.5" height="20" rx="3" fill="#e8590c"/>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="2.21s" fill="freeze"/>CLOSED</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#5c7a3a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="2.21s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="4.50s" fill="freeze"/>OPEN</text>
+<text x="380" y="191" font-size="14" font-weight="bold" fill="#c92a2a" text-anchor="end" visibility="hidden"><set attributeName="visibility" to="visible" begin="4.50s" fill="freeze"/>CLOSED</text>
+<g><line x1="20" y1="123" x2="20" y2="223" stroke="#e8590c" stroke-width="3"/><animateTransform attributeName="transform" type="translate" from="0 0" to="360.0 0" begin="0s" dur="9.0s" fill="freeze"/></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.00s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="0.66s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 1: general season not open yet</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="0.66s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="2.21s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sept 10: 4 point bucks only</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="2.21s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="4.50s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct 1: any antlered buck</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="4.50s" fill="freeze"/><set attributeName="visibility" to="hidden" begin="7.45s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov 1: back to 4 point bucks only</text></g>
+<g visibility="hidden"><set attributeName="visibility" to="visible" begin="7.45s" fill="freeze"/><text x="200" y="69" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec 11: general season closed</text></g>
+</svg>

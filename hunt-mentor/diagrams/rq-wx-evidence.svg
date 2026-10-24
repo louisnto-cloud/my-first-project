@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 482" font-family="sans-serif" role="img" aria-label="Bar chart of evidence strength for what moves game, my rating of the studies in this session (Tip). Strong: snow and cold (mule deer move down), the rut (bucks travel more), hunting pressure, and freeze up (ducks leave). Moderate: day to day temperature. Mixed: rain and wind. Weak: barometric pressure. Near zero: moon phase. Most collar data is on white tailed deer.">
+<rect width="400" height="482" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">What moves game: evidence strength</text>
+<text x="14" y="58" font-size="16" font-weight="bold" fill="#2f3a2b">Snow and cold (mule deer move down)</text>
+<rect x="14" y="65" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="65" width="372.0" height="20" rx="4" fill="#2f3a2b"/>
+<text x="378" y="80" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">strong</text>
+<text x="14" y="108" font-size="16" font-weight="bold" fill="#2f3a2b">The rut (bucks travel more)</text>
+<rect x="14" y="115" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="115" width="372.0" height="20" rx="4" fill="#2f3a2b"/>
+<text x="378" y="130" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">strong</text>
+<text x="14" y="158" font-size="16" font-weight="bold" fill="#2f3a2b">Hunting pressure</text>
+<rect x="14" y="165" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="165" width="372.0" height="20" rx="4" fill="#2f3a2b"/>
+<text x="378" y="180" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">strong</text>
+<text x="14" y="208" font-size="16" font-weight="bold" fill="#2f3a2b">Freeze up (ducks leave)</text>
+<rect x="14" y="215" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="215" width="372.0" height="20" rx="4" fill="#4a7fb0"/>
+<text x="378" y="230" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">strong</text>
+<text x="14" y="258" font-size="16" font-weight="bold" fill="#2f3a2b">Temperature (day to day)</text>
+<rect x="14" y="265" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="265" width="223.2" height="20" rx="4" fill="#8a9a6b"/>
+<text x="245.2" y="280" font-size="15" font-weight="bold" fill="#2f3a2b">moderate</text>
+<text x="14" y="308" font-size="16" font-weight="bold" fill="#2f3a2b">Rain, wind</text>
+<rect x="14" y="315" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="315" width="156.2" height="20" rx="4" fill="#8b5a2b"/>
+<text x="178.2" y="330" font-size="15" font-weight="bold" fill="#2f3a2b">mixed</text>
+<text x="14" y="358" font-size="16" font-weight="bold" fill="#2f3a2b">Barometric pressure</text>
+<rect x="14" y="365" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="365" width="89.3" height="20" rx="4" fill="#e8590c"/>
+<text x="111.3" y="380" font-size="15" font-weight="bold" fill="#2f3a2b">weak</text>
+<text x="14" y="408" font-size="16" font-weight="bold" fill="#2f3a2b">Moon phase</text>
+<rect x="14" y="415" width="372" height="20" rx="4" fill="#efe8d8"/>
+<rect x="14" y="415" width="29.8" height="20" rx="4" fill="#e8590c"/>
+<text x="51.8" y="430" font-size="15" font-weight="bold" fill="#2f3a2b">near zero</text>
+<text x="200" y="454" font-size="14" fill="#6b5b4b" text-anchor="middle">My rating of the studies in this session (Tip).</text>
+<text x="200" y="472" font-size="14" fill="#6b5b4b" text-anchor="middle">Most collar data is on white tailed deer.</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" font-family="sans-serif" role="img" aria-label="Loading a small boat, seen from above. Read the capacity plate and count people, gear, guns and a deer. Heavy gear goes low on the floor, centred side to side on the centre line. Kayak, seen from above: one person, the gun cased and strapped on the deck, a dry bag clipped in.">
+<rect width="400" height="342" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Load low and centred</text>
+<rect x="0" y="40" width="400" height="300" fill="#d7e7f0"/>
+<path d="M10 80 q10 -4 20 0 M60 186 q10 -4 20 0 M330 196 q10 -4 20 0 M250 52 q10 -4 20 0" stroke="#b5cfdf" stroke-width="2" fill="none"/>
+<g transform="translate(4 20) scale(0.84)">
+<path d="M26 128 C46 82 110 70 170 70 H284 C292 70 296 74 296 82 V174 C296 182 292 186 284 186 H170 C110 186 46 174 26 128z" fill="#aab4ba" stroke="#5d666b" stroke-width="3"/>
+<path d="M40 128 C58 92 114 82 170 82 H284 V174 H170 C114 174 58 164 40 128z" fill="#c9d0d4"/>
+<rect x="104" y="80" width="16" height="96" fill="#8f999e" stroke="#5d666b" stroke-width="1"/>
+<rect x="188" y="80" width="16" height="96" fill="#8f999e" stroke="#5d666b" stroke-width="1"/>
+<rect x="262" y="80" width="16" height="96" fill="#8f999e" stroke="#5d666b" stroke-width="1"/>
+<rect x="296" y="114" width="20" height="28" rx="4" fill="#2f3a2b"/><path d="M296 128 H282" stroke="#2f3a2b" stroke-width="3"/>
+<path d="M34 128 H300" stroke="#e8590c" stroke-width="2" stroke-dasharray="7 5"/>
+<g transform="translate(270 128) rotate(-90)"><ellipse rx="9" ry="16" fill="#3d5a80"/><circle r="7.5" fill="#e0b48c"/><path d="M-6 -4 A7.5 7.5 0 0 1 6 -4 L5 1 H-5z" fill="#e8590c"/></g><g transform="translate(112 128) rotate(-90)"><ellipse rx="9" ry="16" fill="#55783f"/><circle r="7.5" fill="#e0b48c"/><path d="M-6 -4 A7.5 7.5 0 0 1 6 -4 L5 1 H-5z" fill="#e8590c"/></g>
+<rect x="138" y="114" width="40" height="28" rx="4" fill="#6b4f35" stroke="#3b2a1a" stroke-width="1.2"/><path d="M138 122 H178" stroke="#3b2a1a" stroke-width="1"/>
+<rect x="210" y="122" width="50" height="12" rx="6" fill="#4a5f3a"/>
+<rect x="276" y="86" width="16" height="11" rx="1.5" fill="#ffffff" stroke="#2f3a2b" stroke-width="1.2"/>
+</g>
+<line x1="243" y1="96" x2="286" y2="100" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="243" cy="96" r="2.6" fill="#2f3a2b"/>
+<rect x="277.1" y="64.0" width="114.9" height="86.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="334.566" y="84.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Capacity</text>
+<text x="334.566" y="103" font-size="15" fill="#2f3a2b" text-anchor="middle">plate: people,</text>
+<text x="334.566" y="122" font-size="15" fill="#2f3a2b" text-anchor="middle">gear, guns,</text>
+<text x="334.566" y="141" font-size="15" fill="#2f3a2b" text-anchor="middle">a deer</text>
+<line x1="137" y1="134" x2="137" y2="192" stroke="#e8590c" stroke-width="1.4"/><circle cx="137" cy="134" r="2.6" fill="#e8590c"/>
+<rect x="18.3" y="192.0" width="255.5" height="28.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="146" y="212" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Heavy gear on the floor, centred</text>
+<g transform="translate(0 30)">
+<path d="M24 262 C70 244 150 240 200 240 C250 240 330 244 376 262 C330 280 250 284 200 284 C150 284 70 280 24 262z" fill="#e8590c" stroke="#a63a0c" stroke-width="2"/>
+<ellipse cx="200" cy="262" rx="30" ry="13" fill="#2f3a2b"/><g transform="translate(206 262) rotate(-90)"><ellipse rx="9" ry="16" fill="#3d5a80"/><circle r="7.5" fill="#e0b48c"/><path d="M-6 -4 A7.5 7.5 0 0 1 6 -4 L5 1 H-5z" fill="#e8590c"/></g>
+<rect x="96" y="254" width="40" height="16" rx="8" fill="#4a7fb0" stroke="#2c5d86" stroke-width="1.2"/><path d="M116 252 v20" stroke="#ffd34d" stroke-width="2"/>
+<rect x="252" y="256" width="78" height="12" rx="6" fill="#6b4f35"/><path d="M270 250 v24 M312 250 v24" stroke="#2f3a2b" stroke-width="3"/>
+<rect x="14.0" y="210.0" width="152.7" height="28.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="90.373" y="230" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Kayak: one person</text>
+<text x="116" y="302" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Dry bag</text><line x1="116" y1="272" x2="116" y2="286" stroke="#4a7fb0" stroke-width="1.4"/><circle cx="116" cy="272" r="2.6" fill="#4a7fb0"/>
+<text x="292" y="302" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Gun cased, strapped</text><line x1="292" y1="270" x2="292" y2="286" stroke="#8b5a2b" stroke-width="1.4"/><circle cx="292" cy="270" r="2.6" fill="#8b5a2b"/>
+</g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three sets of rules for your ATV. Off Road Vehicle Act: registration, plate, helmet, lights, on Crown land and resource roads. Motor Vehicle Act through ICBC: licence, insurance and permits for public roads. Wildlife Act in the Synopsis: no loaded guns on it, no shooting from it, closed areas, everywhere you hunt.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three sets of rules</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"><rect x="6" y="38" width="124" height="256" rx="10"/><rect x="138" y="38" width="124" height="256" rx="10"/><rect x="270" y="38" width="124" height="256" rx="10"/></g>
+  <path d="M30 120 L68 70 L106 120 Z" fill="#8a9a6b"/><path d="M40 120 Q 68 100 96 120" stroke="#8b5a2b" stroke-width="4" fill="none"/>
+  <rect x="166" y="80" width="68" height="40" fill="#6b6f68"/><path d="M200 84 v32" stroke="#fff" stroke-width="3" stroke-dasharray="6 5"/>
+  <rect x="306" y="74" width="52" height="40" rx="4" fill="#8b5a2b"/><text x="332" y="100" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Regs</text>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">
+    <text x="68" y="146">Off Road</text><text x="68" y="164">Vehicle Act</text>
+    <text x="200" y="146">Motor</text><text x="200" y="164">Vehicle Act</text>
+    <text x="332" y="146">Wildlife Act</text><text x="332" y="164">(Synopsis)</text>
+  </g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle">
+    <text x="68" y="196">Plate, helmet,</text><text x="68" y="214">lights, ID</text><text x="68" y="252" font-weight="bold" fill="#e8590c">Crown land,</text><text x="68" y="270" font-weight="bold" fill="#e8590c">FSRs</text>
+    <text x="200" y="196">Licence,</text><text x="200" y="214">insurance,</text><text x="200" y="232">permits</text><text x="200" y="262" font-weight="bold" fill="#e8590c">Public roads</text>
+    <text x="332" y="196">No loaded gun,</text><text x="332" y="214">no shooting,</text><text x="332" y="232">closed areas</text><text x="332" y="262" font-weight="bold" fill="#e8590c">Everywhere</text>
+  </g>
+</svg>

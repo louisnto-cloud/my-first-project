@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif" role="img" aria-label="Map scouting funnel, wide at the top and narrow at the bottom: 1 pick the MU, 2 read your season rows, 3 keep only Crown land, 4 find south facing benches, 5 add edges and water, 6 trace roads and closures, 7 pin a glassing point and the wind. Out the bottom: plan A and plan B.">
+  <rect width="400" height="360" fill="#fffaf0"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <path d="M10 10 L390 10 L370 50 L30 50 Z" fill="#dfe6d3"/><text x="200" y="36" fill="#2f3a2b">1 Pick the MU</text>
+    <path d="M32 54 L368 54 L348 94 L52 94 Z" fill="#d3dcc4"/><text x="200" y="80" fill="#2f3a2b">2 Read your season rows</text>
+    <path d="M54 98 L346 98 L326 138 L74 138 Z" fill="#c6d1b5"/><text x="200" y="124" fill="#2f3a2b">3 Keep Crown land only</text>
+    <path d="M76 142 L324 142 L304 182 L96 182 Z" fill="#b2c09c"/><text x="200" y="168" fill="#2f3a2b">4 South benches</text>
+    <path d="M98 186 L302 186 L282 226 L118 226 Z" fill="#8a9a6b"/><text x="200" y="212" fill="#fff">5 Edges, water</text>
+    <path d="M120 230 L280 230 L260 270 L140 270 Z" fill="#6b7a50"/><text x="200" y="256" fill="#fff">6 Roads, closures</text>
+    <path d="M142 274 L258 274 L240 314 L160 314 Z" fill="#2f3a2b"/><text x="200" y="300" fill="#fff">7 Glass, wind</text>
+  </g>
+  <rect x="120" y="322" width="160" height="32" rx="16" fill="#e8590c"/>
+  <text x="200" y="344" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Plan A and plan B</text>
+</svg>

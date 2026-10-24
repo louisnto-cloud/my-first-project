@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 3 of finding your dominant eye: bring your hands slowly back to your face. The hand triangle ends over your dominant, master eye.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3. Pull back to your face</text>
+<ellipse cx="200" cy="156" rx="74" ry="92" fill="#e2b48c" stroke="#a8744f" stroke-width="1.6"/>
+<path d="M124 126 C120 46 280 46 276 126 C250 86 150 86 124 126z" fill="#6b4f35"/>
+<ellipse cx="170" cy="146" rx="13" ry="8" fill="#fff" stroke="#a8744f" stroke-width="1.2"/><circle cx="170" cy="146" r="5" fill="#3b2a1a"/>
+<ellipse cx="230" cy="146" rx="13" ry="8" fill="#fff" stroke="#a8744f" stroke-width="1.2"/><circle cx="230" cy="146" r="5" fill="#3b2a1a"/>
+<path d="M200 152 L194 178 H206" stroke="#a8744f" stroke-width="1.6" fill="none"/><path d="M178 202 C190 210 210 210 222 202" stroke="#a8744f" stroke-width="2" fill="none"/>
+<path d="M200 122 L260 122 L230 178z" fill="none" stroke="#a8744f" stroke-width="12" stroke-linejoin="round"/>
+<path d="M200 122 L260 122 L230 178z" fill="none" stroke="#efc9a2" stroke-width="8" stroke-linejoin="round"/>
+<path d="M328 96 C300 86 280 102 270 120" stroke="#e8590c" stroke-width="3" fill="none"/><path d="M267.0 125.0 L277.7 118.5 L267.3 112.4z" fill="#e8590c"/>
+<rect x="278.7" y="196.0" width="102.7" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="330" y="216.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">master eye</text>
+<line x1="238" y1="150" x2="298.659" y2="196" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="238" cy="150" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="284" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">It lands on your master eye</text>
+</svg>

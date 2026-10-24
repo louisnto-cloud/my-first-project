@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" role="img" aria-label="Bar chart of minimum bow pull by class. A, crossbow: 68 kilograms. B, crossbow: 55 kilograms. C, compound crossbow: 45 kilograms at peak weight. D, longbow, recurve or compound: 18 kilograms within draw length. E, bison only: 22.6 kilograms. For big game the broadhead must be at least 2.2 centimetres wide. Classes A, B and C allow a bolt of 16.2 grams or more instead of the pull." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="352" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Bow classes: minimum pull</text>
+<circle cx="24" cy="64" r="14" fill="#e8590c"/><text x="24" y="69.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">A</text>
+<text x="46" y="58" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Crossbow</text>
+<rect x="46" y="64" width="272" height="18" rx="4" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="324" y="79" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">68 kg</text>
+<circle cx="24" cy="116" r="14" fill="#e8590c"/><text x="24" y="121.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">B</text>
+<text x="46" y="110" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Crossbow</text>
+<rect x="46" y="116" width="220" height="18" rx="4" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="272" y="131" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">55 kg</text>
+<circle cx="24" cy="168" r="14" fill="#e8590c"/><text x="24" y="173.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">C</text>
+<text x="46" y="162" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Compound crossbow</text>
+<rect x="46" y="168" width="180" height="18" rx="4" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="232" y="183" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">45 kg</text>
+<circle cx="24" cy="220" r="14" fill="#e8590c"/><text x="24" y="225.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">D</text>
+<text x="46" y="214" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Long, recurve, compound</text>
+<rect x="46" y="220" width="72" height="18" rx="4" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="124" y="235" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">18 kg</text>
+<circle cx="24" cy="272" r="14" fill="#e8590c"/><text x="24" y="277.25" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">E</text>
+<text x="46" y="266" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Bison only</text>
+<rect x="46" y="272" width="90.4" height="18" rx="4" fill="#4a7fb0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="142.4" y="287" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">22.6 kg</text>
+<text x="14" y="316" font-size="15" fill="#23261f" text-anchor="start">Big game: broadhead at least 2.2 cm (7/8 in).</text>
+<text x="14" y="336" font-size="15" fill="#23261f" text-anchor="start">A, B, C: or a bolt of 16.2 g (250 gr) or more.</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="A steep slope facing the sun. Old Douglas fir and shrubs grow among broken rock. Deer feed and bed there. Deep snow lies higher up. Label: south or west facing, steep, broken rock, shrubs, old Douglas fir.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Winter range: what it looks like</text>
+<path d="M0 300 L0 260 L60 250 L150 170 L230 110 L300 70 L400 60 L400 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<path d="M230 110 L300 70 L400 60 L400 80 L300 92 L240 128 Z" fill="#fff"/>
+<g><circle cx="50" cy="70" r="18" fill="#e8590c"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(0 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(45 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(90 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(135 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(180 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(225 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(270 50 70)"/><line x1="50" y1="48" x2="50" y2="41" stroke="#e8590c" stroke-width="3" transform="rotate(315 50 70)"/></g>
+<g><polygon points="106.0,205 120,165 134.0,205" fill="#3d5a3a"/><rect x="118" y="205" width="4" height="8.0" fill="#6b4f35"/></g>
+<g><polygon points="156.0,160 170,120 184.0,160" fill="#3d5a3a"/><rect x="168" y="160" width="4" height="8.0" fill="#6b4f35"/></g>
+<g><polygon points="186.0,140 200,100 214.0,140" fill="#3d5a3a"/><rect x="198" y="140" width="4" height="8.0" fill="#6b4f35"/></g>
+<g fill="#8a9a6b"><circle cx="84.4" cy="232" r="6.4"/><circle cx="95.6" cy="232" r="6.4"/><circle cx="90" cy="227.2" r="8"/></g>
+<g fill="#8a9a6b"><circle cx="134.4" cy="196" r="6.4"/><circle cx="145.6" cy="196" r="6.4"/><circle cx="140" cy="191.2" r="8"/></g>
+<g fill="#8a9a6b"><circle cx="179.4" cy="168" r="6.4"/><circle cx="190.6" cy="168" r="6.4"/><circle cx="185" cy="163.2" r="8"/></g>
+<g fill="#8a9a6b"><circle cx="104.4" cy="220" r="6.4"/><circle cx="115.6" cy="220" r="6.4"/><circle cx="110" cy="215.2" r="8"/></g>
+<g transform="translate(150 182) scale(0.6)"><ellipse rx="20" ry="9" fill="#8b5a2b"/><circle cx="19" cy="-10" r="6.5" fill="#8b5a2b"/><rect x="-15" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="-6" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="7" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="13" y="5" width="3.5" height="14" fill="#8b5a2b"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/></g><g transform="translate(200 155) scale(0.6)"><ellipse rx="20" ry="9" fill="#8b5a2b"/><circle cx="19" cy="-10" r="6.5" fill="#8b5a2b"/><rect x="-15" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="-6" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="7" y="5" width="3.5" height="14" fill="#8b5a2b"/><rect x="13" y="5" width="3.5" height="14" fill="#8b5a2b"/><ellipse cx="-20" cy="-2" rx="4" ry="5" fill="#f3ead8"/><path d="M19 -15 l-5 -10 m3 5 l-6 -2 M23 -15 l5 -10 m-3 5 l6 -2" stroke="#5c3b1c" stroke-width="2" fill="none"/></g>
+<path d="M150 236 l18 0 l-6 -14 Z" fill="#a7a39a"/><path d="M215 186 l20 0 l-8 -16 Z" fill="#a7a39a"/>
+<text x="330" y="120" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Deep snow up high</text>
+<g><line x1="70" y1="100" x2="140" y2="160" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="140.0,160.0 130.3,157.4 136.0,150.8" fill="#e8590c"/></g>
+
+<text x="232" y="205" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">South or west facing,</text>
+<text x="232" y="222" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">steep, broken rock,</text>
+<text x="232" y="239" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">shrubs, old Douglas</text>
+<text x="232" y="256" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="start">fir</text>
+</svg>

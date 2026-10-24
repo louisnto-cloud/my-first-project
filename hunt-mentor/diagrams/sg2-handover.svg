@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hand a shotgun over safely: 1 action open and proven empty, 2 muzzle in a safe direction, 3 the other person takes it, checks it themselves, and says they have it.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Handing it over</text>
+<rect x="12" y="50" width="376" height="56" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="78.0" r="12" fill="#FF6A13"/><text x="34" y="83.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="75.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Open and empty</text>
+<text x="54.0" y="92.0" font-size="14" fill="#17201A" text-anchor="start">Bolt back, or broken open.</text>
+<rect x="12" y="114" width="376" height="56" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="142.0" r="12" fill="#1F3D2B"/><text x="34" y="147.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="139.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Muzzle safe</text>
+<text x="54.0" y="156.0" font-size="14" fill="#17201A" text-anchor="start">Ground or sky. Never across a person.</text>
+<rect x="12" y="178" width="376" height="56" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="206.0" r="12" fill="#1F3D2B"/><text x="34" y="211.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="203.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">They check it too</text>
+<text x="54.0" y="220.0" font-size="14" fill="#17201A" text-anchor="start">They look, feel, then say &quot;got it&quot;.</text>
+<text x="200.0" y="286.0" font-size="14" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Same at a fence, a ditch or the truck.</text>
+</svg>

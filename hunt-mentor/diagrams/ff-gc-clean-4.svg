@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4 of cleaning the rifle: push clean wet pellets or patches through the bore, one way, until they come out clean. Dirty to clean takes about 5 to 10.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Patches until clean</text>
+<rect x="40" y="75.0" width="34" height="42" rx="4" fill="#3a3f3a"/><rect x="70" y="83.0" width="310" height="26" rx="3" fill="#6c716b"/><rect x="70" y="89.0" width="310" height="14" fill="#d9d6cc"/><path d="M70 89.0 H380" stroke="#9a9a92" stroke-width="1.2"/>
+<rect x="10" y="94" width="200" height="4" fill="#9b8a6a"/>
+<rect x="206" y="89" width="14" height="14" rx="2" fill="#f4f1e8" stroke="#8a8478" stroke-width="1.2"/>
+<path d="M240 126 H330" stroke="#e8590c" stroke-width="3"/><path d="M338.0 126.0 L327.0 120.0 L327.0 132.1z" fill="#e8590c"/>
+<text x="196" y="132" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="end">one way</text>
+<rect x="70.0" y="164.0" width="44" height="44" rx="3" fill="#3b3b36" stroke="#8a8478" stroke-width="1.4" transform="rotate(-6 92 186)"/>
+<rect x="142.0" y="164.0" width="44" height="44" rx="3" fill="#7a776e" stroke="#8a8478" stroke-width="1.4" transform="rotate(-6 164 186)"/>
+<rect x="214.0" y="164.0" width="44" height="44" rx="3" fill="#b9b6ad" stroke="#8a8478" stroke-width="1.4" transform="rotate(-6 236 186)"/>
+<rect x="286.0" y="164.0" width="44" height="44" rx="3" fill="#f7f5ee" stroke="#8a8478" stroke-width="1.4" transform="rotate(-6 308 186)"/>
+<path d="M84 222 H326" stroke="#2f3a2b" stroke-width="2"/><path d="M334.0 222.0 L324.0 216.5 L324.0 227.5z" fill="#2f3a2b"/>
+<text x="92" y="246" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">dirty</text>
+<text x="308" y="246" font-size="16" font-weight="bold" fill="#2f6e3b" text-anchor="middle">clean</text>
+<text x="200" y="284" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">about 5 to 10 patches</text>
+</svg>

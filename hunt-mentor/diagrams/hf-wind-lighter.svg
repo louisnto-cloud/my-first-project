@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Wind check tool 3: a lighter flame leans with the air, but only shows the air right at your hand. Mind fire risk in dry grass.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="170" y="150" width="50" height="90" rx="8" fill="#4a7fb0"/><rect x="176" y="136" width="38" height="16" fill="#2f3a2b"/>
+  <path d="M195 136 C 180 110, 210 100, 222 76 C 226 100, 214 120, 205 136 Z" fill="#e8590c"/>
+  <path d="M120 100 L170 100" stroke="#4a7fb0" stroke-width="4"/><polygon points="166,92 166,108 180,100" fill="#4a7fb0"/>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lighter flame</text>
+  <text x="300" y="120" font-size="15" fill="#2f3a2b" text-anchor="middle">Only the air</text>
+  <text x="300" y="138" font-size="15" fill="#2f3a2b" text-anchor="middle">at your hand</text>
+  <rect x="40" y="252" width="320" height="34" rx="8" fill="#c0392b"/>
+  <text x="200" y="275" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Fire risk in dry grass (Tip)</text>
+</svg>

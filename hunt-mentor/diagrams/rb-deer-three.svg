@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 358" role="img" aria-label="Three deer boxes: the provincial bag limit for deer is 3 in one licence year, 1 April to 31 March, not counting Haida Gwaii. Only 1 of them may be a mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined. Each deer needs its own species licence, and regional limits apply too." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="358" fill="#fffaf0"/>
+  <g data-tip="Licence year|3 deer from 1 April to 31 March, province wide. Haida Gwaii deer have their own licence and limits.">
+    <text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Deer: 3 a licence year</text>
+    <text x="200" y="48" font-size="15" fill="#2f3a2b" text-anchor="middle">1 April to 31 March. Haida Gwaii not counted.</text>
+  </g>
+  <g data-tip="Mule deer buck: only 1|Only 1 of your 3 deer may be a mule (black tailed) deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined. Bucks from Regions 1 and 2 are outside that 1 (my reading).">
+    <rect x="10" y="62" width="120" height="130" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+    <g transform="translate(64 118) scale(1.25)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4" fill="none"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4" fill="none"/><path d="M26 -24 L22 -36 L16 -42 M22 -36 L28 -44 M30 -24 L34 -36 L30 -44 M34 -36 L40 -42" stroke="#5c3b1c" stroke-width="2.5" fill="none"/></g>
+    <circle cx="28" cy="80" r="13" fill="#e8590c"/><text x="28" y="86" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+    <text x="70" y="170" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">mule buck:</text><text x="70" y="186" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">1 at most</text>
+  </g>
+  <g data-tip="Mix and match|3 white tails, 3 mule deer, or a mix (1 plus 2, or 2 plus 1), as long as the total stays at 3.">
+    <rect x="140" y="62" width="120" height="130" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+    <g transform="translate(194 118) scale(1.25)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4" fill="none"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4" fill="none"/></g>
+    <circle cx="158" cy="80" r="13" fill="#e8590c"/><text x="158" y="86" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+    <text x="200" y="178" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">any deer</text>
+    <rect x="270" y="62" width="120" height="130" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/>
+    <g transform="translate(324 118) scale(1.25)"><ellipse cx="0" cy="0" rx="24" ry="11" fill="#8b5a2b"/><path d="M16 -6 L24 -20 L30 -18 L24 -2 Z" fill="#8b5a2b"/><ellipse cx="29" cy="-20" rx="8" ry="5" fill="#8b5a2b"/><path d="M-18 8 L-20 26 M-10 8 L-9 26 M12 8 L11 26 M19 6 L21 26" stroke="#8b5a2b" stroke-width="4" fill="none"/><path d="M-24 -4 l-5 -2" stroke="#8b5a2b" stroke-width="4" fill="none"/></g>
+    <circle cx="288" cy="80" r="13" fill="#e8590c"/><text x="288" y="86" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+    <text x="330" y="178" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">any deer</text>
+  </g>
+  <g data-tip="Which regions|Regions 3, 4, 5, 6, 7A, 7B and 8 share that 1 mule deer buck. Shoot one near Heffley Creek in Region 3 and you are done with mule bucks in Region 8 too.">
+    <rect x="10" y="204" width="380" height="72" rx="8" fill="#fdecea" stroke="#c92a2a" stroke-width="2"/>
+    <text x="200" y="230" font-size="16" fill="#c92a2a" text-anchor="middle" font-weight="bold">Only 1 mule deer buck from</text>
+    <text x="200" y="256" font-size="16" fill="#c92a2a" text-anchor="middle" font-weight="bold">Regions 3, 4, 5, 6, 7A, 7B, 8 combined</text>
+  </g>
+  <g data-tip="Own licence|Each deer needs its own species licence. You may not hold more than 3 mule deer licences, nor more than 3 white tailed deer licences.">
+    <text x="14" y="308" font-size="16" fill="#23261f" font-weight="bold">Each deer: its own species licence</text>
+  </g>
+  <g data-tip="Regional limits too|Each region sets its own limit as well. You may not exceed either the provincial or the regional limit.">
+    <text x="14" y="336" font-size="16" fill="#23261f">Regional limits apply too</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 2: Midday: cover, shade, water. Work the thick stuff slowly (Tip).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Midday: cover, shade, water</text>
+<g><polygon points="149.0,190 170,130 191.0,190" fill="#3d5a3a"/><rect x="168" y="190" width="4" height="12.0" fill="#6b4f35"/></g><g><polygon points="195.5,190 220,120 244.5,190" fill="#3d5a3a"/><rect x="218" y="190" width="4" height="14.0" fill="#6b4f35"/></g><g fill="#8a9a6b"><circle cx="258.8" cy="185" r="12.8"/><circle cx="281.2" cy="185" r="12.8"/><circle cx="270" cy="175.4" r="16"/></g><text x="200" y="225" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Thick cover, shade, water</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Work the thick stuff slowly (Tip).</text>
+</svg>

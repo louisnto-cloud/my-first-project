@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4: after the flush, watch each bird down and mark where singles land. Walk straight to the nearest single first. Singles often hold tight, Washington Fish and Wildlife, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Follow a covey: 4 Mark the singles</text>
+<rect x="10" y="40" width="380" height="196" rx="8" fill="#dfe6d3"/>
+<ellipse cx="110" cy="120" rx="40" ry="22" fill="#8a9a6b"/>
+<ellipse cx="250" cy="90" rx="40" ry="22" fill="#8a9a6b"/>
+<ellipse cx="320" cy="170" rx="40" ry="22" fill="#8a9a6b"/>
+<g transform="translate(60 200)"><circle r="10" fill="#e8590c"/><text x="0" y="-16" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">You</text></g>
+<line x1="70" y1="190" x2="240" y2="98" stroke="#e8590c" stroke-width="3"/><polygon points="240,98 234.2,106.1 230.0,98.5" fill="#e8590c"/>
+<line x1="70" y1="196" x2="310" y2="170" stroke="#e8590c" stroke-width="3"/><polygon points="310,170 301.5,175.3 300.6,166.6" fill="#e8590c"/>
+<line x1="70" y1="186" x2="104" y2="128" stroke="#e8590c" stroke-width="3"/><polygon points="104,128 103.2,138.0 95.7,133.6" fill="#e8590c"/>
+<text x="250" y="64" font-size="18" font-weight="bold" fill="#a33b2a" text-anchor="middle">X</text>
+<text x="320" y="146" font-size="18" font-weight="bold" fill="#a33b2a" text-anchor="middle">X</text>
+<text x="110" y="96" font-size="18" font-weight="bold" fill="#a33b2a" text-anchor="middle">X</text>
+<rect x="10" y="246" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="269" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Mark every single. Go to the nearest.</text>
+</svg>

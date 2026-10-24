@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Still hunting time budget. A short orange bar for walking, 1 part. A long green bar for standing still and looking, 10 parts. Hunter education says spend at least 10 times longer still than walking.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="36" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Still hunting: where the time goes</text>
+  <g font-family="sans-serif" font-size="16" fill="#23261f">
+    <text x="20" y="100">Walk</text>
+    <rect x="100" y="80" width="28" height="32" fill="#e8590c"/>
+    <text x="138" y="102" font-weight="bold" fill="#e8590c">1</text>
+    <text x="20" y="170">Stand,</text><text x="20" y="190">look</text>
+    <rect x="100" y="156" width="280" height="32" fill="#8a9a6b"/>
+    <text x="230" y="178" font-weight="bold" fill="#ffffff">10</text>
+  </g>
+  <text x="200" y="244" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">A few steps. Stop. Look ahead, not down.</text>
+  <text x="200" y="268" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Then a few more.</text>
+</svg>

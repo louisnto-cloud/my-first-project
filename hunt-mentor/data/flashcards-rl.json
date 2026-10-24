@@ -1,0 +1,1057 @@
+[
+ {
+  "id": "rl-lf-contour",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "What is a contour line?",
+  "back": "A line joining points of the same height. Picture water rising round a hill: each shoreline is a contour."
+ },
+ {
+  "id": "rl-lf-hm-interval",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Hunt Map contour interval in metres mode?",
+  "back": "A line every 20 m, with a thicker index line every 100 m."
+ },
+ {
+  "id": "rl-lf-v-draw",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Contour Vs point uphill. What is it?",
+  "back": "A draw (small valley). Water runs down its middle.",
+  "diagram": "rl-lf-v-rule"
+ },
+ {
+  "id": "rl-lf-v-ridge",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Contour Vs point downhill. What is it?",
+  "back": "A ridge or a spur.",
+  "diagram": "rl-lf-v-rule"
+ },
+ {
+  "id": "rl-lf-ridge",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Ridge: what and why it matters?",
+  "back": "A long line of high ground, higher than both sides. Animals travel just below the crest; you walk below it and glass from it (Tip).",
+  "diagram": "rl-lf-ridge-3d"
+ },
+ {
+  "id": "rl-lf-spur",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Spur: what is it?",
+  "back": "A short ridge running down off a bigger ridge, with a draw on each side. Also called a finger or point.",
+  "diagram": "rl-lf-spur-topo"
+ },
+ {
+  "id": "rl-lf-draw",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Draw: what does it hold?",
+  "back": "Water, brush, shade and travel routes. Evening air and scent drain down it.",
+  "diagram": "rl-lf-draw-3d"
+ },
+ {
+  "id": "rl-lf-saddle",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "How does a saddle look on a topo map?",
+  "back": "An hourglass between two sets of closed rings: the low crossing of a ridge.",
+  "diagram": "hf-shape-saddle"
+ },
+ {
+  "id": "rl-lf-saddle-why",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Why do animals cross ridges at saddles?",
+  "back": "Least climbing and they stay off the high skyline (65%, hunter observation).",
+  "diagram": "rl-lf-saddle-3d"
+ },
+ {
+  "id": "rl-lf-bench",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Bench on a topo map?",
+  "back": "Tight lines, then a wide gap, then tight lines: a flat step on a slope. Deer bed and travel there (65%).",
+  "diagram": "hf-shape-bench"
+ },
+ {
+  "id": "rl-lf-bench-hm",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "How does a bench show on Hunt Map Slope steepness?",
+  "back": "As an uncoloured strip (under 15 degrees) between coloured slopes.",
+  "diagram": "rl-lf-bench-3d"
+ },
+ {
+  "id": "rl-lf-knob",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Knob: what is it?",
+  "back": "A small rounded top: a small set of closed rings. A good lookout on rolling ground.",
+  "diagram": "rl-lf-knob-topo"
+ },
+ {
+  "id": "rl-lf-bowl",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Bowl: what is it?",
+  "back": "A rounded basin with high ground on three sides; contours make big Us. A high ice carved bowl is a cirque.",
+  "diagram": "rl-lf-bowl-topo"
+ },
+ {
+  "id": "rl-lf-cliff",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Cliff on a topo map?",
+  "back": "Contour lines merge or nearly touch. Small rock bands under 20 m may not show at all.",
+  "diagram": "hf-shape-cliff"
+ },
+ {
+  "id": "rl-lf-three-views",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Learn each landform in which three views?",
+  "back": "Topo map, Hunt Map in 3D, and on the ground.",
+  "diagram": "rl-lf-views"
+ },
+ {
+  "id": "rl-lf-3d-on",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "How do you turn on 3D on the Hunt Map?",
+  "back": "Tap 3D in the pill at the bottom right. Tilt with two fingers or the tilt buttons; rotate with the rotate buttons.",
+  "diagram": "rl-hm-3d"
+ },
+ {
+  "id": "rl-lf-boost",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Hunt Map 3D height boost range?",
+  "back": "1 to 2.5 times, default 1.5. Raise it to make benches and saddles pop.",
+  "diagram": "rl-hm-boost"
+ },
+ {
+  "id": "rl-lf-profile",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "On an elevation profile, a flat stretch on a climb is a…?",
+  "back": "Bench. A dip between two tops is a saddle.",
+  "diagram": "rl-lf-profile"
+ },
+ {
+  "id": "rl-lf-fist",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "The fist trick?",
+  "back": "Knuckles are tops, dips between them are saddles, fingers are ridges and spurs, gaps between fingers are draws.",
+  "diagram": "rl-lf-fist"
+ },
+ {
+  "id": "rl-lf-hook",
+  "deck": "Landforms 101: ridges, spurs, draws, saddles, benches, knobs, bowls",
+  "front": "Hook for the 7 shapes?",
+  "back": "Really Smart Deer Sneak Between Knobs and Bowls: Ridge, Spur, Draw, Saddle, Bench, Knob, Bowl."
+ },
+ {
+  "id": "rl-sa-def",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Slope vs aspect?",
+  "back": "Slope: how steep. Aspect: which way the slope faces (the way water would run off).",
+  "diagram": "rl-sa-aspect-compass"
+ },
+ {
+  "id": "rl-sa-45",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "45 degrees in percent?",
+  "back": "100 percent: 1 m up for 1 m along.",
+  "diagram": "rl-sa-slope-scale"
+ },
+ {
+  "id": "rl-sa-30",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "30 degrees in percent?",
+  "back": "About 58 percent. 30 percent is only about 17 degrees.",
+  "diagram": "rl-sa-slope-scale"
+ },
+ {
+  "id": "rl-sa-formula",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Percent slope formula?",
+  "back": "tan(degrees) x 100, or rise divided by run x 100."
+ },
+ {
+  "id": "rl-sa-count",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Hunt Map: 3 contour lines in 100 m of ground?",
+  "back": "About 60 percent, roughly 31 degrees (each line is 20 m).",
+  "diagram": "rl-sa-count-lines"
+ },
+ {
+  "id": "rl-sa-colours",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Hunt Map Slope steepness colours?",
+  "back": "Under 15 none, 15 to 25 yellow, 25 to 30 orange, 30 to 45 red (avalanche terrain in snow), over 45 purple.",
+  "diagram": "rl-sa-hm-keys"
+ },
+ {
+  "id": "rl-sa-aspect-colours",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Hunt Map Slope direction: which colour is south?",
+  "back": "Yellow. North is blue, east green, west red. Flat ground under 8 degrees is uncoloured.",
+  "diagram": "rl-sa-hm-keys"
+ },
+ {
+  "id": "rl-sa-sun",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Noon sun height near Kamloops in mid October?",
+  "back": "About 30 degrees up. On 21 December about 16 degrees.",
+  "diagram": "rl-sa-sun-angle"
+ },
+ {
+  "id": "rl-sa-north30",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "How much noon sun does a 30 degree north face get in mid October?",
+  "back": "Almost none. A 30 degree south face gets about 87 percent strength.",
+  "diagram": "rl-sa-sun-angle"
+ },
+ {
+  "id": "rl-sa-stove",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "South face vs north face, in one hook?",
+  "back": "South is the stove, north is the fridge."
+ },
+ {
+  "id": "rl-sa-plants",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "What grows on warm south faces near Kamloops vs cool north faces?",
+  "back": "South: bunchgrass, sagebrush, open fir and pine. North: thick Douglas fir and spruce, late snow."
+ },
+ {
+  "id": "rl-sa-md-winter",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "BC definition of mule deer winter range slope and aspect?",
+  "back": "10 to 45 percent slope, south or west aspect, below 1,500 m in shallow to moderate snow zones (85%)."
+ },
+ {
+  "id": "rl-sa-warm",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "BC forestry warm and cool aspects?",
+  "back": "Warm about 135 to 270 degrees (SE to W). Cool about 315 to 90 degrees (NW to E)."
+ },
+ {
+  "id": "rl-sa-cold-day",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Cold clear morning: where to glass first?",
+  "back": "Sunny east and south faces (Tip). Hot noon: shady timber."
+ },
+ {
+  "id": "rl-sa-security",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Why does steep broken ground matter to mule deer?",
+  "back": "It is security habitat; mule deer escape up slopes into rough ground."
+ },
+ {
+  "id": "rl-sa-aval",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "Where do most avalanches start?",
+  "back": "On 30 to 45 degree slopes (Avalanche Canada). They can run far out onto flat ground below.",
+  "diagram": "rl-sa-avalanche"
+ },
+ {
+  "id": "rl-sa-hunters",
+  "deck": "Slope and aspect: steepness and which way it faces, and why animals care",
+  "front": "How did slope change hunter use in the Pennsylvania study?",
+  "back": "Hunters were 1.25 times more likely to use an area for every 10 degree drop in slope."
+ },
+ {
+  "id": "rl-eb-bands",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Elevation bands near Kamloops, low to high?",
+  "back": "Bunchgrass, ponderosa pine and Douglas fir, montane spruce, subalpine fir and spruce, alpine.",
+  "diagram": "rl-eb-bands"
+ },
+ {
+  "id": "rl-eb-bg",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Bunchgrass zone reaches about how high?",
+  "back": "Valley bottoms up to about 700 to 1,000 m."
+ },
+ {
+  "id": "rl-eb-idf",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Interior Douglas fir zone upper edge?",
+  "back": "About 900 to 1,450 m."
+ },
+ {
+  "id": "rl-eb-essf",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "ESSF (Engelmann Spruce Subalpine Fir) zone height?",
+  "back": "About 1,200 to 2,300 m."
+ },
+ {
+  "id": "rl-eb-lapse",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "How fast does air cool as you climb, on an average day?",
+  "back": "About 6.5°C per 1,000 m.",
+  "diagram": "rl-eb-lapse"
+ },
+ {
+  "id": "rl-eb-inversion",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Clear calm night: where is it coldest?",
+  "back": "The valley bottom: cold air drains down and pools (inversion).",
+  "diagram": "rl-eb-inversion"
+ },
+ {
+  "id": "rl-eb-snowline",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "What moves deer down in fall: calendar, rut or snow?",
+  "back": "Snow and cold."
+ },
+ {
+  "id": "rl-eb-midoct",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "BCWF (BC Wildlife Federation) mule deer study: when were most collared deer back on winter range in 2019?",
+  "back": "By mid October nearly all were back."
+ },
+ {
+  "id": "rl-eb-25",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Deer burn the most energy in soft snow deeper than…?",
+  "back": "About 25 cm of sinking depth.",
+  "diagram": "sg-snow-depth"
+ },
+ {
+  "id": "rl-eb-50",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Mule deer generally avoid snow deeper than…?",
+  "back": "About 50 cm.",
+  "diagram": "sg-snow-depth"
+ },
+ {
+  "id": "rl-eb-moose",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Moose and snow depth?",
+  "back": "Move freely to about 40 cm, restricted at 40 to 70 cm."
+ },
+ {
+  "id": "rl-eb-aspect",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Where does the snowline sit higher: south or north face?",
+  "back": "South face. Snow lies lower and longer on north faces.",
+  "diagram": "rl-eb-aspect-snow"
+ },
+ {
+  "id": "rl-eb-quail",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "California quail usual height?",
+  "back": "Mostly 250 to 500 m, usually below 750 m.",
+  "diagram": "rl-eb-who"
+ },
+ {
+  "id": "rl-eb-dusky",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Dusky grouse in fall go…?",
+  "back": "Uphill to dense conifers; many observations 1,500 to 2,250 m.",
+  "diagram": "rl-eb-who"
+ },
+ {
+  "id": "rl-eb-ruffed",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Ruffed grouse most abundant height?",
+  "back": "750 to 1,250 m.",
+  "diagram": "rl-eb-who"
+ },
+ {
+  "id": "rl-eb-read",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "How do you put a height on the snowline?",
+  "back": "Centre the Hunt Map on the snow edge and read the elevation at the top left.",
+  "diagram": "rl-eb-read-snow"
+ },
+ {
+  "id": "rl-eb-1700",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Region 3 rule above 1,700 m?",
+  "back": "Motor vehicles other than snowmobiles only on existing roads and trails. Study aid only: the official regulations are the law.",
+  "diagram": "gr-1700"
+ },
+ {
+  "id": "rl-eb-hook",
+  "deck": "Elevation bands and the snowline through the season",
+  "front": "Hook for where to hunt in early snow?",
+  "back": "Hunt where the white stops: just below the snow edge on warm faces."
+ },
+ {
+  "id": "rl-wa-spring",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Spring vs seep?",
+  "back": "Spring: groundwater flowing out on its own. Seep: water oozing slowly over a damp patch."
+ },
+ {
+  "id": "rl-wa-where-spring",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Where do springs often appear?",
+  "back": "Where a slope eases: the toe of a bench or the head of a draw, where water running along a tight layer comes out."
+ },
+ {
+  "id": "rl-wa-dashed",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Hunt Map: dashed blue line?",
+  "back": "An intermittent creek: it may be dry.",
+  "diagram": "rl-wa-hm-key"
+ },
+ {
+  "id": "rl-wa-missing",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Do maps show every spring and seep?",
+  "back": "No. Many are missing. Use the Satellite base, plants and your boots."
+ },
+ {
+  "id": "rl-wa-green",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "In a dry October, what marks water on a brown hill?",
+  "back": "The greenest spot: aspen clumps, willow, dogwood, brushy draws.",
+  "diagram": "rl-wa-green"
+ },
+ {
+  "id": "rl-wa-plants",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Four plants that point to water?",
+  "back": "Willow, red osier dogwood, cottonwood, aspen (also alder, sedge, cattail)."
+ },
+ {
+  "id": "rl-wa-crossing",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Where do trails cross a creek?",
+  "back": "Where banks are low and the bottom is firm. One crossing can serve a whole slope.",
+  "diagram": "rl-wa-crossing"
+ },
+ {
+  "id": "rl-wa-wallow",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "What is a wallow?",
+  "back": "A muddy pit dug and rolled in by bull elk in the rut; bull moose dig rut pits too."
+ },
+ {
+  "id": "rl-wa-beaver",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Why are beaver ponds magnets?",
+  "back": "Water, willow browse and cover in one place; the dam is often a crossing.",
+  "diagram": "rl-wa-beaver"
+ },
+ {
+  "id": "rl-wa-dugout",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Ranch dugout full of ducks: first step?",
+  "back": "Permission, and no hunting or shooting within 100 m of an occupied dwelling or farm building."
+ },
+ {
+  "id": "rl-wa-dry-wet",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Dry spell vs wet spell: what do you sit?",
+  "back": "Dry: water at dawn and dusk. Wet: food and cover.",
+  "diagram": "rl-wa-dry-wet"
+ },
+ {
+  "id": "rl-wa-distance",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "How far do deer usually live from water (studies elsewhere)?",
+  "back": "Prefer within about 1 km, rarely more than about 2.4 km (65%).",
+  "diagram": "sg-water-rings"
+ },
+ {
+  "id": "rl-wa-air",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Which way does evening air go along a creek bottom?",
+  "back": "Down the creek: cold air and your scent drain downhill."
+ },
+ {
+  "id": "rl-wa-sit",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "Where do you sit at a small spring?",
+  "back": "Downwind, watching the trails coming in, not right at the edge."
+ },
+ {
+  "id": "rl-wa-swamp",
+  "deck": "Water on the land: creeks, springs, seeps, wallows, ponds",
+  "front": "SWAMP scan list?",
+  "back": "Springs, Wallows, Aspen clumps, Marsh edges, Ponds."
+ },
+ {
+  "id": "rl-ed-def",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "What is an edge?",
+  "back": "The juncture of two or more different cover types."
+ },
+ {
+  "id": "rl-ed-ecotone",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "What is an ecotone?",
+  "back": "A soft, blended edge: forest and open land mixed through shrubs and young trees.",
+  "diagram": "rl-ed-hard-soft"
+ },
+ {
+  "id": "rl-ed-leopold",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "What did Leopold really stress?",
+  "back": "Interspersion: food and cover types mixed close together, not just more edge."
+ },
+ {
+  "id": "rl-ed-six",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Six edges to look for?",
+  "back": "Timber and grass, cutblock, burn, field and brush, creek strip, treeline.",
+  "diagram": "rl-ed-types"
+ },
+ {
+  "id": "rl-ed-shapes",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Which edge shapes bunch travel?",
+  "back": "Inside corners, points (fingers) of timber, islands of cover.",
+  "diagram": "rl-ed-shapes"
+ },
+ {
+  "id": "rl-ed-200",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "BC mule deer rating: cover within how far of spring feed?",
+  "back": "About 200 m.",
+  "diagram": "rl-ed-distance"
+ },
+ {
+  "id": "rl-ed-quail",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "California quail stay within how far of cover?",
+  "back": "Seldom more than 15 to 30 m.",
+  "diagram": "rl-ed-distance"
+ },
+ {
+  "id": "rl-ed-60",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Mule deer security cover test?",
+  "back": "Hides 90% of a deer at 60 m or less, patches 180 m or more across."
+ },
+ {
+  "id": "rl-ed-loop",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Daily edge loop of most deer?",
+  "back": "Feed in the open at dusk and night, back to cover at dawn."
+ },
+ {
+  "id": "rl-ed-sit",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Three checks to sit an edge?",
+  "back": "View of the corner, wind from the edge to you, sun at your back.",
+  "diagram": "rl-ed-sit"
+ },
+ {
+  "id": "rl-ed-distance",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "How far off an edge do beginners sit?",
+  "back": "100 to 200 m with a rest and a backstop (Tip)."
+ },
+ {
+  "id": "rl-ed-cutblock",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Hunt Map layers for edges?",
+  "back": "Cutblocks by age and Burns by year, with the Satellite base.",
+  "diagram": "hf-cutblock-edge"
+ },
+ {
+  "id": "rl-ed-downside",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Downside of edges?",
+  "back": "Predators and other hunters use them too; too much edge hurts some forest birds."
+ },
+ {
+  "id": "rl-ed-hook",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "EDGE hook?",
+  "back": "Eat in the open, Duck into cover, Go at dusk, Exit at dawn."
+ },
+ {
+  "id": "rl-ed-rule",
+  "deck": "Edges and transitions: where two habitats meet",
+  "front": "Grandpa's edge rule?",
+  "back": "Do not sit in the field or in the woods. Sit where you can see both."
+ },
+ {
+  "id": "rl-bd-needs",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "A good bed gives what three things (Tip)?",
+  "back": "A view below, wind from behind, cover close.",
+  "diagram": "rl-bd-terrain"
+ },
+ {
+  "id": "rl-bd-spots",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Four common bedding spots on a mountain?",
+  "back": "Just below the crest on a spur or ridge, benches, heads of draws, thick cool timber.",
+  "diagram": "rl-bd-terrain"
+ },
+ {
+  "id": "rl-bd-third",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Rough first glass for mountain mule deer beds?",
+  "back": "About two thirds of the way up the face (60%)."
+ },
+ {
+  "id": "rl-bd-security",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Mule deer security cover numbers?",
+  "back": "Hides 90% of a deer at 60 m or less; patches 180 m or more across.",
+  "diagram": "rl-bd-numbers"
+ },
+ {
+  "id": "rl-bd-snow",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Which stands catch the most snow?",
+  "back": "Taller than 10 m with over 60% crown completeness, like old Douglas fir."
+ },
+ {
+  "id": "rl-bd-night",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Night thermal cover?",
+  "back": "A closed canopy above 3 m: traps heat, cuts wind, catches snow.",
+  "diagram": "rl-bd-day-night"
+ },
+ {
+  "id": "rl-bd-day",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Day thermal cover on a cold day?",
+  "back": "Rock bluffs and sunny spots that gather heat.",
+  "diagram": "rl-bd-day-night"
+ },
+ {
+  "id": "rl-bd-elk",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Elk thermal cover from US studies?",
+  "back": "Conifers at least 12 m tall with over 70% crown closure. Its benefit is debated (Cook 1998)."
+ },
+ {
+  "id": "rl-bd-elk-hide",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Elk hiding cover?",
+  "back": "Hides 90% of a standing elk at 61 m."
+ },
+ {
+  "id": "rl-bd-hot",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Hot day: where do deer bed?",
+  "back": "Cooler north and east timber, shady benches, draw heads.",
+  "diagram": "sa-bed-warm-cold"
+ },
+ {
+  "id": "rl-bd-cold",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Cold clear day: where do deer bed?",
+  "back": "Sunny south and east faces, below rock, out of the wind.",
+  "diagram": "sa-bed-warm-cold"
+ },
+ {
+  "id": "rl-bd-wind",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Windy day: where to look?",
+  "back": "Lee side just below the top, in timber (Tip). Watch for swirls.",
+  "diagram": "rl-bd-lee"
+ },
+ {
+  "id": "rl-bd-germaine",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Arizona study: what mattered most for summer day beds?",
+  "back": "Site temperature and canopy closure."
+ },
+ {
+  "id": "rl-bd-df",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Douglas fir share of mule deer winter diet at Knife Creek?",
+  "back": "About 62 to 89 percent."
+ },
+ {
+  "id": "rl-bd-rule",
+  "deck": "Bedding terrain and thermal cover",
+  "front": "Grandpa's bedding rule?",
+  "back": "Glass the beds, hunt the trails."
+ },
+ {
+  "id": "rl-es-def",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "What is escape terrain?",
+  "back": "The ground an animal runs to when threatened."
+ },
+ {
+  "id": "rl-es-mule",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Where does a mule deer run from a coyote?",
+  "back": "To and up slopes into rough broken ground, often stotting (Lingle 2002)."
+ },
+ {
+  "id": "rl-es-wt",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Where does a white tail run?",
+  "back": "Down and away, fast, into thick cover."
+ },
+ {
+  "id": "rl-es-goat",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Mountain goat escape terrain?",
+  "back": "Steep slopes usually 40 degrees or more of sheer or broken cliffs.",
+  "diagram": "rl-es-goat"
+ },
+ {
+  "id": "rl-es-goat-dist",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "How far do goats usually go from escape terrain?",
+  "back": "Rarely more than 400 to 500 m, often less in winter.",
+  "diagram": "rl-es-goat"
+ },
+ {
+  "id": "rl-es-sheep",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Bighorn escape terrain?",
+  "back": "Rugged rock, breaks and terraces next to steep south to southwest grass."
+ },
+ {
+  "id": "rl-es-elk",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Pressured elk escape to?",
+  "back": "Distance and dark timber far from roads (65%)."
+ },
+ {
+  "id": "rl-es-quail",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Quail escape?",
+  "back": "They run to thorny brush within 15 to 30 m, then flush."
+ },
+ {
+  "id": "rl-es-predict",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Before a stalk, what do you ask?",
+  "back": "If it busts, where does it go? Mark the exits.",
+  "diagram": "rl-es-predict"
+ },
+ {
+  "id": "rl-es-cliff",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Animal above a cliff: shoot?",
+  "back": "No. Wait until it is on ground where it will not fall (Tip).",
+  "diagram": "sc-cliff-shot"
+ },
+ {
+  "id": "rl-es-pressure",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Why do steep far places hold game in season?",
+  "back": "Hunter density falls with slope and distance from roads."
+ },
+ {
+  "id": "rl-es-hm",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Hunt Map: what shows rough escape ground?",
+  "back": "Red and purple on Slope steepness (30 degrees and more).",
+  "diagram": "rl-sa-hm-keys"
+ },
+ {
+  "id": "rl-es-stot",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "What is stotting?",
+  "back": "A mule deer bound with all four feet leaving the ground together."
+ },
+ {
+  "id": "rl-es-hook",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "Hook for deer escapes?",
+  "back": "Mulie up, whitey out."
+ },
+ {
+  "id": "rl-es-exit",
+  "deck": "Escape terrain: where animals run and why",
+  "front": "EXIT hook?",
+  "back": "Know the exit before entry: plan the escape route before you stalk."
+ },
+ {
+  "id": "rl-pp-def",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Funnel vs pinch point?",
+  "back": "A funnel narrows the routes; the pinch point is the narrowest spot in it."
+ },
+ {
+  "id": "rl-pp-families",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Four families of pinch?",
+  "back": "Terrain, cover, water, people."
+ },
+ {
+  "id": "rl-pp-terrain",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Five terrain pinches?",
+  "back": "Saddle, bench ledge, head of a draw, gap in a cliff band, narrow ridge or spur."
+ },
+ {
+  "id": "rl-pp-bench",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Bench pinch?",
+  "back": "Where a wide bench narrows to a thin ledge between cliffs above and below.",
+  "diagram": "rl-pp-bench"
+ },
+ {
+  "id": "rl-pp-drawhead",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Where do trails cross a steep draw?",
+  "back": "Around its head, not in and out.",
+  "diagram": "rl-pp-draw-head"
+ },
+ {
+  "id": "rl-pp-gap",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Cliff gap pinch?",
+  "back": "The one break in a rock band: many trails, one gap.",
+  "diagram": "rl-pp-cliff-gap"
+ },
+ {
+  "id": "rl-pp-strip",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Cover pinch example?",
+  "back": "A strip of timber joining two blocks across open ground.",
+  "diagram": "rl-pp-strip"
+ },
+ {
+  "id": "rl-pp-stack",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Best pinch spots?",
+  "back": "Stacked funnels: e.g. a saddle above a timber strip above a creek crossing.",
+  "diagram": "rl-pp-stack"
+ },
+ {
+  "id": "rl-pp-score",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Five things to score a pinch on?",
+  "back": "How narrow, between bed and feed, fresh sign, wind works for a seat, pressure."
+ },
+ {
+  "id": "rl-pp-sit",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Where to sit a pinch?",
+  "back": "Off the trail, downwind or crosswind, 100 to 150 m away, clear lane, backstop.",
+  "diagram": "rl-pp-wind"
+ },
+ {
+  "id": "rl-pp-approach",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Biggest pinch mistake?",
+  "back": "Walking through the pinch, or sitting on the trail."
+ },
+ {
+  "id": "rl-pp-sign",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "No sign at a pinch?",
+  "back": "No sit: map pinches are guesses until tracks prove them."
+ },
+ {
+  "id": "rl-pp-rings",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Hunt Map tool for shot distances at a seat?",
+  "back": "Range rings: 100, 200, 300 m."
+ },
+ {
+  "id": "rl-pp-birds",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Upland pinch?",
+  "back": "The end of a hedge or brushy strip: birds run to it and flush there.",
+  "diagram": "sb-upland-pinch"
+ },
+ {
+  "id": "rl-pp-hook",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "PINCH hook?",
+  "back": "Paths join, Into cover, Narrow ground, Check the wind, Hide off the line."
+ },
+ {
+  "id": "rl-pp-rule",
+  "deck": "Pinch points and funnels deep dive",
+  "front": "Grandpa's pinch rule?",
+  "back": "Do not hunt where animals are. Hunt where they have to go."
+ },
+ {
+  "id": "rl-is-def",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Island of habitat?",
+  "back": "A patch of good cover other hunters skip: small, close, awkward or in between.",
+  "diagram": "rl-is-map"
+ },
+ {
+  "id": "rl-is-73",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Pennsylvania study: share of hunters within 0.5 km of a road?",
+  "back": "73%, on 56% of the ground: density over 2 times higher near roads.",
+  "diagram": "rl-is-road-chart"
+ },
+ {
+  "id": "rl-is-084",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Average farthest hunters got from a road in that study?",
+  "back": "0.84 km. They reported going over 2.5 times farther.",
+  "diagram": "rl-is-road-chart"
+ },
+ {
+  "id": "rl-is-skipped",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Four reasons good spots get skipped?",
+  "back": "Too small, too close, too awkward, in between busy spots.",
+  "diagram": "rl-is-skipped"
+ },
+ {
+  "id": "rl-is-allowance",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Road allowance on a road under 3 lanes?",
+  "back": "15 m each side of the middle: no shooting across or within it, no hunting within it. Study aid only.",
+  "diagram": "rb-road-allowance"
+ },
+ {
+  "id": "rl-is-100",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "The 100 m rule?",
+  "back": "No hunting or shooting within 100 m of a dwelling, occupied farm or ranch building, school, church, playground or regional district park.",
+  "diagram": "rb-100m-ring"
+ },
+ {
+  "id": "rl-is-hwy5",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Hwy 5 single projectile band?",
+  "back": "Hope to Kamloops: no single projectile within 400 m of the road allowance. North of Kamloops is not listed (my reading)."
+ },
+ {
+  "id": "rl-is-park",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "BC Park roads?",
+  "back": "No hunting or shooting within 400 m of a park road or highway inside a BC Park."
+ },
+ {
+  "id": "rl-is-backstop",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Near roads, every shot needs…?",
+  "back": "A solid earth backstop, never toward a road, house or trail.",
+  "diagram": "hf-backstop"
+ },
+ {
+  "id": "rl-is-boat",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Big game from your boat?",
+  "back": "Not while the motor is propelling it (item 23)."
+ },
+ {
+  "id": "rl-is-ducks-boat",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Ducks from a moving boat?",
+  "back": "No shooting from or with a moving boat with a motor or sail; gliding from the motor counts as moving."
+ },
+ {
+  "id": "rl-is-slip",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "What do some deer do when hunters walk past?",
+  "back": "Slip into small cover near the road behind them (Tip)."
+ },
+ {
+  "id": "rl-is-hunt",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Best first option for a small island?",
+  "back": "Sit its edge downwind at dawn or dusk; it disturbs the least."
+ },
+ {
+  "id": "rl-is-hook",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "Three distances near roads?",
+  "back": "15, 100, 400: road allowance, house ring, listed highway band (metres)."
+ },
+ {
+  "id": "rl-is-island",
+  "deck": "Islands of habitat and overlooked spots near roads",
+  "front": "ISLAND hook?",
+  "back": "Is it legal, Safe backstop, Look at land status, Approach with the wind, Never overhunt, Dawn or dusk."
+ },
+ {
+  "id": "rl-rt-read",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "The 8 checks of the map read, in order?",
+  "back": "Law, Access, Shape, Face, Water, Cover, Pressure, Wind.",
+  "diagram": "rl-rt-read"
+ },
+ {
+  "id": "rl-rt-first",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "What comes first and last?",
+  "back": "Law first, wind last."
+ },
+ {
+  "id": "rl-rt-law",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Law check covers what?",
+  "back": "MU (Management Unit), open season, land status, parks, reserves, No Shooting Areas."
+ },
+ {
+  "id": "rl-rt-access",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Access check covers what?",
+  "back": "Roads, gates, Motor vehicle closures, and the 1,700 m rule in Regions 3 and 8."
+ },
+ {
+  "id": "rl-rt-window",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Five things to notice from the truck?",
+  "back": "Faces and what grows on them, burns and cutblocks, benches and saddles, green spots of water, where other trucks park."
+ },
+ {
+  "id": "rl-rt-tracks",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Why drive slowly after rain or snow?",
+  "back": "The road is a tracking strip: count fresh crossings and waypoint them.",
+  "diagram": "rl-rt-tracks"
+ },
+ {
+  "id": "rl-rt-item22",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Item 22?",
+  "back": "It is unlawful to hunt wildlife from a motor vehicle."
+ },
+ {
+  "id": "rl-rt-item28",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Item 28 in plain words?",
+  "back": "No loaded firearm (chamber or attached magazine) in or on a vehicle."
+ },
+ {
+  "id": "rl-rt-hunt-def",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Is glassing with a rifle on you hunting?",
+  "back": "Yes: searching for wildlife while in possession of a firearm counts as hunting.",
+  "diagram": "rl-rt-pullout"
+ },
+ {
+  "id": "rl-rt-pullout",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Safe way to glass from a pullout?",
+  "back": "Truck fully off the road, rifle unloaded and cased, you away from the truck, or scout with no firearm.",
+  "diagram": "rl-rt-pullout"
+ },
+ {
+  "id": "rl-rt-load",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "When can you load after seeing a deer from the road?",
+  "back": "After you walk away from the truck and out of the road allowance, if all else is legal.",
+  "diagram": "rb-road-allowance"
+ },
+ {
+  "id": "rl-rt-light",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Item 38?",
+  "back": "No hunting with a light: no spotlight, headlamp or truck lights to hunt by."
+ },
+ {
+  "id": "rl-rt-offline",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Before leaving home with the Hunt Map?",
+  "back": "Save the area in Offline Maps on wifi; look at Satellite too."
+ },
+ {
+  "id": "rl-rt-loop",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "The scouting loop?",
+  "back": "Map at home, drive and look, mark waypoints, walk and check, journal, back to the map.",
+  "diagram": "rl-rt-loop"
+ },
+ {
+  "id": "rl-rt-time",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Best time to drive and scout?",
+  "back": "Midday. Hunt the edges of the day."
+ },
+ {
+  "id": "rl-rt-rule",
+  "deck": "Reading land from the truck and from a map before you walk",
+  "front": "Grandpa's truck rule?",
+  "back": "The truck is for looking. Your boots are for hunting."
+ }
+]

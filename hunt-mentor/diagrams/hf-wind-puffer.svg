@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Wind check tool 1: a puffer bottle of unscented powder. One squeeze makes a small cloud that drifts and shows direction.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="70" y="120" width="60" height="110" rx="14" fill="#e8590c"/><rect x="88" y="96" width="24" height="26" fill="#2f3a2b"/><rect x="96" y="80" width="8" height="18" fill="#2f3a2b"/>
+  <g fill="#c9b79c" opacity=".8"><circle cx="130" cy="74" r="10"/><circle cx="160" cy="66" r="14"/><circle cx="200" cy="70" r="18"/><circle cx="246" cy="78" r="20"/><circle cx="292" cy="90" r="22" opacity=".6"/></g>
+  <path d="M190 130 L310 130" stroke="#4a7fb0" stroke-width="4"/><polygon points="306,122 306,138 322,130" fill="#4a7fb0"/>
+  <text x="250" y="160" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">drift = direction</text>
+  <text x="200" y="30" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Puffer bottle</text>
+  <text x="200" y="268" font-size="15" fill="#2f3a2b" text-anchor="middle">One puff of unscented powder (70%)</text>
+</svg>

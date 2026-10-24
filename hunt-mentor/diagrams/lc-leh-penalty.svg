@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif" role="img" aria-label="Enhanced odds. Won moose anywhere, or elk in Regions 1 and 2: your odds for that species are cut 66 percent for 3 years. Won any other species: cut 50 percent for 1 year. Deer, black bear and turkey: no cut, apply every year.">
+<rect width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Won last year? Your odds drop</text>
+<rect x="8" y="42" width="384" height="106" rx="8" fill="#fffaf0" stroke="#e8590c" stroke-width="2.4"/>
+<text x="20" y="66" font-size="16" font-weight="bold" fill="#2f3a2b">Moose anywhere,</text>
+<text x="20" y="86" font-size="16" font-weight="bold" fill="#2f3a2b">elk in Regions 1 and 2</text>
+<rect x="20" y="96" width="46" height="30" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="43" y="116" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Yr 1</text>
+<rect x="72" y="96" width="46" height="30" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="95" y="116" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Yr 2</text>
+<rect x="124" y="96" width="46" height="30" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="147" y="116" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Yr 3</text>
+<text x="184" y="117" font-size="16" font-weight="bold" fill="#c2410c">Cut 66% for 3 years</text>
+<rect x="8" y="158" width="384" height="86" rx="8" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2.4"/>
+<text x="20" y="182" font-size="16" font-weight="bold" fill="#2f3a2b">Any other species</text>
+<rect x="20" y="192" width="46" height="30" rx="5" fill="#8b5a2b" stroke="#8b5a2b" stroke-width="2"/>
+<text x="43" y="212" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Yr 1</text>
+<rect x="72" y="192" width="46" height="30" rx="5" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<text x="95" y="212" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Yr 2</text>
+<rect x="124" y="192" width="46" height="30" rx="5" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<text x="147" y="212" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Yr 3</text>
+<text x="184" y="213" font-size="16" font-weight="bold" fill="#8b5a2b">Cut 50% for 1 year</text>
+<rect x="8" y="254" width="384" height="86" rx="8" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2.4"/>
+<text x="20" y="278" font-size="16" font-weight="bold" fill="#2f3a2b">Deer, black bear, turkey</text>
+<rect x="20" y="288" width="46" height="30" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<text x="43" y="308" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Yr 1</text>
+<rect x="72" y="288" width="46" height="30" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<text x="95" y="308" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Yr 2</text>
+<rect x="124" y="288" width="46" height="30" rx="5" fill="#fffaf0" stroke="#2f6e3b" stroke-width="2"/>
+<text x="147" y="308" font-size="15" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Yr 3</text>
+<text x="184" y="309" font-size="16" font-weight="bold" fill="#2f6e3b">No cut. Apply every year</text>
+</svg>

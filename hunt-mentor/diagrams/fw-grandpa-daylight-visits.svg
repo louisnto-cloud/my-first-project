@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bar chart from one GPS study of bucks near hunting stands, as reported in hunting media. Weeks 1 to 3 of the season: about 1 in 3 visits to a stand area were in daylight. Week 13: about 1 in 20. Pressure pushes bucks to use those spots after dark.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-family="sans-serif" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Buck visits to stand areas in daylight</text>
+  <line x1="40" y1="240" x2="380" y2="240" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="80" y="80" width="90" height="160" fill="#8a9a6b"/>
+  <rect x="240" y="216" width="90" height="24" fill="#e8590c"/>
+  <g font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">
+    <text x="125" y="70" fill="#2f3a2b">1 in 3</text>
+    <text x="285" y="206" fill="#e8590c">1 in 20</text>
+  </g>
+  <g font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">
+    <text x="125" y="262">Weeks 1 to 3</text>
+    <text x="285" y="262">Week 13</text>
+  </g>
+  <text x="200" y="290" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">One study, secondary report (60%)</text>
+</svg>

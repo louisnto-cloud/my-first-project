@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-label="Grid of the 15 Management Units in Region 1, Vancouver Island: 1-1 to 1-13, plus 1-14 and 1-15, which are mainland coast around Kingcome and Knight inlets by this app&#x27;s reading of the map." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 1: 15 Management Units</text>
+<text x="200" y="46" font-size="14" fill="#6b6f66" text-anchor="middle">No MU is skipped. The map is approximate.</text>
+<rect x="8" y="62" width="14" height="14" rx="3" fill="#e8590c"/>
+<text x="28" y="74" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">1-1 to 1-13</text>
+<rect x="8" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="38" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-1</text>
+<rect x="73" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="102" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-2</text>
+<rect x="138" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="168" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-3</text>
+<rect x="203" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="232" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-4</text>
+<rect x="268" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="298" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-5</text>
+<rect x="333" y="86" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="362" y="106" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-6</text>
+<rect x="8" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="38" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-7</text>
+<rect x="73" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="102" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-8</text>
+<rect x="138" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="168" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-9</text>
+<rect x="203" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="232" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-10</text>
+<rect x="268" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="298" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-11</text>
+<rect x="333" y="122" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="362" y="142" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-12</text>
+<rect x="8" y="158" width="59" height="30" rx="6" fill="#e8590c"/>
+<text x="38" y="178" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-13</text>
+<rect x="8" y="204" width="14" height="14" rx="3" fill="#4a7fb0"/>
+<text x="28" y="216" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">1-14 and 1-15: mainland coast, Kingcome and</text>
+<text x="28" y="234" font-size="14" fill="#23261f" text-anchor="start" font-weight="bold">Knight inlets (90%, my reading of the map)</text>
+<rect x="8" y="246" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="38" y="266" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-14</text>
+<rect x="73" y="246" width="59" height="30" rx="6" fill="#4a7fb0"/>
+<text x="102" y="266" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1-15</text>
+</svg>

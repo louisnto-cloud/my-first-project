@@ -1,0 +1,175 @@
+[
+ {
+  "id": "sks-001",
+  "deck": "SKS course",
+  "front": "What is the legal class of a standard Type 56 SKS (23 Oct 2026)?",
+  "back": "Non restricted (99%, RCMP Firearms Reference Table, valid 19 Oct 2026). Under federal review: check each season.",
+  "diagram": "sks-legal-status"
+ },
+ {
+  "id": "sks-002",
+  "deck": "SKS course",
+  "front": "How many rounds may your SKS magazine hold?",
+  "back": "5. A semi automatic centrefire long gun magazine over 5 is a prohibited device (99%, SOR/98-462 Part 4).",
+  "diagram": "sks-mag-law"
+ },
+ {
+  "id": "sks-003",
+  "deck": "SKS course",
+  "front": "Type 56 SKS vs Type 56 AK?",
+  "back": "Same Chinese name, different guns. The Type 56 AK (AK-47 copy) is prohibited; the Type 56 SKS is non restricted (99%, FRT)."
+ },
+ {
+  "id": "sks-004",
+  "deck": "SKS course",
+  "front": "Why shake the SKS bolt before firing?",
+  "back": "The firing pin floats free. It must rattle. Stuck forward in old grease, it can slam fire (70%).",
+  "diagram": "sks-insp-2"
+ },
+ {
+  "id": "sks-005",
+  "deck": "SKS course",
+  "front": "What is a slam fire?",
+  "back": "The rifle fires as the bolt closes, with no trigger press, usually from a stuck firing pin (70%).",
+  "diagram": "sks-slamfire"
+ },
+ {
+  "id": "sks-006",
+  "deck": "SKS course",
+  "front": "Who checks headspace on a surplus rifle?",
+  "back": "A qualified gunsmith, with gauges (Tip). Too much headspace can split or rupture cases (80%).",
+  "diagram": "sks-headspace"
+ },
+ {
+  "id": "sks-007",
+  "deck": "SKS course",
+  "front": "SKS safety: which way is SAFE?",
+  "back": "Forward and up. It blocks the trigger. Rearward and down is fire (95%, TC 9-56).",
+  "diagram": "sks-safety"
+ },
+ {
+  "id": "sks-008",
+  "deck": "SKS course",
+  "front": "Does the SKS safety stop a slam fire?",
+  "back": "No. It blocks the trigger only (95%, my reading of TC 9-56)."
+ },
+ {
+  "id": "sks-009",
+  "deck": "SKS course",
+  "front": "How do you empty the SKS fixed magazine?",
+  "back": "Safety on, pull the magazine catch back: it swings open and the rounds drop out (95%).",
+  "diagram": "sks-mag-catch"
+ },
+ {
+  "id": "sks-010",
+  "deck": "SKS course",
+  "front": "Magazine emptied. Is the SKS unloaded?",
+  "back": "Not yet. Close it, pull the handle back to eject the chambered round, then look in chamber, bore and magazine (95%).",
+  "diagram": "sks-unload-4"
+ },
+ {
+  "id": "sks-011",
+  "deck": "SKS course",
+  "front": "Where does the stripper clip go?",
+  "back": "Into the clip guides at the front of the open bolt carrier. Thumb presses the rounds down (95%).",
+  "diagram": "sks-load-2"
+ },
+ {
+  "id": "sks-012",
+  "deck": "SKS course",
+  "front": "SKS in the truck: what must be empty?",
+  "back": "The chamber AND the fixed magazine, because it is always attached (99%, synopsis page 11 item 28).",
+  "diagram": "sks-vehicle"
+ },
+ {
+  "id": "sks-013",
+  "deck": "SKS course",
+  "front": "Function check: safety on, trigger pressed. What should happen?",
+  "back": "Nothing. The hammer must not fall. Safety off: it falls (95%, TC 9-56).",
+  "diagram": "sks-function-check"
+ },
+ {
+  "id": "sks-014",
+  "deck": "SKS course",
+  "front": "Rear sight leaf: what do the numbers mean?",
+  "back": "Hundreds of metres: 1 is 100 m, 10 is 1000 m. First mark: battle setting up to 300 m (95%).",
+  "diagram": "sks-rear-leaf"
+ },
+ {
+  "id": "sks-015",
+  "deck": "SKS course",
+  "front": "Group hits low. Front post up or down?",
+  "back": "Down. Move the front sight opposite to the miss (85%).",
+  "diagram": "sks-front-elev"
+ },
+ {
+  "id": "sks-016",
+  "deck": "SKS course",
+  "front": "Why does corrosive ammo rust a rifle?",
+  "back": "Fired chlorate primers leave salt; the salt pulls water from the air (65%). Wash with water, dry, oil, same day.",
+  "diagram": "sks-corrosive"
+ },
+ {
+  "id": "sks-017",
+  "deck": "SKS course",
+  "front": "Surplus FMJ (full metal jacket) for deer in BC?",
+  "back": "Illegal. Hunt with expanding bullets only (99%, synopsis page 12).",
+  "diagram": "sks-fmj-vs-sp"
+ },
+ {
+  "id": "sks-018",
+  "deck": "SKS course",
+  "front": "SKS field strip: 7 parts in order?",
+  "back": "Top cover, recoil spring, bolt carrier, bolt, gas tube, gas piston, trigger group if needed (95%, TC 9-56).",
+  "diagram": "sks-strip-overview"
+ },
+ {
+  "id": "sks-019",
+  "deck": "SKS course",
+  "front": "Recoil spring goes back in which end first?",
+  "back": "Stepped end first, into the bolt carrier (95%, TC 9-56).",
+  "diagram": "sks-re-5"
+ },
+ {
+  "id": "sks-020",
+  "deck": "SKS course",
+  "front": "Bolt back in: where is the extractor?",
+  "back": "Right front, rear of the bolt about 10 mm from the receiver wall (95%).",
+  "diagram": "sks-re-3"
+ },
+ {
+  "id": "sks-021",
+  "deck": "SKS course",
+  "front": "7.62x39 123 gr: energy at 100 yd and 200 yd?",
+  "back": "About 1,136 and 842 ft lb (75%, Hornady data). Under 1,000 ft lb past about 130 m.",
+  "diagram": "sks-energy"
+ },
+ {
+  "id": "sks-022",
+  "deck": "SKS course",
+  "front": "Your SKS deer range limit?",
+  "back": "150 m at most, and only if you pass the plate test (Tip).",
+  "diagram": "sks-range"
+ },
+ {
+  "id": "sks-023",
+  "deck": "SKS course",
+  "front": "Barrel cut under 470 mm on an SKS?",
+  "back": "Restricted. Cut from a rifle to under 457 mm: prohibited (99%, Criminal Code s. 84(1); FRT records).",
+  "diagram": "sks-barrel-length"
+ },
+ {
+  "id": "sks-024",
+  "deck": "SKS course",
+  "front": "Folding stock that fires under 660 mm?",
+  "back": "Makes the rifle restricted (99%, s. 84(1)). A bullpup stock is a prohibited device (99%).",
+  "diagram": "sks-stock-rules"
+ },
+ {
+  "id": "sks-025",
+  "deck": "SKS course",
+  "front": "Suppressor for the SKS?",
+  "back": "A prohibited device in Canada (99%, Criminal Code s. 84(1)).",
+  "diagram": "sks-red-list"
+ }
+]

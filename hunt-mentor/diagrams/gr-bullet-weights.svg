@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label=".308 bullet weights, heavier to the right. 150 grain, cup and core, for deer. 165 to 168 grain, bonded or Partition, for deer, black bear and all round. 178 to 180 grain, bonded, Partition or all copper, for elk and moose later. Cutaways show a lead core in a copper jacket, and an all copper bullet.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.308 bullets: heavier for bigger game</text>
+  <!-- bullet 1 -->
+  <g transform="translate(70 0)">
+    <path d="M-16 200 L-16 120 Q -16 80 0 60 Q 16 80 16 120 L16 200 Z" fill="#c87533" stroke="#2f3a2b" stroke-width="2"/>
+    <path d="M-11 196 L-11 122 Q -11 92 0 76 Q 11 92 11 122 L11 196 Z" fill="#8a8f88"/>
+  </g>
+  <g transform="translate(200 0)">
+    <path d="M-16 200 L-16 110 Q -16 70 0 50 Q 16 70 16 110 L16 200 Z" fill="#c87533" stroke="#2f3a2b" stroke-width="2"/>
+    <path d="M-11 196 L-11 112 Q -11 82 0 66 Q 11 82 11 112 L11 196 Z" fill="#8a8f88"/>
+    <path d="M-11 150 H11" stroke="#c87533" stroke-width="4"/>
+  </g>
+  <g transform="translate(330 0)">
+    <path d="M-16 200 L-16 100 Q -16 60 0 40 Q 16 60 16 100 L16 200 Z" fill="#c87533" stroke="#2f3a2b" stroke-width="2"/>
+  </g>
+  <g font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle"><text x="70" y="224">150 gr</text><text x="200" y="224">165 to 168 gr</text><text x="330" y="224">178 to 180 gr</text></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="70" y="246">Deer</text><text x="200" y="246">Deer, black bear</text><text x="330" y="246">Elk, moose</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="70" y="266">Cup and core</text><text x="200" y="266">Bonded, Partition</text><text x="330" y="266">Bonded or copper</text></g>
+  <g font-size="14" fill="#2f3a2b"><rect x="10" y="280" width="12" height="12" fill="#8a8f88"/><text x="26" y="291">lead core</text><rect x="110" y="280" width="12" height="12" fill="#c87533"/><text x="126" y="291">copper</text><text x="240" y="291">Not to scale</text></g>
+</svg>

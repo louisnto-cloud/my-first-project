@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three kinds of footwear. Insulated waterproof leather boot, about 400 grams of insulation, for Interior deer. Tall rubber boot for walking wet field edges. Chest waders for the duck marsh. Break boots in for a week with your hunting socks.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pick the boot for the hunt</text>
+  <path d="M40 90 L90 90 L92 170 L130 182 L132 206 L36 206 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="36" y="200" width="96" height="10" fill="#2f3a2b"/>
+  <path d="M170 60 L214 60 L216 172 L250 182 L252 206 L166 206 Z" fill="#2f6b3a" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="166" y="200" width="86" height="10" fill="#2f3a2b"/>
+  <path d="M296 50 L366 50 L370 120 L360 176 L388 186 L388 206 L300 206 L300 176 L292 120 Z" fill="#5c5a4a" stroke="#2f3a2b" stroke-width="2"/>
+  <path d="M300 50 L310 36 M362 50 L352 36" stroke="#2f3a2b" stroke-width="3"/>
+  <rect x="300" y="200" width="88" height="10" fill="#2f3a2b"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="84" y="234">Insulated</text><text x="208" y="234">Tall rubber</text><text x="342" y="234">Waders</text></g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="84" y="252">Interior deer</text><text x="84" y="268">about 400 g</text><text x="208" y="252">field edges</text><text x="342" y="252">duck marsh</text></g>
+  <text x="200" y="292" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Break in a week, in your hunting socks (Tip)</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 204" font-family="sans-serif" role="img" aria-label="When rattling and grunting work best for white tails. Mid October is early. Early November, near the rut, is best. Most does conceive about 13 to 17 November. In one Texas study about 65 percent of bucks responded, best on cool, calm, overcast mornings, 70 percent.">
+<rect width="400" height="204" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">When rattling works best (white tail)</text>
+<rect x="128" y="56" width="264" height="112" rx="6" fill="#eef0e2"/>
+<text x="161" y="48" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<text x="227" y="48" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Oct</text>
+<line x1="194" y1="56" x2="194" y2="62" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="293" y="48" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Nov</text>
+<line x1="260" y1="56" x2="260" y2="62" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="359" y="48" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec</text>
+<line x1="326" y1="56" x2="326" y2="62" stroke="#6b5b4b" stroke-width="1.5"/>
+<text x="10" y="88" font-size="16" font-weight="bold" fill="#23261f">Mid October</text>
+<rect x="224.8" y="70" width="35.2" height="24" rx="5" fill="#8a9a6b"/>
+<text x="266" y="88" font-size="16" font-weight="bold" fill="#5f6e45">early</text>
+<text x="10" y="120" font-size="16" font-weight="bold" fill="#23261f">Early Nov</text>
+<rect x="260.0" y="102" width="33.0" height="24" rx="5" fill="#e8590c"/>
+<text x="299" y="120" font-size="16" font-weight="bold" fill="#e8590c">best</text>
+<text x="10" y="152" font-size="16" font-weight="bold" fill="#23261f">Rut peak</text>
+<rect x="286.4" y="134" width="11.0" height="24" rx="5" fill="#8b5a2b"/>
+<text x="280.4" y="152" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">13 to 17 Nov</text>
+<text x="200" y="192" font-size="15" fill="#6b5b4b" text-anchor="middle">One Texas study: about 65% of bucks came in (70%).</text>
+</svg>

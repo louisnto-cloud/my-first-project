@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-label="Top view of a park road inside a BC Park. A band 400 metres each side of the road centre line: no hunting and no firing a firearm or bow there, unless a park officer authorizes it or the synopsis says otherwise for that road." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="320" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Inside a BC Park: park roads</text>
+<rect x="0" y="40" width="400" height="220" fill="#dfe6d3"/>
+<rect x="0" y="70" width="400" height="160" fill="#c92a2a" opacity=".15"/>
+<rect x="0" y="136" width="400" height="28" fill="#9a9a92"/><line x1="0" y1="150" x2="400" y2="150" stroke="#f2c94c" stroke-width="3" stroke-dasharray="14 10"/>
+<line x1="0" y1="70" x2="400" y2="70" stroke="#c92a2a" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="0" y1="230" x2="400" y2="230" stroke="#c92a2a" stroke-width="2.5" stroke-dasharray="8 6"/>
+<line x1="340" y1="150" x2="340.0" y2="80.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="340,74 344.3,83.0 335.7,83.0" fill="#c92a2a"/><line x1="340" y1="150" x2="340.0" y2="220.0" stroke="#c92a2a" stroke-width="2.5"/><polygon points="340,226 335.7,217.0 344.3,217.0" fill="#c92a2a"/>
+<text x="332" y="110" font-size="15" fill="#c92a2a" text-anchor="end" font-weight="bold">400 m</text><text x="332" y="196" font-size="15" fill="#c92a2a" text-anchor="end" font-weight="bold">400 m</text>
+<text x="14" y="100" font-size="15" fill="#c92a2a" text-anchor="start" font-weight="bold">No hunting, no firing a</text><text x="14" y="120" font-size="15" fill="#c92a2a" text-anchor="start" font-weight="bold">firearm or bow</text>
+<text x="14" y="284" font-size="15" fill="#23261f" text-anchor="start">Measured from the centre line, both sides.</text>
+<text x="14" y="305" font-size="15" fill="#23261f" text-anchor="start">Unless a park officer authorizes it.</text>
+</svg>

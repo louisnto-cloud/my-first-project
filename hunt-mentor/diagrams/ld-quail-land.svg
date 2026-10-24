@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" font-family="sans-serif" role="img" aria-label="Bar showing who owns the remaining South Okanagan grasslands, SOSCP field guide, 75 percent: more than 40 percent private, 10 percent reserve land, the rest other land. California quail live on valley farm, orchard and town edges, mostly below 750 metres. Most birds sit on private land, so ask early, a Tip.">
+<rect x="0" y="0" width="400" height="276" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">South Okanagan grasslands: who owns them</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">SOSCP field guide (75%)</text>
+<rect x="20" y="70" width="360" height="44" rx="6" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+<rect x="20" y="70" width="144" height="44" rx="6" fill="#e8590c"/>
+<rect x="164" y="70" width="36" height="44" fill="#8b5a2b"/>
+<text x="30" y="98" font-size="15" font-weight="bold" fill="#fff">Private: over 40%</text>
+<text x="182" y="136" font-size="14" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Reserve: 10%</text>
+<text x="300" y="98" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The rest</text>
+<g transform="translate(80 186) scale(1.3)"><ellipse cx="0" cy="5" rx="15" ry="10" fill="#7b7f86"/><circle cx="11" cy="-7" r="7" fill="#2f3a2b"/><path d="M10 -14 q4 -10 10 -7" stroke="#2f3a2b" stroke-width="3" fill="none"/><circle cx="10" cy="-21" r="3" fill="#2f3a2b"/><path d="M-3 14 v7 M4 14 v7" stroke="#2f3a2b" stroke-width="2.5"/></g><g transform="translate(160 186) scale(1.2)"><path d="M-20 18 v-18 l20 -16 l20 16 v18 z" fill="#c9b79c" stroke="#2f3a2b" stroke-width="2"/><rect x="-5" y="4" width="10" height="14" fill="#2f3a2b"/></g>
+<text x="200" y="182" font-size="15" font-weight="bold" fill="#2f3a2b">Quail: farm, orchard</text>
+<text x="200" y="202" font-size="15" fill="#2f3a2b">and town edges, mostly</text>
+<text x="200" y="222" font-size="15" fill="#2f3a2b">below 750 m (85%)</text>
+<text x="200" y="262" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Most birds sit on private land: ask early (Tip).</text>
+</svg>

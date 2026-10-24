@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Side view of a North Thompson valley in late October. White tailed deer in the valley bottom hayfields and cottonwoods by the river. Mule deer higher up on open grassland and Douglas fir benches, bedding at timber edges. Snow and cold push mule deer down toward winter range.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M0 80 L70 120 L120 140 L150 200 L250 220 L280 200 L330 130 L400 90 L400 300 L0 300 Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <path d="M120 140 L180 140 L190 150" fill="none" stroke="#8a9a6b" stroke-width="2"/>
+  <rect x="160" y="214" width="80" height="10" fill="#c9b79c"/>
+  <path d="M190 226 L215 226" stroke="#4a7fb0" stroke-width="6"/>
+  <g fill="#2f3a2b"><polygon points="30,96 40,68 50,96"/><polygon points="52,108 62,80 72,108"/><polygon points="350,118 360,90 370,118"/><polygon points="372,104 382,76 392,104"/></g>
+  <g fill="#8a9a6b"><circle cx="232" cy="206" r="9"/><circle cx="246" cy="200" r="8"/></g>
+  <g transform="translate(150 132)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="11" cy="-6" r="5" fill="#8b5a2b"/></g>
+  <g transform="translate(320 128)"><ellipse rx="13" ry="6" fill="#8b5a2b"/><circle cx="-11" cy="-6" r="5" fill="#8b5a2b"/></g>
+  <g transform="translate(190 206)"><ellipse rx="13" ry="6" fill="#6b4f35"/><circle cx="11" cy="-6" r="5" fill="#6b4f35"/></g>
+  <text x="130" y="110" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Mule deer:</text>
+  <text x="130" y="126" font-size="14" fill="#2f3a2b" text-anchor="middle">open fir benches</text>
+  <text x="200" y="258" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">White tails: hayfields,</text>
+  <text x="200" y="276" font-size="14" fill="#2f3a2b" text-anchor="middle">cottonwood river bottoms (75%)</text>
+  <path d="M300 100 C 300 140, 280 170, 262 190" fill="none" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 5"/>
+  <polygon points="256,184 270,186 260,198" fill="#e8590c"/>
+  <text x="392" y="40" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="end">Snow, cold: deer drift down</text>
+  <text x="12" y="40" font-size="14" fill="#2f3a2b">Beds: timber edges (80%)</text>
+</svg>

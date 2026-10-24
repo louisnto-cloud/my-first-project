@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 5: Do not shoot the roost out. Rest it; hunt it every few days at most.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Do not shoot the roost out</text>
+<ellipse cx="200" cy="160" rx="110" ry="40" fill="#4a7fb0"/><line x1="120" y1="110" x2="280" y2="210" stroke="#e8590c" stroke-width="8"/><text x="200" y="235" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Hunt the feed, leave the roost alone (Tip)</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Rest it; hunt it every few days at most.</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Sketch of a bench in the Hunt Map 3D view. A steep timbered slope above, a pale flat shelf across the middle, and a steep slope below. Contour lines are packed above and below the shelf and spread wide across it. A deer beds on the shelf. Label: bench, a flat step, a bed with a view. Caption: steep above, flat shelf, steep below.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Bench in 3D</text>
+<text x="388" y="24" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="36" width="400" height="70" fill="#e3ecf3"/>
+<path d="M0 106 L400 106 L400 140 L0 160 Z" fill="#a9b68e"/><path d="M0 160 L400 140 L400 178 L0 204 Z" fill="#f3ead2"/><path d="M0 204 L400 178 L400 268 L0 268 Z" fill="#a9b68e"/>
+<g fill="none" stroke="#8b5a2b" stroke-width="1.6"><path d="M0 120 L400 114"/><path d="M0 136 L400 124"/><path d="M0 150 L400 134"/><path d="M0 222 L400 196"/><path d="M0 240 L400 214"/><path d="M0 258 L400 232"/></g>
+<g fill="none" stroke="#8b5a2b" stroke-width="2.4"><path d="M0 160 L400 140"/><path d="M0 204 L400 178"/></g>
+<g transform="translate(40 128) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(90 124) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(300 116) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(350 114) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(60 232) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(330 218) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(110 236) scale(1.2)"><path d="M0 -18 L7 -4 H3 L9 6 H-9 L-3 -4 H-7 Z" fill="#6f8256"/><rect x="-1.4" y="6" width="2.8" height="4" fill="#6b4f35"/></g>
+<g transform="translate(200 176) scale(1.15)"><ellipse rx="14" ry="6" fill="#8b5a2b"/><circle cx="12" cy="-7" r="5" fill="#8b5a2b"/><path d="M15 -9 l5 2 l-5 2z" fill="#8b5a2b"/><path d="M10 -11 l-3 -6 M14 -11 l4 -5" stroke="#5c3b1c" stroke-width="2"/></g>
+<line x1="236" y1="158" x2="236" y2="78" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="236" cy="158" r="2.6" fill="#2f3a2b"/>
+<rect x="59.4" y="52" width="281.2" height="26" rx="6" fill="#e8590c"/><text x="200" y="70" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Bench: flat step, a bed with a view</text>
+<text x="200" y="292" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Steep above, flat shelf, steep below</text>
+</svg>

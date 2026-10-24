@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Sketch of a bowl in the Hunt Map 3D view. A ring of high ridges wraps around three sides of a basin that opens toward you. Contour lines curve in big U shapes around the head of the basin. Two deer feed in a green meadow in the bottom.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Bowl in 3D</text>
+<text x="388" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="38" width="400" height="232" fill="#e3ecf3"/>
+<path d="M0 200 C 20 150, 40 110, 80 90 C 130 70, 270 70, 320 90 C 360 110, 380 150, 400 200 L400 270 L0 270z" fill="#c9cfa6"/>
+<path d="M0 200 C 20 150, 40 110, 80 90 C 96 84, 110 80, 124 78 C 100 120, 80 190, 70 270 L0 270z" fill="#ecebcf"/>
+<path d="M400 200 C 380 150, 360 110, 320 90 C 304 84, 290 80, 276 78 C 300 120, 320 190, 330 270 L400 270z" fill="#a3b086"/>
+<path d="M96 270 C 120 226, 160 210, 200 210 C 240 210, 280 226, 304 270z" fill="#b7c98f"/>
+<path d="M54 270 C 60 152, 94 112, 200 112 C 306 112, 340 152, 346 270" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M44 270 C 50 186, 84 146, 200 146 C 316 146, 350 186, 356 270" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M36 270 C 42 224, 76 184, 200 184 C 324 184, 358 224, 364 270" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M30 270 C 36 266, 70 226, 200 226 C 330 226, 364 266, 370 270" fill="none" stroke="#8b5a2b" stroke-width="1.8"/>
+<path d="M0 200 C 20 150, 40 110, 80 90 C 130 70, 270 70, 320 90 C 360 110, 380 150, 400 200" fill="none" stroke="#2f3a2b" stroke-width="3.6"/>
+<g transform="translate(24 252) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(46 262) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(360 248) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(382 262) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(338 262) scale(0.9)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(176 248) scale(0.9 0.9)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<g transform="translate(226 254) scale(-0.9 0.9)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<line x1="200" y1="150" x2="200" y2="71" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="200" cy="150" r="2.6" fill="#2f3a2b"/>
+<rect x="131.2" y="44.0" width="225.5" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="244" y="63" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Bowl: basin open at one end</text>
+<text x="200" y="292" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Lines curve in a big U around the head</text>
+</svg>

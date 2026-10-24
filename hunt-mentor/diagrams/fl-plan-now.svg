@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 411" font-family="sans-serif" role="img" aria-label="Bars for what is open from 11 October to 31 December 2026, examples from the Region 3, 2 and 8 tables: Region 3 any mule deer buck to 31 October, Region 3 four point mule deer bucks 1 November to 10 December, Region 3 grouse to 30 November, Region 8 quail to 30 November, Region 2 ducks to 24 January, Region 3 ducks to 23 December. Check your own MU row.">
+<rect width="400" height="411" fill="#fffaf0"/>
+<text x="14" y="24" font-size="14" font-weight="bold" fill="#6b5b4b">Open from Oct 11 (examples)</text>
+<text x="61.6" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Oct 11</text>
+<text x="177.3" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Nov</text>
+<text x="315.7" y="46" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="middle">Dec</text>
+<text x="14" y="72" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 any mule deer buck</text>
+<text x="386" y="72" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">to Oct 31</text>
+<rect x="14.0" y="80" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="80" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="80" width="140.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="81" width="95.3" height="14" rx="3" fill="#e8590c"/>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 4 point mule deer</text>
+<text x="386" y="126" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="end">Nov 1 to Dec 10</text>
+<rect x="14.0" y="134" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="134" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="134" width="140.6" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="135" width="181.5" height="14" rx="3" fill="#8b5a2b"/>
+<text x="14" y="180" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 grouse</text>
+<text x="386" y="180" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">to Nov 30</text>
+<rect x="14.0" y="188" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="188" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="188" width="140.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="189" width="231.4" height="14" rx="3" fill="#2f3a2b"/>
+<text x="14" y="234" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8 quail</text>
+<text x="386" y="234" font-size="15" font-weight="bold" fill="#5b6b3e" text-anchor="end">to Nov 30</text>
+<rect x="14.0" y="242" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="242" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="242" width="140.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="243" width="231.4" height="14" rx="3" fill="#8a9a6b"/>
+<text x="14" y="288" font-size="16" font-weight="bold" fill="#2f3a2b">Region 2 ducks</text>
+<text x="386" y="288" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">to Jan 24</text>
+<rect x="14.0" y="296" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="296" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="296" width="140.6" height="16" fill="#efe8d6"/>
+<path d="M376.0 293 L386.0 304.0 L376.0 315z" fill="#4a7fb0"/>
+<rect x="14.0" y="297" width="363.0" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="342" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3 ducks</text>
+<text x="386" y="342" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="end">to Dec 23</text>
+<rect x="14.0" y="350" width="95.3" height="16" fill="#efe8d6"/>
+<rect x="109.3" y="350" width="136.1" height="16" fill="#f8f3e6"/>
+<rect x="245.4" y="350" width="140.6" height="16" fill="#efe8d6"/>
+<rect x="14.0" y="351" width="335.7" height="14" rx="3" fill="#4a7fb0"/>
+<text x="14" y="397" font-size="15" font-weight="bold" fill="#e8590c">Check your MU row (99%)</text>
+</svg>

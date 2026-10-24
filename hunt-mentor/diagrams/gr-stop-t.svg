@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="STOP, step T: Think. Where did you last know where you were? Picture the truck, the trail, the creek you crossed.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect y="220" width="400" height="80" fill="#dfe6d3"/>
+  <g fill="#2f3a2b" opacity=".35"><polygon points="20,220 40,140 60,220"/><polygon points="340,220 360,130 380,220"/><polygon points="300,220 316,160 332,220"/></g>
+  <circle cx="54" cy="54" r="34" fill="#e8590c"/><text x="54" y="68" font-size="40" font-weight="bold" fill="#fff" text-anchor="middle">T</text>
+  <text x="102" y="50" font-size="24" font-weight="bold" fill="#2f3a2b">Think</text>
+  <text x="102" y="74" font-size="15" fill="#2f3a2b">Where did you last know where you were?</text>
+  <rect x="160" y="196" width="80" height="20" rx="8" fill="#8b5a2b"/><circle cx="200" cy="140" r="13" fill="#2f3a2b"/><line x1="200" y1="154" x2="200" y2="192" stroke="#2f3a2b" stroke-width="10" stroke-linecap="round"/><path d="M200 192 L226 196 L230 220" stroke="#2f3a2b" stroke-width="8" fill="none"/><g fill="#fff" stroke="#2f3a2b" stroke-width="2"><circle cx="230" cy="122" r="5"/><circle cx="246" cy="108" r="8"/><ellipse cx="300" cy="120" rx="64" ry="34"/></g><rect x="270" y="112" width="40" height="18" rx="4" fill="#4a7fb0"/><circle cx="278" cy="132" r="5" fill="#2f3a2b"/><circle cx="302" cy="132" r="5" fill="#2f3a2b"/><text x="300" y="104" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">The truck?</text>
+</svg>

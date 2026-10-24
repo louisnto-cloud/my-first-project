@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="What to do. Black bear, defensive attack, protecting cubs or food: spray, and if it makes contact play dead. Black bear, predatory attack, stalking you or at night: spray, stand big, fight back. Cougar: never run, look big, back away slowly, if attacked always fight back.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bear or cougar: what to do</text>
+  <g font-size="15" fill="#2f3a2b">
+    <rect x="6" y="38" width="388" height="80" rx="8" fill="#dfe6d3"/>
+    <text x="16" y="62" font-weight="bold">Bear, defensive</text><text x="16" y="82" font-size="14">cubs or food, surprised</text>
+    <text x="210" y="62" font-weight="bold" fill="#e8590c">Spray</text><text x="210" y="84">Contact? Play dead</text><text x="210" y="104" font-size="14">most common type</text>
+    <rect x="6" y="124" width="388" height="80" rx="8" fill="#e8590c" fill-opacity=".2"/>
+    <text x="16" y="148" font-weight="bold">Bear, predatory</text><text x="16" y="168" font-size="14">stalks you, or at night</text>
+    <text x="210" y="148" font-weight="bold" fill="#e8590c">Spray</text><text x="210" y="170">Stand big</text><text x="210" y="190" font-weight="bold" fill="#c0392b">Fight back</text>
+    <rect x="6" y="210" width="388" height="80" rx="8" fill="#8b5a2b" fill-opacity=".2"/>
+    <text x="16" y="234" font-weight="bold">Cougar</text><text x="16" y="254" font-size="14">never run</text>
+    <text x="210" y="234">Look big, eye contact</text><text x="210" y="254">Back away slowly</text><text x="210" y="274" font-weight="bold" fill="#c0392b">Attacked? Fight back</text>
+  </g>
+</svg>

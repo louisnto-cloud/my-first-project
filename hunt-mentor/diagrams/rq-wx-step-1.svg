@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 1 of reading a forecast for hunting: Check the wind first. Direction and speed, morning and evening.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Check the wind first</text>
+<g transform="translate(200 130) scale(2.0)" fill="#c9cfd6"><circle cx="-14" cy="4" r="11"/><circle cx="2" cy="-4" r="15"/><circle cx="18" cy="4" r="11"/><rect x="-14" y="4" width="32" height="11"/></g><g><line x1="120" y1="190" x2="280" y2="190" stroke="#4a7fb0" stroke-width="6" stroke-linecap="round"/><polygon points="280.0,190.0 263.8,197.8 263.8,182.2" fill="#4a7fb0"/></g><text x="200" y="225" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Wind: from where, how strong</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Direction and speed, morning and evening.</text>
+</svg>

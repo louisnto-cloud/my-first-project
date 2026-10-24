@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" font-family="sans-serif" role="img" aria-label="Sketch of a ridge in the Hunt Map 3D view. The crest runs from the far skyline toward you. The left face is in sun, the right face is in shade with trees. Contour lines cross the ridge and bend downhill, toward you, on the crest. Label: crest, walk it and glass from it.">
+<rect width="400" height="302" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Ridge in 3D</text>
+<text x="388" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">Hunt Map 3D view (sketch)</text>
+<rect x="0" y="38" width="400" height="232" fill="#e3ecf3"/>
+<path d="M214 92 C 220 150, 194 210, 198 270 L0 270 L0 168 C 70 142, 150 104, 214 92z" fill="#ecebcf"/>
+<path d="M214 92 C 220 150, 194 210, 198 270 L400 270 L400 160 C 330 136, 270 104, 214 92z" fill="#a3b086"/>
+<path d="M0 172 C 80 172, 150 130, 192 147 L208 156 L224 147 C 270 130, 330 166, 400 166" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M0 212 C 80 212, 150 174, 188 191 L204 200 L220 191 C 270 174, 330 206, 400 206" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M0 248 C 80 248, 150 218, 184 235 L200 244 L216 235 C 270 218, 330 242, 400 242" fill="none" stroke="#8b5a2b" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M214 92 C 220 150, 194 210, 198 270" fill="none" stroke="#2f3a2b" stroke-width="3.2"/>
+<g transform="translate(336 226) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(364 192) scale(0.9)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(378 240) scale(1.1)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(300 262) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<g transform="translate(352 264) scale(1.0)"><path d="M0 -22 L9 -6 H5 L12 6 H-12 L-5 -6 H-9z" fill="#5f7048"/><rect x="-1.5" y="6" width="3" height="5" fill="#6b4f35"/></g>
+<circle cx="40" cy="70" r="15" fill="#f2c14e"/><path d="M40 70 m12 0 l6 0" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-12 0 l-6 0" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m0 12 l0 6" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m0 -12 l0 -6" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m8.399999999999999 8.399999999999999 l4.199999999999999 4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-8.399999999999999 8.399999999999999 l-4.199999999999999 4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m8.399999999999999 -8.399999999999999 l4.199999999999999 -4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70 m-8.399999999999999 -8.399999999999999 l-4.199999999999999 -4.199999999999999" stroke="#f2c14e" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="213" y1="112" x2="213" y2="73" stroke="#2f3a2b" stroke-width="1.6"/><circle cx="213" cy="112" r="2.6" fill="#2f3a2b"/>
+<rect x="171.5" y="46.0" width="221.0" height="27.0" rx="5" fill="#e8590c" stroke="#e8590c" stroke-width="1.2"/>
+<text x="282" y="65" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">Crest: walk it, glass from it</text>
+<line x1="100" y1="196" x2="100" y2="107" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="100" cy="196" r="2.6" fill="#2f3a2b"/>
+<rect x="68.6" y="80.0" width="94.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="116" y="99" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sunny face</text>
+<line x1="318" y1="160" x2="318" y2="111" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="318" cy="160" r="2.6" fill="#2f3a2b"/>
+<rect x="290.6" y="84.0" width="94.9" height="27.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="338" y="103" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">shady face</text>
+<text x="200" y="292" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Lines bend down (toward you) on the crest</text>
+</svg>

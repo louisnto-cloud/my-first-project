@@ -1,0 +1,542 @@
+[
+ {
+  "id": "bg-moose-young-bull",
+  "species": "Moose",
+  "caption": "Young bull with short starter antlers. Count every point on each antler.",
+  "author": "Beeblebrox",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Youngbullantlers.JPG"
+ },
+ {
+  "id": "bg-moose-young-bull-points",
+  "species": "Moose",
+  "caption": "Young bull with more than 2 points on each antler: not a spike fork.",
+  "author": "Eric Kilby",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Young_Bull_Moose_Resting_(54193175296).jpg"
+ },
+ {
+  "id": "bg-moose-big-bull",
+  "species": "Moose",
+  "caption": "Mature bull in late fall: wide palms, many points, a big bell.",
+  "author": "Jacob W. Frank, National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_bull_moose_sporting_large_antlers_in_late_fall._The_wound_on_its_face_is_likely_from_sparring_with_other_males_during_the_rut._(39ec8924-3efe-41fd-b75c-d1e553e0d479).jpg"
+ },
+ {
+  "id": "bg-moose-yearling-bc",
+  "species": "Moose",
+  "caption": "Yearling moose in spring near Atlin, BC: a year old, no antlers yet.",
+  "author": "Jo Ohara",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_calf_Atlin_BC_area_001.jpg"
+ },
+ {
+  "id": "bg-moose-shiras",
+  "species": "Moose",
+  "caption": "Shiras moose bulls in velvet, Utah: the small southeast race.",
+  "author": "BBernardicius",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:2_Shiras_Bull_Moose_07-25-12.JPG"
+ },
+ {
+  "id": "bg-moose-bell",
+  "species": "Moose",
+  "caption": "Bull in summer velvet: hump over the shoulders, bell under the throat.",
+  "author": "Jacob W. Frank, Denali National Park and Preserve",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_Profile_(7956341182).jpg"
+ },
+ {
+  "id": "bg-moose-snow",
+  "species": "Moose",
+  "caption": "Bull in deep snow: long legs carry it over drifts and brush.",
+  "author": "Jacob W. Frank, National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_moose_endures_a_late_snow_storm_in_Denali_(b0942e7f-cbde-474f-aa8b-e6159bfe7e99).jpg"
+ },
+ {
+  "id": "bg-moose-ghost",
+  "species": "Moose",
+  "caption": "Old park photo, Isle Royale: a moose that lost most of its winter hair. Pale, patchy coat.",
+  "author": "US National Park Service (photographer unknown)",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_with_extensive_hair_loss_photographed_by_US_National_Park_Service.jpg"
+ },
+ {
+  "id": "bg-moose-velvet-early",
+  "species": "Moose",
+  "caption": "Bull in early summer: new antlers, short and covered in velvet.",
+  "author": "Zaereth",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_moose_close_up_feeding_on_fireweed.JPG"
+ },
+ {
+  "id": "bg-moose-velvet",
+  "species": "Moose",
+  "caption": "Bull in velvet: soft, furry skin over antlers that are still growing.",
+  "author": "A. Falgoust, Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_moose_in_velvet_(53482687668)_(cropped).jpg"
+ },
+ {
+  "id": "bg-moose-sparring",
+  "species": "Moose",
+  "caption": "Two bulls sparring in the fall: antlers locked, pushing.",
+  "author": "Adams, Grand Teton National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_moose_sparring_(48987005668).jpg"
+ },
+ {
+  "id": "bg-elk-spike-bc",
+  "species": "Elk",
+  "caption": "Young Roosevelt elk bull, Vancouver Island: spikes in velvet, pale rump, dark neck.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Roosevelt_elk_(Cervus_canadensis_roosevelti)_male_Campbell_River.jpg"
+ },
+ {
+  "id": "bg-elk-roosevelt-cow",
+  "species": "Elk",
+  "caption": "Roosevelt elk cow, Vancouver Island: no antlers, pale rump patch, dark neck.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Roosevelt_elk_(Cervus_canadensis_roosevelti)_female_Campbell_River.jpg"
+ },
+ {
+  "id": "bg-elk-rocky-bull",
+  "species": "Elk",
+  "caption": "Rocky Mountain elk bull, Banff: tan body, dark mane, pale rump patch.",
+  "author": "Jakub Fryš",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Elk-Wapiti_-_Banff_(cropped).jpg"
+ },
+ {
+  "id": "bg-elk-spikes",
+  "species": "Elk",
+  "caption": "Young bulls (spikes) running: one or two tips on each antler.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:One_year_old_bulls_are_called_spikes_because_their_antlers_only_have_one_or_two_tips_each._When_they_are_older,_they_will_leave_(3b50abe6-9455-4b66-ba3b-92f3bdaf346a).JPG"
+ },
+ {
+  "id": "bg-elk-calf",
+  "species": "Elk",
+  "caption": "Newborn elk calf, Grand Teton: spotted coat, wobbly long legs.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Elk_Fawn_in_Grand_Teton_NP_-NPS.jpg"
+ },
+ {
+  "id": "bg-elk-velvet",
+  "species": "Elk",
+  "caption": "Bull in summer velvet: antlers soft, fuzzy and still growing.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Elk_in_Velvet_with_Cowbirds_(94f43bbb-155d-4519-3e7a-712f84227462)_(cropped).jpg"
+ },
+ {
+  "id": "bg-elk-bugle",
+  "species": "Elk",
+  "caption": "Bull bugling on a frosty September morning. Breath shows in the cold.",
+  "author": "Eric Johnston, Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_elk_bugling_on_a_frosty_morning_in_Canyon_area_(32060852554).jpg"
+ },
+ {
+  "id": "bg-elk-winter-range",
+  "species": "Elk",
+  "caption": "Bulls bedded on open winter range, Montana.",
+  "author": "Venture West",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_Elk_in_Winter.jpg"
+ },
+ {
+  "id": "bg-elk-winter-coat",
+  "species": "Elk",
+  "caption": "Bull in winter coat: pale body, thick dark mane on the neck.",
+  "author": "ForestWander",
+  "licence": "CC BY-SA 3.0 US",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/us/",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull-elk-profile-stance_-_West_Virginia_-_ForestWander_(cropped).jpg"
+ },
+ {
+  "id": "bg-elk-antlers-count",
+  "species": "Elk",
+  "caption": "Skull and antlers of a big bull. Practise: count the points on one side, brow tine first.",
+  "author": "Adams, Grand Teton National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_elk_skull_and_antlers_(48876341418).jpg"
+ },
+ {
+  "id": "bg-md-velvet-sunpeaks",
+  "species": "Mule deer",
+  "caption": "Young mule deer buck in velvet, Sun Peaks near Kamloops, early summer.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:First_day_of_the_summer_in_the_Alpine_flowers_of_Sun_Peaks...young_Male_Mule_Deer_((Odocoileus_hemionus)_with_antlers_in_velvet..._(28296256855).jpg"
+ },
+ {
+  "id": "bg-md-rut",
+  "species": "Mule deer",
+  "caption": "November rut: a buck follows two does across open grass.",
+  "author": "Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_buck_follows_two_does_during_the_rut_(37686213294).jpg"
+ },
+ {
+  "id": "bg-md-buck-group",
+  "species": "Mule deer",
+  "caption": "Bachelor group: bucks travel together outside the rut.",
+  "author": "Barbara Wheeler, U.S. Fish and Wildlife Service",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Malheur_refuge,_Mule_deer_buck_group_(5447887961).jpg"
+ },
+ {
+  "id": "bg-md-winter-kelowna",
+  "species": "Mule deer",
+  "caption": "Mule deer in winter near Kelowna: grey brown coats, big ears.",
+  "author": "Extemporalist",
+  "licence": "CC0",
+  "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Small_Group_of_Deer_in_Winter_near_Myra-Bellevue_Provincial_Park.png"
+ },
+ {
+  "id": "bg-md-winter-coat",
+  "species": "Mule deer",
+  "caption": "Winter coat close up: thick grey brown hair, pale face, black edged ears.",
+  "author": "Tom Koerner, U.S. Fish and Wildlife Service",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_Deer_on_Winter_Range_in_SW_Wyoming_(23464504609).jpg"
+ },
+ {
+  "id": "bg-md-sitka-haida",
+  "species": "Mule deer",
+  "caption": "Sitka black tailed deer doe, Haida Gwaii: small, reddish summer coat.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Haida_Gwaii_(Queen_Charlotte_Islands)_-_Graham_Island_-_Sitka_Black-Tailed_Deer_(Odocoileus_hemionus_sitkensis)_-_(20939560023).jpg"
+ },
+ {
+  "id": "bg-md-blacktail-vi",
+  "species": "Mule deer",
+  "caption": "Young black tailed buck, Vancouver Island: short antlers in velvet.",
+  "author": "Buiobuione",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black-tailed_deer_in_Vancouver_Island_British_Columbia_Canada_06.jpg"
+ },
+ {
+  "id": "bg-md-one-antler",
+  "species": "Mule deer",
+  "caption": "Buck in winter with only one antler. Check both sides before you count points.",
+  "author": "Hustvedt",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Mule_deer_missing_antler.jpg"
+ },
+ {
+  "id": "bg-wt-buck-rack",
+  "species": "White tailed deer",
+  "caption": "Mature white tailed buck: tines rise straight up off one main beam.",
+  "author": "U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Adult_white_tailed_deer_buck_odocoileus_virginianus.jpg"
+ },
+ {
+  "id": "bg-wt-rack-rear",
+  "species": "White tailed deer",
+  "caption": "Buck from behind: each beam sweeps forward, tines rise off it.",
+  "author": "lovecatz",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:CHASING_A_DOE_(2050445922).jpg"
+ },
+ {
+  "id": "bg-wt-young-spikes",
+  "species": "White tailed deer",
+  "caption": "Young buck: short spikes just showing, slim neck and face.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_young_buck_with_new_antlers_just_starting_to_grow_in._(996b400d-a1d0-42f5-a62d-3237c567e96b).JPG"
+ },
+ {
+  "id": "bg-wt-young-velvet",
+  "species": "White tailed deer",
+  "caption": "Young buck in summer: red coat, small antlers in velvet.",
+  "author": "Amaury Laporte",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Deer_in_Suburbia_-_Young_Buck_1.jpg"
+ },
+ {
+  "id": "bg-wt-fawn",
+  "species": "White tailed deer",
+  "caption": "Fawn in summer: white spots that fade by fall.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Acadia_National_Park,_white-tailed_deer_fawn.jpg"
+ },
+ {
+  "id": "bg-wt-doe-fawn",
+  "species": "White tailed deer",
+  "caption": "Doe and fawn: the family group you see most.",
+  "author": "N0n-Sum-Qua1is-Eram",
+  "licence": "CC0",
+  "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Adolescent_and_Adult_White_Tailed_Deer.jpg"
+ },
+ {
+  "id": "bg-wt-sparring",
+  "species": "White tailed deer",
+  "caption": "Two bucks sparring in the fall rut.",
+  "author": "Harpers Ferry National Historical Park",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Buck_battle_on_Camp_Hill_(21182657790).jpg"
+ },
+ {
+  "id": "bg-bb-kermode",
+  "species": "Black bear",
+  "caption": "White (Kermode or Spirit) phase black bear, Klemtu, BC. Never legal to hunt.",
+  "author": "Maximilian Helm",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ursus_americanus_kermodei,_Spirit_Bear_Lodge,_Klemtu,_BC_1.jpg"
+ },
+ {
+  "id": "bg-bb-glacier-cubs",
+  "species": "Black bear",
+  "caption": "Black sow with two blue grey (Glacier phase) cubs, Alaska. One family, three colours.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Glacier_Bear_with_cubs.jpg"
+ },
+ {
+  "id": "bg-bb-yearling",
+  "species": "Black bear",
+  "caption": "Yearling black bear, Glacier Bay: in its second year. Never legal.",
+  "author": "TheEntropist",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_Bear_Yearling.JPG"
+ },
+ {
+  "id": "bg-bb-cubs-tree-bc",
+  "species": "Black bear",
+  "caption": "Spot the cubs: two small black shapes up the trunk. Garibaldi Park, BC.",
+  "author": "Clayoquot",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_cubs_climbing.JPG"
+ },
+ {
+  "id": "bg-bb-sow-cub-bc",
+  "species": "Black bear",
+  "caption": "Sow with a cub, Christina Lake, BC. Any bear with a cub: never.",
+  "author": "Eviatar Bach",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_and_cub_at_Christina_Lake.JPG"
+ },
+ {
+  "id": "bg-bb-sitting",
+  "species": "Black bear",
+  "caption": "Black bear facing you: tall ears, straight tan muzzle, short claws.",
+  "author": "Mike Bender, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_large.jpg"
+ },
+ {
+  "id": "bg-bb-paws-1909",
+  "species": "Black bear",
+  "caption": "Old 1909 plate of bear paws and prints. Left: short curved claws (black bear). Right: long claws (brown bear, the grizzly).",
+  "author": "Unknown (1909 book plate)",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bear_paws.jpg"
+ },
+ {
+  "id": "bg-bb-den",
+  "species": "Black bear",
+  "caption": "Sow and newborn cubs in a winter den.",
+  "author": "National Park Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Bear_hibernating.jpg"
+ },
+ {
+  "id": "bg-bb-skull",
+  "species": "Black bear",
+  "caption": "Black bear skull from the front: short wide muzzle, big canine teeth.",
+  "author": "Acroterion",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_skull_1.jpg"
+ },
+ {
+  "id": "bg-bb-yoho",
+  "species": "Black bear",
+  "caption": "Black bear in Yoho National Park, BC: straight face, tall ears, no hump.",
+  "author": "Charles J. Sharp",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Cinnamon_black_bear_(Ursus_americanus_cinnamomum)_Yoho.jpg"
+ },
+ {
+  "id": "bg-bb-climbing-claws",
+  "species": "Black bear",
+  "caption": "Young brown phase black bear on a tree: short curved claws grip the bark.",
+  "author": "Steve Maslowski, U.S. Fish and Wildlife Service",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Young_black_bear_standing_with_front_legs_grasping_tree_trunk.jpg"
+ },
+ {
+  "id": "bg-bb-talus",
+  "species": "Black bear",
+  "caption": "Young black bear searching for food on a rocky slope.",
+  "author": "Jacob W. Frank, Yellowstone National Park",
+  "licence": "Public domain",
+  "licenceUrl": "",
+  "source": "https://commons.wikimedia.org/wiki/File:A_young_black_bear_searches_for_food_on_a_talus_slope_(49015793312).jpg"
+ },
+ {
+  "id": "bg-bb-chest-patch",
+  "species": "Black bear",
+  "caption": "Black bear head on: tall ears, straight muzzle, pale chest patch.",
+  "author": "Sunshinedave",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:BLACK_BEAR_MUNCHING_ON_DANDELIONS.jpg"
+ },
+ {
+  "id": "bg-bb-devils-club",
+  "species": "Black bear",
+  "caption": "Black bear eating devil's club berries, southeast Alaska.",
+  "author": "Taal Levi, Oregon State University",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Ursus_americanus_eating_Oplopanax_horridus_berries.jpg"
+ },
+ {
+  "id": "bg-bb-brown-quesnel",
+  "species": "Black bear",
+  "caption": "Brown phase black bear (a sow), Quesnel Lake, BC: straight face, tall ears, no shoulder hump.",
+  "author": "Alan D. Wilson",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Black_bear_Quesnel_Lake_BC.jpg"
+ },
+ {
+  "id": "bg-wt-winter-bc",
+  "species": "White tailed deer",
+  "caption": "Young white tailed deer in winter near Fort St. John, BC: grey brown winter coat.",
+  "author": "tuchodi",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:White-tailed_Deer_(24048341250).jpg"
+ },
+ {
+  "id": "bg-md-rumps-penticton",
+  "species": "Mule deer",
+  "caption": "Mule deer from behind, Penticton: white rump patch, thin tail with a black tip.",
+  "author": "Blake Handley",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:2018_05_30a_Penticton_Morning_Walk_14_(28020762447).jpg"
+ },
+ {
+  "id": "bg-md-doe-clearwater",
+  "species": "Mule deer",
+  "caption": "Mule deer doe in summer, Trophy Mountain meadows near Clearwater, BC.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Trophy_Mtn_meadows,_Clearwater_(8466104301).jpg"
+ },
+ {
+  "id": "bg-moose-cow-calf-bowron",
+  "species": "Moose",
+  "caption": "Cow and calf in a wetland, Bowron Lake Park, BC.",
+  "author": "Trougnouf",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_in_Bowron_Lake_Provincial_Park,_BC_(DSCF3983).jpg"
+ },
+ {
+  "id": "bg-moose-slough-bowron",
+  "species": "Moose",
+  "caption": "Moose country: a slough with sedge and willow, Bowron Lake Park, BC. Find the moose.",
+  "author": "Trougnouf",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Western_moose_in_the_Bowron_Slough_(DSCF4301).jpg"
+ },
+ {
+  "id": "bg-moose-newborn-bc",
+  "species": "Moose",
+  "caption": "Cow with a red brown newborn calf, northern BC, spring.",
+  "author": "Murray Foubister",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:On_Hwy_97_between_Summit_Lake_and_LiardMoose_mum_and_calf_(5857519152).jpg"
+ },
+ {
+  "id": "bg-moose-cow-calf-water",
+  "species": "Moose",
+  "caption": "Cow and calf standing in water.",
+  "author": "Eric Kilby",
+  "licence": "CC BY-SA 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Moose_Mom_and_Calf_Cooling_Off.jpg"
+ },
+ {
+  "id": "bg-elk-sparring-jasper",
+  "species": "Elk",
+  "caption": "Bulls sparring in the timber, Jasper National Park.",
+  "author": "Jeffrey Pang",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Elk_Sparring_-_Jasper_National_Park.jpg"
+ },
+ {
+  "id": "bg-elk-cow-calf-jasper",
+  "species": "Elk",
+  "caption": "Cow and calf at the forest edge, Jasper National Park.",
+  "author": "Thomas Fuhrmann",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Rocky_Mountain_elk_(Cervus_canadensis_nelsoni)_-_Jasper_National_Park_03.jpg"
+ }
+]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, top view. Your scent drifts like campfire smoke, away from a feeding deer. Then the light wind shifts and the scent plume swings toward the deer. The deer's head comes up and it bounds away. Light, shifting wind is the danger.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect width="400" height="300" fill="#dfe6d3" opacity=".5"/>
+  <text x="12" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Scent drifts like smoke</text>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0 120 220;0 120 220;-111 120 220;-111 120 220" keyTimes="0;0.4;0.65;1" dur="8s" fill="freeze"/>
+    <path d="M120 220 L230 190 L230 260 Z" fill="#e8590c" opacity=".18"/>
+    <g fill="#e8590c" opacity=".55">
+      <circle cx="140" cy="222" r="4"><animate attributeName="cx" values="130;225" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="210" r="4"><animate attributeName="cx" values="130;225" dur="2s" begin=".7s" repeatCount="indefinite"/><animate attributeName="cy" values="218;198" dur="2s" begin=".7s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="232" r="4"><animate attributeName="cx" values="130;225" dur="2s" begin="1.3s" repeatCount="indefinite"/><animate attributeName="cy" values="222;250" dur="2s" begin="1.3s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+  <circle cx="120" cy="220" r="10" fill="#e8590c"/>
+  <text x="120" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">You</text>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;160 -40" keyTimes="0;0.8;1" dur="8s" fill="freeze"/>
+    <g transform="translate(70 90)"><ellipse rx="20" ry="10" fill="#8b5a2b"/>
+      <circle cx="18" cy="6" r="6" fill="#8b5a2b"><animate attributeName="cy" values="6;6;-12;-12" keyTimes="0;0.68;0.72;1" dur="8s" fill="freeze"/></circle>
+    </g>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.2s" dur=".4s" fill="freeze"/>
+    <text x="388" y="26" font-size="15" font-weight="bold" fill="#4a7fb0" text-anchor="end">Wind shifts...</text></g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="7s" dur=".5s" fill="freeze"/>
+    <rect x="200" y="230" width="190" height="56" rx="8" fill="#2f3a2b"/>
+    <text x="295" y="254" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Busted. Light, shifting</text>
+    <text x="295" y="274" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">wind is the danger</text></g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 266" font-family="sans-serif" role="img" aria-label="Bar chart. Collared elk in central Utah used public land up to 64 percent of the time before the hunt, 29 percent in rifle season, and about 45 percent after the season. They moved onto private land where hunting was limited. 445 GPS collared elk, 2015 to 2017, The Wildlife Society news, 80 percent.">
+<rect width="400" height="266" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Utah elk on public land</text>
+<text x="12" y="62" font-size="16" font-weight="bold" fill="#2f3a2b">Before the hunt</text>
+<rect x="12" y="70" width="376" height="26" rx="4" fill="#efe9da"/>
+<rect x="12" y="70" width="240.6" height="26" rx="4" fill="#2f3a2b"/>
+<text x="260.64" y="89" font-size="18" font-weight="bold" fill="#2f3a2b">up to 64%</text>
+<text x="12" y="120" font-size="16" font-weight="bold" fill="#2f3a2b">Rifle season</text>
+<rect x="12" y="128" width="376" height="26" rx="4" fill="#efe9da"/>
+<rect x="12" y="128" width="109.0" height="26" rx="4" fill="#e8590c"/>
+<text x="129.04" y="147" font-size="18" font-weight="bold" fill="#e8590c">29%</text>
+<text x="12" y="178" font-size="16" font-weight="bold" fill="#2f3a2b">After the season</text>
+<rect x="12" y="186" width="376" height="26" rx="4" fill="#efe9da"/>
+<rect x="12" y="186" width="169.2" height="26" rx="4" fill="#8a9a6b"/>
+<text x="189.2" y="205" font-size="18" font-weight="bold" fill="#5d6b45">about 45%</text>
+<text x="200" y="236" font-size="14.5" fill="#6b4f35" text-anchor="middle">445 GPS collared elk, 2015 to 2017,</text>
+<text x="200" y="255" font-size="14.5" fill="#6b4f35" text-anchor="middle">The Wildlife Society news (80%).</text>
+</svg>

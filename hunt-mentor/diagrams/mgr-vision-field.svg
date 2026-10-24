@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-label="Top view of a grouse head and its field of view, using chicken data as a close cousin, 75 percent. Each eye covers a wide side wedge, for about 300 degrees in total. Only a narrow 30 degree wedge straight ahead is seen with both eyes. A small blind spot sits straight behind." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="330" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">What a grouse sees (top view)</text>
+<path d="M200 182 L231.1 66.1 A120 120 0 0 1 231.1 297.9 Z" fill="#cfe0ef" opacity="1"/>
+<path d="M200 182 L168.9 297.9 A120 120 0 0 1 168.9 66.1 Z" fill="#cfe0ef" opacity="1"/>
+<path d="M200 182 L231.1 297.9 A120 120 0 0 1 168.9 297.9 Z" fill="#e5e5e5" opacity="1"/>
+<path d="M200 182 L168.9 66.1 A120 120 0 0 1 231.1 66.1 Z" fill="#e8590c" opacity="0.8"/>
+<ellipse cx="200" cy="188" rx="16" ry="22" fill="#8b5a2b"/><circle cx="200" cy="168" r="10" fill="#8b5a2b"/><polygon points="196,160 200,150 204,160" fill="#6b4f35"/>
+<circle cx="192" cy="167" r="2.5" fill="#23261f" stroke="none" stroke-width="0"/>
+<circle cx="208" cy="167" r="2.5" fill="#23261f" stroke="none" stroke-width="0"/>
+<text x="200" y="54" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Both eyes: about 30 degrees</text>
+<text x="20" y="110" font-size="15" fill="#4a7fb0" text-anchor="start" font-weight="bold">Left eye</text>
+<text x="380" y="110" font-size="15" fill="#4a7fb0" text-anchor="end" font-weight="bold">Right eye</text>
+<text x="200" y="320" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Blind spot behind</text>
+<text x="10" y="262" font-size="14" fill="#23261f" text-anchor="start">Total view:</text>
+<text x="10" y="280" font-size="14" fill="#23261f" text-anchor="start">about 300</text>
+<text x="10" y="298" font-size="14" fill="#23261f" text-anchor="start">degrees</text>
+<text x="390" y="262" font-size="14" fill="#23261f" text-anchor="end">Chicken data,</text>
+<text x="390" y="280" font-size="14" fill="#23261f" text-anchor="end">a close cousin</text>
+<text x="390" y="298" font-size="14" fill="#23261f" text-anchor="end">(75%)</text>
+</svg>

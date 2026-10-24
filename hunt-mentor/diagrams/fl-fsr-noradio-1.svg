@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="No two way radio on an active haul road? Wait at the start of the road.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="32" r="17" fill="#fffaf0" stroke="#e8590c" stroke-width="3"/><text x="30" y="39" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e8590c" text-anchor="middle">1</text>
+<text x="56" y="39" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="start">Wait at the start</text>
+<rect x="107" y="170" width="6" height="70" rx="1" fill="#6b4f35"/>
+<rect x="40.0" y="133" width="140" height="37" rx="6" fill="#2f3a2b" stroke="#ffffff" stroke-width="2"/>
+<text x="110" y="155" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">ROAD NAME</text><rect x="225.0" y="204.0" width="60.0" height="20.0" rx="3" fill="#2f3a2b"/><rect x="282.0" y="192.0" width="30.0" height="32.0" rx="4" fill="#2f3a2b"/><rect x="288.0" y="196.0" width="18.0" height="12.0" rx="2" fill="#cfe0ef"/><circle cx="242.0" cy="226.0" r="9.0" fill="#23261f"/><circle cx="296.0" cy="226.0" r="9.0" fill="#23261f"/><circle cx="242.0" cy="226.0" r="4.0" fill="#c9b79c"/><circle cx="296.0" cy="226.0" r="4.0" fill="#c9b79c"/><text x="270" y="120" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e8590c" text-anchor="middle">No radio?</text>
+<rect x="10" y="262" width="380" height="34" rx="8" fill="#2f3a2b"/><text x="200" y="285.0" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">No radio: wait at the start of the road.</text>
+</svg>

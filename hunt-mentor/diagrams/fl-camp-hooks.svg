@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" font-family="sans-serif" role="img" aria-label="Memory hook BEAR: Bag it high, 4 metres up and 3 metres out. Eat away: cook 100 metres from bed. All smells out: food, soap, toothpaste. Rubbish out: pack out everything. Fire: half a metre, eight litres, never alone.">
+<rect width="400" height="340" fill="#fffaf0"/>
+<text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Memory hook: BEAR camp</text>
+<rect x="8" y="46" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="51" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="83" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">B</text>
+<text x="74" y="69" font-size="18" font-weight="bold" fill="#2f3a2b">Bag it high</text>
+<text x="74" y="90" font-size="15.5" fill="#23261f">4 m up, 3 m out</text>
+<rect x="8" y="107" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="112" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="144" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+<text x="74" y="130" font-size="18" font-weight="bold" fill="#2f3a2b">Eat away</text>
+<text x="74" y="151" font-size="15.5" fill="#23261f">cook 100 m from bed</text>
+<rect x="8" y="168" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="173" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="205" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+<text x="74" y="191" font-size="18" font-weight="bold" fill="#2f3a2b">All smells out</text>
+<text x="74" y="212" font-size="15.5" fill="#23261f">food, soap, toothpaste</text>
+<rect x="8" y="229" width="384" height="54" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<rect x="13" y="234" width="48" height="44" rx="8" fill="#e8590c"/>
+<text x="37" y="266" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">R</text>
+<text x="74" y="252" font-size="18" font-weight="bold" fill="#2f3a2b">Rubbish out</text>
+<text x="74" y="273" font-size="15.5" fill="#23261f">pack out everything</text>
+<rect x="8" y="294" width="384" height="38" rx="8" fill="#2f3a2b"/>
+<text x="200" y="319" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Fire: half a metre, eight litres, never alone</text>
+</svg>

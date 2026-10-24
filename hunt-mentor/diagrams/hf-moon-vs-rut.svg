@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Mississippi State data on 48 collared bucks. The moon changed movement by about 4 metres an hour, a sliver of a bar, inside the GPS error. The rut nearly doubled buck travel, a long bar. Rut beats moon.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Buck travel: moon versus rut</text>
+  <text x="12" y="80" font-size="15" font-weight="bold" fill="#2f3a2b">Normal</text>
+  <rect x="110" y="62" width="130" height="26" rx="4" fill="#8a9a6b"/>
+  <text x="12" y="134" font-size="15" font-weight="bold" fill="#2f3a2b">Moon</text>
+  <rect x="110" y="116" width="130" height="26" rx="4" fill="#8a9a6b"/><rect x="240" y="116" width="4" height="26" fill="#c0392b"/>
+  <text x="252" y="134" font-size="14" font-weight="bold" fill="#c0392b">about 4 m an hour</text>
+  <text x="12" y="188" font-size="15" font-weight="bold" fill="#2f3a2b">Rut</text>
+  <rect x="110" y="170" width="250" height="26" rx="4" fill="#e8590c"/>
+  <text x="235" y="188" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">nearly double (75%)</text>
+  <rect x="12" y="226" width="376" height="56" rx="8" fill="#2f3a2b"/>
+  <text x="200" y="250" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Moon effect is inside the GPS error</text>
+  <text x="200" y="270" font-size="14" font-weight="bold" fill="#ffd34d" text-anchor="middle">48 bucks, Mississippi State (75%)</text>
+</svg>

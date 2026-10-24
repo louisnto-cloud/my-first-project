@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Which of your guns is legal for which bird in BC. CZ 457 .22: grouse yes, quail no, ducks no. Tikka .308: grouse yes, quail no, ducks no. 12 gauge shotgun: grouse yes, quail yes, ducks yes with non toxic shot.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which gun, which bird?</text>
+  <g font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">
+    <rect x="130" y="40" width="84" height="34" fill="#2f3a2b"/><text x="172" y="62">Grouse</text>
+    <rect x="218" y="40" width="84" height="34" fill="#2f3a2b"/><text x="260" y="62">Quail</text>
+    <rect x="306" y="40" width="84" height="34" fill="#2f3a2b"/><text x="348" y="62">Ducks</text>
+  </g>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b">
+    <rect x="10" y="80" width="380" height="64" fill="#dfe6d3"/><text x="18" y="108">CZ 457</text><text x="18" y="128">.22 LR</text>
+    <rect x="10" y="150" width="380" height="64" fill="#fffaf0" stroke="#dfe6d3"/><text x="18" y="178">Tikka</text><text x="18" y="198">.308</text>
+    <rect x="10" y="220" width="380" height="64" fill="#dfe6d3"/><text x="18" y="248">12 gauge</text><text x="18" y="268" font-size="14" font-weight="normal">shotgun</text>
+  </g>
+  <g font-size="30" font-weight="bold" text-anchor="middle">
+    <text x="172" y="118" fill="#2f6b3a">✓</text><text x="260" y="122" fill="#c0392b">✗</text><text x="348" y="122" fill="#c0392b">✗</text>
+    <text x="172" y="188" fill="#2f6b3a">✓</text><text x="260" y="192" fill="#c0392b">✗</text><text x="348" y="192" fill="#c0392b">✗</text>
+    <text x="172" y="262" fill="#2f6b3a">✓</text><text x="260" y="262" fill="#2f6b3a">✓</text><text x="348" y="262" fill="#2f6b3a">✓</text>
+  </g>
+  <g font-size="14" fill="#2f3a2b" text-anchor="middle"><text x="172" y="136">head shots</text><text x="348" y="278">non toxic</text></g>
+</svg>

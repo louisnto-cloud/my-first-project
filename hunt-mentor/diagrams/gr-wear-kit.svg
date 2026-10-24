@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Deer hunter dressed head to toe: toque, blaze orange vest over a quiet shell, layers underneath with no cotton, two pairs of gloves, quiet pants, insulated broken in boots with wool or synthetic socks.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="22" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dressed for a cold deer hunt</text>
+  <!-- figure -->
+  <path d="M182 46 Q 200 30 218 46 L218 54 L182 54 Z" fill="#e8590c"/>
+  <circle cx="200" cy="64" r="14" fill="#d9b48f"/>
+  <path d="M170 82 L230 82 L242 170 L158 170 Z" fill="#6b6f48"/>
+  <path d="M176 84 L224 84 L230 150 L170 150 Z" fill="#e8590c"/>
+  <path d="M170 84 L150 150 L160 154 L178 100 Z M230 84 L250 150 L240 154 L222 100 Z" fill="#6b6f48"/>
+  <circle cx="153" cy="158" r="8" fill="#2f3a2b"/><circle cx="247" cy="158" r="8" fill="#2f3a2b"/>
+  <path d="M162 170 L238 170 L232 256 L206 256 L200 196 L194 256 L168 256 Z" fill="#5c5a4a"/>
+  <path d="M164 256 L198 256 L198 278 L156 278 Z M202 256 L236 256 L244 278 L202 278 Z" fill="#6b4f35"/>
+  <!-- labels -->
+  <g stroke="#2f3a2b" stroke-width="1.2"><line x1="182" y1="48" x2="110" y2="46"/><line x1="185" y1="110" x2="110" y2="100"/><line x1="160" y1="130" x2="110" y2="150"/><line x1="153" y1="160" x2="110" y2="200"/><line x1="236" y1="120" x2="280" y2="90"/><line x1="226" y1="210" x2="280" y2="190"/><line x1="236" y1="268" x2="280" y2="262"/></g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">
+    <text x="106" y="50" fill="#e8590c">Orange toque</text><text x="106" y="104" fill="#e8590c">Orange vest</text><text x="106" y="148">Quiet shell</text><text x="106" y="196">2 pairs gloves</text>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#2f3a2b">
+    <text x="284" y="86">Layers under:</text><text x="284" y="104" font-weight="normal">no cotton</text>
+    <text x="284" y="188">Quiet pants</text>
+    <text x="284" y="258">Broken in boots</text><text x="284" y="276" font-weight="normal">wool socks</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Plucking or breasting birds. Pluck: the skin keeps flavour and moisture, roast whole ducks plucked, 80 percent. Breast out: fast and fine for grouse and quail in a pan, a tip. Law: both breasts are the legal minimum you must keep from any game bird, 95 percent. Cook bird meat to 74 degrees Celsius, North Dakota State University, 80 percent.">
+<rect width="400" height="320" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Birds: pluck or breast?</text>
+<rect x="8" y="42" width="188" height="128" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="1.6"/>
+<g transform="translate(34 70) rotate(35)"><path d="M0 -18 C10 -10 10 8 0 18 C-10 8 -10 -10 0 -18z" fill="#8a9a6b" stroke="#2f3a2b" stroke-width="1.6"/><path d="M0 -14 V24" stroke="#2f3a2b" stroke-width="1.6"/></g>
+<text x="66" y="68" font-size="16" font-weight="bold" fill="#2f3a2b">Pluck</text>
+<text x="20" y="112" font-size="15" fill="#2f3a2b">Skin keeps flavour and</text>
+<text x="20" y="130" font-size="15" fill="#2f3a2b">moisture. Roast whole</text>
+<text x="20" y="148" font-size="15" fill="#2f3a2b">ducks (80%).</text>
+<rect x="204" y="42" width="188" height="128" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="1.6"/>
+<g transform="translate(230 70) rotate(-25)"><path d="M-16 -2 C-6 -8 8 -6 12 -4 L12 4 C0 4 -10 4 -16 -2z" fill="#c9ccc6" stroke="#2f3a2b" stroke-width="1.4"/><rect x="12" y="-5" width="16" height="9" rx="4" fill="#6b4f35"/></g>
+<text x="262" y="68" font-size="16" font-weight="bold" fill="#2f3a2b">Breast out</text>
+<text x="216" y="112" font-size="15" fill="#2f3a2b">Fast. Fine for grouse</text>
+<text x="216" y="130" font-size="15" fill="#2f3a2b">and quail in a pan</text>
+<text x="216" y="148" font-size="15" fill="#2f3a2b">(Tip).</text>
+<rect x="8" y="178" width="188" height="128" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="1.6"/>
+<ellipse cx="26" cy="206" rx="9" ry="13" fill="#b5463e" stroke="#2f3a2b" stroke-width="1.4"/><ellipse cx="43" cy="206" rx="9" ry="13" fill="#b5463e" stroke="#2f3a2b" stroke-width="1.4"/>
+<text x="66" y="204" font-size="16" font-weight="bold" fill="#2f3a2b">Keep both</text>
+<text x="66" y="223" font-size="16" font-weight="bold" fill="#2f3a2b">breasts</text>
+<text x="20" y="248" font-size="15" fill="#2f3a2b">The legal minimum</text>
+<text x="20" y="266" font-size="15" fill="#2f3a2b">from any game bird</text>
+<text x="20" y="284" font-size="15" fill="#2f3a2b">(95%).</text>
+<rect x="136.7" y="274" width="49.3" height="24" rx="12.0" fill="#4a7fb0"/><text x="161.4" y="291.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">LAW</text>
+<rect x="204" y="178" width="188" height="128" rx="10" fill="#fff" stroke="#2f3a2b" stroke-width="1.6"/>
+<rect x="223" y="188" width="14" height="30" rx="7" fill="#fff" stroke="#2f3a2b" stroke-width="2"/><rect x="226.5" y="191.0" width="7" height="27.0" fill="#c0392b"/><circle cx="230" cy="218" r="11" fill="#c0392b" stroke="#2f3a2b" stroke-width="2"/><line x1="237" y1="200.0" x2="243" y2="200.0" stroke="#2f3a2b" stroke-width="1.6"/><line x1="237" y1="198.7" x2="243" y2="198.7" stroke="#2f3a2b" stroke-width="1.6"/><line x1="237" y1="197.3" x2="243" y2="197.3" stroke="#2f3a2b" stroke-width="1.6"/><line x1="237" y1="196.0" x2="243" y2="196.0" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="262" y="204" font-size="16" font-weight="bold" fill="#2f3a2b">Bird meat 74°C</text>
+<text x="216" y="248" font-size="15" fill="#2f3a2b">North Dakota State</text>
+<text x="216" y="266" font-size="15" fill="#2f3a2b">University (80%).</text>
+</svg>

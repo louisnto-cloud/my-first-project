@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Three cards about the Map H12 agricultural area of the Peace Region. Inside it: elk 3 point bulls and antlerless, and white tailed deer antlerless and youth either sex. Outside it: elk 6 point bulls, by this app&#x27;s reading of the footnotes. It covers all of 7-32 to 7-34 and parts of 7-20, 7-21, 7-35, 7-45 and 7-46." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Farm area or not? (Map H12)</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#5c7a3a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Inside the farm area</text>
+<text x="14" y="88" font-size="14" fill="#23261f" text-anchor="start">Elk: 3 point bulls and</text>
+<text x="14" y="106" font-size="14" fill="#23261f" text-anchor="start">antlerless. White</text>
+<text x="14" y="124" font-size="14" fill="#23261f" text-anchor="start">tails: antlerless and</text>
+<text x="14" y="142" font-size="14" fill="#23261f" text-anchor="start">youth either sex</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Outside it</text>
+<text x="212" y="88" font-size="14" fill="#23261f" text-anchor="start">Elk: 6 point bulls</text>
+<text x="212" y="106" font-size="14" fill="#23261f" text-anchor="start">(95%, my reading)</text>
+<rect x="6" y="162" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">What it covers</text>
+<rect x="19.0" y="204" width="22" height="28" rx="2" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/><line x1="24.0" y1="211" x2="36.0" y2="211" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="217" x2="36.0" y2="217" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="223" x2="36.0" y2="223" stroke="#2f3a2b" stroke-width="2"/><line x1="24.0" y1="229" x2="36.0" y2="229" stroke="#2f3a2b" stroke-width="2"/>
+<text x="52" y="210" font-size="14" fill="#23261f" text-anchor="start">All of MUs 7-32 to</text>
+<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">7-34, and parts of</text>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">7-20, 7-21, 7-35,</text>
+<text x="52" y="264" font-size="14" fill="#23261f" text-anchor="start">7-45, 7-46</text>
+</svg>

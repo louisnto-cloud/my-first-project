@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Eye level sketch from the valley: two timbered tops with a low open notch between them on the skyline, marked orange. A dotted game trail climbs to the notch.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Saddle from the ground</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">eye level</text>
+  <rect x="0" y="36" width="400" height="232" fill="#e3ecf3"/>
+  <path d="M0 200 C 40 120, 90 80, 130 84 C 170 88, 180 130, 200 136 C 220 130, 240 70, 290 64 C 340 60, 370 120, 400 170 L400 268 L0 268 Z" fill="#8a9a6b"/>
+  <path d="M60 116 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="58.5" y="146" width="3" height="5" fill="#6b4f35"/><path d="M90 88 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="88.5" y="118" width="3" height="5" fill="#6b4f35"/><path d="M120 80 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="118.5" y="110" width="3" height="5" fill="#6b4f35"/><path d="M260 68 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="258.5" y="98" width="3" height="5" fill="#6b4f35"/><path d="M300 60 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="298.5" y="90" width="3" height="5" fill="#6b4f35"/><path d="M330 76 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="328.5" y="106" width="3" height="5" fill="#6b4f35"/><path d="M360 106 l9 18 h-5 l7 12 h-22 l7 -12 h-5 Z" fill="#7f8f62"/><rect x="358.5" y="136" width="3" height="5" fill="#6b4f35"/>
+  <path d="M0 230 C 120 220, 280 236, 400 226 L400 268 L0 268 Z" fill="#cdbf94"/>
+  <path d="M200 136 C 196 170, 210 200, 200 230" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="3 6" fill="none"/>
+  <circle cx="200" cy="136" r="9" fill="#e8590c"/><rect x="185" y="140" width="209" height="24" rx="6" fill="#e8590c"/><text x="289.5" y="157" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">The low notch: a saddle</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Find the lowest point between two tops</text>
+</svg>

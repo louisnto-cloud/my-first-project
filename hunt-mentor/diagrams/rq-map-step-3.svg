@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 3: Access and the pressure band. Open roads, gates, about 1 km band.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Access and the pressure band</text>
+<rect x="80" y="70" width="240" height="150" fill="#dfe6d3" stroke="#8a9a6b"/><path d="M80 200 Q 200 170 320 120" stroke="#c08a3e" stroke-width="50" fill="none" opacity=".4"/><path d="M80 200 Q 200 170 320 120" stroke="#23261f" stroke-width="4" fill="none"/><g transform="translate(120 190) scale(0.7)"><rect x="-22" y="-14" width="28" height="14" fill="#2f3a2b"/><path d="M6 -14 h10 l8 8 v6 h-18 Z" fill="#2f3a2b"/><circle cx="-12" cy="2" r="5" fill="#23261f"/><circle cx="14" cy="2" r="5" fill="#23261f"/></g>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Open roads, gates, about 1 km band.</text>
+</svg>

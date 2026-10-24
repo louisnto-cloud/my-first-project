@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 365" font-family="sans-serif" role="img" aria-label="Count contour lines crossing 100 m of ground on the Hunt Map, where each line is 20 m of height. 1 line in 100 m is about 11 degrees or 20 percent. 2 lines is about 22 degrees, 40 percent. 3 lines is about 31 degrees, 60 percent. 5 lines is 45 degrees, 100 percent. Lines times 20 gives slope in percent.">
+<rect width="400" height="365" fill="#fffaf0"/>
+<text x="12" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Count lines in 100 m</text>
+<text x="388" y="26" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">Hunt Map</text>
+<path d="M14 50 H60" stroke="#e8590c" stroke-width="6" stroke-linecap="round"/><text x="70" y="55" font-size="15" font-weight="bold" fill="#2f3a2b">= 100 m of ground</text>
+<path d="M228 44 C232 50 228 56 232 62" stroke="#8b5a2b" stroke-width="2.4" fill="none"/><text x="242" y="58" font-size="15" font-weight="bold" fill="#2f3a2b">= 20 m up</text>
+<rect x="12" y="74" width="168" height="48" rx="6" fill="#e8ecd9"/>
+<path d="M96.0 78 C101.0 88 91.0 100 96.0 110" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M26 114 H166" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/>
+<text x="196" y="96" font-size="17" font-weight="bold" fill="#2f3a2b">1 line</text>
+<text x="196" y="116" font-size="16" font-weight="bold" fill="#e8590c">about 11°, 20%</text>
+<rect x="12" y="130" width="168" height="48" rx="6" fill="#e8ecd9"/>
+<path d="M61.0 134 C66.0 144 56.0 156 61.0 166" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M131.0 134 C136.0 144 126.0 156 131.0 166" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M26 170 H166" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/>
+<text x="196" y="152" font-size="17" font-weight="bold" fill="#2f3a2b">2 lines</text>
+<text x="196" y="172" font-size="16" font-weight="bold" fill="#e8590c">about 22°, 40%</text>
+<rect x="12" y="186" width="168" height="48" rx="6" fill="#e8ecd9"/>
+<path d="M49.3 190 C54.3 200 44.3 212 49.3 222" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M96.0 190 C101.0 200 91.0 212 96.0 222" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M142.7 190 C147.7 200 137.7 212 142.7 222" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M26 226 H166" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/>
+<text x="196" y="208" font-size="17" font-weight="bold" fill="#2f3a2b">3 lines</text>
+<text x="196" y="228" font-size="16" font-weight="bold" fill="#e8590c">about 31°, 60%</text>
+<rect x="12" y="242" width="168" height="48" rx="6" fill="#e8ecd9"/>
+<path d="M40.0 246 C45.0 256 35.0 268 40.0 278" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M68.0 246 C73.0 256 63.0 268 68.0 278" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M96.0 246 C101.0 256 91.0 268 96.0 278" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M124.0 246 C129.0 256 119.0 268 124.0 278" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M152.0 246 C157.0 256 147.0 268 152.0 278" stroke="#8b5a2b" stroke-width="2.4" fill="none"/>
+<path d="M26 282 H166" stroke="#e8590c" stroke-width="5" stroke-linecap="round"/>
+<text x="196" y="264" font-size="17" font-weight="bold" fill="#2f3a2b">5 lines</text>
+<text x="196" y="284" font-size="16" font-weight="bold" fill="#e8590c">45°, 100%</text>
+<rect x="8" y="302" width="384" height="55" rx="8" fill="#2f3a2b"/><text x="200" y="325.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Lines x 20 = slope in % (95%)</text><text x="200" y="345.6" font-size="14" fill="#fffaf0" text-anchor="middle">Each Hunt Map line: 20 m (99%)</text>
+</svg>

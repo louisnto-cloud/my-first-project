@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Duck gun rules. A shotgun of 10 gauge or smaller, holding no more than 3 shells in magazine and chamber combined, plugged if needed. Shot must be steel, bismuth, tin or approved tungsten. No lead, not even in your pocket. No rifles, no slugs.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <path d="M20 110 L250 110 L250 122 L120 124 L80 150 L30 150 Z" fill="#6b4f35"/>
+  <rect x="250" y="106" width="140" height="10" rx="3" fill="#2f3a2b"/><rect x="200" y="118" width="120" height="8" rx="3" fill="#2f3a2b"/>
+  <g fill="#e8590c"><rect x="210" y="138" width="22" height="34" rx="4"/><rect x="240" y="138" width="22" height="34" rx="4"/><rect x="270" y="138" width="22" height="34" rx="4"/></g>
+  <text x="252" y="196" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">3 shells max</text>
+  <text x="252" y="214" font-size="14" fill="#2f3a2b" text-anchor="middle">magazine plus chamber</text>
+  <text x="20" y="40" font-size="18" font-weight="bold" fill="#2f3a2b">10 gauge or smaller</text>
+  <text x="20" y="64" font-size="14" fill="#2f3a2b">12 gauge works. Plug it if needed</text>
+  <rect x="12" y="232" width="186" height="56" rx="8" fill="#2f6e3b"/>
+  <text x="105" y="256" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Steel, bismuth,</text><text x="105" y="276" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">tin, tungsten</text>
+  <rect x="204" y="232" width="186" height="56" rx="8" fill="#c0392b"/>
+  <text x="297" y="256" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">No lead, even carried</text><text x="297" y="276" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">No rifles, no slugs</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 461" font-family="sans-serif" role="img" aria-label="Six cards: Region 3 special rules, synopsis pages 10, 32 and 33. No feeding or baiting: ungulates, within 200 m of a dwelling, school yard or playground, new. CWD (Chronic Wasting Disease) testing: submit deer, elk and moose heads, whole region. Bovine TB (tuberculosis) testing: submit heads from MUs 3-12, 3-19 and 3-20. Gates and fences: leave them as you found them. Bison on public land: report to RAPP (Report All Poachers and Polluters) 1 877 952 7277, new. Coquihalla, Highway 5: no single projectile within 400 m, Hope to Kamloops.">
+<rect width="400" height="461" fill="#fffaf0"/>
+<rect x="10" y="8" width="187" height="128" rx="9" fill="#f6f1e2" stroke="#c0392b" stroke-width="1.6"/>
+<rect x="10" y="8" width="6" height="128" rx="3" fill="#c0392b"/>
+<g transform="translate(44 34)"><circle cx="-5" cy="4" r="7" fill="#c0392b"/><circle cx="6" cy="4" r="7" fill="#d35400"/><circle cx="0" cy="-5" r="7" fill="#c0392b"/><path d="M0 -12 l2 -4" stroke="#5b3a1a" stroke-width="2"/><circle r="16" fill="none" stroke="#c0392b" stroke-width="3.5"/><path d="M-11 -11 L11 11" stroke="#c0392b" stroke-width="3.5"/></g>
+<rect x="137.7" y="20" width="49.3" height="24" rx="12.0" fill="#2f6e3b"/><text x="162.4" y="37.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">NEW</text>
+<text x="24" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">No feeding or baiting</text>
+<text x="24" y="94" font-size="14" fill="#2f3a2b">Ungulates, within 200 m</text>
+<text x="24" y="112" font-size="14" fill="#2f3a2b">of a dwelling, school</text>
+<text x="24" y="130" font-size="14" fill="#2f3a2b">yard or playground</text>
+<rect x="203" y="8" width="187" height="128" rx="9" fill="#f6f1e2" stroke="#4a7fb0" stroke-width="1.6"/>
+<rect x="203" y="8" width="6" height="128" rx="3" fill="#4a7fb0"/>
+<g transform="translate(237 34)"><path d="M-9 -6 L-17 -12 L-12 -3z M9 -6 L17 -12 L12 -3z" fill="#8b5a2b"/><path d="M-8 -8 C-8 -14 8 -14 8 -8 L5 12 C3 16 -3 16 -5 12z" fill="#8b5a2b"/><circle cx="-4" cy="-3" r="1.6" fill="#2f3a2b"/><circle cx="4" cy="-3" r="1.6" fill="#2f3a2b"/><ellipse cx="0" cy="12" rx="3.5" ry="2.5" fill="#2f3a2b"/><path d="M-6 -12 l-4 -8 l-4 2 M-8 -16 l-6 -2 M6 -12 l4 -8 l4 2 M8 -16 l6 -2" stroke="#6b4f35" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="12" y="2" width="7" height="16" rx="3" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/><rect x="13.5" y="10" width="4" height="7" rx="1.5" fill="#4a7fb0"/></g>
+<text x="217" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">CWD testing</text>
+<text x="217" y="94" font-size="14" fill="#2f3a2b">Submit deer, elk and</text>
+<text x="217" y="112" font-size="14" fill="#2f3a2b">moose heads. Whole</text>
+<text x="217" y="130" font-size="14" fill="#2f3a2b">region</text>
+<rect x="10" y="142" width="187" height="110" rx="9" fill="#f6f1e2" stroke="#4a7fb0" stroke-width="1.6"/>
+<rect x="10" y="142" width="6" height="110" rx="3" fill="#4a7fb0"/>
+<g transform="translate(44 168)"><path d="M-9 -6 L-17 -12 L-12 -3z M9 -6 L17 -12 L12 -3z" fill="#8b5a2b"/><path d="M-8 -8 C-8 -14 8 -14 8 -8 L5 12 C3 16 -3 16 -5 12z" fill="#8b5a2b"/><circle cx="-4" cy="-3" r="1.6" fill="#2f3a2b"/><circle cx="4" cy="-3" r="1.6" fill="#2f3a2b"/><ellipse cx="0" cy="12" rx="3.5" ry="2.5" fill="#2f3a2b"/><path d="M-6 -12 l-4 -8 l-4 2 M-8 -16 l-6 -2 M6 -12 l4 -8 l4 2 M8 -16 l6 -2" stroke="#6b4f35" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="12" y="2" width="7" height="16" rx="3" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/><rect x="13.5" y="10" width="4" height="7" rx="1.5" fill="#4a7fb0"/></g>
+<text x="24" y="208" font-size="16" font-weight="bold" fill="#2f3a2b">Bovine TB testing</text>
+<text x="24" y="228" font-size="14" fill="#2f3a2b">Submit heads from MUs</text>
+<text x="24" y="246" font-size="14" fill="#2f3a2b">3-12, 3-19, 3-20</text>
+<rect x="203" y="142" width="187" height="110" rx="9" fill="#f6f1e2" stroke="#8b5a2b" stroke-width="1.6"/>
+<rect x="203" y="142" width="6" height="110" rx="3" fill="#8b5a2b"/>
+<g transform="translate(237 168)"><rect x="-17" y="-12" width="4" height="26" fill="#6b4f35"/><rect x="13" y="-12" width="4" height="26" fill="#6b4f35"/><path d="M-13 -7 H13 M-13 1 H13 M-13 9 H13 M-13 9 L13 -7" stroke="#8b5a2b" stroke-width="2.6"/></g>
+<text x="217" y="208" font-size="16" font-weight="bold" fill="#2f3a2b">Gates and fences</text>
+<text x="217" y="228" font-size="14" fill="#2f3a2b">Leave them as you</text>
+<text x="217" y="246" font-size="14" fill="#2f3a2b">found them</text>
+<rect x="10" y="258" width="187" height="128" rx="9" fill="#f6f1e2" stroke="#e8590c" stroke-width="1.6"/>
+<rect x="10" y="258" width="6" height="128" rx="3" fill="#e8590c"/>
+<g transform="translate(44 284)"><path d="M-16 6 C-18 -4 -12 -12 -2 -13 C6 -14 10 -10 12 -6 C16 -6 18 -2 18 4 C18 8 16 10 14 10 L13 15 H10 L10 10 L-6 10 L-7 15 H-10 L-10 9 C-13 9 -15 8 -16 6z" fill="#4a3424"/><path d="M14 -6 q4 -4 2 -7" stroke="#d9c9a8" stroke-width="2" fill="none"/></g>
+<rect x="137.7" y="270" width="49.3" height="24" rx="12.0" fill="#2f6e3b"/><text x="162.4" y="287.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">NEW</text>
+<text x="24" y="324" font-size="16" font-weight="bold" fill="#2f3a2b">Bison on public land</text>
+<text x="24" y="344" font-size="14" fill="#2f3a2b">Report to RAPP 1 877</text>
+<text x="24" y="362" font-size="14" fill="#2f3a2b">952 7277</text>
+<rect x="203" y="258" width="187" height="128" rx="9" fill="#f6f1e2" stroke="#c0392b" stroke-width="1.6"/>
+<rect x="203" y="258" width="6" height="128" rx="3" fill="#c0392b"/>
+<g transform="translate(237 284)"><path d="M-13 -14 H13 V2 C13 9 6 13 0 16 C-6 13 -13 9 -13 2z" fill="#2f6e3b"/><text y="7" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text></g>
+<text x="217" y="324" font-size="16" font-weight="bold" fill="#2f3a2b">Coquihalla, Hwy 5</text>
+<text x="217" y="344" font-size="14" fill="#2f3a2b">No single projectile</text>
+<text x="217" y="362" font-size="14" fill="#2f3a2b">within 400 m, Hope to</text>
+<text x="217" y="380" font-size="14" fill="#2f3a2b">Kamloops</text>
+<text x="14" y="410" font-size="14" fill="#6b5b4b">Pages 10, 32, 33. CWD: Chronic Wasting Disease.</text>
+<text x="14" y="429" font-size="14" fill="#6b5b4b">TB: tuberculosis. RAPP: Report All Poachers</text>
+<text x="14" y="448" font-size="14" fill="#6b5b4b">and Polluters.</text>
+</svg>

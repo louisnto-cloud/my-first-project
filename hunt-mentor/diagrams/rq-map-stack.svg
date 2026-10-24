@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" font-family="sans-serif" role="img" aria-label="Six stacked map layers, bottom to top: 1 legal base with MU (Management Unit) and land status; 2 closures and No Shooting areas; 3 access and pressure; 4 habitat and season; 5 terrain and wind; 6 your sign, seats and routes. Build from the bottom up: law first, your sign last. Tip.">
+<rect x="0" y="0" width="400" height="360" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Build your map in 6 layers</text>
+<path d="M14 318 L14 70" stroke="#6b4f35" stroke-width="3"/><path d="M6 80 L14 62 L22 80z" fill="#6b4f35"/>
+<g data-tip="1. Legal base|Can I hunt here at all? MU (Management Unit) and land status. A perfect bench on private land or inside a No Shooting map is worth nothing (99% rules).">
+<rect x="26" y="274" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 296 L100 314 L170 296 L170 303 L100 321 L30 303z" fill="#1c241a"/>
+<path d="M30 296 L100 278 L170 296 L100 314z" fill="#2f3a2b" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="296" r="11" fill="#fffaf0"/><text x="100" y="301" font-size="15" font-weight="bold" fill="#1c241a" text-anchor="middle">1</text>
+<text x="184" y="294" font-size="16" font-weight="bold" fill="#2f3a2b">Legal base</text>
+<text x="184" y="312" font-size="14" fill="#6b5b4b">Can I hunt here at all?</text>
+</g>
+<g data-tip="2. Closures|Can I shoot here, and where can I not drive? No Shooting maps (C7, C11, C12, C17 and others) live in the synopsis and the Region 3 Rule Book. Draw them on your map yourself (Tip).">
+<rect x="26" y="230" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 252 L100 270 L170 252 L170 259 L100 277 L30 259z" fill="#8e2a20"/>
+<path d="M30 252 L100 234 L170 252 L100 270z" fill="#c0392b" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="252" r="11" fill="#fffaf0"/><text x="100" y="257" font-size="15" font-weight="bold" fill="#8e2a20" text-anchor="middle">2</text>
+<text x="184" y="250" font-size="16" font-weight="bold" fill="#2f3a2b">Closures</text>
+<text x="184" y="268" font-size="14" fill="#6b5b4b">Can I shoot here?</text>
+</g>
+<g data-tip="3. Access and pressure|How do I get in, and where will other hunters be?">
+<rect x="26" y="186" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 208 L100 226 L170 208 L170 215 L100 233 L30 215z" fill="#8a6128"/>
+<path d="M30 208 L100 190 L170 208 L100 226z" fill="#c08a3e" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="208" r="11" fill="#fffaf0"/><text x="100" y="213" font-size="15" font-weight="bold" fill="#8a6128" text-anchor="middle">3</text>
+<text x="184" y="206" font-size="16" font-weight="bold" fill="#2f3a2b">Access, pressure</text>
+<text x="184" y="224" font-size="14" fill="#6b5b4b">How do I get in?</text>
+</g>
+<g data-tip="4. Habitat and season|Will the animal be here this month? Month layers are a general pattern (60%). Fresh tracks are today (Tip).">
+<rect x="26" y="142" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 164 L100 182 L170 164 L170 171 L100 189 L30 171z" fill="#5f6e45"/>
+<path d="M30 164 L100 146 L170 164 L100 182z" fill="#8a9a6b" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="164" r="11" fill="#fffaf0"/><text x="100" y="169" font-size="15" font-weight="bold" fill="#5f6e45" text-anchor="middle">4</text>
+<text x="184" y="162" font-size="16" font-weight="bold" fill="#2f3a2b">Habitat, season</text>
+<text x="184" y="180" font-size="14" fill="#6b5b4b">Will it be here this month?</text>
+</g>
+<g data-tip="5. Terrain and wind|Where exactly, and from which side do I come in?">
+<rect x="26" y="98" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 120 L100 138 L170 120 L170 127 L100 145 L30 127z" fill="#4a3524"/>
+<path d="M30 120 L100 102 L170 120 L100 138z" fill="#6b4f35" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="120" r="11" fill="#fffaf0"/><text x="100" y="125" font-size="15" font-weight="bold" fill="#4a3524" text-anchor="middle">5</text>
+<text x="184" y="118" font-size="16" font-weight="bold" fill="#2f3a2b">Terrain, wind</text>
+<text x="184" y="136" font-size="14" fill="#6b5b4b">Which side do I come in?</text>
+</g>
+<g data-tip="6. Your sign and seats|What did I actually see, and where do I sit? An old map leads you to last month&apos;s deer (Tip).">
+<rect x="26" y="54" width="370" height="44" fill="#000" fill-opacity="0"/>
+<path d="M30 76 L100 94 L170 76 L170 83 L100 101 L30 83z" fill="#a83f08"/>
+<path d="M30 76 L100 58 L170 76 L100 94z" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"/>
+<circle cx="100" cy="76" r="11" fill="#fffaf0"/><text x="100" y="81" font-size="15" font-weight="bold" fill="#a83f08" text-anchor="middle">6</text>
+<text x="184" y="74" font-size="16" font-weight="bold" fill="#2f3a2b">Your sign, seats</text>
+<text x="184" y="92" font-size="14" fill="#6b5b4b">Where do I sit?</text>
+</g>
+<g data-tip="Build it bottom up|Law first, your sign last (Tip). Start small: one area you can walk across in a morning, about 2 to 5 square kilometres (Tip).">
+<rect x="10" y="326" width="380" height="28" rx="6" fill="#f4eedf"/>
+<text x="200" y="346" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Bottom up: law first, your sign last (Tip)</text>
+</g>
+</svg>

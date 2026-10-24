@@ -1,0 +1,30 @@
+# Hyphenated terms the style lint allows (scripts/lint-style.mjs).
+# Only official names, brand names, place names and pronunciation respellings.
+# One term per line, matched without case. Lines starting with # are comments.
+# Codes (MU 3-27, .30-06, u-3-003), URLs, file names and quoted law text are allowed already.
+
+# Official and brand names
+E-Comm
+Open-Meteo
+
+# Official place names (BC synopsis spelling)
+Burrell-Young
+Goatskin-Rendall
+Chehalis-Fleetwood
+Bergeron-Tumbler
+
+# Pronunciation respellings from the BC pronunciation guide (lesson: Indigenous respect)
+stoh-loh
+staw-low
+stool-oh
+sec-wep-emc
+shoo-shwahp
+sim-ka
+ness-con-lith
+ent-la-cap-um
+la-cam-el
+kwant-len
+kat-zee
+oh-soy-use
+si-mil-kuh-meen
+spla-cheen

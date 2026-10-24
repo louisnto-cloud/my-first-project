@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="What to bring to a goat compulsory inspection: the horns, plus evidence of sex. Billy: a testicle or part of the penis. Nanny: a portion of the teats or mammary gland. Within 30 days and before December 5, by appointment, 98 percent. In Region 3, the Kamloops office does goat inspections by appointment, 95 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Goat inspection (CI)</text>
+<text x="200.0" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">Compulsory Inspection: bring these</text>
+<g transform="translate(130 125) scale(1.5)"><path d="M-34,-10 L-38,-30 L-48,-34 L-62,-26 L-62,-20 L-50,-16 L-44,-8 Z" fill="#ffffff" stroke="#23261f" stroke-width="1.2"/><path d="M-46,-28 C-46,-42 -38,-48 -30,-50" fill="none" stroke="#23261f" stroke-width="5" stroke-linecap="round"/></g>
+<text x="80" y="175" font-size="16" fill="#e8590c" text-anchor="middle" font-weight="bold">The horns</text>
+<rect x="170" y="70" width="210" height="60" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="275.0" y="95.9" font-size="14" fill="#23261f" text-anchor="middle">Billy: a testicle or</text>
+<text x="275.0" y="113.9" font-size="14" fill="#23261f" text-anchor="middle">part of the penis</text>
+<rect x="170" y="140" width="210" height="60" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="275.0" y="165.9" font-size="14" fill="#23261f" text-anchor="middle">Nanny: part of the teats</text>
+<text x="275.0" y="183.9" font-size="14" fill="#23261f" text-anchor="middle">or mammary gland</text>
+<rect x="20" y="214" width="360" height="76" rx="8" fill="#e3eedc" stroke="#2f6b3a" stroke-width="2"/>
+<text x="200.0" y="238.9" font-size="14" fill="#23261f" text-anchor="middle">Within 30 days and before Dec 5.</text>
+<text x="200.0" y="256.9" font-size="14" fill="#23261f" text-anchor="middle">By appointment. Region 3: Kamloops</text>
+<text x="200.0" y="274.9" font-size="14" fill="#23261f" text-anchor="middle">office (98%, Kamloops 95%).</text>
+</svg>

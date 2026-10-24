@@ -1,0 +1,182 @@
+{
+  "lastChecked": "2026-10-23",
+  "note": "Facts are copied from the app's lessons (lesson named) with their certainty. Owner facts: owner gear list, 2026-10-23. Tips are opinion.",
+  "guns": [
+    {
+      "id": "tikka",
+      "name": "Tikka T3x Arctic",
+      "short": "Tikka",
+      "draw": "bolt",
+      "owned": true,
+      "calibre": ".308 Winchester",
+      "action": "Bolt action, detachable magazine",
+      "sights": "Open (iron) sights today: rear drum stepped 100 m to 600 m, front post. Picatinny rail ready for a scope.",
+      "prefix": "mc-tikka-",
+      "facts": [
+        { "t": "Calibre .308 Winchester, iron sights only today.", "c": 99, "s": "Owner, 2026-10-23" },
+        { "t": "Barrel 508 mm (20 in), stainless, twist 1 in 10, two stage trigger, two position safety, Picatinny rail.", "c": 95, "s": "Sako spec page, as carried in How a rifle works" },
+        { "t": "Your barrel: 20 in, confirmed by you 2026-10-23. Matches the factory 508 mm.", "tip": true },
+        { "t": "Open sights come zeroed at 100 m (109 yd) from the factory. Rear drum: six steps, 100 m to 600 m.", "c": 95, "s": "Tikka T1x and T3x manual v5.3, as carried in How a rifle works" },
+        { "t": "Safety back is ON and locks the bolt closed. To unload the Arctic: muzzle safe, safety OFF, then lift the bolt.", "c": 95, "s": "Tikka manual, as carried in How a rifle works" },
+        { "t": "Magazine capacity: 10 rounds per one retailer listing. VERIFY with your magazine.", "c": 65, "s": "How a rifle works" }
+      ],
+      "lessons": [
+        { "id": "rifle-mechanics", "label": "How a rifle works: your Tikka T3x" },
+        { "id": "scope-guide", "label": "Choosing and mounting your scope" },
+        { "id": "sighting-in", "label": "Sighting in" },
+        { "id": "ballistics-308", "label": ".308 ballistics made simple" },
+        { "id": "field-positions", "label": "Shooting positions and rests" },
+        { "id": "firearm-care", "re": "routine clean", "label": "Clean the Tikka" }
+      ],
+      "ammo": "Tikka: your hunting load, about 20 rounds, all from the same lot",
+      "ammoSrc": "Season practice plan, range bag list (Tip)",
+      "care": [
+        { "k": "afterUse", "t": "Clean it right after use, even with no shots fired. Corrosion can begin within 24 hours, stainless too.", "c": 95, "s": "Tikka manual v5.3, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "routine clean" },
+        { "k": "wet", "t": "Wet: take it out of the case, dry it warm, then the routine clean.", "c": 95, "s": "Tikka manual v5.3, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "wet weather" },
+        { "k": "yearly", "t": "Yearly service: at least once a year, more with heavy use, and before long storage. Includes copper fouling out and a bolt strip.", "c": 95, "s": "Tikka manual v5.3, periodic maintenance, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "copper fouling" },
+        { "k": "screws", "t": "After cleaning, check the action screws (7 Nm with a metal trigger guard).", "c": 95, "s": "Tikka manual v5.3, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "torque" }
+      ]
+    },
+    {
+      "id": "cz457",
+      "name": "CZ 457",
+      "short": "CZ 457",
+      "draw": "rimfire",
+      "owned": true,
+      "calibre": ".22 rimfire (likely .22 LR, Long Rifle): VERIFY",
+      "action": "Bolt action rimfire, detachable magazine",
+      "sights": "Depends on the model. Scope base: 11 mm dovetail or a Weaver rail.",
+      "prefix": "mc-cz457-",
+      "facts": [
+        { "t": "Which CZ 457 model (variant) and chambering? Read the left side of the barrel and the box: VERIFY. The app builds for the whole CZ 457 family.", "tip": true },
+        { "t": "Scope mounts on an 11 mm dovetail or a Weaver rail.", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire" },
+        { "t": "Safety back shows a white dot and locks the trigger. The bolt opens with the safety ON, so unload with the safety ON.", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire" },
+        { "t": "Opposite habit to the Tikka. Say it out loud: Tikka, safety off to unload. CZ, safety stays on.", "tip": true },
+        { "t": "Magazines and barrels interchange with the CZ 455.", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire" },
+        { "t": "Stock screws: 3.5 Nm (newton metres).", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire" }
+      ],
+      "lessons": [
+        { "id": "rimfire-22", "label": "The .22 rimfire: accuracy, grouse and small game" },
+        { "id": "rimfire-22", "re": "CZ 457", "label": "CZ 457 handling notes" },
+        { "id": "firearm-care", "re": "CZ 457", "label": "Clean the CZ 457" },
+        { "id": "season-practice", "re": "22", "label": "The .22 as your cheap trainer" }
+      ],
+      "ammo": "CZ 457: .22 rounds of the type your rifle groups best with, about 100 for practice",
+      "ammoSrc": "Tip",
+      "care": [
+        { "k": "afterUse", "t": "Clean it each time you use it. Wet: as soon as possible after shooting.", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire", "lesson": "rimfire-22", "re": "clean" },
+        { "k": "yearly", "t": "Clean at least once a year. After a great many rounds, a gunsmith cleans the bolt.", "c": 95, "s": "CZ 457 manual, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "CZ 457" },
+        { "k": "rod", "t": "Rod and brush in from the chamber end, never the muzzle.", "c": 95, "s": "CZ 457 manual, as carried in The .22 rimfire", "lesson": "rimfire-22", "re": "clean" }
+      ]
+    },
+    {
+      "id": "sks",
+      "name": "SKS, Chinese",
+      "short": "SKS",
+      "draw": "sks",
+      "owned": true,
+      "calibre": "7.62x39 mm",
+      "action": "Semi automatic, gas operated, fixed magazine",
+      "sights": "Open sights: front post, rear tangent leaf (Tip: check yours)",
+      "prefix": "mc-sks-",
+      "facts": [
+        { "t": "Chinese SKS (Type 56 family), 7.62x39 mm. Surplus rifle, condition unknown.", "c": 99, "s": "Owner, 2026-10-23" },
+        { "t": "Before the first shot: a gunsmith inspection. Firing pin moves freely, bore, headspace.", "tip": true },
+        { "t": "Magazine law: the 5 round limit for long guns applies to magazines made for semi automatic firearms. A fixed SKS magazine must hold no more than 5. A qualified gunsmith confirms or does any pinning. Never alter it yourself.", "c": 90, "s": "How a rifle works, reading of SOR/98-462, Schedule, Part 4, s. 3, checked 2026-10-17" },
+        { "t": "Its federal class (non restricted or not) can change by regulation. Check the current RCMP (Royal Canadian Mounted Police) listing for your rifle: VERIFY.", "tip": true },
+        { "t": "Most surplus 7.62x39 ammunition has corrosive primers. Clean the same day you fire it.", "tip": true }
+      ],
+      "lessons": [
+        { "id": "rifle-mechanics", "re": "magazine", "label": "Magazine and feeding (magazine law)" },
+        { "id": "firearm-care", "label": "Cleaning, maintenance, cold and wet weather" },
+        { "id": "cartridge-anatomy", "label": "How a cartridge works" }
+      ],
+      "ammo": "SKS: 7.62x39 mm. Note if it is corrosive surplus",
+      "ammoSrc": "Tip",
+      "care": [
+        { "k": "corrosive", "t": "Corrosive ammunition fired: clean the bore, bolt, gas piston and gas tube the same day. Water based cleaner first, then oil.", "tip": true, "lesson": "firearm-care", "re": "routine clean" },
+        { "k": "afterUse", "t": "Clean it after every range day.", "tip": true, "lesson": "firearm-care", "re": "routine clean" },
+        { "k": "yearly", "t": "Yearly: full field strip and clean, before long storage.", "tip": true, "lesson": "firearm-care", "re": "copper fouling" }
+      ]
+    },
+    {
+      "id": "shotgun",
+      "name": "Shotgun",
+      "short": "Shotgun",
+      "draw": "shotgun",
+      "owned": false,
+      "calibre": "The app's pick: one 12 gauge, 3 inch chamber, screw in chokes",
+      "action": "Pump, semi auto or over under",
+      "sights": "Front bead. You point a shotgun, you do not aim it.",
+      "prefix": "mc-shotgun-",
+      "facts": [
+        { "t": "Not owned yet. One 12 gauge with a 3 inch chamber and screw in chokes covers ducks with steel and upland birds.", "c": 70, "s": "Choosing your shotgun" },
+        { "t": "Ducks and geese: non toxic shot only. Lead is legal for upland birds.", "c": 99, "s": "Rule Book: legal methods, as carried in Shotgun mastery" },
+        { "t": "Pump or semi auto: a plug so the magazine holds no more than 2 shells, 3 in total with one in the chamber.", "c": 99, "s": "Rule Book: legal methods (synopsis page 12)" }
+      ],
+      "lessons": [
+        { "id": "shotgun-guide", "label": "Choosing your shotgun (buying guide)" },
+        { "id": "shotgun-mastery", "label": "Shotgun mastery: chokes, patterns, shot sizes, lead" },
+        { "id": "shotgun-skills", "label": "Shotgun skills" },
+        { "id": "firearm-care", "re": "shotgun", "label": "Clean a shotgun" }
+      ]
+    }
+  ],
+  "rules": {
+    "title": "Storage and transport",
+    "items": [
+      { "t": "In or on a vehicle or boat in BC: never loaded. An ATV (All Terrain Vehicle) counts as a vehicle.", "c": 99, "s": "Firearm Violence Prevention Act s. 4(1), as carried in Firearm safety, At the car", "lesson": "firearm-safety", "re": "at the car" },
+      { "t": "Unloaded means no cartridge in the chamber and none in a magazine attached to or inserted in the gun. A full magazine clipped in with an empty chamber is loaded.", "c": 99, "s": "SOR/98-209 s. 1; BC synopsis definitions, as carried in Firearm safety and the Rule Book", "lesson": "firearm-safety", "re": "at the car" },
+      { "t": "Leaving the vehicle: rifles and shotguns locked in the trunk or a lockable compartment. No trunk: out of sight, vehicle locked.", "c": 99, "s": "SOR/98-209 s. 10(2), as carried in Firearm safety", "lesson": "firearm-safety", "re": "at the car" },
+      { "t": "Load only where you may lawfully shoot. Never on or across a road.", "c": 99, "s": "SOR/98-209 s. 15; synopsis page 10, as carried in Firearm safety", "lesson": "firearm-safety", "re": "at the car" },
+      { "t": "Boats: loaded only in a boat with no motor, or while the motor is not moving it, when hunting or retrieving wildlife.", "c": 95, "s": "Designation and Exemption Regulation s. 18, as carried in Firearm safety", "lesson": "water-safety" },
+      { "t": "At home: unloaded, and either a secure locking device, the bolt out, or a locked container or room that cannot readily be broken into.", "c": 99, "s": "SOR/98-209 s. 5(1), current to 30 September 2026, as carried in Cleaning and maintenance", "lesson": "firearm-care", "re": "transport" },
+      { "t": "At home: ammunition not readily at hand, unless it is locked up too. Tikka advises a separate locked place.", "c": 99, "s": "SOR/98-209 s. 5(1); Tikka manual (95%)", "lesson": "firearm-care", "re": "transport" },
+      { "t": "A suppressor is a prohibited device in Canada.", "c": 99, "s": "Criminal Code s. 84(1), as carried in How a rifle works", "lesson": "rifle-mechanics", "re": "barrel" }
+    ]
+  },
+  "checklist": [
+    { "id": "eyes", "t": "Eye protection", "s": "Season practice plan, range bag" },
+    { "id": "ears", "t": "Ear protection", "s": "Season practice plan, range bag" },
+    { "id": "targets", "t": "Targets (20 cm plates), stapler, marker", "s": "Season practice plan, range bag" },
+    { "id": "backstop", "t": "A safe backstop behind every target. At a range, use its berms and its rules. Outside a range: only where discharge is lawful.", "c": 99, "s": "Season practice plan: BC discharge bylaws and No Shooting Areas (Rule Book)", "lesson": "season-practice", "re": "shoot the field" },
+    { "id": "ammo", "t": "Ammunition for each gun you bring", "per": true },
+    { "id": "bolt", "t": "Bolts and magazines with each gun, snap cap", "s": "Season practice plan, range bag" },
+    { "id": "rest", "t": "Rest: sticks, sandbag or pad, and the pack you hunt with", "s": "Season practice plan, range bag" },
+    { "id": "tools", "t": "Tools: scope tools and torque driver, cleaning rod with a bore guide, patches, oil", "s": "Tip" },
+    { "id": "optics", "t": "Spotting scope or binoculars, rangefinder", "s": "Season practice plan, range bag" },
+    { "id": "log", "t": "Journal and pencil. Log rounds and groups here after", "s": "Season practice plan, range bag" },
+    { "id": "aid", "t": "First aid kit", "s": "Tip" },
+    { "id": "range", "t": "Range hours, fees and rules checked before you drive", "s": "Season practice plan (VERIFY before you drive)" },
+    { "id": "transport", "t": "Unloaded in the truck, locked when you leave it. Read the transport card below.", "rules": true }
+  ],
+  "later": {
+    "title": "Guns you might add later",
+    "intro": "Information only. Nothing here says you need to buy a gun.",
+    "items": [
+      {
+        "id": "shotgun",
+        "name": "A 12 gauge shotgun for birds (first pick)",
+        "why": "Ducks, geese, grouse and quail. The rifle and the .22 cannot do ducks: they need shot.",
+        "pros": [
+          "One gun covers waterfowl with steel and upland birds (70%, Choosing your shotgun).",
+          "Gas semi auto: softest recoil with 3 inch steel (70%, Choosing your shotgun).",
+          "Pump: cheapest and simple, cycles any load (70%, Choosing your shotgun)."
+        ],
+        "cons": [
+          "Another gun to store, lock and clean (Tip).",
+          "Pump kicks most; semi autos have more parts to clean (70%, Choosing your shotgun).",
+          "Many over unders are not rated for steel (65%, Choosing your shotgun)."
+        ],
+        "prices": [
+          { "tier": "Entry", "p": "about $420 to $900", "eg": "Stoeger P3000, Mossberg 500 Field, Benelli SuperNova, Stoeger M3000" },
+          { "tier": "Mid", "p": "about $850 to $1,870", "eg": "Stoeger M3500, Beretta A300 Outlander, Winchester SX4, Browning Silver Field" },
+          { "tier": "Premium", "p": "about $1,950 to $2,900", "eg": "Browning Maxus II, Benelli SBE3, Beretta A400 Xtreme Plus" }
+        ],
+        "priceSrc": "Choosing your shotgun: CAD (Canadian dollars), search previews of retailer pages, price checked 2026-10-01",
+        "priceC": 65,
+        "guide": "shotgun-guide"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Top view of a cutblock 5 to 15 years old, full of young shrubs, next to standing timber. The orange edge where the two meet is where deer feed in the open and slip back to cover. A newer burn nearby is marked as often closed to vehicles.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="0" width="400" height="300" fill="#2f3a2b" opacity=".8"/>
+  <path d="M60 50 L300 40 L330 200 L80 230 Z" fill="#dfe6d3"/>
+  <g fill="#8a9a6b"><circle cx="110" cy="90" r="9"/><circle cx="220" cy="80" r="10"/><circle cx="260" cy="150" r="9"/><circle cx="130" cy="180" r="8"/><circle cx="200" cy="190" r="9"/><circle cx="280" cy="100" r="7"/><circle cx="180" cy="70" r="7"/></g>
+  <path d="M60 50 L300 40 L330 200 L80 230 Z" fill="none" stroke="#e8590c" stroke-width="6"/>
+  <g transform="translate(318 130)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="-12" cy="-8" r="5" fill="#8b5a2b"/></g>
+  <g transform="translate(90 140)"><ellipse rx="14" ry="7" fill="#8b5a2b"/><circle cx="12" cy="-8" r="5" fill="#8b5a2b"/></g>
+  <text x="195" y="120" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cutblock</text>
+  <text x="195" y="140" font-size="14" fill="#2f3a2b" text-anchor="middle">5 to 15 years old</text>
+  <text x="200" y="268" font-size="16" font-weight="bold" fill="#ffd34d" text-anchor="middle">Hunt the orange edge (60%)</text>
+  <text x="12" y="24" font-size="14" fill="#fff">timber = cover</text>
+  <text x="200" y="290" font-size="14" fill="#fff" text-anchor="middle">feed in the block, cover a few steps away</text>
+</svg>

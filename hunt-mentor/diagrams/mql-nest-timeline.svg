@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Gantt chart from California habitat records, 80 percent. Pairing March to early May. Nesting April to August, peak May and June. Broods from late May into September. About 14 eggs; the female incubates 22 to 23 days. Chicks run at once and fly short hops at about 10 days, 75 percent. BC dates may run later: VERIFY.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spring and summer (California data)</text>
+<line x1="110" y1="44" x2="110" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="130" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Mar</text>
+<line x1="150" y1="44" x2="150" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="170" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Apr</text>
+<line x1="190" y1="44" x2="190" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="210" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">May</text>
+<line x1="230" y1="44" x2="230" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="250" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jun</text>
+<line x1="270" y1="44" x2="270" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="290" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Jul</text>
+<line x1="310" y1="44" x2="310" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="330" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aug</text>
+<line x1="350" y1="44" x2="350" y2="214" stroke="#d8d2c4" stroke-width="1"/>
+<text x="370" y="58" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sep</text>
+<text x="102" y="89" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Pairing</text><rect x="110" y="72" width="88.0" height="24" rx="5" fill="#8a9a6b"/>
+<text x="102" y="125" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Nesting</text><rect x="150" y="108" width="200" height="24" rx="5" fill="#b9a88a"/>
+<text x="102" y="161" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Peak</text><rect x="190" y="144" width="80" height="24" rx="5" fill="#e8590c"/>
+<text x="102" y="197" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="end">Broods</text><rect x="210.0" y="180" width="176.0" height="24" rx="5" fill="#4a7fb0"/>
+<rect x="10" y="222" width="380" height="72" rx="8" fill="#dfe6d3"/>
+<text x="200" y="244" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">About 14 eggs, female sits 22 to 23 days (80%)</text>
+<text x="200" y="266" font-size="14" fill="#2f3a2b" text-anchor="middle">Chicks run at once, fly short hops at 10 days (75%)</text>
+<text x="200" y="288" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">BC dates may run later: VERIFY</text>
+</svg>

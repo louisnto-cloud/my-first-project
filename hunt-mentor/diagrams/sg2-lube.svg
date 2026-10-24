@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Where oil, grease and nothing go: barrel bore gets a light oil film and a dry patch before shooting; over under hinge, lugs and forearm bracket get grease; Beretta A300 gas piston and cylinder get no oil; pump bolt and rails a thin film; choke threads a little oil.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Oil, grease or dry</text>
+<rect x="12" y="44" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="65.0" r="12" fill="#1F3D2B"/><text x="34" y="70.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="62.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Bore</text>
+<text x="54.0" y="79.0" font-size="14" fill="#17201A" text-anchor="start">Light oil to store. Dry patch to shoot</text>
+<rect x="12" y="92" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="113.0" r="12" fill="#1F3D2B"/><text x="34" y="118.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="110.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Choke threads</text>
+<text x="54.0" y="127.0" font-size="14" fill="#17201A" text-anchor="start">Clean, a little oil</text>
+<rect x="12" y="140" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="161.0" r="12" fill="#1F3D2B"/><text x="34" y="166.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="158.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Bolt, rails</text>
+<text x="54.0" y="175.0" font-size="14" fill="#17201A" text-anchor="start">Thin film only</text>
+<rect x="12" y="188" width="376" height="42" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="209.0" r="12" fill="#1F3D2B"/><text x="34" y="214.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="54.0" y="206.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">Over under hinge</text>
+<text x="54.0" y="223.0" font-size="14" fill="#17201A" text-anchor="start">Grease: hinge, lugs, bracket</text>
+<rect x="12" y="236" width="376" height="42" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="257.0" r="12" fill="#FF6A13"/><text x="34" y="262.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="54.0" y="254.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="start">A300 gas piston</text>
+<text x="54.0" y="271.0" font-size="14" fill="#17201A" text-anchor="start">Clean and dry: no oil</text>
+</svg>

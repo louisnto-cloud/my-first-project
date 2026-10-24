@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 403" font-family="sans-serif" role="img" aria-label="Thermometer chart of cooking temperatures in degrees Celsius. 71: all wild game, ground meat and bear, the Canadian Food Inspection Agency food safety number, 95 percent. 74: game birds, 80 percent. 77: bear per Washington, 80 percent. 60 to 63: deer loin as many hunters cook it, a personal risk and not a safe number, lean. Bear: never pink.">
+<rect width="400" height="403" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cooking temperatures, °C</text>
+<rect x="37" y="48" width="22" height="312" rx="11" fill="#f4efe4" stroke="#2f3a2b" stroke-width="2.4"/>
+<circle cx="48" cy="374" r="20" fill="#c0392b" stroke="#2f3a2b" stroke-width="2.4"/>
+<rect x="43" y="94.5" width="10" height="265.0" fill="#c0392b"/>
+<line x1="59" y1="347.5" x2="68" y2="347.5" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="352.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">55</text>
+<line x1="59" y1="290.0" x2="68" y2="290.0" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="295" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">60</text>
+<line x1="59" y1="232.5" x2="68" y2="232.5" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="237.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">65</text>
+<line x1="59" y1="175.0" x2="68" y2="175.0" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="180" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">70</text>
+<line x1="59" y1="117.5" x2="68" y2="117.5" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="122.5" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">75</text>
+<line x1="59" y1="60.0" x2="68" y2="60.0" stroke="#2f3a2b" stroke-width="2"/>
+<text x="32" y="65" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="end">80</text>
+<rect x="61" y="255.5" width="9" height="34.5" fill="#6b5b4b"/>
+<line x1="68" y1="94.5" x2="92" y2="94.5" stroke="#8b5a2b" stroke-width="2"/>
+<rect x="92" y="80.5" width="261.2" height="28" rx="6" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<text x="100" y="100" font-size="15" font-weight="bold" fill="#8b5a2b">Bear: 77°C per Washington (80%)</text>
+<line x1="68" y1="129.0" x2="92" y2="129.0" stroke="#4a7fb0" stroke-width="2"/>
+<rect x="92" y="115.0" width="191.9" height="28" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="2"/>
+<text x="100" y="134.5" font-size="15" font-weight="bold" fill="#4a7fb0">Game birds: 74°C (80%)</text>
+<line x1="68" y1="163.5" x2="92" y2="163.5" stroke="#e8590c" stroke-width="2"/>
+<rect x="92" y="149.5" width="268.0" height="28" rx="6" fill="#e8590c" stroke="#e8590c" stroke-width="2"/>
+<text x="100" y="169" font-size="15" font-weight="bold" fill="#fffaf0">All wild game, ground, bear: 71°C</text>
+<text x="94" y="197.5" font-size="15" font-weight="bold" fill="#c2410c">Canadian food safety number (95%)</text>
+<line x1="70" y1="272.8" x2="92" y2="272.8" stroke="#6b5b4b" stroke-width="2"/>
+<rect x="92" y="258.8" width="284.7" height="28" rx="6" fill="#fffaf0" stroke="#6b5b4b" stroke-width="2"/>
+<text x="100" y="278.25" font-size="15" font-weight="bold" fill="#2f3a2b">Deer loin, 60 to 63°C: many hunters</text>
+<text x="94" y="308.75" font-size="15" fill="#2f3a2b">Your risk, not a safe number. Lean.</text>
+<text x="94" y="330.75" font-size="16" font-weight="bold" fill="#c0392b">Bear: never.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="sans-serif" role="img" aria-label="Side view of a cold front. Cold, dense air on the right pushes under warm air on the left and lifts it. The front moves from right to left. Rain and gusts fall from a big cloud at the front. Before it: south wind and falling pressure. After it: northwest wind, colder, rising pressure, clearing skies.">
+<rect width="400" height="336" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A cold front passing (side view)</text>
+<rect x="0" y="38" width="400" height="198" fill="#f7ead9"/>
+<path d="M400 70 C320 80 250 120 214 196 C206 216 196 230 178 236 L400 236z" fill="#cfe0ef"/>
+<path d="M400 70 C320 80 250 120 214 196 C206 216 196 230 178 236" fill="none" stroke="#4a7fb0" stroke-width="3"/>
+<circle cx="220" cy="92" r="26" fill="#8f99a6"/>
+<circle cx="246" cy="80" r="30" fill="#8f99a6"/>
+<circle cx="276" cy="88" r="26" fill="#8f99a6"/>
+<circle cx="198" cy="104" r="20" fill="#8f99a6"/>
+<circle cx="232" cy="108" r="24" fill="#8f99a6"/>
+<circle cx="266" cy="110" r="24" fill="#8f99a6"/>
+<circle cx="296" cy="104" r="18" fill="#8f99a6"/>
+<circle cx="217" cy="87" r="18.2" fill="#a9b2bd"/>
+<circle cx="243" cy="75" r="21.0" fill="#a9b2bd"/>
+<circle cx="273" cy="83" r="18.2" fill="#a9b2bd"/>
+<circle cx="195" cy="99" r="14.0" fill="#a9b2bd"/>
+<path d="M192 128 l-7 96" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M205 128 l-7 82" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M218 128 l-7 96" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M231 128 l-7 82" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M244 128 l-7 96" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M257 128 l-7 82" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<path d="M270 128 l-7 96" stroke="#4a7fb0" stroke-width="2" opacity=".75" stroke-dasharray="8 6"/>
+<defs><marker id="rq-wx-front-cross-ah-o" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#e8590c"/></marker><marker id="rq-wx-front-cross-ah-b" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#4a7fb0"/></marker></defs>
+<path d="M60 216 C110 206 150 166 170 124" fill="none" stroke="#e8590c" stroke-width="3.2" stroke-linecap="round" marker-end="url(#rq-wx-front-cross-ah-o)"/>
+<path d="M100 224 C130 220 160 202 178 176" fill="none" stroke="#e8590c" stroke-width="3.2" stroke-linecap="round" marker-end="url(#rq-wx-front-cross-ah-o)"/>
+<path d="M372 210 H262" fill="none" stroke="#4a7fb0" stroke-width="4" stroke-linecap="round" marker-end="url(#rq-wx-front-cross-ah-b)"/>
+<path d="M150 58 H60" fill="none" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round" marker-end="url(#rq-wx-front-cross-ah-k)"/>
+<defs><marker id="rq-wx-front-cross-ah-k" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#2f3a2b"/></marker></defs>
+<text x="104" y="78" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Front moves this way</text>
+<text x="20" y="136" font-size="17" font-weight="bold" fill="#c2410c">Warm air</text>
+<text x="20" y="156" font-size="15" fill="#c2410c">rises</text>
+<text x="380" y="160" font-size="17" font-weight="bold" fill="#2c5d86" text-anchor="end">Cold air</text>
+<text x="380" y="180" font-size="15" fill="#2c5d86" text-anchor="end">pushes under</text>
+<rect x="0" y="236" width="400" height="8" fill="#a9b37f"/>
+<rect x="6" y="252" width="128" height="74" rx="8" fill="#f4eedf" stroke="#e8590c" stroke-width="2"/>
+<text x="70" y="274" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Before</text>
+<text x="70" y="296" font-size="15" fill="#2f3a2b" text-anchor="middle">S wind</text>
+<text x="70" y="315" font-size="15" fill="#2f3a2b" text-anchor="middle">pressure falls</text>
+<rect x="136" y="252" width="128" height="74" rx="8" fill="#f4eedf" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200" y="274" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">At the front</text>
+<text x="200" y="296" font-size="15" fill="#2f3a2b" text-anchor="middle">rain</text>
+<text x="200" y="315" font-size="15" fill="#2f3a2b" text-anchor="middle">gusts</text>
+<rect x="266" y="252" width="128" height="74" rx="8" fill="#f4eedf" stroke="#4a7fb0" stroke-width="2"/>
+<text x="330" y="274" font-size="16" font-weight="bold" fill="#4a7fb0" text-anchor="middle">After</text>
+<text x="330" y="296" font-size="15" fill="#2f3a2b" text-anchor="middle">NW wind, colder</text>
+<text x="330" y="315" font-size="15" fill="#2f3a2b" text-anchor="middle">pressure rises</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 5: body and pee posture. Billy: heavier, 70 to 120 kilograms, stretches forward to pee. Nanny: slimmer, 55 to 75 kilograms, squats. Weights 85 percent. Pee posture is hunter lore, 60 percent." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 5: body and pee posture</text>
+<g transform="translate(110 130) scale(1.2 1.2)"><path d="M-30,10 L-38,34 M-18,12 L-22,34 M22,12 L32,34 M34,10 L46,32" stroke="#23261f" stroke-width="6" stroke-linecap="round"/><path d="M-30,-14 C-28,-30 -10,-34 0,-30 C14,-26 30,-24 36,-14 L38,10 C30,16 -24,18 -32,10 Z" fill="#ffffff" stroke="#23261f" stroke-width="1.8"/><path d="M-32,-10 L-36,-30 L-46,-34 L-60,-26 L-60,-20 L-48,-16 L-42,-8 Z" fill="#ffffff" stroke="#23261f" stroke-width="1.8"/><path d="M-52,-18 L-50,-8 L-46,-16" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/><circle cx="-48" cy="-27" r="2" fill="#23261f"/><path d="M-44,-28 C-44,-44 -36,-52 -26,-54" fill="none" stroke="#23261f" stroke-width="6" stroke-linecap="round"/></g>
+<g transform="translate(300 130) scale(-1.0 1.0)"><path d="M-26,10 L-26,34 M-14,12 L-14,34 M22,12 L28,26 L22,34 M34,10 L40,26 L34,34" stroke="#23261f" stroke-width="6" stroke-linecap="round"/><path d="M-30,-14 C-28,-30 -10,-34 0,-30 C14,-26 30,-24 36,-14 L38,10 C30,16 -24,18 -32,10 Z" fill="#ffffff" stroke="#23261f" stroke-width="1.8"/><path d="M-32,-10 L-36,-30 L-46,-34 L-60,-26 L-60,-20 L-48,-16 L-42,-8 Z" fill="#ffffff" stroke="#23261f" stroke-width="1.8"/><path d="M-52,-18 L-50,-8 L-46,-16" fill="#ffffff" stroke="#23261f" stroke-width="1.5"/><circle cx="-48" cy="-27" r="2" fill="#23261f"/><path d="M-44,-28 L-40,-48 C-38,-54 -32,-54 -30,-50" fill="none" stroke="#23261f" stroke-width="3.5" stroke-linecap="round"/></g>
+<text x="110" y="200" font-size="14" fill="#23261f" text-anchor="middle">Billy: heavier,</text>
+<text x="110" y="218" font-size="14" fill="#23261f" text-anchor="middle">70 to 120 kg</text>
+<text x="110" y="236" font-size="14" fill="#23261f" text-anchor="middle">stretches forward</text>
+<text x="300" y="200" font-size="14" fill="#23261f" text-anchor="middle">Nanny: slimmer,</text>
+<text x="300" y="218" font-size="14" fill="#23261f" text-anchor="middle">55 to 75 kg</text>
+<text x="300" y="236" font-size="14" fill="#23261f" text-anchor="middle">squats</text>
+<rect x="20" y="256" width="360" height="38" rx="8" fill="#f3ead8" stroke="#2f3a2b" stroke-width="2"/>
+<text x="200.0" y="279.9" font-size="14" fill="#23261f" text-anchor="middle">Pee posture is hunter lore (60%)</text>
+</svg>

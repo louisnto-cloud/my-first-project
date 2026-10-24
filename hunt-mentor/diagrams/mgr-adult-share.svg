@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bar chart, Pennsylvania Game Commission, 75 percent. Share of adults among grouse shot: 34 percent in October, 51 percent in November, 57 percent in December. Early in the season most birds shot are naive young birds; late in the season, more are adults." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Adults in the bag, by month (Pennsylvania)</text>
+<rect x="60" y="128" width="70" height="102" rx="4" fill="#8a9a6b" stroke="none" stroke-width="0"/>
+<text x="95" y="120" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">34%</text>
+<text x="95" y="252" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Oct</text>
+<rect x="170" y="77" width="70" height="153" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="205" y="69" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">51%</text>
+<text x="205" y="252" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Nov</text>
+<rect x="280" y="59" width="70" height="171" rx="4" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="315" y="51" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">57%</text>
+<text x="315" y="252" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Dec</text>
+<line x1="40" y1="230" x2="380" y2="230" stroke="#23261f" stroke-width="2"/>
+<text x="200" y="282" font-size="14" fill="#23261f" text-anchor="middle">Early: you shoot naive young birds. Late: adults.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 438" font-family="sans-serif" role="img" aria-label="Grid for Alaska, you are a nonresident alien, 85 percent. A BC resident may hunt: grouse, ptarmigan and hares with no guide, 80 percent, on the 630 US dollar licence. Ducks and geese with no guide, plus 2 stamps: the Alaska waterfowl stamp and the Federal Duck Stamp. Black bear, deer, caribou, moose and wolf: guide required. Brown or grizzly bear, Dall sheep and mountain goat: guide required, often a draw permit. Bison, muskox and elk: guide required, draw or registration permits. The guide must be within 100 yards, 91 metres, of you, 85 percent.">
+<rect width="400" height="438" fill="#fffaf0"/>
+<text x="200" y="28" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Alaska: who may hunt what</text>
+<text x="200" y="50" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">You are a nonresident alien (85%)</text>
+<text x="380" y="78" font-size="15" font-weight="bold" fill="#6b5b4b" text-anchor="end">BC resident</text>
+<rect x="8" y="88" width="384" height="62" rx="6" fill="#e9eedd"/>
+<text x="18" y="115" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, ptarmigan,</text>
+<text x="18" y="135" font-size="16" font-weight="bold" fill="#2f3a2b">hares</text>
+<circle cx="230" cy="119.0" r="13" fill="#2f6e3b"/><path d="M224.3 120.0 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="252" y="115" font-size="15" fill="#2f3a2b">No guide (80%).</text>
+<text x="252" y="135" font-size="15" fill="#2f3a2b">$630 licence</text>
+<text x="18" y="187" font-size="16" font-weight="bold" fill="#2f3a2b">Ducks and geese</text>
+<circle cx="230" cy="181.0" r="13" fill="#2f6e3b"/><path d="M224.3 182.0 l4.8 4.8 l9.5 -10.4" fill="none" stroke="#fffaf0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="252" y="177" font-size="15" fill="#2f3a2b">No guide.</text>
+<text x="252" y="197" font-size="15" fill="#2f3a2b">Plus 2 stamps</text>
+<rect x="8" y="212" width="384" height="62" rx="6" fill="#e9eedd"/>
+<text x="18" y="239" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear, deer,</text>
+<text x="18" y="259" font-size="16" font-weight="bold" fill="#2f3a2b">caribou, moose, wolf</text>
+<circle cx="230" cy="243.0" r="13" fill="#2c5d86"/><circle cx="230" cy="239.0" r="4" fill="#fffaf0"/><path d="M223 252.0 C223 245.0 237 245.0 237 252.0z" fill="#fffaf0"/>
+<text x="252" y="249" font-size="15" fill="#2f3a2b">Guide required</text>
+<text x="18" y="301" font-size="16" font-weight="bold" fill="#2f3a2b">Brown bear,</text>
+<text x="18" y="321" font-size="16" font-weight="bold" fill="#2f3a2b">sheep, goat</text>
+<circle cx="230" cy="305.0" r="13" fill="#2c5d86"/><circle cx="230" cy="301.0" r="4" fill="#fffaf0"/><path d="M223 314.0 C223 307.0 237 307.0 237 314.0z" fill="#fffaf0"/>
+<text x="252" y="301" font-size="15" fill="#2f3a2b">Guide. Often a</text>
+<text x="252" y="321" font-size="15" fill="#2f3a2b">draw permit</text>
+<rect x="8" y="336" width="384" height="62" rx="6" fill="#e9eedd"/>
+<text x="18" y="373" font-size="16" font-weight="bold" fill="#2f3a2b">Bison, muskox, elk</text>
+<circle cx="230" cy="367.0" r="13" fill="#2c5d86"/><circle cx="230" cy="363.0" r="4" fill="#fffaf0"/><path d="M223 376.0 C223 369.0 237 369.0 237 376.0z" fill="#fffaf0"/>
+<text x="252" y="363" font-size="15" fill="#2f3a2b">Guide. Draw or</text>
+<text x="252" y="383" font-size="15" fill="#2f3a2b">registration</text>
+<text x="200" y="424" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Guide within 100 yards (91 m) of you (85%).</text>
+</svg>

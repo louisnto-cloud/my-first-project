@@ -1,0 +1,32 @@
+/* Hunt Map icons: inline SVG, 24 by 24, drawn with currentColor. */
+const s = (body, extra = '') => `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${body}</svg>`;
+
+export const ICONS = {
+  menu: s('<path d="M4 7h16M4 12h16M4 17h16" stroke-width="2.4"/>'),
+  profile: s('<path d="M4.5 20v-4.5M8.5 20v-7M12.5 20v-5M16.5 20v-9M20.5 20V6.5" stroke-width="2.4"/><path d="M3.5 10.5 8 6.6l4 2.6 8.5-6" stroke-width="1.6"/>'),
+  search: s('<circle cx="10.5" cy="10.5" r="6.3" stroke-width="2.6"/><path d="m15.4 15.4 5 5" stroke-width="2.8"/>'),
+  weather: s('<path d="M15.5 4.2v1.2M20.6 9h-1.2M19.1 5.4l-.9.9M12 5.4l.9.9" stroke-width="1.6"/><path d="M12.6 8.4a3.2 3.2 0 0 1 5.6 2.7" stroke-width="1.8"/><path d="M7 19.5h9.6a3.6 3.6 0 0 0 .4-7.2 5.2 5.2 0 0 0-9.9 1.1A3.1 3.1 0 0 0 7 19.5Z" fill="currentColor" stroke="none"/>'),
+  locate: s('<circle cx="12" cy="12" r="6.8" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6" stroke-width="2"/>'),
+  follow: s('<path d="M12 3 19 20l-7-3.6L5 20Z" fill="currentColor" stroke-width="1.6"/>'),
+  compass: '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M12 2.5 15.2 12H8.8Z" fill="#e4472b"/><path d="M8.8 12h6.4L12 21.5Z" fill="currentColor" opacity=".75"/></svg>',
+  offline: s('<path d="M5.6 6.6a8 8 0 0 0 0 10.8M18.4 6.6a8 8 0 0 1 0 10.8M8.4 9.3a4.2 4.2 0 0 0 0 5.4M15.6 9.3a4.2 4.2 0 0 1 0 5.4" stroke-width="1.9"/><path d="m10.7 10.7 2.6 2.6M13.3 10.7l-2.6 2.6" stroke-width="1.9"/>'),
+  content: s('<path d="M3.5 7.3c0-.9.7-1.6 1.6-1.6h4.2l1.9 2h7.7c.9 0 1.6.7 1.6 1.6v8.6c0 .9-.7 1.6-1.6 1.6H5.1c-.9 0-1.6-.7-1.6-1.6Z" fill="currentColor" stroke="none"/><path d="M7.5 13h6M7.5 16h9" stroke="#fff" stroke-width="1.8" class="hmm-ic-cut"/>'),
+  tools: s('<path d="m13.8 4.2 3 3-8.3 8.3-3.6.6.6-3.6Z" fill="currentColor" stroke-width="1.6"/><rect x="3" y="17" width="18" height="4.4" rx="1" stroke-width="1.7"/><path d="M7 17v2M11 17v2.4M15 17v2M19 17v2.4" stroke-width="1.4"/>'),
+  insights: s('<path d="M10.2 10.6h3.6l-.5 6.2L12 20.8l-1.3-4Z" fill="currentColor" stroke-width="1.4"/><path d="M10.4 10.4C7.6 9.6 6 7.6 5.8 4.2M7.1 7.9 4.6 7.3M8.4 9.6 6.6 10.8M13.6 10.4c2.8-.8 4.4-2.8 4.6-6.2M16.9 7.9l2.5-.6M15.6 9.6l1.8 1.2" stroke-width="1.7"/><path d="M9.3 11.6 7.4 12.8M14.7 11.6l1.9 1.2" stroke-width="1.5"/>'),
+  track: s('<path d="M12 2.8a3.6 3.6 0 0 0-3.6 3.6c0 2.7 3.6 6.2 3.6 6.2s3.6-3.5 3.6-6.2A3.6 3.6 0 0 0 12 2.8Z" fill="currentColor" stroke-width="1.4"/><circle cx="12" cy="6.4" r="1.2" fill="#fff" stroke="none" class="hmm-ic-cut"/><path d="M9.2 15.2H7.6a2.3 2.3 0 0 0 0 4.6h8.8a2.3 2.3 0 0 1 0 4.6" stroke-width="1.8" transform="translate(0 -2.6)"/>'),
+  layers: s('<path d="M12 3.2 21 8l-9 4.8L3 8Z" fill="currentColor" stroke-width="1.6"/><path d="m3 12 9 4.8 9-4.8M3 16l9 4.8 9-4.8" stroke-width="1.8"/>'),
+  close: s('<path d="M6 6l12 12M18 6 6 18" stroke-width="2.4"/>'),
+  info: s('<circle cx="12" cy="12" r="9" stroke-width="1.8"/><path d="M12 11v6" stroke-width="2.2"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor" stroke="none"/>'),
+  download: s('<path d="M12 4v11m-5-5 5 5 5-5M5 20h14" stroke-width="2.2"/>'),
+  trash: s('<path d="M4 7h16M9.5 7V4.5h5V7M6.2 7l1 12.5h9.6l1-12.5" stroke-width="2"/>'),
+  edit: s('<path d="M4 20h4L19 9l-4-4L4 16Z" stroke-width="2"/>'),
+  target: s('<circle cx="12" cy="12" r="6" stroke-width="2"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-width="2"/>'),
+  chevron: s('<path d="m9 6 6 6-6 6" stroke-width="2.2"/>'),
+  back: s('<path d="M15 5 8 12l7 7" stroke-width="2.4"/>'),
+  pin: s('<path d="M12 22s7-7.1 7-12.2A7 7 0 0 0 5 9.8C5 14.9 12 22 12 22Z" fill="currentColor" stroke="none"/><circle cx="12" cy="9.6" r="2.6" fill="#fff" stroke="none"/>'),
+  car: s('<path d="M3 13.2 5.1 8.4Q5.7 7 7.3 7h9.4q1.6 0 2.2 1.4l2.1 4.8V17q0 1-1 1H4q-1 0-1-1Z" stroke-width="1.8"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/>'),
+  apple: s('<path d="M9 4.5 15 7l6-2.5v14.5L15 21.5 9 19l-6 2.5V7Z" stroke-width="1.8"/><path d="M9 4.5V19M15 7v14.5" stroke-width="1.6"/>'),
+  google: s('<path d="M12 21.5s6.5-6.6 6.5-11.4a6.5 6.5 0 0 0-13 0c0 4.8 6.5 11.4 6.5 11.4Z" stroke-width="1.9"/><circle cx="12" cy="10" r="2.4" stroke-width="1.8"/>'),
+  directions: s('<path d="m12 2.8 9.2 9.2-9.2 9.2L2.8 12Z" stroke-width="1.8"/><path d="M9 14v-2.4c0-.8.6-1.4 1.4-1.4H15m-2-2.2 2.2 2.2L13 12.4" stroke-width="1.7"/>'),
+  copy: s('<rect x="8" y="8" width="12" height="12" rx="2" stroke-width="1.9"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8" stroke-width="1.9"/>'),
+};

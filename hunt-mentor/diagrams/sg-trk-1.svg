@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1, count the toes. Two toes means a hoofed animal like deer, elk or moose. Four toes means the cat or dog family. Five toes means a bear.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Count the toes</text>
+  <g transform="translate(70 135) scale(1.6)" fill="#8b5a2b">
+    <path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/>
+    <path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/>
+  </g>
+  <g transform="translate(200 140) scale(1.5)" fill="#8b5a2b">
+    <path d="M-12 8 Q0 -4 12 8 Q14 20 0 22 Q-14 20 -12 8 Z"/>
+    <ellipse cx="-14" cy="-6" rx="5" ry="7"/><ellipse cx="14" cy="-6" rx="5" ry="7"/>
+    <ellipse cx="-5" cy="-19" rx="5" ry="7"/><ellipse cx="5" cy="-19" rx="5" ry="7"/>
+  </g>
+  <g transform="translate(330 145) scale(1.4)" fill="#8b5a2b">
+    <path d="M-22 4 Q-20 -6 0 -6 Q20 -6 22 4 Q22 22 0 24 Q-22 22 -22 4 Z"/>
+    <ellipse cx="-24" cy="-12" rx="5" ry="6"/><ellipse cx="-13" cy="-20" rx="5" ry="6.5"/><ellipse cx="0" cy="-23" rx="5.5" ry="7"/><ellipse cx="13" cy="-20" rx="5" ry="6.5"/><ellipse cx="24" cy="-12" rx="5" ry="6"/>
+  </g>
+  <g font-size="34" font-weight="bold" fill="#e8590c" text-anchor="middle">
+    <text x="70" y="235">2</text><text x="200" y="235">4</text><text x="330" y="235">5</text>
+  </g>
+  <g font-size="16" fill="#2f3a2b" text-anchor="middle">
+    <text x="70" y="262">Hoofed</text><text x="70" y="281">deer, elk, moose</text>
+    <text x="200" y="262">Cat or dog</text><text x="200" y="281">family</text>
+    <text x="330" y="262">Bear</text>
+  </g>
+</svg>

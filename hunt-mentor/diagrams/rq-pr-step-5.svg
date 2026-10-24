@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5: Be there before the crowd. Map sketch: trucks with headlights on the road push a deer away from the road toward a hunter already sitting on the trail. In place 30 minutes before legal light. Opening morning traffic pushes deer to you (Tip).">
+<rect width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/><text x="30" y="37" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">5</text><text x="60" y="26" font-size="16" font-weight="bold" fill="#2f3a2b">Be there before the crowd</text>
+<rect x="60" y="72" width="280" height="164" fill="#dfe6d3" stroke="#8a9a6b"/>
+<clipPath id="rq-pr-step-5-c"><rect x="60" y="72" width="280" height="164"/></clipPath>
+<g clip-path="url(#rq-pr-step-5-c)"><path d="M80 72 C90 120 70 170 96 236" stroke="#e8590c" stroke-width="58" fill="none" opacity=".33"/><path d="M80 72 C90 120 70 170 96 236" stroke="#23261f" stroke-width="5" fill="none"/></g>
+<ellipse cx="292" cy="154" rx="50" ry="70" fill="#9fb08a" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="292" cy="154" rx="38" ry="54" fill="#7f9a6c" stroke="#8b5a2b" stroke-width="1.2"/>
+<ellipse cx="292" cy="154" rx="26" ry="38" fill="#5f7f50" stroke="#8b5a2b" stroke-width="1.2"/>
+<g transform="translate(84 120) rotate(80)"><rect x="-16" y="-8" width="32" height="16" rx="3" fill="#3d5a80"/><rect x="4" y="-7" width="9" height="14" rx="2" fill="#c9d6e0"/></g>
+<g transform="translate(86 186) rotate(84)"><rect x="-16" y="-8" width="32" height="16" rx="3" fill="#8b5a2b"/><rect x="4" y="-7" width="9" height="14" rx="2" fill="#c9d6e0"/></g>
+<path d="M98 110 l26 -8 v20z" fill="#ffd34d" opacity=".55"/>
+<path d="M100 176 l26 -8 v20z" fill="#ffd34d" opacity=".55"/>
+<g transform="translate(148 160) scale(-0.7 0.7)"><path d="M-8 -18 L-10 0 M-4 -18 L-3 0 M12 -18 L13 0 M16 -18 L18 0" stroke="#5a3e26" stroke-width="2.4" stroke-linecap="round"/><path d="M-12 -28 C-12 -34 -4 -34 6 -34 C14 -34 20 -32 20 -26 C20 -20 16 -17 8 -17 L-6 -17 C-10 -17 -12 -21 -12 -28z" fill="#9a7350"/><path d="M-10 -30 L-16 -42 L-12 -44 L-6 -32z" fill="#9a7350"/><path d="M-16 -42 C-20 -43 -24 -40 -24 -38 L-20 -37 C-17 -37 -14 -39 -13 -41z" fill="#9a7350"/><path d="M-14 -44 L-18 -50 L-12 -45z M-12 -44 L-9 -50 L-10 -44z" fill="#9a7350"/><ellipse cx="18" cy="-27" rx="3" ry="4" fill="#f3ead8"/><circle cx="-18" cy="-41" r=".9" fill="#111"/></g>
+<path d="M168 150 C190 142 206 142 222 148" stroke="#6b4f35" stroke-width="2.6" stroke-dasharray="5 4" fill="none"/><path d="M228.0 150.0 L220.0 143.6 L218.3 153.3z" fill="#6b4f35"/>
+<g transform="translate(236 186) scale(0.75 0.75)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#e8590c"/><rect x="-15" y="-41" width="10" height="17" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M4 -36 L11 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<rect x="69.7" y="244.0" width="260.5" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="200" y="263" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">In place 30 min before legal light</text>
+<text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle">Opening morning traffic pushes deer to you (Tip).</text>
+</svg>

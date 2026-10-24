@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Look around cover, not over it. Left, crossed: a head pokes up over the top of a bush, a round shape against the sky. Right, ticked: the hunter looks around the side of a tree trunk, low and in shade.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="240" width="400" height="60" fill="#c9b79c"/>
+  <ellipse cx="100" cy="200" rx="70" ry="46" fill="#8a9a6b"/>
+  <circle cx="100" cy="148" r="16" fill="#2f3a2b"/>
+  <path d="M60 60 L140 120 M140 60 L60 120" stroke="#c0392b" stroke-width="6"/>
+  <text x="100" y="40" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">Over: skyline head</text>
+  <rect x="280" y="60" width="26" height="182" fill="#6b4f35"/>
+  <polygon points="250,120 293,30 336,120" fill="#2f3a2b"/>
+  <circle cx="318" cy="170" r="14" fill="#2f3a2b"/><rect x="306" y="182" width="30" height="58" rx="8" fill="#2f3a2b"/>
+  <path d="M340 90 l12 12 l24 -28" fill="none" stroke="#2f6e3b" stroke-width="6"/>
+  <text x="300" y="276" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Around the side</text>
+  <text x="100" y="276" font-size="15" fill="#2f3a2b" text-anchor="middle">stay off the skyline</text>
+</svg>

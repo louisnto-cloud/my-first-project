@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 660" font-family="sans-serif" role="img" aria-label="Maps A23 to A29, Campbell River to the west coast. A23 Lukwa Lake: No Hunting Area, MU 1-6. A24 Quinsam Coal Mine site: No Shooting Area, MU 1-6. A25 Shoemaker Bay: No Shooting Area, MU 1-7. A27 Ucluelet Inlet: No Hunting or Shooting Area, MU 1-8. A26 Iron River and Oyster River: special 2 point or better mule deer area, and youth only antlerless, MU 1-6. A28 Kakweiken River: black bear closed area, MU 1-15. A29 Conuma watershed: bow only for all big game with open seasons in Management Unit 1-12.">
+<rect width="400" height="660" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Maps A23 to A29. MU: Management Unit</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NO HUNTING OR NO SHOOTING</text>
+<rect x="8" y="68" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="90.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="110.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A23</text>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Lukwa Lake</text>
+<text x="78" y="110" font-size="15" fill="#c0392b">No Hunting Area</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">MU 1-6</text>
+<rect x="14" y="166.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="186.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A24</text>
+<text x="78" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Quinsam Coal Mine site</text>
+<text x="78" y="186" font-size="15" fill="#d9480f">No Shooting Area</text>
+<text x="78" y="205" font-size="15" fill="#2f3a2b">MU 1-6</text>
+<rect x="8" y="220" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="242.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="262.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A25</text>
+<text x="78" y="243" font-size="16" font-weight="bold" fill="#2f3a2b">Shoemaker Bay</text>
+<text x="78" y="262" font-size="15" fill="#d9480f">No Shooting Area</text>
+<text x="78" y="281" font-size="15" fill="#2f3a2b">MU 1-7</text>
+<rect x="14" y="318.0" width="54" height="30" rx="6" fill="#c0392b"/>
+<text x="41" y="338.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A27</text>
+<text x="78" y="319" font-size="16" font-weight="bold" fill="#2f3a2b">Ucluelet Inlet</text>
+<text x="78" y="338" font-size="15" fill="#c0392b">No Hunting or Shooting Area</text>
+<text x="78" y="357" font-size="15" fill="#2f3a2b">MU 1-8</text>
+<rect x="8" y="380" width="384" height="30" rx="6" fill="#2f3a2b"/>
+<text x="18" y="401" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">SPECIAL RULES</text>
+<rect x="8" y="416" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="438.0" width="54" height="30" rx="6" fill="#2f3a2b"/>
+<text x="41" y="458.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A26</text>
+<text x="78" y="439" font-size="16" font-weight="bold" fill="#2f3a2b">Iron River, Oyster River</text>
+<text x="78" y="458" font-size="15" fill="#2f3a2b">2 point or better bucks, and youth only</text>
+<text x="78" y="477" font-size="15" fill="#2f3a2b">antlerless. MU 1-6</text>
+<rect x="14" y="514.0" width="54" height="30" rx="6" fill="#2f3a2b"/>
+<text x="41" y="534.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A28</text>
+<text x="78" y="515" font-size="16" font-weight="bold" fill="#2f3a2b">Kakweiken River</text>
+<text x="78" y="534" font-size="15" fill="#6b4f35">Black bear closed</text>
+<text x="78" y="553" font-size="15" fill="#2f3a2b">MU 1-15</text>
+<rect x="8" y="568" width="384" height="74" rx="6" fill="#f4eedf"/>
+<rect x="14" y="590.0" width="54" height="30" rx="6" fill="#2f3a2b"/>
+<text x="41" y="610.8" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">A29</text>
+<text x="78" y="591" font-size="16" font-weight="bold" fill="#2f3a2b">Conuma watershed</text>
+<text x="78" y="610" font-size="15" fill="#2f3a2b">Bow only for all big game with open</text>
+<text x="78" y="629" font-size="15" fill="#2f3a2b">seasons. MU 1-12</text>
+</svg>

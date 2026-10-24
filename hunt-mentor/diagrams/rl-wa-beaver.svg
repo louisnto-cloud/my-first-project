@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a beaver pond behind a dam, with willow and alder around the edges, ducks on the water, drowned snags, a creek leaving below the dam, an animal trail crossing on the dam, and conifers beyond. Labels: the dam is a crossing for animals, the edges are willow and alder browse, and the pond draws ducks, moose and deer. Caption: water, browse and cover in one place.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="14" y="26" font-size="18" font-weight="bold" fill="#2f3a2b">Beaver pond: a magnet</text>
+<text x="386" y="26" font-size="14" fill="#6b5b4b" text-anchor="end">map view</text>
+<rect x="8" y="38" width="384" height="224" rx="6" fill="#e3e8cf"/>
+<path d="M14 52 C40 60 50 84 86 104" fill="none" stroke="#4a7fb0" stroke-width="5" stroke-linecap="round"/>
+<path d="M302 168 C318 190 330 200 352 214 C366 224 374 236 386 256" fill="none" stroke="#4a7fb0" stroke-width="5" stroke-linecap="round"/>
+<path d="M84 112 C80 86 120 70 170 72 C220 74 262 82 286 100 C300 112 302 140 296 168 C288 196 246 206 196 204 C140 202 96 190 86 160 C82 146 86 128 84 112z" fill="#9cbcd8" stroke="#6f97ba" stroke-width="2"/>
+<circle cx="150" cy="150" r="3" fill="#7d7363"/><path d="M144 150 H156 M150 144 V156" stroke="#7d7363" stroke-width="1.6"/>
+<circle cx="230" cy="120" r="3" fill="#7d7363"/><path d="M224 120 H236 M230 114 V126" stroke="#7d7363" stroke-width="1.6"/>
+<circle cx="250" cy="170" r="3" fill="#7d7363"/><path d="M244 170 H256 M250 164 V176" stroke="#7d7363" stroke-width="1.6"/>
+<g transform="translate(176 112)"><path d="M-9 0 C-9 -5 -2 -6 4 -5 L6 -10 C8 -13 13 -12 13 -8 L17 -7 L12 -5 C12 1 4 4 -4 4 C-8 4 -9 2 -9 0z" fill="#5c4a32"/><path d="M6 -10 C8 -13 13 -12 13 -8 L10 -6z" fill="#2f6e3b"/><path d="M-12 6 Q0 3 14 6" stroke="#6f97ba" stroke-width="1.4" fill="none"/></g>
+<g transform="translate(198 124)"><path d="M-9 0 C-9 -5 -2 -6 4 -5 L6 -10 C8 -13 13 -12 13 -8 L17 -7 L12 -5 C12 1 4 4 -4 4 C-8 4 -9 2 -9 0z" fill="#5c4a32"/><path d="M6 -10 C8 -13 13 -12 13 -8 L10 -6z" fill="#2f6e3b"/><path d="M-12 6 Q0 3 14 6" stroke="#6f97ba" stroke-width="1.4" fill="none"/></g>
+<path d="M286 96 C304 116 308 146 298 172 C290 192 276 202 262 208" fill="none" stroke="#7a5230" stroke-width="10" stroke-linecap="round"/>
+<path d="M296 104 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M298 115 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M300 126 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M296 137 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M298 148 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M300 159 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M296 170 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M298 181 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M300 192 l9 4" stroke="#4e321b" stroke-width="2" stroke-linecap="round"/>
+<path d="M276 86 L286 96 C304 116 308 146 298 172 C290 192 276 202 262 208 L248 214" fill="none" stroke="#f3ead8" stroke-width="2.4" stroke-dasharray="5 4"/>
+<circle cx="89.5" cy="88.5" r="8.0" fill="#a7bd73"/>
+<circle cx="86.0" cy="92.4" r="7.1" fill="#8faa5c"/>
+<circle cx="85.8" cy="92.1" r="6.1" fill="#a7bd73"/>
+<circle cx="79.1" cy="127.7" r="6.3" fill="#a7bd73"/>
+<circle cx="78.9" cy="135.3" r="6.4" fill="#8faa5c"/>
+<circle cx="76.1" cy="133.3" r="8.8" fill="#a7bd73"/>
+<circle cx="91.1" cy="169.0" r="8.9" fill="#a7bd73"/>
+<circle cx="83.7" cy="173.6" r="6.9" fill="#8faa5c"/>
+<circle cx="85.0" cy="166.2" r="6.9" fill="#a7bd73"/>
+<circle cx="114.4" cy="188.8" r="7.7" fill="#a7bd73"/>
+<circle cx="111.9" cy="190.7" r="7.6" fill="#8faa5c"/>
+<circle cx="103.9" cy="187.6" r="6.6" fill="#a7bd73"/>
+<circle cx="142.5" cy="203.3" r="6.9" fill="#a7bd73"/>
+<circle cx="141.2" cy="203.5" r="6.9" fill="#8faa5c"/>
+<circle cx="144.1" cy="206.0" r="6.7" fill="#a7bd73"/>
+<circle cx="177.0" cy="210.3" r="8.6" fill="#a7bd73"/>
+<circle cx="179.2" cy="207.9" r="8.9" fill="#8faa5c"/>
+<circle cx="170.7" cy="209.2" r="8.3" fill="#a7bd73"/>
+<circle cx="209.1" cy="209.9" r="6.1" fill="#a7bd73"/>
+<circle cx="216.4" cy="212.6" r="7.7" fill="#8faa5c"/>
+<circle cx="219.3" cy="208.1" r="8.1" fill="#a7bd73"/>
+<circle cx="249.3" cy="206.8" r="7.4" fill="#a7bd73"/>
+<circle cx="252.8" cy="210.4" r="7.4" fill="#8faa5c"/>
+<circle cx="250.3" cy="201.6" r="8.1" fill="#a7bd73"/>
+<circle cx="122.1" cy="80.9" r="8.5" fill="#a7bd73"/>
+<circle cx="117.0" cy="74.9" r="8.0" fill="#8faa5c"/>
+<circle cx="113.3" cy="75.6" r="6.5" fill="#a7bd73"/>
+<circle cx="154.6" cy="73.6" r="8.3" fill="#a7bd73"/>
+<circle cx="154.8" cy="75.5" r="7.2" fill="#8faa5c"/>
+<circle cx="165.2" cy="73.8" r="7.3" fill="#a7bd73"/>
+<circle cx="206.7" cy="83.8" r="8.5" fill="#a7bd73"/>
+<circle cx="211.1" cy="77.8" r="7.2" fill="#8faa5c"/>
+<circle cx="204.0" cy="83.8" r="8.9" fill="#a7bd73"/>
+<circle cx="245.1" cy="80.8" r="6.7" fill="#a7bd73"/>
+<circle cx="246.3" cy="83.8" r="7.8" fill="#8faa5c"/>
+<circle cx="246.7" cy="79.0" r="7.3" fill="#a7bd73"/>
+<circle cx="330.0" cy="58.0" r="10.0" fill="#000" opacity=".12"/><circle cx="330.0" cy="56.0" r="10.0" fill="#3f6a34"/><circle cx="327.0" cy="53.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="362.0" cy="72.0" r="10.0" fill="#000" opacity=".12"/><circle cx="362.0" cy="70.0" r="10.0" fill="#3f6a34"/><circle cx="359.0" cy="67.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="374.0" cy="48.0" r="10.0" fill="#000" opacity=".12"/><circle cx="374.0" cy="46.0" r="10.0" fill="#3f6a34"/><circle cx="371.0" cy="43.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="24.0" cy="234.0" r="10.0" fill="#000" opacity=".12"/><circle cx="24.0" cy="232.0" r="10.0" fill="#3f6a34"/><circle cx="21.0" cy="229.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="24.0" cy="94.0" r="10.0" fill="#000" opacity=".12"/><circle cx="24.0" cy="92.0" r="10.0" fill="#3f6a34"/><circle cx="21.0" cy="89.0" r="4.5" fill="#fff" opacity=".12"/>
+<circle cx="366.0" cy="102.0" r="10.0" fill="#000" opacity=".12"/><circle cx="366.0" cy="100.0" r="10.0" fill="#3f6a34"/><circle cx="363.0" cy="97.0" r="4.5" fill="#fff" opacity=".12"/>
+<line x1="196" y1="136" x2="200" y2="70" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="196" cy="136" r="2.6" fill="#2f3a2b"/><rect x="114.9" y="44.0" width="170.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="200" y="64.5" font-size="16" font-weight="bold" fill="#2c5d86" text-anchor="middle">Ducks, moose, deer</text>
+<line x1="305" y1="136" x2="306.64" y2="136" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="305" cy="136" r="2.6" fill="#2f3a2b"/><rect x="306.6" y="112.0" width="90.7" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="352" y="131" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Dam:</text>
+<text x="352" y="149" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">a crossing</text>
+<line x1="112" y1="196" x2="120" y2="232" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="112" cy="196" r="2.6" fill="#2f3a2b"/><rect x="50.9" y="232.0" width="198.2" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="150" y="252.5" font-size="16" font-weight="bold" fill="#4f6b2c" text-anchor="middle">Willow and alder edges</text>
+<text x="200" y="286" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Water, browse and cover in one place</text>
+</svg>

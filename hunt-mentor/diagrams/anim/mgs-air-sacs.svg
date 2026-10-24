@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" font-family="sans-serif" role="img" aria-label="Animation of a goose breathing, a Canada goose in side view with the body shown as a cutaway. The lungs sit high on the back, the front air sacs in the chest, the rear air sacs at the back of the body. Step 1, breath in: fresh air goes down the windpipe past the lungs into the rear air sacs. Step 2, breath out: the rear sacs push that air forward through the lungs, where oxygen is taken up. Step 3, the next breaths move the used air into the front sacs and out of the windpipe. Birds have 9 air sacs and fresh air crosses the lungs in both phases, 85 percent.">
+<rect width="400" height="372" fill="#fffaf0"/>
+<text x="200" y="22" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Air flows one way through the lungs</text>
+<path d="M44 150 L18 138 L22 160 L44 166z" fill="#2a2622"/>
+<path d="M150 200 L146 228 M200 202 L204 228 M136 230 h18 M196 230 h18" stroke="#2a2622" stroke-width="4" stroke-linecap="round"/>
+<path d="M40 160 Q36 130 70 116 Q120 98 196 102 L254 98 Q276 100 288 112 Q304 136 290 170 Q270 206 210 210 Q150 214 100 206 Q56 196 40 160z" fill="#efe6d6" stroke="#5a4a3a" stroke-width="2"/>
+<path d="M262 108 Q272 76 284 54 Q292 38 312 36 Q330 34 338 46 L352 52 L338 58 Q326 60 316 58 Q302 62 298 80 Q292 100 290 118z" fill="#24211e"/>
+<path d="M312 46 Q318 58 326 58 Q320 50 318 42z" fill="#f4efe4"/>
+<circle cx="326" cy="44" r="2" fill="#f4efe4"/>
+<path d="M80 128 Q140 112 200 120 Q170 140 110 146 Q86 146 80 128z" fill="#d8cdb8" opacity=".6"/>
+<path d="M336 52 Q304 60 294 86 Q284 108 250 118" fill="none" stroke="#9a9ca2" stroke-width="5" stroke-linecap="round"/>
+<path d="M170 122 C186 108 226 106 244 116 C250 126 240 134 224 134 C200 136 182 134 170 128z" fill="#e48d97" stroke="#b5606b" stroke-width="1.4"/>
+<ellipse cx="252" cy="158" rx="24" ry="20" fill="#cfe0f0" stroke="#7fa6c8" stroke-width="1.4"/>
+<ellipse cx="122" cy="164" rx="44" ry="28" fill="#cfe0f0" stroke="#7fa6c8" stroke-width="1.4"/>
+<line x1="196" y1="116" x2="166" y2="81" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="196" cy="116" r="2.6" fill="#2f3a2b"/><rect x="132.1" y="52.0" width="55.8" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="160" y="72.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">lungs</text>
+<line x1="292" y1="92" x2="307.466" y2="108" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="292" cy="92" r="2.6" fill="#2f3a2b"/><rect x="307.5" y="96.0" width="84.5" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="349.733" y="116.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">windpipe</text>
+<line x1="258" y1="172" x2="280" y2="240" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="258" cy="172" r="2.6" fill="#2f3a2b"/><rect x="242.9" y="240.0" width="94.1" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="290" y="260.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">front sacs</text>
+<line x1="116" y1="184" x2="104" y2="240" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="116" cy="184" r="2.6" fill="#2f3a2b"/><rect x="52.0" y="240.0" width="88.0" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="96" y="260.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">rear sacs</text>
+<path id="mgs-air-sacs-p1" d="M334 52 Q300 60 290 86 Q280 108 244 120 Q186 132 124 164" fill="none"/>
+<path id="mgs-air-sacs-p2" d="M124 164 Q144 130 172 122 L236 122 Q250 138 252 156" fill="none"/>
+<path id="mgs-air-sacs-p3" d="M252 156 Q262 124 284 104 Q294 74 334 52" fill="none"/>
+<circle r="7" fill="#2f6fb0" stroke="#fffaf0" stroke-width="1.5" opacity="0"><set attributeName="opacity" to="1" begin="0s"/><animateMotion dur="3s" begin="0s" fill="freeze"><mpath href="#mgs-air-sacs-p1"/></animateMotion></circle>
+<circle r="7" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5" opacity="0"><set attributeName="opacity" to="1" begin="3s"/><animateMotion dur="3s" begin="3s" fill="freeze"><mpath href="#mgs-air-sacs-p2"/></animateMotion></circle>
+<circle r="7" fill="#7a7a7a" stroke="#fffaf0" stroke-width="1.5" opacity="0"><set attributeName="opacity" to="1" begin="6s"/><animateMotion dur="3s" begin="6s" fill="freeze"><mpath href="#mgs-air-sacs-p3"/></animateMotion></circle>
+<g opacity="0"><set attributeName="opacity" to="1" begin="0s"/><text x="12" y="290" font-size="15" font-weight="bold" fill="#2f6fb0">1. Breath in: fresh air to the rear sacs</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="3s"/><text x="12" y="312" font-size="15" font-weight="bold" fill="#c2410c">2. Breath out: rear sacs push it through the lungs</text></g>
+<g opacity="0"><set attributeName="opacity" to="1" begin="6s"/><text x="12" y="334" font-size="15" font-weight="bold" fill="#4d4d4d">3. Next breaths: front sacs, then out</text></g>
+<text x="200" y="362" font-size="15" fill="#2f3a2b" text-anchor="middle">9 air sacs, fresh air in both phases (85%)</text>
+</svg>

@@ -1,0 +1,491 @@
+# Glossary
+
+- **ACTS**: Firearm safety rules. Assume every firearm is loaded. Control the muzzle direction at all times. Trigger finger off the trigger and out of the trigger guard. See that the firearm is unloaded: PROVE it safe (85%).
+- **Antlerless**: A deer with no antlers. Usually a doe or a fawn. Some seasons only allow antlerless.
+- **ATV**: All terrain vehicle. A quad.
+- **CSV**: Comma separated values. A plain spreadsheet file. Opens in Excel, Numbers or Google Sheets. The sightings log and journal export as CSV.
+- **Backstop**: What is behind your target that will stop the bullet. Earth is good. Sky is never a backstop. In navigation lessons, a backstop is also a big line you must not cross (a river, road or ridge) that tells you that you went too far.
+- **Bag limit**: Most animals of a kind you may take in one day (birds) or one year (big game).
+- **Bore sight**: Lining up the scope with the barrel before shooting, to get on paper fast.
+- **CORE**: Conservation and Outdoor Recreation Education. BC hunter education course.
+- **Crown land**: Public land owned by the province. Hunting is often allowed unless closed.
+- **CWD**: Chronic Wasting Disease. A fatal brain disease in deer, elk and moose.
+- **ECCC**: Environment and Climate Change Canada. Sets migratory bird rules.
+- **FSR**: Forest Service Road. Gravel resource road on Crown land.
+- **FWID**: Fish and Wildlife ID. Your 9 digit BC hunter number. Replaced the old hunter number card.
+- **Glassing**: Scanning country slowly with binoculars to find animals.
+- **LEH**: Limited Entry Hunting. A draw for special hunts.
+- **MGBHP**: Migratory Game Bird Hunting Permit. Federal permit to hunt ducks and geese. Includes the habitat stamp.
+- **MU**: Management Unit. A numbered hunting area, like 3 17. Rules differ by MU.
+- **PAL**: Possession and Acquisition Licence. Federal licence to own and buy firearms.
+- **Patterning**: Shooting a shotgun at paper to see how the shot spreads.
+- **PFD**: Personal flotation device. A life jacket.
+- **Picatinny rail**: A standard mounting strip with slots, used to attach scope rings.
+- **Species licence**: The BC "tag" for a big game animal. Paper, notched when you kill the animal.
+- **Synopsis**: The BC Hunting and Trapping Regulations Synopsis. Plain language summary of the law.
+- **WILD**: Wildlife Information and Licensing Data. BC online system to buy licences.
+- **Zero**: The distance where your bullet hits exactly where the crosshair points.
+- **4 point buck**: A mule deer buck with at least 4 tines (points) on one antler, not counting the brow tine (99%). A tine must be at least 2.5 cm (1 in) long and longer than it is wide (99%). Synopsis page 4, read 2026-10-02.
+- **Bachelor group**: A small summer group of bucks (2 to 4) that breaks up in fall.
+- **Brow tine**: The short point near the base of the antler, just above the eye.
+- **Browse**: Twigs, buds and leaves of shrubs and trees that deer eat. Also the sign left when they eat them.
+- **Button buck**: A male fawn with small bumps instead of antlers. Counts as antlerless.
+- **Flag**: A white tail's raised, waving white tail when it runs from danger.
+- **Forb**: A small leafy flowering plant that is not a grass.
+- **Metatarsal gland**: A scent patch on the outside of a deer's hind leg. Long on mule deer, small on white tails.
+- **Pre rut**: The weeks before the rut. Bucks spar, rub trees and start checking does.
+- **Rattling**: Clacking antlers together to sound like fighting bucks.
+- **Riparian**: The green strip of land along a river or creek.
+- **Rub**: Bark scraped off a sapling by a buck's antlers.
+- **Rut**: The breeding season. Mule deer mid November to mid December. White tails peak in November.
+- **Scrape**: A pawed bare patch of dirt under a low branch, made by a buck around the rut.
+- **Spot and stalk**: Find the animal with binoculars from far away, then sneak within range.
+- **Stand hunting**: Sitting in one spot, such as a tree stand or ground blind, on a trail and waiting.
+- **Still hunting**: Walking very slowly through cover, stopping often to look and listen.
+- **Stot**: The mule deer bounce. All 4 feet hit the ground and push off together.
+- **Thermals**: Air sliding up a slope as it warms (morning) and down as it cools (evening). They carry your scent.
+- **Tine**: A branch of an antler. Also called a point.
+- **Winter range**: The lower, sunnier slopes where deer spend the winter.
+- **PROVE**: Firearm safety steps. Point the firearm in the safest available direction. Remove all cartridges. Observe the chamber. Verify the feeding path. Examine the bore (85%).
+- **Zone of fire**: The slice of ground in front of a hunter where they may shoot, about 45 degrees. Never swing past it.
+- **Cold shock**: The gasp and fast breathing in the first minute in cold water.
+- **1 10 1 principle**: A name for cold water stages: about 1 minute of cold shock, 10 minutes of useful movement, 1 hour to unconsciousness. A guide, not exact timing.
+- **HELP**: Heat Escape Lessening Posture. Knees up and arms crossed in the water to slow heat loss.
+- **PCOC**: Pleasure Craft Operator Card. Proof of competency to run a boat fitted with a motor.
+- **FVPA**: Firearm Violence Prevention Act. BC law in force 1 October 2026 on loaded firearms and shooting from vehicles and boats.
+- **STOP**: Stop, Think, Observe, Plan. What to do when lost, disoriented or hurt.
+- **Trip plan**: A written plan of who, where, route and return time, left with someone at home.
+- **Satellite messenger**: A device that sends SOS and texts by satellite where there is no cell signal.
+- **RAPP**: Report All Poachers and Polluters. BC line to report wildlife and environmental violations: 1 877 952 7277 (85%).
+- **Tourniquet**: A band tightened above a wound on an arm or leg to stop life threatening bleeding.
+- **SOFTT**: Special Operations Forces Tactical Tourniquet. A commercial windlass tourniquet.
+- **Stalking**: Closing the distance on an animal you have already seen.
+- **Record of Receipt**: A written note that must go with game carried by someone other than the hunter who killed it.
+- **Evidence of sex**: The body part that must stay naturally attached to show if the animal was male or female.
+- **Edible portions**: Meat you must not waste. Big game (not wolf, lynx, bobcat or wolverine): the neck, ribs, all 4 quarters and the loins. Game birds: both breasts (99%, synopsis page 3, read 2026-10-02).
+- **Loaded**: In BC, a firearm with ammunition in the breech or firing chamber, in a fixed magazine inside it, in a magazine on a hinged floor plate, or in a detachable magazine that is inside or attached to it. It counts as loaded even if it cannot fire for the moment (99%, synopsis page 3, 2 October 2026 edition).
+- **Road allowance**: The strip along every numbered highway and every 2 lane or wider public road maintained by the Ministry of Transportation and Infrastructure, the federal government or another province. No hunting or shooting in it, and no shooting across it (99%). It runs 15 m either side of the middle of a road under 3 lanes, 15 m from the paved edge of a wider highway, or to the edge of private or cultivated land, whichever comes first (99%). Synopsis page 10, read 2026-10-02. See the BC rules session.
+- **No Shooting Area**: A mapped area where firing a firearm is banned.
+- **Motor Vehicle Closed Area**: An area where some or all motor vehicles are banned.
+- **Ecological reserve**: Protected land. Hunting, trapping and angling are banned, and so is firing a firearm or bow (99%, synopsis page 9, read 2026-10-02). List and maps: bcparks.ca.
+- **Enclosed land**: Under the Trespass Act, land with a lawful fence, a natural boundary, or trespass signs at each normal access point.
+- **Non toxic shot**: Shot that is not lead, such as steel, bismuth or tungsten. Required for ducks and geese.
+- **Magazine plug**: A filler that limits a shotgun to 3 shells in total. Must not come out unless the gun is taken apart.
+- **Compulsory reporting**: A required report of a kill within 30 days, for listed species and areas.
+- **Field dressing**: Removing the guts soon after the kill.
+- **Gutless method**: Taking the meat off without opening the body cavity.
+- **Conservation officer**: BC wildlife law enforcement officer.
+- **Puddle duck**: A duck that feeds by tipping up in shallow water and jumps straight up to fly. Mallard, teal, wigeon.
+- **Diver**: A duck that dives for food and runs along the water to take off. Goldeneye, bufflehead.
+- **Jump shooting**: Sneaking up on ducks on small water and shooting as they flush.
+- **Pass shooting**: Shooting ducks as they fly over between roost and feeding areas.
+- **Decoy spread**: The pattern you set decoys in.
+- **J hook**: A decoy spread shaped like a J, with an open landing pocket in front of the hunter.
+- **Landing zone**: The open water in a decoy spread where you want ducks to land.
+- **Steel shot**: Non toxic shotgun pellets made of steel. Legal for ducks.
+- **Choke**: The narrowing at the end of a shotgun barrel that controls the spread of shot. Must be rated for steel to shoot steel.
+- **Power boat**: An old BC definition (July 2026 synopsis, page 4): a boat with a motor ready to use, with a tilted motor not counting. Repealed 1 October 2026 by B.C. Reg. 66/2026 and gone from the 2 October 2026 synopsis edition (99%). The duck rule now reads like the federal one: no hunting from a moving boat that has a motor or sail, and a boat still gliding from its motor counts as moving (99%). Read 2026-10-02.
+- **Covey**: A fall or winter flock of quail.
+- **ORV**: Off Road Vehicle. An ATV, dirt bike or side by side under BC law.
+- **Cultivated land**: Farmed land, orchards included. You need permission to hunt it.
+- **Grazing lease**: Crown land leased for livestock. You need the lease holder's OK while livestock are on it.
+- **Non resident Canadian**: A Canadian hunting in a province or territory where they do not live. Each place defines it a little differently.
+- **Outfitter**: A licensed business that guides paying hunters. Required for most non resident big game hunts in Yukon, Alberta and Alaska.
+- **Hunter host**: An Alberta resident with a Hunter Host Licence who accompanies up to 2 non resident hunters a year, unpaid (85%).
+- **WIN**: Wildlife Identification Number. Alberta's lifetime hunter number.
+- **Wildlife Certificate**: Alberta's base licence, bought before any hunting licence.
+- **HAL**: Hunting, Angling and Trapping Licence system. Saskatchewan's online licence account.
+- **GHA**: Game Hunting Area. Manitoba's numbered hunting zones.
+- **WMU**: Wildlife Management Unit. Alberta's numbered hunting zones.
+- **GMU**: Game Management Unit. Alaska's numbered hunting zones.
+- **Nonresident alien**: Alaska's term for a hunter who is not a US citizen and does not live in the US. Needs a guide for every big game animal (85%).
+- **Locking tag**: Alaska's paid big game tag that locks onto the animal after the kill.
+- **Sealing**: An agency placing a seal on a bear hide or skull, or sheep horns, before export.
+- **CBSA**: Canada Border Services Agency. Canadian customs at the border.
+- **CBP**: Customs and Border Protection. US customs at the border.
+- **ATF**: Bureau of Alcohol, Tobacco, Firearms and Explosives. US agency that approves Form 6NIA.
+- **ATF Form 6NIA**: US permit a non US hunter must have approved before bringing a firearm and ammunition into the US (85%).
+- **BSF407**: CBSA card listing serial numbered goods you take out of Canada, so you can prove they were not bought abroad.
+- **CFIA**: Canadian Food Inspection Agency. Sets rules for food and animal products entering Canada.
+- **CITES**: Convention on International Trade in Endangered Species. Permit needed to export some animal parts across borders.
+- **Skull plate**: The piece of skull the antlers grow from, kept with the antlers when the rest of the head is left behind.
+- **Spike fork bull**: A bull moose with no more than 2 tines on one antler, brow palm tines included. Not a calf. The legal class in Region 3 and 8 general seasons (98%).
+- **Tripalm bull**: A bull moose with at least one antler whose brow palm carries 3 or more tines (98%).
+- **10 point bull**: A bull moose with at least 10 tines on one antler, brow palm tines included (98%).
+- **Brow palm**: The lower, forward palm of a moose antler, split from the main palm by the deepest bay (98%).
+- **Calf**: A moose, elk or caribou under 12 months of age (98%).
+- **6 point bull**: A bull elk with at least 6 tines on one antler. The brow tine counts (98%).
+- **Mandatory Hunter Report**: The report every moose, elk or caribou species licence holder must file by 31 March, hunt or no hunt (98%).
+- **Bugle**: The rising whistle scream of a bull elk in the rut.
+- **Wallow**: A muddy pit a rutting bull moose or elk paws out and urinates in.
+- **Bell**: The flap of skin under a moose's throat. Both sexes have one.
+- **Boar**: An adult male bear.
+- **Sow**: An adult female bear.
+- **Cub**: A bear in its first year. Protected, along with any bear in its company (98%).
+- **Yearling**: A bear in its second year. Bears under 2 years are protected (98%).
+- **Hyperphagia**: The fall feeding frenzy when a bear eats huge amounts before denning.
+- **Shoulder hump**: The muscle mass over a grizzly's shoulders. Black bears have none.
+- **Dished face**: The scooped profile between a grizzly's eyes and nose. A black bear's profile is straight.
+- **Colour phase**: A coat colour variation within one species. Black bears can be black, brown, cinnamon or blond.
+- **Grizzly bear**: The large brown bear with a shoulder hump and dished face. No open season in BC (98%).
+- **Trichinosis**: A parasitic worm disease from undercooked meat, bear meat above all. Cook bear to 71 C (160 F) (80%).
+- **Speculum**: The coloured patch on the back edge of a duck's wing. The steadiest ID mark.
+- **Eclipse plumage**: The drab, hen like feathers a drake wears after breeding. Some keep it into fall.
+- **Restricted species**: Ducks with their own smaller daily limit inside the 8: pintail 4, canvasback 4, goldeneye 2, harlequin 2 (99%).
+- **Aggregate bag limit**: One limit shared by several species counted together.
+- **Possession limit**: The most you may hold at any time, home included, until birds are preserved. For migratory birds, 3 times the daily limit (99%).
+- **District**: A federal migratory bird hunting area made of listed MUs. District No. 3 covers Kamloops (99%).
+- **Cackling goose**: A small Arctic goose that looks like a mini Canada goose. Counted with Canada geese (99%).
+- **Franklin's grouse**: The southern BC form of the spruce grouse.
+- **Blue grouse**: Old name for the dusky grouse (Interior) and sooty grouse (coast).
+- **Rimfire**: A cartridge fired by striking its rim, like the .22 LR. Among birds, legal only for grouse, ptarmigan and turkey (99%).
+- **Centrefire**: A cartridge with a central primer, like the .308.
+- **Huns**: Hunter name for grey (Hungarian) partridge.
+- **Initiation Hunting Licence**: A once in a lifetime $19 licence for a BC resident 18 or older who never held a BC hunting licence. Must be supervised at all times (99%).
+- **Youth Hunting Licence**: A $7 licence for ages 10 to under 18, with close supervision (99%).
+- **Supervising hunter**: An adult who meets the synopsis rules and stays with a youth or initiation hunter.
+- **Bench**: A flat step on a slope where deer often bed or feed.
+- **Aspect**: The compass direction a slope faces.
+- **Glassing point**: A spot with a wide view used to scan a bench or slope with binoculars.
+- **Edge**: The line where two kinds of cover meet, such as timber and open ground.
+- **Cold front**: The leading edge of colder air, often with wind and a pressure change.
+- **Hunting pressure**: How many hunters use an area. Pushes deer into cover and into night movement.
+- **Furbearer**: An animal trapped for fur, such as beaver, marten or mink.
+- **Air sac**: Thin air bags in front of and behind a bird's lungs that fill much of its body. They move air but do not take up oxygen (80%).
+- **Crop**: A stretchy pouch at the base of a grouse's neck that holds a meal (85%). Remove it when you gut the bird.
+- **Gizzard**: A hard muscle pouch low in a bird's belly that grinds food with swallowed grit. Birds have no teeth (80%).
+- **Unihemispheric sleep**: Sleeping with half the brain while the other half stays awake, one eye open. Ducks at the edge of a group do it, open eye facing out (80%).
+- **Countercurrent heat exchange**: Warm blood going down a duck's leg passes right beside cool blood coming back up. The feet stay cold and the body stays warm (80%).
+- **Moult**: Dropping old feathers and growing new ones. After breeding, ducks drop their flight feathers and cannot fly for about 3 to 4 weeks (80%).
+- **Staging**: Big groups of birds stopping to rest and feed during spring or fall migration. Tranquille, at the head of Kamloops Lake, is staging ground for geese and swans (90%).
+- **Flight line**: The route ducks and geese fly each day between roosting water and feeding fields, often over low points and along rivers (75%).
+- **Refuge (sanctuary)**: Water or land where ducks and geese are not hunted and rest by day. Pressured mallards fly refuge to food and back about twice a day (80%). Some are legal sanctuaries with no hunting, such as the Vaseux Migratory Bird Sanctuary (99%).
+- **Cripple**: A bird or animal that is hit but not killed. You must make all reasonable effort to find, dispatch and retrieve it, and count it in your bag limit (99%, synopsis page 12, Retrieval).
+- **Tower**: When a hit bird climbs straight up, then falls. It has often been hit in the lungs: watch it all the way down (Tip).
+- **Field hunting**: Hunting ducks or geese over decoys in the farm field they fed in yesterday. You need the owner's permission on private land (99%).
+- **Layout blind**: A low blind you lie down in, used to hide in a stubble field for geese and ducks.
+- **Drumming**: The spring sound a male ruffed grouse makes by beating its wings while standing on a log, mostly March to May (75 to 85%). The wings beat the air, not the log (85%).
+- **Assembly call**: The three note quail call ("chi CA go") a bird gives when it is cut off from the covey or its mate, and when the covey moves (70%).
+- **Velvet**: The soft, hairy skin on growing antlers. Deer antlers grow in velvet April to August and are hard from about September (90%).
+- **Preorbital gland**: A scent gland at the front corner of a deer's eye. A buck rubs it on the licking branch over a scrape (80%).
+- **Tarsal gland**: A scent gland on the inside of a deer's hock. Bucks rub urinate over it in the rut (90%). The tuft then darkens and smells strong (65%).
+- **Ungulate**: An animal with hooves, such as deer, elk, moose, sheep and goats.
+- **Tending bond**: A rutting buck staying with one doe and keeping other bucks away until she breeds or another buck pushes him off (90%).
+- **Licking branch**: The overhanging branch about 1.2 to 1.5 m above a scrape that a buck chews and rubs scent on (65%).
+- **Rub line**: A string of rubs along a buck's travel route. Rub lines often lead toward bedding areas (Tip).
+- **Browse line**: The height below which every twig is eaten. Deer reach about 1.2 m, elk 1.5 to 1.8 m, moose 1.8 to 2.4 m (65%).
+- **Yard up**: In hard winters, white tailed deer stay in a few hectares of dense conifer cover and pack trails (80%).
+- **Full curl**: A bighorn ram whose horn tip, seen square from the side, rises above a line from the centre of the nostril through the lowest back part of the horn base (99%, synopsis page 4).
+- **Thermal cover**: Forest that keeps an animal warmer: a closed canopy above 3 m that traps heat, cuts wind and catches snow (80%).
+- **Escape terrain**: The ground an animal runs to when threatened, such as cliffs for sheep and goats (85%).
+- **Funnel**: Land or cover that narrows the routes animals can take, such as a strip of timber between two openings or a creek bottom (65%).
+- **Pinch point**: The narrowest spot in a funnel: a creek crossing, a gap in a cliff band, an open gate or a downed fence (65%).
+- **Mast**: The fruit and nuts of trees and shrubs. In the Interior: berries, rose hips and conifer seed (70%).
+- **Dead ground**: Ground you cannot see from where you stand, hidden by rolls, folds and draws. Animals hide in it, and you can stalk through it.
+- **Topographic map**: A map that shows the shape of the ground with contour lines (95%). Also called a topo map.
+- **Contour line**: A line on a map joining points of the same height. Lines close together mean steep ground, far apart mean gentle (98%).
+- **Contour interval**: The height step between contour lines. It is printed in the map margin and varies by sheet (90%).
+- **Saddle**: The low point on a ridge between two high points (90%). Deer cross ridges at saddles (65%).
+- **Draw**: A small valley running down a slope. On a map its contours make V shapes that point uphill (90%).
+- **Spur**: A short ridge running off a main ridge. On a map its contours point downhill, like a tongue (90%).
+- **NTS**: National Topographic System. Canada's standard topo map sheets, at 1:50,000 and 1:250,000 (98%).
+- **GPS**: Global Positioning System. Satellites that let a phone or handheld unit find your position.
+- **UTM**: Universal Transverse Mercator. The metre grid printed on most paper topo maps, used to give coordinates (99%).
+- **GPX**: GPS Exchange Format. A file type for sharing waypoints and tracks between map apps.
+- **Waypoint**: A point you save on a GPS or phone map, such as the truck or a downed deer.
+- **Declination**: The angle between true north (the pole) and magnetic north (where the compass needle points) (98%). Near Kamloops the needle points about 15 degrees east of true north (80%).
+- **Bearing**: A direction in degrees from north, read off a compass. To walk back, add 180, or subtract 180 if the bearing is over 180 (95%).
+- **Triangulation**: Finding your position from two or more bearings to known landmarks, drawn back on the map where they cross. The proper name is resection (85%).
+- **BEC**: Biogeoclimatic Ecosystem Classification. How BC sorts land into zones by climate, plants and soil (90%).
+- **BG**: Bunchgrass zone. Open grassland from the valley floor to about 700 to 1,000 m in the dry southern Interior (95%).
+- **PP**: Ponderosa pine zone. A thin band in the driest valleys, about 335 to 900 m (95%).
+- **IDF**: Interior Douglas fir zone. Low to mid slopes of the south central Interior (95%). Mule deer, elk and grouse country.
+- **MS**: Montane spruce zone. Mid elevations, about 1,100 to 1,700 m, with lots of lodgepole pine after old fires (95%).
+- **ESSF**: Engelmann spruce and subalpine fir zone. The top forest zone of the southern Interior, about 1,200 to 2,300 m (95%).
+- **ICH**: Interior cedar and hemlock zone. The Interior wet belt, about 400 to 1,500 m (95%).
+- **CWH**: Coastal Western Hemlock zone. The whole coast and up the Fraser Valley (95%).
+- **Inversion**: On clear, calm nights cold air drains down into valleys and pools there, so the valley floor is colder than the slopes above (75%).
+- **Warm front**: The leading edge of warmer air. Cirrus clouds, then a halo, then grey sky warn of rain or snow within about a day (70%).
+- **Wind chill**: The same air feels far colder in wind. Faces and fingers freeze first (70%).
+- **Hypothermia**: A dangerous drop in core body temperature below 35 °C (75%). Shivering that stops is an emergency (75%).
+- **Afterdrop**: A further drop in core temperature when cold limbs are warmed or moved and cold blood returns to the core. Warm the trunk first (75%).
+- **Frostbite**: Tissue that has frozen. White, waxy and hard, then red, swollen and blistered after warming (75%).
+- **Heat stroke**: The body can no longer control its temperature and it keeps rising, often to 40 °C or higher. Call 911 (80%).
+- **AQHI**: Air Quality Health Index. BC's 1 to 10+ scale for smoke and air pollution. At 10+ everyone should avoid strenuous activity outdoors (80%).
+- **Area restriction order**: A BC Wildfire Service order that closes ground near an active fire. No entering or staying inside without written authorization, hunting included (95%).
+- **ATES**: Avalanche Terrain Exposure Scale. Sorts terrain into simple, challenging and complex (80%).
+- **AST**: Avalanche Skills Training. Avalanche Canada's course. Take AST 1 before travelling in avalanche terrain (Tip).
+- **10 essentials**: The AdventureSmart kit for every trip: light, fire kit, signal device, extra food and water, extra clothing, navigation and communication aids, first aid kit, emergency shelter, pocket knife, sun protection (75%).
+- **CAT**: Combat Application Tourniquet. A commercial windlass tourniquet. Buy a real one: fakes exist (60%).
+- **FRS**: Family Radio Service. Short range handheld radios that need no licence (85%).
+- **Giardia**: A gut parasite from untreated water, also called beaver fever. A filter needs a pore size of 1 micron or smaller to stop it (80%).
+- **Blaze orange**: Bright orange clothing that makes hunters easy to see. The BC synopsis does not require it (90%), but wear it in deer season (Tip).
+- **Improved Cylinder**: IC. An open shotgun choke for close shots, about 50% of the pellets in a 76 cm (30 in) circle at 37 m (40 yd) (70%).
+- **Modified**: M. A medium shotgun choke, about 60% of the pellets in a 76 cm (30 in) circle at 37 m (40 yd) (70%). Nothing tighter with steel unless the choke is rated for it (75%).
+- **Choke creep**: Hard steel shot pushing on a tight choke until it deforms and can lock in the barrel (85%).
+- **Shot**: Under BC law, a shell with 8 or more pellets. Birdshot and buckshot are shot. A slug is not (99%, synopsis page 4).
+- **Slug**: A solid projectile, usually lead, fired from a shotgun for big game (85%).
+- **Buckshot**: Big shotgun pellets for big game. For deer, my reading of the synopsis is No. 1 Buck or bigger, or slugs (95%, my reading).
+- **Primer**: The small explosive cap that lights the powder when the firing pin hits it (85%).
+- **Bolt action**: A rifle you work by hand in four moves: lift unlocks, back extracts, forward feeds, down locks and cocks (95%).
+- **Rifling**: Spiral grooves cut inside a rifle barrel. The ridges between are the lands. They spin the bullet (85%). Shotguns have none and are called smoothbores (85%).
+- **Calibre**: The barrel diameter, measured land to opposite land (85%). It is marked on the side of the barrel.
+- **Grain**: gr. The unit for bullet and powder weight. 150 gr is 9.7 g (95%).
+- **Ballistic coefficient**: A number on the ammo box for how well a bullet cuts the air. Higher drifts less (85%).
+- **MOA**: Minute of angle. A small angle used for scope clicks. A 1/4 MOA click moves the hit about 0.73 cm at 100 m (70%).
+- **MPBR**: Maximum point blank range. A zero chosen so the bullet never rises or falls more than half the vital zone, so you hold centre out to that range (70%).
+- **SFP**: Second focal plane. A scope crosshair that stays the same size when you zoom. Simple and best for beginners (70%).
+- **BDC**: Bullet drop compensator. Hash marks below the crosshair for longer shots. Use them only after you confirm the drops on paper (70%).
+- **Eye relief**: The distance from your eye to the scope's rear lens for a full picture. Keep 9 cm (3.5 in) or more on a .308 (65%).
+- **Broadside**: An animal standing side on to you. The best shot angle for deer, elk, moose and bear (85%).
+- **Vital zone**: The heart and lung area you aim for. About 20 to 25 cm across on a deer (70%).
+- **Double lung**: A hit through both lungs. Deer often run hard, but usually under about 100 m (85%).
+- **Paunch hit**: A hit in the stomach. Leaves a thin trail with green or brown plant matter. Back off and wait (65%).
+- **Danger zone**: 4 to 60°C, the range where bacteria grow fast on meat. Cool meat below it quickly (80%).
+- **Aging**: Holding a carcass at 1 to 3°C for 7 to 14 days so enzymes make the meat tender (80%). Skip it on a warm weather or gut shot deer.
+- **Gambrel**: A bar with hooks that hangs a carcass by its hind legs, through the tendon at the hock (80%).
+- **Cape**: The hide of the head, neck and shoulders, kept for a shoulder mount. Skin it before you cut anything forward of the shoulders (Tip).
+- **Accompany**: Under BC rules, staying close enough to see the other person with your own eyes (glasses are fine, binoculars are not) and to talk without a radio or a shout (99%, synopsis page 3).
+- **Antlered animal**: A deer, moose, elk or caribou over 1 year old with antlers you can see (99%, synopsis page 3).
+- **Bait**: Anything put out to draw wildlife in, fake food included. A decoy is not bait (99%, synopsis page 3).
+- **B.C. resident**: A Canadian citizen or permanent resident whose main home is in BC and who was physically in BC for more than half of each of 6 of the last 12 months (99%, synopsis page 3).
+- **Big game**: Mountain sheep, mountain goat, bison, caribou, elk, moose, deer, black bear, cougar, wolf, bobcat, lynx and wolverine, plus any animal the regulations add (99%, synopsis page 3).
+- **Small game**: Fox, raccoon, coyote, skunk, snowshoe hare and all game birds (99%, synopsis page 4).
+- **Game bird**: Grouse, partridge, quail, pheasant, ptarmigan, wild turkey and the migratory game birds (99%, synopsis page 3).
+- **Upland game bird**: The chicken like land birds: turkey, grouse, partridge, ptarmigan, pheasant and quail. Not ducks or geese (99%, synopsis page 5).
+- **Migratory game birds**: Ducks, geese, brant, coots, snipe, band tailed pigeon and mourning dove. You need the federal MGBHP on top of your BC licence (99%, synopsis page 3).
+- **Hunting**: In BC law it includes searching for, chasing, following, stalking or lying in wait for wildlife, or trying to. Walking the bush with a rifle looking for deer is hunting, even if you never fire (99%, synopsis page 3).
+- **Open season**: The dates and areas the synopsis sets for hunting a species. Outside an open season, hunting is unlawful unless a permit allows it. No row in the season table means no season (99%, synopsis page 5).
+- **GOS**: General Open Season. A season open to every licensed hunter, unlike LEH, which is open only to hunters drawn (99%).
+- **Legal hours**: When you may hunt. Most game: 1 hour before sunrise to 1 hour after sunset. Ducks, geese and other migratory game birds: 30 minutes before sunrise to 30 minutes after sunset (99%, synopsis page 11).
+- **NBL**: No Bag Limit. No maximum (99%, synopsis page 12).
+- **No Hunting Area**: A mapped area where hunting itself is banned, including searching for wildlife with a weapon (99%, synopsis page 4).
+- **Existing road or trail**: A paved road, a logging or mining road, a service road to fences, power lines or towers, a marked ski run, or a bare two track a 4 wheel vehicle can straddle. Matters in motor vehicle closed areas (99%, synopsis page 3).
+- **MVHCA**: Motor Vehicles for Hunting Closed Area. No vehicle may be used to hunt, or to carry game, hunting gear or hunters to or from wildlife (98%, synopsis page 10).
+- **AMA**: Access Management Area. The old name for a Motor Vehicle Closed Area. You will still see it in some regional pages (95%).
+- **WMA**: Wildlife Management Area. A kind of conservation land. Some limit or ban hunting, shooting, vehicles or entry: call the regional office before you hunt one (99%, synopsis page 9).
+- **UWR**: Ungulate Winter Range. A government order that protects winter range from logging and roads. It does not close hunting by itself (85%, my reading).
+- **Schedule B**: Pest animals that may be killed on private land to protect property with no licence or season. On Crown land the open seasons apply (99%, synopsis page 11).
+- **Schedule C**: Pest animals with no closed season or bag limit, such as starling, rock dove and cottontail. No licence needed for the listed ones, but kill them humanely (99%, synopsis page 11).
+- **Permit to accompany**: A permit that lets a BC resident take a non resident or non resident alien hunting big game in place of a guide (99%). The holder pays a royalty on each animal taken, within 30 days after the hunt (99%, synopsis page 15).
+- **Compulsory inspection**: A required check of certain killed animals by a qualified inspector, by appointment, for the species and areas listed, such as cougar in Region 8 (99%, synopsis pages 66 and 68).
+- **Game check**: A temporary roadside checking station run by an officer. Every hunter must stop and report, with or without game (99%, synopsis page 15).
+- **Preserved**: For migratory birds, gutted, plucked and then frozen, cooked, dried, canned or smoked away from the hunting area, or mounted. Until then, keep one feathered wing or the head on, and the bird counts toward your possession limit (99%, Migratory Birds Regulations, 2022, section 1).
+- **Palm**: The flat, hand shaped part of a moose antler. Yearling bulls have no real palm (90%).
+- **Northwestern moose**: The moose race found over most of BC, Kamloops and the Okanagan included (80 to 90%).
+- **Alaskan moose**: The biggest moose race. In BC only the far northwest (90%).
+- **Shiras moose**: The smallest moose race, with the smallest bodies and antlers. In BC only the far southeast corner (90%).
+- **Ruminant**: An animal with a four part stomach (rumen, reticulum, omasum, abomasum) that brings food back up to chew again. Moose, elk and deer are ruminants (85%).
+- **Rumen**: The biggest stomach chamber of a ruminant, where microbes break down plant food. It fills the belly behind the diaphragm; a shot there is a slow death (85%).
+- **Cud**: Food a ruminant brings back up from the rumen to chew again, often while bedded (85%).
+- **Diaphragm**: The sheet of muscle behind the lungs that pulls back to fill them. Everything ahead of it is the vital zone; everything behind it is a slow death (85%).
+- **Browser**: An animal that eats mostly twigs and leaves, not grass. Moose are browsers (90%).
+- **Grazer**: An animal that eats mostly grasses, sedges and forbs. Elk graze first and browse in winter and deep snow (80%).
+- **Mixed feeder**: An animal that both grazes and browses as the season allows. Elk are mixed feeders (80%).
+- **Winter tick**: A tick, also called moose tick, that lives its whole life on one moose over one winter. Heavy loads cause hair loss and can kill calves and weak moose; no health risk to people (85%).
+- **Ghost moose**: A moose that has rubbed off most of its winter hair because of winter ticks, so it looks grey. Seen January to April (85%).
+- **Rut pit**: A hole a bull moose paws out and soaks with urine in the rut, about 45 to 105 cm long (65%). Cows wallow in it too (90%).
+- **Estrus**: The heat, the short time a female will breed. A cow moose that misses her first estrus comes into heat again about 25 days later (90%).
+- **Gestation**: How long a female is pregnant. About 230 days (8 months) for moose and about 8 months for elk (85 to 90%).
+- **Crepuscular**: Most active at dawn and dusk. Moose and elk are crepuscular (75 to 80%).
+- **Dewclaw**: A small extra toe above and behind the hoof. Dewclaws show in a track when the animal sinks into mud or snow, or runs (70%).
+- **Fen**: A wetland of sedges, willow, scrub birch and red osier dogwood. Moose browse there (95%).
+- **Cutblock**: An area of forest that was logged. Moose select blocks about 10 to 30 years old and avoid fresh ones (65%, one BC study).
+- **Home range**: The area an animal lives and moves in. A moose's seasonal home range is seldom over 5 to 10 km²; a black bear boar's is 25 to 150 km², a sow's 5 to 25 km² (90%).
+- **Mineral lick**: A spot where animals come to lick or eat soil for minerals. Elk visit them (85%).
+- **Cow call**: A call that copies a female. A cow moose's long quavering rut moan carries up to 3 km (90%).
+- **Raking**: Thrashing brush with a stick, branch or moose shoulder blade to sound like a bull moose (65%). Legal, because only recorded or electronic calls are banned (95%, my reading).
+- **Hang up**: When a bull coming to a call stops out of sight and will not come closer. A few bull grunts can bring him in (65%).
+- **Wapiti**: Another name for elk. Elk are the same species as European red deer (90%).
+- **Roosevelt elk**: The coastal race of elk, slightly larger and darker (90%). Vancouver Island, the Sunshine Coast and Lower Mainland valleys, Mission included (85 to 90%).
+- **Rocky Mountain elk**: The interior race of elk, more migratory than Roosevelt elk (90%). The Heffley Creek and Okanagan elk (85%).
+- **Ivories**: The two rounded upper canine teeth of an elk, in both bulls and cows (90%). Hunters keep them as a keepsake.
+- **Spike**: An antler with no branches. Yearling bull elk usually carry spikes (90%).
+- **Raghorn**: Hunter name for a 2 year old bull elk with a slender rack of 3 or 4 points a side (90%).
+- **Harem**: The group of cows a bull elk gathers, herds and guards in the rut (90%). Bull moose do not hold harems (90%).
+- **Herd bull**: The mature bull holding a harem of cows in the rut. Younger bulls hang on the edges (Tip).
+- **Satellite bull**: A bull with no cows that hangs near a herd in the rut. Curious, and comes to calls more readily (Tip, hunter lore).
+- **Sparring**: Bulls of equal size locking antlers, pushing and twisting, then letting go with no winner. Not a real fight (90%).
+- **Matriarchal**: Led by older females. Elk cow groups are matriarchal (90%).
+- **Mew**: The most common elk call, made by cows and calves (65%). Learn it first (Tip).
+- **Chirp**: A short contact call between elk in a moving herd (65%).
+- **Alarm bark**: A cow elk's warning call. The herd may run (65%).
+- **Security cover**: Vegetation over 2 m tall that hides 90% of a standing elk at 61 m (80%).
+- **Shed**: To drop the antlers for the year. Moose shed mid November to March, elk late February to early April, oldest bulls first (90%).
+- **Cheek teeth**: The grinding teeth along the jaw. An elk calf has 4, a yearling 5, an adult 6 (85%).
+- **Shoulder blade**: The heavy bone plate over the front ribs. On a big bull elk it can be about 6 cm thick and stop a light bullet (65%).
+- **Dichromat**: An animal with two kinds of colour cones. Deer family animals see blue clearly but reds and oranges look dull (75 to 80%).
+- **Tapetum**: A reflective layer behind the retina that helps deer family animals see in dim light (80%).
+- **Blue listed**: A BC status for a species that is vulnerable. Roosevelt elk have been blue listed since 1998 (90%).
+- **Translocation**: Moving wild animals to a new area to start or grow a herd. Lower Mainland Roosevelt elk grew from about 315 to about 1,600 after translocations (85%).
+- **Hunter day**: One hunter hunting for one day. MU 3-27 took about 77 hunter days per moose, 2020 to 2024 (90%, computed).
+- **Plantigrade**: Flat footed: walking on the whole sole, like a bear (90%).
+- **Omnivore**: An animal that eats both plants and animals. Bears are classed as carnivores but eat mostly plants, about 80% of the diet (75 to 90%).
+- **Hibernation**: A bear's winter sleep in a den. The heart drops from about 55 to 14 beats a minute and the bear does not eat, drink or pass waste for months (80 to 90%).
+- **Delayed implantation**: In bears, the embryo attaches only in October or November, and only if the sow has enough fat (75 to 90%).
+- **Diurnal**: Active by day. Black bears are mainly diurnal but feed at night near people (75%).
+- **Kermode bear**: The white phase of the black bear, also called the Spirit bear, mostly on the north central coast (90%). Never legal to hunt (99%).
+- **Glacier bear**: The blue phase of the black bear, in the far northwest (90%). Never legal to hunt (99%).
+- **Jaw popping**: A bear snapping its jaws. With woofing, moaning, stomping or a bluff charge, it marks a stressed bear that wants space (75%).
+- **Woof**: A loud huff from an agitated bear (75%). A sow's woof often sends her cubs up a tree (Tip).
+- **Bluff charge**: A charge that stops short, meant as a warning. Many moose charges are bluffs, but take them seriously (85%).
+- **Defensive bear**: A bear that is surprised or guarding cubs or food. It comes noisy and fast (75%). If it makes contact, lie on your stomach with your hands over the back of your neck (75%).
+- **Predatory bear**: A bear that is quiet, stalks and keeps coming (75%). If it attacks, fight back at the face (75%).
+- **Bear spray**: Pepper spray made to stop bears. Use it at about 5 to 10 m (75%); it stopped black bears about 90% of the time in Alaska (80%).
+- **Cambium**: The soft layer just under tree bark. Bears strip bark in spring to eat it (90%).
+- **Cache**: A kill a predator has covered with raked debris. A bear may bed close by and defend it: back away (85%).
+- **Rub tree**: A tree bears rub on as a scratching post or to mark their home range. Look for hair caught in the bark (90%).
+- **Straight edge test**: Lay a straight edge across the front of a bear's front foot pad. It cuts across the toes on a black bear, but not on a grizzly (80%).
+- **Soopolallie**: Soapberry. A shrub whose berries ripen late July to mid August and are a main bear food (65%).
+- **Trichinella**: The parasitic worm in bear meat that causes trichinosis. The northern kind survives freezing; cook bear to 71°C (160°F) (85%).
+- **Skull score**: A bear's trophy measure: length plus width of the cleaned skull, lower jaw off, after 60 days of drying (75%).
+- **Slipped hide**: A hide that has spoiled so the hair falls out. It can start within a day in the wrong conditions; never store a hide in plastic (85%).
+- **Gall**: A bear's gall bladder. Possessing or trafficking bear galls or bile is unlawful (99%, synopsis page 12).
+- **Spotting scope**: A single tube telescope of about 20 to 60x, used on a tripod to judge an animal and count points (85%).
+- **Exit pupil**: Front lens size divided by power. An 8x42 binocular gives 5.25 mm; a 10x42 gives 4.2 mm (85%).
+- **Diopter**: The adjuster on one binocular eyepiece. Set the centre focus for your left eye, then the diopter for your right.
+- **Glassing grid**: Glassing a slope in slow strips with about a third overlap, then coming back the other way (60 to 65%).
+- **Mirage**: Heat waves that blur far slopes as the day warms. Glass far ground in the cool first hour (65%).
+- **Viewshed**: Everything you can see from one spot. The Hunt Map's What can I see from here tool draws it (99%, app).
+- **Scent cone**: The widening zone downwind of you that carries your scent. Any animal inside it can smell you (80%).
+- **Upwind**: Toward where the wind is coming from. Keep the animal upwind of you, so the wind blows from it to you (Tip).
+- **Downwind**: Where the wind is blowing to. Your scent drifts downwind; a bull coming to a call often circles downwind to smell it (65%).
+- **Crosswind**: Wind blowing across the line between you and the animal. Often the next best wind after wind in your face (65%).
+- **Swirl**: Wind that keeps changing direction, common at canyon bends, creek junctions and thermal switch times (75%). In a swirl, back out (Tip).
+- **Lee side**: The downwind side of a ridge, where air can tumble back uphill in eddies (70%). Do not sit just behind the crest (Tip).
+- **Puffer bottle**: A squeeze bottle of unscented powder. One puff shows wind drift and direction (70%).
+- **Beaufort scale**: A scale that names wind strength by what you see, such as smoke drifting at 1 to 5 km/h or leaves rustling at 6 to 11 km/h (95%).
+- **Stride**: In tracking, the distance from one foot to the next print of the same foot, which is 2 steps (75%).
+- **Straddle**: The width of a trail of tracks, from the outside edge of the left prints to the outside edge of the right prints (75%).
+- **Gait**: How an animal moves: walk, trot or bound. A faster gait gives a longer stride and a narrower straddle (85%).
+- **Track stick**: A pole about 0.9 to 1.2 m long with rubber bands set at stride length, used to find the next print (65%).
+- **Fox walk**: A quiet step: weight on the back foot, the outside edge of the front foot down lightly, roll in, then lower the heel (65%).
+- **Six S's**: A camouflage checklist from military teaching: shape, shine, shadow, silhouette, spacing, movement (70%). Movement matters most (75%).
+- **Skylined**: Standing out against the sky. Never stand on the skyline, and never shoot a skylined animal: there is no backstop (85%).
+- **Ground blind**: A small hide on the ground, bought or built of brush. It hides your outline and hand movement (Tip).
+- **Tree stand**: A seat fixed high in a tree. About 60% of falls happen climbing up or down or getting in and out (70%).
+- **Full body harness**: A fall arrest harness for tree stands. Connect to the tree before your feet leave the ground (70 to 80%).
+- **Haul line**: A rope to raise and lower your unloaded firearm or bow at a tree stand (80%).
+- **Suspension trauma**: Harm from hanging in a harness after a fall. It can occur in under 20 minutes and can be fatal (80%).
+- **Electronic call**: A device that plays recorded animal calls. Unlawful except for wolf, coyote, cougar, lynx, bobcat and Schedule C birds (99%, synopsis page 12).
+- **Distress call**: A call that copies a hurt or scared animal, such as a fawn or rabbit. It can bring a bear in close and fast (Tip).
+- **Wireless camera**: A trail camera that can send images to a phone or other device (99%, synopsis page 5). Unlawful to use for hunting 1 August to 10 December, and in Region 1 at any time (95 to 99%).
+- **Laser rangefinder**: A device that measures distance with a laser. On a deer it reaches about half the big number on the box (65%).
+- **Mil**: Milliradian, an angle unit marked on many scope reticles. Range in metres = size in metres × 1,000 ÷ mils (85%).
+- **Dope card**: A card of your own bullet drops at each distance, built from real groups at 100, 150, 200 and 250 m (Tip).
+- **Flat distance**: The level distance to a target up or down a slope: slope distance × cosine of the angle (75%). Hold for it or you hit high.
+- **Shooting sticks**: A two or three legged rest that makes standing or sitting shots steady (70%).
+- **Prone**: Lying flat on your belly to shoot, both elbows down. The steadiest field position (85%).
+- **NPOA**: Natural point of aim. Where the barrel points when your muscles are relaxed and supported (80%). Move your body, not the rifle, to put it on target.
+- **Follow through**: Keeping the trigger pressed and the sight picture steady until the bullet is gone (85%).
+- **Dry fire**: Practising the trigger press with an empty firearm. Use a snap cap (95%).
+- **Snap cap**: A dummy cartridge that protects the firearm during dry fire (95%).
+- **Quartering away**: An animal angled away from you. Aim so the bullet exits at the far front leg; the second best angle after broadside (85%).
+- **Quartering toward**: An animal angled toward you. A light bullet can deflect off the shoulder bones (85%); beginners wait for the turn (Tip).
+- **Buck fever**: The shakes and nerves when game appears. Too shaky to hold the crosshair still means no shot (Tip).
+- **Mule kick**: A hard kick of the hind legs at the shot. With a hard low run it often means a heart or lung hit (70%).
+- **Hit site**: Where the animal stood when hit. Look there for blood, hair, bone, tissue and scuffed ground (70%).
+- **Blood trail**: The blood a hit animal leaves as it goes. Bright and frothy means lungs, dark means liver, thin with green bits means gut (70%).
+- **Grid search**: Searching in lanes about 10 m apart, each person in sight of the next, when the trail is lost (70%).
+- **Backstrap**: The long loin along the top of the back on each side of the spine. Cook it hot and fast (Tip).
+- **Tenderloin**: The small loin inside the body under the spine, taken out from inside behind the last rib (Tip).
+- **Game bag**: A breathable cloth bag for meat. It keeps flies and dirt off and lets heat out; never use plastic on warm meat (80%).
+- **Bone out**: Cutting the meat off the bones in the field. Boned meat weighs about half as much; every edible portion must still come out (95%).
+- **Glaze**: The dry crust that forms on clean meat. It slows bacteria and deters egg laying insects, so do not wash meat that is clean (80%).
+- **Infrared optics**: An optical device that can detect infrared radiation, such as a thermal scope or monocular (99%, synopsis page 3). Unlawful to use or even possess on a hunting trip (99%, page 11).
+- **Drone**: An aircraft with no one aboard, flown by remote control or software, that could find, follow or watch wildlife (99%, synopsis page 3). Unlawful to fly or possess on a hunting trip, or to use what it found less than 6 hours before the trip starts (99%).
+- **Guide**: A person who, for compensation or reward, accompanies and assists another person to hunt wildlife (99%, synopsis page 11). Guiding needs a licence, and a hunter who uses an illegal guide can be charged too (99%).
+- **Transporter**: A person who, for money or other compensation, carries a hunter to, from or between places so the hunter can hunt (99%, synopsis page 11). Needs a transport licence or a guide outfitter licence (99%).
+- **Trafficking**: To buy, sell, trade or distribute for gain or consideration, or to offer to do so (99%, synopsis page 4). Trading meat for a favour counts; a true gift is not trafficking (90%).
+- **Antler restricted season**: A season open only to animals with set antlers or horns, such as spike fork moose, full curl sheep or 6 point elk (99%, synopsis pages 12 and 15). On the way home the antlers stay on part of the upper skull with the species licence, and you may not alter them (99%). A 4 point deer season counts (95%, my reading).
+- **Harvest Report**: The section of a shared LEH (Limited Entry Hunting) authorization. Carry it while hunting, fill it in at the kill, and tell every hunter in the group at once (99%, synopsis).
+- **Fraser Valley Special Area licence**: An extra licence for hunting all of MU 2-4, and the parts of MU 2-8 inside Mission, Maple Ridge, Pitt Meadows and Coquitlam. You also need $1,000,000 public liability insurance (99%, synopsis page 29, Map B10).
+- **Migratory Bird Sanctuary**: Federal land and water set aside for migratory birds. Closed to hunting unless a special federal permit is granted or notices say otherwise; blue signs with a loon mark the boundary (99%, synopsis page 9).
+- **National Wildlife Area**: Federal wildlife land. Closed to hunting unless a special federal permit is granted or notices say otherwise; blue signs with a loon mark the boundary (99%, synopsis page 9).
+- **Licence year**: For hunting licences, 1 April to 31 March of the next year (99%, synopsis page 3). All hunting and species licences expire 31 March (99%).
+- **Recreation site**: A site in BC's Recreation Sites and Trails system, under the Forest Recreation Regulation (99%). No shooting a firearm, bow or crossbow on or into its developed part: 100 m (109 yd) in every direction from a structure, campsite or staging area (99%, synopsis page 9). No gut piles there either (99%).
+- **Indian Reserve**: Reserve land is private land. Get permission from the band office to hunt on it or even to cross it (99%, synopsis page 9).
+- **Full metal jacket**: A bullet fully covered in metal that does not expand. Unlawful for hunting with a rifle, as are tracer, incendiary and explosive bullets (99%, synopsis page 12). Range ammunition is often this kind (Tip).
+- **Region**: One of BC's 9 hunting regions, such as Region 3 Thompson. Each region is split into numbered MUs (Management Units); Region 7 has two halves, 7A Omineca and 7B Peace (95 to 99%, BC MU map layer).
+- **BC**: British Columbia.
+- **Fair chase**: The ethical, sportsmanlike and lawful pursuit of free ranging wild game, where the animal has a reasonable chance to escape (85%, Boone and Crockett Club). An ethic, not the law.
+- **Spine shock**: A hit that stuns the spine without cutting the cord can drop a deer, and it may get up and run within a minute or so (85%). Reload and watch any animal that drops at the shot.
+- **Sky busting**: Shooting at birds beyond the range you can kill cleanly. It risks crippling birds (85%, Ducks Unlimited).
+- **Flock shooting**: Shooting at the whole flock or covey instead of one bird. Resist it: pick one bird, shoot, then pick the next (70 to 85%).
+- **Roost**: The water or place where birds rest and sleep. Setting up near a roost can push birds off it (65%); hunt where they feed or fly (Tip).
+- **HCTF**: Habitat Conservation Trust Foundation. Surcharges on BC hunting, angling, trapping and guiding licences go to it, and it funds fish, wildlife and habitat projects (80%).
+- **Leave No Trace**: A set of outdoor ethics principles taught by Leave No Trace Canada. Principle 3: dispose of waste properly and bring back what you carried in (85%).
+- **R3**: Recruit, retain, reactivate. Programs that bring new hunters in and keep them; keeping them is the hard part, and peer mentors help (70%).
+- **Military crest**: The line just below the top of a ridge, where your outline does not show against the sky (60%). Travel there and creep up to peek over (Tip).
+- **Back bearing**: The reverse direction of a bearing: add 180 if under 180, subtract 180 if over (95%). Walk it to go back the way you came.
+- **Aiming off**: Aiming on purpose to one side of a feature, such as the road the truck is on, so you know which way to turn when you hit it (85%). Aim off more than your likely error (Tip).
+- **Handrail**: A line feature you can follow without the compass: a creek, road, fence, power line, timber edge or ridge (85%).
+- **Catching feature**: A big line just past your target, such as a main ridge, big river or highway. Hit it and you know you went too far (85%). The navigation lessons also call it a backstop (Tip).
+- **Attack point**: A large or obvious feature near your target, best where two handrails cross. Go to it big and easy, then go to the target small and careful (85%).
+- **Collecting feature**: Something you pass on the way that tells you that you are on track, like a creek you cross (85%).
+- **Baseline**: A long line you can always reach by walking one general direction, usually the road the truck is on (Tip).
+- **Escape bearing**: The rough bearing that always reaches your baseline, such as about 180 when the road is to the south (Tip). Write it on your hand or the map margin.
+- **Orienting the map**: Turning the map until its north lines run with the compass needle, or until a road or ridge on it lines up with the real one (95%). Then left on the map is left on the ground.
+- **Terrain association**: Moving by matching the ground you see to the map, feature by feature: name three big features, find them on the map, check their order (Tip, standard land navigation term).
+- **Pace count**: How many steps you take over a measured 100 m, counting each left foot, on flat, rough and uphill ground (75%). It tells you how far you have walked.
+- **Thumbing the map**: Keeping your thumb on the map where you are and moving it as you walk, so one glance finds you (Tip, orienteering habit).
+- **Leapfrog**: A two person compass walk. One holds the bearing and waves the other onto the line, then walks to them and repeats (Tip). Best in fog, timber and flat ground.
+- **Shadow stick**: A stick on level ground used to find rough east and west. Mark the shadow tip, wait 10 to 15 minutes, mark again: the first mark is west, the second east (60%).
+- **Grid north**: The direction the grid lines on a map point. On UTM zone 10 near Heffley Creek it is about 2.5 degrees east of true north (85%, my calculation).
+- **Easting**: The UTM number in metres east. Read it first, going right across the map (95%).
+- **Northing**: The UTM number in metres north. Read it second, going up the map (95%).
+- **Index contour**: A thicker contour line with its height printed on it (95%). The Hunt Map draws one every 100 m (99%, app).
+- **Spot height**: A height printed at one point on a map, often on a hilltop or peak (85%).
+- **Scale**: The ratio between map and ground. At 1:50,000, 1 cm on the map is 500 m on the ground (99%).
+- **Datum**: The model of the earth that map coordinates are based on. Canadian maps use NAD83 and phones use WGS84; for hunting they agree within a couple of metres (75%).
+- **Last known point**: The last place a lost person is known to have been. Searchers start there, from the trip plan, and work outward (65%).
+- **Civil twilight**: The time after sunset when there is still enough light to work in the open. In October it ends about 33 minutes after sunset; after that you need a headlamp in timber (85%).
+- **SAR**: Search and rescue. In BC, call 911 and police call out the volunteer ground search and rescue (GSAR) teams; there is no charge for rescue (75 to 95%).
+- **BCSARA**: BC Search and Rescue Association. Its yearly review covers BC ground search and rescue and lists the 10 worst things you can do outdoors (95%).
+- **AdventureSmart**: An outdoor safety program that teaches the trip plan, the 10 essentials and STOP, via the BC Search and Rescue Association (75%).
+- **PLB**: Personal locator beacon. Sends a one way SOS on 406 MHz, with no monthly plan for the SOS function (60%, gear guides).
+- **SOS**: A call for help. A satellite messenger, or an iPhone 14 or later, can send one where there is no cell signal (65 to 85%). On the ground, lay out a V or SOS at least 3 m long (75%).
+- **FACETS**: Six thinking traps found in avalanche accidents: Familiarity, Acceptance, Consistency, Expert halo, Tracks or scarcity, Social facilitation (80%).
+- **Hug a Tree**: Hug a Tree and Survive, a program that teaches children to stay put, keep warm and dry, and answer searchers (70%). Lost adults should stay put too (75%).
+- **Category 1 campfire**: An open fire no larger than 0.5 m high by 0.5 m wide (80%, BC Wildfire Service). Check fire bans before every fire (80%).
+- **Turnaround time**: The time you agree to turn back for the truck, whatever happens (Tip).
+- **Emergency bivy bag**: A light emergency shelter bag you climb inside. Better than a foil blanket against cold ground (65%).
+- **Debris shelter**: A shelter built from branches, boughs and leaves. It gives emergency insulation but takes hours and lots of dry material (65%).
+- **Three Ts**: AdventureSmart's trip planning, training and taking the essentials (75%).
+- **NDA**: National Deer Association. A North American deer conservation and hunting group; the app quotes its articles on tracking and wait times.
+- **Gauge**: The bore size of a shotgun. The number of lead balls of that bore that weigh one pound, so a smaller number is a bigger bore: a 12 gauge is wider than a 20 gauge (90%).
+- **Chamber length**: The longest shell a shotgun chamber is made for, such as 3 in (76 mm). It is stamped on the barrel. Never fire a shell longer than the stamp (95%).
+- **Pump action**: A shotgun you work by sliding the fore end back and forward to eject the empty and load the next shell (95%).
+- **Gas action**: A semi auto that uses a little gas from the fired shell to push a piston and cycle the action (90%).
+- **Inertia action**: A semi auto that uses recoil and a spring inside the bolt to cycle the action, with no gas system (90%).
+- **Over under**: A shotgun with two barrels, one above the other, that breaks open at a hinge to load (95%).
+- **Action bar lock**: The button on a pump shotgun that frees the fore end so you can open the action when it is cocked (95%, Remington 870 manual).
+- **Carrier**: The part under a pump or semi auto action that lifts a shell from the magazine up to the chamber (90%).
+- **Shell latch**: The small catch that holds shells in the tube magazine until the action releases one (90%).
+- **Short stroke**: Not pulling a pump fore end all the way back. The empty may not eject or the next shell may jam (85%).
+- **Rib**: The flat raised strip along the top of a shotgun barrel. Your eye looks along it (90%).
+- **Length of pull**: The distance from the trigger to the middle of the butt pad. It sets how well a gun fits you (90%).
+- **Cast**: A small sideways bend in a shotgun stock so your eye lines up with the rib. Cast off suits right handed shooters (85%).
+- **Drop at comb**: How far the top of the stock sits below the line of the rib, where your cheek rests. It sets how high your eye sits (85%).
+- **Bismuth shot**: Non toxic shot made mostly of bismuth. Softer than steel, closer to lead in how it carries (80%).
+- **TSS**: Tungsten super shot. Very dense non toxic shot. Check with the gun and choke maker before using it (Tip).
+- **Wad**: The plastic or fibre cup in a shell that holds the shot and seals the gas behind it (90%).
+- **Crimp**: The folded closure at the front of a shotgun shell that holds the shot in (90%).
+- **Pattern percentage**: The share of a shell's pellets that land in a 30 in (76 cm) circle at 40 yd (37 m). It shows how tight a choke throws (85%).
+- **Swing through**: A lead method. Start behind the bird, swing through it and fire as the muzzle passes ahead (Tip).
+- **Pull away**: A lead method. Start on the bird, then pull ahead of it and fire (Tip).
+- **Maintained lead**: A lead method. Start ahead of the bird and keep the same gap while you swing and fire (Tip).
+- **Headspace**: The fit between the cartridge and the chamber when the bolt is closed. Too much is dangerous; a gunsmith checks it with gauges (85%).
+- **Cosmoline**: A thick brown grease used to store surplus rifles. It must be cleaned out, above all from the bolt and firing pin channel, before firing (80%).
+- **Slam fire**: A rifle firing as the bolt closes, without the trigger being pulled. A stuck firing pin in an SKS can cause it (80%).
+- **Stripper clip**: A metal strip holding rounds that you push down into a fixed magazine from the top, as on an SKS (90%).
+- **Corrosive ammunition**: Old surplus ammunition with primers that leave salts in the bore. Clean with water based cleaner the same day or the barrel rusts (80%).
+- **Cocking indicator**: A small part at the back of the bolt that shows when the rifle is cocked (90%).
+- **Bolt stop**: The catch that keeps the bolt in the rifle. Pressing it lets you pull the bolt out to clean it (90%).
+- **Free floating barrel**: A barrel that does not touch the stock along its length, so the stock cannot push it off aim (85%).
+- **Peep sight**: A rear sight with a small round hole. You look through it and centre the front post (90%).
+- **Bore guide**: A plug that goes in the action instead of the bolt and keeps the cleaning rod centred in the bore (85%).
+- **CLP**: Clean, lubricate, protect. A single product that cleans and oils a gun (85%).
+- **Two stage trigger**: A trigger with a light first take up, then a firm wall, then the break (90%).
+- **Hang fire**: A delay between the firing pin strike and the shot. Keep the muzzle in a safe direction for at least 30 seconds before opening the action (Tip, common range rule).
+- **Cold bore shot**: The first shot from a clean or cold barrel. It can land a little away from the later shots, and it is the shot that matters when hunting (Tip).

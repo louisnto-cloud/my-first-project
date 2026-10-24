@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-label="Three moments when evidence of species and sex may come off: at home once the meat is butchered and stored there to be eaten, at a meat cutter or cold storage plant, or after a qualified compulsory inspector has inspected it. Butchering at a friend&#x27;s house on the way home is not one of the three, which is this app&#x27;s reading." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="296" fill="#fffaf0"/>
+<text x="200" y="26" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">Evidence may come off only:</text>
+<rect x="8" y="44" width="124" height="190" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<g transform="translate(70 100) scale(1.6)"><rect x="-18" y="-6" width="36" height="24" fill="#8b5a2b"/><path d="M-24 -4 L0 -24 L24 -4 Z" fill="#2f3a2b"/><rect x="-5" y="6" width="10" height="12" fill="#fffaf0"/></g>
+<text x="70" y="160" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Home</text>
+<text x="70" y="184" font-size="14" fill="#2f3a2b" text-anchor="middle">butchered and</text>
+<text x="70" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle">stored there</text>
+<rect x="138" y="44" width="124" height="190" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<g transform="translate(200 98) scale(1.6)"><path d="M-18 -10 Q 0 -22 18 -8 Q 26 6 10 14 Q -10 20 -20 6 Z" fill="#c4564a"/><circle cx="-14" cy="12" r="5" fill="#f3e9d8"/><path d="M-14 12 L-26 22" stroke="#f3e9d8" stroke-width="5"/></g>
+<text x="200" y="160" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Meat cutter</text>
+<text x="200" y="184" font-size="14" fill="#2f3a2b" text-anchor="middle">or cold storage</text>
+<text x="200" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle">plant</text>
+<rect x="268" y="44" width="124" height="190" rx="10" fill="#ffffff" stroke="#5c7a3a" stroke-width="2.5"/>
+<g transform="translate(330 98) scale(1.5)"><rect x="-26" y="-18" width="52" height="36" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="-8" x2="18" y2="-8" stroke="#2f3a2b" stroke-width="2.5"/><line x1="-18" y1="0" x2="10" y2="0" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="8" x2="14" y2="8" stroke="#2f3a2b" stroke-width="2"/></g><path d="M348 80 L356.4 88.4 L372 70.4" fill="none" stroke="#5c7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="330" y="160" font-size="16" fill="#23261f" text-anchor="middle" font-weight="bold">Inspected</text>
+<text x="330" y="184" font-size="14" fill="#2f3a2b" text-anchor="middle">by a compulsory</text>
+<text x="330" y="202" font-size="14" fill="#2f3a2b" text-anchor="middle">inspector</text>
+<text x="200" y="262" font-size="15" fill="#c92a2a" text-anchor="middle" font-weight="bold">A friend&#x27;s house on the way home is not one.</text>
+<text x="200" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">(this app&#x27;s reading, 90%)</text>
+</svg>

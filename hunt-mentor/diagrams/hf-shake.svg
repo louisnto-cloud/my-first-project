@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Two binocular views of the same deer at 800 metres. Left, handheld: the view shakes, the deer is a blur, the tail flick is missed. Right, on a tripod: the view is still and the small tail flick is easy to see.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <g fill="#dfe6d3" stroke="#2f3a2b" stroke-width="4"><circle cx="70" cy="140" r="54"/><circle cx="130" cy="140" r="54"/><circle cx="270" cy="140" r="54"/><circle cx="330" cy="140" r="54"/></g>
+  <g fill="#8b5a2b" opacity=".35"><ellipse cx="96" cy="146" rx="16" ry="7"/><ellipse cx="104" cy="140" rx="16" ry="7"/><ellipse cx="100" cy="152" rx="16" ry="7"/></g>
+  <g stroke="#2f3a2b" stroke-width="2" fill="none" opacity=".5"><path d="M40 90 l10 6 l-8 6 l10 6"/><path d="M160 90 l-10 6 l8 6 l-10 6"/></g>
+  <ellipse cx="300" cy="146" rx="18" ry="8" fill="#8b5a2b"/><circle cx="316" cy="136" r="5" fill="#8b5a2b"/>
+  <path d="M282 142 l-10 -10" stroke="#fffaf0" stroke-width="4"/><path d="M282 142 l-10 -10" stroke="#8b5a2b" stroke-width="2"/>
+  <circle cx="276" cy="136" r="10" fill="none" stroke="#e8590c" stroke-width="2.5"/>
+  <text x="100" y="30" font-size="17" font-weight="bold" fill="#c0392b" text-anchor="middle">Handheld</text>
+  <text x="300" y="30" font-size="17" font-weight="bold" fill="#2f6e3b" text-anchor="middle">Tripod</text>
+  <text x="100" y="226" font-size="15" fill="#2f3a2b" text-anchor="middle">shaky blur</text>
+  <text x="300" y="226" font-size="15" fill="#2f3a2b" text-anchor="middle">tail flick seen</text>
+  <text x="200" y="276" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Same deer, 800 m (875 yd) away (Tip)</text>
+</svg>

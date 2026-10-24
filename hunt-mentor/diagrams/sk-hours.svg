@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" font-family="sans-serif" role="img" aria-label="Day timeline: legal hours run from one hour before sunrise to one hour after sunset. Outside that, no hunting. Following a trail with a rifle counts as hunting. Never use a light or headlamp with a rifle. Tracking with no rifle, just finding a dead deer, is not settled: verify with a conservation officer.">
+<rect width="400" height="320" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Legal hours to hunt or track with a rifle</text>
+<defs><linearGradient id="sk-hours-day" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#f3c9a0"/><stop offset=".22" stop-color="#f6df8f"/><stop offset=".78" stop-color="#f6df8f"/><stop offset="1" stop-color="#f3c9a0"/></linearGradient></defs>
+<rect x="8" y="72" width="84" height="48" rx="6" fill="#2b3a55"/><rect x="308" y="72" width="84" height="48" rx="6" fill="#2b3a55"/>
+<rect x="92" y="72" width="216" height="48" fill="url(#sk-hours-day)"/>
+<line x1="92" y1="66" x2="92" y2="126" stroke="#e8590c" stroke-width="3"/><line x1="308" y1="66" x2="308" y2="126" stroke="#e8590c" stroke-width="3"/>
+<text x="50" y="93" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">No</text><text x="50" y="111" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">hunting</text>
+<text x="350" y="93" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">No</text><text x="350" y="111" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">hunting</text>
+
+<text x="200" y="102" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Legal hours</text>
+<line x1="145.0" y1="52.0" x2="149.0" y2="52.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="141.8" y1="59.8" x2="144.6" y2="62.6" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="134.0" y1="63.0" x2="134.0" y2="67.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="126.2" y1="59.8" x2="123.4" y2="62.6" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="123.0" y1="52.0" x2="119.0" y2="52.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="126.2" y1="44.2" x2="123.4" y2="41.4" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="134.0" y1="41.0" x2="134.0" y2="37.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="141.8" y1="44.2" x2="144.6" y2="41.4" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><circle cx="134" cy="52" r="8" fill="#e8590c"/>
+<text x="118" y="57" font-size="15" fill="#2f3a2b" text-anchor="end">sunrise</text>
+<line x1="134" y1="72" x2="134" y2="120" stroke="#c98a3a" stroke-width="1.4" stroke-dasharray="3 3"/>
+<line x1="277.0" y1="52.0" x2="281.0" y2="52.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="273.8" y1="59.8" x2="276.6" y2="62.6" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="266.0" y1="63.0" x2="266.0" y2="67.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="258.2" y1="59.8" x2="255.4" y2="62.6" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="255.0" y1="52.0" x2="251.0" y2="52.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="258.2" y1="44.2" x2="255.4" y2="41.4" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="266.0" y1="41.0" x2="266.0" y2="37.0" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><line x1="273.8" y1="44.2" x2="276.6" y2="41.4" stroke="#e8590c" stroke-width="2" stroke-linecap="round"/><circle cx="266" cy="52" r="8" fill="#e8590c"/>
+<text x="282" y="57" font-size="15" fill="#2f3a2b">sunset</text>
+<line x1="266" y1="72" x2="266" y2="120" stroke="#c98a3a" stroke-width="1.4" stroke-dasharray="3 3"/>
+<path d="M92 130 v6 H134 v-6" stroke="#2f3a2b" stroke-width="1.6" fill="none"/>
+<text x="113" y="154" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 h before</text>
+<text x="113" y="172" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sunrise</text>
+<path d="M266 130 v6 H308 v-6" stroke="#2f3a2b" stroke-width="1.6" fill="none"/>
+<text x="287" y="154" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1 h after</text>
+<text x="287" y="172" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">sunset</text>
+<rect x="8" y="182" width="384" height="33" rx="6" fill="#f4eedf"/>
+<path d="M18 194.5 c-2 -5 4 -5 3 0 c0 3 -3 4 -3 0z" fill="#8b5a2b"/><path d="M27 202.5 c-2 -5 4 -5 3 0 c0 3 -3 4 -3 0z" fill="#8b5a2b"/><path d="M36 194.5 c-2 -5 4 -5 3 0 c0 3 -3 4 -3 0z" fill="#8b5a2b"/>
+<text x="50" y="204" font-size="15" font-weight="bold" fill="#2f3a2b">Following a trail with a rifle is hunting.</text>
+<rect x="8" y="221" width="384" height="33" rx="6" fill="#f4eedf"/>
+<circle cx="30" cy="237.5" r="11" fill="none" stroke="#c92a2a" stroke-width="2.4"/><path d="M22 229.5 L38 245.5" stroke="#c92a2a" stroke-width="2.4"/><path d="M25 237.5 l6 -3 v6z" fill="#f2b134"/>
+<text x="50" y="243" font-size="15" font-weight="bold" fill="#c92a2a">Never with a light or headlamp and a rifle.</text>
+<rect x="8" y="260" width="384" height="52" rx="6" fill="#f4eedf"/>
+<circle cx="30" cy="286.0" r="11" fill="#b7791f"/><text x="30" y="292" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="50" y="282" font-size="15" fill="#2f3a2b">No rifle, just finding a dead deer:</text>
+<text x="50" y="301" font-size="15" fill="#2f3a2b">VERIFY with a conservation officer.</text>
+</svg>

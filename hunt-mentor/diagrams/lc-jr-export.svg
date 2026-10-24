@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 333" font-family="sans-serif" role="img" aria-label="The journal lives only on your phone. Tap Export CSV, get a .csv file, open it in any spreadsheet. Export after each trip and save it off the phone, because a lost phone loses your seasons.">
+<rect width="400" height="333" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Back it up: Export CSV</text>
+<rect x="20" y="48" width="78" height="138" rx="12" fill="#23261f"/><rect x="27" y="60" width="64" height="104" rx="4" fill="#dde8f2"/>
+<rect x="33" y="68" width="52" height="7" rx="2" fill="#9fb3c6"/><rect x="33" y="84" width="38" height="7" rx="2" fill="#9fb3c6"/><rect x="33" y="100" width="52" height="7" rx="2" fill="#9fb3c6"/><rect x="33" y="116" width="38" height="7" rx="2" fill="#9fb3c6"/>
+<rect x="31" y="136" width="56" height="22" rx="5" fill="#e8590c"/><text x="59" y="152" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">Export</text>
+<path d="M108 116 H140" stroke="#2f3a2b" stroke-width="3"/><path d="M150.0 116.0 L139.0 110.0 L139.0 122.0z" fill="#2f3a2b"/>
+<path d="M160 62 H204 L222 80 V170 H160z" fill="#fffaf0" stroke="#2f3a2b" stroke-width="3"/><path d="M204 62 V80 H222" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+<path d="M170 98 H212" stroke="#8a9a6b" stroke-width="5" stroke-linecap="round"/><path d="M170 114 H212" stroke="#8a9a6b" stroke-width="5" stroke-linecap="round"/><path d="M170 130 H212" stroke="#8a9a6b" stroke-width="5" stroke-linecap="round"/><path d="M170 146 H212" stroke="#8a9a6b" stroke-width="5" stroke-linecap="round"/>
+<path d="M232 116 H262" stroke="#2f3a2b" stroke-width="3"/><path d="M272.0 116.0 L261.0 110.0 L261.0 122.0z" fill="#2f3a2b"/>
+<rect x="282" y="70" width="100" height="92" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.4"/><rect x="282" y="70" width="100" height="16" fill="#cfe0c8"/>
+<path d="M307 70 V162" stroke="#2f3a2b" stroke-width="1"/><path d="M332 70 V162" stroke="#2f3a2b" stroke-width="1"/><path d="M357 70 V162" stroke="#2f3a2b" stroke-width="1"/><path d="M282 105 H382" stroke="#2f3a2b" stroke-width="1"/><path d="M282 124 H382" stroke="#2f3a2b" stroke-width="1"/><path d="M282 143 H382" stroke="#2f3a2b" stroke-width="1"/>
+<text x="59" y="206" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Phone</text><text x="191" y="206" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">.csv file</text><text x="332" y="206" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spreadsheet</text>
+<text x="200" y="238" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Lives only on your phone.</text>
+<text x="200" y="258" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Lost phone = lost seasons.</text>
+<rect x="8" y="270" width="384" height="57" rx="8" fill="#e8590c"/><text x="200" y="293.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Export after each trip.</text><text x="200" y="314.6" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Save it off the phone.</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-label="Four cards of First Nations notices in Region 7A. McLeod Lake Indian Band: access to Treaty Settlement Lands needs Band Office permission. Tsay Keh Dene Nation: voluntary hunter registration, 250 562 8882. Kwadacha Nation: Lands and Resources Officer, 250 471 2302. Nak&#x27;azdli Whut&#x27;en: Land Guardians, 250 996 0088, to share parts." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="272" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Notices from First Nations</text>
+<rect x="6" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<path d="M6 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#c92a2a"/>
+<text x="101" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">McLeod Lake Indian</text>
+<text x="101" y="76" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Band</text>
+<path d="M17.0 114 l13 -12 l13 12 v12 h-26 z" fill="#8b5a2b"/><rect x="27.0" y="118" width="7" height="8" fill="#fffaf0"/>
+<text x="52" y="106" font-size="14" fill="#23261f" text-anchor="start">Treaty lands: Band</text>
+<text x="52" y="124" font-size="14" fill="#23261f" text-anchor="start">Office permission</text>
+<text x="52" y="142" font-size="14" fill="#23261f" text-anchor="start">first</text>
+<rect x="204" y="40" width="190" height="114" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 50 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v36 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="58" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Tsay Keh Dene Nation</text>
+<rect x="220.0" y="99" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="223.0" y="103" width="10" height="18" fill="#ffffff"/>
+<text x="250" y="106" font-size="14" fill="#23261f" text-anchor="start">Voluntary</text>
+<text x="250" y="124" font-size="14" fill="#23261f" text-anchor="start">registration: 250</text>
+<text x="250" y="142" font-size="14" fill="#23261f" text-anchor="start">562 8882</text>
+<rect x="6" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M6 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="101" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Kwadacha Nation</text>
+<rect x="22.0" y="203" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="25.0" y="207" width="10" height="18" fill="#ffffff"/>
+<text x="52" y="210" font-size="14" fill="#23261f" text-anchor="start">Lands and</text>
+<text x="52" y="228" font-size="14" fill="#23261f" text-anchor="start">Resources Officer:</text>
+<text x="52" y="246" font-size="14" fill="#23261f" text-anchor="start">250 471 2302</text>
+<rect x="204" y="162" width="190" height="96" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<path d="M204 172 a10 10 0 0 1 10 -10 h170 a10 10 0 0 1 10 10 v18 h-190 z" fill="#2f3a2b"/>
+<text x="299" y="180" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Nak&#x27;azdli Whut&#x27;en</text>
+<rect x="220.0" y="203" width="16" height="30" rx="3" fill="#2f3a2b"/><rect x="223.0" y="207" width="10" height="18" fill="#ffffff"/>
+<text x="250" y="210" font-size="14" fill="#23261f" text-anchor="start">Land Guardians, to</text>
+<text x="250" y="228" font-size="14" fill="#23261f" text-anchor="start">share parts: 250</text>
+<text x="250" y="246" font-size="14" fill="#23261f" text-anchor="start">996 0088</text>
+</svg>

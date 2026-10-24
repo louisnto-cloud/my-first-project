@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" font-family="sans-serif" role="img" aria-label="Grid of legal hunting methods from the page 13 table. Columns: deer, moose, black bear, grouse, ducks. Centrefire rifle: yes for deer, moose and bear, yes for grouse or ptarmigan only, no for ducks. Rimfire .22: no for deer, moose, bear and ducks, yes for grouse, ptarmigan or turkey only. Shotgun: yes for deer and bear with 20 gauge or larger and No. 1 Buck or larger, no for moose, yes for grouse, yes for ducks with non toxic shot, 10 gauge or smaller. Air rifle: yes for deer and bear at .35 calibre or larger, no for moose, yes for grouse, no for ducks. Bow classes: deer B C D, moose A C D, bear A C D, grouse B C D, ducks D. Elk and caribou match moose.">
+<rect width="400" height="470" fill="#fffaf0"/>
+<g transform="translate(150 36) scale(1.05 1.05)"><g fill="#2f3a2b"><path d="M-10 -4 C-10 -9 0 -10 10 -9 C16 -8 18 -4 17 1 C16 4 12 5 8 5 L-6 5 C-10 5 -11 1 -10 -4z"/><path d="M-8 -6 L-14 -16 L-10 -18 L-4 -8z"/><path d="M-14 -17 C-17 -17 -21 -15 -22 -12 L-19 -11 C-16 -11 -13 -12 -11 -15z"/><path d="M-12 -17 L-17 -22 L-11 -19z"/><path d="M-12 -18 C-15 -24 -11 -29 -6 -29 M-12 -24 L-16 -29 M-9 -27 L-7 -32" stroke="#2f3a2b" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M-7 4 V16 M-4 4 V16 M10 4 V16 M14 4 V16" stroke="#2f3a2b" stroke-width="2.2" stroke-linecap="round"/><path d="M17 -6 L21 -4 L17 -2z"/></g></g>
+<text x="150" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Deer</text>
+<g transform="translate(205 36) scale(1.05 1.05)"><g fill="#2f3a2b"><path d="M-8 -8 C-4 -15 8 -13 16 -8 C20 -5 20 0 18 4 L-6 4 C-10 2 -10 -4 -8 -8z"/><path d="M-8 -9 L-16 -6 L-25 -2 C-27 0 -25 4 -21 3 L-12 0 L-5 -2z"/><path d="M-13 0 C-14 5 -12 8 -11 8" stroke="#2f3a2b" stroke-width="2.4" fill="none"/><path d="M-11 -8 C-14 -14 -22 -18 -28 -15 L-26 -13 L-29 -11 L-25 -10 L-27 -8 C-20 -8 -15 -8 -11 -6z"/><path d="M-4 3 V16 M0 3 V16 M12 3 V16 M16 3 V16" stroke="#2f3a2b" stroke-width="2.4" stroke-linecap="round"/></g></g>
+<text x="205" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Moose</text>
+<g transform="translate(260 36) scale(1.05 1.05)"><g fill="#2f3a2b"><path d="M-14 4 C-16 -4 -10 -11 0 -11 C10 -11 17 -8 18 -1 L18 15 L13 15 L12 7 L-5 7 L-6 15 L-11 15 L-11 9 C-13 8 -14 6 -14 4z"/><path d="M-12 -5 C-16 -9 -22 -8 -25 -4 L-28 -1 C-28 1 -25 2 -22 2 L-12 2z"/><circle cx="-17" cy="-8" r="2.8"/></g></g>
+<text x="260" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Bear</text>
+<g transform="translate(315 36) scale(1.05 1.05)"><g fill="#2f3a2b"><path d="M-12 -2 C-12 -10 -2 -12 6 -10 C14 -8 16 0 12 6 C8 10 -4 11 -9 7 C-12 5 -12 2 -12 -2z"/><path d="M8 -4 L20 -10 C22 -4 22 2 19 7 L8 4z"/><path d="M-9 -4 C-12 -9 -11 -15 -6 -16 C-2 -16 0 -12 -1 -8z"/><path d="M-11 -12 l-4 1 l4 1z"/><path d="M-2 10 v5 M3 10 v5" stroke="#2f3a2b" stroke-width="1.6"/></g></g>
+<text x="315" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grouse</text>
+<g transform="translate(368 36) scale(-1.05 1.05)"><g fill="#2f3a2b"><path d="M-20 2 C-18 -6 -6 -6 4 -4 L9 -8 C9 -16 17 -18 20 -12 L25 -11 L20 -8 C17 -4 15 0 13 4 C7 10 -12 10 -20 2z"/><path d="M-24 10 H22" stroke="#4a7fb0" stroke-width="2" stroke-dasharray="6 3"/></g></g>
+<text x="368" y="70" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Ducks</text>
+<rect x="8" y="80" width="384" height="46" rx="6" fill="#f4eedf"/>
+<g transform="translate(24 103)"><rect x="-4" y="-2" width="8" height="14" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-4 -2 L-2 -8 L0 -12 L2 -8 L4 -2z" fill="#b87333" stroke="#7a4a1a"/></g>
+<text x="40" y="109" font-size="15" font-weight="bold" fill="#2f3a2b">Centrefire</text>
+<circle cx="150" cy="104" r="14" fill="#e3eedb"/><path d="M142.7 105.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="205" cy="104" r="14" fill="#e3eedb"/><path d="M197.7 105.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="260" cy="104" r="14" fill="#e3eedb"/><path d="M252.7 105.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="315" cy="104" r="14" fill="#e3eedb"/><path d="M307.6 105.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="328" cy="92" r="8" fill="#e8590c"/><text x="328" y="97" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<circle cx="368" cy="104" r="14" fill="#f6e1dc"/><path d="M362.6 98.6 l10.8 10.8 M373.4 98.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<rect x="8" y="130" width="384" height="46" rx="6" fill="#ffffff"/>
+<g transform="translate(24 153)"><rect x="-2.6" y="2" width="5.2" height="9" rx="1" fill="#c9a24a" stroke="#7a5a1a"/><path d="M-2.6 2 C-2.6 -3 2.6 -3 2.6 2z" fill="#8a8a8a" stroke="#555"/></g>
+<text x="40" y="159" font-size="15" font-weight="bold" fill="#2f3a2b">Rimfire .22</text>
+<circle cx="150" cy="154" r="14" fill="#f6e1dc"/><path d="M144.6 148.6 l10.8 10.8 M155.4 148.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="205" cy="154" r="14" fill="#f6e1dc"/><path d="M199.6 148.6 l10.8 10.8 M210.4 148.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="260" cy="154" r="14" fill="#f6e1dc"/><path d="M254.6 148.6 l10.8 10.8 M265.4 148.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="315" cy="154" r="14" fill="#e3eedb"/><path d="M307.6 155.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="328" cy="142" r="8" fill="#e8590c"/><text x="328" y="147" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<circle cx="368" cy="154" r="14" fill="#f6e1dc"/><path d="M362.6 148.6 l10.8 10.8 M373.4 148.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<rect x="8" y="180" width="384" height="46" rx="6" fill="#f4eedf"/>
+<g transform="translate(24 203)"><rect x="-5" y="-10" width="10" height="16" rx="1.5" fill="#c0392b" stroke="#7e2318"/><rect x="-5.5" y="6" width="11" height="6" rx="1" fill="#c9a24a" stroke="#7a5a1a"/></g>
+<text x="40" y="209" font-size="15" font-weight="bold" fill="#2f3a2b">Shotgun</text>
+<circle cx="150" cy="204" r="14" fill="#e3eedb"/><path d="M142.7 205.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="163" cy="192" r="8" fill="#e8590c"/><text x="163" y="197" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="205" cy="204" r="14" fill="#f6e1dc"/><path d="M199.6 198.6 l10.8 10.8 M210.4 198.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="260" cy="204" r="14" fill="#e3eedb"/><path d="M252.7 205.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="273" cy="192" r="8" fill="#e8590c"/><text x="273" y="197" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<circle cx="315" cy="204" r="14" fill="#e3eedb"/><path d="M307.6 205.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="368" cy="204" r="14" fill="#e3eedb"/><path d="M360.6 205.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="381" cy="192" r="8" fill="#e8590c"/><text x="381" y="197" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<rect x="8" y="230" width="384" height="46" rx="6" fill="#ffffff"/>
+<g transform="translate(24 253)"><path d="M-4 -2 L-5 6 L5 6 L4 -2 C4 -6 -4 -6 -4 -2z" fill="#9aa0a6" stroke="#555"/></g>
+<text x="40" y="259" font-size="15" font-weight="bold" fill="#2f3a2b">Air rifle</text>
+<circle cx="150" cy="254" r="14" fill="#e3eedb"/><path d="M142.7 255.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="163" cy="242" r="8" fill="#e8590c"/><text x="163" y="247" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<circle cx="205" cy="254" r="14" fill="#f6e1dc"/><path d="M199.6 248.6 l10.8 10.8 M210.4 248.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<circle cx="260" cy="254" r="14" fill="#e3eedb"/><path d="M252.7 255.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="273" cy="242" r="8" fill="#e8590c"/><text x="273" y="247" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<circle cx="315" cy="254" r="14" fill="#e3eedb"/><path d="M307.6 255.0 l5.2 5.2 l10.5 -11.6" fill="none" stroke="#2f6e3b" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="368" cy="254" r="14" fill="#f6e1dc"/><path d="M362.6 248.6 l10.8 10.8 M373.4 248.6 l-10.8 10.8" stroke="#c0392b" stroke-width="2.9" stroke-linecap="round"/>
+<rect x="8" y="280" width="384" height="46" rx="6" fill="#f4eedf"/>
+<g transform="translate(24 303)"><path d="M-4 -12 C8 -6 8 6 -4 12" fill="none" stroke="#8b5a2b" stroke-width="2.6"/><path d="M-4 -12 V12" stroke="#2f3a2b" stroke-width="1"/><path d="M-8 0 H10 M6 -3 L10 0 L6 3" stroke="#2f3a2b" stroke-width="1.6" fill="none"/></g>
+<text x="40" y="309" font-size="15" font-weight="bold" fill="#2f3a2b">Bow class</text>
+<text x="150" y="309" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">B C D</text>
+<text x="205" y="309" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">A C D</text>
+<text x="260" y="309" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">A C D</text>
+<text x="315" y="309" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">B C D</text>
+<text x="368" y="309" font-size="14" font-weight="bold" fill="#2f6e3b" text-anchor="middle">D</text>
+<text x="12" y="344" font-size="15" font-weight="bold" fill="#2f3a2b">Moose column: elk and caribou are the same.</text>
+<circle cx="20" cy="361" r="8" fill="#e8590c"/><text x="20" y="366" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="34" y="366" font-size="14" fill="#2f3a2b">Shotgun: 20 gauge or larger, No. 1 Buck or larger.</text>
+<circle cx="20" cy="383" r="8" fill="#e8590c"/><text x="20" y="388" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="34" y="388" font-size="14" fill="#2f3a2b">Rimfire: grouse, ptarmigan or turkey only.</text>
+<circle cx="20" cy="405" r="8" fill="#e8590c"/><text x="20" y="410" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="34" y="410" font-size="14" fill="#2f3a2b">Centrefire: grouse or ptarmigan only.</text>
+<circle cx="20" cy="427" r="8" fill="#e8590c"/><text x="20" y="432" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<text x="34" y="432" font-size="14" fill="#2f3a2b">Ducks: non toxic shot, 10 gauge or smaller.</text>
+<circle cx="20" cy="449" r="8" fill="#e8590c"/><text x="20" y="454" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<text x="34" y="454" font-size="14" fill="#2f3a2b">Air rifle: .35 calibre or larger.</text>
+</svg>

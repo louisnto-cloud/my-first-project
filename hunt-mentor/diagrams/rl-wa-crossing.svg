@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Map view of a creek with steep cut banks along most of its length. At one spot the banks are low and the bottom is firm gravel. Several dotted game trails from both sides converge on that one easy crossing.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="12" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="start">Where animals cross a creek</text><text x="388" y="24" font-size="14" fill="#2f3a2b" text-anchor="end">map view</text><rect x="0" y="36" width="400" height="232" fill="#dfe6d3" opacity=".6"/><text x="388" y="24" font-size="13" fill="#2f3a2b" text-anchor="end"></text>
+  <path d="M0 150 C 100 130, 200 170, 400 140" stroke="#4a7fb0" stroke-width="14" fill="none"/>
+  <path d="M0 136 C 100 116, 150 140, 180 146 M230 160 C 300 150, 340 132, 400 126" stroke="#8b5a2b" stroke-width="4" fill="none" stroke-dasharray="2 4"/>
+  <path d="M0 166 C 100 146, 150 168, 180 172 M230 182 C 300 172, 340 150, 400 156" stroke="#8b5a2b" stroke-width="4" fill="none" stroke-dasharray="2 4"/>
+  <ellipse cx="205" cy="160" rx="26" ry="18" fill="#d9c9a3" opacity=".9"/>
+  <path d="M120 40 C 160 90, 190 120, 205 150 M300 40 C 250 90, 220 120, 205 150 M205 170 C 190 210, 150 240, 110 268 M205 170 C 230 210, 270 240, 320 268" stroke="#8b5a2b" stroke-width="3" stroke-dasharray="3 6" fill="none"/>
+  <rect x="10" y="44" width="142" height="24" rx="6" fill="#2f3a2b"/><text x="81.0" y="61" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Steep cut banks</text><rect x="202" y="196" width="192" height="24" rx="6" fill="#e8590c"/><text x="298.0" y="213" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Low bank, firm gravel</text>
+  <text x="200" y="292" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Trails gather at the easy crossing</text>
+</svg>

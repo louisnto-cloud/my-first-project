@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 510" font-family="sans-serif" role="img" aria-label="Grid search from the last blood, seen from above in snow. A blood trail runs in, marked with flags, to the last blood spot: flag it and return there. Step 1: search a circle of 20 m around it. Step 2: a circle of 40 m. Downhill and water: check these first. Step 3: walk lanes 10 m apart and stay in sight of each other, you in one lane and your brother one lane over. Walk beside the blood line, never on it. Lost it? Back to the last flag, then circles, then lanes.">
+<rect width="400" height="510" fill="#fffaf0"/>
+<defs><clipPath id="blood-grid-c"><rect x="8" y="42" width="384" height="222" rx="8"/></clipPath><marker id="blood-grid-ah" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12z" fill="#2f3a2b"/></marker></defs>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grid search from the last blood</text>
+<g clip-path="url(#blood-grid-c)"><rect x="8" y="42" width="384" height="222" fill="#f3f6f8"/>
+<path d="M371 249 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M33 64 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M174 130 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M284 259 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M179 103 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M26 52 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M187 114 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M155 237 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M210 166 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M101 51 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M134 75 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M204 260 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M288 240 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M145 256 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M185 159 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M196 244 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M200 224 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M145 235 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M225 243 q6 -3 12 0" stroke="#dde5ea" stroke-width="2" fill="none"/>
+<path d="M250 268 C290 236 330 236 400 216" stroke="#4a7fb0" stroke-width="9" fill="none" stroke-linecap="round"/>
+</g>
+<rect x="8" y="42" width="384" height="222" rx="8" fill="none" stroke="#c9d3da"/>
+<circle cx="150" cy="154" r="40" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="150" cy="154" r="80" fill="none" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="24" cy="60" r="3.5" fill="#c92a2a"/>
+<circle cx="46" cy="76" r="3.5" fill="#c92a2a"/>
+<line x1="52" y1="78" x2="52" y2="58" stroke="#2f3a2b" stroke-width="1.6"/><path d="M52 58 h11 l-3 4 l3 4 h-11z" fill="#e8590c"/>
+<circle cx="68" cy="92" r="3.5" fill="#c92a2a"/>
+<circle cx="90" cy="108" r="3.5" fill="#c92a2a"/>
+<line x1="96" y1="110" x2="96" y2="90" stroke="#2f3a2b" stroke-width="1.6"/><path d="M96 90 h11 l-3 4 l3 4 h-11z" fill="#e8590c"/>
+<circle cx="110" cy="124" r="3.5" fill="#c92a2a"/>
+<circle cx="130" cy="140" r="3.5" fill="#c92a2a"/>
+<line x1="136" y1="142" x2="136" y2="122" stroke="#2f3a2b" stroke-width="1.6"/><path d="M136 122 h11 l-3 4 l3 4 h-11z" fill="#e8590c"/>
+<text x="72" y="64" font-size="15" font-weight="bold" fill="#2f3a2b">Blood trail, flagged</text>
+<circle cx="150" cy="154" r="9" fill="#c92a2a" stroke="#fffaf0" stroke-width="2"/><line x1="158" y1="154" x2="158" y2="130" stroke="#2f3a2b" stroke-width="1.8"/><path d="M158 130 h14 l-4 5 l4 5 h-14z" fill="#e8590c"/>
+<rect x="237.6" y="56.0" width="148.8" height="45.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="312" y="75" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LAST BLOOD</text>
+<text x="312" y="93" font-size="15" fill="#2f3a2b" text-anchor="middle">flag it, return here</text>
+<line x1="162" y1="144" x2="237.59" y2="93" stroke="#2f3a2b" stroke-width="1.4"/>
+<rect x="244.0" y="162.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="299.236" y="180" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1: circle 20 m</text>
+<line x1="184" y1="150" x2="244" y2="174" stroke="#2f3a2b" stroke-width="1.4"/>
+<rect x="244.0" y="198.0" width="110.5" height="26.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="299.236" y="216" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2: circle 40 m</text>
+<line x1="224" y1="184" x2="244" y2="210" stroke="#2f3a2b" stroke-width="1.4"/>
+<line x1="372" y1="152" x2="372" y2="214" stroke="#2f3a2b" stroke-width="2.6" marker-end="url(#blood-grid-ah)"/>
+<rect x="241.5" y="112.0" width="153.0" height="43.0" rx="5" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.2"/>
+<text x="318" y="130" font-size="14" font-weight="bold" fill="#2c5d86" text-anchor="middle">Downhill and water:</text>
+<text x="318" y="147" font-size="14" font-weight="bold" fill="#2c5d86" text-anchor="middle">check these first</text>
+<text x="14" y="296" font-size="17" font-weight="bold" fill="#2f3a2b">3: lanes, 10 m apart</text>
+<text x="14" y="316" font-size="15" fill="#2f3a2b">Stay in sight of each other</text>
+<line x1="214" y1="342" x2="330" y2="342" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#blood-grid-ah)"/>
+<line x1="214" y1="372" x2="330" y2="372" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#blood-grid-ah)"/>
+<line x1="214" y1="402" x2="330" y2="402" stroke="#2f3a2b" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#blood-grid-ah)"/>
+<circle cx="206" cy="342" r="8" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/><text x="192" y="347" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="end">You</text>
+<circle cx="206" cy="372" r="8" fill="#6b4f35" stroke="#fffaf0" stroke-width="2"/><text x="192" y="377" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="end">Brother, one lane over</text>
+<text x="192" y="407" font-size="14" fill="#6b5b4b" text-anchor="end">next lane</text>
+<line x1="346" y1="342" x2="346" y2="372" stroke="#2f3a2b" stroke-width="1.6"/><line x1="340" y1="342" x2="352" y2="342" stroke="#2f3a2b" stroke-width="1.6"/><line x1="340" y1="372" x2="352" y2="372" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="356" y="362" font-size="15" font-weight="bold" fill="#2f3a2b">10 m</text>
+<text x="14" y="438" font-size="15" font-weight="bold" fill="#2f3a2b">Walk beside the blood line, never on it.</text>
+<text x="14" y="459" font-size="15" fill="#2f3a2b">Lost it? Back to the last flag,</text>
+<text x="14" y="478" font-size="15" fill="#2f3a2b">then circles, then lanes.</text>
+<text x="14" y="500" font-size="14" fill="#6b5b4b">Orange: blood and flags. Dashed: search pattern.</text>
+</svg>

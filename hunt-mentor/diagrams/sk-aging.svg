@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 356" font-family="sans-serif" role="img" aria-label="Aging timeline: hold the carcass at 1 to 3 degrees Celsius for 7 to 14 days, and stop at day 14. Ticks at day 0, 7, 10 and 14. Slime, mould or an off smell means stop, trim and freeze. No cold room: skip aging, cut and freeze within a few days, a tip.">
+<rect width="400" height="356" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aging: cold, and not too long</text>
+<rect x="33" y="48" width="14" height="66" rx="7" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2.4"/><circle cx="40" cy="122" r="12" fill="#4a7fb0" stroke="#2f3a2b" stroke-width="2.4"/><rect x="37" y="88" width="6" height="34" fill="#4a7fb0"/><path d="M48 62 h6 M48 76 h6 M48 90 h6 M48 104 h6" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="68" y="78" font-size="17" font-weight="bold" fill="#2f3a2b">Hold at</text>
+<text x="68" y="110" font-size="30" font-weight="bold" fill="#4a7fb0">1 to 3°C</text>
+<path d="M290 46 H370" stroke="#2f3a2b" stroke-width="3" stroke-linecap="round"/><path d="M330 46 v10" stroke="#2f3a2b" stroke-width="2"/><path d="M330 56 C308 60 304 86 312 108 C318 124 342 124 348 108 C356 86 352 60 330 56z" fill="#efe6d2" stroke="#b9a885" stroke-width="1.6"/><path d="M318 72 C324 80 336 80 342 72 M316 94 C324 102 336 102 344 94" stroke="#d9c9a5" stroke-width="1.4" fill="none"/>
+<rect x="26" y="152" width="330" height="30" rx="6" fill="#e8ece2" stroke="#8a9a6b" stroke-width="1.4"/>
+<rect x="191.0" y="152" width="165.0" height="30" fill="#4a7fb0" opacity=".9"/>
+<text x="273.5" y="173" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">7 to 14 days</text>
+<line x1="356.0" y1="134" x2="356.0" y2="192" stroke="#c0392b" stroke-width="4"/>
+<text x="362" y="146" font-size="17" font-weight="bold" fill="#c0392b">Stop</text>
+<line x1="26.0" y1="182" x2="26.0" y2="190" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="26" y="208" font-size="15" fill="#2f3a2b">day 0</text>
+<line x1="191.0" y1="182" x2="191.0" y2="190" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="191" y="208" font-size="15" fill="#2f3a2b" text-anchor="middle">day 7</text>
+<line x1="261.7" y1="182" x2="261.7" y2="190" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="261.714" y="208" font-size="15" fill="#2f3a2b" text-anchor="middle">day 10</text>
+<line x1="356.0" y1="182" x2="356.0" y2="190" stroke="#2f3a2b" stroke-width="1.6"/>
+<text x="356" y="208" font-size="15" fill="#2f3a2b" text-anchor="middle">day 14</text>
+<rect x="8" y="236" width="384" height="52" rx="9" fill="#fbe3df" stroke="#c0392b" stroke-width="1.6"/>
+<circle cx="34" cy="262" r="14" fill="#c0392b"/><text x="34" y="269" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">!</text>
+<text x="58" y="258" font-size="16" font-weight="bold" fill="#2f3a2b">Slime, mould or off smell:</text>
+<text x="58" y="278" font-size="16" font-weight="bold" fill="#c0392b">stop, trim, freeze.</text>
+<rect x="8" y="296" width="384" height="52" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.4"/>
+<g transform="translate(34 322)"><rect x="-11" y="-14" width="22" height="28" rx="3" fill="#fffaf0" stroke="#2f3a2b" stroke-width="2"/><path d="M-11 -3 H11" stroke="#2f3a2b" stroke-width="2"/><path d="M-7 -10 v4 M-7 2 v6" stroke="#2f3a2b" stroke-width="2"/></g>
+<text x="58" y="318" font-size="16" font-weight="bold" fill="#2f3a2b">No cold room? Skip aging.</text>
+<text x="58" y="338" font-size="15" fill="#2f3a2b">Cut and freeze within a few days (Tip).</text>
+</svg>

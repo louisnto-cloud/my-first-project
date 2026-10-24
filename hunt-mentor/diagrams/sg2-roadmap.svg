@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The shotgun course in 12 chapters: 1 meet the shotgun, 2 pump, 3 semi auto, 4 over under, 5 gauge and chamber, 6 chokes and patterning, 7 shot and the law, 8 mount swing and lead, 9 safety with others, 10 grouse and duck plans, 11 cleaning and field strip, 12 buying guide.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">The course in 12 chapters</text>
+<rect x="14" y="46" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="30" cy="71" r="11" fill="#1F3D2B"/><text x="30" y="75.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="45.0" y="76.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Meet it</text>
+<rect x="140" y="46" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="156" cy="71" r="11" fill="#1F3D2B"/><text x="156" y="75.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="171.0" y="76.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Pump</text>
+<rect x="266" y="46" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="282" cy="71" r="11" fill="#1F3D2B"/><text x="282" y="75.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="297.0" y="76.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Semi auto</text>
+<rect x="14" y="106" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="30" cy="131" r="11" fill="#1F3D2B"/><text x="30" y="135.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="45.0" y="136.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Over under</text>
+<rect x="140" y="106" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="156" cy="131" r="11" fill="#1F3D2B"/><text x="156" y="135.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="171.0" y="136.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Gauge</text>
+<rect x="266" y="106" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="282" cy="131" r="11" fill="#1F3D2B"/><text x="282" y="135.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text x="297.0" y="136.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Chokes</text>
+<rect x="14" y="166" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="30" cy="191" r="11" fill="#1F3D2B"/><text x="30" y="195.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text x="45.0" y="196.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Shot</text>
+<rect x="140" y="166" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="156" cy="191" r="11" fill="#1F3D2B"/><text x="156" y="195.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+<text x="171.0" y="196.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Swing</text>
+<rect x="266" y="166" width="118" height="50" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="2"/>
+<circle cx="282" cy="191" r="11" fill="#FF6A13"/><text x="282" y="195.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+<text x="297.0" y="196.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Safety</text>
+<rect x="14" y="226" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="30" cy="251" r="11" fill="#1F3D2B"/><text x="30" y="255.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+<text x="45.0" y="256.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Plans</text>
+<rect x="140" y="226" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="156" cy="251" r="11" fill="#1F3D2B"/><text x="156" y="255.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">11</text>
+<text x="171.0" y="256.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Cleaning</text>
+<rect x="266" y="226" width="118" height="50" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="2"/>
+<circle cx="282" cy="251" r="11" fill="#1F3D2B"/><text x="282" y="255.7" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">12</text>
+<text x="297.0" y="256.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Buy one</text>
+<text x="200.0" y="290.0" font-size="15" font-weight="bold" fill="#1F3D2B" text-anchor="middle">Safety (9) is the one you never skip.</text>
+</svg>

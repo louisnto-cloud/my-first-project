@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" font-family="sans-serif" role="img" aria-label="Four numbers from a Pennsylvania public land aerial survey. 73 percent of hunters were within half a kilometre of a road. The average farthest point hunters reached from a road was 0.84 kilometres. Each kilometre closer to a road made an area about 3 times more likely to be hunted, and each 10 degrees flatter, 1.25 times. Luloff and others 2004, Penn State, read directly; 90 percent for Pennsylvania.">
+<rect width="400" height="342" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Who hunts where</text>
+<text x="200" y="50" font-size="15" fill="#6b5b4b" text-anchor="middle">Pennsylvania aerial survey</text>
+<rect x="8" y="62" width="188" height="110" rx="8" fill="#f1ead9"/>
+<text x="22" y="102" font-size="28" font-weight="bold" fill="#e8590c">73%</text>
+<text x="22" y="130" font-size="15" font-weight="bold" fill="#2f3a2b">of hunters within</text>
+<text x="22" y="149" font-size="15" fill="#2f3a2b">0.5 km of a road</text>
+<g transform="translate(170 90) scale(0.95)" fill="#6b6b62" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<rect x="204" y="62" width="188" height="110" rx="8" fill="#f1ead9"/>
+<text x="218" y="102" font-size="28" font-weight="bold" fill="#e8590c">0.84 km</text>
+<text x="218" y="130" font-size="15" font-weight="bold" fill="#2f3a2b">average farthest</text>
+<text x="218" y="149" font-size="15" fill="#2f3a2b">point from a road</text>
+<g transform="translate(366 108) scale(0.75 0.75)"><path d="M-2 -20 L-8 0 M2 -20 L8 -1" stroke="#4a4136" stroke-width="5" stroke-linecap="round"/><path d="M-6 -40 C-6 -44 6 -44 6 -40 L5 -19 H-5z" fill="#e8590c"/><rect x="-15" y="-41" width="10" height="17" rx="3" fill="#7a5a3a"/><circle cx="0" cy="-47" r="5.5" fill="#e0b48c"/><path d="M4 -36 L11 -26" stroke="#e0b48c" stroke-width="3.4" stroke-linecap="round"/></g>
+<rect x="8" y="180" width="188" height="110" rx="8" fill="#f1ead9"/>
+<text x="22" y="220" font-size="28" font-weight="bold" fill="#e8590c">about 3x</text>
+<text x="22" y="248" font-size="15" font-weight="bold" fill="#2f3a2b">more hunters each</text>
+<text x="22" y="267" font-size="15" fill="#2f3a2b">1 km closer to a road</text>
+<g transform="translate(170 208) scale(0.95)" fill="#6b6b62" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<rect x="204" y="180" width="188" height="110" rx="8" fill="#f1ead9"/>
+<text x="218" y="220" font-size="28" font-weight="bold" fill="#e8590c">1.25x</text>
+<text x="218" y="248" font-size="15" font-weight="bold" fill="#2f3a2b">more hunters each</text>
+<text x="218" y="267" font-size="15" fill="#2f3a2b">10 degrees flatter</text>
+<path d="M348 220 L384 220 L384 202z" fill="#8a9a6b"/>
+<text x="200" y="314" font-size="14" fill="#6b5b4b" text-anchor="middle">Luloff and others 2004, Penn State, read directly</text>
+<text x="200" y="332" font-size="14" fill="#6b5b4b" text-anchor="middle">(90% for Pennsylvania).</text>
+</svg>

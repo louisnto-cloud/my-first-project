@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" font-family="sans-serif" role="img" aria-label="3 common mistakes. Taking bird shot or a .22 for deer, fix: Centrefire, .35 air rifle, 20 gauge with No. 1 Buck, or a legal bow. A lead grouse load in the vest on a duck hunt, fix: Steel shells only in the duck bag. Pulling the plug for ducks, fix: Plug in. Three shells, total.">
+<rect width="400" height="352" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">3 common mistakes</text>
+<circle cx="28" cy="52" r="11" fill="#17201A"/><path d="M23.5 47.5 l9 9 M32.5 47.5 l-9 9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><text x="46" y="57" font-size="15" font-weight="bold" fill="#17201A">Mistake</text><circle cx="244" cy="52" r="11" fill="#1F3D2B"/><path d="M239 52 l3.5 4 l6.5 -8" stroke="#FFFFFF" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="262" y="57" font-size="15" font-weight="bold" fill="#1F3D2B">Fix</text>
+<g><rect x="12" y="72" width="160" height="113" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="94" font-size="15" fill="#17201A">Taking bird shot</text>
+<text x="22" y="113" font-size="15" fill="#17201A">or a .22 for deer</text><path d="M178 128.5 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 128.5 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="72" width="160" height="113" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="94" font-size="15" font-weight="bold" fill="#1F3D2B">Centrefire, .35</text>
+<text x="238" y="113" font-size="15" font-weight="bold" fill="#1F3D2B">air rifle, 20</text>
+<text x="238" y="132" font-size="15" font-weight="bold" fill="#1F3D2B">gauge with No. 1</text>
+<text x="238" y="151" font-size="15" font-weight="bold" fill="#1F3D2B">Buck, or a legal</text>
+<text x="238" y="170" font-size="15" font-weight="bold" fill="#1F3D2B">bow</text></g>
+<g><rect x="12" y="195" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="217" font-size="15" fill="#17201A">A lead grouse load</text>
+<text x="22" y="236" font-size="15" fill="#17201A">in the vest on a</text>
+<text x="22" y="255" font-size="15" fill="#17201A">duck hunt</text><path d="M178 232.5 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 232.5 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="195" width="160" height="75" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="217" font-size="15" font-weight="bold" fill="#1F3D2B">Steel shells</text>
+<text x="238" y="236" font-size="15" font-weight="bold" fill="#1F3D2B">only in the duck</text>
+<text x="238" y="255" font-size="15" font-weight="bold" fill="#1F3D2B">bag</text></g>
+<g><rect x="12" y="280" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#17201A" stroke-width="1.5" stroke-dasharray="5 4"/><text x="22" y="302" font-size="15" fill="#17201A">Pulling the plug</text>
+<text x="22" y="321" font-size="15" fill="#17201A">for ducks</text><path d="M178 308 H215" stroke="#1F3D2B" stroke-width="3" fill="none"/><path d="M222 308 l-9 -6 v12z" fill="#1F3D2B"/><rect x="228" y="280" width="160" height="56" rx="8" fill="#FFFFFF" stroke="#1F3D2B" stroke-width="3"/><text x="238" y="302" font-size="15" font-weight="bold" fill="#1F3D2B">Plug in. Three</text>
+<text x="238" y="321" font-size="15" font-weight="bold" fill="#1F3D2B">shells, total</text></g>
+
+</svg>

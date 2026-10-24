@@ -1,0 +1,2935 @@
+{
+ "updated": "2026-10-03",
+ "species": {
+  "muledeer": {
+   "label": "Mule deer",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1000
+     ],
+     "where": "Winter range: steep south and west facing slopes with shrubs and old Douglas fir, below deep snow. Near Kamloops the studied range is below about 760 m.",
+     "cert": 80
+    },
+    "2": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1000
+     ],
+     "where": "Winter range. Deep snow packs deer onto the warmest, steepest slopes.",
+     "cert": 80
+    },
+    "3": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1000
+     ],
+     "where": "Still on winter range. First green grass shows on low south slopes late in the month.",
+     "cert": 75
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1200
+     ],
+     "where": "Green up on low south facing grass slopes, the best viewing month. Migrants start to leave late in the month.",
+     "cert": 75
+    },
+    "5": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      400,
+      1900
+     ],
+     "where": "Spring migration: most migrants go to summer range in April and May, often about 50 km, on the same route every year. Some deer stay low all year.",
+     "cert": 70
+    },
+    "6": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      800,
+      2000
+     ],
+     "where": "Summer range: moister high country, openings, cutblocks and burns. Fawns born late May to June.",
+     "cert": 65
+    },
+    "7": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      800,
+      2000
+     ],
+     "where": "Summer range high up. Resident deer stay on the lower slopes.",
+     "cert": 60
+    },
+    "8": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      800,
+      2100
+     ],
+     "where": "Summer range in the high country until frost.",
+     "cert": 60
+    },
+    "9": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      800,
+      2100
+     ],
+     "where": "Mostly still on summer range. Cold snaps and early snow up high start some moves.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "PP",
+      "IDF",
+      "MS"
+     ],
+     "elevM": [
+      400,
+      1800
+     ],
+     "where": "Fall migration: collared deer came back in October and November; one year nearly all were back by mid October. Snow and cold set the timing.",
+     "cert": 70
+    },
+    "11": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1300
+     ],
+     "where": "Most deer on or near winter range. Rut in November and early December.",
+     "cert": 75
+    },
+    "12": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1100
+     ],
+     "where": "Winter range. In light snow years some deer stay higher until December.",
+     "cert": 75
+    }
+   },
+   "notes": [
+    "74% of collared deer that could migrate were migratory, averaging 47.2 km per year (current SIMDeer page); the 2020 update said 78% and 55 km on average; longest about 100 km (102 km straight line in 2019) (85%).",
+    "Most moved to summer range April to May and back October to November, on nearly the same path both ways (85%).",
+    "Trigger is snow and cold, not the rut (Monteith 2011, 85%).",
+    "Snow: difficulty above about 30 cm (BC account), deer leave slopes near 50 cm (UBC thesis): use 30 to 50 cm as the range (75%).",
+    "No approved Ungulate Winter Range polygons in the box around Kamloops and Heffley Creek; approved mule deer winter ranges exist south toward Merritt (order u-3-003) and in the Okanagan (u-8-001) (layer query, 90%).",
+    "Elevations are a general pattern built from BEC zone ranges, not from collar data (65%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Mule and Black tailed Deer in BC (2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/muledeer.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Wildlife Federation, Southern Interior Mule Deer Project page",
+     "url": "https://bcwf.bc.ca/initiatives/mule-deer-project/",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Wildlife Federation, SIMDeer winter update, 11 March 2020",
+     "url": "https://bcwf.bc.ca/southern-interior-mule-deer-project-winter-update/",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Wildlife Federation, SIMDeer update, 13 November 2019",
+     "url": "https://bcwf.bc.ca/southern-interior-mule-deer-project-update/",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Monteith and others 2011, Ecosphere, timing of mule deer migration",
+     "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/ES10-00096.1",
+     "checked": "2026-10-01"
+    },
+    {
+     "name": "Willms 1976, deer diet and winter range near Kamloops",
+     "url": "https://cdnsciencepub.com/doi/pdf/10.4141/cjas76-065",
+     "checked": "2026-10-01"
+    },
+    {
+     "name": "BC Data Catalogue, Ungulate Winter Range Approved layer (queried by area)",
+     "url": "https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "whitetail": {
+   "label": "White tailed deer",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Valley bottoms: south facing slopes, fans and terraces with shrubs; dense conifer patches when snow is deep.",
+     "cert": 65
+    },
+    "2": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Valley bottom winter range; conifer patches in deep snow.",
+     "cert": 65
+    },
+    "3": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Winter range; first green up on fields and south slopes.",
+     "cert": 60
+    },
+    "4": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Fields and riparian edges green up first; deer feed there at dawn and dusk.",
+     "cert": 60
+    },
+    "5": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Floodplains and river terraces. Fawns born late May or June.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Summer on floodplains, river terraces, hay and alfalfa fields. Most active at dawn and dusk.",
+     "cert": 65
+    },
+    "7": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Floodplains, riparian brush and irrigated fields.",
+     "cert": 65
+    },
+    "8": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Floodplains, riparian brush and irrigated fields.",
+     "cert": 65
+    },
+    "9": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      1000
+     ],
+     "where": "Fields and riparian cover; short moves along the valley as feed changes.",
+     "cert": 60
+    },
+    "10": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      1000
+     ],
+     "where": "Aspen, cottonwood and willow groves along rivers and wetlands; fields at dusk. Rut builds late in the month.",
+     "cert": 65
+    },
+    "11": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Rut peaks in November. Valley bottom fields and riparian brush.",
+     "cert": 70
+    },
+    "12": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH"
+     ],
+     "elevM": [
+      300,
+      900
+     ],
+     "where": "Early winter: river groves first, then south slopes and conifer patches as snow deepens.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "Snow depth is the main factor in where white tails live; they prefer valley bottoms with farmland (BC account, 85%).",
+    "Seasonal moves are short: up or down the main valleys, or across the valley from north slopes in summer to south slopes in winter (BC account, 85%).",
+    "The BC account is built mostly on Kootenay data; applying it to the Thompson and Okanagan lowers certainty to about 65 to 70%.",
+    "Local reading: North Thompson hayfields and cottonwood bottoms (deer notes 2026-10-01, 75%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, White tailed Deer in BC (Blood 2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/whttail.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "blacktail": {
+   "label": "Black tailed deer (coast)",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      800
+     ],
+     "where": "Low winter range: old forest, warm south facing slopes and floodplains with little snow. Above 1,000 m is rarely used in winter.",
+     "cert": 70
+    },
+    "2": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      800
+     ],
+     "where": "Low winter range in old forest and on warm slopes.",
+     "cert": 70
+    },
+    "3": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      900
+     ],
+     "where": "Winter range; migrants start up as low snow melts (timing VERIFY).",
+     "cert": 55
+    },
+    "4": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Green up climbs the slopes; migrants move up within their own watershed.",
+     "cert": 55
+    },
+    "5": {
+     "zones": [
+      "CWH",
+      "ESSF"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Moving up behind the snow line. Fawns born late May to June.",
+     "cert": 55
+    },
+    "6": {
+     "zones": [
+      "CWH",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      0,
+      1800
+     ],
+     "where": "Summer at all elevations, sea level to alpine meadows. Residents stay low in small home ranges.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "CWH",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      0,
+      1800
+     ],
+     "where": "Summer at all elevations; migrants high.",
+     "cert": 60
+    },
+    "8": {
+     "zones": [
+      "CWH",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      0,
+      1800
+     ],
+     "where": "Summer at all elevations; migrants high.",
+     "cert": 60
+    },
+    "9": {
+     "zones": [
+      "CWH",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      0,
+      1800
+     ],
+     "where": "Migrants still high; late green up keeps some deer up into fall.",
+     "cert": 55
+    },
+    "10": {
+     "zones": [
+      "CWH",
+      "ESSF"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Early snow up high starts the move down.",
+     "cert": 55
+    },
+    "11": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Rut in November and early December; snow pushes migrants toward winter range.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      900
+     ],
+     "where": "Low winter range: old forest on warm slopes and floodplains.",
+     "cert": 70
+    }
+   },
+   "notes": [
+    "Some deer migrate within a watershed and some stay resident; migrant annual home range about 1,770 ha versus about 140 ha for residents in a moderate snow zone (Nyberg and Janz 1990 via Gold River report, 80%).",
+    "Old forest at low elevation is key winter range on the coast (BC account; McNay and Voller, 80 to 85%).",
+    "Data come from Vancouver Island; no Fraser Valley or Hope collar study found. Weak for area B (55 to 70%).",
+    "High coastal slopes are Mountain Hemlock zone, which is not in the map's zone list; ESSF and IMA stand in for the high country here."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Mule and Black tailed Deer in BC (2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/muledeer.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Ecological Reports Catalogue, Gold River Wildlife Interpretations, black tailed deer",
+     "url": "https://a100.gov.bc.ca/pub/acat/documents/r1773/whr_4064_modhe_1116621873479_669615d733154125b483be52fe74517e.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Ministry of Forests, McNay and Voller, coastal black tailed deer survival (brochure 41)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/Docs/Bro/Bro41.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "moose": {
+   "label": "Moose",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      400,
+      1500
+     ],
+     "where": "Winter: river valleys that cut the plateaus, burns, cutblocks, wetland complexes and lower avalanche tracks. Moose handle 50 cm of snow or more.",
+     "cert": 70
+    },
+    "2": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      400,
+      1500
+     ],
+     "where": "Winter range, same places.",
+     "cert": 70
+    },
+    "3": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      400,
+      1500
+     ],
+     "where": "Late winter range.",
+     "cert": 65
+    },
+    "4": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      400,
+      1600
+     ],
+     "where": "Spring range next to winter range; moose move fast once the snow turns patchy.",
+     "cert": 65
+    },
+    "5": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      500,
+      1700
+     ],
+     "where": "Calves born late May and June.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "MS",
+      "SBS",
+      "ESSF",
+      "ICH"
+     ],
+     "elevM": [
+      800,
+      1900
+     ],
+     "where": "Summer: spread over the plateaus near lakes, swamps and beaver ponds; in the mountains, higher summer ranges.",
+     "cert": 65
+    },
+    "7": {
+     "zones": [
+      "MS",
+      "SBS",
+      "ESSF",
+      "ICH"
+     ],
+     "elevM": [
+      800,
+      1900
+     ],
+     "where": "Summer near lakes, swamps and beaver ponds; water plants.",
+     "cert": 65
+    },
+    "8": {
+     "zones": [
+      "MS",
+      "SBS",
+      "ESSF",
+      "ICH"
+     ],
+     "elevM": [
+      800,
+      1900
+     ],
+     "where": "Summer near water and in young forest.",
+     "cert": 65
+    },
+    "9": {
+     "zones": [
+      "MS",
+      "SBS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      800,
+      1900
+     ],
+     "where": "Rut starts. Most calves are conceived in late September and early October.",
+     "cert": 70
+    },
+    "10": {
+     "zones": [
+      "MS",
+      "SBS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      800,
+      1900
+     ],
+     "where": "Rut early in the month. Moose stay high longer than deer, elk or sheep.",
+     "cert": 70
+    },
+    "11": {
+     "zones": [
+      "IDF",
+      "MS",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      500,
+      1700
+     ],
+     "where": "Slow drift down toward valley bottoms; in light snow they stay at mid elevation.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      400,
+      1600
+     ],
+     "where": "Early winter: river valleys, burns, cutblocks and wetland complexes.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "Little or no trouble in snow to 40 cm, slight trouble at 40 to 70 cm; they often winter in 50 cm or more (BC account, 85%).",
+    "Seasonal home range seldom over 5 to 10 km2; some moose stay in the valleys all year (BC account, 85%).",
+    "Bonaparte Plateau north of Kamloops is a provincial moose research area since 2012 (90%); no movement results published in the report read.",
+    "Elevations are a general pattern from BEC zones (60 to 65%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Moose in BC (2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/moose.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC provincial moose research, 2016 progress report (Bonaparte study area)",
+     "url": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/wildlife-wildlife-habitat/moose/2016_moose_research_progress_report.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "elk": {
+   "label": "Elk",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Winter range with shallow snow: open forest, grassy benches, floodplain marshes; coastal herds in big river valleys.",
+     "cert": 60
+    },
+    "2": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Winter range with shallow snow.",
+     "cert": 60
+    },
+    "3": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Winter range.",
+     "cert": 55
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "Spring green up on winter range.",
+     "cert": 55
+    },
+    "5": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2000
+     ],
+     "where": "Migration up in May and June: bulls first, cows once calves can follow. Calves born late May and early June.",
+     "cert": 60
+    },
+    "6": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1000,
+      2300
+     ],
+     "where": "Subalpine and alpine basins and avalanche tracks.",
+     "cert": 55
+    },
+    "7": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1000,
+      2300
+     ],
+     "where": "Subalpine and alpine basins.",
+     "cert": 55
+    },
+    "8": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1000,
+      2300
+     ],
+     "where": "Subalpine and alpine basins.",
+     "cert": 55
+    },
+    "9": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      800,
+      2200
+     ],
+     "where": "Rut in mid September; most cows bred mid to late September.",
+     "cert": 70
+    },
+    "10": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      600,
+      2000
+     ],
+     "where": "Late rut; autumn snow pushes herds back toward winter range. A few bulls stay high.",
+     "cert": 60
+    },
+    "11": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Back on winter range in most years.",
+     "cert": 55
+    },
+    "12": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Winter range.",
+     "cert": 60
+    }
+   },
+   "notes": [
+    "Few elk near the bases: about 1,350 in the Thompson Okanagan area in 2000 (BC account, 85% for that date).",
+    "Interior Rocky Mountain elk are more migratory; coastal Roosevelt herds mostly go up in summer, a few stay low (BC account, 85%).",
+    "Roosevelt elk were released near Chehalis under a provincial recovery project (HCTF 2015, 85%).",
+    "Weak species for our areas: months and elevations are a general pattern (55 to 60%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Elk in BC (2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/elk.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Habitat Conservation Trust Foundation, Return of the Roosevelts (2015)",
+     "url": "https://hctf.ca/return-of-the-roosevelts/",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "bighorn": {
+   "label": "Bighorn sheep (California)",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Winter range: steep south to southwest grassland with bluebunch wheatgrass, close to cliffs.",
+     "cert": 80
+    },
+    "2": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Winter range on low grassland near cliffs.",
+     "cert": 80
+    },
+    "3": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Winter and spring range.",
+     "cert": 75
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Spring green up on low grass; lambing starts the last week of April in rugged cliffs.",
+     "cert": 80
+    },
+    "5": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      300,
+      2300
+     ],
+     "where": "Lambing to early June. Migratory herds leave for alpine pastures in May or June; many Fraser River sheep stay low all year.",
+     "cert": 70
+    },
+    "6": {
+     "zones": [
+      "IDF",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Migratory herds on alpine summer pastures; resident herds on low grassland.",
+     "cert": 65
+    },
+    "7": {
+     "zones": [
+      "IDF",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Alpine summer pastures for migrants.",
+     "cert": 65
+    },
+    "8": {
+     "zones": [
+      "IDF",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Alpine summer pastures for migrants.",
+     "cert": 65
+    },
+    "9": {
+     "zones": [
+      "IDF",
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Alpine until snow covers the feed.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "ESSF"
+     ],
+     "elevM": [
+      300,
+      2300
+     ],
+     "where": "Back to winter range in late September or October when snow covers the alpine.",
+     "cert": 70
+    },
+    "11": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Rut from early November on winter range.",
+     "cert": 80
+    },
+    "12": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      300,
+      1800
+     ],
+     "where": "Rut to mid December, then winter range.",
+     "cert": 80
+    }
+   },
+   "notes": [
+    "Winter and spring ranges: low grasslands in BG, PP and IDF zones at 300 to 1,825 m (BC account, 85%).",
+    "Named winter ranges: Dewdrop Rosseau Creek WMA (Kamloops Lake), McTaggart Cowan WMA (east of Skaha Lake), Vaseux and White Lake grasslands (BC pages, 90%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Bighorn Sheep in BC (2000)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/bighorn.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Dewdrop Rosseau Creek",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/dewdrop-rosseau-creek",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, McTaggart Cowan nsek'lniw't",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/mctaggart-cowan-ns-k-niw-t",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "goat": {
+   "label": "Mountain goat",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "ESSF",
+      "IMA",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Winter range close to cliffs: interior goats on windswept high slopes or bluffs at and below treeline; coastal goats lower, in old forest near cliffs.",
+     "cert": 65
+    },
+    "2": {
+     "zones": [
+      "ESSF",
+      "IMA",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Winter range close to cliffs.",
+     "cert": 65
+    },
+    "3": {
+     "zones": [
+      "ESSF",
+      "IMA",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Winter range close to cliffs.",
+     "cert": 65
+    },
+    "4": {
+     "zones": [
+      "ESSF",
+      "MS",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2300
+     ],
+     "where": "Spring: lower slopes and forest edges for green up; mineral lick use starts in April.",
+     "cert": 65
+    },
+    "5": {
+     "zones": [
+      "ESSF",
+      "MS",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2300
+     ],
+     "where": "Kidding May to June on cliffs; trips to licks, sometimes up to 24 km.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1200,
+      2500
+     ],
+     "where": "Moving up to treeline and alpine as snow melts.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1400,
+      2600
+     ],
+     "where": "At or above treeline, never far from escape terrain.",
+     "cert": 70
+    },
+    "8": {
+     "zones": [
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1400,
+      2600
+     ],
+     "where": "At or above treeline, never far from escape terrain.",
+     "cert": 70
+    },
+    "9": {
+     "zones": [
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1400,
+      2600
+     ],
+     "where": "At or above treeline.",
+     "cert": 70
+    },
+    "10": {
+     "zones": [
+      "ESSF",
+      "IMA"
+     ],
+     "elevM": [
+      1200,
+      2600
+     ],
+     "where": "Still high; shifting toward winter range as snow builds.",
+     "cert": 65
+    },
+    "11": {
+     "zones": [
+      "ESSF",
+      "IMA",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Rut early November to early December, peak 15 to 20 November, on or near winter range.",
+     "cert": 75
+    },
+    "12": {
+     "zones": [
+      "ESSF",
+      "IMA",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2500
+     ],
+     "where": "Winter range.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "Goats rarely go more than 400 to 500 m from escape terrain of 40 degrees or steeper (BC plan, 85%).",
+    "Critical periods: winter 1 November to 30 April; kidding and early rearing 1 May to 15 July (BC plan, 85%).",
+    "Coastal goats winter lower in forest; interior goats winter high or on bluffs near treeline (BC plan, 85%). The elevation range in winter is wide for that reason."
+   ],
+   "sources": [
+    {
+     "name": "BC Management Plan for the Mountain Goat (2010)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/recovery/management_plans/MtGoat_MP_Final_28May2010.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Data Catalogue, Ungulate Winter Range Approved layer (queried by area)",
+     "url": "https://catalogue.data.gov.bc.ca/dataset/ungulate-winter-range-approved",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Meidinger and Pojar 1991, Ecosystems of BC, zone chapters (elevations)",
+     "url": "https://www.for.gov.bc.ca/hfd/pubs/docs/srs/srs06.htm",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "blackbear": {
+   "label": "Black bear",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2000
+     ],
+     "where": "In the den. Cubs born January or February. Interior bears den about 5 to 7 months, south coast bears 3 to 5.",
+     "cert": 70
+    },
+    "2": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      2000
+     ],
+     "where": "In the den.",
+     "cert": 70
+    },
+    "3": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Most interior bears still denned; coast bears may be out late in the month.",
+     "cert": 55
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "ICH",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Out of the den, mostly April to May. Low green up: grassy south slopes, meadows, riparian strips, skunk cabbage swamps.",
+     "cert": 70
+    },
+    "5": {
+     "zones": [
+      "PP",
+      "IDF",
+      "ICH",
+      "MS",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1800
+     ],
+     "where": "Green up climbs the slopes; avalanche chutes and burns.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Grasses, forbs and insects; mating season.",
+     "cert": 55
+    },
+    "7": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Berries start; bears follow ripening patches.",
+     "cert": 55
+    },
+    "8": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Berries; salmon streams on the coast.",
+     "cert": 60
+    },
+    "9": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Fall feeding binge (hyperphagia): berries and spawning fish.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Still feeding hard; den entry starts mid October in nearby studies.",
+     "cert": 65
+    },
+    "11": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Den entry through late November; coastal bears later.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "ICH",
+      "IDF",
+      "MS",
+      "ESSF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      2000
+     ],
+     "where": "Denned. A few bears, mostly males, stay out if food is available.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "Nearby study (northeastern Cascades, Washington): males entered dens 22 October to 19 November and came out 4 April to 7 May; females 15 October to 19 November and 4 April to 22 May (Gaines 2003, 80%).",
+    "WildSafeBC: typically in dens December to April, emerging in April (75%).",
+    "Not a migrant: home ranges of 25 to 150 km2 for males and 5 to 25 km2 for females shift with food (BC account, 85%).",
+    "Den elevations and zones vary widely; the zone list is a general pattern (55%)."
+   ],
+   "sources": [
+    {
+     "name": "BC Ministry of Environment, Black Bears in BC (2001)",
+     "url": "https://www.env.gov.bc.ca/wld/documents/blackbear.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Gaines 2003, Canadian Field Naturalist 117(4), black bear denning, northeastern Cascades",
+     "url": "https://www.canadianfieldnaturalist.ca/index.php/cfn/article/download/833/833/3326",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "WildSafeBC, black bear",
+     "url": "https://wildsafebc.com/species/black-bear/",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "ducks": {
+   "label": "Ducks",
+   "pattern": "long distance migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Wintering on open water: Fraser delta and valley fields and sloughs; ice free valley rivers and lakes such as the South Thompson River and Vaseux Lake.",
+     "cert": 65
+    },
+    "2": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Wintering waters.",
+     "cert": 60
+    },
+    "3": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1000
+     ],
+     "where": "Spring migration north starts; valley wetlands open first.",
+     "cert": 55
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Spring passage; plateau lakes open as the ice goes out.",
+     "cert": 55
+    },
+    "5": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      300,
+      1500
+     ],
+     "where": "Breeding on interior wetlands and potholes; mallard, goldeneye and wood duck nest at Tranquille.",
+     "cert": 60
+    },
+    "6": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      300,
+      1500
+     ],
+     "where": "Broods on interior wetlands.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      300,
+      1500
+     ],
+     "where": "Broods and moult.",
+     "cert": 55
+    },
+    "8": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "SBS"
+     ],
+     "elevM": [
+      300,
+      1500
+     ],
+     "where": "Early migrants begin to move.",
+     "cert": 55
+    },
+    "9": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Fall migration well under way by late September.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "MS",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1500
+     ],
+     "where": "Peak fall passage through the interior; plateau lakes start to freeze.",
+     "cert": 60
+    },
+    "11": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1000
+     ],
+     "where": "Freeze up in late November ends most interior migration; birds pack onto open valley water and the coast.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Wintering waters.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "BC fall migration largely ends by late November with freeze up (DU 2024, 75%); well under way in late September (DU 2025, 75%).",
+    "Fraser delta waterfowl food demand runs September to April (PBHJV 2024, 80%).",
+    "Named wintering or staging waters: South Thompson River (IBA), Tranquille (WMA, no shooting), Vaseux Lake (IBA, sanctuary, no hunting), Pitt Addington Marsh, Bert Brink, Harrison Chehalis and Boundary Bay WMAs, North Arm of Okanagan Lake (old basin study) (65 to 90%).",
+    "Weak: no month by month counts for the Thompson or Okanagan; months here are a general pattern (55 to 65%)."
+   ],
+   "sources": [
+    {
+     "name": "Ducks Unlimited field reports, 2024 migration and wintering update (BC section)",
+     "url": "https://www.ducks.org/conservation/waterfowl-research-science/field-reports-2024-migration-and-wintering-habitat-update",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Ducks Unlimited field reports, 2025 fall habitat outlook (BC section)",
+     "url": "https://www.ducks.org/conservation/waterfowl-research-science/field-reports-2025-fall-habitat-outlook",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Ducks Unlimited field reports, migration and wintering outlook (BC section)",
+     "url": "https://www.ducks.org/conservation/national/field-reports-migration-and-wintering-habitat-outlook",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Pacific Birds Habitat Joint Venture, Fraser River Delta guide (2024)",
+     "url": "https://pacificbirds.org/wp-content/uploads/2025/01/Conservation-of-Mig-Bird-Habitat-Fraser-River-Delta-Guide-for-Local-Govts-2024.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "IBA Canada, South Thompson River (BC176)",
+     "url": "https://www.ibacanada.org/mobile/site.jsp?siteID=BC176",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "IBA Canada, Vaseux Lake Area (BC262)",
+     "url": "https://www.ibacanada.org/mobile/site.jsp?siteID=BC262",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Tranquille",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/tranquille",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Pitt Addington Marsh",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/pitt-addington-marsh",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Bert Brink",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/bert-brink",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Boundary Bay",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/boundary-bay",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Okanagan Basin Study, Chapter 9 Wildlife and Water Management (1970s)",
+     "url": "https://www.obwb.ca/newsite/wp-content/uploads/2013/06/68.pdf",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "geese": {
+   "label": "Geese",
+   "pattern": "long distance migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Snow geese mostly on the Skagit in Washington late December to February; Canada and cackling geese on Fraser Valley fields; local Canada geese on open interior rivers.",
+     "cert": 65
+    },
+    "2": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Same as January.",
+     "cert": 65
+    },
+    "3": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1000
+     ],
+     "where": "Snow geese back on the Fraser estuary by mid March; spring staging at Tranquille.",
+     "cert": 70
+    },
+    "4": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1000
+     ],
+     "where": "Snow geese leave in April for Wrangel Island, Russia; Canada geese start nesting.",
+     "cert": 70
+    },
+    "5": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "Canada geese nesting and raising goslings on valley wetlands.",
+     "cert": 55
+    },
+    "6": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "Canada geese with goslings.",
+     "cert": 55
+    },
+    "7": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "Canada geese moult.",
+     "cert": 55
+    },
+    "8": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF",
+      "CWH"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "Local Canada geese on fields and lakes.",
+     "cert": 55
+    },
+    "9": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1300
+     ],
+     "where": "First snow geese reach the coast in late September; fall staging starts.",
+     "cert": 70
+    },
+    "10": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      0,
+      1200
+     ],
+     "where": "Snow geese arrive on the Fraser delta by early October; best numbers mid October to mid December.",
+     "cert": 75
+    },
+    "11": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      1000
+     ],
+     "where": "Interior freeze up pushes geese to open water and the coast; fall staging at Tranquille.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "CWH",
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      0,
+      700
+     ],
+     "where": "Fraser delta snow geese shift to the Skagit late in the month.",
+     "cert": 70
+    }
+   },
+   "notes": [
+    "Snow geese are Wrangel Island birds, a 5,000 km trip; mid winter count of the Fraser and Skagit flocks was 135,000 in January 2021 (Reifel, 80%).",
+    "Tranquille WMA is spring and fall staging for Canada geese and swans (BC page, 90%). It is a No Shooting area.",
+    "Moult and nesting months for local Canada geese are a general pattern (55%)."
+   ],
+   "sources": [
+    {
+     "name": "Reifel Migratory Bird Sanctuary, Lesser Snow Geese",
+     "url": "https://www.reifelbirdsanctuary.com/snow.html",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Ducks Unlimited field reports, 2025 fall habitat outlook (BC section)",
+     "url": "https://www.ducks.org/conservation/waterfowl-research-science/field-reports-2025-fall-habitat-outlook",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Ducks Unlimited field reports, migration and wintering outlook (BC section)",
+     "url": "https://www.ducks.org/conservation/national/field-reports-migration-and-wintering-habitat-outlook",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC WMA page, Tranquille",
+     "url": "https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-habitats/conservation-lands/wma/wmas-list/tranquille",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "ruffed": {
+   "label": "Ruffed grouse",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Aspen, poplar and birch stands; buds and catkins; snow roosts in soft snow.",
+     "cert": 70
+    },
+    "2": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Same small winter home range.",
+     "cert": 70
+    },
+    "3": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Late winter on the same home range.",
+     "cert": 70
+    },
+    "4": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Males drum on logs to hold small territories.",
+     "cert": 75
+    },
+    "5": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Nesting on the ground near young forest edges.",
+     "cert": 60
+    },
+    "6": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Broods in young forest and edges.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Broods in young forest and edges.",
+     "cert": 60
+    },
+    "8": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Families still together; berries and leaves.",
+     "cert": 60
+    },
+    "9": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Fall shuffle: young birds disperse to new ground; adults stay home.",
+     "cert": 70
+    },
+    "10": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Fall shuffle continues; clover, leaves, berries and buds.",
+     "cert": 65
+    },
+    "11": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Settled on a small winter home range.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "IDF",
+      "ICH",
+      "MS",
+      "SBS",
+      "CWH"
+     ],
+     "elevM": [
+      300,
+      1700
+     ],
+     "where": "Aspen buds and catkins; snow roosts.",
+     "cert": 70
+    }
+   },
+   "notes": [
+    "Not migratory; annual home range about 2.4 to 16 ha (6 to 40 acres) (Vermont, 70%).",
+    "Most abundant at 750 to 1,250 m in BC (BC atlas, 85%).",
+    "Fall dispersal is mostly young birds (Connecticut, Vermont, 70%)."
+   ],
+   "sources": [
+    {
+     "name": "Atlas of the Breeding Birds of BC 2008 to 2012, ruffed grouse (Chutter 2015)",
+     "url": "https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=RUGR&lang=en",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Vermont Fish and Wildlife, ruffed grouse",
+     "url": "https://www.vtfishandwildlife.com/learn-more/vermont-critters/birds/ruffed-grouse",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Connecticut DEEP, ruffed grouse fact sheet",
+     "url": "https://portal.ct.gov/-/media/DEEP/wildlife/pdf_files/outreach/fact_sheets/grousepdf.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Maine Inland Fisheries and Wildlife, ruffed grouse",
+     "url": "https://www.maine.gov/ifw/fish-wildlife/wildlife/species-information/birds/ruffed-grouse.html",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "dusky": {
+   "label": "Dusky grouse (blue grouse)",
+   "pattern": "elevational migrant",
+   "months": {
+    "1": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      1000,
+      2100
+     ],
+     "where": "Winter high in dense conifers such as Douglas fir, pine and subalpine fir, eating needles.",
+     "cert": 60
+    },
+    "2": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      1000,
+      2100
+     ],
+     "where": "Winter conifers.",
+     "cert": 60
+    },
+    "3": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      1000,
+      2100
+     ],
+     "where": "Winter conifers; some start back down late in the month.",
+     "cert": 55
+    },
+    "4": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      500,
+      2250
+     ],
+     "where": "Back on open breeding grounds in late March or April; males hoot.",
+     "cert": 60
+    },
+    "5": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      500,
+      2250
+     ],
+     "where": "Breeding on open forest edges, even sagebrush grassland; many BC birds breed at 1,500 to 2,250 m.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      500,
+      2250
+     ],
+     "where": "Hens with broods on the breeding grounds.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      500,
+      2250
+     ],
+     "where": "Adult males leave by mid July for higher forest with huckleberry.",
+     "cert": 55
+    },
+    "8": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      800,
+      2250
+     ],
+     "where": "Hens and broods on breeding grounds; males higher.",
+     "cert": 55
+    },
+    "9": {
+     "zones": [
+      "IDF",
+      "MS",
+      "ESSF"
+     ],
+     "elevM": [
+      900,
+      2250
+     ],
+     "where": "Moving into dense conifers, usually uphill.",
+     "cert": 60
+    },
+    "10": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      1000,
+      2250
+     ],
+     "where": "Upslope move continues; snow pushes birds into winter conifers.",
+     "cert": 60
+    },
+    "11": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      1000,
+      2100
+     ],
+     "where": "Winter conifers.",
+     "cert": 60
+    },
+    "12": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "IDF"
+     ],
+     "elevM": [
+      1000,
+      2100
+     ],
+     "where": "Winter conifers.",
+     "cert": 60
+    }
+   },
+   "notes": [
+    "Moves in fall from open breeding areas to dense conifers, uphill in most of the range; up to about 48 km (30 miles), usually much less, often on foot (Audubon, 70%).",
+    "BC breeding: mainly IDF and ESSF, many records at 1,500 to 2,250 m, 500 to 1,250 m not uncommon (BC atlas, 85%). So the up and down shift in BC may be smaller than in US sources.",
+    "Area B has sooty grouse instead; Washington sources say they also move to higher conifers in late summer and fall, but this varies (60%)."
+   ],
+   "sources": [
+    {
+     "name": "Atlas of the Breeding Birds of BC 2008 to 2012, dusky grouse (Starzomski 2015)",
+     "url": "https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=DUGR&lang=en",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Audubon field guide, dusky grouse",
+     "url": "https://www.audubon.org/field-guide/bird/dusky-grouse",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Colorado Parks and Wildlife, dusky grouse",
+     "url": "https://cpw.state.co.us/species/dusky-grouse",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "US National Park Service, Rocky Mountain NP, dusky grouse",
+     "url": "https://www.nps.gov/romo/learn/nature/dusky-grouse.htm",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Birdweb (Seattle Audubon), sooty grouse",
+     "url": "https://www.birdweb.org/birdweb/bird/sooty_grouse",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "spruce": {
+   "label": "Spruce grouse",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "In conifer trees eating pine and spruce needles.",
+     "cert": 65
+    },
+    "2": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "In conifer trees on needles.",
+     "cert": 65
+    },
+    "3": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Still in the trees on needles.",
+     "cert": 60
+    },
+    "4": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Males display with wing claps; mostly still in the trees.",
+     "cert": 55
+    },
+    "5": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Back on the ground in late spring; nesting.",
+     "cert": 60
+    },
+    "6": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Broods on the ground in conifer forest.",
+     "cert": 60
+    },
+    "7": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Broods on the ground in conifer forest.",
+     "cert": 60
+    },
+    "8": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Ground feeding on berries and plants.",
+     "cert": 55
+    },
+    "9": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Mostly on the ground; some birds move a few km to winter range.",
+     "cert": 55
+    },
+    "10": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "Shifting into the trees; needle diet begins.",
+     "cert": 60
+    },
+    "11": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "In the trees on needles.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "MS",
+      "ESSF",
+      "SBS",
+      "ICH"
+     ],
+     "elevM": [
+      900,
+      2100
+     ],
+     "where": "In the trees on needles.",
+     "cert": 65
+    }
+   },
+   "notes": [
+    "Conifer specialist; known to 2,500 m in BC (BC atlas, 85%).",
+    "Some populations are partly migratory: moves of up to 9.5 km between separate summer and winter ranges (Herzog and Keppie 1980, cited in the Vermont recovery plan, 70%).",
+    "Months are a general pattern (55 to 65%)."
+   ],
+   "sources": [
+    {
+     "name": "Atlas of the Breeding Birds of BC 2008 to 2012, spruce grouse (Chutter 2015)",
+     "url": "https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=SPGR&lang=en",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Vermont Spruce Grouse Recovery Plan, citing Herzog and Keppie 1980 (The Condor 82)",
+     "url": "https://www.vtfishandwildlife.com/sites/fishandwildlife/files/documents/Learn%20More/Library/REPORTS%20AND%20DOCUMENTS/NONGAME%20AND%20NATURAL%20HERITAGE/RECOVERY%20PLANS/Vermont%20Spruce%20Grouse%20Recovery%20Plan.pdf",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "quail": {
+   "label": "California quail",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Winter coveys, sometimes very large, near farms, orchards and suburbs with thick brush. Same small range all winter.",
+     "cert": 75
+    },
+    "2": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Winter coveys in thick cover near feed.",
+     "cert": 75
+    },
+    "3": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Coveys start to break up into pairs.",
+     "cert": 60
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Pairs; some birds disperse up to 8 km in spring.",
+     "cert": 65
+    },
+    "5": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Nesting on the ground in brush.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Broods; never far from cover.",
+     "cert": 65
+    },
+    "7": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Broods; never far from cover.",
+     "cert": 65
+    },
+    "8": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Family groups join into coveys.",
+     "cert": 60
+    },
+    "9": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Coveys of 20 or more in brushy draws and farm edges.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Fall coveys in brushy draws, orchard and vineyard edges, riparian thickets.",
+     "cert": 70
+    },
+    "11": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Coveys on winter range: brush, farm edges, riparian thickets.",
+     "cert": 70
+    },
+    "12": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      250,
+      750
+     ],
+     "where": "Winter coveys grow larger; a hard winter is the big killer.",
+     "cert": 70
+    }
+   },
+   "notes": [
+    "Resident, not migratory (CDFW 75%; iNFOnews 60%).",
+    "BC breeding mostly below 750 m, most common at 250 to 500 m, a few to 1,250 m; PP and BG zones; Okanagan and Kettle valleys; Fraser Valley population apparently lost (BC atlas, 85%).",
+    "Winter home range of 4 coveys averaged 10.5 ha (6.9 to 18 ha); seldom more than 15 to 30 m from cover (CDFW, California data, 75%)."
+   ],
+   "sources": [
+    {
+     "name": "Atlas of the Breeding Birds of BC 2008 to 2012, California quail (Starzomski 2015)",
+     "url": "https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=CAQU&lang=en",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "California Department of Fish and Wildlife, life history account, California quail",
+     "url": "https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=1707",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "iNFOnews, quail in the Southern Interior, 9 October 2015",
+     "url": "https://infotel.ca/newsitem/everything-you-need-to-know-about-quail-in-the-southern-interior/it22857",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "BC Outdoors Magazine, California quail profile, 4 October 2021",
+     "url": "https://www.bcoutdoorsmagazine.com/an-attractive-sporty-california-import/",
+     "checked": "2026-10-03"
+    }
+   ]
+  },
+  "chukar": {
+   "label": "Chukar",
+   "pattern": "resident",
+   "months": {
+    "1": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      195,
+      610
+     ],
+     "where": "Low, rocky, south facing slopes in sagebrush and bunchgrass; heavy snow pushes coveys lower.",
+     "cert": 70
+    },
+    "2": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      195,
+      610
+     ],
+     "where": "Winter flocks start breaking up late in the month.",
+     "cert": 70
+    },
+    "3": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      195,
+      800
+     ],
+     "where": "Pairs by mid March.",
+     "cert": 75
+    },
+    "4": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1000
+     ],
+     "where": "Nesting on dry rocky slopes near water.",
+     "cert": 65
+    },
+    "5": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1000
+     ],
+     "where": "Nesting on dry rocky slopes near water.",
+     "cert": 65
+    },
+    "6": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1250
+     ],
+     "where": "Broods near water; coveys start forming in mid June.",
+     "cert": 70
+    },
+    "7": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1250
+     ],
+     "where": "Coveys; morning and evening trips to water.",
+     "cert": 70
+    },
+    "8": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1250
+     ],
+     "where": "Coveys; morning and evening trips to water.",
+     "cert": 70
+    },
+    "9": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1250
+     ],
+     "where": "Fall coveys on steep rocky slopes.",
+     "cert": 65
+    },
+    "10": {
+     "zones": [
+      "BG",
+      "PP",
+      "IDF"
+     ],
+     "elevM": [
+      195,
+      1000
+     ],
+     "where": "Fall coveys on cliffs and talus with bunchgrass and cheatgrass.",
+     "cert": 65
+    },
+    "11": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      195,
+      800
+     ],
+     "where": "First snows push coveys down and onto south facing slopes.",
+     "cert": 65
+    },
+    "12": {
+     "zones": [
+      "BG",
+      "PP"
+     ],
+     "elevM": [
+      195,
+      610
+     ],
+     "where": "Winter on the lowest sunny slopes; deep snow and cold are the main threat.",
+     "cert": 70
+    }
+   },
+   "notes": [
+    "Resident with short downhill moves in heavy snow (FEIS, 75%).",
+    "Thompson River valley Lytton to Kamloops at 195 to 610 m in 1962; hunter reports at 915 to 1,125 m did not last (Demarchi, 80%). BC atlas: mostly 250 to 500 m, some to 1,250 m (85%).",
+    "Prolonged cold plus deep snow is the chief limiting factor in BC (Demarchi, 80%)."
+   ],
+   "sources": [
+    {
+     "name": "Atlas of the Breeding Birds of BC 2008 to 2012, chukar (Starzomski 2015)",
+     "url": "https://www.birdatlas.bc.ca/accounts/speciesaccount.jsp?sp=CHUK&lang=en",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "Demarchi 1962 chukar thesis, Wildlife Afield 14(2) 2017",
+     "url": "http://www.wildlifebc.org/pdfs/WA%2014_2ChukarWeb.pdf",
+     "checked": "2026-10-03"
+    },
+    {
+     "name": "USDA Fire Effects Information System, chukar (Sullivan 1994)",
+     "url": "https://www.fs.usda.gov/database/feis/animals/bird/alch/all.html",
+     "checked": "2026-10-03"
+    }
+   ]
+  }
+ }
+}

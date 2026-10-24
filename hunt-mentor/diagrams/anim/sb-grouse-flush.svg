@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Animation, side view of a forest edge. You walk slowly along the edge. You stop and stand still. The grouse hiding ahead cannot stand the silence and flushes with a roar of wings, climbing up and away over the trees. Up and away with sky behind it is the safe shot. Tip: the stop makes the bird flush.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <rect x="0" y="200" width="400" height="100" fill="#c9b79c"/>
+  <rect x="0" y="170" width="400" height="34" fill="#8a9a6b" opacity=".5"/>
+  <g fill="#2f3a2b" transform="translate(40 200) scale(1.4)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
+  <g fill="#2f3a2b" transform="translate(360 200) scale(1.6)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
+  <g fill="#2f3a2b" transform="translate(300 196) scale(1.1)"><polygon points="-12,0 0,-34 12,0"/><rect x="-3" y="0" width="6" height="8"/></g>
+  <g><g transform="translate(0 0) scale(1.0)"><circle r="9" fill="#e8590c"/></g><rect x="-6" y="8" width="12" height="26" rx="4" fill="#e8590c"/><animateTransform attributeName="transform" type="translate" values="40 216;160 216;160 216" keyTimes="0;.45;1" dur="8s" fill="freeze"/></g>
+  <g><g transform="translate(0 0) scale(0.8)"><path d="M-18 -4 L-30 -14.0 L-30 2 Z" fill="#8a7560"/><ellipse rx="22" ry="15" fill="#8a7560"/><circle cx="18" cy="-14" r="9" fill="#8a7560"/><path d="M14 -24 Q20 -36 26 -30" stroke="#2f3a2b" stroke-width="3" fill="none"/><path d="M26 -15 L32 -13 L26 -11Z" fill="#2f3a2b"/><path d="M-4 14 L-6 24 M6 14 L8 24" stroke="#2f3a2b" stroke-width="2"/></g><animateTransform attributeName="transform" type="translate" values="250 196;250 196;290 130;340 96" keyTimes="0;.62;.8;1" dur="8s" fill="freeze"/></g>
+  <g opacity="0" stroke="#e8590c" stroke-width="3"><set attributeName="opacity" to="1" begin="5s"/><set attributeName="opacity" to="0" begin="6.4s"/><path d="M230 170 l-14 -10 M240 160 l-6 -16 M262 160 l6 -16 M272 170 l14 -10"/></g>
+  <rect x="10" y="12" width="380" height="40" rx="8" fill="#2f3a2b"/>
+  <g><set attributeName="opacity" to="0" begin="3.6s"/><text x="200" y="38" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Walk slowly along the edge</text></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="3.6s"/><set attributeName="opacity" to="0" begin="5s"/><text x="200" y="38" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Stop. Stand still...</text></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="5s"/><text x="200" y="38" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">The stop makes it flush (Tip)</text></g>
+  <g opacity="0"><set attributeName="opacity" to="1" begin="7.2s"/><rect x="190" y="240" width="204" height="52" rx="8" fill="#fff" stroke="#2f3a2b"/><text x="292" y="262" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Up and away, sky behind:</text><text x="292" y="282" font-size="14" fill="#2f3a2b" text-anchor="middle">now it is a safe shot</text></g>
+</svg>

@@ -1,0 +1,718 @@
+ Hunting and Trapping Regulations Synopsis - Province of British Columbia .cRWfYA{z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}/*!sc*/
+.cRWfYA .hide{display:none;}/*!sc*/
+.cRWfYA #header-search-button:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.cRWfYA label{cursor:pointer;font-size:16px;color:#201F1E;}/*!sc*/
+.cRWfYA label:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.cRWfYA label svg{padding-left:5px;}/*!sc*/
+.cRWfYA form{width:100%;margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding-right:0.5rem;}/*!sc*/
+.cRWfYA form input{-webkit-flex:1;-ms-flex:1;flex:1;border:1px solid #2E5DD7;position:relative;}/*!sc*/
+.cRWfYA form input > .fas.fa-check{position:absolute;top:0;right:0;}/*!sc*/
+.cRWfYA form input:focus{outline:#2E5DD7;}/*!sc*/
+.cRWfYA form button{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;cursor:pointer;margin-right:8px;}/*!sc*/
+.cRWfYA form .show{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cRWfYA form .hide{display:none;}/*!sc*/
+.cRWfYA .header-search-icon{padding:15px;}/*!sc*/
+.cRWfYA .input-search-icon{position:absolute;top:1rem;right:1rem;}/*!sc*/
+.cRWfYA .transparent-button{border:none;background-color:transparent;cursor:pointer;}/*!sc*/
+.cRWfYA .transparent-button:focus{outline:1px solid #2E5DD7;}/*!sc*/
+.cRWfYA .transparent-button a{-webkit-text-decoration:none;text-decoration:none;color:#292929;}/*!sc*/
+@media (max-width:767px){.cRWfYA label{padding-left:8px;}.cRWfYA form{-webkit-flex:1;-ms-flex:1;flex:1;}.cRWfYA input{border-radius:5px 0 0 5px;}.cRWfYA input:focus{outline:none;}}/*!sc*/
+@media (max-width:991px){.cRWfYA form input{width:100px;}}/*!sc*/
+data-styled.g1[id="sc-2212a760-0"]{content:"cRWfYA,"}/*!sc*/
+.cEHGbx .alert{color:#fff;}/*!sc*/
+.cEHGbx .alert .container{margin-left:auto;margin-right:auto;padding:10px 0;max-width:1120px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:16px;}/*!sc*/
+.cEHGbx .alert .container img{margin-left:20px;width:24px;height:24px;}/*!sc*/
+.cEHGbx .alert .container .content{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.cEHGbx .alert .container .content p{margin:0;text-align:left !important;}/*!sc*/
+.cEHGbx .alert .container .content p a{color:#fff;font-weight:700;}/*!sc*/
+.cEHGbx .alert .container .dismiss{cursor:pointer;margin-right:20px;}/*!sc*/
+.cEHGbx .alert .container .dismiss img{width:16px;height:16px;}/*!sc*/
+.cEHGbx .alert.alert-danger{background-color:#D8292F;}/*!sc*/
+.cEHGbx .alert.alert-info{background-color:#013366;}/*!sc*/
+.cEHGbx .alert.alert-success{background-color:#2E8540;}/*!sc*/
+.cEHGbx .alert.alert-black{background-color:#2D2D2D;}/*!sc*/
+.cEHGbx .alert-toggle-mobile{cursor:pointer;}/*!sc*/
+.cEHGbx .alert-toggle-mobile .container{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cEHGbx .alert-toggle-mobile .container .content{padding-top:0;}/*!sc*/
+@media (max-width:1199px){.cEHGbx .alert .container{margin:0px 32px;}.cEHGbx .alert .container img{margin:0;}.cEHGbx .alert .container .dismiss{margin:0;}}/*!sc*/
+@media (max-width:576px){.cEHGbx .alert .container{margin:0px 16px;}}/*!sc*/
+@media (min-width:1200px){.cEHGbx .alert .container img{margin:0;}.cEHGbx .alert .container .dismiss{margin:0;}}/*!sc*/
+@media (min-width:768px){.cEHGbx .alert-toggle-mobile{display:none;}}/*!sc*/
+data-styled.g4[id="sc-f77f9f43-0"]{content:"cEHGbx,"}/*!sc*/
+.fxXPEO{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;color:#292929;-webkit-text-decoration:none;text-decoration:none;padding:8px 16px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:16px;min-height:35px;}/*!sc*/
+.fxXPEO .icon{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-right:8px;-webkit-flex:0 0 32px;-ms-flex:0 0 32px;flex:0 0 32px;}/*!sc*/
+.fxXPEO .icon-hover{display:none;-webkit-flex:0 0 32px;-ms-flex:0 0 32px;flex:0 0 32px;}/*!sc*/
+.fxXPEO:hover{color:#292929;-webkit-text-decoration:underline;text-decoration:underline;background-color:#EDEBE9;}/*!sc*/
+.fxXPEO:hover .icon-hover{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-right:8px;}/*!sc*/
+.fxXPEO:hover .icon{display:none;}/*!sc*/
+.fxXPEO:focus{color:#292929;-webkit-text-decoration:underline;text-decoration:underline;outline:1px solid #2E5DD7;}/*!sc*/
+data-styled.g5[id="sc-c0611d6-0"]{content:"fxXPEO,"}/*!sc*/
+.bqEpsD{width:100vw;z-index:1;font-size:18px;height:100vh;background-color:white;overflow-y:scroll;margin:0;border-top:1px solid #D9D9D9;-webkit-transition:-webkit-transform .5s ease,max-width .5s ease;-webkit-transition:transform .5s ease,max-width .5s ease;transition:transform .5s ease,max-width .5s ease;position:absolute;}/*!sc*/
+.bqEpsD .header-menu-container{max-width:1120px;margin:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:32px;background-color:white;padding-bottom:200px;}/*!sc*/
+.bqEpsD .header-menu-container h2{margin-top:0;}/*!sc*/
+.bqEpsD .header-menu-container ul{margin:0;padding:0;}/*!sc*/
+.bqEpsD .header-menu-container ul li{list-style:none;margin-bottom:0;}/*!sc*/
+.bqEpsD .find-information-menu{-webkit-flex:1 1 80%;-ms-flex:1 1 80%;flex:1 1 80%;padding-right:40px;}/*!sc*/
+.bqEpsD .find-information-menu ul{-webkit-columns:2 auto;columns:2 auto;}/*!sc*/
+.bqEpsD .find-information-menu ul li{-webkit-break-inside:avoid-column;break-inside:avoid-column;}/*!sc*/
+.bqEpsD .more-menu{border-left:1px solid #D9D9D9;padding-left:40px;}/*!sc*/
+.bqEpsD.slide-in{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transform:translateX(0);max-width:100%;}/*!sc*/
+.bqEpsD.slide-out{-webkit-transform:translateX(100vw);-ms-transform:translateX(100vw);transform:translateX(100vw);-webkit-transform:translateX(100vw);max-width:0;}/*!sc*/
+.bqEpsD.slide-out .header-menu-container{visibility:hidden;}/*!sc*/
+@media (max-width:991px){.bqEpsD .header-menu-container{display:block;padding:32px 16px;padding-bottom:200px;}.bqEpsD .find-information-menu{padding-right:0;padding-bottom:24px;}.bqEpsD .find-information-menu ul{-webkit-columns:initial;columns:initial;}.bqEpsD .more-menu{border-left:0;border-top:1px solid #D9D9D9;padding-left:0;padding-top:24px;}}/*!sc*/
+data-styled.g6[id="sc-29c29c8a-0"]{content:"bqEpsD,"}/*!sc*/
+.kiKcNJ span{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.kiKcNJ .show-menu svg{margin-left:8px;width:16px;height:16px;}/*!sc*/
+.kiKcNJ .hide-menu svg{margin-left:8px;width:8px;height:8px;}/*!sc*/
+@media (max-width:575px){.kiKcNJ{padding:12px !important;}.kiKcNJ .show-menu svg,.kiKcNJ .hide-menu svg{width:16px;height:16px;margin:0;}.kiKcNJ .text{display:none;}}/*!sc*/
+data-styled.g7[id="sc-d286223a-0"]{content:"kiKcNJ,"}/*!sc*/
+.cyZPGn{top:0px;height:auto;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;z-index:99;position:-webkit-sticky;position:sticky;}/*!sc*/
+.cyZPGn.header__hide{top:0px;position:-webkit-sticky;position:sticky;}/*!sc*/
+.cyZPGn .header__container{background-color:white;width:100%;border-bottom:1px solid #D9D9D9;}/*!sc*/
+.cyZPGn header{position:relative;}/*!sc*/
+.cyZPGn header .header__main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;max-width:1120px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;height:64px;}/*!sc*/
+@media (max-width:575px){.cyZPGn header .header__main{margin:0 16px;}}/*!sc*/
+@media (min-width:576px) and (max-width:1199px){.cyZPGn header .header__main{margin:0 32px;}}/*!sc*/
+@media (min-width:1200px){.cyZPGn header .header__main{margin:auto;}}/*!sc*/
+.cyZPGn header .header__logo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;}/*!sc*/
+.cyZPGn header .header__logo img.logo{max-height:60px;}/*!sc*/
+.cyZPGn header .header__logo a.header-title{padding-left:1rem;font-size:1.5rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.cyZPGn header .header__logo a.header-title:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.cyZPGn header .header__access{display:inline;height:0;position:absolute;width:0;z-index:9;font-size:16px;}/*!sc*/
+.cyZPGn header .header__access ul{padding-left:10px;list-style:none;}/*!sc*/
+.cyZPGn header .header__access ul li a{margin:0 0 0 -5000px;width:120px;padding:2px;position:absolute;top:3px;}/*!sc*/
+.cyZPGn header .header__access ul li a:focus{margin-left:-10px;background-color:white;}/*!sc*/
+.cyZPGn header .header__right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.cyZPGn .header__search--basic{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.cyZPGn .header-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;-webkit-box-pack:end;-webkit-justify-content:end;-ms-flex-pack:end;justify-content:end;}/*!sc*/
+.cyZPGn .header-menu-button{width:auto;}/*!sc*/
+.cyZPGn .header-right-expanded{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.cyZPGn .header-right-expanded button.alerts-button{display:none;}/*!sc*/
+.cyZPGn .header-right-expanded .header__search--basic{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.cyZPGn button.alerts-button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background-color:transparent;border-width:0;cursor:pointer;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0 8px;width:24px;height:24px;border-radius:24px;}/*!sc*/
+.cyZPGn button.alerts-button:focus{border:1px solid #2E5DD7;}/*!sc*/
+.cyZPGn button.alerts-button svg{padding:0;}/*!sc*/
+.cyZPGn button.alerts-button.danger svg{color:#D8292F;}/*!sc*/
+.cyZPGn button.alerts-button.danger svg:hover{color:#DF5C60;}/*!sc*/
+.cyZPGn button.alerts-button.info svg{color:#013366;}/*!sc*/
+.cyZPGn button.alerts-button.info svg:hover{color:#38598A;}/*!sc*/
+.cyZPGn button.alerts-button.success svg{color:#2E8540;}/*!sc*/
+.cyZPGn button.alerts-button.success svg:hover{color:#569B64;}/*!sc*/
+.cyZPGn button.alerts-button.black svg{color:#000000;}/*!sc*/
+.cyZPGn button.alerts-button.black svg:hover{color:#000000;}/*!sc*/
+.cyZPGn .header-menu{position:relative;overflow-x:clip;}/*!sc*/
+@media(max-width:991px){.cyZPGn header .header__main{margin:0 32px;}.cyZPGn .search-expanded .header__logo{display:none;}}/*!sc*/
+@media (max-width:575px){.cyZPGn header .header__main{margin:0 16px;}.cyZPGn header .header__logo img.logo{max-height:50px;}.cyZPGn .header-menu-button{width:auto;}}/*!sc*/
+data-styled.g8[id="sc-4377a60f-0"]{content:"cyZPGn,"}/*!sc*/
+.hICLDM div.floatingWidget{position:fixed;right:0;bottom:0;z-index:11;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;padding:15px 20px 15px 15px;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex:0 0 56px;-ms-flex:0 0 56px;flex:0 0 56px;height:110px;gap:15px;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup--home{height:47.5px;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup .floatingWidget__buttonGroup__button{color:#1A5A96;font-size:21px;text-align:center;cursor:pointer;border:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex:1;-ms-flex:1;flex:1;width:48px;background:#FAF9F8;box-shadow:0px 0.3px 0.9px rgba(0,0,0,0.1),0px 1.6px 3.6px rgba(0,0,0,0.13);border-radius:50%;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup .floatingWidget__buttonGroup__button--backToTop svg{position:relative;top:3px;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup .floatingWidget__buttonGroup__button:hover{background-color:#EDEBE9;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup .floatingWidget__buttonGroup__button:focus{background-color:#EDEBE9;border:1px solid #2E5DD7;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup--permalink svg{position:relative;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__shareFlyout{background-color:#fff;border:1px solid #B9B9B9;padding:12px;border-radius:3px;max-width:300px;margin-right:12px;box-shadow:0 3px 6pt #00000029;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__shareFlyout span{font-weight:bold;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__shareFlyout input{margin:12px 0;width:95%;height:36px;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__shareFlyout .floatingWidget__shareFlyout__buttonGroup{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__shareFlyout .floatingWidget__shareFlyout__buttonGroup button{font-size:16px;line-height:unset;width:75px;height:34px;margin-right:10px;padding:6px 10px;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--backToTop .move-icon-hover{display:none;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--backToTop .move-icon{display:inline;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--backToTop:hover .move-icon-hover{display:inline;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--backToTop:hover .move-icon{display:none;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--backToTop svg{min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--permalink .copy-icon-hover{display:none;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--permalink .copy-icon{display:inline;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--permalink:hover .copy-icon-hover{display:inline;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--permalink:hover .copy-icon{display:none;}/*!sc*/
+.hICLDM div.floatingWidget .floatingWidget__buttonGroup__button--permalink svg{min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content;}/*!sc*/
+data-styled.g10[id="sc-8bc2b6a7-0"]{content:"hICLDM,"}/*!sc*/
+.idkhmr .container{padding:15px 0;border:solid 1px #cccccc;background:#FFFFFF 0% 0% no-repeat padding-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.idkhmr .container span{color:#003366;font-weight:bold;text-align:center;}/*!sc*/
+.idkhmr .thankyou__text{padding:9px 0;}/*!sc*/
+.idkhmr .btn-yes,.idkhmr .btn-no{margin-left:20px;}/*!sc*/
+.idkhmr .btn-submit{margin:auto;display:block;}/*!sc*/
+.idkhmr .feedback-reason{margin:5px 0;}/*!sc*/
+.idkhmr .feedback-reason label{margin-left:20px;display:block;}/*!sc*/
+.idkhmr .feedback-reason input{float:left;margin-top:6px;}/*!sc*/
+.idkhmr p{font-weight:bold;}/*!sc*/
+@media (max-width:767px){.idkhmr .container{display:block;padding:15px;}.idkhmr .container .didYouFind__text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.idkhmr .container .didYouFind__buttons{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin-top:10px;}.idkhmr .container .didYouFind__reasons{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin:0 auto;}.idkhmr .container .thankyou__text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}}/*!sc*/
+data-styled.g11[id="sc-7991dac4-0"]{content:"idkhmr,"}/*!sc*/
+.jPfNrD{background-color:#292929;color:#FAF9F8;font-size:14px;line-height:21px;border-top:4px solid #FCBA19;border-bottom:4px solid #FCBA19;}/*!sc*/
+.jPfNrD.granville-theme{border-top:4px solid #373535;border-bottom:4px solid #373535;}/*!sc*/
+.jPfNrD .landAcknowledgement__container{max-width:1120px;margin:auto;padding:32px 16px;}/*!sc*/
+.jPfNrD .landAcknowledgement__container p{margin:0;}/*!sc*/
+@media (min-width:576px){.jPfNrD .landAcknowledgement__container{padding:32px;}}/*!sc*/
+@media (min-width:992px){}/*!sc*/
+data-styled.g12[id="sc-119f5479-0"]{content:"jPfNrD,"}/*!sc*/
+.cJNewr{padding-bottom:100px;}/*!sc*/
+.cJNewr footer{max-width:1120px;margin:auto;font-size:14px;color:#464341;line-height:21px;padding:16px;}/*!sc*/
+.cJNewr footer ul{list-style-type:none;padding:0;}/*!sc*/
+.cJNewr footer ul a{-webkit-text-decoration:underline;text-decoration:underline;color:#464341;}/*!sc*/
+.cJNewr footer ul a:hover{-webkit-text-decoration:underline;text-decoration:underline;color:#605E5C;}/*!sc*/
+.cJNewr footer .footer-link-grey{color:#464341;}/*!sc*/
+.cJNewr footer .container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:32px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+.cJNewr footer .container .contact{-webkit-flex:0 0 50%;-ms-flex:0 0 50%;flex:0 0 50%;}/*!sc*/
+.cJNewr footer .container .contact .logo{height:56px;}/*!sc*/
+.cJNewr footer .container .contact p{margin:16px 0 0 0;}/*!sc*/
+.cJNewr footer .container .contact p a{-webkit-text-decoration:underline;text-decoration:underline;color:#464341;}/*!sc*/
+.cJNewr footer .container .contact p a:hover{-webkit-text-decoration:underline;text-decoration:underline;color:#605E5C;}/*!sc*/
+.cJNewr footer .container .more-info{-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;}/*!sc*/
+.cJNewr footer .container .more-info h2{text-transform:uppercase;font-size:14px;line-height:24px;margin:16px 0;}/*!sc*/
+.cJNewr footer .container .more-info ul{-webkit-columns:2;columns:2;margin:0 0 16px 0;gap:48px;}/*!sc*/
+.cJNewr footer .container .more-info ul li{width:160px;margin-bottom:16px;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.cJNewr footer .bottom{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;border-top:1px solid #013366;padding-top:32px;margin-top:32px;}/*!sc*/
+@media (max-width:575px){.cJNewr footer .container{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:0;}.cJNewr footer .container .more-info h2{margin-top:24px;}.cJNewr footer .container .more-info ul li{width:unset;}.cJNewr .copyright{margin-top:-16px;}}/*!sc*/
+@media (min-width:576px){.cJNewr footer{padding:32px;}}/*!sc*/
+@media (max-width:767px){.cJNewr footer .container .more-info ul li{width:unset;}}/*!sc*/
+@media (min-width:992px){.cJNewr footer{padding-top:56px;}}/*!sc*/
+@media (max-width:1120px){.cJNewr footer .container .more-info ul li{width:unset;}.cJNewr footer .bottom{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/
+data-styled.g13[id="sc-4ab246b9-0"]{content:"cJNewr,"}/*!sc*/
+.eQSpUt{border:1px solid;border-radius:8px;margin-top:1rem;padding:16px 24px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;gap:8px;}/*!sc*/
+.eQSpUt:first-child{margin-top:0;}/*!sc*/
+.eQSpUt:last-child{margin-bottom:0;}/*!sc*/
+.eQSpUt.alert-danger{background:#F7E1E3;border-color:#D8292F;}/*!sc*/
+.eQSpUt.alert-danger .alert-icon{color:#D8292F;}/*!sc*/
+.eQSpUt.alert-warning{background:#FEF2D6;border-color:#FCBA19;}/*!sc*/
+.eQSpUt.alert-warning .alert-icon{color:#FCBA19;}/*!sc*/
+.eQSpUt.alert-success{background:#F5FFF8;border-color:#2E8540;}/*!sc*/
+.eQSpUt.alert-success .alert-icon{color:#2E8540;}/*!sc*/
+.eQSpUt.alert-information{background:#F6F9FC;border-color:#013366;}/*!sc*/
+.eQSpUt.alert-information .alert-icon{color:#013366;}/*!sc*/
+.eQSpUt .alert-message{font-weight:400;font-size:16px;line-height:27px;color:#292929;}/*!sc*/
+.eQSpUt .alert-message > *{margin-bottom:8px;}/*!sc*/
+.eQSpUt .alert-message > *:first-child{margin-top:0;}/*!sc*/
+.eQSpUt .alert-message > *:last-child{margin-bottom:0;}/*!sc*/
+.eQSpUt .alert-message a{color:#003366;}/*!sc*/
+.eQSpUt .alert-message a:hover,.eQSpUt .alert-message a:focus,.eQSpUt .alert-message a:active{color:#1A5A96;}/*!sc*/
+.eQSpUt .alert-message a.btn{color:#FFFFFF;}/*!sc*/
+.eQSpUt .alert-icon{min-width:16px;min-height:16px;margin-top:2px;}/*!sc*/
+data-styled.g27[id="sc-3d886b8f-0"]{content:"eQSpUt,"}/*!sc*/
+.cmWUnZ{width:100%;margin-top:32px;}/*!sc*/
+.cmWUnZ .alerts{padding:0;}/*!sc*/
+@media (min-width:768px){}/*!sc*/
+@media (max-width:991px){}/*!sc*/
+data-styled.g28[id="sc-5dc6d7e7-0"]{content:"cmWUnZ,"}/*!sc*/
+.fuPnqr{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;overflow:hidden;}/*!sc*/
+.fuPnqr .scrollable{overflow-x:auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+.fuPnqr .scrollable::-webkit-scrollbar-track{background-color:#fff;}/*!sc*/
+.fuPnqr .scrollable::-webkit-scrollbar{height:4px;background-color:#fff;}/*!sc*/
+.fuPnqr .scrollable::-webkit-scrollbar-thumb{background-color:#E1DFDD;}/*!sc*/
+.fuPnqr a{color:#1A5A96;-webkit-text-decoration:underline;text-decoration:underline;padding:8px;}/*!sc*/
+.fuPnqr a:hover{background-color:#F3F2F1;}/*!sc*/
+.fuPnqr a:focus{outline:1px solid #2E5DD7;}/*!sc*/
+.fuPnqr a:active{background-color:#E1DFDD;}/*!sc*/
+.fuPnqr .current{color:#292929;font-weight:700;padding:8px;}/*!sc*/
+.fuPnqr .chevron{padding:8px;border:none;background-color:white;cursor:pointer;height:37.5px;}/*!sc*/
+.fuPnqr .chevron:hover{background-color:#F3F2F1;}/*!sc*/
+.fuPnqr .chevron:focus{outline:1px solid #2E5DD7;}/*!sc*/
+.fuPnqr .chevron:active{background-color:#E1DFDD;}/*!sc*/
+.fuPnqr .chevron img{margin-top:5px;}/*!sc*/
+.fuPnqr .chevron.chevron-left img{-webkit-transform:scaleX(-1);-webkit-transform:scaleX(-1);-ms-transform:scaleX(-1);transform:scaleX(-1);}/*!sc*/
+.fuPnqr .breadcrumb__container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:4px 4px 4px 0px;}/*!sc*/
+.fuPnqr .breadcrumb__container span{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.fuPnqr .breadcrumb__container span.separator{padding:8px;}/*!sc*/
+.fuPnqr .gradient-left{background:linear-gradient(to right,white 60%,rgba(255,0,0,0));width:80px;height:100%;top:0;left:0;position:absolute;display:none;}/*!sc*/
+.fuPnqr .gradient-left.visible{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:1px;}/*!sc*/
+.fuPnqr .gradient-left.button-pressed{background:linear-gradient(to right,white 50%,transparent 50%);}/*!sc*/
+.fuPnqr .gradient-right{background:linear-gradient(to right,rgba(255,0,0,0),white 40%);width:80px;height:100%;top:0;right:0;position:absolute;display:none;}/*!sc*/
+.fuPnqr .gradient-right.visible{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-right:1px;}/*!sc*/
+@media (max-width:991px){.fuPnqr .chevron{display:none;}.fuPnqr .gradient-left{background:linear-gradient(to right,white 30%,rgba(255,0,0,0));}.fuPnqr .gradient-left.visible{padding:0;}.fuPnqr .gradient-right{background:linear-gradient(to right,rgba(255,0,0,0),white 70%);}.fuPnqr .gradient-right.visible{padding:0;}}/*!sc*/
+@media (max-width:767px){.fuPnqr .gradient-left,.fuPnqr .gradient-right{width:50px;}}/*!sc*/
+@media (min-width:992px){.fuPnqr .scrollable{-webkit-scrollbar-width:none;-moz-scrollbar-width:none;-ms-scrollbar-width:none;scrollbar-width:none;}.fuPnqr .scrollable::-webkit-scrollbar{height:0px;}}/*!sc*/
+data-styled.g41[id="sc-c1765486-0"]{content:"fuPnqr,"}/*!sc*/
+.cmrsaE{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;width:100%;}/*!sc*/
+.cmrsaE h1{margin:32px 0 0 0;font-weight:700;font-size:32px;line-height:48px;}/*!sc*/
+.cmrsaE .pageTitle__container{max-width:1120px;margin:auto;width:100%;}/*!sc*/
+.cmrsaE .pageTitle__container .pageTitle__content .pageTitle__title{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:baseline;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;}/*!sc*/
+@media (max-width:992px){.cmrsaE h1{font-size:32px;}}/*!sc*/
+data-styled.g53[id="sc-690ca30c-0"]{content:"cmrsaE,"}/*!sc*/
+.hmZCuG{background-color:#FFFFFF;color:#292929;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:32px 0px;width:100%;}/*!sc*/
+.hmZCuG h2{font-size:16px;font-weight:700;line-height:27px;margin:0 0 8px 0px;padding:0;text-transform:uppercase;}/*!sc*/
+.hmZCuG ul{list-style:none;margin:0;overflow:hidden;padding:0;}/*!sc*/
+.hmZCuG ul li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;}/*!sc*/
+.hmZCuG ul.child-pages{margin:4px 0;}/*!sc*/
+.hmZCuG a{background-color:#FFFFFF;border-left:4px solid transparent;color:#292929;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:16px;font-weight:400;line-height:27px;margin-top:0;min-height:35px;padding:6px 16px;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.hmZCuG a:focus{box-shadow:inset 0px 0px 0px 2px #2E5DD7;outline:none;}/*!sc*/
+.hmZCuG a:hover{background-color:#EDEBE9;-webkit-text-decoration:underline;text-decoration:underline;color:#1A5A96;}/*!sc*/
+.hmZCuG a.active,.hmZCuG a.sibling{padding-left:16px;}/*!sc*/
+.hmZCuG a.active{background-color:#F6F9FC;border-color:#1A5A96;color:#1A5A96;font-weight:700;}/*!sc*/
+.hmZCuG a.active:hover{background-color:#EDEBE9;}/*!sc*/
+.hmZCuG a.parent{font-weight:700;background-color:white;border:none;padding-left:0px;}/*!sc*/
+.hmZCuG a.child::before{-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;content:"";display:block;height:auto;margin-right:16px;}/*!sc*/
+.hmZCuG a.child:hover::before{border-color:transparent;}/*!sc*/
+.hmZCuG ul.child-pages li{margin-left:24px;border-left:1px solid #E1DFDD;}/*!sc*/
+.hmZCuG ul.child-pages li a{padding:6px 16px 6px 0px;border:none;}/*!sc*/
+data-styled.g55[id="sc-d3161fb-0"]{content:"hmZCuG,"}/*!sc*/
+.lfWRri{background-color:#FFFFFF;border:1px solid #D9D9D9;border-radius:8px;color:#292929;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;}/*!sc*/
+.lfWRri button{background-color:#FAF9F8;border:none;border-radius:8px;cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:24px;padding:8px 16px;color:#292929;}/*!sc*/
+.lfWRri button h2{font-size:16px;font-weight:700;line-height:24px;margin:0;}/*!sc*/
+.lfWRri button:hover{background-color:#EDEBE9;}/*!sc*/
+.lfWRri button.open{border-bottom:1px solid #D9D9D9;border-radius:8px 8px 0 0;}/*!sc*/
+.lfWRri ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;list-style:none;margin:0;padding:0;}/*!sc*/
+.lfWRri li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;gap:24px;margin:0;padding:0;}/*!sc*/
+.lfWRri li a{background-color:#FFFFFF;border:2px solid transparent;box-shadow:0px 1px 0px rgba(0,0,0,0.1);color:#292929;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-weight:400;margin-top:1px;padding:4px 12px;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.lfWRri li a:focus{border-color:#2E5DD7;outline:0;}/*!sc*/
+.lfWRri li a:hover{background-color:#EDEBE9;}/*!sc*/
+.lfWRri li:first-child a{margin-top:0;}/*!sc*/
+.lfWRri li:last-child a{border-radius:0 0 8px 8px;box-shadow:none;}/*!sc*/
+data-styled.g56[id="sc-15ed282c-0"]{content:"lfWRri,"}/*!sc*/
+.cbCPMZ .topicPageLayout__container{margin:auto;max-width:1120px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+@media (max-width:1199px){.cbCPMZ .topicPageLayout__container{margin:0 32px;}}/*!sc*/
+@media (min-width:992px){.cbCPMZ .topicPageLayout__container{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}/*!sc*/
+@media (max-width:575px){.cbCPMZ .topicPageLayout__container{margin:0 16px;}}/*!sc*/
+.cbCPMZ .topicPageNav__container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;}/*!sc*/
+@media (min-width:992px){.cbCPMZ .topicPageNav__container{box-shadow:1px 0px 0px rgba(0,0,0,0.1);width:28%;margin-right:24px;}}/*!sc*/
+@media (min-width:992px){.cbCPMZ[dir="rtl"] .topicPageNav__container{box-shadow:-1px 0px 0px rgba(0,0,0,0.1);}}/*!sc*/
+.cbCPMZ .topicMain__container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:2;-ms-flex:2;flex:2;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;width:100%;margin:24px 0px 32px;}/*!sc*/
+@media (min-width:992px){.cbCPMZ .topicMain__container{width:70%;}}/*!sc*/
+@media (max-width:575px){.cbCPMZ .topicMain__container{margin:16px 0px 24px;}}/*!sc*/
+.cbCPMZ .topicContent__main{margin:24px 0px 0px 0px;border-top:1px solid #D9D9D9;padding-top:24px;width:100%;line-height:27px;}/*!sc*/
+.cbCPMZ .topicContent__main #body > h2{margin-top:48px !important;}/*!sc*/
+.cbCPMZ .topicContent__main #body > p:last-child{margin-bottom:0px;}/*!sc*/
+.cbCPMZ .topicContent__main > :first-child,.cbCPMZ .topicContent__main > :first-child > :first-child,.cbCPMZ .topicContent__main #body > :first-child{margin-top:0px;}/*!sc*/
+.cbCPMZ .topicPageBreadCrumb__container{box-shadow:0px 1px 1px rgba(0,0,0,0.15);}/*!sc*/
+.cbCPMZ .topicPageBreadCrumb__container .topicPageLayout__container{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}/*!sc*/
+@media (max-width:575px){.cbCPMZ .topicPageBreadCrumb__container .topicPageLayout__container{margin:0 16px;}}/*!sc*/
+@media (min-width:992px) and (max-width:1199px){.cbCPMZ .topicPageBreadCrumb__container .topicPageLayout__container{margin:0 32px;}}/*!sc*/
+@media (min-width:1200px){.cbCPMZ .topicPageBreadCrumb__container .topicPageLayout__container{margin:auto;}}/*!sc*/
+.cbCPMZ h1{margin:0;font-weight:600;}/*!sc*/
+.cbCPMZ .nav_Tab{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+@media (min-width:992px){.cbCPMZ .nav_Tab{display:none;}}/*!sc*/
+.cbCPMZ .nav_Desktop{display:none;}/*!sc*/
+@media (min-width:992px){.cbCPMZ .nav_Desktop{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}}/*!sc*/
+.cbCPMZ .last_Updated_Text{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0px;gap:4px;margin-top:8px;font-size:14px;line-height:21px;}/*!sc*/
+.cbCPMZ .searchWidget{margin:24px 0 0 0;max-width:none;width:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:16px 24px 24px 24px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;gap:8px;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;border-radius:4px;background:#FAF9F8;z-index:10;position:relative;}/*!sc*/
+@media (max-width:991px){.cbCPMZ .searchWidget{width:auto;}}/*!sc*/
+.cbCPMZ .searchWidget form{width:100%;}/*!sc*/
+.cbCPMZ .searchWidget form div.search{background:#fff;}/*!sc*/
+.cbCPMZ .searchWidget form div.search .input-container svg{fill:#A19F9D;}/*!sc*/
+data-styled.g57[id="sc-5d8c1f48-0"]{content:"cbCPMZ,"}/*!sc*/
+.eRWdku{margin-top:0 !important;}/*!sc*/
+data-styled.g58[id="sc-5d8c1f48-1"]{content:"eRWdku,"}/*!sc*/
+@media (max-width:768px){.ipQnM .gridLayout{padding-top:0 !important;}}/*!sc*/
+.ipQnM .two-col,.ipQnM .two-col-left,.ipQnM .two-col-right,.ipQnM .three-col{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-column-gap:24px;column-gap:24px;}/*!sc*/
+.ipQnM .two-col img,.ipQnM .two-col-left img,.ipQnM .two-col-right img,.ipQnM .three-col img{height:auto !important;}/*!sc*/
+.ipQnM .two-col p:first-child,.ipQnM .two-col-left p:first-child,.ipQnM .two-col-right p:first-child,.ipQnM .three-col p:first-child{margin-top:0;}/*!sc*/
+.ipQnM .two-col .iframe-video-embed[width='1120px'][height='630px'] .embed-responsive,.ipQnM .two-col-left .iframe-video-embed[width='1120px'][height='630px'] .embed-responsive,.ipQnM .two-col-right .iframe-video-embed[width='1120px'][height='630px'] .embed-responsive,.ipQnM .three-col .iframe-video-embed[width='1120px'][height='630px'] .embed-responsive,.ipQnM .two-col .iframe-video-embed[width='640px'][height='360px'] .embed-responsive,.ipQnM .two-col-left .iframe-video-embed[width='640px'][height='360px'] .embed-responsive,.ipQnM .two-col-right .iframe-video-embed[width='640px'][height='360px'] .embed-responsive,.ipQnM .three-col .iframe-video-embed[width='640px'][height='360px'] .embed-responsive,.ipQnM .two-col .iframe-video-embed[width='560px'][height='315px'] .embed-responsive,.ipQnM .two-col-left .iframe-video-embed[width='560px'][height='315px'] .embed-responsive,.ipQnM .two-col-right .iframe-video-embed[width='560px'][height='315px'] .embed-responsive,.ipQnM .three-col .iframe-video-embed[width='560px'][height='315px'] .embed-responsive,.ipQnM .two-col .iframe-video-embed[width='400px'][height='225px'] .embed-responsive,.ipQnM .two-col-left .iframe-video-embed[width='400px'][height='225px'] .embed-responsive,.ipQnM .two-col-right .iframe-video-embed[width='400px'][height='225px'] .embed-responsive,.ipQnM .three-col .iframe-video-embed[width='400px'][height='225px'] .embed-responsive{padding-bottom:56.25%;}/*!sc*/
+.ipQnM .two-col .iframe-video-embed[width='252px'][height='189px'] .embed-responsive,.ipQnM .two-col-left .iframe-video-embed[width='252px'][height='189px'] .embed-responsive,.ipQnM .two-col-right .iframe-video-embed[width='252px'][height='189px'] .embed-responsive,.ipQnM .three-col .iframe-video-embed[width='252px'][height='189px'] .embed-responsive{padding-bottom:75%;}/*!sc*/
+@media (max-width:768px){.ipQnM .two-col,.ipQnM .two-col-left,.ipQnM .two-col-right,.ipQnM .three-col{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/
+.ipQnM .two-col > *,.ipQnM .three-col > *{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.ipQnM .two-col-left .col-1{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.ipQnM .two-col-left .col-2{-webkit-flex:3;-ms-flex:3;flex:3;}/*!sc*/
+.ipQnM .two-col-right .col-1{-webkit-flex:3;-ms-flex:3;flex:3;}/*!sc*/
+.ipQnM .two-col-right .col-2{-webkit-flex:1;-ms-flex:1;flex:1;}/*!sc*/
+.ipQnM .accordion-btn{background-color:#F3F2F1;padding:4px 12px;cursor:pointer;color:#292929;text-transform:lowercase;-webkit-text-decoration:none;text-decoration:none;border-radius:4px;margin:5px 5px 0 5px;border:1px solid #D9D9D9;display:inline-block;}/*!sc*/
+.ipQnM .accordion-btn:hover{-webkit-text-decoration:underline;text-decoration:underline;background-color:#EDEBE9;}/*!sc*/
+.ipQnM .accordion-btn:focus{background-color:#F3F2F1;border:1px solid #2E5DD7;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.ipQnM .accordion-btn::first-letter{text-transform:uppercase;}/*!sc*/
+.ipQnM .accordion-bar{background-color:#F3F2F1;padding:5px 0px;cursor:pointer;display:none;}/*!sc*/
+.ipQnM .accordion-btn-container{margin-top:15px;margin-left:-5px;}/*!sc*/
+.ipQnM .panel{box-sizing:border-box;border:1px solid #E1DFDD !important;border-radius:4px;margin-top:12px;background-color:#FAF9F8;}/*!sc*/
+.ipQnM .panel .panel-heading{padding:8px 16px;position:relative;cursor:pointer;}/*!sc*/
+.ipQnM .panel .panel-heading:focus{outline:1px solid #2E5DD7 !important;}/*!sc*/
+.ipQnM .panel .panel-heading:hover{background-color:#EDEBE9;}/*!sc*/
+.ipQnM .panel .panel-heading h2{font-size:16px;font-family:'BC Sans';font-style:normal;font-weight:700;margin:0;color:#003366;max-width:95%;}/*!sc*/
+.ipQnM .panel .panel-heading h2:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.ipQnM .panel .panel-title > p{font-weight:700;color:#003366;max-width:95%;margin:0;}/*!sc*/
+.ipQnM .panel .collapseArrow{position:absolute;top:15px;right:15px;color:#003366;}/*!sc*/
+.ipQnM .panel .collapseArrow::before{border-style:solid;border-width:0.25em 0.25em 0 0;content:'';display:inline-block;height:0.45em;left:0.15em;position:relative;top:0.15em;vertical-align:top;width:0.45em;}/*!sc*/
+.ipQnM .panel .collapseArrow:before{top:0;-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);}/*!sc*/
+.ipQnM .panel .panel-collapse{display:none;}/*!sc*/
+.ipQnM .panel .panel-body{padding:16px;background-color:#ffffff;}/*!sc*/
+.ipQnM .panel .panel-body .panel-text > :first-child{margin-top:0px;}/*!sc*/
+.ipQnM .panel .panel-body .panel-text > :last-child{margin-bottom:0px;}/*!sc*/
+.ipQnM .panel.open .panel-collapse{display:block;}/*!sc*/
+.ipQnM .panel.open .collapseArrow:before{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);}/*!sc*/
+.ipQnM *[dir="rtl"] .panel .collapseArrow{left:15px;right:initial;}/*!sc*/
+.ipQnM div.callout{background-color:#FAF9F8;padding:16px 24px 16px;margin:16px 0;border:1px #00000080;border-left:8px solid #013366;font-weight:400;font-size:16px;line-height:27px;}/*!sc*/
+.ipQnM div.callout h2,.ipQnM div.callout h3,.ipQnM div.callout h4{margin:8px 0px 8px;}/*!sc*/
+.ipQnM div.callout h2:first-child,.ipQnM div.callout h3:first-child,.ipQnM div.callout h4:first-child{margin-top:0;}/*!sc*/
+.ipQnM div.callout ol:last-child,.ipQnM div.callout ul:last-child{margin-bottom:0;}/*!sc*/
+.ipQnM div.callout ol li:last-child,.ipQnM div.callout ul li:last-child{margin-bottom:0;}/*!sc*/
+.ipQnM div.callout p:first-of-type{margin-top:0;}/*!sc*/
+.ipQnM div.callout p:last-of-type{margin-bottom:0;}/*!sc*/
+.ipQnM div.callout a.btn-primary{padding:4px 8px;}/*!sc*/
+.ipQnM div.callout .three-col,.ipQnM div.callout .two-col,.ipQnM div.callout .two-col-left,.ipQnM div.callout .two-col-right{display:block !important;margin-bottom:16px;-webkit-column-gap:24px;column-gap:24px;}/*!sc*/
+.ipQnM div.callout .three-col div,.ipQnM div.callout .two-col div,.ipQnM div.callout .two-col-left div,.ipQnM div.callout .two-col-right div{width:100% !important;max-width:100% !important;}/*!sc*/
+.ipQnM div.callout .three-col > *:not(:last-child),.ipQnM div.callout .two-col > *:not(:last-child),.ipQnM div.callout .two-col-left > *:not(:last-child),.ipQnM div.callout .two-col-right > *:not(:last-child){margin-bottom:16px;}/*!sc*/
+.ipQnM div.callout .three-col h2:first-child,.ipQnM div.callout .two-col h2:first-child,.ipQnM div.callout .two-col-left h2:first-child,.ipQnM div.callout .two-col-right h2:first-child,.ipQnM div.callout .three-col h3:first-child,.ipQnM div.callout .two-col h3:first-child,.ipQnM div.callout .two-col-left h3:first-child,.ipQnM div.callout .two-col-right h3:first-child,.ipQnM div.callout .three-col h4:first-child,.ipQnM div.callout .two-col h4:first-child,.ipQnM div.callout .two-col-left h4:first-child,.ipQnM div.callout .two-col-right h4:first-child{margin-block-start:0em;}/*!sc*/
+.ipQnM div.callout .two-col > *:not(:last-child),.ipQnM div.callout .two-col-left > *:not(:last-child),.ipQnM div.callout .two-col-right > *:not(:last-child),.ipQnM div.callout .three-col > *:not(:last-child){padding-right:0rem !important;}/*!sc*/
+.ipQnM div.callout .three-col.show-navigation{display:block !important;}/*!sc*/
+.ipQnM div.callout .three-col.show-navigation > div{margin-bottom:16px;}/*!sc*/
+@media (max-width:575px){.ipQnM div.callout{padding:16px 16px 16px;}}/*!sc*/
+@media (min-width:768px){.ipQnM div.callout .two-col,.ipQnM div.callout .two-col-left,.ipQnM div.callout .two-col-right{display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}.ipQnM div.callout .two-col > *:not(:last-child),.ipQnM div.callout .two-col-left > *:not(:last-child),.ipQnM div.callout .two-col-right > *:not(:last-child){margin-bottom:0px;}}/*!sc*/
+@media (min-width:992px){.ipQnM div.callout .three-col{display:-webkit-box !important;display:-webkit-flex !important;display:-ms-flexbox !important;display:flex !important;}.ipQnM div.callout .three-col > *:not(:last-child){margin-bottom:0px;}}/*!sc*/
+.ipQnM span.flickr_link a{white-space:nowrap;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.ipQnM span.flickr_link a svg{width:7px;height:14px;position:relative;top:6px;padding:3.333px 5.833px 3.333px 7.5px;font-size:13px;-webkit-transition:-webkit-transform 0.3s ease;-webkit-transition:transform 0.3s ease;transition:transform 0.3s ease;}/*!sc*/
+.ipQnM span.flickr_link a path{fill:#1A5A96;}/*!sc*/
+.ipQnM span.flickr_link a:focus{border:1px solid #2E5DD7;}/*!sc*/
+.ipQnM span.flickr_link a:hover{color:#1A5A96;}/*!sc*/
+.ipQnM span.flickr_link a:hover svg{-webkit-transform:translateX(5px);-ms-transform:translateX(5px);transform:translateX(5px);}/*!sc*/
+.ipQnM .embed-responsive{position:relative;display:block;height:0;padding:0;overflow:hidden;}/*!sc*/
+.ipQnM .embed-responsive .embed-responsive-item,.ipQnM .embed-responsive iframe,.ipQnM .embed-responsive embed,.ipQnM .embed-responsive object{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0;}/*!sc*/
+.ipQnM .embed-responsive.embed-responsive-4by3{padding-bottom:75%;}/*!sc*/
+.ipQnM .embed-responsive.embed-responsive-16by9{padding-bottom:56.25%;}/*!sc*/
+.ipQnM .iframe-video-embed{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:8px;}/*!sc*/
+.ipQnM .iframe-video-embed > h2{font-size:18px !important;line-height:27px !important;margin:0px;text-align:left;}/*!sc*/
+.ipQnM .iframe-video-embed > p{margin:0px;text-align:left;}/*!sc*/
+.ipQnM a.btn-primary,.ipQnM button.btn-primary{margin-right:5px;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g136[id="sc-939580af-0"]{content:"ipQnM,"}/*!sc*/
+ Skip to main content Skip to main navigation Accessibility Statement Search Cancel Menu Find information Employment, business and economic development Data and information management Birth, adoption, death, marriage and divorce British Columbians and our governments Education and training Farming, natural resources and industry Driving and transportation Family and social supports Health Environmental protection and sustainability Housing and tenancy Law, crime and justice Public safety and emergency services Sports, recreation, arts and culture Taxes and tax credits Tourism and immigration More Careers &amp; MyHR Services Forms News Contact us Home / Sports, recreation, arts and culture / Recreation / Fishing, hunting and trapping / Hunting and trapping in B.C. / Regulations Synopsis More topics Hunting and trapping in B.C. Regulations Synopsis Corrections and updates Hunting Synopsis photo contest Limited Entry Hunting B.C. resident hunting Non-resident hunting Hunting licences Species licences Guide outfitter licence Permit to accompany Guiding territory certificate Compulsory reporting Compulsory inspection Vendor resources Privacy policy Mandatory hunter reporting Trapping in B.C. Hunting data Wildlife harvest allocation Frequently asked questions Wildlife health information for hunters Hunting and Trapping Regulations Synopsis Last updated on August 31, 2026 The B.C. government prohibits or restricts Motor Vehicles in some areas to protect sensitive fish and wildlife and their habitats or reduce displacement or disturbance to wildlife. Access the&nbsp; Motor Vehicle Prohibitions &nbsp;page for more information. On this page 
+ 
+ 
+ 
+	 Hunting and Trapping Synopsis 
+	 Regulations by region 
+	 Management unit maps 
+	 Detailed General Open Season maps 
+ 
+ 
+ 
+ 
+	 Fraser Valley special hunting areas 
+	 Hunting in Parks 
+	 Trapping in B.C. 
+ 
+ 
+ 
+ Hunting and Trapping Regulations Synopsis 
+ 
+ 
+ 
+ 
+ 
+ The 2026-2028&nbsp;Hunting and Trapping Regulations Synopsis (PDF, 13MB) is a summary of the B.C. hunting and trapping regulations made under the Wildlife Act , prepared for the convenience of hunters and trappers. 
+ The regulations synopsis: 
+ 
+	 Sets out general hunting information 
+	 Summarizes important hunting regulations 
+	 Defines open seasons with maps indicating closed areas 
+ 
+ 
+ 
+ The 2026-2028&nbsp;Hunting and&nbsp;Trapping Regulations Synopsis is effective from &nbsp; July 1, 2026&nbsp;to June 30, 2028 .&nbsp; 
+ For a summary of the changes and why they have been made, consult the 2026 Hunting and Trapping Regulations Changes Summary (PDF, 180KB) . 
+ 
+ Corrections and updates: Changes to hunting and trapping regulations&nbsp;are updated in the online version of the synopsis and specific details are listed on&nbsp; Hunting and Trapping Regulation Synopsis corrections and updates . 
+ 
+ Regulations&nbsp;by region 
+ 
+ 
+ 
+ 
+ 
+ Region 1 (PDF, 1.6MB) 
+ Region 2 (PDF, 856KB) 
+ Region 3 (PDF, 1MB) 
+ Region 4 (PDF, 841KB) 
+ Region 5 (PDF, 1.4MB) 
+ Region 6 (PDF, 2.6MB) 
+ Region 7A (PDF, 1.1MB) 
+ Region 7B (PDF, 1.7MB) 
+ Region 8 (PDF, 994KB) 
+ 
+ 
+ Management unit maps 
+ The province is divided into nine administrative regions, having a total of 225 management units (MU)&nbsp;for the purpose of game management. Each unit is identified by number and is shown with its boundaries delineated in black dashed lines on the following maps: 
+ 
+	 Region 1:&nbsp;Vancouver Island (PDF, 27MB) 
+	 Region 2: Lower Mainland (PDF, 28MB) 
+	 Region 3: Thompson (PDF, 36MB) 
+	 Region 4: Kootenay (PDF, 34MB) 
+	 Region 5: Cariboo (PDF, 42MB) 
+	 Region 6: Skeena (PDF, 43MB) 
+	 Region 7A: Omineca (PDF, 48MB) 
+	 Region 7B: Peace (PDF, 44MB) 
+	 Region 8: Okanagan (PDF, 26MB) 
+ 
+ Detailed Hunting and Trapping Synopsis maps 
+ The following maps represent some of the areas where portions of a management unit are open/closed during the General Open Season or areas where hunting/shooting is restricted or prohibited. Not all maps within the Hunting and Trapping Regulations Synopsis are include here. Refer to the current 2026-2028&nbsp;Hunting and Trapping Regulations Synopsis (PDF, 13MB) for more details and other boundary information including, but not limited to: 
+ 
+	 Species closed areas 
+	 Management unit boundaries 
+	 No hunting/shooting areas 
+ 
+ Road data is not up-to-date and roads depicted may&nbsp;not exist. New roads from 1995 onwards may not be shown on maps. The following maps are poster&nbsp;size maps&nbsp;and will not be legible if printed on standard 8.5x11 inch paper. You will be able to zoom in and take note of boundary details. 
+ These maps may&nbsp;contain references to previous ministers or ministries responsible for wildlife at the time of publication. Periodic transfer of authority for natural resource management may not be reflected in&nbsp;these documents. 
+ 
+ Note: Visit motor vehicle prohibitions for information and detailed maps regarding areas where vehicle use is restricted. 
+ 
+ 
+ Expand All &nbsp;|&nbsp; Collapse All 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 1: Vancouver Island 
+ 
+ 
+ 
+ 
+ 
+ Special antlerless mule deer 
+ Adult hunters are only permitted to hunt antlerless deer in the designated Special Antlerless Mule Deer areas within these management units: 
+ 
+	 MU 1-2 
+	 MU 1-4 
+	 MU 1-5 
+	 MU 1-6 
+	 MU 1-15 
+ 
+ Special Antlerless Mule Deer areas are &quot;Bow&quot; or &quot;Firearms Using Shot&quot;&nbsp;only. The maps below are more detailed to help supplement those provided in the Regulations Synopsis: 
+ 
+	 Campbell River to Courtenay (PDF, 189KB) 
+	 Courtenay to Nanaimo (PDF, 193KB) 
+	 Nanaimo to Finlayson Arm (PDF, 227KB) 
+ 
+ No hunting or shooting areas 
+ 
+	 Woodhus Slough MU 1-6 No hunting Area (PDF, 691KB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 2: Lower Mainland 
+ 
+ 
+ 
+ 
+ 
+ No hunting or shooting areas 
+ 
+	 Squamish River Valley MU 2-6 No Shooting Areas (PDF, 13.7MB) 
+	 Chehalis-Fleetwood MU 2-19 No Shooting Areas (PDF, 3.7MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 3: Thompson 
+ 
+ 
+ 
+ 
+ 
+ Mountain sheep 
+ 
+	 General Open Season Mountain Sheep in MU 3-17 Zone C (PDF, 18.6MB) 
+ 
+ No hunting or shooting areas 
+ 
+	 Marble Canyon Park No Shooting or Hunting Area MU 3-17 (PDF, 7.7MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 4: Kootenay 
+ 
+ 
+ 
+ 
+ 
+ Mule deer and white-tail deer 
+ 
+	 January 5-31, 2026 Cranbrook area deer hunt&nbsp;(PDF, 4.8MB) 
+	 January&nbsp;5-31, 2026 Cranbrook area deer hunt -&nbsp;detailed map (PDF, 6.7MB) 
+	 
+		 Digital file KMZ version (KMZ, 71.6KB) 
+	 
+	 
+	 Cranbrook January 2026 Deer Hunt &ndash; Fact Sheet (PDF, 131KB) 
+ 
+ Elk 
+ 
+	 South Trench Elk Zone (PDF, 1.8MB) 
+	 North Trench Elk Zone (PDF, 9MB) 
+	 Creston Elk Zone (PDF, 7.4MB) 
+	 Elk Valley Elk Zone (PDF, 4.2MB) 
+ 
+ No hunting or shooting areas 
+ 
+	 Hwy 3 No Hunting/Shooting Area MU 4-23 (PDF, 3.1MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 5: Cariboo 
+ 
+ 
+ 
+ 
+ 
+ Black bear 
+ 
+	 Korich/Kainet/Culpepper Lagoon/Salmon Bay Black Bear Hunting Seasons (PDF, 1.8MB) 
+	 Black Bear No Hunting Areas in MU 5-9 (PDF, 15MB) 
+ 
+ Grouse 
+ 
+	 Sharp-tailed Grouse Closed Area MU 5-14 (PDF, 11MB) 
+ 
+ Mountain goat 
+ 
+	 Hunting Closure of the Niagara Mountain Goat Population in MU 5-15 (PDF, 17MB) 
+ 
+ No hunting or shooting areas 
+ 
+	 No Hunting Area&nbsp;400m Elkin Creek-Lord River FSR (MU 5-4) (PDF, 700KB) 
+	 No Hunting Area - 400m Chilko-Newton Road (MU 5-4 and 5-5) (PDF, 2.8MB) 
+ 
+ Single projectile areas 
+ 
+	 West Fraser FSR Single Projectile Area (PDF, 12.1MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 6: Skeena 
+ 
+ 
+ 
+ 
+ 
+ These maps are geo-referenced PDFs&nbsp;that can be downloaded to electronic devices with mapping programs such as Avenza maps. This will allow users to see where they are in relation to the boundaries of the zones. 
+ 
+ 
+ Black bear 
+ 
+	 Black Bear No Hunting Areas in MUs 6-3 and 6-11 (PDF, 23.9MB) 
+ 
+ Moose 
+ 
+	 Haines Highway Moose Restricted Area (MUs 6-28, 6-29) (PDF, 13.2MB) 
+ 
+ No hunting/shooting areas 
+ 
+	 Kwaal/Kitkiata Seasonal No Hunting Area (MU 6-3) (PDF, 5.4MB) 
+	 Hudson Bay Mountain and Smithers Community Forest No Shooting Area (MU 6-9) (PDF, 3.4MB) 
+	 Shaman Island No Shooting or Hunting Area (PDF, 787KB) 
+	 Highway 113 No Shooting or Hunting Area (PDF, 16.9MB) 
+ 
+ Single projectile areas 
+ 
+	 Highway 113 No Shooting or Hunting Area (PDF, 16.8MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 7A: Omineca 
+ 
+ 
+ 
+ 
+ 
+ Caribou 
+ 
+	 Map G25 Chase/Wolverine Caribou Hunting Closed Areas Zone A of MU 7-39 and 7-40 (PDF, 2.8 MB) 
+ 
+ Mountain goat 
+ 
+	 Mitchell Mountain Mountain Goat Closed Area (MU 7-28) (PDF, 522KB) 
+	 Blanchet Mountain Mountain Goat Closed Area (MU 7-27) (PDF, 446KB) 
+	 Driftwood Mountain Mountain Goat Closed Area (MU 7-27) (PDF, 445KB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 7B:&nbsp;Peace 
+ 
+ 
+ 
+ 
+ 
+ Muskwa-Kechika Access Management Area (PDF, 3.2MB) 
+ Bison 
+ 
+	 Bison General Open Season in Portion of MU 7-42 (PDF, 3.7MB) 
+	 Bison General Open Season in Portions of MUs 8-57 and 7-58 (PDF, 3.9MB) 
+ 
+ Moose 
+ 
+	 Compulsory Inspection Requirements in Portions of MU 7-52 (PDF, 9.1MB) 
+	 Portions of MUs 7-52 (Barney Lake area) closed to moose hunting October 1-15 (PDF, 3.4MB) 
+	 Portions of MUs 7-52 (Fireside/Coal River area) and 7-53 (Smith River Watershed) closed to moose hunting October 1-15 (PDF, 1.1MB) 
+	 Moose Closed Season Area in MU 7-31 (PDF, 6.8MB) 
+	 Moose Closed Season Area in MU 7-51 (PDF, 8.2MB) 
+ 
+ Mountain goat 
+ 
+	 Toad River Mountain Goat Closed Area (MU 7-51) (PDF, 1.6MB) 
+	 Toad River Mountain Goat Closed Area (MU 7-54) (PDF, 1.5MB) 
+ 
+ No hunting or shooting areas 
+ 
+	 Fontas No Hunting Area MU 7-47, 7-48 and 7-56&nbsp;(PDF, 1.1MB) 
+	 Lower Burnt River No Shooting or Hunting Area (PDF, 1.6MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &nbsp; 
+ 
+ Region 8: Okanagan 
+ 
+ 
+ 
+ 
+ 
+ No hunting or shooting areas 
+ 
+	 Kalamalka Lake Park MU 8-22 (PDF, 1.8MB) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Fraser Valley Special Hunting Areas 
+ A Fraser Valley Special Area Hunting Licence (PDF, 21MB) is required to hunt anywhere within provincial Management Unit 2-4 and parts of Management Unit 2-8 within Maple Ridge, Pitt Meadows, Mission and Coquitlam. 
+ The Fraser Valley Special Area Hunting Licence&nbsp;map brochure was last published in the 2023-2024 licence year. Updating and printing the brochure to reflect current municipal Discharge of Firearms Bylaw (DFB) boundaries is not currently scheduled. Hunters should be aware that there may have been significant DFB boundary changes and amendments enacted by local Councils since 2023-2024.&nbsp; 
+ Hunters are also reminded it is their responsibility to ensure they are very familiar with local DFB boundaries at all times when afield.&nbsp; 
+ The current DFB boundaries for each city and municipality can be obtained from their Clerk&rsquo;s Office.&nbsp;Request a copy of the wording of the bylaw itself and also the Appendix &ldquo;A&rdquo; map of the actual DFB boundaries. 
+ Hunting in parks 
+ 
+ For information on hunting in provincial parks, visit BC Parks&#39; fishing and hunting guide . To see if the park you are planning to visit allows hunting, check the park&rsquo;s webpage . 
+ 
+ Trapping in B.C. 
+ The 2026-2028&nbsp;Trapping Regulations&nbsp;(PDF, 236KB) is a summary of the B.C.&nbsp;trapping regulations included in the 2026-2028&nbsp;Hunting and Trapping Regulations Synopsis (PDF, 12MB) .&nbsp;For more information on trapping, visit Trapping in B.C. More topics Did you find what you were looking for? Yes No The B.C. Public Service acknowledges the territories of First Nations around B.C. and is grateful to carry out our work on these lands. We acknowledge the rights, interests, priorities, and concerns of all Indigenous Peoples - First Nations, Métis, and Inuit - respecting and acknowledging their distinct cultures, histories, rights, laws, and governments. We can help in over 220 languages and through other accessible options.  Call, email or text us , or  find a service centre More info Home About gov.bc.ca Disclaimer Privacy Accessibility Copyright Contact us © 2026 Government of British Columbia 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 435" font-family="sans-serif" role="img" aria-label="Flowchart of 4 checks before you drive. One: Region 3 motor vehicle maps for open roads in your MU. Two: Thompson Rivers Forest Service Road notices for closures today. Three: DriveBC for highways. Four: BC Wildfire Service for fire bans and area closures. Then go, and on a Forest Service Road call your kilometres on the posted radio channel, a Tip.">
+<rect x="0" y="0" width="400" height="435" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Roads: 4 checks before you drive</text>
+<rect x="16" y="42" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="66" font-size="15" fill="#2f3a2b">1. Region 3 motor vehicle maps: which roads</text>
+<text x="28" y="85" font-size="15" fill="#2f3a2b">are open in your MU</text>
+<line x1="200.0" y1="96" x2="200.0" y2="118" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,116 207.0,116 200.0,126" fill="#2f3a2b"/>
+<rect x="16" y="126" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="150" font-size="15" fill="#2f3a2b">2. Thompson Rivers FSR (Forest Service Road)</text>
+<text x="28" y="169" font-size="15" fill="#2f3a2b">notices: closures today</text>
+<line x1="200.0" y1="180" x2="200.0" y2="202" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,200 207.0,200 200.0,210" fill="#2f3a2b"/>
+<rect x="16" y="210" width="368" height="35" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="234" font-size="15" fill="#2f3a2b">3. DriveBC: highways</text>
+<line x1="200.0" y1="245" x2="200.0" y2="267" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,265 207.0,265 200.0,275" fill="#2f3a2b"/>
+<rect x="16" y="275" width="368" height="54" rx="8" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="28" y="299" font-size="15" fill="#2f3a2b">4. BC Wildfire Service: fire bans and area</text>
+<text x="28" y="318" font-size="15" fill="#2f3a2b">closures</text>
+<line x1="200.0" y1="329" x2="200.0" y2="351" stroke="#2f3a2b" stroke-width="3"/><polygon points="193.0,349 207.0,349 200.0,359" fill="#2f3a2b"/>
+<rect x="16" y="359" width="368" height="54" rx="8" fill="#e9efe0" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="28" y="383" font-size="15" font-weight="bold" fill="#2f3a2b">Go. On an FSR, call your kilometres on the</text>
+<text x="28" y="402" font-size="15" font-weight="bold" fill="#2f3a2b">posted radio channel (Tip)</text>
+</svg>

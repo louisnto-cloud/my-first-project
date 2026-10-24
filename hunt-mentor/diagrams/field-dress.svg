@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 492" font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="492" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#23261f" text-anchor="middle">Field dressing: gutted method</text>
+  <g transform="translate(0,24)">
+  <!-- deer lying on its back is hard to read; simple standing side outline, head left -->
+  <g stroke="#23261f" stroke-width="2.5" stroke-linejoin="round">
+    <!-- legs -->
+    <rect x="120" y="150" width="14" height="70" rx="5" fill="#8a9a6b"/>
+    <rect x="142" y="150" width="14" height="66" rx="5" fill="#8a9a6b"/>
+    <rect x="262" y="150" width="14" height="70" rx="5" fill="#8a9a6b"/>
+    <rect x="284" y="150" width="14" height="66" rx="5" fill="#8a9a6b"/>
+    <!-- body -->
+    <ellipse cx="210" cy="125" rx="110" ry="42" fill="#8a9a6b"/>
+    <!-- neck -->
+    <path d="M118 112 L82 62 L104 52 L142 100 Z" fill="#8a9a6b"/>
+    <!-- head -->
+    <ellipse cx="80" cy="56" rx="30" ry="16" fill="#8a9a6b"/>
+    <!-- ear -->
+    <path d="M96 44 L112 24 L106 48 Z" fill="#8a9a6b"/>
+    <!-- antler -->
+    <path d="M90 42 L94 14 M94 26 L84 16 M94 20 L104 8" fill="none" stroke="#6b4f35" stroke-width="4" stroke-linecap="round"/>
+    <!-- tail -->
+    <path d="M318 108 L334 100 L330 116 Z" fill="#fffaf0"/>
+  </g>
+  <!-- belly cut line -->
+  <line x1="150" y1="164" x2="300" y2="160" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+  <!-- diaphragm line -->
+  <line x1="178" y1="88" x2="178" y2="164" stroke="#e8590c" stroke-width="3" stroke-dasharray="6 6"/>
+  <!-- numbered markers -->
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <circle cx="60" cy="84" r="14" fill="#2f3a2b"/><text x="60" y="90" fill="#fffaf0">1</text>
+    <circle cx="350" cy="140" r="14" fill="#2f3a2b"/><text x="350" y="146" fill="#fffaf0">2</text>
+    <circle cx="300" cy="186" r="14" fill="#2f3a2b"/><text x="300" y="192" fill="#fffaf0">3</text>
+    <circle cx="225" cy="190" r="14" fill="#2f3a2b"/><text x="225" y="196" fill="#fffaf0">4</text>
+    <circle cx="178" cy="66" r="14" fill="#2f3a2b"/><text x="178" y="72" fill="#fffaf0">5</text>
+    <circle cx="120" cy="80" r="14" fill="#2f3a2b"/><text x="120" y="86" fill="#fffaf0">6</text>
+    <circle cx="210" cy="125" r="14" fill="#2f3a2b"/><text x="210" y="131" fill="#fffaf0">7</text>
+  </g>
+  <!-- legend -->
+  <g font-size="15" fill="#23261f">
+    <text x="16" y="256" fill="#23261f">1  Confirm dead. Notch licence first.</text>
+    <text x="16" y="284" fill="#23261f">2  Gloves on. Cut around the anus, tie off.</text>
+    <text x="16" y="312" fill="#23261f">3  Open hide at the pelvis, blade up.</text>
+    <text x="16" y="340" fill="#23261f">4  Cut belly to ribs. Fingers guard blade.</text>
+    <text x="16" y="368" fill="#23261f">5  Cut the diaphragm along the ribs.</text>
+    <text x="16" y="396" fill="#23261f">6  Reach up, cut windpipe and gullet.</text>
+    <text x="16" y="424" fill="#23261f">7  Roll guts out. Prop cavity open to cool.</text>
+  </g>
+  <text x="16" y="456" font-size="14" fill="#6b4f35">Orange dashes: cut lines. Do not cut the gut.</text>
+</g>
+</svg>

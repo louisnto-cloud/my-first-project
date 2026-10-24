@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" font-family="sans-serif" role="img" aria-label="Deer, elk or moose killed in the Chronic Wasting Disease Management Zone, Management Units 4-1 to 4-8 and 4-20 to 4-25. Regions 3 and 8 are not in it. Stays in the zone, shown as a skull and a row of vertebrae: brain tissue and the spinal column, including vertebrae and nerve tissue. May leave, shown as a deer tail and a boned out piece of meat: the tail, and meat boned out, which is this app&#x27;s reading, 95 percent.">
+<rect width="400" height="312" fill="#fffaf0"/>
+<g data-tip="The zone|Management Units 4-1 to 4-8 and 4-20 to 4-25, in Region 4, Kootenay. Region 3 (Kamloops) and Region 8 are not in it.">
+<rect x="0" y="0" width="400" height="76" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chronic Wasting Disease zone</text>
+<text x="200" y="48" font-size="15" fill="#2f3a2b" text-anchor="middle">Management Units 4-1 to 4-8, 4-20 to 4-25</text>
+<text x="200" y="68" font-size="15" fill="#6b5b4b" text-anchor="middle">Deer, elk, moose. Regions 3 and 8 not in it.</text>
+</g>
+<rect x="6" y="80" width="190" height="178" rx="9" fill="#ffffff" stroke="#c0392b" stroke-width="2.4"/>
+<g data-tip="Stays in zone|You must not ship or carry these out of the zone, or get another person to carry them out for you.">
+<path d="M6 89 a9 9 0 0 1 9 -9 h172 a9 9 0 0 1 9 9 v21 h-190z" fill="#c0392b"/>
+<circle cx="30" cy="96" r="9" fill="#fffaf0"/><path d="M25 91 l10 10 M35 91 l-10 10" stroke="#c0392b" stroke-width="2.6" stroke-linecap="round"/>
+<text x="108" y="102" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Stays in zone</text>
+</g>
+<g data-tip="Brain tissue|The brain never leaves the zone. The disease builds up most in the brain.">
+<rect x="10" y="114" width="96" height="94" fill="#ffffff"/>
+<g transform="translate(52 150) scale(1.05)"><path d="M-30 -10 C-30 -26 -12 -32 4 -28 C14 -26 22 -20 34 -14 C44 -9 50 -4 50 2 C44 6 34 6 24 4 C14 4 8 10 -2 12 C-16 14 -30 8 -30 -10 Z" fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.6"/><ellipse cx="6" cy="-14" rx="7" ry="6" fill="#6b4f35"/><path d="M-22 6 C-20 14 -14 18 -6 16" stroke="#6b4f35" stroke-width="1.6" fill="none"/><path d="M-14 -20 C-8 -24 -2 -22 0 -18" stroke="#c0392b" stroke-width="1.6" fill="none"/></g>
+<text x="56" y="198" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brain</text>
+</g>
+<g data-tip="Spinal column|The vertebrae and the nerve tissue inside them stay in the zone. The tail is not included.">
+<rect x="108" y="114" width="84" height="94" fill="#ffffff"/>
+<g fill="#ecdfc3" stroke="#6b4f35" stroke-width="1.4">
+<rect x="112" y="146" width="15" height="13" rx="3"/><path d="M119.5 146 l-3 -12 h6z"/>
+<rect x="131" y="146" width="15" height="13" rx="3"/><path d="M138.5 146 l-3 -12 h6z"/>
+<rect x="150" y="146" width="15" height="13" rx="3"/><path d="M157.5 146 l-3 -12 h6z"/>
+<rect x="169" y="146" width="15" height="13" rx="3"/><path d="M176.5 146 l-3 -12 h6z"/>
+</g>
+<path d="M110 152.5 H188" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="3 3"/>
+<text x="150" y="198" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Spine</text>
+</g>
+<text x="101" y="226" font-size="15" fill="#2f3a2b" text-anchor="middle">Vertebrae and</text>
+<text x="101" y="246" font-size="15" fill="#2f3a2b" text-anchor="middle">nerve tissue too</text>
+<rect x="204" y="80" width="190" height="178" rx="9" fill="#ffffff" stroke="#4f6b2f" stroke-width="2.4"/>
+<g data-tip="May leave|The tail and boned out meat may leave the zone.">
+<path d="M204 89 a9 9 0 0 1 9 -9 h172 a9 9 0 0 1 9 9 v21 h-190z" fill="#4f6b2f"/>
+<circle cx="228" cy="96" r="9" fill="#fffaf0"/><path d="M223 96 l4 4 l7 -8" stroke="#4f6b2f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="306" y="102" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">May leave</text>
+</g>
+<g data-tip="The tail|The rule on the spinal column says not including the tail, so the tail may leave.">
+<rect x="208" y="114" width="80" height="94" fill="#ffffff"/>
+<g transform="translate(248 150)"><path d="M0 -30 C10 -30 16 -18 17 -4 C18 12 10 28 0 30 C-10 28 -18 12 -17 -4 C-16 -18 -10 -30 0 -30 Z" fill="#ffffff" stroke="#8a8378" stroke-width="1.4"/><path d="M0 -30 C6 -30 9 -18 9 -4 C9 10 5 22 0 24 C-5 22 -9 10 -9 -4 C-9 -18 -6 -30 0 -30 Z" fill="#8b5a2b"/><path d="M-14 4 l-6 3 M-15 -6 l-6 1 M14 4 l6 3 M15 -6 l6 1 M-10 20 l-5 5 M10 20 l5 5" stroke="#8a8378" stroke-width="1.2"/></g>
+<text x="248" y="198" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Tail</text>
+</g>
+<g data-tip="Meat boned out|Best practice: bone out at the kill site and leave the non edible parts there or at a landfill.">
+<rect x="290" y="114" width="100" height="94" fill="#ffffff"/>
+<g transform="translate(340 152)"><path d="M-36 -8 C-30 -24 0 -26 22 -18 C36 -12 38 6 26 14 C10 24 -24 22 -34 10 C-38 4 -38 -2 -36 -8 Z" fill="#b5523b" stroke="#7a2e1e" stroke-width="1.4"/><path d="M-28 -6 C-14 -14 8 -12 24 -4 M-30 6 C-12 2 10 4 26 8" stroke="#f3e3cf" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+<text x="340" y="198" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Boned meat</text>
+</g>
+<text x="299" y="226" font-size="15" fill="#2f3a2b" text-anchor="middle">Bone out at kill site</text>
+<text x="299" y="246" font-size="15" fill="#6b5b4b" text-anchor="middle">(my reading, 95%)</text>
+<g data-tip="Test the head|Testing is mandatory in the zone. Drop the head at a designated freezer in the zone within one week, before you leave the area.">
+<rect x="6" y="266" width="388" height="40" rx="9" fill="#2f3a2b"/>
+<g transform="translate(32 286)"><rect x="-12" y="-14" width="24" height="28" rx="3" fill="#dfe9f0" stroke="#fffaf0" stroke-width="1.4"/><path d="M-12 -3 H12 M7 -10 V-6 M7 1 V8" stroke="#2f3a2b" stroke-width="1.6"/></g>
+<text x="214" y="292" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Head: test at a zone freezer</text>
+</g>
+</svg>

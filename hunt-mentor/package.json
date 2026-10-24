@@ -1,0 +1,10 @@
+{
+  "name": "hunt-mentor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hunt Mentor: a static offline hunting school for the phone.",
+  "scripts": {
+    "build": "node build.mjs",
+    "lint:style": "node scripts/lint-style.mjs"
+  }
+}

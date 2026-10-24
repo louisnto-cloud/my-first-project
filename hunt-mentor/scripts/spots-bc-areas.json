@@ -1,0 +1,1348 @@
+{
+ "R1A": {
+  "name": "Region 1 Vancouver Island: around Village of Tofino (48.2 to 49.7 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   48.2,
+   -125.1,
+   49.7
+  ],
+  "excl": [],
+  "region": "1",
+  "landKm2": 8547,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Tofino",
+   "lat": 49.1302,
+   "lon": -125.8932,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R1B": {
+  "name": "Region 1 Vancouver Island: around District of North Cowichan (48.2 to 49.7 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   48.2,
+   -123.1,
+   49.7
+  ],
+  "excl": [],
+  "region": "1",
+  "landKm2": 21086,
+  "demz": 11,
+  "tileScale": 1,
+  "base": {
+   "name": "District of North Cowichan",
+   "lat": 48.847,
+   "lon": -123.6852,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R2A": {
+  "name": "Region 2 Lower Mainland: around City of Delta (48.2 to 49.7 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   48.2,
+   -121.1,
+   49.7
+  ],
+  "excl": [
+   [
+    -122.9,
+    49.0,
+    -121.3,
+    49.95
+   ]
+  ],
+  "region": "2",
+  "landKm2": 2340,
+  "demz": 11,
+  "tileScale": 1,
+  "base": {
+   "name": "City of Delta",
+   "lat": 49.0981,
+   "lon": -122.9953,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R8A": {
+  "name": "Region 8 Okanagan: around Town of Princeton (48.2 to 49.7 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   48.2,
+   -119.1,
+   49.7
+  ],
+  "excl": [
+   [
+    -120.1,
+    49.0,
+    -119.2,
+    49.7
+   ]
+  ],
+  "region": "8",
+  "landKm2": 6221,
+  "demz": 11,
+  "tileScale": 1,
+  "base": {
+   "name": "Town of Princeton",
+   "lat": 49.334,
+   "lon": -120.5323,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R4A": {
+  "name": "Region 4 Kootenay: around City of Rossland (48.2 to 49.7 N, 117.1 to 119.1 W)",
+  "box": [
+   -119.1,
+   48.2,
+   -117.1,
+   49.7
+  ],
+  "excl": [],
+  "region": "4",
+  "landKm2": 11352,
+  "demz": 11,
+  "tileScale": 1,
+  "base": {
+   "name": "City of Rossland",
+   "lat": 49.1227,
+   "lon": -117.8476,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R4B": {
+  "name": "Region 4 Kootenay: around Boswell (48.2 to 49.7 N, 115.1 to 117.1 W)",
+  "box": [
+   -117.1,
+   48.2,
+   -115.1,
+   49.7
+  ],
+  "excl": [
+   [
+    -116.6,
+    49.0,
+    -114.6,
+    50.6
+   ]
+  ],
+  "region": "4",
+  "landKm2": 2838,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Boswell",
+   "lat": 49.4559,
+   "lon": -116.7649,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R4C": {
+  "name": "Region 4 Kootenay: around District of Sparwood (48.2 to 49.7 N, 114.0 to 115.1 W)",
+  "box": [
+   -115.1,
+   48.2,
+   -114.0,
+   49.7
+  ],
+  "excl": [
+   [
+    -116.6,
+    49.0,
+    -114.6,
+    50.6
+   ]
+  ],
+  "region": "4",
+  "landKm2": 973,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Sparwood",
+   "lat": 49.739,
+   "lon": -114.8418,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R1C": {
+  "name": "Region 1 Vancouver Island: around District of Port Hardy (49.7 to 51.2 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   49.7,
+   -127.1,
+   51.2
+  ],
+  "excl": [],
+  "region": "1",
+  "landKm2": 12887,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Port Hardy",
+   "lat": 50.6969,
+   "lon": -127.4479,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R1D": {
+  "name": "Region 1 Vancouver Island: around City of Campbell River (49.7 to 51.2 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   49.7,
+   -125.1,
+   51.2
+  ],
+  "excl": [],
+  "region": "1",
+  "landKm2": 23711,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "City of Campbell River",
+   "lat": 50.0174,
+   "lon": -125.3208,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R2B": {
+  "name": "Region 2 Lower Mainland: around District of Squamish (49.7 to 51.2 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   49.7,
+   -123.1,
+   51.2
+  ],
+  "excl": [],
+  "region": "2",
+  "landKm2": 23747,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Squamish",
+   "lat": 49.7839,
+   "lon": -123.147,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R3A": {
+  "name": "Region 3 Thompson: around Resort Municipality of Whistler (49.7 to 51.2 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   49.7,
+   -121.1,
+   51.2
+  ],
+  "excl": [
+   [
+    -121.6,
+    50.2,
+    -119.4,
+    51.9
+   ],
+   [
+    -122.9,
+    49.0,
+    -121.3,
+    49.95
+   ],
+   [
+    -121.3,
+    49.7,
+    -118.6,
+    50.5
+   ]
+  ],
+  "region": "3",
+  "landKm2": 15754,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Resort Municipality of Whistler",
+   "lat": 50.1105,
+   "lon": -122.9714,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R4D": {
+  "name": "Region 4 Kootenay: around Village of Nakusp (49.7 to 51.2 N, 117.1 to 119.1 W)",
+  "box": [
+   -119.1,
+   49.7,
+   -117.1,
+   51.2
+  ],
+  "excl": [
+   [
+    -121.3,
+    49.7,
+    -118.6,
+    50.5
+   ],
+   [
+    -119.4,
+    50.5,
+    -117.6,
+    51.6
+   ]
+  ],
+  "region": "4",
+  "landKm2": 12299,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Nakusp",
+   "lat": 50.2524,
+   "lon": -117.8151,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R4E": {
+  "name": "Region 4 Kootenay: around Village of Radium Hot Springs (49.7 to 51.2 N, 115.1 to 117.1 W)",
+  "box": [
+   -117.1,
+   49.7,
+   -115.1,
+   51.2
+  ],
+  "excl": [
+   [
+    -116.6,
+    49.0,
+    -114.6,
+    50.6
+   ]
+  ],
+  "region": "4",
+  "landKm2": 10517,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Radium Hot Springs",
+   "lat": 50.6275,
+   "lon": -116.079,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6A": {
+  "name": "Region 6 Skeena: around Village of Daajing Giids (51.2 to 52.7 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   51.2,
+   -131.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 3026,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Daajing Giids",
+   "lat": 53.2469,
+   "lon": -132.0839,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6B": {
+  "name": "Region 6 Skeena: around Village of Daajing Giids (51.2 to 52.7 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   51.2,
+   -129.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 12234,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Daajing Giids",
+   "lat": 53.2469,
+   "lon": -132.0839,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R5A": {
+  "name": "Region 5 Cariboo: around Old Bella Bella (51.2 to 52.7 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   51.2,
+   -127.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "5",
+  "landKm2": 19573,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Old Bella Bella",
+   "lat": 52.1576,
+   "lon": -128.1068,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R5B": {
+  "name": "Region 5 Cariboo: around Stuie (51.2 to 52.7 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   51.2,
+   -125.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "5",
+  "landKm2": 22992,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Stuie",
+   "lat": 52.3699,
+   "lon": -126.0648,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R5C": {
+  "name": "Region 5 Cariboo: around Chilanko Forks (51.2 to 52.7 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   51.2,
+   -123.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "5",
+  "landKm2": 22992,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Chilanko Forks",
+   "lat": 52.1126,
+   "lon": -124.0655,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R5D": {
+  "name": "Region 5 Cariboo: around Soda Creek (51.2 to 52.7 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   51.2,
+   -121.1,
+   52.7
+  ],
+  "excl": [
+   [
+    -121.6,
+    50.2,
+    -119.4,
+    51.9
+   ],
+   [
+    -122.6,
+    51.2,
+    -120.4,
+    52.3
+   ]
+  ],
+  "region": "5",
+  "landKm2": 10270,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Soda Creek",
+   "lat": 52.3506,
+   "lon": -122.2956,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R3B": {
+  "name": "Region 3 Thompson: around Blue River (51.2 to 52.7 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   51.2,
+   -119.1,
+   52.7
+  ],
+  "excl": [
+   [
+    -121.6,
+    50.2,
+    -119.4,
+    51.9
+   ],
+   [
+    -122.6,
+    51.2,
+    -120.4,
+    52.3
+   ],
+   [
+    -119.4,
+    50.5,
+    -117.6,
+    51.6
+   ]
+  ],
+  "region": "3",
+  "landKm2": 10703,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Blue River",
+   "lat": 52.1074,
+   "lon": -119.3046,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R4F": {
+  "name": "Region 4 Kootenay: around Mica Creek (51.2 to 52.7 N, 117.1 to 119.1 W)",
+  "box": [
+   -119.1,
+   51.2,
+   -117.1,
+   52.7
+  ],
+  "excl": [
+   [
+    -119.4,
+    50.5,
+    -117.6,
+    51.6
+   ]
+  ],
+  "region": "4",
+  "landKm2": 14213,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Mica Creek",
+   "lat": 52.0078,
+   "lon": -118.5661,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R4G": {
+  "name": "Region 4 Kootenay: around Town of Golden (51.2 to 52.7 N, 115.1 to 117.1 W)",
+  "box": [
+   -117.1,
+   51.2,
+   -115.1,
+   52.7
+  ],
+  "excl": [],
+  "region": "4",
+  "landKm2": 3286,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Town of Golden",
+   "lat": 51.3002,
+   "lon": -116.9658,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6C": {
+  "name": "Region 6 Skeena: around Village of Daajing Giids (52.7 to 54.2 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   52.7,
+   -131.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 19207,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Daajing Giids",
+   "lat": 53.2469,
+   "lon": -132.0839,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6D": {
+  "name": "Region 6 Skeena: around District of Port Edward (52.7 to 54.2 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   52.7,
+   -129.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 22221,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Port Edward",
+   "lat": 54.1798,
+   "lon": -130.0898,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6E": {
+  "name": "Region 6 Skeena: around District of Kitimat (52.7 to 54.2 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   52.7,
+   -127.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 22221,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Kitimat",
+   "lat": 53.9497,
+   "lon": -128.7459,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6F": {
+  "name": "Region 6 Skeena: around Village of Burns Lake (52.7 to 54.2 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   52.7,
+   -125.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 22221,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Burns Lake",
+   "lat": 54.1803,
+   "lon": -125.4901,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AA": {
+  "name": "Region 7A Omineca: around District of Vanderhoof (52.7 to 54.2 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   52.7,
+   -123.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 22221,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Vanderhoof",
+   "lat": 54.0201,
+   "lon": -124.0017,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AB": {
+  "name": "Region 7A Omineca: around City of Prince George (52.7 to 54.2 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   52.7,
+   -121.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 22221,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "City of Prince George",
+   "lat": 53.9258,
+   "lon": -122.7654,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AC": {
+  "name": "Region 7A Omineca: around Village of Valemount (52.7 to 54.2 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   52.7,
+   -119.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 16978,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Valemount",
+   "lat": 52.8302,
+   "lon": -119.2643,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AD": {
+  "name": "Region 7A Omineca: around Village of Valemount (52.7 to 54.2 N, 117.1 to 119.1 W)",
+  "box": [
+   -119.1,
+   52.7,
+   -117.1,
+   54.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 1893,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Valemount",
+   "lat": 52.8302,
+   "lon": -119.2643,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6G": {
+  "name": "Region 6 Skeena: around Village of Masset (54.2 to 55.7 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   54.2,
+   -131.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 6492,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Masset",
+   "lat": 54.0221,
+   "lon": -132.0932,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6H": {
+  "name": "Region 6 Skeena: around District of Port Edward (54.2 to 55.7 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   54.2,
+   -129.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 15105,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Port Edward",
+   "lat": 54.2299,
+   "lon": -130.1313,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6I": {
+  "name": "Region 6 Skeena: around City of Terrace (54.2 to 55.7 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   54.2,
+   -127.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 21435,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "City of Terrace",
+   "lat": 54.4575,
+   "lon": -128.5816,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6J": {
+  "name": "Region 6 Skeena: around Village of Granisle (54.2 to 55.7 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   54.2,
+   -125.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 21435,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Village of Granisle",
+   "lat": 54.9494,
+   "lon": -126.2053,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AE": {
+  "name": "Region 7A Omineca: around District of Mackenzie (54.2 to 55.7 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   54.2,
+   -123.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 21435,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Mackenzie",
+   "lat": 55.3079,
+   "lon": -123.1648,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7AF": {
+  "name": "Region 7A Omineca: around District of Tumbler Ridge (54.2 to 55.7 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   54.2,
+   -121.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 21435,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Tumbler Ridge",
+   "lat": 54.9808,
+   "lon": -121.2385,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7BA": {
+  "name": "Region 7B Peace: around District of Tumbler Ridge (54.2 to 55.7 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   54.2,
+   -119.1,
+   55.7
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 11776,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Tumbler Ridge",
+   "lat": 55.0298,
+   "lon": -120.9731,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6K": {
+  "name": "Region 6 Skeena: around District of Stewart (55.7 to 57.2 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   55.7,
+   -131.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 4179,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Stewart",
+   "lat": 56.0756,
+   "lon": -130.0147,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6L": {
+  "name": "Region 6 Skeena: around District of Stewart (55.7 to 57.2 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   55.7,
+   -129.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 16651,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Stewart",
+   "lat": 56.0756,
+   "lon": -130.0147,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6M": {
+  "name": "Region 6 Skeena: around Kuldo (55.7 to 57.2 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   55.7,
+   -127.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 20633,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Kuldo",
+   "lat": 55.8405,
+   "lon": -127.9209,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7AG": {
+  "name": "Region 7A Omineca: around Bear Lake (55.7 to 57.2 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   55.7,
+   -125.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 20633,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Bear Lake",
+   "lat": 56.1928,
+   "lon": -126.8633,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7AH": {
+  "name": "Region 7A Omineca: around Germansen Landing (55.7 to 57.2 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   55.7,
+   -123.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "7A",
+  "landKm2": 20633,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Germansen Landing",
+   "lat": 55.7832,
+   "lon": -124.7016,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7BB": {
+  "name": "Region 7B Peace: around District of Hudsons Hope (55.7 to 57.2 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   55.7,
+   -121.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 20633,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Hudsons Hope",
+   "lat": 56.0209,
+   "lon": -122.0286,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R7BC": {
+  "name": "Region 7B Peace: around City of Fort St John (55.7 to 57.2 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   55.7,
+   -119.1,
+   57.2
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 11335,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "City of Fort St John",
+   "lat": 56.2449,
+   "lon": -120.8293,
+   "note": "Municipality from ABMS_MUNICIPALITIES_SP (point inside its boundary)"
+  }
+ },
+ "R6N": {
+  "name": "Region 6 Skeena: around District of Stewart (57.2 to 58.7 N, 133.1 to 135.1 W)",
+  "box": [
+   -135.1,
+   57.2,
+   -133.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 1371,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "District of Stewart",
+   "lat": 56.0756,
+   "lon": -130.0147,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6O": {
+  "name": "Region 6 Skeena: around Telegraph Creek (57.2 to 58.7 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   57.2,
+   -131.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 17368,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Telegraph Creek",
+   "lat": 57.9032,
+   "lon": -131.1596,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R6P": {
+  "name": "Region 6 Skeena: around Iskut (57.2 to 58.7 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   57.2,
+   -129.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 19817,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Iskut",
+   "lat": 57.8375,
+   "lon": -129.9875,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R6Q": {
+  "name": "Region 6 Skeena: around Northern Rockies Regional Municipality (57.2 to 58.7 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   57.2,
+   -127.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 19817,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R7BD": {
+  "name": "Region 7B Peace: around Fort Ware (57.2 to 58.7 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   57.2,
+   -125.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 19817,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Fort Ware",
+   "lat": 57.4284,
+   "lon": -125.6365,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7BE": {
+  "name": "Region 7B Peace: around Northern Rockies Regional Municipality (57.2 to 58.7 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   57.2,
+   -123.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 19817,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R7BF": {
+  "name": "Region 7B Peace: around Buckinghorse River (57.2 to 58.7 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   57.2,
+   -121.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 19817,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Buckinghorse River",
+   "lat": 57.3868,
+   "lon": -122.8535,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7BG": {
+  "name": "Region 7B Peace: around Kahntah (57.2 to 58.7 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   57.2,
+   -119.1,
+   58.7
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 10887,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Kahntah",
+   "lat": 58.3562,
+   "lon": -120.9083,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R6R": {
+  "name": "Region 6 Skeena: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 137.1 to 139.1 W)",
+  "box": [
+   -139.1,
+   58.7,
+   -137.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 6520,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6S": {
+  "name": "Region 6 Skeena: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 135.1 to 137.1 W)",
+  "box": [
+   -137.1,
+   58.7,
+   -135.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 6235,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6T": {
+  "name": "Region 6 Skeena: around Atlin (58.7 to 60.0 N, 133.1 to 135.1 W)",
+  "box": [
+   -135.1,
+   58.7,
+   -133.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 13570,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Atlin",
+   "lat": 59.5756,
+   "lon": -133.7001,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R6U": {
+  "name": "Region 6 Skeena: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 131.1 to 133.1 W)",
+  "box": [
+   -133.1,
+   58.7,
+   -131.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 16486,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R6V": {
+  "name": "Region 6 Skeena: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 129.1 to 131.1 W)",
+  "box": [
+   -131.1,
+   58.7,
+   -129.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "6",
+  "landKm2": 16465,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R7BH": {
+  "name": "Region 7B Peace: around Lower Post (58.7 to 60.0 N, 127.1 to 129.1 W)",
+  "box": [
+   -129.1,
+   58.7,
+   -127.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 16482,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Lower Post",
+   "lat": 59.9257,
+   "lon": -128.4933,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7BI": {
+  "name": "Region 7B Peace: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 125.1 to 127.1 W)",
+  "box": [
+   -127.1,
+   58.7,
+   -125.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 16487,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R7BJ": {
+  "name": "Region 7B Peace: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 123.1 to 125.1 W)",
+  "box": [
+   -125.1,
+   58.7,
+   -123.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 16494,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ },
+ "R7BK": {
+  "name": "Region 7B Peace: around Old Fort Nelson (58.7 to 60.0 N, 121.1 to 123.1 W)",
+  "box": [
+   -123.1,
+   58.7,
+   -121.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 16506,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Old Fort Nelson",
+   "lat": 58.8239,
+   "lon": -122.5425,
+   "note": "Community from BC Geographical Names (GNS_GEOGRAPHICAL_NAMES_SP), nearest the middle of the area"
+  }
+ },
+ "R7BL": {
+  "name": "Region 7B Peace: around Northern Rockies Regional Municipality (58.7 to 60.0 N, 119.1 to 121.1 W)",
+  "box": [
+   -121.1,
+   58.7,
+   -119.1,
+   60.0
+  ],
+  "excl": [],
+  "region": "7B",
+  "landKm2": 9062,
+  "demz": 11,
+  "tileScale": 4,
+  "base": {
+   "name": "Northern Rockies Regional Municipality",
+   "lat": 59.0423,
+   "lon": -123.4761,
+   "note": "Nearest municipality from ABMS_MUNICIPALITIES_SP (outside the area)"
+  }
+ }
+}

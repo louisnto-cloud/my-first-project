@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 228" font-family="sans-serif" role="img" aria-label="Timeline from 1 October to 31 December. First frost averages 12 October in Kamloops. The mule deer rut starts mid November and runs to mid December. Bucks close 10 December. Also in this window: any buck in October in Region 3, and snow and cold push deer to winter range, mostly October and November.">
+<rect width="400" height="228" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">October to December: what changes</text>
+<rect x="20.0" y="150" width="121.3" height="24" fill="#f2e3c9" stroke="#fffaf0" stroke-width="2"/>
+<text x="80.6522" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">October</text>
+<rect x="141.3" y="150" width="117.4" height="24" fill="#e8e0cc" stroke="#fffaf0" stroke-width="2"/>
+<text x="200" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">November</text>
+<rect x="258.7" y="150" width="121.3" height="24" fill="#dfe3e6" stroke="#fffaf0" stroke-width="2"/>
+<text x="319.348" y="194" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">December</text>
+<text x="20" y="216" font-size="14" fill="#6b5b4b">Oct 1</text>
+<text x="380" y="216" font-size="14" fill="#6b5b4b" text-anchor="end">Dec 31</text>
+<path d="M63.0 98 V162" stroke="#4a7fb0" stroke-width="3"/>
+<circle cx="63.0" cy="162" r="7" fill="#4a7fb0" stroke="#fffaf0" stroke-width="2"/>
+<text x="55.0435" y="68" font-size="16" font-weight="bold" fill="#2c5d86">First frost</text>
+<text x="55.0435" y="88" font-size="15" font-weight="bold" fill="#2f3a2b">avg Oct 12</text>
+<path d="M196.1 98 V162" stroke="#e8590c" stroke-width="3"/>
+<circle cx="196.1" cy="162" r="7" fill="#e8590c" stroke="#fffaf0" stroke-width="2"/>
+<text x="196.087" y="68" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Rut starts</text>
+<text x="196.087" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">mid Nov</text>
+<path d="M293.9 98 V162" stroke="#8b5a2b" stroke-width="3"/>
+<circle cx="293.9" cy="162" r="7" fill="#8b5a2b" stroke="#fffaf0" stroke-width="2"/>
+<text x="293.913" y="68" font-size="16" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Bucks close</text>
+<text x="293.913" y="88" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Dec 10</text>
+</svg>

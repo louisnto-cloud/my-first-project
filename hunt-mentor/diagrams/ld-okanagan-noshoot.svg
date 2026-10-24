@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 641" font-family="sans-serif" role="img" aria-label="No Shooting areas near Okanagan towns, from the Region 8 maps, quoted in More, 99 percent. Vaseux Migratory Bird Sanctuary: no hunting, blue loon signs, boundary VERIFY. Kaleden and Okanagan Falls: No Shooting, and Skaha Lake is shot only, Map J10. Penticton: Upper Carmi Road No Shooting Area, mostly private land, Map J8. Naramata: No Shooting and shot only area, Map J11. Vernon: Swan Lake, Kalamalka Lake Park and Silver Star Park, Maps J16 to J18. Highway 97C: no hunting within 400 metres from Peachland to Aspen Grove. Oliver Mountain: vehicles closed, not shooting, Map J2. Kelowna: no closure listed, but the city bylaw, the 100 metre rule and private land still apply.">
+<rect width="400" height="641" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Region 8 maps, quoted in More (99%)</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#c0392b"/>
+<g transform="translate(31 47) scale(0.62)" fill="#fffaf0" stroke="none"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="50" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">CLOSED OR NO SHOOTING</text>
+<rect x="8" y="68" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="51.0" cy="105.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(51.0 105.0) scale(0.8)" fill="#c0392b" stroke="none"><rect x="-15" y="-12" width="30" height="24" rx="2" fill="#2f63a6"/><path d="M-10 5 C-6 -1 4 -1 8 3 L12 1 L10 5 C6 8 -6 8 -10 5z M8 3 C8 -2 4 -4 2 -2" fill="#fffaf0"/></g>
+<text x="98" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Vaseux sanctuary</text>
+<text x="98" y="110" font-size="15" fill="#2f3a2b">No hunting. Blue loon signs. Edge:</text>
+<text x="98" y="129" font-size="15" fill="#2f3a2b">VERIFY</text>
+<rect x="14" y="156.5" width="74" height="30" rx="6" fill="#c0392b"/>
+<text x="51" y="177.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J10</text>
+<text x="98" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Kaleden, Okanagan Falls</text>
+<text x="98" y="186" font-size="15" fill="#2f3a2b">No Shooting. Skaha Lake: shot only</text>
+<rect x="8" y="201" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="213.5" width="74" height="30" rx="6" fill="#c0392b"/>
+<text x="51" y="234.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J8</text>
+<text x="98" y="224" font-size="16" font-weight="bold" fill="#2f3a2b">Penticton: Upper Carmi</text>
+<text x="98" y="243" font-size="15" fill="#2f3a2b">No Shooting, mostly private land</text>
+<rect x="14" y="270.5" width="74" height="30" rx="6" fill="#c0392b"/>
+<text x="51" y="291.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J11</text>
+<text x="98" y="281" font-size="16" font-weight="bold" fill="#2f3a2b">Naramata</text>
+<text x="98" y="300" font-size="15" fill="#2f3a2b">No Shooting and shot only area</text>
+<rect x="8" y="315" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="327.5" width="74" height="30" rx="6" fill="#c0392b"/>
+<text x="51" y="347.5" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">J16 to J18</text>
+<text x="98" y="338" font-size="16" font-weight="bold" fill="#2f3a2b">Vernon area</text>
+<text x="98" y="357" font-size="15" fill="#2f3a2b">Swan Lake, Kalamalka Park, Silver Star</text>
+<circle cx="51.0" cy="409.0" r="20" fill="#fffaf0" stroke="#c0392b" stroke-width="2"/>
+<g transform="translate(51.0 409.0) scale(0.8)" fill="#c0392b" stroke="none"><path d="M-12 -13 H12 V2 C12 9 6 13 0 15 C-6 13 -12 9 -12 2z"/><path d="M-6 -6 H6 M-6 0 H6" stroke="#fffaf0" stroke-width="2.4"/></g>
+<text x="98" y="395" font-size="16" font-weight="bold" fill="#2f3a2b">Hwy 97C</text>
+<text x="98" y="414" font-size="15" fill="#2f3a2b">No hunting within 400 m, Peachland to</text>
+<text x="98" y="433" font-size="15" fill="#2f3a2b">Aspen Grove</text>
+<rect x="8" y="456" width="384" height="30" rx="6" fill="#8b5a2b"/>
+<text x="18" y="477" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">NOT A SHOOTING CLOSURE</text>
+<rect x="8" y="492" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="504.5" width="74" height="30" rx="6" fill="#8b5a2b"/>
+<text x="51" y="525.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">J2</text>
+<text x="98" y="515" font-size="16" font-weight="bold" fill="#2f3a2b">Oliver Mountain</text>
+<text x="98" y="534" font-size="15" fill="#2f3a2b">Vehicles closed, not shooting</text>
+<circle cx="51.0" cy="586.0" r="20" fill="#fffaf0" stroke="#8b5a2b" stroke-width="2"/>
+<g transform="translate(51.0 586.0) scale(0.8)" fill="#8b5a2b" stroke="none"><rect x="-15" y="-4" width="10" height="17"/><rect x="-4" y="-14" width="11" height="27"/><rect x="8" y="0" width="8" height="13"/><path d="M-1 -10 h2 v2 h-2z M3 -10 h2 v2 h-2z M-1 -4 h2 v2 h-2z M3 -4 h2 v2 h-2z M-1 2 h2 v2 h-2z M3 2 h2 v2 h-2z" fill="#fffaf0"/></g>
+<text x="98" y="572" font-size="16" font-weight="bold" fill="#2f3a2b">Kelowna</text>
+<text x="98" y="591" font-size="15" fill="#2f3a2b">No closure listed. Bylaw and 100 m still</text>
+<text x="98" y="610" font-size="15" fill="#2f3a2b">apply</text>
+</svg>

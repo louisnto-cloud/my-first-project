@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="A deer fence crossing. A hard packed trail runs straight at the wire. The top strand sags and is polished. Hair is caught in the barbs. Pull the hair out; new hair next visit means the crossing is in use.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A fence crossing</text>
+  <rect x="0" y="170" width="400" height="130" fill="#dfe6d3"/>
+  <path d="M150 300 Q180 240 195 190 L215 190 Q230 240 260 300 Z" fill="#c9b79c"/>
+  <path d="M195 190 L205 150 L215 190 Z" fill="#c9b79c"/>
+  <g fill="#6b4f35"><rect x="60" y="80" width="12" height="120"/><rect x="330" y="80" width="12" height="120"/></g>
+  <g stroke="#2f3a2b" stroke-width="2.5" fill="none"><path d="M66 95 Q200 125 336 95"/><path d="M66 125 H336"/><path d="M66 155 H336"/></g>
+  <g stroke="#2f3a2b" stroke-width="2"><path d="M120 100 l6 6 M126 100 l-6 6 M270 100 l6 6 M276 100 l-6 6 M196 109 l6 6 M202 109 l-6 6 M196 122 l6 6 M202 122 l-6 6"/></g>
+  <g stroke="#8b5a2b" stroke-width="2"><path d="M200 112 l-4 14 M202 112 l2 16 M204 112 l8 12 M199 125 l-6 10 M201 125 l3 12"/></g>
+  <circle cx="202" cy="120" r="22" fill="none" stroke="#e8590c" stroke-width="3"/>
+  <text x="235" y="70" font-size="15" font-weight="bold" fill="#e8590c">Hair in barbs</text>
+  <path d="M260 74 L222 108" stroke="#e8590c" stroke-width="2"/>
+  <text x="20" y="60" font-size="15" fill="#2f3a2b">Top strand sags,</text>
+  <text x="20" y="78" font-size="15" fill="#2f3a2b">polished</text>
+  <text x="270" y="240" font-size="15" fill="#2f3a2b">Packed trail</text>
+  <text x="270" y="258" font-size="15" fill="#2f3a2b">straight at</text>
+  <text x="270" y="276" font-size="15" fill="#2f3a2b">the wire</text>
+  <text x="20" y="250" font-size="14" fill="#6b4f35">Pull the hair.</text>
+  <text x="20" y="268" font-size="14" fill="#6b4f35">New hair next time:</text>
+  <text x="20" y="286" font-size="14" fill="#6b4f35">in use (Tip)</text>
+</svg>

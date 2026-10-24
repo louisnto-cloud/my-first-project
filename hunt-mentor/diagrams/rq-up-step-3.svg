@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 3: Steep country: start high. Chukar run uphill (75%).">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="30" cy="30" r="20" fill="#e8590c"/>
+<text x="30" y="37" font-family="sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+<text x="60" y="26" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Steep country: start high</text>
+<path d="M80 210 L200 100 L320 210 Z" fill="#d8c9a6"/><g transform="translate(200 110) scale(1.2)"><circle cy="-14" r="6" fill="#e8590c"/><rect x="-6" y="-8" width="12" height="16" rx="3" fill="#e8590c"/><rect x="-5" y="8" width="4" height="10" fill="#2f3a2b"/><rect x="1" y="8" width="4" height="10" fill="#2f3a2b"/></g><g><line x1="200" y1="125" x2="200" y2="185" stroke="#e8590c" stroke-width="3" stroke-linecap="round"/><polygon points="200.0,185.0 195.7,176.0 204.3,176.0" fill="#e8590c"/></g><text x="200" y="235" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e8590c" text-anchor="middle">Chukar: get above, work down</text>
+<text x="200" y="288" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="middle">Chukar run uphill (75%).</text>
+</svg>

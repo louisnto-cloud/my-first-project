@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 298" role="img" aria-label="Carbon monoxide warning: never run a fuel burning heater, stove, lantern, barbecue or generator inside a tent or closed vehicle. Opening the flap is not enough. Symptoms: headache, dizziness, nausea, sleepiness. Get everyone out and call 911.">
+  <rect x="0" y="0" width="400" height="298" fill="#fffaf0"/>
+<text x="200" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Carbon monoxide: the silent killer</text>
+<rect x="10" y="46" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<polygon points="42.0,67.6 24.0,88 60.0,88" fill="#e8590c"/><polygon points="42.0,67.6 37.2,88 46.8,88" fill="#2f3a2b"/><path d="M42.0 84 q-7.2 -7.2 0 -16.0 q7.2 8.8 0 16.0 z" fill="#e8590c" stroke="#e8590c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M42.0 84 q-3.2 -4.0 0 -8.0 q3.2 4.0 0 8.0 z" fill="#f6c343" stroke="#f6c343" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><path d="M54.6 52.6 l10.799999999999999 10.799999999999999 M65.4 52.6 l-10.799999999999999 10.799999999999999" fill="none" stroke="#b3261e" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="68" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">No stove or heater in the tent</text>
+<text x="80" y="90" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">not even with the flap open (80%)</text>
+<rect x="10" y="108" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<circle cx="42.0" cy="132" r="16" fill="#cccccc"/><text x="42.0" y="138" font-family="sans-serif" font-size="18" font-weight="bold" fill="#23261f" text-anchor="middle">?</text>
+<text x="80" y="130" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">You cannot see or smell it</text>
+<text x="80" y="152" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">it builds up while you sleep</text>
+<rect x="10" y="170" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<text x="42.0" y="202" font-family="sans-serif" font-size="26" font-weight="bold" fill="#b3261e" text-anchor="middle">!</text>
+<text x="80" y="192" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Headache, dizzy, sick, sleepy</text>
+<text x="80" y="214" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">looks like flu (80%)</text>
+<rect x="10" y="232" width="380" height="56" rx="10" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<line x1="26.0" y1="258" x2="58.0" y2="258" stroke="#2f3a2b" stroke-width="4" stroke-linecap="round"/><polygon points="58.0,258.0 49.0,262.3 49.0,253.7" fill="#2f3a2b"/>
+<text x="80" y="254" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="start">Get everyone out, call 911</text>
+<text x="80" y="276" font-family="sans-serif" font-size="14" fill="#23261f" text-anchor="start">fresh air first (80%)</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" font-family="sans-serif" role="img" aria-label="Grid of upland bird seasons by region, 99 percent. Region 3, Kamloops, 1 October to 30 November: quail no season; chukar 5 a day; grey partridge 3 a day; pheasant cocks 2 a day. Region 8, Okanagan, 1 October to 30 November: quail 10 a day; chukar 5 a day; grey partridge 3 a day; pheasant cocks 2 a day. Region 2, Mission: quail, chukar and grey partridge no season; pheasant cocks in MUs 2-4 and 2-8 only, 10 October to 30 November, 2 a day. Possession is 3 times the daily limit.">
+<rect width="400" height="450" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Upland seasons by region (99%)</text>
+<text x="54.5" y="60" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quail</text>
+<text x="151.5" y="60" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chukar</text>
+<text x="248.5" y="60" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Grey</text>
+<text x="248.5" y="78" font-size="14" fill="#6b5b4b" text-anchor="middle">partridge</text>
+<text x="345.5" y="60" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Pheasant</text>
+<text x="345.5" y="78" font-size="14" fill="#6b5b4b" text-anchor="middle">cocks</text>
+<text x="14" y="104" font-size="16" font-weight="bold" fill="#2f3a2b">Region 3, Kamloops</text>
+<text x="14" y="124" font-size="15" font-weight="bold" fill="#c2410c">Oct 1 to Nov 30</text>
+<rect x="8" y="132" width="93" height="58" rx="7" fill="#f6dcd8"/>
+<text x="54.5" y="158" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">No</text>
+<text x="54.5" y="176" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">season</text>
+<rect x="105" y="132" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="151.5" y="162" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="151.5" y="181" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<rect x="202" y="132" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="248.5" y="162" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="248.5" y="181" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<rect x="299" y="132" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="345.5" y="162" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="345.5" y="181" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<text x="14" y="218" font-size="16" font-weight="bold" fill="#2f3a2b">Region 8, Okanagan</text>
+<text x="14" y="238" font-size="15" font-weight="bold" fill="#c2410c">Oct 1 to Nov 30</text>
+<rect x="8" y="246" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="54.5" y="276" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">10</text>
+<text x="54.5" y="295" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<rect x="105" y="246" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="151.5" y="276" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<text x="151.5" y="295" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<rect x="202" y="246" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="248.5" y="276" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="248.5" y="295" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<rect x="299" y="246" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="345.5" y="276" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="345.5" y="295" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<text x="14" y="332" font-size="16" font-weight="bold" fill="#2f3a2b">Region 2, Mission</text>
+<text x="14" y="352" font-size="15" font-weight="bold" fill="#c2410c">Pheasant, MUs 2-4, 2-8: Oct 10 to Nov 30</text>
+<rect x="8" y="360" width="93" height="58" rx="7" fill="#f6dcd8"/>
+<text x="54.5" y="386" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">No</text>
+<text x="54.5" y="404" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">season</text>
+<rect x="105" y="360" width="93" height="58" rx="7" fill="#f6dcd8"/>
+<text x="151.5" y="386" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">No</text>
+<text x="151.5" y="404" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">season</text>
+<rect x="202" y="360" width="93" height="58" rx="7" fill="#f6dcd8"/>
+<text x="248.5" y="386" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">No</text>
+<text x="248.5" y="404" font-size="15" font-weight="bold" fill="#c92a2a" text-anchor="middle">season</text>
+<rect x="299" y="360" width="93" height="58" rx="7" fill="#2f6e3b"/>
+<text x="345.5" y="390" font-size="24" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="345.5" y="409" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">a day</text>
+<text x="200" y="438" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Possession: 3 times the daily limit</text>
+</svg>

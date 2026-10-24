@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Note the angle and the flat distance if your unit shows it.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Read the angle mode</text><rect x="110" y="70" width="180" height="120" rx="12" fill="#1f2420" stroke="none" stroke-width="2"/><text x="200" y="120" font-size="34" font-weight="bold" fill="#ffb347" text-anchor="middle">214</text><text x="200" y="150" font-size="17" font-weight="bold" fill="#ffb347" text-anchor="middle">HCD 198 m</text><text x="200" y="175" font-size="15" fill="#ffb347" text-anchor="middle">22°</text><text x="200" y="240" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">flat distance for your hold</text>
+</svg>

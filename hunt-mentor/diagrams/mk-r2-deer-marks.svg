@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" font-family="sans-serif" role="img" aria-label="Footnotes: deer. ▲: Bowen and Texada: deer limit 3(2). ★ / ✻: Bowen Island only / Texada Island only. * / ***: Under 18 / under 18, or 65 and older. **: Part of 2-11, Maps B15 and B20. Mostly private land. ◆: 2-5 and 2-12: 1 buck, Sept 10 to Nov 30.">
+<rect width="400" height="396" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">Footnotes: deer</text>
+<text x="16" y="52" font-size="14" fill="#17201A">Means (99%, page 28)</text>
+<g><rect x="12" y="68" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="83" height="56" rx="8" fill="#1F3D2B"/><rect x="87" y="68" width="8" height="56" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">▲</text><text x="105" y="90" font-size="15" font-weight="bold" fill="#17201A">Bowen and Texada: deer limit</text>
+<text x="105" y="109" font-size="15" font-weight="bold" fill="#17201A">3(2)</text></g>
+<g><rect x="12" y="132" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="132" width="83" height="56" rx="8" fill="#1F3D2B"/><rect x="87" y="132" width="8" height="56" fill="#1F3D2B"/><text x="22" y="154" font-size="15" font-weight="bold" fill="#FFFFFF">★ / ✻</text><text x="105" y="154" font-size="15" fill="#17201A">Bowen Island only / Texada Island</text>
+<text x="105" y="173" font-size="15" fill="#17201A">only</text></g>
+<g><rect x="12" y="196" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="196" width="83" height="56" rx="8" fill="#1F3D2B"/><rect x="87" y="196" width="8" height="56" fill="#1F3D2B"/><text x="22" y="218" font-size="15" font-weight="bold" fill="#FFFFFF">* / ***</text><text x="105" y="218" font-size="15" fill="#17201A">Under 18 / under 18, or 65 and</text>
+<text x="105" y="237" font-size="15" fill="#17201A">older</text></g>
+<g><rect x="12" y="260" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="260" width="83" height="56" rx="8" fill="#1F3D2B"/><rect x="87" y="260" width="8" height="56" fill="#1F3D2B"/><text x="22" y="282" font-size="15" font-weight="bold" fill="#FFFFFF">**</text><text x="105" y="282" font-size="15" fill="#17201A">Part of 2-11, Maps B15 and B20.</text>
+<text x="105" y="301" font-size="15" fill="#17201A">Mostly private land</text></g>
+<g><rect x="12" y="324" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="324" width="83" height="56" rx="8" fill="#1F3D2B"/><rect x="87" y="324" width="8" height="56" fill="#1F3D2B"/><text x="22" y="346" font-size="15" font-weight="bold" fill="#FFFFFF">◆</text><text x="105" y="346" font-size="15" fill="#17201A">2-5 and 2-12: 1 buck, Sept 10 to</text>
+<text x="105" y="365" font-size="15" fill="#17201A">Nov 30</text></g>
+
+</svg>

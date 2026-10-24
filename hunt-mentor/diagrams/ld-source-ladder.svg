@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Bar chart of how much to trust each source in this session. The synopsis: 85 to 99 percent. BC Parks and Wildlife Management Area pages: 85 to 95. Research reports: 75 to 85. Magazine: 65. News: 55 to 65. Blog: 55. Forum: 50. Under 60 percent is a lead to check, not a fact.">
+<rect x="0" y="0" width="400" height="404" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">How much to trust each source</text>
+<text x="200" y="46" font-size="14" fill="#6b4f35" text-anchor="middle">Certainty used in this session</text>
+<line x1="120.0" y1="84" x2="120.0" y2="364" stroke="#dfe6d3" stroke-width="2"/>
+<text x="120" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">0%</text>
+<line x1="248.0" y1="84" x2="248.0" y2="364" stroke="#dfe6d3" stroke-width="2"/>
+<text x="248" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">50%</text>
+<line x1="376.0" y1="84" x2="376.0" y2="364" stroke="#dfe6d3" stroke-width="2"/>
+<text x="376" y="78" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">100%</text>
+<text x="8" y="108" font-size="14" font-weight="bold" fill="#2f3a2b">Synopsis</text>
+<rect x="120.0" y="92" width="253.4" height="22" rx="4" fill="#8a9a6b"/>
+<text x="124" y="108" font-size="14" font-weight="bold" fill="#fff">85 to 99%</text>
+<text x="8" y="148" font-size="14" font-weight="bold" fill="#2f3a2b">BC Parks, WMA</text>
+<rect x="120.0" y="132" width="243.2" height="22" rx="4" fill="#8a9a6b"/>
+<text x="124" y="148" font-size="14" font-weight="bold" fill="#fff">85 to 95%</text>
+<text x="8" y="188" font-size="14" font-weight="bold" fill="#2f3a2b">Research</text>
+<rect x="120.0" y="172" width="217.6" height="22" rx="4" fill="#8a9a6b"/>
+<text x="124" y="188" font-size="14" font-weight="bold" fill="#fff">75 to 85%</text>
+<text x="8" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">Magazine</text>
+<rect x="120.0" y="212" width="166.4" height="22" rx="4" fill="#4a7fb0"/>
+<text x="292.4" y="228" font-size="14" font-weight="bold" fill="#2f3a2b">65%</text>
+<text x="8" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">News</text>
+<rect x="120.0" y="252" width="166.4" height="22" rx="4" fill="#4a7fb0"/>
+<text x="292.4" y="268" font-size="14" font-weight="bold" fill="#2f3a2b">55 to 65%</text>
+<text x="8" y="308" font-size="14" font-weight="bold" fill="#2f3a2b">Blog</text>
+<rect x="120.0" y="292" width="140.8" height="22" rx="4" fill="#e8590c"/>
+<text x="266.8" y="308" font-size="14" font-weight="bold" fill="#2f3a2b">55%</text>
+<text x="8" y="348" font-size="14" font-weight="bold" fill="#2f3a2b">Forum</text>
+<rect x="120.0" y="332" width="128.0" height="22" rx="4" fill="#e8590c"/>
+<text x="254" y="348" font-size="14" font-weight="bold" fill="#2f3a2b">50%</text>
+<text x="200" y="382" font-size="14" fill="#2f3a2b" text-anchor="middle">Under 60% is a lead to check, not a fact.</text>
+</svg>

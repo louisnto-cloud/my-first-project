@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 572" font-family="sans-serif" role="img" aria-label="Checklist: can I shoot here? Every one of nine checks must be yes, and a check that does not apply counts as yes. 1 outside every National Park. 2 outside every ecological reserve. 3 not in a BC Park, or its page allows hunting in an open season. 4 over 100 metres (109 yards) from occupied buildings and schools. 5 off the road allowance and not shooting across it. 6 outside No Shooting and No Hunting Areas. 7 near a listed highway: check its 400 metre band in the Rule Book; some ban rifles and slugs, some ban all hunting. 8 fenced, posted, leased or crop land: the owner said yes. 9 in a town: the local bylaw allows it. Any no: do not shoot. All yes: the place is OK; now check season, licence, target and backstop.">
+<rect width="400" height="572" fill="#fffaf0"/>
+<text x="16" y="34" font-size="21" font-weight="bold" fill="#e8590c">Need YES to all 9</text>
+<text x="384" y="34" font-size="15" fill="#6b5b4b" text-anchor="end">Does not apply = yes</text>
+<g data-tip="Closed places|No hunting in any National Park. Ecological reserves are closed to hunting and to firing any firearm or bow.">
+<rect x="8" y="50" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
+<circle cx="28" cy="70" r="12" fill="#2f3a2b"/><text x="28" y="75.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<g transform="translate(58 70) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-15 11 L-4 -9 L2 1 L6 -4 L15 11z"/><path d="M-4 -9 L-1 -4 L-6 -3z" fill="#fffaf0"/></g>
+<text x="80" y="76" font-size="16" fill="#2f3a2b">Outside National Parks</text>
+<rect x="8" y="94" width="384" height="40" rx="7" fill="#ffffff" stroke="#e3d8c0"/>
+<circle cx="28" cy="114" r="12" fill="#2f3a2b"/><text x="28" y="119.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<g transform="translate(58 114) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-12 12 C-14 -4 -2 -14 14 -13 C14 4 4 13 -12 12z"/><path d="M-12 12 L6 -6" stroke="#fffaf0" stroke-width="1.8"/></g>
+<text x="80" y="120" font-size="16" fill="#2f3a2b">Outside ecological reserves</text>
+</g>
+<g data-tip="BC Parks|Many ban hunting. Check the park's own page that hunting is allowed, then hunt only in a lawful open season.">
+<rect x="8" y="138" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
+<circle cx="28" cy="158" r="12" fill="#2f3a2b"/><text x="28" y="163.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<g transform="translate(58 158) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-8 -14 L-1 0 L-4 0 L1 9 L-17 9 L-12 0 L-15 0z"/><path d="M8 -10 L14 1 L12 1 L16 10 L0 10 L4 1 L2 1z"/><rect x="-9.5" y="9" width="3" height="4"/><rect x="6.5" y="10" width="3" height="3"/></g>
+<text x="80" y="164" font-size="16" fill="#2f3a2b">BC Park allows it, in season</text>
+</g>
+<g data-tip="The 100 m rule|No hunting or shooting within 100 m (109 yd) of a church, school, playground, regional district park, home, or farm building with people or animals in it.">
+<rect x="8" y="182" width="384" height="40" rx="7" fill="#ffffff" stroke="#e3d8c0"/>
+<circle cx="28" cy="202" r="12" fill="#2f3a2b"/><text x="28" y="207.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">4</text>
+<g transform="translate(58 202) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-14 0 L0 -13 L14 0z"/><rect x="-10" y="0" width="20" height="13"/><rect x="-3" y="5" width="6" height="8" fill="#fffaf0"/></g>
+<text x="80" y="208" font-size="16" fill="#2f3a2b">Over 100 m (109 yd) from homes</text>
+</g>
+<g data-tip="Road allowance|On numbered highways and public roads of 2 lanes or more: no shooting across or within the road allowance, and no hunting within it.">
+<rect x="8" y="226" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
+<circle cx="28" cy="246" r="12" fill="#2f3a2b"/><text x="28" y="251.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">5</text>
+<g transform="translate(58 246) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="80" y="252" font-size="16" fill="#2f3a2b">Off road allowance, not across it</text>
+</g>
+<g data-tip="Two kinds of area|A No Shooting Area bans firing a firearm. A No Hunting Area bans hunting itself, bow or firearm.">
+<rect x="8" y="270" width="384" height="40" rx="7" fill="#ffffff" stroke="#e3d8c0"/>
+<circle cx="28" cy="290" r="12" fill="#2f3a2b"/><text x="28" y="295.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">6</text>
+<g transform="translate(58 290) scale(0.72)" fill="#2f3a2b" stroke="none"><circle r="13" fill="none" stroke="#2f3a2b" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#2f3a2b" stroke-width="3.5"/></g>
+<text x="80" y="296" font-size="16" fill="#2f3a2b">Outside No Shooting, No Hunting Areas</text>
+</g>
+<rect x="8" y="314" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
+<circle cx="28" cy="334" r="12" fill="#2f3a2b"/><text x="28" y="339.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">7</text>
+<g transform="translate(58 334) scale(0.72)" fill="#2f3a2b" stroke="none"><path d="M-12 -13 H12 V2 C12 9 6 13 0 15 C-6 13 -12 9 -12 2z"/><path d="M-6 -6 H6 M-6 0 H6" stroke="#fffaf0" stroke-width="2.4"/></g>
+<text x="80" y="340" font-size="16" fill="#2f3a2b">Listed highway: check its 400 m band</text>
+<g data-tip="Private and leased land|A fence all the way round or no trespassing signs at each way in means it is closed without the owner's permission. Cultivated land needs consent too.">
+<rect x="8" y="358" width="384" height="40" rx="7" fill="#ffffff" stroke="#e3d8c0"/>
+<circle cx="28" cy="378" r="12" fill="#2f3a2b"/><text x="28" y="383.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">8</text>
+<g transform="translate(58 378) scale(0.72)" fill="#2f3a2b" stroke="none"><rect x="-15" y="-10" width="3.5" height="23"/><rect x="11.5" y="-10" width="3.5" height="23"/><path d="M-12 -5 H12 M-12 3 H12 M-12 3 L12 -5" stroke="#2f3a2b" stroke-width="2.6"/></g>
+<text x="80" y="384" font-size="16" fill="#2f3a2b">Fenced, posted, leased, crop: owner OK</text>
+</g>
+<g data-tip="Towns|Inside a city or district, the local bylaw decides where you may shoot. The synopsis does not print bylaws.">
+<rect x="8" y="402" width="384" height="40" rx="7" fill="#f4eedf" stroke="#e3d8c0"/>
+<circle cx="28" cy="422" r="12" fill="#2f3a2b"/><text x="28" y="427.5" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">9</text>
+<g transform="translate(58 422) scale(0.72)" fill="#2f3a2b" stroke="none"><rect x="-15" y="-4" width="10" height="17"/><rect x="-4" y="-14" width="11" height="27"/><rect x="8" y="0" width="8" height="13"/><path d="M-1 -10 h2 v2 h-2z M3 -10 h2 v2 h-2z M-1 -4 h2 v2 h-2z M3 -4 h2 v2 h-2z M-1 2 h2 v2 h-2z M3 2 h2 v2 h-2z" fill="#fffaf0"/></g>
+<text x="80" y="428" font-size="16" fill="#2f3a2b">Town: bylaw allows it</text>
+</g>
+<g data-tip="Any no|Do not shoot. Killing wildlife while trespassing or breaking any other law is its own offence.">
+<rect x="8" y="450" width="384" height="42" rx="8" fill="#c0392b"/>
+<g transform="translate(32 471) scale(0.7)"><circle r="13" fill="none" stroke="#fffaf0" stroke-width="3.5"/><path d="M-9 -9 L9 9" stroke="#fffaf0" stroke-width="3.5"/></g>
+<text x="58" y="478" font-size="18" font-weight="bold" fill="#fffaf0">Any NO: DO NOT SHOOT</text></g>
+<rect x="8" y="500" width="384" height="62" rx="8" fill="#2f3a2b"/>
+<path d="M20 531 l7 7 l13 -14" fill="none" stroke="#fffaf0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="58" y="526" font-size="17" font-weight="bold" fill="#fffaf0">All yes: the place is OK</text>
+<text x="58" y="549" font-size="15" fill="#fffaf0">Now: season, licence, target, backstop</text>
+</svg>

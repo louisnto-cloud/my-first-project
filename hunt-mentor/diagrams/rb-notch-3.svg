@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 3: cancel the species licence the way the licence itself instructs. Orange marks show the parts you cut or mark. Follow the instructions printed on your own licence." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="34" font-size="20" fill="#23261f" text-anchor="middle" font-weight="bold">3. Cancel it as it shows</text>
+<g transform="translate(200 140) scale(3.2)"><rect x="-26" y="-18" width="52" height="36" rx="4" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="-8" x2="18" y2="-8" stroke="#2f3a2b" stroke-width="2.5"/><line x1="-18" y1="0" x2="10" y2="0" stroke="#2f3a2b" stroke-width="2"/><line x1="-18" y1="8" x2="14" y2="8" stroke="#2f3a2b" stroke-width="2"/><path d="M-26 -8 l6 3 l-6 3 Z M26 2 l-6 3 l6 3 Z" fill="#e8590c"/></g><text x="200" y="218" font-size="15" fill="#e8590c" text-anchor="middle" font-weight="bold">Orange: the parts you cut or mark</text>
+<text x="200" y="262" font-size="15" fill="#2f3a2b" text-anchor="middle">Follow the instructions printed on YOUR licence.</text>
+</svg>

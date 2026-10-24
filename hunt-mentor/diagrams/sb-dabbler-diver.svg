@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 434" font-family="sans-serif" role="img" aria-label="Chart comparing a puddle duck and a diver. Puddle duck: feeds by tipping up with its tail in the air, jumps straight up off the water, has a bright shiny wing patch, lives on shallow marsh and creeks. Diver: dives deep to feed, runs along the water to take off, has a white or grey wing patch, lives on big deep lakes and rivers.">
+  <rect width="400" height="434" fill="#fffaf0"/>
+  <text x="105" y="28" font-size="18" font-weight="bold" fill="#8b5a2b" text-anchor="middle">Puddle duck</text>
+  <text x="105" y="46" font-size="14" fill="#8b5a2b" text-anchor="middle">(dabbler)</text>
+  <text x="300" y="28" font-size="18" font-weight="bold" fill="#4a7fb0" text-anchor="middle">Diver</text>
+  <text x="300" y="46" font-size="14" fill="#4a7fb0" text-anchor="middle">(diving duck)</text>
+  <line x1="200" y1="56" x2="200" y2="430" stroke="#8a9a6b" stroke-width="2"/>
+  <rect x="4" y="56" width="392" height="22" rx="4" fill="#dfe6d3"/>
+  <text x="200" y="72" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Feeds</text>
+  <rect x="4" y="160" width="392" height="22" rx="4" fill="#dfe6d3"/>
+  <text x="200" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Takes off</text>
+  <rect x="4" y="264" width="392" height="22" rx="4" fill="#dfe6d3"/>
+  <text x="200" y="280" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Wing patch</text>
+  <rect x="4" y="350" width="392" height="22" rx="4" fill="#dfe6d3"/>
+  <text x="200" y="366" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Water</text>
+  <rect x="20" y="112" width="170" height="24" fill="#4a7fb0" opacity=".35"/>
+  <g transform="translate(105 112) rotate(70)"><g transform="translate(0 0) scale(0.8)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#8b5a2b"/><circle cx="18" cy="-20" r="9" fill="#8b5a2b"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g></g>
+  <text x="105" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle">Tips up, tail high</text>
+  <rect x="210" y="104" width="180" height="32" fill="#4a7fb0" opacity=".35"/>
+  <g transform="translate(240 104) scale(0.6)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#4a7fb0"/><circle cx="18" cy="-20" r="9" fill="#4a7fb0"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <path d="M250 108 L320 126 M310.2 128.0 L320 126 L312.4 119.5" stroke="#2f3a2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g transform="translate(345 132) scale(0.5)"><path d="M-30 0 Q-34 -14 -18 -14 L10 -12 Q24 -10 24 0 Q20 10 -2 10 L-22 10 Q-32 8 -30 0Z" fill="#4a7fb0"/><circle cx="18" cy="-20" r="9" fill="#4a7fb0"/><path d="M26 -21 L38 -18 L26 -15Z" fill="#2f3a2b"/></g>
+  <text x="300" y="152" font-size="14" fill="#2f3a2b" text-anchor="middle">Dives deep</text>
+  <line x1="20" y1="236" x2="190" y2="236" stroke="#4a7fb0" stroke-width="3"/>
+  <path d="M80 232 L80 196 M84.3 205.0 L80 196 L75.7 205.0" stroke="#e8590c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <g transform="translate(80 196) scale(0.6)"><ellipse rx="18" ry="5" fill="#8b5a2b"/><circle cx="18" cy="-1" r="4.5" fill="#8b5a2b"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#8b5a2b"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#8b5a2b"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#8b5a2b"/></g>
+  <text x="105" y="256" font-size="14" fill="#2f3a2b" text-anchor="middle">Jumps straight up</text>
+  <line x1="210" y1="236" x2="390" y2="236" stroke="#4a7fb0" stroke-width="3"/>
+  <path d="M220 232 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0 q8 -6 16 0" fill="none" stroke="#4a7fb0" stroke-width="2"/>
+  <path d="M230 226 L350 200 M342.1 206.2 L350 200 L340.3 197.7" stroke="#e8590c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <g transform="translate(360 198) scale(0.6)"><ellipse rx="18" ry="5" fill="#4a7fb0"/><circle cx="18" cy="-1" r="4.5" fill="#4a7fb0"/><path d="M8 -3 Q2 -20.0 -10 -32.0 Q-8 -16.0 -8 -3Z" fill="#4a7fb0"/><path d="M8 3 Q2 20.0 -10 32.0 Q-8 16.0 -8 3Z" fill="#4a7fb0"/><path d="M-16 0 L-26 -5 L-26 5Z" fill="#4a7fb0"/></g>
+  <text x="300" y="256" font-size="14" fill="#2f3a2b" text-anchor="middle">Runs on the water</text>
+  <path d="M40 300 Q105 280 170 300 L160 316 Q105 302 50 316Z" fill="#b8a98f"/>
+  <rect x="112" y="296" width="34" height="14" fill="#4a7fb0"/><rect x="112" y="294" width="34" height="3" fill="#fff"/><rect x="112" y="309" width="34" height="3" fill="#fff"/>
+  <text x="105" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">Bright, shiny patch</text>
+  <path d="M232 300 Q300 280 368 300 L358 316 Q300 302 242 316Z" fill="#6b6f78"/>
+  <rect x="300" y="296" width="40" height="14" fill="#fff"/>
+  <text x="300" y="338" font-size="14" fill="#2f3a2b" text-anchor="middle">White or grey patch</text>
+  <path d="M30 394 Q105 380 180 394" fill="none" stroke="#4a7fb0" stroke-width="6"/>
+  <text x="105" y="420" font-size="14" fill="#2f3a2b" text-anchor="middle">Shallow marsh, creek</text>
+  <rect x="222" y="380" width="156" height="24" rx="6" fill="#4a7fb0"/>
+  <text x="300" y="420" font-size="14" fill="#2f3a2b" text-anchor="middle">Big deep lake, river</text>
+</svg>

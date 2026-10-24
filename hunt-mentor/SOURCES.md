@@ -1,0 +1,293 @@
+# SOURCES.md
+
+Every source used in Hunt Mentor. Add a row each time a source is used.
+Certainty scale: see CLAUDE.md.
+
+## Status key
+- READ: opened and read directly.
+- FOUND: located (link confirmed via search), not yet read in full.
+
+## BC provincial (official)
+
+| Source | Link | Status | Date checked | Notes |
+|---|---|---|---|---|
+| BC Hunting and Trapping Regulations Synopsis, 2026 to 2028 (landing page) | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis | FOUND | 2026-09-30 | Effective 1 July 2026 to 30 June 2028 (90%, search summary of official page; confirm on read) |
+| Synopsis, full PDF | https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis.pdf | FOUND | 2026-09-30 | 13 MB |
+| Synopsis, Region 3 Thompson PDF | https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-3-thompson.pdf | FOUND | 2026-09-30 | Heffley Creek / Sun Peaks base |
+| Synopsis, Region 8 Okanagan PDF | https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/hunting-trapping-synopsis-region-8-okanagan.pdf | FOUND | 2026-09-30 | Quail trip |
+| Synopsis, Region 2 Lower Mainland PDF | VERIFY | TODO | | Mission base |
+| 2026 regulation changes summary | https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/regulations/2026_hunting-trapping_regulation_changes_summary.pdf | FOUND | 2026-09-30 | |
+| Hunting in BC hub | https://www.gov.bc.ca/hunting | FOUND | 2026-09-30 | |
+| In season regulation changes | VERIFY | TODO | | Must be in "before every hunt" checklist |
+| BC Wildlife Act and regulations (BC Laws) | VERIFY | TODO | | |
+| BC Off Road Vehicle Act | VERIFY | TODO | | |
+| BC Trespass Act | VERIFY | TODO | | |
+| BC Parks hunting rules | VERIFY | TODO | | |
+| BC CWD (Chronic Wasting Disease) program | VERIFY | TODO | | |
+| BC Wildfire Service (fire bans, area restrictions) | VERIFY | TODO | | |
+| DriveBC and FSR (Forest Service Road) status | VERIFY | TODO | | |
+| RAPP (Report All Poachers and Polluters) line | VERIFY | TODO | | Phone number must be read from official source |
+
+## Federal (official)
+
+| Source | Link | Status | Date checked | Notes |
+|---|---|---|---|---|
+| ECCC BC migratory bird summary (Aug 2025 to Jul 2026 page) | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html | FOUND | 2026-09-30 | Need the 2026 to 2027 version |
+| Migratory Birds Regulations in Canada: 2026 (report) | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/consultation-process-regulations/report-series/july-2026.html | FOUND | 2026-09-30 | Search summary says no BC changes for 2026 to 2028 (70%, confirm on read) |
+| Migratory Game Bird Hunting Permit overview | https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/permit.html | FOUND | 2026-09-30 | |
+| Migratory Birds Regulations, 2022 (Justice Laws) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html | READ | 2026-10-04 | Schedule 3, Part 10, Table 1 (current to 2026-09-21): every duck, goose, coot and snipe row in `data/seasons/migratory.json` checked against it (99%) |
+| Firearms Act; storage, display, transport regulations (RCMP) | VERIFY | TODO | | |
+| CBSA (Canada Border Services Agency) firearms and wild meat | VERIFY | TODO | | Alaska trip |
+| CFIA (Canadian Food Inspection Agency) import rules for hunted meat | VERIFY | TODO | | |
+
+## Other jurisdictions (official)
+- Yukon, Alberta, Saskatchewan, Manitoba, Alaska: VERIFY, Phase E.
+
+## Secondary (60 to 79% max, never for rules)
+
+| Source | Link | Date checked | Use |
+|---|---|---|---|
+| Silvercore blog, BC regs 2026 | https://www.silvercore.ca/blog/new-bc-hunting-regulations | 2026-09-30 | Cross check only |
+| BC Outdoors Magazine, reg changes | https://www.bcoutdoorsmagazine.com/what-bc-hunters-anglers-should-know-about-upcoming-regulatory-changes/ | 2026-09-30 | Cross check only |
+
+## Added 2026-10-01 (all via search preview, capped 85%)
+
+| Source | Link | Used in |
+|---|---|---|
+| BC Firearm Violence Prevention Act page | https://www2.gov.bc.ca/gov/content/justice/criminal-justice/policing-in-bc/fvpa | Firearm safety, water safety, regs.json |
+| BC news release: FVPA in force 1 Oct 2026 | https://news.gov.bc.ca/releases/2026PSSG0037-000460 | regs.json |
+| BC Trespass Act | https://www.bclaws.gov.bc.ca/civix/document/id/consol21/consol21/00_96462_01 | BC rules |
+| RCMP storing and transporting firearms | https://rcmp.ca/en/firearms/firearms-safety-training-transport-and-storage/storing-transporting-and-displaying-firearms | BC rules, firearm safety |
+| Storage, Display, Transportation regs SOR/98-209 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/ | BC rules |
+| Migratory Birds Regulations, 2022 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html | BC rules, water safety, gear |
+| BC RAPP page | https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/natural-resource-law-enforcement/conservation-officer-service/cos-rapp | Emergency card, BC rules |
+| BC CWD page | https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/wildlife/wildlife-conservation/wildlife-health/chronic-wasting-disease/cwd-bc | BC rules |
+| BC compulsory reporting | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/compulsory-reporting | After the shot |
+| BC Parks hunting guide | https://bcparks.ca/plan-your-trip/visit-responsibly/fishing-hunting-guide/ | BC rules |
+| WDFW food safety (not BC law) | https://wdfw.wa.gov/hunting/requirements/food-safety | After the shot |
+| BC Firearms Academy, evidence of sex (secondary) | https://bcfirearmsacademy.ca/possession-transportation-big-game/ | BC rules |
+| Apple Support, Emergency SOS via satellite | (see bush safety session) | Bush safety |
+| Deer research sources | see research/2026-10-01-deer.md | Deer sessions |
+| Gear research sources | see research/2026-10-01-gear.md | Gear sessions |
+
+## Added 2026-10-02 (official texts, read directly)
+
+| Source | Link | Used in |
+|---|---|---|
+| Order in Council 156/2026 (FVPA in force 1 October 2026) | https://www.bclaws.gov.bc.ca/civix/document/id/oic/oic_cur/0156_2026 | regs.json, water safety, BC rules |
+| B.C. Reg. 66/2026: Hunting Regulation changes (power boat definition repealed, s.17(1)(n) moving boat) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84anif66_2026 | regs.json, glossary, water safety, ducks |
+| B.C. Reg. 66/2026: Designation and Exemption Regulation s.5.1, s.18, s.19 (boat exemptions) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/168_90anif66_2026 | regs.json, water safety, BC rules |
+| Firearm Violence Prevention Act, SBC 2021 c. 7, and its table of legislative changes | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/21007 | water safety, BC rules |
+| Hunting Regulation, B.C. Reg. 190/84 (s.15 evidence of sex, s.17 methods) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01 | After the shot, BC rules |
+| Hunting Licensing Regulation, B.C. Reg. 8/99 (s.5 to s.7) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_99 | Licences |
+| Wildlife Act (s.26, s.27, s.39) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01 | BC rules, gear |
+| Trespass Act, RSBC 2018 c. 3 (s.2, s.4) | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18003 | BC rules |
+| Closed Areas Regulation, B.C. Reg. 76/84, Schedules 10 to 13 | https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_12 | First quail trip, Region 8 |
+| Small Vessel Regulations, SOR/2010-91 (s.7, s.10, s.204, s.209) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-2010-91/FullText.html | Water safety |
+| Competency of Operators of Pleasure Craft Regulations, SOR/99-53 | https://laws-lois.justice.gc.ca/eng/regulations/SOR-99-53/FullText.html | Water safety |
+| Storage, Display, Transportation regs, SOR/98-209 (s.1, s.10, s.15) | https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html | BC rules, water safety, firearm safety |
+| BC hunting FAQ | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/frequently-asked-questions | Licences, BC rules, after the shot |
+| BC species licences page | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/species-licences | Licences, after the shot |
+| BC Fish and Wildlife ID page | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/wild-system/fish-wildlife-id | Licences |
+| BC regulation corrections page (last updated 19 August 2026) | https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis | Countdown, BC rules |
+| Wikimedia Commons (photos, each credited on the Photo credits page) | https://commons.wikimedia.org | Species sessions, flashcards |
+
+## Added 2026-10-03 (migration, named areas, quail, camping)
+
+- Full list with links, sections and certainty: `research/2026-10-03-migration-and-areas.md`. Main sources: BC Wildlife Federation Southern Interior Mule Deer Project pages; BC government species accounts (deer, sheep); Management Plan for the Mountain Goat in BC (2010); Gaines 2003 (black bear denning, Washington Cascades); WildSafeBC; BC Ungulate Winter Range layer (BC Data Catalogue); BC Recreation Sites and Trails data; BC Parks pages; B.C. Reg. 24/2015 (Lower Mainland WMA camping rules); BC Wildfire Service campfire status (changes daily).
+- Synopsis 2 October 2026 edition, read directly for the Rule Book sessions; royalty amounts from the Wildlife Act Commercial Activities Regulation, Schedule 1.06 (BC Laws, current to 29 September 2026).
+
+## Added 2026-10-04 (hunter success)
+
+| Source | Link | Used in |
+|---|---|---|
+| BC Big Game Harvest Statistics 1976 to 2024 (BC Data Catalogue, updated 2026-09-14, Open Government Licence BC) | https://catalogue.data.gov.bc.ca/dataset/big-game-harvest-statistics-1976-to-2024 | data/harvest/bc-harvest.json, map area report |
+
+## Videos (added 2026-10-04)
+
+- Manifest: `data/videos/videos.json`. Placements: `research/2026-10-04-video-placements.md`.
+- YouTube (64 link cards, no embeds, no thumbnails copied): every link verified with the YouTube oEmbed endpoint (https://www.youtube.com/oembed) on 2026-10-04; title and channel copied exactly. Main channels: Ducks Unlimited, Elk101, MeatEater, Parks Canada, Alberta Parks, Alberta Hunter Education Instructors' Association, Canadian Red Cross, AdventureSmart, Hunt Fish Manitoba, Pheasants Forever and Quail Forever, Ruffed Grouse Society, National Deer Association, onX Hunt, Mossy Oak, Outdoor Life, Hunter Ed, NSSF, state agencies (Ohio, New Mexico, Arkansas). Tactics only: opinion, never a source for BC rules. US videos flagged "US rules shown, BC rules differ".
+- Wikimedia Commons (21 animal behaviour clips, streamed from upload.wikimedia.org, never copied into the repo): licences read from each file page's metadata on 2026-10-04. Public domain (USFWS), CC0, CC BY 2.0 and 3.0, CC BY-SA 2.0, 3.0 and 4.0. Author and licence stored per clip in the manifest and shown as credit.
+
+## 2026-10-11 Masterclass and lesson expansion research logs
+- Each batch logs every source with link, certainty and date in research/:
+  2026-10-11-masterclass-{mule-deer,white-tailed-deer,ducks,geese,grouse,quail}.md,
+  2026-10-11-{fs,ff,fn,fl}.md (Foundations 14 to 52), 2026-10-11-{rl,rp,rs,rq}.md (Reading the Land 13 to 52).
+- BC clock change: BC government news release 2 March 2026 ("Adopting permanent daylight saving time", news.gov.bc.ca/33415): 8 March 2026 was the last change; no fall back 1 November 2026 (read directly 2026-10-11, 95%).
+- Tikka T3x Arctic .308: Sako spec page, 1 in 10 twist (read directly by the ff writer, 95%).
+
+## 2026-10-11 Area analysis habitat model
+- `data/analyze/species-model.json` (Hunt Map "Analyze area"): built from the phase 8 Masterclass lessons, the 2026-10-11 research logs and `data/migration.json`. New sources and every model choice: research/2026-10-11-analyze-model.md. Check with `node scripts/check-species-model.mjs`.
+
+## 2026-10-11 Tap a place: MU, region and place pop ups
+- MU outlines, regions, neighbours and counts: BC Data Catalogue WHSE_WILDLIFE_MANAGEMENT.WAA_WILDLIFE_MGMT_UNITS_SVW, the app copy in `data/layers/bc/mu/` (data date 2026-10-03), Open Government Licence BC (99%; neighbours 95%, worked out from the outlines). Region 7B is named Peace from the synopsis and the Rule Book; the layer says Omineca for both 7A and 7B.
+- Place and town positions: BC Geographical Names web service, https://apps.gov.bc.ca/pub/bcgnws/names/search (exact spelling, official names first), queried 2026-10-11, Open Government Licence BC (95%; 85% or 80% when the name is shared and was picked by the MU or region named next to it; 80% for names that are not official). geographic.gov.bc.ca was not reachable from this environment.
+- Forest service road pins: the app's forest road layer (`data/layers/*/forest_roads.pmtiles`, FTEN_ROAD_SECTION_LINES_SVW, data date 2026-10-03), middle of the longest named section, only when the name is unique (85%).
+- Built by `scripts/build-places.py` into `data/places/mu.json` and `data/places/places.json`; names left out and why: `data/places/unresolved.json`.
+
+## 2026-10-11 Wait times before following a hit deer (owner: show all sources, "Your call")
+- Hunter Ed blog (Kalkomey), Jared Braddock, "Deer Anatomy for Hunters", 11 September 2026: https://www.hunter-ed.com/blog/hunting-basics-understanding-deer-anatomy-for-a-successful-hunt/ (read directly, 70% as advice). Source of the app's sk-wait-chart numbers.
+- National Deer Association, Bob Westerfield, "How to Blood Trail a Deer", 21 September 2012: https://deerassociation.com/blood-trail-deer/ (read directly, 70%). Liver 2 h minimum, gut 4 to 6 h.
+- National Deer Association, NDA Staff, "You just shot a deer. Here's how to find it", 25 October 2023: https://deerassociation.com/watch-you-just-shot-a-deer-heres-how-to-find-it/ (read directly, 70%). Liver 8 to 10 h, guts 10 to 12 h.
+- American Hunter, Jeff Johnston, 8 August 2019, and MeatEater, Mark Kenyon, 23 November 2019 (read directly, 65 to 70%). Hunter education study guides, hunter-ed.com Iowa and bowhunter-ed.com Pennsylvania (read directly, 75%).
+- All quotes and the comparison: research/2026-10-11-wait-times.md. Diagram: diagrams/sk-wait-compare.svg.
+
+- US National Park Service, "Bear Identification" (toe line test on tracks): https://home.nps.gov/articles/bear-identification.htm . Checked 2026-10-16. Used in 3.1 Tracks and the bear toe line diagram.
+## 2026-10-16 Safety tools (#/safety, app/addons/safety.js)
+- Full list with how each was read, certainty and dates: data/addons/safety/safety.json ("sources").
+- Read directly 2026-10-16: BC Report a wildfire (1 800 663 5555, *5555; page updated 9 February 2026, 99%); BC Conservation Officer Service RAPP page (1 877 952 7277; updated 31 May 2024, 99%); WildSafeBC black bear, grizzly bear and cougar pages (75%); Parks Canada bear spray pages, mountain parks (2024-06-28) and Pacific Rim (2025-02-11) (80 to 85%); E-Comm 911 Calling 9-1-1 (80%); Chilliwack SAR trip plan article (70%); WebKit blog, Web Push for Web Apps on iOS 16.4 (80%); BC Data Catalogue, BC Wildfire Fire Locations Current (95%).
+- Search previews only (pages blocked to fetch): AdventureSmart trip plan (75%), Canadian Red Cross ice thickness 15, 20, 25 cm (75%).
+- Live data (fetched on the phone only on a tap): Open-Meteo forecast API (CC BY 4.0); BC government ArcGIS Online layers BCWS_ActiveFires_PublicView (linked from the BC Data Catalogue), British Columbia Bans and Prohibition Areas (layer 14) and Area Restrictions (layer 13); Avalanche Canada api.avalanche.ca point forecast.
+- VERIFY: satellite phone emergency number (search preview only, not shown).
+## 2026-10-16 Practice trainers (#/train)
+- No new sources. Every fact in `data/addons/train/facts.json` is copied, with its certainty, from these lessons: Shot placement (Hunter Ed, ADFG, IBEP, Virginia DWR, Outdoor Canada, onX, Victory Ridge), Rule Book definitions and Region 3 (synopsis pages 3, 4, 33, 34), Mule deer, Mule deer Masterclass (BC deer account 2000: shoulder height 90 to 95 cm), White tailed deer Masterclass, Judging distance (Canadian Army fieldcraft, Vortex).
+- Range scene scale: deer drawn 92 cm at the shoulder (BC deer account, 90%). The 46 cm chest depth figure stays Tip (55%, forum lore); a web search on 2026-10-16 found no agency or study figure for mule deer chest depth (VERIFY).
+- Animal and antler drawings in the trainers are simplified practice shapes, placed to match the lesson plates; they are not anatomy references.
+## 2026-10-16 No shooting / no hunting areas (map layer no_hunting, scripts/build-noshoot.py)
+- Searched 2026-10-16, no official spatial dataset of Wildlife Act closed areas (No Shooting Areas, No Hunting Areas): BC Data Catalogue (catalogue.data.gov.bc.ca) for "no shooting", "hunting closed area", "firearm discharge", "closed areas regulation", "no hunting"; the openmaps.gov.bc.ca WFS layer list. Only motor vehicle closures (WAA_MVPR_AREAS_SP, already the closures layer) exist. City of Kamloops open data hub and ArcGIS Online: no firearm discharge bylaw dataset found.
+- So only rules whose legal area is an official outline are drawn, from the BC Geographic Warehouse WFS (Open Government Licence BC), downloaded 2026-10-16: TA_PARK_ECORES_PA_SVW (ecological reserves, Lac du Bois, Marble Canyon), CLAB_NATIONAL_PARKS, ABMS_MUNICIPALITIES_SP (City of Kamloops), TA_WILDLIFE_MGMT_AREAS_SVW (Tranquille), FWA_LAKES_POLY (McQueen, Griffin, Isobel, Logan, Tunkwa lakes), WAA_WILDLIFE_MGMT_UNITS_SVW (MU 3-45).
+- Rule wording: synopsis 2026 to 2028 pages 4, 9, 10, 33, 35 and the Closed Areas Regulation, as quoted in content/phase7/03-where-you-can-hunt.md and 08-region-3-thompson.md (99% rule; area certainty 85 to 99% per feature).
+- Not drawn, listed by MU in data/addons/noshoot/unmapped.json: map captions quoted in the region Rule Book lessons (Regions 1, 2, 3, 4, 6, 7A, 7B, 8). Region 5 has no list yet (VERIFY).
+## 2026-10-16 Camping layer and BC wide spots (map layers camping and spots, scripts/build-camping.py, scripts/spots-pipeline.py)
+- Recreation Sites and Trails BC: WHSE_FOREST_TENURE.FTEN_REC_SITE_POINTS_SVW, BC Geographic Warehouse WFS (https://catalogue.data.gov.bc.ca/dataset/recreation-sites-and-trails-bc-recreation-site-points), Open Government Licence BC, downloaded 2026-10-16. Official point, campsites, access, structures, closure note, description. Site page link: https://www.sitesandtrailsbc.ca/resource/<FOREST_FILE_ID> (route read from the site code, 2026-10-16).
+- BC Parks API (https://bcparks.api.gov.bc.ca/api, listed at https://catalogue.data.gov.bc.ca/dataset/bc-parks-data-api-access), Open Government Licence BC, downloaded 2026-10-16: park features (campgrounds, sites, reservations, operating dates) and park facilities. No campground coordinates in the API: position from a name matched OpenStreetMap camp site, else the park point (flagged on the card).
+- OpenStreetMap tourism=camp_site and caravan_site via the Overpass API (maps.mail.ru mirror), OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright), 2026-10-16. Shown as "Unofficial listing, verify" unless merged into an official point (within 300 m or ref:FFID).
+- Photos: Wikimedia Commons (CC0, public domain, CC BY, CC BY-SA only), credit on every card. Thumbnails load live and the service worker keeps viewed ones. No photos stored in the repo.
+- Popularity (estimate, 50%): data/harvest/bc-harvest.json (Big Game Harvest Statistics 1976 to 2024, BC Data Catalogue, OGL BC; years 2020 to 2024) hunter days per square km by MU, plus road access from the spot pipeline.
+- Rec site firearm rule on camp cards: synopsis page 9 and the Forest Recreation Regulation, as quoted in content/phase7/03-where-you-can-hunt.md (99%).
+- Black bear scoring reasons: content/phase4/06-black-bear.md, content/phase8/85-black-bear-year.md and 86-black-bear-day.md (65 to 90% as stated there). Coast deer zones: content/phase3/26-wet-forests.md (80 to 95%). Party tags: content/phase2/49-hunting-with-a-partner.md (Tip) and synopsis page 11 item 25 (99%).
+- BC wide areas: ABMS_MUNICIPALITIES_SP and BC Geographical Names GNS_GEOGRAPHICAL_NAMES_SP (communities) for the "Drive: from" town, 2026-10-16.
+## 2026-10-16 Crown land, Crown tenures and Where you can likely hunt (map layers crown_land, crown_tenures, hunt_likely; scripts/build-crown.py)
+- BC Geographic Warehouse WFS (https://openmaps.gov.bc.ca/geo/pub/wfs, Open Government Licence BC), downloaded 2026-10-16:
+  - ParcelMap BC parcels, WHSE_CADASTRE.PMBC_PARCEL_FABRIC_POLY_SVW (https://catalogue.data.gov.bc.ca/dataset/parcelmap-bc-parcel-fabric): OWNER_TYPE Crown Provincial and Untitled Provincial = Crown land (90%); Federal = federal land, CHECK (90%).
+  - Crown tenures, WHSE_TANTALIS.TA_CROWN_TENURES_SVW (https://catalogue.data.gov.bc.ca/dataset/tantalis-crown-tenures): stage TENURE, in good standing, not RESERVE/NOTATION (90%).
+  - Cut outs: TA_PARK_ECORES_PA_SVW, TA_CONSERVANCY_AREAS_SVW, CLAB_NATIONAL_PARKS, CLAB_INDIAN_RESERVES, FNT_TREATY_LAND_SP, ABMS_MUNICIPALITIES_SP; land mask NTS_BC_COASTLINE_POLYS_125M; regions from WAA_WILDLIFE_MGMT_UNITS_SVW.
+- "Likely Crown land (no titled parcel)" is derived, not an official class: land with no parcel, reserve, treaty land, park or municipality; gaps under 50 m wide and pieces under 5 ha dropped (80%, my method).
+- "Where you can likely hunt" is derived: Crown and likely Crown land minus no_hunting areas, municipalities, tenures (lease, licence, permit) and federal land; parks, tenures and federal land shown grey as check first (75%, my method).
+- Rule wording from the app lessons: open seasons on Crown land (synopsis page 11, content/phase7/04-unlawful-acts.md, 99%); grazing lease and Trespass Act note (page 9, content/phase7/03-where-you-can-hunt.md, 99%); National Wildlife Areas and Migratory Bird Sanctuaries (page 9, 99%); 100 m rule (page 10, 99%). "Hunting is usually allowed on Crown land in an open season" is my reading of the Rule Book (85%).
+- Range Act grazing licences and permits: mapped since 2026-10-17 (layer range_tenures, below); whether they count as a "grazing lease" in the page 9 rule: VERIFY.
+## 2026-10-17 Water cut out of Crown land and Where you can likely hunt; Range Act tenures (scripts/build-crown.py --cut-water, --range)
+- Freshwater Atlas, BC Geographic Warehouse WFS (Open Government Licence BC), downloaded 2026-10-17: WHSE_BASEMAPPING.FWA_LAKES_POLY (https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-lakes), FWA_RIVERS_POLY (https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-rivers), FWA_MANMADE_WATERBODIES_POLY (https://catalogue.data.gov.bc.ca/dataset/freshwater-atlas-manmade-waterbodies). Polygons of 2 ha or more, simplified 5 m, cut out of crown_land class likely and hunt_likely class open (my method; the 1:125,000 land mask includes lakes).
+- Range tenures, WHSE_FOREST_TENURE.FTEN_RANGE_POLY_SVW (https://catalogue.data.gov.bc.ca/dataset/range-tenure-polygons), downloaded 2026-10-17: LIFE_CYCLE_STATUS_CODE ACTIVE (1,610 polygons), merged by type and Natural Resource District; tenure holder names left out. Type words from the dataset column notes: E01 Grazing Licence, E02 Grazing Permit, E03 Non-Replaceable Grazing Permit, H01 Haycutting Licence, H02 Haycutting Permit, H03 Non-Replaceable Haycutting Permit (95%). Dataset notes: range tenures apply only to Crown land; private land inside a boundary is not part of the grazing area; grazing may overlap water during drawdown (95%). Map data 90%.
+- Rule on the layer and in Can I hunt here now?: synopsis page 9, "A person is not permitted to hunt on cultivated land or on Crown land which is subject to a grazing lease while the land is occupied by livestock, without the consent of the owner, lessee, or occupant of the land." (99%, as quoted in content/phase7/03-where-you-can-hunt.md). VERIFY: a Range Act licence or permit may not be a "grazing lease".
+## 2026-10-16 Practice shooting (map layer ranges, Tools > Where can I practise?, #/map/tool/practice)
+- Ranges and clubs: OpenStreetMap through the Overpass API (overpass.kumi.systems mirror; data as of 2026-05-31), ODbL, credit "© OpenStreetMap contributors". Query: leisure=shooting_ground, sport ~ shooting|archery|clay_pigeon|trap|skeet, shooting=*, BC box, kept only inside a BC MU. 142 features merged into 50 sites (scripts/build-ranges.py). Certainty 70% (volunteer mapped).
+- BC Wildlife Federation affiliated clubs (https://bcwf.bc.ca/our-clubs/): web page only, no open licence, so linked, not copied.
+- Rules card (data/addons/practice/rules.json), read 2026-10-16 unless noted: Wildlife Act sections 27(1), 31, 32 (bclaws.gov.bc.ca, 99%); Firearms Act (Canada) section 17 (95%); Criminal Code section 86(1) (99%); BC Gov News 2017FLNR0073-001092, Fraser Valley no shooting zones for target practice (85%, 2017, may have changed); BC Wildfire Service fire bans and restrictions page, binary exploding targets often banned with campfire bans (page updated 8 October 2026, 95%). Synopsis pages 9, 10 and 33 as quoted in content/phase7/03-where-you-can-hunt.md and the no_hunting layer.
+- VERIFY: no official BC page found that says in general whether target shooting on open Crown land is allowed; City of Kamloops discharge bylaw (not found online); tracer ammunition rules (none found).
+- Backstop checklist reuses diagrams/hf-backstop.svg and the lessons Is it legal to shoot? (step 8), Firearm safety and The .22 rimfire.
+## 2026-10-17 Region 2 no shooting layer, Harrison deer lesson (scripts/build-noshoot.py, content/phase6/20-local-harrison-deer.md)
+- Synopsis 2026 to 2028, edition dated 2 October 2026 (PDF downloaded and read 2026-10-17): pages 4, 7, 8, 9, 10, 11, 13, 14, 26 to 31 (99%).
+- Closed Areas Regulation, B.C. Reg. 76/84, consolidation current to 13 October 2026 (https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01 and _02 to _14), read directly 2026-10-17: Schedules 1 s. 7; 3 ss. 12, 17, 19, 22, 30; 4 s. 3; 5 ss. 11, 28, 33, 49, 63, 85, 92, 115; 5.1 ss. 7 to 12, 14; 6 ss. 3, 4; 7 ss. 5, 52; 8.1 s. 1; 9 ss. 1, 7, 9, 23; 11 ss. 1, 3 (99%; long boundaries my reading, 85%).
+- BC Geographic Warehouse WFS (Open Government Licence BC), downloaded 2026-10-17: GBA_LOCAL_REG_GREENSPACES_SP (regional district parks, PARK_TYPE Regional, names with "Regional Park"), PMBC_PARCEL_FABRIC_POLY_SVW (Burns Bog parcels by PID; 000-915-084 not found: VERIFY), FWA_ISLANDS_POLY (Bowen, Keats, Savary, North Thormanby), FWA_LAKES_POLY (Cultus Lake), TA_PARK_ECORES_PA_SVW (Garibaldi Park), ABMS_ELECTORAL_AREAS_SP (FVRD Area H, 2022 boundary, used only to show the VERIFY).
+- BC Geographical Names (apps.gov.bc.ca/pub/bcgnws), read 2026-10-17: place points used to assign MUs to described areas (my reading).
+- FVRD no shooting road map (https://www.fvrd.ca/assets/Government/Documents/NoShootingAreas.pdf, dated 2017): a map picture only; no FVRD or BC open data layer found (BC Data Catalogue searches "no shooting", "firearm discharge"; maps.fvrd.ca not reachable from here). Not drawn.
+- Chilliwack Natural Resource District road safety information (https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information), last updated 22 September 2026, read 2026-10-17 (95%). No radio channel or hauling schedule for Sts'ailes (West) FSR found in an official source: VERIFY.
+## 2026-10-17 VERIFY sweep (Masterclasses, Rule Book, deer, safety, firearms, legal)
+- Read directly 2026-10-17 (99% unless noted):
+  - Hunting Regulation, B.C. Reg. 190/84, BC Laws, current to 13 October 2026 (includes B.C. Reg. 66/2026 and 97/2026): https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_00 . s. 1 (bait), s. 17 and 18 (methods), Schedules 1 to 8 (season rows and Part 2 restrictions). Used for: Region 8 "QUAIL" row, Region 1 California quail MUs (law says 1-1 to 1-5, synopsis 1-1 to 1-15), Region 3 deer and moose rows, Region 4 and 7A wolf NBL rows, Region 6 Haida Gwaii bear, Region 8 turkey 8-26, Peace River and Delta and Boundary Bay and Ex Dinsdale bird rules, pheasant rows.
+  - Closed Areas Regulation, B.C. Reg. 76/84, s. 12 (road allowance "highway" definition) and Schedule 9, s. 22 (400 m highway list), BC Laws, current to 13 October 2026: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/76_84_01
+  - Wildlife Act, s. 1 ("hunt") and s. 31, BC Laws, current to 30 September 2026: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01
+  - Wildfire Regulation, B.C. Reg. 38/2005, s. 1 and s. 20 (Category 1 campfire, hand tool or 8 litres of water), BC Laws, current to 13 October 2026: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/38_2005
+  - Limited Entry Hunting Regulations Synopsis 2026 to 2027 (PDF): https://www2.gov.bc.ca/assets/gov/sports-recreation-arts-and-culture/outdoor-recreation/fishing-and-hunting/hunting/limited-entry-hunting/leh-regulations-synopsis.pdf . Page 1 ($6.30 fee), page 8 (Region 3 moose, Region 8 elk), hunt codes by region (95% for "none in region" summaries).
+  - Synopsis corrections and updates page, last updated 19 August 2026 (2 items: Region 6 page 48 Teslin moose LEH, provincial page 7 online migratory permit): https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/regulations-synopsis/regulation-synopsis-corrections-and-updates
+  - Synopsis 2026 to 2028 text (regs-src/synopsis.txt): Region 2 page 28 snow goose note H; Minister's message (9 CWD cases as of January 2026); full text search for "orange" (none).
+  - Storage, Display, Transportation and Handling of Firearms by Individuals Regulations, SOR/98-209, s. 5, current to 30 September 2026: https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-209/FullText.html
+  - Firearms Act s. 23 (transfer reference number), current to 30 September 2026: https://laws-lois.justice.gc.ca/eng/acts/F-11.6/section-23.html
+  - Criminal Code s. 84(1) (prohibited device, silencer): https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html ; SOR/98-462 Schedule Part 4 s. 3 (magazine limits): https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-462/FullText.html
+  - BC RAPP page (no cell shortcut listed); BC Report a wildfire (updated 9 February 2026); BC Wildfire fire centres page (Coastal covers the Lower Mainland); Kamloops Fire Centre bans page (updated 2 October 2026: Category 1, 2, 3 permitted); Trapping in B.C. page (fur royalties as of 14 January 2026); BC CWD page (updated 22 September 2026, no count).
+  - Kelowna Discharge of Firearms Bylaw No. 9779 (city consolidated copy, 90%); Penticton Bow and Arrow and Firearms Regulations Bylaw No. 2015-37 (city copy, 85%); District of Mission Discharge of Firearms Regulation Bylaw 5433-2014 (district copy, 85%).
+  - BC Geographical Names (apps.gov.bc.ca/pub/bcgnws): Bench Creek and Banting Creek (Hwy 6 closure, Region 4), Heffley Creek (MU 3-27, 0.4 km from 3-28), placed on the app MU layer (85 to 95%).
+- Read through a page reader (WebFetch) 2026-10-17, 90% (quotes checked, page not saved):
+  - ECCC BC migratory game bird summary, August 2026 to July 2027, page dated 7 July 2026: https://www.canada.ca/en/environment-climate-change/services/migratory-game-bird-hunting/regulations-provincial-territorial-summaries/british-columbia.html
+  - ECCC wind chill and the Wind Chill Index, modified 16 December 2025: https://www.canada.ca/en/services/environment/weather/severeweather/wind-chill-index.html (95%)
+  - Canadian Beacon Registry, beacons that must be registered, modified 18 February 2026: https://www.canada.ca/en/air-force/services/search-rescue/beacon-registry/beacons.html
+  - Apple support, Emergency SOS via satellite, published 5 October 2026: https://support.apple.com/en-ca/101573 (95%)
+- Secondary (60%): MeatEater, how much fat to add to ground venison (burger fat rule of thumb, Tip).
+- Hunt Map Steep ground layer (checked 2026-10-18): Avalanche Canada, Avy Savvy, Slope Angle: "The vast majority of avalanches take place on slopes between 30° and 45°"; less common on 25 to 30° slopes: https://avysavvy.avalanche.ca/en-ca/slope-angle (95%). Slope bands worked out on the phone from AWS Terrain Tiles (terrarium), no new download source.
+- Hunt week checklist (app/addons/huntweek.js), read directly 2026-10-23 (95%): Chilliwack Natural Resource District road safety information (https://www2.gov.bc.ca/gov/content/industry/natural-resource-use/resource-roads/local-road-safety-information/chilliwack-natural-resource-district-district-road-safety-information), page "Last updated on October 21, 2026": Mystery 5500 FSR 6314.17 "No access past 0km, washout at 2.0km"; Hemlock Valley FSR 6314.04 "No access at 0 km due to four washed out culverts"; Harrison East FSR "NO ACCESS PAST 55 KM THROUGH TO KOOKIPI FSR". Every other rule line in the checklist is copied from a lesson, with that lesson's source and certainty. Practice range list: data/addons/practice/ranges.geojson (OpenStreetMap, ODbL, May 2026).
+
+## 2026-10-23 Mission and Harrison VERIFY sweep (content/phase6/06, 12, 20; content/phase7/09)
+- Read directly 2026-10-23 (99% unless noted):
+  - Trespass Act, RSBC 2018 c. 3, current to 13 October 2026, ss. 1 to 7: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/18003 (replaces the 2010 archived consolidation in the landowner lesson).
+  - Hunting Licensing Regulation, B.C. Reg. 8/99, current to 20 October 2026, Part 2 ss. 24 to 28 (Fraser Valley special area, $1 000 000 insurance) and fee item 2.3 ($8 + $2): https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/8_99
+  - Hunting Regulation, B.C. Reg. 190/84, Schedule 2 (Region 2), current to 20 October 2026: Part 1 items 5 and 32.01, Part 3 s. 1(2) (Bowen and Texada "3, two of which may be antlerless"), no MU 2-1 row: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_03 ; s. 19 park seasons: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/190_84_01
+  - Migratory Birds Regulations, 2022, current to 30 September 2026, Schedule 3 Part 10: District No. 2 = MUs 2-2 to 2-19; snow and Ross's geese 10 a day (5 Ross's), 30 possession, plus 5 snow geese in 2-4 and 2-5: https://laws-lois.justice.gc.ca/eng/regulations/SOR-2022-105/FullText.html
+  - Park, Conservancy and Recreation Area Regulation, B.C. Reg. 180/90, ss. 28 and 29 and Schedule B (current to 20 October 2026). Not on Schedule B: Sasquatch, Kilby, Davis Lake, Golden Ears, Rolley Lake. On it: Pinecone Burke, Chilliwack Lake, Skagit Valley, Indian Arm: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/180_90_01 and https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/180_90_03
+  - BC Parks fishing and hunting guide (hunting only in Schedule B parks): https://bcparks.ca/plan-your-trip/visit-responsibly/fishing-hunting-guide/ ; BC Parks API lists Sasquatch Park (ORCS 200) and Kilby Park (ORCS 245); no park named Judge Howay in the API or the BC parks layer WHSE_TANTALIS.TA_PARK_ECORES_PA_SVW.
+  - Closed Areas Regulation, B.C. Reg. 76/84, all schedules, current to 20 October 2026: Schedule 5 s. 49 (Electoral Area H, heading Huntingdon and Sumas Mountain, am. B.C. Reg. 190/96) and s. 115 (Mount Judge Howay Park, M.U. 2-8). No entry names the Lhá:lt Harrison Chehalis or Bert Brink WMAs.
+  - Wildlife Act s. 4(4) (use of a WMA needs the regional manager's written permission), current to 30 September 2026: https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96488_01
+  - FVRD Electoral Area H page (Columbia Valley, Cultus Lake, Lindell Beach; 121 km2): https://www.fvrd.ca/EN/main/about-the-fvrd/electoral-areas/electoral-area-h.html
+  - District of Mission Discharge of Firearms Regulation Bylaw 5433-2014, PDF with Schedule A map and boundary key (Area B: CPR north, Fraser south, Nelson St east, 150 m from buildings and highways; Area C: Stave Lake; Area D west: Kearsley Rd north, Rockwell Rd south, Florence Lake Rd east minus 500 m, municipal boundary west; Area D east: Stave Lake): https://www.mission.ca/media/file/discharge-firearms-regulation-bylaw-5433-2014pdf (upgrades the 85% entry of 2026-10-17 to 99%).
+  - Village of Harrison Hot Springs Discharge of Firearms Bylaw No. 1207, 2024, adopted 27 May 2024 (scanned PDF read as images): no discharge anywhere in the village, none into, over or through it; exceptions only for peace and conservation officers: https://www.harrisonhotsprings.ca/sites/default/files/2024-06/Bylaw-1207---Discharge-of-Firearms.pdf
+  - Chilliwack Natural Resource District road safety information, last updated 21 October 2026 (95%), plus the district's FSR safety map layer (FSR_Safety_Information_View): Harrison East, Francis Lake, Mystery 5500, Mystery (post wildfire rockfall), Hemlock Valley, Fleetwood notices; none for Sts'ailes (West) or Chehalis FSR.
+  - Sea to Sky road conditions, last updated 19 October 2026: Sts'ailes (West) FSR managed by Chilliwack district (95%).
+  - BC WMA pages: Lhá:lt Harrison Chehalis (updated 18 August 2026), Bert Brink (updated 14 August 2026); neither states hunting status.
+- Club and business sites read 2026-10-23 (not rules): BCWF insurance page (Excess Third Party Liability up to $5,000,000, Acera Insurance, 75%) https://bcwf.bc.ca/insurance/ ; Chilliwack Fish and Game Protective Association, 48685 Chilliwack Lake Rd (90%) https://www.chilliwackfishandgame.com/ ; Opening Day Game Cutting (wild game, 90%); Mission Meat Shop (cut and wrap for hunters, 90%).
+- Could not open from this environment 2026-10-23: laws.abbotsford.ca (TLS chain error), missionrodandgun.com (no response), canada.ca ECCC summary (connection reset).
+- BC Geographical Names records 40097 (Mount Judge Howay Park, rescinded, decision 2002-01-28) and 49542 (Mount Judge Howay Recreation Area, rescinded 1989): "E side of Golden Ears Provincial Park, just NW of Stave Lake", point 49.483, -122.308 (point only, no boundary): https://apps.gov.bc.ca/pub/bcgnws/names/40097
+
+## 2026-10-23 Black tailed deer Masterclass (content/phase8/111 to 116, data/flashcards-black-tailed-deer.json, diagrams/mbt-*.svg)
+- BC Ministry of Environment, Lands and Parks (2000), "Mule and Black-tailed Deer in British Columbia" (text D. A. Blood), PDF text read directly 2026-10-23 (90%): https://www.env.gov.bc.ca/wld/documents/muledeer.pdf . Used: black tail tail, rump, size (bucks 48 to 90 kg, does 40 to 65 kg), yearling spikes, range west of the Coast and Cascade summits, 150,000 to 250,000 deer, rut in November and early December, displays, tending bond, glands, logged habitat use in spring and summer, old growth winter range, steep south to west slopes, 30 cm snow, winter and summer foods.
+- Nyberg, J.B. and D.W. Janz, editors (1990), "Deer and Elk Habitats in Coastal Forests of Southern British Columbia", BC Ministry of Forests Special Report Series 5 (scanned PDF, pages 33 to 53 read as images 2026-10-23, 90%): https://www.for.gov.bc.ca/hfd/pubs/docs/srs/Srs05.htm (PDF https://www.for.gov.bc.ca/hfd/pubs/docs/srs/Srs05.pdf). Used: south coast weights (largest males from the lower Fraser Valley), ears about 3 cm shorter, about 90% of yearlings spikes, harvest ages, Vancouver Island breeding November and early December with most conceptions 15 November to 5 December (citing Thomas 1970), doe receptive about a day, 22 to 29 day cycles, tending 2 to 3 days before and 3 to 4 days after, peak weight and 20 to 25% winter loss, cover types, 90% hidden at 60 m (mule deer research), 57 cm chest height, snow sinking costs, 50 cm vs 5 cm snow under 70% crown closure, clearcut use within 100 m of cover and the 200 m and 400 m opening widths (Kremsater 1989), migration 2 to 5 km, 20 to 25% and 70% migrants, home range sizes, hunting has little effect because of abundant cover. Most data are from Vancouver Island, not Harrison.
+- Thomas, D.C. (1970), "Ovary, reproduction, and productivity of female Columbian black-tailed deer", PhD thesis, University of British Columbia, abstract via search preview 2026-10-23 (80%; the UBC page blocked direct reads): https://open.library.ubc.ca/collections/831/items/1.0103943
+- BC Ministry of Environment, Order Ungulate Winter Range U-2-006 (mule deer and Columbian black tailed deer, Fraser TSA, Chilliwack district), 22 September 2009, scanned order read as images 2026-10-23 (95%): https://www.env.gov.bc.ca/wld/documents/uwr/u-2-006_order_22Sep09.pdf ; approved UWR list (approved 22/09/2009, amended 19/05/2011, 31,838 ha) https://www.env.gov.bc.ca/wld/frpa/uwr/approved_uwr.html ; shapefile https://www.env.gov.bc.ca/esd/distdata/ecosystems/frpa/uwr/r2/tuwra_u-2-006.zip (115 polygons, species code M-ODHE; Hunt Mentor converted polygon centres from BC Albers to latitude and longitude: groups east and west of Harrison Lake, toward the Chehalis, north of the lake and up the Fraser Canyon; 85%, my reading).
+- Washington Department of Fish and Wildlife, Living with wildlife: deer, read 2026-10-23 (80%, Washington): https://wdfw.wa.gov/species-habitats/living/species-facts/deer . Used: black tail tail and alarm flag, weights in pounds, home range half to 3 square miles, dawn and dusk activity, rut November and December, bed size.
+- Washington Department of Fish and Wildlife, Food safety guidelines for game meat, read 2026-10-23 (80%): https://wdfw.wa.gov/hunting/requirements/food-safety . Used: below 40°F fast, clean and dry, no plastic or tarps before chilled, prop the cavity on logs, ageing 34 to 37°F no longer than two weeks.
+- BC Big Game Harvest Statistics 1976 to 2024 via data/harvest/bc-harvest.json (90%): resident mule deer rows for MUs 2-8, 2-18, 2-19 and the Region 2 total, 2020 to 2024. Hunt Mentor computed days per deer: 2-18 24.6, 2-19 27.5, 2-8 30.3, Region 2 13.5.
+- Rules: Synopsis 2026 to 2028, 2 October 2026 edition, pages 4, 8, 10, 11, 12, 13, 14, 15, 27, 28 (99%), as already logged for the Region 2 Rule Book and the Harrison deer lesson.
+- Not found, marked VERIFY: a black tail study on behaviour in rain; rattling and calling for black tails; the local Harrison rut peak; usual first snow and November night temperatures at Harrison hunting elevations. ADFG (Alaska Department of Fish and Game) Sitka black tailed deer page returned an empty page 2026-10-23.
+## 2026-10-23 CZ 457 .22 course (content/phase8/141 to 150, ids mc-cz457-01 to 10; diagrams cz-*; data/flashcards-cz457.json)
+- Maker manual, read directly 2026-10-23 (95%): CZ 457 instruction manual, English, 05 2025 (PDF dated 8 October 2025; printed page = PDF page minus 1), pages 1 to 13 and figures 1 to 10: https://czubpimstorage.blob.core.windows.net/strapi-pim/assets/735342000443_CZ_457_05_2025_en_es_cs_de_fr_8dc25ceb9d.pdf
+  - Safety rules 1 to 23 (pages 2, 3); features incl. barrel change "at the highest user level", 60 degree bolt, bolt out with safety engaged, CZ 455 barrels and magazines (page 4); ammunition, match chambers, dry fire, magazine removal and loading (page 5); loading, single shot adapter, unloading (page 6); safety, cocking indicator, trigger ranges and screws A, B, C, safety check (page 7); sights zeroed at 50 m, rear 25 to 200 m, 11 mm dovetail or Weaver rail, gunsmith advice (page 8); stripping, stock screws 73 and 74 at 3.5 Nm, caution, when to clean (page 9); cleaning direction, other parts, preservation, cold (page 10); troubleshooting (page 11); parts list (page 12).
+- Law, read directly 2026-10-23 (99%), current to 30 September 2026:
+  - Criminal Code s. 2 "firearm" (includes frame or receiver): https://laws-lois.justice.gc.ca/eng/acts/C-46/section-2.html
+  - Criminal Code s. 84(1): automatic firearm, firearm part (a barrel), prohibited device (c) sound moderators, prohibited firearm (b) adapted under 660 mm or barrel under 457 mm, restricted firearm: https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html
+  - SOR/98-462 Part 4 ss. 1 to 3 (trigger devices, bullpup stocks, magazine limits; s. 3(2)(a)(i) rimfire exclusion): https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-462/FullText.html
+- BC hunting rules restated from the Rule Book sessions (synopsis 2026 to 2028, 2 October 2026 edition, 99%): pages 3, 4, 8, 11 to 13, 26 to 29; Region 2 closed areas and Harrison Hot Springs Bylaw 1207 via the Region 2 and Harrison lessons.
+- Secondary (80 to 85%): CZ USA product pages for the CZ 457 American, Lux, Varmint, Scout (read 2026-10-23): https://www.czfirearms.com/en-us/products/rimfire-rifles/cz-457-series/cz-457-american ; all4shooters, "CZ 457: three new rimfire rifles", Stefan Perey, 21 October 2020 (two barrel screws, calibre kits, two position safety, 5 round magazine): https://www.all4shooters.com/en/shooting/rifles/cz-457-three-new-rimfire-synthetic-thumbhole-and-long-range-precision-threaded-test/
+- Store prices, search result previews 2026-10-23 (60 to 65%): Cabela's Canada (Vortex Crossfire II 2 to 7x32 Rimfire $199.99; Talley 11 mm rimfire rings $59.77; Butler Creek Alaskan Magnum sling $29.77 sale, $44.99), Rangeview Sports (Crossfire II $219.99; Leupold VX Freedom Rimfire 3 to 9x40 $495.36 special order; CZ .22 LR magazines, polymer $15.99 to $52.99, steel $69.99 to $79.99), Canadian Tire (VX Freedom Rimfire 3 to 9x40 $699.99), Canex (Zeiss Conquest V4 3 to 12x44 $1,199.99), Warne 722M (US$45.99), Otis .22 kits (US$20 to US$40).
+- Tip level only (55 to 65%): CZ Parts online store scope mounting tutorial (ring torque 2 to 2.5 Nm for its rings); Long Range Hunting forum and EABCO shim kit (barrel swap reports, headspace shims).
+- Trajectory numbers reuse the Hunt Mentor model in content/phase2/31-rimfire-22.md (75%).
+## 2026-10-23 SKS (Chinese Type 56) course (content/phase8/171 to 178, mc-sks-01 to mc-sks-08; diagrams/sks-*.svg from scripts/sks-diagrams.py)
+- Read directly 2026-10-23:
+  - RCMP Firearms Reference Table, PDF frt-1019.pdf, valid as of 2026/10/19 (108,760 pages), Norinco records pages 66167 to 66191: Type 56 SKS FRN 142679, 141924, 142871, 181122, 33820, 37364 (non restricted, 520 or 478 mm); FRN 177622 (408 mm, restricted, s. 84(1) restricted firearm (b)); FRN 2387 SKS D (472, 483, 520 mm non restricted; 419 and 320 mm restricted; 400 mm cut prohibited, s. 84(1) prohibited firearm (b)(ii)); FRN 127793 SKS NR (422 mm, restricted); FRN 45186 Type 56 AK (prohibited). Page: https://rcmp.ca/en/firearms/firearms-reference-table (99%)
+  - RCMP lists of models prohibited by SOR/2020-96, SOR/2024-248 and SOR/2025-0086 (pfl-1019-a, b, c, recorded 19 October 2026): no SKS or Simonov entry (99%). https://rcmp.ca/sites/default/files/dam/pfl-1019-a.pdf (and -b, -c)
+  - SOR/98-462, current to 30 September 2026: Part 1 item 64 (AK-47 family, includes Type 56 and 56-1 to 56-4), Part 4 items 1 (trigger devices), 2 (bullpup stocks), 3(1)(a), 3(2), 3(4), 3(5) (5 round limit, permanent alteration methods). https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-462/FullText.html (95 to 99%)
+  - Criminal Code s. 84, current to 30 September 2026, last amended 18 July 2026 (2026, c. 11 s. 3 repealed a "superior court" paragraph only): cartridge magazine, automatic firearm, prohibited firearm (b) and the second (e), restricted firearm (b) 470 mm and (c) 660 mm, prohibited device (silencer), s. 84(2) barrel length. https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html (99%)
+  - RCMP, Maximum permitted magazine capacity, modified 18 October 2024 (5 rounds semi automatic centrefire long gun; permanently altered; C-21 offence and licence to acquire). https://rcmp.ca/en/firearms/classes-firearms/maximum-permitted-magazine-capacity (95%)
+  - US Army TC 9-56, "SKS Rifle, Simonov Type 56", October 1969, with a Type 56 training packet (US government work): operation, safety, unloading, disassembly and reassembly, functioning, function check, cleaning, technical data. https://archive.org/download/gunmanual_sksmanual/sksmanual.pdf (95%)
+- Reliable secondary, 2026-10-23:
+  - The Canadian Press via CP24, 21 October 2026 (SKS review advisory group yet to meet; Carney to weigh advice) and 5 December 2025 (classification review announced, consultations including on the SKS). (80%)
+  - Wikipedia "SKS" and "Type 56 carbine" (free floating firing pin, slam fire, chrome lining, bayonet types, Chinese production). (70%)
+  - AccurateShooter Daily Bulletin, "Tech Tip: Coping with Corrosive Ammo", 3 March 2018 (Brownells, Paul Markel). (65%)
+  - Hornady 7.62x39 123 gr SST ballistics via Midwest Gun Works and KYGUNCO listings (2,350 fps, 1,508 / 1,136 / 842 ft lb at 0 / 100 / 200 yd). (75%)
+  - Rangeview Sports listing, Hornady 7.62x39 123 gr SST 20 rounds $41.99, out of stock, price checked 2026-10-23. (70%)
+- Could not use 2026-10-23: Wikimedia Commons API (HTTP 429 rate limit), so the course has no photos yet; hornady.com product page (404).
+## 2026-10-23 Shotgun course and buying guide (content/phase8/161 to 172, mc-shotgun-01 to 12; diagrams/sg2-*; data/flashcards-shotgun.json)
+- Maker manuals, read directly 2026-10-23 (95%):
+  - Remington Model 870 instruction book, form RD 7058 (copy on rem870.com; the remarms.com 2026 PDF returned error 522): https://www.rem870.com/remington_model_870_manual.pdf . Safety, action bar lock, barrel, choke change, load, unload, plug, disassembly, cleaning, reassembly, 12/20 burst.
+  - Beretta A300 Outlander instruction manual, 09/2011, Cod. 62271 (copy on berettaweb.com): https://berettaweb.com/Munuals/Beretta%20Owner%20Manual%20A300%20Outlander%20LD.pdf . Gas system, load check, load, unload, reducer (3 shots), steel shot and Mobilchoke chart, HP cartridge caution, disassembly, routine maintenance (gas parts not lubricated), reassembly, stock drop and cast, storage.
+  - Beretta semi automatic shotgun user manual (Beretta site, covers the A300 Outlander): https://dam.beretta.com/content/dam/beretta-usa/user-manuals/semiauto_Manual.pdf . Reducer, steel shot.
+  - Stoeger M3000 owner's manual: https://debug.stoegerindustries.com/sites/default/files/content/media/manuals/2021-12/m3000_owners_manual.pdf . Inertia operation, minimum 1 oz 3 dram load, unloading, disassembly, cleaning, function check, plug, chokes and steel.
+  - Browning Citori owner's manual, 2021 web edition: https://www.browning.com/content/dam/browning/support/owners-manuals/2021/21-BFA-299_Citori%20OM_WEB.pdf . Safety and selector, top lever, assembly, disassembly, loading, firing, unloading, Invector notch chart lead versus steel, choke removal, cleaning.
+- Law, read directly 2026-10-23 (99%): Criminal Code s. 84(1), current to 2026-09-30, prohibited firearm (b) 660 mm and 457 mm, restricted firearm (b) 470 mm: https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html . Migratory Birds Regulations, 2022 ss. 28, 37, 38, 41; BC synopsis pages 12, 13, 27; Firearms Act s. 23: carried from the app Rule Book and lessons (99%).
+- Secondary: Wikipedia gauge (firearms) bore table, read 2026-10-23 (70%); Wikipedia shot (pellet), steel hardness and bismuth in older guns, read 2026-10-23 (70%); NWTF turkey load pellet science and Outdoor Life tungsten super shot, shot densities, search previews 2026-10-23 (65%).
+- Prices, read through a page reader 2026-10-23 (75%): Rangeview Sports search pages (rangeviewsports.ca) for Stoeger, M3000, Benelli, A300, Citori, Remington 870, condor. Stoeger P3500 $630; Stoeger M3000 $725 to $890; Benelli Nova 3 $805; Beretta A300 Ultima $1,400 to $1,525; Beretta A400 Xtreme Plus $2,515 to $2,760; Browning Citori Hunter Grade I $2,944.99 to $3,019.99 (special order); used Remington 870 Magnum $560, used M3000 $710 to $740. No Canadian new price found for the Remington 870 Fieldmaster (VERIFY). Other tiers carried from content/phase1/03-shotgun.md (2026-10-01, 65%).
+- Could not open 2026-10-23: remarms.com manual PDFs (error 522), brownells.it Beretta safety sheets (HTML instead of PDF), reliablegun.com (403), several Canadian retailer search pages.
+
+## 2026-10-23 Plan live conditions and hour by hour (app/addons/plan-live.js, app/addons/plan-days.js, data/addons/plan-live/plan-live.json)
+- Open-Meteo forecast API (CC BY 4.0), hourly wind, gusts, rain, temperature, freezing level, snowfall, up to 16 days ahead, fetched on the phone: https://open-meteo.com/ (model forecast, not a promise). Days beyond the window show climate and rules only.
+- BC government Forest Service Road Safety Information, South Coast (ArcGIS layer FSR_Safety_Information_View, owner governmentofbc), public, read live by the app within 40 km of the plan point; checked reachable and CORS open 2026-10-23, layer last edited 20 October 2026 (95%): https://services6.arcgis.com/ubm4tcTYICKBpist/arcgis/rest/services/FSR_Safety_Information_View/FeatureServer/0 ; map: https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=a42873895b3d4ca084ea9730212cacb1
+- No signal fallback for road notices: the Chilliwack district lines saved in the Harrison deer lesson (page updated 21 October 2026, read 2026-10-23, 95%).
+- BC Wildfire Service bans and prohibition areas layer (same query as the Safety conditions check, 95%).
+- Rut phases: Black tailed deer Masterclass 4 (Nyberg and Janz 1990 page 36, BC deer account 2000, 90%); local Harrison peak VERIFY.
+- Climate lines: Environment Canada Climate Normals 1991 to 2020, Abbotsford (95%), as logged for the fitness and packs lessons.
+- Thermals: Wind and thermals lesson (75%); switch times are the Hunt Map's rule of thumb (Tip). Drive times: straight line times 1.3 at 60 km/h plus 15 min (Assumption, estimate).
+## 2026-10-23 Tikka T3x Arctic Masterclass (content/phase8/211 to 220, mc-tikka-01 to 10, data/flashcards-tikka.json, diagrams/tk-*.svg)
+- Read directly 2026-10-23 (95%): Tikka T1x and T3x instruction manual v5.3 (PDF, 136 pages; English pages 1 to 19 and fold out figures I to V): https://media.sako.global/image/upload/v1691658741/Tikka_T1x_T3x_Instruction_Manual_v5.3_cjggnu.pdf . Lessons cite printed page numbers (PDF page minus 2). The safety, bolt, grease point, sight, magazine and bolt strip diagrams are simplified drawings based on figures 1 to 4, 7 to 10, 16, 17, 19 and 21 to 27.
+- Read 2026-10-23 (95%): Sako, Tikka T3x Arctic page (308 Win, 508 mm, 1:10, 4.1 kg, 1026 mm, two stage trigger, two position safety, birch laminate, Picatinny rail, open sights to 600 m, two lug bolt, 70 degree opening, Canadian Rangers): https://www.sako.global/rifle/t3x-arctic
+- Read directly 2026-10-23 (99%): Criminal Code s. 84(1) and (2), current to 30 September 2026 (prohibited device (c), prohibited firearm (b), barrel length): https://laws-lois.justice.gc.ca/eng/acts/C-46/section-84.html ; SOR/98-462 Schedule Part 4 s. 3, current to 30 September 2026: https://laws-lois.justice.gc.ca/eng/regulations/SOR-98-462/FullText.html (applying it to a bolt action magazine is my reading, 90%).
+- Ring maker torque: Leupold BackCountry cross slot ring product pages, read 2026-10-23 (95%): ring top screws 28 in lb, keeper clamp 45 in lb, 30 mm high 1.14 in, 1 in medium 0.9 in, US$99.99: https://www.leupold.com/backcountry-cross-slot-30mm-high-rings-matte and https://www.leupold.com/backcountry-cross-slot-1-medium-rings-matte . Vortex blog, read directly (85%): 15 to 18 in lb, no thread locker, scope maker first: https://vortexoptics.com/blog/how-to-torque-your-riflescope-rings.html . Vortex Pro Series rings: 18 in lb ring screws, 30 in lb base clamp (search preview of https://vortexoptics.com/vortex-pro-series-inch-rings.html and retailers, 75%). The 2026-10-01 scope guide says 65 in lb cross bolt: conflict, VERIFY.
+- Reviews (secondary): all4shooters T3x Arctic test (75%): https://www.all4shooters.com/en/hunting/rifles/tikka-t3x-arctic-bolt-action-in-308-winchester-features-test/ ; Recoil T3x Arctic review (70%): https://www.recoilweb.com/tikka-t3x-arctic-131608.html
+- Prices, price checked 2026-10-23, search previews (55 to 65%): Cabela's Canada (Diamondback 3 to 9x40 $399.99, VX 3HD $839.99, Primos Trigger Stick $129.77), Leupold dealers in Armstrong BC via Locally (VX Freedom $649.99 to $689.99), Canadian Tire (VX Freedom $599.99, undated), Rangeview Sports (Tikka CTR, Arctic 10 round magazine $219.99; Harris BRM $139.99), Gunpost classified (VX 5HD retail $2,069), Palmetto State Armory (A Zoom .308 snap caps US$29.99), Pelican Sales (Wheeler FAT Wrench US$74.54).

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" font-family="sans-serif" role="img" aria-label="Home or the shop. Cost: home is your evening; a shop example is 150 dollars flat under 125 pounds. Time: 3 to 5 hours for a first deer at home; a shop takes a week or two. Quality: your own trim and labels at home; at a shop it depends. Learning: at home you learn the animal; at a shop you learn nothing. Sausage: home needs a grinder and stuffer; a shop adds the pork. Lean: first deer at home, moose at a shop or rent a grinder.">
+<rect width="400" height="430" fill="#fffaf0"/>
+<text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Home or the shop?</text>
+<rect x="98" y="42" width="144" height="38" rx="8" fill="#8a9a6b"/>
+<g transform="translate(128 61)"><path d="M-12 1 L0 -11 L12 1z" fill="#fffaf0"/><rect x="-9" y="1" width="18" height="11" fill="#fffaf0"/><rect x="-3" y="5" width="6" height="7" fill="#8a9a6b"/></g>
+<text x="178" y="67" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Home</text>
+<rect x="250" y="42" width="144" height="38" rx="8" fill="#4a7fb0"/>
+<g transform="translate(280 61) rotate(-20)"><path d="M-4 -3 C6 -6 12 -3 15 0 L-4 2z" fill="#fffaf0"/><rect x="-16" y="-3" width="12" height="6" rx="2" fill="#3b2a1a"/></g>
+<text x="330" y="67" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Shop</text>
+<rect x="6" y="85" width="388" height="58" rx="6" fill="#f4eedf"/>
+<text x="52" y="122" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cost</text>
+<rect x="98" y="89" width="144" height="50" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.8"/>
+<text x="170" y="118" font-size="15" fill="#2f3a2b" text-anchor="middle">Your evening</text>
+<rect x="250" y="89" width="144" height="50" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/>
+<text x="322" y="108.5" font-size="15" fill="#2f3a2b" text-anchor="middle">Example: $150</text>
+<text x="322" y="127.5" font-size="15" fill="#2f3a2b" text-anchor="middle">under 125 lb</text>
+<text x="52" y="178" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Time</text>
+<rect x="98" y="145" width="144" height="50" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.8"/>
+<text x="170" y="164.5" font-size="15" fill="#2f3a2b" text-anchor="middle">3 to 5 h,</text>
+<text x="170" y="183.5" font-size="15" fill="#2f3a2b" text-anchor="middle">first deer</text>
+<rect x="250" y="145" width="144" height="50" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/>
+<text x="322" y="164.5" font-size="15" fill="#2f3a2b" text-anchor="middle">1 to 2 weeks</text>
+<text x="322" y="183.5" font-size="15" fill="#2f3a2b" text-anchor="middle">wait</text>
+<rect x="6" y="197" width="388" height="58" rx="6" fill="#f4eedf"/>
+<text x="52" y="234" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Quality</text>
+<rect x="98" y="201" width="144" height="50" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.8"/>
+<text x="170" y="220.5" font-size="15" fill="#2f3a2b" text-anchor="middle">Your trim,</text>
+<text x="170" y="239.5" font-size="15" fill="#2f3a2b" text-anchor="middle">your labels</text>
+<rect x="250" y="201" width="144" height="50" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/>
+<text x="322" y="220.5" font-size="15" fill="#2f3a2b" text-anchor="middle">Depends on</text>
+<text x="322" y="239.5" font-size="15" fill="#2f3a2b" text-anchor="middle">the shop</text>
+<text x="52" y="290" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Learning</text>
+<rect x="98" y="257" width="144" height="50" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.8"/>
+<text x="170" y="276.5" font-size="15" fill="#2f3a2b" text-anchor="middle">You learn</text>
+<text x="170" y="295.5" font-size="15" fill="#2f3a2b" text-anchor="middle">the animal</text>
+<rect x="250" y="257" width="144" height="50" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/>
+<text x="322" y="276.5" font-size="15" fill="#2f3a2b" text-anchor="middle">You learn</text>
+<text x="322" y="295.5" font-size="15" fill="#2f3a2b" text-anchor="middle">nothing</text>
+<rect x="6" y="309" width="388" height="58" rx="6" fill="#f4eedf"/>
+<text x="52" y="346" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sausage</text>
+<rect x="98" y="313" width="144" height="50" rx="6" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.8"/>
+<text x="170" y="332.5" font-size="15" fill="#2f3a2b" text-anchor="middle">Grinder,</text>
+<text x="170" y="351.5" font-size="15" fill="#2f3a2b" text-anchor="middle">stuffer</text>
+<rect x="250" y="313" width="144" height="50" rx="6" fill="#fffaf0" stroke="#4a7fb0" stroke-width="1.8"/>
+<text x="322" y="332.5" font-size="15" fill="#2f3a2b" text-anchor="middle">Easy, they</text>
+<text x="322" y="351.5" font-size="15" fill="#2f3a2b" text-anchor="middle">add pork</text>
+<text x="200" y="392" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">Lean: first deer at home. Moose: shop or rent</text>
+<text x="200" y="414" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">a grinder.</text>
+</svg>

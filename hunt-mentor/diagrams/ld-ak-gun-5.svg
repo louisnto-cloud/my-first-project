@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 5: entering the United States, show Customs and Border Protection the approved Form 6NIA and the Alaska hunting licence.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="34" cy="34" r="20" fill="#e8590c"/>
+<text x="34" y="41" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+<text x="64" y="32" font-size="19" font-weight="bold" fill="#23261f">Entering the US</text>
+<circle cx="133" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(133.33333333333334 124) scale(1.6)"><rect x="-18" y="-22" width="36" height="44" rx="3" fill="#3b4a7a"/><circle cx="0" cy="-3" r="8" fill="none" stroke="#d9a400" stroke-width="2"/><path d="M-9 12 h18" stroke="#d9a400" stroke-width="2.5"/></g>
+<circle cx="267" cy="124" r="52" fill="#dfe6d3"/>
+<g transform="translate(266.6666666666667 124) scale(1.6)"><rect x="-20" y="-22" width="40" height="44" rx="3" fill="#fff" stroke="#2f3a2b" stroke-width="2.5"/><path d="M-13 -12 h26 M-13 -4 h26 M-13 4 h18" stroke="#8a9a6b" stroke-width="2.5"/><path d="M8 18 l18 -26 l5 3 l-18 26 l-6 2 z" fill="#e8590c"/></g>
+<text x="200" y="204" font-size="15" fill="#2f3a2b" text-anchor="middle">Show CBP the approved 6NIA</text>
+<text x="200" y="224" font-size="15" fill="#2f3a2b" text-anchor="middle">and your Alaska licence (85%).</text>
+</svg>

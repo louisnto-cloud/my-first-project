@@ -1,0 +1,711 @@
+[
+ {
+  "id": "mgr-001",
+  "deck": "Grouse Masterclass",
+  "front": "Name the 6 kinds of grouse you can hunt in BC.",
+  "back": "Ruffed, spruce, dusky (Interior), sooty (coast), sharp tailed, and ptarmigan (3 kinds). (85%)",
+  "diagram": "mgr-six-grouse"
+ },
+ {
+  "id": "mgr-002",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse: male or female? Unbroken tail band, 2 rump dots.",
+  "back": "Male. Hen: band broken in the middle, 1 rump dot. Use two clues. (70 to 85%)",
+  "diagram": "mgr-sex-tails"
+ },
+ {
+  "id": "mgr-003",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse: middle tail feather length for a male?",
+  "back": "About 15 cm (6 in) or more. Under 14 cm (5.5 in): female. In between: use another clue. (70%)"
+ },
+ {
+  "id": "mgr-004",
+  "deck": "Grouse Masterclass",
+  "front": "Young of the year or adult: which feathers do you check?",
+  "back": "The 2 outer flight feathers, P9 and P10. Pointed and frayed: young. Rounded: adult. (85%)",
+  "diagram": "mgr-age-wing"
+ },
+ {
+  "id": "mgr-005",
+  "deck": "Grouse Masterclass",
+  "front": "P9 or P10 still growing in. Young or adult?",
+  "back": "Adult. Young birds do not moult P9 and P10 in their first summer. (85%)"
+ },
+ {
+  "id": "mgr-006",
+  "deck": "Grouse Masterclass",
+  "front": "Spruce grouse male: 3 marks.",
+  "back": "Black throat and breast edged white, red comb over the eye, black tail. Franklin's form: white spots above the tail. (80 to 85%)",
+  "photo": "g-spruce-male"
+ },
+ {
+  "id": "mgr-007",
+  "deck": "Grouse Masterclass",
+  "front": "Why is the spruce grouse called the fool hen?",
+  "back": "It trusts its camouflage and often lets people walk close. (80%)"
+ },
+ {
+  "id": "mgr-008",
+  "deck": "Grouse Masterclass",
+  "front": "Sooty vs dusky grouse: where?",
+  "back": "Sooty: wet coast forest (Region 2 lists SOOTY (Blue)). Dusky: drier Interior (Regions 3 and 8 list DUSKY (Blue)). One species, blue grouse, until 2006. (85 to 99%)",
+  "diagram": "mgr-blue-split"
+ },
+ {
+  "id": "mgr-009",
+  "deck": "Grouse Masterclass",
+  "front": "Dusky grouse weight range?",
+  "back": "About 880 g to 1.6 kg: the biggest forest grouse in BC. (80%)",
+  "diagram": "mgr-weights"
+ },
+ {
+  "id": "mgr-010",
+  "deck": "Grouse Masterclass",
+  "front": "Smallest grouse?",
+  "back": "White tailed ptarmigan, about 350 g. (85%)"
+ },
+ {
+  "id": "mgr-011",
+  "deck": "Grouse Masterclass",
+  "front": "Sharp tailed grouse: 3 field marks.",
+  "back": "Pale with V marks on a white breast, short pointed tail with longer middle feathers, white in flight. (80 to 85%)",
+  "photo": "sharp-tailed-grouse"
+ },
+ {
+  "id": "mgr-012",
+  "deck": "Grouse Masterclass",
+  "front": "Sharp tailed grouse in BC: how many, and status?",
+  "back": "About 10,000 breeding birds (2001). Columbian subspecies on the provincial Blue List. (85%)"
+ },
+ {
+  "id": "mgr-013",
+  "deck": "Grouse Masterclass",
+  "front": "Where are sharp tailed grouse open in Region 3?",
+  "back": "Only MUs 3-30 and 3-31, 10 Sept to 30 Nov, 5 (10). Not the part of 3-30 south of the Scottie Creek FSR, Map C18. (99%)"
+ },
+ {
+  "id": "mgr-014",
+  "deck": "Grouse Masterclass",
+  "front": "Which ptarmigan has a white tail all year?",
+  "back": "White tailed ptarmigan. Willow and rock keep black tails. (85%)"
+ },
+ {
+  "id": "mgr-015",
+  "deck": "Grouse Masterclass",
+  "front": "Ptarmigan feet?",
+  "back": "Feathered: unique among chicken like birds, they work like snowshoes. (85%)"
+ },
+ {
+  "id": "mgr-016",
+  "deck": "Grouse Masterclass",
+  "front": "Sage grouse in BC: season?",
+  "back": "None. No season row anywhere in the synopsis. (90%, my reading)",
+  "photo": "g-sage-grouse"
+ },
+ {
+  "id": "mgr-017",
+  "deck": "Grouse Masterclass",
+  "front": "Ptarmigan or sharp tailed grouse in Region 8?",
+  "back": "No row for either in Region 8. (99%)"
+ },
+ {
+  "id": "mgr-018",
+  "deck": "Grouse Masterclass",
+  "front": "Why is grouse breast white meat?",
+  "back": "Fast muscle fibres that run on stored sugar: big power for a few seconds, then they tire. (70%)",
+  "diagram": "mgr-keel-muscle"
+ },
+ {
+  "id": "mgr-019",
+  "deck": "Grouse Masterclass",
+  "front": "What is the keel?",
+  "back": "The blade on the breastbone that anchors the big flight muscles. (80%)"
+ },
+ {
+  "id": "mgr-020",
+  "deck": "Grouse Masterclass",
+  "front": "How does air move through a bird's lung?",
+  "back": "One way, pushed by air sacs that act as bellows. The lung is rigid. (80%)"
+ },
+ {
+  "id": "mgr-021",
+  "deck": "Grouse Masterclass",
+  "front": "How many air sacs do most birds have?",
+  "back": "About 9, in a front set and a rear set. (70%)"
+ },
+ {
+  "id": "mgr-022",
+  "deck": "Grouse Masterclass",
+  "front": "Where are a grouse's heart and lungs?",
+  "back": "Lungs high against the back; heart low and forward under the front breast. (80%)",
+  "diagram": "mgr-vitals-bird"
+ },
+ {
+  "id": "mgr-023",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse body temperature?",
+  "back": "About 41.5 C (40.4 to 42.6 C in captive ruffed grouse). (75%)"
+ },
+ {
+  "id": "mgr-024",
+  "deck": "Grouse Masterclass",
+  "front": "Crop, gizzard, ceca: one job each.",
+  "back": "Crop stores, gizzard grinds with grit, ceca ferment fibre. (80%)",
+  "diagram": "mgr-gut-path"
+ },
+ {
+  "id": "mgr-025",
+  "deck": "Grouse Masterclass",
+  "front": "Why do grouse pick gravel?",
+  "back": "Grit for the gizzard to grind buds, seeds and needles. (85%)"
+ },
+ {
+  "id": "mgr-026",
+  "deck": "Grouse Masterclass",
+  "front": "Spruce grouse winter diet?",
+  "back": "Up to 99% conifer needles once snow covers the ground. Gut grows about 40% longer. (75%)",
+  "diagram": "mgr-gut-seasons"
+ },
+ {
+  "id": "mgr-027",
+  "deck": "Grouse Masterclass",
+  "front": "Favourite winter food of ruffed grouse?",
+  "back": "Aspen flower buds. They avoid birch and alder catkins when they can choose. (80%)"
+ },
+ {
+  "id": "mgr-028",
+  "deck": "Grouse Masterclass",
+  "front": "How warm is a snow roost?",
+  "back": "Under 20 cm of soft snow: -3 to -12 C while the air was as low as -35 C. (75%)",
+  "diagram": "mgr-snow-roost"
+ },
+ {
+  "id": "mgr-029",
+  "deck": "Grouse Masterclass",
+  "front": "What are pectinations?",
+  "back": "Comb like scales on a grouse's toes in winter: snowshoes. (85%)"
+ },
+ {
+  "id": "mgr-030",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse chick survival?",
+  "back": "Over 3 in 4 die within 35 days, most in the first week. (75%)",
+  "diagram": "mgr-survival"
+ },
+ {
+  "id": "mgr-031",
+  "deck": "Grouse Masterclass",
+  "front": "Adult ruffed grouse yearly survival?",
+  "back": "About 1 in 2 (Pennsylvania). Hardest months: January to March. (75%)"
+ },
+ {
+  "id": "mgr-032",
+  "deck": "Grouse Masterclass",
+  "front": "Why open the crop of a shot grouse?",
+  "back": "It shows what they eat right now. Hunt that food. (Tip)"
+ },
+ {
+  "id": "mgr-033",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse field of view?",
+  "back": "About 300 degrees; only about 30 degrees with both eyes (chicken data, 75%). Blind spot straight behind.",
+  "diagram": "mgr-vision-field"
+ },
+ {
+  "id": "mgr-034",
+  "deck": "Grouse Masterclass",
+  "front": "Do grouse see colour?",
+  "back": "Yes: four cone types (violet, blue, green, red), one more than us (75%, chicken data). They key on motion."
+ },
+ {
+  "id": "mgr-035",
+  "deck": "Grouse Masterclass",
+  "front": "Do grouse smell hunters?",
+  "back": "No study found that they do. Wind matters for sound and your dog's nose. (Tip)"
+ },
+ {
+  "id": "mgr-036",
+  "deck": "Grouse Masterclass",
+  "front": "What sounds carry to a grouse?",
+  "back": "Low thumps: boots on rock, truck doors, voices. Their inner ear is tuned low. (65%; Tip)",
+  "diagram": "mgr-hearing"
+ },
+ {
+  "id": "mgr-037",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse escape plan in 5 steps?",
+  "back": "Freeze, walk off under cover, flush with a roar, glide under about 90 m, land in a tree and freeze again. (75 to 80%)",
+  "diagram": "mgr-threat-ladder"
+ },
+ {
+  "id": "mgr-038",
+  "deck": "Grouse Masterclass",
+  "front": "Why does stopping make grouse flush?",
+  "back": "Hunter lore: a stopped predator may have seen it. Be ready when you stop. (Tip)"
+ },
+ {
+  "id": "mgr-039",
+  "deck": "Grouse Masterclass",
+  "front": "How do you work a dog on grouse?",
+  "back": "Into the wind, so it meets the scent cone drifting downwind. (Tip)"
+ },
+ {
+  "id": "mgr-040",
+  "deck": "Grouse Masterclass",
+  "front": "Body language: about to flush?",
+  "back": "Neck stretched tall, crest up, tail fanning. (Tip, hunter lore)",
+  "diagram": "mgr-alarm-postures"
+ },
+ {
+  "id": "mgr-041",
+  "deck": "Grouse Masterclass",
+  "front": "Harvest rate near open roads vs farther away (Pennsylvania)?",
+  "back": "48% near open roads, 19% farther. (75%)",
+  "diagram": "mgr-road-pressure"
+ },
+ {
+  "id": "mgr-042",
+  "deck": "Grouse Masterclass",
+  "front": "Male survival within vs beyond 201 m of roads?",
+  "back": "23% within, 36% beyond. Walk past the road band. (75%)"
+ },
+ {
+  "id": "mgr-043",
+  "deck": "Grouse Masterclass",
+  "front": "When do ruffed grouse families break up?",
+  "back": "At about 12 weeks, early fall. (75%)",
+  "diagram": "mgr-family-year"
+ },
+ {
+  "id": "mgr-044",
+  "deck": "Grouse Masterclass",
+  "front": "How far do young ruffed grouse disperse?",
+  "back": "Young hens about 4.8 km, young males about 2.1 km, over 2 to 3 weeks (Wisconsin). (80%)"
+ },
+ {
+  "id": "mgr-045",
+  "deck": "Grouse Masterclass",
+  "front": "Adults share of the bag: October vs December?",
+  "back": "34% in October, 57% in December (Pennsylvania). (75%)",
+  "diagram": "mgr-adult-share"
+ },
+ {
+  "id": "mgr-046",
+  "deck": "Grouse Masterclass",
+  "front": "A grouse flushes and glides into a fir. What now?",
+  "back": "Mark the tree and walk straight to it, ready for a second flush. (Tip)"
+ },
+ {
+  "id": "mgr-047",
+  "deck": "Grouse Masterclass",
+  "front": "Bird disappears under a lone evergreen?",
+  "back": "Circle the tree: it may walk out and flush from the far side. (Tip)"
+ },
+ {
+  "id": "mgr-048",
+  "deck": "Grouse Masterclass",
+  "front": "Hen ruffed grouse with chicks: what does she do?",
+  "back": "Hisses, fans tail and ruff, may fake a broken wing to lead you away. (70%)"
+ },
+ {
+  "id": "mgr-049",
+  "deck": "Grouse Masterclass",
+  "front": "How does a ruffed grouse drum?",
+  "back": "Stands on a log and beats cupped wings against the air. The wings never hit the log. (85%)",
+  "diagram": "mgr-displays"
+ },
+ {
+  "id": "mgr-050",
+  "deck": "Grouse Masterclass",
+  "front": "When do ruffed grouse drum most?",
+  "back": "Spring, March to May; peak in April in one study. A little in fall too. (75 to 85%)"
+ },
+ {
+  "id": "mgr-051",
+  "deck": "Grouse Masterclass",
+  "front": "How far can you hear a drum?",
+  "back": "About 400 m or more in thick woods, depending which way the bird faces. (60 to 70%)"
+ },
+ {
+  "id": "mgr-052",
+  "deck": "Grouse Masterclass",
+  "front": "Dusky grouse display?",
+  "back": "Deep hoots with neck air sacs showing (reddish purple), yellow orange comb. Heard up to about 400 m. (75%)",
+  "photo": "dusky-grouse-male"
+ },
+ {
+  "id": "mgr-053",
+  "deck": "Grouse Masterclass",
+  "front": "Spruce grouse display?",
+  "back": "Struts with red combs up and tail fanned; short flight ending in two loud wing claps. (65 to 75%)"
+ },
+ {
+  "id": "mgr-054",
+  "deck": "Grouse Masterclass",
+  "front": "Sharp tailed grouse display?",
+  "back": "Dawn dance on a lek: stamping feet, rattling tail, pink neck sacs. Lek calls carry up to 1.5 km. (85%)"
+ },
+ {
+  "id": "mgr-055",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse clutch and incubation?",
+  "back": "7 to 12 eggs, 23 to 24 days, hatch usually early June. (85%)",
+  "diagram": "mgr-clutch"
+ },
+ {
+  "id": "mgr-056",
+  "deck": "Grouse Masterclass",
+  "front": "Sharp tailed grouse average clutch in BC?",
+  "back": "12.8 eggs. First clutch at 11 months. (85%)"
+ },
+ {
+  "id": "mgr-057",
+  "deck": "Grouse Masterclass",
+  "front": "When do ruffed grouse chicks fly well?",
+  "back": "Short hops in week 1, fly well by week 3. (75%)"
+ },
+ {
+  "id": "mgr-058",
+  "deck": "Grouse Masterclass",
+  "front": "What do dusky grouse do in fall?",
+  "back": "Move uphill into dense conifers and eat needles all winter: an upside down migration. (70 to 75%)"
+ },
+ {
+  "id": "mgr-059",
+  "deck": "Grouse Masterclass",
+  "front": "When are ptarmigan white?",
+  "back": "Mostly white by mid October. (85%)"
+ },
+ {
+  "id": "mgr-060",
+  "deck": "Grouse Masterclass",
+  "front": "Region 3 grouse seasons (MUs 3-12 to 3-20, 3-26 to 3-44)?",
+  "back": "Youth only 1 to 9 Sept; general 10 Sept to 30 Nov. (99%)",
+  "diagram": "re-r3-grouse-bars"
+ },
+ {
+  "id": "mgr-061",
+  "deck": "Grouse Masterclass",
+  "front": "Region 2 grouse season?",
+  "back": "Bow only 1 to 9 Sept; general 10 Sept to 15 Dec, MUs 2-2 to 2-19. (99%)"
+ },
+ {
+  "id": "mgr-062",
+  "deck": "Grouse Masterclass",
+  "front": "Region 8 grouse seasons?",
+  "back": "Youth 1 to 9 Sept; general 10 Sept to 30 Nov; bow only 1 to 10 Dec. (99%)"
+ },
+ {
+  "id": "mgr-063",
+  "deck": "Grouse Masterclass",
+  "front": "Legal hunting hours for grouse?",
+  "back": "1 hour before sunrise to 1 hour after sunset (item 38). Ducks are 30 minutes. (99%)",
+  "diagram": "mgr-day-clock"
+ },
+ {
+  "id": "mgr-064",
+  "deck": "Grouse Masterclass",
+  "front": "A grouse day in 4 parts?",
+  "back": "Feed and grit at dawn, rest and dust midday, feed late day, roost at night. (hunter lore, 75%)"
+ },
+ {
+  "id": "mgr-065",
+  "deck": "Grouse Masterclass",
+  "front": "Best time for the .22 still hunt?",
+  "back": "Midday, when spruce and dusky grouse sit in trees. (Tip)"
+ },
+ {
+  "id": "mgr-066",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse on a windy day?",
+  "back": "Wild and skittish; hunt sheltered draws and thick cover. (Tip, hunter lore)",
+  "diagram": "mgr-weather-grid"
+ },
+ {
+  "id": "mgr-067",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse on a rainy day?",
+  "back": "Under thick conifers. (Tip, hunter lore)"
+ },
+ {
+  "id": "mgr-068",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse and the moon or pressure fronts?",
+  "back": "No grouse study found. Do not plan around them; log your own data. (VERIFY)"
+ },
+ {
+  "id": "mgr-069",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse elevation band in BC?",
+  "back": "Most abundant 750 to 1,250 m, aspen and poplar near water. (85%)",
+  "diagram": "sb-grouse-elev"
+ },
+ {
+  "id": "mgr-070",
+  "deck": "Grouse Masterclass",
+  "front": "Ruffed grouse forest age?",
+  "back": "Young forest under about 20 years old. (75%)"
+ },
+ {
+  "id": "mgr-071",
+  "deck": "Grouse Masterclass",
+  "front": "Dusky grouse elevations in BC?",
+  "back": "Many seen at 1,500 to 2,250 m; breeding at 500 to 1,250 m is not uncommon. (85%)"
+ },
+ {
+  "id": "mgr-072",
+  "deck": "Grouse Masterclass",
+  "front": "White tailed ptarmigan breeding height in the Interior?",
+  "back": "1,830 to 2,650 m. (85%)"
+ },
+ {
+  "id": "mgr-073",
+  "deck": "Grouse Masterclass",
+  "front": "Sharp tailed grouse key BC foods?",
+  "back": "Snowberry, rose, dandelion; buds of water birch, aspen, saskatoon, chokecherry. (85%)"
+ },
+ {
+  "id": "mgr-074",
+  "deck": "Grouse Masterclass",
+  "front": "Ptarmigan winter food?",
+  "back": "Willow, alder and dwarf birch buds and twigs. (85%)"
+ },
+ {
+  "id": "mgr-075",
+  "deck": "Grouse Masterclass",
+  "front": "Hunt Map: 4 steps for grouse ground?",
+  "back": "Management Units and Forest Service roads; Cutblocks by age and Burns; Slope direction and Sun and shade; Elevation profile. (Tip)",
+  "diagram": "mgr-map-2"
+ },
+ {
+  "id": "mgr-076",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse near Heffley Creek, MU 3-27?",
+  "back": "Ruffed, spruce, dusky, and ptarmigan up high. No sharp tailed season in 3-27. (90 to 99%)"
+ },
+ {
+  "id": "mgr-077",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse in the South Okanagan (Region 8)?",
+  "back": "Ruffed, spruce, dusky. 5 a day in total. No sharp tail, no ptarmigan. (99%)"
+ },
+ {
+  "id": "mgr-078",
+  "deck": "Grouse Masterclass",
+  "front": "Sun Peaks rule?",
+  "back": "No hunting or shooting within 400 m of any lift, run, facility or development, MU 3-27, Map C11. (99%)"
+ },
+ {
+  "id": "mgr-079",
+  "deck": "Grouse Masterclass",
+  "front": "Grouse track?",
+  "back": "About 5 cm: 3 long toes forward, 1 short back, in one zig zag line. (75%)",
+  "diagram": "mgr-track-grid"
+ },
+ {
+  "id": "mgr-080",
+  "deck": "Grouse Masterclass",
+  "front": "Normal grouse droppings?",
+  "back": "Curved, fibrous, pencil thick, white tipped, 2.5 to 4 cm. (70 to 85%)",
+  "diagram": "mgr-droppings"
+ },
+ {
+  "id": "mgr-081",
+  "deck": "Grouse Masterclass",
+  "front": "Caecal droppings: fresh or old?",
+  "back": "Green is fresh; they turn black quickly. (65%)"
+ },
+ {
+  "id": "mgr-082",
+  "deck": "Grouse Masterclass",
+  "front": "Pile of droppings on one spot of a mossy log?",
+  "back": "A ruffed grouse drum stand. He lives there year round. (85%)",
+  "diagram": "mgr-drum-log"
+ },
+ {
+  "id": "mgr-083",
+  "deck": "Grouse Masterclass",
+  "front": "Snow hole with wing marks beside it?",
+  "back": "The grouse burst out and left. A hole with no exit sign may still hold a bird. (75%; Tip)",
+  "photo": "hab-grouse-snow-roost"
+ },
+ {
+  "id": "mgr-084",
+  "deck": "Grouse Masterclass",
+  "front": "Dust bowl?",
+  "back": "A shallow scrape in dry dirt with a few feathers, often on road edges. (80%)",
+  "diagram": "mgr-dust-bowl"
+ },
+ {
+  "id": "mgr-085",
+  "deck": "Grouse Masterclass",
+  "front": "Fresh track line heading into cover?",
+  "back": "Slow down, walk beside the line, be ready. The bird is often within 50 m. (Tip)"
+ },
+ {
+  "id": "mgr-086",
+  "deck": "Grouse Masterclass",
+  "front": "Is a .22 rimfire legal for grouse?",
+  "back": "Yes. Rimfire: grouse, ptarmigan or turkey only (page 13, note 2). Not quail, pheasant or partridge. (99%)",
+  "diagram": "sb-upland-weapons"
+ },
+ {
+  "id": "mgr-087",
+  "deck": "Grouse Masterclass",
+  "front": ".22 on grouse: aim point and range?",
+  "back": "Head or upper neck, inside about 25 m (27 yd), rested, dirt behind. (Tip)",
+  "diagram": "mgr-rim-4"
+ },
+ {
+  "id": "mgr-088",
+  "deck": "Grouse Masterclass",
+  "front": ".22 backstop rule of thumb?",
+  "back": "Dirt behind the bird or no shot. A .22 bullet can fly over 1 km. (Tip; safety)",
+  "diagram": "mgr-rim-2"
+ },
+ {
+  "id": "mgr-089",
+  "deck": "Grouse Masterclass",
+  "front": "400 m single projectile ban and your .22?",
+  "back": "On listed highways (for example Hwy 5, Hope to Kamloops) no bullet within 400 m of the road allowance; shotgun with shot allowed. Hwy 5 north of Kamloops is not listed (95%). (99%)"
+ },
+ {
+  "id": "mgr-090",
+  "deck": "Grouse Masterclass",
+  "front": "Shotgun load for ruffed grouse?",
+  "back": "12 gauge, lead No. 7.5 or 6, improved cylinder. Lead is legal for upland birds. (Tip 60%; legal 99%)"
+ },
+ {
+  "id": "mgr-091",
+  "deck": "Grouse Masterclass",
+  "front": "Swing on a flushing grouse?",
+  "back": "Bead behind, swing through past the beak, shoot, keep moving. Sky behind, nobody in front. (Tip)"
+ },
+ {
+  "id": "mgr-092",
+  "deck": "Grouse Masterclass",
+  "front": "Dogs on grouse: legal?",
+  "back": "Yes, unleashed for small game. Training on game birds under supervision 1 Aug to 30 Apr. (99%)"
+ },
+ {
+  "id": "mgr-093",
+  "deck": "Grouse Masterclass",
+  "front": "Road allowance width on a road under 3 lanes?",
+  "back": "15 m either side of the middle, or to private or cultivated land if closer. (99%)",
+  "diagram": "rb-road-allowance"
+ },
+ {
+  "id": "mgr-094",
+  "deck": "Grouse Masterclass",
+  "front": "Which roads does the road allowance rule name?",
+  "back": "Numbered highways and two lane or wider public roads kept by Transportation and Infrastructure, its contractors, the federal government or another province or territory. (99%)"
+ },
+ {
+  "id": "mgr-095",
+  "deck": "Grouse Masterclass",
+  "front": "Forest Service roads and the road allowance rule?",
+  "back": "Wording does not clearly name FSRs: VERIFY with a conservation officer (70%). Items 22 and 28 still apply. Same safe habit. (99% for items)"
+ },
+ {
+  "id": "mgr-096",
+  "deck": "Grouse Masterclass",
+  "front": "Items 22 and 28 in one line?",
+  "back": "No hunting from a motor vehicle; no live round in the chamber or attached magazine in or on any vehicle. (99%)",
+  "diagram": "mgr-road-flow"
+ },
+ {
+  "id": "mgr-097",
+  "deck": "Grouse Masterclass",
+  "front": "ATV on a Forest Service Road needs?",
+  "back": "Valid driver's licence and at least $200,000 third party liability insurance. (99%)"
+ },
+ {
+  "id": "mgr-098",
+  "deck": "Grouse Masterclass",
+  "front": "Region 3 above 1,700 m: vehicles?",
+  "back": "Motor vehicles except snowmobiles only on existing roads and trails. (99%)"
+ },
+ {
+  "id": "mgr-099",
+  "deck": "Grouse Masterclass",
+  "front": "Late season sharp tailed grouse?",
+  "back": "Big flocks flush far; one chance. A modified choke helps. (60%)"
+ },
+ {
+  "id": "mgr-100",
+  "deck": "Grouse Masterclass",
+  "front": "What does an old hand do differently?",
+  "back": "Hunts edges slowly, walks away from roads, marks every flush, circles evergreens, opens crops, keeps a log. (opinion)"
+ },
+ {
+  "id": "mgr-101",
+  "deck": "Grouse Masterclass",
+  "front": "What stays attached to a grouse until home?",
+  "back": "One feathered wing (page 15). (99%)",
+  "diagram": "rb-evidence-birds"
+ },
+ {
+  "id": "mgr-102",
+  "deck": "Grouse Masterclass",
+  "front": "Edible portions of a game bird?",
+  "back": "Both breasts. They must go home, to a meat cutter or cold storage. (99%)"
+ },
+ {
+  "id": "mgr-103",
+  "deck": "Grouse Masterclass",
+  "front": "Upland bird possession limit?",
+  "back": "3 times the daily limit while hunting or going home; sharp tailed grouse in Region 3: 2 times. (99%)"
+ },
+ {
+  "id": "mgr-104",
+  "deck": "Grouse Masterclass",
+  "front": "Region 3 grouse daily bag?",
+  "back": "5 of each kind, 10 total a day, 30 in possession. (99%)"
+ },
+ {
+  "id": "mgr-105",
+  "deck": "Grouse Masterclass",
+  "front": "Region 8 grouse daily bag?",
+  "back": "5 total a day, 15 in possession. (99%)"
+ },
+ {
+  "id": "mgr-106",
+  "deck": "Grouse Masterclass",
+  "front": "Region 2 grouse daily bag?",
+  "back": "10 a day, 30 in possession (sooty, ruffed, spruce together). (99%)"
+ },
+ {
+  "id": "mgr-107",
+  "deck": "Grouse Masterclass",
+  "front": "Region 3 ptarmigan?",
+  "back": "1 Sept to 30 Nov, MUs 3-12 to 3-20 and 3-26 to 3-44, 5 (15). (99%)"
+ },
+ {
+  "id": "mgr-108",
+  "deck": "Grouse Masterclass",
+  "front": "Field care in 4 words each?",
+  "back": "Note species, wing on. Crop and guts out. Spread in shade. Cooler on ice. (80%)",
+  "diagram": "mgr-care-3"
+ },
+ {
+  "id": "mgr-109",
+  "deck": "Grouse Masterclass",
+  "front": "Cool to what, cook to what?",
+  "back": "Keep under 4 C; cook game birds to 74 C (165 F). (80%)",
+  "diagram": "mgr-care-4"
+ },
+ {
+  "id": "mgr-110",
+  "deck": "Grouse Masterclass",
+  "front": "Fridge and freezer times for game birds?",
+  "back": "Fridge up to 3 days; freezer up to 6 months. (80%)"
+ },
+ {
+  "id": "mgr-111",
+  "deck": "Grouse Masterclass",
+  "front": "A shot bird falls into brush. What do you do?",
+  "back": "Eyes on the spot, pick a mark, walk straight there, search in growing circles. (Tip)",
+  "diagram": "mgr-mark-fall"
+ }
+]

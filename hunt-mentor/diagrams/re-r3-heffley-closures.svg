@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 532" font-family="sans-serif" role="img" aria-label="List of closures near Heffley Creek in MUs 3-27 and 3-28. Map C7, both MUs, the South Thompson band: no hunting or shooting to the Lafarge Bridge, no shooting from there to the Pritchard Bridge. MU 3-27, Map C11, Sun Peaks: no hunting or shooting within 400 metres. MU 3-28, Map C12, McQueen Lake: no shooting within 1 kilometre. MU 3-28, Maps C13 and C15: Skull Mountain open roads only 1 September to 10 December; Lac du Bois highlighted roads only. MU 3-28 ATV and snowmobile: no ATV or electric bike for hunting 1 September to 10 December, no snowmobile for hunting 1 April to 14 December. Both MUs: the 1,700 metre vehicle rule and the 200 metre feeding and baiting ban. MU 3-27 has no All Terrain Vehicle for hunting closure.">
+<rect width="400" height="532" fill="#fffaf0"/>
+<rect x="4" y="8" width="392" height="75" rx="6" fill="#f4eedf"/>
+<rect x="8" y="12" width="56" height="67" rx="6" fill="#c92a2a"/>
+<text x="36" y="51.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C7</text>
+<text x="74" y="31" font-size="16" font-weight="bold" fill="#2f3a2b">South Thompson band, both MUs</text>
+<text x="74" y="51" font-size="15" fill="#b02525">No hunting or shooting to the Lafarge Bridge.</text>
+<text x="74" y="71" font-size="15" fill="#b02525">No shooting to the Pritchard Bridge</text>
+<rect x="8" y="90" width="56" height="47" rx="6" fill="#c92a2a"/>
+<text x="36" y="119.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C11</text>
+<text x="74" y="109" font-size="16" font-weight="bold" fill="#2f3a2b">Sun Peaks</text>
+<text x="388" y="109" font-size="14" fill="#6b5b4b" text-anchor="end">MU 3-27</text>
+<text x="74" y="129" font-size="15" fill="#b02525">No hunting or shooting within 400 m</text>
+<rect x="4" y="144" width="392" height="55" rx="6" fill="#f4eedf"/>
+<rect x="8" y="148" width="56" height="47" rx="6" fill="#e8590c"/>
+<text x="36" y="177.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C12</text>
+<text x="74" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">McQueen Lake</text>
+<text x="388" y="167" font-size="14" fill="#6b5b4b" text-anchor="end">MU 3-28</text>
+<text x="74" y="187" font-size="15" fill="#c2410c">No shooting within 1 km</text>
+<rect x="8" y="206" width="56" height="87" rx="6" fill="#8b5a2b"/>
+<text x="36" y="246.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C13</text>
+<text x="36" y="264.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">C15</text>
+<text x="74" y="225" font-size="16" font-weight="bold" fill="#2f3a2b">Skull Mtn, Lac du Bois</text>
+<text x="388" y="225" font-size="14" fill="#6b5b4b" text-anchor="end">MU 3-28</text>
+<text x="74" y="245" font-size="15" fill="#8b5a2b">Skull Mtn: open roads only Sept 1 to</text>
+<text x="74" y="265" font-size="15" fill="#8b5a2b">Dec 10.</text>
+<text x="74" y="285" font-size="15" fill="#8b5a2b">Lac du Bois: highlighted roads only</text>
+<rect x="4" y="300" width="392" height="95" rx="6" fill="#f4eedf"/>
+<rect x="8" y="304" width="56" height="87" rx="6" fill="#e8590c"/>
+<text x="36" y="353.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">ATV</text>
+<text x="74" y="323" font-size="16" font-weight="bold" fill="#2f3a2b">ATV and snowmobile</text>
+<text x="388" y="323" font-size="14" fill="#6b5b4b" text-anchor="end">MU 3-28</text>
+<text x="74" y="343" font-size="15" fill="#c2410c">No ATV or e bike for hunting Sept 1 to</text>
+<text x="74" y="363" font-size="15" fill="#c2410c">Dec 10.</text>
+<text x="74" y="383" font-size="15" fill="#c2410c">No snowmobile for hunting Apr 1 to Dec 14</text>
+<rect x="8" y="402" width="56" height="67" rx="6" fill="#8b5a2b"/>
+<text x="36" y="441.5" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">Both</text>
+<text x="74" y="421" font-size="16" font-weight="bold" fill="#2f3a2b">Both MUs</text>
+<text x="74" y="441" font-size="15" fill="#8b5a2b">1,700 m vehicle rule and the 200 m feeding</text>
+<text x="74" y="461" font-size="15" fill="#8b5a2b">and baiting ban</text>
+<text x="8" y="497" font-size="15" fill="#6b5b4b">3-27 has no ATV (All Terrain Vehicle) for hunting</text>
+<text x="8" y="518" font-size="15" fill="#6b5b4b">closure</text>
+</svg>

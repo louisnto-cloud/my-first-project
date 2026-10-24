@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" font-family="sans-serif" role="img" aria-label="Bar chart of three studies on wind and deer movement. An Oklahoma GPS study over 7 years found little change with wind speed, 60 percent. A South Carolina GPS thesis found small effects in some seasons and hours, 65 percent. An older South Texas radio collar study from the 1980s found a drop at 24 to 31 kilometres an hour and a rebound above 32, 55 percent. The results are mixed. Sources are hunting magazine and thesis summaries and search previews: treat as Tip level.">
+<rect width="400" height="344" fill="#fffaf0"/>
+<text x="14" y="28" font-size="18" font-weight="bold" fill="#2f3a2b">Wind and deer movement: mixed</text>
+<text x="386" y="54" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">effect on movement</text>
+<text x="14" y="77" font-size="16" font-weight="bold" fill="#2f3a2b">Oklahoma GPS, 7 years</text>
+<rect x="345.1" y="61" width="40.9" height="24" rx="12.0" fill="#6b5b4b"/><text x="365.6" y="78.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">60%</text>
+<rect x="14" y="84" width="372" height="24" rx="5" fill="#efe8d6"/><rect x="14" y="84" width="89.3" height="24" rx="5" fill="#8a9a6b"/>
+<text x="111.28" y="101" font-size="15" font-weight="bold" fill="#2f3a2b">little change</text>
+<text x="14" y="141" font-size="16" font-weight="bold" fill="#2f3a2b">South Carolina GPS</text>
+<rect x="345.1" y="125" width="40.9" height="24" rx="12.0" fill="#6b5b4b"/><text x="365.6" y="142.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">65%</text>
+<text x="14" y="163" font-size="15" fill="#2f3a2b">some seasons and hours</text>
+<rect x="14" y="170" width="372" height="24" rx="5" fill="#efe8d6"/><rect x="14" y="170" width="156.2" height="24" rx="5" fill="#8a9a6b"/>
+<text x="162.24" y="187" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">small effects</text>
+<text x="14" y="227" font-size="16" font-weight="bold" fill="#2f3a2b">South Texas, 1980s</text>
+<rect x="345.1" y="211" width="40.9" height="24" rx="12.0" fill="#6b5b4b"/><text x="365.6" y="228.04" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">55%</text>
+<text x="14" y="249" font-size="15" fill="#2f3a2b">drop at 24 to 31 km/h</text>
+<rect x="14" y="256" width="372" height="24" rx="5" fill="#efe8d6"/><rect x="14" y="256" width="275.3" height="24" rx="5" fill="#e8590c"/>
+<text x="281.28" y="273" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">drop, then rebound</text>
+<text x="14" y="310" font-size="14" fill="#6b5b4b">Hunting magazine and thesis summaries, search</text>
+<text x="14" y="330" font-size="14" fill="#6b5b4b">previews. Treat as Tip level.</text>
+</svg>

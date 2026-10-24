@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 284" font-family="sans-serif" role="img" aria-label="When to get help. Thick timber, snow coming: Your brother, now. Gut hit: More eyes, not more hours. Private land, closed area: Conservation officer. Dogs on deer in BC must be on a leash (95%)..">
+<rect width="400" height="284" rx="12" fill="#EEF1EA"/>
+<text x="16" y="30" font-size="18" font-weight="bold" fill="#1F3D2B">When to get help</text>
+<text x="22" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Situation</text><text x="210" y="58" font-size="14" font-weight="bold" fill="#1F3D2B">Call</text>
+<g data-tip="Thick timber, snow coming|Call your brother before you start trailing, not after dark. Tip."><rect x="12" y="68" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="68" width="188" height="56" rx="8" fill="#1F3D2B"/><rect x="192" y="68" width="8" height="56" fill="#1F3D2B"/><text x="22" y="90" font-size="15" font-weight="bold" fill="#FFFFFF">Thick timber, snow</text>
+<text x="22" y="109" font-size="15" font-weight="bold" fill="#FFFFFF">coming</text><text x="210" y="90" font-size="15" fill="#17201A">Your brother, now</text></g>
+<g data-tip="Gut hit|More eyes beat more hours. Tip."><rect x="12" y="132" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#C9D3C4" stroke-width="1"/><rect x="12" y="132" width="188" height="56" rx="8" fill="#1F3D2B"/><rect x="192" y="132" width="8" height="56" fill="#1F3D2B"/><text x="22" y="154" font-size="15" font-weight="bold" fill="#FFFFFF">Gut hit</text><text x="210" y="154" font-size="15" fill="#17201A">More eyes, not more</text>
+<text x="210" y="173" font-size="15" fill="#17201A">hours</text></g>
+<g data-tip="Conservation officer|No shame in a conservation officer call. They would rather help than find a wasted deer. Tip."><rect x="12" y="196" width="376" height="56" rx="8" fill="#FFFFFF" stroke="#FF6A13" stroke-width="3"/><rect x="12" y="196" width="188" height="56" rx="8" fill="#FF6A13"/><rect x="192" y="196" width="8" height="56" fill="#FF6A13"/><text x="22" y="218" font-size="15" font-weight="bold" fill="#17201A">Private land,</text>
+<text x="22" y="237" font-size="15" font-weight="bold" fill="#17201A">closed area</text><text x="210" y="218" font-size="15" fill="#17201A">Conservation officer</text></g>
+<text x="16" y="272" font-size="14" fill="#17201A">Dogs on deer in BC must be on a leash (95%).</text>
+</svg>

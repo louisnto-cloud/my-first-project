@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 317" role="img" aria-label="Grid: Region 3 deer bag limits. All deer together, one licence year: 3. Mule deer: 1. White tailed deer, either sex: 2. Antlerless mule deer: draw only: LEH. Mule deer buck from Regions 3, 4, 5, 6, 7A, 7B and 8 combined: 1." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="317" fill="#fffaf0"/>
+<text x="200" y="26" font-size="17" font-weight="bold" fill="#23261f" text-anchor="middle">Region 3 deer bag limits</text>
+<text x="200" y="47" font-size="14" fill="#8b5a2b" text-anchor="middle">Page 33, and page 14 for the province</text>
+<rect x="6.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68.0" y="103" font-size="26" font-weight="bold" fill="#e8590c" text-anchor="middle">3</text>
+<text x="68.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">All deer</text>
+<text x="68.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">together, one</text>
+<text x="68.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">licence year</text>
+<rect x="138.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="200.0" y="103" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1</text>
+<text x="200.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">Mule deer</text>
+<rect x="270.0" y="69" width="124.0" height="106" rx="9" fill="#ffffff" stroke="#8b5a2b" stroke-width="2.5"/>
+<text x="332.0" y="103" font-size="26" font-weight="bold" fill="#8b5a2b" text-anchor="middle">2</text>
+<text x="332.0" y="127" font-size="14" fill="#23261f" text-anchor="middle">White tailed</text>
+<text x="332.0" y="145" font-size="14" fill="#23261f" text-anchor="middle">deer, either</text>
+<text x="332.0" y="163" font-size="14" fill="#23261f" text-anchor="middle">sex</text>
+<rect x="6.0" y="183" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#2f3a2b" stroke-width="2.5"/>
+<text x="68.0" y="217" font-size="26" font-weight="bold" fill="#2f3a2b" text-anchor="middle">LEH</text>
+<text x="68.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Antlerless mule</text>
+<text x="68.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">deer: draw only</text>
+<rect x="138.0" y="183" width="124.0" height="124" rx="9" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="200.0" y="217" font-size="26" font-weight="bold" fill="#c92a2a" text-anchor="middle">1</text>
+<text x="200.0" y="241" font-size="14" fill="#23261f" text-anchor="middle">Mule deer buck</text>
+<text x="200.0" y="259" font-size="14" fill="#23261f" text-anchor="middle">from Regions 3,</text>
+<text x="200.0" y="277" font-size="14" fill="#23261f" text-anchor="middle">4, 5, 6, 7A, 7B</text>
+<text x="200.0" y="295" font-size="14" fill="#23261f" text-anchor="middle">and 8 combined</text>
+</svg>

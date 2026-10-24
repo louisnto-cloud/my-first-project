@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Put it out step 4: any warmth means more water and more stirring. Fires left warm can come back.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Repeat if warm</text><rect x="0" y="220" width="400" height="80" rx="0" fill="#dfe6d3"/><rect x="130" y="200" width="140" height="18" rx="6" fill="#777"/><circle cx="200" cy="205" r="8.0" fill="#e8590c"/><text x="200" y="120" font-size="18" font-weight="bold" fill="#c0392b" text-anchor="middle">Warm? Do it again</text><text x="200" y="288" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Warm anywhere? Water and stir again</text>
+</svg>

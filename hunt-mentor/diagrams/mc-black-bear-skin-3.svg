@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Hide step 3 of 4: the head. Turn the ears inside out, split the lips and eyelids, and leave about 2.5 cm of nose cartilage, so salt can reach every layer. Or leave the head in the hide and get it to a taxidermist fast.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<rect x="12" y="12" width="376" height="34" rx="6" fill="#2f3a2b"/>
+<text x="26" y="35" font-size="18" font-weight="bold" fill="#ffffff">Hide 3 of 4: head</text>
+<rect x="12" y="254" width="376" height="36" rx="6" fill="#2f3a2b"/>
+<text x="200" y="278" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Turn ears, split lips and eyelids.</text>
+<rect x="12" y="52" width="376" height="196" rx="8" fill="#e9e2cf"/>
+<circle cx="138" cy="86" r="24" fill="#2b2622"/><circle cx="262" cy="86" r="24" fill="#2b2622"/><circle cx="138" cy="88" r="12" fill="#5a4d43"/><circle cx="262" cy="88" r="12" fill="#5a4d43"/>
+<path d="M110 140 C110 96 150 74 200 74 C250 74 290 96 290 140 C290 192 250 230 200 230 C150 230 110 192 110 140z" fill="#2b2622"/>
+<path d="M162 176 C162 150 180 140 200 140 C220 140 238 150 238 176 C238 204 220 220 200 220 C180 220 162 204 162 176z" fill="#9a7a58"/>
+<path d="M184 160 C184 150 216 150 216 160 C216 172 206 178 200 178 C194 178 184 172 184 160z" fill="#1b1714"/>
+<path d="M200 178 V196 M186 204 C194 210 206 210 214 204" stroke="#1b1714" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<ellipse cx="168" cy="128" rx="7" ry="6" fill="#1b1714"/><circle cx="170" cy="126" r="1.8" fill="#fff"/>
+<ellipse cx="232" cy="128" rx="7" ry="6" fill="#1b1714"/><circle cx="234" cy="126" r="1.8" fill="#fff"/>
+<circle cx="138" cy="88" r="15" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="262" cy="88" r="15" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="168" cy="128" r="12" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="232" cy="128" r="12" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="200" cy="200" r="16" fill="none" stroke="#e8590c" stroke-width="3"/>
+<circle cx="200" cy="164" r="15" fill="none" stroke="#e8590c" stroke-width="3"/>
+<rect x="12.4" y="60.0" width="87.2" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="56" y="79" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Ears: turn</text>
+<line x1="124" y1="84" x2="99.594" y2="72" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="124" cy="84" r="2.6" fill="#2f3a2b"/>
+<rect x="300.4" y="60.0" width="87.2" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="344" y="79" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Ears: turn</text>
+<line x1="276" y1="84" x2="300.406" y2="72" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="276" cy="84" r="2.6" fill="#2f3a2b"/>
+<rect x="21.7" y="130.0" width="68.6" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="56" y="149" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Eyelids</text>
+<line x1="156" y1="128" x2="90.285" y2="142" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="156" cy="128" r="2.6" fill="#2f3a2b"/>
+<rect x="294.2" y="186.0" width="91.7" height="27.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="340" y="205" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">Lips, nose</text>
+<line x1="216" y1="196" x2="294.159" y2="198" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="216" cy="196" r="2.6" fill="#2f3a2b"/>
+</svg>

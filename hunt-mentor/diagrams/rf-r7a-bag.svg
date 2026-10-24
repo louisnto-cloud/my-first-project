@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" role="img" aria-label="Tiles: Region 7A bag limits. Mule deer 1. White tailed deer 2, at most 1 buck and 1 antlerless. All deer 3 province wide by the page 14 table. Grouse 10 a day for dusky, spruce and ruffed together. Ptarmigan 10 a day." font-family="sans-serif">
+<rect x="0" y="0" width="400" height="264" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">Region 7A bag limits</text>
+<rect x="6" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="68" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">1</text>
+<text x="68" y="96" font-size="14" fill="#23261f" text-anchor="middle">mule deer</text>
+<rect x="138" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="200" y="74" font-size="26" fill="#e8590c" text-anchor="middle" font-weight="bold">2</text>
+<text x="200" y="96" font-size="14" fill="#23261f" text-anchor="middle">white tails: 1</text>
+<text x="200" y="114" font-size="14" fill="#23261f" text-anchor="middle">buck, 1</text>
+<text x="200" y="132" font-size="14" fill="#23261f" text-anchor="middle">antlerless</text>
+<rect x="270" y="40" width="124" height="102" rx="10" fill="#ffffff" stroke="#c92a2a" stroke-width="2.5"/>
+<text x="332" y="74" font-size="26" fill="#c92a2a" text-anchor="middle" font-weight="bold">3</text>
+<text x="332" y="96" font-size="14" fill="#23261f" text-anchor="middle">deer province</text>
+<text x="332" y="114" font-size="14" fill="#23261f" text-anchor="middle">wide</text>
+<rect x="6" y="150" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="68" y="184" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">10</text>
+<text x="68" y="206" font-size="14" fill="#23261f" text-anchor="middle">grouse a day:</text>
+<text x="68" y="224" font-size="14" fill="#23261f" text-anchor="middle">dusky, spruce,</text>
+<text x="68" y="242" font-size="14" fill="#23261f" text-anchor="middle">ruffed together</text>
+<rect x="138" y="150" width="124" height="102" rx="10" fill="#ffffff" stroke="#8a9a6b" stroke-width="2.5"/>
+<text x="200" y="184" font-size="26" fill="#8a9a6b" text-anchor="middle" font-weight="bold">10</text>
+<text x="200" y="206" font-size="14" fill="#23261f" text-anchor="middle">ptarmigan a day</text>
+</svg>

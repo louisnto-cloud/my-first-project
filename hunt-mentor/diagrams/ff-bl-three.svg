@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Three panels. Internal ballistics: inside the barrel, pressure and twist. External ballistics: in the air, drop, wind and angle. Terminal ballistics: in the animal, expansion and depth. This lesson is mostly external ballistics, the middle one.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Three kinds of ballistics</text>
+<rect x="8" y="44" width="124" height="214" rx="8" fill="#dfe6d3"/>
+<text x="70" y="70" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Internal</text>
+<text x="70" y="90" font-size="14" fill="#2f3a2b" text-anchor="middle">inside the barrel</text>
+<text x="70" y="214" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">pressure,</text>
+<text x="70" y="233" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">twist</text>
+<rect x="138" y="44" width="124" height="214" rx="8" fill="#dbe8f1" stroke="#e8590c" stroke-width="3"/>
+<text x="200" y="70" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">External</text>
+<text x="200" y="90" font-size="14" fill="#2f3a2b" text-anchor="middle">in the air</text>
+<text x="200" y="214" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">drop, wind,</text>
+<text x="200" y="233" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">angle</text>
+<rect x="268" y="44" width="124" height="214" rx="8" fill="#f3dcd3"/>
+<text x="330" y="70" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Terminal</text>
+<text x="330" y="90" font-size="14" fill="#2f3a2b" text-anchor="middle">in the animal</text>
+<text x="330" y="214" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">expansion,</text>
+<text x="330" y="233" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">depth</text>
+<rect x="18" y="122" width="104" height="44" rx="3" fill="#5c625d"/><rect x="18" y="132" width="104" height="24" fill="#c9ccc6"/>
+<path d="M26 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M40 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M54 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M68 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M82 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M96 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M110 132 l10 24" stroke="#8d918b" stroke-width="2.2"/>
+<path d="M20 136 h22 l6 8 l-6 8 h-22z" fill="#e8590c" opacity=".85"/>
+<path d="M48 135 h26 c10 0 18 5 22 9 c-4 4 -12 9 -22 9 h-26z" fill="#b87333" stroke="#6b3f17" stroke-width="1.2"/>
+<path d="M100 144 h16" stroke="#2f3a2b" stroke-width="2"/><path d="M120.0 144.0 L113.0 140.2 L113.0 147.8z" fill="#2f3a2b"/>
+<path d="M150 176 Q200 110 252 166" stroke="#e8590c" stroke-width="2.8" fill="none" stroke-dasharray="6 4"/>
+<circle cx="150" cy="176" r="4" fill="#2f3a2b"/>
+<circle cx="252" cy="166" r="9" fill="none" stroke="#2f3a2b" stroke-width="2"/><circle cx="252" cy="166" r="3" fill="#2f3a2b"/>
+<path d="M158 116 h22" stroke="#4a7fb0" stroke-width="2.6" stroke-linecap="round"/><path d="M186.0 116.0 L179.0 112.2 L179.0 119.8z" fill="#4a7fb0"/>
+<path d="M188 134 h22" stroke="#4a7fb0" stroke-width="2.6" stroke-linecap="round"/><path d="M216.0 134.0 L209.0 130.2 L209.0 137.8z" fill="#4a7fb0"/>
+<path d="M150 190 H252" stroke="#6b5b4b" stroke-width="1.5"/>
+<path d="M282 150 C308 128 354 136 380 146 C354 156 308 168 282 150z" fill="#c76b5a" opacity=".55"/>
+<g transform="translate(332 148)"><path d="M-10 -5 h14 v10 h-14z" fill="#b87333" stroke="#6b3f17" stroke-width="1.2"/><path d="M4 -5 C10 -14 16 -16 20 -12 C16 -6 14 -2 14 0 C14 2 16 6 20 12 C16 16 10 14 4 5z" fill="#d08b4c" stroke="#6b3f17" stroke-width="1.2"/></g>
+<path d="M282 182 H380" stroke="#2f3a2b" stroke-width="1.6"/><path d="M282.0 182.0 L289.0 185.8 L289.0 178.2z" fill="#2f3a2b"/><path d="M380.0 182.0 L373.0 178.2 L373.0 185.8z" fill="#2f3a2b"/>
+<text x="200" y="286" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">This lesson is mostly the middle one</text>
+</svg>

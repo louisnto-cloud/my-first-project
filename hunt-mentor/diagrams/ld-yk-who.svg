@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 483" font-family="sans-serif" role="img" aria-label="List for Yukon, you are a non resident Canadian, 85 percent. Grouse, ptarmigan and hare: no guide, small game licence. Ducks and geese: no guide, plus the federal Migratory Game Bird Hunting Permit. Moose, caribou and wood bison: a registered outfitter, or a Yukon resident friend with a special guide licence. Black bear and wolf: outfitter, special guide VERIFY. Sheep, goat, grizzly and wolverine: registered outfitter only. Deer and elk: Yukon residents only.">
+<rect width="400" height="483" fill="#fffaf0"/>
+<text x="200" y="27" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Yukon: who may hunt what</text>
+<text x="200" y="49" font-size="15" font-weight="bold" fill="#c2410c" text-anchor="middle">You are a non resident Canadian (85%)</text>
+<rect x="8" y="62" width="384" height="30" rx="6" fill="#2f3a2b"/><text x="18" y="83" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">BC RESIDENT IN THE YUKON</text>
+<rect x="8" y="98" width="384" height="56" rx="6" fill="#f4eedf"/>
+<circle cx="34" cy="126.0" r="15" fill="#2f6e3b"/><path d="M29.1 127.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="62" y="123" font-size="16" font-weight="bold" fill="#2f3a2b">Grouse, ptarmigan, hare</text>
+<text x="62" y="142" font-size="15" fill="#2f3a2b">No guide. Small game licence</text>
+<rect x="8" y="158" width="384" height="56" rx="6" fill="#f4eedf"/>
+<circle cx="34" cy="186.0" r="15" fill="#2f6e3b"/><path d="M29.1 187.0 l4.2 4.2 l8.5 -9.3" fill="none" stroke="#fffaf0" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="62" y="183" font-size="16" font-weight="bold" fill="#2f3a2b">Ducks and geese</text>
+<text x="62" y="202" font-size="15" fill="#2f3a2b">No guide. Plus federal bird permit</text>
+<rect x="8" y="218" width="384" height="75" rx="6" fill="#f4eedf"/>
+<circle cx="34" cy="255.5" r="15" fill="#b7791f"/><text x="34" y="261.5" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="62" y="243" font-size="16" font-weight="bold" fill="#2f3a2b">Moose, caribou, wood bison</text>
+<text x="62" y="262" font-size="15" fill="#2f3a2b">Outfitter, or Yukon friend with a special</text>
+<text x="62" y="281" font-size="15" fill="#2f3a2b">guide licence</text>
+<rect x="8" y="297" width="384" height="56" rx="6" fill="#f4eedf"/>
+<circle cx="34" cy="325.0" r="15" fill="#b7791f"/><text x="34" y="331" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="62" y="322" font-size="16" font-weight="bold" fill="#2f3a2b">Black bear, wolf</text>
+<text x="62" y="341" font-size="15" fill="#2f3a2b">Outfitter. Special guide: VERIFY</text>
+<rect x="8" y="357" width="384" height="56" rx="6" fill="#f4eedf"/>
+<circle cx="34" cy="385.0" r="15" fill="#b7791f"/><text x="34" y="391" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">?</text>
+<text x="62" y="382" font-size="16" font-weight="bold" fill="#2f3a2b">Sheep, goat, grizzly, wolverine</text>
+<text x="62" y="401" font-size="15" fill="#2f3a2b">Registered outfitter only</text>
+<rect x="8" y="417" width="384" height="56" rx="6" fill="#f6dfd6"/>
+<circle cx="34" cy="445.0" r="15" fill="#c92a2a"/><path d="M29.2 440.2 l9.6 9.6 M38.8 440.2 l-9.6 9.6" stroke="#fffaf0" stroke-width="2.6" stroke-linecap="round"/>
+<text x="62" y="442" font-size="16" font-weight="bold" fill="#2f3a2b">Deer and elk</text>
+<text x="62" y="461" font-size="15" fill="#c92a2a">Yukon residents only</text>
+</svg>

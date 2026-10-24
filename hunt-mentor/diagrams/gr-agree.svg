@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Before every walk, agree three things: who covers left, who covers right, and the stop signal. After a shot, both unload and walk up together, the shooter leads.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Agree 3 things first</text>
+  <g fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"><rect x="6" y="40" width="124" height="180" rx="10"/><rect x="138" y="40" width="124" height="180" rx="10"/><rect x="270" y="40" width="124" height="180" rx="10"/></g>
+  <path d="M68 140 L30 70 A 80 80 0 0 1 68 60 Z" fill="#8a9a6b"/><circle cx="68" cy="146" r="10" fill="#2f3a2b"/>
+  <path d="M200 140 L200 60 A 80 80 0 0 1 238 70 Z" fill="#4a7fb0" opacity=".6"/><circle cx="200" cy="146" r="10" fill="#2f3a2b"/>
+  <path d="M320 150 v-60 m0 0 h22 v44 M332 90 v-10 M344 90 v-8 M354 94 v40 q0 18 -18 18 h-6 q-10 0 -10 -10" fill="none" stroke="#2f3a2b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <g font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle"><text x="68" y="186">Who covers</text><text x="68" y="206">left</text><text x="200" y="186">Who covers</text><text x="200" y="206">right</text><text x="332" y="186">Stop</text><text x="332" y="206">signal</text></g>
+  <text x="200" y="252" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">After a shot: both unload, walk up together</text>
+  <text x="200" y="276" font-size="14" fill="#2f3a2b" text-anchor="middle">Never step in front of a muzzle</text>
+</svg>

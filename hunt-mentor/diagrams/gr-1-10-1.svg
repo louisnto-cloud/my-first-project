@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="The 1 10 1 principle for cold water. 1 minute of cold shock: gasping, get your breathing under control. About 10 minutes of useful movement: get out or onto the hull. About 1 hour before hypothermia makes you unconscious. Rough times, not exact.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="24" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Cold water: 1, 10, 1</text>
+  <rect x="0" y="40" width="400" height="200" fill="#4a7fb0" opacity=".15"/>
+  <g font-weight="bold" text-anchor="middle">
+    <rect x="10" y="56" width="110" height="170" rx="10" fill="#c0392b"/>
+    <text x="65" y="100" font-size="34" fill="#fff">1</text><text x="65" y="124" font-size="15" fill="#fff">minute</text>
+    <text x="65" y="164" font-size="15" fill="#fff">Gasp.</text><text x="65" y="184" font-size="15" fill="#fff">Breathe.</text><text x="65" y="204" font-size="14" fill="#fff">Float in PFD</text>
+    <rect x="130" y="56" width="130" height="170" rx="10" fill="#e8590c"/>
+    <text x="195" y="100" font-size="34" fill="#fff">10</text><text x="195" y="124" font-size="15" fill="#fff">minutes</text>
+    <text x="195" y="164" font-size="15" fill="#fff">Hands still</text><text x="195" y="184" font-size="15" fill="#fff">work: get out</text><text x="195" y="204" font-size="14" fill="#fff">or onto the hull</text>
+    <rect x="270" y="56" width="120" height="170" rx="10" fill="#4a7fb0"/>
+    <text x="330" y="100" font-size="34" fill="#fff">1</text><text x="330" y="124" font-size="15" fill="#fff">hour</text>
+    <text x="330" y="164" font-size="15" fill="#fff">Then</text><text x="330" y="184" font-size="15" fill="#fff">hypothermia</text><text x="330" y="204" font-size="14" fill="#fff">knocks you out</text>
+  </g>
+  <text x="200" y="262" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">The first gasp kills: head under, you inhale water</text>
+  <text x="200" y="284" font-size="14" fill="#2f3a2b" text-anchor="middle">Rough times. Water, body and clothing change them</text>
+</svg>

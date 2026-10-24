@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-label="Timeline of a ruffed grouse family. June: hatch. Week 1: short hops. Week 3: flies well. Week 12: the family splits. September and October: the young move away. In a Wisconsin study, young hens moved about 4.8 kilometres and young males about 2.1 kilometres over 2 to 3 weeks, 80 percent. Adults stay home on a few hectares." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="290" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#23261f" text-anchor="middle" font-weight="bold">A ruffed grouse family year</text>
+<line x1="30" y1="120" x2="370" y2="120" stroke="#23261f" stroke-width="3"/>
+<circle cx="40" cy="120" r="9" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="40" y="98" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">June</text>
+<text x="40" y="80" font-size="14" fill="#23261f" text-anchor="middle">Hatch</text>
+<circle cx="110" cy="120" r="9" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="110" y="160" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Week 1</text>
+<text x="110" y="178" font-size="14" fill="#23261f" text-anchor="middle">Short hops</text>
+<circle cx="170" cy="120" r="9" fill="#2f3a2b" stroke="none" stroke-width="0"/>
+<text x="170" y="98" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Week 3</text>
+<text x="170" y="80" font-size="14" fill="#23261f" text-anchor="middle">Flies well</text>
+<circle cx="250" cy="120" r="9" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="250" y="160" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Week 12</text>
+<text x="250" y="178" font-size="14" fill="#23261f" text-anchor="middle">Family splits</text>
+<circle cx="340" cy="120" r="9" fill="#e8590c" stroke="none" stroke-width="0"/>
+<text x="340" y="98" font-size="14" fill="#23261f" text-anchor="middle" font-weight="bold">Sept, Oct</text>
+<text x="340" y="80" font-size="14" fill="#23261f" text-anchor="middle">Young move</text>
+<rect x="10" y="200" width="380" height="80" rx="8" fill="#ffffff" stroke="#8a9a6b" stroke-width="2"/>
+<text x="22" y="224" font-size="14" fill="#23261f" text-anchor="start">Young hens move about 4.8 km, young males</text>
+<text x="22" y="242" font-size="14" fill="#23261f" text-anchor="start">about 2.1 km, over 2 to 3 weeks (80%).</text>
+<text x="22" y="260" font-size="14" fill="#23261f" text-anchor="start">Adults stay home on a few hectares.</text>
+</svg>

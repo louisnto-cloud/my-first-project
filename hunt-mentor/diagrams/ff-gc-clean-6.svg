@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" font-family="sans-serif" role="img" aria-label="Step 6 of cleaning the rifle: an oiled patch through the bore leaves a thin film of light oil on metal. Wipe the chamber dry before shooting. Check the action screws: 7 Nm with a metal trigger guard.">
+<rect width="400" height="290" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">6. Thin oil, check screws</text>
+<rect x="40" y="63.0" width="34" height="42" rx="4" fill="#3a3f3a"/><rect x="70" y="71.0" width="310" height="26" rx="3" fill="#6c716b"/><rect x="70" y="77.0" width="310" height="14" fill="#d9d6cc"/><path d="M70 77.0 H380" stroke="#9a9a92" stroke-width="1.2"/>
+<rect x="10" y="82" width="150" height="4" fill="#9b8a6a"/>
+<rect x="156" y="77" width="14" height="14" rx="2" fill="#f2df9e" stroke="#b08a2a" stroke-width="1.2"/>
+<path d="M110 44 c-6 9 -6 15 0 15 c6 0 6 -6 0 -15z" fill="#d9a521"/>
+<rect x="196.7" y="44.0" width="126.6" height="29.0" rx="5" fill="#fffaf0" stroke="#6b5b4b" stroke-width="1.2"/>
+<text x="260" y="64.5" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">thin film of oil</text>
+<rect x="8.0" y="116.0" width="111.9" height="29.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="64" y="136.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">chamber dry</text>
+<line x1="56" y1="94" x2="56" y2="116" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="56" cy="94" r="2.6" fill="#2f3a2b"/>
+<path d="M30 190 H370 V214 C300 222 120 222 30 214z" fill="#8a5a2b" stroke="#5a3a1a" stroke-width="1.2"/>
+<rect x="120" y="182" width="170" height="10" rx="3" fill="#3a3f3a"/>
+<circle cx="140" cy="198" r="7" fill="#9ea29b" stroke="#3a3f3a" stroke-width="1.6"/><path d="M136 198 h8" stroke="#3a3f3a" stroke-width="2"/>
+<circle cx="270" cy="198" r="7" fill="#9ea29b" stroke="#3a3f3a" stroke-width="1.6"/><path d="M266 198 h8" stroke="#3a3f3a" stroke-width="2"/>
+<g transform="rotate(-24 270 198)"><rect x="270" y="194" width="100" height="9" rx="4" fill="#3a3f3a"/><rect x="340" y="191" width="30" height="15" rx="6" fill="#2b2b2b"/></g>
+<rect x="150.5" y="126.0" width="179.0" height="49.0" rx="5" fill="#fffaf0" stroke="#e8590c" stroke-width="1.2"/>
+<text x="240" y="146.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">action screws: 7 Nm</text>
+<text x="240" y="166.5" font-size="16" font-weight="bold" fill="#c2410c" text-anchor="middle">metal guard</text>
+<line x1="140" y1="191" x2="170.482" y2="175" stroke="#2f3a2b" stroke-width="1.4"/><circle cx="140" cy="191" r="2.6" fill="#2f3a2b"/>
+<text x="200" y="270" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Chamber dry before shooting</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Flowchart for choosing a method. First: a legal spot and permission. Then: what cover? A thick strip of brush: one hunter pushes, one blocks the end. Patchy brush: stop and go walk. Steep rock: chukar, get above them. Stubble fields: gray partridge, cover a lot of ground. No permission: check Crown land on the Hunt Map. Tip: listen at dusk and hunt the next morning. Methods from Washington Fish and Wildlife, 75 percent.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="24" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Which method? A quick flowchart</text>
+<rect x="90" y="36" width="220" height="30" rx="8" fill="#2f3a2b"/>
+<text x="200" y="56" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Legal spot + permission?</text>
+<line x1="200" y1="66" x2="200" y2="84" stroke="#2f3a2b" stroke-width="3"/><polygon points="200,84 195.7,75.0 204.3,75.0" fill="#2f3a2b"/>
+<rect x="130" y="84" width="140" height="30" rx="8" fill="#e8590c"/>
+<text x="200" y="104" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">What cover?</text>
+<line x1="200" y1="114" x2="54" y2="150" stroke="#2f3a2b" stroke-width="2"/><polygon points="54,150 61.7,143.6 63.8,152.1" fill="#2f3a2b"/>
+<rect x="8" y="150" width="92" height="64" rx="8" fill="#dfe6d3"/>
+<text x="54" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Brush strip</text>
+<text x="54" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">push + block</text>
+<line x1="200" y1="114" x2="150" y2="150" stroke="#2f3a2b" stroke-width="2"/><polygon points="150,150 154.8,141.2 159.8,148.3" fill="#2f3a2b"/>
+<rect x="104" y="150" width="92" height="64" rx="8" fill="#dfe6d3"/>
+<text x="150" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Patches</text>
+<text x="150" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">stop and go</text>
+<line x1="200" y1="114" x2="246" y2="150" stroke="#2f3a2b" stroke-width="2"/><polygon points="246,150 236.2,147.9 241.6,141.0" fill="#2f3a2b"/>
+<rect x="200" y="150" width="92" height="64" rx="8" fill="#dfe6d3"/>
+<text x="246" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Rock slope</text>
+<text x="246" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">get above</text>
+<line x1="200" y1="114" x2="342" y2="150" stroke="#2f3a2b" stroke-width="2"/><polygon points="342,150 332.2,152.0 334.3,143.6" fill="#2f3a2b"/>
+<rect x="296" y="150" width="92" height="64" rx="8" fill="#dfe6d3"/>
+<text x="342" y="176" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Stubble</text>
+<text x="342" y="198" font-size="14" fill="#2f3a2b" text-anchor="middle">walk miles</text>
+<rect x="10" y="226" width="380" height="66" rx="8" fill="#dfe6d3"/>
+<text x="200" y="250" font-size="14" font-weight="bold" fill="#2f3a2b" text-anchor="middle">No permission? Crown land check on the Hunt Map</text>
+<text x="200" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">Then: listen at dusk, hunt next morning (Tip)</text>
+<text x="200" y="290" font-size="14" fill="#2f3a2b" text-anchor="middle"></text>
+</svg>

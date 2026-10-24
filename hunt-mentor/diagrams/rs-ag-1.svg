@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 1: press your own boot print right beside the animal print, in the same ground and the same light.">
+<rect x="0" y="0" width="400" height="300" rx="0" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">1. Make a control print</text>
+<g transform="translate(140 170) rotate(0) scale(2.2)" fill="#8b5a2b"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g><g transform="translate(270 170)"><path d="M-22 -40 Q0 -52 22 -40 L24 30 Q0 44 -24 30 Z" fill="#6b4f35"/></g><text x="140" y="245" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">Their print</text><text x="270" y="245" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">Your boot</text><text x="200" y="280" font-size="15" fill="#23261f" text-anchor="middle">Same ground, same light</text>
+</svg>

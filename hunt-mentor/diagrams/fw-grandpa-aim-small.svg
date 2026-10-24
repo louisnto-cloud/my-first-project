@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two deer chests side by side. Left: aim at the whole deer, the misses scatter across the body and some land outside the vitals. Right: aim at one small spot behind the front leg, a third of the way up, and the misses stay close to that spot inside the vitals.">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+  <g>
+    <ellipse cx="100" cy="130" rx="86" ry="54" fill="#8b5a2b"/>
+    <ellipse cx="92" cy="140" rx="28" ry="24" fill="#e7b38a"/>
+    <g fill="#2f3a2b"><circle cx="40" cy="104" r="5"/><circle cx="150" cy="160" r="5"/><circle cx="120" cy="96" r="5"/><circle cx="60" cy="168" r="5"/><circle cx="96" cy="122" r="5"/></g>
+    <text x="100" y="220" font-family="sans-serif" font-size="16" font-weight="bold" fill="#e8590c" text-anchor="middle">Aim at the deer</text>
+    <text x="100" y="240" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Misses go wide</text>
+  </g>
+  <g>
+    <ellipse cx="300" cy="130" rx="86" ry="54" fill="#8b5a2b"/>
+    <ellipse cx="292" cy="140" rx="28" ry="24" fill="#e7b38a"/>
+    <circle cx="292" cy="142" r="4" fill="#e8590c"/>
+    <g fill="#2f3a2b"><circle cx="284" cy="134" r="5"/><circle cx="302" cy="148" r="5"/><circle cx="296" cy="132" r="5"/><circle cx="286" cy="152" r="5"/></g>
+    <text x="300" y="220" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Aim at one hair</text>
+    <text x="300" y="240" font-family="sans-serif" font-size="15" fill="#23261f" text-anchor="middle">Misses stay close</text>
+  </g>
+  <text x="200" y="282" font-family="sans-serif" font-size="14" fill="#6b4f35" text-anchor="middle">Illustration only, not real groups</text>
+</svg>

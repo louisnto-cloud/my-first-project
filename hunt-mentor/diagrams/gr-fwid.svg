@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Your FWID is your old hunter number plus 3 extra digits. No card needed. Carry photo ID and know the number.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Your FWID, your hunter number</text>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <rect x="14" y="50" width="150" height="60" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+    <text x="89" y="76" fill="#2f3a2b">Old hunter</text><text x="89" y="96" fill="#2f3a2b">number</text>
+    <text x="180" y="88" font-size="24" fill="#2f3a2b">+</text>
+    <rect x="196" y="50" width="90" height="60" rx="8" fill="#e8590c"/>
+    <text x="241" y="76" fill="#fff">3 extra</text><text x="241" y="96" fill="#fff">digits</text>
+    <text x="304" y="88" font-size="24" fill="#2f3a2b">=</text>
+    <rect x="318" y="50" width="72" height="60" rx="8" fill="#2f3a2b"/><text x="354" y="86" fill="#fff">FWID</text>
+  </g>
+  <!-- wallet -->
+  <rect x="30" y="150" width="150" height="100" rx="10" fill="#8b5a2b"/>
+  <rect x="44" y="164" width="122" height="72" rx="6" fill="#fffaf0"/>
+  <circle cx="72" cy="192" r="14" fill="#8a9a6b"/><rect x="58" y="210" width="28" height="16" rx="4" fill="#8a9a6b"/>
+  <g fill="#2f3a2b"><rect x="96" y="184" width="58" height="6"/><rect x="96" y="198" width="44" height="6"/><rect x="96" y="212" width="52" height="6"/></g>
+  <text x="105" y="272" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Carry photo ID</text>
+  <!-- head with number -->
+  <circle cx="290" cy="196" r="34" fill="#dfe6d3" stroke="#2f3a2b" stroke-width="2"/>
+  <text x="290" y="202" font-size="15" font-weight="bold" fill="#e8590c" text-anchor="middle">FWID #</text>
+  <text x="290" y="252" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Know the number</text>
+  <text x="290" y="272" font-size="14" fill="#2f3a2b" text-anchor="middle">No card needed</text>
+</svg>

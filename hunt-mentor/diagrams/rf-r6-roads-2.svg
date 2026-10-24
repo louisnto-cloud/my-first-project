@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 370" font-family="sans-serif" role="img" aria-label="Seasonal road closures part 2: the rest of the 1 May to 15 November seasonal routes, all in Management Unit 6-24. Hot Lakes Road: from the start of alpine, within 10 metres of either side of the trail. Cassiar Townsite and Quartzrock Creek Access Trail: past the height of land, within 10 metres of the trail and side trails. Midway Mine Access Trail: to 400 metres from its end, Map F32. One Ace mountain mining Access Road: to 400 metres from the end of the trail and side trails.">
+<rect width="400" height="370" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Seasonal road closures, part 2</text>
+<rect x="8" y="32" width="384" height="30" rx="6" fill="#2c5d86"/>
+<text x="18" y="53" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="1">MAY 1 TO NOV 15, ALL MU 6-24</text>
+<rect x="8" y="68" width="384" height="74" rx="6" fill="#f4eedf"/>
+<circle cx="41.0" cy="105.0" r="20" fill="#fffaf0" stroke="#2c5d86" stroke-width="2"/>
+<g transform="translate(41.0 105.0) scale(0.8)" fill="#2c5d86" stroke="none"><path d="M-12 14 C-12 4 10 4 6 -4 C2 -10 -6 -8 -4 -14" stroke="#2c5d86" stroke-width="4" fill="none" stroke-dasharray="5 3"/></g>
+<text x="78" y="91" font-size="16" font-weight="bold" fill="#2f3a2b">Hot Lakes Road</text>
+<text x="78" y="110" font-size="15" fill="#2f3a2b">From the start of alpine: within 10 m of the</text>
+<text x="78" y="129" font-size="15" fill="#2f3a2b">trail</text>
+<circle cx="41.0" cy="191.0" r="20" fill="#fffaf0" stroke="#2c5d86" stroke-width="2"/>
+<g transform="translate(41.0 191.0) scale(0.8)" fill="#2c5d86" stroke="none"><path d="M-12 14 C-12 4 10 4 6 -4 C2 -10 -6 -8 -4 -14" stroke="#2c5d86" stroke-width="4" fill="none" stroke-dasharray="5 3"/></g>
+<text x="78" y="167" font-size="16" font-weight="bold" fill="#2f3a2b">Cassiar Townsite, Quartzrock Creek</text>
+<text x="78" y="187" font-size="16" font-weight="bold" fill="#2f3a2b">trail</text>
+<text x="78" y="206" font-size="15" fill="#2f3a2b">Past the height of land: within 10 m of the</text>
+<text x="78" y="225" font-size="15" fill="#2f3a2b">trail and side trails</text>
+<rect x="8" y="240" width="384" height="55" rx="6" fill="#f4eedf"/>
+<rect x="14" y="252.5" width="54" height="30" rx="6" fill="#2c5d86"/>
+<text x="41" y="273.3" font-size="16" font-weight="bold" fill="#fffaf0" text-anchor="middle">F32</text>
+<text x="78" y="263" font-size="16" font-weight="bold" fill="#2f3a2b">Midway Mine Access Trail</text>
+<text x="78" y="282" font-size="15" fill="#2f3a2b">To 400 m from its end</text>
+<circle cx="41.0" cy="324.5" r="20" fill="#fffaf0" stroke="#2c5d86" stroke-width="2"/>
+<g transform="translate(41.0 324.5) scale(0.8)" fill="#2c5d86" stroke="none"><path d="M-6 -14 L-14 14 H14 L6 -14z"/><path d="M0 -12 V-6 M0 -1 V5 M0 9 V14" stroke="#fffaf0" stroke-width="2"/></g>
+<text x="78" y="320" font-size="16" font-weight="bold" fill="#2f3a2b">One Ace mountain mining road</text>
+<text x="78" y="339" font-size="15" fill="#2f3a2b">To 400 m from the trail ends</text>
+</svg>

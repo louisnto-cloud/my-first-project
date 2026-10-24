@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Federal Migratory Game Bird Hunting Permit. 8 dollars 50 for the permit plus 8 dollars 50 for the habitat stamp equals 17 dollars. It expires 30 June. Carry it on paper or on your phone.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Federal bird permit</text>
+  <g font-size="16" font-weight="bold" text-anchor="middle">
+    <rect x="20" y="50" width="120" height="80" rx="8" fill="#4a7fb0"/><text x="80" y="82" fill="#fff">Permit</text><text x="80" y="108" fill="#fff">$8.50</text>
+    <text x="156" y="96" font-size="24" fill="#2f3a2b">+</text>
+    <rect x="172" y="56" width="80" height="68" fill="#fff" stroke="#8a9a6b" stroke-width="3" stroke-dasharray="4 3"/>
+    <ellipse cx="212" cy="80" rx="16" ry="8" fill="#4a7fb0"/><circle cx="226" cy="74" r="5" fill="#2f6b3a"/>
+    <text x="212" y="112" fill="#2f3a2b">$8.50</text>
+    <text x="212" y="146" font-size="14" fill="#2f3a2b">Habitat stamp</text>
+    <text x="270" y="96" font-size="24" fill="#2f3a2b">=</text>
+    <rect x="290" y="62" width="90" height="56" rx="8" fill="#e8590c"/><text x="335" y="97" font-size="20" fill="#fff">$17</text>
+  </g>
+  <rect x="20" y="176" width="170" height="90" rx="8" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+  <rect x="20" y="176" width="170" height="26" rx="8" fill="#2f3a2b"/>
+  <text x="105" y="195" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Expires</text>
+  <text x="105" y="242" font-size="22" font-weight="bold" fill="#2f3a2b" text-anchor="middle">30 June</text>
+  <rect x="250" y="172" width="56" height="96" rx="8" fill="#2f3a2b"/><rect x="256" y="182" width="44" height="72" fill="#4a7fb0" opacity=".6"/>
+  <text x="278" y="224" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">e</text>
+  <text x="320" y="214" font-size="15" font-weight="bold" fill="#2f3a2b">Phone</text>
+  <text x="320" y="234" font-size="15" font-weight="bold" fill="#2f3a2b">or paper</text>
+</svg>

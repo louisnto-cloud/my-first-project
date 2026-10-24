@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 4, measure the stride: from one foot to the same foot next time, for example left front to left front. The walking trail zig zags left and right.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">4. Measure the stride</text>
+  <rect x="10" y="70" width="380" height="140" rx="10" fill="#dfe6d3"/>
+  <g fill="#8b5a2b">
+    <g transform="translate(60 170) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(140 115) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(220 170) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(300 115) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+    <g transform="translate(375 170) rotate(90) scale(.8)"><path d="M-2 -20 C-9 -16 -13 -2 -12 12 C-11 19 -3 20 -2 14 Z"/><path d="M2 -20 C9 -16 13 -2 12 12 C11 19 3 20 2 14 Z"/></g>
+  </g>
+  <g stroke="#e8590c" stroke-width="3" fill="none"><path d="M60 235 H220 M60 226 V244 M220 226 V244"/></g>
+  <text x="140" y="265" font-size="17" font-weight="bold" fill="#e8590c" text-anchor="middle">Stride</text>
+  <text x="140" y="287" font-size="15" fill="#2f3a2b" text-anchor="middle">left foot to left foot</text>
+  <text x="300" y="60" font-size="15" fill="#2f3a2b" text-anchor="middle">Travel →</text>
+</svg>

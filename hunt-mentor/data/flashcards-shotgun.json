@@ -1,0 +1,287 @@
+[
+ {
+  "id": "sg2-001",
+  "deck": "Shotgun course",
+  "front": "First three things every time you handle a shotgun?",
+  "back": "Point it safe. Finger off, outside the guard. Open it and prove it unloaded: ACTS and PROVE. (85%)",
+  "diagram": "sg2-acts"
+ },
+ {
+  "id": "sg2-002",
+  "deck": "Shotgun course",
+  "front": "What is the rib for?",
+  "back": "Your sight line. Your eye is the rear sight, so fit decides where it shoots. (85%)",
+  "diagram": "sg2-rib"
+ },
+ {
+  "id": "sg2-003",
+  "deck": "Shotgun course",
+  "front": "Five parts inside a shotshell, back to front?",
+  "back": "Primer, powder, wad, shot, crimp. (70%)",
+  "diagram": "sg2-shell"
+ },
+ {
+  "id": "sg2-004",
+  "deck": "Shotgun course",
+  "front": "Under what lengths does a cut shotgun become prohibited?",
+  "back": "Barrel under 457 mm, or under 660 mm overall. Criminal Code s. 84(1). Never cut a gun. (99%)",
+  "diagram": "sg2-legal-class"
+ },
+ {
+  "id": "sg2-005",
+  "deck": "Shotgun course",
+  "front": "Semi auto shotgun, barrel under 470 mm: what class?",
+  "back": "Restricted. Criminal Code s. 84(1). (99%)"
+ },
+ {
+  "id": "sg2-006",
+  "deck": "Shotgun course",
+  "front": "Remington 870 safety: red band showing means?",
+  "back": "It can fire. Red band hidden = safe. (95%)",
+  "diagram": "sg2-pump-parts"
+ },
+ {
+  "id": "sg2-007",
+  "deck": "Shotgun course",
+  "front": "870 fore end will not move on a cocked gun. Why?",
+  "back": "It is locked. Push the action bar lock, then pull it back. (95%)",
+  "diagram": "sg2-pump-parts"
+ },
+ {
+  "id": "sg2-008",
+  "deck": "Shotgun course",
+  "front": "Number one pump mistake?",
+  "back": "Short stroking: not pulling the fore end fully back and forward. Rack it hard. (70%)",
+  "diagram": "sg2-pump-fails"
+ },
+ {
+  "id": "sg2-009",
+  "deck": "Shotgun course",
+  "front": "Shell slid back over the 870 carrier while loading. Fix?",
+  "back": "Safety on, muzzle safe, open the action forcefully. (95%, Remington manual)"
+ },
+ {
+  "id": "sg2-010",
+  "deck": "Shotgun course",
+  "front": "Gas semi auto: what works the action?",
+  "back": "A little gas from the barrel pushes a piston that drives the bolt back. (95%)",
+  "diagram": "sg2-semi-gas"
+ },
+ {
+  "id": "sg2-011",
+  "deck": "Shotgun course",
+  "front": "Inertia semi auto: what works the action?",
+  "back": "Recoil squeezes a stiff spring in the bolt; the spring kicks the bolt back. (95%)",
+  "diagram": "sg2-semi-inertia"
+ },
+ {
+  "id": "sg2-012",
+  "deck": "Shotgun course",
+  "front": "Stoeger M3000 minimum load?",
+  "back": "1 oz (28 g), 3 dram. Lighter loads may not cycle. (95%)"
+ },
+ {
+  "id": "sg2-013",
+  "deck": "Shotgun course",
+  "front": "Beretta A300 gas piston and cylinder: oil them?",
+  "back": "No. Clean and wipe dry; they must not be lubricated. (95%)",
+  "diagram": "sg2-gc-5"
+ },
+ {
+  "id": "sg2-014",
+  "deck": "Shotgun course",
+  "front": "Beretta A300 exhaust valve: take it apart?",
+  "back": "Never. It is self cleaning. Gunsmith only. (95%)"
+ },
+ {
+  "id": "sg2-015",
+  "deck": "Shotgun course",
+  "front": "A300 as shipped holds how many shells?",
+  "back": "3: two in the magazine (factory reducer) plus one chambered. (95%)"
+ },
+ {
+  "id": "sg2-016",
+  "deck": "Shotgun course",
+  "front": "Citori second barrel will not fire. Why?",
+  "back": "Trigger not let fully forward between shots, common with gloves. (95%)",
+  "diagram": "sg2-ou-fails"
+ },
+ {
+  "id": "sg2-017",
+  "deck": "Shotgun course",
+  "front": "Citori: when can you change the barrel selector?",
+  "back": "Only with the safety on. O = over first, U = under first. (95%)",
+  "diagram": "sg2-ou-parts"
+ },
+ {
+  "id": "sg2-018",
+  "deck": "Shotgun course",
+  "front": "How do you close a loaded over under?",
+  "back": "Lift the stock to the barrels so the muzzles stay pointed down. (Tip)",
+  "diagram": "sg2-ou-load-3"
+ },
+ {
+  "id": "sg2-019",
+  "deck": "Shotgun course",
+  "front": "12 gauge or 20 gauge: bigger bore?",
+  "back": "12 gauge, about 18.5 mm. 20 gauge about 15.6 mm. (70%)",
+  "diagram": "sg2-gauge"
+ },
+ {
+  "id": "sg2-020",
+  "deck": "Shotgun course",
+  "front": "3 in chamber: which shells?",
+  "back": "2 3/4 in and 3 in. Never longer than the barrel stamp. (95%)",
+  "diagram": "sg2-chamber"
+ },
+ {
+  "id": "sg2-021",
+  "deck": "Shotgun course",
+  "front": "What is the 12 20 burst?",
+  "back": "A 20 gauge shell lodges in a 12 gauge barrel; a 12 fired behind it can burst the barrel. (95%)",
+  "diagram": "sg2-1220"
+ },
+ {
+  "id": "sg2-022",
+  "deck": "Shotgun course",
+  "front": "Standard pattern test?",
+  "back": "Percent of pellets in a 30 in (76 cm) circle at 40 yd (37 m), circle drawn on the densest part. (85%)",
+  "diagram": "sg2-pat-4"
+ },
+ {
+  "id": "sg2-023",
+  "deck": "Shotgun course",
+  "front": "How many pattern sheets per choke and shell?",
+  "back": "At least 5, then average. (85%)",
+  "diagram": "sg2-pat-6"
+ },
+ {
+  "id": "sg2-024",
+  "deck": "Shotgun course",
+  "front": "Browning tube with 3 notches: lead and steel?",
+  "back": "Modified with lead. Full with steel. (95%)",
+  "diagram": "sg2-notches"
+ },
+ {
+  "id": "sg2-025",
+  "deck": "Shotgun course",
+  "front": "Full choke with steel?",
+  "back": "Not for steel (Browning, Beretta, Stoeger). Use open chokes. (95%)"
+ },
+ {
+  "id": "sg2-026",
+  "deck": "Shotgun course",
+  "front": "Pattern off to one side. First thing to check?",
+  "back": "Gun fit and mount. (70%)",
+  "diagram": "sg2-pat-read"
+ },
+ {
+  "id": "sg2-027",
+  "deck": "Shotgun course",
+  "front": "Shot legal for ducks and geese?",
+  "back": "Non toxic only: steel, bismuth, tungsten types, tin. (99%)",
+  "diagram": "sg2-shot-law"
+ },
+ {
+  "id": "sg2-028",
+  "deck": "Shotgun course",
+  "front": "Lead grouse shell in your coat on a duck hunt?",
+  "back": "Illegal. s. 38(1) bans possessing other shot in the hunting area. (99%)"
+ },
+ {
+  "id": "sg2-029",
+  "deck": "Shotgun course",
+  "front": "Lead legal for grouse?",
+  "back": "Yes, upland birds are not covered by the lead ban, unless a local rule says so. (99%)"
+ },
+ {
+  "id": "sg2-030",
+  "deck": "Shotgun course",
+  "front": "Delta dykes and lead?",
+  "back": "No lead shot for any purpose on or seaward of any Delta dyke or the Surrey dykes facing Mud Bay. (99%)"
+ },
+ {
+  "id": "sg2-031",
+  "deck": "Shotgun course",
+  "front": "Densest shot: steel, bismuth, lead or tungsten?",
+  "back": "Tungsten super shot, about 18 g/cm3. Steel about 7.8. (65%)",
+  "diagram": "sg2-density"
+ },
+ {
+  "id": "sg2-032",
+  "deck": "Shotgun course",
+  "front": "Starting duck shell?",
+  "back": "Steel No. 2 or 3. Teal No. 4. Geese BB. (Tip, 70%)",
+  "diagram": "sg2-picks"
+ },
+ {
+  "id": "sg2-033",
+  "deck": "Shotgun course",
+  "front": "Starting grouse shell and choke?",
+  "back": "Lead No. 7.5 or 6, improved cylinder. (Tip, 60%)",
+  "diagram": "sg2-grouse-plan"
+ },
+ {
+  "id": "sg2-034",
+  "deck": "Shotgun course",
+  "front": "Three lead methods?",
+  "back": "Pull away, maintained lead, swing through. The gun never stops. (70 to 85%)",
+  "diagram": "sg2-lead-swing"
+ },
+ {
+  "id": "sg2-035",
+  "deck": "Shotgun course",
+  "front": "Mount: what comes to what?",
+  "back": "Gun to the face: cheek first, then shoulder. Head still. (85%)",
+  "diagram": "sg2-mount-4"
+ },
+ {
+  "id": "sg2-036",
+  "deck": "Shotgun course",
+  "front": "Walking in a line: your zone?",
+  "back": "About 45 degrees straight ahead. Never between or behind the line. (75%)",
+  "diagram": "sg2-line"
+ },
+ {
+  "id": "sg2-037",
+  "deck": "Shotgun course",
+  "front": "Boat with the motor running: guns?",
+  "back": "Unloaded. No duck hunting from a moving motor boat. (95 to 99%)",
+  "diagram": "sg2-boat"
+ },
+ {
+  "id": "sg2-038",
+  "deck": "Shotgun course",
+  "front": "Barrel blocked by snow. Clear it how?",
+  "back": "Unload, look from the breech, push it out with a rod. Never shoot it out. (95%)",
+  "diagram": "sg2-bore-check"
+ },
+ {
+  "id": "sg2-039",
+  "deck": "Shotgun course",
+  "front": "Over under: where does grease go?",
+  "back": "Hinge pin recess, barrel lugs, forearm bracket. (95%)",
+  "diagram": "sg2-oc-3"
+ },
+ {
+  "id": "sg2-040",
+  "deck": "Shotgun course",
+  "front": "Duck range line?",
+  "back": "Farthest decoy at 35 m (38 yd). Inside: shoot. Past: watch. (Tip)",
+  "diagram": "sg2-range-card"
+ },
+ {
+  "id": "sg2-041",
+  "deck": "Shotgun course",
+  "front": "My lean for a first duck gun?",
+  "back": "Beretta A300 Outlander, 12 gauge, 3 in, gas. Budget: Stoeger M3000. Try both. (Tip)",
+  "diagram": "sg2-buy-flow"
+ },
+ {
+  "id": "sg2-042",
+  "deck": "Shotgun course",
+  "front": "Private sale: what does the seller need?",
+  "back": "A reference number from the Registrar, using your licence details. Firearms Act s. 23. (99%)",
+  "diagram": "sg2-used"
+ }
+]

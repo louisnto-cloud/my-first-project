@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Check the real wind with a puffer at every new terrain feature.">
+<rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<circle cx="26" cy="26" r="17" fill="#e8590c" stroke="none" stroke-width="2"/><text x="26" y="32" font-family="sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">4</text><text x="52" y="32" font-family="sans-serif" font-size="18" fill="#2f3a2b" text-anchor="start" font-weight="bold">Check, then check again</text><rect x="160" y="100" width="50" height="90" rx="10" fill="#ffffff" stroke="#2f3a2b" stroke-width="2"/><path d="M210 120 C 250 110, 280 130, 320 120" fill="none" stroke="#9aa5b1" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><text x="20" y="270" font-family="sans-serif" font-size="15" fill="#2f3a2b" text-anchor="start" font-weight="bold">Puffer at every new feature</text>
+</svg>

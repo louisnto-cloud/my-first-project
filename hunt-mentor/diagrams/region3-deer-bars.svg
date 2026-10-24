@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 514" font-family="sans-serif" role="img" aria-label="Bar chart of Region 3 mule deer resident harvest, average per year 2020 to 2024, official survey estimates, with hunter success. MU 3-30, Cache Creek and Clinton: 502 deer, 24 percent of hunters successful. MU 3-27, Heffley Creek and Sun Peaks: 327 deer, 30 percent. MU 3-19, Logan Lake and Knutsford: 327 deer, 21 percent. MU 3-29, Dewdrop, north of Kamloops Lake: 299 deer, 31 percent. MU 3-26, Chase and Salmon Arm: 258 deer, 21 percent. MU 3-31, Clinton Creek side: 248 deer, 27 percent. MU 3-20, Kamloops south: 240 deer, 22 percent. MU 3-18, Savona and Ashcroft: 226 deer, 25 percent. Source: BC Big Game Harvest Statistics 1976 to 2024, BC Data Catalogue. Area labels approximate.">
+<rect width="400" height="514" fill="#fffaf0"/>
+<text x="14" y="24" font-size="18" font-weight="bold" fill="#2f3a2b">Region 3 mule deer: resident harvest</text>
+<text x="14" y="44" font-size="14" fill="#6b5b4b">Average per year, 2020 to 2024, official survey estimates</text>
+<text x="14" y="72" font-size="14" font-weight="bold" fill="#6b5b4b">MU</text>
+<text x="70" y="72" font-size="14" font-weight="bold" fill="#6b5b4b">Deer a year</text>
+<text x="386" y="72" font-size="14" font-weight="bold" fill="#6b5b4b" text-anchor="end">Success</text>
+<rect x="8" y="80" width="384" height="46" rx="6" fill="#f4eedf"/>
+<text x="14" y="102" font-size="16" font-weight="bold" fill="#2f3a2b">3-30</text>
+<rect x="70" y="87" width="250.0" height="20" rx="3" fill="#6b4f35"/>
+<text x="314" y="102" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">502</text>
+<text x="386" y="102" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">24%</text>
+<text x="70" y="122" font-size="14" fill="#6b5b4b">Cache Creek, Clinton</text>
+<text x="14" y="150" font-size="16" font-weight="bold" fill="#2f3a2b">3-27</text>
+<rect x="70" y="135" width="162.8" height="20" rx="3" fill="#6b4f35"/>
+<text x="226.849" y="150" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">327</text>
+<text x="386" y="150" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">30%</text>
+<text x="70" y="170" font-size="14" fill="#6b5b4b">Heffley Creek, Sun Peaks</text>
+<rect x="8" y="176" width="384" height="46" rx="6" fill="#f4eedf"/>
+<text x="14" y="198" font-size="16" font-weight="bold" fill="#2f3a2b">3-19</text>
+<rect x="70" y="183" width="162.8" height="20" rx="3" fill="#6b4f35"/>
+<text x="226.849" y="198" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">327</text>
+<text x="386" y="198" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">21%</text>
+<text x="70" y="218" font-size="14" fill="#6b5b4b">Logan Lake, Knutsford</text>
+<text x="14" y="246" font-size="16" font-weight="bold" fill="#2f3a2b">3-29</text>
+<rect x="70" y="231" width="148.9" height="20" rx="3" fill="#6b4f35"/>
+<text x="212.904" y="246" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">299</text>
+<text x="386" y="246" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">31%</text>
+<text x="70" y="266" font-size="14" fill="#6b5b4b">Dewdrop, north of Kamloops Lake</text>
+<rect x="8" y="272" width="384" height="46" rx="6" fill="#f4eedf"/>
+<text x="14" y="294" font-size="16" font-weight="bold" fill="#2f3a2b">3-26</text>
+<rect x="70" y="279" width="128.5" height="20" rx="3" fill="#6b4f35"/>
+<text x="192.486" y="294" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">258</text>
+<text x="386" y="294" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">21%</text>
+<text x="70" y="314" font-size="14" fill="#6b5b4b">Chase, Salmon Arm</text>
+<text x="14" y="342" font-size="16" font-weight="bold" fill="#2f3a2b">3-31</text>
+<rect x="70" y="327" width="123.5" height="20" rx="3" fill="#6b4f35"/>
+<text x="187.506" y="342" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">248</text>
+<text x="386" y="342" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">27%</text>
+<text x="70" y="362" font-size="14" fill="#6b5b4b">Clinton Creek side</text>
+<rect x="8" y="368" width="384" height="46" rx="6" fill="#f4eedf"/>
+<text x="14" y="390" font-size="16" font-weight="bold" fill="#2f3a2b">3-20</text>
+<rect x="70" y="375" width="119.5" height="20" rx="3" fill="#6b4f35"/>
+<text x="183.522" y="390" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">240</text>
+<text x="386" y="390" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">22%</text>
+<text x="70" y="410" font-size="14" fill="#6b5b4b">Kamloops south</text>
+<text x="14" y="438" font-size="16" font-weight="bold" fill="#2f3a2b">3-18</text>
+<rect x="70" y="423" width="112.5" height="20" rx="3" fill="#6b4f35"/>
+<text x="176.55" y="438" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="end">226</text>
+<text x="386" y="438" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">25%</text>
+<text x="70" y="458" font-size="14" fill="#6b5b4b">Savona, Ashcroft</text>
+<text x="14" y="482" font-size="14" fill="#6b5b4b">Source: BC Big Game Harvest Statistics 1976 to 2024</text>
+<text x="14" y="501" font-size="14" fill="#6b5b4b">(BC Data Catalogue). Area labels approximate.</text>
+</svg>

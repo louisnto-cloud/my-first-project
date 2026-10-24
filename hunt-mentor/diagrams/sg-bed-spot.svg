@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Where a deer beds, a hillside seen from the side. 1, the deer lies on a bench in the top third of the slope, under a tree. 2, its eyes watch the open ground below. 3, air coming down from above carries the smell of anything sneaking in from behind. A deer bed is an oval about 0.9 to 1.2 m long. Tip, hunter lore.">
+<rect width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Sees below, smells above</text>
+<path d="M0 300 L0 280 C90 272 170 232 228 144 L248 124 L314 120 L332 110 C352 86 372 66 400 54 L400 300Z" fill="#dfe6d3" stroke="#8a9a6b" stroke-width="2"/>
+<g data-tip="Warm and cold days|Warm days: north facing timber, benches, draws, shade. Cold days: sunny south and west slopes, out of the wind (80%).">
+<rect x="296" y="116" width="6" height="8" fill="#5c3b1c"/><path d="M299 52 L314 86 L307 86 L318 104 L311 104 L322 118 L276 118 L287 104 L280 104 L291 86 L284 86z" fill="#2f4f2a" stroke="#1f3a1c" stroke-width="1"/>
+<path d="M366 66 L376 30 L386 62z M346 84 L356 50 L366 80z" fill="#2f4f2a"/>
+</g>
+<g data-tip="1. Bench, top third|Day beds sit where the animal can see below and smell what comes from above: benches, the top third of a slope, under a tree with a view (hunter lore, 60%).">
+<path d="M378 54 L392 54 L392 132 L378 132" stroke="#6b4f35" stroke-width="2.4" fill="none"/>
+<text x="372" y="160" font-size="14" font-weight="bold" fill="#6b4f35" text-anchor="end">top third</text>
+<circle cx="240" cy="162" r="11" fill="#6b4f35"/><text x="240" y="167" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">1</text>
+<text x="256" y="168" font-size="15" font-weight="bold" fill="#2f3a2b">bench</text>
+</g>
+<g data-tip="Bedded deer|Warm bed test: put your hand in it. Warm means minutes. Do not sit down to think about it; the animal may be watching you (Tip).">
+<g transform="translate(276 121) scale(1.05)">
+<path d="M-26 0 C-30 -10 -24 -22 -6 -24 C12 -26 28 -20 32 -8 C34 -3 32 0 28 0z" fill="#9b7653" stroke="#4a3626" stroke-width="1.4"/>
+<path d="M-22 0 L-38 0 L-38 -3 L-24 -5z" fill="#7d5f43" stroke="#4a3626" stroke-width="1"/>
+<ellipse cx="29" cy="-12" rx="4" ry="6" fill="#f3ead8"/>
+<path d="M-16 -16 C-22 -28 -24 -38 -22 -46 L-12 -44 C-12 -34 -8 -26 -4 -21z" fill="#9b7653" stroke="#4a3626" stroke-width="1.2"/>
+<path d="M-20 -48 C-26 -52 -38 -50 -44 -44 C-46 -40 -44 -37 -40 -38 L-28 -39 C-20 -40 -16 -44 -20 -48z" fill="#9b7653" stroke="#4a3626" stroke-width="1.2"/>
+<ellipse cx="-14" cy="-55" rx="4" ry="9" transform="rotate(30 -14 -55)" fill="#8a6848" stroke="#4a3626" stroke-width="1"/>
+<ellipse cx="-22" cy="-56" rx="4" ry="9" transform="rotate(-10 -22 -56)" fill="#8a6848" stroke="#4a3626" stroke-width="1"/>
+<circle cx="-30" cy="-45" r="1.8" fill="#120b06"/><circle cx="-44" cy="-41" r="1.6" fill="#120b06"/>
+</g>
+</g>
+<g data-tip="2. Eyes watch below|Against cougars, ambush hunters, deer pick spots with long sightlines (80%). Cougars kill the most southern Interior mule deer, coyotes next (85%).">
+<path d="M240 76 L40 270" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+<path d="M242 78 L140 244" stroke="#e8590c" stroke-width="3" stroke-dasharray="8 6"/>
+<circle cx="24" cy="156" r="11" fill="#e8590c"/><text x="24" y="161" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">2</text>
+<text x="42" y="162" font-size="17" font-weight="bold" fill="#c2410c">Eyes watch</text>
+<text x="42" y="182" font-size="17" font-weight="bold" fill="#c2410c">below</text>
+</g>
+<g data-tip="3. Nose covers behind|Air coming down from above carries the smell of anything sneaking in from behind (Tip). Lore: bucks bed looking down, with wind from behind (60%).">
+<g stroke="#4a7fb0" stroke-width="3.4" fill="none" stroke-linecap="round"><path d="M398 40 C370 56 350 72 330 86"/><path d="M372 98 C356 102 340 104 322 104"/></g>
+<path d="M322 92 L326 80 L334 92z" fill="#4a7fb0" transform="rotate(-10 328 88)"/><path d="M314 104 L324 97 L324 111z" fill="#4a7fb0"/>
+<circle cx="24" cy="62" r="11" fill="#4a7fb0"/><text x="24" y="67" font-size="14" font-weight="bold" fill="#fffaf0" text-anchor="middle">3</text>
+<text x="42" y="68" font-size="17" font-weight="bold" fill="#2c5d86">Nose covers</text>
+<text x="42" y="88" font-size="17" font-weight="bold" fill="#2c5d86">behind</text>
+</g>
+<g data-tip="Deer bed|An oval of flattened grass, duff or snow about 0.9 to 1.2 m long, often with pellets and a few hairs (70%). Elk beds are bigger, about 1.2 to 1.5 m, and come in groups (65%).">
+<rect x="236" y="196" width="156" height="72" rx="8" fill="#fffaf0" stroke="#8a9a6b" stroke-width="1.5"/>
+<ellipse cx="270" cy="232" rx="26" ry="14" fill="#cfc39b" stroke="#8b6a48" stroke-width="1.6" stroke-dasharray="4 3"/>
+<circle cx="262" cy="230" r="2" fill="#3b2a1c"/><circle cx="268" cy="236" r="2" fill="#3b2a1c"/><circle cx="276" cy="229" r="2" fill="#3b2a1c"/>
+<text x="304" y="224" font-size="15" font-weight="bold" fill="#2f3a2b">Bed: oval</text>
+<text x="304" y="244" font-size="14" fill="#2f3a2b">0.9 to 1.2 m</text>
+<path d="M244 256 L296 256" stroke="#2f3a2b" stroke-width="1.6"/><path d="M244 251 v10 M296 251 v10" stroke="#2f3a2b" stroke-width="1.6"/>
+</g>
+<text x="120" y="292" font-size="14" fill="#6b4f35" text-anchor="middle">Tip: hunter lore, not a rule</text>
+</svg>

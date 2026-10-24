@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 880" font-family="sans-serif" role="img" aria-label="Browse shrub key with a small leaf picture on each row. First: is it green in winter? If yes, evergreen: a ground mat with red berries is kinnikinnick; spiny holly like leaflets is Oregon grape; glossy sticky leaves with 3 veins is snowbrush; small opposite toothed leaves is falsebox; big leathery leaves on the coast is salal. If no, are the leaves opposite? Yes: red stems means red osier dogwood, 3 to 5 lobes means Douglas maple, white berries means snowberry, scaly undersides means soopolallie. No, alternate: oval leaves toothed on the top half is saskatoon, wedge shaped with 3 teeth is bitterbrush, long narrow leaves is willow, round shaky leaves is aspen, thorns means rose or hawthorn. Leaf traits from E Flora BC (85%).">
+<rect width="400" height="880" fill="#fffaf0"/>
+<text x="200" y="26" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Name that browse shrub</text>
+<rect x="115.2" y="40" width="169.7" height="34" rx="17" fill="#2f3a2b"/>
+<text x="200" y="63" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Green in winter?</text>
+<rect x="8" y="82" width="384" height="28" rx="6" fill="#2f6e3b"/>
+<text x="18" y="102" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="0.5">YES: EVERGREEN</text>
+<rect x="8" y="114" width="384" height="40" rx="6" fill="#eef2e6"/>
+<g transform="translate(32 134.0)" stroke-linejoin="round"><path d="M-16 8 C-8 3 8 3 16 8" stroke="#8b5a2b" stroke-width="2" fill="none"/><ellipse cx="-12" cy="3" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(-20 -12 3)"/><ellipse cx="-5" cy="1" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(10 -5 1)"/><ellipse cx="3" cy="1" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(-10 3 1)"/><ellipse cx="11" cy="3" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(20 11 3)"/><ellipse cx="-8" cy="-4" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(30 -8 -4)"/><ellipse cx="7" cy="-4" rx="4.5" ry="3" fill="#5c7a3a" transform="rotate(-30 7 -4)"/><circle cx="-1" cy="-5" r="3.4" fill="#c0392b"/><circle cx="4" cy="-8" r="3" fill="#c0392b"/></g>
+<text x="58" y="140" font-size="15" fill="#2f3a2b">Ground mat, red berry</text>
+<text x="386" y="140" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">kinnikinnick</text>
+<g transform="translate(32 176.0)" stroke-linejoin="round"><path d="M-15 0 H15" stroke="#8b5a2b" stroke-width="1.6"/><path d="M-10 1 l-4 3 l2 1 l-2 3 l4 3 l4 -3 l-2 -3 l2 -1z" fill="#3f5a2a"/><path d="M-10 -1 l-4 -3 l2 -1 l-2 -3 l4 -3 l4 3 l-2 3 l2 1z" fill="#3f5a2a"/><path d="M0 1 l-4 3 l2 1 l-2 3 l4 3 l4 -3 l-2 -3 l2 -1z" fill="#3f5a2a"/><path d="M0 -1 l-4 -3 l2 -1 l-2 -3 l4 -3 l4 3 l-2 3 l2 1z" fill="#3f5a2a"/><path d="M10 1 l-4 3 l2 1 l-2 3 l4 3 l4 -3 l-2 -3 l2 -1z" fill="#3f5a2a"/><path d="M10 -1 l-4 -3 l2 -1 l-2 -3 l4 -3 l4 3 l-2 3 l2 1z" fill="#3f5a2a"/><path d="M12 -3 l3 -3 l2 4 l3 -1 l-2 5 l-5 0z" fill="#3f5a2a"/></g>
+<text x="58" y="182" font-size="15" fill="#2f3a2b">Spiny holly leaflets</text>
+<text x="386" y="182" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">Oregon grape</text>
+<rect x="8" y="198" width="384" height="40" rx="6" fill="#eef2e6"/>
+<g transform="translate(32 218.0)" stroke-linejoin="round"><ellipse cx="0" cy="0" rx="14" ry="9" fill="#5c7a3a"/><ellipse cx="-3" cy="-3" rx="6" ry="2" fill="#e9f2df" opacity=".7"/><path d="M-12 1 C-4 0 4 0 13 0 M-11 2 C-4 -6 4 -7 10 -6 M-11 2 C-4 8 4 8 10 6" stroke="#fffaf0" stroke-width="1.2" fill="none"/></g>
+<text x="58" y="224" font-size="15" fill="#2f3a2b">Glossy, sticky, 3 veins</text>
+<text x="386" y="224" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">snowbrush</text>
+<g transform="translate(32 260.0)" stroke-linejoin="round"><path d="M0 -14 V14" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 -8 C4 -13 10 -12 12 -8 C10 -5 4 -5 0 -8z" fill="#3f5a2a"/><path d="M0 -8 C-4 -13 -10 -12 -12 -8 C-10 -5 -4 -5 0 -8z" fill="#3f5a2a"/><path d="M0 2 C4 -3 10 -2 12 2 C10 5 4 5 0 2z" fill="#3f5a2a"/><path d="M0 2 C-4 -3 -10 -2 -12 2 C-10 5 -4 5 0 2z" fill="#3f5a2a"/><path d="M0 11 C4 6 10 7 12 11 C10 14 4 14 0 11z" fill="#3f5a2a"/><path d="M0 11 C-4 6 -10 7 -12 11 C-10 14 -4 14 0 11z" fill="#3f5a2a"/></g>
+<text x="58" y="266" font-size="15" fill="#2f3a2b">Small, opposite, toothed</text>
+<text x="386" y="266" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">falsebox</text>
+<rect x="8" y="282" width="384" height="40" rx="6" fill="#eef2e6"/>
+<g transform="translate(32 302.0)" stroke-linejoin="round"><path d="M0 12 C-14 4 -12 -12 0 -15 C12 -12 14 4 0 12z" fill="#3f5a2a"/><path d="M0 12 V-13 M0 -2 L-6 -7 M0 3 L6 -2 M0 -7 L5 -11" stroke="#9db37a" stroke-width="1.2" fill="none"/></g>
+<text x="58" y="308" font-size="15" fill="#2f3a2b">Big, leathery, coast</text>
+<text x="386" y="308" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">salal</text>
+<text x="200" y="348" font-size="15" font-weight="bold" fill="#8b5a2b" text-anchor="middle">NO: not green in winter</text>
+<rect x="110.8" y="358" width="178.4" height="34" rx="17" fill="#8b5a2b"/>
+<text x="200" y="381" font-size="17" font-weight="bold" fill="#fffaf0" text-anchor="middle">Leaves opposite?</text>
+<rect x="8" y="400" width="384" height="28" rx="6" fill="#8b5a2b"/>
+<text x="18" y="420" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="0.5">YES: OPPOSITE</text>
+<rect x="8" y="432" width="384" height="40" rx="6" fill="#f4eedf"/>
+<g transform="translate(32 452.0)" stroke-linejoin="round"><path d="M-4 15 L-2 -14 M-2 -2 L-12 -10 M-1 -6 L8 -14" stroke="#b3261e" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+<text x="58" y="458" font-size="15" fill="#2f3a2b">Red stems</text>
+<text x="386" y="458" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">dogwood</text>
+<g transform="translate(32 494.0)" stroke-linejoin="round"><path d="M0 13 V2 M0 2 L-13 -2 L-9 -5 L-12 -11 L-5 -9 L-3 -15 L0 -10 L3 -15 L5 -9 L12 -11 L9 -5 L13 -2z" fill="#5c7a3a" stroke="#3f5a2a" stroke-width="1"/></g>
+<text x="58" y="500" font-size="15" fill="#2f3a2b">3 to 5 lobes</text>
+<text x="386" y="500" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">maple</text>
+<rect x="8" y="516" width="384" height="40" rx="6" fill="#f4eedf"/>
+<g transform="translate(32 536.0)" stroke-linejoin="round"><path d="M-10 12 C-6 2 0 -4 10 -8" stroke="#8b5a2b" stroke-width="1.6" fill="none"/><circle cx="-4" cy="-2" r="4.2" fill="#ffffff" stroke="#9a9a8a" stroke-width="1"/><circle cx="3" cy="-6" r="4.2" fill="#ffffff" stroke="#9a9a8a" stroke-width="1"/><circle cx="2" cy="2" r="4.2" fill="#ffffff" stroke="#9a9a8a" stroke-width="1"/><circle cx="9" cy="-2" r="4.2" fill="#ffffff" stroke="#9a9a8a" stroke-width="1"/><circle cx="-2" cy="6" r="4.2" fill="#ffffff" stroke="#9a9a8a" stroke-width="1"/></g>
+<text x="58" y="542" font-size="15" fill="#2f3a2b">White berries</text>
+<text x="386" y="542" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">snowberry</text>
+<g transform="translate(32 578.0)" stroke-linejoin="round"><ellipse cx="0" cy="0" rx="14" ry="7.5" fill="#5c7a3a"/><ellipse cx="0" cy="3" rx="12" ry="4" fill="#c79a5a"/><circle cx="-8" cy="3" r="1.1" fill="#8b5a2b"/><circle cx="-4" cy="3" r="1.1" fill="#8b5a2b"/><circle cx="0" cy="3" r="1.1" fill="#8b5a2b"/><circle cx="4" cy="3" r="1.1" fill="#8b5a2b"/><circle cx="8" cy="3" r="1.1" fill="#8b5a2b"/></g>
+<text x="58" y="584" font-size="15" fill="#2f3a2b">Scaly underside</text>
+<text x="386" y="584" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">soopolallie</text>
+<rect x="8" y="606" width="384" height="28" rx="6" fill="#6b4f35"/>
+<text x="18" y="626" font-size="15" font-weight="bold" fill="#fffaf0" letter-spacing="0.5">NO: ALTERNATE</text>
+<rect x="8" y="638" width="384" height="40" rx="6" fill="#f4eedf"/>
+<g transform="translate(32 658.0)" stroke-linejoin="round"><path d="M0 14 C-12 10 -12 -6 0 -14 C12 -6 12 10 0 14z" fill="#5c7a3a"/><path d="M-10 -1 l2 -2 l1 2 l2 -3 l1 2 l2 -3 l2 2 l2 -3 l1 2 l2 -2 l1 3" stroke="#fffaf0" stroke-width="1.2" fill="none"/><path d="M0 13 V-12" stroke="#9db37a" stroke-width="1"/></g>
+<text x="58" y="664" font-size="15" fill="#2f3a2b">Toothed top half</text>
+<text x="386" y="664" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">saskatoon</text>
+<g transform="translate(32 700.0)" stroke-linejoin="round"><path d="M0 14 L-10 -8 L-6 -12 L-3 -6 L0 -14 L3 -6 L6 -12 L10 -8z" fill="#5c7a3a" stroke="#3f5a2a" stroke-width="1"/></g>
+<text x="58" y="706" font-size="15" fill="#2f3a2b">Wedge, 3 teeth</text>
+<text x="386" y="706" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">bitterbrush</text>
+<rect x="8" y="722" width="384" height="40" rx="6" fill="#f4eedf"/>
+<g transform="translate(32 742.0)" stroke-linejoin="round"><path d="M-3 15 C-7 2 -5 -8 2 -16 C6 -6 5 4 -3 15z" fill="#5c7a3a"/><path d="M8 13 C5 3 6 -6 12 -13 C15 -4 14 5 8 13z" fill="#3f5a2a"/></g>
+<text x="58" y="748" font-size="15" fill="#2f3a2b">Long, narrow</text>
+<text x="386" y="748" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">willow</text>
+<g transform="translate(32 784.0)" stroke-linejoin="round"><path d="M0 14 V6" stroke="#8b5a2b" stroke-width="1.6"/><path d="M0 6 C-15 4 -13 -14 0 -14 C13 -14 15 4 0 6z" fill="#9db37a" stroke="#3f5a2a" stroke-width="1"/><path d="M-12 -12 L-17 -16 M12 -12 L17 -16" stroke="#6b5b4b" stroke-width="1.2"/></g>
+<text x="58" y="790" font-size="15" fill="#2f3a2b">Round, shaky</text>
+<text x="386" y="790" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">aspen</text>
+<rect x="8" y="806" width="384" height="40" rx="6" fill="#f4eedf"/>
+<g transform="translate(32 826.0)" stroke-linejoin="round"><path d="M-15 8 C-5 2 5 -2 15 -8" stroke="#8b5a2b" stroke-width="3" fill="none"/><path d="M-10 5 l-2 -7 l3 5z" fill="#8b5a2b"/><path d="M-2 1 l-2 -7 l3 5z" fill="#8b5a2b"/><path d="M6 -3 l-2 -7 l3 5z" fill="#8b5a2b"/><path d="M-6 3 l2 7 l3 -5z" fill="#8b5a2b"/><path d="M2 -1 l2 7 l3 -5z" fill="#8b5a2b"/><path d="M10 -5 l2 7 l3 -5z" fill="#8b5a2b"/><circle cx="13" cy="-11" r="3.5" fill="#c0392b"/></g>
+<text x="58" y="832" font-size="15" fill="#2f3a2b">Thorns</text>
+<text x="386" y="832" font-size="16" font-weight="bold" fill="#2f3a2b" text-anchor="end">rose, hawthorn</text>
+<text x="200" y="866" font-size="14" fill="#6b5b4b" text-anchor="middle">Leaf traits from E Flora BC (85%)</text>
+</svg>

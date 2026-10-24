@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 635" font-family="sans-serif" role="img" aria-label="Region 4 bag limits, synopsis page 37. NBL means No Bag Limit. Never more than 3 deer province wide. Deer, all together: 2. Mule deer: 1. White tailed deer: 2, one buck and one antlerless. Plus 1 deer of either species and sex in the Cranbrook Deer Hunt, 5 to 31 January. Bobcat: 1. Cougar: 1 or 2 depending on the Management Unit. Coyote: no bag limit. Grouse: 5 a day for all three kinds together. Turkey: 3 a year, 1 in spring and 2 in fall.">
+<rect width="400" height="635" fill="#fffaf0"/>
+<text x="14" y="23" font-size="14" font-weight="bold" fill="#6b5b4b">Page 37. NBL: No Bag Limit.</text>
+<rect x="8" y="33" width="384" height="64" rx="8" fill="#fbe9e3" stroke="#c0392b" stroke-width="1.6"/>
+<text x="64" y="74" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="middle">3</text>
+<text x="128" y="59" font-size="16" font-weight="bold" fill="#2f3a2b">Deer, province wide</text>
+<text x="128" y="80" font-size="15" font-weight="bold" fill="#c0392b">Never more</text>
+<text x="14" y="123" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">DEER</text>
+<line x1="78" y1="118" x2="392" y2="118" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="133" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="163.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="160.5" font-size="16" fill="#2f3a2b">Deer, all together</text>
+<text x="64" y="209.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">1</text>
+<text x="130" y="206.5" font-size="16" fill="#2f3a2b">Mule deer</text>
+<rect x="8" y="225" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="255.6" font-size="24" font-weight="bold" fill="#c2410c" text-anchor="middle">2</text>
+<text x="130" y="252.5" font-size="16" fill="#2f3a2b">White tails: 1 buck, 1 antlerless</text>
+<text x="64" y="301.6" font-size="24" font-weight="bold" fill="#6a4c93" text-anchor="middle">+1</text>
+<text x="130" y="298.5" font-size="16" fill="#2f3a2b">Cranbrook Deer Hunt, Jan 5 to 31</text>
+<text x="14" y="343" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">OTHER GAME</text>
+<line x1="141" y1="338" x2="392" y2="338" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="353" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="383.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1</text>
+<text x="130" y="380.5" font-size="16" fill="#2f3a2b">Bobcat</text>
+<text x="64" y="429.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">1 or 2</text>
+<text x="130" y="426.5" font-size="16" fill="#2f3a2b">Cougar, by MU</text>
+<rect x="8" y="445" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="475.6" font-size="24" font-weight="bold" fill="#8b5a2b" text-anchor="middle">NBL</text>
+<text x="130" y="472.5" font-size="16" fill="#2f3a2b">Coyote</text>
+<text x="14" y="517" font-size="15" font-weight="bold" fill="#6b5b4b" letter-spacing="1">BIRDS</text>
+<line x1="83" y1="512" x2="392" y2="512" stroke="#d8cfb8" stroke-width="1.4"/>
+<rect x="8" y="527" width="384" height="44" rx="6" fill="#f4eedf"/>
+<text x="64" y="557.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">5 a day</text>
+<text x="130" y="554.5" font-size="16" fill="#2f3a2b">Grouse, all 3 kinds together</text>
+<text x="64" y="603.6" font-size="24" font-weight="bold" fill="#2c5d86" text-anchor="middle">3 a year</text>
+<text x="130" y="600.5" font-size="16" fill="#2f3a2b">Turkey: 1 spring, 2 fall</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Step 6: watch the goat 10 minutes or more before you decide. If you are sure it is a billy, shoot only where a dead goat will stay put. Not sure? No shot." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200.0" y="26" font-size="18" fill="#2f3a2b" text-anchor="middle" font-weight="bold">Step 6: watch 10 minutes, then decide</text>
+<circle cx="110" cy="140" r="70" fill="#ffffff" stroke="#23261f" stroke-width="3"/>
+<path d="M110 140 L110 70 A70 70 0 0 1 170.6 105 Z" fill="#e8590c" opacity="0.35"/>
+<path d="M110 140 L110 84 M110 140 L150 118" stroke="#23261f" stroke-width="4" stroke-linecap="round"/>
+<text x="110" y="236" font-size="15" fill="#2f3a2b" text-anchor="middle" font-weight="bold">10 minutes or more</text>
+<text x="300" y="100" font-size="15" fill="#23261f" text-anchor="middle">Sure it is a billy?</text>
+<text x="300" y="119" font-size="15" fill="#23261f" text-anchor="middle">Shoot only where a</text>
+<text x="300" y="138" font-size="15" fill="#23261f" text-anchor="middle">dead goat stays put.</text>
+<text x="300" y="190" font-size="18" fill="#e8590c" text-anchor="middle" font-weight="bold">Not sure?</text>
+<text x="300" y="212" font-size="18" fill="#e8590c" text-anchor="middle" font-weight="bold">No shot.</text>
+</svg>

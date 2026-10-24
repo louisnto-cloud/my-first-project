@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Fence step 1: before the fence, unload the rifle. Bolt open, magazine out, chamber empty. PROVE it safe.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="28" font-size="18" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Unload. PROVE it.</text>
+  <g stroke="#6b4f35" stroke-width="2"><line x1="330" y1="60" x2="330" y2="250"/><line x1="380" y1="60" x2="380" y2="250"/></g>
+  <g stroke="#2f3a2b" stroke-width="1.5" stroke-dasharray="3 3"><line x1="300" y1="100" x2="400" y2="100"/><line x1="300" y1="150" x2="400" y2="150"/><line x1="300" y1="200" x2="400" y2="200"/></g>
+  <path d="M20 140 L110 132 L118 132 L126 156 L220 154 L220 164 L120 168 L104 178 L92 172 L20 186 Z" fill="#8b5a2b" stroke="#2f3a2b" stroke-width="2"/>
+  <rect x="110" y="122" width="70" height="18" fill="#6b6f68" stroke="#2f3a2b" stroke-width="2"/><rect x="180" y="126" width="110" height="8" fill="#6b6f68"/>
+  <rect x="126" y="124" width="34" height="10" fill="#fffaf0" stroke="#2f3a2b"/>
+  <path d="M110 128 h-30" stroke="#6b6f68" stroke-width="10"/><path d="M84 134 l-6 18" stroke="#2f3a2b" stroke-width="5"/>
+  <rect x="140" y="200" width="24" height="30" rx="3" fill="#2f3a2b"/><text x="152" y="252" font-size="14" fill="#2f3a2b" text-anchor="middle">Magazine out</text>
+  <text x="60" y="110" font-size="14" font-weight="bold" fill="#e8590c">Bolt open</text>
+  <text x="200" y="104" font-size="14" font-weight="bold" fill="#e8590c">Chamber empty</text>
+  <text x="200" y="286" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Point, Remove, Observe, Verify, Examine</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" font-family="sans-serif" role="img" aria-label="Cleaning kit for all three guns: a smooth, straight one piece rod; a bore guide that keeps the rod centred; brushes for .22, .30 calibre and 12 gauge; patches or felt pellets; bore solvent, for the bore only; a CLP gun oil that cleans, lubricates and protects; light grease for the lugs and cam; and a torque driver for the action and ring screws.">
+<rect width="400" height="350" fill="#fffaf0"/>
+<text x="200" y="28" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">A cleaning kit that covers all three guns</text>
+<rect x="8" y="42" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="13" y="47" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(41 77.0) rotate(-30)"><rect x="-24" y="-1.6" width="44" height="3.2" rx="1.5" fill="#9aa3a8" stroke="#5d666b" stroke-width=".8"/><rect x="-30" y="-4.5" width="12" height="9" rx="3" fill="#3b2a1a"/><circle cx="21" cy="0" r="2.4" fill="#5d666b"/></g>
+<text x="76" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">One piece rod</text>
+<text x="76" y="87" font-size="14.5" fill="#2f3a2b">smooth, straight</text>
+<rect x="204" y="42" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="209" y="47" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(237 77.0) rotate(-20)"><rect x="-20" y="-6" width="34" height="12" rx="3" fill="#d14c12"/><rect x="12" y="-4" width="10" height="8" rx="2" fill="#a63a0c"/><rect x="-22" y="-1.5" width="44" height="3" fill="#9aa3a8" opacity=".9"/></g>
+<text x="272" y="67" font-size="16" font-weight="bold" fill="#2f3a2b">Bore guide</text>
+<text x="272" y="87" font-size="14.5" fill="#2f3a2b">keeps the rod</text>
+<text x="272" y="104" font-size="14.5" fill="#2f3a2b">centred</text>
+<rect x="8" y="118" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="13" y="123" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(41 153.0)"><rect x="-20" y="-13.0" width="16" height="2.4" fill="#9aa3a8"/><rect x="-4" y="-14.0" width="22" height="4" rx="2.0" fill="#c8a24a"/><path d="M0 -14.0 V-10.0 M5 -14.0 V-10.0 M10 -14.0 V-10.0 M15 -14.0 V-10.0" stroke="#8a6d1f" stroke-width="1"/><rect x="-20" y="-1.0" width="16" height="2.4" fill="#9aa3a8"/><rect x="-4" y="-3.0" width="22" height="6" rx="3.0" fill="#c8a24a"/><path d="M0 -3.0 V3.0 M5 -3.0 V3.0 M10 -3.0 V3.0 M15 -3.0 V3.0" stroke="#8a6d1f" stroke-width="1"/><rect x="-20" y="12.0" width="16" height="2.4" fill="#9aa3a8"/><rect x="-4" y="8.5" width="22" height="9" rx="4.5" fill="#c8a24a"/><path d="M0 8.5 V17.5 M5 8.5 V17.5 M10 8.5 V17.5 M15 8.5 V17.5" stroke="#8a6d1f" stroke-width="1"/></g>
+<text x="76" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Brushes</text>
+<text x="76" y="163" font-size="14.5" fill="#2f3a2b">.22, .30, 12 ga</text>
+<rect x="204" y="118" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="209" y="123" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(237 153.0)"><rect x="-18" y="-12" width="20" height="20" rx="1" fill="#ffffff" stroke="#b9ad92" stroke-width="1.2" transform="rotate(-10)"/><rect x="-8" y="-6" width="20" height="20" rx="1" fill="#ffffff" stroke="#b9ad92" stroke-width="1.2" transform="rotate(8)"/><circle cx="16" cy="-10" r="6" fill="#d8d0bd" stroke="#9c927b" stroke-width="1"/></g>
+<text x="272" y="143" font-size="16" font-weight="bold" fill="#2f3a2b">Patches</text>
+<text x="272" y="163" font-size="14.5" fill="#2f3a2b">or felt pellets</text>
+<rect x="8" y="194" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="13" y="199" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(41 229.0)"><rect x="-10" y="-10" width="20" height="26" rx="4" fill="#2c5d86"/><rect x="-5" y="-16" width="10" height="7" fill="#1d3e5c"/><rect x="-8" y="-2" width="16" height="10" fill="#fffaf0"/><path d="M-5 1 H5 M-5 5 H3" stroke="#2c5d86" stroke-width="1.6"/></g>
+<text x="76" y="219" font-size="16" font-weight="bold" fill="#2f3a2b">Bore solvent</text>
+<text x="76" y="239" font-size="14.5" fill="#2f3a2b">for the bore only</text>
+<rect x="204" y="194" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="209" y="199" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(237 229.0)"><rect x="-10" y="-10" width="20" height="26" rx="4" fill="#b0892f"/><rect x="-5" y="-16" width="10" height="7" fill="#2f3a2b"/><path d="M-2 -16 L0 -24 L2 -16z" fill="#2f3a2b"/><rect x="-8" y="-2" width="16" height="10" fill="#fffaf0"/><path d="M-5 1 H5 M-5 5 H3" stroke="#b0892f" stroke-width="1.6"/></g>
+<text x="272" y="219" font-size="16" font-weight="bold" fill="#2f3a2b">CLP gun oil</text>
+<text x="272" y="239" font-size="14.5" fill="#2f3a2b">clean, lube,</text>
+<text x="272" y="256" font-size="14.5" fill="#2f3a2b">protect</text>
+<rect x="8" y="270" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="13" y="275" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(41 305.0) rotate(-20)"><path d="M-20 -6 H10 L14 -3 V3 L10 6 H-20 L-22 3 V-3z" fill="#e3e6e8" stroke="#5d666b" stroke-width="1.2"/><rect x="14" y="-2.5" width="8" height="5" fill="#2f3a2b"/><path d="M-12 -6 V6 M-16 -6 V6" stroke="#5d666b" stroke-width="1"/><rect x="-8" y="-3" width="14" height="6" fill="#e8590c"/></g>
+<text x="76" y="295" font-size="16" font-weight="bold" fill="#2f3a2b">Light grease</text>
+<text x="76" y="315" font-size="14.5" fill="#2f3a2b">lugs and cam</text>
+<rect x="204" y="270" width="188" height="70" rx="9" fill="#f4eedf" stroke="#8a9a6b" stroke-width="1.2"/>
+<rect x="209" y="275" width="56" height="60" rx="7" fill="#fffaf0"/>
+<g transform="translate(237 305.0) rotate(-30)"><rect x="-26" y="-7" width="26" height="14" rx="6" fill="#2f3a2b"/><rect x="-6" y="-5" width="8" height="10" rx="2" fill="#c0392b"/><rect x="2" y="-2" width="20" height="4" fill="#9aa3a8"/><path d="M-22 -4 V4 M-17 -4 V4 M-12 -4 V4" stroke="#5d666b" stroke-width="1"/></g>
+<text x="272" y="295" font-size="16" font-weight="bold" fill="#2f3a2b">Torque driver</text>
+<text x="272" y="315" font-size="14.5" fill="#2f3a2b">action and ring</text>
+<text x="272" y="332" font-size="14.5" fill="#2f3a2b">screws</text>
+</svg>

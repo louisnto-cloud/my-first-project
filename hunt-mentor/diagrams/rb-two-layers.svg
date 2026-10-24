@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Two nested limits. The provincial limit covers all of BC for one licence year. Inside it each region, such as Regions 2, 3 and 8, has its own regional limit. You may fill the provincial limit in one region or several, as long as each regional limit holds. Never exceed either." font-family="sans-serif">
+  <rect x="0" y="0" width="400" height="300" fill="#fffaf0"/>
+<text x="200" y="26" font-size="19" fill="#23261f" text-anchor="middle" font-weight="bold">Two limits. Never exceed either.</text>
+<rect x="10" y="42" width="380" height="190" rx="12" fill="#eef3e6" stroke="#5c7a3a" stroke-width="3"/>
+<text x="24" y="68" font-size="15" fill="#5c7a3a" text-anchor="start" font-weight="bold">Provincial: all of BC, one licence year</text>
+<rect x="24" y="86" width="110" height="124" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="79" y="112" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Region 2</text>
+<text x="79" y="140" font-size="14" fill="#2f3a2b" text-anchor="middle">its own</text>
+<text x="79" y="158" font-size="14" fill="#2f3a2b" text-anchor="middle">regional</text>
+<text x="79" y="176" font-size="14" fill="#2f3a2b" text-anchor="middle">limit</text>
+<rect x="146" y="86" width="110" height="124" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="201" y="112" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Region 3</text>
+<text x="201" y="140" font-size="14" fill="#2f3a2b" text-anchor="middle">its own</text>
+<text x="201" y="158" font-size="14" fill="#2f3a2b" text-anchor="middle">regional</text>
+<text x="201" y="176" font-size="14" fill="#2f3a2b" text-anchor="middle">limit</text>
+<rect x="268" y="86" width="110" height="124" rx="10" fill="#ffffff" stroke="#e8590c" stroke-width="2.5"/>
+<text x="323" y="112" font-size="15" fill="#23261f" text-anchor="middle" font-weight="bold">Region 8</text>
+<text x="323" y="140" font-size="14" fill="#2f3a2b" text-anchor="middle">its own</text>
+<text x="323" y="158" font-size="14" fill="#2f3a2b" text-anchor="middle">regional</text>
+<text x="323" y="176" font-size="14" fill="#2f3a2b" text-anchor="middle">limit</text>
+<text x="14" y="262" font-size="15" fill="#23261f" text-anchor="start">You may fill the provincial limit in one region</text>
+<text x="14" y="282" font-size="15" fill="#23261f" text-anchor="start">or several, if each regional limit holds.</text>
+</svg>

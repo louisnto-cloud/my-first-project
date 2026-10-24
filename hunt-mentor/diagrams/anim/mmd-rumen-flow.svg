@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" font-family="sans-serif" role="img" aria-label="Animation: a dot of food loops from the mouth into the rumen and reticulum and back up to the mouth as cud to chew again. Boxes show the four chambers: rumen, reticulum, omasum and abomasum, in order. Microbes in the rumen break down plants. The deer fills up fast, beds, and chews cud, 85 percent. A gut hit leaves green brown matter that smells, 70 percent.">
+<rect width="400" height="314" fill="#fffaf0"/>
+<text x="200" y="24" font-size="17" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Four chamber stomach: how it eats</text>
+<rect x="14" y="52" width="112" height="56" rx="10" fill="#dfe6d3" stroke="#23261f" stroke-width="2"/><text x="70" y="76" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">mouth</text>
+<rect x="144" y="52" width="112" height="56" rx="10" fill="#c9b46a" stroke="#23261f" stroke-width="2"/><text x="200" y="76" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">rumen</text>
+<rect x="144" y="160" width="112" height="56" rx="10" fill="#c9b46a" stroke="#23261f" stroke-width="2"/><text x="200" y="184" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">reticulum</text>
+<rect x="274" y="160" width="112" height="56" rx="10" fill="#dfe6d3" stroke="#23261f" stroke-width="2"/><text x="330" y="184" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">omasum</text>
+<rect x="274" y="52" width="112" height="56" rx="10" fill="#dfe6d3" stroke="#23261f" stroke-width="2"/><text x="330" y="76" font-size="15" font-weight="bold" fill="#23261f" text-anchor="middle">abomasum</text>
+<line x1="126" y1="72" x2="142" y2="72" stroke="#e8590c" stroke-width="3"/><path d="M0 0 l-10 -5 v10z" fill="#e8590c" transform="translate(142 72) rotate(0)"/>
+<line x1="176" y1="108" x2="176" y2="158" stroke="#e8590c" stroke-width="3"/><path d="M0 0 l-10 -5 v10z" fill="#e8590c" transform="translate(176 158) rotate(90)"/>
+<line x1="256" y1="188" x2="272" y2="188" stroke="#e8590c" stroke-width="3"/><path d="M0 0 l-10 -5 v10z" fill="#e8590c" transform="translate(272 188) rotate(0)"/>
+<line x1="330" y1="160" x2="330" y2="110" stroke="#e8590c" stroke-width="3"/><path d="M0 0 l-10 -5 v10z" fill="#e8590c" transform="translate(330 110) rotate(-90)"/>
+<path d="M144 196 Q 70 196 70 112" fill="none" stroke="#4a7fb0" stroke-width="3" stroke-dasharray="6 5"/>
+<text x="58" y="232" font-size="15" font-weight="bold" fill="#2c5d86" text-anchor="middle">cud back up</text>
+<text x="58" y="250" font-size="15" fill="#2c5d86" text-anchor="middle">to chew again</text>
+<path d="M70 96 L246 96 L246 196 L100 196 Q 70 196 70 140 L70 96" fill="none" stroke="none" id="mmd-rumen-flow-loop"/>
+<circle r="7" fill="#e8590c" stroke="#fffaf0" stroke-width="1.5"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#mmd-rumen-flow-loop"/></animateMotion></circle>
+<text x="232" y="240" font-size="15" fill="#2f3a2b" text-anchor="middle">Microbes in the rumen</text>
+<text x="232" y="258" font-size="15" fill="#2f3a2b" text-anchor="middle">break down plants</text>
+<text x="200" y="284" font-size="15" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Fill up fast, bed, chew cud (85%)</text>
+<text x="200" y="304" font-size="15" font-weight="bold" fill="#6b4f35" text-anchor="middle">Gut hit: green brown, smells (70%)</text>
+</svg>

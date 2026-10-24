@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 404" font-family="sans-serif" role="img" aria-label="Region 8 bar charts, average harvest a year by MU (Management Unit). Quail: MU 8-1 Oliver and Osoyoos about 249, every other MU a handful each. Mule deer: 8-5 Princeton 268, 8-8 Summerland and Peachland 266, 8-6 173, 8-1 163, 8-11 158, 8-10 Kelowna 151. MU 8-1 is mostly private land, so permission is the game. Lean.">
+<rect width="400" height="404" fill="#fffaf0"/>
+<text x="200" y="30" font-size="19" font-weight="bold" fill="#2f3a2b" text-anchor="middle">Region 8: the quail trip</text>
+<text x="14" y="70" font-size="17" font-weight="bold" fill="#c2410c">Quail a year</text>
+<text x="14" y="99" font-size="16" font-weight="bold" fill="#2f3a2b">8-1</text>
+<rect x="75.3056" y="85" width="185.0" height="18" rx="3" fill="#e8590c"/>
+<text x="267.3" y="100" font-size="16" font-weight="bold" fill="#2f3a2b">about 249</text>
+<text x="14" y="126" font-size="16" font-weight="bold" fill="#2f3a2b">others</text>
+<rect x="75.3056" y="112" width="4.5" height="18" rx="3" fill="#e8590c"/>
+<text x="86.8" y="127" font-size="16" font-weight="bold" fill="#2f3a2b">a handful each</text>
+<text x="14" y="166" font-size="17" font-weight="bold" fill="#5b6b3e">Mule deer a year</text>
+<text x="14" y="195" font-size="16" font-weight="bold" fill="#2f3a2b">8-5</text>
+<rect x="75.3056" y="181" width="185.0" height="18" rx="3" fill="#8a9a6b"/>
+<text x="267.3" y="196" font-size="16" font-weight="bold" fill="#2f3a2b">268</text>
+<text x="14" y="222" font-size="16" font-weight="bold" fill="#2f3a2b">8-8</text>
+<rect x="75.3056" y="208" width="183.6" height="18" rx="3" fill="#8a9a6b"/>
+<text x="265.9" y="223" font-size="16" font-weight="bold" fill="#2f3a2b">266</text>
+<text x="14" y="249" font-size="16" font-weight="bold" fill="#2f3a2b">8-6</text>
+<rect x="75.3056" y="235" width="119.4" height="18" rx="3" fill="#8a9a6b"/>
+<text x="201.7" y="250" font-size="16" font-weight="bold" fill="#2f3a2b">173</text>
+<text x="14" y="276" font-size="16" font-weight="bold" fill="#2f3a2b">8-1</text>
+<rect x="75.3056" y="262" width="112.5" height="18" rx="3" fill="#8a9a6b"/>
+<text x="194.8" y="277" font-size="16" font-weight="bold" fill="#2f3a2b">163</text>
+<text x="14" y="303" font-size="16" font-weight="bold" fill="#2f3a2b">8-11</text>
+<rect x="75.3056" y="289" width="109.0" height="18" rx="3" fill="#8a9a6b"/>
+<text x="191.4" y="304" font-size="16" font-weight="bold" fill="#2f3a2b">158</text>
+<text x="14" y="330" font-size="16" font-weight="bold" fill="#2f3a2b">8-10</text>
+<rect x="75.3056" y="316" width="104.2" height="18" rx="3" fill="#8a9a6b"/>
+<text x="186.5" y="331" font-size="16" font-weight="bold" fill="#2f3a2b">151</text>
+<text x="14" y="366" font-size="15" font-weight="bold" fill="#8b5a2b">8-1 is mostly private: permission is the game.</text>
+<text x="14" y="387" font-size="15" font-weight="bold" fill="#8b5a2b">Lean.</text>
+</svg>

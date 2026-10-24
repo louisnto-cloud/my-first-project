@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Used shotgun checks: 1 seller shows it unloaded and you prove it, 2 bores clean, no pits, bulges or dents, 3 chokes come out, threads clean, 4 action cycles smooth, 5 for gas guns piston and seal present, for over unders the action closes tight, 6 plug and choke wrench included, 7 PAL check and the transfer reference number.">
+<rect width="400" height="300" fill="#EEF1EA"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#1F3D2B">Buying used: 7 checks</text>
+<rect x="12" y="44" width="376" height="30" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="59.0" r="12" fill="#FF6A13"/><text x="34" y="64.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+<text x="54.0" y="64.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Prove it unloaded</text>
+<rect x="12" y="79" width="376" height="30" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="94.0" r="12" fill="#1F3D2B"/><text x="34" y="99.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+<text x="54.0" y="99.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Bores: no pits, bulges</text>
+<rect x="12" y="114" width="376" height="30" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="129.0" r="12" fill="#1F3D2B"/><text x="34" y="134.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+<text x="54.0" y="134.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Chokes come out</text>
+<rect x="12" y="149" width="376" height="30" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="164.0" r="12" fill="#1F3D2B"/><text x="34" y="169.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+<text x="54.0" y="169.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Action cycles smooth</text>
+<rect x="12" y="184" width="376" height="30" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="199.0" r="12" fill="#1F3D2B"/><text x="34" y="204.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+<text x="54.0" y="204.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Gas parts / tight hinge</text>
+<rect x="12" y="219" width="376" height="30" rx="8" fill="#ffffff" stroke="#1F3D2B" stroke-width="1.6"/>
+<circle cx="34" cy="234.0" r="12" fill="#1F3D2B"/><text x="34" y="239.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+<text x="54.0" y="239.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">Plug and wrench in box</text>
+<rect x="12" y="254" width="376" height="30" rx="8" fill="#ffffff" stroke="#FF6A13" stroke-width="1.6"/>
+<circle cx="34" cy="269.0" r="12" fill="#FF6A13"/><text x="34" y="274.0" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+<text x="54.0" y="274.0" font-size="14" font-weight="bold" fill="#17201A" text-anchor="start">PAL and reference number</text>
+</svg>

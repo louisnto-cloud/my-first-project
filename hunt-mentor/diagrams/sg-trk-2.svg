@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="sans-serif" role="img" aria-label="Step 2, look for claws. A dog family print, wolf or coyote, shows claw dots ahead of the toes and a small triangle heel pad. A cat print, cougar, shows no claws and a big heel pad with 3 lobes.">
+  <rect width="400" height="300" fill="#fffaf0"/>
+  <text x="200" y="30" font-size="20" font-weight="bold" fill="#2f3a2b" text-anchor="middle">2. Look for claws</text>
+  <g transform="translate(105 145) scale(2.4)">
+    <g fill="#8b5a2b">
+      <path d="M-12 8 Q0 -4 12 8 Q14 20 0 22 Q-14 20 -12 8 Z"/>
+      <ellipse cx="-14" cy="-6" rx="5" ry="7"/><ellipse cx="14" cy="-6" rx="5" ry="7"/>
+      <ellipse cx="-5" cy="-19" rx="5" ry="7"/><ellipse cx="5" cy="-19" rx="5" ry="7"/>
+    </g>
+    <g fill="#e8590c"><circle cx="-16" cy="-16" r="1.8"/><circle cx="16" cy="-16" r="1.8"/><circle cx="-6" cy="-30" r="1.8"/><circle cx="6" cy="-30" r="1.8"/></g>
+  </g>
+  <g transform="translate(295 150) scale(2.4)" fill="#8b5a2b">
+    <path d="M-16 10 Q-16 -2 0 -2 Q16 -2 16 10 Q16 20 10 20 Q5 16 0 21 Q-5 16 -10 20 Q-16 20 -16 10 Z"/>
+    <ellipse cx="-18" cy="-10" rx="5" ry="6"/><ellipse cx="-7" cy="-20" rx="5" ry="6.5"/><ellipse cx="7" cy="-18" rx="5" ry="6.5"/><ellipse cx="18" cy="-7" rx="5" ry="6"/>
+  </g>
+  <g font-size="16" text-anchor="middle">
+    <text x="105" y="250" font-weight="bold" fill="#e8590c">Claws show</text>
+    <text x="105" y="272" fill="#2f3a2b">wolf, coyote, dog</text>
+    <text x="295" y="250" font-weight="bold" fill="#2f3a2b">No claws</text>
+    <text x="295" y="272" fill="#2f3a2b">cougar</text>
+  </g>
+</svg>
