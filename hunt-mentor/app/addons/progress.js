@@ -265,7 +265,7 @@
     const sp = spR ? spR(sp0, String((plan.where && plan.where.mu) || '').split('-')[0]) : sp0;
     const P = studyPath(plan, sp), ms = pathStats(S, P.must);
     if (!sp && !P.must.length) item('must', 'Must know screens read', null, 'The plan data is not on this phone yet, so the study path cannot be worked out. Open the plan once with signal.', `#/plan/${pid}`, 'Open the plan');
-    else item('must', 'Must know screens read', ms.total ? ms.seen / ms.total : 0, `${ms.seen} of ${ms.total} must know screens read on this plan's study path (${pct(ms.seen, ms.total)}%). Points follow the share read.`, ms.next ? `#/s/${encodeURIComponent(ms.next.id)}/${ms.next.i}` : `#/plan/${pid}`, ms.next ? `Read next: ${ms.next.title}` : 'See the study path');
+    else item('must', 'Must know screens read', ms.total ? ms.seen / ms.total : 0, `${ms.seen} of ${ms.total} must know screens read on this plan's study path (${pct(ms.seen, ms.total)}%). Read them all for the full ${W.must} points; each one you read adds its share.`, ms.next ? `#/s/${encodeURIComponent(ms.next.id)}/${ms.next.i}` : `#/plan/${pid}`, ms.next ? `Read next: ${ms.next.title}` : 'See the study path');
     // 2. licence and tag (self tick)
     item('licence', 'Licence and tag bought', mine.licence ? 1 : 0, mine.licence ? `You ticked it on ${fmtDay(mine.licence)}.` : 'Not ticked yet. Tick it here once you hold them.', '#/s/licences', 'Lesson: Licences and tags', { tick: 'licence' });
     // 3. sighted in (self tick)

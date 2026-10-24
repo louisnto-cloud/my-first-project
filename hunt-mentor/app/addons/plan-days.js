@@ -227,7 +227,19 @@
   const dayHead = (label) => { const m = String(label).match(/^(\w+),?\s+(.*)$/); return m ? `<b class="pld-wd">${esc(m[1])}</b> <b>${esc(m[2])}</b>` : `<b>${esc(label)}</b>`; };
   // the legal light margin rule, said once for every day and time below
   const LEGEND = 'Legal light times on this plan are shown 3 min late at the start and 1 min early at the end, for safety (phone sun times can be up to 2 min off).';
-  function dayHtml(d, i) {
+  // after a kill: meat care and pack out, only what the lessons already say (Meat care, Packing out, After the shot)
+  function ifGot(plan) {
+    const sp = String((plan && plan.species) || ''), deer = /deer/.test(sp), r2 = /^2-/.test(String((plan && plan.where && plan.where.mu) || ''));
+    const kg = deer ? (r2 ? '16 to 30' : '23 to 38') : null; // same numbers as the plan's pack out estimate (a third of live weight, Tip)
+    return `<div class="pld-got"><b>If you get one</b><ul class="pll-small">
+      <li>Notch the licence before you touch the animal ${badge(99)} ${lessonA('after-the-shot', 'After the shot')}</li>
+      <li>Guts out or meat off within the hour. Shade, air moving, off the ground ${badge(80)}</li>
+      <li>Breathable cloth game bags, one per quarter. Never plastic or garbage bags: plastic holds heat in ${badge(80)}</li>
+      <li>Get the meat below 4°C as fast as you can; best, into a cooler the same day ${badge(80)} ${lessonA('meat-care', 'Meat care')}</li>
+      <li>Neck, ribs, four quarters and loins all come out, however many trips ${badge(95)}${kg ? `. About ${kg} kg of boned meat ${TIP}` : ''} ${lessonA('packing-out', 'Packing out')}</li>
+    </ul></div>`;
+  }
+  function dayHtml(d, i, plan) {
     if (d.kind === 'nolight') return `<div class="card"><h3>Day ${i + 1}: ${esc(d.label)}</h3><p class="muted">Sun times are not ready on this screen, so no hour by hour plan. Open the Home page once, then come back.</p></div>`;
     const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow">${dayHead(d.label)}${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
     if (d.kind === 'closed') return `<details class="card pl-day pl-closed pld-day">${head}<p><b>No open season for you on this day.</b> Scout, sight in or rest. No hunting.</p></details>`;
@@ -244,6 +256,7 @@
       ${d.backup ? `<div class="pld-bk"><div class="pld-bk-h">Backup plan and its own times</div>${spotLine(d.backup, 'Backup')}<ul class="pll-small pld-why">${d.backup.why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
       ${blocked}
       <div class="pld-hh">Hour by hour</div><ol class="pld-steps">${steps}</ol>
+      ${d.kind === 'hunt' ? ifGot(plan) : ''}
       ${roles.length ? `<div class="pld-roles"><b>${d.pair ? 'With your partner' : 'Solo'}</b><ul>${roles.map((r) => `<li>${esc(r.t)} ${badge(r.cert)}</li>`).join('')}</ul><p class="pll-small">${lessonA(d.roles.lesson, 'Lesson: Hunting with a partner')}${d.pair ? '' : ` · ${lessonA('local-harrison-deer', 'Your Harrison deer hunt')}`}</p></div>` : ''}
       </details>`;
   }
@@ -255,7 +268,7 @@
     return `<div class="pld"><p class="pll-law">Study aid only. The official regulations are the law.</p>
       <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
       ${KEY(days.some((d) => d.wind && d.wind.length))}
-      ${days.map(dayHtml).join('')}
+      ${days.map((d, i) => dayHtml(d, i, plan)).join('')}
       <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; margins as in the line at the top, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {
@@ -332,7 +345,7 @@
 .pld-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.pld-acts .btn{min-height:44px}.pld-ti{font-size:16px}.pld-tx{color:var(--ink);display:block;margin-top:2px}
 .pld-bk{border:2px dashed var(--line);border-radius:12px;padding:8px 10px;margin:16px 0;background:var(--sel-bg)}.pld-bk-h,.pld-hh{font-weight:800;font-size:16px;margin:4px 0}.pld-hh{margin-top:16px;border-top:2px solid var(--line);padding-top:10px}
 .pld-caution{margin:6px 0;line-height:1.35}.pld-key li{min-height:28px}.pld-caution{color:var(--bad-ink)}
-.pld-block,.pld-note{background:var(--warn-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pld-why{margin:4px 0 8px}.pld-roles{margin-top:8px}
+.pld-block,.pld-note{background:var(--warn-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pld-why{margin:4px 0 8px}.pld-roles{margin-top:8px}.pld-got{margin-top:8px}.pld-got ul{margin:4px 0 0}
 .pld summary{min-height:44px}.pld-wd{font-size:18px}.pld-legend{font-size:14px;background:var(--sel-bg);padding:8px 10px;border-radius:10px;margin:8px 0}.pll-small{font-size:14px}.pll-law{font-size:14px;color:var(--muted)}
 @media print{.pld-day{break-inside:avoid}.pld details,.pld-day{display:block}}`;
     document.head.appendChild(st);
