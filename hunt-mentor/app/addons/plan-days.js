@@ -41,7 +41,7 @@
 
   // data (shared file with plan-live.js); defaults keep it working when the file is not saved yet
   const DEF = {
-    est: { driveKmh: 60, roadFactor: 1.3, walkKmh: 4, gearUpMin: 10, bufferMin: 15, why: 'Assumption: road distance is the straight line times 1.3, driven at 60 km/h on average, plus 15 minutes of slack. Walking 4 km/h.' },
+    est: { driveKmh: 60, roadFactor: 1.3, walkKmh: 3, gearUpMin: 10, bufferMin: 15, why: 'Assumption: road distance is the straight line from Mission to the parking times 1.3, driven at 60 km/h on average, plus 15 minutes of slack. Walk: 3 km/h plus 1 min per 10 m of climb, at least 5 min (the spot pipeline\'s rule).' },
     thermals: { lesson: 'wind-thermals', more: 'wind-mastery', cert: 75, down: 'Cool air sinks downhill from night until the sun warms the slope.', up: 'Warm air rises uphill while the sun heats the slopes.', switch: 'Thermals switch mid morning and near sunset.' },
     roles: { lesson: 'hunting-partner', pair: [], solo: [] },
   };
@@ -52,8 +52,9 @@
   const parkOf = (s) => { const p = s.detail && s.detail.park; return Array.isArray(p) && p.length >= 2 ? { lat: +p[1], lon: +p[0] } : null; };
   function walkOf(s) {
     const d = s.detail || {};
-    if (d.walkMin != null) return { min: Math.max(5, +d.walkMin), how: `${d.walkKm != null ? `${(+d.walkKm).toFixed(1)} km, ` : ''}${d.climbM ? `${Math.round(d.climbM)} m climb, ` : ''}spot data estimate` };
-    if (d.walkKm != null) return { min: Math.max(5, Math.round((+d.walkKm / D.est.walkKmh) * 60)), how: `${(+d.walkKm).toFixed(1)} km at ${D.est.walkKmh} km/h, estimate` };
+    // one walk rule everywhere (spot pipeline): 3 km/h plus 1 min per 10 m of climb, at least 5 min
+    if (d.walkMin != null) return { min: Math.max(5, +d.walkMin), how: `${d.walkKm != null ? `${(+d.walkKm).toFixed(1)} km, ` : ''}${d.climbM ? `${Math.round(d.climbM)} m climb, ` : ''}3 km/h plus 1 min per 10 m climb, at least 5 min, estimate` };
+    if (d.walkKm != null) return { min: Math.max(5, Math.round((+d.walkKm / D.est.walkKmh) * 60 + (+d.climbM || 0) / 10)), how: `${(+d.walkKm).toFixed(1)} km at ${D.est.walkKmh} km/h plus 1 min per 10 m climb, at least 5 min, estimate` };
     return { min: 20, how: 'Assumption: 20 minutes, no walk data for this spot', assumed: true };
   }
   const normRoad = (s) => String(s || '').toLowerCase().replace(/\s+-\s+.*$/, '').replace(/forest service road|\bfsr\b|\(.*?\)/g, '').replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -165,7 +166,7 @@
       if (leave != null) S(leave, 'leave', `Leave ${day.drive.from}`, `About ${Math.round(roadKm)} km and ${driveMin} min to ${esc(pName)}, plus ${E.bufferMin} min slack (estimate).`, { est: true });
       S(arrive, 'park', 'Park and gear up', P && P.c.s.detail && P.c.s.detail.parkWhat ? `Park: ${esc(P.c.s.detail.parkWhat)}. Load the rifle only where it is legal to hunt, never on or across the road.` : 'Park off the road. Load the rifle only where it is legal to hunt, never on or across the road.', { est: true });
       S(walkIn, 'walkin', 'Walk in quietly', `${walk} min to the spot (${P ? esc(P.w.how) : 'Assumption'}). Headlamp, red light if you have one.`, { est: true });
-      S(setup, 'setup', 'Set up and sit: legal light starts', `${P ? esc(P.f.t) + ' ' : ''}Air still sinks downhill at first light: sit below or beside where deer will feed, so your scent drains away from them. ${thSrc} Dawn and dusk matter most ${badge(80)}. Sit still through the thermal switch, about ${fmtT(swA)} to ${fmtT(swB)}: air swirls, do not walk then ${TIP}.`, { legal: true });
+      S(setup, 'setup', 'Sit by: legal light starts', `Sit by ${fmtT(setup).replace(/\.$/, '')} (legal light starts). Earlier option ${TIP}: in your seat by ${fmtT(setup - 45 * MIN).replace(/\.$/, '')} to ${fmtT(setup - 30 * MIN).replace(/\.$/, '')} (30 to 45 min before), so you are still when deer move; then leave and walk in that much earlier than the times above. ${P ? esc(P.f.t) + ' ' : ''}Air still sinks downhill at first light: sit below or beside where deer will feed, so your scent drains away from them. ${thSrc} Dawn and dusk matter most ${badge(80)}. Sit still through the thermal switch, about ${fmtT(swA)} to ${fmtT(swB)}: air swirls, do not walk then ${TIP}.`, { legal: true });
       const rut = L.rut && !L.rut.verify && /rut|breeding/i.test(L.rut.phase);
       S(amEnd, 'midday', rainDay != null && rainDay > 10 ? 'Midday: still hunt timber or scout' : 'Midday: still hunt or scout', `${esc(th.up)} Hunt from above or across the slope so your scent lifts away ${badge(th.cert)}. ${rut ? `${esc(L.rut.phase)}: stay out through midday; bucks cruise for does ${TIP} (${lessonA(L.rut.lesson, 'Masterclass: The rut')}).` : 'Or scout the backup spot for sign and the wind.'} Eat, drink, check the time.`);
       if (EV && !day.evening.same) S(midEnd, 'move', `Move to ${esc(EV.c.s.name)}`, `${esc(EV.f.t)} Drive and walk in before ${fmtT(evSit)} (estimate).`, { est: true });
