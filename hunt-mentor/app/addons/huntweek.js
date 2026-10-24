@@ -95,7 +95,7 @@
         { id: 'legal', t: 'In doubt about a shot? Run Legal to shoot? in Field Mode.', tip: true, links: [['#/field/legal', 'Legal to shoot?']] },
       ] },
       { id: 'gA', from: -1, to: -999, h: 'After the shot', sub: 'Read it now, use it then', items: [
-        { id: 'wait', t: 'Stay still, watch, mark where it stood. Wait about 30 minutes before you follow.', tip: true, links: [L('after-the-shot', /wait/i, 'After the shot'), L('blood-trailing', null, 'Blood trailing')] },
+        { id: 'wait', t: 'Stay still, watch, mark where it stood. How long to wait depends on the hit: at least 30 minutes, much longer for a liver or gut hit (see After the shot, step 2).', tip: true, links: [L('after-the-shot', /wait/i, 'After the shot'), L('blood-trailing', null, 'Blood trailing')] },
         { id: 'cancel', t: 'Kill, cancel the licence, then touch the deer.', c: 99, s: `${SYN}, page 11`, links: [['#/field/c/tag', 'Tag card']] },
         { id: 'sex', t: 'Leave the unskinned tail and a testicle or part of the penis attached.', c: 99, s: `${SYN}, page 15 (Rule Book: after the kill)`, links: [L('rb-after-the-kill', /evidence of sex/i, 'Evidence of sex')] },
         { id: 'cool', t: 'Cool it: game bags, shade, no plastic or tarp on a warm carcass. Cooler the same day.', c: 80, s: 'Meat care lesson', links: [L('meat-care', /cooling/i, 'Cooling in the field'), ['#/field/c/dress', 'Field dressing card']] },
