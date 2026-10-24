@@ -14,7 +14,7 @@
 (function () {
   'use strict';
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const tx = (s) => esc(s).replace(/(\d)-(\d)/g, '$1&#8209;$2'); // keep codes like 2-18 on one line
+  const tx = (s) => esc(s).replace(/(\d+(?:-\d+)+)/g, '<span style="white-space:nowrap">$1</span>'); // keep codes like 2-18 and dates on one line, with a plain hyphen
   const badge = (v) => (v == null ? '<span class="verify">VERIFY</span>' : `<span class="cert ${v >= 95 ? 'c-hi' : v >= 80 ? 'c-mid' : v >= 60 ? 'c-lo' : 'c-tip'}" title="Certainty ${v}%">${v}%</span>`);
   const cache = {};
   const getJSON = (u) => (cache[u] = cache[u] || fetch(u, { credentials: 'omit' }).then((r) => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); }).catch((e) => { delete cache[u]; throw e; }));
@@ -130,9 +130,9 @@
       `Range: low = the worst year, likely = the middle year, high = the best year${widen ? `; widened (low x ${WIDEN.low}, high x ${WIDEN.high}) because ${flags.join('; ')}` : ''}.`,
       `Season success = deer taken / hunters, same range rule: ${g.map((r) => `${r.year}: ${pct(r.kills / r.hunters, 1)}`).join('; ')}.`,
       `Days per deer = 1 / chance per day (${Math.round(base.daysPerDeer.low)} to ${Math.round(base.daysPerDeer.high)}, likely ${Math.round(base.daysPerDeer.mid)}).`,
-      `Your ${N} day${N === 1 ? '' : 's'}: chance = 1 minus (1 minus chance per day) to the power ${N}. Likely: 1 − (1 − ${perDay.mid.toFixed(4)})^${N} = ${pct(base.overPlanDays.mid, 1)}.`,
+      `Your ${N} day${N === 1 ? '' : 's'}: chance = 1 minus (1 minus chance per day) to the power ${N}. Likely: 1 minus (1 minus ${perDay.mid.toFixed(4)})^${N} = ${pct(base.overPlanDays.mid, 1)}.`,
       'Assumes an average hunter on an average season day, every day the same and independent. Your skill, your spot and your dates move it (see the estimates).',
-      n > 1 ? `Party of ${n}: 1 − (1 − p)^(${N} x ${n}), as if each hunter hunts apart at the average rate. Hunting side by side counts for less (Tip).` : null,
+      n > 1 ? `Party of ${n}: 1 minus (1 minus p)^(${N} x ${n}), as if each hunter hunts apart at the average rate. Hunting side by side counts for less (Tip).` : null,
       nonRes.length ? `Non resident rows exist (${nonRes.map((r) => `${r.year}: ${r.hunters} hunter${r.hunters === 1 ? '' : 's'}, ${r.kills == null ? 'kills not published' : r.kills + ' deer'}, ${r.days} days`).join('; ')}). They come from guide outfitter reports, a different count, and are under 20 hunters, so they are shown but not added.` : 'No non resident rows for this MU and species, so residents only.',
       'Hunt year runs 1 April to 31 March. The MU rate covers the whole MU, every spot and every week of the season.',
     ].filter(Boolean);
