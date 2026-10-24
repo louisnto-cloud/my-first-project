@@ -1385,7 +1385,10 @@
     // HMPlanDays.mount(el, plan, spots, { dayOpen, live }): hour by hour per day, with the turnaround alarm buttons wired
     if (Dd && typeof Dd.mount === 'function') {
       try {
-        const sps = X.spots.map((x) => ({ id: x.id, name: x.name, cat: x.cat, mu: x.mu, lat: x.lat, lon: x.lon, detail: x._d || null }));
+        // a spot from the saved plan (no signal, or a reload) has no _d: rebuild the detail from the saved fields, so walk, parking and
+        // the leave and turnaround times match the online plan instead of the 20 min walk assumption
+        const savedD = (x) => (x.walkMin != null || x.walkKm != null || x.park ? { park: x.park && x.park.lon != null ? [+x.park.lon, +x.park.lat] : null, parkWhat: x.park && x.park.what, walkMin: x.walkMin, walkKm: x.walkKm, climbM: x.climbM, aspect: x.aspect, driveVia: x.driveVia } : null);
+        const sps = X.spots.map((x) => ({ id: x.id, name: x.name, cat: x.cat, mu: x.mu, lat: x.lat, lon: x.lon, detail: x._d || savedD(x) }));
         const r = await Dd.mount(el.querySelector('#pl-days-x'), X.plan, sps, { dayOpen: X.legal.dayOpen, home: X.home, live: m.live || null }); if (!alive()) return;
         m.daysX = r && r.days; daysOk = !!(r && r.days);
         if (typeof m.redraw === 'function') m.redraw();
