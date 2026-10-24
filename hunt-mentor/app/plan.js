@@ -1390,10 +1390,10 @@
     let answer;
     if (od.pct >= 90) answer = `<p><b>Maybe, but never promised.</b> Hunters here have done very well on average.</p>`;
     else answer = `<p><b>No. 90% is not realistic here${huntDays ? ` in ${huntDays} hunt day${huntDays === 1 ? '' : 's'}` : ''}.</b></p>
-      <ul><li>5 year total: ${pct(od.pct)} of resident hunters got one over the whole season (the middle year of the 2020 to 2024 reports, the same base as Your odds).</li>
+      <ul><li>Middle year: ${pct(od.pct)} of resident hunters got one over the whole season (the middle year of the 2020 to 2024 reports, the same base as Your odds).</li>
       <li>So most hunters went home without one, even with ${od.dph.toFixed(1)} days each.</li>
       ${huntDays ? `<li>Rough math (Tip): at the average rate, your ${huntDays} hunt day${huntDays === 1 ? '' : 's'} give ${r5(you)}${n > 1 ? `, and ${r5(party)} that one of the ${n} tags in your party is filled${p.party === 'two' && !(p.ask && p.ask.partner && typeof p.ask.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}.</li>` : '<li>Your dates have no open hunt days, so the chance is 0 on these dates.</li>'}
-      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the 5 year total rate.</li>` : ''}
+      ${need ? `<li>Rough math (Tip): a 9 in 10 chance would take about ${need} hunter days at the middle year rate.</li>` : ''}
       <li>You beat the average with scouting, time in the field and patience. See below.</li></ul>`;
     const years = od.rows.map((r) => `<tr class="${r.lowConfidence ? 'pl-low' : ''}"><td>${r.year}</td><td>${r.hunters != null ? r.hunters : 'n/a'}</td><td>${r.kills != null ? r.kills : 'n/a'}</td><td>${r.successPct != null && !r.lowConfidence ? r.successPct.toFixed(0) + '%' : r.lowConfidence ? 'Few hunters' : 'n/a'}</td><td>${r.days != null ? r.days : 'n/a'}</td></tr>`).join('');
     return `<div class="card pl-odds"><h3>Official success: ${where}</h3>
