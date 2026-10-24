@@ -664,3 +664,44 @@ body.hm-kb .tabs, body.hm-kb .as-bar { display: none; }
 .pl-why a { display: flex; align-items: center; width: fit-content; min-height: 44px; }
 .pl .srd-btn.sm, .pl .srd-l { min-height: 44px; display: inline-flex; align-items: center; }
 .pl-pace button[aria-pressed="true"]::before { content: "\2713\00a0"; }
+
+/* R5 design and readability (trip plan, 360 to 390 px, gloved thumb at 5 a.m.) */
+/* one display size per heading level: stage, fold and card titles 24 px; groups and cards inside them 19 px */
+main .tl-today h2, main .tl-st > details > summary h2, main .tl-master > summary h2, main .pl-srcs > summary h2 { font: 700 24px/1.1 var(--display); margin: 0; }
+main .tl-hd h3, main .pl-grp > h3, main .tl-today .gc-h { font: 700 19px/1.2 var(--display); margin: 0 0 6px; }
+/* stage header: the date and a status pill on one line, the title under it */
+.tl-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 4px; }
+main .tl-meta .tl-tag { margin: 0; flex: 0 0 auto; white-space: nowrap; }
+main .tl-tag.tl-tag-up { background: var(--line); color: var(--ink); }
+main .tl-past .tl-tag { background: var(--line); color: var(--ink); }
+main .tl-st { margin: 0 0 12px; }
+main .tl-in > .tl-step:first-child { border-top: 0; }
+/* a jump never parks a heading under the app bar and the sticky stage bar */
+main .tl-st, main .tl-today, main .tl-hd, main .pl-sec, main .pl-grp, main .tl-master, main .pl-srcs, main [id^="pl-"], main [id^="tl-"] { scroll-margin-top: calc(var(--top-h, 56px) + 64px); }
+/* Hunt day card: label left, time right in one column, its note on a short line under it */
+main .tl-hd { padding: 12px 14px; }
+.tl-hr { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line); }
+.tl-hd h3 + .tl-hr, .tl-bk h4 + .tl-hr { border-top: 0; }
+.tl-hk { color: var(--muted); font-size: 16px; }
+.tl-t { font-family: var(--mono); font-weight: 700; font-size: 18px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tl-hn { grid-column: 1 / -1; display: block; margin-top: 2px; font: 400 14px/1.4 var(--font); color: var(--ink); }
+.tl-hw { grid-template-columns: 1fr; }
+.tl-hw > b { font-size: 16px; overflow-wrap: anywhere; }
+.tl-hd .tl-opt { margin: 0; padding: 8px 0; border-top: 1px solid var(--line); line-height: 1.4; }
+.tl-ln { display: block; margin-top: 4px; }
+.tl-ln:first-child { margin-top: 0; }
+.tl-hd-n { line-height: 1.4; }
+/* the backup block stands apart: its own box, heading and times */
+.tl-bk { margin: 12px 0 0; padding: 4px 12px 10px; border: 2px dashed var(--btn-line); border-radius: 10px; background: var(--bg); }
+.tl-bk h4 { margin: 8px 0 2px; font: 700 17px/1.2 var(--display); }
+.tl-bk .pl-small { margin: 6px 0 0; line-height: 1.4; }
+/* the warning is the one thing on the card in the safety colour */
+main .tl-hd .tl-warn { margin: 10px 0 0; padding: 8px 10px; border: 0; border-left: 6px solid var(--blaze); border-radius: 6px; background: var(--warn-bg); color: var(--ink); font-size: 15px; line-height: 1.4; }
+/* short lines: the text under each step reads in ink, not pale grey */
+main .tl-today li p { color: var(--ink); line-height: 1.4; }
+main .tl-step p { line-height: 1.4; }
+/* full checklist: one fold, groups are headed sections with an index of groups at the top */
+.pl-gix { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.pl-gix-b { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 4px 10px; border: 2px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); font: 700 14px/1.2 var(--font); text-align: left; }
+.pl-grp { border-top: 2px solid var(--line); padding: 12px 0 4px; margin-top: 8px; }
+.pl-grp > h3 { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
