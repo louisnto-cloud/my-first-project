@@ -226,7 +226,8 @@
     const asOf = live.wxAsOf || live.asOf;
     const head = `<div class="card pll-head"><h3>Live conditions</h3>
       <p class="pll-law">Study aid only. The official regulations are the law.</p>
-      ${live.stale || live.offline ? `<p class="pll-stale" role="status"><b>${live.offline ? 'No signal.' : 'Saved copy.'}</b> Showing what was saved${asOf ? ` (as of ${esc(fmtDT(asOf))})` : ''}. Forecasts change: check again with signal the night before.</p>` : `<p class="pll-small">As of ${esc(fmtDT(asOf))}</p>`}
+      ${live.stale || live.offline ? `<p class="pll-stale" role="status"><b>${live.offline ? 'No signal.' : 'Saved copy.'}</b> Showing what was saved. Forecasts change: check again with signal the night before.</p>` : ''}
+      <p class="pll-small pll-asof"><b>As of ${asOf ? esc(fmtDT(asOf)) : 'not checked yet'}</b>${live.stale || live.offline ? ' (saved copy)' : ''}<br>Weather: Open-Meteo. Roads and fire bans: BC government layers, each checked time below.</p>
       <button type="button" class="btn block no-print" data-pll-refresh="1">Check again</button></div>`;
     const days = (live.days || []).map((d, i) => dayCard(d, i, live, P0)).join('');
     const others = (live.perPoint || []).length > 1 ? spotsTable(live) : '';

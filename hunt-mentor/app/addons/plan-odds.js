@@ -213,7 +213,7 @@
     }
     const coast = isCoastDeer(sp, mu);
     if (coast) {
-      out.push({ name: 'Hunt the rut dates', effect: 'Most does conceive 15 November to 5 December (90%). Bucks move by day then (Tip). Stay out through midday in rut weeks (Tip).', source: 'Black tailed deer Masterclass 4: The rut', lesson: L.rut, cert: 90 });
+      out.push({ name: 'Hunt the rut dates', effect: 'Most does conceive 15 November to 5 December (90%). Bucks move by day then (Tip). Stay out through midday in rut weeks (Tip).', source: 'Nyberg and Janz 1990, page 36 (Vancouver Island data), via Black tailed deer Masterclass 4: The rut', lesson: L.rut, cert: 90 });
       out.push({ name: 'Watch cutblock edges', effect: 'Collared coast deer used clearcuts most within 100 m of cover (90%). Sit where you see that edge band at dawn and dusk (Tip).', source: 'Black tailed deer Masterclass 5 (Nyberg and Janz 1990)', lesson: L.hunt, cert: 90 });
       out.push({ name: 'Watch the doe, then behind her', effect: 'In the rut a buck follows a doe 2 to 3 days before her heat (90%). Stop and glass behind every doe for 5 minutes (Tip). Bucks only in these MUs (99%, page 28).', source: 'Black tailed deer Masterclass 4', lesson: L.rut, cert: 90 });
     }
