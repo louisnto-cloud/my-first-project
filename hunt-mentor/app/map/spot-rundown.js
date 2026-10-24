@@ -270,8 +270,8 @@ function render(D, ctx) {
       const rows = (D.harvest.rows || []).filter((r) => r.mu === D.mu && r.species === s.harvest && r.resident && r.year >= 2020 && r.year <= 2024);
       const g = rows.filter((r) => !r.lowConfidence && r.hunters >= 20 && r.kills != null);
       if (g.length >= 3) {
-        const pct = (g.reduce((t, r) => t + r.kills, 0) / g.reduce((t, r) => t + r.hunters, 0)) * 100;
-        a.push(li(`${esc(s.label)} harvest odds, MU ${esc(D.mu)}: <b>${Math.round(pct)}%</b> of resident hunters got one (2020 to 2024 average, ${g.length} years)${badge(90)}${srcTxt('BC Big Game Harvest Statistics 1976 to 2024, Hunter Sample estimates')}`));
+        const yr = g.map((r) => (r.kills / r.hunters) * 100).sort((x, y) => x - y), pct = yr[Math.floor((yr.length - 1) / 2)]; // the middle year, the same base as the plan's odds
+        a.push(li(`${esc(s.label)} harvest odds, MU ${esc(D.mu)}: <b>${Math.round(pct)}%</b> of resident hunters got one in the middle year (${Math.round(yr[0])}% to ${Math.round(yr[yr.length - 1])}% across 2020 to 2024, ${g.length} years)${badge(90)}${srcTxt('BC Big Game Harvest Statistics 1976 to 2024, Hunter Sample estimates')}`));
       } else if (rows.length) a.push(li(`${esc(s.label)} harvest odds, MU ${esc(D.mu)}: too few hunters reported (under 20 a year) for a reliable %${srcTxt('BC Big Game Harvest Statistics')}`));
     }
   } else if (SP.some((s) => s.harvest && D.tags.includes(s.tag)) && !D.harvest) a.push(li('Harvest odds: not loaded. Open the app once with signal.'));
