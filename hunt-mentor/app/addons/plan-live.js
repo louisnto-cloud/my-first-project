@@ -143,7 +143,8 @@
       const mo = +iso.slice(5, 7), clim = D && D.climate && D.climate[regionOf(plan.where && plan.where.mu)] && D.climate[regionOf(plan.where && plan.where.mu)][String(mo)];
       return Object.assign({ date: iso, moon: moon(Date.parse(iso + 'T20:00:00Z')), forecast: iso >= today && iso <= last, past: iso < today, forecastFrom: iso > last ? dAdd(iso, -(FORECAST_DAYS - 1)) : null, rut: rutFor(D, plan, iso), climate: clim || null }, L);
     });
-    const live = { v: 1, planId: plan.id || null, asOf: Date.now(), perPoint: [], days, rut: days.length ? days[Math.floor((days.length - 1) / 2)].rut : null, roads: null, fireBans: null, stale: false, offline: navigator.onLine === false, errors: {}, mig, center, data: !!D };
+    const route = (points || []).filter((p) => p && p.lat != null && p.lon != null).slice(0, 6).map((p) => ({ id: p.id, name: p.name || '', lat: +p.lat, lon: +p.lon, detail: p.detail ? { driveVia: p.detail.driveVia || [], park: p.detail.park || null } : null }));
+    const live = { v: 1, planId: plan.id || null, asOf: Date.now(), route, perPoint: [], days, rut: days.length ? days[Math.floor((days.length - 1) / 2)].rut : null, roads: null, fireBans: null, stale: false, offline: navigator.onLine === false, errors: {}, mig, center, data: !!D };
     const wxDates = dates.filter((x) => x >= today && x <= last);
     const online = navigator.onLine !== false;
     const jobs = [];
@@ -253,7 +254,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${L}</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light ${L} (margins: see Sources below)</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}
@@ -286,11 +287,19 @@
     const pt = live.center;
     const li = (x) => `<li class="${x.kind === 'closure' || x.closed ? 'pll-bad' : ''}"><b>${x.kind === 'closure' ? 'Closure' : x.kind === 'none' ? 'No notice' : x.closed ? 'Warning, road closed' : 'Caution'}: ${esc(x.road || 'Road')}</b>${x.km != null ? ` <span class="muted pll-small">${Math.round(x.km)} km from ${pt ? 'the plan point' : 'here'}</span>` : ''}<br>${esc(x.t)}${x.notice && /^https?:/.test(x.notice) ? ` <a href="${esc(x.notice)}" target="_blank" rel="noopener">Notice</a>` : x.notice ? ` ${esc(x.notice)}` : ''}${x.contact ? `<br><span class="pll-small">Contact: ${esc(x.contact)}</span>` : ''}</li>`;
     const items = (R.items || []).slice(0, 12).sort((x, y) => (x.km == null ? 0 : x.km) - (y.km == null ? 0 : y.km));
+    // notices on the drive in to a plan spot, or within 2 km of one (the hour by hour's own test), come first; the rest fold
+    const NF = window.HMPlanDays && window.HMPlanDays._noticesFor, route = live.route || [];
+    const onRoute = new Map();
+    if (NF && route.length) for (const s of route) { try { NF(s, items).forEach((n) => { const k = items.findIndex((x) => x.road === n.road && x.t === n.t); if (k >= 0 && !onRoute.has(k)) onRoute.set(k, `${n.why}, ${s.name || 'a plan spot'}`); }); } catch (e) { /* no match */ } }
+    const liR = (x, k) => li(x).replace(/<\/li>$/, `<br><span class="pll-small"><b>On your route</b>: ${esc(onRoute.get(k))}</span></li>`);
+    const mine = items.map((x, k) => [x, k]).filter(([, k]) => onRoute.has(k)), rest = items.filter((x, k) => !onRoute.has(k));
+    const routeHtml = onRoute.size ? `<p class="pll-small"><b>On or near your route (${mine.length})</b></p><ul class="pll-roads">${mine.map(([x, k]) => liR(x, k)).join('')}</ul>
+      ${rest.length ? `<details class="pll-more"><summary>${rest.length} other notice${rest.length === 1 ? '' : 's'} within 40 km, not on your route</summary><ul class="pll-roads">${rest.map(li).join('')}</ul></details>` : ''}` : '';
     const when = R.live ? `Live from the official layer${R.stale ? ' (saved copy)' : ''}, checked ${esc(fmtDT(R.asOf))}${R.edited ? `; layer last edited ${esc(fmtDT(R.edited))}` : ''}. ${badge(R.cert)}`
       : R.saved ? `No live check (${live.offline ? 'no signal' : 'layer did not answer'}). Saved lines from the lesson: district page updated ${esc(R.pageUpdated)}, read ${esc(R.checked)}. ${badge(R.cert)} ${lessonA(R.lesson, 'Lesson')}`
       : 'No saved road notices for this area in the app.';
     return `<div class="card"><h3>Road notices (FSR, Forest Service Road)</h3>
-      ${items.length ? `<ul class="pll-roads">${items.slice(0, 5).map(li).join('')}</ul>${items.length > 5 ? `<details class="pll-more"><summary>${items.length - 5} more notices</summary><ul class="pll-roads">${items.slice(5).map(li).join('')}</ul></details>` : ''}` : `<p>${R.live ? 'No notices in the official layer within 40 km.' : ''} No notice is not a promise the road is open.</p>`}
+      ${routeHtml || (items.length ? `${route.length ? '<p class="pll-small">None of these is on the drive in to a plan spot (Estimate, from the spot road names). Check the km anyway.</p>' : ''}<ul class="pll-roads">${items.slice(0, 5).map(li).join('')}</ul>${items.length > 5 ? `<details class="pll-more"><summary>${items.length - 5} more notices</summary><ul class="pll-roads">${items.slice(5).map(li).join('')}</ul></details>` : ''}` : `<p>${R.live ? 'No notices in the official layer within 40 km.' : ''} No notice is not a promise the road is open.</p>`)}
       ${(R.items || []).length > 12 ? `<p class="pll-small muted">${R.items.length - 12} more on the official map.</p>` : ''}
       <p class="pll-small">${when}</p>
       <p class="pll-small"><a href="${esc(R.link)}" target="_blank" rel="noopener">${esc(R.linkName || 'Official road page')}</a>${R.map ? ` · <a href="${esc(R.map)}" target="_blank" rel="noopener">Official road map</a>` : ''}. Read it the night before. Signs at the road beat any app.</p>
