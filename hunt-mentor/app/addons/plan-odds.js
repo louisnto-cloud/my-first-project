@@ -237,8 +237,8 @@
 .po .po-sub{font-size:14px;color:var(--muted);margin:2px 0 8px}
 .po .po-how>summary{min-height:44px;font-weight:700;cursor:pointer}.po .po-h4{margin:14px 0 4px;font-size:16px}.po .po-h5{margin:10px 0 2px;font-size:15px}
 .po .po-bar{margin:12px 0}
-.po .po-bar-h{display:flex;justify-content:space-between;gap:8px;font-size:16px}
-.po .po-bar-h b{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.po .po-bar-h{display:flex;flex-direction:column;gap:2px;font-size:16px}
+.po .po-bar-h b{font-family:var(--mono);font-weight:800;font-size:24px;line-height:1.15;white-space:normal}
 .po svg{display:block;width:100%;height:auto;overflow:visible}
 .po svg text{font-size:16px;fill:var(--ink);font-family:var(--font)}
 .po svg .po-mut{fill:var(--muted)}
@@ -321,7 +321,7 @@
     const scale = Math.max(0.5, Math.ceil(Math.max(b.successSeason.high, b.overPlanDays.high, ...(res.spots || []).map((s) => s.estimate.high)) * 4) / 4);
     const dates = b.dates && b.dates.length ? `${dLabel(b.dates[0])}${b.dates.length > 1 ? ` to ${dLabel(b.dates[b.dates.length - 1])}` : ''}` : '';
     const picture = `<div class="card"><h3>Your odds: ${where}</h3>
-      <p class="po-sub">Official base, an average hunter. Range = worst year to best year, line = the middle year (median of the 5 reports). The other odds cards on this plan use the same base. Scale 0 to ${Math.round(scale * 100)}%.</p>
+
       ${bar('po-b1', 'Whole season, one hunter', b.successSeason, scale, false, `${P0(b.successSeason.mid)} (${R0(b.successSeason)})`, `Average hunter spent ${b.daysPerHunter.toFixed(1)} days.`)}
       ${bar('po-b2', 'One hunter day', b.perDay, scale, false, `${P1(b.perDay.mid)} (${R1(b.perDay)})`, `About 1 deer per ${Math.round(b.daysPerDeer.mid)} hunter days (${Math.round(b.daysPerDeer.low)} to ${Math.round(b.daysPerDeer.high)}).`)}
       ${N ? bar('po-b3', `Your ${N} day${N === 1 ? '' : 's'}${dates ? `, ${esc(dates)}` : ''}`, b.overPlanDays, scale, true, `${P0(b.overPlanDays.mid)} (${R0(b.overPlanDays)})`, b.partyOverPlanDays ? `Someone in your party of ${b.party}: about ${P0(b.partyOverPlanDays.mid)} (${R0(b.partyOverPlanDays)}), if you hunt apart, at the median year rate (Tip).${res.tagAssumed ? ' Assumption: your partner carries a tag; change it in Your answers.' : ''}` : '') : '<p>No dates in this plan yet.</p>'}
@@ -336,7 +336,7 @@
       <div class="tbl"><table><thead><tr><th>Year</th><th>Hunters</th><th>Deer</th><th>Days</th><th>A day</th></tr></thead><tbody>${res.years.map((y) => `<tr><td>${y.year}</td><td>${y.hunters != null ? y.hunters : 'n/a'}</td><td>${y.kills != null ? y.kills : 'n/a'}</td><td>${y.days != null ? y.days : 'n/a'}</td><td>${y.perDay != null ? P1(y.perDay) : 'left out'}</td></tr>`).join('')}</tbody></table></div>
       <p class="po-sub">Source: <a href="${esc(res.source.url)}" target="_blank" rel="noopener">${esc(res.source.name)}</a>, checked ${esc(res.source.checked || '')} ${badge(res.source.cert)}. Rut: ${lessonLink(L.rut, 'Masterclass 4: The rut')}. Pressure: ${lessonLink(L.pressure, 'Hunting pressure')}.</p>`;
     // headline numbers stay on the card; the years, the per spot multipliers and the method fold under one heading
-    const how = `<details class="card po-how"><summary>How these odds are worked out</summary>${yrs.replace(/^<div class="card">/, '<div class="po-in">')}${spotsWhy(res)}${meth}</details>`;
+    const how = `<details class="card po-how"><summary>How these odds are worked out</summary><p class="po-sub">Official base, an average hunter. Range = worst year to best year, line = the middle year (median of the 5 reports). The other odds cards on this plan use the same base. Scale 0 to ${Math.round(scale * 100)}%.</p>${yrs.replace(/^<div class="card">/, '<div class="po-in">')}${spotsWhy(res)}${meth}</details>`;
     return `${head}${picture}${lev}${spots}${how}</div>`;
   }
 
