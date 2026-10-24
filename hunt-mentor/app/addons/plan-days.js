@@ -277,7 +277,7 @@
       <p class="pld-legend"><b>${esc(LEGEND)}</b></p>
       ${KEY(days.some((d) => d.wind && d.wind.length))}
       ${(() => { const seen = new Map(); return days.map((d, i) => dayHtml(d, i, plan, seen)).join(''); })()}
-      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; shown a little late at the start and a little early at the end, for safety (up to about 2 min off the true times); check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
+      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; times include a small safety margin; check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {
     const L = [];
