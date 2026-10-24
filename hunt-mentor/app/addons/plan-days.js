@@ -215,7 +215,7 @@
   // "Saturday, November 14": the weekday is the heading, the date sits after it
   const dayHead = (label) => { const m = String(label).match(/^(\w+),?\s+(.*)$/); return m ? `<b class="pld-wd">${esc(m[1])}</b> <b>${esc(m[2])}</b>` : `<b>${esc(label)}</b>`; };
   // the legal light margin rule, said once for every day and time below
-  const LEGEND = 'Times: sit = legal light start + 3 min margin; turn back by legal light end \u2212 1 min. The legal light times shown already include both margins.';
+  const LEGEND = 'Legal light times on this plan are shown 3 min late at the start and 1 min early at the end, for safety (phone sun times can be up to 2 min off).';
   function dayHtml(d, i) {
     if (d.kind === 'nolight') return `<div class="card"><h3>Day ${i + 1}: ${esc(d.label)}</h3><p class="muted">Sun times are not ready on this screen, so no hour by hour plan. Open the Home page once, then come back.</p></div>`;
     const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow">${dayHead(d.label)}${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
