@@ -62,6 +62,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          # Sub-apps such as /hunt-mentor, /vuon and /docviet are published by
+          # their own feature-branch deploys and do not exist in this dist/.
+          # Without keep_files, every main deploy deleted them from the site
+          # until the next feature-branch deploy happened to restore them.
+          keep_files: true
 
       # On the pilgrimage feature branch: overlay only /pilgrimage, leaving
       # whatever is deployed at the site root untouched.
