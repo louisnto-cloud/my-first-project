@@ -226,7 +226,7 @@ function render(D, ctx) {
   if (d.mu) w.push(li(`MU (Management Unit) ${esc(d.mu)}, Region ${esc(d.region || '')} ${esc(d.regionName || '')}${badge((d.flags || []).find((f) => /^MU/.test(f.t || ''))?.cert ?? 95)}${srcTxt('MU layer WAA_WILDLIFE_MGMT_UNITS_SVW')}`));
   w.push(li(`Coordinates: <b>${esc(dec)}</b> (decimal)${fmt !== 'dd' ? `<br>${esc(formatCoord(lng, lat, fmt))} (${fmt === 'utm' ? 'UTM (Universal Transverse Mercator), your setting' : 'degrees minutes seconds, your setting'})` : ''}`));
   if (d.elev != null) w.push(li(`Elevation ${esc(units.elev(d.elev))}, slope ${esc(d.slope)} degrees (${slopeWords(d.slope)}), ${esc(d.aspect || '')}${badge(pc)}${srcTxt('terrain model, ' + PIPE)}`));
-  if (dm) w.push(li(`Drive: from ${esc(dm[1])}, about ${esc(dm[2])} km${EST}${srcTxt('straight line from Mission to the parking times 1.3, rounded down, ' + PIPE)}`));
+  if (dm) w.push(li(`Drive: from ${esc(dm[1])}, about ${esc(dm[2])} km${EST}${srcTxt('straight line from Mission to the parking times 1.3, ' + PIPE)}`));
   if (Array.isArray(d.driveVia) && d.driveVia.length) w.push(li(`Route: ${d.driveVia.map(esc).join(', then ')}`));
   if (park) w.push(li(`Park at ${esc(`${park[1].toFixed(5)}, ${park[0].toFixed(5)}`)}: ${esc(d.parkWhat || 'parking point')}${haversine([lng, lat], park) > 30 ? `, ${esc(units.dist(haversine([lng, lat], park)))} straight line from the spot` : ''}`));
   const wk = num(d.walkKm), rk = num(d.rideKm);
