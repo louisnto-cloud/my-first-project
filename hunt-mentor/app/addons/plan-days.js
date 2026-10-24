@@ -214,7 +214,7 @@
       <div class="pld-acts no-print"><a class="btn" href="${mapLink(x.spot)}">Map</a><a class="btn" href="${gdir(parkOf(x.spot) || x.spot)}" target="_blank" rel="noopener">Directions</a></div></div>`;
   function dayHtml(d, i) {
     if (d.kind === 'nolight') return `<div class="card"><h3>Day ${i + 1}: ${esc(d.label)}</h3><p class="muted">Sun times are not ready on this screen, so no hour by hour plan. Open the Home page once, then come back.</p></div>`;
-    const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(d.label)}</b>${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light (start shown 2 min late, for safety) ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
+    const head = `<summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(d.label)}</b>${d.kind === 'closed' ? ': not open, scout only' : d.kind === 'past' ? ': done' : ''}<br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${esc(fmtT(d.legalStart))} to ${esc(fmtT(d.legalEnd))}</span></span></summary>`;
     if (d.kind === 'closed') return `<details class="card pl-day pl-closed pld-day">${head}<p><b>No open season for you on this day.</b> Scout, sight in or rest. No hunting.</p></details>`;
     const now = Date.now();
     const steps = d.steps.map((s) => `<li class="pld-st pld-${s.key}"><span class="pld-tm">${esc(fmtT(s.at))}</span><span><b>${s.title}</b>${s.est ? ' <span class="pill">Estimate</span>' : ''}<br><span class="pll-small">${s.t}</span>
@@ -237,7 +237,7 @@
     if (!days || !days.length) return '<div class="card"><h3>Hour by hour</h3><p class="muted">No days in this plan.</p></div>';
     return `<div class="pld"><p class="pll-law">Study aid only. The official regulations are the law.</p>
       ${days.map(dayHtml).join('')}
-      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; start shown 2 min late on purpose, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
+      <p class="pll-small muted">Times: ${esc(D.est.why)} Turnaround: sunset minus your walk out (the Safety tool's rule). Thermal times: ${esc(D.thermals.times || 'Tip, rule of thumb')} Spots are candidates, scout them first. Legal light: synopsis page 11, item 38 ${badge(99)}; start shown 3 min late and end 1 min early on purpose, check the NRC (National Research Council) sunrise table. Home time: drive from the spot's parking to home (estimate).</p></div>`;
   }
   function text(days) {
     const L = [];

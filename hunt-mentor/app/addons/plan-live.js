@@ -73,7 +73,7 @@
     const [y, m, d] = iso.split('-').map(Number), noon = new Date(y, m - 1, d, 12);
     const rise = S && S.sunEvent && pt ? S.sunEvent(noon, pt.lat, pt.lon, true) : null, set = S && S.sunEvent && pt ? S.sunEvent(noon, pt.lat, pt.lon, false) : null;
     const ok = rise && set && h && h.beforeSunriseMin != null;
-    return { sunrise: rise ? +rise : null, sunset: set ? +set : null, legalStart: ok ? +rise - (h.beforeSunriseMin - 2) * 6e4 : null, legalMarginMin: 2, legalEnd: ok ? +set + h.afterSunsetMin * 6e4 : null, rule: h ? h.text : null, ruleCert: h ? h.certainty : null };
+    return { sunrise: rise ? +rise : null, sunset: set ? +set : null, legalStart: ok ? +rise - (h.beforeSunriseMin - 3) * 6e4 : null, legalMarginMin: 3, legalEnd: ok ? +set + (h.afterSunsetMin - 1) * 6e4 : null, rule: h ? h.text : null, ruleCert: h ? h.certainty : null };
   }
 
   // ---------- rut (Masterclass) ----------
@@ -253,7 +253,7 @@
         ${s.gustMax != null && s.gustMax >= 50 ? '<p class="pll-warn">Strong gusts drop dead trees. Stay out of burned or beetle killed timber in a wind (Tip).</p>' : ''}
         <p class="pll-small muted">At ${esc(P0.name || 'the plan point')}. Model forecast, not a promise.</p>`;
     }
-    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 2 min late, for safety) ${L}</span></span></summary>
+    return `<details class="card pl-day pll-day${d.past ? '' : ' pl-open'}"${i === 0 ? ' open' : ''}><summary><span class="pl-dn">Day ${i + 1}</span><span class="grow"><b>${esc(dLabel(d.date))}</b><br><span class="muted pll-small">Legal light (start shown 3 min late and end 1 min early, for safety) ${L}</span></span></summary>
       <div class="pll-kv"><span>Sunrise, sunset</span><b>${esc(fmtT(d.sunrise))}, ${esc(fmtT(d.sunset))}</b></div>
       <div class="pll-kv"><span>Moon</span><b>${esc(d.moon.name)}, ${d.moon.lit}% lit</b></div>
       ${d.rut ? `<div class="pll-kv"><span>Rut</span><b>${d.rut.verify ? '<span class="verify">VERIFY</span>' : esc(d.rut.phase)}</b></div>` : ''}
@@ -305,7 +305,7 @@
       <p class="pll-small">${B.stale ? 'Saved copy, ' : ''}checked ${esc(fmtDT(B.asOf))}, BC Wildfire Service ${badge(B.cert || 95)}. An empty result is not a promise. <a href="${esc(B.link || page)}" target="_blank" rel="noopener">Fire bans and restrictions</a></p></div>`;
   }
   function srcCard(live) {
-    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Start shown 2 min late on purpose (phone sun math can run 1 to 2 min early). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
+    return `<p class="pll-small muted pll-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Sun times worked out on the phone (within a few minutes in valleys). ${live.days && live.days[0] && live.days[0].rule ? `Legal light: ${esc(live.days[0].rule)} ${badge(live.days[0].ruleCert)} Start shown 3 min late and end 1 min early on purpose (phone sun math can be up to 2 min off at the spot). Check sunrise on the NRC (National Research Council) sunrise table, as the synopsis says.` : ''} Moon: worked out on the phone (Tip, within a day).</p>`;
   }
 
   let cssDone = false;
