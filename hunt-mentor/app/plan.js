@@ -1516,7 +1516,7 @@
     const goal = A.success || 'meat';
     const head = { see: 'Seeing one', shot: 'A shot opportunity', meat: 'Meat in the freezer' }[goal];
     const body = goal === 'meat'
-      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled${p.party === 'two' && !(A.partner && typeof A.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}. Rough math (Tip) at the 5 year total rate (all 2020 to 2024 hunters pooled).</p>`
+      ? `<p><b>About ${r5(trip)}%</b> over your ${hd} hunt day${hd === 1 ? '' : 's'}${tagsN(p) > 1 ? `, about ${r5(pty)}% that one of your ${tagsN(p)} tags is filled${p.party === 'two' && !(A.partner && typeof A.partner.tag === 'boolean') ? ' (Assumption: your partner carries a tag; change it in Your answers)' : ''}` : ''}. Rough math (Tip) at the ${medPer ? "middle year rate, the same base as Your odds" : "5 year total rate (all 2020 to 2024 hunters pooled)"}.</p>`
       : goal === 'shot'
         ? `<p><b>No official number</b> for shot chances. Every animal taken was a shot chance, so it is at least the kill rate: about ${r5(trip)}% or more over your ${hd} hunt day${hd === 1 ? '' : 's'} (rough math, Tip).</p>`
         : `<p><b>No official number</b> for seeing one. It is at least your shot chance (about ${r5(trip)}% or more, rough math, Tip). Quiet spots at first and last light are where hunters see deer (Tip).</p>`;
