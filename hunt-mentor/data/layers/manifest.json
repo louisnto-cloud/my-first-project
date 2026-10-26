@@ -1850,10 +1850,16 @@
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-26",
    "areas": [
-    "B"
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
    ],
    "file": "data/layers/{area}/roads_detail.pmtiles",
-   "bytes": 2768448
+   "bytes": 44210560
   },
   {
    "id": "trails_detail",
@@ -1913,10 +1919,16 @@
    "licence": "Open Government Licence BC",
    "dataDate": "2026-10-26",
    "areas": [
-    "B"
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
    ],
    "file": "data/layers/{area}/trails_detail.pmtiles",
-   "bytes": 171526
+   "bytes": 2536896
   },
   {
    "id": "ranges",
