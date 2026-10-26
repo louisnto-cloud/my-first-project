@@ -52,6 +52,27 @@ function pmUrl(l, M, area) {
   const path = f.startsWith('data/') ? f : `data/layers/${f}`;
   return new URL(`${path}?${vq(l, M)}`, location.href).href;
 }
+/** The mapped road at a parking point: nearest roads_detail lines within 50 m (BC Digital Road Atlas and forest tenure segments).
+    Resolves { text (plain words, no HTML), m, layer } or null (no layer here, nothing within 50 m, or offline and not saved). Never rejects. */
+const roadCache = new Map();
+export function roadAt(lng, lat, ctx = {}) {
+  const k = `${(+lng).toFixed(5)},${(+lat).toFixed(5)}`;
+  if (!roadCache.has(k)) roadCache.set(k, (async () => {
+    const M = await manifestOf(ctx), l = layerOf(M, 'roads_detail'), b = (M && M.areaBoxes) || {};
+    const area = l && (l.areas || []).find((a) => b[a] && lng >= b[a][0] && lng <= b[a][2] && lat >= b[a][1] && lat <= b[a][3]);
+    if (!area) return null;
+    const hits = (await safe(queryPm(pmUrl(l, M, area), lng, lat, 50))) || [];
+    const lines = hits.filter((h) => h.type === 2).sort((x, y) => x.dist - y.dist);
+    if (!lines.length) return null;
+    const atlas = lines.find((h) => h.props.src !== 'Forest tenure road segments'), ften = lines.find((h) => h.props.src === 'Forest tenure road segments');
+    const a = atlas || ften, p = a.props, st = (ften && ften.dist <= 30 && ften.props.status) || p.status;
+    const bits = [p.name ? `${p.cls || 'Road'}, ${p.name}` : (p.cls || 'Road'), p.surf ? `surface ${String(p.surf).toLowerCase()}` : '', st ? `status ${st.charAt(0).toLowerCase()}${st.slice(1)}` : ''].filter(Boolean);
+    const srcs = [...new Set([a, st && ften && ften.props.status === st ? ften : null].filter(Boolean).map((h) => h.props.src))].join(' and ');
+    return { m: Math.round(a.dist), layer: l, text: `${bits.join(', ')}. Estimate: nearest mapped line, ${a.dist < 5 ? 'right at' : `about ${Math.round(a.dist)} m from`} the parking point (${srcs}, data ${l.dataDate || ''}). Not a promise it is open, drivable or legal to drive.` };
+  })().catch(() => null));
+  return roadCache.get(k);
+}
+
 function areaAt(M, lng, lat) {
   const b = (M && M.areaBoxes) || {};
   return Object.keys(b).find((a) => lng >= b[a][0] && lng <= b[a][2] && lat >= b[a][1] && lat <= b[a][3]) || null;
@@ -158,10 +179,12 @@ async function gather(spot, ctx, plan) {
     big.length && mu ? safe(gj('data/harvest/bc-harvest.json'), 15000) : null,
     H ? safe(steepness(H, lng, lat), 6000) : null,
   ]);
+  const pk = Array.isArray(d.park) && d.park.length >= 2 ? d.park : null;
+  const parkRoad = pk ? await safe(roadAt(+pk[0], +pk[1], ctx), 6000) : null;
   const zone = zoneHits && zoneHits[0] ? String(zoneHits[0].props.zone || zoneHits[0].props.label || '').replace(/[^A-Z].*$/, '') || null : null;
   const regRows = (regs || []).filter(Boolean).flatMap((R) => (R.rows || []).filter((r) => mu && (r.mus || []).includes(mu)).map((r) => ({ ...r, _src: R.source, _checked: R.checked })));
   return { spot, d, id, lng, lat, area, mu, region, plan, today, month, tags, idx, zone, zoneLayer: layerOf(M, 'habitat_zones'), closeHits, closeLayer: layerOf(M, 'closures'),
-    mig, regRows, playbook, harvest, steep, sl, M, ms: Math.round(performance.now() - t0) };
+    mig, regRows, playbook, harvest, steep, parkRoad, sl, M, ms: Math.round(performance.now() - t0) };
 }
 
 // steepest ground around the spot from the terrain tiles: 8 directions at 150 m and 300 m
@@ -228,7 +251,7 @@ function render(D, ctx) {
   if (d.elev != null) w.push(li(`Elevation ${esc(units.elev(d.elev))}, slope ${esc(d.slope)} degrees (${slopeWords(d.slope)}), ${esc(d.aspect || '')}${badge(pc)}${srcTxt('terrain model, ' + PIPE)}`));
   if (dm) w.push(li(`Drive: from ${esc(dm[1])}, about ${esc(dm[2])} km${EST}${srcTxt('straight line from Mission to the parking times 1.3, ' + PIPE)}`));
   if (Array.isArray(d.driveVia) && d.driveVia.length) w.push(li(`Route: ${d.driveVia.map(esc).join(', then ')}`));
-  if (park) w.push(li(`Park at ${esc(`${park[1].toFixed(5)}, ${park[0].toFixed(5)}`)}: ${esc(d.parkWhat || 'parking point')}${haversine([lng, lat], park) > 30 ? `, ${esc(units.dist(haversine([lng, lat], park)))} straight line from the spot` : ''}`));
+  if (park) w.push(li(`Park at ${esc(`${park[1].toFixed(5)}, ${park[0].toFixed(5)}`)}: ${esc(d.parkWhat || 'parking point')}${haversine([lng, lat], park) > 30 ? `, ${esc(units.dist(haversine([lng, lat], park)))} straight line from the spot` : ''}${D.parkRoad ? `<br>Road here: ${esc(D.parkRoad.text)}${badge(D.parkRoad.layer.cert)}` : ''}`));
   const wk = num(d.walkKm), rk = num(d.rideKm);
   if (wk || rk) w.push(li(`${rk ? `Ride ${esc(fmtNum(rk, 1))} km` : `Walk ${esc(fmtNum(wk, wk < 1 ? 2 : 1))} km`}${num(d.climbM) ? `, climb about ${esc(fmtNum(d.climbM))} m` : ''}${d.walkMin != null && num(d.walkMin) != null ? `, about ${esc(Math.max(5, +d.walkMin))} min one way (3 km/h plus 1 min per 10 m climb, at least 5 min)` : ''}${EST}`));
   if (walkL) w.push(li(`${esc(walkL.replace(/about (\d+) min at 3 km\/h\.?/i, (m, n) => `about ${Math.max(5, +n)} min (3 km/h plus 1 min per 10 m climb, at least 5 min).`))}`));

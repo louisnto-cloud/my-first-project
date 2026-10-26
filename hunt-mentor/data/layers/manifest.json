@@ -1701,6 +1701,236 @@
    "bytes": 1199761
   },
   {
+   "id": "roads_detail",
+   "group": "Access",
+   "label": "Detailed roads (class, surface, status)",
+   "type": "line",
+   "minzoom": 10,
+   "paint": {
+    "line-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "resource",
+     "#6d4c41",
+     "unclassified",
+     "#9e9d24",
+     "recreation",
+     "#2e7d32",
+     "restricted",
+     "#c62828",
+     "service",
+     "#546e7a",
+     "proposed",
+     "#90a4ae",
+     "tenure",
+     "#a1887f",
+     "retired",
+     "#8d6e63",
+     "overgrown",
+     "#8d6e63",
+     "pending",
+     "#90a4ae",
+     "#757575"
+    ],
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     10,
+     0.9,
+     14,
+     2.6
+    ]
+   },
+   "dashFilter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "retired",
+      "overgrown",
+      "pending"
+     ]
+    ]
+   ],
+   "dash": [
+    2,
+    2
+   ],
+   "dashOpacity": 0.6,
+   "legend": [
+    [
+     "Resource road",
+     "#6d4c41"
+    ],
+    [
+     "Unclassified road",
+     "#9e9d24"
+    ],
+    [
+     "Recreation road",
+     "#2e7d32"
+    ],
+    [
+     "Restricted road",
+     "#c62828"
+    ],
+    [
+     "Service road",
+     "#546e7a"
+    ],
+    [
+     "Forest tenure road not in the road atlas",
+     "#a1887f"
+    ],
+    [
+     "Dashed, faded: retired, overgrown or decommissioned",
+     "#8d6e63"
+    ],
+    [
+     "Dashed grey: proposed or pending (may not exist)",
+     "#90a4ae"
+    ]
+   ],
+   "popup": [
+    [
+     "Road",
+     "name"
+    ],
+    [
+     "Class",
+     "cls"
+    ],
+    [
+     "Surface",
+     "surf"
+    ],
+    [
+     "Lanes",
+     "lanes"
+    ],
+    [
+     "Status",
+     "status"
+    ],
+    [
+     "File",
+     "file"
+    ],
+    [
+     "Holder",
+     "client"
+    ],
+    [
+     "Source",
+     "src"
+    ],
+    [
+     "Data date",
+     "date"
+    ]
+   ],
+   "labelField": "name",
+   "labelMinzoom": 13,
+   "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (BC Digital Road Atlas: class, surface, lanes) and WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW (forest tenure road segments: life cycle status)",
+   "about": "Every mapped resource, unclassified and back road, with its class and surface, plus retired forest roads. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
+   "cert": 85,
+   "legal": false,
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-26",
+   "areas": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "file": "data/layers/{area}/roads_detail.pmtiles",
+   "bytes": 44210560
+  },
+  {
+   "id": "trails_detail",
+   "group": "Access",
+   "label": "Trails and old tracks (road atlas)",
+   "type": "line",
+   "minzoom": 10,
+   "paint": {
+    "line-color": "#4e342e",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     10,
+     0.7,
+     14,
+     1.6
+    ],
+    "line-dasharray": [
+     1.5,
+     1.5
+    ],
+    "line-opacity": 0.85
+   },
+   "popup": [
+    [
+     "Trail",
+     "name"
+    ],
+    [
+     "Class",
+     "cls"
+    ],
+    [
+     "Surface",
+     "surf"
+    ],
+    [
+     "Source",
+     "src"
+    ],
+    [
+     "Data date",
+     "date"
+    ]
+   ],
+   "labelField": "name",
+   "labelMinzoom": 13,
+   "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (road atlas trail class). OpenStreetMap tracks and paths were not reachable when built",
+   "about": "Trails and old tracks the road atlas maps, beyond the official recreation trails. A trail on the map is not a promise it is open, passable or legal to ride: closures, private land and posted signs still apply.",
+   "cert": 75,
+   "legal": false,
+   "licence": "Open Government Licence BC",
+   "dataDate": "2026-10-26",
+   "areas": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "file": "data/layers/{area}/trails_detail.pmtiles",
+   "bytes": 2536896
+  },
+  {
    "id": "ranges",
    "group": "Practice shooting",
    "label": "Shooting ranges and clubs",

@@ -1218,6 +1218,7 @@
       }
     };
     // Hunt day card: one card per hunt day with leave, park (coordinates), sit, legal light, turnaround and the backup spot
+    const roadNotes = new Map();
     const drawHuntDay = () => {
       if (!alive()) return; const box = $('#tl-huntday'); if (!box) return;
       const hd = (m.daysX || []).filter((d) => d.kind === 'hunt' && d.steps && d.steps.length);
@@ -1225,6 +1226,13 @@
       const ll = (o) => { const pk = o && o.spot && o.spot.detail && o.spot.detail.park; return Array.isArray(pk) && pk.length >= 2 ? { lat: +pk[1], lon: +pk[0], park: 1 } : o && o.spot && o.spot.lat != null ? { lat: +o.spot.lat, lon: +o.spot.lon } : null; };
       const where = (o) => { const q = ll(o); return q ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${q.lat.toFixed(5)},${q.lon.toFixed(5)}" target="_blank" rel="noopener">${q.lat.toFixed(5)}, ${q.lon.toFixed(5)}</a>${q.park ? '' : ' (spot point: no parking point in the data)'}` : 'no point in the data'; };
       const wk = (o) => (o && o.walk && o.walk.min != null ? +o.walk.min : null);
+      // the mapped road at the parking point (roads_detail layer, spot-rundown.js roadAt): looked up once, then the card redraws
+      const parkRoad = (o) => {
+        const q = ll(o); if (!q || !q.park) return '';
+        const k = `${q.lon.toFixed(5)},${q.lat.toFixed(5)}`, r = roadNotes.get(k);
+        if (r === undefined) { roadNotes.set(k, null); import('./map/spot-rundown.js').then((rd) => rd.roadAt(q.lon, q.lat)).then((v) => { if (v) { roadNotes.set(k, v); if (box.isConnected) drawHuntDay(); } }, () => {}); }
+        return r ? `<span class="tl-hn">Road here: ${esc(r.text)}</span>` : '';
+      };
       const ln = (s) => s.split(/(?<=\.) (?=[A-Z])/).map((x) => `<span class="tl-ln">${x}</span>`).join('');
       box.innerHTML = hd.map((d) => {
         const at = (k) => (d.steps.find((x) => x.key === k) || {}).at;
@@ -1246,7 +1254,7 @@
         })();
         return `<div class="card tl-hd"><h3>Hunt day: ${esc(dLabel(d.date))}</h3>
           ${tr('Leave home', tmG(at('leave')), (() => { const dm = d.drive && d.drive.min != null ? +d.drive.min : null, a = at('leave'), b = at('setup'); if (dm == null || a == null || b == null) return ''; const spare = Math.round((b - a) / 60000 - dm - (wp || 0)); return spare > 0 ? `Leave time covers the drive${d.drive.km != null ? ` (about ${Math.round(d.drive.km)} km)` : ''}, the walk, and about ${spare} min spare to park and gear up in the dark (estimate).` : ''; })())}
-          ${P ? wr('Park', `${esc(P.spot.name)}: ${where(P)}`) : ''}
+          ${P ? wr('Park', `${esc(P.spot.name)}: ${where(P)}${parkRoad(P)}`) : ''}
           ${tr('Sit by', tmG(at('setup')), wp != null ? `walk in about ${fmtMin(wp)}` : '')}
           <p class="pl-small tl-opt"><b>Option (Tip):</b> be in your seat 30 to 45 min before legal light starts, so you are still when deer move.<span class="tl-ln">If you take it, leave home that much earlier than the time above.</span></p>
           ${tr('Legal light', `${tmG(d.legalStart)}<br>to ${tmG(d.legalEnd)}`)}

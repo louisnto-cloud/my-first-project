@@ -237,7 +237,14 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14 });
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
-  map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id);
+  if (type === 'line' && l.dashFilter) {
+    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer (line-dasharray is not data driven)
+    const both = (f) => (l.filter ? ['all', l.filter, f] : f);
+    const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
+    st.lf = Object.assign(st.lf || {}, { [`${id}-dash`]: both(l.dashFilter), [id]: both(['!', l.dashFilter]) });
+    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
+    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id);
+  } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
     const o = l.outline || {}, wz = (w, add = 0) => ['interpolate', ['linear'], ['zoom'], 9, w[0] + add, 12, w[1] + add, 15, w[2] + add];
@@ -368,8 +375,11 @@ function prep(st, ft, area) {
 // PMTiles cannot hold arrays: the pipeline writes monthsKey like ",11,12,1,2,3,4," for seasonal features.
 function pmMonthFilter(st, ids = st.mapIds) {
   const m = prefs.month ? ['any', ['!', ['has', 'monthsKey']], ['in', `,${prefs.month},`, ['to-string', ['get', 'monthsKey']]]] : null;
-  const f = st.l.filter && m ? ['all', st.l.filter, m] : (st.l.filter || m);
-  for (const id of ids) if (map.getLayer(id)) map.setFilter(id, f);
+  for (const id of ids) {
+    if (!map.getLayer(id)) continue;
+    const base = (st.lf && st.lf[id.replace(/-(line|label|hatch|case)$/, '')]) || st.l.filter; // dashFilter layers keep their own split
+    map.setFilter(id, base && m ? ['all', base, m] : (base || m));
+  }
 }
 // Several area or tile files often arrive together: one setData for the lot.
 function queueRefresh(st) {
@@ -477,7 +487,7 @@ export function itemsAt(p, pad = 12) {
   for (const h of hits) {
     let r = null, k = h.properties._hid;
     if (k != null) r = raw.get(k);
-    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
+    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case|dash)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
     if (!r || seen.has(k)) continue;
     seen.add(k); items.push(r);
     if (items.length >= 8) break;
