@@ -241,8 +241,9 @@ function addLayerSet(st, src, sfx, sourceLayer) {
     // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer (line-dasharray is not data driven)
     const both = (f) => (l.filter ? ['all', l.filter, f] : f);
     const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
-    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: both(l.dashFilter), minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
-    map.addLayer({ id, type, source: src, ...sl, filter: both(['!', l.dashFilter]), minzoom, layout, paint }, before); ids.push(id);
+    st.lf = Object.assign(st.lf || {}, { [`${id}-dash`]: both(l.dashFilter), [id]: both(['!', l.dashFilter]) });
+    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
+    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id);
   } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
@@ -374,8 +375,11 @@ function prep(st, ft, area) {
 // PMTiles cannot hold arrays: the pipeline writes monthsKey like ",11,12,1,2,3,4," for seasonal features.
 function pmMonthFilter(st, ids = st.mapIds) {
   const m = prefs.month ? ['any', ['!', ['has', 'monthsKey']], ['in', `,${prefs.month},`, ['to-string', ['get', 'monthsKey']]]] : null;
-  const f = st.l.filter && m ? ['all', st.l.filter, m] : (st.l.filter || m);
-  for (const id of ids) if (map.getLayer(id)) map.setFilter(id, f);
+  for (const id of ids) {
+    if (!map.getLayer(id)) continue;
+    const base = (st.lf && st.lf[id.replace(/-(line|label|hatch|case)$/, '')]) || st.l.filter; // dashFilter layers keep their own split
+    map.setFilter(id, base && m ? ['all', base, m] : (base || m));
+  }
 }
 // Several area or tile files often arrive together: one setData for the lot.
 function queueRefresh(st) {

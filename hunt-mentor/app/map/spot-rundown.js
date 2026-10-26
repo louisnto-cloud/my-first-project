@@ -68,7 +68,7 @@ export function roadAt(lng, lat, ctx = {}) {
     const a = atlas || ften, p = a.props, st = (ften && ften.dist <= 30 && ften.props.status) || p.status;
     const bits = [p.name ? `${p.cls || 'Road'}, ${p.name}` : (p.cls || 'Road'), p.surf ? `surface ${String(p.surf).toLowerCase()}` : '', st ? `status ${st.charAt(0).toLowerCase()}${st.slice(1)}` : ''].filter(Boolean);
     const srcs = [...new Set([a, st && ften && ften.props.status === st ? ften : null].filter(Boolean).map((h) => h.props.src))].join(' and ');
-    return { m: Math.round(a.dist), layer: l, text: `${bits.join(', ')}. Estimate: nearest mapped line, about ${Math.round(a.dist)} m from the parking point (${srcs}, data ${l.dataDate || ''}). Not a promise it is open, drivable or legal to drive.` };
+    return { m: Math.round(a.dist), layer: l, text: `${bits.join(', ')}. Estimate: nearest mapped line, ${a.dist < 5 ? 'right at' : `about ${Math.round(a.dist)} m from`} the parking point (${srcs}, data ${l.dataDate || ''}). Not a promise it is open, drivable or legal to drive.` };
   })().catch(() => null));
   return roadCache.get(k);
 }
