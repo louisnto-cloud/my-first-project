@@ -119,6 +119,11 @@ function plain(st, p) {
     case 'closures': return { t: named('Motor vehicle closure'), s: val(p.dates) || 'Limits driving here, often part of the year.' };
     case 'closure_routes': return { t: named('Road inside a closure'), s: val(p.status) || 'Tap More for its status and dates.' };
     case 'forest_roads': return { t: named('Forest road'), s: 'Can be gated, washed out or deactivated.' };
+    case 'roads_detail': { // class and status under the finger (road atlas or forest tenure segment)
+      const bits = [val(p.surf) && `Surface ${val(p.surf).toLowerCase()}`, val(p.status)].filter(Boolean).join('. ');
+      return { t: name ? `${val(p.cls) || 'Road'}: ${name}` : (val(p.cls) || 'Road'), s: `${bits ? `${bits}. ` : ''}Not a promise it is open, drivable or legal to drive.` };
+    }
+    case 'trails_detail': return { t: name ? `${val(p.cls) || 'Trail'}: ${name}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}Not a promise it is open or legal to ride.` };
     case 'rec_sites': return { t: named('Recreation site'), s: 'No shooting near its campsites and buildings.' };
     case 'rec_trails': return { t: named('Recreation trail'), s: '' };
     case 'ranges': return { t: named('Shooting range'), s: 'A legal place to sight in. Fees may apply.' };

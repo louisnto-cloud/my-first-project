@@ -237,7 +237,13 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14 });
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
-  map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id);
+  if (type === 'line' && l.dashFilter) {
+    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer (line-dasharray is not data driven)
+    const both = (f) => (l.filter ? ['all', l.filter, f] : f);
+    const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
+    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: both(l.dashFilter), minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
+    map.addLayer({ id, type, source: src, ...sl, filter: both(['!', l.dashFilter]), minzoom, layout, paint }, before); ids.push(id);
+  } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
     const o = l.outline || {}, wz = (w, add = 0) => ['interpolate', ['linear'], ['zoom'], 9, w[0] + add, 12, w[1] + add, 15, w[2] + add];
@@ -477,7 +483,7 @@ export function itemsAt(p, pad = 12) {
   for (const h of hits) {
     let r = null, k = h.properties._hid;
     if (k != null) r = raw.get(k);
-    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
+    else { const st = [...L.values()].find((x) => x.mapIds.includes(h.layer.id)); k = `${h.layer.id.replace(/-(line|label|hatch|case|dash)$/, '')}|${JSON.stringify(h.properties)}`; if (st) r = { st, f: { properties: h.properties } }; }
     if (!r || seen.has(k)) continue;
     seen.add(k); items.push(r);
     if (items.length >= 8) break;
