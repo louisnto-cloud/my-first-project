@@ -191,3 +191,11 @@ hunt-mentor/
 - Field Mode legal light: the active plan's point is the top row, named from the plan (Harrison Lake area); also on the pocket cards.
 - Offline estimate: per zoom tile sizes remeasured (the offline.js comment has the numbers).
 - Map sheet titles wrap to 2 lines; How to shows its icon only under 401 px. Safety inline links and map "Synopsis PDF" links get a 44 px tap area. Tour toast 2.2 s.
+
+## 7z3. Detailed roads and trails (2026-10-26, prompt 2026-10-26-roads-trails-detail)
+- New Access layers roads_detail and trails_detail per area (scripts/build-roads-detail.py). Existing forest_roads and rec_trails stay.
+- Decision: road atlas city classes (highway, arterial, collector, local, lanes, driveways, strata) are left out: the base map draws them.
+- Decision: forest tenure segments kept when retired or pending, and active ones only where the road atlas has no line within 20 m (no double lines).
+- Decision: manifest dashFilter (layers.js) draws retired, overgrown and pending lines dashed and faded in their own map layer.
+- Scouting and Hunt day presets turn both on. Tap card, spot rundown and the Hunt day Park line name the road class, surface and status at the parking point (within 50 m, estimate).
+- Not done: OpenStreetMap tracks, paths and gates (download servers not reachable from the sandbox). Gates: no BC open data layer found.
