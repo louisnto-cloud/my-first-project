@@ -33,11 +33,11 @@ Named Vietnamese distributors, what each brings, and fit for a premium Canadian 
 
 ## B. RISK REGISTER
 
-Likelihood (L) and impact (I): H / M / L. Owner is who at Organika drives the mitigation. Every risk traces to a primer chapter.
+Likelihood (L) and impact (I): H / M / L. Every risk traces to a primer chapter.
 
 | # | Risk | L | I | Mitigation | Anchor |
 |---|---|---|---|---|---|
-| 1 | Distributor holds the product registration; switching means register againing every SKU (months) | H | H | Organika or an independent responsible agent holds registrations; written dossier handover clause | Ch5.3 |
+| 1 | Distributor holds the product registration; switching means registering every SKU again (months) | H | H | Organika or an independent responsible agent holds registrations; written dossier handover clause | Ch5.3 |
 | 2 | Trademark squatting by a partner (first to file) | M | H | File VN trademarks before any distributor meeting; audit whether Kat already filed | Ch1.3, Ch5.3 |
 | 3 | Own grey market Organika (hand carry from Canada) undercuts the official line | H | M | Vietnam specific packs/sizes, controlled price ladder, minimum advertised price policy | Ch4 F9, Ch3 |
 | 4 | Guilt by association with the 2025 counterfeit wave | M | H | QR/GS1 authenticity, chain listing, NIFC verifiable dossier, chính hãng messaging | Ch4 W2/W8, Ch7.5 |
@@ -52,6 +52,7 @@ Likelihood (L) and impact (I): H / M / L. Owner is who at Organika drives the mi
 | 13 | Lead SKUs priced above their Vietnamese bands (magnesium, greens in Canadian packs) | H | H | Set the SKU order on real COGS; Vietnam packs or a lower Vietnam price for magnesium and greens; collagen leads meanwhile | Ch6.5 |
 | 14 | Registration access: current intake and turnaround unconfirmed; new law proposed for 1 Jan 2027 | M | H | Written confirmation from the registration consultant on intake, turnaround and transition before committing dates | Ch5.3 |
 | 15 | Kids categories carry elevated regulatory and trust heat | M | M | Treat kids as later phase | Ch3.3, Ch7.8 |
+| 16 | Platform fees keep rising: Shopee Mall health now takes ~25–27% before ads after the May 2026 wave; TikTok Shop and Lazada rose the same month | H | M | Price official store SKUs with full promo headroom; model net per unit on current fees in the Channels tab; keep chain pharmacy as the margin anchor | Ch2.7, Ch6.4 |
 
 Top three to close before signing anything: #1 (registration ownership), #2 (trademark), #3 (grey market packs). All three are cheaper to fix now than after a contract is signed.
 
@@ -59,7 +60,7 @@ Top three to close before signing anything: #1 (registration ownership), #2 (tra
 
 ## C. 90 DAY ACTION PLAN
 
-Starts November 2026, anchored on the in market visit (re dated 24 Oct 2026). Weeks are indicative.
+Starts November 2026, anchored on the in market visit (redated 24 Oct 2026). Weeks are indicative.
 
 | Weeks | Workstream | Concrete actions | Output |
 |---|---|---|---|
