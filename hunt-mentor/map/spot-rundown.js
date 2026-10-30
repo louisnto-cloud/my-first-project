@@ -10,6 +10,7 @@
      spot: { id, name, lng, lat, area?, detail? (detail tile props if already loaded) }
      ctx:  { H (HuntMap, map only), plan ({ species, from, to, mu } optional), manifest (optional), getJSON (optional),
              loadIndex(area) (optional, FeatureCollection), hasSession(id) (optional), onBack (optional) } */
+import { roadProps, roadName, traced, NAV_WARN } from './road-words.js';
 import { esc, units, haversine, fmtNum, MONTH_NAMES, formatCoord } from './util.js';
 import { queryPm } from './mvt.js';
 
@@ -65,10 +66,17 @@ export function roadAt(lng, lat, ctx = {}) {
     const lines = hits.filter((h) => h.type === 2).sort((x, y) => x.dist - y.dist);
     if (!lines.length) return null;
     const atlas = lines.find((h) => h.props.src !== 'Forest tenure road segments'), ften = lines.find((h) => h.props.src === 'Forest tenure road segments');
-    const a = atlas || ften, p = a.props, st = (ften && ften.dist <= 30 && ften.props.status) || p.status;
-    const bits = [p.name ? `${p.cls || 'Road'}, ${p.name}` : (p.cls || 'Road'), p.surf ? `surface ${String(p.surf).toLowerCase()}` : '', st ? `status ${st.charAt(0).toLowerCase()}${st.slice(1)}` : ''].filter(Boolean);
-    const srcs = [...new Set([a, st && ften && ften.props.status === st ? ften : null].filter(Boolean).map((h) => h.props.src))].join(' and ');
-    return { m: Math.round(a.dist), layer: l, text: `${bits.join(', ')}. Estimate: nearest mapped line, ${a.dist < 5 ? 'right at' : `about ${Math.round(a.dist)} m from`} the parking point (${srcs}, data ${l.dataDate || ''}). Not a promise it is open, drivable or legal to drive.` };
+    const a = atlas || ften, p = roadProps(a.props), fp = ften && roadProps(ften.props); // plain words: road-words.js
+    // a permit record status belongs to this road only when it is the same road (same name), or there is no atlas line;
+    // a retired spur that touches the main road is named as a spur (it is not the main road's status)
+    const norm = (x) => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const same = fp && ften.dist <= 30 && (!atlas || !p.name || !ften.props.name || norm(ften.props.name) === norm(p.name)); // raw names: a permit code is not this road's name // unnamed: most likely its own permit record
+    const st = (same && fp.status) || p.status;
+    const spur = fp && !same && atlas && ften.dist <= 30 && /^(retired|pending)$/.test(ften.props.kind) ? `A different road, ${ften.props.kind === 'retired' ? 'with a retired permit' : 'with a pending permit'}, also touches here (${roadName(fp) || 'no name'}). ` : '';
+    const nm = roadName(p);
+    const bits = [nm ? `${p.cls || 'Road'}, ${nm}` : (p.cls || 'Road'), p.surf ? `surface ${String(p.surf).toLowerCase()}` : '', st ? `status ${st.charAt(0).toLowerCase()}${st.slice(1)}` : ''].filter(Boolean);
+    const srcs = [...new Set([a, same ? ften : null].filter(Boolean).map((h) => h.props.src))].join(' and ');
+    return { m: Math.round(a.dist), layer: l, text: `${bits.join(', ')}. Nearest mapped road, ${a.dist < 10 ? 'at' : `about ${Math.round(a.dist)} m from`} the parking spot (${srcs}, downloaded ${l.dataDate || ''}). ${spur}${traced(p) ? `${NAV_WARN} ` : ''}Read the road safety notices at home, before you lose signal. Not a promise it is open, drivable or legal to drive.` };
   })().catch(() => null));
   return roadCache.get(k);
 }

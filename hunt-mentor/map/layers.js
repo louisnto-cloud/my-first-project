@@ -2,6 +2,7 @@
    Layer files load only when the layer is on, only for areas near the view, and only from its minzoom less one.
    File paths: "data/..." from the app root, anything else from data/layers/. "{area}" in a path is replaced by each key in
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
+import { roadProps, roadName } from './road-words.js';
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
 import { withOverrides, guideFor, BUILTIN_LAYERS, PRESETS } from './layer-guide.js';
@@ -237,13 +238,17 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14 });
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
+  if (type === 'line' && l.casing) { // a soft white edge under the line, satellite and hybrid only (caseOn), so roads hold up on dark forest
+    map.addLayer({ id: `${id}-case`, type: 'line', source: src, ...sl, ...(l.filter ? { filter: l.filter } : {}), minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-opacity': 0.7, 'line-width': ['interpolate', ['linear'], ['zoom'], 10, l.casing * 0.7, 14, l.casing * 1.6] } }, before);
+    ids.push(`${id}-case`);
+  }
   if (type === 'line' && l.dashFilter) {
-    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer (line-dasharray is not data driven)
+    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer under the solid one (line-dasharray is not data driven)
     const both = (f) => (l.filter ? ['all', l.filter, f] : f);
     const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
     st.lf = Object.assign(st.lf || {}, { [`${id}-dash`]: both(l.dashFilter), [id]: both(['!', l.dashFilter]) });
     map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
-    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id);
+    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id); // solid on top: most retired permit lines sit on a road the atlas still maps (forge 2026-10-30)
   } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
@@ -520,10 +525,10 @@ function fmtVal(v) {
   return s;
 }
 function featHtml({ st, f }) {
-  const l = st.l, p = f.properties;
+  const l = st.l, p = /^(roads|trails)_detail$/.test(l.id) ? roadProps(f.properties) : f.properties; // plain words: road-words.js
   const spec = Array.isArray(l.popup) && l.popup.length ? l.popup : Object.keys(p).filter((k) => !HIDE.has(k)).slice(0, 8).map((k) => [human(k), k]);
   const rows = spec.map(([label, key]) => [label, fmtVal(p[key])]).filter(([, v]) => v !== '');
-  const title = l.labelField && p[l.labelField] != null && p[l.labelField] !== '' ? fmtVal(p[l.labelField]) : '';
+  const title = /^(roads|trails)_detail$/.test(l.id) ? roadName(p) : l.labelField && p[l.labelField] != null && p[l.labelField] !== '' ? fmtVal(p[l.labelField]) : '';
   return `<article class="hmm-feat"><div class="hmm-feat-l">${swatch(st)}<span>${esc(l.label)}</span></div>
     ${title ? `<h3>${esc(title)}</h3>` : ''}
     <dl class="hmm-dl">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}${p._m ? `<dt>Months</dt><dd>${esc(monthsText(p._m))}</dd>` : ''}</dl>
@@ -591,7 +596,7 @@ function rowHtml(st) {
 function legendHtml(l) {
   const items = Array.isArray(l.legend) && l.legend.length ? l.legend : autoLegend(l);
   if (!items.length) return '';
-  return `<ul class="hmm-legend">${items.map(([t, c, o]) => `<li><i style="background:${esc(c)}${o != null ? `;opacity:${Math.min(1, o * 2.2).toFixed(2)}` : ''}"></i>${esc(t)}</li>`).join('')}</ul>`;
+  return `<ul class="hmm-legend">${items.map(([t, c, o, k]) => `<li><i${k === 'dash' || k === 'dot' ? ` class="${k}"` : ''} style="${k === 'dash' || k === 'dot' ? `--c:${esc(c)}` : `background:${esc(c)}`}${o != null ? `;opacity:${Math.min(1, o * 2.2).toFixed(2)}` : ''}"></i>${esc(t)}</li>`).join('')}</ul>`;
 }
 // BEC (Biogeoclimatic Ecosystem Classification) zone codes used by the habitat zones layer
 const BEC = { BG: 'Bunchgrass', PP: 'Ponderosa Pine', IDF: 'Interior Douglas fir', MS: 'Montane Spruce', ESSF: 'Engelmann Spruce Subalpine Fir', ICH: 'Interior Cedar Hemlock', SBS: 'Sub Boreal Spruce', CWH: 'Coastal Western Hemlock', CDF: 'Coastal Douglas fir', MH: 'Mountain Hemlock', IMA: 'Interior Mountain heather Alpine', CMA: 'Coastal Mountain heather Alpine', BAFA: 'Boreal Altai Fescue Alpine', SBPS: 'Sub Boreal Pine Spruce', BWBS: 'Boreal White and Black Spruce' };
