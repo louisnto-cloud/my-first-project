@@ -1830,11 +1830,11 @@
      "status"
     ],
     [
-     "File",
+     "Permit number",
      "file"
     ],
     [
-     "Holder",
+     "Permit holder",
      "client"
     ],
     [
@@ -1842,14 +1842,14 @@
      "src"
     ],
     [
-     "Data date",
+     "Date",
      "date"
     ]
    ],
    "labelField": "name",
    "labelMinzoom": 13,
    "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (BC Digital Road Atlas: class, surface, lanes) and WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW (forest tenure road segments: life cycle status)",
-   "about": "Every mapped resource, unclassified and back road, with its class and surface, plus retired forest roads. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
+   "about": "Resource, service, recreation, restricted access and unknown type roads from the BC road atlas, plus logging roads on permit records (active, retired or pending). Town streets are on the base map. Most unnamed lines were traced from air photos: the province says not to use them to navigate. Gates are not on this map. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, snowed in, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
    "cert": 85,
    "legal": false,
    "licence": "Open Government Licence BC",
@@ -1918,7 +1918,7 @@
    "labelField": "name",
    "labelMinzoom": 13,
    "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (road atlas trail class). OpenStreetMap tracks and paths were not reachable when built",
-   "about": "Trails and old tracks the road atlas maps, beyond the official recreation trails. A trail on the map is not a promise it is open, passable or legal to ride: closures, private land and posted signs still apply.",
+   "about": "Trails, skid trails and old tracks the road atlas maps, beyond the official recreation trails, plus some paved town walkways. A trail on the map is not a promise it is open, passable or legal to ride: closures, private land and posted signs still apply.",
    "cert": 75,
    "legal": false,
    "licence": "Open Government Licence BC",

@@ -2,6 +2,7 @@
    Layer files load only when the layer is on, only for areas near the view, and only from its minzoom less one.
    File paths: "data/..." from the app root, anything else from data/layers/. "{area}" in a path is replaced by each key in
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
+import { roadProps } from './road-words.js';
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
 import { withOverrides, guideFor, BUILTIN_LAYERS, PRESETS } from './layer-guide.js';
@@ -238,12 +239,12 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
   if (type === 'line' && l.dashFilter) {
-    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer (line-dasharray is not data driven)
+    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer above the solid one (line-dasharray is not data driven)
     const both = (f) => (l.filter ? ['all', l.filter, f] : f);
     const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
     st.lf = Object.assign(st.lf || {}, { [`${id}-dash`]: both(l.dashFilter), [id]: both(['!', l.dashFilter]) });
-    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
     map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id);
+    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`); // on top: a retired spur under a solid road still shows
   } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)
@@ -520,7 +521,7 @@ function fmtVal(v) {
   return s;
 }
 function featHtml({ st, f }) {
-  const l = st.l, p = f.properties;
+  const l = st.l, p = /^(roads|trails)_detail$/.test(l.id) ? roadProps(f.properties) : f.properties; // plain words: road-words.js
   const spec = Array.isArray(l.popup) && l.popup.length ? l.popup : Object.keys(p).filter((k) => !HIDE.has(k)).slice(0, 8).map((k) => [human(k), k]);
   const rows = spec.map(([label, key]) => [label, fmtVal(p[key])]).filter(([, v]) => v !== '');
   const title = l.labelField && p[l.labelField] != null && p[l.labelField] !== '' ? fmtVal(p[l.labelField]) : '';

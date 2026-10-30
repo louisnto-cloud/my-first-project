@@ -4,7 +4,7 @@
 Sources (BC Geographic Warehouse WFS, openmaps.gov.bc.ca, Open Government Licence BC):
   WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP     BC Digital Road Atlas: every mapped road, with class, surface, name, lanes.
                                                     Kept: the classes the base map does not show clearly (resource, unclassified,
-                                                    recreation, restricted, service, proposed, trail, skid, water access...).
+                                                    recreation, restricted, service, proposed, trail, skid; water access is dropped).
                                                     Left out: highways, arterial, collector, local, ramps, lanes, alleys, driveways, ferries.
   WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW   Forest tenure road segments: life cycle status (ACTIVE, RETIRED, PENDING), file id, client.
                                                     Kept: every RETIRED or PENDING segment (drawn as their own class), and ACTIVE segments that
@@ -55,11 +55,11 @@ SEG = 'WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW'
 # road atlas classes the base map already draws clearly (city and highway network): left out
 SKIP_CLASS = {'highway', 'freeway', 'expressway', 'arterial', 'collector', 'local', 'ramp', 'lane', 'alleyway', 'driveway',
               'ferry', 'yield', 'strata', 'runway', 'water'}
-CLASS_TEXT = {'resource': 'Resource road', 'unclassified': 'Unclassified road', 'recreation': 'Recreation road',
-              'restricted': 'Restricted road', 'service': 'Service road', 'proposed': 'Proposed road (may not exist)',
-              'trail': 'Trail (road atlas)', 'skid': 'Skid trail', 'trail_skid': 'Skid trail', 'trail_recreation': 'Recreation trail', 'pedestrian': 'Pedestrian path'}
+CLASS_TEXT = {'resource': 'Resource road', 'unclassified': 'Road, type unknown', 'recreation': 'Recreation road',
+              'restricted': 'Restricted access road', 'service': 'Service road', 'proposed': 'Proposed road (may not exist)',
+              'trail': 'Trail (road atlas)', 'skid': 'Skid trail', 'trail_skid': 'Skid trail', 'trail_recreation': 'Recreation trail', 'pedestrian': 'Town walkway'}
 SURF_TEXT = {'paved': 'Paved', 'loose': 'Loose (gravel or dirt)', 'rough': 'Rough', 'overgrown': 'Overgrown',
-             'decommissioned': 'Decommissioned', 'seasonal': 'Seasonal', 'unknown': 'Not in data', 'boat': 'Boat access'}
+             'decommissioned': 'Decommissioned', 'seasonal': 'Seasonal', 'unknown': 'Unknown', 'boat': 'Boat access'}
 
 
 def get(url, tries=6):
@@ -165,7 +165,7 @@ def build_area(a, box, cache):
         kind = {'retired': 'retired', 'pending': 'pending'}.get(st, 'tenure')
         ret = str(p.get('RETIREMENT_DATE') or '')[:10]
         status = {'retired': f'Retired (forest tenure){" " + ret if ret else ""}: may be deactivated, overgrown or gone',
-                  'pending': 'Pending (forest tenure): may not be built yet'}.get(st, 'Active (forest tenure)')
+                  'pending': 'Pending (forest tenure): may not be built yet'}.get(st, 'Permit on record (forest tenure): does not mean open or drivable')
         roads.append(g)
         rprops.append({'name': (p.get('MAP_LABEL') or '').strip() or None, 'kind': kind,
                        'cls': 'Forest tenure road (' + (p.get('FILE_TYPE_DESCRIPTION') or 'road') + ')', 'status': status,
@@ -201,7 +201,7 @@ def update_manifest(cache):
 
     def size(lid):
         return sum(stats[a][lid]['bytes'] for a in order if stats[a].get(lid))
-    dash = ['in', ['get', 'kind'], ['literal', ['retired', 'overgrown', 'pending']]]
+    dash = ['in', ['get', 'kind'], ['literal', ['retired', 'overgrown', 'pending', 'proposed']]]
     E = [
         {'id': 'roads_detail', 'group': 'Access', 'label': 'Detailed roads (class, surface, status)', 'type': 'line', 'minzoom': 10,
          'paint': {'line-color': ['match', ['get', 'kind'], 'resource', '#6d4c41', 'unclassified', '#9e9d24', 'recreation', '#2e7d32',
@@ -209,8 +209,8 @@ def update_manifest(cache):
                                   'retired', '#8d6e63', 'overgrown', '#8d6e63', 'pending', '#90a4ae', '#757575'],
                    'line-width': ['interpolate', ['linear'], ['zoom'], 10, 0.9, 14, 2.6]},
          'dashFilter': dash, 'dash': [2, 2], 'dashOpacity': 0.6,
-         'legend': [['Resource road', '#6d4c41'], ['Unclassified road', '#9e9d24'], ['Recreation road', '#2e7d32'],
-                    ['Restricted road', '#c62828'], ['Service road', '#546e7a'], ['Forest tenure road not in the road atlas', '#a1887f'],
+         'legend': [['Resource road', '#6d4c41'], ['Road, type unknown', '#9e9d24'], ['Recreation road', '#2e7d32'],
+                    ['Restricted access road', '#c62828'], ['Service road', '#546e7a'], ['Forest tenure road not in the road atlas', '#a1887f'],
                     ['Dashed, faded: retired, overgrown or decommissioned', '#8d6e63'], ['Dashed grey: proposed or pending (may not exist)', '#90a4ae']],
          'popup': [['Road', 'name'], ['Class', 'cls'], ['Surface', 'surf'], ['Lanes', 'lanes'], ['Status', 'status'], ['File', 'file'],
                    ['Holder', 'client'], ['Source', 'src'], ['Data date', 'date']],
@@ -228,6 +228,12 @@ def update_manifest(cache):
                   'it is open, passable or legal to ride: closures, private land and posted signs still apply.',
          'cert': 75, 'legal': False, 'licence': OGL, 'dataDate': TODAY, 'areas': [a for a in order if stats[a].get('trails_detail')], 'file': 'data/layers/{area}/trails_detail.pmtiles', 'bytes': size('trails_detail')},
     ]
+    # display keys tuned by hand in the manifest win over the defaults above (forge pass 2026-10-30: colours, legend, wording)
+    old = {l.get('id'): l for l in man['layers']}
+    for e in E:
+        for k in ('label', 'paint', 'legend', 'dashFilter', 'dash', 'dashOpacity', 'popup', 'about'):
+            if k in old.get(e['id'], {}):
+                e[k] = old[e['id']][k]
     ids = {e['id'] for e in E}
     layers = [l for l in man['layers'] if l.get('id') not in ids]
     at = next((i + 1 for i, l in enumerate(layers) if l.get('id') == 'rec_trails'), len(layers))

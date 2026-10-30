@@ -10,6 +10,7 @@
    tools-main.js onMapClick, hunt-sightings.js onTap). Hooks: layers.js handleClick calls open(); tools-main.js long press calls H.tapCard.open().
    Close: swipe down (header or the card body at the top), the X, or Back (tools-main.js backGuard).
    API: HuntMap.tapCard = { open(H, lngLat, { items, press }), close(), isOpen() } */
+import { roadProps, driveTip, traced, NAV_WARN } from './road-words.js';
 import { esc } from './util.js';
 import * as layers from './layers.js';
 
@@ -119,11 +120,12 @@ function plain(st, p) {
     case 'closures': return { t: named('Motor vehicle closure'), s: val(p.dates) || 'Limits driving here, often part of the year.' };
     case 'closure_routes': return { t: named('Road inside a closure'), s: val(p.status) || 'Tap More for its status and dates.' };
     case 'forest_roads': return { t: named('Forest road'), s: 'Can be gated, washed out or deactivated.' };
-    case 'roads_detail': { // class and status under the finger (road atlas or forest tenure segment)
+    case 'roads_detail': { // class and status under the finger (road atlas or forest tenure segment); wording: road-words.js
+      p = roadProps(p);
       const bits = [val(p.surf) && `Surface ${val(p.surf).toLowerCase()}`, val(p.status)].filter(Boolean).join('. ');
-      return { t: name ? `${val(p.cls) || 'Road'}: ${name}` : (val(p.cls) || 'Road'), s: `${bits ? `${bits}. ` : ''}Not a promise it is open, drivable or legal to drive.` };
+      return { t: name ? `${val(p.cls) || 'Road'}: ${name}` : (val(p.cls) || 'Road'), s: `${bits ? `${bits}. ` : ''}${driveTip(p)} ${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, drivable or legal to drive.` };
     }
-    case 'trails_detail': return { t: name ? `${val(p.cls) || 'Trail'}: ${name}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}Not a promise it is open or legal to ride.` };
+    case 'trails_detail': p = roadProps(p); return { t: name ? `${val(p.cls) || 'Trail'}: ${name}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}Not a promise it is open or legal to ride.` };
     case 'rec_sites': return { t: named('Recreation site'), s: 'No shooting near its campsites and buildings.' };
     case 'rec_trails': return { t: named('Recreation trail'), s: '' };
     case 'ranges': return { t: named('Shooting range'), s: 'A legal place to sight in. Fees may apply.' };
