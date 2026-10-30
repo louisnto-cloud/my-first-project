@@ -10,20 +10,11 @@
 - FX used throughout: **26,250 VND/USD** (Vietcombank/interbank, 14–16 July 2026 — HIGH). CAD conversions in Chapter 6 use **18,690 VND/CAD** (quotes 18,638–18,687, 14–16 July 2026 — exchange-rates.org, Wise/Yahoo quotes — MEDIUM-HIGH).
 - Vietnamese terms are defined on first use and collected in the Chapter 10 glossary.
 
-**Corrections to the pre verified brief (newer/stronger sources contradict four anchors)**
-
-| Brief said | What current sources show | Sources |
-|---|---|---|
-| Decree 46/2026 reinstated 15 April 2026 | **Never reinstated.** Resolution 09/2026 (4 Feb 2026) suspended it to 15 Apr 2026; Resolution 15/2026 (6 Apr 2026) extended the suspension **until the amended Law on Food Safety and its implementing decree take effect** (~March 2027). **Decree 15/2018 is the operative regime in July 2026.** | congbao.chinhphu.vn; VFA (vfa.gov.vn); USDA FAS GAIN Apr 2026; thuvienphapluat.vn — all 2026. HIGH |
-| Amended Law on Food Safety expected ~July 2026 | Not passed. Submission planned for the National Assembly session of **October 2026**, expected effective **~1 March 2027** | Tilleke & Gibbins 2026; FoodNavigator Asia 7 Apr 2026. HIGH |
-| April 2025 bust: "900+ fake brand names" | Sources retrieved confirm **88 products confirmed fake** (86 health protection foods + 2 supplements), ~100 tons seized, market value >VND 539B; the 900 brands figure was **not corroborated** | CAND, Tuổi Trẻ, VOV, 2025. HIGH for the 88/100 ton figures |
-| Swisse owned by Shanghai Pharma | Swisse is owned by **H&H Group (Health & Happiness, Hong Kong listed)**, acquired 2015–2018; Shanghai Pharma was only a rumored 2015 bidder | GlobalData company profile, 2025. HIGH |
-
-Also updated: the border crisis stranded **1,300+ vehicles/vessels** at gates by 30 Jan 2026 (VietnamNet, Vietnam News, 2026 — HIGH); the brief's "700+ shipments" was not corroborated. The brief's "health category growing up to 80%" on ecommerce could not be verified in any 2025–26 source; verified figures are +46.9% (health industry, full year 2025, Metric) and a −22% USD terms fall in the supplements sub category after the counterfeit scandals (VnExpress, 2026) — both are used instead.
-
-> **FRESHNESS UPDATE — 23 October 2026.** The body of this primer is dated as of 17–18 July 2026. A targeted re-check of the one time-sensitive item on 23 Oct 2026 confirms Chapter 5's conclusion still holds, with firmer dates: the amended Law on Food Safety has **not** passed — it is before the National Assembly's 2nd Session of the 16th legislature (17 Oct–20 Nov 2026); the Standing Committee reviewed it 24 Sep 2026 (Vietnam News; VietnamNet, 2026 — HIGH). Decree 46/2026 **remains suspended**; Decree 15/2018 is still operative. The proposed effective date for the new law has firmed to **1 January 2027** per the Ministry of Health's WTO notice (USDA FAS, Aug 2026 — MEDIUM), earlier than the ~March 2027 figure below. Everything else in this document remains as of July 2026 — refresh store counts, prices, FX, and platform fees before acting on them.
->
-> **DATA REFRESH — 23 October 2026.** A spot re-check of the time-sensitive figures found them broadly stable since July: **FX** USD/VND ~26,200 (OFX, Aug 2026) and CAD/VND ~18,300–18,580 (exchange-rates.org, Oct 2026) — both within ~2% of the figures used in Chapter 6, so the worked example and the ~2.38× multiple stand; **Long Chau** Q3 2026 results were not yet published (latest remains 2,517 pharmacies, Q1 2026); **platform fees** unchanged, no new late-2026 Shopee/TikTok hikes found beyond those already in Chapter 6; **CPTPP** schedule Decree 115/2022 amended by **Decree 13/2025/NĐ-CP**; multiple customs brokers now agree HS 2106.90.99 is 15% MFN and **0% CPTPP with a Form CPTPP C/O** (firmed from the July inference). Also added this pass: supplement **imports by country** (B&Company ~2022 — Singapore, US lead; Japan's value tripled 2013→2022) in Chapter 1, and **Pharmacity** firmed to 1,049 stores end-2025 (Mekong Capital). Sources: OFX, exchange-rates.org, The Investor, Mekong Capital, VN customs brokers, B&Company, 2024–26 — MEDIUM.
+> **STATUS AT 30 OCTOBER 2026.** Body research: 17–18 July 2026. Refreshes: 23–24 Oct and 30 Oct 2026.
+> - **Regulation:** the amended Food Safety Law was presented to the National Assembly on 24 Oct 2026 (MEDIUM) and has not passed; the session runs to 20 Nov 2026. Proposed effective date 1 Jan 2027. Decree 15/2018 still operative; Decree 46/2026 still suspended (Ch5).
+> - **Platform fees rose again in May 2026:** Shopee Mall health fixed fee 18.0–20.8% plus a 6% payment fee, so the all in take is now ~25–27% before ads; TikTok Shop and Lazada raised fees the same month (Ch2.7, Ch6.4).
+> - **Long Chau:** ~2,639 pharmacies at June 2026 (Ch2.1). Q3 2026 count not yet found.
+> - **Refresh before a live negotiation:** FX, store counts, shelf prices and platform fees.
 
 ---
 
@@ -56,6 +47,27 @@ The ten chapters teach the market. This page is the decision layer on top of the
 | Apr – Jun 2027 | Official Shopee/TikTok stores live as SKUs clear; online launch; first velocity data | Official stores carry about a quarter of online supplement sales and rising (Ch1.4) |
 | Jun – Aug 2027 | Long Chau and Pharmacity listing push armed with platform velocity data | Chains ask for proof of demand (Ch8.1) |
 | Sep – Nov 2027 | First Tet sell in (Tet 2028, 26 Jan): gift sets, chain displays, co funded promos | The 30 day pre Tet window allows the year's deepest legal promos (Ch7.7) |
+
+
+---
+
+# PROVENANCE: WHAT CHANGED FROM THE ORIGINAL BRIEF
+
+**Corrections to the pre verified brief (newer/stronger sources contradict four anchors)**
+
+| Brief said | What current sources show | Sources |
+|---|---|---|
+| Decree 46/2026 reinstated 15 April 2026 | **Never reinstated.** Resolution 09/2026 (4 Feb 2026) suspended it to 15 Apr 2026; Resolution 15/2026 (6 Apr 2026) extended the suspension **until the amended Law on Food Safety and its implementing decree take effect** (~March 2027). **Decree 15/2018 is the operative regime in July 2026.** | congbao.chinhphu.vn; VFA (vfa.gov.vn); USDA FAS GAIN Apr 2026; thuvienphapluat.vn — all 2026. HIGH |
+| Amended Law on Food Safety expected ~July 2026 | Not passed. Submission planned for the National Assembly session of **October 2026**, expected effective **~1 March 2027** | Tilleke & Gibbins 2026; FoodNavigator Asia 7 Apr 2026. HIGH |
+| April 2025 bust: "900+ fake brand names" | Sources retrieved confirm **88 products confirmed fake** (86 health protection foods + 2 supplements), ~100 tons seized, market value >VND 539B; the 900 brands figure was **not corroborated** | CAND, Tuổi Trẻ, VOV, 2025. HIGH for the 88/100 ton figures |
+| Swisse owned by Shanghai Pharma | Swisse is owned by **H&H Group (Health & Happiness, Hong Kong listed)**, acquired 2015–2018; Shanghai Pharma was only a rumored 2015 bidder | GlobalData company profile, 2025. HIGH |
+
+Also updated: the border crisis stranded **1,300+ vehicles/vessels** at gates by 30 Jan 2026 (VietnamNet, Vietnam News, 2026 — HIGH); the brief's "700+ shipments" was not corroborated. The brief's "health category growing up to 80%" on ecommerce could not be verified in any 2025–26 source; verified figures are +46.9% (health industry, full year 2025, Metric) and a −22% USD terms fall in the supplements sub category after the counterfeit scandals (VnExpress, 2026) — both are used instead.
+
+> **FRESHNESS UPDATE — 23 October 2026.** The body of this primer is dated as of 17–18 July 2026. A targeted re-check of the one time-sensitive item on 23 Oct 2026 confirms Chapter 5's conclusion still holds, with firmer dates: the amended Law on Food Safety has **not** passed — it is before the National Assembly's 2nd Session of the 16th legislature (17 Oct–20 Nov 2026); the Standing Committee reviewed it 24 Sep 2026 (Vietnam News; VietnamNet, 2026 — HIGH). Decree 46/2026 **remains suspended**; Decree 15/2018 is still operative. The proposed effective date for the new law has firmed to **1 January 2027** per the Ministry of Health's WTO notice (USDA FAS, Aug 2026 — MEDIUM), earlier than the ~March 2027 figure below. Everything else in this document remains as of July 2026 — refresh store counts, prices, FX, and platform fees before acting on them.
+>
+> **DATA REFRESH — 23 October 2026.** A spot re-check of the time-sensitive figures found them broadly stable since July: **FX** USD/VND ~26,200 (OFX, Aug 2026) and CAD/VND ~18,300–18,580 (exchange-rates.org, Oct 2026) — both within ~2% of the figures used in Chapter 6, so the worked example and the ~2.38× multiple stand; **Long Chau** Q3 2026 results were not yet published (latest remains 2,517 pharmacies, Q1 2026); **platform fees** unchanged, no new late-2026 Shopee/TikTok hikes found beyond those already in Chapter 6; **CPTPP** schedule Decree 115/2022 amended by **Decree 13/2025/NĐ-CP**; multiple customs brokers now agree HS 2106.90.99 is 15% MFN and **0% CPTPP with a Form CPTPP C/O** (firmed from the July inference). Also added this pass: supplement **imports by country** (B&Company ~2022 — Singapore, US lead; Japan's value tripled 2013→2022) in Chapter 1, and **Pharmacity** firmed to 1,049 stores end-2025 (Mekong Capital). Sources: OFX, exchange-rates.org, The Investor, Mekong Capital, VN customs brokers, B&Company, 2024–26 — MEDIUM.
+
 
 ---
 
@@ -164,7 +176,7 @@ Who touches an imported supplement, in order:
 
 | Metric | Value | Source, year | Confidence |
 |---|---|---|---|
-| Stores | 8 (2017) → 2,117 (Jun 2025) → 2,417 + 223 vaccination centers (end 2025) → **2,517 + 228 vaccination centers (Mar 2026)**; all 63 provinces; +400–500 planned 2026 | theinvestor.vn Jan 2026; FRT Q1 2026 release via vietnam.vn | HIGH |
+| Stores | 8 (2017) → 2,117 (Jun 2025) → 2,417 + 223 vaccination centers (end 2025) → 2,517 + 228 vaccination centers (Mar 2026) → **~2,639 pharmacies + 236 vaccination centers (Jun 2026**; vietnam.vn H1 2026 report via search, MEDIUM); all 63 provinces; +400–500 planned 2026 | theinvestor.vn Jan 2026; FRT Q1 2026 release via vietnam.vn | HIGH |
 | Revenue | FY2025 **VND 34,501B (~USD 1.31B), +36% YoY** = 68% of FPT Retail; Q1 2026 VND 10,343B, +28% | theinvestor.vn; Tuổi Trẻ Jan 2026; Thời báo Tài chính Apr 2026 | HIGH |
 | Revenue per store | ~VND 1.2B/month (2025); 1.3B (Q1 2026) | vietnam.vn Apr 2026 | HIGH |
 | Profitability | Profitable since 2021; FY2025 EBITDA VND 1,680B+ (+76%); ~96% of FPT Retail profit | Báo Pháp luật 2026; VnExpress 2026 | HIGH |
@@ -243,9 +255,10 @@ Who touches an imported supplement, in order:
 | Conflicting total | YouNet ECI: VND 458.2T, +26% — different crawl methodology; cite Metric primary | YouNet ECI 2026 | MEDIUM both; conflict real |
 | Supplement rank | #2 in functional food revenue behind TikTok Shop (Jan–May 2025) | Metric via Đại Biểu Nhân Dân 2025 | MEDIUM |
 | Mall requirements | Registered business license + trademark certificate or brand authorization/official distributor letter | Alibaba insights guide; LMC.vn 2025–26 | HIGH |
-| Fees (2025 wave) | Fixed commission raised to ~10% most categories Apr 2025; health & beauty **16–17% cited from 23 May 2025** (danviet.vn); payment fee 5% incl. VAT from 3 Jul 2025; infrastructure fee VND 3,000/order from 1 Jul 2025 | danviet.vn; sapo.vn; Forest Shipping 2025 | MEDIUM-HIGH on components |
+| Fees (2025 wave) | Fixed commission raised to ~10% most categories Apr 2025; payment fee 5% incl. VAT from 3 Jul 2025; infrastructure fee VND 3,000/order from 1 Jul 2025 | sapo.vn; Forest Shipping 2025 | MEDIUM-HIGH on components |
+| **May 2026 wave** | Payment/transaction fee 5% → **6%** from 1 May 2026; Health fixed fee **non Mall 12.5–14% → 15.5–17% from 23 May 2026; Mall 15.0–17.8% → 18.0–20.8% from 29 May 2026**; co funded voucher share up to 40% (cap VND 50,000/item); a 1% "visibility maintenance" ad top up was postponed. The Ministry of Industry and Trade and the National Competition Commission called in Shopee and TikTok Shop over the hikes | Sapo (reproducing Shopee's table) 2026; Tuoi Tre News 22 May 2026; Thanh Nien 22 May 2026 | MEDIUM-HIGH (Shopee's own table is login rendered) |
 | Feb 2026 | New 5% technical support fee (SG/MY/TH/VN); fixed commission averaging ~9.5% + ~5% payment fee | Forest Shipping; Digital in Asia 2026 | MEDIUM |
-| All in take | **~21–22% of GMV for a supplement seller before ads/vouchers** (derived from components; vs ~10–13% in 2024). Exact current health category line is login gated — verify in Seller Center | derivation labeled | MEDIUM |
+| All in take | **~25–27% of GMV for a Shopee Mall supplement seller before ads/vouchers** (18.0–20.8% fixed + 6% payment + VND 3,000/order, recomputed 30 Oct 2026; vs ~10–13% in 2024). Whether the Feb 2026 technical support fee stacks on top is unconfirmed — verify in Seller Center | derivation labeled | MEDIUM |
 
 - Freeship Xtra type programs were discontinued/restructured in the 2025 fee wave, shifting shipping subsidy cost to sellers (Vietnambiz 2026 — MEDIUM). The Vietnam Competition Commission formally queried Shopee's fee hikes (VCC 2025 — MEDIUM).
 - Named category leaders online 2025: **Lavima (VN, gynecological/probiotic), Optibac (UK probiotics), Blackmores (AU)** (Metric category page, 2025 — MEDIUM). Per brand GMV sits in Metric's paywalled TPCN report — worth buying before your distributor pitch.
@@ -325,7 +338,7 @@ Share estimates below are ranges I constructed from the evidence above; **no off
 | Long Chau | Fast growing single buyer block (~20% of chain pharma retail) | Chain margin unpublished; assume 30–40% ask (LOW) | High: central buying, traceability dossiers, co marketing expected | Premium imported, pharmacist recommended SKUs |
 | Pharmacity | Smaller, premium friendly | Unpublished | High: 7,000 SKU discipline | Beauty/wellness, vitamins |
 | An Khang / Trung Son | Small | Unpublished | Medium | Mass mid; Korean adjacent (TS) |
-| Shopee (Mall) | Ecommerce ≈ 25–33% of market and rising; Shopee #2 in category | Take rate ~21–22% + ads/vouchers | Medium: papers + trademark | All; value packs, bundles |
+| Shopee (Mall) | Ecommerce ≈ 25–33% of market and rising; Shopee #2 in category | Take rate ~25–27% (Mall, May 2026) + ads/vouchers | Medium: papers + trademark | All; value packs, bundles |
 | TikTok Shop (Mall) | #1 online for supplements | 6–8% platform take (pre 2026 hike) + 15–30% affiliate + livestream costs | Medium high: restricted category approval | Beauty (collagen), trend items, gifting |
 | Lazada/Tiki | ~3% combined GMV | LazMall 6–13% commission | Low medium | Secondary shelf |
 | Modern trade | Small for pills; big for adult milk/gift formats | Supermarket commission 15–30% + listing fees | Medium; listing fees | Tet gift boxes, mainstream vitamins |
@@ -628,7 +641,7 @@ Format per card: origin/owner · positioning/tier · heroes · channels · entry
 # CHAPTER 6: THE MONEY
 
 > **What you need to know**
-> Premium imported collagen sells for VND 650,000–850,000 per box; a mass supplement must land under roughly VND 10,000–15,000 per daily dose; official list prices sit 20–45% above real street prices because deep promos are structural. Shopee's all in take for a supplement seller is now ~21–22% before advertising; TikTok Shop was cheaper but its May 2026 fee schedule changes that. A realistic build from FOB to shelf multiplies FOB by roughly 2.3–2.6× under CPTPP zero duty — before promo funding, which is where launches actually die.
+> Premium imported collagen sells for VND 650,000–850,000 per box; a mass supplement must land under roughly VND 10,000–15,000 per daily dose; official list prices sit 20–45% above real street prices because deep promos are structural. Shopee Mall's all in take for a supplement seller is now ~25–27% before advertising after the May 2026 fee wave; TikTok Shop and Lazada raised fees the same month. A realistic build from FOB to shelf multiplies FOB by roughly 2.3–2.6× under CPTPP zero duty — before promo funding, which is where launches actually die.
 
 ## 6.1 FX (state of play)
 
@@ -684,10 +697,10 @@ Model assumptions are labeled; sourced inputs cited. Product: 250g premium marin
 
 | Deduction | Rate | VND | Source/confidence |
 |---|---|---|---|
-| Shopee all in take (fixed + payment + infra) | ~21–22% | −116,000 | Derived from 2025–26 fee components (MEDIUM) |
+| Shopee Mall all in take (fixed + payment + infra) | ~25–27% | −131,000 to −146,000 | Recomputed from May 2026 fee components (MEDIUM) |
 | Affiliate/KOC commission (launch phase) | 15–30% targeted plans | −80,000 to −160,000 | OneZ/Ecomobi 2025–26 (MEDIUM); supplement specific norm unpublished |
 | Campaign vouchers/co funding (11.11 type) | 5–10% typical brand share | −27,000 to −53,000 | Platform campaign mechanics (LOW — norms unpublished) |
-| **Seller nets** | | **~206,000–312,000** | vs distributor transfer price 346,700 — **negative to thin** |
+| **Seller nets** | | **~176,000–297,000** | vs distributor transfer price 346,700 — **negative to thin** |
 
 - Reading: at a 2.38× build, ecommerce launch economics are loss making during KOC driven pushes unless (a) the distributor margin funds it as A&P, (b) the online pack is differentiated (smaller size, higher per gram price), or (c) you plan list price with 25–35% promo headroom from day one. This is why brands launch at a higher list and live at everyday promo prices — the 20–45% list street gaps in 6.2 are that headroom made visible.
 - Chain pharmacy economics by contrast: no platform take, but expect listing fees, promo funding asks, 30/60/90 day payment terms (L/Cs of 60–120 days are common in initial trade — trade.gov CCG — HIGH), and margin asks at the top of the range.
@@ -696,9 +709,9 @@ Model assumptions are labeled; sourced inputs cited. Product: 250g premium marin
 
 | Platform | Commission | Payment/processing | Per order | All in before ads | Source, year | Confidence |
 |---|---|---|---|---|---|---|
-| Shopee (health) | ~10% standard; health & beauty cited 16–17% from 23 May 2025; +5% "technical support fee" Feb 2026 | 5% incl. VAT (from 3 Jul 2025) | VND 3,000 (from 1 Jul 2025) | **~21–22%** | danviet; sapo; Forest Shipping 2025–26 | MEDIUM-HIGH components; exact health line login gated |
+| Shopee (health) | Non Mall 15.5–17% (from 23 May 2026); **Mall 18.0–20.8% (from 29 May 2026)**; Feb 2026 "technical support fee" stacking unconfirmed | 6% (from 1 May 2026) | VND 3,000 (from 1 Jul 2025) | **~25–27% Mall** | Sapo; Tuoi Tre; Thanh Nien; Forest Shipping 2025–26 | MEDIUM-HIGH components; exact health line login gated |
 | TikTok Shop | 3–4% standard / 5.78–7.7% Mall (Apr 2025); **from 9 May 2026: 12.5% / 15.5% Mall + 6% transaction** with category carve outs (health reportedly reduced — verify) | in commission | VND 3,000 (from 27 Oct 2025) | 7–8% (2025) → ~18%+ (post May 2026 default) | TikTok Seller VN official; tktk.com 2025–26 | MEDIUM-HIGH |
-| Lazada (LazMall) | 6–13% + 3% SEA wide increase Feb 2026 | ~6% incl. VAT (from 26 May 2025) | — | ~12–20% | Digital in Asia; danviet 2025–26 | MEDIUM |
+| Lazada (LazMall) | 6–13% + 3% SEA wide increase Feb 2026 | 5% → 6% incl. VAT (from 26 May 2026) | VND 3,000 infrastructure fee (from 26 May 2026) | ~15–22% | Digital in Asia; danviet 2025–26 | MEDIUM |
 
 ## 6.5 Organika's own line: where each SKU lands against the real shelf
 
@@ -860,7 +873,7 @@ Model assumptions are labeled; sourced inputs cited. Product: 250g premium marin
 
 ## 8.4 Pricing structure: the stack and the trap
 
-- Sourced stack: distributor 35–60% on landed (MEDIUM) → retail 15–30%+ commission equivalent (MEDIUM) → legal promo depth to 50–100% (HIGH) → platform take 7–22% online (MEDIUM-HIGH). Sub distributor layer for independents: few points, unpublished (UNVERIFIED).
+- Sourced stack: distributor 35–60% on landed (MEDIUM) → retail 15–30%+ commission equivalent (MEDIUM) → legal promo depth to 50–100% (HIGH) → platform take ~15–27% online after the May 2026 fee wave (MEDIUM-HIGH). Sub distributor layer for independents: few points, unpublished (UNVERIFIED).
 - Where list price sits: real SKUs show 20–45% gaps between official list and street/promo price (Adiva, LiveSpo, DHC — Ch6.2, MEDIUM). Everyday promo price is the real consumer price; list exists to fund the gap.
 - **The trap (synthesis — MEDIUM):** launching at a shelf price computed from cost plus with thin margins leaves nothing for the promo cadence the market expects (Tet window, 11.11, livestream pushes, GWP). Brands then either break price integrity (killing pharmacy relationships) or go dark on promos (killing velocity). Build the ladder backward: target everyday promo consumer price → add 25–35% headroom to set list → check the stack still pays everyone → only then quote your distributor transfer price.
 
@@ -963,7 +976,7 @@ The eight questions a distributor or chain buyer will actually put to Louis, eac
 1. Analyst consensus market: **USD ~0.9B (2024), ~11%/yr → ~1.7B by 2030** (GVR + Ken agree within 2% — HIGH); the "USD 2.4–2.9B" numbers you'll hear = the widest functional food definition (MEDIUM).
 2. Fastest growing supplement market in SEA; #2 destination for Australian supplement exports (**AUD 86M, 2024** — CMA, HIGH).
 3. Pharmacy is the trust channel: **59% of purchases** (Rakuten 2022 — HIGH, dated); the pharmacist is the de facto prescriber.
-4. **Long Chau won**: 2,517 stores (Mar 2026), VND 34,501B revenue 2025 (+36%), profitable, Creador valued it at USD 1.5B (HIGH).
+4. **Long Chau won**: ~2,639 stores (Jun 2026), VND 34,501B revenue 2025 (+36%), profitable, Creador valued it at USD 1.5B (HIGH).
 5. Ecommerce = Shopee (>56%) + TikTok Shop (>41%) duopoly; **TikTok Shop is already #1 for supplements** (Metric — HIGH/MEDIUM).
 6. The 2025 counterfeit crisis (100 ton MegaPhaco case, Medistar VND 1.8T, Kera convictions, ex VFA chief 20 years) cut online category GMV 22% in USD and pushed demand into official channels: **Mall stores = 2.12% of shops, 32.6% of GMV** (HIGH).
 7. Your products are **TPBVSK** — pre market VFA registration, held by a Vietnamese entity, **not transferable** (HIGH/MEDIUM).
@@ -974,7 +987,7 @@ The eight questions a distributor or chain buyer will actually put to Louis, eac
 ## 10.2 The 5 channels that matter (in order)
 
 1. **Long Chau** — the must win door; enter via an exclusive distributor + chain level agreement (Blackmores/Vitabiotics pattern).
-2. **Shopee Mall** — authenticity shelf + demand proof; ~21–22% all in take.
+2. **Shopee Mall** — authenticity shelf + demand proof; ~25–27% all in take (May 2026).
 3. **TikTok Shop Mall** — #1 supplement platform; restricted category approval; livestream engine.
 4. **Pharmacity** — premium wellness second chain; 7,000 SKU discipline.
 5. **Independent pharmacies via distributor reps** — phase 2 volume; Hapulico/Tô Hiến Thành hubs.
