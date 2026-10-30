@@ -222,6 +222,8 @@ input:disabled + .hmm-switch { opacity: 0.4; }
 .hmm-sw.spot { display: grid; place-items: center; background: #fff !important; border: 2px solid #2f7d32; border-radius: 50%; }
 .hmm-legend { list-style: none; padding: 0; margin: 4px 0; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 14px; }
 .hmm-legend i { display: inline-block; width: 14px; height: 14px; border-radius: 4px; margin-right: 6px; vertical-align: -2px; }
+.hmm-legend i.dash { width: 22px; border-radius: 0; background: repeating-linear-gradient(90deg, var(--c) 0 6px, transparent 6px 10px) center / 100% 4px no-repeat; }
+.hmm-legend i.dot { width: 22px; border-radius: 0; background: radial-gradient(circle, var(--c) 0 2.5px, transparent 3px) 0 50% / 7px 7px repeat-x; }
 .hmm-empty { background: var(--hmm-soft); border-radius: 14px; padding: 14px 16px; margin: 10px 0; }
 .hmm-empty b { font-size: 17px; }
 .hmm-chiprow { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 8px; scrollbar-width: none; align-items: center; }

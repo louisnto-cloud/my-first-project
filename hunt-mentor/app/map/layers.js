@@ -591,7 +591,7 @@ function rowHtml(st) {
 function legendHtml(l) {
   const items = Array.isArray(l.legend) && l.legend.length ? l.legend : autoLegend(l);
   if (!items.length) return '';
-  return `<ul class="hmm-legend">${items.map(([t, c, o]) => `<li><i style="background:${esc(c)}${o != null ? `;opacity:${Math.min(1, o * 2.2).toFixed(2)}` : ''}"></i>${esc(t)}</li>`).join('')}</ul>`;
+  return `<ul class="hmm-legend">${items.map(([t, c, o, k]) => `<li><i${k === 'dash' || k === 'dot' ? ` class="${k}"` : ''} style="${k === 'dash' || k === 'dot' ? `--c:${esc(c)}` : `background:${esc(c)}`}${o != null ? `;opacity:${Math.min(1, o * 2.2).toFixed(2)}` : ''}"></i>${esc(t)}</li>`).join('')}</ul>`;
 }
 // BEC (Biogeoclimatic Ecosystem Classification) zone codes used by the habitat zones layer
 const BEC = { BG: 'Bunchgrass', PP: 'Ponderosa Pine', IDF: 'Interior Douglas fir', MS: 'Montane Spruce', ESSF: 'Engelmann Spruce Subalpine Fir', ICH: 'Interior Cedar Hemlock', SBS: 'Sub Boreal Spruce', CWH: 'Coastal Western Hemlock', CDF: 'Coastal Douglas fir', MH: 'Mountain Hemlock', IMA: 'Interior Mountain heather Alpine', CMA: 'Coastal Mountain heather Alpine', BAFA: 'Boreal Altai Fescue Alpine', SBPS: 'Sub Boreal Pine Spruce', BWBS: 'Boreal White and Black Spruce' };

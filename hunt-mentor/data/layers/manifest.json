@@ -1714,9 +1714,9 @@
       "kind"
      ],
      "resource",
-     "#6d4c41",
+     "#3e2723",
      "unclassified",
-     "#9e9d24",
+     "#f9a825",
      "recreation",
      "#2e7d32",
      "restricted",
@@ -1728,9 +1728,9 @@
      "tenure",
      "#a1887f",
      "retired",
-     "#8d6e63",
+     "#9e9e9e",
      "overgrown",
-     "#8d6e63",
+     "#9e9e9e",
      "pending",
      "#90a4ae",
      "#757575"
@@ -1760,7 +1760,8 @@
      [
       "retired",
       "overgrown",
-      "pending"
+      "pending",
+      "proposed"
      ]
     ]
    ],
@@ -1771,12 +1772,12 @@
    "dashOpacity": 0.6,
    "legend": [
     [
-     "Resource road",
-     "#6d4c41"
+     "Resource road (logging and industry)",
+     "#3e2723"
     ],
     [
-     "Unclassified road",
-     "#9e9d24"
+     "Class unknown in the road atlas",
+     "#f9a825"
     ],
     [
      "Recreation road",
@@ -1791,16 +1792,20 @@
      "#546e7a"
     ],
     [
-     "Forest tenure road not in the road atlas",
+     "Forest tenure road, not in the road atlas",
      "#a1887f"
     ],
     [
-     "Dashed, faded: retired, overgrown or decommissioned",
-     "#8d6e63"
+     "Grey dashes: retired, overgrown or decommissioned",
+     "#9e9e9e",
+     null,
+     "dash"
     ],
     [
-     "Dashed grey: proposed or pending (may not exist)",
-     "#90a4ae"
+     "Blue grey dashes: proposed or pending, may not exist",
+     "#90a4ae",
+     null,
+     "dash"
     ]
    ],
    "popup": [
@@ -1868,7 +1873,7 @@
    "type": "line",
    "minzoom": 10,
    "paint": {
-    "line-color": "#4e342e",
+    "line-color": "#6a1b9a",
     "line-width": [
      "interpolate",
      [
@@ -1883,8 +1888,8 @@
      1.6
     ],
     "line-dasharray": [
-     1.5,
-     1.5
+     0.6,
+     1.6
     ],
     "line-opacity": 0.85
    },
@@ -1928,7 +1933,15 @@
     "G"
    ],
    "file": "data/layers/{area}/trails_detail.pmtiles",
-   "bytes": 2536896
+   "bytes": 2536896,
+   "legend": [
+    [
+     "Purple dots: trail or old track",
+     "#6a1b9a",
+     null,
+     "dot"
+    ]
+   ]
   },
   {
    "id": "ranges",
