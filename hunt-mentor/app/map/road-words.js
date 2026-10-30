@@ -22,17 +22,18 @@ export function roadProps(p) {
   const ret = /^Retired \(forest tenure\)\s*([\d-]*)/.exec(o.status || '');
   if (ret) o.status = `Permit retired${ret[1] ? ` ${ret[1]}` : ''}: the road may be deactivated, overgrown or still in use`;
   if (/^Pending \(forest tenure\)/.test(o.status || '')) o.status = 'Permit pending: the road may not be built yet';
+  if (/^Overgrown or decommissioned \(road atlas surface\)/.test(o.status || '')) o.status = '';
   if (o.src === 'Forest tenure road segments' && o.date) o.date = `Downloaded ${o.date}`;
   return o;
 }
 /** One plain driving line (Tip) from the surface and kind, or ''. */
 export function driveTip(p) {
   const k = (p && p.kind) || '', s = String((p && p.surf) || '').toLowerCase();
-  if (k === 'overgrown' || /overgrown|decommissioned/.test(s)) return 'Tip: plan to walk it, not drive it.';
+  if (k === 'overgrown' || /overgrown|decommissioned/.test(s)) return 'Tip: plan to walk it, not drive it. On foot, private land, reserves and parks still apply: check the land layers.';
   if (k === 'retired') return 'Tip: condition unknown. Do not count on driving it until you see it.';
   if (k === 'proposed' || k === 'pending') return 'Tip: may not exist on the ground.';
   if (k === 'restricted') return 'Tip: you may not be allowed in. Look for gates and signs.';
-  const yieldTip = k === 'resource' || k === 'tenure' ? ' Logging trucks use these roads: always yield to them (BC rule). No radio: headlights on, keep right, pull over for loaded trucks (Tip).' : '';
+  const yieldTip = k === 'resource' || k === 'tenure' ? ' Always yield to industrial traffic, like logging trucks (BC Recreation Sites and Trails). No radio: headlights on, keep right, pull over for loaded trucks (Tip).' : '';
   if (/^paved/.test(s)) return `Tip: paved, if it is open.${yieldTip}`;
   if (/^loose/.test(s)) return `Tip: most trucks manage it when open and dry; snow and washouts change that.${yieldTip}`;
   if (/^rough/.test(s)) return `Tip: expect to need high clearance or 4x4.${yieldTip}`;
@@ -48,4 +49,4 @@ export function roadName(p) {
 }
 /** True for an unnamed road atlas line (most were traced from air photos). */
 export const traced = (p) => !!p && !p.name && p.src === 'BC Digital Road Atlas';
-export const NAV_WARN = 'Traced from air photos: the province says not to use these lines to navigate.';
+export const NAV_WARN = 'If this line was traced from air photos, the province says not to use it to navigate.';

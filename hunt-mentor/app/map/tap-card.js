@@ -96,8 +96,11 @@ function roadOrder(items) {
   const rank = (r) => { if (!r || !r.st || r.st.l.id !== 'roads_detail') return 0; const q = (r.f && r.f.properties) || {}; return (q.name && q.src !== 'Forest tenure road segments' ? 0 : 1) + (ROAD_RANK[q.kind] || 0); };
   return items.map((r, i) => [r, i]).sort((a, b) => (a[0].st && b[0].st && a[0].st.l.id === 'roads_detail' && b[0].st.l.id === 'roads_detail' ? rank(a[0]) - rank(b[0]) : 0) || a[1] - b[1]).map((x) => x[0]);
 }
+let firstRoad = true; // the yield and no radio lines show on the first road item only (one card, said once)
 function itemHtml(r, i) {
+  if (i === 0) firstRoad = true;
   const { t, s } = plain(r.st, (r.f && r.f.properties) || {});
+  if (r.st && r.st.l.id === 'roads_detail') firstRoad = false;
   let sw = '';
   try { sw = layers.swatchHtml(r.st); } catch (err) { sw = '<span class="hmm-sw"></span>'; }
   return `<li class="tc-item">${sw}<div><b>${esc(t)}</b>${s ? `<small>${esc(s)}</small>` : ''}</div><button class="tc-more" data-tc-more="${i}" aria-label="More about ${esc(t)}">More</button></li>`;
@@ -128,8 +131,8 @@ function plain(st, p) {
     case 'forest_roads': return { t: named('Forest road'), s: 'Can be gated, washed out or deactivated.' };
     case 'roads_detail': { // class and status under the finger (road atlas or forest tenure segment); wording: road-words.js
       p = roadProps(p);
-      const nm = roadName(p), bits = [val(p.surf) && `Surface ${val(p.surf).toLowerCase()}`, val(p.status)].filter(Boolean).join('. ');
-      return { t: nm ? `${val(p.cls) || 'Road'}: ${nm}` : `${val(p.cls) || 'Road'}${p.src === 'BC Digital Road Atlas' ? ', side road (no name)' : ''}`, s: `${bits ? `${bits}. ` : ''}${driveTip(p)} ${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, drivable or legal to drive.` };
+      const nm = roadName(p), sf = val(p.surf).toLowerCase(), bits = [sf && !/^(unknown|overgrown|decommissioned)/.test(sf) && `Surface ${sf}`, val(p.status)].filter(Boolean).join('. ');
+      return { t: nm ? `${val(p.cls) || 'Road'}: ${nm}` : `${val(p.cls) || 'Road'}${p.src === 'BC Digital Road Atlas' ? ', side road (no name)' : ''}`, s: `${bits ? `${bits}. ` : ''}${firstRoad ? driveTip(p) : driveTip(p).replace(/ Always yield.*$/, '')} ${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, drivable or legal to drive.` };
     }
     case 'trails_detail': { p = roadProps(p); const nm = roadName(p);
       return { t: nm ? `${val(p.cls) || 'Trail'}: ${nm}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, or legal to ride a bike or ATV (All Terrain Vehicle) on.` }; }

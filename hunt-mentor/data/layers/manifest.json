@@ -1747,10 +1747,21 @@
      [
       "case",
       [
-       "to-boolean",
+       "all",
        [
-        "get",
-        "name"
+        "to-boolean",
+        [
+         "get",
+         "name"
+        ]
+       ],
+       [
+        "!=",
+        [
+         "get",
+         "src"
+        ],
+        "Forest tenure road segments"
        ]
       ],
       1.6,
@@ -1760,10 +1771,21 @@
      [
       "case",
       [
-       "to-boolean",
+       "all",
        [
-        "get",
-        "name"
+        "to-boolean",
+        [
+         "get",
+         "name"
+        ]
+       ],
+       [
+        "!=",
+        [
+         "get",
+         "src"
+        ],
+        "Forest tenure road segments"
        ]
       ],
       4,
@@ -1865,7 +1887,7 @@
    "labelField": "name",
    "labelMinzoom": 13,
    "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (BC Digital Road Atlas: class, surface, lanes) and WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW (forest tenure road segments: life cycle status)",
-   "about": "Resource, service, recreation, restricted access and unknown type roads from the BC road atlas, plus logging roads on permit records (active, retired or pending). Town streets are on the base map. Most unnamed lines were traced from air photos: the province says not to use them to navigate. Gates are not on this map. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, snowed in, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
+   "about": "Resource, service, recreation, restricted access and unknown type roads from the BC road atlas, plus logging roads on permit records (active, retired or pending). Town streets are on the base map. Many unnamed lines were traced from air photos, and the province says not to use those to navigate. Gates are not on this map. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, snowed in, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
    "cert": 85,
    "legal": false,
    "licence": "Open Government Licence BC",
