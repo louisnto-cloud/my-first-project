@@ -19,7 +19,7 @@ A research, planning, pitch, evaluation and decision package on entering Vietnam
 
 ## The one-line call
 
-Grow Vietnam on a narrow path: one committed distributor structure with **Organika controlling registrations and trademarks**, official channels only, and a calendar built around Tet (first full Tet play is Tet 2028, 26 Jan 2028). **Lead with Enhanced Collagen and magnesium in a Vietnam pack; greens follow.** This changed on 24 Oct 2026, when a red team pass priced every SKU from real Canadian shelf prices: collagen lands inside its Vietnamese band; magnesium and greens in Canadian packs land above theirs. Full reasoning in the primer's READ THIS FIRST section.
+Grow Vietnam on a narrow path: one committed distributor structure with **Organika controlling registrations and trademarks**, official channels only, and a calendar built around Tet (first full Tet play is Tet 2028, 26 Jan 2028). **Lead with Enhanced Collagen and magnesium in a Vietnam pack; greens follow.** This changed on 24 Oct 2026, when a red team pass priced every SKU from real Canadian shelf prices: collagen lands below its Vietnamese band, the only line with room for full promo headroom; magnesium and greens in Canadian packs land at or above theirs. Full reasoning in the primer's READ THIS FIRST section.
 
 ## The four things to do first
 
