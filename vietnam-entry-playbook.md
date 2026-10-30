@@ -84,33 +84,33 @@ Milestone gate at week 12: registrations filed, IP secured to Organika, one dist
 > Use this only for new partners, and only after the existing partner decision is made. In Vietnam, word of a brand shopping for a new distributor reaches the current one quickly (Ch9).
 
 ```
-Subject: Organika Canada — exploring a Vietnam distribution partnership
+Subject: Organika: a Vietnam distribution partnership
 
 Dear [Name],
 
-I lead emerging channels at Organika Health Products, a Canadian natural
-health brand making collagen, magnesium, greens, probiotics, fibre and
-vitamins. We are planning a considered entry into Vietnam and I am looking
-for one committed distribution partner to build the brand properly rather
-than list it widely and hope.
+I am looking for one committed partner to build Organika in Vietnam's
+pharmacy chains and official stores.
 
-Why I am writing to you specifically: [one line on their pharmacy depth or
-premium import track record, e.g. your work building Doppelherz across
-pharmacies nationwide].
+Organika is a Canadian natural health brand: collagen, magnesium, greens,
+probiotics and fibre, with Health Canada quality and full GMP
+documentation. Our products already reach Vietnamese shoppers. We now want
+to grow properly, through one partner and official channels only.
 
-What we bring: Health Canada quality and full GMP documentation, an entry
-range led by premium Canadian collagen priced below Japanese imports and
-chelated magnesium in a Vietnam pack, where no official brand leads, a marketing budget for launch, and registrations
-we intend to hold ourselves so our partner is never exposed to a
-fresh registration if the relationship changes.
+Why you: [one line on their pharmacy depth or premium import record, e.g.
+your work building Doppelherz across pharmacies nationwide].
 
-What we are looking for: a partner who can place us in the pharmacy chains
-and run official Mall stores on Shopee and TikTok Shop, and who wants
-exclusivity earned against clear volume milestones.
+What we bring:
+- Premium Canadian collagen priced below Japanese imports, and chelated
+  magnesium in a Vietnam pack, a shelf no official brand leads
+- A launch marketing budget
+- Registrations held by Organika, so our partner never faces a fresh
+  registration if things change
 
-Could we hold a short call in the next two weeks? I can share a market view,
-our proposed range and price ladder, and the documentation we already have
-ready.
+What we look for: chain pharmacy placement, official Mall stores on Shopee
+and TikTok Shop, and exclusivity earned against clear volume milestones.
+
+Could we hold a 30 minute call in the next two weeks? I will bring a market
+view, the proposed range and price ladder, and our documentation plan.
 
 Warm regards,
 Louis To
