@@ -1,7 +1,7 @@
 # VIETNAM ENTRY PLAYBOOK — OPERATIONAL COMPANION
 
 **For:** Louis To, Senior Sales Manager, Emerging Channels, Organika Health Products
-**Pairs with:** `vietnam supplement market primer.md` (the market knowledge) and `vietnam primer app.html` (the interactive briefing). This file is the do list: who to talk to, what could go wrong, what to do in the first 90 days, and what to put in front of a distributor.
+**Pairs with:** `vietnam-supplement-market-primer.md` (the market knowledge) and `vietnam-primer-app.html` (the interactive briefing). This file is the do list: who to talk to, what could go wrong, what to do in the first 90 days, and what to put in front of a distributor.
 **Date:** 18 July 2026. Confidence tags carry the primer's meaning (HIGH / MEDIUM / LOW / UNVERIFIED).
 
 ---
@@ -120,7 +120,7 @@ Organika Health Products
 
 ### D2. One page leave behind (the "why Organika" sheet)
 
-**Organika Health Products — Vietnam entry, at a glance**
+**Organika Health Products — Vietnam partnership, at a glance**
 
 - **Who we are.** Canadian natural health brand since 1990. Collagen, magnesium, greens, probiotics, fibre, vitamins. Made under GMP; Health Canada licensed.
 - **Why Canada, honestly.** Not a famous origin in Vietnam yet, and we are not pretending otherwise. This is a quality and category play: Canada ranked #1 on the 2022 Global Food Security Index quality and safety sub index, and Jamieson, Webber Naturals and Natural Factors are already familiar names.
@@ -133,4 +133,4 @@ Organika Health Products
 
 ---
 
-*Operational companion. The market evidence, sources, and confidence ratings live in `vietnam supplement market primer.md`.*
+*Operational companion. The market evidence, sources, and confidence ratings live in `vietnam-supplement-market-primer.md`.*
