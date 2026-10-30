@@ -1749,19 +1749,58 @@
       [
        "all",
        [
-        "to-boolean",
-        [
-         "get",
-         "name"
-        ]
-       ],
-       [
         "!=",
         [
          "get",
          "src"
         ],
         "Forest tenure road segments"
+       ],
+       [
+        "in",
+        [
+         "slice",
+         [
+          "to-string",
+          [
+           "get",
+           "name"
+          ]
+         ],
+         0,
+         1
+        ],
+        [
+         "literal",
+         [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+         ]
+        ]
        ]
       ],
       1.6,
@@ -1773,19 +1812,58 @@
       [
        "all",
        [
-        "to-boolean",
-        [
-         "get",
-         "name"
-        ]
-       ],
-       [
         "!=",
         [
          "get",
          "src"
         ],
         "Forest tenure road segments"
+       ],
+       [
+        "in",
+        [
+         "slice",
+         [
+          "to-string",
+          [
+           "get",
+           "name"
+          ]
+         ],
+         0,
+         1
+        ],
+        [
+         "literal",
+         [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+         ]
+        ]
        ]
       ],
       4,
@@ -1816,7 +1894,11 @@
    "dashOpacity": 0.9,
    "legend": [
     [
-     "Resource road (logging and industry); thick if named",
+     "Resource road (logging and industry)",
+     "#a0410d"
+    ],
+    [
+     "Thick line: the road has a name, like an FSR (Forest Service Road)",
      "#a0410d"
     ],
     [
@@ -1852,6 +1934,14 @@
      "name"
     ],
     [
+     "Use",
+     "use"
+    ],
+    [
+     "Permit road",
+     "permitRoad"
+    ],
+    [
      "Class",
      "cls"
     ],
@@ -1868,10 +1958,6 @@
      "status"
     ],
     [
-     "Permit number",
-     "file"
-    ],
-    [
      "Permit holder",
      "client"
     ],
@@ -1886,8 +1972,8 @@
    ],
    "labelField": "name",
    "labelMinzoom": 13,
-   "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (BC Digital Road Atlas: class, surface, lanes) and WHSE_FOREST_TENURE.FTEN_ROAD_SEGMENT_LINES_SVW (forest tenure road segments: life cycle status)",
-   "about": "Resource, service, recreation, restricted access and unknown type roads from the BC road atlas, plus logging roads on permit records (active, retired or pending). Town streets are on the base map. Many unnamed lines were traced from air photos, and the province says not to use those to navigate. Gates are not on this map. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, snowed in, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
+   "source": "BC Digital Road Atlas (road class, surface, lanes) and BC forest tenure road segments (permit records)",
+   "about": "Resource, service, recreation, restricted access and unknown type roads from the BC road atlas, plus logging roads on permit records (active, retired or pending). Town streets are on the base map. Some unnamed lines were traced from air photos, and the province says not to use those for navigation. Gates are not on this map. A line on the map is not a promise the road is open, drivable or legal to drive. Roads can be gated, washed out, snowed in, deactivated or inside a motor vehicle closure: check the Motor vehicle closures layer, the synopsis and posted signs.",
    "cert": 85,
    "legal": false,
    "licence": "Open Government Licence BC",
@@ -1903,7 +1989,72 @@
    ],
    "file": "data/layers/{area}/roads_detail.pmtiles",
    "bytes": 44210560,
-   "casing": 3.5
+   "casing": 3.5,
+   "labelExpr": [
+    "case",
+    [
+     "all",
+     [
+      "!=",
+      [
+       "get",
+       "src"
+      ],
+      "Forest tenure road segments"
+     ],
+     [
+      "in",
+      [
+       "slice",
+       [
+        "to-string",
+        [
+         "get",
+         "name"
+        ]
+       ],
+       0,
+       1
+      ],
+      [
+       "literal",
+       [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+       ]
+      ]
+     ]
+    ],
+    [
+     "get",
+     "name"
+    ],
+    ""
+   ]
   },
   {
    "id": "trails_detail",
@@ -1956,7 +2107,7 @@
    ],
    "labelField": "name",
    "labelMinzoom": 13,
-   "source": "WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP (road atlas trail class). OpenStreetMap tracks and paths were not reachable when built",
+   "source": "BC Digital Road Atlas (trail classes). OpenStreetMap trails are not in this layer yet",
    "about": "Trails, skid trails and old tracks the road atlas maps, beyond the official recreation trails, plus some paved town walkways. A trail on the map is not a promise it is open, passable or legal to ride: closures, private land and posted signs still apply.",
    "cert": 75,
    "legal": false,

@@ -2,7 +2,7 @@
    Layer files load only when the layer is on, only for areas near the view, and only from its minzoom less one.
    File paths: "data/..." from the app root, anything else from data/layers/. "{area}" in a path is replaced by each key in
    "areas" (and "{area_lc}" by its lower case). Or give "files": { "A": "path", "B": "path" }. Files get "?v=<dataDate or updated>". */
-import { roadProps } from './road-words.js';
+import { roadProps, roadName } from './road-words.js';
 import { esc, prefs, savePrefs, bboxIntersects, padBbox, parseMonths, monthsText, MONTH_NAMES, pointInGeom, bboxOf, fmtNum } from './util.js';
 import * as spots from './spots.js';
 import { withOverrides, guideFor, BUILTIN_LAYERS, PRESETS } from './layer-guide.js';
@@ -528,7 +528,7 @@ function featHtml({ st, f }) {
   const l = st.l, p = /^(roads|trails)_detail$/.test(l.id) ? roadProps(f.properties) : f.properties; // plain words: road-words.js
   const spec = Array.isArray(l.popup) && l.popup.length ? l.popup : Object.keys(p).filter((k) => !HIDE.has(k)).slice(0, 8).map((k) => [human(k), k]);
   const rows = spec.map(([label, key]) => [label, fmtVal(p[key])]).filter(([, v]) => v !== '');
-  const title = l.labelField && p[l.labelField] != null && p[l.labelField] !== '' ? fmtVal(p[l.labelField]) : '';
+  const title = /^(roads|trails)_detail$/.test(l.id) ? roadName(p) : l.labelField && p[l.labelField] != null && p[l.labelField] !== '' ? fmtVal(p[l.labelField]) : '';
   return `<article class="hmm-feat"><div class="hmm-feat-l">${swatch(st)}<span>${esc(l.label)}</span></div>
     ${title ? `<h3>${esc(title)}</h3>` : ''}
     <dl class="hmm-dl">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}${p._m ? `<dt>Months</dt><dd>${esc(monthsText(p._m))}</dd>` : ''}</dl>
