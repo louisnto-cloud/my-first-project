@@ -20,25 +20,17 @@
 
 # READ THIS FIRST: THE BOTTOM LINE FOR ORGANIKA
 
-The ten chapters teach the market. This page is the decision layer on top of them; every claim traces to the chapter shown.
+**The answer.** Yes to Vietnam, on a narrow path. Lead with Enhanced Collagen and magnesium in a Vietnam pack. Before anything else: file our trademarks and get Vietnam COGS per SKU. Both protect us whatever the final call.
 
-**The call.** Grow Vietnam on a narrow, staged path: one committed distributor structure with Organika controlling registrations and trademarks, official channels only, and a calendar built around Tet. **Lead with Enhanced Collagen, whose economics fit the premium band, and magnesium in a Vietnam sized pack; greens follow in a smaller format.** The final SKU order is set on real COGS. The market is USD ~0.9B growing ~11% a year (Ch1), the 2025 counterfeit purge is handing share to provably authentic imports (Ch4), and no Canadian brand operates at scale (Ch3).
+## Three questions, answered
 
-> **RED TEAM CORRECTION (24 Oct 2026).** Earlier versions of this page said "magnesium and greens ahead of collagen." A red team pass, using real 2026 Canadian shelf prices and the margin model, found that the open shelves are open but not all are priced to win. At Organika's estimated export price, Enhanced Collagen's modeled shelf (~VND 529k) sits about 19% below the VND 650 to 850k premium band, so it is the one line that can carry the market's 25 to 35% promo headroom and still list inside its band (VND 662 to 715k). Magnesium bisglycinate (120 caps) lands at the top of its VND 220 to 500k band with no headroom, and Digest & Renew Greens (340g) lands well above its VND 350 to 600k band. A real channel multiple stricter than the model's 2.4x erodes collagen's headroom first, so confirm it before quoting. Positioning logic still points to magnesium and greens; economics point to collagen first. The call above reconciles both. See Ch6.5 and the internal margin model (vietnam-margin-model.xlsx, SKU_Economics).
+| Question | Answer | The evidence |
+|---|---|---|
+| **Is the market worth it?** | Yes. About USD 0.9B, growing ~11% a year, fastest in Southeast Asia | Ch1.1. The 2025 counterfeit purge cut online supplement sales 22% in USD and pushed buyers to official stores, now about a quarter of online supplement sales (Ch1.4, Ch4) |
+| **Can Organika win?** | On collagen now; on magnesium and greens only in Vietnam packs | Collagen models at ~VND 529k, below its VND 650–850k band, so it can list at VND 662–715k with full promo headroom. Magnesium lands at its band ceiling, greens well above (Ch6.5). No Canadian brand operates at scale (Ch3) |
+| **What could stop us?** | Registration access, who holds our registrations and trademark, and our own grey market | Registrations are not transferable; trademarks are first to file (Ch5.3). The new Food Safety Law is before the National Assembly with a proposed 1 Jan 2027 start (Ch5.2). Hand carry sellers already ship Enhanced Collagen from Canada (Ch3) |
 
-**Ten decisions, in order:**
-1. **Settle the existing distributor relationship first.** Organika already sells in Vietnam through Kat Vietnam Trading (organikacanada.vn, ~10 SKUs, no Shopee Mall store — Ch3). Confirm the current agreement's status and terms, then agree a partner plan (targets, registration holder, official stores) before opening any other distributor conversation. Courting a second distributor while the first relationship is unresolved is a face problem in Vietnam (Ch9) and word travels.
-2. **Establish who holds your registrations and the Organika trademark in Vietnam today.** Registrations are not transferable and trademarks are first to file; distributor mark squatting is documented (Ch5.3). Agree handover terms in writing.
-3. **Treat your own grey market as a live competitor.** Hand carry sellers already ship Enhanced Collagen from Canada (Ch3). Plan Vietnam specific packs and a controlled price ladder from day one, or the official line competes with cheaper genuine Organika (Ch4 F9).
-4. **Copy the proven entry pattern rather than inventing one.** One committed national distributor + origin credential + chain listing + Mall stores + QR authenticity: Doppelherz/Mastertran, Blackmores/Mesa, Swisse/Grove (Ch4). Every distributor will benchmark your deal against these.
-5. **Lead with the SKUs that are open AND priced to win.** On current estimates: Enhanced Collagen (the only line with promo headroom that still lists inside its band; existing Vietnamese demand) and magnesium bisglycinate in a Vietnam pack. Greens follows once a smaller format or a lower Vietnam export price lands it in band. Re-run the order the day real COGS arrive (Ch6.5).
-6. **Price backward from the everyday promo price with 25–35% headroom, and never show your FOB to a distributor.** Real list to street gaps run 20–45% (Ch6.2). The model inverts the margin stack to a maximum FOB per SKU that still lands the shelf at the band midpoint; set your own margin target in it.
-7. **Confirm the registration window before committing dates.** Decree 15/2018 is operative and Decree 46/2026 suspended, but current intake and turnaround for new TPBVSK dossiers are unconfirmed, and the new Food Safety Law is proposed to take effect 1 January 2027 (Ch5). Have the registration consultant confirm whether TPBVSK filings are being accepted and how in-flight dossiers transition, then file the first SKUs.
-8. **Write every claim from the dossier, not from marketing.** Provincial ad approval since 1 July 2026, verbatim disclaimer, no doctors or medical imagery, personal KOL liability since 1 January 2026 (Ch5.4). The 2025 prison sentences made talent and platforms cautious (Ch4).
-9. **Sequence channels: Shopee Mall and TikTok Shop Mall for proof of demand, then Long Chau.** Long Chau is the must win door and expects a distributor led deal with traceability dossiers (Ch2.1); platform velocity data is what chain buyers ask for (Ch8.1).
-10. **Run the calendar off Tet.** Tet 2027 (6 February) is too close to plan around; the first full Tet play is **Tet 2028, which falls on 26 January 2028**, so the gift sell in runs September to November 2027 (publicholidays.vn; holidaydb, 2026 — LIKELY; Ch9.8).
-
-**The sequence (re-dated 24 Oct 2026):**
+## The sequence (re-dated 24 Oct 2026)
 
 | When | Move | Why then |
 |---|---|---|
@@ -48,10 +40,29 @@ The ten chapters teach the market. This page is the decision layer on top of the
 | Jun – Aug 2027 | Long Chau and Pharmacity listing push armed with platform velocity data | Chains ask for proof of demand (Ch8.1) |
 | Sep – Nov 2027 | First Tet sell in (Tet 2028, 26 Jan): gift sets, chain displays, co funded promos | The 30 day pre Tet window allows the year's deepest legal promos (Ch7.7) |
 
+## Stop gates
+
+- **March 2027:** trademarks filed, registration holder terms in writing, first dossiers accepted. Miss any one and spend pauses.
+- **August 2027:** official store sell through against plan before the chain push.
+
+## The ten rules
+
+1. **Settle the existing partner plan first.** Organika already sells through Kat Vietnam Trading (organikacanada.vn, ~10 SKUs, no Shopee Mall store — Ch3). Agree targets, registration holder and official stores before any other distributor talk; parallel courting is a face problem (Ch9).
+2. **Know who holds the registrations and the trademark today.** Agree handover terms in writing (Ch5.3).
+3. **Treat the grey market as a competitor.** Vietnam packs and a price ladder from day one (Ch4 F9).
+4. **Copy the proven pattern.** One national distributor, origin credential, chain listing, Mall stores, QR authenticity: Doppelherz, Blackmores, Swisse (Ch4).
+5. **Lead with what is open and priced to win.** Collagen now; magnesium in a Vietnam pack; greens in a smaller format. Re-run the order on real COGS (Ch6.5).
+6. **Price backward from the promo price.** 25–35% headroom; list to street gaps run 20–45% (Ch6.2). Never show FOB to a distributor.
+7. **Confirm the registration window before committing dates.** Have the registration consultant confirm in writing whether new TPBVSK dossiers are being accepted and how in flight dossiers transition under the new law (Ch5).
+8. **Write claims from the dossier.** Provincial ad approval since 1 Jul 2026, verbatim disclaimer, no doctors, KOL liability since 1 Jan 2026 (Ch5.4).
+9. **Online proof first, then Long Chau.** Shopee Mall now takes ~25–27% before ads; chain buyers ask for platform velocity (Ch2.1, Ch6.4, Ch8.1).
+10. **Run the calendar off Tet 2028 (26 Jan 2028).** Tet 2027 (6 Feb) is too close; the gift sell in runs September to November 2027 (publicholidays.vn; holidaydb, 2026 — LIKELY; Ch9.8).
 
 ---
 
 # PROVENANCE: WHAT CHANGED FROM THE ORIGINAL BRIEF
+
+> **RED TEAM CORRECTION (24 Oct 2026).** Versions before 24 Oct 2026 said "magnesium and greens ahead of collagen." A red team pass, using real 2026 Canadian shelf prices and the margin model, found that the open shelves are open but not all are priced to win. At Organika's estimated export price, Enhanced Collagen's modeled shelf (~VND 529k) sits about 19% below the VND 650 to 850k premium band, so it is the one line that can carry the market's 25 to 35% promo headroom and still list inside its band (VND 662 to 715k). Magnesium bisglycinate (120 caps) lands at the top of its VND 220 to 500k band with no headroom, and Digest & Renew Greens (340g) lands well above its VND 350 to 600k band. A real channel multiple stricter than the model's 2.4x erodes collagen's headroom first, so confirm it before quoting. Positioning logic still points to magnesium and greens; economics point to collagen first. The decision page reconciles both. See Ch6.5 and the internal margin model (vietnam-margin-model.xlsx, SKU_Economics).
 
 **Corrections to the pre verified brief (newer/stronger sources contradict four anchors)**
 
