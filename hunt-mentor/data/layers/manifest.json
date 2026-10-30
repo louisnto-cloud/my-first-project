@@ -1714,9 +1714,9 @@
       "kind"
      ],
      "resource",
-     "#3e2723",
+     "#a0410d",
      "unclassified",
-     "#f9a825",
+     "#6b5d00",
      "recreation",
      "#2e7d32",
      "restricted",
@@ -1724,15 +1724,15 @@
      "service",
      "#546e7a",
      "proposed",
-     "#90a4ae",
+     "#616161",
      "tenure",
      "#a1887f",
      "retired",
-     "#9e9e9e",
+     "#616161",
      "overgrown",
-     "#9e9e9e",
+     "#616161",
      "pending",
-     "#90a4ae",
+     "#616161",
      "#757575"
     ],
     "line-width": [
@@ -1744,9 +1744,31 @@
       "zoom"
      ],
      10,
-     0.9,
+     [
+      "case",
+      [
+       "to-boolean",
+       [
+        "get",
+        "name"
+       ]
+      ],
+      1.6,
+      0.9
+     ],
      14,
-     2.6
+     [
+      "case",
+      [
+       "to-boolean",
+       [
+        "get",
+        "name"
+       ]
+      ],
+      4,
+      2.4
+     ]
     ]
    },
    "dashFilter": [
@@ -1766,25 +1788,25 @@
     ]
    ],
    "dash": [
-    2,
-    2
+    1.5,
+    1.5
    ],
-   "dashOpacity": 0.6,
+   "dashOpacity": 0.9,
    "legend": [
     [
-     "Resource road (logging and industry)",
-     "#3e2723"
+     "Resource road (logging and industry); thick if named",
+     "#a0410d"
     ],
     [
-     "Class unknown in the road atlas",
-     "#f9a825"
+     "Road of unknown type",
+     "#6b5d00"
     ],
     [
      "Recreation road",
      "#2e7d32"
     ],
     [
-     "Restricted road",
+     "Restricted access road",
      "#c62828"
     ],
     [
@@ -1792,18 +1814,12 @@
      "#546e7a"
     ],
     [
-     "Forest tenure road, not in the road atlas",
+     "Logging road on permit records only",
      "#a1887f"
     ],
     [
-     "Grey dashes: retired, overgrown or decommissioned",
-     "#9e9e9e",
-     null,
-     "dash"
-    ],
-    [
-     "Blue grey dashes: proposed or pending, may not exist",
-     "#90a4ae",
+     "Grey dashes: overgrown, decommissioned, permit retired, proposed or pending. Condition unknown; may not exist",
+     "#616161",
      null,
      "dash"
     ]
@@ -1864,7 +1880,8 @@
     "G"
    ],
    "file": "data/layers/{area}/roads_detail.pmtiles",
-   "bytes": 44210560
+   "bytes": 44210560,
+   "casing": 3.5
   },
   {
    "id": "trails_detail",
@@ -1911,7 +1928,7 @@
      "src"
     ],
     [
-     "Data date",
+     "Date",
      "date"
     ]
    ],
@@ -1941,7 +1958,8 @@
      null,
      "dot"
     ]
-   ]
+   ],
+   "casing": 2.5
   },
   {
    "id": "ranges",

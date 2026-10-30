@@ -10,7 +10,7 @@
    tools-main.js onMapClick, hunt-sightings.js onTap). Hooks: layers.js handleClick calls open(); tools-main.js long press calls H.tapCard.open().
    Close: swipe down (header or the card body at the top), the X, or Back (tools-main.js backGuard).
    API: HuntMap.tapCard = { open(H, lngLat, { items, press }), close(), isOpen() } */
-import { roadProps, driveTip, traced, NAV_WARN } from './road-words.js';
+import { roadProps, roadName, driveTip, traced, NAV_WARN } from './road-words.js';
 import { esc } from './util.js';
 import * as layers from './layers.js';
 
@@ -37,6 +37,7 @@ export function open(H, ll, opts = {}) {
   const map = H.map, p = [+(+ll.lng).toFixed(6), +(+ll.lat).toFixed(6)];
   let items = opts.items;
   if (!items) { try { items = layers.itemsAt(map.project([p[0], p[1]])); } catch (err) { items = []; } }
+  items = roadOrder(items); // detailed roads: the named road first, side spurs and permit records after
   // a plain tap on empty map while another card or tool is open just closes it (one calm step at a time)
   if (!opts.press && !opts.reopen && !items.length && H.els && !H.els.sheet.hidden && !isMine(H)) { H.closeSheet(); return true; }
   const my = ++tok;
@@ -90,6 +91,11 @@ function html(H, p, items) {
   </div>`;
 }
 
+const ROAD_RANK = { retired: 3, pending: 3, proposed: 3, overgrown: 2, tenure: 2 };
+function roadOrder(items) {
+  const rank = (r) => { if (!r || !r.st || r.st.l.id !== 'roads_detail') return 0; const q = (r.f && r.f.properties) || {}; return (q.name && q.src !== 'Forest tenure road segments' ? 0 : 1) + (ROAD_RANK[q.kind] || 0); };
+  return items.map((r, i) => [r, i]).sort((a, b) => (a[0].st && b[0].st && a[0].st.l.id === 'roads_detail' && b[0].st.l.id === 'roads_detail' ? rank(a[0]) - rank(b[0]) : 0) || a[1] - b[1]).map((x) => x[0]);
+}
 function itemHtml(r, i) {
   const { t, s } = plain(r.st, (r.f && r.f.properties) || {});
   let sw = '';
@@ -122,10 +128,11 @@ function plain(st, p) {
     case 'forest_roads': return { t: named('Forest road'), s: 'Can be gated, washed out or deactivated.' };
     case 'roads_detail': { // class and status under the finger (road atlas or forest tenure segment); wording: road-words.js
       p = roadProps(p);
-      const bits = [val(p.surf) && `Surface ${val(p.surf).toLowerCase()}`, val(p.status)].filter(Boolean).join('. ');
-      return { t: name ? `${val(p.cls) || 'Road'}: ${name}` : (val(p.cls) || 'Road'), s: `${bits ? `${bits}. ` : ''}${driveTip(p)} ${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, drivable or legal to drive.` };
+      const nm = roadName(p), bits = [val(p.surf) && `Surface ${val(p.surf).toLowerCase()}`, val(p.status)].filter(Boolean).join('. ');
+      return { t: nm ? `${val(p.cls) || 'Road'}: ${nm}` : `${val(p.cls) || 'Road'}${p.src === 'BC Digital Road Atlas' ? ', side road (no name)' : ''}`, s: `${bits ? `${bits}. ` : ''}${driveTip(p)} ${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, drivable or legal to drive.` };
     }
-    case 'trails_detail': p = roadProps(p); return { t: name ? `${val(p.cls) || 'Trail'}: ${name}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}Not a promise it is open or legal to ride.` };
+    case 'trails_detail': { p = roadProps(p); const nm = roadName(p);
+      return { t: nm ? `${val(p.cls) || 'Trail'}: ${nm}` : (val(p.cls) || 'Trail'), s: `${val(p.surf) ? `Surface ${val(p.surf).toLowerCase()}. ` : ''}${traced(p) ? `${NAV_WARN} ` : ''}Not a promise it is open, or legal to ride a bike or ATV (All Terrain Vehicle) on.` }; }
     case 'rec_sites': return { t: named('Recreation site'), s: 'No shooting near its campsites and buildings.' };
     case 'rec_trails': return { t: named('Recreation trail'), s: '' };
     case 'ranges': return { t: named('Shooting range'), s: 'A legal place to sight in. Fees may apply.' };

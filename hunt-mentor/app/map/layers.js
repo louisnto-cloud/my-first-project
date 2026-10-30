@@ -238,13 +238,17 @@ function addLayerSet(st, src, sfx, sourceLayer) {
   if (type === 'symbol' && !layout['text-field'] && !layout['icon-image']) Object.assign(layout, { 'text-field': ['to-string', ['get', l.labelField || 'name']], 'text-font': ['Noto Sans Bold'], 'text-size': 14 });
   const before = type === 'fill' ? H.anchors.fills : type === 'line' ? H.anchors.lines : H.anchors.symbols;
   if (l.filter) sl.filter = l.filter;
+  if (type === 'line' && l.casing) { // a soft white edge under the line, satellite and hybrid only (caseOn), so roads hold up on dark forest
+    map.addLayer({ id: `${id}-case`, type: 'line', source: src, ...sl, ...(l.filter ? { filter: l.filter } : {}), minzoom, layout: { 'line-join': 'round' }, paint: { 'line-color': '#ffffff', 'line-opacity': 0.7, 'line-width': ['interpolate', ['linear'], ['zoom'], 10, l.casing * 0.7, 14, l.casing * 1.6] } }, before);
+    ids.push(`${id}-case`);
+  }
   if (type === 'line' && l.dashFilter) {
-    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer above the solid one (line-dasharray is not data driven)
+    // manifest dashFilter: those lines (retired, overgrown, proposed) draw dashed and faded in their own layer under the solid one (line-dasharray is not data driven)
     const both = (f) => (l.filter ? ['all', l.filter, f] : f);
     const dpaint = Object.assign({}, paint, { 'line-dasharray': l.dash || [2, 2], 'line-opacity': l.dashOpacity ?? 0.6 });
     st.lf = Object.assign(st.lf || {}, { [`${id}-dash`]: both(l.dashFilter), [id]: both(['!', l.dashFilter]) });
-    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id);
-    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`); // on top: a retired spur under a solid road still shows
+    map.addLayer({ id: `${id}-dash`, type, source: src, ...sl, filter: st.lf[`${id}-dash`], minzoom, layout, paint: dpaint }, before); ids.push(`${id}-dash`);
+    map.addLayer({ id, type, source: src, ...sl, filter: st.lf[id], minzoom, layout, paint }, before); ids.push(id); // solid on top: most retired permit lines sit on a road the atlas still maps (forge 2026-10-30)
   } else { map.addLayer({ id, type, source: src, ...sl, minzoom, layout, paint }, before); ids.push(id); }
   if (type === 'fill') {
     // outline width: [at zoom 9, 12, 15] numbers (a zoom curve must be the top level expression, so the casing builds its own)

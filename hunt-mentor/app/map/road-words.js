@@ -6,7 +6,8 @@
      FTEN_ROAD_SEGMENT_LINES_SVW: LIFE_CYCLE_STATUS_CODE Pending, Active or Retired is the permit record, not the road's condition.
    The driving line is a Tip (opinion from the surface value), never a promise. */
 const CLS = {
-  'Unclassified road': 'Road, type unknown',
+  'Unclassified road': 'Road of unknown type',
+  'Road, type unknown': 'Road of unknown type',
   'Restricted road': 'Restricted access road',
   'Pedestrian path': 'Town walkway',
 };
@@ -15,22 +16,35 @@ export function roadProps(p) {
   if (!p) return p;
   const o = Object.assign({}, p);
   if (CLS[o.cls]) o.cls = CLS[o.cls];
-  if (/^Forest tenure road/.test(o.cls || '')) o.cls = String(o.cls).replace(/^Forest tenure road/, 'Logging road on permit records');
+  if (/^Forest tenure road/.test(o.cls || '')) o.cls = 'Logging road on permit records';
   if (SURF[o.surf]) o.surf = SURF[o.surf];
-  if (/^Active \(forest tenure\)/.test(o.status || '')) o.status = 'Permit on record (forest tenure): does not mean open or drivable';
+  if (/^Active \(forest tenure\)/.test(o.status || '')) o.status = 'Permit on record: does not mean open or drivable';
+  const ret = /^Retired \(forest tenure\)\s*([\d-]*)/.exec(o.status || '');
+  if (ret) o.status = `Permit retired${ret[1] ? ` ${ret[1]}` : ''}: the road may be deactivated, overgrown or still in use`;
+  if (/^Pending \(forest tenure\)/.test(o.status || '')) o.status = 'Permit pending: the road may not be built yet';
   if (o.src === 'Forest tenure road segments' && o.date) o.date = `Downloaded ${o.date}`;
   return o;
 }
 /** One plain driving line (Tip) from the surface and kind, or ''. */
 export function driveTip(p) {
   const k = (p && p.kind) || '', s = String((p && p.surf) || '').toLowerCase();
-  if (k === 'retired' || k === 'overgrown' || /overgrown|decommissioned/.test(s)) return 'Tip: plan to walk it, not drive it.';
+  if (k === 'overgrown' || /overgrown|decommissioned/.test(s)) return 'Tip: plan to walk it, not drive it.';
+  if (k === 'retired') return 'Tip: condition unknown. Do not count on driving it until you see it.';
   if (k === 'proposed' || k === 'pending') return 'Tip: may not exist on the ground.';
-  if (/^paved/.test(s)) return 'Tip: a paved road, if it is open.';
-  if (/^loose/.test(s)) return 'Tip: gravel or dirt. Most trucks manage it when open and dry; snow and washouts change that.';
-  if (/^rough/.test(s)) return 'Tip: rough. Expect to need high clearance or 4x4.';
-  if (/^seasonal/.test(s)) return 'Tip: seasonal. Expect it may be impassable in November.';
-  return 'Tip: surface unknown. Do not count on driving it until you see it.';
+  if (k === 'restricted') return 'Tip: you may not be allowed in. Look for gates and signs.';
+  const yieldTip = k === 'resource' || k === 'tenure' ? ' Logging trucks use these roads: always yield to them (BC rule). No radio: headlights on, keep right, pull over for loaded trucks (Tip).' : '';
+  if (/^paved/.test(s)) return `Tip: paved, if it is open.${yieldTip}`;
+  if (/^loose/.test(s)) return `Tip: most trucks manage it when open and dry; snow and washouts change that.${yieldTip}`;
+  if (/^rough/.test(s)) return `Tip: expect to need high clearance or 4x4.${yieldTip}`;
+  if (/^seasonal/.test(s)) return `Tip: seasonal. It may be impassable in late fall and winter.${yieldTip}`;
+  return `Tip: surface unknown. Do not count on driving it until you see it.${yieldTip}`;
+}
+/** A road name a person can read: FSR spelled out; a bare permit code is shown as a permit number. */
+export function roadName(p) {
+  const n = String((p && p.name) || '').trim();
+  if (!n) return '';
+  if (p.src === 'Forest tenure road segments' && /^[A-Z]{0,2}\d{3,}/.test(n)) return `permit ${n}`;
+  return n.replace(/\bFSR\b/, 'FSR (Forest Service Road)');
 }
 /** True for an unnamed road atlas line (most were traced from air photos). */
 export const traced = (p) => !!p && !p.name && p.src === 'BC Digital Road Atlas';
