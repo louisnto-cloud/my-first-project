@@ -1,0 +1,44 @@
+name: Build & verify workbook
+
+# Regenerates the workbook and enforces the integrity guarantees on every push
+# and pull request. A build that violates the honesty model (any fabricated
+# commercial cell, a broken formula, an unresolved link, etc.) fails the job.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install openpyxl
+
+      - name: Build workbook (self-runs the integrity suite at the end)
+        run: python build_competitor_intel.py
+
+      - name: Run integrity test suite explicitly
+        run: python test_competitor_intel.py
+
+      - name: Upload generated workbook
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitor-intel-workbook
+          path: Amazon_ca_Beverage_Competitor_Intel_*.xlsx
+          if-no-files-found: error
